@@ -8,222 +8,117 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 
 
-helps['apimanagement'] = """
+helps['eventsubscriptions'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['eventsubscriptions create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a eventsubscriptions.
 """
 
-helps['apimanagement create'] = """
+helps['eventsubscriptions update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a eventsubscriptions.
 """
 
-helps['apimanagement create'] = """
+helps['eventsubscriptions delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a eventsubscriptions.
 """
 
-helps['apimanagement create'] = """
+helps['eventsubscriptions list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a eventsubscriptions.
 """
 
-helps['apimanagement create'] = """
+helps['eventsubscriptions show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a eventsubscriptions.
 """
 
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement'] = """
+helps['eventsubscriptions locations topictypes providers {providernamespace} {resourcetypename}'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['eventsubscriptions locations topictypes providers {providernamespace} {resourcetypename} list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a eventsubscriptions locations topictypes providers {providernamespace} {resourcetypename}.
 """
 
-helps['apimanagement create'] = """
+helps['eventsubscriptions locations topictypes providers {providernamespace} {resourcetypename} show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a eventsubscriptions locations topictypes providers {providernamespace} {resourcetypename}.
 """
 
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement'] = """
+helps[''] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps[' list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a .
 """
 
-helps['apimanagement'] = """
+helps['topics'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['topics create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a topics.
 """
 
-helps['apimanagement create'] = """
+helps['topics update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a topics.
 """
 
-helps['apimanagement create'] = """
+helps['topics delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a topics.
 """
 
-helps['apimanagement create'] = """
+helps['topics list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a topics.
 """
 
-helps['apimanagement create'] = """
+helps['topics show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a topics.
 """
 
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement'] = """
+helps['topics providers {providernamespace} {resourcetypename}'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['topics providers {providernamespace} {resourcetypename} list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a topics providers {providernamespace} {resourcetypename}.
 """
 
-helps['apimanagement create'] = """
+helps['topics providers {providernamespace} {resourcetypename} show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a topics providers {providernamespace} {resourcetypename}.
 """
 
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement'] = """
+helps['topictypes'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['topictypes list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a topictypes.
 """
 
-helps['apimanagement create'] = """
+helps['topictypes show'] = """
     type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a topictypes.
 """

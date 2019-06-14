@@ -8,402 +8,302 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 
 
-helps['apimanagement'] = """
+helps[''] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps[' list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a .
 """
 
-helps['apimanagement'] = """
+helps['namespaces'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a namespaces.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a namespaces.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a namespaces.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a namespaces.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a namespaces.
 """
 
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement'] = """
+helps['namespaces authorizationrules'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces authorizationrules list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a namespaces authorizationrules.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces authorizationrules show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a namespaces authorizationrules.
 """
 
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement'] = """
+helps['namespaces disasterrecoveryconfigs'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces disasterrecoveryconfigs create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a namespaces disasterrecoveryconfigs.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces disasterrecoveryconfigs delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a namespaces disasterrecoveryconfigs.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces disasterrecoveryconfigs list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a namespaces disasterrecoveryconfigs.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces disasterrecoveryconfigs show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a namespaces disasterrecoveryconfigs.
 """
 
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement'] = """
+helps['namespaces disasterrecoveryconfigs authorizationrules'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces disasterrecoveryconfigs authorizationrules list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a namespaces disasterrecoveryconfigs authorizationrules.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces disasterrecoveryconfigs authorizationrules show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a namespaces disasterrecoveryconfigs authorizationrules.
 """
 
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement'] = """
+helps['namespaces migrationconfigurations'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces migrationconfigurations show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a namespaces migrationconfigurations.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces migrationconfigurations list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a namespaces migrationconfigurations.
 """
 
-helps['apimanagement'] = """
+helps['namespaces queues'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces queues create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a namespaces queues.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces queues delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a namespaces queues.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces queues list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a namespaces queues.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces queues show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a namespaces queues.
 """
 
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement'] = """
+helps['namespaces queues authorizationrules'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces queues authorizationrules list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a namespaces queues authorizationrules.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces queues authorizationrules show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a namespaces queues authorizationrules.
 """
 
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement'] = """
+helps['namespaces topics'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces topics create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a namespaces topics.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces topics delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a namespaces topics.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces topics list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a namespaces topics.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces topics show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a namespaces topics.
 """
 
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement'] = """
+helps['namespaces topics authorizationrules'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces topics authorizationrules list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a namespaces topics authorizationrules.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces topics authorizationrules show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a namespaces topics authorizationrules.
 """
 
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement'] = """
+helps['namespaces topics subscriptions'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces topics subscriptions create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a namespaces topics subscriptions.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces topics subscriptions delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a namespaces topics subscriptions.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces topics subscriptions list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a namespaces topics subscriptions.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces topics subscriptions show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a namespaces topics subscriptions.
 """
 
-helps['apimanagement'] = """
+helps['namespaces topics subscriptions'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces topics subscriptions list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a namespaces topics subscriptions.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces topics subscriptions show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a namespaces topics subscriptions.
 """
 
-helps['apimanagement'] = """
+helps['namespaces topics subscriptions rules'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces topics subscriptions rules create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a namespaces topics subscriptions rules.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces topics subscriptions rules delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a namespaces topics subscriptions rules.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces topics subscriptions rules list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a namespaces topics subscriptions rules.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces topics subscriptions rules show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a namespaces topics subscriptions rules.
 """
 
-helps['apimanagement'] = """
+helps['namespaces topics subscriptions rules'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces topics subscriptions rules show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a namespaces topics subscriptions rules.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces topics subscriptions rules list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a namespaces topics subscriptions rules.
 """
 
-helps['apimanagement'] = """
+helps['sku'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['sku list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a sku.
 """
 
-helps['apimanagement'] = """
+helps[''] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps[' list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a .
 """
 
-helps['apimanagement'] = """
+helps['namespaces'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['namespaces list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a namespaces.
 """

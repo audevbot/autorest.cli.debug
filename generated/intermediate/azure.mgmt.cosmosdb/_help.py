@@ -8,417 +8,162 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 
 
-helps['apimanagement'] = """
+helps['databaseaccounts'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['databaseaccounts create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a databaseaccounts.
 """
 
-helps['apimanagement create'] = """
+helps['databaseaccounts delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a databaseaccounts.
 """
 
-helps['apimanagement create'] = """
+helps['databaseaccounts list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a databaseaccounts.
 """
 
-helps['apimanagement create'] = """
+helps['databaseaccounts show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a databaseaccounts.
 """
 
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement'] = """
+helps['databaseaccounts tables databases keyspaces containers collections'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['databaseaccounts tables databases keyspaces containers collections list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a databaseaccounts tables databases keyspaces containers collections.
 """
 
-helps['apimanagement create'] = """
+helps['databaseaccounts tables databases keyspaces containers collections show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a databaseaccounts tables databases keyspaces containers collections.
 """
 
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement'] = """
+helps[''] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps[' list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a .
 """
 
-helps['apimanagement'] = """
+helps['databaseaccounts databases'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['databaseaccounts databases list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a databaseaccounts databases.
 """
 
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement'] = """
+helps['databaseaccounts databases collections'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['databaseaccounts databases collections list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a databaseaccounts databases collections.
 """
 
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement'] = """
+helps['databaseaccounts region databases collections'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['databaseaccounts region databases collections list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a databaseaccounts region databases collections.
 """
 
-helps['apimanagement'] = """
+helps['databaseaccounts region'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['databaseaccounts region list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a databaseaccounts region.
 """
 
-helps['apimanagement'] = """
+helps['databaseaccounts sourceregion targetregion'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['databaseaccounts sourceregion targetregion list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a databaseaccounts sourceregion targetregion.
 """
 
-helps['apimanagement'] = """
+helps['databaseaccounts targetregion'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['databaseaccounts targetregion list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a databaseaccounts targetregion.
 """
 
-helps['apimanagement'] = """
+helps['databaseaccounts'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['databaseaccounts list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a databaseaccounts.
 """
 
-helps['apimanagement'] = """
+helps['databaseaccounts region databases collections'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['databaseaccounts region databases collections list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a databaseaccounts region databases collections.
 """
 
-helps['apimanagement'] = """
+helps['databaseaccounts databases collections'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['databaseaccounts databases collections list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a databaseaccounts databases collections.
 """
 
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement'] = """
+helps['databaseaccounts databases collections partitionkeyrangeid'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['databaseaccounts databases collections partitionkeyrangeid list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a databaseaccounts databases collections partitionkeyrangeid.
 """
 
-helps['apimanagement'] = """
+helps['databaseaccounts region databases collections partitionkeyrangeid'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['databaseaccounts region databases collections partitionkeyrangeid list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a databaseaccounts region databases collections partitionkeyrangeid.
 """

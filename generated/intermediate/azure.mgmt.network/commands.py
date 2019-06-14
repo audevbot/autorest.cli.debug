@@ -5,22 +5,19 @@
 
 # pylint: disable=line-too-long
 from azure.cli.core.commands import CliCommandType
-from azure.cli.command_modules.apimanagement._client_factory import cf_apimanagement
+from azure.cli.command_modules.network._client_factory import cf_network
 def load_command_table(self, _):
 
-    apimanagement_sdk = CliCommandType(
-        operations_tmpl='azure.mgmt.apimanagement.operations#ApiManagementOperations.{}',
-        client_factory=cf_apimanagement)
+    network_sdk = CliCommandType(
+        operations_tmpl='azure.mgmt.network.operations#ApiManagementOperations.{}',
+        client_factory=cf_network)
 
 
-    with self.command_group('apimanagement', apimanagement_sdk, client_factory=cf_apimanagement) as g:
-        g.custom_command('create', 'create_apimanagement')
-        g.custom_command('create', 'create_apimanagement')
-        g.custom_command('create', 'create_apimanagement')
-        g.custom_command('create', 'create_apimanagement')
-        g.custom_command('create', 'create_apimanagement')
-        g.custom_command('create', 'create_apimanagement')
-        g.custom_command('create', 'create_apimanagement')
-        g.custom_command('create', 'create_apimanagement')
-    with self.command_group('apimanagement', is_preview=True):
-        pass
+    with self.command_group('azurefirewalls', network_sdk, client_factory=cf_network) as g:
+        g.custom_command('create', 'create_azurefirewalls')
+        g.custom_command('delete', 'delete_azurefirewalls')
+        g.custom_command('list', 'list_azurefirewalls')
+        g.custom_command('show', 'show_azurefirewalls')
+    with self.command_group('azurefirewalls', network_sdk, client_factory=cf_network) as g:
+        g.custom_command('show', 'show_azurefirewalls')
+        g.custom_command('list', 'list_azurefirewalls')

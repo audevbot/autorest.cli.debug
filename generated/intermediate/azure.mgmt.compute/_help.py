@@ -8,132 +8,122 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 
 
-helps['apimanagement'] = """
+helps['galleries'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['galleries create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a galleries.
 """
 
-helps['apimanagement create'] = """
+helps['galleries delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a galleries.
 """
 
-helps['apimanagement create'] = """
+helps['galleries list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a galleries.
 """
 
-helps['apimanagement create'] = """
+helps['galleries show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a galleries.
 """
 
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement'] = """
+helps['galleries'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['galleries show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a galleries.
 """
 
-helps['apimanagement create'] = """
+helps['galleries list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a galleries.
 """
 
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement'] = """
+helps['galleries images'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['galleries images create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a galleries images.
 """
 
-helps['apimanagement create'] = """
+helps['galleries images delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a galleries images.
 """
 
-helps['apimanagement create'] = """
+helps['galleries images list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a galleries images.
 """
 
-helps['apimanagement create'] = """
+helps['galleries images show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a galleries images.
 """
 
-helps['apimanagement'] = """
+helps['galleries images'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['galleries images show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a galleries images.
 """
 
-helps['apimanagement create'] = """
+helps['galleries images list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a galleries images.
 """
 
-helps['apimanagement'] = """
+helps['galleries images versions'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['galleries images versions create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a galleries images versions.
 """
 
-helps['apimanagement create'] = """
+helps['galleries images versions delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a galleries images versions.
 """
 
-helps['apimanagement create'] = """
+helps['galleries images versions list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a galleries images versions.
 """
 
-helps['apimanagement create'] = """
+helps['galleries images versions show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a galleries images versions.
 """
 
-helps['apimanagement'] = """
+helps['galleries images versions'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['galleries images versions show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a galleries images versions.
 """
 
-helps['apimanagement create'] = """
+helps['galleries images versions list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a galleries images versions.
 """
