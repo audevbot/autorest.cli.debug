@@ -8,72 +8,52 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 
 
-helps['apimanagement'] = """
+helps['automationaccounts jobs'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['automationaccounts jobs create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a automationaccounts jobs.
 """
 
-helps['apimanagement create'] = """
+helps['automationaccounts jobs list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a automationaccounts jobs.
 """
 
-helps['apimanagement create'] = """
+helps['automationaccounts jobs show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a automationaccounts jobs.
 """
 
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement'] = """
+helps['automationaccounts jobs'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['automationaccounts jobs show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a automationaccounts jobs.
 """
 
-helps['apimanagement create'] = """
+helps['automationaccounts jobs list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a automationaccounts jobs.
 """
 
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement'] = """
+helps['automationaccounts jobs streams'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['automationaccounts jobs streams show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a automationaccounts jobs streams.
 """
 
-helps['apimanagement create'] = """
+helps['automationaccounts jobs streams list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a automationaccounts jobs streams.
 """

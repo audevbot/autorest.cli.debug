@@ -8,252 +8,237 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 
 
-helps['apimanagement'] = """
+helps['batchaccounts'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a batchaccounts.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a batchaccounts.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a batchaccounts.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a batchaccounts.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a batchaccounts.
 """
 
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement'] = """
+helps['batchaccounts'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a batchaccounts.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a batchaccounts.
 """
 
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement'] = """
+helps['batchaccounts applications versions'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts applications versions create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a batchaccounts applications versions.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts applications versions delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a batchaccounts applications versions.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts applications versions list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a batchaccounts applications versions.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts applications versions show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a batchaccounts applications versions.
 """
 
-helps['apimanagement'] = """
+helps['batchaccounts applications versions'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts applications versions show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a batchaccounts applications versions.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts applications versions list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a batchaccounts applications versions.
 """
 
-helps['apimanagement'] = """
+helps['batchaccounts applications'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts applications create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a batchaccounts applications.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts applications update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a batchaccounts applications.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts applications delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a batchaccounts applications.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts applications list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a batchaccounts applications.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts applications show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a batchaccounts applications.
 """
 
-helps['apimanagement'] = """
+helps['batchaccounts applications'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts applications show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a batchaccounts applications.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts applications list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a batchaccounts applications.
 """
 
-helps['apimanagement'] = """
+helps['locations'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement'] = """
+helps[''] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps[' list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a .
 """
 
-helps['apimanagement'] = """
+helps['batchaccounts certificates'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts certificates create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a batchaccounts certificates.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts certificates update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a batchaccounts certificates.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts certificates delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a batchaccounts certificates.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts certificates list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a batchaccounts certificates.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts certificates show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a batchaccounts certificates.
 """
 
-helps['apimanagement'] = """
+helps['batchaccounts certificates'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts certificates show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a batchaccounts certificates.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts certificates list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a batchaccounts certificates.
 """
 
-helps['apimanagement'] = """
+helps['batchaccounts pools'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts pools create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a batchaccounts pools.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts pools update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a batchaccounts pools.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts pools delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a batchaccounts pools.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts pools list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a batchaccounts pools.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts pools show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a batchaccounts pools.
 """
 
-helps['apimanagement'] = """
+helps['batchaccounts pools'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts pools show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a batchaccounts pools.
 """
 
-helps['apimanagement create'] = """
+helps['batchaccounts pools list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a batchaccounts pools.
 """

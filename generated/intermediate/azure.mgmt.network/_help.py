@@ -8,52 +8,42 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 
 
-helps['apimanagement'] = """
+helps['azurefirewalls'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['azurefirewalls create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a azurefirewalls.
 """
 
-helps['apimanagement create'] = """
+helps['azurefirewalls delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a azurefirewalls.
 """
 
-helps['apimanagement create'] = """
+helps['azurefirewalls list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a azurefirewalls.
 """
 
-helps['apimanagement create'] = """
+helps['azurefirewalls show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a azurefirewalls.
 """
 
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement'] = """
+helps['azurefirewalls'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['azurefirewalls show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a azurefirewalls.
 """
 
-helps['apimanagement create'] = """
+helps['azurefirewalls list'] = """
     type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a azurefirewalls.
 """

@@ -8,1927 +8,1792 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 
 
-helps['apimanagement'] = """
+helps['service apis'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service apis create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service apis.
 """
 
-helps['apimanagement create'] = """
+helps['service apis update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a service apis.
 """
 
-helps['apimanagement create'] = """
+helps['service apis delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service apis.
 """
 
-helps['apimanagement create'] = """
+helps['service apis list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service apis.
 """
 
-helps['apimanagement create'] = """
+helps['service apis show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service apis.
 """
 
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement'] = """
+helps['service apis'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
 """
 
-helps['apimanagement create'] = """
+helps['service apis show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service apis.
 """
 
-helps['apimanagement create'] = """
+helps['service apis list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service apis.
 """
 
-helps['apimanagement'] = """
+helps['service apis'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service apis list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service apis.
 """
 
-helps['apimanagement'] = """
+helps['service apis releases'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service apis releases create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service apis releases.
 """
 
-helps['apimanagement create'] = """
+helps['service apis releases update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a service apis releases.
 """
 
-helps['apimanagement create'] = """
+helps['service apis releases delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service apis releases.
 """
 
-helps['apimanagement create'] = """
+helps['service apis releases list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service apis releases.
 """
 
-helps['apimanagement create'] = """
+helps['service apis releases show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service apis releases.
 """
 
-helps['apimanagement'] = """
+helps['service apis releases'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service apis releases show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service apis releases.
 """
 
-helps['apimanagement create'] = """
+helps['service apis releases list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service apis releases.
 """
 
-helps['apimanagement'] = """
+helps['service apis operations'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service apis operations create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service apis operations.
 """
 
-helps['apimanagement create'] = """
+helps['service apis operations update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a service apis operations.
 """
 
-helps['apimanagement create'] = """
+helps['service apis operations delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service apis operations.
 """
 
-helps['apimanagement create'] = """
+helps['service apis operations list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service apis operations.
 """
 
-helps['apimanagement create'] = """
+helps['service apis operations show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service apis operations.
 """
 
-helps['apimanagement'] = """
+helps['service apis operations'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service apis operations show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service apis operations.
 """
 
-helps['apimanagement create'] = """
+helps['service apis operations list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service apis operations.
 """
 
-helps['apimanagement'] = """
+helps['service apis operations policies'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service apis operations policies create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service apis operations policies.
 """
 
-helps['apimanagement create'] = """
+helps['service apis operations policies delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service apis operations policies.
 """
 
-helps['apimanagement create'] = """
+helps['service apis operations policies list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service apis operations policies.
 """
 
-helps['apimanagement create'] = """
+helps['service apis operations policies show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service apis operations policies.
 """
 
-helps['apimanagement'] = """
+helps['service apis operations policies'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service apis operations policies show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service apis operations policies.
 """
 
-helps['apimanagement create'] = """
+helps['service apis operations policies list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service apis operations policies.
 """
 
-helps['apimanagement'] = """
+helps['service tags'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
 """
 
-helps['apimanagement create'] = """
+helps['service tags create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service tags.
 """
 
-helps['apimanagement create'] = """
+helps['service tags update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a service tags.
 """
 
-helps['apimanagement create'] = """
+helps['service tags delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service tags.
 """
 
-helps['apimanagement create'] = """
+helps['service tags list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service tags.
 """
 
-helps['apimanagement create'] = """
+helps['service tags show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service tags.
 """
 
-helps['apimanagement'] = """
+helps['service tags apis products operations'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
 """
 
-helps['apimanagement create'] = """
+helps['service tags apis products operations list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service tags apis products operations.
 """
 
-helps['apimanagement create'] = """
+helps['service tags apis products operations show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service tags apis products operations.
 """
 
-helps['apimanagement'] = """
+helps['service apis'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service apis list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service apis.
 """
 
-helps['apimanagement'] = """
+helps['service apis policies'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service apis policies create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service apis policies.
 """
 
-helps['apimanagement create'] = """
+helps['service apis policies delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service apis policies.
 """
 
-helps['apimanagement create'] = """
+helps['service apis policies list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service apis policies.
 """
 
-helps['apimanagement create'] = """
+helps['service apis policies show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service apis policies.
 """
 
-helps['apimanagement'] = """
+helps['service apis policies'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service apis policies show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service apis policies.
 """
 
-helps['apimanagement create'] = """
+helps['service apis policies list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service apis policies.
 """
 
-helps['apimanagement'] = """
+helps['service apis schemas'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service apis schemas create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service apis schemas.
 """
 
-helps['apimanagement create'] = """
+helps['service apis schemas delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service apis schemas.
 """
 
-helps['apimanagement create'] = """
+helps['service apis schemas list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service apis schemas.
 """
 
-helps['apimanagement create'] = """
+helps['service apis schemas show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service apis schemas.
 """
 
-helps['apimanagement'] = """
+helps['service apis schemas'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service apis schemas show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service apis schemas.
 """
 
-helps['apimanagement create'] = """
+helps['service apis schemas list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service apis schemas.
 """
 
-helps['apimanagement'] = """
+helps['service apis diagnostics'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service apis diagnostics create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service apis diagnostics.
 """
 
-helps['apimanagement create'] = """
+helps['service apis diagnostics update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a service apis diagnostics.
 """
 
-helps['apimanagement create'] = """
+helps['service apis diagnostics delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service apis diagnostics.
 """
 
-helps['apimanagement create'] = """
+helps['service apis diagnostics list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service apis diagnostics.
 """
 
-helps['apimanagement create'] = """
+helps['service apis diagnostics show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service apis diagnostics.
 """
 
-helps['apimanagement'] = """
+helps['service apis diagnostics'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service apis diagnostics show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service apis diagnostics.
 """
 
-helps['apimanagement create'] = """
+helps['service apis diagnostics list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service apis diagnostics.
 """
 
-helps['apimanagement'] = """
+helps['service apis issues'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service apis issues create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service apis issues.
 """
 
-helps['apimanagement create'] = """
+helps['service apis issues update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a service apis issues.
 """
 
-helps['apimanagement create'] = """
+helps['service apis issues delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service apis issues.
 """
 
-helps['apimanagement create'] = """
+helps['service apis issues list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service apis issues.
 """
 
-helps['apimanagement create'] = """
+helps['service apis issues show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service apis issues.
 """
 
-helps['apimanagement'] = """
+helps['service apis issues'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service apis issues show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service apis issues.
 """
 
-helps['apimanagement create'] = """
+helps['service apis issues list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service apis issues.
 """
 
-helps['apimanagement'] = """
+helps['service apis issues comments'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service apis issues comments create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service apis issues comments.
 """
 
-helps['apimanagement create'] = """
+helps['service apis issues comments delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service apis issues comments.
 """
 
-helps['apimanagement create'] = """
+helps['service apis issues comments list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service apis issues comments.
 """
 
-helps['apimanagement create'] = """
+helps['service apis issues comments show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service apis issues comments.
 """
 
-helps['apimanagement'] = """
+helps['service apis issues comments'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service apis issues comments show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service apis issues comments.
 """
 
-helps['apimanagement create'] = """
+helps['service apis issues comments list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service apis issues comments.
 """
 
-helps['apimanagement'] = """
+helps['service apis issues attachments'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service apis issues attachments create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service apis issues attachments.
 """
 
-helps['apimanagement create'] = """
+helps['service apis issues attachments delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service apis issues attachments.
 """
 
-helps['apimanagement create'] = """
+helps['service apis issues attachments list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service apis issues attachments.
 """
 
-helps['apimanagement create'] = """
+helps['service apis issues attachments show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service apis issues attachments.
 """
 
-helps['apimanagement'] = """
+helps['service apis issues attachments'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service apis issues attachments show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service apis issues attachments.
 """
 
-helps['apimanagement create'] = """
+helps['service apis issues attachments list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service apis issues attachments.
 """
 
-helps['apimanagement'] = """
+helps['service apis tagdescriptions'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service apis tagdescriptions create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service apis tagdescriptions.
 """
 
-helps['apimanagement create'] = """
+helps['service apis tagdescriptions delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service apis tagdescriptions.
 """
 
-helps['apimanagement create'] = """
+helps['service apis tagdescriptions list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service apis tagdescriptions.
 """
 
-helps['apimanagement create'] = """
+helps['service apis tagdescriptions show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service apis tagdescriptions.
 """
 
-helps['apimanagement'] = """
+helps['service apis tagdescriptions'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service apis tagdescriptions show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service apis tagdescriptions.
 """
 
-helps['apimanagement create'] = """
+helps['service apis tagdescriptions list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service apis tagdescriptions.
 """
 
-helps['apimanagement'] = """
+helps['service apis'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service apis list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service apis.
 """
 
-helps['apimanagement'] = """
+helps['service apiversionsets'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service apiversionsets create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service apiversionsets.
 """
 
-helps['apimanagement create'] = """
+helps['service apiversionsets update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a service apiversionsets.
 """
 
-helps['apimanagement create'] = """
+helps['service apiversionsets delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service apiversionsets.
 """
 
-helps['apimanagement create'] = """
+helps['service apiversionsets list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service apiversionsets.
 """
 
-helps['apimanagement create'] = """
+helps['service apiversionsets show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service apiversionsets.
 """
 
-helps['apimanagement'] = """
+helps['service apiversionsets'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service apiversionsets show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service apiversionsets.
 """
 
-helps['apimanagement create'] = """
+helps['service apiversionsets list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service apiversionsets.
 """
 
-helps['apimanagement'] = """
+helps['service authorizationservers'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service authorizationservers create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service authorizationservers.
 """
 
-helps['apimanagement create'] = """
+helps['service authorizationservers update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a service authorizationservers.
 """
 
-helps['apimanagement create'] = """
+helps['service authorizationservers delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service authorizationservers.
 """
 
-helps['apimanagement create'] = """
+helps['service authorizationservers list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service authorizationservers.
 """
 
-helps['apimanagement create'] = """
+helps['service authorizationservers show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service authorizationservers.
 """
 
-helps['apimanagement'] = """
+helps['service authorizationservers'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service authorizationservers show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service authorizationservers.
 """
 
-helps['apimanagement create'] = """
+helps['service authorizationservers list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service authorizationservers.
 """
 
-helps['apimanagement'] = """
+helps['service backends'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service backends create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service backends.
 """
 
-helps['apimanagement create'] = """
+helps['service backends update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a service backends.
 """
 
-helps['apimanagement create'] = """
+helps['service backends delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service backends.
 """
 
-helps['apimanagement create'] = """
+helps['service backends list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service backends.
 """
 
-helps['apimanagement create'] = """
+helps['service backends show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service backends.
 """
 
-helps['apimanagement'] = """
+helps['service backends'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service backends show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service backends.
 """
 
-helps['apimanagement create'] = """
+helps['service backends list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service backends.
 """
 
-helps['apimanagement'] = """
+helps['service caches'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service caches create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service caches.
 """
 
-helps['apimanagement create'] = """
+helps['service caches update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a service caches.
 """
 
-helps['apimanagement create'] = """
+helps['service caches delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service caches.
 """
 
-helps['apimanagement create'] = """
+helps['service caches list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service caches.
 """
 
-helps['apimanagement create'] = """
+helps['service caches show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service caches.
 """
 
-helps['apimanagement'] = """
+helps['service caches'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service caches show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service caches.
 """
 
-helps['apimanagement create'] = """
+helps['service caches list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service caches.
 """
 
-helps['apimanagement'] = """
+helps['service certificates'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service certificates create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service certificates.
 """
 
-helps['apimanagement create'] = """
+helps['service certificates delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service certificates.
 """
 
-helps['apimanagement create'] = """
+helps['service certificates list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service certificates.
 """
 
-helps['apimanagement create'] = """
+helps['service certificates show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service certificates.
 """
 
-helps['apimanagement'] = """
+helps['service certificates'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service certificates show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service certificates.
 """
 
-helps['apimanagement create'] = """
+helps['service certificates list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service certificates.
 """
 
-helps['apimanagement'] = """
+helps[''] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps[' list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a .
 """
 
-helps['apimanagement'] = """
+helps['service'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service.
 """
 
-helps['apimanagement'] = """
+helps['service'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
 """
 
-helps['apimanagement create'] = """
+helps['service create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service.
 """
 
-helps['apimanagement create'] = """
+helps['service update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a service.
 """
 
-helps['apimanagement create'] = """
+helps['service delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service.
 """
 
-helps['apimanagement create'] = """
+helps['service list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service.
 """
 
-helps['apimanagement create'] = """
+helps['service show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service.
 """
 
-helps['apimanagement'] = """
+helps['service'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service.
 """
 
-helps['apimanagement create'] = """
+helps['service list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service.
 """
 
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement'] = """
+helps['service diagnostics'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service diagnostics create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service diagnostics.
 """
 
-helps['apimanagement create'] = """
+helps['service diagnostics update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a service diagnostics.
 """
 
-helps['apimanagement create'] = """
+helps['service diagnostics delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service diagnostics.
 """
 
-helps['apimanagement create'] = """
+helps['service diagnostics list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service diagnostics.
 """
 
-helps['apimanagement create'] = """
+helps['service diagnostics show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service diagnostics.
 """
 
-helps['apimanagement'] = """
+helps['service diagnostics'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service diagnostics show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service diagnostics.
 """
 
-helps['apimanagement create'] = """
+helps['service diagnostics list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service diagnostics.
 """
 
-helps['apimanagement'] = """
+helps['service templates'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service templates create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service templates.
 """
 
-helps['apimanagement create'] = """
+helps['service templates update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a service templates.
 """
 
-helps['apimanagement create'] = """
+helps['service templates delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service templates.
 """
 
-helps['apimanagement create'] = """
+helps['service templates list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service templates.
 """
 
-helps['apimanagement create'] = """
+helps['service templates show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service templates.
 """
 
-helps['apimanagement'] = """
+helps['service templates'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service templates show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service templates.
 """
 
-helps['apimanagement create'] = """
+helps['service templates list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service templates.
 """
 
-helps['apimanagement'] = """
+helps['service groups'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service groups create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service groups.
 """
 
-helps['apimanagement create'] = """
+helps['service groups update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a service groups.
 """
 
-helps['apimanagement create'] = """
+helps['service groups delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service groups.
 """
 
-helps['apimanagement create'] = """
+helps['service groups list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service groups.
 """
 
-helps['apimanagement create'] = """
+helps['service groups show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service groups.
 """
 
-helps['apimanagement'] = """
+helps['service groups'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service groups show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service groups.
 """
 
-helps['apimanagement create'] = """
+helps['service groups list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service groups.
 """
 
-helps['apimanagement'] = """
+helps['service groups users'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service groups users create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service groups users.
 """
 
-helps['apimanagement create'] = """
+helps['service groups users delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service groups users.
 """
 
-helps['apimanagement create'] = """
+helps['service groups users list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service groups users.
 """
 
-helps['apimanagement'] = """
+helps['service groups'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service groups list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service groups.
 """
 
-helps['apimanagement'] = """
+helps['service identityproviders'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service identityproviders create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service identityproviders.
 """
 
-helps['apimanagement create'] = """
+helps['service identityproviders update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a service identityproviders.
 """
 
-helps['apimanagement create'] = """
+helps['service identityproviders delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service identityproviders.
 """
 
-helps['apimanagement create'] = """
+helps['service identityproviders list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service identityproviders.
 """
 
-helps['apimanagement create'] = """
+helps['service identityproviders show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service identityproviders.
 """
 
-helps['apimanagement'] = """
+helps['service identityproviders'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service identityproviders show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service identityproviders.
 """
 
-helps['apimanagement create'] = """
+helps['service identityproviders list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service identityproviders.
 """
 
-helps['apimanagement'] = """
+helps['service issues'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service issues show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service issues.
 """
 
-helps['apimanagement create'] = """
+helps['service issues list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service issues.
 """
 
-helps['apimanagement'] = """
+helps['service loggers'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service loggers create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service loggers.
 """
 
-helps['apimanagement create'] = """
+helps['service loggers update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a service loggers.
 """
 
-helps['apimanagement create'] = """
+helps['service loggers delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service loggers.
 """
 
-helps['apimanagement create'] = """
+helps['service loggers list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service loggers.
 """
 
-helps['apimanagement create'] = """
+helps['service loggers show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service loggers.
 """
 
-helps['apimanagement'] = """
+helps['service loggers'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service loggers show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service loggers.
 """
 
-helps['apimanagement create'] = """
+helps['service loggers list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service loggers.
 """
 
-helps['apimanagement'] = """
+helps['service locations'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
 """
 
-helps['apimanagement create'] = """
+helps['service locations list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service locations.
 """
 
-helps['apimanagement'] = """
+helps['service notifications'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service notifications create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service notifications.
 """
 
-helps['apimanagement create'] = """
+helps['service notifications list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service notifications.
 """
 
-helps['apimanagement create'] = """
+helps['service notifications show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service notifications.
 """
 
-helps['apimanagement'] = """
+helps['service notifications'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service notifications show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service notifications.
 """
 
-helps['apimanagement create'] = """
+helps['service notifications list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service notifications.
 """
 
-helps['apimanagement'] = """
+helps['service notifications recipientusers'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service notifications recipientusers create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service notifications recipientusers.
 """
 
-helps['apimanagement create'] = """
+helps['service notifications recipientusers delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service notifications recipientusers.
 """
 
-helps['apimanagement create'] = """
+helps['service notifications recipientusers list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service notifications recipientusers.
 """
 
-helps['apimanagement'] = """
+helps['service notifications'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service notifications list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service notifications.
 """
 
-helps['apimanagement'] = """
+helps['service notifications recipientemails'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service notifications recipientemails create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service notifications recipientemails.
 """
 
-helps['apimanagement create'] = """
+helps['service notifications recipientemails delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service notifications recipientemails.
 """
 
-helps['apimanagement create'] = """
+helps['service notifications recipientemails list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service notifications recipientemails.
 """
 
-helps['apimanagement'] = """
+helps['service notifications'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service notifications list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service notifications.
 """
 
-helps['apimanagement'] = """
+helps['service openidconnectproviders'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service openidconnectproviders create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service openidconnectproviders.
 """
 
-helps['apimanagement create'] = """
+helps['service openidconnectproviders update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a service openidconnectproviders.
 """
 
-helps['apimanagement create'] = """
+helps['service openidconnectproviders delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service openidconnectproviders.
 """
 
-helps['apimanagement create'] = """
+helps['service openidconnectproviders list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service openidconnectproviders.
 """
 
-helps['apimanagement create'] = """
+helps['service openidconnectproviders show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service openidconnectproviders.
 """
 
-helps['apimanagement'] = """
+helps['service openidconnectproviders'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service openidconnectproviders show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service openidconnectproviders.
 """
 
-helps['apimanagement create'] = """
+helps['service openidconnectproviders list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service openidconnectproviders.
 """
 
-helps['apimanagement'] = """
+helps['service policies'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service policies create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service policies.
 """
 
-helps['apimanagement create'] = """
+helps['service policies delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service policies.
 """
 
-helps['apimanagement create'] = """
+helps['service policies list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service policies.
 """
 
-helps['apimanagement create'] = """
+helps['service policies show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service policies.
 """
 
-helps['apimanagement'] = """
+helps['service policies'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service policies show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service policies.
 """
 
-helps['apimanagement create'] = """
+helps['service policies list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service policies.
 """
 
-helps['apimanagement'] = """
+helps['service'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service.
 """
 
-helps['apimanagement'] = """
+helps['service'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service.
 """
 
-helps['apimanagement create'] = """
+helps['service update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a service.
 """
 
-helps['apimanagement create'] = """
+helps['service show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service.
 """
 
-helps['apimanagement'] = """
+helps['service'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service.
 """
 
-helps['apimanagement'] = """
+helps['service'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service.
 """
 
-helps['apimanagement create'] = """
+helps['service update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a service.
 """
 
-helps['apimanagement create'] = """
+helps['service show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service.
 """
 
-helps['apimanagement'] = """
+helps['service'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service.
 """
 
-helps['apimanagement'] = """
+helps['service'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service.
 """
 
-helps['apimanagement create'] = """
+helps['service update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a service.
 """
 
-helps['apimanagement create'] = """
+helps['service show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service.
 """
 
-helps['apimanagement'] = """
+helps['service'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service.
 """
 
-helps['apimanagement'] = """
+helps['service products'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
 """
 
-helps['apimanagement create'] = """
+helps['service products create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service products.
 """
 
-helps['apimanagement create'] = """
+helps['service products update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a service products.
 """
 
-helps['apimanagement create'] = """
+helps['service products delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service products.
 """
 
-helps['apimanagement create'] = """
+helps['service products list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service products.
 """
 
-helps['apimanagement create'] = """
+helps['service products show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service products.
 """
 
-helps['apimanagement'] = """
+helps['service products'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
 """
 
-helps['apimanagement create'] = """
+helps['service products show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service products.
 """
 
-helps['apimanagement create'] = """
+helps['service products list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service products.
 """
 
-helps['apimanagement'] = """
+helps['service products apis'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service products apis create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service products apis.
 """
 
-helps['apimanagement create'] = """
+helps['service products apis delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service products apis.
 """
 
-helps['apimanagement create'] = """
+helps['service products apis list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service products apis.
 """
 
-helps['apimanagement'] = """
+helps['service products'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service products list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service products.
 """
 
-helps['apimanagement'] = """
+helps['service products groups'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service products groups create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service products groups.
 """
 
-helps['apimanagement create'] = """
+helps['service products groups delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service products groups.
 """
 
-helps['apimanagement create'] = """
+helps['service products groups list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service products groups.
 """
 
-helps['apimanagement'] = """
+helps['service products'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service products list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service products.
 """
 
-helps['apimanagement'] = """
+helps['service products'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service products list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service products.
 """
 
-helps['apimanagement'] = """
+helps['service products policies'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service products policies create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service products policies.
 """
 
-helps['apimanagement create'] = """
+helps['service products policies delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service products policies.
 """
 
-helps['apimanagement create'] = """
+helps['service products policies list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service products policies.
 """
 
-helps['apimanagement create'] = """
+helps['service products policies show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service products policies.
 """
 
-helps['apimanagement'] = """
+helps['service products policies'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service products policies show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service products policies.
 """
 
-helps['apimanagement create'] = """
+helps['service products policies list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service products policies.
 """
 
-helps['apimanagement'] = """
+helps['service properties'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service properties create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service properties.
 """
 
-helps['apimanagement create'] = """
+helps['service properties update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a service properties.
 """
 
-helps['apimanagement create'] = """
+helps['service properties delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service properties.
 """
 
-helps['apimanagement create'] = """
+helps['service properties list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service properties.
 """
 
-helps['apimanagement create'] = """
+helps['service properties show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service properties.
 """
 
-helps['apimanagement'] = """
+helps['service properties'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service properties show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service properties.
 """
 
-helps['apimanagement create'] = """
+helps['service properties list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service properties.
 """
 
-helps['apimanagement'] = """
+helps['service quotas'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service quotas list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service quotas.
 """
 
-helps['apimanagement'] = """
+helps['service quotas periods'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service quotas periods show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service quotas periods.
 """
 
-helps['apimanagement'] = """
+helps['service'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service.
 """
 
-helps['apimanagement'] = """
+helps['service'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
 """
 
-helps['apimanagement create'] = """
+helps['service list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service.
 """
 
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
-"""
-
-helps['apimanagement'] = """
+helps['service subscriptions'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service subscriptions create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service subscriptions.
 """
 
-helps['apimanagement create'] = """
+helps['service subscriptions update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a service subscriptions.
 """
 
-helps['apimanagement create'] = """
+helps['service subscriptions delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service subscriptions.
 """
 
-helps['apimanagement create'] = """
+helps['service subscriptions list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service subscriptions.
 """
 
-helps['apimanagement create'] = """
+helps['service subscriptions show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service subscriptions.
 """
 
-helps['apimanagement'] = """
+helps['service subscriptions'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service subscriptions list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service subscriptions.
 """
 
-helps['apimanagement create'] = """
+helps['service subscriptions show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service subscriptions.
 """
 
-helps['apimanagement'] = """
+helps['service'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service.
 """
 
-helps['apimanagement'] = """
+helps['service tenant'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service tenant show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service tenant.
 """
 
-helps['apimanagement'] = """
+helps['service tenant'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service tenant show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service tenant.
 """
 
-helps['apimanagement'] = """
+helps['service tenant'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
-"""
-
-helps['apimanagement create'] = """
-    type: command
-    short-summary: Create a Apimanagement.
 """
 
-helps['apimanagement'] = """
+helps['service users'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service users create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a service users.
 """
 
-helps['apimanagement create'] = """
+helps['service users update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a service users.
 """
 
-helps['apimanagement create'] = """
+helps['service users delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a service users.
 """
 
-helps['apimanagement create'] = """
+helps['service users list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service users.
 """
 
-helps['apimanagement create'] = """
+helps['service users show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service users.
 """
 
-helps['apimanagement'] = """
+helps['service users'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service users show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service users.
 """
 
-helps['apimanagement create'] = """
+helps['service users list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service users.
 """
 
-helps['apimanagement'] = """
+helps['service users'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service users list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service users.
 """
 
-helps['apimanagement'] = """
+helps['service users'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service users list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service users.
 """
 
-helps['apimanagement'] = """
+helps['service users'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service users list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a service users.
 """
 
-helps['apimanagement'] = """
+helps['service apis'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['service apis show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a service apis.
 """

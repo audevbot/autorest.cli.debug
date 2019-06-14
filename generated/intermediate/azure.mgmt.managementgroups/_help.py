@@ -8,72 +8,72 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 
 
-helps['apimanagement'] = """
+helps['managementgroups'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['managementgroups create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a managementgroups.
 """
 
-helps['apimanagement create'] = """
+helps['managementgroups update'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: update a managementgroups.
 """
 
-helps['apimanagement create'] = """
+helps['managementgroups delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a managementgroups.
 """
 
-helps['apimanagement create'] = """
+helps['managementgroups list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a managementgroups.
 """
 
-helps['apimanagement create'] = """
+helps['managementgroups show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a managementgroups.
 """
 
-helps['apimanagement'] = """
+helps['managementgroups'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['managementgroups show'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: show a managementgroups.
 """
 
-helps['apimanagement create'] = """
+helps['managementgroups list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a managementgroups.
 """
 
-helps['apimanagement'] = """
+helps['managementgroups'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps['managementgroups create'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: create a managementgroups.
 """
 
-helps['apimanagement create'] = """
+helps['managementgroups delete'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: delete a managementgroups.
 """
 
-helps['apimanagement'] = """
+helps[''] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['apimanagement create'] = """
+helps[' list'] = """
     type: command
-    short-summary: Create a Apimanagement.
+    short-summary: list a .
 """
