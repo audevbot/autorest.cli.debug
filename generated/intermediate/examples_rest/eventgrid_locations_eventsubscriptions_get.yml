@@ -1,0 +1,19 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    location_name: myLocation
+  tasks:
+    - name: EventSubscriptions_ListRegionalBySubscription
+      azure_rm_resource_facts:
+        api_version: '2019-01-01'
+        provider: EventGrid
+        resource_type: locations
+        resource_name: '{{ location_name }}'
+        subresource:
+          - type: eventSubscriptions
+      register: output
+    - debug:
+        var: output

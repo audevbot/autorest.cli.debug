@@ -1,0 +1,20 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    authorization_server_name: myAuthorizationServer
+  tasks:
+
+    - name: ApiManagementGetAuthorizationServer
+      azure_rm_apimanagementauthorizationserver_info:
+        resource_group: '{{resource_group}}'
+        name: '{{service_name}}'
+        authsid: '{{authorization_server_name}}'
+    
+      register: output
+    - debug:
+        var: output

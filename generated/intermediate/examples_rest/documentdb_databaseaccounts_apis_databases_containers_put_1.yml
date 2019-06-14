@@ -1,0 +1,58 @@
+- import_playbook: documentdb_databaseaccounts_apis_databases_containers_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    database_account_name: myDatabaseAccount
+    apis_name: myApis
+    database_name: myDatabase
+    container_name: myContainer
+  tasks:
+    - name: CosmosDBGremlinContainerCreateUpdate
+      azure_rm_resource:
+        idempotency: true
+        api_version: '2015-04-08'
+        resource_group: '{{ resource_group }}'
+        provider: DocumentDB
+        resource_type: databaseAccounts
+        resource_name: '{{ database_account_name }}'
+        subresource:
+          - type: apis
+            name: '{{ apis_name }}'
+          - type: databases
+            name: '{{ database_name }}'
+          - type: containers
+            name: '{{ container_name }}'
+        body:
+          properties:
+            resource:
+              id: containerName
+              indexingPolicy:
+                indexingMode: Consistent
+                automatic: true
+                includedPaths:
+                  - path: /*
+                    indexes:
+                      - kind: Range
+                        dataType: String
+                        precision: '-1'
+                      - kind: Range
+                        dataType: Number
+                        precision: '-1'
+                excludedPaths: []
+              partitionKey:
+                paths:
+                  - /AccountNumber
+                kind: Hash
+              defaultTtl: '100'
+              uniqueKeyPolicy:
+                uniqueKeys:
+                  - paths:
+                      - /testPath
+              conflictResolutionPolicy:
+                mode: LastWriterWins
+                conflictResolutionPath: /path
+            options: {}

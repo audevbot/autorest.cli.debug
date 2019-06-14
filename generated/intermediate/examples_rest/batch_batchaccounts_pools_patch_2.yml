@@ -1,0 +1,25 @@
+- import_playbook: batch_batchaccounts_pools_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    batch_account_name: myBatchAccount
+    pool_name: myPool
+  tasks:
+    - name: UpdatePool - Remove Start Task
+      azure_rm_resource:
+        method: PATCH
+        api_version: '2018-12-01'
+        resource_group: '{{ resource_group }}'
+        provider: Batch
+        resource_type: batchAccounts
+        resource_name: '{{ batch_account_name }}'
+        subresource:
+          - type: pools
+            name: '{{ pool_name }}'
+        body:
+          properties:
+            startTask: {}

@@ -1,0 +1,26 @@
+- import_playbook: apimanagement_service_products_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    product_name: myProduct
+    tag_name: myTag
+  tasks:
+    - name: ApiManagementCreateProductTag
+      azure_rm_resource:
+        idempotency: true
+        api_version: '2019-01-01'
+        resource_group: '{{ resource_group }}'
+        provider: ApiManagement
+        resource_type: service
+        resource_name: '{{ service_name }}'
+        subresource:
+          - type: products
+            name: '{{ product_name }}'
+          - type: tags
+            name: '{{ tag_name }}'
+        body: !<tag:yaml.org,2002:js/undefined> ''

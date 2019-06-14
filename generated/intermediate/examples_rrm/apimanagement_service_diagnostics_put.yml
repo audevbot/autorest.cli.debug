@@ -1,0 +1,48 @@
+# ref##loggerId##/loggers/azuremonitor
+- import_playbook: apimanagement_service_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    diagnostic_name: myDiagnostic
+  tasks:
+
+    - name: ApiManagementCreateDiagnostic
+      azure_rm_apimanagementdiagnostic:
+        resource_group: '{{resource_group}}'
+        name: '{{service_name}}'
+        diagnostic_id: '{{diagnostic_name}}'
+        always_log: allErrors
+        logger_id: /loggers/azuremonitor
+        sampling:
+          sampling_type: fixed
+          percentage: '50'
+        frontend:
+          request:
+            headers:
+              - Content-type
+            body:
+              bytes: '512'
+          response:
+            headers:
+              - Content-type
+            body:
+              bytes: '512'
+        backend:
+          request:
+            headers:
+              - Content-type
+            body:
+              bytes: '512'
+          response:
+            headers:
+              - Content-type
+            body:
+              bytes: '512'
+    

@@ -1,0 +1,24 @@
+- import_playbook: apimanagement_service_properties_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    property_name: myProperty
+  tasks:
+
+    - name: ApiManagementUpdateProperty
+      azure_rm_apimanagementproperty:
+        resource_group: '{{resource_group}}'
+        name: '{{service_name}}'
+        prop_id: '{{property_name}}'
+        tags:
+          - foo
+          - bar2
+        secret: true
+    

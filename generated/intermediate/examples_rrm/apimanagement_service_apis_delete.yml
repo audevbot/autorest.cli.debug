@@ -1,0 +1,18 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    apis_name: myApis
+  tasks:
+
+    - name: ApiManagementDeleteApi
+      azure_rm_apimanagementapi:
+        resource_group: '{{resource_group}}'
+        name: '{{service_name}}'
+        api_id: '{{apis_name}}'
+        state: absent
+    

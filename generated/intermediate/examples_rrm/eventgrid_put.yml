@@ -1,0 +1,28 @@
+# ref##scope##subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4
+# ref##endpointUrl##https://requestb.in/15ksip71
+- import_playbook: resourcegroups_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    {scope}_name: myScope
+    microsoft.event_grid_name: myMicrosoftEventGrid
+  tasks:
+
+    - name: EventSubscriptions_CreateOrUpdateForSubscription
+      azure_rm_eventgrideventsubscription:
+        scope: subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4
+        name: examplesubscription3
+        event_subscription_info:
+          properties:
+            destination:
+              endpointType: WebHook
+              properties:
+                endpointUrl: 'https://requestb.in/15ksip71'
+            filter:
+              isSubjectCaseSensitive: false
+    

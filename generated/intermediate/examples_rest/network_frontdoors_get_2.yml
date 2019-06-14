@@ -1,0 +1,19 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    front_door_name: myFrontDoor
+  tasks:
+    - name: Get Front Door
+      azure_rm_resource_facts:
+        api_version: '2019-04-01'
+        resource_group: '{{ resource_group }}'
+        provider: Network
+        resource_type: frontDoors
+        resource_name: '{{ front_door_name }}'
+      register: output
+    - debug:
+        var: output

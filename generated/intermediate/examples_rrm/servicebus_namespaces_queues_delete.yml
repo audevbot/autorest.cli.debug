@@ -1,0 +1,18 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    namespace_name: my
+    queue_name: myQueue
+  tasks:
+
+    - name: QueueDelete
+      azure_rm_servicebusqueue:
+        resource_group: '{{resource_group}}'
+        namespace_name: '{{namespace_name}}'
+        name: '{{queue_name}}'
+        state: absent
+    

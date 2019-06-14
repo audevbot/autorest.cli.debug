@@ -1,0 +1,18 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    batch_account_name: myBatchAccount
+    certificate_name: myCertificate
+  tasks:
+
+    - name: CertificateDelete
+      azure_rm_batchcertificate:
+        resource_group: '{{resource_group}}'
+        account_name: '{{batch_account_name}}'
+        name: '{{certificate_name}}'
+        state: absent
+    

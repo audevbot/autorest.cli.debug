@@ -1,0 +1,26 @@
+- import_playbook: apimanagement_service_groups_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    group_name: myGroup
+    user_name: myUser
+  tasks:
+    - name: ApiManagementCreateGroupUser
+      azure_rm_resource:
+        idempotency: true
+        api_version: '2019-01-01'
+        resource_group: '{{ resource_group }}'
+        provider: ApiManagement
+        resource_type: service
+        resource_name: '{{ service_name }}'
+        subresource:
+          - type: groups
+            name: '{{ group_name }}'
+          - type: users
+            name: '{{ user_name }}'
+        body: !<tag:yaml.org,2002:js/undefined> ''

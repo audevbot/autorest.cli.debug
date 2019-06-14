@@ -1,0 +1,23 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    front_door_name: myFrontDoor
+    frontend_endpoint_name: myFrontendEndpoint
+  tasks:
+    - name: FrontendEndpoints_DisableHttps
+      azure_rm_resource:
+        method: POST
+        api_version: '2019-04-01'
+        resource_group: '{{ resource_group }}'
+        provider: Network
+        resource_type: frontDoors
+        resource_name: '{{ front_door_name }}'
+        subresource:
+          - type: frontendEndpoints
+            name: '{{ frontend_endpoint_name }}'
+          - type: disableHttps
+        body: !<tag:yaml.org,2002:js/undefined> ''

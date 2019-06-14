@@ -1,0 +1,15 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars: {}
+  tasks:
+    - name: List all Azure Firewalls for a given subscription
+      azure_rm_resource_facts:
+        api_version: '2018-11-01'
+        provider: Network
+        resource_type: azureFirewalls
+      register: output
+    - debug:
+        var: output

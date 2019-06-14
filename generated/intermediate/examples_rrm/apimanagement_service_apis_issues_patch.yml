@@ -1,0 +1,23 @@
+- import_playbook: apimanagement_service_apis_issues_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    apis_name: myApis
+    issue_name: myIssue
+  tasks:
+
+    - name: ApiManagementUpdateApiIssue
+      azure_rm_apimanagementapiissue:
+        resource_group: '{{resource_group}}'
+        name: '{{service_name}}'
+        api_id: '{{apis_name}}'
+        issue_id: '{{issue_name}}'
+        state: closed
+    

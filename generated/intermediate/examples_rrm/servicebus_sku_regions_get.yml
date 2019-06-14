@@ -1,0 +1,16 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    sku_name: mySku
+  tasks:
+
+    - name: RegionsListBySku
+      azure_rm_servicebusregion_info:
+        sku: '{{sku_name}}'
+    
+      register: output
+    - debug:
+        var: output

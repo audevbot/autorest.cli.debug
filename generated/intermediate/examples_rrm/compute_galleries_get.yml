@@ -1,0 +1,18 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    gallery_name: myGallery
+  tasks:
+
+    - name: Get a gallery.
+      azure_rm_computegallery_info:
+        resource_group: '{{resource_group}}'
+        name: '{{gallery_name}}'
+    
+      register: output
+    - debug:
+        var: output

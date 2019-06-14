@@ -1,0 +1,26 @@
+- import_playbook: apimanagement_service_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    policy_name: myPolicy
+  tasks:
+    - name: ApiManagementCreatePolicy
+      azure_rm_resource:
+        idempotency: true
+        api_version: '2019-01-01'
+        resource_group: '{{ resource_group }}'
+        provider: ApiManagement
+        resource_type: service
+        resource_name: '{{ service_name }}'
+        subresource:
+          - type: policies
+            name: '{{ policy_name }}'
+        body:
+          properties:
+            format: xml
+            value: "<policies>\r\n  <inbound />\r\n  <backend>\r\n    <forward-request />\r\n  </backend>\r\n  <outbound />\r\n</policies>"

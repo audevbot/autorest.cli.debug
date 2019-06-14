@@ -1,0 +1,20 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    group_name: myGroup
+  tasks:
+
+    - name: ApiManagementGetGroup
+      azure_rm_apimanagementgroup_info:
+        resource_group: '{{resource_group}}'
+        name: '{{service_name}}'
+        group_id: '{{group_name}}'
+    
+      register: output
+    - debug:
+        var: output

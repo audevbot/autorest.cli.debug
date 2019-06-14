@@ -1,0 +1,22 @@
+- import_playbook: apimanagement_service_authorizationservers_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    authorization_server_name: myAuthorizationServer
+  tasks:
+
+    - name: ApiManagementUpdateAuthorizationServer
+      azure_rm_apimanagementauthorizationserver:
+        resource_group: '{{resource_group}}'
+        name: '{{service_name}}'
+        authsid: '{{authorization_server_name}}'
+        client_secret: updated
+        client_id: update
+    

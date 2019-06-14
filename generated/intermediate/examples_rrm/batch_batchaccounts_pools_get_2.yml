@@ -1,0 +1,20 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    batch_account_name: myBatchAccount
+    pool_name: myPool
+  tasks:
+
+    - name: GetPool
+      azure_rm_batchpool_info:
+        resource_group: '{{resource_group}}'
+        account_name: '{{batch_account_name}}'
+        name: '{{pool_name}}'
+    
+      register: output
+    - debug:
+        var: output

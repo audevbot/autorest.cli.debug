@@ -1,0 +1,20 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    namespace_name: my
+    migration_configuration_name: myMigrationConfiguration
+  tasks:
+
+    - name: MigrationConfigurationsGet
+      azure_rm_servicebusmigrationconfig_info:
+        resource_group: '{{resource_group}}'
+        namespace_name: '{{namespace_name}}'
+        name: '{{migration_configuration_name}}'
+    
+      register: output
+    - debug:
+        var: output

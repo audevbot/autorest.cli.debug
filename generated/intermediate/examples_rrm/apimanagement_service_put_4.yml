@@ -1,0 +1,32 @@
+- import_playbook: apimanagement_service_users_put.yml
+- import_playbook: apimanagement_service_products_put.yml
+- import_playbook: apimanagement_service_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    user_name: myUser
+    product_name: myProduct
+  tasks:
+
+    - name: ApiManagementCreateSubscription
+      azure_rm_apimanagementsubscription:
+        resource_group: '{{resource_group}}'
+        name: '{{service_name}}'
+        sid: testsub
+        owner_id: >-
+          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
+          }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/users/{{
+          user_name }}
+        scope: >-
+          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
+          }}/providers/Microsoft.ApiManagement/service/{{ service_name
+          }}/products/{{ product_name }}
+        display_name: testsub
+    

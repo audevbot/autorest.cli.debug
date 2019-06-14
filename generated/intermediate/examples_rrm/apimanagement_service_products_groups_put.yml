@@ -1,0 +1,22 @@
+- import_playbook: apimanagement_service_products_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    product_name: myProduct
+    group_name: myGroup
+  tasks:
+
+    - name: ApiManagementCreateProductGroup
+      azure_rm_apimanagementproductgroup:
+        resource_group: '{{resource_group}}'
+        name: '{{service_name}}'
+        product_id: '{{product_name}}'
+        group_id: '{{group_name}}'
+    

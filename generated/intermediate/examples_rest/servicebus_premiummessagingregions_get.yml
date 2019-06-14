@@ -1,0 +1,15 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars: {}
+  tasks:
+    - name: PremiumMessagingRegionsList
+      azure_rm_resource_facts:
+        api_version: '2017-04-01'
+        provider: ServiceBus
+        resource_type: premiumMessagingRegions
+      register: output
+    - debug:
+        var: output

@@ -1,0 +1,36 @@
+- import_playbook: network_frontdoorwebapplicationfirewallpolicies_put.yml
+- import_playbook: network_frontdoors_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    front_door_name: myFrontDoor
+    frontend_endpoint_name: myFrontendEndpoint
+    front_door_web_application_firewall_policy_name: myFrontDoorWebApplicationFirewallPolicy
+  tasks:
+    - name: Create or update specific Frontend Endpoint
+      azure_rm_resource:
+        idempotency: true
+        api_version: '2019-04-01'
+        resource_group: '{{ resource_group }}'
+        provider: Network
+        resource_type: frontDoors
+        resource_name: '{{ front_door_name }}'
+        subresource:
+          - type: frontendEndpoints
+            name: '{{ frontend_endpoint_name }}'
+        body:
+          name: frontendEndpoint1
+          properties:
+            hostName: www.contoso.com
+            sessionAffinityEnabledState: Enabled
+            sessionAffinityTtlSeconds: '60'
+            webApplicationFirewallPolicyLink:
+              id: >-
+                /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                resource_group
+                }}/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/{{
+                front_door_web_application_firewall_policy_name }}

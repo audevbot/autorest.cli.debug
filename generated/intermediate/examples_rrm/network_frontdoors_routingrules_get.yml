@@ -1,0 +1,18 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    front_door_name: myFrontDoor
+  tasks:
+
+    - name: List Routing Rules in a Front Door
+      azure_rm_frontdoorroutingrule_info:
+        resource_group: '{{resource_group}}'
+        front_door_name: '{{front_door_name}}'
+    
+      register: output
+    - debug:
+        var: output

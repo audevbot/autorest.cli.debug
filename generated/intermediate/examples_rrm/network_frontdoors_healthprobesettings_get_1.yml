@@ -1,0 +1,20 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    front_door_name: myFrontDoor
+    health_probe_setting_name: myHealthProbeSetting
+  tasks:
+
+    - name: Get HealthProbeSettings
+      azure_rm_frontdoorhealthprobesetting_info:
+        resource_group: '{{resource_group}}'
+        front_door_name: '{{front_door_name}}'
+        name: '{{health_probe_setting_name}}'
+    
+      register: output
+    - debug:
+        var: output

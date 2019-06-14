@@ -1,0 +1,17 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+  tasks:
+    - name: CosmosDBDatabaseAccountListByResourceGroup
+      azure_rm_resource_facts:
+        api_version: '2015-04-08'
+        resource_group: '{{ resource_group }}'
+        provider: DocumentDB
+        resource_type: databaseAccounts
+      register: output
+    - debug:
+        var: output

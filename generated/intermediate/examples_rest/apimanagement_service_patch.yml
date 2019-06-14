@@ -1,0 +1,22 @@
+- import_playbook: apimanagement_service_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+  tasks:
+    - name: ApiManagementUpdateServiceDisableTls10
+      azure_rm_resource:
+        method: PATCH
+        api_version: '2019-01-01'
+        resource_group: '{{ resource_group }}'
+        provider: ApiManagement
+        resource_type: service
+        resource_name: '{{ service_name }}'
+        body:
+          properties:
+            customProperties:
+              Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10: 'false'

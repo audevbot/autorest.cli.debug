@@ -1,0 +1,20 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    backend_name: myBackend
+  tasks:
+
+    - name: ApiManagementGetBackend
+      azure_rm_apimanagementbackend_info:
+        resource_group: '{{resource_group}}'
+        name: '{{service_name}}'
+        backend_id: '{{backend_name}}'
+    
+      register: output
+    - debug:
+        var: output

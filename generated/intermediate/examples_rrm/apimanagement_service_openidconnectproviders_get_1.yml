@@ -1,0 +1,20 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    openid_connect_provider_name: myOpenidConnectProvider
+  tasks:
+
+    - name: ApiManagementGetOpenIdConnectProvider
+      azure_rm_apimanagementopenidconnectprovider_info:
+        resource_group: '{{resource_group}}'
+        name: '{{service_name}}'
+        opid: '{{openid_connect_provider_name}}'
+    
+      register: output
+    - debug:
+        var: output

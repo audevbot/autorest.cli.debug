@@ -1,0 +1,20 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    apis_name: myApis
+  tasks:
+
+    - name: ApiManagementGetApiRevisionContract
+      azure_rm_apimanagementapi_info:
+        resource_group: '{{resource_group}}'
+        name: '{{service_name}}'
+        api_id: '{{apis_name}}'
+    
+      register: output
+    - debug:
+        var: output

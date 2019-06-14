@@ -1,0 +1,23 @@
+- import_playbook: apimanagement_service_users_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    user_name: myUser
+  tasks:
+
+    - name: ApiManagementUpdateUser
+      azure_rm_apimanagementuser:
+        resource_group: '{{resource_group}}'
+        name: '{{service_name}}'
+        user_id: '{{user_name}}'
+        email: foobar@outlook.com
+        first_name: foo
+        last_name: bar
+    

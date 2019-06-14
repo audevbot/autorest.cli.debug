@@ -1,0 +1,16 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    topic_type_name: myTopicType
+  tasks:
+
+    - name: TopicTypes_ListEventTypes
+      azure_rm_eventgridtopictype_info:
+        name: '{{topic_type_name}}'
+    
+      register: output
+    - debug:
+        var: output

@@ -1,0 +1,28 @@
+- import_playbook: apimanagement_service_loggers_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    logger_name: myLogger
+  tasks:
+    - name: ApiManagementUpdateLogger
+      azure_rm_resource:
+        method: PATCH
+        api_version: '2019-01-01'
+        resource_group: '{{ resource_group }}'
+        provider: ApiManagement
+        resource_type: service
+        resource_name: '{{ service_name }}'
+        subresource:
+          - type: loggers
+            name: '{{ logger_name }}'
+        body:
+          properties:
+            credentials:
+              name: hydraeventhub
+              connectionString: >-
+                Endpoint=sb://hydraeventhub-ns.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=********=

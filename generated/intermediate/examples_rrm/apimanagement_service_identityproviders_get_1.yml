@@ -1,0 +1,20 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    identity_provider_name: myIdentityProvider
+  tasks:
+
+    - name: ApiManagementGetIdentityProvider
+      azure_rm_apimanagementidentityprovider_info:
+        resource_group: '{{resource_group}}'
+        service_name: '{{service_name}}'
+        name: '{{identity_provider_name}}'
+    
+      register: output
+    - debug:
+        var: output

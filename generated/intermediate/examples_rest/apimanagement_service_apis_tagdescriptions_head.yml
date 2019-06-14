@@ -1,0 +1,24 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    apis_name: myApis
+    tag_description_name: myTagDescription
+  tasks:
+    - name: ApiManagementHeadApiTagDescription
+      azure_rm_resource:
+        method: HEAD
+        api_version: '2019-01-01'
+        resource_group: '{{ resource_group }}'
+        provider: ApiManagement
+        resource_type: service
+        resource_name: '{{ service_name }}'
+        subresource:
+          - type: apis
+            name: '{{ apis_name }}'
+          - type: tagDescriptions
+            name: '{{ tag_description_name }}'

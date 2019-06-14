@@ -1,0 +1,24 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    notification_name: myNotification
+    recipient_email_name: myRecipientEmail
+  tasks:
+    - name: ApiManagementHeadNotificationRecipientEmail
+      azure_rm_resource:
+        method: HEAD
+        api_version: '2019-01-01'
+        resource_group: '{{ resource_group }}'
+        provider: ApiManagement
+        resource_type: service
+        resource_name: '{{ service_name }}'
+        subresource:
+          - type: notifications
+            name: '{{ notification_name }}'
+          - type: recipientEmails
+            name: '{{ recipient_email_name }}'

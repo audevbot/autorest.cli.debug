@@ -1,0 +1,37 @@
+- import_playbook: apimanagement_service_users_put.yml
+- import_playbook: apimanagement_service_apis_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    apis_name: myApis
+    issue_name: myIssue
+    user_name: myUser
+  tasks:
+    - name: ApiManagementCreateApiIssue
+      azure_rm_resource:
+        idempotency: true
+        api_version: '2019-01-01'
+        resource_group: '{{ resource_group }}'
+        provider: ApiManagement
+        resource_type: service
+        resource_name: '{{ service_name }}'
+        subresource:
+          - type: apis
+            name: '{{ apis_name }}'
+          - type: issues
+            name: '{{ issue_name }}'
+        body:
+          properties:
+            title: New API issue
+            description: New API issue description
+            createdDate: '2018-02-01T22:21:20.467Z'
+            state: open
+            userId: >-
+              /subscriptions/{{ subscription_id }}/resourceGroups/{{
+              resource_group }}/providers/Microsoft.ApiManagement/service/{{
+              service_name }}/users/{{ user_name }}

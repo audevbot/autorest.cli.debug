@@ -1,0 +1,13 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    '{scope}_name': myScope
+    microsoft.event_grid_name: myMicrosoftEventGrid
+  tasks:
+    - name: EventSubscriptions_DeleteForCustomTopic
+      azure_rm_resource:
+        method: DELETE
+        api_version: '2019-01-01'

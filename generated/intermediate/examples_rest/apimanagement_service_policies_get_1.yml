@@ -1,0 +1,23 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    policy_name: myPolicy
+  tasks:
+    - name: ApiManagementGetPolicy
+      azure_rm_resource_facts:
+        api_version: '2019-01-01'
+        resource_group: '{{ resource_group }}'
+        provider: ApiManagement
+        resource_type: service
+        resource_name: '{{ service_name }}'
+        subresource:
+          - type: policies
+            name: '{{ policy_name }}'
+      register: output
+    - debug:
+        var: output

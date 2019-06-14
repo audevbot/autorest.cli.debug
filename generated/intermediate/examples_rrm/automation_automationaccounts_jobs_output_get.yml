@@ -1,0 +1,20 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    automation_account_name: myAutomationAccount
+    job_name: myJob
+  tasks:
+
+    - name: Get Job Output
+      azure_rm_automationjob_info:
+        resource_group: '{{resource_group}}'
+        automation_account_name: '{{automation_account_name}}'
+        name: '{{job_name}}'
+    
+      register: output
+    - debug:
+        var: output

@@ -1,0 +1,16 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+  tasks:
+
+    - name: List Front Doors in a Resource Group
+      azure_rm_frontdoor_info:
+        resource_group: '{{resource_group}}'
+    
+      register: output
+    - debug:
+        var: output

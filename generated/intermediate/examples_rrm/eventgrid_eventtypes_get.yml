@@ -1,0 +1,20 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    {resource_type_name}_name: myResourceType
+  tasks:
+
+    - name: Topics_ListEventTypes
+      azure_rm_eventgridtopic_info:
+        resource_group: '{{resource_group}}'
+        provider_namespace: Microsoft.Storage
+        resource_type_name: storageAccounts
+        name: '{{{resource_type_name}_name}}'
+    
+      register: output
+    - debug:
+        var: output

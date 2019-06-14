@@ -1,0 +1,27 @@
+# ref##connectionString##Endpoint=sb://hydraeventhub-ns.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=********=
+- import_playbook: apimanagement_service_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    logger_name: myLogger
+  tasks:
+
+    - name: ApiManagementCreateEHLogger
+      azure_rm_apimanagementlogger:
+        resource_group: '{{resource_group}}'
+        name: '{{service_name}}'
+        logger_id: '{{logger_name}}'
+        logger_type: azureEventHub
+        description: adding a new logger
+        credentials:
+          name: hydraeventhub
+          connectionString: >-
+            Endpoint=sb://hydraeventhub-ns.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=********=
+    

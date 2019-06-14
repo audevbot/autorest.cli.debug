@@ -1,0 +1,32 @@
+- import_playbook: apimanagement_service_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+  tasks:
+
+    - name: ApiManagementCreateServiceWithSystemCertificates
+      azure_rm_apimanagementservice:
+        resource_group: '{{resource_group}}'
+        name: '{{service_name}}'
+        tags:
+          tag1: value1
+          tag2: value2
+          tag3: value3
+        certificates:
+          - encoded_certificate: '*******Base64 encoded Certificate******************'
+            certificate_password: Password
+            store_name: CertificateAuthority
+        publisher_email: apim@autorestsdk.com
+        publisher_name: autorestsdk
+        sku:
+          name: Basic
+          capacity: '1'
+        location: Central US
+    

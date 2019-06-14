@@ -1,0 +1,21 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    policy_name: myPolicy
+  tasks:
+
+    - name: ApiManagementGetPolicyFormat
+      azure_rm_apimanagementpolicy_info:
+        resource_group: '{{resource_group}}'
+        name: '{{service_name}}'
+        policy_id: '{{policy_name}}'
+        format: rawxml
+    
+      register: output
+    - debug:
+        var: output

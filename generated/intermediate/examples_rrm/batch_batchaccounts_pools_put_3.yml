@@ -1,0 +1,31 @@
+- import_playbook: compute_images_put.yml
+- import_playbook: batch_batchaccounts_pools_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    batch_account_name: myBatchAccount
+    pool_name: myPool
+    image_name: myImage
+  tasks:
+
+    - name: CreatePool - Custom Image
+      azure_rm_batchpool:
+        resource_group: '{{resource_group}}'
+        account_name: '{{batch_account_name}}'
+        name: '{{pool_name}}'
+        vm_size: STANDARD_D4
+        deployment_configuration:
+          virtual_machine_configuration:
+            image_reference:
+              id: >-
+                /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                resource_group }}/providers/Microsoft.Compute/images/{{ image_name
+                }}
+            node_agent_sku_id: batch.node.ubuntu 14.04
+    

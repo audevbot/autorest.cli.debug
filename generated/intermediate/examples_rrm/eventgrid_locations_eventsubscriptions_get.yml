@@ -1,0 +1,16 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    location_name: myLocation
+  tasks:
+
+    - name: EventSubscriptions_ListRegionalBySubscription
+      azure_rm_eventgrideventsubscription_info:
+        location: '{{location_name}}'
+    
+      register: output
+    - debug:
+        var: output

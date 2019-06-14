@@ -1,0 +1,21 @@
+- import_playbook: apimanagement_service_caches_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    cache_name: myCache
+  tasks:
+
+    - name: ApiManagementUpdateCache
+      azure_rm_apimanagementcache:
+        resource_group: '{{resource_group}}'
+        name: '{{service_name}}'
+        cache_id: '{{cache_name}}'
+        description: Update Cache in west India
+    
