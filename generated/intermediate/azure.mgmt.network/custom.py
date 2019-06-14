@@ -1,33 +1,25 @@
 # 
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_azurefirewalls(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `azurefirewalls create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_azurefirewalls(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `azurefirewalls delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_azurefirewalls(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `azurefirewalls list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_azurefirewalls(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `azurefirewalls show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_azurefirewalls(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `azurefirewalls show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_azurefirewalls(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `azurefirewalls list`')

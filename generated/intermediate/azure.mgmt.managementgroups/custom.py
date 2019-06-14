@@ -1,41 +1,41 @@
 # 
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_managementgroups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `managementgroups create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def update_managementgroups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `managementgroups update`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_managementgroups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `managementgroups delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_managementgroups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `managementgroups list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_managementgroups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `managementgroups show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_managementgroups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `managementgroups show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_managementgroups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `managementgroups list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_managementgroups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `managementgroups create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_managementgroups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `managementgroups delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement ` list`')

@@ -1,1145 +1,1037 @@
 # 
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service apis(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def update_service apis(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis update`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service apis(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service apis(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service apis(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service apis(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service apis(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service apis(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service apis releases(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis releases create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def update_service apis releases(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis releases update`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service apis releases(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis releases delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service apis releases(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis releases list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service apis releases(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis releases show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service apis releases(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis releases show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service apis releases(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis releases list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service apis operations(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis operations create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def update_service apis operations(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis operations update`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service apis operations(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis operations delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service apis operations(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis operations list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service apis operations(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis operations show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service apis operations(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis operations show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service apis operations(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis operations list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service apis operations policies(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis operations policies create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service apis operations policies(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis operations policies delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service apis operations policies(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis operations policies list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service apis operations policies(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis operations policies show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service apis operations policies(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis operations policies show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service apis operations policies(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis operations policies list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service tags(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service tags create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def update_service tags(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service tags update`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service tags(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service tags delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service tags(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service tags list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service tags(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service tags show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service tags apis products operations(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service tags apis products operations list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service tags apis products operations(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service tags apis products operations show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service apis(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service apis policies(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis policies create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service apis policies(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis policies delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service apis policies(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis policies list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service apis policies(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis policies show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service apis policies(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis policies show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service apis policies(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis policies list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service apis schemas(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis schemas create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service apis schemas(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis schemas delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service apis schemas(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis schemas list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service apis schemas(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis schemas show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service apis schemas(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis schemas show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service apis schemas(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis schemas list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service apis diagnostics(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis diagnostics create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def update_service apis diagnostics(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis diagnostics update`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service apis diagnostics(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis diagnostics delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service apis diagnostics(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis diagnostics list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service apis diagnostics(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis diagnostics show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service apis diagnostics(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis diagnostics show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service apis diagnostics(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis diagnostics list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service apis issues(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis issues create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def update_service apis issues(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis issues update`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service apis issues(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis issues delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service apis issues(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis issues list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service apis issues(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis issues show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service apis issues(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis issues show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service apis issues(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis issues list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service apis issues comments(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis issues comments create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service apis issues comments(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis issues comments delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service apis issues comments(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis issues comments list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service apis issues comments(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis issues comments show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service apis issues comments(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis issues comments show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service apis issues comments(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis issues comments list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service apis issues attachments(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis issues attachments create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service apis issues attachments(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis issues attachments delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service apis issues attachments(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis issues attachments list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service apis issues attachments(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis issues attachments show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service apis issues attachments(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis issues attachments show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service apis issues attachments(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis issues attachments list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service apis tagdescriptions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis tagdescriptions create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service apis tagdescriptions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis tagdescriptions delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service apis tagdescriptions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis tagdescriptions list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service apis tagdescriptions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis tagdescriptions show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service apis tagdescriptions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis tagdescriptions show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service apis tagdescriptions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis tagdescriptions list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service apis(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service apiversionsets(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apiversionsets create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def update_service apiversionsets(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apiversionsets update`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service apiversionsets(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apiversionsets delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service apiversionsets(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apiversionsets list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service apiversionsets(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apiversionsets show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service apiversionsets(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apiversionsets show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service apiversionsets(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apiversionsets list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service authorizationservers(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service authorizationservers create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def update_service authorizationservers(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service authorizationservers update`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service authorizationservers(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service authorizationservers delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service authorizationservers(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service authorizationservers list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service authorizationservers(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service authorizationservers show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service authorizationservers(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service authorizationservers show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service authorizationservers(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service authorizationservers list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service backends(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service backends create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def update_service backends(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service backends update`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service backends(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service backends delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service backends(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service backends list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service backends(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service backends show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service backends(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service backends show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service backends(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service backends list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service caches(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service caches create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def update_service caches(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service caches update`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service caches(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service caches delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service caches(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service caches list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service caches(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service caches show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service caches(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service caches show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service caches(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service caches list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service certificates(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service certificates create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service certificates(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service certificates delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service certificates(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service certificates list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service certificates(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service certificates show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service certificates(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service certificates show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service certificates(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service certificates list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement ` list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def update_service(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service update`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service diagnostics(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service diagnostics create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def update_service diagnostics(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service diagnostics update`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service diagnostics(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service diagnostics delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service diagnostics(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service diagnostics list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service diagnostics(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service diagnostics show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service diagnostics(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service diagnostics show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service diagnostics(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service diagnostics list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service templates(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service templates create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def update_service templates(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service templates update`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service templates(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service templates delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service templates(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service templates list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service templates(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service templates show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service templates(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service templates show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service templates(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service templates list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service groups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service groups create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def update_service groups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service groups update`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service groups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service groups delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service groups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service groups list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service groups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service groups show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service groups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service groups show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service groups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service groups list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service groups users(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service groups users create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service groups users(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service groups users delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service groups users(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service groups users list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service groups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service groups list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service identityproviders(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service identityproviders create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def update_service identityproviders(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service identityproviders update`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service identityproviders(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service identityproviders delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service identityproviders(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service identityproviders list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service identityproviders(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service identityproviders show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service identityproviders(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service identityproviders show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service identityproviders(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service identityproviders list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service issues(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service issues show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service issues(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service issues list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service loggers(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service loggers create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def update_service loggers(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service loggers update`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service loggers(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service loggers delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service loggers(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service loggers list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service loggers(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service loggers show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service loggers(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service loggers show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service loggers(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service loggers list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service locations(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service locations list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service notifications(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service notifications create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service notifications(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service notifications list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service notifications(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service notifications show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service notifications(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service notifications show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service notifications(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service notifications list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service notifications recipientusers(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service notifications recipientusers create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service notifications recipientusers(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service notifications recipientusers delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service notifications recipientusers(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service notifications recipientusers list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service notifications(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service notifications list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service notifications recipientemails(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service notifications recipientemails create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service notifications recipientemails(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service notifications recipientemails delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service notifications recipientemails(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service notifications recipientemails list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service notifications(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service notifications list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service openidconnectproviders(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service openidconnectproviders create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def update_service openidconnectproviders(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service openidconnectproviders update`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service openidconnectproviders(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service openidconnectproviders delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service openidconnectproviders(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service openidconnectproviders list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service openidconnectproviders(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service openidconnectproviders show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service openidconnectproviders(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service openidconnectproviders show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service openidconnectproviders(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service openidconnectproviders list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service policies(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service policies create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service policies(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service policies delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service policies(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service policies list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service policies(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service policies show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service policies(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service policies show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service policies(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service policies list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def update_service(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service update`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def update_service(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service update`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def update_service(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service update`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service products(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service products create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def update_service products(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service products update`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service products(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service products delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service products(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service products list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service products(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service products show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service products(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service products show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service products(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service products list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service products apis(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service products apis create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service products apis(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service products apis delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service products apis(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service products apis list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service products(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service products list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service products groups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service products groups create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service products groups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service products groups delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service products groups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service products groups list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service products(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service products list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service products(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service products list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service products policies(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service products policies create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service products policies(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service products policies delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service products policies(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service products policies list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service products policies(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service products policies show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service products policies(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service products policies show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service products policies(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service products policies list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service properties(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service properties create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def update_service properties(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service properties update`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service properties(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service properties delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service properties(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service properties list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service properties(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service properties show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service properties(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service properties show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service properties(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service properties list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service quotas(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service quotas list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service quotas periods(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service quotas periods show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service subscriptions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service subscriptions create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def update_service subscriptions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service subscriptions update`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service subscriptions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service subscriptions delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service subscriptions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service subscriptions list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service subscriptions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service subscriptions show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service subscriptions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service subscriptions list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service subscriptions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service subscriptions show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service tenant(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service tenant show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service tenant(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service tenant show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_service users(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service users create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def update_service users(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service users update`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_service users(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service users delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service users(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service users list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service users(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service users show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service users(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service users show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service users(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service users list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service users(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service users list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service users(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service users list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_service users(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service users list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_service apis(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `service apis show`')

@@ -1,45 +1,29 @@
 # 
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_automationaccounts jobs(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `automationaccounts jobs create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_automationaccounts jobs(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `automationaccounts jobs list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_automationaccounts jobs(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `automationaccounts jobs show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_automationaccounts jobs(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `automationaccounts jobs show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_automationaccounts jobs(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `automationaccounts jobs list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_automationaccounts jobs streams(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `automationaccounts jobs streams show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_automationaccounts jobs streams(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `automationaccounts jobs streams list`')

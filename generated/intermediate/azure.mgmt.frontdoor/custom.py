@@ -1,153 +1,145 @@
 # 
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_frontdoors(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_frontdoors(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_frontdoors(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_frontdoors(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_frontdoors(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_frontdoors(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_frontdoors routingrules(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors routingrules create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_frontdoors routingrules(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors routingrules delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_frontdoors routingrules(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors routingrules list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_frontdoors routingrules(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors routingrules show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_frontdoors routingrules(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors routingrules show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_frontdoors routingrules(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors routingrules list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_frontdoors healthprobesettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors healthprobesettings create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_frontdoors healthprobesettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors healthprobesettings delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_frontdoors healthprobesettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors healthprobesettings list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_frontdoors healthprobesettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors healthprobesettings show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_frontdoors healthprobesettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors healthprobesettings show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_frontdoors healthprobesettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors healthprobesettings list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_frontdoors loadbalancingsettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors loadbalancingsettings create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_frontdoors loadbalancingsettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors loadbalancingsettings delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_frontdoors loadbalancingsettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors loadbalancingsettings list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_frontdoors loadbalancingsettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors loadbalancingsettings show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_frontdoors loadbalancingsettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors loadbalancingsettings show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_frontdoors loadbalancingsettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors loadbalancingsettings list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_frontdoors backendpools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors backendpools create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_frontdoors backendpools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors backendpools delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_frontdoors backendpools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors backendpools list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_frontdoors backendpools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors backendpools show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_frontdoors backendpools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors backendpools show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_frontdoors backendpools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors backendpools list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def create_frontdoors frontendendpoints(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors frontendendpoints create`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def delete_frontdoors frontendendpoints(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors frontendendpoints delete`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_frontdoors frontendendpoints(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors frontendendpoints list`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_frontdoors frontendendpoints(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors frontendendpoints show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def show_frontdoors frontendendpoints(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors frontendendpoints show`')
 
 
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
-
-
-def create_apimanagement(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `apimanagement create`')
+def list_frontdoors frontendendpoints(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    raise CLIError('TODO: Implement `frontdoors frontendendpoints list`')
