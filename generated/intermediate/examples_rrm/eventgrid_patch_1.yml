@@ -1,0 +1,23 @@
+# ref##scope##subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg
+- import_playbook: eventhub_namespaces_eventhubs_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    {scope}_name: myScope
+    microsoft.event_grid_name: myMicrosoftEventGrid
+    resource_group: myResourceGroup
+    namespace_name: my
+    eventhub_name: myEventhub
+  tasks:
+
+    - name: EventSubscriptions_UpdateForResourceGroup
+      azure_rm_eventgrideventsubscription:
+        scope: >-
+          subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg
+        name: examplesubscription2
+    

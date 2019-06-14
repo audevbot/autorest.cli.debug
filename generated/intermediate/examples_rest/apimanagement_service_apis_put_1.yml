@@ -1,0 +1,27 @@
+- import_playbook: apimanagement_service_apis_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    apis_name: myApis
+  tasks:
+    - name: ApiManagementCreateApiUsingSwaggerImport
+      azure_rm_resource:
+        idempotency: true
+        api_version: '2019-01-01'
+        resource_group: '{{ resource_group }}'
+        provider: ApiManagement
+        resource_type: service
+        resource_name: '{{ service_name }}'
+        subresource:
+          - type: apis
+            name: '{{ apis_name }}'
+        body:
+          properties:
+            format: swagger-link-json
+            value: 'http://petstore.swagger.io/v2/swagger.json'
+            path: petstore

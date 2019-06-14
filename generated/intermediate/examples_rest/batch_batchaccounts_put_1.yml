@@ -1,0 +1,37 @@
+- import_playbook: storage_storageaccounts_put.yml
+- import_playbook: keyvault_vaults_put.yml
+- import_playbook: batch_batchaccounts_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    batch_account_name: myBatchAccount
+    storage_account_name: myStorageAccount
+    vault_name: myVault
+  tasks:
+    - name: BatchAccountCreate_BYOS
+      azure_rm_resource:
+        idempotency: true
+        api_version: '2018-12-01'
+        resource_group: '{{ resource_group }}'
+        provider: Batch
+        resource_type: batchAccounts
+        resource_name: '{{ batch_account_name }}'
+        body:
+          location: japaneast
+          properties:
+            autoStorage:
+              storageAccountId: >-
+                /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                resource_group }}/providers/Microsoft.Storage/storageAccounts/{{
+                storage_account_name }}
+            poolAllocationMode: UserSubscription
+            keyVaultReference:
+              id: >-
+                /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                resource_group }}/providers/Microsoft.KeyVault/vaults/{{
+                vault_name }}
+              url: 'http://sample.vault.azure.net/'

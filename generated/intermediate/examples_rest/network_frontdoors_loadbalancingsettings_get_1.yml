@@ -1,0 +1,23 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    front_door_name: myFrontDoor
+    load_balancing_setting_name: myLoadBalancingSetting
+  tasks:
+    - name: Get LoadBalancingSettings
+      azure_rm_resource_facts:
+        api_version: '2019-04-01'
+        resource_group: '{{ resource_group }}'
+        provider: Network
+        resource_type: frontDoors
+        resource_name: '{{ front_door_name }}'
+        subresource:
+          - type: loadBalancingSettings
+            name: '{{ load_balancing_setting_name }}'
+      register: output
+    - debug:
+        var: output

@@ -1,0 +1,20 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    automation_account_name: myAutomationAccount
+  tasks:
+
+    - name: >-
+        List software update configurations Targeting a specific azure virtual
+        machine
+      azure_rm_softwareupdateconfiguration_info:
+        resource_group: '{{resource_group}}'
+        automation_account_name: '{{automation_account_name}}'
+    
+      register: output
+    - debug:
+        var: output

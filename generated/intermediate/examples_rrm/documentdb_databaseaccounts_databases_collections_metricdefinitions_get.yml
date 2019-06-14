@@ -1,0 +1,22 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    database_account_name: myDatabaseAccount
+    database_name: myDatabase
+    collection_name: myCollection
+  tasks:
+
+    - name: CosmosDBCollectionGetMetricDefinitions
+      azure_rm_cosmosdbcollection_info:
+        resource_group: '{{resource_group}}'
+        name: '{{database_account_name}}'
+        database_rid: '{{database_name}}'
+        collection_rid: '{{collection_name}}'
+    
+      register: output
+    - debug:
+        var: output

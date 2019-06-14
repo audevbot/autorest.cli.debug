@@ -1,0 +1,15 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    '{scope}_name': myScope
+    microsoft.event_grid_name: myMicrosoftEventGrid
+  tasks:
+    - name: EventSubscriptions_GetForResource
+      azure_rm_resource_facts:
+        api_version: '2019-01-01'
+      register: output
+    - debug:
+        var: output

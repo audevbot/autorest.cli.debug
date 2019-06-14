@@ -1,0 +1,22 @@
+- import_playbook: servicebus_namespaces_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    namespace_name: my
+  tasks:
+
+    - name: NameSpaceUpdate
+      azure_rm_servicebusnamespace:
+        resource_group: '{{resource_group}}'
+        name: '{{namespace_name}}'
+        location: South Central US
+        tags:
+          tag3: value3
+          tag4: value4
+    

@@ -1,0 +1,24 @@
+- import_playbook: resourcegroups_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    '{scope}_name': myScope
+    microsoft.event_grid_name: myMicrosoftEventGrid
+  tasks:
+    - name: EventSubscriptions_CreateOrUpdateForResourceGroup
+      azure_rm_resource:
+        idempotency: true
+        api_version: '2019-01-01'
+        body:
+          properties:
+            destination:
+              endpointType: WebHook
+              properties:
+                endpointUrl: 'https://requestb.in/15ksip71'
+            filter:
+              isSubjectCaseSensitive: false
+              subjectBeginsWith: ExamplePrefix
+              subjectEndsWith: ExampleSuffix

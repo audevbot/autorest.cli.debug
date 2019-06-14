@@ -1,0 +1,17 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+  tasks:
+
+    - name: ApiManagementDeleteSubscription
+      azure_rm_apimanagementsubscription:
+        resource_group: '{{resource_group}}'
+        name: '{{service_name}}'
+        sid: testsub
+        state: absent
+    

@@ -1,0 +1,63 @@
+- import_playbook: network_virtualnetworks_subnets_put.yml
+- import_playbook: network_virtualnetworks_subnets_put.yml
+- import_playbook: network_virtualnetworks_subnets_put.yml
+- import_playbook: servicebus_namespaces_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    namespace_name: my
+    network_rule_set_name: myNetworkRuleSet
+    virtual_network_name: myVirtualNetwork
+    subnet_name: mySubnet
+  tasks:
+    - name: NameSpaceNetworkRuleSetCreate
+      azure_rm_resource:
+        idempotency: true
+        api_version: '2017-04-01'
+        resource_group: '{{ resource_group }}'
+        provider: ServiceBus
+        resource_type: namespaces
+        resource_name: '{{ namespace_name }}'
+        subresource:
+          - type: networkRuleSets
+            name: '{{ network_rule_set_name }}'
+        body:
+          properties:
+            defaultAction: Deny
+            virtualNetworkRules:
+              - subnet:
+                  id: >-
+                    /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                    resource_group
+                    }}/providers/Microsoft.Network/virtualNetworks/{{
+                    virtual_network_name }}/subnets/{{ subnet_name }}
+                ignoreMissingVnetServiceEndpoint: true
+              - subnet:
+                  id: >-
+                    /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                    resource_group
+                    }}/providers/Microsoft.Network/virtualNetworks/{{
+                    virtual_network_name }}/subnets/{{ subnet_name }}
+                ignoreMissingVnetServiceEndpoint: false
+              - subnet:
+                  id: >-
+                    /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                    resource_group
+                    }}/providers/Microsoft.Network/virtualNetworks/{{
+                    virtual_network_name }}/subnets/{{ subnet_name }}
+                ignoreMissingVnetServiceEndpoint: false
+            ipRules:
+              - ipMask: 1.1.1.1
+                action: Allow
+              - ipMask: 1.1.1.2
+                action: Allow
+              - ipMask: 1.1.1.3
+                action: Allow
+              - ipMask: 1.1.1.4
+                action: Allow
+              - ipMask: 1.1.1.5
+                action: Allow

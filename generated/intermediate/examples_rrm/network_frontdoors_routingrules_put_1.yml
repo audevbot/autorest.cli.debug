@@ -1,0 +1,49 @@
+- import_playbook: network_frontdoors_frontendendpoints_put.yml
+- import_playbook: network_frontdoors_frontendendpoints_put.yml
+# ref##customPath##/api
+- import_playbook: network_frontdoors_routingrules_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    front_door_name: myFrontDoor
+    routing_rule_name: myRoutingRule
+    frontend_endpoint_name: myFrontendEndpoint
+  tasks:
+
+    - name: Create or update specific Redirect Routing Rule
+      azure_rm_frontdoorroutingrule:
+        resource_group: '{{resource_group}}'
+        front_door_name: '{{front_door_name}}'
+        name: '{{routing_rule_name}}'
+        routing_rule_parameters:
+          name: redirectRoutingRule1
+          properties:
+            frontendEndpoints:
+              - id: >-
+                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                  resource_group }}/providers/Microsoft.Network/frontDoors/{{
+                  front_door_name }}/frontendEndpoints/{{ frontend_endpoint_name }}
+              - id: >-
+                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                  resource_group }}/providers/Microsoft.Network/frontDoors/{{
+                  front_door_name }}/frontendEndpoints/{{ frontend_endpoint_name }}
+            acceptedProtocols:
+              - Https
+            patternsToMatch:
+              - /*
+            routeConfiguration:
+              '@odata.type': '#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration'
+              redirectType: Moved
+              redirectProtocol: HttpsOnly
+              customHost: www.bing.com
+              customPath: /api
+              customFragment: fragment
+              customQueryString: a=b
+            enabledState: Enabled
+    

@@ -1,0 +1,15 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars: {}
+  tasks:
+    - name: ApiManagementServiceCheckNameAvailability
+      azure_rm_resource:
+        method: POST
+        api_version: '2019-01-01'
+        provider: ApiManagement
+        resource_type: checkNameAvailability
+        body:
+          name: apimService1

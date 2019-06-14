@@ -1,0 +1,38 @@
+- import_playbook: apimanagement_service_apis_put.yml
+- import_playbook: apimanagement_service_apis_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    apis_name: myApis
+  tasks:
+    - name: ApiManagementCreateApiClone
+      azure_rm_resource:
+        idempotency: true
+        api_version: '2019-01-01'
+        resource_group: '{{ resource_group }}'
+        provider: ApiManagement
+        resource_type: service
+        resource_name: '{{ service_name }}'
+        subresource:
+          - type: apis
+            name: '{{ apis_name }}'
+        body:
+          properties:
+            displayName: Echo API2
+            description: Copy of Existing Echo Api including Operations.
+            subscriptionRequired: true
+            serviceUrl: 'http://echoapi.cloudapp.net/api'
+            path: echo2
+            protocols:
+              - http
+              - https
+            isCurrent: true
+            sourceApiId: >-
+              /subscriptions/{{ subscription_id }}/resourceGroups/{{
+              resource_group }}/providers/Microsoft.ApiManagement/service/{{
+              service_name }}/apis/{{ apis_name }}

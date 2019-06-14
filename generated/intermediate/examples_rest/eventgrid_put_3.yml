@@ -1,0 +1,36 @@
+- import_playbook: storage_storageaccounts_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    '{scope}_name': myScope
+    microsoft.event_grid_name: myMicrosoftEventGrid
+    resource_group: myResourceGroup
+    storage_account_name: myStorageAccount
+  tasks:
+    - name: EventSubscriptions_CreateOrUpdateForCustomTopic_WebhookDestination
+      azure_rm_resource:
+        idempotency: true
+        api_version: '2019-01-01'
+        body:
+          properties:
+            destination:
+              endpointType: WebHook
+              properties:
+                endpointUrl: >-
+                  https://contosofunction.azurewebsites.net/api/HttpTriggerCSharp1?code=<HIDDEN>
+            filter:
+              isSubjectCaseSensitive: false
+              subjectBeginsWith: ExamplePrefix
+              subjectEndsWith: ExampleSuffix
+            deadLetterDestination:
+              endpointType: StorageBlob
+              properties:
+                resourceId: >-
+                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                  resource_group
+                  }}/providers/Microsoft.Storage/storageAccounts/{{
+                  storage_account_name }}
+                blobContainerName: contosocontainer

@@ -1,0 +1,20 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    logger_name: myLogger
+  tasks:
+
+    - name: ApiManagementGetLogger
+      azure_rm_apimanagementlogger_info:
+        resource_group: '{{resource_group}}'
+        name: '{{service_name}}'
+        logger_id: '{{logger_name}}'
+    
+      register: output
+    - debug:
+        var: output

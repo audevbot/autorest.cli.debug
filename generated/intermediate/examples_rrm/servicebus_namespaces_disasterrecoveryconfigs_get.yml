@@ -1,0 +1,19 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    namespace_name: my
+  tasks:
+
+    - name: SBAliasList
+      azure_rm_servicebusdisasterrecoveryconfig_info:
+        resource_group: '{{resource_group}}'
+        namespace_name: '{{namespace_name}}'
+        alias: sdk-DisasterRecovery-3814
+    
+      register: output
+    - debug:
+        var: output

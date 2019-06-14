@@ -1,0 +1,22 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    apis_name: myApis
+  tasks:
+
+    - name: ApiManagementGetApiExportInOpenApi2dot0
+      azure_rm_apimanagementapiexport_info:
+        resource_group: '{{resource_group}}'
+        name: '{{service_name}}'
+        api_id: '{{apis_name}}'
+        format: swagger-link
+        export: 'true'
+    
+      register: output
+    - debug:
+        var: output

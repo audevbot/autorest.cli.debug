@@ -1,0 +1,21 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    namespace_name: my
+  tasks:
+    - name: NameSpaceUpdate
+      azure_rm_resource:
+        method: POST
+        api_version: '2017-04-01'
+        resource_group: '{{ resource_group }}'
+        provider: ServiceBus
+        resource_type: namespaces
+        resource_name: '{{ namespace_name }}'
+        subresource:
+          - type: migrate
+        body:
+          targetNamespaceType: EventHub

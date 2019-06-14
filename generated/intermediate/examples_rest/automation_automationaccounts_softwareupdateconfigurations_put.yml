@@ -1,0 +1,86 @@
+- import_playbook: automation_automationaccounts_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    automation_account_name: myAutomationAccount
+    software_update_configuration_name: mySoftwareUpdateConfiguration
+  tasks:
+    - name: Create software update configuration
+      azure_rm_resource:
+        idempotency: true
+        api_version: 2017-05-15-preview
+        resource_group: '{{ resource_group }}'
+        provider: Automation
+        resource_type: automationAccounts
+        resource_name: '{{ automation_account_name }}'
+        subresource:
+          - type: softwareUpdateConfigurations
+            name: '{{ software_update_configuration_name }}'
+        body:
+          properties:
+            updateConfiguration:
+              operatingSystem: Windows
+              duration: PT2H0M
+              windows:
+                excludedKbNumbers:
+                  - '168934'
+                  - '168973'
+                includedUpdateClassifications: Critical
+                rebootSetting: IfRequired
+              azureVirtualMachines:
+                - >-
+                  /subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-01
+                - >-
+                  /subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-02
+                - >-
+                  /subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-03
+              nonAzureComputerNames:
+                - box1.contoso.com
+                - box2.contoso.com
+              targets:
+                azureQueries:
+                  - scope:
+                      - >-
+                        /subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources
+                      - /subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067
+                    tagSettings:
+                      tags:
+                        - tag1:
+                            - tag1Value1
+                            - tag1Value2
+                            - tag1Value3
+                        - tag2:
+                            - tag2Value1
+                            - tag2Value2
+                            - tag2Value3
+                      filterOperator: All
+                    locations:
+                      - Japan East
+                      - UK South
+                nonAzureQueries:
+                  - FunctionAlias: SavedSearch1
+                    WorkspaceId: WorkspaceId1
+                  - FunctionAlias: SavedSearch2
+                    WorkspaceId: WorkspaceId2
+            scheduleInfo:
+              frequency: Hour
+              startTime: '2017-10-19T12:22:57+00:00'
+              timeZone: America/Los_Angeles
+              interval: '1'
+              expiryTime: '2018-11-09T11:22:57+00:00'
+              advancedSchedule:
+                weekDays:
+                  - Monday
+                  - Thursday
+            tasks:
+              preTask:
+                source: HelloWorld
+                parameters:
+                  COMPUTERNAME: Computer1
+              postTask:
+                source: GetCache
+                parameters: null

@@ -1,0 +1,20 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    quota_name: myQuota
+  tasks:
+
+    - name: ApiManagementGetQuotaCounterKeys
+      azure_rm_apimanagementquotabycounterkey_info:
+        resource_group: '{{resource_group}}'
+        name: '{{service_name}}'
+        quota_counter_key: '{{quota_name}}'
+    
+      register: output
+    - debug:
+        var: output

@@ -1,0 +1,24 @@
+# ref##metadataEndpoint##https://oidprovider-template3.net
+- import_playbook: apimanagement_service_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    openid_connect_provider_name: myOpenidConnectProvider
+  tasks:
+
+    - name: ApiManagementCreateOpenIdConnectProvider
+      azure_rm_apimanagementopenidconnectprovider:
+        resource_group: '{{resource_group}}'
+        name: '{{service_name}}'
+        opid: '{{openid_connect_provider_name}}'
+        display_name: templateoidprovider3
+        metadata_endpoint: 'https://oidprovider-template3.net'
+        client_id: oidprovidertemplate3
+    

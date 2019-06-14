@@ -1,0 +1,18 @@
+- import_playbook: eventgrid_topics_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    topic_name: myTopic
+  tasks:
+
+    - name: Topics_Update
+      azure_rm_eventgridtopic:
+        resource_group: '{{resource_group}}'
+        name: '{{topic_name}}'
+    

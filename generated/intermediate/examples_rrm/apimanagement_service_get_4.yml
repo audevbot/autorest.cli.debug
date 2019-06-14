@@ -1,0 +1,14 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+  tasks:
+
+    - name: ApiManagementListServiceBySubscription
+      azure_rm_apimanagementservice_info: {}
+    
+      register: output
+    - debug:
+        var: output

@@ -1,0 +1,25 @@
+- import_playbook: resourcegroups_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    namespace_name: my
+  tasks:
+
+    - name: NameSpaceCreate
+      azure_rm_servicebusnamespace:
+        resource_group: '{{resource_group}}'
+        name: '{{namespace_name}}'
+        location: South Central US
+        tags:
+          tag1: value1
+          tag2: value2
+        sku:
+          name: Standard
+          tier: Standard
+    

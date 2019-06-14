@@ -1,0 +1,28 @@
+- import_playbook: network_frontdoors_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    front_door_name: myFrontDoor
+    health_probe_setting_name: myHealthProbeSetting
+  tasks:
+    - name: Create or update specific HealthProbeSettings
+      azure_rm_resource:
+        idempotency: true
+        api_version: '2019-04-01'
+        resource_group: '{{ resource_group }}'
+        provider: Network
+        resource_type: frontDoors
+        resource_name: '{{ front_door_name }}'
+        subresource:
+          - type: healthProbeSettings
+            name: '{{ health_probe_setting_name }}'
+        body:
+          name: healthProbeSettings1
+          properties:
+            path: /
+            protocol: Http
+            intervalInSeconds: '120'

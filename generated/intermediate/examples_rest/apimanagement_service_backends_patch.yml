@@ -1,0 +1,28 @@
+- import_playbook: apimanagement_service_backends_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    backend_name: myBackend
+  tasks:
+    - name: ApiManagementUpdateBackend
+      azure_rm_resource:
+        method: PATCH
+        api_version: '2019-01-01'
+        resource_group: '{{ resource_group }}'
+        provider: ApiManagement
+        resource_type: service
+        resource_name: '{{ service_name }}'
+        subresource:
+          - type: backends
+            name: '{{ backend_name }}'
+        body:
+          properties:
+            description: description5308
+            tls:
+              validateCertificateChain: false
+              validateCertificateName: true

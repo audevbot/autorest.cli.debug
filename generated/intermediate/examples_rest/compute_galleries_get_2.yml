@@ -1,0 +1,15 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars: {}
+  tasks:
+    - name: List galleries in a subscription.
+      azure_rm_resource_facts:
+        api_version: '2019-03-01'
+        provider: Compute
+        resource_type: galleries
+      register: output
+    - debug:
+        var: output

@@ -1,0 +1,23 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    batch_account_name: myBatchAccount
+    certificate_name: myCertificate
+  tasks:
+    - name: Get Certificate
+      azure_rm_resource_facts:
+        api_version: '2018-12-01'
+        resource_group: '{{ resource_group }}'
+        provider: Batch
+        resource_type: batchAccounts
+        resource_name: '{{ batch_account_name }}'
+        subresource:
+          - type: certificates
+            name: '{{ certificate_name }}'
+      register: output
+    - debug:
+        var: output

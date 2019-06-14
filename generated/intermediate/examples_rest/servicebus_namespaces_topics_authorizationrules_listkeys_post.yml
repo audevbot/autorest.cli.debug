@@ -1,0 +1,26 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    namespace_name: my
+    topic_name: myTopic
+    authorization_rule_name: myAuthorizationRule
+  tasks:
+    - name: TopicAuthorizationRuleListKey
+      azure_rm_resource:
+        method: POST
+        api_version: '2015-08-01'
+        resource_group: '{{ resource_group }}'
+        provider: ServiceBus
+        resource_type: namespaces
+        resource_name: '{{ namespace_name }}'
+        subresource:
+          - type: topics
+            name: '{{ topic_name }}'
+          - type: authorizationRules
+            name: '{{ authorization_rule_name }}'
+          - type: ListKeys
+        body: !<tag:yaml.org,2002:js/undefined> ''

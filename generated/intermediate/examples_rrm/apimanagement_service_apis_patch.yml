@@ -1,0 +1,24 @@
+# ref##serviceUrl##http://echoapi.cloudapp.net/api2
+- import_playbook: apimanagement_service_apis_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    apis_name: myApis
+  tasks:
+
+    - name: ApiManagementUpdateApi
+      azure_rm_apimanagementapi:
+        resource_group: '{{resource_group}}'
+        name: '{{service_name}}'
+        api_id: '{{apis_name}}'
+        display_name: Echo API New
+        service_url: 'http://echoapi.cloudapp.net/api2'
+        path: newecho
+    

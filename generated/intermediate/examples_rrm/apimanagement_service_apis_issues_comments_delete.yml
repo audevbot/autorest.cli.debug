@@ -1,0 +1,22 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    apis_name: myApis
+    issue_name: myIssue
+    comment_name: myComment
+  tasks:
+
+    - name: ApiManagementDeleteApiIssueComment
+      azure_rm_apimanagementapiissuecomment:
+        resource_group: '{{resource_group}}'
+        name: '{{service_name}}'
+        api_id: '{{apis_name}}'
+        issue_id: '{{issue_name}}'
+        comment_id: '{{comment_name}}'
+        state: absent
+    

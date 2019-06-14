@@ -1,0 +1,23 @@
+- import_playbook: resourcegroups_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    topic_name: myTopic
+  tasks:
+    - name: Topics_CreateOrUpdate
+      azure_rm_resource:
+        idempotency: true
+        api_version: '2019-01-01'
+        resource_group: '{{ resource_group }}'
+        provider: EventGrid
+        resource_type: topics
+        resource_name: '{{ topic_name }}'
+        body:
+          location: westus2
+          tags:
+            tag1: value1
+            tag2: value2

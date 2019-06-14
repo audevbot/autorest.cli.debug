@@ -1,0 +1,27 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    apis_name: myApis
+    issue_name: myIssue
+    attachment_name: myAttachment
+  tasks:
+    - name: ApiManagementDeleteApiIssueAttachment
+      azure_rm_resource:
+        method: DELETE
+        api_version: '2019-01-01'
+        resource_group: '{{ resource_group }}'
+        provider: ApiManagement
+        resource_type: service
+        resource_name: '{{ service_name }}'
+        subresource:
+          - type: apis
+            name: '{{ apis_name }}'
+          - type: issues
+            name: '{{ issue_name }}'
+          - type: attachments
+            name: '{{ attachment_name }}'

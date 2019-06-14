@@ -1,0 +1,18 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    namespace_name: my
+    disaster_recovery_config_name: myDisasterRecoveryConfig
+  tasks:
+
+    - name: SBAliasDelete
+      azure_rm_servicebusdisasterrecoveryconfig:
+        resource_group: '{{resource_group}}'
+        name: '{{namespace_name}}'
+        alias: '{{disaster_recovery_config_name}}'
+        state: absent
+    

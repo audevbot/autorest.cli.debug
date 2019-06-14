@@ -1,0 +1,24 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    apis_name: myApis
+    schema_name: mySchema
+  tasks:
+    - name: ApiManagementDeleteApiSchema
+      azure_rm_resource:
+        method: DELETE
+        api_version: '2019-01-01'
+        resource_group: '{{ resource_group }}'
+        provider: ApiManagement
+        resource_type: service
+        resource_name: '{{ service_name }}'
+        subresource:
+          - type: apis
+            name: '{{ apis_name }}'
+          - type: schemas
+            name: '{{ schema_name }}'

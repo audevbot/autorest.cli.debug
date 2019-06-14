@@ -1,0 +1,25 @@
+- import_playbook: apimanagement_service_quotas_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    quota_name: myQuota
+  tasks:
+    - name: ApiManagementUpdateQuotaCounterKey
+      azure_rm_resource:
+        method: PATCH
+        api_version: '2019-01-01'
+        resource_group: '{{ resource_group }}'
+        provider: ApiManagement
+        resource_type: service
+        resource_name: '{{ service_name }}'
+        subresource:
+          - type: quotas
+            name: '{{ quota_name }}'
+        body:
+          callsCount: '0'
+          kbTransferred: '2.5630078125'

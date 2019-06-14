@@ -1,0 +1,20 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    location_name: myLocation
+  tasks:
+
+    - name: ApiManagementServiceGetNetworkStatusByLocation
+      azure_rm_apimanagementnetworkstatu_info:
+        resource_group: '{{resource_group}}'
+        service_name: '{{service_name}}'
+        name: '{{location_name}}'
+    
+      register: output
+    - debug:
+        var: output

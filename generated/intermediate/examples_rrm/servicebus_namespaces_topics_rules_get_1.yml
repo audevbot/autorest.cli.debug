@@ -1,0 +1,23 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    namespace_name: my
+    topic_name: myTopic
+    rule_name: myRule
+  tasks:
+
+    - name: RulesGet
+      azure_rm_servicebusrule_info:
+        resource_group: '{{resource_group}}'
+        namespace_name: '{{namespace_name}}'
+        topic_name: '{{topic_name}}'
+        subscription_name: sdk-Subscriptions-8691
+        name: '{{rule_name}}'
+    
+      register: output
+    - debug:
+        var: output

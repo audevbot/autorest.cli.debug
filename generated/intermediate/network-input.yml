@@ -1,0 +1,3730 @@
+$id: '1'
+modelTypes:
+  - $id: '2'
+    $type: CompositeType
+    properties:
+      - $id: '3'
+        isReadOnly: false
+        realPath:
+          - id
+        collectionFormat: none
+        defaultValue:
+          $id: '4'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '5'
+          fixed: false
+          raw: Resource ID.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '6'
+          fixed: false
+          raw: id
+        serializedName: id
+        modelType:
+          $id: '7'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '8'
+            fixed: false
+            raw: String
+          deprecated: false
+    serializedName: SubResource
+    documentation: Reference to another subresource.
+    containsConstantProperties: false
+    name:
+      $id: '9'
+      fixed: false
+      raw: SubResource
+    extensions:
+      x-ms-azure-resource: true
+    deprecated: false
+  - $id: '10'
+    $type: CompositeType
+    properties:
+      - $id: '11'
+        isReadOnly: true
+        realPath:
+          - privateIPAddress
+        collectionFormat: none
+        defaultValue:
+          $id: '12'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '13'
+          fixed: false
+          raw: >-
+            The Firewall Internal Load Balancer IP to be used as the next hop in
+            User Defined Routes.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '14'
+          fixed: false
+          raw: privateIPAddress
+        serializedName: privateIPAddress
+        modelType:
+          $id: '15'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '16'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '17'
+        isReadOnly: false
+        realPath:
+          - subnet
+        collectionFormat: none
+        defaultValue:
+          $id: '18'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '19'
+          fixed: false
+          raw: >-
+            Reference of the subnet resource. This resource must be named
+            'AzureFirewallSubnet'.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '20'
+          fixed: false
+          raw: subnet
+        serializedName: subnet
+        modelType:
+          $ref: '2'
+      - $id: '21'
+        isReadOnly: false
+        realPath:
+          - publicIPAddress
+        collectionFormat: none
+        defaultValue:
+          $id: '22'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '23'
+          fixed: false
+          raw: >-
+            Reference of the PublicIP resource. This field is a mandatory input
+            if subnet is not null.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '24'
+          fixed: false
+          raw: publicIPAddress
+        serializedName: publicIPAddress
+        modelType:
+          $ref: '2'
+      - $id: '25'
+        isReadOnly: false
+        realPath:
+          - provisioningState
+        collectionFormat: none
+        defaultValue:
+          $id: '26'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '27'
+          fixed: false
+          raw: The provisioning state of the resource.
+        extensions:
+          x-ms-enum:
+            name: ProvisioningState
+            modelAsString: true
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '28'
+          fixed: false
+          raw: provisioningState
+        serializedName: provisioningState
+        modelType:
+          $id: '29'
+          $type: EnumType
+          modelAsExtensible: false
+          values:
+            - $id: '30'
+              name: Succeeded
+              serializedName: Succeeded
+            - $id: '31'
+              name: Updating
+              serializedName: Updating
+            - $id: '32'
+              name: Deleting
+              serializedName: Deleting
+            - $id: '33'
+              name: Failed
+              serializedName: Failed
+          modelAsString: true
+          underlyingType:
+            $id: '34'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              $id: '35'
+              fixed: false
+              raw: String
+            deprecated: false
+          name:
+            $id: '36'
+            fixed: false
+            raw: ProvisioningState
+          deprecated: false
+    serializedName: AzureFirewallIPConfigurationPropertiesFormat
+    documentation: Properties of IP configuration of an Azure Firewall.
+    containsConstantProperties: false
+    name:
+      $id: '37'
+      fixed: false
+      raw: AzureFirewallIPConfigurationPropertiesFormat
+    deprecated: false
+  - $id: '38'
+    $type: CompositeType
+    properties:
+      - $id: '39'
+        isReadOnly: false
+        realPath:
+          - properties
+        collectionFormat: none
+        defaultValue:
+          $id: '40'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '41'
+          fixed: false
+        extensions:
+          x-ms-client-flatten: true
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '42'
+          fixed: false
+          raw: properties
+        serializedName: properties
+        modelType:
+          $ref: '10'
+      - $id: '43'
+        isReadOnly: false
+        realPath:
+          - name
+        collectionFormat: none
+        defaultValue:
+          $id: '44'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '45'
+          fixed: false
+          raw: >-
+            Name of the resource that is unique within a resource group. This
+            name can be used to access the resource.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '46'
+          fixed: false
+          raw: name
+        serializedName: name
+        modelType:
+          $id: '47'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '48'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '49'
+        isReadOnly: true
+        realPath:
+          - etag
+        collectionFormat: none
+        defaultValue:
+          $id: '50'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '51'
+          fixed: false
+          raw: >-
+            A unique read-only string that changes whenever the resource is
+            updated.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '52'
+          fixed: false
+          raw: etag
+        serializedName: etag
+        modelType:
+          $id: '53'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '54'
+            fixed: false
+            raw: String
+          deprecated: false
+    serializedName: AzureFirewallIPConfiguration
+    baseModelType:
+      $ref: '2'
+    documentation: IP configuration of an Azure Firewall.
+    containsConstantProperties: false
+    name:
+      $id: '55'
+      fixed: false
+      raw: AzureFirewallIPConfiguration
+    deprecated: false
+  - $id: '56'
+    $type: CompositeType
+    properties:
+      - $id: '57'
+        isReadOnly: false
+        realPath:
+          - type
+        collectionFormat: none
+        defaultValue:
+          $id: '58'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '59'
+          fixed: false
+          raw: The type of action.
+        extensions:
+          x-ms-enum:
+            name: AzureFirewallRCActionType
+            modelAsString: true
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '60'
+          fixed: false
+          raw: type
+        serializedName: type
+        modelType:
+          $id: '61'
+          $type: EnumType
+          modelAsExtensible: false
+          values:
+            - $id: '62'
+              name: Allow
+              serializedName: Allow
+            - $id: '63'
+              name: Deny
+              serializedName: Deny
+          modelAsString: true
+          underlyingType:
+            $id: '64'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              $id: '65'
+              fixed: false
+              raw: String
+            deprecated: false
+          name:
+            $id: '66'
+            fixed: false
+            raw: AzureFirewallRCActionType
+          deprecated: false
+    serializedName: AzureFirewallRCAction
+    documentation: Properties of the AzureFirewallRCAction.
+    containsConstantProperties: false
+    name:
+      $id: '67'
+      fixed: false
+      raw: AzureFirewallRCAction
+    deprecated: false
+  - $id: '68'
+    $type: CompositeType
+    properties:
+      - $id: '69'
+        isReadOnly: false
+        realPath:
+          - protocolType
+        collectionFormat: none
+        defaultValue:
+          $id: '70'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '71'
+          fixed: false
+          raw: Protocol type
+        extensions:
+          x-ms-enum:
+            name: AzureFirewallApplicationRuleProtocolType
+            modelAsString: true
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '72'
+          fixed: false
+          raw: protocolType
+        serializedName: protocolType
+        modelType:
+          $id: '73'
+          $type: EnumType
+          modelAsExtensible: false
+          values:
+            - $id: '74'
+              name: Http
+              serializedName: Http
+            - $id: '75'
+              name: Https
+              serializedName: Https
+          modelAsString: true
+          underlyingType:
+            $id: '76'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              $id: '77'
+              fixed: false
+              raw: String
+            deprecated: false
+          name:
+            $id: '78'
+            fixed: false
+            raw: AzureFirewallApplicationRuleProtocolType
+          deprecated: false
+      - $id: '79'
+        isReadOnly: false
+        realPath:
+          - port
+        collectionFormat: none
+        constraints:
+          InclusiveMaximum: '64000'
+          InclusiveMinimum: '0'
+        defaultValue:
+          $id: '80'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '81'
+          fixed: false
+          raw: >-
+            Port number for the protocol, cannot be greater than 64000. This
+            field is optional.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '82'
+          fixed: false
+          raw: port
+        serializedName: port
+        modelType:
+          $id: '83'
+          $type: PrimaryType
+          format: int32
+          knownPrimaryType: int
+          name:
+            $id: '84'
+            fixed: false
+            raw: Int
+          deprecated: false
+    serializedName: AzureFirewallApplicationRuleProtocol
+    documentation: Properties of the application rule protocol.
+    containsConstantProperties: false
+    name:
+      $id: '85'
+      fixed: false
+      raw: AzureFirewallApplicationRuleProtocol
+    deprecated: false
+  - $id: '86'
+    $type: CompositeType
+    properties:
+      - $id: '87'
+        isReadOnly: false
+        realPath:
+          - name
+        collectionFormat: none
+        defaultValue:
+          $id: '88'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '89'
+          fixed: false
+          raw: Name of the application rule.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '90'
+          fixed: false
+          raw: name
+        serializedName: name
+        modelType:
+          $id: '91'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '92'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '93'
+        isReadOnly: false
+        realPath:
+          - description
+        collectionFormat: none
+        defaultValue:
+          $id: '94'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '95'
+          fixed: false
+          raw: Description of the rule.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '96'
+          fixed: false
+          raw: description
+        serializedName: description
+        modelType:
+          $id: '97'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '98'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '99'
+        isReadOnly: false
+        realPath:
+          - sourceAddresses
+        collectionFormat: none
+        defaultValue:
+          $id: '100'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '101'
+          fixed: false
+          raw: List of source IP addresses for this rule.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '102'
+          fixed: false
+          raw: sourceAddresses
+        serializedName: sourceAddresses
+        modelType:
+          $id: '103'
+          $type: SequenceType
+          elementType:
+            $id: '104'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              $id: '105'
+              fixed: false
+              raw: String
+            deprecated: false
+          name:
+            $id: '106'
+            fixed: false
+          deprecated: false
+      - $id: '107'
+        isReadOnly: false
+        realPath:
+          - protocols
+        collectionFormat: none
+        defaultValue:
+          $id: '108'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '109'
+          fixed: false
+          raw: Array of ApplicationRuleProtocols.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '110'
+          fixed: false
+          raw: protocols
+        serializedName: protocols
+        modelType:
+          $id: '111'
+          $type: SequenceType
+          elementType:
+            $ref: '68'
+          name:
+            $id: '112'
+            fixed: false
+          deprecated: false
+      - $id: '113'
+        isReadOnly: false
+        realPath:
+          - targetFqdns
+        collectionFormat: none
+        defaultValue:
+          $id: '114'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '115'
+          fixed: false
+          raw: List of FQDNs for this rule.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '116'
+          fixed: false
+          raw: targetFqdns
+        serializedName: targetFqdns
+        modelType:
+          $id: '117'
+          $type: SequenceType
+          elementType:
+            $id: '118'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              $id: '119'
+              fixed: false
+              raw: String
+            deprecated: false
+          name:
+            $id: '120'
+            fixed: false
+          deprecated: false
+      - $id: '121'
+        isReadOnly: false
+        realPath:
+          - fqdnTags
+        collectionFormat: none
+        defaultValue:
+          $id: '122'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '123'
+          fixed: false
+          raw: List of FQDN Tags for this rule.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '124'
+          fixed: false
+          raw: fqdnTags
+        serializedName: fqdnTags
+        modelType:
+          $id: '125'
+          $type: SequenceType
+          elementType:
+            $id: '126'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              $id: '127'
+              fixed: false
+              raw: String
+            deprecated: false
+          name:
+            $id: '128'
+            fixed: false
+          deprecated: false
+    serializedName: AzureFirewallApplicationRule
+    documentation: Properties of an application rule.
+    containsConstantProperties: false
+    name:
+      $id: '129'
+      fixed: false
+      raw: AzureFirewallApplicationRule
+    deprecated: false
+  - $id: '130'
+    $type: CompositeType
+    properties:
+      - $id: '131'
+        isReadOnly: false
+        realPath:
+          - priority
+        collectionFormat: none
+        constraints:
+          InclusiveMaximum: '65000'
+          InclusiveMinimum: '100'
+        defaultValue:
+          $id: '132'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '133'
+          fixed: false
+          raw: Priority of the application rule collection resource.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '134'
+          fixed: false
+          raw: priority
+        serializedName: priority
+        modelType:
+          $id: '135'
+          $type: PrimaryType
+          format: int32
+          knownPrimaryType: int
+          name:
+            $id: '136'
+            fixed: false
+            raw: Int
+          deprecated: false
+      - $id: '137'
+        isReadOnly: false
+        realPath:
+          - action
+        collectionFormat: none
+        defaultValue:
+          $id: '138'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '139'
+          fixed: false
+          raw: The action type of a rule collection
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '140'
+          fixed: false
+          raw: action
+        serializedName: action
+        modelType:
+          $ref: '56'
+      - $id: '141'
+        isReadOnly: false
+        realPath:
+          - rules
+        collectionFormat: none
+        defaultValue:
+          $id: '142'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '143'
+          fixed: false
+          raw: Collection of rules used by a application rule collection.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '144'
+          fixed: false
+          raw: rules
+        serializedName: rules
+        modelType:
+          $id: '145'
+          $type: SequenceType
+          elementType:
+            $ref: '86'
+          name:
+            $id: '146'
+            fixed: false
+          deprecated: false
+      - $id: '147'
+        isReadOnly: false
+        realPath:
+          - provisioningState
+        collectionFormat: none
+        defaultValue:
+          $id: '148'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '149'
+          fixed: false
+          raw: The provisioning state of the resource.
+        extensions:
+          x-ms-enum:
+            name: ProvisioningState
+            modelAsString: true
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '150'
+          fixed: false
+          raw: provisioningState
+        serializedName: provisioningState
+        modelType:
+          $ref: '29'
+    serializedName: AzureFirewallApplicationRuleCollectionPropertiesFormat
+    documentation: Properties of the application rule collection.
+    containsConstantProperties: false
+    name:
+      $id: '151'
+      fixed: false
+      raw: AzureFirewallApplicationRuleCollectionPropertiesFormat
+    deprecated: false
+  - $id: '152'
+    $type: CompositeType
+    properties:
+      - $id: '153'
+        isReadOnly: false
+        realPath:
+          - properties
+        collectionFormat: none
+        defaultValue:
+          $id: '154'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '155'
+          fixed: false
+        extensions:
+          x-ms-client-flatten: true
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '156'
+          fixed: false
+          raw: properties
+        serializedName: properties
+        modelType:
+          $ref: '130'
+      - $id: '157'
+        isReadOnly: false
+        realPath:
+          - name
+        collectionFormat: none
+        defaultValue:
+          $id: '158'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '159'
+          fixed: false
+          raw: >-
+            Gets name of the resource that is unique within a resource group.
+            This name can be used to access the resource.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '160'
+          fixed: false
+          raw: name
+        serializedName: name
+        modelType:
+          $id: '161'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '162'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '163'
+        isReadOnly: true
+        realPath:
+          - etag
+        collectionFormat: none
+        defaultValue:
+          $id: '164'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '165'
+          fixed: false
+          raw: >-
+            Gets a unique read-only string that changes whenever the resource is
+            updated.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '166'
+          fixed: false
+          raw: etag
+        serializedName: etag
+        modelType:
+          $id: '167'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '168'
+            fixed: false
+            raw: String
+          deprecated: false
+    serializedName: AzureFirewallApplicationRuleCollection
+    baseModelType:
+      $ref: '2'
+    documentation: Application rule collection resource
+    containsConstantProperties: false
+    name:
+      $id: '169'
+      fixed: false
+      raw: AzureFirewallApplicationRuleCollection
+    deprecated: false
+  - $id: '170'
+    $type: CompositeType
+    properties:
+      - $id: '171'
+        isReadOnly: false
+        realPath:
+          - type
+        collectionFormat: none
+        defaultValue:
+          $id: '172'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '173'
+          fixed: false
+          raw: The type of action.
+        extensions:
+          x-ms-enum:
+            name: AzureFirewallNatRCActionType
+            modelAsString: true
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '174'
+          fixed: false
+          raw: type
+        serializedName: type
+        modelType:
+          $id: '175'
+          $type: EnumType
+          modelAsExtensible: false
+          values:
+            - $id: '176'
+              name: Snat
+              serializedName: Snat
+            - $id: '177'
+              name: Dnat
+              serializedName: Dnat
+          modelAsString: true
+          underlyingType:
+            $id: '178'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              $id: '179'
+              fixed: false
+              raw: String
+            deprecated: false
+          name:
+            $id: '180'
+            fixed: false
+            raw: AzureFirewallNatRCActionType
+          deprecated: false
+    serializedName: AzureFirewallNatRCAction
+    documentation: AzureFirewall NAT Rule Collection Action.
+    containsConstantProperties: false
+    name:
+      $id: '181'
+      fixed: false
+      raw: AzureFirewallNatRCAction
+    deprecated: false
+  - $id: '182'
+    $type: CompositeType
+    properties:
+      - $id: '183'
+        isReadOnly: false
+        realPath:
+          - name
+        collectionFormat: none
+        defaultValue:
+          $id: '184'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '185'
+          fixed: false
+          raw: Name of the NAT rule.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '186'
+          fixed: false
+          raw: name
+        serializedName: name
+        modelType:
+          $id: '187'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '188'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '189'
+        isReadOnly: false
+        realPath:
+          - description
+        collectionFormat: none
+        defaultValue:
+          $id: '190'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '191'
+          fixed: false
+          raw: Description of the rule.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '192'
+          fixed: false
+          raw: description
+        serializedName: description
+        modelType:
+          $id: '193'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '194'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '195'
+        isReadOnly: false
+        realPath:
+          - sourceAddresses
+        collectionFormat: none
+        defaultValue:
+          $id: '196'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '197'
+          fixed: false
+          raw: List of source IP addresses for this rule.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '198'
+          fixed: false
+          raw: sourceAddresses
+        serializedName: sourceAddresses
+        modelType:
+          $id: '199'
+          $type: SequenceType
+          elementType:
+            $id: '200'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              $id: '201'
+              fixed: false
+              raw: String
+            deprecated: false
+          name:
+            $id: '202'
+            fixed: false
+          deprecated: false
+      - $id: '203'
+        isReadOnly: false
+        realPath:
+          - destinationAddresses
+        collectionFormat: none
+        defaultValue:
+          $id: '204'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '205'
+          fixed: false
+          raw: List of destination IP addresses for this rule.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '206'
+          fixed: false
+          raw: destinationAddresses
+        serializedName: destinationAddresses
+        modelType:
+          $id: '207'
+          $type: SequenceType
+          elementType:
+            $id: '208'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              $id: '209'
+              fixed: false
+              raw: String
+            deprecated: false
+          name:
+            $id: '210'
+            fixed: false
+          deprecated: false
+      - $id: '211'
+        isReadOnly: false
+        realPath:
+          - destinationPorts
+        collectionFormat: none
+        defaultValue:
+          $id: '212'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '213'
+          fixed: false
+          raw: List of destination ports.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '214'
+          fixed: false
+          raw: destinationPorts
+        serializedName: destinationPorts
+        modelType:
+          $id: '215'
+          $type: SequenceType
+          elementType:
+            $id: '216'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              $id: '217'
+              fixed: false
+              raw: String
+            deprecated: false
+          name:
+            $id: '218'
+            fixed: false
+          deprecated: false
+      - $id: '219'
+        isReadOnly: false
+        realPath:
+          - protocols
+        collectionFormat: none
+        defaultValue:
+          $id: '220'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '221'
+          fixed: false
+          raw: >-
+            Array of AzureFirewallNetworkRuleProtocols applicable to this NAT
+            rule.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '222'
+          fixed: false
+          raw: protocols
+        serializedName: protocols
+        modelType:
+          $id: '223'
+          $type: SequenceType
+          elementType:
+            $id: '224'
+            $type: EnumType
+            modelAsExtensible: false
+            values:
+              - $id: '225'
+                name: TCP
+                serializedName: TCP
+              - $id: '226'
+                name: UDP
+                serializedName: UDP
+              - $id: '227'
+                name: Any
+                serializedName: Any
+              - $id: '228'
+                name: ICMP
+                serializedName: ICMP
+            modelAsString: true
+            underlyingType:
+              $id: '229'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '230'
+                fixed: false
+                raw: String
+              deprecated: false
+            name:
+              $id: '231'
+              fixed: false
+              raw: AzureFirewallNetworkRuleProtocol
+            deprecated: false
+          name:
+            $id: '232'
+            fixed: false
+          deprecated: false
+      - $id: '233'
+        isReadOnly: false
+        realPath:
+          - translatedAddress
+        collectionFormat: none
+        defaultValue:
+          $id: '234'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '235'
+          fixed: false
+          raw: The translated address for this NAT rule.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '236'
+          fixed: false
+          raw: translatedAddress
+        serializedName: translatedAddress
+        modelType:
+          $id: '237'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '238'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '239'
+        isReadOnly: false
+        realPath:
+          - translatedPort
+        collectionFormat: none
+        defaultValue:
+          $id: '240'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '241'
+          fixed: false
+          raw: The translated port for this NAT rule.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '242'
+          fixed: false
+          raw: translatedPort
+        serializedName: translatedPort
+        modelType:
+          $id: '243'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '244'
+            fixed: false
+            raw: String
+          deprecated: false
+    serializedName: AzureFirewallNatRule
+    documentation: Properties of a NAT rule.
+    containsConstantProperties: false
+    name:
+      $id: '245'
+      fixed: false
+      raw: AzureFirewallNatRule
+    deprecated: false
+  - $id: '246'
+    $type: CompositeType
+    properties:
+      - $id: '247'
+        isReadOnly: false
+        realPath:
+          - priority
+        collectionFormat: none
+        constraints:
+          InclusiveMaximum: '65000'
+          InclusiveMinimum: '100'
+        defaultValue:
+          $id: '248'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '249'
+          fixed: false
+          raw: Priority of the NAT rule collection resource.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '250'
+          fixed: false
+          raw: priority
+        serializedName: priority
+        modelType:
+          $id: '251'
+          $type: PrimaryType
+          format: int32
+          knownPrimaryType: int
+          name:
+            $id: '252'
+            fixed: false
+            raw: Int
+          deprecated: false
+      - $id: '253'
+        isReadOnly: false
+        realPath:
+          - action
+        collectionFormat: none
+        defaultValue:
+          $id: '254'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '255'
+          fixed: false
+          raw: The action type of a NAT rule collection
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '256'
+          fixed: false
+          raw: action
+        serializedName: action
+        modelType:
+          $ref: '170'
+      - $id: '257'
+        isReadOnly: false
+        realPath:
+          - rules
+        collectionFormat: none
+        defaultValue:
+          $id: '258'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '259'
+          fixed: false
+          raw: Collection of rules used by a NAT rule collection.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '260'
+          fixed: false
+          raw: rules
+        serializedName: rules
+        modelType:
+          $id: '261'
+          $type: SequenceType
+          elementType:
+            $ref: '182'
+          name:
+            $id: '262'
+            fixed: false
+          deprecated: false
+      - $id: '263'
+        isReadOnly: false
+        realPath:
+          - provisioningState
+        collectionFormat: none
+        defaultValue:
+          $id: '264'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '265'
+          fixed: false
+          raw: The provisioning state of the resource.
+        extensions:
+          x-ms-enum:
+            name: ProvisioningState
+            modelAsString: true
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '266'
+          fixed: false
+          raw: provisioningState
+        serializedName: provisioningState
+        modelType:
+          $ref: '29'
+    serializedName: AzureFirewallNatRuleCollectionProperties
+    documentation: Properties of the NAT rule collection.
+    containsConstantProperties: false
+    name:
+      $id: '267'
+      fixed: false
+      raw: AzureFirewallNatRuleCollectionProperties
+    deprecated: false
+  - $id: '268'
+    $type: CompositeType
+    properties:
+      - $id: '269'
+        isReadOnly: false
+        realPath:
+          - properties
+        collectionFormat: none
+        defaultValue:
+          $id: '270'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '271'
+          fixed: false
+        extensions:
+          x-ms-client-flatten: true
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '272'
+          fixed: false
+          raw: properties
+        serializedName: properties
+        modelType:
+          $ref: '246'
+      - $id: '273'
+        isReadOnly: false
+        realPath:
+          - name
+        collectionFormat: none
+        defaultValue:
+          $id: '274'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '275'
+          fixed: false
+          raw: >-
+            Gets name of the resource that is unique within a resource group.
+            This name can be used to access the resource.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '276'
+          fixed: false
+          raw: name
+        serializedName: name
+        modelType:
+          $id: '277'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '278'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '279'
+        isReadOnly: true
+        realPath:
+          - etag
+        collectionFormat: none
+        defaultValue:
+          $id: '280'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '281'
+          fixed: false
+          raw: >-
+            Gets a unique read-only string that changes whenever the resource is
+            updated.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '282'
+          fixed: false
+          raw: etag
+        serializedName: etag
+        modelType:
+          $id: '283'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '284'
+            fixed: false
+            raw: String
+          deprecated: false
+    serializedName: AzureFirewallNatRuleCollection
+    baseModelType:
+      $ref: '2'
+    documentation: NAT rule collection resource
+    containsConstantProperties: false
+    name:
+      $id: '285'
+      fixed: false
+      raw: AzureFirewallNatRuleCollection
+    deprecated: false
+  - $id: '286'
+    $type: CompositeType
+    properties:
+      - $id: '287'
+        isReadOnly: false
+        realPath:
+          - name
+        collectionFormat: none
+        defaultValue:
+          $id: '288'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '289'
+          fixed: false
+          raw: Name of the network rule.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '290'
+          fixed: false
+          raw: name
+        serializedName: name
+        modelType:
+          $id: '291'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '292'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '293'
+        isReadOnly: false
+        realPath:
+          - description
+        collectionFormat: none
+        defaultValue:
+          $id: '294'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '295'
+          fixed: false
+          raw: Description of the rule.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '296'
+          fixed: false
+          raw: description
+        serializedName: description
+        modelType:
+          $id: '297'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '298'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '299'
+        isReadOnly: false
+        realPath:
+          - protocols
+        collectionFormat: none
+        defaultValue:
+          $id: '300'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '301'
+          fixed: false
+          raw: Array of AzureFirewallNetworkRuleProtocols.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '302'
+          fixed: false
+          raw: protocols
+        serializedName: protocols
+        modelType:
+          $id: '303'
+          $type: SequenceType
+          elementType:
+            $ref: '224'
+          name:
+            $id: '304'
+            fixed: false
+          deprecated: false
+      - $id: '305'
+        isReadOnly: false
+        realPath:
+          - sourceAddresses
+        collectionFormat: none
+        defaultValue:
+          $id: '306'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '307'
+          fixed: false
+          raw: List of source IP addresses for this rule.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '308'
+          fixed: false
+          raw: sourceAddresses
+        serializedName: sourceAddresses
+        modelType:
+          $id: '309'
+          $type: SequenceType
+          elementType:
+            $id: '310'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              $id: '311'
+              fixed: false
+              raw: String
+            deprecated: false
+          name:
+            $id: '312'
+            fixed: false
+          deprecated: false
+      - $id: '313'
+        isReadOnly: false
+        realPath:
+          - destinationAddresses
+        collectionFormat: none
+        defaultValue:
+          $id: '314'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '315'
+          fixed: false
+          raw: List of destination IP addresses.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '316'
+          fixed: false
+          raw: destinationAddresses
+        serializedName: destinationAddresses
+        modelType:
+          $id: '317'
+          $type: SequenceType
+          elementType:
+            $id: '318'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              $id: '319'
+              fixed: false
+              raw: String
+            deprecated: false
+          name:
+            $id: '320'
+            fixed: false
+          deprecated: false
+      - $id: '321'
+        isReadOnly: false
+        realPath:
+          - destinationPorts
+        collectionFormat: none
+        defaultValue:
+          $id: '322'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '323'
+          fixed: false
+          raw: List of destination ports.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '324'
+          fixed: false
+          raw: destinationPorts
+        serializedName: destinationPorts
+        modelType:
+          $id: '325'
+          $type: SequenceType
+          elementType:
+            $id: '326'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              $id: '327'
+              fixed: false
+              raw: String
+            deprecated: false
+          name:
+            $id: '328'
+            fixed: false
+          deprecated: false
+    serializedName: AzureFirewallNetworkRule
+    documentation: Properties of the network rule.
+    containsConstantProperties: false
+    name:
+      $id: '329'
+      fixed: false
+      raw: AzureFirewallNetworkRule
+    deprecated: false
+  - $id: '330'
+    $type: CompositeType
+    properties:
+      - $id: '331'
+        isReadOnly: false
+        realPath:
+          - priority
+        collectionFormat: none
+        constraints:
+          InclusiveMaximum: '65000'
+          InclusiveMinimum: '100'
+        defaultValue:
+          $id: '332'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '333'
+          fixed: false
+          raw: Priority of the network rule collection resource.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '334'
+          fixed: false
+          raw: priority
+        serializedName: priority
+        modelType:
+          $id: '335'
+          $type: PrimaryType
+          format: int32
+          knownPrimaryType: int
+          name:
+            $id: '336'
+            fixed: false
+            raw: Int
+          deprecated: false
+      - $id: '337'
+        isReadOnly: false
+        realPath:
+          - action
+        collectionFormat: none
+        defaultValue:
+          $id: '338'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '339'
+          fixed: false
+          raw: The action type of a rule collection
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '340'
+          fixed: false
+          raw: action
+        serializedName: action
+        modelType:
+          $ref: '56'
+      - $id: '341'
+        isReadOnly: false
+        realPath:
+          - rules
+        collectionFormat: none
+        defaultValue:
+          $id: '342'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '343'
+          fixed: false
+          raw: Collection of rules used by a network rule collection.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '344'
+          fixed: false
+          raw: rules
+        serializedName: rules
+        modelType:
+          $id: '345'
+          $type: SequenceType
+          elementType:
+            $ref: '286'
+          name:
+            $id: '346'
+            fixed: false
+          deprecated: false
+      - $id: '347'
+        isReadOnly: false
+        realPath:
+          - provisioningState
+        collectionFormat: none
+        defaultValue:
+          $id: '348'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '349'
+          fixed: false
+          raw: The provisioning state of the resource.
+        extensions:
+          x-ms-enum:
+            name: ProvisioningState
+            modelAsString: true
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '350'
+          fixed: false
+          raw: provisioningState
+        serializedName: provisioningState
+        modelType:
+          $ref: '29'
+    serializedName: AzureFirewallNetworkRuleCollectionPropertiesFormat
+    documentation: Properties of the network rule collection.
+    containsConstantProperties: false
+    name:
+      $id: '351'
+      fixed: false
+      raw: AzureFirewallNetworkRuleCollectionPropertiesFormat
+    deprecated: false
+  - $id: '352'
+    $type: CompositeType
+    properties:
+      - $id: '353'
+        isReadOnly: false
+        realPath:
+          - properties
+        collectionFormat: none
+        defaultValue:
+          $id: '354'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '355'
+          fixed: false
+        extensions:
+          x-ms-client-flatten: true
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '356'
+          fixed: false
+          raw: properties
+        serializedName: properties
+        modelType:
+          $ref: '330'
+      - $id: '357'
+        isReadOnly: false
+        realPath:
+          - name
+        collectionFormat: none
+        defaultValue:
+          $id: '358'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '359'
+          fixed: false
+          raw: >-
+            Gets name of the resource that is unique within a resource group.
+            This name can be used to access the resource.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '360'
+          fixed: false
+          raw: name
+        serializedName: name
+        modelType:
+          $id: '361'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '362'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '363'
+        isReadOnly: true
+        realPath:
+          - etag
+        collectionFormat: none
+        defaultValue:
+          $id: '364'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '365'
+          fixed: false
+          raw: >-
+            Gets a unique read-only string that changes whenever the resource is
+            updated.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '366'
+          fixed: false
+          raw: etag
+        serializedName: etag
+        modelType:
+          $id: '367'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '368'
+            fixed: false
+            raw: String
+          deprecated: false
+    serializedName: AzureFirewallNetworkRuleCollection
+    baseModelType:
+      $ref: '2'
+    documentation: Network rule collection resource
+    containsConstantProperties: false
+    name:
+      $id: '369'
+      fixed: false
+      raw: AzureFirewallNetworkRuleCollection
+    deprecated: false
+  - $id: '370'
+    $type: CompositeType
+    properties:
+      - $id: '371'
+        isReadOnly: false
+        realPath:
+          - applicationRuleCollections
+        collectionFormat: none
+        defaultValue:
+          $id: '372'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '373'
+          fixed: false
+          raw: Collection of application rule collections used by Azure Firewall.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '374'
+          fixed: false
+          raw: applicationRuleCollections
+        serializedName: applicationRuleCollections
+        modelType:
+          $id: '375'
+          $type: SequenceType
+          elementType:
+            $ref: '152'
+          name:
+            $id: '376'
+            fixed: false
+          deprecated: false
+      - $id: '377'
+        isReadOnly: false
+        realPath:
+          - natRuleCollections
+        collectionFormat: none
+        defaultValue:
+          $id: '378'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '379'
+          fixed: false
+          raw: Collection of NAT rule collections used by Azure Firewall.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '380'
+          fixed: false
+          raw: natRuleCollections
+        serializedName: natRuleCollections
+        modelType:
+          $id: '381'
+          $type: SequenceType
+          elementType:
+            $ref: '268'
+          name:
+            $id: '382'
+            fixed: false
+          deprecated: false
+      - $id: '383'
+        isReadOnly: false
+        realPath:
+          - networkRuleCollections
+        collectionFormat: none
+        defaultValue:
+          $id: '384'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '385'
+          fixed: false
+          raw: Collection of network rule collections used by Azure Firewall.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '386'
+          fixed: false
+          raw: networkRuleCollections
+        serializedName: networkRuleCollections
+        modelType:
+          $id: '387'
+          $type: SequenceType
+          elementType:
+            $ref: '352'
+          name:
+            $id: '388'
+            fixed: false
+          deprecated: false
+      - $id: '389'
+        isReadOnly: false
+        realPath:
+          - ipConfigurations
+        collectionFormat: none
+        defaultValue:
+          $id: '390'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '391'
+          fixed: false
+          raw: IP configuration of the Azure Firewall resource.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '392'
+          fixed: false
+          raw: ipConfigurations
+        serializedName: ipConfigurations
+        modelType:
+          $id: '393'
+          $type: SequenceType
+          elementType:
+            $ref: '38'
+          name:
+            $id: '394'
+            fixed: false
+          deprecated: false
+      - $id: '395'
+        isReadOnly: false
+        realPath:
+          - provisioningState
+        collectionFormat: none
+        defaultValue:
+          $id: '396'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '397'
+          fixed: false
+          raw: The provisioning state of the resource.
+        extensions:
+          x-ms-enum:
+            name: ProvisioningState
+            modelAsString: true
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '398'
+          fixed: false
+          raw: provisioningState
+        serializedName: provisioningState
+        modelType:
+          $ref: '29'
+    serializedName: AzureFirewallPropertiesFormat
+    documentation: Properties of the Azure Firewall.
+    containsConstantProperties: false
+    name:
+      $id: '399'
+      fixed: false
+      raw: AzureFirewallPropertiesFormat
+    deprecated: false
+  - $id: '400'
+    $type: CompositeType
+    properties:
+      - $id: '401'
+        isReadOnly: false
+        realPath:
+          - properties
+        collectionFormat: none
+        defaultValue:
+          $id: '402'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '403'
+          fixed: false
+        extensions:
+          x-ms-client-flatten: true
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '404'
+          fixed: false
+          raw: properties
+        serializedName: properties
+        modelType:
+          $ref: '370'
+      - $id: '405'
+        isReadOnly: true
+        realPath:
+          - etag
+        collectionFormat: none
+        defaultValue:
+          $id: '406'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '407'
+          fixed: false
+          raw: >-
+            Gets a unique read-only string that changes whenever the resource is
+            updated.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '408'
+          fixed: false
+          raw: etag
+        serializedName: etag
+        modelType:
+          $id: '409'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '410'
+            fixed: false
+            raw: String
+          deprecated: false
+    serializedName: AzureFirewall
+    baseModelType:
+      $id: '411'
+      $type: CompositeType
+      properties:
+        - $id: '412'
+          isReadOnly: false
+          realPath:
+            - id
+          collectionFormat: none
+          defaultValue:
+            $id: '413'
+            fixed: false
+          deprecated: false
+          documentation:
+            $id: '414'
+            fixed: false
+            raw: Resource ID.
+          isRequired: false
+          isConstant: false
+          name:
+            $id: '415'
+            fixed: false
+            raw: id
+          serializedName: id
+          modelType:
+            $id: '416'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              $id: '417'
+              fixed: false
+              raw: String
+            deprecated: false
+        - $id: '418'
+          isReadOnly: true
+          realPath:
+            - name
+          collectionFormat: none
+          defaultValue:
+            $id: '419'
+            fixed: false
+          deprecated: false
+          documentation:
+            $id: '420'
+            fixed: false
+            raw: Resource name.
+          isRequired: false
+          isConstant: false
+          name:
+            $id: '421'
+            fixed: false
+            raw: name
+          serializedName: name
+          modelType:
+            $id: '422'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              $id: '423'
+              fixed: false
+              raw: String
+            deprecated: false
+        - $id: '424'
+          isReadOnly: true
+          realPath:
+            - type
+          collectionFormat: none
+          defaultValue:
+            $id: '425'
+            fixed: false
+          deprecated: false
+          documentation:
+            $id: '426'
+            fixed: false
+            raw: Resource type.
+          isRequired: false
+          isConstant: false
+          name:
+            $id: '427'
+            fixed: false
+            raw: type
+          serializedName: type
+          modelType:
+            $id: '428'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              $id: '429'
+              fixed: false
+              raw: String
+            deprecated: false
+        - $id: '430'
+          isReadOnly: false
+          realPath:
+            - location
+          collectionFormat: none
+          defaultValue:
+            $id: '431'
+            fixed: false
+          deprecated: false
+          documentation:
+            $id: '432'
+            fixed: false
+            raw: Resource location.
+          isRequired: false
+          isConstant: false
+          name:
+            $id: '433'
+            fixed: false
+            raw: location
+          serializedName: location
+          modelType:
+            $id: '434'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              $id: '435'
+              fixed: false
+              raw: String
+            deprecated: false
+        - $id: '436'
+          isReadOnly: false
+          realPath:
+            - tags
+          collectionFormat: none
+          defaultValue:
+            $id: '437'
+            fixed: false
+          deprecated: false
+          documentation:
+            $id: '438'
+            fixed: false
+            raw: Resource tags.
+          isRequired: false
+          isConstant: false
+          name:
+            $id: '439'
+            fixed: false
+            raw: tags
+          serializedName: tags
+          modelType:
+            $id: '440'
+            $type: DictionaryType
+            valueType:
+              $id: '441'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '442'
+                fixed: false
+                raw: String
+              deprecated: false
+            supportsAdditionalProperties: false
+            name:
+              $id: '443'
+              fixed: false
+            deprecated: false
+      serializedName: Resource
+      documentation: Common resource representation.
+      containsConstantProperties: false
+      name:
+        $id: '444'
+        fixed: false
+        raw: Resource
+      extensions:
+        x-ms-azure-resource: true
+      deprecated: false
+    documentation: Azure Firewall resource
+    containsConstantProperties: false
+    name:
+      $id: '445'
+      fixed: false
+      raw: AzureFirewall
+    deprecated: false
+  - $id: '446'
+    $type: CompositeType
+    properties:
+      - $id: '447'
+        isReadOnly: false
+        realPath:
+          - value
+        collectionFormat: none
+        defaultValue:
+          $id: '448'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '449'
+          fixed: false
+          raw: List of Azure Firewalls in a resource group.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '450'
+          fixed: false
+          raw: value
+        serializedName: value
+        modelType:
+          $id: '451'
+          $type: SequenceType
+          elementType:
+            $ref: '400'
+          name:
+            $id: '452'
+            fixed: false
+          deprecated: false
+      - $id: '453'
+        isReadOnly: false
+        realPath:
+          - nextLink
+        collectionFormat: none
+        defaultValue:
+          $id: '454'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '455'
+          fixed: false
+          raw: URL to get the next set of results.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '456'
+          fixed: false
+          raw: nextLink
+        serializedName: nextLink
+        modelType:
+          $id: '457'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '458'
+            fixed: false
+            raw: String
+          deprecated: false
+    serializedName: AzureFirewallListResult
+    documentation: Response for ListAzureFirewalls API service call.
+    containsConstantProperties: false
+    name:
+      $id: '459'
+      fixed: false
+      raw: AzureFirewallListResult
+    deprecated: false
+  - $ref: '411'
+enumTypes:
+  - $ref: '29'
+  - $ref: '61'
+  - $ref: '73'
+  - $ref: '175'
+  - $ref: '224'
+name: NetworkManagementClient
+namespace: Azure.mgmt.network
+modelsName: Models
+apiVersion: '2018-11-01'
+baseUrl: 'https://management.azure.com'
+documentation: >-
+  The Microsoft Azure Network management API provides a RESTful set of web
+  services that interact with Microsoft Azure Networks service to manage your
+  network resources. The API has entities that capture the relationship between
+  an end user and the Microsoft Azure Networks service.
+extensions:
+  security:
+    - azure_auth:
+        - user_impersonation
+properties:
+  - $id: '460'
+    isReadOnly: false
+    realPath:
+      - subscriptionId
+    collectionFormat: none
+    defaultValue:
+      $id: '461'
+      fixed: false
+    deprecated: false
+    documentation:
+      $id: '462'
+      fixed: false
+      raw: >-
+        The subscription credentials which uniquely identify the Microsoft Azure
+        subscription. The subscription ID forms part of the URI for every
+        service call.
+    isRequired: true
+    isConstant: false
+    name:
+      $id: '463'
+      fixed: false
+      raw: subscriptionId
+    serializedName: subscriptionId
+    modelType:
+      $id: '464'
+      $type: PrimaryType
+      knownPrimaryType: string
+      name:
+        $id: '465'
+        fixed: false
+        raw: String
+      deprecated: false
+  - $id: '466'
+    isReadOnly: false
+    realPath:
+      - api-version
+    collectionFormat: none
+    defaultValue:
+      $id: '467'
+      fixed: false
+    deprecated: false
+    documentation:
+      $id: '468'
+      fixed: false
+      raw: Client API version.
+    isRequired: true
+    isConstant: false
+    name:
+      $id: '469'
+      fixed: false
+      raw: api-version
+    serializedName: api-version
+    modelType:
+      $id: '470'
+      $type: PrimaryType
+      knownPrimaryType: string
+      name:
+        $id: '471'
+        fixed: false
+        raw: String
+      deprecated: false
+operations:
+  - $id: '472'
+    methods:
+      - $id: '473'
+        parameters:
+          - $id: '474'
+            location: path
+            collectionFormat: none
+            defaultValue:
+              $id: '475'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '476'
+              fixed: false
+              raw: The name of the resource group.
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '477'
+              fixed: false
+              raw: resourceGroupName
+            serializedName: resourceGroupName
+            modelType:
+              $id: '478'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '479'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '480'
+            location: path
+            collectionFormat: none
+            defaultValue:
+              $id: '481'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '482'
+              fixed: false
+              raw: The name of the Azure Firewall.
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '483'
+              fixed: false
+              raw: azureFirewallName
+            serializedName: azureFirewallName
+            modelType:
+              $id: '484'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '485'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '486'
+            clientProperty:
+              $ref: '466'
+            location: query
+            collectionFormat: none
+            defaultValue:
+              $id: '487'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '488'
+              fixed: false
+              raw: Client API version.
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '489'
+              fixed: false
+              raw: api-version
+            serializedName: api-version
+            modelType:
+              $id: '490'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '491'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '492'
+            clientProperty:
+              $ref: '460'
+            location: path
+            collectionFormat: none
+            defaultValue:
+              $id: '493'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '494'
+              fixed: false
+              raw: >-
+                The subscription credentials which uniquely identify the
+                Microsoft Azure subscription. The subscription ID forms part of
+                the URI for every service call.
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '495'
+              fixed: false
+              raw: subscriptionId
+            serializedName: subscriptionId
+            modelType:
+              $id: '496'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '497'
+                fixed: false
+                raw: String
+              deprecated: false
+        name:
+          $id: '498'
+          fixed: false
+          raw: Delete
+        group:
+          $id: '499'
+          fixed: false
+          raw: AzureFirewalls
+        serializedName: AzureFirewalls_Delete
+        url: >-
+          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/azureFirewalls/{azureFirewallName}
+        isAbsoluteUrl: false
+        httpMethod: delete
+        responses:
+          OK:
+            $id: '500'
+            isNullable: true
+          Accepted:
+            $id: '501'
+            isNullable: true
+          NoContent:
+            $id: '502'
+            isNullable: true
+        defaultResponse:
+          $id: '503'
+          isNullable: true
+        returnType:
+          $id: '504'
+          isNullable: true
+        description: Deletes the specified Azure Firewall.
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        extensions:
+          x-ms-examples:
+            Delete Azure Firewall:
+              parameters:
+                api-version: '2018-11-01'
+                subscriptionId: subid
+                resourceGroupName: rg1
+                azureFirewallName: azurefirewall
+              responses:
+                '200': {}
+                '202': {}
+                '204': {}
+          x-ms-long-running-operation: true
+        deprecated: false
+        hidden: false
+      - $id: '505'
+        parameters:
+          - $id: '506'
+            location: path
+            collectionFormat: none
+            defaultValue:
+              $id: '507'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '508'
+              fixed: false
+              raw: The name of the resource group.
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '509'
+              fixed: false
+              raw: resourceGroupName
+            serializedName: resourceGroupName
+            modelType:
+              $id: '510'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '511'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '512'
+            location: path
+            collectionFormat: none
+            defaultValue:
+              $id: '513'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '514'
+              fixed: false
+              raw: The name of the Azure Firewall.
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '515'
+              fixed: false
+              raw: azureFirewallName
+            serializedName: azureFirewallName
+            modelType:
+              $id: '516'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '517'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '518'
+            clientProperty:
+              $ref: '466'
+            location: query
+            collectionFormat: none
+            defaultValue:
+              $id: '519'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '520'
+              fixed: false
+              raw: Client API version.
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '521'
+              fixed: false
+              raw: api-version
+            serializedName: api-version
+            modelType:
+              $id: '522'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '523'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '524'
+            clientProperty:
+              $ref: '460'
+            location: path
+            collectionFormat: none
+            defaultValue:
+              $id: '525'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '526'
+              fixed: false
+              raw: >-
+                The subscription credentials which uniquely identify the
+                Microsoft Azure subscription. The subscription ID forms part of
+                the URI for every service call.
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '527'
+              fixed: false
+              raw: subscriptionId
+            serializedName: subscriptionId
+            modelType:
+              $id: '528'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '529'
+                fixed: false
+                raw: String
+              deprecated: false
+        name:
+          $id: '530'
+          fixed: false
+          raw: Get
+        group:
+          $id: '531'
+          fixed: false
+          raw: AzureFirewalls
+        serializedName: AzureFirewalls_Get
+        url: >-
+          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/azureFirewalls/{azureFirewallName}
+        isAbsoluteUrl: false
+        httpMethod: get
+        responses:
+          OK:
+            $id: '532'
+            body:
+              $ref: '400'
+            isNullable: true
+        defaultResponse:
+          $id: '533'
+          isNullable: true
+        returnType:
+          $id: '534'
+          body:
+            $ref: '400'
+          isNullable: true
+        description: Gets the specified Azure Firewall.
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        extensions:
+          x-ms-examples:
+            Get Azure Firewall:
+              parameters:
+                api-version: '2018-11-01'
+                subscriptionId: subid
+                resourceGroupName: rg1
+                azureFirewallName: azurefirewall
+              responses:
+                '200':
+                  body:
+                    name: azurefirewall
+                    id: >-
+                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                      resource_group
+                      }}/providers/Microsoft.Network/azureFirewalls/{{
+                      azure_firewall_name }}
+                    type: Microsoft.Network/azureFirewalls
+                    etag: w/\00000000-0000-0000-0000-000000000000\
+                    location: West US
+                    tags:
+                      key1: value1
+                    properties:
+                      provisioningState: Succeeded
+                      ipConfigurations:
+                        - name: azureFirewallIpConfiguration
+                          id: >-
+                            /subscriptions/{{ subscription_id
+                            }}/resourceGroups/{{ resource_group
+                            }}/providers/Microsoft.Network/azureFirewalls/{{
+                            azure_firewall_name }}/ipConfigurations/{{
+                            ip_configuration_name }}
+                          etag: w/\00000000-0000-0000-0000-000000000000\
+                          properties:
+                            provisioningState: Succeeded
+                            privateIPAddress: 10.0.0.0
+                            subnet:
+                              id: >-
+                                /subscriptions/{{ subscription_id
+                                }}/resourceGroups/{{ resource_group
+                                }}/providers/Microsoft.Network/virtualNetworks/{{
+                                virtual_network_name }}/subnets/{{ subnet_name
+                                }}
+                            publicIPAddress:
+                              id: >-
+                                /subscriptions/{{ subscription_id
+                                }}/resourceGroups/{{ resource_group
+                                }}/providers/Microsoft.Network/publicIPAddresses/{{
+                                public_ip_address_name }}
+                      applicationRuleCollections:
+                        - name: apprulecoll
+                          properties:
+                            priority: '110'
+                            action:
+                              type: Deny
+                            rules:
+                              - name: rule1
+                                description: Deny inbound rule
+                                protocols:
+                                  - protocolType: Https
+                                    port: '443'
+                                targetFqdns:
+                                  - www.test.com
+                                sourceAddresses:
+                                  - 216.58.216.164
+                                  - 10.0.0.0/24
+                      natRuleCollections:
+                        - name: natrulecoll
+                          properties:
+                            priority: '112'
+                            action:
+                              type: Dnat
+                            rules:
+                              - name: DNAT-HTTPS-traffic
+                                description: D-NAT all outbound web traffic for inspection
+                                sourceAddresses:
+                                  - '*'
+                                destinationAddresses:
+                                  - 1.2.3.4
+                                destinationPorts:
+                                  - '443'
+                                protocols:
+                                  - TCP
+                                translatedAddress: 1.2.3.5
+                                translatedPort: '8443'
+                      networkRuleCollections:
+                        - name: netrulecoll
+                          properties:
+                            priority: '112'
+                            action:
+                              type: Deny
+                            rules:
+                              - name: L4-traffic
+                                description: Block traffic based on source IPs and ports
+                                sourceAddresses:
+                                  - 192.168.1.1-192.168.1.12
+                                  - 10.1.4.12-10.1.4.255
+                                destinationPorts:
+                                  - 443-444
+                                  - '8443'
+                                destinationAddresses:
+                                  - '*'
+                                protocols:
+                                  - TCP
+        deprecated: false
+        hidden: false
+      - $id: '535'
+        parameters:
+          - $id: '536'
+            location: path
+            collectionFormat: none
+            defaultValue:
+              $id: '537'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '538'
+              fixed: false
+              raw: The name of the resource group.
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '539'
+              fixed: false
+              raw: resourceGroupName
+            serializedName: resourceGroupName
+            modelType:
+              $id: '540'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '541'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '542'
+            location: path
+            collectionFormat: none
+            defaultValue:
+              $id: '543'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '544'
+              fixed: false
+              raw: The name of the Azure Firewall.
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '545'
+              fixed: false
+              raw: azureFirewallName
+            serializedName: azureFirewallName
+            modelType:
+              $id: '546'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '547'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '548'
+            location: body
+            collectionFormat: none
+            defaultValue:
+              $id: '549'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '550'
+              fixed: false
+              raw: >-
+                Parameters supplied to the create or update Azure Firewall
+                operation.
+            extensions:
+              x-ms-requestBody-name: parameters
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '551'
+              fixed: false
+              raw: parameters
+            serializedName: parameters
+            modelType:
+              $ref: '400'
+          - $id: '552'
+            clientProperty:
+              $ref: '466'
+            location: query
+            collectionFormat: none
+            defaultValue:
+              $id: '553'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '554'
+              fixed: false
+              raw: Client API version.
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '555'
+              fixed: false
+              raw: api-version
+            serializedName: api-version
+            modelType:
+              $id: '556'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '557'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '558'
+            clientProperty:
+              $ref: '460'
+            location: path
+            collectionFormat: none
+            defaultValue:
+              $id: '559'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '560'
+              fixed: false
+              raw: >-
+                The subscription credentials which uniquely identify the
+                Microsoft Azure subscription. The subscription ID forms part of
+                the URI for every service call.
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '561'
+              fixed: false
+              raw: subscriptionId
+            serializedName: subscriptionId
+            modelType:
+              $id: '562'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '563'
+                fixed: false
+                raw: String
+              deprecated: false
+        name:
+          $id: '564'
+          fixed: false
+          raw: CreateOrUpdate
+        group:
+          $id: '565'
+          fixed: false
+          raw: AzureFirewalls
+        serializedName: AzureFirewalls_CreateOrUpdate
+        url: >-
+          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/azureFirewalls/{azureFirewallName}
+        isAbsoluteUrl: false
+        httpMethod: put
+        responses:
+          OK:
+            $id: '566'
+            body:
+              $ref: '400'
+            isNullable: true
+          Created:
+            $id: '567'
+            body:
+              $ref: '400'
+            isNullable: true
+        defaultResponse:
+          $id: '568'
+          isNullable: true
+        returnType:
+          $id: '569'
+          body:
+            $ref: '400'
+          isNullable: true
+        description: Creates or updates the specified Azure Firewall.
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        extensions:
+          x-ms-requestBody-index: '2'
+          x-ms-examples:
+            Create Azure Firewall:
+              parameters:
+                api-version: '2018-11-01'
+                subscriptionId: subid
+                resourceGroupName: rg1
+                azureFirewallName: azurefirewall
+                parameters:
+                  tags:
+                    key1: value1
+                  properties:
+                    ipConfigurations:
+                      - name: azureFirewallIpConfiguration
+                        properties:
+                          subnet:
+                            id: >-
+                              /subscriptions/{{ subscription_id
+                              }}/resourceGroups/{{ resource_group
+                              }}/providers/Microsoft.Network/virtualNetworks/{{
+                              virtual_network_name }}/subnets/{{ subnet_name }}
+                          publicIPAddress:
+                            id: >-
+                              /subscriptions/{{ subscription_id
+                              }}/resourceGroups/{{ resource_group
+                              }}/providers/Microsoft.Network/publicIPAddresses/{{
+                              public_ip_address_name }}
+                    applicationRuleCollections:
+                      - name: apprulecoll
+                        properties:
+                          priority: '110'
+                          action:
+                            type: Deny
+                          rules:
+                            - name: rule1
+                              description: Deny inbound rule
+                              protocols:
+                                - protocolType: Https
+                                  port: '443'
+                              targetFqdns:
+                                - www.test.com
+                              sourceAddresses:
+                                - 216.58.216.164
+                                - 10.0.0.0/24
+                    natRuleCollections:
+                      - name: natrulecoll
+                        properties:
+                          priority: '112'
+                          action:
+                            type: Dnat
+                          rules:
+                            - name: DNAT-HTTPS-traffic
+                              description: D-NAT all outbound web traffic for inspection
+                              sourceAddresses:
+                                - '*'
+                              destinationAddresses:
+                                - 1.2.3.4
+                              destinationPorts:
+                                - '443'
+                              protocols:
+                                - TCP
+                              translatedAddress: 1.2.3.5
+                              translatedPort: '8443'
+                    networkRuleCollections:
+                      - name: netrulecoll
+                        properties:
+                          priority: '112'
+                          action:
+                            type: Deny
+                          rules:
+                            - name: L4-traffic
+                              description: Block traffic based on source IPs and ports
+                              sourceAddresses:
+                                - 192.168.1.1-192.168.1.12
+                                - 10.1.4.12-10.1.4.255
+                              destinationPorts:
+                                - 443-444
+                                - '8443'
+                              destinationAddresses:
+                                - '*'
+                              protocols:
+                                - TCP
+              responses:
+                '200':
+                  body:
+                    name: azurefirewall
+                    id: >-
+                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                      resource_group
+                      }}/providers/Microsoft.Network/azureFirewalls/{{
+                      azure_firewall_name }}
+                    type: Microsoft.Network/azureFirewalls
+                    etag: w/\00000000-0000-0000-0000-000000000000\
+                    location: West US
+                    tags:
+                      key1: value1
+                    properties:
+                      provisioningState: Succeeded
+                      ipConfigurations:
+                        - name: azureFirewallIpConfiguration
+                          id: >-
+                            /subscriptions/{{ subscription_id
+                            }}/resourceGroups/{{ resource_group
+                            }}/providers/Microsoft.Network/azureFirewalls/{{
+                            azure_firewall_name }}/ipConfigurations/{{
+                            ip_configuration_name }}
+                          etag: w/\00000000-0000-0000-0000-000000000000\
+                          properties:
+                            provisioningState: Succeeded
+                            privateIPAddress: 10.0.0.0
+                            subnet:
+                              id: >-
+                                /subscriptions/{{ subscription_id
+                                }}/resourceGroups/{{ resource_group
+                                }}/providers/Microsoft.Network/virtualNetworks/{{
+                                virtual_network_name }}/subnets/{{ subnet_name
+                                }}
+                            publicIPAddress:
+                              id: >-
+                                /subscriptions/{{ subscription_id
+                                }}/resourceGroups/{{ resource_group
+                                }}/providers/Microsoft.Network/publicIPAddresses/{{
+                                public_ip_address_name }}
+                      applicationRuleCollections:
+                        - name: apprulecoll
+                          properties:
+                            priority: '110'
+                            action:
+                              type: Deny
+                            rules:
+                              - name: rule1
+                                description: Deny inbound rule
+                                protocols:
+                                  - protocolType: Https
+                                    port: '443'
+                                targetFqdns:
+                                  - www.test.com
+                                sourceAddresses:
+                                  - 216.58.216.164
+                                  - 10.0.0.0/24
+                      natRuleCollections:
+                        - name: natrulecoll
+                          properties:
+                            priority: '112'
+                            action:
+                              type: Dnat
+                            rules:
+                              - name: DNAT-HTTPS-traffic
+                                description: D-NAT all outbound web traffic for inspection
+                                sourceAddresses:
+                                  - '*'
+                                destinationAddresses:
+                                  - 1.2.3.4
+                                destinationPorts:
+                                  - '443'
+                                protocols:
+                                  - TCP
+                                translatedAddress: 1.2.3.5
+                                translatedPort: '8443'
+                      networkRuleCollections:
+                        - name: netrulecoll
+                          properties:
+                            priority: '112'
+                            action:
+                              type: Deny
+                            rules:
+                              - name: L4-traffic
+                                description: Block traffic based on source IPs and ports
+                                sourceAddresses:
+                                  - 192.168.1.1-192.168.1.12
+                                  - 10.1.4.12-10.1.4.255
+                                destinationPorts:
+                                  - 443-444
+                                  - '8443'
+                                destinationAddresses:
+                                  - '*'
+                                protocols:
+                                  - TCP
+                '201':
+                  body:
+                    name: azurefirewall
+                    id: >-
+                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                      resource_group
+                      }}/providers/Microsoft.Network/azureFirewalls/{{
+                      azure_firewall_name }}
+                    type: Microsoft.Network/azureFirewalls
+                    etag: w/\00000000-0000-0000-0000-000000000000\
+                    location: West US
+                    tags:
+                      key1: value1
+                    properties:
+                      provisioningState: Succeeded
+                      ipConfigurations:
+                        - name: azureFirewallIpConfiguration
+                          id: >-
+                            /subscriptions/{{ subscription_id
+                            }}/resourceGroups/{{ resource_group
+                            }}/providers/Microsoft.Network/azureFirewalls/{{
+                            azure_firewall_name }}/ipConfigurations/{{
+                            ip_configuration_name }}
+                          etag: w/\00000000-0000-0000-0000-000000000000\
+                          properties:
+                            provisioningState: Succeeded
+                            privateIPAddress: 10.0.0.0
+                            subnet:
+                              id: >-
+                                /subscriptions/{{ subscription_id
+                                }}/resourceGroups/{{ resource_group
+                                }}/providers/Microsoft.Network/virtualNetworks/{{
+                                virtual_network_name }}/subnets/{{ subnet_name
+                                }}
+                            publicIPAddress:
+                              id: >-
+                                /subscriptions/{{ subscription_id
+                                }}/resourceGroups/{{ resource_group
+                                }}/providers/Microsoft.Network/publicIPAddresses/{{
+                                public_ip_address_name }}
+                      applicationRuleCollections:
+                        - name: apprulecoll
+                          properties:
+                            priority: '110'
+                            action:
+                              type: Deny
+                            rules:
+                              - name: rule1
+                                description: Deny inbound rule
+                                protocols:
+                                  - protocolType: Https
+                                    port: '443'
+                                targetFqdns:
+                                  - www.test.com
+                                sourceAddresses:
+                                  - 216.58.216.164
+                                  - 10.0.0.0/24
+                      natRuleCollections:
+                        - name: natrulecoll
+                          properties:
+                            priority: '112'
+                            action:
+                              type: Dnat
+                            rules:
+                              - name: DNAT-HTTPS-traffic
+                                description: D-NAT all outbound web traffic for inspection
+                                sourceAddresses:
+                                  - '*'
+                                destinationAddresses:
+                                  - 1.2.3.4
+                                destinationPorts:
+                                  - '443'
+                                protocols:
+                                  - TCP
+                                translatedAddress: 1.2.3.5
+                                translatedPort: '8443'
+                      networkRuleCollections:
+                        - name: netrulecoll
+                          properties:
+                            priority: '112'
+                            action:
+                              type: Deny
+                            rules:
+                              - name: L4-traffic
+                                description: Block traffic based on source IPs and ports
+                                sourceAddresses:
+                                  - 192.168.1.1-192.168.1.12
+                                  - 10.1.4.12-10.1.4.255
+                                destinationPorts:
+                                  - 443-444
+                                  - '8443'
+                                destinationAddresses:
+                                  - '*'
+                                protocols:
+                                  - TCP
+          x-ms-long-running-operation: true
+        deprecated: false
+        hidden: false
+      - $id: '570'
+        parameters:
+          - $id: '571'
+            location: path
+            collectionFormat: none
+            defaultValue:
+              $id: '572'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '573'
+              fixed: false
+              raw: The name of the resource group.
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '574'
+              fixed: false
+              raw: resourceGroupName
+            serializedName: resourceGroupName
+            modelType:
+              $id: '575'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '576'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '577'
+            clientProperty:
+              $ref: '466'
+            location: query
+            collectionFormat: none
+            defaultValue:
+              $id: '578'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '579'
+              fixed: false
+              raw: Client API version.
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '580'
+              fixed: false
+              raw: api-version
+            serializedName: api-version
+            modelType:
+              $id: '581'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '582'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '583'
+            clientProperty:
+              $ref: '460'
+            location: path
+            collectionFormat: none
+            defaultValue:
+              $id: '584'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '585'
+              fixed: false
+              raw: >-
+                The subscription credentials which uniquely identify the
+                Microsoft Azure subscription. The subscription ID forms part of
+                the URI for every service call.
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '586'
+              fixed: false
+              raw: subscriptionId
+            serializedName: subscriptionId
+            modelType:
+              $id: '587'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '588'
+                fixed: false
+                raw: String
+              deprecated: false
+        name:
+          $id: '589'
+          fixed: false
+          raw: List
+        group:
+          $id: '590'
+          fixed: false
+          raw: AzureFirewalls
+        serializedName: AzureFirewalls_List
+        url: >-
+          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/azureFirewalls
+        isAbsoluteUrl: false
+        httpMethod: get
+        responses:
+          OK:
+            $id: '591'
+            body:
+              $ref: '446'
+            isNullable: true
+        defaultResponse:
+          $id: '592'
+          isNullable: true
+        returnType:
+          $id: '593'
+          body:
+            $ref: '446'
+          isNullable: true
+        description: Lists all Azure Firewalls in a resource group.
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        extensions:
+          x-ms-examples:
+            List all Azure Firewalls for a given resource group:
+              parameters:
+                api-version: '2018-11-01'
+                subscriptionId: subid
+                resourceGroupName: rg1
+              responses:
+                '200':
+                  body:
+                    value:
+                      - name: azurefirewall
+                        id: >-
+                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                          resource_group
+                          }}/providers/Microsoft.Network/azureFirewalls/{{
+                          azure_firewall_name }}
+                        type: Microsoft.Network/azureFirewalls
+                        etag: w/\00000000-0000-0000-0000-000000000000\
+                        location: West US
+                        tags:
+                          key1: value1
+                        properties:
+                          provisioningState: Succeeded
+                          ipConfigurations:
+                            - name: azureFirewallIpConfiguration
+                              id: >-
+                                /subscriptions/{{ subscription_id
+                                }}/resourceGroups/{{ resource_group
+                                }}/providers/Microsoft.Network/azureFirewalls/{{
+                                azure_firewall_name }}/ipConfigurations/{{
+                                ip_configuration_name }}
+                              etag: w/\00000000-0000-0000-0000-000000000000\
+                              properties:
+                                provisioningState: Succeeded
+                                privateIPAddress: 10.0.0.0
+                                subnet:
+                                  id: >-
+                                    /subscriptions/{{ subscription_id
+                                    }}/resourceGroups/{{ resource_group
+                                    }}/providers/Microsoft.Network/virtualNetworks/{{
+                                    virtual_network_name }}/subnets/{{
+                                    subnet_name }}
+                                publicIPAddress:
+                                  id: >-
+                                    /subscriptions/{{ subscription_id
+                                    }}/resourceGroups/{{ resource_group
+                                    }}/providers/Microsoft.Network/publicIPAddresses/{{
+                                    public_ip_address_name }}
+                          applicationRuleCollections:
+                            - name: apprulecoll
+                              properties:
+                                priority: '110'
+                                action:
+                                  type: Deny
+                                rules:
+                                  - name: rule1
+                                    description: Deny inbound rule
+                                    protocols:
+                                      - protocolType: Https
+                                        port: '443'
+                                    targetFqdns:
+                                      - www.test.com
+                                    sourceAddresses:
+                                      - 216.58.216.164
+                                      - 10.0.0.0/24
+                          natRuleCollections:
+                            - name: natrulecoll
+                              properties:
+                                priority: '112'
+                                action:
+                                  type: Dnat
+                                rules:
+                                  - name: DNAT-HTTPS-traffic
+                                    description: >-
+                                      D-NAT all outbound web traffic for
+                                      inspection
+                                    sourceAddresses:
+                                      - '*'
+                                    destinationAddresses:
+                                      - 1.2.3.4
+                                    destinationPorts:
+                                      - '443'
+                                    protocols:
+                                      - TCP
+                                    translatedAddress: 1.2.3.5
+                                    translatedPort: '8443'
+                          networkRuleCollections:
+                            - name: netrulecoll
+                              properties:
+                                priority: '112'
+                                action:
+                                  type: Deny
+                                rules:
+                                  - name: L4-traffic
+                                    description: >-
+                                      Block traffic based on source IPs and
+                                      ports
+                                    sourceAddresses:
+                                      - 192.168.1.1-192.168.1.12
+                                      - 10.1.4.12-10.1.4.255
+                                    destinationPorts:
+                                      - 443-444
+                                      - '8443'
+                                    destinationAddresses:
+                                      - '*'
+                                    protocols:
+                                      - TCP
+          x-ms-pageable:
+            nextLinkName: nextLink
+        deprecated: false
+        hidden: false
+      - $id: '594'
+        parameters:
+          - $id: '595'
+            clientProperty:
+              $ref: '466'
+            location: query
+            collectionFormat: none
+            defaultValue:
+              $id: '596'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '597'
+              fixed: false
+              raw: Client API version.
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '598'
+              fixed: false
+              raw: api-version
+            serializedName: api-version
+            modelType:
+              $id: '599'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '600'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '601'
+            clientProperty:
+              $ref: '460'
+            location: path
+            collectionFormat: none
+            defaultValue:
+              $id: '602'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '603'
+              fixed: false
+              raw: >-
+                The subscription credentials which uniquely identify the
+                Microsoft Azure subscription. The subscription ID forms part of
+                the URI for every service call.
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '604'
+              fixed: false
+              raw: subscriptionId
+            serializedName: subscriptionId
+            modelType:
+              $id: '605'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '606'
+                fixed: false
+                raw: String
+              deprecated: false
+        name:
+          $id: '607'
+          fixed: false
+          raw: ListAll
+        group:
+          $id: '608'
+          fixed: false
+          raw: AzureFirewalls
+        serializedName: AzureFirewalls_ListAll
+        url: >-
+          /subscriptions/{subscriptionId}/providers/Microsoft.Network/azureFirewalls
+        isAbsoluteUrl: false
+        httpMethod: get
+        responses:
+          OK:
+            $id: '609'
+            body:
+              $ref: '446'
+            isNullable: true
+        defaultResponse:
+          $id: '610'
+          isNullable: true
+        returnType:
+          $id: '611'
+          body:
+            $ref: '446'
+          isNullable: true
+        description: Gets all the Azure Firewalls in a subscription.
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        extensions:
+          x-ms-examples:
+            List all Azure Firewalls for a given subscription:
+              parameters:
+                api-version: '2018-11-01'
+                subscriptionId: subid
+              responses:
+                '200':
+                  body:
+                    value:
+                      - name: azurefirewall
+                        id: >-
+                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                          resource_group
+                          }}/providers/Microsoft.Network/azureFirewalls/{{
+                          azure_firewall_name }}
+                        type: Microsoft.Network/azureFirewalls
+                        etag: w/\00000000-0000-0000-0000-000000000000\
+                        location: West US
+                        tags:
+                          key1: value1
+                        properties:
+                          provisioningState: Succeeded
+                          ipConfigurations:
+                            - name: azureFirewallIpConfiguration
+                              id: >-
+                                /subscriptions/{{ subscription_id
+                                }}/resourceGroups/{{ resource_group
+                                }}/providers/Microsoft.Network/azureFirewalls/{{
+                                azure_firewall_name }}/ipConfigurations/{{
+                                ip_configuration_name }}
+                              etag: w/\00000000-0000-0000-0000-000000000000\
+                              properties:
+                                provisioningState: Succeeded
+                                privateIPAddress: 10.0.0.0
+                                subnet:
+                                  id: >-
+                                    /subscriptions/{{ subscription_id
+                                    }}/resourceGroups/{{ resource_group
+                                    }}/providers/Microsoft.Network/virtualNetworks/{{
+                                    virtual_network_name }}/subnets/{{
+                                    subnet_name }}
+                                publicIPAddress:
+                                  id: >-
+                                    /subscriptions/{{ subscription_id
+                                    }}/resourceGroups/{{ resource_group
+                                    }}/providers/Microsoft.Network/publicIPAddresses/{{
+                                    public_ip_address_name }}
+                          applicationRuleCollections:
+                            - name: apprulecoll
+                              properties:
+                                priority: '110'
+                                action:
+                                  type: Deny
+                                rules:
+                                  - name: rule1
+                                    description: Deny inbound rule
+                                    protocols:
+                                      - protocolType: Https
+                                        port: '443'
+                                    targetFqdns:
+                                      - www.test.com
+                                    sourceAddresses:
+                                      - 216.58.216.164
+                                      - 10.0.0.0/24
+                          natRuleCollections:
+                            - name: natrulecoll
+                              properties:
+                                priority: '112'
+                                action:
+                                  type: Dnat
+                                rules:
+                                  - name: DNAT-HTTPS-traffic
+                                    description: >-
+                                      D-NAT all outbound web traffic for
+                                      inspection
+                                    sourceAddresses:
+                                      - '*'
+                                    destinationAddresses:
+                                      - 1.2.3.4
+                                    destinationPorts:
+                                      - '443'
+                                    protocols:
+                                      - TCP
+                                    translatedAddress: 1.2.3.5
+                                    translatedPort: '8443'
+                          networkRuleCollections:
+                            - name: netrulecoll
+                              properties:
+                                priority: '112'
+                                action:
+                                  type: Deny
+                                rules:
+                                  - name: L4-traffic
+                                    description: >-
+                                      Block traffic based on source IPs and
+                                      ports
+                                    sourceAddresses:
+                                      - 192.168.1.1-192.168.1.12
+                                      - 10.1.4.12-10.1.4.255
+                                    destinationPorts:
+                                      - 443-444
+                                      - '8443'
+                                    destinationAddresses:
+                                      - '*'
+                                    protocols:
+                                      - TCP
+          x-ms-pageable:
+            nextLinkName: nextLink
+        deprecated: false
+        hidden: false
+    name:
+      $id: '612'
+      fixed: false
+      raw: AzureFirewalls
+    typeName:
+      $id: '613'
+      fixed: false
+    nameForProperty: AzureFirewalls

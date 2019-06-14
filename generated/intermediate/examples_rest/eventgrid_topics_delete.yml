@@ -1,0 +1,17 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    topic_name: myTopic
+  tasks:
+    - name: Topics_Delete
+      azure_rm_resource:
+        method: DELETE
+        api_version: '2019-01-01'
+        resource_group: '{{ resource_group }}'
+        provider: EventGrid
+        resource_type: topics
+        resource_name: '{{ topic_name }}'

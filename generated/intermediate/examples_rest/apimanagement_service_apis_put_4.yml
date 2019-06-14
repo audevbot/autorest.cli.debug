@@ -1,0 +1,31 @@
+- import_playbook: apimanagement_service_apis_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    apis_name: myApis
+  tasks:
+    - name: ApiManagementCreateSoapPassThroughApiUsingWsdlImport
+      azure_rm_resource:
+        idempotency: true
+        api_version: '2019-01-01'
+        resource_group: '{{ resource_group }}'
+        provider: ApiManagement
+        resource_type: service
+        resource_name: '{{ service_name }}'
+        subresource:
+          - type: apis
+            name: '{{ apis_name }}'
+        body:
+          properties:
+            format: wsdl-link
+            value: 'http://www.webservicex.net/CurrencyConvertor.asmx?WSDL'
+            path: currency
+            apiType: soap
+            wsdlSelector:
+              wsdlServiceName: CurrencyConvertor
+              wsdlEndpointName: CurrencyConvertorSoap

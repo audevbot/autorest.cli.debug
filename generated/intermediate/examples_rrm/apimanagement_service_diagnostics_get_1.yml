@@ -1,0 +1,20 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+    diagnostic_name: myDiagnostic
+  tasks:
+
+    - name: ApiManagementGetDiagnostic
+      azure_rm_apimanagementdiagnostic_info:
+        resource_group: '{{resource_group}}'
+        name: '{{service_name}}'
+        diagnostic_id: '{{diagnostic_name}}'
+    
+      register: output
+    - debug:
+        var: output
