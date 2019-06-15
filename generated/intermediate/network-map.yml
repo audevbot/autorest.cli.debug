@@ -1492,9 +1492,11 @@ Modules:
                 NameGoSdk: Protocols
                 NameTerraform: Protocols
                 IdPortion: null
-                Type: 'unknown[reference: undefined]'
-                TypeName: UnknownTypeName
-                TypeNameGo: UnknownTypeName
+                Type: 'unknown[undefined {"$ref":"224"}]'
+                TypeName: >-
+                  {"$id":"303","$type":"SequenceType","elementType":{"$ref":"224"},"name":{"$id":"304","fixed":false},"deprecated":false}
+                TypeNameGo: >-
+                  {"$id":"303","$type":"SequenceType","elementType":{"$ref":"224"},"name":{"$id":"304","fixed":false},"deprecated":false}
                 IsList: true
                 Required: false
                 Documentation: Array of AzureFirewallNetworkRuleProtocols.
@@ -3610,9 +3612,11 @@ Modules:
                         NameGoSdk: Protocols
                         NameTerraform: Protocols
                         IdPortion: null
-                        Type: 'unknown[reference: undefined]'
-                        TypeName: UnknownTypeName
-                        TypeNameGo: UnknownTypeName
+                        Type: 'unknown[undefined {"$ref":"224"}]'
+                        TypeName: >-
+                          {"$id":"303","$type":"SequenceType","elementType":{"$ref":"224"},"name":{"$id":"304","fixed":false},"deprecated":false}
+                        TypeNameGo: >-
+                          {"$id":"303","$type":"SequenceType","elementType":{"$ref":"224"},"name":{"$id":"304","fixed":false},"deprecated":false}
                         IsList: true
                         Required: false
                         Documentation: Array of AzureFirewallNetworkRuleProtocols.
@@ -5930,9 +5934,11 @@ Modules:
                 NameGoSdk: Protocols
                 NameTerraform: Protocols
                 IdPortion: null
-                Type: 'unknown[reference: undefined]'
-                TypeName: UnknownTypeName
-                TypeNameGo: UnknownTypeName
+                Type: 'unknown[undefined {"$ref":"224"}]'
+                TypeName: >-
+                  {"$id":"303","$type":"SequenceType","elementType":{"$ref":"224"},"name":{"$id":"304","fixed":false},"deprecated":false}
+                TypeNameGo: >-
+                  {"$id":"303","$type":"SequenceType","elementType":{"$ref":"224"},"name":{"$id":"304","fixed":false},"deprecated":false}
                 IsList: true
                 Required: false
                 Documentation: Array of AzureFirewallNetworkRuleProtocols.
@@ -6985,9 +6991,6 @@ Info:
   - '  ** FOUND OPTION resourceGroupName'
   - '  ** FOUND OPTION azureFirewallName'
   - '  ** FOUND OPTION parameters'
-  - '  ** COULDN''T FIND undefined'
-  - '  ** COULDN''T FIND undefined'
   - '  ** FOUND OPTION resourceGroupName'
   - '  ** FOUND OPTION resourceGroupName'
   - '  ** FOUND OPTION azureFirewallName'
-  - '  ** COULDN''T FIND undefined'

@@ -4005,7 +4005,7 @@ Modules:
         NameGoSdk: RoutingRuleParameters
         NameTerraform: RoutingRuleParameters
         IdPortion: null
-        Type: 'unknown[reference: 41]'
+        Type: 'unknown[undefined {"$ref":"41"}]'
         TypeName: xxx
         TypeNameGo: null
         IsList: false
@@ -4966,7 +4966,7 @@ Modules:
         NameGoSdk: HealthProbeSettingsParameters
         NameTerraform: HealthProbeSettingsParameters
         IdPortion: null
-        Type: 'unknown[reference: 173]'
+        Type: 'unknown[undefined {"$ref":"173"}]'
         TypeName: xxx
         TypeNameGo: null
         IsList: false
@@ -5483,7 +5483,7 @@ Modules:
         NameGoSdk: LoadBalancingSettingsParameters
         NameTerraform: LoadBalancingSettingsParameters
         IdPortion: null
-        Type: 'unknown[reference: 123]'
+        Type: 'unknown[undefined {"$ref":"123"}]'
         TypeName: xxx
         TypeNameGo: null
         IsList: false
@@ -5990,7 +5990,7 @@ Modules:
         NameGoSdk: BackendPoolParameters
         NameTerraform: BackendPoolParameters
         IdPortion: null
-        Type: 'unknown[reference: 221]'
+        Type: 'unknown[undefined {"$ref":"221"}]'
         TypeName: xxx
         TypeNameGo: null
         IsList: false
@@ -6705,7 +6705,7 @@ Modules:
         NameGoSdk: FrontendEndpointParameters
         NameTerraform: FrontendEndpointParameters
         IdPortion: null
-        Type: 'unknown[reference: 315]'
+        Type: 'unknown[undefined {"$ref":"315"}]'
         TypeName: xxx
         TypeNameGo: null
         IsList: false

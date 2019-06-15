@@ -121,7 +121,7 @@ class AzureRMFrontendEndpoints(AzureRMModuleBaseExt):
                 required=true
             ),
             frontend_endpoint_parameters=dict(
-                type='unknown[reference: 315]',
+                type='unknown[undefined {"$ref":"315"}]',
                 updatable=False,
                 disposition='frontendEndpointParameters',
                 required=true
