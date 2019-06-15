@@ -916,9 +916,11 @@ Modules:
         NameGoSdk: Protocols
         NameTerraform: Protocols
         IdPortion: null
-        Type: 'unknown[reference: undefined]'
-        TypeName: UnknownTypeName
-        TypeNameGo: UnknownTypeName
+        Type: 'unknown[undefined {"$ref":"350"}]'
+        TypeName: >-
+          {"$id":"556","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"557","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
+        TypeNameGo: >-
+          {"$id":"556","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"557","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
         IsList: true
         Required: false
         Documentation: >-
@@ -2409,9 +2411,11 @@ Modules:
             NameGoSdk: Protocols
             NameTerraform: Protocols
             IdPortion: null
-            Type: 'unknown[reference: undefined]'
-            TypeName: UnknownTypeName
-            TypeNameGo: UnknownTypeName
+            Type: 'unknown[undefined {"$ref":"350"}]'
+            TypeName: >-
+              {"$id":"556","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"557","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
+            TypeNameGo: >-
+              {"$id":"556","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"557","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
             IsList: true
             Required: false
             Documentation: >-
@@ -4806,9 +4810,11 @@ Modules:
         NameGoSdk: Protocols
         NameTerraform: Protocols
         IdPortion: null
-        Type: 'unknown[reference: undefined]'
-        TypeName: UnknownTypeName
-        TypeNameGo: UnknownTypeName
+        Type: 'unknown[undefined {"$ref":"350"}]'
+        TypeName: >-
+          {"$id":"556","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"557","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
+        TypeNameGo: >-
+          {"$id":"556","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"557","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
         IsList: true
         Required: false
         Documentation: >-
@@ -29476,9 +29482,11 @@ Modules:
                 NameGoSdk: Protocols
                 NameTerraform: Protocols
                 IdPortion: null
-                Type: 'unknown[reference: undefined]'
-                TypeName: UnknownTypeName
-                TypeNameGo: UnknownTypeName
+                Type: 'unknown[undefined {"$ref":"350"}]'
+                TypeName: >-
+                  {"$id":"593","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"594","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
+                TypeNameGo: >-
+                  {"$id":"593","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"594","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
                 IsList: true
                 Required: false
                 Documentation: >-
@@ -72074,9 +72082,11 @@ Modules:
         NameGoSdk: Protocols
         NameTerraform: Protocols
         IdPortion: null
-        Type: 'unknown[reference: undefined]'
-        TypeName: UnknownTypeName
-        TypeNameGo: UnknownTypeName
+        Type: 'unknown[undefined {"$ref":"350"}]'
+        TypeName: >-
+          {"$id":"556","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"557","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
+        TypeNameGo: >-
+          {"$id":"556","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"557","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
         IsList: true
         Required: false
         Documentation: >-
@@ -73533,9 +73543,11 @@ Modules:
             NameGoSdk: Protocols
             NameTerraform: Protocols
             IdPortion: null
-            Type: 'unknown[reference: undefined]'
-            TypeName: UnknownTypeName
-            TypeNameGo: UnknownTypeName
+            Type: 'unknown[undefined {"$ref":"350"}]'
+            TypeName: >-
+              {"$id":"556","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"557","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
+            TypeNameGo: >-
+              {"$id":"556","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"557","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
             IsList: true
             Required: false
             Documentation: >-
@@ -84223,9 +84235,11 @@ Modules:
                 NameGoSdk: Protocols
                 NameTerraform: Protocols
                 IdPortion: null
-                Type: 'unknown[reference: undefined]'
-                TypeName: UnknownTypeName
-                TypeNameGo: UnknownTypeName
+                Type: 'unknown[undefined {"$ref":"350"}]'
+                TypeName: >-
+                  {"$id":"593","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"594","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
+                TypeNameGo: >-
+                  {"$id":"593","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"594","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
                 IsList: true
                 Required: false
                 Documentation: >-
@@ -90272,8 +90286,6 @@ Info:
   - '  ** FOUND OPTION serviceName'
   - '  ** FOUND OPTION apiId'
   - '  ** FOUND OPTION parameters'
-  - '  ** COULDN''T FIND undefined'
-  - '  ** COULDN''T FIND undefined'
   - '  ** FOUND OPTION resourceGroupName'
   - '  ** FOUND OPTION serviceName'
   - '  ** FOUND OPTION tags'
@@ -90284,7 +90296,6 @@ Info:
   - '  ** FOUND OPTION resourceGroupName'
   - '  ** FOUND OPTION serviceName'
   - '  ** FOUND OPTION apiId'
-  - '  ** COULDN''T FIND undefined'
   - '  ** FOUND OPTION resourceGroupName'
   - '  ** FOUND OPTION serviceName'
   - '  ** FOUND OPTION apiId'
@@ -90461,7 +90472,6 @@ Info:
   - '  ** FOUND OPTION serviceName'
   - '  ** FOUND OPTION apiId'
   - '  ** FOUND OPTION includeNotTaggedOperations'
-  - '  ** COULDN''T FIND undefined'
   - '  ** FOUND OPTION resourceGroupName'
   - '  ** FOUND OPTION serviceName'
   - '  ** FOUND OPTION versionSetId'
@@ -90654,11 +90664,9 @@ Info:
   - '  ** FOUND OPTION serviceName'
   - '  ** FOUND OPTION productId'
   - '  ** FOUND OPTION apiId'
-  - '  ** COULDN''T FIND undefined'
   - '  ** FOUND OPTION resourceGroupName'
   - '  ** FOUND OPTION serviceName'
   - '  ** FOUND OPTION productId'
-  - '  ** COULDN''T FIND undefined'
   - '  ** FOUND OPTION resourceGroupName'
   - '  ** FOUND OPTION serviceName'
   - '  ** FOUND OPTION productId'
@@ -90729,7 +90737,6 @@ Info:
   - '  ** FOUND OPTION sid'
   - '  ** FOUND OPTION resourceGroupName'
   - '  ** FOUND OPTION serviceName'
-  - '  ** COULDN''T FIND undefined'
   - '  ** FOUND OPTION resourceGroupName'
   - '  ** FOUND OPTION serviceName'
   - '  ** FOUND OPTION accessName'

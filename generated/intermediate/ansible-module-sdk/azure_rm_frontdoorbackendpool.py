@@ -145,7 +145,7 @@ class AzureRMBackendPools(AzureRMModuleBaseExt):
                 required=true
             ),
             backend_pool_parameters=dict(
-                type='unknown[reference: 221]',
+                type='unknown[undefined {"$ref":"221"}]',
                 updatable=False,
                 required=true
             ),

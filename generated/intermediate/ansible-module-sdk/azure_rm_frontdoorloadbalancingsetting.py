@@ -121,7 +121,7 @@ class AzureRMLoadBalancingSettings(AzureRMModuleBaseExt):
                 required=true
             ),
             load_balancing_settings_parameters=dict(
-                type='unknown[reference: 123]',
+                type='unknown[undefined {"$ref":"123"}]',
                 updatable=False,
                 required=true
             ),

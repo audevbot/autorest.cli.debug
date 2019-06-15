@@ -168,7 +168,7 @@ class AzureRMRoutingRules(AzureRMModuleBaseExt):
                 required=true
             ),
             routing_rule_parameters=dict(
-                type='unknown[reference: 41]',
+                type='unknown[undefined {"$ref":"41"}]',
                 updatable=False,
                 required=true
             ),

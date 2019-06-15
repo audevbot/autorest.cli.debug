@@ -409,7 +409,7 @@ product_api:
                   Describes on which protocols the operations in this API can be
                   invoked.
               returned: always
-              type: 'unknown[reference: undefined]'
+              type: 'unknown[undefined {"$ref":"350"}]'
               sample: null
             api_version_set:
               description:

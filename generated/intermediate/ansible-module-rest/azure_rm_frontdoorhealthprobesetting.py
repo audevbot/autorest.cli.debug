@@ -115,7 +115,7 @@ class AzureRMHealthProbeSettings(AzureRMModuleBaseExt):
                 required=true
             ),
             health_probe_settings_parameters=dict(
-                type='unknown[reference: 173]',
+                type='unknown[undefined {"$ref":"173"}]',
                 updatable=False,
                 disposition='healthProbeSettingsParameters',
                 required=true
