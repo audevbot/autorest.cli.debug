@@ -687,7 +687,9 @@ class AzureRMApi(AzureRMModuleBaseExt):
                             ),
                             bearer_token_sending_methods=dict(
                                 type='list',
-                                disposition='bearerTokenSendingMethods'
+                                disposition='bearerTokenSendingMethods',
+                                choices=['authorizationHeader',
+                                         'query']
                             )
                         )
                     ),
@@ -768,7 +770,9 @@ class AzureRMApi(AzureRMModuleBaseExt):
             ),
             protocols=dict(
                 type='list',
-                disposition='/properties/*'
+                disposition='/properties/*',
+                choices=['http',
+                         'https']
             ),
             api_version_set=dict(
                 type='dict',

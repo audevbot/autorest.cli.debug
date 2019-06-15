@@ -2711,7 +2711,10 @@ class AzureRMPool(AzureRMModuleBaseExt):
                         type='str'
                     ),
                     visibility=dict(
-                        type='list'
+                        type='list',
+                        choices=['StartTask',
+                                 'Task',
+                                 'RemoteUser']
                     )
                 )
             ),

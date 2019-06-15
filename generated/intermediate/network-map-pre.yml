@@ -1039,7 +1039,19 @@ Modules:
                 IncludeInArgSpec: true
                 NoLog: false
                 SubOptions: []
-                EnumValues: []
+                EnumValues:
+                  - Key: TCP
+                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Description: !<tag:yaml.org,2002:js/undefined> ''
+                  - Key: UDP
+                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Description: !<tag:yaml.org,2002:js/undefined> ''
+                  - Key: Any
+                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Description: !<tag:yaml.org,2002:js/undefined> ''
+                  - Key: ICMP
+                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /properties/natRuleCollections/properties/rules/protocols
                 PathPython: /natRuleCollections/rules/protocols
                 PathGo: /properties/natRuleCollections/properties/rules/protocols
@@ -1487,7 +1499,19 @@ Modules:
                 IncludeInArgSpec: true
                 NoLog: false
                 SubOptions: []
-                EnumValues: []
+                EnumValues:
+                  - Key: TCP
+                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Description: !<tag:yaml.org,2002:js/undefined> ''
+                  - Key: UDP
+                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Description: !<tag:yaml.org,2002:js/undefined> ''
+                  - Key: Any
+                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Description: !<tag:yaml.org,2002:js/undefined> ''
+                  - Key: ICMP
+                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /properties/networkRuleCollections/properties/rules/protocols
                 PathPython: /networkRuleCollections/rules/protocols
                 PathGo: /properties/networkRuleCollections/properties/rules/protocols
@@ -3167,7 +3191,19 @@ Modules:
                         IncludeInArgSpec: true
                         NoLog: false
                         SubOptions: []
-                        EnumValues: []
+                        EnumValues:
+                          - Key: TCP
+                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Description: !<tag:yaml.org,2002:js/undefined> ''
+                          - Key: UDP
+                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Description: !<tag:yaml.org,2002:js/undefined> ''
+                          - Key: Any
+                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Description: !<tag:yaml.org,2002:js/undefined> ''
+                          - Key: ICMP
+                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Description: !<tag:yaml.org,2002:js/undefined> ''
                         PathSwagger: >-
                           /properties/natRuleCollections/properties/rules/protocols
                         PathPython: /natRuleCollections/rules/protocols
@@ -3579,7 +3615,19 @@ Modules:
                         IncludeInArgSpec: true
                         NoLog: false
                         SubOptions: []
-                        EnumValues: []
+                        EnumValues:
+                          - Key: TCP
+                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Description: !<tag:yaml.org,2002:js/undefined> ''
+                          - Key: UDP
+                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Description: !<tag:yaml.org,2002:js/undefined> ''
+                          - Key: Any
+                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Description: !<tag:yaml.org,2002:js/undefined> ''
+                          - Key: ICMP
+                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Description: !<tag:yaml.org,2002:js/undefined> ''
                         PathSwagger: >-
                           /properties/networkRuleCollections/properties/rules/protocols
                         PathPython: /networkRuleCollections/rules/protocols
@@ -5433,7 +5481,19 @@ Modules:
                 IncludeInArgSpec: true
                 NoLog: false
                 SubOptions: []
-                EnumValues: []
+                EnumValues:
+                  - Key: TCP
+                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Description: !<tag:yaml.org,2002:js/undefined> ''
+                  - Key: UDP
+                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Description: !<tag:yaml.org,2002:js/undefined> ''
+                  - Key: Any
+                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Description: !<tag:yaml.org,2002:js/undefined> ''
+                  - Key: ICMP
+                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /properties/natRuleCollections/properties/rules/protocols
                 PathPython: /natRuleCollections/rules/protocols
                 PathGo: /properties/natRuleCollections/properties/rules/protocols
@@ -5879,7 +5939,19 @@ Modules:
                 IncludeInArgSpec: true
                 NoLog: false
                 SubOptions: []
-                EnumValues: []
+                EnumValues:
+                  - Key: TCP
+                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Description: !<tag:yaml.org,2002:js/undefined> ''
+                  - Key: UDP
+                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Description: !<tag:yaml.org,2002:js/undefined> ''
+                  - Key: Any
+                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Description: !<tag:yaml.org,2002:js/undefined> ''
+                  - Key: ICMP
+                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /properties/networkRuleCollections/properties/rules/protocols
                 PathPython: /networkRuleCollections/rules/protocols
                 PathGo: /properties/networkRuleCollections/properties/rules/protocols

@@ -625,7 +625,7 @@ objects:
           '/certificates/storeName': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: store_name
-          '/certificates/visibility': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/certificates/visibility': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: visibility
           '/properties/certificates': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -642,9 +642,10 @@ objects:
           '/properties/certificates/storeName': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: StoreName
-          '/properties/certificates/visibility': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/certificates/visibility': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [go]
             go_field_name: Visibility
+            go_enum_type_name: CertificateVisibility
           '/applicationPackages': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
             python_field_name: application_packages
@@ -1275,7 +1276,7 @@ objects:
           '/certificates/storeName': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: store_name
-          '/certificates/visibility': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/certificates/visibility': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: visibility
           '/properties/certificates': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -1292,9 +1293,10 @@ objects:
           '/properties/certificates/storeName': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: StoreName
-          '/properties/certificates/visibility': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/certificates/visibility': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [go]
             go_field_name: Visibility
+            go_enum_type_name: CertificateVisibility
           '/applicationPackages': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
             python_field_name: application_packages
@@ -1943,9 +1945,10 @@ objects:
           '/properties/certificates/storeName': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: StoreName
-          '/properties/certificates/visibility': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/certificates/visibility': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [go]
             go_field_name: Visibility
+            go_enum_type_name: CertificateVisibility
           '/certificates': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
             python_field_name: certificates
@@ -1958,7 +1961,7 @@ objects:
           '/certificates/storeName': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: store_name
-          '/certificates/visibility': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/certificates/visibility': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: visibility
           '/properties/applicationPackages': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -2686,10 +2689,15 @@ objects:
             required: false
             sample_value: MY
             azure_sdk_references: ['/certificates/storeName', '/properties/certificates/storeName']
-          - !ruby/object:Api::Type::String
+          - !ruby/object:Api::Type::Enum
             name: 'visibility'
             description: 'undefined'
             required: false
+            values:
+              - :StartTask
+              - :Task
+              - :RemoteUser
+            default_value: :StartTask
             sample_value: RemoteUser
             azure_sdk_references: ['/certificates/visibility', '/properties/certificates/visibility']
       - !ruby/object:Api::Type::NestedObject
