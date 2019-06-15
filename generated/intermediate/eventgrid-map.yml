@@ -579,25 +579,25 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Creating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Creating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Updating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Updating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Deleting
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Deleting
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Succeeded
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Succeeded
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Canceled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Canceled
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Failed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Failed
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: AwaitingManualAction
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: AwaitingManualAction
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/provisioningState
         PathPython: /provisioningState
@@ -2633,25 +2633,25 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Creating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Creating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Updating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Updating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Deleting
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Deleting
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Succeeded
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Succeeded
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Canceled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Canceled
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Failed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Failed
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: AwaitingManualAction
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: AwaitingManualAction
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/provisioningState
         PathPython: /provisioningState
@@ -4616,22 +4616,22 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Creating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Creating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Updating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Updating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Deleting
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Deleting
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Succeeded
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Succeeded
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Canceled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Canceled
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Failed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Failed
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/provisioningState
         PathPython: /provisioningState
@@ -5443,22 +5443,22 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Creating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Creating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Updating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Updating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Deleting
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Deleting
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Succeeded
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Succeeded
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Canceled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Canceled
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Failed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Failed
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/provisioningState
         PathPython: /provisioningState
@@ -6013,10 +6013,10 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: RegionalResource
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: RegionalResource
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: GlobalResource
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: GlobalResource
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/resourceRegionType
         PathPython: /resourceRegionType
@@ -6049,22 +6049,22 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Creating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Creating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Updating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Updating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Deleting
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Deleting
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Succeeded
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Succeeded
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Canceled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Canceled
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Failed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Failed
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/provisioningState
         PathPython: /provisioningState

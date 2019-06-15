@@ -230,13 +230,13 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: GlobalDocumentDB
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: GlobalDocumentDB
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: MongoDB
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: MongoDB
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Parse
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Parse
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /kind
         PathPython: /kind
@@ -319,19 +319,19 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Eventual
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Eventual
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Session
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Session
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: BoundedStaleness
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: BoundedStaleness
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Strong
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Strong
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: ConsistentPrefix
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: ConsistentPrefix
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/consistencyPolicy/defaultConsistencyLevel
             PathPython: /consistencyPolicy/defaultConsistencyLevel
@@ -1988,13 +1988,13 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: GlobalDocumentDB
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: GlobalDocumentDB
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: MongoDB
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: MongoDB
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Parse
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Parse
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /kind
         PathPython: /kind
@@ -2049,7 +2049,7 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Standard
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Standard
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/databaseAccountOfferType
             PathPython: /databaseAccountOfferType
@@ -2204,19 +2204,19 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: Eventual
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Eventual
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Session
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Session
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: BoundedStaleness
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: BoundedStaleness
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Strong
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Strong
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: ConsistentPrefix
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: ConsistentPrefix
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /properties/consistencyPolicy/defaultConsistencyLevel
                 PathPython: /consistencyPolicy/defaultConsistencyLevel
@@ -3117,13 +3117,13 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: GlobalDocumentDB
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: GlobalDocumentDB
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: MongoDB
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: MongoDB
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Parse
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Parse
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /kind
         PathPython: /kind
@@ -3249,7 +3249,7 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Standard
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Standard
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/databaseAccountOfferType
         PathPython: /databaseAccountOfferType
@@ -3401,19 +3401,19 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Eventual
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Eventual
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Session
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Session
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: BoundedStaleness
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: BoundedStaleness
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Strong
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Strong
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: ConsistentPrefix
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: ConsistentPrefix
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/consistencyPolicy/defaultConsistencyLevel
             PathPython: /consistencyPolicy/defaultConsistencyLevel
@@ -6216,25 +6216,25 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Count
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Count
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Bytes
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Bytes
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Seconds
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Seconds
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Percent
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Percent
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: CountPerSecond
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: CountPerSecond
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: BytesPerSecond
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: BytesPerSecond
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Milliseconds
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Milliseconds
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /value/unit
             PathPython: /value/unit
@@ -6807,25 +6807,25 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Count
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Count
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Bytes
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Bytes
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Seconds
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Seconds
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Percent
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Percent
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: CountPerSecond
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: CountPerSecond
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: BytesPerSecond
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: BytesPerSecond
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Milliseconds
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Milliseconds
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /value/unit
             PathPython: /value/unit
@@ -7541,25 +7541,25 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Count
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Count
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Bytes
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Bytes
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Seconds
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Seconds
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Percent
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Percent
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: CountPerSecond
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: CountPerSecond
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: BytesPerSecond
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: BytesPerSecond
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Milliseconds
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Milliseconds
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /value/unit
             PathPython: /value/unit
@@ -8207,25 +8207,25 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Count
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Count
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Bytes
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Bytes
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Seconds
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Seconds
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Percent
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Percent
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: CountPerSecond
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: CountPerSecond
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: BytesPerSecond
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: BytesPerSecond
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Milliseconds
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Milliseconds
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /value/unit
             PathPython: /value/unit
@@ -8893,25 +8893,25 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Count
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Count
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Bytes
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Bytes
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Seconds
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Seconds
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Percent
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Percent
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: CountPerSecond
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: CountPerSecond
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: BytesPerSecond
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: BytesPerSecond
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Milliseconds
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Milliseconds
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /value/unit
             PathPython: /value/unit
@@ -9769,25 +9769,25 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Count
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Count
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Bytes
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Bytes
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Seconds
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Seconds
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Percent
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Percent
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: CountPerSecond
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: CountPerSecond
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: BytesPerSecond
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: BytesPerSecond
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Milliseconds
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Milliseconds
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /value/unit
             PathPython: /value/unit
@@ -10623,25 +10623,25 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Count
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Count
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Bytes
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Bytes
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Seconds
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Seconds
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Percent
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Percent
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: CountPerSecond
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: CountPerSecond
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: BytesPerSecond
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: BytesPerSecond
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Milliseconds
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Milliseconds
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /value/unit
             PathPython: /value/unit
@@ -11561,25 +11561,25 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Count
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Count
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Bytes
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Bytes
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Seconds
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Seconds
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Percent
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Percent
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: CountPerSecond
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: CountPerSecond
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: BytesPerSecond
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: BytesPerSecond
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Milliseconds
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Milliseconds
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /value/unit
             PathPython: /value/unit
@@ -12235,25 +12235,25 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Count
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Count
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Bytes
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Bytes
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Seconds
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Seconds
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Percent
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Percent
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: CountPerSecond
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: CountPerSecond
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: BytesPerSecond
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: BytesPerSecond
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Milliseconds
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Milliseconds
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /value/unit
             PathPython: /value/unit
@@ -12963,25 +12963,25 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Count
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Count
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Bytes
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Bytes
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Seconds
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Seconds
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Percent
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Percent
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: CountPerSecond
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: CountPerSecond
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: BytesPerSecond
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: BytesPerSecond
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Milliseconds
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Milliseconds
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /value/unit
             PathPython: /value/unit
@@ -13782,25 +13782,25 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Count
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Count
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Bytes
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Bytes
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Seconds
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Seconds
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Percent
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Percent
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: CountPerSecond
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: CountPerSecond
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: BytesPerSecond
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: BytesPerSecond
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Milliseconds
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Milliseconds
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /value/unit
             PathPython: /value/unit

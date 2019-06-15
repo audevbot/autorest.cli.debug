@@ -332,10 +332,10 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: Allow
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Allow
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Deny
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Deny
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /properties/applicationRuleCollections/properties/action/type
                 PathPython: /applicationRuleCollections/action/type
@@ -603,16 +603,16 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Succeeded
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Succeeded
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Updating
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Updating
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Deleting
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Deleting
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Failed
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Failed
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: >-
               /properties/applicationRuleCollections/properties/provisioningState
@@ -820,10 +820,10 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: Snat
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Snat
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Dnat
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Dnat
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /properties/natRuleCollections/properties/action/type
                 PathPython: /natRuleCollections/action/type
@@ -1044,16 +1044,16 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: TCP
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: TCP
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: UDP
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: UDP
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Any
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Any
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: ICMP
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: ICMP
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /properties/natRuleCollections/properties/rules/protocols
                 PathPython: /natRuleCollections/rules/protocols
@@ -1161,16 +1161,16 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Succeeded
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Succeeded
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Updating
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Updating
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Deleting
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Deleting
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Failed
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Failed
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/natRuleCollections/properties/provisioningState
             PathPython: /natRuleCollections/provisioningState
@@ -1376,10 +1376,10 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: Allow
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Allow
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Deny
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Deny
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /properties/networkRuleCollections/properties/action/type
                 PathPython: /networkRuleCollections/action/type
@@ -1504,16 +1504,16 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: TCP
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: TCP
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: UDP
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: UDP
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Any
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Any
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: ICMP
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: ICMP
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /properties/networkRuleCollections/properties/rules/protocols
                 PathPython: /networkRuleCollections/rules/protocols
@@ -1655,16 +1655,16 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Succeeded
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Succeeded
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Updating
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Updating
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Deleting
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Deleting
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Failed
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Failed
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/networkRuleCollections/properties/provisioningState
             PathPython: /networkRuleCollections/provisioningState
@@ -1986,16 +1986,16 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Succeeded
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Succeeded
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Updating
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Updating
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Deleting
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Deleting
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Failed
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Failed
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/ipConfigurations/properties/provisioningState
             PathPython: /ipConfigurations/provisioningState
@@ -2106,16 +2106,16 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Succeeded
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Succeeded
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Updating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Updating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Deleting
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Deleting
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Failed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Failed
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/provisioningState
         PathPython: /provisioningState
@@ -2532,10 +2532,10 @@ Modules:
                         SubOptions: []
                         EnumValues:
                           - Key: Allow
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: Allow
                             Description: !<tag:yaml.org,2002:js/undefined> ''
                           - Key: Deny
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: Deny
                             Description: !<tag:yaml.org,2002:js/undefined> ''
                         PathSwagger: >-
                           /properties/applicationRuleCollections/properties/action/type
@@ -2976,10 +2976,10 @@ Modules:
                         SubOptions: []
                         EnumValues:
                           - Key: Snat
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: Snat
                             Description: !<tag:yaml.org,2002:js/undefined> ''
                           - Key: Dnat
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: Dnat
                             Description: !<tag:yaml.org,2002:js/undefined> ''
                         PathSwagger: /properties/natRuleCollections/properties/action/type
                         PathPython: /natRuleCollections/action/type
@@ -3202,16 +3202,16 @@ Modules:
                         SubOptions: []
                         EnumValues:
                           - Key: TCP
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: TCP
                             Description: !<tag:yaml.org,2002:js/undefined> ''
                           - Key: UDP
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: UDP
                             Description: !<tag:yaml.org,2002:js/undefined> ''
                           - Key: Any
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: Any
                             Description: !<tag:yaml.org,2002:js/undefined> ''
                           - Key: ICMP
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: ICMP
                             Description: !<tag:yaml.org,2002:js/undefined> ''
                         PathSwagger: >-
                           /properties/natRuleCollections/properties/rules/protocols
@@ -3494,10 +3494,10 @@ Modules:
                         SubOptions: []
                         EnumValues:
                           - Key: Allow
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: Allow
                             Description: !<tag:yaml.org,2002:js/undefined> ''
                           - Key: Deny
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: Deny
                             Description: !<tag:yaml.org,2002:js/undefined> ''
                         PathSwagger: >-
                           /properties/networkRuleCollections/properties/action/type
@@ -3626,16 +3626,16 @@ Modules:
                         SubOptions: []
                         EnumValues:
                           - Key: TCP
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: TCP
                             Description: !<tag:yaml.org,2002:js/undefined> ''
                           - Key: UDP
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: UDP
                             Description: !<tag:yaml.org,2002:js/undefined> ''
                           - Key: Any
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: Any
                             Description: !<tag:yaml.org,2002:js/undefined> ''
                           - Key: ICMP
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: ICMP
                             Description: !<tag:yaml.org,2002:js/undefined> ''
                         PathSwagger: >-
                           /properties/networkRuleCollections/properties/rules/protocols
@@ -4784,10 +4784,10 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: Allow
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Allow
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Deny
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Deny
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /properties/applicationRuleCollections/properties/action/type
                 PathPython: /applicationRuleCollections/action/type
@@ -5052,16 +5052,16 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Succeeded
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Succeeded
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Updating
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Updating
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Deleting
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Deleting
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Failed
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Failed
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: >-
               /properties/applicationRuleCollections/properties/provisioningState
@@ -5268,10 +5268,10 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: Snat
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Snat
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Dnat
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Dnat
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /properties/natRuleCollections/properties/action/type
                 PathPython: /natRuleCollections/action/type
@@ -5492,16 +5492,16 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: TCP
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: TCP
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: UDP
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: UDP
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Any
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Any
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: ICMP
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: ICMP
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /properties/natRuleCollections/properties/rules/protocols
                 PathPython: /natRuleCollections/rules/protocols
@@ -5608,16 +5608,16 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Succeeded
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Succeeded
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Updating
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Updating
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Deleting
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Deleting
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Failed
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Failed
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/natRuleCollections/properties/provisioningState
             PathPython: /natRuleCollections/provisioningState
@@ -5822,10 +5822,10 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: Allow
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Allow
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Deny
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Deny
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /properties/networkRuleCollections/properties/action/type
                 PathPython: /networkRuleCollections/action/type
@@ -5950,16 +5950,16 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: TCP
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: TCP
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: UDP
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: UDP
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Any
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Any
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: ICMP
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: ICMP
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /properties/networkRuleCollections/properties/rules/protocols
                 PathPython: /networkRuleCollections/rules/protocols
@@ -6100,16 +6100,16 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Succeeded
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Succeeded
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Updating
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Updating
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Deleting
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Deleting
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Failed
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Failed
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/networkRuleCollections/properties/provisioningState
             PathPython: /networkRuleCollections/provisioningState
@@ -6422,16 +6422,16 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Succeeded
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Succeeded
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Updating
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Updating
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Deleting
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Deleting
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Failed
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Failed
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/ipConfigurations/properties/provisioningState
             PathPython: /ipConfigurations/provisioningState
@@ -6540,16 +6540,16 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Succeeded
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Succeeded
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Updating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Updating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Deleting
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Deleting
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Failed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Failed
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/provisioningState
         PathPython: /provisioningState

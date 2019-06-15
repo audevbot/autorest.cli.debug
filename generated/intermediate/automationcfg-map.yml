@@ -219,10 +219,10 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Windows
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Windows
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Linux
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Linux
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/updateConfiguration/operatingSystem
             PathPython: /updateConfiguration/operatingSystem
@@ -275,31 +275,31 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: Unclassified
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Unclassified
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Critical
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Critical
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Security
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Security
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: UpdateRollup
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: UpdateRollup
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: FeaturePack
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: FeaturePack
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: ServicePack
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: ServicePack
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Definition
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Definition
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Tools
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Tools
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Updates
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Updates
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: >-
                   /properties/updateConfiguration/windows/includedUpdateClassifications
@@ -456,16 +456,16 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: Unclassified
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Unclassified
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Critical
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Critical
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Security
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Security
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Other
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Other
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: >-
                   /properties/updateConfiguration/linux/includedPackageClassifications
@@ -1202,19 +1202,19 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: OneTime
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: OneTime
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Day
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Day
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Hour
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Hour
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Week
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Week
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Month
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Month
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/scheduleInfo/frequency
             PathPython: /scheduleInfo/frequency
@@ -1412,25 +1412,25 @@ Modules:
                     SubOptions: []
                     EnumValues:
                       - Key: Monday
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Monday
                         Description: !<tag:yaml.org,2002:js/undefined> ''
                       - Key: Tuesday
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Tuesday
                         Description: !<tag:yaml.org,2002:js/undefined> ''
                       - Key: Wednesday
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Wednesday
                         Description: !<tag:yaml.org,2002:js/undefined> ''
                       - Key: Thursday
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Thursday
                         Description: !<tag:yaml.org,2002:js/undefined> ''
                       - Key: Friday
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Friday
                         Description: !<tag:yaml.org,2002:js/undefined> ''
                       - Key: Saturday
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Saturday
                         Description: !<tag:yaml.org,2002:js/undefined> ''
                       - Key: Sunday
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Sunday
                         Description: !<tag:yaml.org,2002:js/undefined> ''
                     PathSwagger: >-
                       /properties/scheduleInfo/advancedSchedule/monthlyOccurrences/day
@@ -2288,10 +2288,10 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: Windows
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Windows
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Linux
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Linux
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /properties/updateConfiguration/operatingSystem
                 PathPython: /updateConfiguration/operatingSystem
@@ -2345,31 +2345,31 @@ Modules:
                     SubOptions: []
                     EnumValues:
                       - Key: Unclassified
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Unclassified
                         Description: !<tag:yaml.org,2002:js/undefined> ''
                       - Key: Critical
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Critical
                         Description: !<tag:yaml.org,2002:js/undefined> ''
                       - Key: Security
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Security
                         Description: !<tag:yaml.org,2002:js/undefined> ''
                       - Key: UpdateRollup
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: UpdateRollup
                         Description: !<tag:yaml.org,2002:js/undefined> ''
                       - Key: FeaturePack
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: FeaturePack
                         Description: !<tag:yaml.org,2002:js/undefined> ''
                       - Key: ServicePack
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: ServicePack
                         Description: !<tag:yaml.org,2002:js/undefined> ''
                       - Key: Definition
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Definition
                         Description: !<tag:yaml.org,2002:js/undefined> ''
                       - Key: Tools
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Tools
                         Description: !<tag:yaml.org,2002:js/undefined> ''
                       - Key: Updates
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Updates
                         Description: !<tag:yaml.org,2002:js/undefined> ''
                     PathSwagger: >-
                       /properties/updateConfiguration/windows/includedUpdateClassifications
@@ -2530,16 +2530,16 @@ Modules:
                     SubOptions: []
                     EnumValues:
                       - Key: Unclassified
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Unclassified
                         Description: !<tag:yaml.org,2002:js/undefined> ''
                       - Key: Critical
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Critical
                         Description: !<tag:yaml.org,2002:js/undefined> ''
                       - Key: Security
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Security
                         Description: !<tag:yaml.org,2002:js/undefined> ''
                       - Key: Other
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Other
                         Description: !<tag:yaml.org,2002:js/undefined> ''
                     PathSwagger: >-
                       /properties/updateConfiguration/linux/includedPackageClassifications
@@ -3278,19 +3278,19 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: OneTime
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: OneTime
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Day
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Day
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Hour
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Hour
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Week
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Week
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Month
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Month
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /properties/scheduleInfo/frequency
                 PathPython: /scheduleInfo/frequency
@@ -3488,25 +3488,25 @@ Modules:
                         SubOptions: []
                         EnumValues:
                           - Key: Monday
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: Monday
                             Description: !<tag:yaml.org,2002:js/undefined> ''
                           - Key: Tuesday
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: Tuesday
                             Description: !<tag:yaml.org,2002:js/undefined> ''
                           - Key: Wednesday
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: Wednesday
                             Description: !<tag:yaml.org,2002:js/undefined> ''
                           - Key: Thursday
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: Thursday
                             Description: !<tag:yaml.org,2002:js/undefined> ''
                           - Key: Friday
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: Friday
                             Description: !<tag:yaml.org,2002:js/undefined> ''
                           - Key: Saturday
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: Saturday
                             Description: !<tag:yaml.org,2002:js/undefined> ''
                           - Key: Sunday
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: Sunday
                             Description: !<tag:yaml.org,2002:js/undefined> ''
                         PathSwagger: >-
                           /properties/scheduleInfo/advancedSchedule/monthlyOccurrences/day
@@ -4614,19 +4614,19 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: OneTime
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: OneTime
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Day
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Day
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Hour
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Hour
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Week
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Week
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Month
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Month
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /value/properties/frequency
             PathPython: /value/frequency

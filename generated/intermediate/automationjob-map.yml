@@ -391,43 +391,43 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: New
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: New
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Activating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Activating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Running
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Running
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Completed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Completed
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Failed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Failed
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Stopped
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Stopped
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Blocked
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Blocked
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Suspended
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Suspended
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Disconnected
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Disconnected
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Suspending
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Suspending
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Stopping
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Stopping
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Resuming
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Resuming
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Removing
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Removing
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/status
         PathPython: /status
@@ -647,16 +647,16 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Failed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Failed
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Succeeded
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Succeeded
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Suspended
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Suspended
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Processing
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Processing
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/provisioningState
         PathPython: /provisioningState
@@ -1567,43 +1567,43 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: New
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: New
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Activating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Activating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Running
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Running
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Completed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Completed
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Failed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Failed
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Stopped
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Stopped
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Blocked
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Blocked
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Suspended
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Suspended
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Disconnected
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Disconnected
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Suspending
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Suspending
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Stopping
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Stopping
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Resuming
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Resuming
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Removing
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Removing
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/status
         PathPython: /status
@@ -1850,16 +1850,16 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Failed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Failed
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Succeeded
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Succeeded
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Suspended
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Suspended
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Processing
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Processing
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/provisioningState
         PathPython: /provisioningState
@@ -2428,25 +2428,25 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Progress
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Progress
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Output
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Output
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Warning
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Warning
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Error
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Error
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Debug
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Debug
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Verbose
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Verbose
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Any
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Any
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/streamType
         PathPython: /streamType

@@ -338,22 +338,22 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Creating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Creating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Updating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Updating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Failed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Failed
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Succeeded
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Succeeded
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Deleting
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Deleting
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Migrating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Migrating
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/provisioningState
         PathPython: /provisioningState
@@ -1136,22 +1136,22 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Creating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Creating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Updating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Updating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Failed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Failed
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Succeeded
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Succeeded
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Deleting
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Deleting
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Migrating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Migrating
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/provisioningState
         PathPython: /provisioningState
@@ -1707,10 +1707,10 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Windows
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Windows
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Linux
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Linux
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/osType
         PathPython: /osType
@@ -1743,10 +1743,10 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Generalized
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Generalized
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Specialized
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Specialized
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/osState
         PathPython: /osState
@@ -2322,22 +2322,22 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Creating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Creating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Updating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Updating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Failed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Failed
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Succeeded
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Succeeded
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Deleting
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Deleting
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Migrating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Migrating
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/provisioningState
         PathPython: /provisioningState
@@ -2735,10 +2735,10 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Windows
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Windows
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Linux
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Linux
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/osType
             PathPython: /osType
@@ -2771,10 +2771,10 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Generalized
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Generalized
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Specialized
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Specialized
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/osState
             PathPython: /osState
@@ -3888,10 +3888,10 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Windows
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Windows
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Linux
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Linux
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/osType
         PathPython: /osType
@@ -3924,10 +3924,10 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Generalized
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Generalized
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Specialized
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Specialized
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/osState
         PathPython: /osState
@@ -4502,22 +4502,22 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Creating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Creating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Updating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Updating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Failed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Failed
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Succeeded
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Succeeded
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Deleting
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Deleting
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Migrating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Migrating
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/provisioningState
         PathPython: /provisioningState
@@ -5142,10 +5142,10 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Standard_LRS
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Standard_LRS
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Standard_ZRS
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Standard_ZRS
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/publishingProfile/storageAccountType
             PathPython: /publishingProfile/storageAccountType
@@ -5222,22 +5222,22 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Creating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Creating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Updating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Updating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Failed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Failed
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Succeeded
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Succeeded
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Deleting
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Deleting
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Migrating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Migrating
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/provisioningState
         PathPython: /provisioningState
@@ -5339,13 +5339,13 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: None
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: None
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: ReadOnly
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: ReadOnly
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: ReadWrite
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: ReadWrite
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /properties/storageProfile/osDiskImage/hostCaching
                 PathPython: /storageProfile/osDiskImage/hostCaching
@@ -5440,13 +5440,13 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: None
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: None
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: ReadOnly
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: ReadOnly
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: ReadWrite
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: ReadWrite
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /properties/storageProfile/dataDiskImages/hostCaching
                 PathPython: /storageProfile/dataDiskImages/hostCaching
@@ -5558,16 +5558,16 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Unknown
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Unknown
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: InProgress
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: InProgress
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Completed
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Completed
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Failed
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Failed
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/replicationStatus/aggregatedState
             PathPython: /replicationStatus/aggregatedState
@@ -5650,16 +5650,16 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: Unknown
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Unknown
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Replicating
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Replicating
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Completed
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Completed
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Failed
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Failed
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /properties/replicationStatus/summary/state
                 PathPython: /replicationStatus/summary/state
@@ -6206,10 +6206,10 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: Standard_LRS
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Standard_LRS
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Standard_ZRS
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Standard_ZRS
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /properties/publishingProfile/storageAccountType
                 PathPython: /publishingProfile/storageAccountType
@@ -6960,10 +6960,10 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Standard_LRS
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Standard_LRS
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Standard_ZRS
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Standard_ZRS
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/publishingProfile/storageAccountType
             PathPython: /publishingProfile/storageAccountType
@@ -7008,22 +7008,22 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Creating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Creating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Updating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Updating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Failed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Failed
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Succeeded
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Succeeded
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Deleting
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Deleting
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Migrating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Migrating
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/provisioningState
         PathPython: /provisioningState
@@ -7124,13 +7124,13 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: None
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: None
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: ReadOnly
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: ReadOnly
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: ReadWrite
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: ReadWrite
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /properties/storageProfile/osDiskImage/hostCaching
                 PathPython: /storageProfile/osDiskImage/hostCaching
@@ -7225,13 +7225,13 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: None
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: None
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: ReadOnly
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: ReadOnly
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: ReadWrite
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: ReadWrite
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /properties/storageProfile/dataDiskImages/hostCaching
                 PathPython: /storageProfile/dataDiskImages/hostCaching
@@ -7342,16 +7342,16 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Unknown
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Unknown
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: InProgress
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: InProgress
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Completed
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Completed
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Failed
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Failed
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/replicationStatus/aggregatedState
             PathPython: /replicationStatus/aggregatedState
@@ -7434,16 +7434,16 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: Unknown
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Unknown
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Replicating
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Replicating
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Completed
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Completed
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Failed
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Failed
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /properties/replicationStatus/summary/state
                 PathPython: /replicationStatus/summary/state

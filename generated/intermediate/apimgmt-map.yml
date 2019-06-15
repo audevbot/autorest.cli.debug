@@ -367,12 +367,12 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: authorizationHeader
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: authorizationHeader
                     Description: >-
                       Access token will be transmitted in the Authorization
                       header using Bearer schema
                   - Key: query
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: query
                     Description: Access token will be transmitted as query parameters.
                 PathSwagger: >-
                   /properties/authenticationSettings/openid/bearerTokenSendingMethods
@@ -555,10 +555,10 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: http
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: http
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: soap
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: soap
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/type
         PathPython: /type
@@ -939,10 +939,10 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: http
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: http
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: https
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: https
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/protocols
         PathPython: /protocols
@@ -1087,13 +1087,13 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Segment
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Segment
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Query
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Query
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Header
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Header
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/apiVersionSet/versioningScheme
             PathPython: /apiVersionSet/versioningScheme
@@ -1232,43 +1232,43 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: wadl-xml
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: wadl-xml
             Description: The contents are inline and Content type is a WADL document.
           - Key: wadl-link-json
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: wadl-link-json
             Description: >-
               The WADL document is hosted on a publicly accessible internet
               address.
           - Key: swagger-json
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: swagger-json
             Description: >-
               The contents are inline and Content Type is a OpenApi 2.0
               Document.
           - Key: swagger-link-json
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: swagger-link-json
             Description: >-
               The Open Api 2.0 document is hosted on a publicly accessible
               internet address.
           - Key: wsdl
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: wsdl
             Description: The contents are inline and the document is a WSDL/Soap document.
           - Key: wsdl-link
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: wsdl-link
             Description: >-
               The WSDL document is hosted on a publicly accessible internet
               address.
           - Key: openapi
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: openapi
             Description: >-
               The contents are inline and Content Type is a OpenApi 3.0 Document
               in YAML format.
           - Key: openapi+json
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: openapi+json
             Description: >-
               The contents are inline and Content Type is a OpenApi 3.0 Document
               in JSON format.
           - Key: openapi-link
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: openapi-link
             Description: >-
               The Open Api 3.0 document is hosted on a publicly accessible
               internet address.
@@ -1396,10 +1396,10 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: SoapToRest
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: SoapToRest
             Description: Imports a SOAP API having a RESTful front end.
           - Key: SoapPassThrough
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: SoapPassThrough
             Description: Imports the Soap API having a SOAP front end.
         PathSwagger: /properties/apiType
         PathPython: /apiType
@@ -1865,12 +1865,12 @@ Modules:
                     SubOptions: []
                     EnumValues:
                       - Key: authorizationHeader
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: authorizationHeader
                         Description: >-
                           Access token will be transmitted in the Authorization
                           header using Bearer schema
                       - Key: query
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: query
                         Description: Access token will be transmitted as query parameters.
                     PathSwagger: >-
                       /properties/authenticationSettings/openid/bearerTokenSendingMethods
@@ -2053,10 +2053,10 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: http
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: http
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: soap
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: soap
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/type
             PathPython: /type
@@ -2434,10 +2434,10 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: http
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: http
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: https
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: https
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/protocols
             PathPython: /protocols
@@ -2582,13 +2582,13 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: Segment
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Segment
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Query
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Query
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Header
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Header
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /properties/apiVersionSet/versioningScheme
                 PathPython: /apiVersionSet/versioningScheme
@@ -4237,12 +4237,12 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: authorizationHeader
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: authorizationHeader
                     Description: >-
                       Access token will be transmitted in the Authorization
                       header using Bearer schema
                   - Key: query
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: query
                     Description: Access token will be transmitted as query parameters.
                 PathSwagger: >-
                   /properties/authenticationSettings/openid/bearerTokenSendingMethods
@@ -4425,10 +4425,10 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: http
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: http
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: soap
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: soap
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/type
         PathPython: /type
@@ -4833,10 +4833,10 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: http
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: http
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: https
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: https
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/protocols
         PathPython: /protocols
@@ -4981,13 +4981,13 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Segment
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Segment
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Query
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Query
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Header
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Header
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/apiVersionSet/versioningScheme
             PathPython: /apiVersionSet/versioningScheme
@@ -14322,20 +14322,20 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: xml
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: xml
             Description: The contents are inline and Content type is an XML document.
           - Key: xml-link
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: xml-link
             Description: >-
               The policy XML document is hosted on a http endpoint accessible
               from the API Management service.
           - Key: rawxml
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: rawxml
             Description: >-
               The contents are inline and Content type is a non XML encoded
               policy document.
           - Key: rawxml-link
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: rawxml-link
             Description: >-
               The policy document is not Xml encoded and is hosted on a http
               endpoint accessible from the API Management service.
@@ -14598,20 +14598,20 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: xml
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: xml
                 Description: The contents are inline and Content type is an XML document.
               - Key: xml-link
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: xml-link
                 Description: >-
                   The policy XML document is hosted on a http endpoint
                   accessible from the API Management service.
               - Key: rawxml
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: rawxml
                 Description: >-
                   The contents are inline and Content type is a non XML encoded
                   policy document.
               - Key: rawxml-link
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: rawxml-link
                 Description: >-
                   The policy document is not Xml encoded and is hosted on a http
                   endpoint accessible from the API Management service.
@@ -15090,20 +15090,20 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: xml
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: xml
             Description: The contents are inline and Content type is an XML document.
           - Key: xml-link
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: xml-link
             Description: >-
               The policy XML document is hosted on a http endpoint accessible
               from the API Management service.
           - Key: rawxml
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: rawxml
             Description: >-
               The contents are inline and Content type is a non XML encoded
               policy document.
           - Key: rawxml-link
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: rawxml-link
             Description: >-
               The policy document is not Xml encoded and is hosted on a http
               endpoint accessible from the API Management service.
@@ -17209,10 +17209,10 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: notPublished
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: notPublished
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: published
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: published
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /value/properties/state
             PathPython: /value/state
@@ -17611,20 +17611,20 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: xml
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: xml
             Description: The contents are inline and Content type is an XML document.
           - Key: xml-link
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: xml-link
             Description: >-
               The policy XML document is hosted on a http endpoint accessible
               from the API Management service.
           - Key: rawxml
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: rawxml
             Description: >-
               The contents are inline and Content type is a non XML encoded
               policy document.
           - Key: rawxml-link
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: rawxml-link
             Description: >-
               The policy document is not Xml encoded and is hosted on a http
               endpoint accessible from the API Management service.
@@ -17877,20 +17877,20 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: xml
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: xml
                 Description: The contents are inline and Content type is an XML document.
               - Key: xml-link
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: xml-link
                 Description: >-
                   The policy XML document is hosted on a http endpoint
                   accessible from the API Management service.
               - Key: rawxml
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: rawxml
                 Description: >-
                   The contents are inline and Content type is a non XML encoded
                   policy document.
               - Key: rawxml-link
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: rawxml-link
                 Description: >-
                   The policy document is not Xml encoded and is hosted on a http
                   endpoint accessible from the API Management service.
@@ -18417,20 +18417,20 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: xml
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: xml
             Description: The contents are inline and Content type is an XML document.
           - Key: xml-link
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: xml-link
             Description: >-
               The policy XML document is hosted on a http endpoint accessible
               from the API Management service.
           - Key: rawxml
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: rawxml
             Description: >-
               The contents are inline and Content type is a non XML encoded
               policy document.
           - Key: rawxml-link
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: rawxml-link
             Description: >-
               The policy document is not Xml encoded and is hosted on a http
               endpoint accessible from the API Management service.
@@ -19951,7 +19951,7 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: allErrors
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: allErrors
             Description: Always log all erroneous request regardless of sampling settings.
         PathSwagger: /properties/alwaysLog
         PathPython: /alwaysLog
@@ -20032,7 +20032,7 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: fixed
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: fixed
                 Description: Fixed-rate sampling.
             PathSwagger: /properties/sampling/samplingType
             PathPython: /sampling/samplingType
@@ -20892,7 +20892,7 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: allErrors
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: allErrors
                 Description: >-
                   Always log all erroneous request regardless of sampling
                   settings.
@@ -20975,7 +20975,7 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: fixed
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: fixed
                     Description: Fixed-rate sampling.
                 PathSwagger: /properties/sampling/samplingType
                 PathPython: /sampling/samplingType
@@ -22139,7 +22139,7 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: allErrors
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: allErrors
             Description: Always log all erroneous request regardless of sampling settings.
         PathSwagger: /properties/alwaysLog
         PathPython: /alwaysLog
@@ -22220,7 +22220,7 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: fixed
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: fixed
                 Description: Fixed-rate sampling.
             PathSwagger: /properties/sampling/samplingType
             PathPython: /sampling/samplingType
@@ -23272,19 +23272,19 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: proposed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: proposed
             Description: The issue is proposed.
           - Key: open
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: open
             Description: The issue is opened.
           - Key: removed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: removed
             Description: The issue was removed.
           - Key: resolved
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: resolved
             Description: The issue is now resolved.
           - Key: closed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: closed
             Description: The issue was closed.
         PathSwagger: /properties/state
         PathPython: /state
@@ -23680,19 +23680,19 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: proposed
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: proposed
                 Description: The issue is proposed.
               - Key: open
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: open
                 Description: The issue is opened.
               - Key: removed
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: removed
                 Description: The issue was removed.
               - Key: resolved
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: resolved
                 Description: The issue is now resolved.
               - Key: closed
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: closed
                 Description: The issue was closed.
             PathSwagger: /properties/state
             PathPython: /state
@@ -24334,19 +24334,19 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: proposed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: proposed
             Description: The issue is proposed.
           - Key: open
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: open
             Description: The issue is opened.
           - Key: removed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: removed
             Description: The issue was removed.
           - Key: resolved
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: resolved
             Description: The issue is now resolved.
           - Key: closed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: closed
             Description: The issue was closed.
         PathSwagger: /properties/state
         PathPython: /state
@@ -28863,12 +28863,12 @@ Modules:
                         SubOptions: []
                         EnumValues:
                           - Key: authorizationHeader
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: authorizationHeader
                             Description: >-
                               Access token will be transmitted in the
                               Authorization header using Bearer schema
                           - Key: query
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: query
                             Description: >-
                               Access token will be transmitted as query
                               parameters.
@@ -29054,10 +29054,10 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: http
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: http
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: soap
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: soap
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /value/api/type
                 PathPython: /value/api/type
@@ -29462,10 +29462,10 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: http
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: http
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: https
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: https
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /value/api/protocols
                 PathPython: /value/api/protocols
@@ -29980,10 +29980,10 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: notPublished
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: notPublished
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: published
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: published
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /value/product/state
                 PathPython: /value/product/state
@@ -30491,13 +30491,13 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Segment
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Segment
             Description: The API Version is passed in a path segment.
           - Key: Query
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Query
             Description: The API Version is passed in a query parameter.
           - Key: Header
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Header
             Description: The API Version is passed in a HTTP header.
         PathSwagger: /properties/versioningScheme
         PathPython: /versioningScheme
@@ -30854,13 +30854,13 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Segment
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Segment
                 Description: The API Version is passed in a path segment.
               - Key: Query
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Query
                 Description: The API Version is passed in a query parameter.
               - Key: Header
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Header
                 Description: The API Version is passed in a HTTP header.
             PathSwagger: /properties/versioningScheme
             PathPython: /versioningScheme
@@ -31385,13 +31385,13 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Segment
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Segment
             Description: The API Version is passed in a path segment.
           - Key: Query
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Query
             Description: The API Version is passed in a query parameter.
           - Key: Header
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Header
             Description: The API Version is passed in a HTTP header.
         PathSwagger: /properties/versioningScheme
         PathPython: /versioningScheme
@@ -31745,28 +31745,28 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: HEAD
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: HEAD
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: OPTIONS
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: OPTIONS
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: TRACE
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: TRACE
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: GET
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: GET
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: POST
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: POST
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: PUT
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: PUT
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: PATCH
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: PATCH
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: DELETE
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: DELETE
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/authorizationMethods
         PathPython: /authorizationMethods
@@ -31804,10 +31804,10 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Basic
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Basic
             Description: Basic Client Authentication method.
           - Key: Body
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Body
             Description: Body based Authentication method.
         PathSwagger: /properties/clientAuthenticationMethod
         PathPython: /clientAuthenticationMethod
@@ -32032,10 +32032,10 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: authorizationHeader
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: authorizationHeader
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: query
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: query
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/bearerTokenSendingMethods
         PathPython: /bearerTokenSendingMethods
@@ -32261,22 +32261,22 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: authorizationCode
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: authorizationCode
             Description: >-
               Authorization Code Grant flow as described
               https://tools.ietf.org/html/rfc6749#section-4.1.
           - Key: implicit
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: implicit
             Description: >-
               Implicit Code Grant flow as described
               https://tools.ietf.org/html/rfc6749#section-4.2.
           - Key: resourceOwnerPassword
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: resourceOwnerPassword
             Description: >-
               Resource Owner Password Grant flow as described
               https://tools.ietf.org/html/rfc6749#section-4.3.
           - Key: clientCredentials
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: clientCredentials
             Description: >-
               Client Credentials Grant flow as described
               https://tools.ietf.org/html/rfc6749#section-4.4.
@@ -32573,28 +32573,28 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: HEAD
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: HEAD
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: OPTIONS
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: OPTIONS
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: TRACE
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: TRACE
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: GET
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: GET
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: POST
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: POST
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: PUT
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: PUT
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: PATCH
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: PATCH
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: DELETE
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: DELETE
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/authorizationMethods
             PathPython: /authorizationMethods
@@ -32632,10 +32632,10 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Basic
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Basic
                 Description: Basic Client Authentication method.
               - Key: Body
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Body
                 Description: Body based Authentication method.
             PathSwagger: /properties/clientAuthenticationMethod
             PathPython: /clientAuthenticationMethod
@@ -32862,10 +32862,10 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: authorizationHeader
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: authorizationHeader
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: query
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: query
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/bearerTokenSendingMethods
             PathPython: /bearerTokenSendingMethods
@@ -33091,22 +33091,22 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: authorizationCode
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: authorizationCode
                 Description: >-
                   Authorization Code Grant flow as described
                   https://tools.ietf.org/html/rfc6749#section-4.1.
               - Key: implicit
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: implicit
                 Description: >-
                   Implicit Code Grant flow as described
                   https://tools.ietf.org/html/rfc6749#section-4.2.
               - Key: resourceOwnerPassword
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: resourceOwnerPassword
                 Description: >-
                   Resource Owner Password Grant flow as described
                   https://tools.ietf.org/html/rfc6749#section-4.3.
               - Key: clientCredentials
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: clientCredentials
                 Description: >-
                   Client Credentials Grant flow as described
                   https://tools.ietf.org/html/rfc6749#section-4.4.
@@ -33618,28 +33618,28 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: HEAD
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: HEAD
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: OPTIONS
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: OPTIONS
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: TRACE
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: TRACE
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: GET
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: GET
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: POST
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: POST
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: PUT
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: PUT
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: PATCH
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: PATCH
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: DELETE
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: DELETE
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/authorizationMethods
         PathPython: /authorizationMethods
@@ -33677,10 +33677,10 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Basic
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Basic
             Description: Basic Client Authentication method.
           - Key: Body
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Body
             Description: Body based Authentication method.
         PathSwagger: /properties/clientAuthenticationMethod
         PathPython: /clientAuthenticationMethod
@@ -33905,10 +33905,10 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: authorizationHeader
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: authorizationHeader
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: query
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: query
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/bearerTokenSendingMethods
         PathPython: /bearerTokenSendingMethods
@@ -34134,22 +34134,22 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: authorizationCode
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: authorizationCode
             Description: >-
               Authorization Code Grant flow as described
               https://tools.ietf.org/html/rfc6749#section-4.1.
           - Key: implicit
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: implicit
             Description: >-
               Implicit Code Grant flow as described
               https://tools.ietf.org/html/rfc6749#section-4.2.
           - Key: resourceOwnerPassword
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: resourceOwnerPassword
             Description: >-
               Resource Owner Password Grant flow as described
               https://tools.ietf.org/html/rfc6749#section-4.3.
           - Key: clientCredentials
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: clientCredentials
             Description: >-
               Client Credentials Grant flow as described
               https://tools.ietf.org/html/rfc6749#section-4.4.
@@ -35402,10 +35402,10 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: http
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: http
             Description: The Backend is a RESTful service.
           - Key: soap
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: soap
             Description: The Backend is a SOAP service.
         PathSwagger: /properties/protocol
         PathPython: /protocol
@@ -36486,10 +36486,10 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: http
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: http
                 Description: The Backend is a RESTful service.
               - Key: soap
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: soap
                 Description: The Backend is a SOAP service.
             PathSwagger: /properties/protocol
             PathPython: /protocol
@@ -37877,10 +37877,10 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: http
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: http
             Description: The Backend is a RESTful service.
           - Key: soap
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: soap
             Description: The Backend is a SOAP service.
         PathSwagger: /properties/protocol
         PathPython: /protocol
@@ -40761,19 +40761,19 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: Developer
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Developer
                     Description: Developer SKU of Api Management.
                   - Key: Standard
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Standard
                     Description: Standard SKU of Api Management.
                   - Key: Premium
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Premium
                     Description: Premium SKU of Api Management.
                   - Key: Basic
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Basic
                     Description: Basic SKU of Api Management.
                   - Key: Consumption
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Consumption
                     Description: Consumption SKU of Api Management.
                 PathSwagger: /value/sku/name
                 PathPython: /value/sku/name
@@ -40926,13 +40926,13 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: automatic
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: automatic
                     Description: Supported scale type automatic.
                   - Key: manual
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: manual
                     Description: Supported scale type manual.
                   - Key: none
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: none
                     Description: Scaling not supported.
                 PathSwagger: /value/capacity/scaleType
                 PathPython: /value/capacity/scaleType
@@ -41346,19 +41346,19 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Proxy
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Proxy
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Portal
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Portal
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Management
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Management
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Scm
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Scm
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: DeveloperPortal
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: DeveloperPortal
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/hostnameConfigurations/type
             PathPython: /hostnameConfigurations/type
@@ -41920,19 +41920,19 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: Developer
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Developer
                     Description: Developer SKU of Api Management.
                   - Key: Standard
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Standard
                     Description: Standard SKU of Api Management.
                   - Key: Premium
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Premium
                     Description: Premium SKU of Api Management.
                   - Key: Basic
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Basic
                     Description: Basic SKU of Api Management.
                   - Key: Consumption
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Consumption
                     Description: Consumption SKU of Api Management.
                 PathSwagger: /properties/additionalLocations/sku/name
                 PathPython: /additionalLocations/sku/name
@@ -42384,10 +42384,10 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: CertificateAuthority
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: CertificateAuthority
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Root
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Root
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/certificates/storeName
             PathPython: /certificates/storeName
@@ -42595,15 +42595,15 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: None
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: None
             Description: The service is not part of any Virtual Network.
           - Key: External
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: External
             Description: >-
               The service is part of Virtual Network and it is accessible from
               Internet.
           - Key: Internal
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Internal
             Description: >-
               The service is part of Virtual Network and it is only accessible
               from within the virtual network.
@@ -43039,19 +43039,19 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Developer
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Developer
                 Description: Developer SKU of Api Management.
               - Key: Standard
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Standard
                 Description: Standard SKU of Api Management.
               - Key: Premium
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Premium
                 Description: Premium SKU of Api Management.
               - Key: Basic
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Basic
                 Description: Basic SKU of Api Management.
               - Key: Consumption
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Consumption
                 Description: Consumption SKU of Api Management.
             PathSwagger: /sku/name
             PathPython: /sku/name
@@ -43591,19 +43591,19 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: Proxy
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Proxy
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Portal
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Portal
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Management
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Management
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Scm
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Scm
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: DeveloperPortal
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: DeveloperPortal
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /properties/hostnameConfigurations/type
                 PathPython: /hostnameConfigurations/type
@@ -44099,19 +44099,19 @@ Modules:
                     SubOptions: []
                     EnumValues:
                       - Key: Developer
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Developer
                         Description: Developer SKU of Api Management.
                       - Key: Standard
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Standard
                         Description: Standard SKU of Api Management.
                       - Key: Premium
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Premium
                         Description: Premium SKU of Api Management.
                       - Key: Basic
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Basic
                         Description: Basic SKU of Api Management.
                       - Key: Consumption
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Consumption
                         Description: Consumption SKU of Api Management.
                     PathSwagger: /properties/additionalLocations/sku/name
                     PathPython: /additionalLocations/sku/name
@@ -44396,10 +44396,10 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: CertificateAuthority
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: CertificateAuthority
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Root
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Root
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /properties/certificates/storeName
                 PathPython: /certificates/storeName
@@ -44608,15 +44608,15 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: None
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: None
                 Description: The service is not part of any Virtual Network.
               - Key: External
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: External
                 Description: >-
                   The service is part of Virtual Network and it is accessible
                   from Internet.
               - Key: Internal
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Internal
                 Description: >-
                   The service is part of Virtual Network and it is only
                   accessible from within the virtual network.
@@ -44741,19 +44741,19 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Developer
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Developer
                 Description: Developer SKU of Api Management.
               - Key: Standard
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Standard
                 Description: Standard SKU of Api Management.
               - Key: Premium
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Premium
                 Description: Premium SKU of Api Management.
               - Key: Basic
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Basic
                 Description: Basic SKU of Api Management.
               - Key: Consumption
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Consumption
                 Description: Consumption SKU of Api Management.
             PathSwagger: /sku/name
             PathPython: /sku/name
@@ -46328,19 +46328,19 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Proxy
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Proxy
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Portal
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Portal
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Management
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Management
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Scm
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Scm
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: DeveloperPortal
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: DeveloperPortal
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/hostnameConfigurations/type
             PathPython: /hostnameConfigurations/type
@@ -46958,19 +46958,19 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: Developer
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Developer
                     Description: Developer SKU of Api Management.
                   - Key: Standard
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Standard
                     Description: Standard SKU of Api Management.
                   - Key: Premium
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Premium
                     Description: Premium SKU of Api Management.
                   - Key: Basic
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Basic
                     Description: Basic SKU of Api Management.
                   - Key: Consumption
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Consumption
                     Description: Consumption SKU of Api Management.
                 PathSwagger: /properties/additionalLocations/sku/name
                 PathPython: /additionalLocations/sku/name
@@ -47412,10 +47412,10 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: CertificateAuthority
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: CertificateAuthority
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Root
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Root
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/certificates/storeName
             PathPython: /certificates/storeName
@@ -47623,15 +47623,15 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: None
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: None
             Description: The service is not part of any Virtual Network.
           - Key: External
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: External
             Description: >-
               The service is part of Virtual Network and it is accessible from
               Internet.
           - Key: Internal
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Internal
             Description: >-
               The service is part of Virtual Network and it is only accessible
               from within the virtual network.
@@ -47745,19 +47745,19 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Developer
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Developer
                 Description: Developer SKU of Api Management.
               - Key: Standard
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Standard
                 Description: Standard SKU of Api Management.
               - Key: Premium
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Premium
                 Description: Premium SKU of Api Management.
               - Key: Basic
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Basic
                 Description: Basic SKU of Api Management.
               - Key: Consumption
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Consumption
                 Description: Consumption SKU of Api Management.
             PathSwagger: /sku/name
             PathPython: /sku/name
@@ -48759,7 +48759,7 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: allErrors
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: allErrors
             Description: Always log all erroneous request regardless of sampling settings.
         PathSwagger: /properties/alwaysLog
         PathPython: /alwaysLog
@@ -48840,7 +48840,7 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: fixed
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: fixed
                 Description: Fixed-rate sampling.
             PathSwagger: /properties/sampling/samplingType
             PathPython: /sampling/samplingType
@@ -49690,7 +49690,7 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: allErrors
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: allErrors
                 Description: >-
                   Always log all erroneous request regardless of sampling
                   settings.
@@ -49773,7 +49773,7 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: fixed
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: fixed
                     Description: Fixed-rate sampling.
                 PathSwagger: /properties/sampling/samplingType
                 PathPython: /sampling/samplingType
@@ -50891,7 +50891,7 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: allErrors
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: allErrors
             Description: Always log all erroneous request regardless of sampling settings.
         PathSwagger: /properties/alwaysLog
         PathPython: /alwaysLog
@@ -50972,7 +50972,7 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: fixed
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: fixed
                 Description: Fixed-rate sampling.
             PathSwagger: /properties/sampling/samplingType
             PathPython: /sampling/samplingType
@@ -53701,13 +53701,13 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: custom
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: custom
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: system
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: system
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: external
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: external
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/type
         PathPython: /type
@@ -54066,13 +54066,13 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: custom
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: custom
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: system
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: system
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: external
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: external
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/type
             PathPython: /type
@@ -54658,13 +54658,13 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: custom
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: custom
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: system
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: system
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: external
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: external
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/type
         PathPython: /type
@@ -55157,20 +55157,20 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: active
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: active
             Description: User state is active.
           - Key: blocked
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: blocked
             Description: >-
               User is blocked. Blocked users cannot authenticate at developer
               portal or call API.
           - Key: pending
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: pending
             Description: >-
               User account is pending. Requires identity confirmation before it
               can be made active.
           - Key: deleted
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: deleted
             Description: >-
               User account is closed. All identities and related entities are
               removed.
@@ -55557,13 +55557,13 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: custom
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: custom
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: system
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: system
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: external
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: external
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/groups/type
             PathPython: /groups/type
@@ -56044,20 +56044,20 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: active
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: active
                 Description: User state is active.
               - Key: blocked
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: blocked
                 Description: >-
                   User is blocked. Blocked users cannot authenticate at
                   developer portal or call API.
               - Key: pending
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: pending
                 Description: >-
                   User account is pending. Requires identity confirmation before
                   it can be made active.
               - Key: deleted
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: deleted
                 Description: >-
                   User account is closed. All identities and related entities
                   are removed.
@@ -56445,13 +56445,13 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: custom
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: custom
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: system
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: system
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: external
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: external
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /value/properties/groups/type
                 PathPython: /value/groups/type
@@ -56804,22 +56804,22 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: facebook
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: facebook
             Description: Facebook as Identity provider.
           - Key: google
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: google
             Description: Google as Identity provider.
           - Key: microsoft
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: microsoft
             Description: Microsoft Live as Identity provider.
           - Key: twitter
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: twitter
             Description: Twitter as Identity provider.
           - Key: aad
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: aad
             Description: Azure Active Directory as Identity provider.
           - Key: aadB2C
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: aadB2C
             Description: Azure Active Directory B2C as Identity provider.
         PathSwagger: /properties/type
         PathPython: /type
@@ -57298,22 +57298,22 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: facebook
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: facebook
                 Description: Facebook as Identity provider.
               - Key: google
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: google
                 Description: Google as Identity provider.
               - Key: microsoft
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: microsoft
                 Description: Microsoft Live as Identity provider.
               - Key: twitter
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: twitter
                 Description: Twitter as Identity provider.
               - Key: aad
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: aad
                 Description: Azure Active Directory as Identity provider.
               - Key: aadB2C
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: aadB2C
                 Description: Azure Active Directory B2C as Identity provider.
             PathSwagger: /properties/type
             PathPython: /type
@@ -57961,22 +57961,22 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: facebook
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: facebook
             Description: Facebook as Identity provider.
           - Key: google
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: google
             Description: Google as Identity provider.
           - Key: microsoft
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: microsoft
             Description: Microsoft Live as Identity provider.
           - Key: twitter
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: twitter
             Description: Twitter as Identity provider.
           - Key: aad
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: aad
             Description: Azure Active Directory as Identity provider.
           - Key: aadB2C
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: aadB2C
             Description: Azure Active Directory B2C as Identity provider.
         PathSwagger: /properties/type
         PathPython: /type
@@ -58664,19 +58664,19 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: proposed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: proposed
             Description: The issue is proposed.
           - Key: open
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: open
             Description: The issue is opened.
           - Key: removed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: removed
             Description: The issue was removed.
           - Key: resolved
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: resolved
             Description: The issue is now resolved.
           - Key: closed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: closed
             Description: The issue was closed.
         PathSwagger: /properties/state
         PathPython: /state
@@ -59127,10 +59127,10 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: azureEventHub
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: azureEventHub
             Description: Azure Event Hub as log destination.
           - Key: applicationInsights
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: applicationInsights
             Description: Azure Application Insights as log destination.
         PathSwagger: /properties/loggerType
         PathPython: /loggerType
@@ -59497,10 +59497,10 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: azureEventHub
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: azureEventHub
                 Description: Azure Event Hub as log destination.
               - Key: applicationInsights
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: applicationInsights
                 Description: Azure Application Insights as log destination.
             PathSwagger: /properties/loggerType
             PathPython: /loggerType
@@ -60122,10 +60122,10 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: azureEventHub
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: azureEventHub
             Description: Azure Event Hub as log destination.
           - Key: applicationInsights
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: applicationInsights
             Description: Azure Application Insights as log destination.
         PathSwagger: /properties/loggerType
         PathPython: /loggerType
@@ -64979,20 +64979,20 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: xml
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: xml
             Description: The contents are inline and Content type is an XML document.
           - Key: xml-link
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: xml-link
             Description: >-
               The policy XML document is hosted on a http endpoint accessible
               from the API Management service.
           - Key: rawxml
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: rawxml
             Description: >-
               The contents are inline and Content type is a non XML encoded
               policy document.
           - Key: rawxml-link
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: rawxml-link
             Description: >-
               The policy document is not Xml encoded and is hosted on a http
               endpoint accessible from the API Management service.
@@ -65237,20 +65237,20 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: xml
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: xml
                 Description: The contents are inline and Content type is an XML document.
               - Key: xml-link
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: xml-link
                 Description: >-
                   The policy XML document is hosted on a http endpoint
                   accessible from the API Management service.
               - Key: rawxml
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: rawxml
                 Description: >-
                   The contents are inline and Content type is a non XML encoded
                   policy document.
               - Key: rawxml-link
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: rawxml-link
                 Description: >-
                   The policy document is not Xml encoded and is hosted on a http
                   endpoint accessible from the API Management service.
@@ -65668,20 +65668,20 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: xml
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: xml
             Description: The contents are inline and Content type is an XML document.
           - Key: xml-link
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: xml-link
             Description: >-
               The policy XML document is hosted on a http endpoint accessible
               from the API Management service.
           - Key: rawxml
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: rawxml
             Description: >-
               The contents are inline and Content type is a non XML encoded
               policy document.
           - Key: rawxml-link
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: rawxml-link
             Description: >-
               The policy document is not Xml encoded and is hosted on a http
               endpoint accessible from the API Management service.
@@ -69557,10 +69557,10 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: notPublished
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: notPublished
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: published
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: published
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/state
         PathPython: /state
@@ -70013,10 +70013,10 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: notPublished
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: notPublished
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: published
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: published
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/state
             PathPython: /state
@@ -70710,10 +70710,10 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: notPublished
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: notPublished
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: published
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: published
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/state
         PathPython: /state
@@ -71435,12 +71435,12 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: authorizationHeader
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: authorizationHeader
                     Description: >-
                       Access token will be transmitted in the Authorization
                       header using Bearer schema
                   - Key: query
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: query
                     Description: Access token will be transmitted as query parameters.
                 PathSwagger: >-
                   /properties/authenticationSettings/openid/bearerTokenSendingMethods
@@ -71623,10 +71623,10 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: http
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: http
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: soap
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: soap
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/type
         PathPython: /type
@@ -72031,10 +72031,10 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: http
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: http
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: https
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: https
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/protocols
         PathPython: /protocols
@@ -72179,13 +72179,13 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Segment
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Segment
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Query
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Query
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Header
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Header
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/apiVersionSet/versioningScheme
             PathPython: /apiVersionSet/versioningScheme
@@ -72891,12 +72891,12 @@ Modules:
                     SubOptions: []
                     EnumValues:
                       - Key: authorizationHeader
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: authorizationHeader
                         Description: >-
                           Access token will be transmitted in the Authorization
                           header using Bearer schema
                       - Key: query
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: query
                         Description: Access token will be transmitted as query parameters.
                     PathSwagger: >-
                       /value/properties/authenticationSettings/openid/bearerTokenSendingMethods
@@ -73082,10 +73082,10 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: http
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: http
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: soap
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: soap
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /value/properties/type
             PathPython: /value/type
@@ -73492,10 +73492,10 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: http
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: http
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: https
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: https
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /value/properties/protocols
             PathPython: /value/protocols
@@ -73640,13 +73640,13 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: Segment
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Segment
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Query
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Query
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: Header
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Header
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /value/properties/apiVersionSet/versioningScheme
                 PathPython: /value/apiVersionSet/versioningScheme
@@ -74219,13 +74219,13 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: custom
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: custom
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: system
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: system
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: external
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: external
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/type
         PathPython: /type
@@ -74777,13 +74777,13 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: custom
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: custom
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: system
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: system
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: external
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: external
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /value/properties/type
             PathPython: /value/type
@@ -75340,22 +75340,22 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: suspended
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: suspended
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: active
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: active
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: expired
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: expired
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: submitted
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: submitted
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: rejected
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: rejected
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: cancelled
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: cancelled
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /value/properties/state
             PathPython: /value/state
@@ -76021,20 +76021,20 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: xml
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: xml
             Description: The contents are inline and Content type is an XML document.
           - Key: xml-link
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: xml-link
             Description: >-
               The policy XML document is hosted on a http endpoint accessible
               from the API Management service.
           - Key: rawxml
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: rawxml
             Description: >-
               The contents are inline and Content type is a non XML encoded
               policy document.
           - Key: rawxml-link
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: rawxml-link
             Description: >-
               The policy document is not Xml encoded and is hosted on a http
               endpoint accessible from the API Management service.
@@ -76287,20 +76287,20 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: xml
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: xml
                 Description: The contents are inline and Content type is an XML document.
               - Key: xml-link
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: xml-link
                 Description: >-
                   The policy XML document is hosted on a http endpoint
                   accessible from the API Management service.
               - Key: rawxml
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: rawxml
                 Description: >-
                   The contents are inline and Content type is a non XML encoded
                   policy document.
               - Key: rawxml-link
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: rawxml-link
                 Description: >-
                   The policy document is not Xml encoded and is hosted on a http
                   endpoint accessible from the API Management service.
@@ -76760,20 +76760,20 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: xml
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: xml
             Description: The contents are inline and Content type is an XML document.
           - Key: xml-link
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: xml-link
             Description: >-
               The policy XML document is hosted on a http endpoint accessible
               from the API Management service.
           - Key: rawxml
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: rawxml
             Description: >-
               The contents are inline and Content type is a non XML encoded
               policy document.
           - Key: rawxml-link
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: rawxml-link
             Description: >-
               The policy document is not Xml encoded and is hosted on a http
               endpoint accessible from the API Management service.
@@ -81419,22 +81419,22 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: suspended
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: suspended
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: active
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: active
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: expired
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: expired
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: submitted
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: submitted
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: rejected
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: rejected
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: cancelled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: cancelled
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/state
         PathPython: /state
@@ -82040,22 +82040,22 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: suspended
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: suspended
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: active
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: active
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: expired
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: expired
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: submitted
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: submitted
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: rejected
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: rejected
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: cancelled
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: cancelled
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/state
             PathPython: /state
@@ -82675,22 +82675,22 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: suspended
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: suspended
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: active
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: active
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: expired
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: expired
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: submitted
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: submitted
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: rejected
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: rejected
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: cancelled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: cancelled
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/state
         PathPython: /state
@@ -83587,12 +83587,12 @@ Modules:
                         SubOptions: []
                         EnumValues:
                           - Key: authorizationHeader
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: authorizationHeader
                             Description: >-
                               Access token will be transmitted in the
                               Authorization header using Bearer schema
                           - Key: query
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: query
                             Description: >-
                               Access token will be transmitted as query
                               parameters.
@@ -83778,10 +83778,10 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: http
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: http
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: soap
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: soap
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /value/api/type
                 PathPython: /value/api/type
@@ -84186,10 +84186,10 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: http
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: http
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: https
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: https
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /value/api/protocols
                 PathPython: /value/api/protocols
@@ -84704,10 +84704,10 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: notPublished
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: notPublished
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: published
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: published
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /value/product/state
                 PathPython: /value/product/state
@@ -86068,20 +86068,20 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: active
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: active
             Description: User state is active.
           - Key: blocked
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: blocked
             Description: >-
               User is blocked. Blocked users cannot authenticate at developer
               portal or call API.
           - Key: pending
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: pending
             Description: >-
               User account is pending. Requires identity confirmation before it
               can be made active.
           - Key: deleted
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: deleted
             Description: >-
               User account is closed. All identities and related entities are
               removed.
@@ -86362,12 +86362,12 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: signup
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: signup
             Description: >-
               Send an e-mail to the user confirming they have successfully
               signed up.
           - Key: invite
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: invite
             Description: >-
               Send an e-mail inviting the user to sign-up and complete
               registration.
@@ -86546,13 +86546,13 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: custom
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: custom
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: system
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: system
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: external
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: external
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/groups/type
             PathPython: /groups/type
@@ -86834,20 +86834,20 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: active
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: active
                 Description: User state is active.
               - Key: blocked
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: blocked
                 Description: >-
                   User is blocked. Blocked users cannot authenticate at
                   developer portal or call API.
               - Key: pending
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: pending
                 Description: >-
                   User account is pending. Requires identity confirmation before
                   it can be made active.
               - Key: deleted
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: deleted
                 Description: >-
                   User account is closed. All identities and related entities
                   are removed.
@@ -87506,20 +87506,20 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: active
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: active
             Description: User state is active.
           - Key: blocked
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: blocked
             Description: >-
               User is blocked. Blocked users cannot authenticate at developer
               portal or call API.
           - Key: pending
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: pending
             Description: >-
               User account is pending. Requires identity confirmation before it
               can be made active.
           - Key: deleted
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: deleted
             Description: >-
               User account is closed. All identities and related entities are
               removed.
@@ -87906,13 +87906,13 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: custom
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: custom
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: system
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: system
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: external
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: external
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/groups/type
             PathPython: /groups/type
@@ -88481,13 +88481,13 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: custom
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: custom
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: system
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: system
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: external
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: external
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /value/properties/type
             PathPython: /value/type
@@ -89012,22 +89012,22 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: suspended
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: suspended
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: active
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: active
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: expired
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: expired
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: submitted
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: submitted
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: rejected
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: rejected
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: cancelled
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: cancelled
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /value/properties/state
             PathPython: /value/state
@@ -90093,20 +90093,20 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Swagger
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Swagger
             Description: >-
               The Api Definition is exported in OpenApi Specification 2.0 format
               to the Storage Blob.
           - Key: Wsdl
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Wsdl
             Description: >-
               The Api Definition is exported in WSDL Schema to Storage Blob.
               This is only supported for APIs of Type `soap`
           - Key: Wadl
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Wadl
             Description: Export the Api Definition in WADL Schema to Storage Blob.
           - Key: OpenApi
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: OpenApi
             Description: >-
               Export the Api Definition in OpenApi Specification 3.0 to Storage
               Blob.
