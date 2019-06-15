@@ -18,4 +18,10 @@
         resource_group: '{{resource_group}}'
         front_door_name: '{{front_door_name}}'
         name: '{{health_probe_setting_name}}'
+        health_probe_settings_parameters:
+          name: healthProbeSettings1
+          properties:
+            path: /
+            protocol: Http
+            intervalInSeconds: '120'
     

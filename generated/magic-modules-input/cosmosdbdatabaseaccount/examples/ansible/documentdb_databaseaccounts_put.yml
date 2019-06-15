@@ -5,4 +5,11 @@ task: !ruby/object:Provider::Ansible::Task
   code:
     resource_group: myResourceGroup
     name: myDatabaseAccount
+    create_update_parameters:
+      location: westus
+      properties:
+        databaseAccountOfferType: Standard
+        locations:
+          - failoverPriority: '0'
+            locationName: southcentralus
   

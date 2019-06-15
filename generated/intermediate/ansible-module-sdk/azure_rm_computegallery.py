@@ -78,6 +78,10 @@ EXAMPLES = '''
   azure_rm_computegallery:
     resource_group: myResourceGroup
     name: myGallery
+    gallery:
+      location: West US
+      properties:
+        description: This is the gallery description.
 - name: Delete a gallery.
   azure_rm_computegallery:
     resource_group: myResourceGroup

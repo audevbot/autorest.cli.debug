@@ -61,11 +61,11 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - NameSwagger: parameters
-        NameAnsible: parameters
-        NamePythonSdk: parameters
-        NameGoSdk: Parameters
-        NameTerraform: Parameters
+      - NameSwagger: createUpdateParameters
+        NameAnsible: create_update_parameters
+        NamePythonSdk: create_update_parameters
+        NameGoSdk: CreateUpdateParameters
+        NameTerraform: CreateUpdateParameters
         IdPortion: null
         Type: dict
         TypeName: DatabaseAccountCreateUpdateParameters

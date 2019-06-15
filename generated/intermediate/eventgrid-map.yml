@@ -76,11 +76,11 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - NameSwagger: parameters
-        NameAnsible: parameters
-        NamePythonSdk: parameters
-        NameGoSdk: Parameters
-        NameTerraform: Parameters
+      - NameSwagger: eventSubscriptionInfo
+        NameAnsible: event_subscription_info
+        NamePythonSdk: event_subscription_info
+        NameGoSdk: EventSubscriptionInfo
+        NameTerraform: EventSubscriptionInfo
         IdPortion: null
         Type: dict
         TypeName: EventSubscription
@@ -104,7 +104,30 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: true
-        ExampleValue: null
+        ExampleValue:
+          properties:
+            destination:
+              endpointType: StorageQueue
+              properties:
+                resourceId: >-
+                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                  resource_group
+                  }}/providers/Microsoft.Storage/storageAccounts/{{
+                  storage_account_name }}
+                queueName: queue1
+            filter:
+              isSubjectCaseSensitive: false
+              subjectBeginsWith: ExamplePrefix
+              subjectEndsWith: ExampleSuffix
+            deadLetterDestination:
+              endpointType: StorageBlob
+              properties:
+                resourceId: >-
+                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                  resource_group
+                  }}/providers/Microsoft.Storage/storageAccounts/{{
+                  storage_account_name }}
+                blobContainerName: contosocontainer
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -4382,11 +4405,11 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - NameSwagger: parameters
-        NameAnsible: parameters
-        NamePythonSdk: parameters
-        NameGoSdk: Parameters
-        NameTerraform: Parameters
+      - NameSwagger: topicInfo
+        NameAnsible: topic_info
+        NamePythonSdk: topic_info
+        NameGoSdk: TopicInfo
+        NameTerraform: TopicInfo
         IdPortion: null
         Type: dict
         TypeName: Topic
@@ -4408,7 +4431,11 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: true
-        ExampleValue: null
+        ExampleValue:
+          location: westus2
+          tags:
+            tag1: value1
+            tag2: value2
         Hidden: false
         IncludeInResponse: false
         Flatten: false

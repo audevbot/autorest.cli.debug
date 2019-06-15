@@ -64,11 +64,11 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - NameSwagger: parameters
-        NameAnsible: parameters
-        NamePythonSdk: parameters
-        NameGoSdk: Parameters
-        NameTerraform: Parameters
+      - NameSwagger: gallery
+        NameAnsible: gallery
+        NamePythonSdk: gallery
+        NameGoSdk: Gallery
+        NameTerraform: Gallery
         IdPortion: null
         Type: dict
         TypeName: Gallery
@@ -92,7 +92,10 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: true
-        ExampleValue: null
+        ExampleValue:
+          location: West US
+          properties:
+            description: This is the gallery description.
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -1376,11 +1379,11 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - NameSwagger: parameters
-        NameAnsible: parameters
-        NamePythonSdk: parameters
-        NameGoSdk: Parameters
-        NameTerraform: Parameters
+      - NameSwagger: galleryImage
+        NameAnsible: gallery_image
+        NamePythonSdk: gallery_image
+        NameGoSdk: GalleryImage
+        NameTerraform: GalleryImage
         IdPortion: null
         Type: dict
         TypeName: GalleryImage
@@ -1402,7 +1405,15 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: true
-        ExampleValue: null
+        ExampleValue:
+          location: West US
+          properties:
+            osType: Windows
+            osState: Generalized
+            identifier:
+              publisher: myPublisherName
+              offer: myOfferName
+              sku: mySkuName
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -4722,11 +4733,11 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - NameSwagger: parameters
-        NameAnsible: parameters
-        NamePythonSdk: parameters
-        NameGoSdk: Parameters
-        NameTerraform: Parameters
+      - NameSwagger: galleryImageVersion
+        NameAnsible: gallery_image_version
+        NamePythonSdk: gallery_image_version
+        NameGoSdk: GalleryImageVersion
+        NameTerraform: GalleryImageVersion
         IdPortion: null
         Type: dict
         TypeName: GalleryImageVersion
@@ -4750,7 +4761,22 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: true
-        ExampleValue: null
+        ExampleValue:
+          location: West US
+          properties:
+            publishingProfile:
+              targetRegions:
+                - name: West US
+                  regionalReplicaCount: '1'
+                - name: East US
+                  regionalReplicaCount: '2'
+                  storageAccountType: Standard_ZRS
+              source:
+                managedImage:
+                  id: >-
+                    /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                    resource_group }}/providers/Microsoft.Compute/images/{{
+                    image_name }}
         Hidden: false
         IncludeInResponse: false
         Flatten: false

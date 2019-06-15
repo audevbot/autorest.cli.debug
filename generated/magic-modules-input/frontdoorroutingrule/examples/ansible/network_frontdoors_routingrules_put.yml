@@ -6,4 +6,28 @@ task: !ruby/object:Provider::Ansible::Task
     resource_group: myResourceGroup
     front_door_name: myFrontDoor
     name: myRoutingRule
+    routing_rule_parameters:
+      name: routingRule1
+      properties:
+        frontendEndpoints:
+          - id: >-
+              /subscriptions/{{ subscription_id }}/resourceGroups/{{
+              resource_group }}/providers/Microsoft.Network/frontDoors/{{
+              front_door_name }}/frontendEndpoints/{{ frontend_endpoint_name }}
+          - id: >-
+              /subscriptions/{{ subscription_id }}/resourceGroups/{{
+              resource_group }}/providers/Microsoft.Network/frontDoors/{{
+              front_door_name }}/frontendEndpoints/{{ frontend_endpoint_name }}
+        acceptedProtocols:
+          - Http
+        patternsToMatch:
+          - /*
+        routeConfiguration:
+          '@odata.type': '#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration'
+          backendPool:
+            id: >-
+              /subscriptions/{{ subscription_id }}/resourceGroups/{{
+              resource_group }}/providers/Microsoft.Network/frontDoors/{{
+              front_door_name }}/backendPools/{{ backend_pool_name }}
+        enabledState: Enabled
   

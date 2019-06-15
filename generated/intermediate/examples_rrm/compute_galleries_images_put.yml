@@ -17,4 +17,13 @@
         resource_group: '{{resource_group}}'
         gallery_name: '{{gallery_name}}'
         name: '{{image_name}}'
+        gallery_image:
+          location: West US
+          properties:
+            osType: Windows
+            osState: Generalized
+            identifier:
+              publisher: myPublisherName
+              offer: myOfferName
+              sku: mySkuName
     

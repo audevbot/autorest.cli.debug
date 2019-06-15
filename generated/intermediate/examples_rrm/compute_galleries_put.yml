@@ -15,4 +15,8 @@
       azure_rm_computegallery:
         resource_group: '{{resource_group}}'
         name: '{{gallery_name}}'
+        gallery:
+          location: West US
+          properties:
+            description: This is the gallery description.
     

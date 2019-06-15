@@ -61,11 +61,11 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - NameSwagger: parameters
-        NameAnsible: parameters
-        NamePythonSdk: parameters
-        NameGoSdk: Parameters
-        NameTerraform: Parameters
+      - NameSwagger: frontDoorParameters
+        NameAnsible: front_door_parameters
+        NamePythonSdk: front_door_parameters
+        NameGoSdk: FrontDoorParameters
+        NameTerraform: FrontDoorParameters
         IdPortion: null
         Type: dict
         TypeName: FrontDoor
@@ -2906,11 +2906,11 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - NameSwagger: parameters
-        NameAnsible: parameters
-        NamePythonSdk: parameters
-        NameGoSdk: Parameters
-        NameTerraform: Parameters
+      - NameSwagger: routingRuleParameters
+        NameAnsible: routing_rule_parameters
+        NamePythonSdk: routing_rule_parameters
+        NameGoSdk: RoutingRuleParameters
+        NameTerraform: RoutingRuleParameters
         IdPortion: null
         Type: dict
         TypeName: RoutingRule
@@ -4181,11 +4181,11 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - NameSwagger: parameters
-        NameAnsible: parameters
-        NamePythonSdk: parameters
-        NameGoSdk: Parameters
-        NameTerraform: Parameters
+      - NameSwagger: healthProbeSettingsParameters
+        NameAnsible: health_probe_settings_parameters
+        NamePythonSdk: health_probe_settings_parameters
+        NameGoSdk: HealthProbeSettingsParameters
+        NameTerraform: HealthProbeSettingsParameters
         IdPortion: null
         Type: dict
         TypeName: HealthProbeSettingsModel
@@ -5033,11 +5033,11 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - NameSwagger: parameters
-        NameAnsible: parameters
-        NamePythonSdk: parameters
-        NameGoSdk: Parameters
-        NameTerraform: Parameters
+      - NameSwagger: loadBalancingSettingsParameters
+        NameAnsible: load_balancing_settings_parameters
+        NamePythonSdk: load_balancing_settings_parameters
+        NameGoSdk: LoadBalancingSettingsParameters
+        NameTerraform: LoadBalancingSettingsParameters
         IdPortion: null
         Type: dict
         TypeName: LoadBalancingSettingsModel
@@ -5876,11 +5876,11 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - NameSwagger: parameters
-        NameAnsible: parameters
-        NamePythonSdk: parameters
-        NameGoSdk: Parameters
-        NameTerraform: Parameters
+      - NameSwagger: backendPoolParameters
+        NameAnsible: backend_pool_parameters
+        NamePythonSdk: backend_pool_parameters
+        NameGoSdk: BackendPoolParameters
+        NameTerraform: BackendPoolParameters
         IdPortion: null
         Type: dict
         TypeName: BackendPool
@@ -6901,11 +6901,11 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - NameSwagger: parameters
-        NameAnsible: parameters
-        NamePythonSdk: parameters
-        NameGoSdk: Parameters
-        NameTerraform: Parameters
+      - NameSwagger: frontendEndpointParameters
+        NameAnsible: frontend_endpoint_parameters
+        NamePythonSdk: frontend_endpoint_parameters
+        NameGoSdk: FrontendEndpointParameters
+        NameTerraform: FrontendEndpointParameters
         IdPortion: null
         Type: dict
         TypeName: FrontendEndpoint

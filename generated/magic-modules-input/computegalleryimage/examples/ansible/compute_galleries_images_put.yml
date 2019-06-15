@@ -6,4 +6,13 @@ task: !ruby/object:Provider::Ansible::Task
     resource_group: myResourceGroup
     gallery_name: myGallery
     name: myImage
+    gallery_image:
+      location: West US
+      properties:
+        osType: Windows
+        osState: Generalized
+        identifier:
+          publisher: myPublisherName
+          offer: myOfferName
+          sku: mySkuName
   

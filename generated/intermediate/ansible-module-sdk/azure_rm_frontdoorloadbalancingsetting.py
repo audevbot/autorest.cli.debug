@@ -61,6 +61,11 @@ EXAMPLES = '''
     resource_group: myResourceGroup
     front_door_name: myFrontDoor
     name: myLoadBalancingSetting
+    load_balancing_settings_parameters:
+      name: loadBalancingSettings1
+      properties:
+        sampleSize: '4'
+        successfulSamplesRequired: '2'
 - name: Delete LoadBalancingSettings
   azure_rm_frontdoorloadbalancingsetting:
     resource_group: myResourceGroup
