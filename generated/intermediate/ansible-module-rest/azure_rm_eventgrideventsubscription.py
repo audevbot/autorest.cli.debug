@@ -39,12 +39,6 @@ options:
   name:
     description:
       - Name of the resource
-  event_subscription_info:
-    description:
-      - >-
-        Event subscription properties containing the destination and filter
-        information
-    required: true
   destination:
     description:
       - >-
@@ -127,147 +121,36 @@ EXAMPLES = '''
   azure_rm_eventgrideventsubscription:
     scope: subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4
     name: examplesubscription3
-    event_subscription_info:
-      properties:
-        destination:
-          endpointType: WebHook
-          properties:
-            endpointUrl: 'https://requestb.in/15ksip71'
-        filter:
-          isSubjectCaseSensitive: false
 - name: EventSubscriptions_CreateOrUpdateForResourceGroup
   azure_rm_eventgrideventsubscription:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg
     name: examplesubscription2
-    event_subscription_info:
-      properties:
-        destination:
-          endpointType: WebHook
-          properties:
-            endpointUrl: 'https://requestb.in/15ksip71'
-        filter:
-          isSubjectCaseSensitive: false
-          subjectBeginsWith: ExamplePrefix
-          subjectEndsWith: ExampleSuffix
 - name: EventSubscriptions_CreateOrUpdateForResource
   azure_rm_eventgrideventsubscription:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventHub/namespaces/examplenamespace1
     name: examplesubscription10
-    event_subscription_info:
-      properties:
-        destination:
-          endpointType: WebHook
-          properties:
-            endpointUrl: 'https://requestb.in/15ksip71'
-        filter:
-          isSubjectCaseSensitive: false
-          subjectBeginsWith: ExamplePrefix
-          subjectEndsWith: ExampleSuffix
 - name: EventSubscriptions_CreateOrUpdateForCustomTopic_WebhookDestination
   azure_rm_eventgrideventsubscription:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1
     name: examplesubscription1
-    event_subscription_info:
-      properties:
-        destination:
-          endpointType: WebHook
-          properties:
-            endpointUrl: >-
-              https://contosofunction.azurewebsites.net/api/HttpTriggerCSharp1?code=<HIDDEN>
-        filter:
-          isSubjectCaseSensitive: false
-          subjectBeginsWith: ExamplePrefix
-          subjectEndsWith: ExampleSuffix
-        deadLetterDestination:
-          endpointType: StorageBlob
-          properties:
-            resourceId: >-
-              /subscriptions/{{ subscription_id }}/resourceGroups/{{
-              resource_group }}/providers/Microsoft.Storage/storageAccounts/{{
-              storage_account_name }}
-            blobContainerName: contosocontainer
 - name: EventSubscriptions_CreateOrUpdateForCustomTopic_EventHubDestination
   azure_rm_eventgrideventsubscription:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1
     name: examplesubscription1
-    event_subscription_info:
-      properties:
-        destination:
-          endpointType: EventHub
-          properties:
-            resourceId: >-
-              /subscriptions/{{ subscription_id }}/resourceGroups/{{
-              resource_group }}/providers/Microsoft.EventHub/namespaces/{{
-              namespace_name }}/eventhubs/{{ eventhub_name }}
-        filter:
-          isSubjectCaseSensitive: false
-          subjectBeginsWith: ExamplePrefix
-          subjectEndsWith: ExampleSuffix
-        deadLetterDestination:
-          endpointType: StorageBlob
-          properties:
-            resourceId: >-
-              /subscriptions/{{ subscription_id }}/resourceGroups/{{
-              resource_group }}/providers/Microsoft.Storage/storageAccounts/{{
-              storage_account_name }}
-            blobContainerName: contosocontainer
 - name: EventSubscriptions_CreateOrUpdateForCustomTopic_HybridConnectionDestination
   azure_rm_eventgrideventsubscription:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1
     name: examplesubscription1
-    event_subscription_info:
-      properties:
-        destination:
-          endpointType: HybridConnection
-          properties:
-            resourceId: >-
-              /subscriptions/{{ subscription_id }}/resourceGroups/{{
-              resource_group }}/providers/Microsoft.Relay/namespaces/{{
-              namespace_name }}/hybridConnections/{{ hybrid_connection_name }}
-        filter:
-          isSubjectCaseSensitive: false
-          subjectBeginsWith: ExamplePrefix
-          subjectEndsWith: ExampleSuffix
-        deadLetterDestination:
-          endpointType: StorageBlob
-          properties:
-            resourceId: >-
-              /subscriptions/{{ subscription_id }}/resourceGroups/{{
-              resource_group }}/providers/Microsoft.Storage/storageAccounts/{{
-              storage_account_name }}
-            blobContainerName: contosocontainer
 - name: EventSubscriptions_CreateOrUpdateForCustomTopic_StorageQueueDestination
   azure_rm_eventgrideventsubscription:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1
     name: examplesubscription1
-    event_subscription_info:
-      properties:
-        destination:
-          endpointType: StorageQueue
-          properties:
-            resourceId: >-
-              /subscriptions/{{ subscription_id }}/resourceGroups/{{
-              resource_group }}/providers/Microsoft.Storage/storageAccounts/{{
-              storage_account_name }}
-            queueName: queue1
-        filter:
-          isSubjectCaseSensitive: false
-          subjectBeginsWith: ExamplePrefix
-          subjectEndsWith: ExampleSuffix
-        deadLetterDestination:
-          endpointType: StorageBlob
-          properties:
-            resourceId: >-
-              /subscriptions/{{ subscription_id }}/resourceGroups/{{
-              resource_group }}/providers/Microsoft.Storage/storageAccounts/{{
-              storage_account_name }}
-            blobContainerName: contosocontainer
 - name: EventSubscriptions_UpdateForSubscription
   azure_rm_eventgrideventsubscription:
     scope: subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -453,11 +336,6 @@ class AzureRMEventSubscriptions(AzureRMModuleBaseExt):
                 disposition='eventSubscriptionName',
                 required=true
             ),
-            event_subscription_info=dict(
-                type='dict',
-                disposition='eventSubscriptionInfo',
-                required=true
-            ),
             destination=dict(
                 type='dict',
                 disposition='/properties/*'
@@ -515,7 +393,6 @@ class AzureRMEventSubscriptions(AzureRMModuleBaseExt):
 
         self.scope = None
         self.name = None
-        self.event_subscription_info = None
         self.id = None
         self.name = None
         self.type = None

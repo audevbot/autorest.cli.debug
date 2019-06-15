@@ -32,10 +32,6 @@ options:
   name:
     description:
       - Resource name.
-  routing_rule_parameters:
-    description:
-      - Routing Rule properties needed to create a new Front Door.
-    required: true
   id:
     description:
       - Resource ID.
@@ -65,60 +61,11 @@ EXAMPLES = '''
     resource_group: myResourceGroup
     front_door_name: myFrontDoor
     name: myRoutingRule
-    routing_rule_parameters:
-      name: routingRule1
-      properties:
-        frontendEndpoints:
-          - id: >-
-              /subscriptions/{{ subscription_id }}/resourceGroups/{{
-              resource_group }}/providers/Microsoft.Network/frontDoors/{{
-              front_door_name }}/frontendEndpoints/{{ frontend_endpoint_name }}
-          - id: >-
-              /subscriptions/{{ subscription_id }}/resourceGroups/{{
-              resource_group }}/providers/Microsoft.Network/frontDoors/{{
-              front_door_name }}/frontendEndpoints/{{ frontend_endpoint_name }}
-        acceptedProtocols:
-          - Http
-        patternsToMatch:
-          - /*
-        routeConfiguration:
-          '@odata.type': '#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration'
-          backendPool:
-            id: >-
-              /subscriptions/{{ subscription_id }}/resourceGroups/{{
-              resource_group }}/providers/Microsoft.Network/frontDoors/{{
-              front_door_name }}/backendPools/{{ backend_pool_name }}
-        enabledState: Enabled
 - name: Create or update specific Redirect Routing Rule
   azure_rm_frontdoorroutingrule:
     resource_group: myResourceGroup
     front_door_name: myFrontDoor
     name: myRoutingRule
-    routing_rule_parameters:
-      name: redirectRoutingRule1
-      properties:
-        frontendEndpoints:
-          - id: >-
-              /subscriptions/{{ subscription_id }}/resourceGroups/{{
-              resource_group }}/providers/Microsoft.Network/frontDoors/{{
-              front_door_name }}/frontendEndpoints/{{ frontend_endpoint_name }}
-          - id: >-
-              /subscriptions/{{ subscription_id }}/resourceGroups/{{
-              resource_group }}/providers/Microsoft.Network/frontDoors/{{
-              front_door_name }}/frontendEndpoints/{{ frontend_endpoint_name }}
-        acceptedProtocols:
-          - Https
-        patternsToMatch:
-          - /*
-        routeConfiguration:
-          '@odata.type': '#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration'
-          redirectType: Moved
-          redirectProtocol: HttpsOnly
-          customHost: www.bing.com
-          customPath: /api
-          customFragment: fragment
-          customQueryString: a=b
-        enabledState: Enabled
 - name: Delete Routing Rule
   azure_rm_frontdoorroutingrule:
     resource_group: myResourceGroup
@@ -195,10 +142,6 @@ class AzureRMRoutingRules(AzureRMModuleBaseExt):
                 disposition='routing_rule_name',
                 required=true
             ),
-            routing_rule_parameters=dict(
-                type='dict',
-                required=true
-            ),
             id=dict(
                 type='str',
                 updatable=False,
@@ -219,7 +162,6 @@ class AzureRMRoutingRules(AzureRMModuleBaseExt):
         self.resource_group = None
         self.front_door_name = None
         self.name = None
-        self.routing_rule_parameters = None
         self.type = None
         self.body = {}
 
@@ -293,7 +235,7 @@ class AzureRMRoutingRules(AzureRMModuleBaseExt):
             response = self.mgmt_client.routing_rules.create_or_update(resource_group_name=self.resource_group,
                                                                        front_door_name=self.front_door_name,
                                                                        routing_rule_name=self.name,
-                                                                       routing_rule_parameters=self.body)
+                                                                       routing_rule_parameters=self.routingRuleParameters)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
         except CloudError as exc:

@@ -44,12 +44,6 @@ objects:
             go_variable_name: name
             python_parameter_name: gallery_image_version_name
             python_variable_name: name
-          'galleryImageVersion': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
-            id_portion: null
-            go_variable_name: galleryImageVersion
-            go_type_name: null
-            python_parameter_name: gallery_image_version
-            python_variable_name: gallery_image_version
       delete: !ruby/object:Api::Azure::SDKOperationDefinition
         async: true
         go_func_name: Delete
@@ -243,12 +237,6 @@ objects:
         input: true
         sample_value: myVersion
         azure_sdk_references: ['galleryImageVersionName', '/name']
-      - !ruby/object:Api::Type::NestedObject
-        name: 'galleryImageVersion'
-        description: 'Parameters supplied to the create or update gallery Image Version operation.'
-        required: true
-        sample_value: [object Object]
-        azure_sdk_references: ['galleryImageVersion']
       - !ruby/object:Api::Azure::Type::Location
         name: 'location'
         description: 'Resource location'

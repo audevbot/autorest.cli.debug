@@ -28,12 +28,6 @@ options:
   name:
     description:
       - Resource name
-  gallery:
-    description:
-      - >-
-        Parameters supplied to the create or update Shared Image Gallery
-        operation.
-    required: true
   location:
     description:
       - Resource location
@@ -84,10 +78,6 @@ EXAMPLES = '''
   azure_rm_computegallery:
     resource_group: myResourceGroup
     name: myGallery
-    gallery:
-      location: West US
-      properties:
-        description: This is the gallery description.
 - name: Delete a gallery.
   azure_rm_computegallery:
     resource_group: myResourceGroup
@@ -202,10 +192,6 @@ class AzureRMGalleries(AzureRMModuleBaseExt):
                 disposition='gallery_name',
                 required=true
             ),
-            gallery=dict(
-                type='dict',
-                required=true
-            ),
             location=dict(
                 type='str',
                 updatable=False,
@@ -231,7 +217,6 @@ class AzureRMGalleries(AzureRMModuleBaseExt):
 
         self.resource_group = None
         self.name = None
-        self.gallery = None
         self.id = None
         self.name = None
         self.type = None

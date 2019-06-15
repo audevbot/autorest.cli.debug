@@ -34,12 +34,6 @@ objects:
             go_variable_name: name
             python_parameter_name: account_name
             python_variable_name: name
-          'createUpdateParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
-            id_portion: null
-            go_variable_name: createUpdateParameters
-            go_type_name: null
-            python_parameter_name: create_update_parameters
-            python_variable_name: create_update_parameters
       delete: !ruby/object:Api::Azure::SDKOperationDefinition
         async: true
         go_func_name: Delete
@@ -413,12 +407,6 @@ objects:
         input: true
         sample_value: myDatabaseAccount
         azure_sdk_references: ['accountName', '/name']
-      - !ruby/object:Api::Type::NestedObject
-        name: 'createUpdateParameters'
-        description: 'The parameters to provide for the current database account.'
-        required: true
-        sample_value: [object Object]
-        azure_sdk_references: ['createUpdateParameters']
       - !ruby/object:Api::Azure::Type::Location
         name: 'location'
         description: 'The location of the resource group to which the resource belongs.'

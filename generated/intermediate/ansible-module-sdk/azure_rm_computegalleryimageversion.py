@@ -40,12 +40,6 @@ options:
   name:
     description:
       - Resource name
-  gallery_image_version:
-    description:
-      - >-
-        Parameters supplied to the create or update gallery Image Version
-        operation.
-    required: true
   location:
     description:
       - Resource location
@@ -187,22 +181,6 @@ EXAMPLES = '''
     gallery_name: myGallery
     gallery_image_name: myImage
     name: myVersion
-    gallery_image_version:
-      location: West US
-      properties:
-        publishingProfile:
-          targetRegions:
-            - name: West US
-              regionalReplicaCount: '1'
-            - name: East US
-              regionalReplicaCount: '2'
-              storageAccountType: Standard_ZRS
-          source:
-            managedImage:
-              id: >-
-                /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                resource_group }}/providers/Microsoft.Compute/images/{{
-                image_name }}
 - name: Delete a gallery Image Version.
   azure_rm_computegalleryimageversion:
     resource_group: myResourceGroup
@@ -474,10 +452,6 @@ class AzureRMGalleryImageVersions(AzureRMModuleBaseExt):
                 disposition='gallery_image_version_name',
                 required=true
             ),
-            gallery_image_version=dict(
-                type='dict',
-                required=true
-            ),
             location=dict(
                 type='str',
                 updatable=False,
@@ -523,7 +497,6 @@ class AzureRMGalleryImageVersions(AzureRMModuleBaseExt):
         self.gallery_name = None
         self.gallery_image_name = None
         self.name = None
-        self.gallery_image_version = None
         self.id = None
         self.name = None
         self.type = None
@@ -602,7 +575,7 @@ class AzureRMGalleryImageVersions(AzureRMModuleBaseExt):
                                                                                 gallery_name=self.gallery_name,
                                                                                 gallery_image_name=self.gallery_image_name,
                                                                                 gallery_image_version_name=self.name,
-                                                                                gallery_image_version=self.gallery_image_version)
+                                                                                gallery_image_version=self.galleryImageVersion)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
         except CloudError as exc:

@@ -75,38 +75,6 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - NameSwagger: eventSubscriptionInfo
-        NameAnsible: event_subscription_info
-        NamePythonSdk: event_subscription_info
-        NameGoSdk: EventSubscriptionInfo
-        NameTerraform: EventSubscriptionInfo
-        IdPortion: null
-        Type: dict
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: true
-        Documentation: >-
-          Event subscription properties containing the destination and filter
-          information
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
       - NameSwagger: parameters
         NameAnsible: parameters
         NamePythonSdk: parameters
@@ -4408,36 +4376,6 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: topicInfo
-        NameAnsible: topic_info
-        NamePythonSdk: topic_info
-        NameGoSdk: TopicInfo
-        NameTerraform: TopicInfo
-        IdPortion: null
-        Type: dict
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: true
-        Documentation: Topic information
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false

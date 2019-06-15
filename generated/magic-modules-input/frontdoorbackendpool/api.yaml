@@ -39,12 +39,6 @@ objects:
             go_variable_name: name
             python_parameter_name: backend_pool_name
             python_variable_name: name
-          'backendPoolParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
-            id_portion: null
-            go_variable_name: backendPoolParameters
-            go_type_name: null
-            python_parameter_name: backend_pool_parameters
-            python_variable_name: backend_pool_parameters
       delete: !ruby/object:Api::Azure::SDKOperationDefinition
         async: true
         go_func_name: Delete
@@ -137,12 +131,6 @@ objects:
         input: true
         sample_value: myBackendPool
         azure_sdk_references: ['backendPoolName', '/name']
-      - !ruby/object:Api::Type::NestedObject
-        name: 'backendPoolParameters'
-        description: 'Backend Pool properties needed to create a new Pool.'
-        required: true
-        sample_value: [object Object]
-        azure_sdk_references: ['backendPoolParameters']
       - !ruby/object:Api::Type::String
         name: 'id'
         description: 'Resource ID.'

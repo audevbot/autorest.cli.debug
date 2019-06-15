@@ -34,12 +34,6 @@ objects:
             go_variable_name: name
             python_parameter_name: front_door_name
             python_variable_name: name
-          'frontDoorParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
-            id_portion: null
-            go_variable_name: frontDoorParameters
-            go_type_name: null
-            python_parameter_name: front_door_parameters
-            python_variable_name: front_door_parameters
       delete: !ruby/object:Api::Azure::SDKOperationDefinition
         async: true
         go_func_name: Delete
@@ -194,12 +188,6 @@ objects:
         input: true
         sample_value: myFrontDoor
         azure_sdk_references: ['frontDoorName', '/name']
-      - !ruby/object:Api::Type::NestedObject
-        name: 'frontDoorParameters'
-        description: 'Front Door properties needed to create a new Front Door.'
-        required: true
-        sample_value: [object Object]
-        azure_sdk_references: ['frontDoorParameters']
       - !ruby/object:Api::Azure::Type::Location
         name: 'location'
         description: 'Resource location.'

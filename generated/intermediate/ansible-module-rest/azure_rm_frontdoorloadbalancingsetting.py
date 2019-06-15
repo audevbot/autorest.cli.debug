@@ -32,10 +32,6 @@ options:
   name:
     description:
       - Resource name.
-  load_balancing_settings_parameters:
-    description:
-      - LoadBalancingSettings properties needed to create a new Front Door.
-    required: true
   id:
     description:
       - Resource ID.
@@ -65,11 +61,6 @@ EXAMPLES = '''
     resource_group: myResourceGroup
     front_door_name: myFrontDoor
     name: myLoadBalancingSetting
-    load_balancing_settings_parameters:
-      name: loadBalancingSettings1
-      properties:
-        sampleSize: '4'
-        successfulSamplesRequired: '2'
 - name: Delete LoadBalancingSettings
   azure_rm_frontdoorloadbalancingsetting:
     resource_group: myResourceGroup
@@ -141,11 +132,6 @@ class AzureRMLoadBalancingSettings(AzureRMModuleBaseExt):
                 disposition='loadBalancingSettingsName',
                 required=true
             ),
-            load_balancing_settings_parameters=dict(
-                type='dict',
-                disposition='loadBalancingSettingsParameters',
-                required=true
-            ),
             id=dict(
                 type='str',
                 updatable=False,
@@ -166,7 +152,6 @@ class AzureRMLoadBalancingSettings(AzureRMModuleBaseExt):
         self.resource_group = None
         self.front_door_name = None
         self.name = None
-        self.load_balancing_settings_parameters = None
         self.type = None
 
         self.results = dict(changed=False)

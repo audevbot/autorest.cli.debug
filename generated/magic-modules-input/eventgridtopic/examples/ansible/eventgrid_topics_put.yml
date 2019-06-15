@@ -5,9 +5,4 @@ task: !ruby/object:Provider::Ansible::Task
   code:
     resource_group: myResourceGroup
     name: myTopic
-    topic_info:
-      location: westus2
-      tags:
-        tag1: value1
-        tag2: value2
   

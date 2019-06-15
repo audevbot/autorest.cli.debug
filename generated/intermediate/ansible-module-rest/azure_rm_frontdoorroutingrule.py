@@ -32,10 +32,6 @@ options:
   name:
     description:
       - Resource name.
-  routing_rule_parameters:
-    description:
-      - Routing Rule properties needed to create a new Front Door.
-    required: true
   id:
     description:
       - Resource ID.
@@ -65,60 +61,11 @@ EXAMPLES = '''
     resource_group: myResourceGroup
     front_door_name: myFrontDoor
     name: myRoutingRule
-    routing_rule_parameters:
-      name: routingRule1
-      properties:
-        frontendEndpoints:
-          - id: >-
-              /subscriptions/{{ subscription_id }}/resourceGroups/{{
-              resource_group }}/providers/Microsoft.Network/frontDoors/{{
-              front_door_name }}/frontendEndpoints/{{ frontend_endpoint_name }}
-          - id: >-
-              /subscriptions/{{ subscription_id }}/resourceGroups/{{
-              resource_group }}/providers/Microsoft.Network/frontDoors/{{
-              front_door_name }}/frontendEndpoints/{{ frontend_endpoint_name }}
-        acceptedProtocols:
-          - Http
-        patternsToMatch:
-          - /*
-        routeConfiguration:
-          '@odata.type': '#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration'
-          backendPool:
-            id: >-
-              /subscriptions/{{ subscription_id }}/resourceGroups/{{
-              resource_group }}/providers/Microsoft.Network/frontDoors/{{
-              front_door_name }}/backendPools/{{ backend_pool_name }}
-        enabledState: Enabled
 - name: Create or update specific Redirect Routing Rule
   azure_rm_frontdoorroutingrule:
     resource_group: myResourceGroup
     front_door_name: myFrontDoor
     name: myRoutingRule
-    routing_rule_parameters:
-      name: redirectRoutingRule1
-      properties:
-        frontendEndpoints:
-          - id: >-
-              /subscriptions/{{ subscription_id }}/resourceGroups/{{
-              resource_group }}/providers/Microsoft.Network/frontDoors/{{
-              front_door_name }}/frontendEndpoints/{{ frontend_endpoint_name }}
-          - id: >-
-              /subscriptions/{{ subscription_id }}/resourceGroups/{{
-              resource_group }}/providers/Microsoft.Network/frontDoors/{{
-              front_door_name }}/frontendEndpoints/{{ frontend_endpoint_name }}
-        acceptedProtocols:
-          - Https
-        patternsToMatch:
-          - /*
-        routeConfiguration:
-          '@odata.type': '#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration'
-          redirectType: Moved
-          redirectProtocol: HttpsOnly
-          customHost: www.bing.com
-          customPath: /api
-          customFragment: fragment
-          customQueryString: a=b
-        enabledState: Enabled
 - name: Delete Routing Rule
   azure_rm_frontdoorroutingrule:
     resource_group: myResourceGroup
@@ -190,11 +137,6 @@ class AzureRMRoutingRules(AzureRMModuleBaseExt):
                 disposition='routingRuleName',
                 required=true
             ),
-            routing_rule_parameters=dict(
-                type='dict',
-                disposition='routingRuleParameters',
-                required=true
-            ),
             id=dict(
                 type='str',
                 updatable=False,
@@ -215,7 +157,6 @@ class AzureRMRoutingRules(AzureRMModuleBaseExt):
         self.resource_group = None
         self.front_door_name = None
         self.name = None
-        self.routing_rule_parameters = None
         self.type = None
 
         self.results = dict(changed=False)

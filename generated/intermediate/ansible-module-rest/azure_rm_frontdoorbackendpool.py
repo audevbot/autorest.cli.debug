@@ -32,10 +32,6 @@ options:
   name:
     description:
       - Resource name.
-  backend_pool_parameters:
-    description:
-      - Backend Pool properties needed to create a new Pool.
-    required: true
   id:
     description:
       - Resource ID.
@@ -65,37 +61,6 @@ EXAMPLES = '''
     resource_group: myResourceGroup
     front_door_name: myFrontDoor
     name: myBackendPool
-    backend_pool_parameters:
-      name: backendPool1
-      properties:
-        backends:
-          - address: w3.contoso.com
-            httpPort: '80'
-            httpsPort: '443'
-            weight: '1'
-            priority: '2'
-          - address: contoso.com.website-us-west-2.othercloud.net
-            httpPort: '80'
-            httpsPort: '443'
-            weight: '2'
-            priority: '1'
-          - address: contoso1.azurewebsites.net
-            httpPort: '80'
-            httpsPort: '443'
-            weight: '1'
-            priority: '1'
-        loadBalancingSettings:
-          id: >-
-            /subscriptions/{{ subscription_id }}/resourceGroups/{{
-            resource_group }}/providers/Microsoft.Network/frontDoors/{{
-            front_door_name }}/loadBalancingSettings/{{
-            load_balancing_setting_name }}
-        healthProbeSettings:
-          id: >-
-            /subscriptions/{{ subscription_id }}/resourceGroups/{{
-            resource_group }}/providers/Microsoft.Network/frontDoors/{{
-            front_door_name }}/healthProbeSettings/{{ health_probe_setting_name
-            }}
 - name: Delete Backend Pool
   azure_rm_frontdoorbackendpool:
     resource_group: myResourceGroup
@@ -167,11 +132,6 @@ class AzureRMBackendPools(AzureRMModuleBaseExt):
                 disposition='backendPoolName',
                 required=true
             ),
-            backend_pool_parameters=dict(
-                type='dict',
-                disposition='backendPoolParameters',
-                required=true
-            ),
             id=dict(
                 type='str',
                 updatable=False,
@@ -192,7 +152,6 @@ class AzureRMBackendPools(AzureRMModuleBaseExt):
         self.resource_group = None
         self.front_door_name = None
         self.name = None
-        self.backend_pool_parameters = None
         self.type = None
 
         self.results = dict(changed=False)

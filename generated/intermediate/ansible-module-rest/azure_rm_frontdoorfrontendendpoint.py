@@ -32,10 +32,6 @@ options:
   name:
     description:
       - Resource name.
-  frontend_endpoint_parameters:
-    description:
-      - Frontend endpoint properties needed to create a new endpoint.
-    required: true
   id:
     description:
       - Resource ID.
@@ -65,18 +61,6 @@ EXAMPLES = '''
     resource_group: myResourceGroup
     front_door_name: myFrontDoor
     name: myFrontendEndpoint
-    frontend_endpoint_parameters:
-      name: frontendEndpoint1
-      properties:
-        hostName: www.contoso.com
-        sessionAffinityEnabledState: Enabled
-        sessionAffinityTtlSeconds: '60'
-        webApplicationFirewallPolicyLink:
-          id: >-
-            /subscriptions/{{ subscription_id }}/resourceGroups/{{
-            resource_group
-            }}/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/{{
-            front_door_web_application_firewall_policy_name }}
 - name: Delete Backend Pool
   azure_rm_frontdoorfrontendendpoint:
     resource_group: myResourceGroup
@@ -148,11 +132,6 @@ class AzureRMFrontendEndpoints(AzureRMModuleBaseExt):
                 disposition='frontendEndpointName',
                 required=true
             ),
-            frontend_endpoint_parameters=dict(
-                type='dict',
-                disposition='frontendEndpointParameters',
-                required=true
-            ),
             id=dict(
                 type='str',
                 updatable=False,
@@ -173,7 +152,6 @@ class AzureRMFrontendEndpoints(AzureRMModuleBaseExt):
         self.resource_group = None
         self.front_door_name = None
         self.name = None
-        self.frontend_endpoint_parameters = None
         self.type = None
 
         self.results = dict(changed=False)

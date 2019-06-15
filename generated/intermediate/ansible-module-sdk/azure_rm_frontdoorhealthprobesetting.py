@@ -32,10 +32,6 @@ options:
   name:
     description:
       - Resource name.
-  health_probe_settings_parameters:
-    description:
-      - HealthProbeSettings properties needed to create a new Front Door.
-    required: true
   id:
     description:
       - Resource ID.
@@ -65,12 +61,6 @@ EXAMPLES = '''
     resource_group: myResourceGroup
     front_door_name: myFrontDoor
     name: myHealthProbeSetting
-    health_probe_settings_parameters:
-      name: healthProbeSettings1
-      properties:
-        path: /
-        protocol: Http
-        intervalInSeconds: '120'
 - name: Delete HealthProbeSettings
   azure_rm_frontdoorhealthprobesetting:
     resource_group: myResourceGroup
@@ -147,10 +137,6 @@ class AzureRMHealthProbeSettings(AzureRMModuleBaseExt):
                 disposition='health_probe_settings_name',
                 required=true
             ),
-            health_probe_settings_parameters=dict(
-                type='dict',
-                required=true
-            ),
             id=dict(
                 type='str',
                 updatable=False,
@@ -171,7 +157,6 @@ class AzureRMHealthProbeSettings(AzureRMModuleBaseExt):
         self.resource_group = None
         self.front_door_name = None
         self.name = None
-        self.health_probe_settings_parameters = None
         self.type = None
         self.body = {}
 
@@ -245,7 +230,7 @@ class AzureRMHealthProbeSettings(AzureRMModuleBaseExt):
             response = self.mgmt_client.health_probe_settings.create_or_update(resource_group_name=self.resource_group,
                                                                                front_door_name=self.front_door_name,
                                                                                health_probe_settings_name=self.name,
-                                                                               health_probe_settings_parameters=self.body)
+                                                                               health_probe_settings_parameters=self.healthProbeSettingsParameters)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
         except CloudError as exc:
