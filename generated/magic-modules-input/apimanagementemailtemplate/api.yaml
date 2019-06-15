@@ -41,7 +41,7 @@ objects:
           '/properties/parameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Parameters
-            go_type_name: {"$id":"2812","$type":"SequenceType","elementType":{"$ref":"2763"},"name":{"$id":"2813","fixed":false},"deprecated":false}
+            go_type_name: EmailTemplateParametersContractProperties
           '/properties/parameters/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
@@ -85,7 +85,7 @@ objects:
           '/properties/parameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Parameters
-            go_type_name: {"$id":"2812","$type":"SequenceType","elementType":{"$ref":"2763"},"name":{"$id":"2813","fixed":false},"deprecated":false}
+            go_type_name: EmailTemplateParametersContractProperties
           '/properties/parameters/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
@@ -177,7 +177,7 @@ objects:
           '/properties/parameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Parameters
-            go_type_name: {"$id":"2812","$type":"SequenceType","elementType":{"$ref":"2763"},"name":{"$id":"2813","fixed":false},"deprecated":false}
+            go_type_name: EmailTemplateParametersContractProperties
           '/properties/parameters/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name

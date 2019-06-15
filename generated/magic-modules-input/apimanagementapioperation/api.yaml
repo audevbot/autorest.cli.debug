@@ -76,7 +76,7 @@ objects:
           '/properties/templateParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: TemplateParameters
-            go_type_name: {"$id":"1249","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1250","fixed":false},"deprecated":false}
+            go_type_name: ParameterContract
           '/properties/templateParameters/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
@@ -195,7 +195,7 @@ objects:
           '/properties/request/queryParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: QueryParameters
-            go_type_name: {"$id":"1210","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1211","fixed":false},"deprecated":false}
+            go_type_name: ParameterContract
           '/properties/request/queryParameters/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
@@ -217,7 +217,7 @@ objects:
           '/properties/request/headers': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Headers
-            go_type_name: {"$id":"1216","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1217","fixed":false},"deprecated":false}
+            go_type_name: ParameterContract
           '/properties/request/headers/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
@@ -239,7 +239,7 @@ objects:
           '/properties/request/representations': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Representations
-            go_type_name: {"$id":"1222","$type":"SequenceType","elementType":{"$ref":"1141"},"name":{"$id":"1223","fixed":false},"deprecated":false}
+            go_type_name: RepresentationContract
           '/properties/request/representations/contentType': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: ContentType
@@ -255,7 +255,7 @@ objects:
           '/properties/request/representations/formParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: FormParameters
-            go_type_name: {"$id":"1170","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1171","fixed":false},"deprecated":false}
+            go_type_name: ParameterContract
           '/properties/request/representations/formParameters/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
@@ -343,7 +343,7 @@ objects:
           '/properties/responses': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Responses
-            go_type_name: {"$id":"1265","$type":"SequenceType","elementType":{"$ref":"1173"},"name":{"$id":"1266","fixed":false},"deprecated":false}
+            go_type_name: ResponseContract
           '/properties/responses/statusCode': 
             applicable_to: [go]
             go_field_name: StatusCode
@@ -353,7 +353,7 @@ objects:
           '/properties/responses/representations': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Representations
-            go_type_name: {"$id":"1190","$type":"SequenceType","elementType":{"$ref":"1141"},"name":{"$id":"1191","fixed":false},"deprecated":false}
+            go_type_name: RepresentationContract
           '/properties/responses/representations/contentType': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: ContentType
@@ -369,7 +369,7 @@ objects:
           '/properties/responses/representations/formParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: FormParameters
-            go_type_name: {"$id":"1170","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1171","fixed":false},"deprecated":false}
+            go_type_name: ParameterContract
           '/properties/responses/representations/formParameters/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
@@ -391,7 +391,7 @@ objects:
           '/properties/responses/headers': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Headers
-            go_type_name: {"$id":"1196","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1197","fixed":false},"deprecated":false}
+            go_type_name: ParameterContract
           '/properties/responses/headers/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
@@ -491,7 +491,7 @@ objects:
           '/properties/templateParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: TemplateParameters
-            go_type_name: {"$id":"1249","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1250","fixed":false},"deprecated":false}
+            go_type_name: ParameterContract
           '/properties/templateParameters/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
@@ -610,7 +610,7 @@ objects:
           '/properties/request/queryParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: QueryParameters
-            go_type_name: {"$id":"1210","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1211","fixed":false},"deprecated":false}
+            go_type_name: ParameterContract
           '/properties/request/queryParameters/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
@@ -632,7 +632,7 @@ objects:
           '/properties/request/headers': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Headers
-            go_type_name: {"$id":"1216","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1217","fixed":false},"deprecated":false}
+            go_type_name: ParameterContract
           '/properties/request/headers/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
@@ -654,7 +654,7 @@ objects:
           '/properties/request/representations': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Representations
-            go_type_name: {"$id":"1222","$type":"SequenceType","elementType":{"$ref":"1141"},"name":{"$id":"1223","fixed":false},"deprecated":false}
+            go_type_name: RepresentationContract
           '/properties/request/representations/contentType': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: ContentType
@@ -670,7 +670,7 @@ objects:
           '/properties/request/representations/formParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: FormParameters
-            go_type_name: {"$id":"1170","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1171","fixed":false},"deprecated":false}
+            go_type_name: ParameterContract
           '/properties/request/representations/formParameters/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
@@ -758,7 +758,7 @@ objects:
           '/properties/responses': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Responses
-            go_type_name: {"$id":"1265","$type":"SequenceType","elementType":{"$ref":"1173"},"name":{"$id":"1266","fixed":false},"deprecated":false}
+            go_type_name: ResponseContract
           '/properties/responses/statusCode': 
             applicable_to: [go]
             go_field_name: StatusCode
@@ -768,7 +768,7 @@ objects:
           '/properties/responses/representations': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Representations
-            go_type_name: {"$id":"1190","$type":"SequenceType","elementType":{"$ref":"1141"},"name":{"$id":"1191","fixed":false},"deprecated":false}
+            go_type_name: RepresentationContract
           '/properties/responses/representations/contentType': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: ContentType
@@ -784,7 +784,7 @@ objects:
           '/properties/responses/representations/formParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: FormParameters
-            go_type_name: {"$id":"1170","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1171","fixed":false},"deprecated":false}
+            go_type_name: ParameterContract
           '/properties/responses/representations/formParameters/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
@@ -806,7 +806,7 @@ objects:
           '/properties/responses/headers': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Headers
-            go_type_name: {"$id":"1196","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1197","fixed":false},"deprecated":false}
+            go_type_name: ParameterContract
           '/properties/responses/headers/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
@@ -905,7 +905,7 @@ objects:
           '/properties/templateParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: TemplateParameters
-            go_type_name: {"$id":"1249","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1250","fixed":false},"deprecated":false}
+            go_type_name: ParameterContract
           '/properties/templateParameters/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
@@ -961,7 +961,7 @@ objects:
           '/properties/request/queryParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: QueryParameters
-            go_type_name: {"$id":"1210","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1211","fixed":false},"deprecated":false}
+            go_type_name: ParameterContract
           '/properties/request/queryParameters/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
@@ -983,7 +983,7 @@ objects:
           '/properties/request/headers': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Headers
-            go_type_name: {"$id":"1216","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1217","fixed":false},"deprecated":false}
+            go_type_name: ParameterContract
           '/properties/request/headers/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
@@ -1005,7 +1005,7 @@ objects:
           '/properties/request/representations': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Representations
-            go_type_name: {"$id":"1222","$type":"SequenceType","elementType":{"$ref":"1141"},"name":{"$id":"1223","fixed":false},"deprecated":false}
+            go_type_name: RepresentationContract
           '/properties/request/representations/contentType': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: ContentType
@@ -1021,7 +1021,7 @@ objects:
           '/properties/request/representations/formParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: FormParameters
-            go_type_name: {"$id":"1170","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1171","fixed":false},"deprecated":false}
+            go_type_name: ParameterContract
           '/properties/request/representations/formParameters/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
@@ -1127,7 +1127,7 @@ objects:
           '/properties/responses': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Responses
-            go_type_name: {"$id":"1265","$type":"SequenceType","elementType":{"$ref":"1173"},"name":{"$id":"1266","fixed":false},"deprecated":false}
+            go_type_name: ResponseContract
           '/properties/responses/statusCode': 
             applicable_to: [go]
             go_field_name: StatusCode
@@ -1137,7 +1137,7 @@ objects:
           '/properties/responses/representations': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Representations
-            go_type_name: {"$id":"1190","$type":"SequenceType","elementType":{"$ref":"1141"},"name":{"$id":"1191","fixed":false},"deprecated":false}
+            go_type_name: RepresentationContract
           '/properties/responses/representations/contentType': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: ContentType
@@ -1153,7 +1153,7 @@ objects:
           '/properties/responses/representations/formParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: FormParameters
-            go_type_name: {"$id":"1170","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1171","fixed":false},"deprecated":false}
+            go_type_name: ParameterContract
           '/properties/responses/representations/formParameters/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
@@ -1175,7 +1175,7 @@ objects:
           '/properties/responses/headers': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Headers
-            go_type_name: {"$id":"1196","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1197","fixed":false},"deprecated":false}
+            go_type_name: ParameterContract
           '/properties/responses/headers/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name

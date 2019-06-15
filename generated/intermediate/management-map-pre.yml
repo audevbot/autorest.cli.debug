@@ -507,10 +507,8 @@ Modules:
         NameTerraform: Children
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"295","$type":"SequenceType","elementType":{"$ref":"222"},"name":{"$id":"296","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"295","$type":"SequenceType","elementType":{"$ref":"222"},"name":{"$id":"296","fixed":false},"deprecated":false}
+        TypeName: ManagementGroupChildInfo
+        TypeNameGo: ManagementGroupChildInfo
         IsList: true
         Required: false
         Documentation: The list of children.
@@ -690,10 +688,8 @@ Modules:
             NameTerraform: Children
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"263","$type":"SequenceType","elementType":{"$ref":"222"},"name":{"$id":"264","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"263","$type":"SequenceType","elementType":{"$ref":"222"},"name":{"$id":"264","fixed":false},"deprecated":false}
+            TypeName: ManagementGroupChildInfo
+            TypeNameGo: ManagementGroupChildInfo
             IsList: true
             Required: false
             Documentation: The list of children.
@@ -874,10 +870,8 @@ Modules:
                 NameTerraform: Children
                 IdPortion: null
                 Type: dict
-                TypeName: >-
-                  {"$id":"263","$type":"SequenceType","elementType":{"$ref":"222"},"name":{"$id":"264","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"263","$type":"SequenceType","elementType":{"$ref":"222"},"name":{"$id":"264","fixed":false},"deprecated":false}
+                TypeName: ManagementGroupChildInfo
+                TypeNameGo: ManagementGroupChildInfo
                 IsList: true
                 Required: false
                 Documentation: The list of children.
@@ -1060,10 +1054,8 @@ Modules:
                     NameTerraform: Children
                     IdPortion: null
                     Type: dict
-                    TypeName: >-
-                      {"$id":"263","$type":"SequenceType","elementType":{"$ref":"222"},"name":{"$id":"264","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"263","$type":"SequenceType","elementType":{"$ref":"222"},"name":{"$id":"264","fixed":false},"deprecated":false}
+                    TypeName: ManagementGroupChildInfo
+                    TypeNameGo: ManagementGroupChildInfo
                     IsList: true
                     Required: false
                     Documentation: The list of children.
@@ -2087,10 +2079,8 @@ Modules:
         NameTerraform: Children
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"295","$type":"SequenceType","elementType":{"$ref":"222"},"name":{"$id":"296","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"295","$type":"SequenceType","elementType":{"$ref":"222"},"name":{"$id":"296","fixed":false},"deprecated":false}
+        TypeName: ManagementGroupChildInfo
+        TypeNameGo: ManagementGroupChildInfo
         IsList: true
         Required: false
         Documentation: The list of children.
@@ -2270,10 +2260,8 @@ Modules:
             NameTerraform: Children
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"263","$type":"SequenceType","elementType":{"$ref":"222"},"name":{"$id":"264","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"263","$type":"SequenceType","elementType":{"$ref":"222"},"name":{"$id":"264","fixed":false},"deprecated":false}
+            TypeName: ManagementGroupChildInfo
+            TypeNameGo: ManagementGroupChildInfo
             IsList: true
             Required: false
             Documentation: The list of children.
@@ -2454,10 +2442,8 @@ Modules:
                 NameTerraform: Children
                 IdPortion: null
                 Type: dict
-                TypeName: >-
-                  {"$id":"263","$type":"SequenceType","elementType":{"$ref":"222"},"name":{"$id":"264","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"263","$type":"SequenceType","elementType":{"$ref":"222"},"name":{"$id":"264","fixed":false},"deprecated":false}
+                TypeName: ManagementGroupChildInfo
+                TypeNameGo: ManagementGroupChildInfo
                 IsList: true
                 Required: false
                 Documentation: The list of children.
@@ -2640,10 +2626,8 @@ Modules:
                     NameTerraform: Children
                     IdPortion: null
                     Type: dict
-                    TypeName: >-
-                      {"$id":"263","$type":"SequenceType","elementType":{"$ref":"222"},"name":{"$id":"264","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"263","$type":"SequenceType","elementType":{"$ref":"222"},"name":{"$id":"264","fixed":false},"deprecated":false}
+                    TypeName: ManagementGroupChildInfo
+                    TypeNameGo: ManagementGroupChildInfo
                     IsList: true
                     Required: false
                     Documentation: The list of children.
@@ -3056,10 +3040,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"71","$type":"SequenceType","elementType":{"$ref":"54"},"name":{"$id":"72","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"71","$type":"SequenceType","elementType":{"$ref":"54"},"name":{"$id":"72","fixed":false},"deprecated":false}
+        TypeName: Operation
+        TypeNameGo: Operation
         IsList: true
         Required: false
         Documentation: >-

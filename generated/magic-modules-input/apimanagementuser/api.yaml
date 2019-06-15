@@ -72,7 +72,7 @@ objects:
           '/properties/identities': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Identities
-            go_type_name: {"$id":"2941","$type":"SequenceType","elementType":{"$ref":"2879"},"name":{"$id":"2942","fixed":false},"deprecated":false}
+            go_type_name: UserIdentityContract
           '/properties/identities/provider': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Provider
@@ -163,7 +163,7 @@ objects:
           '/properties/identities': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Identities
-            go_type_name: {"$id":"2941","$type":"SequenceType","elementType":{"$ref":"2879"},"name":{"$id":"2942","fixed":false},"deprecated":false}
+            go_type_name: UserIdentityContract
           '/properties/identities/provider': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Provider
@@ -260,7 +260,7 @@ objects:
           '/properties/identities': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Identities
-            go_type_name: {"$id":"2941","$type":"SequenceType","elementType":{"$ref":"2879"},"name":{"$id":"2942","fixed":false},"deprecated":false}
+            go_type_name: UserIdentityContract
           '/properties/identities/provider': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Provider
@@ -303,7 +303,7 @@ objects:
           '/properties/groups': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Groups
-            go_type_name: {"$id":"3047","$type":"SequenceType","elementType":{"$ref":"2981"},"name":{"$id":"3048","fixed":false},"deprecated":false}
+            go_type_name: GroupContractProperties
           '/groups': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
             python_field_name: groups

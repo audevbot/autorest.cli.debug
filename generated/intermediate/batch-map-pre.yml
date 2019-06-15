@@ -4617,10 +4617,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1445","$type":"SequenceType","elementType":{"$ref":"1416"},"name":{"$id":"1446","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1445","$type":"SequenceType","elementType":{"$ref":"1416"},"name":{"$id":"1446","fixed":false},"deprecated":false}
+        TypeName: Operation
+        TypeNameGo: Operation
         IsList: true
         Required: false
         Documentation: !<tag:yaml.org,2002:js/undefined> ''
@@ -5521,10 +5519,8 @@ Modules:
             NameTerraform: Details
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"421","$type":"SequenceType","elementType":{"$ref":"398"},"name":{"$id":"422","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"421","$type":"SequenceType","elementType":{"$ref":"398"},"name":{"$id":"422","fixed":false},"deprecated":false}
+            TypeName: DeleteCertificateError
+            TypeNameGo: DeleteCertificateError
             IsList: true
             Required: false
             Documentation: A list of additional details about the error.
@@ -5637,10 +5633,8 @@ Modules:
                 NameTerraform: Details
                 IdPortion: null
                 Type: dict
-                TypeName: >-
-                  {"$id":"421","$type":"SequenceType","elementType":{"$ref":"398"},"name":{"$id":"422","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"421","$type":"SequenceType","elementType":{"$ref":"398"},"name":{"$id":"422","fixed":false},"deprecated":false}
+                TypeName: DeleteCertificateError
+                TypeNameGo: DeleteCertificateError
                 IsList: true
                 Required: false
                 Documentation: A list of additional details about the error.
@@ -5753,10 +5747,8 @@ Modules:
                     NameTerraform: Details
                     IdPortion: null
                     Type: dict
-                    TypeName: >-
-                      {"$id":"421","$type":"SequenceType","elementType":{"$ref":"398"},"name":{"$id":"422","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"421","$type":"SequenceType","elementType":{"$ref":"398"},"name":{"$id":"422","fixed":false},"deprecated":false}
+                    TypeName: DeleteCertificateError
+                    TypeNameGo: DeleteCertificateError
                     IsList: true
                     Required: false
                     Documentation: A list of additional details about the error.
@@ -7044,10 +7036,8 @@ Modules:
             NameTerraform: Details
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"421","$type":"SequenceType","elementType":{"$ref":"398"},"name":{"$id":"422","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"421","$type":"SequenceType","elementType":{"$ref":"398"},"name":{"$id":"422","fixed":false},"deprecated":false}
+            TypeName: DeleteCertificateError
+            TypeNameGo: DeleteCertificateError
             IsList: true
             Required: false
             Documentation: A list of additional details about the error.
@@ -7160,10 +7150,8 @@ Modules:
                 NameTerraform: Details
                 IdPortion: null
                 Type: dict
-                TypeName: >-
-                  {"$id":"421","$type":"SequenceType","elementType":{"$ref":"398"},"name":{"$id":"422","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"421","$type":"SequenceType","elementType":{"$ref":"398"},"name":{"$id":"422","fixed":false},"deprecated":false}
+                TypeName: DeleteCertificateError
+                TypeNameGo: DeleteCertificateError
                 IsList: true
                 Required: false
                 Documentation: A list of additional details about the error.
@@ -7276,10 +7264,8 @@ Modules:
                     NameTerraform: Details
                     IdPortion: null
                     Type: dict
-                    TypeName: >-
-                      {"$id":"421","$type":"SequenceType","elementType":{"$ref":"398"},"name":{"$id":"422","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"421","$type":"SequenceType","elementType":{"$ref":"398"},"name":{"$id":"422","fixed":false},"deprecated":false}
+                    TypeName: DeleteCertificateError
+                    TypeNameGo: DeleteCertificateError
                     IsList: true
                     Required: false
                     Documentation: A list of additional details about the error.
@@ -8345,10 +8331,8 @@ Modules:
                 NameTerraform: DataDisks
                 IdPortion: null
                 Type: dict
-                TypeName: >-
-                  {"$id":"653","$type":"SequenceType","elementType":{"$ref":"557"},"name":{"$id":"654","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"653","$type":"SequenceType","elementType":{"$ref":"557"},"name":{"$id":"654","fixed":false},"deprecated":false}
+                TypeName: DataDisk
+                TypeNameGo: DataDisk
                 IsList: true
                 Required: false
                 Documentation: >-
@@ -8681,10 +8665,8 @@ Modules:
                     NameTerraform: ContainerRegistries
                     IdPortion: null
                     Type: dict
-                    TypeName: >-
-                      {"$id":"631","$type":"SequenceType","elementType":{"$ref":"592"},"name":{"$id":"632","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"631","$type":"SequenceType","elementType":{"$ref":"592"},"name":{"$id":"632","fixed":false},"deprecated":false}
+                    TypeName: ContainerRegistry
+                    TypeNameGo: ContainerRegistry
                     IsList: true
                     Required: false
                     Documentation: >-
@@ -9201,10 +9183,8 @@ Modules:
                 NameTerraform: InboundNatPools
                 IdPortion: null
                 Type: dict
-                TypeName: >-
-                  {"$id":"841","$type":"SequenceType","elementType":{"$ref":"794"},"name":{"$id":"842","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"841","$type":"SequenceType","elementType":{"$ref":"794"},"name":{"$id":"842","fixed":false},"deprecated":false}
+                TypeName: InboundNatPool
+                TypeNameGo: InboundNatPool
                 IsList: true
                 Required: true
                 Documentation: >-
@@ -9415,10 +9395,8 @@ Modules:
                     NameTerraform: NetworkSecurityGroupRules
                     IdPortion: null
                     Type: dict
-                    TypeName: >-
-                      {"$id":"833","$type":"SequenceType","elementType":{"$ref":"770"},"name":{"$id":"834","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"833","$type":"SequenceType","elementType":{"$ref":"770"},"name":{"$id":"834","fixed":false},"deprecated":false}
+                    TypeName: NetworkSecurityGroupRule
+                    TypeNameGo: NetworkSecurityGroupRule
                     IsList: true
                     Required: false
                     Documentation: >-
@@ -9594,10 +9572,8 @@ Modules:
         NameTerraform: UserAccounts
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1301","$type":"SequenceType","elementType":{"$ref":"900"},"name":{"$id":"1302","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1301","$type":"SequenceType","elementType":{"$ref":"900"},"name":{"$id":"1302","fixed":false},"deprecated":false}
+        TypeName: UserAccount
+        TypeNameGo: UserAccount
         IsList: true
         Required: false
         Documentation: !<tag:yaml.org,2002:js/undefined> ''
@@ -9943,10 +9919,8 @@ Modules:
         NameTerraform: Metadata
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1307","$type":"SequenceType","elementType":{"$ref":"932"},"name":{"$id":"1308","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1307","$type":"SequenceType","elementType":{"$ref":"932"},"name":{"$id":"1308","fixed":false},"deprecated":false}
+        TypeName: MetadataItem
+        TypeNameGo: MetadataItem
         IsList: true
         Required: false
         Documentation: >-
@@ -10093,10 +10067,8 @@ Modules:
             NameTerraform: ResourceFiles
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1055","$type":"SequenceType","elementType":{"$ref":"946"},"name":{"$id":"1056","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1055","$type":"SequenceType","elementType":{"$ref":"946"},"name":{"$id":"1056","fixed":false},"deprecated":false}
+            TypeName: ResourceFile
+            TypeNameGo: ResourceFile
             IsList: true
             Required: false
             Documentation: !<tag:yaml.org,2002:js/undefined> ''
@@ -10346,10 +10318,8 @@ Modules:
             NameTerraform: EnvironmentSettings
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1061","$type":"SequenceType","elementType":{"$ref":"984"},"name":{"$id":"1062","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1061","$type":"SequenceType","elementType":{"$ref":"984"},"name":{"$id":"1062","fixed":false},"deprecated":false}
+            TypeName: EnvironmentSetting
+            TypeNameGo: EnvironmentSetting
             IsList: true
             Required: false
             Documentation: !<tag:yaml.org,2002:js/undefined> ''
@@ -10932,10 +10902,8 @@ Modules:
         NameTerraform: Certificates
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1317","$type":"SequenceType","elementType":{"$ref":"1084"},"name":{"$id":"1318","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1317","$type":"SequenceType","elementType":{"$ref":"1084"},"name":{"$id":"1318","fixed":false},"deprecated":false}
+        TypeName: CertificateReference
+        TypeNameGo: CertificateReference
         IsList: true
         Required: false
         Documentation: >-
@@ -11153,10 +11121,8 @@ Modules:
         NameTerraform: ApplicationPackages
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1323","$type":"SequenceType","elementType":{"$ref":"1121"},"name":{"$id":"1324","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1323","$type":"SequenceType","elementType":{"$ref":"1121"},"name":{"$id":"1324","fixed":false},"deprecated":false}
+        TypeName: ApplicationPackageReference
+        TypeNameGo: ApplicationPackageReference
         IsList: true
         Required: false
         Documentation: >-
@@ -11689,10 +11655,8 @@ Modules:
                 NameTerraform: Details
                 IdPortion: null
                 Type: dict
-                TypeName: >-
-                  {"$id":"749","$type":"SequenceType","elementType":{"$ref":"732"},"name":{"$id":"750","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"749","$type":"SequenceType","elementType":{"$ref":"732"},"name":{"$id":"750","fixed":false},"deprecated":false}
+                TypeName: AutoScaleRunError
+                TypeNameGo: AutoScaleRunError
                 IsList: true
                 Required: false
                 Documentation: !<tag:yaml.org,2002:js/undefined> ''
@@ -11773,10 +11737,8 @@ Modules:
                     NameTerraform: Details
                     IdPortion: null
                     Type: dict
-                    TypeName: >-
-                      {"$id":"749","$type":"SequenceType","elementType":{"$ref":"732"},"name":{"$id":"750","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"749","$type":"SequenceType","elementType":{"$ref":"732"},"name":{"$id":"750","fixed":false},"deprecated":false}
+                    TypeName: AutoScaleRunError
+                    TypeNameGo: AutoScaleRunError
                     IsList: true
                     Required: false
                     Documentation: !<tag:yaml.org,2002:js/undefined> ''
@@ -12039,10 +12001,8 @@ Modules:
             NameTerraform: Errors
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1188","$type":"SequenceType","elementType":{"$ref":"1135"},"name":{"$id":"1189","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1188","$type":"SequenceType","elementType":{"$ref":"1135"},"name":{"$id":"1189","fixed":false},"deprecated":false}
+            TypeName: ResizeError
+            TypeNameGo: ResizeError
             IsList: true
             Required: false
             Documentation: >-
@@ -12125,10 +12085,8 @@ Modules:
                 NameTerraform: Details
                 IdPortion: null
                 Type: dict
-                TypeName: >-
-                  {"$id":"1152","$type":"SequenceType","elementType":{"$ref":"1135"},"name":{"$id":"1153","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"1152","$type":"SequenceType","elementType":{"$ref":"1135"},"name":{"$id":"1153","fixed":false},"deprecated":false}
+                TypeName: ResizeError
+                TypeNameGo: ResizeError
                 IsList: true
                 Required: false
                 Documentation: !<tag:yaml.org,2002:js/undefined> ''
@@ -12209,10 +12167,8 @@ Modules:
                     NameTerraform: Details
                     IdPortion: null
                     Type: dict
-                    TypeName: >-
-                      {"$id":"1152","$type":"SequenceType","elementType":{"$ref":"1135"},"name":{"$id":"1153","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"1152","$type":"SequenceType","elementType":{"$ref":"1135"},"name":{"$id":"1153","fixed":false},"deprecated":false}
+                    TypeName: ResizeError
+                    TypeNameGo: ResizeError
                     IsList: true
                     Required: false
                     Documentation: !<tag:yaml.org,2002:js/undefined> ''
@@ -13094,10 +13050,8 @@ Modules:
                     NameTerraform: DataDisks
                     IdPortion: null
                     Type: dict
-                    TypeName: >-
-                      {"$id":"653","$type":"SequenceType","elementType":{"$ref":"557"},"name":{"$id":"654","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"653","$type":"SequenceType","elementType":{"$ref":"557"},"name":{"$id":"654","fixed":false},"deprecated":false}
+                    TypeName: DataDisk
+                    TypeNameGo: DataDisk
                     IsList: true
                     Required: false
                     Documentation: >-
@@ -13432,10 +13386,8 @@ Modules:
                         NameTerraform: ContainerRegistries
                         IdPortion: null
                         Type: dict
-                        TypeName: >-
-                          {"$id":"631","$type":"SequenceType","elementType":{"$ref":"592"},"name":{"$id":"632","fixed":false},"deprecated":false}
-                        TypeNameGo: >-
-                          {"$id":"631","$type":"SequenceType","elementType":{"$ref":"592"},"name":{"$id":"632","fixed":false},"deprecated":false}
+                        TypeName: ContainerRegistry
+                        TypeNameGo: ContainerRegistry
                         IsList: true
                         Required: false
                         Documentation: >-
@@ -13963,10 +13915,8 @@ Modules:
                     NameTerraform: InboundNatPools
                     IdPortion: null
                     Type: dict
-                    TypeName: >-
-                      {"$id":"841","$type":"SequenceType","elementType":{"$ref":"794"},"name":{"$id":"842","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"841","$type":"SequenceType","elementType":{"$ref":"794"},"name":{"$id":"842","fixed":false},"deprecated":false}
+                    TypeName: InboundNatPool
+                    TypeNameGo: InboundNatPool
                     IsList: true
                     Required: true
                     Documentation: >-
@@ -14180,10 +14130,8 @@ Modules:
                         NameTerraform: NetworkSecurityGroupRules
                         IdPortion: null
                         Type: dict
-                        TypeName: >-
-                          {"$id":"833","$type":"SequenceType","elementType":{"$ref":"770"},"name":{"$id":"834","fixed":false},"deprecated":false}
-                        TypeNameGo: >-
-                          {"$id":"833","$type":"SequenceType","elementType":{"$ref":"770"},"name":{"$id":"834","fixed":false},"deprecated":false}
+                        TypeName: NetworkSecurityGroupRule
+                        TypeNameGo: NetworkSecurityGroupRule
                         IsList: true
                         Required: false
                         Documentation: >-
@@ -14362,10 +14310,8 @@ Modules:
             NameTerraform: UserAccounts
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1301","$type":"SequenceType","elementType":{"$ref":"900"},"name":{"$id":"1302","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1301","$type":"SequenceType","elementType":{"$ref":"900"},"name":{"$id":"1302","fixed":false},"deprecated":false}
+            TypeName: UserAccount
+            TypeNameGo: UserAccount
             IsList: true
             Required: false
             Documentation: !<tag:yaml.org,2002:js/undefined> ''
@@ -14718,10 +14664,8 @@ Modules:
             NameTerraform: Metadata
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1307","$type":"SequenceType","elementType":{"$ref":"932"},"name":{"$id":"1308","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1307","$type":"SequenceType","elementType":{"$ref":"932"},"name":{"$id":"1308","fixed":false},"deprecated":false}
+            TypeName: MetadataItem
+            TypeNameGo: MetadataItem
             IsList: true
             Required: false
             Documentation: >-
@@ -14869,10 +14813,8 @@ Modules:
                 NameTerraform: ResourceFiles
                 IdPortion: null
                 Type: dict
-                TypeName: >-
-                  {"$id":"1055","$type":"SequenceType","elementType":{"$ref":"946"},"name":{"$id":"1056","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"1055","$type":"SequenceType","elementType":{"$ref":"946"},"name":{"$id":"1056","fixed":false},"deprecated":false}
+                TypeName: ResourceFile
+                TypeNameGo: ResourceFile
                 IsList: true
                 Required: false
                 Documentation: !<tag:yaml.org,2002:js/undefined> ''
@@ -15126,10 +15068,8 @@ Modules:
                 NameTerraform: EnvironmentSettings
                 IdPortion: null
                 Type: dict
-                TypeName: >-
-                  {"$id":"1061","$type":"SequenceType","elementType":{"$ref":"984"},"name":{"$id":"1062","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"1061","$type":"SequenceType","elementType":{"$ref":"984"},"name":{"$id":"1062","fixed":false},"deprecated":false}
+                TypeName: EnvironmentSetting
+                TypeNameGo: EnvironmentSetting
                 IsList: true
                 Required: false
                 Documentation: !<tag:yaml.org,2002:js/undefined> ''
@@ -15724,10 +15664,8 @@ Modules:
             NameTerraform: Certificates
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1317","$type":"SequenceType","elementType":{"$ref":"1084"},"name":{"$id":"1318","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1317","$type":"SequenceType","elementType":{"$ref":"1084"},"name":{"$id":"1318","fixed":false},"deprecated":false}
+            TypeName: CertificateReference
+            TypeNameGo: CertificateReference
             IsList: true
             Required: false
             Documentation: >-
@@ -15947,10 +15885,8 @@ Modules:
             NameTerraform: ApplicationPackages
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1323","$type":"SequenceType","elementType":{"$ref":"1121"},"name":{"$id":"1324","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1323","$type":"SequenceType","elementType":{"$ref":"1121"},"name":{"$id":"1324","fixed":false},"deprecated":false}
+            TypeName: ApplicationPackageReference
+            TypeNameGo: ApplicationPackageReference
             IsList: true
             Required: false
             Documentation: >-
@@ -18046,10 +17982,8 @@ Modules:
                 NameTerraform: DataDisks
                 IdPortion: null
                 Type: dict
-                TypeName: >-
-                  {"$id":"653","$type":"SequenceType","elementType":{"$ref":"557"},"name":{"$id":"654","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"653","$type":"SequenceType","elementType":{"$ref":"557"},"name":{"$id":"654","fixed":false},"deprecated":false}
+                TypeName: DataDisk
+                TypeNameGo: DataDisk
                 IsList: true
                 Required: false
                 Documentation: >-
@@ -18382,10 +18316,8 @@ Modules:
                     NameTerraform: ContainerRegistries
                     IdPortion: null
                     Type: dict
-                    TypeName: >-
-                      {"$id":"631","$type":"SequenceType","elementType":{"$ref":"592"},"name":{"$id":"632","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"631","$type":"SequenceType","elementType":{"$ref":"592"},"name":{"$id":"632","fixed":false},"deprecated":false}
+                    TypeName: ContainerRegistry
+                    TypeNameGo: ContainerRegistry
                     IsList: true
                     Required: false
                     Documentation: >-
@@ -18993,10 +18925,8 @@ Modules:
                 NameTerraform: Details
                 IdPortion: null
                 Type: dict
-                TypeName: >-
-                  {"$id":"749","$type":"SequenceType","elementType":{"$ref":"732"},"name":{"$id":"750","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"749","$type":"SequenceType","elementType":{"$ref":"732"},"name":{"$id":"750","fixed":false},"deprecated":false}
+                TypeName: AutoScaleRunError
+                TypeNameGo: AutoScaleRunError
                 IsList: true
                 Required: false
                 Documentation: !<tag:yaml.org,2002:js/undefined> ''
@@ -19077,10 +19007,8 @@ Modules:
                     NameTerraform: Details
                     IdPortion: null
                     Type: dict
-                    TypeName: >-
-                      {"$id":"749","$type":"SequenceType","elementType":{"$ref":"732"},"name":{"$id":"750","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"749","$type":"SequenceType","elementType":{"$ref":"732"},"name":{"$id":"750","fixed":false},"deprecated":false}
+                    TypeName: AutoScaleRunError
+                    TypeNameGo: AutoScaleRunError
                     IsList: true
                     Required: false
                     Documentation: !<tag:yaml.org,2002:js/undefined> ''
@@ -19278,10 +19206,8 @@ Modules:
                 NameTerraform: InboundNatPools
                 IdPortion: null
                 Type: dict
-                TypeName: >-
-                  {"$id":"841","$type":"SequenceType","elementType":{"$ref":"794"},"name":{"$id":"842","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"841","$type":"SequenceType","elementType":{"$ref":"794"},"name":{"$id":"842","fixed":false},"deprecated":false}
+                TypeName: InboundNatPool
+                TypeNameGo: InboundNatPool
                 IsList: true
                 Required: true
                 Documentation: >-
@@ -19492,10 +19418,8 @@ Modules:
                     NameTerraform: NetworkSecurityGroupRules
                     IdPortion: null
                     Type: dict
-                    TypeName: >-
-                      {"$id":"833","$type":"SequenceType","elementType":{"$ref":"770"},"name":{"$id":"834","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"833","$type":"SequenceType","elementType":{"$ref":"770"},"name":{"$id":"834","fixed":false},"deprecated":false}
+                    TypeName: NetworkSecurityGroupRule
+                    TypeNameGo: NetworkSecurityGroupRule
                     IsList: true
                     Required: false
                     Documentation: >-
@@ -19671,10 +19595,8 @@ Modules:
         NameTerraform: UserAccounts
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1301","$type":"SequenceType","elementType":{"$ref":"900"},"name":{"$id":"1302","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1301","$type":"SequenceType","elementType":{"$ref":"900"},"name":{"$id":"1302","fixed":false},"deprecated":false}
+        TypeName: UserAccount
+        TypeNameGo: UserAccount
         IsList: true
         Required: false
         Documentation: !<tag:yaml.org,2002:js/undefined> ''
@@ -20020,10 +19942,8 @@ Modules:
         NameTerraform: Metadata
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1307","$type":"SequenceType","elementType":{"$ref":"932"},"name":{"$id":"1308","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1307","$type":"SequenceType","elementType":{"$ref":"932"},"name":{"$id":"1308","fixed":false},"deprecated":false}
+        TypeName: MetadataItem
+        TypeNameGo: MetadataItem
         IsList: true
         Required: false
         Documentation: >-
@@ -20170,10 +20090,8 @@ Modules:
             NameTerraform: ResourceFiles
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1055","$type":"SequenceType","elementType":{"$ref":"946"},"name":{"$id":"1056","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1055","$type":"SequenceType","elementType":{"$ref":"946"},"name":{"$id":"1056","fixed":false},"deprecated":false}
+            TypeName: ResourceFile
+            TypeNameGo: ResourceFile
             IsList: true
             Required: false
             Documentation: !<tag:yaml.org,2002:js/undefined> ''
@@ -20423,10 +20341,8 @@ Modules:
             NameTerraform: EnvironmentSettings
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1061","$type":"SequenceType","elementType":{"$ref":"984"},"name":{"$id":"1062","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1061","$type":"SequenceType","elementType":{"$ref":"984"},"name":{"$id":"1062","fixed":false},"deprecated":false}
+            TypeName: EnvironmentSetting
+            TypeNameGo: EnvironmentSetting
             IsList: true
             Required: false
             Documentation: !<tag:yaml.org,2002:js/undefined> ''
@@ -21009,10 +20925,8 @@ Modules:
         NameTerraform: Certificates
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1317","$type":"SequenceType","elementType":{"$ref":"1084"},"name":{"$id":"1318","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1317","$type":"SequenceType","elementType":{"$ref":"1084"},"name":{"$id":"1318","fixed":false},"deprecated":false}
+        TypeName: CertificateReference
+        TypeNameGo: CertificateReference
         IsList: true
         Required: false
         Documentation: >-
@@ -21230,10 +21144,8 @@ Modules:
         NameTerraform: ApplicationPackages
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1323","$type":"SequenceType","elementType":{"$ref":"1121"},"name":{"$id":"1324","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1323","$type":"SequenceType","elementType":{"$ref":"1121"},"name":{"$id":"1324","fixed":false},"deprecated":false}
+        TypeName: ApplicationPackageReference
+        TypeNameGo: ApplicationPackageReference
         IsList: true
         Required: false
         Documentation: >-
@@ -21561,10 +21473,8 @@ Modules:
             NameTerraform: Errors
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1188","$type":"SequenceType","elementType":{"$ref":"1135"},"name":{"$id":"1189","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1188","$type":"SequenceType","elementType":{"$ref":"1135"},"name":{"$id":"1189","fixed":false},"deprecated":false}
+            TypeName: ResizeError
+            TypeNameGo: ResizeError
             IsList: true
             Required: false
             Documentation: >-
@@ -21647,10 +21557,8 @@ Modules:
                 NameTerraform: Details
                 IdPortion: null
                 Type: dict
-                TypeName: >-
-                  {"$id":"1152","$type":"SequenceType","elementType":{"$ref":"1135"},"name":{"$id":"1153","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"1152","$type":"SequenceType","elementType":{"$ref":"1135"},"name":{"$id":"1153","fixed":false},"deprecated":false}
+                TypeName: ResizeError
+                TypeNameGo: ResizeError
                 IsList: true
                 Required: false
                 Documentation: !<tag:yaml.org,2002:js/undefined> ''
@@ -21731,10 +21639,8 @@ Modules:
                     NameTerraform: Details
                     IdPortion: null
                     Type: dict
-                    TypeName: >-
-                      {"$id":"1152","$type":"SequenceType","elementType":{"$ref":"1135"},"name":{"$id":"1153","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"1152","$type":"SequenceType","elementType":{"$ref":"1135"},"name":{"$id":"1153","fixed":false},"deprecated":false}
+                    TypeName: ResizeError
+                    TypeNameGo: ResizeError
                     IsList: true
                     Required: false
                     Documentation: !<tag:yaml.org,2002:js/undefined> ''

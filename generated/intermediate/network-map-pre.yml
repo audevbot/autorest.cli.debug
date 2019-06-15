@@ -222,10 +222,8 @@ Modules:
         NameTerraform: ApplicationRuleCollections
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"375","$type":"SequenceType","elementType":{"$ref":"152"},"name":{"$id":"376","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"375","$type":"SequenceType","elementType":{"$ref":"152"},"name":{"$id":"376","fixed":false},"deprecated":false}
+        TypeName: AzureFirewallApplicationRuleCollection
+        TypeNameGo: AzureFirewallApplicationRuleCollection
         IsList: true
         Required: false
         Documentation: Collection of application rule collections used by Azure Firewall.
@@ -368,10 +366,8 @@ Modules:
             NameTerraform: Rules
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"145","$type":"SequenceType","elementType":{"$ref":"86"},"name":{"$id":"146","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"145","$type":"SequenceType","elementType":{"$ref":"86"},"name":{"$id":"146","fixed":false},"deprecated":false}
+            TypeName: AzureFirewallApplicationRule
+            TypeNameGo: AzureFirewallApplicationRule
             IsList: true
             Required: false
             Documentation: Collection of rules used by a application rule collection.
@@ -484,10 +480,8 @@ Modules:
                 NameTerraform: Protocols
                 IdPortion: null
                 Type: dict
-                TypeName: >-
-                  {"$id":"111","$type":"SequenceType","elementType":{"$ref":"68"},"name":{"$id":"112","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"111","$type":"SequenceType","elementType":{"$ref":"68"},"name":{"$id":"112","fixed":false},"deprecated":false}
+                TypeName: AzureFirewallApplicationRuleProtocol
+                TypeNameGo: AzureFirewallApplicationRuleProtocol
                 IsList: true
                 Required: false
                 Documentation: Array of ApplicationRuleProtocols.
@@ -720,10 +714,8 @@ Modules:
         NameTerraform: NatRuleCollections
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"381","$type":"SequenceType","elementType":{"$ref":"268"},"name":{"$id":"382","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"381","$type":"SequenceType","elementType":{"$ref":"268"},"name":{"$id":"382","fixed":false},"deprecated":false}
+        TypeName: AzureFirewallNatRuleCollection
+        TypeNameGo: AzureFirewallNatRuleCollection
         IsList: true
         Required: false
         Documentation: Collection of NAT rule collections used by Azure Firewall.
@@ -866,10 +858,8 @@ Modules:
             NameTerraform: Rules
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"261","$type":"SequenceType","elementType":{"$ref":"182"},"name":{"$id":"262","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"261","$type":"SequenceType","elementType":{"$ref":"182"},"name":{"$id":"262","fixed":false},"deprecated":false}
+            TypeName: AzureFirewallNatRule
+            TypeNameGo: AzureFirewallNatRule
             IsList: true
             Required: false
             Documentation: Collection of rules used by a NAT rule collection.
@@ -1276,10 +1266,8 @@ Modules:
         NameTerraform: NetworkRuleCollections
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"387","$type":"SequenceType","elementType":{"$ref":"352"},"name":{"$id":"388","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"387","$type":"SequenceType","elementType":{"$ref":"352"},"name":{"$id":"388","fixed":false},"deprecated":false}
+        TypeName: AzureFirewallNetworkRuleCollection
+        TypeNameGo: AzureFirewallNetworkRuleCollection
         IsList: true
         Required: false
         Documentation: Collection of network rule collections used by Azure Firewall.
@@ -1422,10 +1410,8 @@ Modules:
             NameTerraform: Rules
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"345","$type":"SequenceType","elementType":{"$ref":"286"},"name":{"$id":"346","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"345","$type":"SequenceType","elementType":{"$ref":"286"},"name":{"$id":"346","fixed":false},"deprecated":false}
+            TypeName: AzureFirewallNetworkRule
+            TypeNameGo: AzureFirewallNetworkRule
             IsList: true
             Required: false
             Documentation: Collection of rules used by a network rule collection.
@@ -1503,11 +1489,9 @@ Modules:
                 NameGoSdk: Protocols
                 NameTerraform: Protocols
                 IdPortion: null
-                Type: 'unknown[reference: 224]'
-                TypeName: >-
-                  {"$id":"303","$type":"SequenceType","elementType":{"$ref":"224"},"name":{"$id":"304","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"303","$type":"SequenceType","elementType":{"$ref":"224"},"name":{"$id":"304","fixed":false},"deprecated":false}
+                Type: 'unknown[reference: undefined]'
+                TypeName: UnknownTypeName
+                TypeNameGo: UnknownTypeName
                 IsList: true
                 Required: false
                 Documentation: Array of AzureFirewallNetworkRuleProtocols.
@@ -1770,10 +1754,8 @@ Modules:
         NameTerraform: IpConfigurations
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"393","$type":"SequenceType","elementType":{"$ref":"38"},"name":{"$id":"394","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"393","$type":"SequenceType","elementType":{"$ref":"38"},"name":{"$id":"394","fixed":false},"deprecated":false}
+        TypeName: AzureFirewallIPConfiguration
+        TypeNameGo: AzureFirewallIPConfiguration
         IsList: true
         Required: false
         Documentation: IP configuration of the Azure Firewall resource.
@@ -2410,10 +2392,8 @@ Modules:
             NameTerraform: ApplicationRuleCollections
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"375","$type":"SequenceType","elementType":{"$ref":"152"},"name":{"$id":"376","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"375","$type":"SequenceType","elementType":{"$ref":"152"},"name":{"$id":"376","fixed":false},"deprecated":false}
+            TypeName: AzureFirewallApplicationRuleCollection
+            TypeNameGo: AzureFirewallApplicationRuleCollection
             IsList: true
             Required: false
             Documentation: Collection of application rule collections used by Azure Firewall.
@@ -2576,10 +2556,8 @@ Modules:
                     NameTerraform: Rules
                     IdPortion: null
                     Type: dict
-                    TypeName: >-
-                      {"$id":"145","$type":"SequenceType","elementType":{"$ref":"86"},"name":{"$id":"146","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"145","$type":"SequenceType","elementType":{"$ref":"86"},"name":{"$id":"146","fixed":false},"deprecated":false}
+                    TypeName: AzureFirewallApplicationRule
+                    TypeNameGo: AzureFirewallApplicationRule
                     IsList: true
                     Required: false
                     Documentation: Collection of rules used by a application rule collection.
@@ -2694,10 +2672,8 @@ Modules:
                         NameTerraform: Protocols
                         IdPortion: null
                         Type: dict
-                        TypeName: >-
-                          {"$id":"111","$type":"SequenceType","elementType":{"$ref":"68"},"name":{"$id":"112","fixed":false},"deprecated":false}
-                        TypeNameGo: >-
-                          {"$id":"111","$type":"SequenceType","elementType":{"$ref":"68"},"name":{"$id":"112","fixed":false},"deprecated":false}
+                        TypeName: AzureFirewallApplicationRuleProtocol
+                        TypeNameGo: AzureFirewallApplicationRuleProtocol
                         IsList: true
                         Required: false
                         Documentation: Array of ApplicationRuleProtocols.
@@ -2866,10 +2842,8 @@ Modules:
             NameTerraform: NatRuleCollections
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"381","$type":"SequenceType","elementType":{"$ref":"268"},"name":{"$id":"382","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"381","$type":"SequenceType","elementType":{"$ref":"268"},"name":{"$id":"382","fixed":false},"deprecated":false}
+            TypeName: AzureFirewallNatRuleCollection
+            TypeNameGo: AzureFirewallNatRuleCollection
             IsList: true
             Required: false
             Documentation: Collection of NAT rule collections used by Azure Firewall.
@@ -3030,10 +3004,8 @@ Modules:
                     NameTerraform: Rules
                     IdPortion: null
                     Type: dict
-                    TypeName: >-
-                      {"$id":"261","$type":"SequenceType","elementType":{"$ref":"182"},"name":{"$id":"262","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"261","$type":"SequenceType","elementType":{"$ref":"182"},"name":{"$id":"262","fixed":false},"deprecated":false}
+                    TypeName: AzureFirewallNatRule
+                    TypeNameGo: AzureFirewallNatRule
                     IsList: true
                     Required: false
                     Documentation: Collection of rules used by a NAT rule collection.
@@ -3384,10 +3356,8 @@ Modules:
             NameTerraform: NetworkRuleCollections
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"387","$type":"SequenceType","elementType":{"$ref":"352"},"name":{"$id":"388","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"387","$type":"SequenceType","elementType":{"$ref":"352"},"name":{"$id":"388","fixed":false},"deprecated":false}
+            TypeName: AzureFirewallNetworkRuleCollection
+            TypeNameGo: AzureFirewallNetworkRuleCollection
             IsList: true
             Required: false
             Documentation: Collection of network rule collections used by Azure Firewall.
@@ -3550,10 +3520,8 @@ Modules:
                     NameTerraform: Rules
                     IdPortion: null
                     Type: dict
-                    TypeName: >-
-                      {"$id":"345","$type":"SequenceType","elementType":{"$ref":"286"},"name":{"$id":"346","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"345","$type":"SequenceType","elementType":{"$ref":"286"},"name":{"$id":"346","fixed":false},"deprecated":false}
+                    TypeName: AzureFirewallNetworkRule
+                    TypeNameGo: AzureFirewallNetworkRule
                     IsList: true
                     Required: false
                     Documentation: Collection of rules used by a network rule collection.
@@ -3633,11 +3601,9 @@ Modules:
                         NameGoSdk: Protocols
                         NameTerraform: Protocols
                         IdPortion: null
-                        Type: 'unknown[reference: 224]'
-                        TypeName: >-
-                          {"$id":"303","$type":"SequenceType","elementType":{"$ref":"224"},"name":{"$id":"304","fixed":false},"deprecated":false}
-                        TypeNameGo: >-
-                          {"$id":"303","$type":"SequenceType","elementType":{"$ref":"224"},"name":{"$id":"304","fixed":false},"deprecated":false}
+                        Type: 'unknown[reference: undefined]'
+                        TypeName: UnknownTypeName
+                        TypeNameGo: UnknownTypeName
                         IsList: true
                         Required: false
                         Documentation: Array of AzureFirewallNetworkRuleProtocols.
@@ -3840,10 +3806,8 @@ Modules:
             NameTerraform: IpConfigurations
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"393","$type":"SequenceType","elementType":{"$ref":"38"},"name":{"$id":"394","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"393","$type":"SequenceType","elementType":{"$ref":"38"},"name":{"$id":"394","fixed":false},"deprecated":false}
+            TypeName: AzureFirewallIPConfiguration
+            TypeNameGo: AzureFirewallIPConfiguration
             IsList: true
             Required: false
             Documentation: IP configuration of the Azure Firewall resource.
@@ -4694,10 +4658,8 @@ Modules:
         NameTerraform: ApplicationRuleCollections
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"375","$type":"SequenceType","elementType":{"$ref":"152"},"name":{"$id":"376","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"375","$type":"SequenceType","elementType":{"$ref":"152"},"name":{"$id":"376","fixed":false},"deprecated":false}
+        TypeName: AzureFirewallApplicationRuleCollection
+        TypeNameGo: AzureFirewallApplicationRuleCollection
         IsList: true
         Required: false
         Documentation: Collection of application rule collections used by Azure Firewall.
@@ -4840,10 +4802,8 @@ Modules:
             NameTerraform: Rules
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"145","$type":"SequenceType","elementType":{"$ref":"86"},"name":{"$id":"146","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"145","$type":"SequenceType","elementType":{"$ref":"86"},"name":{"$id":"146","fixed":false},"deprecated":false}
+            TypeName: AzureFirewallApplicationRule
+            TypeNameGo: AzureFirewallApplicationRule
             IsList: true
             Required: false
             Documentation: Collection of rules used by a application rule collection.
@@ -4956,10 +4916,8 @@ Modules:
                 NameTerraform: Protocols
                 IdPortion: null
                 Type: dict
-                TypeName: >-
-                  {"$id":"111","$type":"SequenceType","elementType":{"$ref":"68"},"name":{"$id":"112","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"111","$type":"SequenceType","elementType":{"$ref":"68"},"name":{"$id":"112","fixed":false},"deprecated":false}
+                TypeName: AzureFirewallApplicationRuleProtocol
+                TypeNameGo: AzureFirewallApplicationRuleProtocol
                 IsList: true
                 Required: false
                 Documentation: Array of ApplicationRuleProtocols.
@@ -5190,10 +5148,8 @@ Modules:
         NameTerraform: NatRuleCollections
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"381","$type":"SequenceType","elementType":{"$ref":"268"},"name":{"$id":"382","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"381","$type":"SequenceType","elementType":{"$ref":"268"},"name":{"$id":"382","fixed":false},"deprecated":false}
+        TypeName: AzureFirewallNatRuleCollection
+        TypeNameGo: AzureFirewallNatRuleCollection
         IsList: true
         Required: false
         Documentation: Collection of NAT rule collections used by Azure Firewall.
@@ -5336,10 +5292,8 @@ Modules:
             NameTerraform: Rules
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"261","$type":"SequenceType","elementType":{"$ref":"182"},"name":{"$id":"262","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"261","$type":"SequenceType","elementType":{"$ref":"182"},"name":{"$id":"262","fixed":false},"deprecated":false}
+            TypeName: AzureFirewallNatRule
+            TypeNameGo: AzureFirewallNatRule
             IsList: true
             Required: false
             Documentation: Collection of rules used by a NAT rule collection.
@@ -5744,10 +5698,8 @@ Modules:
         NameTerraform: NetworkRuleCollections
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"387","$type":"SequenceType","elementType":{"$ref":"352"},"name":{"$id":"388","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"387","$type":"SequenceType","elementType":{"$ref":"352"},"name":{"$id":"388","fixed":false},"deprecated":false}
+        TypeName: AzureFirewallNetworkRuleCollection
+        TypeNameGo: AzureFirewallNetworkRuleCollection
         IsList: true
         Required: false
         Documentation: Collection of network rule collections used by Azure Firewall.
@@ -5890,10 +5842,8 @@ Modules:
             NameTerraform: Rules
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"345","$type":"SequenceType","elementType":{"$ref":"286"},"name":{"$id":"346","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"345","$type":"SequenceType","elementType":{"$ref":"286"},"name":{"$id":"346","fixed":false},"deprecated":false}
+            TypeName: AzureFirewallNetworkRule
+            TypeNameGo: AzureFirewallNetworkRule
             IsList: true
             Required: false
             Documentation: Collection of rules used by a network rule collection.
@@ -5971,11 +5921,9 @@ Modules:
                 NameGoSdk: Protocols
                 NameTerraform: Protocols
                 IdPortion: null
-                Type: 'unknown[reference: 224]'
-                TypeName: >-
-                  {"$id":"303","$type":"SequenceType","elementType":{"$ref":"224"},"name":{"$id":"304","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"303","$type":"SequenceType","elementType":{"$ref":"224"},"name":{"$id":"304","fixed":false},"deprecated":false}
+                Type: 'unknown[reference: undefined]'
+                TypeName: UnknownTypeName
+                TypeNameGo: UnknownTypeName
                 IsList: true
                 Required: false
                 Documentation: Array of AzureFirewallNetworkRuleProtocols.
@@ -6236,10 +6184,8 @@ Modules:
         NameTerraform: IpConfigurations
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"393","$type":"SequenceType","elementType":{"$ref":"38"},"name":{"$id":"394","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"393","$type":"SequenceType","elementType":{"$ref":"38"},"name":{"$id":"394","fixed":false},"deprecated":false}
+        TypeName: AzureFirewallIPConfiguration
+        TypeNameGo: AzureFirewallIPConfiguration
         IsList: true
         Required: false
         Documentation: IP configuration of the Azure Firewall resource.
@@ -7030,6 +6976,9 @@ Info:
   - '  ** FOUND OPTION resourceGroupName'
   - '  ** FOUND OPTION azureFirewallName'
   - '  ** FOUND OPTION parameters'
+  - '  ** COULDN''T FIND undefined'
+  - '  ** COULDN''T FIND undefined'
   - '  ** FOUND OPTION resourceGroupName'
   - '  ** FOUND OPTION resourceGroupName'
   - '  ** FOUND OPTION azureFirewallName'
+  - '  ** COULDN''T FIND undefined'

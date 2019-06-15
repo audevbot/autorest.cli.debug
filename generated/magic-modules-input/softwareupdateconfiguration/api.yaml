@@ -179,7 +179,7 @@ objects:
           '/properties/updateConfiguration/targets/azureQueries': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: AzureQueries
-            go_type_name: {"$id":"142","$type":"SequenceType","elementType":{"$ref":"101"},"name":{"$id":"143","fixed":false},"deprecated":false}
+            go_type_name: AzureQueryProperties
           '/properties/updateConfiguration/targets/azureQueries/scope': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Scope
@@ -193,7 +193,7 @@ objects:
           '/properties/updateConfiguration/targets/nonAzureQueries': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: NonAzureQueries
-            go_type_name: {"$id":"148","$type":"SequenceType","elementType":{"$ref":"123"},"name":{"$id":"149","fixed":false},"deprecated":false}
+            go_type_name: NonAzureQueryProperties
           '/properties/updateConfiguration/targets/nonAzureQueries/functionAlias': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: FunctionAlias
@@ -302,7 +302,7 @@ objects:
           '/properties/scheduleInfo/advancedSchedule/monthlyOccurrences': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: MonthlyOccurrences
-            go_type_name: {"$id":"241","$type":"SequenceType","elementType":{"$ref":"197"},"name":{"$id":"242","fixed":false},"deprecated":false}
+            go_type_name: AdvancedScheduleMonthlyOccurrence
           '/properties/scheduleInfo/advancedSchedule/monthlyOccurrences/occurrence': 
             applicable_to: [go]
             go_field_name: Occurrence

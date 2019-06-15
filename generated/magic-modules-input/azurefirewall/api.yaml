@@ -88,7 +88,7 @@ objects:
           '/properties/applicationRuleCollections': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: ApplicationRuleCollections
-            go_type_name: {"$id":"375","$type":"SequenceType","elementType":{"$ref":"152"},"name":{"$id":"376","fixed":false},"deprecated":false}
+            go_type_name: AzureFirewallApplicationRuleCollection
           '/properties/applicationRuleCollections/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
             go_field_name: Properties
@@ -107,7 +107,7 @@ objects:
           '/properties/applicationRuleCollections/properties/rules': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Rules
-            go_type_name: {"$id":"145","$type":"SequenceType","elementType":{"$ref":"86"},"name":{"$id":"146","fixed":false},"deprecated":false}
+            go_type_name: AzureFirewallApplicationRule
           '/properties/applicationRuleCollections/properties/rules/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
@@ -120,7 +120,7 @@ objects:
           '/properties/applicationRuleCollections/properties/rules/protocols': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Protocols
-            go_type_name: {"$id":"111","$type":"SequenceType","elementType":{"$ref":"68"},"name":{"$id":"112","fixed":false},"deprecated":false}
+            go_type_name: AzureFirewallApplicationRuleProtocol
           '/properties/applicationRuleCollections/properties/rules/targetFqdns': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: TargetFqdns
@@ -175,7 +175,7 @@ objects:
           '/properties/natRuleCollections': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: NatRuleCollections
-            go_type_name: {"$id":"381","$type":"SequenceType","elementType":{"$ref":"268"},"name":{"$id":"382","fixed":false},"deprecated":false}
+            go_type_name: AzureFirewallNatRuleCollection
           '/properties/natRuleCollections/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
             go_field_name: Properties
@@ -194,7 +194,7 @@ objects:
           '/properties/natRuleCollections/properties/rules': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Rules
-            go_type_name: {"$id":"261","$type":"SequenceType","elementType":{"$ref":"182"},"name":{"$id":"262","fixed":false},"deprecated":false}
+            go_type_name: AzureFirewallNatRule
           '/properties/natRuleCollections/properties/rules/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
@@ -261,7 +261,7 @@ objects:
           '/properties/networkRuleCollections': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: NetworkRuleCollections
-            go_type_name: {"$id":"387","$type":"SequenceType","elementType":{"$ref":"352"},"name":{"$id":"388","fixed":false},"deprecated":false}
+            go_type_name: AzureFirewallNetworkRuleCollection
           '/properties/networkRuleCollections/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
             go_field_name: Properties
@@ -280,7 +280,7 @@ objects:
           '/properties/networkRuleCollections/properties/rules': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Rules
-            go_type_name: {"$id":"345","$type":"SequenceType","elementType":{"$ref":"286"},"name":{"$id":"346","fixed":false},"deprecated":false}
+            go_type_name: AzureFirewallNetworkRule
           '/properties/networkRuleCollections/properties/rules/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
@@ -317,7 +317,7 @@ objects:
           '/properties/ipConfigurations': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: IpConfigurations
-            go_type_name: {"$id":"393","$type":"SequenceType","elementType":{"$ref":"38"},"name":{"$id":"394","fixed":false},"deprecated":false}
+            go_type_name: AzureFirewallIPConfiguration
           '/properties/ipConfigurations/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
             go_field_name: Properties
@@ -385,7 +385,7 @@ objects:
           '/properties/applicationRuleCollections': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: ApplicationRuleCollections
-            go_type_name: {"$id":"375","$type":"SequenceType","elementType":{"$ref":"152"},"name":{"$id":"376","fixed":false},"deprecated":false}
+            go_type_name: AzureFirewallApplicationRuleCollection
           '/properties/applicationRuleCollections/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
             go_field_name: Properties
@@ -404,7 +404,7 @@ objects:
           '/properties/applicationRuleCollections/properties/rules': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Rules
-            go_type_name: {"$id":"145","$type":"SequenceType","elementType":{"$ref":"86"},"name":{"$id":"146","fixed":false},"deprecated":false}
+            go_type_name: AzureFirewallApplicationRule
           '/properties/applicationRuleCollections/properties/rules/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
@@ -417,7 +417,7 @@ objects:
           '/properties/applicationRuleCollections/properties/rules/protocols': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Protocols
-            go_type_name: {"$id":"111","$type":"SequenceType","elementType":{"$ref":"68"},"name":{"$id":"112","fixed":false},"deprecated":false}
+            go_type_name: AzureFirewallApplicationRuleProtocol
           '/properties/applicationRuleCollections/properties/rules/targetFqdns': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: TargetFqdns
@@ -476,7 +476,7 @@ objects:
           '/properties/natRuleCollections': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: NatRuleCollections
-            go_type_name: {"$id":"381","$type":"SequenceType","elementType":{"$ref":"268"},"name":{"$id":"382","fixed":false},"deprecated":false}
+            go_type_name: AzureFirewallNatRuleCollection
           '/properties/natRuleCollections/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
             go_field_name: Properties
@@ -495,7 +495,7 @@ objects:
           '/properties/natRuleCollections/properties/rules': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Rules
-            go_type_name: {"$id":"261","$type":"SequenceType","elementType":{"$ref":"182"},"name":{"$id":"262","fixed":false},"deprecated":false}
+            go_type_name: AzureFirewallNatRule
           '/properties/natRuleCollections/properties/rules/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
@@ -581,7 +581,7 @@ objects:
           '/properties/networkRuleCollections': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: NetworkRuleCollections
-            go_type_name: {"$id":"387","$type":"SequenceType","elementType":{"$ref":"352"},"name":{"$id":"388","fixed":false},"deprecated":false}
+            go_type_name: AzureFirewallNetworkRuleCollection
           '/properties/networkRuleCollections/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
             go_field_name: Properties
@@ -600,7 +600,7 @@ objects:
           '/properties/networkRuleCollections/properties/rules': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Rules
-            go_type_name: {"$id":"345","$type":"SequenceType","elementType":{"$ref":"286"},"name":{"$id":"346","fixed":false},"deprecated":false}
+            go_type_name: AzureFirewallNetworkRule
           '/properties/networkRuleCollections/properties/rules/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
@@ -674,7 +674,7 @@ objects:
           '/properties/ipConfigurations': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: IpConfigurations
-            go_type_name: {"$id":"393","$type":"SequenceType","elementType":{"$ref":"38"},"name":{"$id":"394","fixed":false},"deprecated":false}
+            go_type_name: AzureFirewallIPConfiguration
           '/properties/ipConfigurations/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
             go_field_name: Properties

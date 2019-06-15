@@ -112,7 +112,7 @@ objects:
           '/properties/properties/serviceFabricCluster/serverX509Names': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: ServerX509names
-            go_type_name: {"$id":"1893","$type":"SequenceType","elementType":{"$ref":"1846"},"name":{"$id":"1894","fixed":false},"deprecated":false}
+            go_type_name: X509CertificateName
           '/properties/properties/serviceFabricCluster/serverX509Names/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
@@ -313,7 +313,7 @@ objects:
           '/properties/properties/serviceFabricCluster/serverX509Names': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: ServerX509names
-            go_type_name: {"$id":"1893","$type":"SequenceType","elementType":{"$ref":"1846"},"name":{"$id":"1894","fixed":false},"deprecated":false}
+            go_type_name: X509CertificateName
           '/properties/properties/serviceFabricCluster/serverX509Names/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
@@ -505,7 +505,7 @@ objects:
           '/properties/properties/serviceFabricCluster/serverX509Names': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: ServerX509names
-            go_type_name: {"$id":"1893","$type":"SequenceType","elementType":{"$ref":"1846"},"name":{"$id":"1894","fixed":false},"deprecated":false}
+            go_type_name: X509CertificateName
           '/properties/properties/serviceFabricCluster/serverX509Names/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
