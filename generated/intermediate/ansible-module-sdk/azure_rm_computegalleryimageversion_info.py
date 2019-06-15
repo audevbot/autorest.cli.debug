@@ -60,10 +60,35 @@ options:
             The target regions where the Image Version is going to be replicated
             to. This property is updatable.
         type: list
+        suboptions:
+          name:
+            description:
+              - The name of the region.
+            required: true
+          regional_replica_count:
+            description:
+              - >-
+                The number of replicas of the Image Version to be created per
+                region. This property is updatable.
+          storage_account_type:
+            description:
+              - >-
+                Specifies the storage account type to be used to store the
+                image. This property is not updatable.
       source:
         description:
           - undefined
         required: true
+        suboptions:
+          managed_image:
+            description:
+              - undefined
+            required: true
+            suboptions:
+              id:
+                description:
+                  - The managed artifact id.
+                required: true
       replica_count:
         description:
           - >-

@@ -112,10 +112,27 @@ objects:
             applicable_to: [go]
             go_field_name: TargetRegions
             go_type_name: TargetRegion
+          '/properties/publishingProfile/targetRegions/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+            applicable_to: [go]
+            go_field_name: Name
+          '/properties/publishingProfile/targetRegions/regionalReplicaCount': 
+            applicable_to: [go]
+            go_field_name: RegionalReplicaCount
+          '/properties/publishingProfile/targetRegions/storageAccountType': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
+            applicable_to: [go]
+            go_field_name: StorageAccountType
+            go_enum_type_name: StorageAccountType
           '/properties/publishingProfile/source': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
             go_field_name: Source
             go_type_name: GalleryArtifactSource
+          '/properties/publishingProfile/source/managedImage': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
+            applicable_to: [go]
+            go_field_name: ManagedImage
+            go_type_name: ManagedArtifact
+          '/properties/publishingProfile/source/managedImage/id': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+            applicable_to: [go]
+            go_field_name: ID
           '/properties/publishingProfile/replicaCount': 
             applicable_to: [go]
             go_field_name: ReplicaCount
@@ -138,9 +155,24 @@ objects:
           '/publishingProfile/targetRegions': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
             python_field_name: target_regions
+          '/publishingProfile/targetRegions/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+            applicable_to: [python]
+            python_field_name: name
+          '/publishingProfile/targetRegions/regionalReplicaCount': 
+            applicable_to: [python]
+            python_field_name: regional_replica_count
+          '/publishingProfile/targetRegions/storageAccountType': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
+            applicable_to: [python]
+            python_field_name: storage_account_type
           '/publishingProfile/source': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [python]
             python_field_name: source
+          '/publishingProfile/source/managedImage': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
+            applicable_to: [python]
+            python_field_name: managed_image
+          '/publishingProfile/source/managedImage/id': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+            applicable_to: [python]
+            python_field_name: id
           '/publishingProfile/replicaCount': 
             applicable_to: [python]
             python_field_name: replica_count
@@ -260,11 +292,43 @@ objects:
             description: 'The target regions where the Image Version is going to be replicated to. This property is updatable.'
             required: false
             azure_sdk_references: ['/publishingProfile/targetRegions', '/properties/publishingProfile/targetRegions']
+            properties:
+              - !ruby/object:Api::Type::String
+                name: 'name'
+                description: 'The name of the region.'
+                required: true
+                azure_sdk_references: ['/publishingProfile/targetRegions/name', '/properties/publishingProfile/targetRegions/name', '/name']
+              - 
+                name: 'regionalReplicaCount'
+                description: 'The number of replicas of the Image Version to be created per region. This property is updatable.'
+                required: false
+                azure_sdk_references: ['/publishingProfile/targetRegions/regionalReplicaCount', '/properties/publishingProfile/targetRegions/regionalReplicaCount']
+              - !ruby/object:Api::Type::Enum
+                name: 'storageAccountType'
+                description: 'Specifies the storage account type to be used to store the image. This property is not updatable.'
+                required: false
+                values:
+                  - :Standard_LRS
+                  - :Standard_ZRS
+                default_value: :Standard_LRS
+                azure_sdk_references: ['/publishingProfile/targetRegions/storageAccountType', '/properties/publishingProfile/targetRegions/storageAccountType']
           - !ruby/object:Api::Type::NestedObject
             name: 'source'
             description: 'undefined'
             required: true
             azure_sdk_references: ['/publishingProfile/source', '/properties/publishingProfile/source']
+            properties:
+              - !ruby/object:Api::Type::NestedObject
+                name: 'managedImage'
+                description: 'undefined'
+                required: true
+                azure_sdk_references: ['/publishingProfile/source/managedImage', '/properties/publishingProfile/source/managedImage']
+                properties:
+                  - !ruby/object:Api::Type::String
+                    name: 'id'
+                    description: 'The managed artifact id.'
+                    required: true
+                    azure_sdk_references: ['/publishingProfile/source/managedImage/id', '/properties/publishingProfile/source/managedImage/id']
           - 
             name: 'replicaCount'
             description: 'The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.'

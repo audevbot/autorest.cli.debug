@@ -35,6 +35,83 @@ options:
   id:
     description:
       - Resource ID.
+  host_name:
+    description:
+      - The host name of the frontendEndpoint. Must be a domain name.
+  session_affinity_enabled_state:
+    description:
+      - >-
+        Whether to allow session affinity on this host. Valid options are
+        'Enabled' or 'Disabled'
+  session_affinity_ttl_seconds:
+    description:
+      - >-
+        UNUSED. This field will be ignored. The TTL to use in seconds for
+        session affinity, if applicable.
+  web_application_firewall_policy_link:
+    description:
+      - >-
+        Defines the Web Application Firewall policy for each host (if
+        applicable)
+    suboptions:
+      id:
+        description:
+          - Resource ID.
+  resource_state:
+    description:
+      - Resource status.
+  custom_https_provisioning_state:
+    description:
+      - Provisioning status of Custom Https of the frontendEndpoint.
+  custom_https_provisioning_substate:
+    description:
+      - >-
+        Provisioning substate shows the progress of custom HTTPS
+        enabling/disabling process step by step.
+  custom_https_configuration:
+    description:
+      - The configuration specifying how to enable HTTPS
+    suboptions:
+      certificate_source:
+        description:
+          - Defines the source of the SSL certificate
+      protocol_type:
+        description:
+          - Defines the TLS extension protocol that is used for secure delivery
+      key_vault_certificate_source_parameters:
+        description:
+          - >-
+            KeyVault certificate source parameters (if
+            certificateSource=AzureKeyVault)
+        suboptions:
+          vault:
+            description:
+              - The Key Vault containing the SSL certificate
+            suboptions:
+              id:
+                description:
+                  - Resource ID.
+          secret_name:
+            description:
+              - >-
+                The name of the Key Vault secret representing the full
+                certificate PFX
+          secret_version:
+            description:
+              - >-
+                The version of the Key Vault secret representing the full
+                certificate PFX
+      front_door_certificate_source_parameters:
+        description:
+          - >-
+            Parameters required for enabling SSL with Front Door-managed
+            certificates (if certificateSource=FrontDoor)
+        suboptions:
+          certificate_type:
+            description:
+              - >-
+                Defines the type of the certificate used for secure connections
+                to a frontendEndpoint
   type:
     description:
       - Resource type.

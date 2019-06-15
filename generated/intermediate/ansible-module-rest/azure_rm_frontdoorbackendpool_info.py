@@ -35,6 +35,55 @@ options:
   id:
     description:
       - Resource ID.
+  backends:
+    description:
+      - The set of backends for this pool
+    type: list
+    suboptions:
+      address:
+        description:
+          - Location of the backend (IP address or FQDN)
+      http_port:
+        description:
+          - The HTTP TCP port number. Must be between 1 and 65535.
+      https_port:
+        description:
+          - The HTTPS TCP port number. Must be between 1 and 65535.
+      enabled_state:
+        description:
+          - >-
+            Whether to enable use of this backend. Permitted values are
+            'Enabled' or 'Disabled'
+      priority:
+        description:
+          - >-
+            Priority to use for load balancing. Higher priorities will not be
+            used for load balancing if any lower priority backend is healthy.
+      weight:
+        description:
+          - Weight of this endpoint for load balancing purposes.
+      backend_host_header:
+        description:
+          - >-
+            The value to use as the host header sent to the backend. If blank or
+            unspecified, this defaults to the incoming host.
+  load_balancing_settings:
+    description:
+      - Load balancing settings for a backend pool
+    suboptions:
+      id:
+        description:
+          - Resource ID.
+  health_probe_settings:
+    description:
+      - L7 health probe settings for a backend pool
+    suboptions:
+      id:
+        description:
+          - Resource ID.
+  resource_state:
+    description:
+      - Resource status.
   type:
     description:
       - Resource type.

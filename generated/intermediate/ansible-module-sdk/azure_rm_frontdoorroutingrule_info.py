@@ -35,6 +35,33 @@ options:
   id:
     description:
       - Resource ID.
+  frontend_endpoints:
+    description:
+      - Frontend endpoints associated with this rule
+    type: list
+    suboptions:
+      id:
+        description:
+          - Resource ID.
+  accepted_protocols:
+    description:
+      - Protocol schemes to match for this rule
+    type: list
+  patterns_to_match:
+    description:
+      - The route patterns of the rule.
+    type: list
+  enabled_state:
+    description:
+      - >-
+        Whether to enable use of this rule. Permitted values are 'Enabled' or
+        'Disabled'
+  route_configuration:
+    description:
+      - A reference to the routing configuration.
+  resource_state:
+    description:
+      - Resource status.
   type:
     description:
       - Resource type.

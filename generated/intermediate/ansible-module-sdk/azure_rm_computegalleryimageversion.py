@@ -55,10 +55,35 @@ options:
             The target regions where the Image Version is going to be replicated
             to. This property is updatable.
         type: list
+        suboptions:
+          name:
+            description:
+              - The name of the region.
+            required: true
+          regional_replica_count:
+            description:
+              - >-
+                The number of replicas of the Image Version to be created per
+                region. This property is updatable.
+          storage_account_type:
+            description:
+              - >-
+                Specifies the storage account type to be used to store the
+                image. This property is not updatable.
       source:
         description:
           - undefined
         required: true
+        suboptions:
+          managed_image:
+            description:
+              - undefined
+            required: true
+            suboptions:
+              id:
+                description:
+                  - The managed artifact id.
+                required: true
       replica_count:
         description:
           - >-
@@ -262,12 +287,49 @@ properties:
           returned: always
           type: dict
           sample: null
+          contains:
+            name:
+              description:
+                - The name of the region.
+              returned: always
+              type: str
+              sample: null
+            regional_replica_count:
+              description:
+                - >-
+                  The number of replicas of the Image Version to be created per
+                  region. This property is updatable.
+              returned: always
+              type: number
+              sample: null
+            storage_account_type:
+              description:
+                - >-
+                  Specifies the storage account type to be used to store the
+                  image. This property is not updatable.
+              returned: always
+              type: str
+              sample: null
         source:
           description:
             - !<tag:yaml.org,2002:js/undefined> ''
           returned: always
           type: dict
           sample: null
+          contains:
+            managed_image:
+              description:
+                - !<tag:yaml.org,2002:js/undefined> ''
+              returned: always
+              type: dict
+              sample: null
+              contains:
+                id:
+                  description:
+                    - The managed artifact id.
+                  returned: always
+                  type: str
+                  sample: null
         replica_count:
           description:
             - >-
@@ -480,11 +542,37 @@ class AzureRMGalleryImageVersions(AzureRMModuleBaseExt):
                 required=true,
                 options=dict(
                     target_regions=dict(
-                        type='list'
+                        type='list',
+                        options=dict(
+                            name=dict(
+                                type='str',
+                                required=true
+                            ),
+                            regional_replica_count=dict(
+                                type='number'
+                            ),
+                            storage_account_type=dict(
+                                type='str',
+                                choices=['Standard_LRS',
+                                         'Standard_ZRS']
+                            )
+                        )
                     ),
                     source=dict(
                         type='dict',
-                        required=true
+                        required=true,
+                        options=dict(
+                            managed_image=dict(
+                                type='dict',
+                                required=true,
+                                options=dict(
+                                    id=dict(
+                                        type='str',
+                                        required=true
+                                    )
+                                )
+                            )
+                        )
                     ),
                     replica_count=dict(
                         type='number'

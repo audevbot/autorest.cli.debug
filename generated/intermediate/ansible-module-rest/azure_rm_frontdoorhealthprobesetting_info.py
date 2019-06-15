@@ -35,6 +35,18 @@ options:
   id:
     description:
       - Resource ID.
+  path:
+    description:
+      - The path to use for the health probe. Default is /
+  protocol:
+    description:
+      - Protocol scheme to use for this probe
+  interval_in_seconds:
+    description:
+      - The number of seconds between health probes.
+  resource_state:
+    description:
+      - Resource status.
   type:
     description:
       - Resource type.

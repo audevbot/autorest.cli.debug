@@ -35,6 +35,55 @@ options:
   id:
     description:
       - Resource ID.
+  backends:
+    description:
+      - The set of backends for this pool
+    type: list
+    suboptions:
+      address:
+        description:
+          - Location of the backend (IP address or FQDN)
+      http_port:
+        description:
+          - The HTTP TCP port number. Must be between 1 and 65535.
+      https_port:
+        description:
+          - The HTTPS TCP port number. Must be between 1 and 65535.
+      enabled_state:
+        description:
+          - >-
+            Whether to enable use of this backend. Permitted values are
+            'Enabled' or 'Disabled'
+      priority:
+        description:
+          - >-
+            Priority to use for load balancing. Higher priorities will not be
+            used for load balancing if any lower priority backend is healthy.
+      weight:
+        description:
+          - Weight of this endpoint for load balancing purposes.
+      backend_host_header:
+        description:
+          - >-
+            The value to use as the host header sent to the backend. If blank or
+            unspecified, this defaults to the incoming host.
+  load_balancing_settings:
+    description:
+      - Load balancing settings for a backend pool
+    suboptions:
+      id:
+        description:
+          - Resource ID.
+  health_probe_settings:
+    description:
+      - L7 health probe settings for a backend pool
+    suboptions:
+      id:
+        description:
+          - Resource ID.
+  resource_state:
+    description:
+      - Resource status.
   type:
     description:
       - Resource type.
@@ -114,6 +163,94 @@ properties:
   returned: always
   type: dict
   sample: null
+  contains:
+    backends:
+      description:
+        - The set of backends for this pool
+      returned: always
+      type: dict
+      sample: null
+      contains:
+        address:
+          description:
+            - Location of the backend (IP address or FQDN)
+          returned: always
+          type: str
+          sample: null
+        http_port:
+          description:
+            - The HTTP TCP port number. Must be between 1 and 65535.
+          returned: always
+          type: number
+          sample: null
+        https_port:
+          description:
+            - The HTTPS TCP port number. Must be between 1 and 65535.
+          returned: always
+          type: number
+          sample: null
+        enabled_state:
+          description:
+            - >-
+              Whether to enable use of this backend. Permitted values are
+              'Enabled' or 'Disabled'
+          returned: always
+          type: str
+          sample: null
+        priority:
+          description:
+            - >-
+              Priority to use for load balancing. Higher priorities will not be
+              used for load balancing if any lower priority backend is healthy.
+          returned: always
+          type: number
+          sample: null
+        weight:
+          description:
+            - Weight of this endpoint for load balancing purposes.
+          returned: always
+          type: number
+          sample: null
+        backend_host_header:
+          description:
+            - >-
+              The value to use as the host header sent to the backend. If blank
+              or unspecified, this defaults to the incoming host.
+          returned: always
+          type: str
+          sample: null
+    load_balancing_settings:
+      description:
+        - Load balancing settings for a backend pool
+      returned: always
+      type: dict
+      sample: null
+      contains:
+        id:
+          description:
+            - Resource ID.
+          returned: always
+          type: str
+          sample: null
+    health_probe_settings:
+      description:
+        - L7 health probe settings for a backend pool
+      returned: always
+      type: dict
+      sample: null
+      contains:
+        id:
+          description:
+            - Resource ID.
+          returned: always
+          type: str
+          sample: null
+    resource_state:
+      description:
+        - Resource status.
+      returned: always
+      type: str
+      sample: null
 name:
   description:
     - Resource name.
@@ -167,6 +304,67 @@ class AzureRMBackendPools(AzureRMModuleBaseExt):
                 type='str',
                 updatable=False,
                 disposition='/'
+            ),
+            backends=dict(
+                type='list',
+                disposition='/properties/*',
+                options=dict(
+                    address=dict(
+                        type='str'
+                    ),
+                    http_port=dict(
+                        type='number',
+                        disposition='httpPort'
+                    ),
+                    https_port=dict(
+                        type='number',
+                        disposition='httpsPort'
+                    ),
+                    enabled_state=dict(
+                        type='str',
+                        disposition='enabledState',
+                        choices=['Enabled',
+                                 'Disabled']
+                    ),
+                    priority=dict(
+                        type='number'
+                    ),
+                    weight=dict(
+                        type='number'
+                    ),
+                    backend_host_header=dict(
+                        type='str',
+                        disposition='backendHostHeader'
+                    )
+                )
+            ),
+            load_balancing_settings=dict(
+                type='dict',
+                disposition='/properties/loadBalancingSettings',
+                options=dict(
+                    id=dict(
+                        type='str'
+                    )
+                )
+            ),
+            health_probe_settings=dict(
+                type='dict',
+                disposition='/properties/healthProbeSettings',
+                options=dict(
+                    id=dict(
+                        type='str'
+                    )
+                )
+            ),
+            resource_state=dict(
+                type='str',
+                disposition='/properties/resourceState',
+                choices=['Creating',
+                         'Enabling',
+                         'Enabled',
+                         'Disabling',
+                         'Disabled',
+                         'Deleting']
             ),
             name=dict(
                 type='str',

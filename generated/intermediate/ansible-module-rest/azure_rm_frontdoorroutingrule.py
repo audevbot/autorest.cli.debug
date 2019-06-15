@@ -35,6 +35,33 @@ options:
   id:
     description:
       - Resource ID.
+  frontend_endpoints:
+    description:
+      - Frontend endpoints associated with this rule
+    type: list
+    suboptions:
+      id:
+        description:
+          - Resource ID.
+  accepted_protocols:
+    description:
+      - Protocol schemes to match for this rule
+    type: list
+  patterns_to_match:
+    description:
+      - The route patterns of the rule.
+    type: list
+  enabled_state:
+    description:
+      - >-
+        Whether to enable use of this rule. Permitted values are 'Enabled' or
+        'Disabled'
+  route_configuration:
+    description:
+      - A reference to the routing configuration.
+  resource_state:
+    description:
+      - Resource status.
   type:
     description:
       - Resource type.
@@ -137,6 +164,52 @@ properties:
   returned: always
   type: dict
   sample: null
+  contains:
+    frontend_endpoints:
+      description:
+        - Frontend endpoints associated with this rule
+      returned: always
+      type: dict
+      sample: null
+      contains:
+        id:
+          description:
+            - Resource ID.
+          returned: always
+          type: str
+          sample: null
+    accepted_protocols:
+      description:
+        - Protocol schemes to match for this rule
+      returned: always
+      type: str
+      sample: null
+    patterns_to_match:
+      description:
+        - The route patterns of the rule.
+      returned: always
+      type: str
+      sample: null
+    enabled_state:
+      description:
+        - >-
+          Whether to enable use of this rule. Permitted values are 'Enabled' or
+          'Disabled'
+      returned: always
+      type: str
+      sample: null
+    route_configuration:
+      description:
+        - A reference to the routing configuration.
+      returned: always
+      type: dict
+      sample: null
+    resource_state:
+      description:
+        - Resource status.
+      returned: always
+      type: str
+      sample: null
 name:
   description:
     - Resource name.
@@ -190,6 +263,45 @@ class AzureRMRoutingRules(AzureRMModuleBaseExt):
                 type='str',
                 updatable=False,
                 disposition='/'
+            ),
+            frontend_endpoints=dict(
+                type='list',
+                disposition='/properties/frontendEndpoints',
+                options=dict(
+                    id=dict(
+                        type='str'
+                    )
+                )
+            ),
+            accepted_protocols=dict(
+                type='list',
+                disposition='/properties/acceptedProtocols',
+                choices=['Http',
+                         'Https']
+            ),
+            patterns_to_match=dict(
+                type='list',
+                disposition='/properties/patternsToMatch'
+            ),
+            enabled_state=dict(
+                type='str',
+                disposition='/properties/enabledState',
+                choices=['Enabled',
+                         'Disabled']
+            ),
+            route_configuration=dict(
+                type='dict',
+                disposition='/properties/routeConfiguration'
+            ),
+            resource_state=dict(
+                type='str',
+                disposition='/properties/resourceState',
+                choices=['Creating',
+                         'Enabling',
+                         'Enabled',
+                         'Disabling',
+                         'Disabled',
+                         'Deleting']
             ),
             name=dict(
                 type='str',
