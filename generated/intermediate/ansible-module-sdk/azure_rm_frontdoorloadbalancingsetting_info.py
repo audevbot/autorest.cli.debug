@@ -35,6 +35,20 @@ options:
   id:
     description:
       - Resource ID.
+  sample_size:
+    description:
+      - The number of samples to consider for load balancing decisions
+  successful_samples_required:
+    description:
+      - The number of samples within the sample period that must succeed
+  additional_latency_milliseconds:
+    description:
+      - >-
+        The additional latency in milliseconds for probes to fall into the
+        lowest latency bucket
+  resource_state:
+    description:
+      - Resource status.
   type:
     description:
       - Resource type.

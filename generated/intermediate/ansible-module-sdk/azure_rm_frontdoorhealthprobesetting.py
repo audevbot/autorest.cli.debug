@@ -35,6 +35,18 @@ options:
   id:
     description:
       - Resource ID.
+  path:
+    description:
+      - The path to use for the health probe. Default is /
+  protocol:
+    description:
+      - Protocol scheme to use for this probe
+  interval_in_seconds:
+    description:
+      - The number of seconds between health probes.
+  resource_state:
+    description:
+      - Resource status.
   type:
     description:
       - Resource type.
@@ -89,6 +101,31 @@ properties:
   returned: always
   type: dict
   sample: null
+  contains:
+    path:
+      description:
+        - The path to use for the health probe. Default is /
+      returned: always
+      type: str
+      sample: null
+    protocol:
+      description:
+        - Protocol scheme to use for this probe
+      returned: always
+      type: str
+      sample: null
+    interval_in_seconds:
+      description:
+        - The number of seconds between health probes.
+      returned: always
+      type: number
+      sample: null
+    resource_state:
+      description:
+        - Resource status.
+      returned: always
+      type: str
+      sample: null
 name:
   description:
     - Resource name.
@@ -147,6 +184,30 @@ class AzureRMHealthProbeSettings(AzureRMModuleBaseExt):
                 type='str',
                 updatable=False,
                 disposition='/'
+            ),
+            path=dict(
+                type='str',
+                disposition='/'
+            ),
+            protocol=dict(
+                type='str',
+                disposition='/',
+                choices=['Http',
+                         'Https']
+            ),
+            interval_in_seconds=dict(
+                type='number',
+                disposition='/'
+            ),
+            resource_state=dict(
+                type='str',
+                disposition='/',
+                choices=['Creating',
+                         'Enabling',
+                         'Enabled',
+                         'Disabling',
+                         'Disabled',
+                         'Deleting']
             ),
             name=dict(
                 type='str',

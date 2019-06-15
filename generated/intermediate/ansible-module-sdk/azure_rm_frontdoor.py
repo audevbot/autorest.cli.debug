@@ -38,25 +38,239 @@ options:
     description:
       - Routing rules associated with this Front Door.
     type: list
+    suboptions:
+      id:
+        description:
+          - Resource ID.
+      frontend_endpoints:
+        description:
+          - Frontend endpoints associated with this rule
+        type: list
+        suboptions:
+          id:
+            description:
+              - Resource ID.
+      accepted_protocols:
+        description:
+          - Protocol schemes to match for this rule
+        type: list
+      patterns_to_match:
+        description:
+          - The route patterns of the rule.
+        type: list
+      enabled_state:
+        description:
+          - >-
+            Whether to enable use of this rule. Permitted values are 'Enabled'
+            or 'Disabled'
+      route_configuration:
+        description:
+          - A reference to the routing configuration.
+      resource_state:
+        description:
+          - Resource status.
+      name:
+        description:
+          - Resource name.
+      type:
+        description:
+          - Resource type.
   load_balancing_settings:
     description:
       - Load balancing settings associated with this Front Door instance.
     type: list
+    suboptions:
+      id:
+        description:
+          - Resource ID.
+      sample_size:
+        description:
+          - The number of samples to consider for load balancing decisions
+      successful_samples_required:
+        description:
+          - The number of samples within the sample period that must succeed
+      additional_latency_milliseconds:
+        description:
+          - >-
+            The additional latency in milliseconds for probes to fall into the
+            lowest latency bucket
+      resource_state:
+        description:
+          - Resource status.
+      name:
+        description:
+          - Resource name.
+      type:
+        description:
+          - Resource type.
   health_probe_settings:
     description:
       - Health probe settings associated with this Front Door instance.
     type: list
+    suboptions:
+      id:
+        description:
+          - Resource ID.
+      path:
+        description:
+          - The path to use for the health probe. Default is /
+      protocol:
+        description:
+          - Protocol scheme to use for this probe
+      interval_in_seconds:
+        description:
+          - The number of seconds between health probes.
+      resource_state:
+        description:
+          - Resource status.
+      name:
+        description:
+          - Resource name.
+      type:
+        description:
+          - Resource type.
   backend_pools:
     description:
       - Backend pools available to routing rules.
     type: list
+    suboptions:
+      id:
+        description:
+          - Resource ID.
+      backends:
+        description:
+          - The set of backends for this pool
+        type: list
+        suboptions:
+          address:
+            description:
+              - Location of the backend (IP address or FQDN)
+          http_port:
+            description:
+              - The HTTP TCP port number. Must be between 1 and 65535.
+          https_port:
+            description:
+              - The HTTPS TCP port number. Must be between 1 and 65535.
+          enabled_state:
+            description:
+              - >-
+                Whether to enable use of this backend. Permitted values are
+                'Enabled' or 'Disabled'
+          priority:
+            description:
+              - >-
+                Priority to use for load balancing. Higher priorities will not
+                be used for load balancing if any lower priority backend is
+                healthy.
+          weight:
+            description:
+              - Weight of this endpoint for load balancing purposes.
+          backend_host_header:
+            description:
+              - >-
+                The value to use as the host header sent to the backend. If
+                blank or unspecified, this defaults to the incoming host.
+      load_balancing_settings:
+        description:
+          - Load balancing settings for a backend pool
+        suboptions:
+          id:
+            description:
+              - Resource ID.
+      health_probe_settings:
+        description:
+          - L7 health probe settings for a backend pool
+        suboptions:
+          id:
+            description:
+              - Resource ID.
+      resource_state:
+        description:
+          - Resource status.
+      name:
+        description:
+          - Resource name.
+      type:
+        description:
+          - Resource type.
   frontend_endpoints:
     description:
       - Frontend endpoints available to routing rules.
     type: list
+    suboptions:
+      id:
+        description:
+          - Resource ID.
+      host_name:
+        description:
+          - The host name of the frontendEndpoint. Must be a domain name.
+      session_affinity_enabled_state:
+        description:
+          - >-
+            Whether to allow session affinity on this host. Valid options are
+            'Enabled' or 'Disabled'
+      session_affinity_ttl_seconds:
+        description:
+          - >-
+            UNUSED. This field will be ignored. The TTL to use in seconds for
+            session affinity, if applicable.
+      web_application_firewall_policy_link:
+        description:
+          - >-
+            Defines the Web Application Firewall policy for each host (if
+            applicable)
+        suboptions:
+          id:
+            description:
+              - Resource ID.
+      resource_state:
+        description:
+          - Resource status.
+      custom_https_provisioning_state:
+        description:
+          - Provisioning status of Custom Https of the frontendEndpoint.
+      custom_https_provisioning_substate:
+        description:
+          - >-
+            Provisioning substate shows the progress of custom HTTPS
+            enabling/disabling process step by step.
+      custom_https_configuration:
+        description:
+          - The configuration specifying how to enable HTTPS
+        suboptions:
+          certificate_source:
+            description:
+              - Defines the source of the SSL certificate
+          protocol_type:
+            description:
+              - >-
+                Defines the TLS extension protocol that is used for secure
+                delivery
+          key_vault_certificate_source_parameters:
+            description:
+              - >-
+                KeyVault certificate source parameters (if
+                certificateSource=AzureKeyVault)
+          front_door_certificate_source_parameters:
+            description:
+              - >-
+                Parameters required for enabling SSL with Front Door-managed
+                certificates (if certificateSource=FrontDoor)
+      name:
+        description:
+          - Resource name.
+      type:
+        description:
+          - Resource type.
   backend_pools_settings:
     description:
       - Settings for all backendPools
+    suboptions:
+      enforce_certificate_name_check:
+        description:
+          - >-
+            Whether to enforce certificate name check on HTTPS requests to all
+            backend pools. No effect on non-HTTPS requests.
   enabled_state:
     description:
       - >-
@@ -256,36 +470,455 @@ properties:
       returned: always
       type: dict
       sample: null
+      contains:
+        id:
+          description:
+            - Resource ID.
+          returned: always
+          type: str
+          sample: null
+        properties:
+          description:
+            - Properties of the Front Door Routing Rule
+          returned: always
+          type: dict
+          sample: null
+          contains:
+            frontend_endpoints:
+              description:
+                - Frontend endpoints associated with this rule
+              returned: always
+              type: dict
+              sample: null
+              contains:
+                id:
+                  description:
+                    - Resource ID.
+                  returned: always
+                  type: str
+                  sample: null
+            accepted_protocols:
+              description:
+                - Protocol schemes to match for this rule
+              returned: always
+              type: str
+              sample: null
+            patterns_to_match:
+              description:
+                - The route patterns of the rule.
+              returned: always
+              type: str
+              sample: null
+            enabled_state:
+              description:
+                - >-
+                  Whether to enable use of this rule. Permitted values are
+                  'Enabled' or 'Disabled'
+              returned: always
+              type: str
+              sample: null
+            route_configuration:
+              description:
+                - A reference to the routing configuration.
+              returned: always
+              type: dict
+              sample: null
+            resource_state:
+              description:
+                - Resource status.
+              returned: always
+              type: str
+              sample: null
+        name:
+          description:
+            - Resource name.
+          returned: always
+          type: str
+          sample: null
+        type:
+          description:
+            - Resource type.
+          returned: always
+          type: str
+          sample: null
     load_balancing_settings:
       description:
         - Load balancing settings associated with this Front Door instance.
       returned: always
       type: dict
       sample: null
+      contains:
+        id:
+          description:
+            - Resource ID.
+          returned: always
+          type: str
+          sample: null
+        properties:
+          description:
+            - Properties of the load balancing settings
+          returned: always
+          type: dict
+          sample: null
+          contains:
+            sample_size:
+              description:
+                - The number of samples to consider for load balancing decisions
+              returned: always
+              type: number
+              sample: null
+            successful_samples_required:
+              description:
+                - >-
+                  The number of samples within the sample period that must
+                  succeed
+              returned: always
+              type: number
+              sample: null
+            additional_latency_milliseconds:
+              description:
+                - >-
+                  The additional latency in milliseconds for probes to fall into
+                  the lowest latency bucket
+              returned: always
+              type: number
+              sample: null
+            resource_state:
+              description:
+                - Resource status.
+              returned: always
+              type: str
+              sample: null
+        name:
+          description:
+            - Resource name.
+          returned: always
+          type: str
+          sample: null
+        type:
+          description:
+            - Resource type.
+          returned: always
+          type: str
+          sample: null
     health_probe_settings:
       description:
         - Health probe settings associated with this Front Door instance.
       returned: always
       type: dict
       sample: null
+      contains:
+        id:
+          description:
+            - Resource ID.
+          returned: always
+          type: str
+          sample: null
+        properties:
+          description:
+            - Properties of the health probe settings
+          returned: always
+          type: dict
+          sample: null
+          contains:
+            path:
+              description:
+                - The path to use for the health probe. Default is /
+              returned: always
+              type: str
+              sample: null
+            protocol:
+              description:
+                - Protocol scheme to use for this probe
+              returned: always
+              type: str
+              sample: null
+            interval_in_seconds:
+              description:
+                - The number of seconds between health probes.
+              returned: always
+              type: number
+              sample: null
+            resource_state:
+              description:
+                - Resource status.
+              returned: always
+              type: str
+              sample: null
+        name:
+          description:
+            - Resource name.
+          returned: always
+          type: str
+          sample: null
+        type:
+          description:
+            - Resource type.
+          returned: always
+          type: str
+          sample: null
     backend_pools:
       description:
         - Backend pools available to routing rules.
       returned: always
       type: dict
       sample: null
+      contains:
+        id:
+          description:
+            - Resource ID.
+          returned: always
+          type: str
+          sample: null
+        properties:
+          description:
+            - Properties of the Front Door Backend Pool
+          returned: always
+          type: dict
+          sample: null
+          contains:
+            backends:
+              description:
+                - The set of backends for this pool
+              returned: always
+              type: dict
+              sample: null
+              contains:
+                address:
+                  description:
+                    - Location of the backend (IP address or FQDN)
+                  returned: always
+                  type: str
+                  sample: null
+                http_port:
+                  description:
+                    - The HTTP TCP port number. Must be between 1 and 65535.
+                  returned: always
+                  type: number
+                  sample: null
+                https_port:
+                  description:
+                    - The HTTPS TCP port number. Must be between 1 and 65535.
+                  returned: always
+                  type: number
+                  sample: null
+                enabled_state:
+                  description:
+                    - >-
+                      Whether to enable use of this backend. Permitted values
+                      are 'Enabled' or 'Disabled'
+                  returned: always
+                  type: str
+                  sample: null
+                priority:
+                  description:
+                    - >-
+                      Priority to use for load balancing. Higher priorities will
+                      not be used for load balancing if any lower priority
+                      backend is healthy.
+                  returned: always
+                  type: number
+                  sample: null
+                weight:
+                  description:
+                    - Weight of this endpoint for load balancing purposes.
+                  returned: always
+                  type: number
+                  sample: null
+                backend_host_header:
+                  description:
+                    - >-
+                      The value to use as the host header sent to the backend.
+                      If blank or unspecified, this defaults to the incoming
+                      host.
+                  returned: always
+                  type: str
+                  sample: null
+            load_balancing_settings:
+              description:
+                - Load balancing settings for a backend pool
+              returned: always
+              type: dict
+              sample: null
+              contains:
+                id:
+                  description:
+                    - Resource ID.
+                  returned: always
+                  type: str
+                  sample: null
+            health_probe_settings:
+              description:
+                - L7 health probe settings for a backend pool
+              returned: always
+              type: dict
+              sample: null
+              contains:
+                id:
+                  description:
+                    - Resource ID.
+                  returned: always
+                  type: str
+                  sample: null
+            resource_state:
+              description:
+                - Resource status.
+              returned: always
+              type: str
+              sample: null
+        name:
+          description:
+            - Resource name.
+          returned: always
+          type: str
+          sample: null
+        type:
+          description:
+            - Resource type.
+          returned: always
+          type: str
+          sample: null
     frontend_endpoints:
       description:
         - Frontend endpoints available to routing rules.
       returned: always
       type: dict
       sample: null
+      contains:
+        id:
+          description:
+            - Resource ID.
+          returned: always
+          type: str
+          sample: null
+        properties:
+          description:
+            - Properties of the Frontend endpoint
+          returned: always
+          type: dict
+          sample: null
+          contains:
+            host_name:
+              description:
+                - The host name of the frontendEndpoint. Must be a domain name.
+              returned: always
+              type: str
+              sample: null
+            session_affinity_enabled_state:
+              description:
+                - >-
+                  Whether to allow session affinity on this host. Valid options
+                  are 'Enabled' or 'Disabled'
+              returned: always
+              type: str
+              sample: null
+            session_affinity_ttl_seconds:
+              description:
+                - >-
+                  UNUSED. This field will be ignored. The TTL to use in seconds
+                  for session affinity, if applicable.
+              returned: always
+              type: number
+              sample: null
+            web_application_firewall_policy_link:
+              description:
+                - >-
+                  Defines the Web Application Firewall policy for each host (if
+                  applicable)
+              returned: always
+              type: dict
+              sample: null
+              contains:
+                id:
+                  description:
+                    - Resource ID.
+                  returned: always
+                  type: str
+                  sample: null
+            resource_state:
+              description:
+                - Resource status.
+              returned: always
+              type: str
+              sample: null
+            custom_https_provisioning_state:
+              description:
+                - Provisioning status of Custom Https of the frontendEndpoint.
+              returned: always
+              type: str
+              sample: null
+            custom_https_provisioning_substate:
+              description:
+                - >-
+                  Provisioning substate shows the progress of custom HTTPS
+                  enabling/disabling process step by step.
+              returned: always
+              type: str
+              sample: null
+            custom_https_configuration:
+              description:
+                - The configuration specifying how to enable HTTPS
+              returned: always
+              type: dict
+              sample: null
+              contains:
+                certificate_source:
+                  description:
+                    - Defines the source of the SSL certificate
+                  returned: always
+                  type: str
+                  sample: null
+                protocol_type:
+                  description:
+                    - >-
+                      Defines the TLS extension protocol that is used for secure
+                      delivery
+                  returned: always
+                  type: str
+                  sample: null
+                key_vault_certificate_source_parameters:
+                  description:
+                    - >-
+                      KeyVault certificate source parameters (if
+                      certificateSource=AzureKeyVault)
+                  returned: always
+                  type: dict
+                  sample: null
+                front_door_certificate_source_parameters:
+                  description:
+                    - >-
+                      Parameters required for enabling SSL with Front
+                      Door-managed certificates (if certificateSource=FrontDoor)
+                  returned: always
+                  type: dict
+                  sample: null
+        name:
+          description:
+            - Resource name.
+          returned: always
+          type: str
+          sample: null
+        type:
+          description:
+            - Resource type.
+          returned: always
+          type: str
+          sample: null
     backend_pools_settings:
       description:
         - Settings for all backendPools
       returned: always
       type: dict
       sample: null
+      contains:
+        enforce_certificate_name_check:
+          description:
+            - >-
+              Whether to enforce certificate name check on HTTPS requests to all
+              backend pools. No effect on non-HTTPS requests.
+          returned: always
+          type: str
+          sample: null
     enabled_state:
       description:
         - >-
@@ -360,27 +993,226 @@ class AzureRMFrontDoors(AzureRMModuleBaseExt):
             ),
             routing_rules=dict(
                 type='list',
-                disposition='/'
+                disposition='/',
+                options=dict(
+                    id=dict(
+                        type='str'
+                    ),
+                    frontend_endpoints=dict(
+                        type='list',
+                        options=dict(
+                            id=dict(
+                                type='str'
+                            )
+                        )
+                    ),
+                    accepted_protocols=dict(
+                        type='list',
+                        choices=['Http',
+                                 'Https']
+                    ),
+                    patterns_to_match=dict(
+                        type='list'
+                    ),
+                    enabled_state=dict(
+                        type='str',
+                        choices=['Enabled',
+                                 'Disabled']
+                    ),
+                    route_configuration=dict(
+                        type='dict'
+                    ),
+                    resource_state=dict(
+                        type='str',
+                        choices=['Creating',
+                                 'Enabling',
+                                 'Enabled',
+                                 'Disabling',
+                                 'Disabled',
+                                 'Deleting']
+                    ),
+                    name=dict(
+                        type='str'
+                    )
+                )
             ),
             load_balancing_settings=dict(
                 type='list',
-                disposition='/'
+                disposition='/',
+                options=dict(
+                    id=dict(
+                        type='str'
+                    ),
+                    sample_size=dict(
+                        type='number'
+                    ),
+                    successful_samples_required=dict(
+                        type='number'
+                    ),
+                    additional_latency_milliseconds=dict(
+                        type='number'
+                    ),
+                    resource_state=dict(
+                        type='str',
+                        choices=['Creating',
+                                 'Enabling',
+                                 'Enabled',
+                                 'Disabling',
+                                 'Disabled',
+                                 'Deleting']
+                    ),
+                    name=dict(
+                        type='str'
+                    )
+                )
             ),
             health_probe_settings=dict(
                 type='list',
-                disposition='/'
+                disposition='/',
+                options=dict(
+                    id=dict(
+                        type='str'
+                    ),
+                    path=dict(
+                        type='str'
+                    ),
+                    protocol=dict(
+                        type='str',
+                        choices=['Http',
+                                 'Https']
+                    ),
+                    interval_in_seconds=dict(
+                        type='number'
+                    ),
+                    resource_state=dict(
+                        type='str',
+                        choices=['Creating',
+                                 'Enabling',
+                                 'Enabled',
+                                 'Disabling',
+                                 'Disabled',
+                                 'Deleting']
+                    ),
+                    name=dict(
+                        type='str'
+                    )
+                )
             ),
             backend_pools=dict(
                 type='list',
-                disposition='/'
+                disposition='/',
+                options=dict(
+                    id=dict(
+                        type='str'
+                    ),
+                    backends=dict(
+                        type='list',
+                        options=dict(
+                            address=dict(
+                                type='str'
+                            ),
+                            http_port=dict(
+                                type='number'
+                            ),
+                            https_port=dict(
+                                type='number'
+                            ),
+                            enabled_state=dict(
+                                type='str',
+                                choices=['Enabled',
+                                         'Disabled']
+                            ),
+                            priority=dict(
+                                type='number'
+                            ),
+                            weight=dict(
+                                type='number'
+                            ),
+                            backend_host_header=dict(
+                                type='str'
+                            )
+                        )
+                    ),
+                    load_balancing_settings=dict(
+                        type='dict',
+                        options=dict(
+                            id=dict(
+                                type='str'
+                            )
+                        )
+                    ),
+                    health_probe_settings=dict(
+                        type='dict',
+                        options=dict(
+                            id=dict(
+                                type='str'
+                            )
+                        )
+                    ),
+                    resource_state=dict(
+                        type='str',
+                        choices=['Creating',
+                                 'Enabling',
+                                 'Enabled',
+                                 'Disabling',
+                                 'Disabled',
+                                 'Deleting']
+                    ),
+                    name=dict(
+                        type='str'
+                    )
+                )
             ),
             frontend_endpoints=dict(
                 type='list',
-                disposition='/'
+                disposition='/',
+                options=dict(
+                    id=dict(
+                        type='str'
+                    ),
+                    host_name=dict(
+                        type='str'
+                    ),
+                    session_affinity_enabled_state=dict(
+                        type='str',
+                        choices=['Enabled',
+                                 'Disabled']
+                    ),
+                    session_affinity_ttl_seconds=dict(
+                        type='number'
+                    ),
+                    web_application_firewall_policy_link=dict(
+                        type='dict',
+                        options=dict(
+                            id=dict(
+                                type='str'
+                            )
+                        )
+                    ),
+                    resource_state=dict(
+                        type='str',
+                        choices=['Creating',
+                                 'Enabling',
+                                 'Enabled',
+                                 'Disabling',
+                                 'Disabled',
+                                 'Deleting']
+                    ),
+                    name=dict(
+                        type='str'
+                    )
+                )
             ),
             backend_pools_settings=dict(
                 type='dict',
-                disposition='/'
+                disposition='/',
+                options=dict(
+                    enforce_certificate_name_check=dict(
+                        type='str',
+                        choices=['Enabled',
+                                 'Disabled']
+                    )
+                )
             ),
             enabled_state=dict(
                 type='str',

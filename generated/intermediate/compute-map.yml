@@ -4911,7 +4911,109 @@ Modules:
             IncludeInDocumentation: true
             IncludeInArgSpec: true
             NoLog: false
-            SubOptions: []
+            SubOptions:
+              - NameSwagger: name
+                NameAnsible: name
+                NamePythonSdk: name
+                NameGoSdk: Name
+                NameTerraform: Name
+                IdPortion: null
+                Type: str
+                TypeName: String
+                TypeNameGo: String
+                IsList: false
+                Required: true
+                Documentation: The name of the region.
+                DocumentationMarkKeywords: true
+                DefaultValue: null
+                IncludeInDocumentation: true
+                IncludeInArgSpec: true
+                NoLog: false
+                SubOptions: []
+                EnumValues: []
+                PathSwagger: /properties/publishingProfile/targetRegions/name
+                PathPython: /publishingProfile/targetRegions/name
+                PathGo: /properties/publishingProfile/targetRegions/name
+                DispositionSdk: '*'
+                DispositionRest: '*'
+                Comparison: ''
+                Updatable: true
+                ExampleValue: null
+                Hidden: false
+                IncludeInResponse: true
+                Flatten: false
+              - NameSwagger: regionalReplicaCount
+                NameAnsible: regional_replica_count
+                NamePythonSdk: regional_replica_count
+                NameGoSdk: RegionalReplicaCount
+                NameTerraform: RegionalReplicaCount
+                IdPortion: null
+                Type: number
+                TypeName: Int
+                TypeNameGo: Int
+                IsList: false
+                Required: false
+                Documentation: >-
+                  The number of replicas of the Image Version to be created per
+                  region. This property is updatable.
+                DocumentationMarkKeywords: true
+                DefaultValue: null
+                IncludeInDocumentation: true
+                IncludeInArgSpec: true
+                NoLog: false
+                SubOptions: []
+                EnumValues: []
+                PathSwagger: >-
+                  /properties/publishingProfile/targetRegions/regionalReplicaCount
+                PathPython: /publishingProfile/targetRegions/regionalReplicaCount
+                PathGo: >-
+                  /properties/publishingProfile/targetRegions/regionalReplicaCount
+                DispositionSdk: '*'
+                DispositionRest: '*'
+                Comparison: ''
+                Updatable: true
+                ExampleValue: null
+                Hidden: false
+                IncludeInResponse: true
+                Flatten: false
+              - NameSwagger: storageAccountType
+                NameAnsible: storage_account_type
+                NamePythonSdk: storage_account_type
+                NameGoSdk: StorageAccountType
+                NameTerraform: StorageAccountType
+                IdPortion: null
+                Type: str
+                TypeName: StorageAccountType
+                TypeNameGo: StorageAccountType
+                IsList: false
+                Required: false
+                Documentation: >-
+                  Specifies the storage account type to be used to store the
+                  image. This property is not updatable.
+                DocumentationMarkKeywords: true
+                DefaultValue: null
+                IncludeInDocumentation: true
+                IncludeInArgSpec: true
+                NoLog: false
+                SubOptions: []
+                EnumValues:
+                  - Key: Standard_LRS
+                    Value: Standard_LRS
+                    Description: !<tag:yaml.org,2002:js/undefined> ''
+                  - Key: Standard_ZRS
+                    Value: Standard_ZRS
+                    Description: !<tag:yaml.org,2002:js/undefined> ''
+                PathSwagger: /properties/publishingProfile/targetRegions/storageAccountType
+                PathPython: /publishingProfile/targetRegions/storageAccountType
+                PathGo: /properties/publishingProfile/targetRegions/storageAccountType
+                DispositionSdk: '*'
+                DispositionRest: '*'
+                Comparison: ''
+                Updatable: true
+                ExampleValue: null
+                Hidden: false
+                IncludeInResponse: true
+                Flatten: false
             EnumValues: []
             PathSwagger: /properties/publishingProfile/targetRegions
             PathPython: /publishingProfile/targetRegions
@@ -4941,7 +5043,67 @@ Modules:
             IncludeInDocumentation: true
             IncludeInArgSpec: true
             NoLog: false
-            SubOptions: []
+            SubOptions:
+              - NameSwagger: managedImage
+                NameAnsible: managed_image
+                NamePythonSdk: managed_image
+                NameGoSdk: ManagedImage
+                NameTerraform: ManagedImage
+                IdPortion: null
+                Type: dict
+                TypeName: ManagedArtifact
+                TypeNameGo: ManagedArtifact
+                IsList: false
+                Required: true
+                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                DocumentationMarkKeywords: true
+                DefaultValue: null
+                IncludeInDocumentation: true
+                IncludeInArgSpec: true
+                NoLog: false
+                SubOptions:
+                  - NameSwagger: id
+                    NameAnsible: id
+                    NamePythonSdk: id
+                    NameGoSdk: ID
+                    NameTerraform: ID
+                    IdPortion: null
+                    Type: str
+                    TypeName: String
+                    TypeNameGo: String
+                    IsList: false
+                    Required: true
+                    Documentation: The managed artifact id.
+                    DocumentationMarkKeywords: true
+                    DefaultValue: null
+                    IncludeInDocumentation: true
+                    IncludeInArgSpec: true
+                    NoLog: false
+                    SubOptions: []
+                    EnumValues: []
+                    PathSwagger: /properties/publishingProfile/source/managedImage/id
+                    PathPython: /publishingProfile/source/managedImage/id
+                    PathGo: /properties/publishingProfile/source/managedImage/id
+                    DispositionSdk: '*'
+                    DispositionRest: '*'
+                    Comparison: ''
+                    Updatable: true
+                    ExampleValue: null
+                    Hidden: false
+                    IncludeInResponse: true
+                    Flatten: false
+                EnumValues: []
+                PathSwagger: /properties/publishingProfile/source/managedImage
+                PathPython: /publishingProfile/source/managedImage
+                PathGo: /properties/publishingProfile/source/managedImage
+                DispositionSdk: '*'
+                DispositionRest: '*'
+                Comparison: ''
+                Updatable: true
+                ExampleValue: null
+                Hidden: false
+                IncludeInResponse: true
+                Flatten: false
             EnumValues: []
             PathSwagger: /properties/publishingProfile/source
             PathPython: /publishingProfile/source
@@ -5973,7 +6135,111 @@ Modules:
                 IncludeInDocumentation: true
                 IncludeInArgSpec: true
                 NoLog: false
-                SubOptions: []
+                SubOptions:
+                  - NameSwagger: name
+                    NameAnsible: name
+                    NamePythonSdk: name
+                    NameGoSdk: Name
+                    NameTerraform: Name
+                    IdPortion: null
+                    Type: str
+                    TypeName: String
+                    TypeNameGo: String
+                    IsList: false
+                    Required: true
+                    Documentation: The name of the region.
+                    DocumentationMarkKeywords: true
+                    DefaultValue: null
+                    IncludeInDocumentation: true
+                    IncludeInArgSpec: true
+                    NoLog: false
+                    SubOptions: []
+                    EnumValues: []
+                    PathSwagger: /properties/publishingProfile/targetRegions/name
+                    PathPython: /publishingProfile/targetRegions/name
+                    PathGo: /properties/publishingProfile/targetRegions/name
+                    DispositionSdk: '*'
+                    DispositionRest: '*'
+                    Comparison: ''
+                    Updatable: true
+                    ExampleValue: null
+                    Hidden: false
+                    IncludeInResponse: false
+                    Flatten: false
+                  - NameSwagger: regionalReplicaCount
+                    NameAnsible: regional_replica_count
+                    NamePythonSdk: regional_replica_count
+                    NameGoSdk: RegionalReplicaCount
+                    NameTerraform: RegionalReplicaCount
+                    IdPortion: null
+                    Type: number
+                    TypeName: Int
+                    TypeNameGo: Int
+                    IsList: false
+                    Required: false
+                    Documentation: >-
+                      The number of replicas of the Image Version to be created
+                      per region. This property is updatable.
+                    DocumentationMarkKeywords: true
+                    DefaultValue: null
+                    IncludeInDocumentation: true
+                    IncludeInArgSpec: true
+                    NoLog: false
+                    SubOptions: []
+                    EnumValues: []
+                    PathSwagger: >-
+                      /properties/publishingProfile/targetRegions/regionalReplicaCount
+                    PathPython: /publishingProfile/targetRegions/regionalReplicaCount
+                    PathGo: >-
+                      /properties/publishingProfile/targetRegions/regionalReplicaCount
+                    DispositionSdk: '*'
+                    DispositionRest: '*'
+                    Comparison: ''
+                    Updatable: true
+                    ExampleValue: null
+                    Hidden: false
+                    IncludeInResponse: false
+                    Flatten: false
+                  - NameSwagger: storageAccountType
+                    NameAnsible: storage_account_type
+                    NamePythonSdk: storage_account_type
+                    NameGoSdk: StorageAccountType
+                    NameTerraform: StorageAccountType
+                    IdPortion: null
+                    Type: str
+                    TypeName: StorageAccountType
+                    TypeNameGo: StorageAccountType
+                    IsList: false
+                    Required: false
+                    Documentation: >-
+                      Specifies the storage account type to be used to store the
+                      image. This property is not updatable.
+                    DocumentationMarkKeywords: true
+                    DefaultValue: null
+                    IncludeInDocumentation: true
+                    IncludeInArgSpec: true
+                    NoLog: false
+                    SubOptions: []
+                    EnumValues:
+                      - Key: Standard_LRS
+                        Value: Standard_LRS
+                        Description: !<tag:yaml.org,2002:js/undefined> ''
+                      - Key: Standard_ZRS
+                        Value: Standard_ZRS
+                        Description: !<tag:yaml.org,2002:js/undefined> ''
+                    PathSwagger: >-
+                      /properties/publishingProfile/targetRegions/storageAccountType
+                    PathPython: /publishingProfile/targetRegions/storageAccountType
+                    PathGo: >-
+                      /properties/publishingProfile/targetRegions/storageAccountType
+                    DispositionSdk: '*'
+                    DispositionRest: '*'
+                    Comparison: ''
+                    Updatable: true
+                    ExampleValue: null
+                    Hidden: false
+                    IncludeInResponse: false
+                    Flatten: false
                 EnumValues: []
                 PathSwagger: /properties/publishingProfile/targetRegions
                 PathPython: /publishingProfile/targetRegions
@@ -6003,7 +6269,67 @@ Modules:
                 IncludeInDocumentation: true
                 IncludeInArgSpec: true
                 NoLog: false
-                SubOptions: []
+                SubOptions:
+                  - NameSwagger: managedImage
+                    NameAnsible: managed_image
+                    NamePythonSdk: managed_image
+                    NameGoSdk: ManagedImage
+                    NameTerraform: ManagedImage
+                    IdPortion: null
+                    Type: dict
+                    TypeName: ManagedArtifact
+                    TypeNameGo: ManagedArtifact
+                    IsList: false
+                    Required: true
+                    Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                    DocumentationMarkKeywords: true
+                    DefaultValue: null
+                    IncludeInDocumentation: true
+                    IncludeInArgSpec: true
+                    NoLog: false
+                    SubOptions:
+                      - NameSwagger: id
+                        NameAnsible: id
+                        NamePythonSdk: id
+                        NameGoSdk: ID
+                        NameTerraform: ID
+                        IdPortion: null
+                        Type: str
+                        TypeName: String
+                        TypeNameGo: String
+                        IsList: false
+                        Required: true
+                        Documentation: The managed artifact id.
+                        DocumentationMarkKeywords: true
+                        DefaultValue: null
+                        IncludeInDocumentation: true
+                        IncludeInArgSpec: true
+                        NoLog: false
+                        SubOptions: []
+                        EnumValues: []
+                        PathSwagger: /properties/publishingProfile/source/managedImage/id
+                        PathPython: /publishingProfile/source/managedImage/id
+                        PathGo: /properties/publishingProfile/source/managedImage/id
+                        DispositionSdk: '*'
+                        DispositionRest: '*'
+                        Comparison: ''
+                        Updatable: true
+                        ExampleValue: null
+                        Hidden: false
+                        IncludeInResponse: false
+                        Flatten: false
+                    EnumValues: []
+                    PathSwagger: /properties/publishingProfile/source/managedImage
+                    PathPython: /publishingProfile/source/managedImage
+                    PathGo: /properties/publishingProfile/source/managedImage
+                    DispositionSdk: '*'
+                    DispositionRest: '*'
+                    Comparison: ''
+                    Updatable: true
+                    ExampleValue: null
+                    Hidden: false
+                    IncludeInResponse: false
+                    Flatten: false
                 EnumValues: []
                 PathSwagger: /properties/publishingProfile/source
                 PathPython: /publishingProfile/source
@@ -6699,7 +7025,109 @@ Modules:
             IncludeInDocumentation: true
             IncludeInArgSpec: true
             NoLog: false
-            SubOptions: []
+            SubOptions:
+              - NameSwagger: name
+                NameAnsible: name
+                NamePythonSdk: name
+                NameGoSdk: Name
+                NameTerraform: Name
+                IdPortion: null
+                Type: str
+                TypeName: String
+                TypeNameGo: String
+                IsList: false
+                Required: true
+                Documentation: The name of the region.
+                DocumentationMarkKeywords: true
+                DefaultValue: null
+                IncludeInDocumentation: true
+                IncludeInArgSpec: true
+                NoLog: false
+                SubOptions: []
+                EnumValues: []
+                PathSwagger: /properties/publishingProfile/targetRegions/name
+                PathPython: /publishingProfile/targetRegions/name
+                PathGo: /properties/publishingProfile/targetRegions/name
+                DispositionSdk: '*'
+                DispositionRest: '*'
+                Comparison: ''
+                Updatable: true
+                ExampleValue: null
+                Hidden: false
+                IncludeInResponse: false
+                Flatten: false
+              - NameSwagger: regionalReplicaCount
+                NameAnsible: regional_replica_count
+                NamePythonSdk: regional_replica_count
+                NameGoSdk: RegionalReplicaCount
+                NameTerraform: RegionalReplicaCount
+                IdPortion: null
+                Type: number
+                TypeName: Int
+                TypeNameGo: Int
+                IsList: false
+                Required: false
+                Documentation: >-
+                  The number of replicas of the Image Version to be created per
+                  region. This property is updatable.
+                DocumentationMarkKeywords: true
+                DefaultValue: null
+                IncludeInDocumentation: true
+                IncludeInArgSpec: true
+                NoLog: false
+                SubOptions: []
+                EnumValues: []
+                PathSwagger: >-
+                  /properties/publishingProfile/targetRegions/regionalReplicaCount
+                PathPython: /publishingProfile/targetRegions/regionalReplicaCount
+                PathGo: >-
+                  /properties/publishingProfile/targetRegions/regionalReplicaCount
+                DispositionSdk: '*'
+                DispositionRest: '*'
+                Comparison: ''
+                Updatable: true
+                ExampleValue: null
+                Hidden: false
+                IncludeInResponse: false
+                Flatten: false
+              - NameSwagger: storageAccountType
+                NameAnsible: storage_account_type
+                NamePythonSdk: storage_account_type
+                NameGoSdk: StorageAccountType
+                NameTerraform: StorageAccountType
+                IdPortion: null
+                Type: str
+                TypeName: StorageAccountType
+                TypeNameGo: StorageAccountType
+                IsList: false
+                Required: false
+                Documentation: >-
+                  Specifies the storage account type to be used to store the
+                  image. This property is not updatable.
+                DocumentationMarkKeywords: true
+                DefaultValue: null
+                IncludeInDocumentation: true
+                IncludeInArgSpec: true
+                NoLog: false
+                SubOptions: []
+                EnumValues:
+                  - Key: Standard_LRS
+                    Value: Standard_LRS
+                    Description: !<tag:yaml.org,2002:js/undefined> ''
+                  - Key: Standard_ZRS
+                    Value: Standard_ZRS
+                    Description: !<tag:yaml.org,2002:js/undefined> ''
+                PathSwagger: /properties/publishingProfile/targetRegions/storageAccountType
+                PathPython: /publishingProfile/targetRegions/storageAccountType
+                PathGo: /properties/publishingProfile/targetRegions/storageAccountType
+                DispositionSdk: '*'
+                DispositionRest: '*'
+                Comparison: ''
+                Updatable: true
+                ExampleValue: null
+                Hidden: false
+                IncludeInResponse: false
+                Flatten: false
             EnumValues: []
             PathSwagger: /properties/publishingProfile/targetRegions
             PathPython: /publishingProfile/targetRegions
@@ -6729,7 +7157,67 @@ Modules:
             IncludeInDocumentation: true
             IncludeInArgSpec: true
             NoLog: false
-            SubOptions: []
+            SubOptions:
+              - NameSwagger: managedImage
+                NameAnsible: managed_image
+                NamePythonSdk: managed_image
+                NameGoSdk: ManagedImage
+                NameTerraform: ManagedImage
+                IdPortion: null
+                Type: dict
+                TypeName: ManagedArtifact
+                TypeNameGo: ManagedArtifact
+                IsList: false
+                Required: true
+                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                DocumentationMarkKeywords: true
+                DefaultValue: null
+                IncludeInDocumentation: true
+                IncludeInArgSpec: true
+                NoLog: false
+                SubOptions:
+                  - NameSwagger: id
+                    NameAnsible: id
+                    NamePythonSdk: id
+                    NameGoSdk: ID
+                    NameTerraform: ID
+                    IdPortion: null
+                    Type: str
+                    TypeName: String
+                    TypeNameGo: String
+                    IsList: false
+                    Required: true
+                    Documentation: The managed artifact id.
+                    DocumentationMarkKeywords: true
+                    DefaultValue: null
+                    IncludeInDocumentation: true
+                    IncludeInArgSpec: true
+                    NoLog: false
+                    SubOptions: []
+                    EnumValues: []
+                    PathSwagger: /properties/publishingProfile/source/managedImage/id
+                    PathPython: /publishingProfile/source/managedImage/id
+                    PathGo: /properties/publishingProfile/source/managedImage/id
+                    DispositionSdk: '*'
+                    DispositionRest: '*'
+                    Comparison: ''
+                    Updatable: true
+                    ExampleValue: null
+                    Hidden: false
+                    IncludeInResponse: false
+                    Flatten: false
+                EnumValues: []
+                PathSwagger: /properties/publishingProfile/source/managedImage
+                PathPython: /publishingProfile/source/managedImage
+                PathGo: /properties/publishingProfile/source/managedImage
+                DispositionSdk: '*'
+                DispositionRest: '*'
+                Comparison: ''
+                Updatable: true
+                ExampleValue: null
+                Hidden: false
+                IncludeInResponse: false
+                Flatten: false
             EnumValues: []
             PathSwagger: /properties/publishingProfile/source
             PathPython: /publishingProfile/source

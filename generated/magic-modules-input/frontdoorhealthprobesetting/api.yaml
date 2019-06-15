@@ -86,6 +86,32 @@ objects:
             applicable_to: [go]
             go_field_name: Properties
             go_type_name: HealthProbeSettingsProperties
+          '/properties/path': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+            applicable_to: [go]
+            go_field_name: Path
+          '/path': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+            applicable_to: [python]
+            python_field_name: path
+          '/properties/protocol': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
+            applicable_to: [go]
+            go_field_name: Protocol
+            go_enum_type_name: Protocol
+          '/protocol': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
+            applicable_to: [python]
+            python_field_name: protocol
+          '/properties/intervalInSeconds': 
+            applicable_to: [go]
+            go_field_name: IntervalInSeconds
+          '/intervalInSeconds': 
+            applicable_to: [python]
+            python_field_name: interval_in_seconds
+          '/properties/resourceState': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
+            applicable_to: [go]
+            go_field_name: ResourceState
+            go_enum_type_name: ResourceState
+          '/resourceState': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
+            applicable_to: [python]
+            python_field_name: resource_state
           '/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             go_field_name: Name
             python_field_name: name
@@ -137,6 +163,38 @@ objects:
         required: false
         input: true
         azure_sdk_references: ['/id']
+      - !ruby/object:Api::Type::String
+        name: 'path'
+        description: 'The path to use for the health probe. Default is /'
+        required: false
+        azure_sdk_references: ['/path', '/properties/path']
+      - !ruby/object:Api::Type::Enum
+        name: 'protocol'
+        description: 'Protocol scheme to use for this probe'
+        required: false
+        values:
+          - :Http
+          - :Https
+        default_value: :Http
+        azure_sdk_references: ['/protocol', '/properties/protocol']
+      - 
+        name: 'intervalInSeconds'
+        description: 'The number of seconds between health probes.'
+        required: false
+        azure_sdk_references: ['/intervalInSeconds', '/properties/intervalInSeconds']
+      - !ruby/object:Api::Type::Enum
+        name: 'resourceState'
+        description: 'Resource status.'
+        required: false
+        values:
+          - :Creating
+          - :Enabling
+          - :Enabled
+          - :Disabling
+          - :Disabled
+          - :Deleting
+        default_value: :Creating
+        azure_sdk_references: ['/resourceState', '/properties/resourceState']
       - !ruby/object:Api::Type::String
         name: 'name'
         description: 'Resource name.'

@@ -35,6 +35,20 @@ options:
   id:
     description:
       - Resource ID.
+  sample_size:
+    description:
+      - The number of samples to consider for load balancing decisions
+  successful_samples_required:
+    description:
+      - The number of samples within the sample period that must succeed
+  additional_latency_milliseconds:
+    description:
+      - >-
+        The additional latency in milliseconds for probes to fall into the
+        lowest latency bucket
+  resource_state:
+    description:
+      - Resource status.
   type:
     description:
       - Resource type.
@@ -88,6 +102,33 @@ properties:
   returned: always
   type: dict
   sample: null
+  contains:
+    sample_size:
+      description:
+        - The number of samples to consider for load balancing decisions
+      returned: always
+      type: number
+      sample: null
+    successful_samples_required:
+      description:
+        - The number of samples within the sample period that must succeed
+      returned: always
+      type: number
+      sample: null
+    additional_latency_milliseconds:
+      description:
+        - >-
+          The additional latency in milliseconds for probes to fall into the
+          lowest latency bucket
+      returned: always
+      type: number
+      sample: null
+    resource_state:
+      description:
+        - Resource status.
+      returned: always
+      type: str
+      sample: null
 name:
   description:
     - Resource name.
@@ -146,6 +187,28 @@ class AzureRMLoadBalancingSettings(AzureRMModuleBaseExt):
                 type='str',
                 updatable=False,
                 disposition='/'
+            ),
+            sample_size=dict(
+                type='number',
+                disposition='/'
+            ),
+            successful_samples_required=dict(
+                type='number',
+                disposition='/'
+            ),
+            additional_latency_milliseconds=dict(
+                type='number',
+                disposition='/'
+            ),
+            resource_state=dict(
+                type='str',
+                disposition='/',
+                choices=['Creating',
+                         'Enabling',
+                         'Enabled',
+                         'Disabling',
+                         'Disabled',
+                         'Deleting']
             ),
             name=dict(
                 type='str',
