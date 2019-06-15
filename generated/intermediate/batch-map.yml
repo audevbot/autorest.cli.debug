@@ -8635,10 +8635,8 @@ Modules:
                     NameTerraform: ContainerImageNames
                     IdPortion: null
                     Type: str
-                    TypeName: >-
-                      {"$id":"623","$type":"SequenceType","elementType":{"$id":"624","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"625","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"626","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"623","$type":"SequenceType","elementType":{"$id":"624","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"625","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"626","fixed":false},"deprecated":false}
+                    TypeName: String
+                    TypeNameGo: String
                     IsList: true
                     Required: false
                     Documentation: >-
@@ -11064,42 +11062,8 @@ Modules:
             NameTerraform: Visibility
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"1111","$type":"SequenceType","elementType":{"$id":"1112","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"1113","description":"The
-              certificate should be visible to the user account under which the
-              start task is
-              run.","name":"StartTask","serializedName":"StartTask"},{"$id":"1114","description":"The
-              certificate should be visible to the user accounts under which job
-              tasks are
-              run.","name":"Task","serializedName":"Task"},{"$id":"1115","description":"The
-              certificate should be visible to the user accounts under which
-              users remotely access the
-              node.","name":"RemoteUser","serializedName":"RemoteUser"}],"modelAsString":false,"underlyingType":{"$id":"1116","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1117","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1118","fixed":false,"raw":"CertificateVisibility"},"deprecated":false},"name":{"$id":"1119","fixed":false},"extensions":{"x-ms-enum":{"name":"CertificateVisibility","modelAsString":false,"values":[{"value":"StartTask","description":"The
-              certificate should be visible to the user account under which the
-              start task is run."},{"value":"Task","description":"The
-              certificate should be visible to the user accounts under which job
-              tasks are run."},{"value":"RemoteUser","description":"The
-              certificate should be visible to the user accounts under which
-              users remotely access the
-              node."}]},"x-nullable":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1111","$type":"SequenceType","elementType":{"$id":"1112","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"1113","description":"The
-              certificate should be visible to the user account under which the
-              start task is
-              run.","name":"StartTask","serializedName":"StartTask"},{"$id":"1114","description":"The
-              certificate should be visible to the user accounts under which job
-              tasks are
-              run.","name":"Task","serializedName":"Task"},{"$id":"1115","description":"The
-              certificate should be visible to the user accounts under which
-              users remotely access the
-              node.","name":"RemoteUser","serializedName":"RemoteUser"}],"modelAsString":false,"underlyingType":{"$id":"1116","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1117","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1118","fixed":false,"raw":"CertificateVisibility"},"deprecated":false},"name":{"$id":"1119","fixed":false},"extensions":{"x-ms-enum":{"name":"CertificateVisibility","modelAsString":false,"values":[{"value":"StartTask","description":"The
-              certificate should be visible to the user account under which the
-              start task is run."},{"value":"Task","description":"The
-              certificate should be visible to the user accounts under which job
-              tasks are run."},{"value":"RemoteUser","description":"The
-              certificate should be visible to the user accounts under which
-              users remotely access the
-              node."}]},"x-nullable":false},"deprecated":false}
+            TypeName: CertificateVisibility
+            TypeNameGo: CertificateVisibility
             IsList: true
             Required: false
             Documentation: !<tag:yaml.org,2002:js/undefined> ''
@@ -11241,10 +11205,8 @@ Modules:
         NameTerraform: ApplicationLicenses
         IdPortion: null
         Type: str
-        TypeName: >-
-          {"$id":"1329","$type":"SequenceType","elementType":{"$id":"1330","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1331","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1332","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1329","$type":"SequenceType","elementType":{"$id":"1330","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1331","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1332","fixed":false},"deprecated":false}
+        TypeName: String
+        TypeNameGo: String
         IsList: true
         Required: false
         Documentation: >-
@@ -13370,10 +13332,8 @@ Modules:
                         NameTerraform: ContainerImageNames
                         IdPortion: null
                         Type: str
-                        TypeName: >-
-                          {"$id":"623","$type":"SequenceType","elementType":{"$id":"624","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"625","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"626","fixed":false},"deprecated":false}
-                        TypeNameGo: >-
-                          {"$id":"623","$type":"SequenceType","elementType":{"$id":"624","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"625","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"626","fixed":false},"deprecated":false}
+                        TypeName: String
+                        TypeNameGo: String
                         IsList: true
                         Required: false
                         Documentation: >-
@@ -15832,42 +15792,8 @@ Modules:
                 NameTerraform: Visibility
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"1111","$type":"SequenceType","elementType":{"$id":"1112","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"1113","description":"The
-                  certificate should be visible to the user account under which
-                  the start task is
-                  run.","name":"StartTask","serializedName":"StartTask"},{"$id":"1114","description":"The
-                  certificate should be visible to the user accounts under which
-                  job tasks are
-                  run.","name":"Task","serializedName":"Task"},{"$id":"1115","description":"The
-                  certificate should be visible to the user accounts under which
-                  users remotely access the
-                  node.","name":"RemoteUser","serializedName":"RemoteUser"}],"modelAsString":false,"underlyingType":{"$id":"1116","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1117","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1118","fixed":false,"raw":"CertificateVisibility"},"deprecated":false},"name":{"$id":"1119","fixed":false},"extensions":{"x-ms-enum":{"name":"CertificateVisibility","modelAsString":false,"values":[{"value":"StartTask","description":"The
-                  certificate should be visible to the user account under which
-                  the start task is run."},{"value":"Task","description":"The
-                  certificate should be visible to the user accounts under which
-                  job tasks are run."},{"value":"RemoteUser","description":"The
-                  certificate should be visible to the user accounts under which
-                  users remotely access the
-                  node."}]},"x-nullable":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"1111","$type":"SequenceType","elementType":{"$id":"1112","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"1113","description":"The
-                  certificate should be visible to the user account under which
-                  the start task is
-                  run.","name":"StartTask","serializedName":"StartTask"},{"$id":"1114","description":"The
-                  certificate should be visible to the user accounts under which
-                  job tasks are
-                  run.","name":"Task","serializedName":"Task"},{"$id":"1115","description":"The
-                  certificate should be visible to the user accounts under which
-                  users remotely access the
-                  node.","name":"RemoteUser","serializedName":"RemoteUser"}],"modelAsString":false,"underlyingType":{"$id":"1116","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1117","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1118","fixed":false,"raw":"CertificateVisibility"},"deprecated":false},"name":{"$id":"1119","fixed":false},"extensions":{"x-ms-enum":{"name":"CertificateVisibility","modelAsString":false,"values":[{"value":"StartTask","description":"The
-                  certificate should be visible to the user account under which
-                  the start task is run."},{"value":"Task","description":"The
-                  certificate should be visible to the user accounts under which
-                  job tasks are run."},{"value":"RemoteUser","description":"The
-                  certificate should be visible to the user accounts under which
-                  users remotely access the
-                  node."}]},"x-nullable":false},"deprecated":false}
+                TypeName: CertificateVisibility
+                TypeNameGo: CertificateVisibility
                 IsList: true
                 Required: false
                 Documentation: !<tag:yaml.org,2002:js/undefined> ''
@@ -16005,10 +15931,8 @@ Modules:
             NameTerraform: ApplicationLicenses
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"1329","$type":"SequenceType","elementType":{"$id":"1330","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1331","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1332","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1329","$type":"SequenceType","elementType":{"$id":"1330","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1331","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1332","fixed":false},"deprecated":false}
+            TypeName: String
+            TypeNameGo: String
             IsList: true
             Required: false
             Documentation: >-
@@ -18300,10 +18224,8 @@ Modules:
                     NameTerraform: ContainerImageNames
                     IdPortion: null
                     Type: str
-                    TypeName: >-
-                      {"$id":"623","$type":"SequenceType","elementType":{"$id":"624","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"625","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"626","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"623","$type":"SequenceType","elementType":{"$id":"624","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"625","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"626","fixed":false},"deprecated":false}
+                    TypeName: String
+                    TypeNameGo: String
                     IsList: true
                     Required: false
                     Documentation: >-
@@ -21091,42 +21013,8 @@ Modules:
             NameTerraform: Visibility
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"1111","$type":"SequenceType","elementType":{"$id":"1112","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"1113","description":"The
-              certificate should be visible to the user account under which the
-              start task is
-              run.","name":"StartTask","serializedName":"StartTask"},{"$id":"1114","description":"The
-              certificate should be visible to the user accounts under which job
-              tasks are
-              run.","name":"Task","serializedName":"Task"},{"$id":"1115","description":"The
-              certificate should be visible to the user accounts under which
-              users remotely access the
-              node.","name":"RemoteUser","serializedName":"RemoteUser"}],"modelAsString":false,"underlyingType":{"$id":"1116","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1117","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1118","fixed":false,"raw":"CertificateVisibility"},"deprecated":false},"name":{"$id":"1119","fixed":false},"extensions":{"x-ms-enum":{"name":"CertificateVisibility","modelAsString":false,"values":[{"value":"StartTask","description":"The
-              certificate should be visible to the user account under which the
-              start task is run."},{"value":"Task","description":"The
-              certificate should be visible to the user accounts under which job
-              tasks are run."},{"value":"RemoteUser","description":"The
-              certificate should be visible to the user accounts under which
-              users remotely access the
-              node."}]},"x-nullable":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1111","$type":"SequenceType","elementType":{"$id":"1112","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"1113","description":"The
-              certificate should be visible to the user account under which the
-              start task is
-              run.","name":"StartTask","serializedName":"StartTask"},{"$id":"1114","description":"The
-              certificate should be visible to the user accounts under which job
-              tasks are
-              run.","name":"Task","serializedName":"Task"},{"$id":"1115","description":"The
-              certificate should be visible to the user accounts under which
-              users remotely access the
-              node.","name":"RemoteUser","serializedName":"RemoteUser"}],"modelAsString":false,"underlyingType":{"$id":"1116","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1117","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1118","fixed":false,"raw":"CertificateVisibility"},"deprecated":false},"name":{"$id":"1119","fixed":false},"extensions":{"x-ms-enum":{"name":"CertificateVisibility","modelAsString":false,"values":[{"value":"StartTask","description":"The
-              certificate should be visible to the user account under which the
-              start task is run."},{"value":"Task","description":"The
-              certificate should be visible to the user accounts under which job
-              tasks are run."},{"value":"RemoteUser","description":"The
-              certificate should be visible to the user accounts under which
-              users remotely access the
-              node."}]},"x-nullable":false},"deprecated":false}
+            TypeName: CertificateVisibility
+            TypeNameGo: CertificateVisibility
             IsList: true
             Required: false
             Documentation: !<tag:yaml.org,2002:js/undefined> ''
@@ -21264,10 +21152,8 @@ Modules:
         NameTerraform: ApplicationLicenses
         IdPortion: null
         Type: str
-        TypeName: >-
-          {"$id":"1329","$type":"SequenceType","elementType":{"$id":"1330","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1331","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1332","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1329","$type":"SequenceType","elementType":{"$id":"1330","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1331","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1332","fixed":false},"deprecated":false}
+        TypeName: String
+        TypeNameGo: String
         IsList: true
         Required: false
         Documentation: >-

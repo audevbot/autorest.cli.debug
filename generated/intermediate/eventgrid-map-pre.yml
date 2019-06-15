@@ -286,10 +286,8 @@ Modules:
             NameTerraform: IncludedEventTypes
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"21","$type":"SequenceType","elementType":{"$id":"22","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"23","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"24","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"21","$type":"SequenceType","elementType":{"$id":"22","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"23","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"24","fixed":false},"deprecated":false}
+            TypeName: String
+            TypeNameGo: String
             IsList: true
             Required: false
             Documentation: "A list of applicable event types that need to be part of the event subscription. \r\nIf it is desired to subscribe to all event types, the string \"all\" needs to be specified as an element in this list."
@@ -360,10 +358,8 @@ Modules:
         NameTerraform: Labels
         IdPortion: null
         Type: str
-        TypeName: >-
-          {"$id":"82","$type":"SequenceType","elementType":{"$id":"83","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"84","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"85","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"82","$type":"SequenceType","elementType":{"$id":"83","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"84","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"85","fixed":false},"deprecated":false}
+        TypeName: String
+        TypeNameGo: String
         IsList: true
         Required: false
         Documentation: List of user defined labels.
@@ -989,10 +985,8 @@ Modules:
                 NameTerraform: IncludedEventTypes
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"21","$type":"SequenceType","elementType":{"$id":"22","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"23","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"24","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"21","$type":"SequenceType","elementType":{"$id":"22","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"23","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"24","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: "A list of applicable event types that need to be part of the event subscription. \r\nIf it is desired to subscribe to all event types, the string \"all\" needs to be specified as an element in this list."
@@ -1063,10 +1057,8 @@ Modules:
             NameTerraform: Labels
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"82","$type":"SequenceType","elementType":{"$id":"83","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"84","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"85","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"82","$type":"SequenceType","elementType":{"$id":"83","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"84","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"85","fixed":false},"deprecated":false}
+            TypeName: String
+            TypeNameGo: String
             IsList: true
             Required: false
             Documentation: List of user defined labels.
@@ -2764,10 +2756,8 @@ Modules:
             NameTerraform: IncludedEventTypes
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"21","$type":"SequenceType","elementType":{"$id":"22","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"23","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"24","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"21","$type":"SequenceType","elementType":{"$id":"22","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"23","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"24","fixed":false},"deprecated":false}
+            TypeName: String
+            TypeNameGo: String
             IsList: true
             Required: false
             Documentation: "A list of applicable event types that need to be part of the event subscription. \r\nIf it is desired to subscribe to all event types, the string \"all\" needs to be specified as an element in this list."
@@ -2838,10 +2828,8 @@ Modules:
         NameTerraform: Labels
         IdPortion: null
         Type: str
-        TypeName: >-
-          {"$id":"82","$type":"SequenceType","elementType":{"$id":"83","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"84","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"85","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"82","$type":"SequenceType","elementType":{"$id":"83","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"84","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"85","fixed":false},"deprecated":false}
+        TypeName: String
+        TypeNameGo: String
         IsList: true
         Required: false
         Documentation: List of user defined labels.
@@ -6067,10 +6055,8 @@ Modules:
         NameTerraform: SupportedLocations
         IdPortion: null
         Type: str
-        TypeName: >-
-          {"$id":"474","$type":"SequenceType","elementType":{"$id":"475","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"476","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"477","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"474","$type":"SequenceType","elementType":{"$id":"475","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"476","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"477","fixed":false},"deprecated":false}
+        TypeName: String
+        TypeNameGo: String
         IsList: true
         Required: false
         Documentation: List of locations supported by this topic type.

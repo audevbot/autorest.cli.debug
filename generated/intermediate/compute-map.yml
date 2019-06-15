@@ -2157,10 +2157,8 @@ Modules:
             NameTerraform: DiskTypes
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"125","$type":"SequenceType","elementType":{"$id":"126","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"127","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"128","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"125","$type":"SequenceType","elementType":{"$id":"126","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"127","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"128","fixed":false},"deprecated":false}
+            TypeName: String
+            TypeNameGo: String
             IsList: true
             Required: false
             Documentation: A list of disk types.
@@ -3188,10 +3186,8 @@ Modules:
                 NameTerraform: DiskTypes
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"125","$type":"SequenceType","elementType":{"$id":"126","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"127","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"128","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"125","$type":"SequenceType","elementType":{"$id":"126","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"127","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"128","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: A list of disk types.
@@ -4342,10 +4338,8 @@ Modules:
             NameTerraform: DiskTypes
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"125","$type":"SequenceType","elementType":{"$id":"126","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"127","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"128","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"125","$type":"SequenceType","elementType":{"$id":"126","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"127","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"128","fixed":false},"deprecated":false}
+            TypeName: String
+            TypeNameGo: String
             IsList: true
             Required: false
             Documentation: A list of disk types.
@@ -4999,30 +4993,8 @@ Modules:
             NameTerraform: TargetRegions
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"278","$type":"SequenceType","elementType":{"$id":"279","$type":"CompositeType","properties":[{"$id":"280","isReadOnly":false,"realPath":["name"],"collectionFormat":"none","defaultValue":{"$id":"281","fixed":false},"deprecated":false,"documentation":{"$id":"282","fixed":false,"raw":"The
-              name of the
-              region."},"isRequired":true,"isConstant":false,"name":{"$id":"283","fixed":false,"raw":"name"},"serializedName":"name","modelType":{"$id":"284","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"285","fixed":false,"raw":"String"},"deprecated":false}},{"$id":"286","isReadOnly":false,"realPath":["regionalReplicaCount"],"collectionFormat":"none","defaultValue":{"$id":"287","fixed":false},"deprecated":false,"documentation":{"$id":"288","fixed":false,"raw":"The
-              number of replicas of the Image Version to be created per region.
-              This property is
-              updatable."},"isRequired":false,"isConstant":false,"name":{"$id":"289","fixed":false,"raw":"regionalReplicaCount"},"serializedName":"regionalReplicaCount","modelType":{"$id":"290","$type":"PrimaryType","format":"int32","knownPrimaryType":"int","name":{"$id":"291","fixed":false,"raw":"Int"},"deprecated":false}},{"$id":"292","isReadOnly":false,"realPath":["storageAccountType"],"collectionFormat":"none","defaultValue":{"$id":"293","fixed":false},"deprecated":false,"documentation":{"$id":"294","fixed":false,"raw":"Specifies
-              the storage account type to be used to store the image. This
-              property is not
-              updatable."},"extensions":{"x-ms-enum":{"name":"StorageAccountType","modelAsString":true}},"isRequired":false,"isConstant":false,"name":{"$id":"295","fixed":false,"raw":"storageAccountType"},"serializedName":"storageAccountType","modelType":{"$ref":"267"}}],"serializedName":"TargetRegion","documentation":"Describes
-              the target region
-              information.","containsConstantProperties":false,"name":{"$id":"296","fixed":false,"raw":"TargetRegion"},"deprecated":false},"name":{"$id":"297","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"278","$type":"SequenceType","elementType":{"$id":"279","$type":"CompositeType","properties":[{"$id":"280","isReadOnly":false,"realPath":["name"],"collectionFormat":"none","defaultValue":{"$id":"281","fixed":false},"deprecated":false,"documentation":{"$id":"282","fixed":false,"raw":"The
-              name of the
-              region."},"isRequired":true,"isConstant":false,"name":{"$id":"283","fixed":false,"raw":"name"},"serializedName":"name","modelType":{"$id":"284","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"285","fixed":false,"raw":"String"},"deprecated":false}},{"$id":"286","isReadOnly":false,"realPath":["regionalReplicaCount"],"collectionFormat":"none","defaultValue":{"$id":"287","fixed":false},"deprecated":false,"documentation":{"$id":"288","fixed":false,"raw":"The
-              number of replicas of the Image Version to be created per region.
-              This property is
-              updatable."},"isRequired":false,"isConstant":false,"name":{"$id":"289","fixed":false,"raw":"regionalReplicaCount"},"serializedName":"regionalReplicaCount","modelType":{"$id":"290","$type":"PrimaryType","format":"int32","knownPrimaryType":"int","name":{"$id":"291","fixed":false,"raw":"Int"},"deprecated":false}},{"$id":"292","isReadOnly":false,"realPath":["storageAccountType"],"collectionFormat":"none","defaultValue":{"$id":"293","fixed":false},"deprecated":false,"documentation":{"$id":"294","fixed":false,"raw":"Specifies
-              the storage account type to be used to store the image. This
-              property is not
-              updatable."},"extensions":{"x-ms-enum":{"name":"StorageAccountType","modelAsString":true}},"isRequired":false,"isConstant":false,"name":{"$id":"295","fixed":false,"raw":"storageAccountType"},"serializedName":"storageAccountType","modelType":{"$ref":"267"}}],"serializedName":"TargetRegion","documentation":"Describes
-              the target region
-              information.","containsConstantProperties":false,"name":{"$id":"296","fixed":false,"raw":"TargetRegion"},"deprecated":false},"name":{"$id":"297","fixed":false},"deprecated":false}
+            TypeName: TargetRegion
+            TypeNameGo: TargetRegion
             IsList: true
             Required: false
             Documentation: >-
@@ -6083,30 +6055,8 @@ Modules:
                 NameTerraform: TargetRegions
                 IdPortion: null
                 Type: dict
-                TypeName: >-
-                  {"$id":"278","$type":"SequenceType","elementType":{"$id":"279","$type":"CompositeType","properties":[{"$id":"280","isReadOnly":false,"realPath":["name"],"collectionFormat":"none","defaultValue":{"$id":"281","fixed":false},"deprecated":false,"documentation":{"$id":"282","fixed":false,"raw":"The
-                  name of the
-                  region."},"isRequired":true,"isConstant":false,"name":{"$id":"283","fixed":false,"raw":"name"},"serializedName":"name","modelType":{"$id":"284","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"285","fixed":false,"raw":"String"},"deprecated":false}},{"$id":"286","isReadOnly":false,"realPath":["regionalReplicaCount"],"collectionFormat":"none","defaultValue":{"$id":"287","fixed":false},"deprecated":false,"documentation":{"$id":"288","fixed":false,"raw":"The
-                  number of replicas of the Image Version to be created per
-                  region. This property is
-                  updatable."},"isRequired":false,"isConstant":false,"name":{"$id":"289","fixed":false,"raw":"regionalReplicaCount"},"serializedName":"regionalReplicaCount","modelType":{"$id":"290","$type":"PrimaryType","format":"int32","knownPrimaryType":"int","name":{"$id":"291","fixed":false,"raw":"Int"},"deprecated":false}},{"$id":"292","isReadOnly":false,"realPath":["storageAccountType"],"collectionFormat":"none","defaultValue":{"$id":"293","fixed":false},"deprecated":false,"documentation":{"$id":"294","fixed":false,"raw":"Specifies
-                  the storage account type to be used to store the image. This
-                  property is not
-                  updatable."},"extensions":{"x-ms-enum":{"name":"StorageAccountType","modelAsString":true}},"isRequired":false,"isConstant":false,"name":{"$id":"295","fixed":false,"raw":"storageAccountType"},"serializedName":"storageAccountType","modelType":{"$ref":"267"}}],"serializedName":"TargetRegion","documentation":"Describes
-                  the target region
-                  information.","containsConstantProperties":false,"name":{"$id":"296","fixed":false,"raw":"TargetRegion"},"deprecated":false},"name":{"$id":"297","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"278","$type":"SequenceType","elementType":{"$id":"279","$type":"CompositeType","properties":[{"$id":"280","isReadOnly":false,"realPath":["name"],"collectionFormat":"none","defaultValue":{"$id":"281","fixed":false},"deprecated":false,"documentation":{"$id":"282","fixed":false,"raw":"The
-                  name of the
-                  region."},"isRequired":true,"isConstant":false,"name":{"$id":"283","fixed":false,"raw":"name"},"serializedName":"name","modelType":{"$id":"284","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"285","fixed":false,"raw":"String"},"deprecated":false}},{"$id":"286","isReadOnly":false,"realPath":["regionalReplicaCount"],"collectionFormat":"none","defaultValue":{"$id":"287","fixed":false},"deprecated":false,"documentation":{"$id":"288","fixed":false,"raw":"The
-                  number of replicas of the Image Version to be created per
-                  region. This property is
-                  updatable."},"isRequired":false,"isConstant":false,"name":{"$id":"289","fixed":false,"raw":"regionalReplicaCount"},"serializedName":"regionalReplicaCount","modelType":{"$id":"290","$type":"PrimaryType","format":"int32","knownPrimaryType":"int","name":{"$id":"291","fixed":false,"raw":"Int"},"deprecated":false}},{"$id":"292","isReadOnly":false,"realPath":["storageAccountType"],"collectionFormat":"none","defaultValue":{"$id":"293","fixed":false},"deprecated":false,"documentation":{"$id":"294","fixed":false,"raw":"Specifies
-                  the storage account type to be used to store the image. This
-                  property is not
-                  updatable."},"extensions":{"x-ms-enum":{"name":"StorageAccountType","modelAsString":true}},"isRequired":false,"isConstant":false,"name":{"$id":"295","fixed":false,"raw":"storageAccountType"},"serializedName":"storageAccountType","modelType":{"$ref":"267"}}],"serializedName":"TargetRegion","documentation":"Describes
-                  the target region
-                  information.","containsConstantProperties":false,"name":{"$id":"296","fixed":false,"raw":"TargetRegion"},"deprecated":false},"name":{"$id":"297","fixed":false},"deprecated":false}
+                TypeName: TargetRegion
+                TypeNameGo: TargetRegion
                 IsList: true
                 Required: false
                 Documentation: >-
@@ -6831,30 +6781,8 @@ Modules:
             NameTerraform: TargetRegions
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"278","$type":"SequenceType","elementType":{"$id":"279","$type":"CompositeType","properties":[{"$id":"280","isReadOnly":false,"realPath":["name"],"collectionFormat":"none","defaultValue":{"$id":"281","fixed":false},"deprecated":false,"documentation":{"$id":"282","fixed":false,"raw":"The
-              name of the
-              region."},"isRequired":true,"isConstant":false,"name":{"$id":"283","fixed":false,"raw":"name"},"serializedName":"name","modelType":{"$id":"284","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"285","fixed":false,"raw":"String"},"deprecated":false}},{"$id":"286","isReadOnly":false,"realPath":["regionalReplicaCount"],"collectionFormat":"none","defaultValue":{"$id":"287","fixed":false},"deprecated":false,"documentation":{"$id":"288","fixed":false,"raw":"The
-              number of replicas of the Image Version to be created per region.
-              This property is
-              updatable."},"isRequired":false,"isConstant":false,"name":{"$id":"289","fixed":false,"raw":"regionalReplicaCount"},"serializedName":"regionalReplicaCount","modelType":{"$id":"290","$type":"PrimaryType","format":"int32","knownPrimaryType":"int","name":{"$id":"291","fixed":false,"raw":"Int"},"deprecated":false}},{"$id":"292","isReadOnly":false,"realPath":["storageAccountType"],"collectionFormat":"none","defaultValue":{"$id":"293","fixed":false},"deprecated":false,"documentation":{"$id":"294","fixed":false,"raw":"Specifies
-              the storage account type to be used to store the image. This
-              property is not
-              updatable."},"extensions":{"x-ms-enum":{"name":"StorageAccountType","modelAsString":true}},"isRequired":false,"isConstant":false,"name":{"$id":"295","fixed":false,"raw":"storageAccountType"},"serializedName":"storageAccountType","modelType":{"$ref":"267"}}],"serializedName":"TargetRegion","documentation":"Describes
-              the target region
-              information.","containsConstantProperties":false,"name":{"$id":"296","fixed":false,"raw":"TargetRegion"},"deprecated":false},"name":{"$id":"297","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"278","$type":"SequenceType","elementType":{"$id":"279","$type":"CompositeType","properties":[{"$id":"280","isReadOnly":false,"realPath":["name"],"collectionFormat":"none","defaultValue":{"$id":"281","fixed":false},"deprecated":false,"documentation":{"$id":"282","fixed":false,"raw":"The
-              name of the
-              region."},"isRequired":true,"isConstant":false,"name":{"$id":"283","fixed":false,"raw":"name"},"serializedName":"name","modelType":{"$id":"284","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"285","fixed":false,"raw":"String"},"deprecated":false}},{"$id":"286","isReadOnly":false,"realPath":["regionalReplicaCount"],"collectionFormat":"none","defaultValue":{"$id":"287","fixed":false},"deprecated":false,"documentation":{"$id":"288","fixed":false,"raw":"The
-              number of replicas of the Image Version to be created per region.
-              This property is
-              updatable."},"isRequired":false,"isConstant":false,"name":{"$id":"289","fixed":false,"raw":"regionalReplicaCount"},"serializedName":"regionalReplicaCount","modelType":{"$id":"290","$type":"PrimaryType","format":"int32","knownPrimaryType":"int","name":{"$id":"291","fixed":false,"raw":"Int"},"deprecated":false}},{"$id":"292","isReadOnly":false,"realPath":["storageAccountType"],"collectionFormat":"none","defaultValue":{"$id":"293","fixed":false},"deprecated":false,"documentation":{"$id":"294","fixed":false,"raw":"Specifies
-              the storage account type to be used to store the image. This
-              property is not
-              updatable."},"extensions":{"x-ms-enum":{"name":"StorageAccountType","modelAsString":true}},"isRequired":false,"isConstant":false,"name":{"$id":"295","fixed":false,"raw":"storageAccountType"},"serializedName":"storageAccountType","modelType":{"$ref":"267"}}],"serializedName":"TargetRegion","documentation":"Describes
-              the target region
-              information.","containsConstantProperties":false,"name":{"$id":"296","fixed":false,"raw":"TargetRegion"},"deprecated":false},"name":{"$id":"297","fixed":false},"deprecated":false}
+            TypeName: TargetRegion
+            TypeNameGo: TargetRegion
             IsList: true
             Required: false
             Documentation: >-

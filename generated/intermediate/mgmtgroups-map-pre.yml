@@ -474,10 +474,8 @@ Modules:
         NameTerraform: Roles
         IdPortion: null
         Type: str
-        TypeName: >-
-          {"$id":"283","$type":"SequenceType","elementType":{"$id":"284","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"285","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"286","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"283","$type":"SequenceType","elementType":{"$id":"284","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"285","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"286","fixed":false},"deprecated":false}
+        TypeName: String
+        TypeNameGo: String
         IsList: true
         Required: false
         Documentation: The role definitions associated with the management group.
@@ -656,10 +654,8 @@ Modules:
             NameTerraform: Roles
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"255","$type":"SequenceType","elementType":{"$id":"256","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"257","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"258","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"255","$type":"SequenceType","elementType":{"$id":"256","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"257","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"258","fixed":false},"deprecated":false}
+            TypeName: String
+            TypeNameGo: String
             IsList: true
             Required: false
             Documentation: The roles definitions associated with the management group.
@@ -838,10 +834,8 @@ Modules:
                 NameTerraform: Roles
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"255","$type":"SequenceType","elementType":{"$id":"256","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"257","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"258","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"255","$type":"SequenceType","elementType":{"$id":"256","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"257","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"258","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: The roles definitions associated with the management group.
@@ -1020,10 +1014,8 @@ Modules:
                     NameTerraform: Roles
                     IdPortion: null
                     Type: str
-                    TypeName: >-
-                      {"$id":"255","$type":"SequenceType","elementType":{"$id":"256","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"257","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"258","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"255","$type":"SequenceType","elementType":{"$id":"256","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"257","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"258","fixed":false},"deprecated":false}
+                    TypeName: String
+                    TypeNameGo: String
                     IsList: true
                     Required: false
                     Documentation: >-
@@ -1804,10 +1796,8 @@ Modules:
         NameTerraform: Roles
         IdPortion: null
         Type: str
-        TypeName: >-
-          {"$id":"283","$type":"SequenceType","elementType":{"$id":"284","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"285","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"286","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"283","$type":"SequenceType","elementType":{"$id":"284","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"285","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"286","fixed":false},"deprecated":false}
+        TypeName: String
+        TypeNameGo: String
         IsList: true
         Required: false
         Documentation: The role definitions associated with the management group.
@@ -2228,10 +2218,8 @@ Modules:
             NameTerraform: Roles
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"255","$type":"SequenceType","elementType":{"$id":"256","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"257","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"258","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"255","$type":"SequenceType","elementType":{"$id":"256","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"257","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"258","fixed":false},"deprecated":false}
+            TypeName: String
+            TypeNameGo: String
             IsList: true
             Required: false
             Documentation: The roles definitions associated with the management group.
@@ -2410,10 +2398,8 @@ Modules:
                 NameTerraform: Roles
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"255","$type":"SequenceType","elementType":{"$id":"256","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"257","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"258","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"255","$type":"SequenceType","elementType":{"$id":"256","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"257","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"258","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: The roles definitions associated with the management group.
@@ -2592,10 +2578,8 @@ Modules:
                     NameTerraform: Roles
                     IdPortion: null
                     Type: str
-                    TypeName: >-
-                      {"$id":"255","$type":"SequenceType","elementType":{"$id":"256","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"257","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"258","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"255","$type":"SequenceType","elementType":{"$id":"256","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"257","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"258","fixed":false},"deprecated":false}
+                    TypeName: String
+                    TypeNameGo: String
                     IsList: true
                     Required: false
                     Documentation: >-

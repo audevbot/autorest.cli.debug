@@ -321,10 +321,8 @@ Modules:
                 NameTerraform: ExcludedKbNumbers
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"24","$type":"SequenceType","elementType":{"$id":"25","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"26","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"27","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"24","$type":"SequenceType","elementType":{"$id":"25","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"26","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"27","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: KB numbers excluded from the software update configuration.
@@ -353,10 +351,8 @@ Modules:
                 NameTerraform: IncludedKbNumbers
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"32","$type":"SequenceType","elementType":{"$id":"33","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"34","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"35","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"32","$type":"SequenceType","elementType":{"$id":"33","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"34","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"35","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: KB numbers included from the software update configuration.
@@ -491,10 +487,8 @@ Modules:
                 NameTerraform: ExcludedPackageNameMasks
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"60","$type":"SequenceType","elementType":{"$id":"61","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"62","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"63","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"60","$type":"SequenceType","elementType":{"$id":"61","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"62","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"63","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: packages excluded from the software update configuration.
@@ -523,10 +517,8 @@ Modules:
                 NameTerraform: IncludedPackageNameMasks
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"68","$type":"SequenceType","elementType":{"$id":"69","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"70","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"71","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"68","$type":"SequenceType","elementType":{"$id":"69","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"70","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"71","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: packages included from the software update configuration.
@@ -630,10 +622,8 @@ Modules:
             NameTerraform: AzureVirtualMachines
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"180","$type":"SequenceType","elementType":{"$id":"181","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"182","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"183","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"180","$type":"SequenceType","elementType":{"$id":"181","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"182","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"183","fixed":false},"deprecated":false}
+            TypeName: String
+            TypeNameGo: String
             IsList: true
             Required: false
             Documentation: >-
@@ -665,10 +655,8 @@ Modules:
             NameTerraform: NonAzureComputerNames
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"188","$type":"SequenceType","elementType":{"$id":"189","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"190","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"191","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"188","$type":"SequenceType","elementType":{"$id":"189","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"190","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"191","fixed":false},"deprecated":false}
+            TypeName: String
+            TypeNameGo: String
             IsList: true
             Required: false
             Documentation: >-
@@ -735,10 +723,8 @@ Modules:
                     NameTerraform: Scope
                     IdPortion: null
                     Type: str
-                    TypeName: >-
-                      {"$id":"106","$type":"SequenceType","elementType":{"$id":"107","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"108","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"109","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"106","$type":"SequenceType","elementType":{"$id":"107","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"108","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"109","fixed":false},"deprecated":false}
+                    TypeName: String
+                    TypeNameGo: String
                     IsList: true
                     Required: false
                     Documentation: List of Subscription or Resource Group ARM Ids.
@@ -767,10 +753,8 @@ Modules:
                     NameTerraform: Locations
                     IdPortion: null
                     Type: str
-                    TypeName: >-
-                      {"$id":"114","$type":"SequenceType","elementType":{"$id":"115","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"116","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"117","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"114","$type":"SequenceType","elementType":{"$id":"115","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"116","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"117","fixed":false},"deprecated":false}
+                    TypeName: String
+                    TypeNameGo: String
                     IsList: true
                     Required: false
                     Documentation: List of locations to scope the query to.
@@ -1298,10 +1282,8 @@ Modules:
                 NameTerraform: WeekDays
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"225","$type":"SequenceType","elementType":{"$id":"226","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"227","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"228","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"225","$type":"SequenceType","elementType":{"$id":"226","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"227","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"228","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: Days of the week that the job should execute on.
@@ -1330,10 +1312,8 @@ Modules:
                 NameTerraform: MonthDays
                 IdPortion: null
                 Type: number
-                TypeName: >-
-                  {"$id":"233","$type":"SequenceType","elementType":{"$id":"234","$type":"PrimaryType","format":"int32","knownPrimaryType":"int","name":{"$id":"235","fixed":false,"raw":"Int"},"deprecated":false},"name":{"$id":"236","fixed":false},"extensions":{"x-nullable":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"233","$type":"SequenceType","elementType":{"$id":"234","$type":"PrimaryType","format":"int32","knownPrimaryType":"int","name":{"$id":"235","fixed":false,"raw":"Int"},"deprecated":false},"name":{"$id":"236","fixed":false},"extensions":{"x-nullable":false},"deprecated":false}
+                TypeName: Int
+                TypeNameGo: Int
                 IsList: true
                 Required: false
                 Documentation: >-
@@ -2411,10 +2391,8 @@ Modules:
                     NameTerraform: ExcludedKbNumbers
                     IdPortion: null
                     Type: str
-                    TypeName: >-
-                      {"$id":"24","$type":"SequenceType","elementType":{"$id":"25","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"26","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"27","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"24","$type":"SequenceType","elementType":{"$id":"25","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"26","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"27","fixed":false},"deprecated":false}
+                    TypeName: String
+                    TypeNameGo: String
                     IsList: true
                     Required: false
                     Documentation: >-
@@ -2445,10 +2423,8 @@ Modules:
                     NameTerraform: IncludedKbNumbers
                     IdPortion: null
                     Type: str
-                    TypeName: >-
-                      {"$id":"32","$type":"SequenceType","elementType":{"$id":"33","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"34","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"35","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"32","$type":"SequenceType","elementType":{"$id":"33","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"34","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"35","fixed":false},"deprecated":false}
+                    TypeName: String
+                    TypeNameGo: String
                     IsList: true
                     Required: false
                     Documentation: >-
@@ -2585,10 +2561,8 @@ Modules:
                     NameTerraform: ExcludedPackageNameMasks
                     IdPortion: null
                     Type: str
-                    TypeName: >-
-                      {"$id":"60","$type":"SequenceType","elementType":{"$id":"61","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"62","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"63","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"60","$type":"SequenceType","elementType":{"$id":"61","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"62","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"63","fixed":false},"deprecated":false}
+                    TypeName: String
+                    TypeNameGo: String
                     IsList: true
                     Required: false
                     Documentation: packages excluded from the software update configuration.
@@ -2619,10 +2593,8 @@ Modules:
                     NameTerraform: IncludedPackageNameMasks
                     IdPortion: null
                     Type: str
-                    TypeName: >-
-                      {"$id":"68","$type":"SequenceType","elementType":{"$id":"69","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"70","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"71","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"68","$type":"SequenceType","elementType":{"$id":"69","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"70","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"71","fixed":false},"deprecated":false}
+                    TypeName: String
+                    TypeNameGo: String
                     IsList: true
                     Required: false
                     Documentation: packages included from the software update configuration.
@@ -2728,10 +2700,8 @@ Modules:
                 NameTerraform: AzureVirtualMachines
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"180","$type":"SequenceType","elementType":{"$id":"181","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"182","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"183","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"180","$type":"SequenceType","elementType":{"$id":"181","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"182","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"183","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: >-
@@ -2762,10 +2732,8 @@ Modules:
                 NameTerraform: NonAzureComputerNames
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"188","$type":"SequenceType","elementType":{"$id":"189","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"190","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"191","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"188","$type":"SequenceType","elementType":{"$id":"189","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"190","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"191","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: >-
@@ -2834,10 +2802,8 @@ Modules:
                         NameTerraform: Scope
                         IdPortion: null
                         Type: str
-                        TypeName: >-
-                          {"$id":"106","$type":"SequenceType","elementType":{"$id":"107","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"108","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"109","fixed":false},"deprecated":false}
-                        TypeNameGo: >-
-                          {"$id":"106","$type":"SequenceType","elementType":{"$id":"107","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"108","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"109","fixed":false},"deprecated":false}
+                        TypeName: String
+                        TypeNameGo: String
                         IsList: true
                         Required: false
                         Documentation: List of Subscription or Resource Group ARM Ids.
@@ -2868,10 +2834,8 @@ Modules:
                         NameTerraform: Locations
                         IdPortion: null
                         Type: str
-                        TypeName: >-
-                          {"$id":"114","$type":"SequenceType","elementType":{"$id":"115","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"116","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"117","fixed":false},"deprecated":false}
-                        TypeNameGo: >-
-                          {"$id":"114","$type":"SequenceType","elementType":{"$id":"115","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"116","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"117","fixed":false},"deprecated":false}
+                        TypeName: String
+                        TypeNameGo: String
                         IsList: true
                         Required: false
                         Documentation: List of locations to scope the query to.
@@ -3394,10 +3358,8 @@ Modules:
                     NameTerraform: WeekDays
                     IdPortion: null
                     Type: str
-                    TypeName: >-
-                      {"$id":"225","$type":"SequenceType","elementType":{"$id":"226","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"227","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"228","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"225","$type":"SequenceType","elementType":{"$id":"226","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"227","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"228","fixed":false},"deprecated":false}
+                    TypeName: String
+                    TypeNameGo: String
                     IsList: true
                     Required: false
                     Documentation: Days of the week that the job should execute on.
@@ -3426,10 +3388,8 @@ Modules:
                     NameTerraform: MonthDays
                     IdPortion: null
                     Type: number
-                    TypeName: >-
-                      {"$id":"233","$type":"SequenceType","elementType":{"$id":"234","$type":"PrimaryType","format":"int32","knownPrimaryType":"int","name":{"$id":"235","fixed":false,"raw":"Int"},"deprecated":false},"name":{"$id":"236","fixed":false},"extensions":{"x-nullable":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"233","$type":"SequenceType","elementType":{"$id":"234","$type":"PrimaryType","format":"int32","knownPrimaryType":"int","name":{"$id":"235","fixed":false,"raw":"Int"},"deprecated":false},"name":{"$id":"236","fixed":false},"extensions":{"x-nullable":false},"deprecated":false}
+                    TypeName: Int
+                    TypeNameGo: Int
                     IsList: true
                     Required: false
                     Documentation: >-
@@ -4562,10 +4522,8 @@ Modules:
                 NameTerraform: AzureVirtualMachines
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"452","$type":"SequenceType","elementType":{"$id":"453","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"454","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"455","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"452","$type":"SequenceType","elementType":{"$id":"453","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"454","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"455","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: >-

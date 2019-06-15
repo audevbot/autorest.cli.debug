@@ -349,20 +349,8 @@ Modules:
                 NameTerraform: BearerTokenSendingMethods
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"287","$type":"SequenceType","elementType":{"$id":"288","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"289","description":"Access
-                  token will be transmitted in the Authorization header using
-                  Bearer
-                  schema","name":"authorizationHeader","serializedName":"authorizationHeader"},{"$id":"290","description":"Access
-                  token will be transmitted as query
-                  parameters.","name":"query","serializedName":"query"}],"modelAsString":true,"underlyingType":{"$id":"291","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"292","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"293","fixed":false,"raw":"bearerTokenSendingMethods"},"deprecated":false},"name":{"$id":"294","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"287","$type":"SequenceType","elementType":{"$id":"288","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"289","description":"Access
-                  token will be transmitted in the Authorization header using
-                  Bearer
-                  schema","name":"authorizationHeader","serializedName":"authorizationHeader"},{"$id":"290","description":"Access
-                  token will be transmitted as query
-                  parameters.","name":"query","serializedName":"query"}],"modelAsString":true,"underlyingType":{"$id":"291","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"292","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"293","fixed":false,"raw":"bearerTokenSendingMethods"},"deprecated":false},"name":{"$id":"294","fixed":false},"deprecated":false}
+                TypeName: bearerTokenSendingMethods
+                TypeNameGo: bearerTokenSendingMethods
                 IsList: true
                 Required: false
                 Documentation: How to send token to the server.
@@ -917,10 +905,8 @@ Modules:
         NameTerraform: Protocols
         IdPortion: null
         Type: 'unknown[undefined {"$ref":"350"}]'
-        TypeName: >-
-          {"$id":"556","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"557","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"556","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"557","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
+        TypeName: '{"$ref":"350"}'
+        TypeNameGo: '{"$ref":"350"}'
         IsList: true
         Required: false
         Documentation: >-
@@ -1841,20 +1827,8 @@ Modules:
                     NameTerraform: BearerTokenSendingMethods
                     IdPortion: null
                     Type: str
-                    TypeName: >-
-                      {"$id":"287","$type":"SequenceType","elementType":{"$id":"288","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"289","description":"Access
-                      token will be transmitted in the Authorization header
-                      using Bearer
-                      schema","name":"authorizationHeader","serializedName":"authorizationHeader"},{"$id":"290","description":"Access
-                      token will be transmitted as query
-                      parameters.","name":"query","serializedName":"query"}],"modelAsString":true,"underlyingType":{"$id":"291","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"292","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"293","fixed":false,"raw":"bearerTokenSendingMethods"},"deprecated":false},"name":{"$id":"294","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"287","$type":"SequenceType","elementType":{"$id":"288","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"289","description":"Access
-                      token will be transmitted in the Authorization header
-                      using Bearer
-                      schema","name":"authorizationHeader","serializedName":"authorizationHeader"},{"$id":"290","description":"Access
-                      token will be transmitted as query
-                      parameters.","name":"query","serializedName":"query"}],"modelAsString":true,"underlyingType":{"$id":"291","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"292","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"293","fixed":false,"raw":"bearerTokenSendingMethods"},"deprecated":false},"name":{"$id":"294","fixed":false},"deprecated":false}
+                    TypeName: bearerTokenSendingMethods
+                    TypeNameGo: bearerTokenSendingMethods
                     IsList: true
                     Required: false
                     Documentation: How to send token to the server.
@@ -2412,10 +2386,8 @@ Modules:
             NameTerraform: Protocols
             IdPortion: null
             Type: 'unknown[undefined {"$ref":"350"}]'
-            TypeName: >-
-              {"$id":"556","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"557","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"556","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"557","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
+            TypeName: '{"$ref":"350"}'
+            TypeNameGo: '{"$ref":"350"}'
             IsList: true
             Required: false
             Documentation: >-
@@ -4213,20 +4185,8 @@ Modules:
                 NameTerraform: BearerTokenSendingMethods
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"287","$type":"SequenceType","elementType":{"$id":"288","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"289","description":"Access
-                  token will be transmitted in the Authorization header using
-                  Bearer
-                  schema","name":"authorizationHeader","serializedName":"authorizationHeader"},{"$id":"290","description":"Access
-                  token will be transmitted as query
-                  parameters.","name":"query","serializedName":"query"}],"modelAsString":true,"underlyingType":{"$id":"291","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"292","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"293","fixed":false,"raw":"bearerTokenSendingMethods"},"deprecated":false},"name":{"$id":"294","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"287","$type":"SequenceType","elementType":{"$id":"288","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"289","description":"Access
-                  token will be transmitted in the Authorization header using
-                  Bearer
-                  schema","name":"authorizationHeader","serializedName":"authorizationHeader"},{"$id":"290","description":"Access
-                  token will be transmitted as query
-                  parameters.","name":"query","serializedName":"query"}],"modelAsString":true,"underlyingType":{"$id":"291","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"292","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"293","fixed":false,"raw":"bearerTokenSendingMethods"},"deprecated":false},"name":{"$id":"294","fixed":false},"deprecated":false}
+                TypeName: bearerTokenSendingMethods
+                TypeNameGo: bearerTokenSendingMethods
                 IsList: true
                 Required: false
                 Documentation: How to send token to the server.
@@ -4811,10 +4771,8 @@ Modules:
         NameTerraform: Protocols
         IdPortion: null
         Type: 'unknown[undefined {"$ref":"350"}]'
-        TypeName: >-
-          {"$id":"556","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"557","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"556","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"557","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
+        TypeName: '{"$ref":"350"}'
+        TypeNameGo: '{"$ref":"350"}'
         IsList: true
         Required: false
         Documentation: >-
@@ -7470,10 +7428,8 @@ Modules:
             NameTerraform: Values
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
+            TypeName: String
+            TypeNameGo: String
             IsList: true
             Required: false
             Documentation: Parameter values.
@@ -7760,10 +7716,8 @@ Modules:
                 NameTerraform: Values
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: Parameter values.
@@ -7972,10 +7926,8 @@ Modules:
                 NameTerraform: Values
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: Parameter values.
@@ -8339,10 +8291,8 @@ Modules:
                     NameTerraform: Values
                     IdPortion: null
                     Type: str
-                    TypeName: >-
-                      {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
+                    TypeName: String
+                    TypeNameGo: String
                     IsList: true
                     Required: false
                     Documentation: Parameter values.
@@ -8808,10 +8758,8 @@ Modules:
                     NameTerraform: Values
                     IdPortion: null
                     Type: str
-                    TypeName: >-
-                      {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
+                    TypeName: String
+                    TypeNameGo: String
                     IsList: true
                     Required: false
                     Documentation: Parameter values.
@@ -9034,10 +8982,8 @@ Modules:
                 NameTerraform: Values
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: Parameter values.
@@ -9592,10 +9538,8 @@ Modules:
                 NameTerraform: Values
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: Parameter values.
@@ -9882,10 +9826,8 @@ Modules:
                     NameTerraform: Values
                     IdPortion: null
                     Type: str
-                    TypeName: >-
-                      {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
+                    TypeName: String
+                    TypeNameGo: String
                     IsList: true
                     Required: false
                     Documentation: Parameter values.
@@ -10094,10 +10036,8 @@ Modules:
                     NameTerraform: Values
                     IdPortion: null
                     Type: str
-                    TypeName: >-
-                      {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
+                    TypeName: String
+                    TypeNameGo: String
                     IsList: true
                     Required: false
                     Documentation: Parameter values.
@@ -10466,10 +10406,8 @@ Modules:
                         NameTerraform: Values
                         IdPortion: null
                         Type: str
-                        TypeName: >-
-                          {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
-                        TypeNameGo: >-
-                          {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
+                        TypeName: String
+                        TypeNameGo: String
                         IsList: true
                         Required: false
                         Documentation: Parameter values.
@@ -10942,10 +10880,8 @@ Modules:
                         NameTerraform: Values
                         IdPortion: null
                         Type: str
-                        TypeName: >-
-                          {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
-                        TypeNameGo: >-
-                          {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
+                        TypeName: String
+                        TypeNameGo: String
                         IsList: true
                         Required: false
                         Documentation: Parameter values.
@@ -11168,10 +11104,8 @@ Modules:
                     NameTerraform: Values
                     IdPortion: null
                     Type: str
-                    TypeName: >-
-                      {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
+                    TypeName: String
+                    TypeNameGo: String
                     IsList: true
                     Required: false
                     Documentation: Parameter values.
@@ -12038,10 +11972,8 @@ Modules:
             NameTerraform: Values
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
+            TypeName: String
+            TypeNameGo: String
             IsList: true
             Required: false
             Documentation: Parameter values.
@@ -12328,10 +12260,8 @@ Modules:
                 NameTerraform: Values
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: Parameter values.
@@ -12540,10 +12470,8 @@ Modules:
                 NameTerraform: Values
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: Parameter values.
@@ -12907,10 +12835,8 @@ Modules:
                     NameTerraform: Values
                     IdPortion: null
                     Type: str
-                    TypeName: >-
-                      {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
+                    TypeName: String
+                    TypeNameGo: String
                     IsList: true
                     Required: false
                     Documentation: Parameter values.
@@ -13376,10 +13302,8 @@ Modules:
                     NameTerraform: Values
                     IdPortion: null
                     Type: str
-                    TypeName: >-
-                      {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
+                    TypeName: String
+                    TypeNameGo: String
                     IsList: true
                     Required: false
                     Documentation: Parameter values.
@@ -13602,10 +13526,8 @@ Modules:
                 NameTerraform: Values
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"1136","$type":"SequenceType","elementType":{"$id":"1137","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1138","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1139","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: Parameter values.
@@ -20150,10 +20072,8 @@ Modules:
                 NameTerraform: Headers
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: Array of HTTP Headers to log.
@@ -20272,10 +20192,8 @@ Modules:
                 NameTerraform: Headers
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: Array of HTTP Headers to log.
@@ -20424,10 +20342,8 @@ Modules:
                 NameTerraform: Headers
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: Array of HTTP Headers to log.
@@ -20546,10 +20462,8 @@ Modules:
                 NameTerraform: Headers
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: Array of HTTP Headers to log.
@@ -21101,10 +21015,8 @@ Modules:
                     NameTerraform: Headers
                     IdPortion: null
                     Type: str
-                    TypeName: >-
-                      {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
+                    TypeName: String
+                    TypeNameGo: String
                     IsList: true
                     Required: false
                     Documentation: Array of HTTP Headers to log.
@@ -21223,10 +21135,8 @@ Modules:
                     NameTerraform: Headers
                     IdPortion: null
                     Type: str
-                    TypeName: >-
-                      {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
+                    TypeName: String
+                    TypeNameGo: String
                     IsList: true
                     Required: false
                     Documentation: Array of HTTP Headers to log.
@@ -21377,10 +21287,8 @@ Modules:
                     NameTerraform: Headers
                     IdPortion: null
                     Type: str
-                    TypeName: >-
-                      {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
+                    TypeName: String
+                    TypeNameGo: String
                     IsList: true
                     Required: false
                     Documentation: Array of HTTP Headers to log.
@@ -21499,10 +21407,8 @@ Modules:
                     NameTerraform: Headers
                     IdPortion: null
                     Type: str
-                    TypeName: >-
-                      {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
+                    TypeName: String
+                    TypeNameGo: String
                     IsList: true
                     Required: false
                     Documentation: Array of HTTP Headers to log.
@@ -22354,10 +22260,8 @@ Modules:
                 NameTerraform: Headers
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: Array of HTTP Headers to log.
@@ -22476,10 +22380,8 @@ Modules:
                 NameTerraform: Headers
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: Array of HTTP Headers to log.
@@ -22628,10 +22530,8 @@ Modules:
                 NameTerraform: Headers
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: Array of HTTP Headers to log.
@@ -22750,10 +22650,8 @@ Modules:
                 NameTerraform: Headers
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: Array of HTTP Headers to log.
@@ -28884,20 +28782,8 @@ Modules:
                         NameTerraform: BearerTokenSendingMethods
                         IdPortion: null
                         Type: str
-                        TypeName: >-
-                          {"$id":"287","$type":"SequenceType","elementType":{"$id":"288","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"289","description":"Access
-                          token will be transmitted in the Authorization header
-                          using Bearer
-                          schema","name":"authorizationHeader","serializedName":"authorizationHeader"},{"$id":"290","description":"Access
-                          token will be transmitted as query
-                          parameters.","name":"query","serializedName":"query"}],"modelAsString":true,"underlyingType":{"$id":"291","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"292","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"293","fixed":false,"raw":"bearerTokenSendingMethods"},"deprecated":false},"name":{"$id":"294","fixed":false},"deprecated":false}
-                        TypeNameGo: >-
-                          {"$id":"287","$type":"SequenceType","elementType":{"$id":"288","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"289","description":"Access
-                          token will be transmitted in the Authorization header
-                          using Bearer
-                          schema","name":"authorizationHeader","serializedName":"authorizationHeader"},{"$id":"290","description":"Access
-                          token will be transmitted as query
-                          parameters.","name":"query","serializedName":"query"}],"modelAsString":true,"underlyingType":{"$id":"291","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"292","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"293","fixed":false,"raw":"bearerTokenSendingMethods"},"deprecated":false},"name":{"$id":"294","fixed":false},"deprecated":false}
+                        TypeName: bearerTokenSendingMethods
+                        TypeNameGo: bearerTokenSendingMethods
                         IsList: true
                         Required: false
                         Documentation: How to send token to the server.
@@ -29483,10 +29369,8 @@ Modules:
                 NameTerraform: Protocols
                 IdPortion: null
                 Type: 'unknown[undefined {"$ref":"350"}]'
-                TypeName: >-
-                  {"$id":"593","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"594","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"593","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"594","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
+                TypeName: '{"$ref":"350"}'
+                TypeNameGo: '{"$ref":"350"}'
                 IsList: true
                 Required: false
                 Documentation: >-
@@ -31762,10 +31646,8 @@ Modules:
         NameTerraform: AuthorizationMethods
         IdPortion: null
         Type: str
-        TypeName: >-
-          {"$id":"1604","$type":"SequenceType","elementType":{"$id":"1605","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"1606","name":"HEAD","serializedName":"HEAD"},{"$id":"1607","name":"OPTIONS","serializedName":"OPTIONS"},{"$id":"1608","name":"TRACE","serializedName":"TRACE"},{"$id":"1609","name":"GET","serializedName":"GET"},{"$id":"1610","name":"POST","serializedName":"POST"},{"$id":"1611","name":"PUT","serializedName":"PUT"},{"$id":"1612","name":"PATCH","serializedName":"PATCH"},{"$id":"1613","name":"DELETE","serializedName":"DELETE"}],"modelAsString":false,"underlyingType":{"$id":"1614","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1615","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1616","fixed":false,"raw":"AuthorizationMethod"},"deprecated":false},"name":{"$id":"1617","fixed":false},"extensions":{"x-ms-enum":{"name":"AuthorizationMethod","modelAsString":false}},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1604","$type":"SequenceType","elementType":{"$id":"1605","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"1606","name":"HEAD","serializedName":"HEAD"},{"$id":"1607","name":"OPTIONS","serializedName":"OPTIONS"},{"$id":"1608","name":"TRACE","serializedName":"TRACE"},{"$id":"1609","name":"GET","serializedName":"GET"},{"$id":"1610","name":"POST","serializedName":"POST"},{"$id":"1611","name":"PUT","serializedName":"PUT"},{"$id":"1612","name":"PATCH","serializedName":"PATCH"},{"$id":"1613","name":"DELETE","serializedName":"DELETE"}],"modelAsString":false,"underlyingType":{"$id":"1614","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1615","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1616","fixed":false,"raw":"AuthorizationMethod"},"deprecated":false},"name":{"$id":"1617","fixed":false},"extensions":{"x-ms-enum":{"name":"AuthorizationMethod","modelAsString":false}},"deprecated":false}
+        TypeName: AuthorizationMethod
+        TypeNameGo: AuthorizationMethod
         IsList: true
         Required: false
         Documentation: >-
@@ -31796,22 +31678,8 @@ Modules:
         NameTerraform: ClientAuthenticationMethod
         IdPortion: null
         Type: str
-        TypeName: >-
-          {"$id":"1622","$type":"SequenceType","elementType":{"$id":"1623","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"1624","description":"Basic
-          Client Authentication
-          method.","name":"Basic","serializedName":"Basic"},{"$id":"1625","description":"Body
-          based Authentication
-          method.","name":"Body","serializedName":"Body"}],"modelAsString":true,"underlyingType":{"$id":"1626","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1627","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1628","fixed":false,"raw":"ClientAuthenticationMethod"},"deprecated":false},"name":{"$id":"1629","fixed":false},"extensions":{"x-ms-enum":{"name":"ClientAuthenticationMethod","modelAsString":true,"values":[{"value":"Basic","description":"Basic
-          Client Authentication method."},{"value":"Body","description":"Body
-          based Authentication method."}]}},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1622","$type":"SequenceType","elementType":{"$id":"1623","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"1624","description":"Basic
-          Client Authentication
-          method.","name":"Basic","serializedName":"Basic"},{"$id":"1625","description":"Body
-          based Authentication
-          method.","name":"Body","serializedName":"Body"}],"modelAsString":true,"underlyingType":{"$id":"1626","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1627","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1628","fixed":false,"raw":"ClientAuthenticationMethod"},"deprecated":false},"name":{"$id":"1629","fixed":false},"extensions":{"x-ms-enum":{"name":"ClientAuthenticationMethod","modelAsString":true,"values":[{"value":"Basic","description":"Basic
-          Client Authentication method."},{"value":"Body","description":"Body
-          based Authentication method."}]}},"deprecated":false}
+        TypeName: ClientAuthenticationMethod
+        TypeNameGo: ClientAuthenticationMethod
         IsList: true
         Required: false
         Documentation: >-
@@ -32037,10 +31905,8 @@ Modules:
         NameTerraform: BearerTokenSendingMethods
         IdPortion: null
         Type: str
-        TypeName: >-
-          {"$id":"1658","$type":"SequenceType","elementType":{"$id":"1659","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"1660","name":"authorizationHeader","serializedName":"authorizationHeader"},{"$id":"1661","name":"query","serializedName":"query"}],"modelAsString":true,"underlyingType":{"$id":"1662","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1663","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1664","fixed":false,"raw":"BearerTokenSendingMethod"},"deprecated":false},"name":{"$id":"1665","fixed":false},"extensions":{"x-ms-enum":{"name":"BearerTokenSendingMethod","modelAsString":true}},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1658","$type":"SequenceType","elementType":{"$id":"1659","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"1660","name":"authorizationHeader","serializedName":"authorizationHeader"},{"$id":"1661","name":"query","serializedName":"query"}],"modelAsString":true,"underlyingType":{"$id":"1662","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1663","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1664","fixed":false,"raw":"BearerTokenSendingMethod"},"deprecated":false},"name":{"$id":"1665","fixed":false},"extensions":{"x-ms-enum":{"name":"BearerTokenSendingMethod","modelAsString":true}},"deprecated":false}
+        TypeName: BearerTokenSendingMethod
+        TypeNameGo: BearerTokenSendingMethod
         IsList: true
         Required: false
         Documentation: 'Specifies the mechanism by which access token is passed to the API. '
@@ -32260,42 +32126,8 @@ Modules:
         NameTerraform: GrantTypes
         IdPortion: null
         Type: str
-        TypeName: >-
-          {"$id":"1577","$type":"SequenceType","elementType":{"$id":"1578","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"1579","description":"Authorization
-          Code Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.1.","name":"authorizationCode","serializedName":"authorizationCode"},{"$id":"1580","description":"Implicit
-          Code Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.2.","name":"implicit","serializedName":"implicit"},{"$id":"1581","description":"Resource
-          Owner Password Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.3.","name":"resourceOwnerPassword","serializedName":"resourceOwnerPassword"},{"$id":"1582","description":"Client
-          Credentials Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.4.","name":"clientCredentials","serializedName":"clientCredentials"}],"modelAsString":true,"underlyingType":{"$id":"1583","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1584","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1585","fixed":false,"raw":"GrantType"},"deprecated":false},"name":{"$id":"1586","fixed":false},"extensions":{"x-ms-enum":{"name":"GrantType","modelAsString":true,"values":[{"value":"authorizationCode","description":"Authorization
-          Code Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.1."},{"value":"implicit","description":"Implicit
-          Code Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.2."},{"value":"resourceOwnerPassword","description":"Resource
-          Owner Password Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.3."},{"value":"clientCredentials","description":"Client
-          Credentials Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.4."}]}},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1577","$type":"SequenceType","elementType":{"$id":"1578","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"1579","description":"Authorization
-          Code Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.1.","name":"authorizationCode","serializedName":"authorizationCode"},{"$id":"1580","description":"Implicit
-          Code Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.2.","name":"implicit","serializedName":"implicit"},{"$id":"1581","description":"Resource
-          Owner Password Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.3.","name":"resourceOwnerPassword","serializedName":"resourceOwnerPassword"},{"$id":"1582","description":"Client
-          Credentials Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.4.","name":"clientCredentials","serializedName":"clientCredentials"}],"modelAsString":true,"underlyingType":{"$id":"1583","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1584","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1585","fixed":false,"raw":"GrantType"},"deprecated":false},"name":{"$id":"1586","fixed":false},"extensions":{"x-ms-enum":{"name":"GrantType","modelAsString":true,"values":[{"value":"authorizationCode","description":"Authorization
-          Code Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.1."},{"value":"implicit","description":"Implicit
-          Code Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.2."},{"value":"resourceOwnerPassword","description":"Resource
-          Owner Password Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.3."},{"value":"clientCredentials","description":"Client
-          Credentials Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.4."}]}},"deprecated":false}
+        TypeName: GrantType
+        TypeNameGo: GrantType
         IsList: true
         Required: true
         Documentation: >-
@@ -32586,10 +32418,8 @@ Modules:
             NameTerraform: AuthorizationMethods
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"1604","$type":"SequenceType","elementType":{"$id":"1605","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"1606","name":"HEAD","serializedName":"HEAD"},{"$id":"1607","name":"OPTIONS","serializedName":"OPTIONS"},{"$id":"1608","name":"TRACE","serializedName":"TRACE"},{"$id":"1609","name":"GET","serializedName":"GET"},{"$id":"1610","name":"POST","serializedName":"POST"},{"$id":"1611","name":"PUT","serializedName":"PUT"},{"$id":"1612","name":"PATCH","serializedName":"PATCH"},{"$id":"1613","name":"DELETE","serializedName":"DELETE"}],"modelAsString":false,"underlyingType":{"$id":"1614","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1615","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1616","fixed":false,"raw":"AuthorizationMethod"},"deprecated":false},"name":{"$id":"1617","fixed":false},"extensions":{"x-ms-enum":{"name":"AuthorizationMethod","modelAsString":false}},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1604","$type":"SequenceType","elementType":{"$id":"1605","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"1606","name":"HEAD","serializedName":"HEAD"},{"$id":"1607","name":"OPTIONS","serializedName":"OPTIONS"},{"$id":"1608","name":"TRACE","serializedName":"TRACE"},{"$id":"1609","name":"GET","serializedName":"GET"},{"$id":"1610","name":"POST","serializedName":"POST"},{"$id":"1611","name":"PUT","serializedName":"PUT"},{"$id":"1612","name":"PATCH","serializedName":"PATCH"},{"$id":"1613","name":"DELETE","serializedName":"DELETE"}],"modelAsString":false,"underlyingType":{"$id":"1614","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1615","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1616","fixed":false,"raw":"AuthorizationMethod"},"deprecated":false},"name":{"$id":"1617","fixed":false},"extensions":{"x-ms-enum":{"name":"AuthorizationMethod","modelAsString":false}},"deprecated":false}
+            TypeName: AuthorizationMethod
+            TypeNameGo: AuthorizationMethod
             IsList: true
             Required: false
             Documentation: >-
@@ -32620,24 +32450,8 @@ Modules:
             NameTerraform: ClientAuthenticationMethod
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"1622","$type":"SequenceType","elementType":{"$id":"1623","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"1624","description":"Basic
-              Client Authentication
-              method.","name":"Basic","serializedName":"Basic"},{"$id":"1625","description":"Body
-              based Authentication
-              method.","name":"Body","serializedName":"Body"}],"modelAsString":true,"underlyingType":{"$id":"1626","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1627","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1628","fixed":false,"raw":"ClientAuthenticationMethod"},"deprecated":false},"name":{"$id":"1629","fixed":false},"extensions":{"x-ms-enum":{"name":"ClientAuthenticationMethod","modelAsString":true,"values":[{"value":"Basic","description":"Basic
-              Client Authentication
-              method."},{"value":"Body","description":"Body based Authentication
-              method."}]}},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1622","$type":"SequenceType","elementType":{"$id":"1623","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"1624","description":"Basic
-              Client Authentication
-              method.","name":"Basic","serializedName":"Basic"},{"$id":"1625","description":"Body
-              based Authentication
-              method.","name":"Body","serializedName":"Body"}],"modelAsString":true,"underlyingType":{"$id":"1626","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1627","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1628","fixed":false,"raw":"ClientAuthenticationMethod"},"deprecated":false},"name":{"$id":"1629","fixed":false},"extensions":{"x-ms-enum":{"name":"ClientAuthenticationMethod","modelAsString":true,"values":[{"value":"Basic","description":"Basic
-              Client Authentication
-              method."},{"value":"Body","description":"Body based Authentication
-              method."}]}},"deprecated":false}
+            TypeName: ClientAuthenticationMethod
+            TypeNameGo: ClientAuthenticationMethod
             IsList: true
             Required: false
             Documentation: >-
@@ -32863,10 +32677,8 @@ Modules:
             NameTerraform: BearerTokenSendingMethods
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"1658","$type":"SequenceType","elementType":{"$id":"1659","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"1660","name":"authorizationHeader","serializedName":"authorizationHeader"},{"$id":"1661","name":"query","serializedName":"query"}],"modelAsString":true,"underlyingType":{"$id":"1662","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1663","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1664","fixed":false,"raw":"BearerTokenSendingMethod"},"deprecated":false},"name":{"$id":"1665","fixed":false},"extensions":{"x-ms-enum":{"name":"BearerTokenSendingMethod","modelAsString":true}},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1658","$type":"SequenceType","elementType":{"$id":"1659","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"1660","name":"authorizationHeader","serializedName":"authorizationHeader"},{"$id":"1661","name":"query","serializedName":"query"}],"modelAsString":true,"underlyingType":{"$id":"1662","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1663","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1664","fixed":false,"raw":"BearerTokenSendingMethod"},"deprecated":false},"name":{"$id":"1665","fixed":false},"extensions":{"x-ms-enum":{"name":"BearerTokenSendingMethod","modelAsString":true}},"deprecated":false}
+            TypeName: BearerTokenSendingMethod
+            TypeNameGo: BearerTokenSendingMethod
             IsList: true
             Required: false
             Documentation: >-
@@ -33088,42 +32900,8 @@ Modules:
             NameTerraform: GrantTypes
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"1577","$type":"SequenceType","elementType":{"$id":"1578","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"1579","description":"Authorization
-              Code Grant flow as described
-              https://tools.ietf.org/html/rfc6749#section-4.1.","name":"authorizationCode","serializedName":"authorizationCode"},{"$id":"1580","description":"Implicit
-              Code Grant flow as described
-              https://tools.ietf.org/html/rfc6749#section-4.2.","name":"implicit","serializedName":"implicit"},{"$id":"1581","description":"Resource
-              Owner Password Grant flow as described
-              https://tools.ietf.org/html/rfc6749#section-4.3.","name":"resourceOwnerPassword","serializedName":"resourceOwnerPassword"},{"$id":"1582","description":"Client
-              Credentials Grant flow as described
-              https://tools.ietf.org/html/rfc6749#section-4.4.","name":"clientCredentials","serializedName":"clientCredentials"}],"modelAsString":true,"underlyingType":{"$id":"1583","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1584","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1585","fixed":false,"raw":"GrantType"},"deprecated":false},"name":{"$id":"1586","fixed":false},"extensions":{"x-ms-enum":{"name":"GrantType","modelAsString":true,"values":[{"value":"authorizationCode","description":"Authorization
-              Code Grant flow as described
-              https://tools.ietf.org/html/rfc6749#section-4.1."},{"value":"implicit","description":"Implicit
-              Code Grant flow as described
-              https://tools.ietf.org/html/rfc6749#section-4.2."},{"value":"resourceOwnerPassword","description":"Resource
-              Owner Password Grant flow as described
-              https://tools.ietf.org/html/rfc6749#section-4.3."},{"value":"clientCredentials","description":"Client
-              Credentials Grant flow as described
-              https://tools.ietf.org/html/rfc6749#section-4.4."}]}},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1577","$type":"SequenceType","elementType":{"$id":"1578","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"1579","description":"Authorization
-              Code Grant flow as described
-              https://tools.ietf.org/html/rfc6749#section-4.1.","name":"authorizationCode","serializedName":"authorizationCode"},{"$id":"1580","description":"Implicit
-              Code Grant flow as described
-              https://tools.ietf.org/html/rfc6749#section-4.2.","name":"implicit","serializedName":"implicit"},{"$id":"1581","description":"Resource
-              Owner Password Grant flow as described
-              https://tools.ietf.org/html/rfc6749#section-4.3.","name":"resourceOwnerPassword","serializedName":"resourceOwnerPassword"},{"$id":"1582","description":"Client
-              Credentials Grant flow as described
-              https://tools.ietf.org/html/rfc6749#section-4.4.","name":"clientCredentials","serializedName":"clientCredentials"}],"modelAsString":true,"underlyingType":{"$id":"1583","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1584","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1585","fixed":false,"raw":"GrantType"},"deprecated":false},"name":{"$id":"1586","fixed":false},"extensions":{"x-ms-enum":{"name":"GrantType","modelAsString":true,"values":[{"value":"authorizationCode","description":"Authorization
-              Code Grant flow as described
-              https://tools.ietf.org/html/rfc6749#section-4.1."},{"value":"implicit","description":"Implicit
-              Code Grant flow as described
-              https://tools.ietf.org/html/rfc6749#section-4.2."},{"value":"resourceOwnerPassword","description":"Resource
-              Owner Password Grant flow as described
-              https://tools.ietf.org/html/rfc6749#section-4.3."},{"value":"clientCredentials","description":"Client
-              Credentials Grant flow as described
-              https://tools.ietf.org/html/rfc6749#section-4.4."}]}},"deprecated":false}
+            TypeName: GrantType
+            TypeNameGo: GrantType
             IsList: true
             Required: true
             Documentation: >-
@@ -33629,10 +33407,8 @@ Modules:
         NameTerraform: AuthorizationMethods
         IdPortion: null
         Type: str
-        TypeName: >-
-          {"$id":"1604","$type":"SequenceType","elementType":{"$id":"1605","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"1606","name":"HEAD","serializedName":"HEAD"},{"$id":"1607","name":"OPTIONS","serializedName":"OPTIONS"},{"$id":"1608","name":"TRACE","serializedName":"TRACE"},{"$id":"1609","name":"GET","serializedName":"GET"},{"$id":"1610","name":"POST","serializedName":"POST"},{"$id":"1611","name":"PUT","serializedName":"PUT"},{"$id":"1612","name":"PATCH","serializedName":"PATCH"},{"$id":"1613","name":"DELETE","serializedName":"DELETE"}],"modelAsString":false,"underlyingType":{"$id":"1614","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1615","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1616","fixed":false,"raw":"AuthorizationMethod"},"deprecated":false},"name":{"$id":"1617","fixed":false},"extensions":{"x-ms-enum":{"name":"AuthorizationMethod","modelAsString":false}},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1604","$type":"SequenceType","elementType":{"$id":"1605","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"1606","name":"HEAD","serializedName":"HEAD"},{"$id":"1607","name":"OPTIONS","serializedName":"OPTIONS"},{"$id":"1608","name":"TRACE","serializedName":"TRACE"},{"$id":"1609","name":"GET","serializedName":"GET"},{"$id":"1610","name":"POST","serializedName":"POST"},{"$id":"1611","name":"PUT","serializedName":"PUT"},{"$id":"1612","name":"PATCH","serializedName":"PATCH"},{"$id":"1613","name":"DELETE","serializedName":"DELETE"}],"modelAsString":false,"underlyingType":{"$id":"1614","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1615","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1616","fixed":false,"raw":"AuthorizationMethod"},"deprecated":false},"name":{"$id":"1617","fixed":false},"extensions":{"x-ms-enum":{"name":"AuthorizationMethod","modelAsString":false}},"deprecated":false}
+        TypeName: AuthorizationMethod
+        TypeNameGo: AuthorizationMethod
         IsList: true
         Required: false
         Documentation: >-
@@ -33663,22 +33439,8 @@ Modules:
         NameTerraform: ClientAuthenticationMethod
         IdPortion: null
         Type: str
-        TypeName: >-
-          {"$id":"1622","$type":"SequenceType","elementType":{"$id":"1623","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"1624","description":"Basic
-          Client Authentication
-          method.","name":"Basic","serializedName":"Basic"},{"$id":"1625","description":"Body
-          based Authentication
-          method.","name":"Body","serializedName":"Body"}],"modelAsString":true,"underlyingType":{"$id":"1626","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1627","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1628","fixed":false,"raw":"ClientAuthenticationMethod"},"deprecated":false},"name":{"$id":"1629","fixed":false},"extensions":{"x-ms-enum":{"name":"ClientAuthenticationMethod","modelAsString":true,"values":[{"value":"Basic","description":"Basic
-          Client Authentication method."},{"value":"Body","description":"Body
-          based Authentication method."}]}},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1622","$type":"SequenceType","elementType":{"$id":"1623","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"1624","description":"Basic
-          Client Authentication
-          method.","name":"Basic","serializedName":"Basic"},{"$id":"1625","description":"Body
-          based Authentication
-          method.","name":"Body","serializedName":"Body"}],"modelAsString":true,"underlyingType":{"$id":"1626","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1627","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1628","fixed":false,"raw":"ClientAuthenticationMethod"},"deprecated":false},"name":{"$id":"1629","fixed":false},"extensions":{"x-ms-enum":{"name":"ClientAuthenticationMethod","modelAsString":true,"values":[{"value":"Basic","description":"Basic
-          Client Authentication method."},{"value":"Body","description":"Body
-          based Authentication method."}]}},"deprecated":false}
+        TypeName: ClientAuthenticationMethod
+        TypeNameGo: ClientAuthenticationMethod
         IsList: true
         Required: false
         Documentation: >-
@@ -33904,10 +33666,8 @@ Modules:
         NameTerraform: BearerTokenSendingMethods
         IdPortion: null
         Type: str
-        TypeName: >-
-          {"$id":"1658","$type":"SequenceType","elementType":{"$id":"1659","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"1660","name":"authorizationHeader","serializedName":"authorizationHeader"},{"$id":"1661","name":"query","serializedName":"query"}],"modelAsString":true,"underlyingType":{"$id":"1662","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1663","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1664","fixed":false,"raw":"BearerTokenSendingMethod"},"deprecated":false},"name":{"$id":"1665","fixed":false},"extensions":{"x-ms-enum":{"name":"BearerTokenSendingMethod","modelAsString":true}},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1658","$type":"SequenceType","elementType":{"$id":"1659","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"1660","name":"authorizationHeader","serializedName":"authorizationHeader"},{"$id":"1661","name":"query","serializedName":"query"}],"modelAsString":true,"underlyingType":{"$id":"1662","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1663","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1664","fixed":false,"raw":"BearerTokenSendingMethod"},"deprecated":false},"name":{"$id":"1665","fixed":false},"extensions":{"x-ms-enum":{"name":"BearerTokenSendingMethod","modelAsString":true}},"deprecated":false}
+        TypeName: BearerTokenSendingMethod
+        TypeNameGo: BearerTokenSendingMethod
         IsList: true
         Required: false
         Documentation: 'Specifies the mechanism by which access token is passed to the API. '
@@ -34127,42 +33887,8 @@ Modules:
         NameTerraform: GrantTypes
         IdPortion: null
         Type: str
-        TypeName: >-
-          {"$id":"1577","$type":"SequenceType","elementType":{"$id":"1578","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"1579","description":"Authorization
-          Code Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.1.","name":"authorizationCode","serializedName":"authorizationCode"},{"$id":"1580","description":"Implicit
-          Code Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.2.","name":"implicit","serializedName":"implicit"},{"$id":"1581","description":"Resource
-          Owner Password Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.3.","name":"resourceOwnerPassword","serializedName":"resourceOwnerPassword"},{"$id":"1582","description":"Client
-          Credentials Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.4.","name":"clientCredentials","serializedName":"clientCredentials"}],"modelAsString":true,"underlyingType":{"$id":"1583","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1584","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1585","fixed":false,"raw":"GrantType"},"deprecated":false},"name":{"$id":"1586","fixed":false},"extensions":{"x-ms-enum":{"name":"GrantType","modelAsString":true,"values":[{"value":"authorizationCode","description":"Authorization
-          Code Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.1."},{"value":"implicit","description":"Implicit
-          Code Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.2."},{"value":"resourceOwnerPassword","description":"Resource
-          Owner Password Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.3."},{"value":"clientCredentials","description":"Client
-          Credentials Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.4."}]}},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1577","$type":"SequenceType","elementType":{"$id":"1578","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"1579","description":"Authorization
-          Code Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.1.","name":"authorizationCode","serializedName":"authorizationCode"},{"$id":"1580","description":"Implicit
-          Code Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.2.","name":"implicit","serializedName":"implicit"},{"$id":"1581","description":"Resource
-          Owner Password Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.3.","name":"resourceOwnerPassword","serializedName":"resourceOwnerPassword"},{"$id":"1582","description":"Client
-          Credentials Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.4.","name":"clientCredentials","serializedName":"clientCredentials"}],"modelAsString":true,"underlyingType":{"$id":"1583","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1584","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1585","fixed":false,"raw":"GrantType"},"deprecated":false},"name":{"$id":"1586","fixed":false},"extensions":{"x-ms-enum":{"name":"GrantType","modelAsString":true,"values":[{"value":"authorizationCode","description":"Authorization
-          Code Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.1."},{"value":"implicit","description":"Implicit
-          Code Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.2."},{"value":"resourceOwnerPassword","description":"Resource
-          Owner Password Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.3."},{"value":"clientCredentials","description":"Client
-          Credentials Grant flow as described
-          https://tools.ietf.org/html/rfc6749#section-4.4."}]}},"deprecated":false}
+        TypeName: GrantType
+        TypeNameGo: GrantType
         IsList: true
         Required: true
         Documentation: >-
@@ -34768,10 +34494,8 @@ Modules:
             NameTerraform: ManagementEndpoints
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"1877","$type":"SequenceType","elementType":{"$id":"1878","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1879","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1880","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1877","$type":"SequenceType","elementType":{"$id":"1878","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1879","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1880","fixed":false},"deprecated":false}
+            TypeName: String
+            TypeNameGo: String
             IsList: true
             Required: true
             Documentation: The cluster management endpoint.
@@ -34800,10 +34524,8 @@ Modules:
             NameTerraform: ServerCertificateThumbprints
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"1885","$type":"SequenceType","elementType":{"$id":"1886","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1887","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1888","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1885","$type":"SequenceType","elementType":{"$id":"1886","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1887","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1888","fixed":false},"deprecated":false}
+            TypeName: String
+            TypeNameGo: String
             IsList: true
             Required: false
             Documentation: >-
@@ -34961,10 +34683,8 @@ Modules:
             NameTerraform: Certificate
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"1817","$type":"SequenceType","elementType":{"$id":"1818","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1819","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1820","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1817","$type":"SequenceType","elementType":{"$id":"1818","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1819","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1820","fixed":false},"deprecated":false}
+            TypeName: String
+            TypeNameGo: String
             IsList: true
             Required: false
             Documentation: List of Client Certificate Thumbprint.
@@ -35840,10 +35560,8 @@ Modules:
                     NameTerraform: ManagementEndpoints
                     IdPortion: null
                     Type: str
-                    TypeName: >-
-                      {"$id":"1877","$type":"SequenceType","elementType":{"$id":"1878","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1879","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1880","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"1877","$type":"SequenceType","elementType":{"$id":"1878","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1879","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1880","fixed":false},"deprecated":false}
+                    TypeName: String
+                    TypeNameGo: String
                     IsList: true
                     Required: true
                     Documentation: The cluster management endpoint.
@@ -35874,10 +35592,8 @@ Modules:
                     NameTerraform: ServerCertificateThumbprints
                     IdPortion: null
                     Type: str
-                    TypeName: >-
-                      {"$id":"1885","$type":"SequenceType","elementType":{"$id":"1886","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1887","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1888","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"1885","$type":"SequenceType","elementType":{"$id":"1886","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1887","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1888","fixed":false},"deprecated":false}
+                    TypeName: String
+                    TypeNameGo: String
                     IsList: true
                     Required: false
                     Documentation: >-
@@ -36049,10 +35765,8 @@ Modules:
                 NameTerraform: Certificate
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"1817","$type":"SequenceType","elementType":{"$id":"1818","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1819","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1820","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"1817","$type":"SequenceType","elementType":{"$id":"1818","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1819","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1820","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: List of Client Certificate Thumbprint.
@@ -37255,10 +36969,8 @@ Modules:
             NameTerraform: ManagementEndpoints
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"1877","$type":"SequenceType","elementType":{"$id":"1878","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1879","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1880","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1877","$type":"SequenceType","elementType":{"$id":"1878","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1879","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1880","fixed":false},"deprecated":false}
+            TypeName: String
+            TypeNameGo: String
             IsList: true
             Required: true
             Documentation: The cluster management endpoint.
@@ -37287,10 +36999,8 @@ Modules:
             NameTerraform: ServerCertificateThumbprints
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"1885","$type":"SequenceType","elementType":{"$id":"1886","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1887","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1888","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1885","$type":"SequenceType","elementType":{"$id":"1886","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1887","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1888","fixed":false},"deprecated":false}
+            TypeName: String
+            TypeNameGo: String
             IsList: true
             Required: false
             Documentation: >-
@@ -37448,10 +37158,8 @@ Modules:
             NameTerraform: Certificate
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"1817","$type":"SequenceType","elementType":{"$id":"1818","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1819","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1820","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1817","$type":"SequenceType","elementType":{"$id":"1818","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1819","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1820","fixed":false},"deprecated":false}
+            TypeName: String
+            TypeNameGo: String
             IsList: true
             Required: false
             Documentation: List of Client Certificate Thumbprint.
@@ -42149,10 +41857,8 @@ Modules:
             NameTerraform: PublicIpAddresses
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"2346","$type":"SequenceType","elementType":{"$id":"2347","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2348","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"2349","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"2346","$type":"SequenceType","elementType":{"$id":"2347","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2348","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"2349","fixed":false},"deprecated":false}
+            TypeName: String
+            TypeNameGo: String
             IsList: true
             Required: false
             Documentation: >-
@@ -42185,10 +41891,8 @@ Modules:
             NameTerraform: PrivateIpAddresses
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"2354","$type":"SequenceType","elementType":{"$id":"2355","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2356","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"2357","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"2354","$type":"SequenceType","elementType":{"$id":"2355","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2356","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"2357","fixed":false},"deprecated":false}
+            TypeName: String
+            TypeNameGo: String
             IsList: true
             Required: false
             Documentation: >-
@@ -42960,10 +42664,8 @@ Modules:
         NameTerraform: PublicIpAddresses
         IdPortion: null
         Type: str
-        TypeName: >-
-          {"$id":"2473","$type":"SequenceType","elementType":{"$id":"2474","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2475","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"2476","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"2473","$type":"SequenceType","elementType":{"$id":"2474","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2475","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"2476","fixed":false},"deprecated":false}
+        TypeName: String
+        TypeNameGo: String
         IsList: true
         Required: false
         Documentation: >-
@@ -42995,10 +42697,8 @@ Modules:
         NameTerraform: PrivateIpAddresses
         IdPortion: null
         Type: str
-        TypeName: >-
-          {"$id":"2481","$type":"SequenceType","elementType":{"$id":"2482","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2483","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"2484","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"2481","$type":"SequenceType","elementType":{"$id":"2482","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2483","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"2484","fixed":false},"deprecated":false}
+        TypeName: String
+        TypeNameGo: String
         IsList: true
         Required: false
         Documentation: >-
@@ -46710,10 +46410,8 @@ Modules:
         NameTerraform: PublicIpAddresses
         IdPortion: null
         Type: str
-        TypeName: >-
-          {"$id":"2473","$type":"SequenceType","elementType":{"$id":"2474","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2475","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"2476","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"2473","$type":"SequenceType","elementType":{"$id":"2474","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2475","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"2476","fixed":false},"deprecated":false}
+        TypeName: String
+        TypeNameGo: String
         IsList: true
         Required: false
         Documentation: >-
@@ -46744,10 +46442,8 @@ Modules:
         NameTerraform: PrivateIpAddresses
         IdPortion: null
         Type: str
-        TypeName: >-
-          {"$id":"2481","$type":"SequenceType","elementType":{"$id":"2482","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2483","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"2484","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"2481","$type":"SequenceType","elementType":{"$id":"2482","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2483","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"2484","fixed":false},"deprecated":false}
+        TypeName: String
+        TypeNameGo: String
         IsList: true
         Required: false
         Documentation: >-
@@ -47060,10 +46756,8 @@ Modules:
             NameTerraform: PublicIpAddresses
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"2346","$type":"SequenceType","elementType":{"$id":"2347","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2348","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"2349","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"2346","$type":"SequenceType","elementType":{"$id":"2347","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2348","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"2349","fixed":false},"deprecated":false}
+            TypeName: String
+            TypeNameGo: String
             IsList: true
             Required: false
             Documentation: >-
@@ -47095,10 +46789,8 @@ Modules:
             NameTerraform: PrivateIpAddresses
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"2354","$type":"SequenceType","elementType":{"$id":"2355","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2356","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"2357","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"2354","$type":"SequenceType","elementType":{"$id":"2355","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2356","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"2357","fixed":false},"deprecated":false}
+            TypeName: String
+            TypeNameGo: String
             IsList: true
             Required: false
             Documentation: >-
@@ -48970,10 +48662,8 @@ Modules:
                 NameTerraform: Headers
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: Array of HTTP Headers to log.
@@ -49092,10 +48782,8 @@ Modules:
                 NameTerraform: Headers
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: Array of HTTP Headers to log.
@@ -49244,10 +48932,8 @@ Modules:
                 NameTerraform: Headers
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: Array of HTTP Headers to log.
@@ -49366,10 +49052,8 @@ Modules:
                 NameTerraform: Headers
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: Array of HTTP Headers to log.
@@ -49911,10 +49595,8 @@ Modules:
                     NameTerraform: Headers
                     IdPortion: null
                     Type: str
-                    TypeName: >-
-                      {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
+                    TypeName: String
+                    TypeNameGo: String
                     IsList: true
                     Required: false
                     Documentation: Array of HTTP Headers to log.
@@ -50033,10 +49715,8 @@ Modules:
                     NameTerraform: Headers
                     IdPortion: null
                     Type: str
-                    TypeName: >-
-                      {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
+                    TypeName: String
+                    TypeNameGo: String
                     IsList: true
                     Required: false
                     Documentation: Array of HTTP Headers to log.
@@ -50187,10 +49867,8 @@ Modules:
                     NameTerraform: Headers
                     IdPortion: null
                     Type: str
-                    TypeName: >-
-                      {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
+                    TypeName: String
+                    TypeNameGo: String
                     IsList: true
                     Required: false
                     Documentation: Array of HTTP Headers to log.
@@ -50309,10 +49987,8 @@ Modules:
                     NameTerraform: Headers
                     IdPortion: null
                     Type: str
-                    TypeName: >-
-                      {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
+                    TypeName: String
+                    TypeNameGo: String
                     IsList: true
                     Required: false
                     Documentation: Array of HTTP Headers to log.
@@ -51118,10 +50794,8 @@ Modules:
                 NameTerraform: Headers
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: Array of HTTP Headers to log.
@@ -51240,10 +50914,8 @@ Modules:
                 NameTerraform: Headers
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: Array of HTTP Headers to log.
@@ -51392,10 +51064,8 @@ Modules:
                 NameTerraform: Headers
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: Array of HTTP Headers to log.
@@ -51514,10 +51184,8 @@ Modules:
                 NameTerraform: Headers
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"910","$type":"SequenceType","elementType":{"$id":"911","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"912","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"913","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: Array of HTTP Headers to log.
@@ -56892,10 +56560,8 @@ Modules:
         NameTerraform: AllowedTenants
         IdPortion: null
         Type: str
-        TypeName: >-
-          {"$id":"3182","$type":"SequenceType","elementType":{"$id":"3183","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"3184","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"3185","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"3182","$type":"SequenceType","elementType":{"$id":"3183","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"3184","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"3185","fixed":false},"deprecated":false}
+        TypeName: String
+        TypeNameGo: String
         IsList: true
         Required: false
         Documentation: List of Allowed Tenants when configuring Azure Active Directory login.
@@ -57388,10 +57054,8 @@ Modules:
             NameTerraform: AllowedTenants
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"3182","$type":"SequenceType","elementType":{"$id":"3183","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"3184","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"3185","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"3182","$type":"SequenceType","elementType":{"$id":"3183","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"3184","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"3185","fixed":false},"deprecated":false}
+            TypeName: String
+            TypeNameGo: String
             IsList: true
             Required: false
             Documentation: >-
@@ -58053,10 +57717,8 @@ Modules:
         NameTerraform: AllowedTenants
         IdPortion: null
         Type: str
-        TypeName: >-
-          {"$id":"3182","$type":"SequenceType","elementType":{"$id":"3183","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"3184","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"3185","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"3182","$type":"SequenceType","elementType":{"$id":"3183","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"3184","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"3185","fixed":false},"deprecated":false}
+        TypeName: String
+        TypeNameGo: String
         IsList: true
         Required: false
         Documentation: List of Allowed Tenants when configuring Azure Active Directory login.
@@ -61075,10 +60737,8 @@ Modules:
             NameTerraform: Emails
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"3480","$type":"SequenceType","elementType":{"$id":"3481","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"3482","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"3483","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"3480","$type":"SequenceType","elementType":{"$id":"3481","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"3482","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"3483","fixed":false},"deprecated":false}
+            TypeName: String
+            TypeNameGo: String
             IsList: true
             Required: false
             Documentation: List of Emails subscribed for the notification.
@@ -61107,10 +60767,8 @@ Modules:
             NameTerraform: Users
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"3488","$type":"SequenceType","elementType":{"$id":"3489","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"3490","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"3491","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"3488","$type":"SequenceType","elementType":{"$id":"3489","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"3490","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"3491","fixed":false},"deprecated":false}
+            TypeName: String
+            TypeNameGo: String
             IsList: true
             Required: false
             Documentation: List of Users subscribed for the notification.
@@ -61560,10 +61218,8 @@ Modules:
             NameTerraform: Emails
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"3480","$type":"SequenceType","elementType":{"$id":"3481","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"3482","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"3483","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"3480","$type":"SequenceType","elementType":{"$id":"3481","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"3482","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"3483","fixed":false},"deprecated":false}
+            TypeName: String
+            TypeNameGo: String
             IsList: true
             Required: false
             Documentation: List of Emails subscribed for the notification.
@@ -61592,10 +61248,8 @@ Modules:
             NameTerraform: Users
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"3488","$type":"SequenceType","elementType":{"$id":"3489","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"3490","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"3491","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"3488","$type":"SequenceType","elementType":{"$id":"3489","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"3490","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"3491","fixed":false},"deprecated":false}
+            TypeName: String
+            TypeNameGo: String
             IsList: true
             Required: false
             Documentation: List of Users subscribed for the notification.
@@ -71485,20 +71139,8 @@ Modules:
                 NameTerraform: BearerTokenSendingMethods
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"287","$type":"SequenceType","elementType":{"$id":"288","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"289","description":"Access
-                  token will be transmitted in the Authorization header using
-                  Bearer
-                  schema","name":"authorizationHeader","serializedName":"authorizationHeader"},{"$id":"290","description":"Access
-                  token will be transmitted as query
-                  parameters.","name":"query","serializedName":"query"}],"modelAsString":true,"underlyingType":{"$id":"291","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"292","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"293","fixed":false,"raw":"bearerTokenSendingMethods"},"deprecated":false},"name":{"$id":"294","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"287","$type":"SequenceType","elementType":{"$id":"288","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"289","description":"Access
-                  token will be transmitted in the Authorization header using
-                  Bearer
-                  schema","name":"authorizationHeader","serializedName":"authorizationHeader"},{"$id":"290","description":"Access
-                  token will be transmitted as query
-                  parameters.","name":"query","serializedName":"query"}],"modelAsString":true,"underlyingType":{"$id":"291","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"292","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"293","fixed":false,"raw":"bearerTokenSendingMethods"},"deprecated":false},"name":{"$id":"294","fixed":false},"deprecated":false}
+                TypeName: bearerTokenSendingMethods
+                TypeNameGo: bearerTokenSendingMethods
                 IsList: true
                 Required: false
                 Documentation: How to send token to the server.
@@ -72083,10 +71725,8 @@ Modules:
         NameTerraform: Protocols
         IdPortion: null
         Type: 'unknown[undefined {"$ref":"350"}]'
-        TypeName: >-
-          {"$id":"556","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"557","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"556","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"557","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
+        TypeName: '{"$ref":"350"}'
+        TypeNameGo: '{"$ref":"350"}'
         IsList: true
         Required: false
         Documentation: >-
@@ -72941,20 +72581,8 @@ Modules:
                     NameTerraform: BearerTokenSendingMethods
                     IdPortion: null
                     Type: str
-                    TypeName: >-
-                      {"$id":"287","$type":"SequenceType","elementType":{"$id":"288","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"289","description":"Access
-                      token will be transmitted in the Authorization header
-                      using Bearer
-                      schema","name":"authorizationHeader","serializedName":"authorizationHeader"},{"$id":"290","description":"Access
-                      token will be transmitted as query
-                      parameters.","name":"query","serializedName":"query"}],"modelAsString":true,"underlyingType":{"$id":"291","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"292","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"293","fixed":false,"raw":"bearerTokenSendingMethods"},"deprecated":false},"name":{"$id":"294","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"287","$type":"SequenceType","elementType":{"$id":"288","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"289","description":"Access
-                      token will be transmitted in the Authorization header
-                      using Bearer
-                      schema","name":"authorizationHeader","serializedName":"authorizationHeader"},{"$id":"290","description":"Access
-                      token will be transmitted as query
-                      parameters.","name":"query","serializedName":"query"}],"modelAsString":true,"underlyingType":{"$id":"291","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"292","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"293","fixed":false,"raw":"bearerTokenSendingMethods"},"deprecated":false},"name":{"$id":"294","fixed":false},"deprecated":false}
+                    TypeName: bearerTokenSendingMethods
+                    TypeNameGo: bearerTokenSendingMethods
                     IsList: true
                     Required: false
                     Documentation: How to send token to the server.
@@ -73544,10 +73172,8 @@ Modules:
             NameTerraform: Protocols
             IdPortion: null
             Type: 'unknown[undefined {"$ref":"350"}]'
-            TypeName: >-
-              {"$id":"556","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"557","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"556","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"557","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
+            TypeName: '{"$ref":"350"}'
+            TypeNameGo: '{"$ref":"350"}'
             IsList: true
             Required: false
             Documentation: >-
@@ -77145,10 +76771,8 @@ Modules:
         NameTerraform: Tags
         IdPortion: null
         Type: str
-        TypeName: >-
-          {"$id":"3883","$type":"SequenceType","elementType":{"$id":"3884","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"3885","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"3886","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"3883","$type":"SequenceType","elementType":{"$id":"3884","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"3885","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"3886","fixed":false},"deprecated":false}
+        TypeName: String
+        TypeNameGo: String
         IsList: true
         Required: false
         Documentation: >-
@@ -77473,10 +77097,8 @@ Modules:
             NameTerraform: Tags
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"3883","$type":"SequenceType","elementType":{"$id":"3884","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"3885","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"3886","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"3883","$type":"SequenceType","elementType":{"$id":"3884","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"3885","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"3886","fixed":false},"deprecated":false}
+            TypeName: String
+            TypeNameGo: String
             IsList: true
             Required: false
             Documentation: >-
@@ -77976,10 +77598,8 @@ Modules:
         NameTerraform: Tags
         IdPortion: null
         Type: str
-        TypeName: >-
-          {"$id":"3883","$type":"SequenceType","elementType":{"$id":"3884","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"3885","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"3886","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"3883","$type":"SequenceType","elementType":{"$id":"3884","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"3885","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"3886","fixed":false},"deprecated":false}
+        TypeName: String
+        TypeNameGo: String
         IsList: true
         Required: false
         Documentation: >-
@@ -83637,20 +83257,8 @@ Modules:
                         NameTerraform: BearerTokenSendingMethods
                         IdPortion: null
                         Type: str
-                        TypeName: >-
-                          {"$id":"287","$type":"SequenceType","elementType":{"$id":"288","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"289","description":"Access
-                          token will be transmitted in the Authorization header
-                          using Bearer
-                          schema","name":"authorizationHeader","serializedName":"authorizationHeader"},{"$id":"290","description":"Access
-                          token will be transmitted as query
-                          parameters.","name":"query","serializedName":"query"}],"modelAsString":true,"underlyingType":{"$id":"291","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"292","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"293","fixed":false,"raw":"bearerTokenSendingMethods"},"deprecated":false},"name":{"$id":"294","fixed":false},"deprecated":false}
-                        TypeNameGo: >-
-                          {"$id":"287","$type":"SequenceType","elementType":{"$id":"288","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"289","description":"Access
-                          token will be transmitted in the Authorization header
-                          using Bearer
-                          schema","name":"authorizationHeader","serializedName":"authorizationHeader"},{"$id":"290","description":"Access
-                          token will be transmitted as query
-                          parameters.","name":"query","serializedName":"query"}],"modelAsString":true,"underlyingType":{"$id":"291","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"292","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"293","fixed":false,"raw":"bearerTokenSendingMethods"},"deprecated":false},"name":{"$id":"294","fixed":false},"deprecated":false}
+                        TypeName: bearerTokenSendingMethods
+                        TypeNameGo: bearerTokenSendingMethods
                         IsList: true
                         Required: false
                         Documentation: How to send token to the server.
@@ -84236,10 +83844,8 @@ Modules:
                 NameTerraform: Protocols
                 IdPortion: null
                 Type: 'unknown[undefined {"$ref":"350"}]'
-                TypeName: >-
-                  {"$id":"593","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"594","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"593","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"594","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
+                TypeName: '{"$ref":"350"}'
+                TypeNameGo: '{"$ref":"350"}'
                 IsList: true
                 Required: false
                 Documentation: >-
