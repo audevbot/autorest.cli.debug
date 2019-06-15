@@ -61,11 +61,11 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - NameSwagger: parameters
-        NameAnsible: parameters
-        NamePythonSdk: parameters
-        NameGoSdk: Parameters
-        NameTerraform: Parameters
+      - NameSwagger: createUpdateParameters
+        NameAnsible: create_update_parameters
+        NamePythonSdk: create_update_parameters
+        NameGoSdk: CreateUpdateParameters
+        NameTerraform: CreateUpdateParameters
         IdPortion: null
         Type: dict
         TypeName: DatabaseAccountCreateUpdateParameters
@@ -87,7 +87,30 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: true
-        ExampleValue: null
+        ExampleValue:
+          location: westus
+          tags: {}
+          kind: GlobalDocumentDB
+          properties:
+            databaseAccountOfferType: Standard
+            ipRangeFilter: 10.10.10.10
+            isVirtualNetworkFilterEnabled: true
+            virtualNetworkRules:
+              - id: >-
+                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                  resource_group
+                  }}/providers/Microsoft.Network/virtualNetworks/{{
+                  virtual_network_name }}/subnets/{{ subnet_name }}
+                ignoreMissingVNetServiceEndpoint: false
+            locations:
+              - failoverPriority: '0'
+                locationName: southcentralus
+              - failoverPriority: '1'
+                locationName: eastus
+            consistencyPolicy:
+              defaultConsistencyLevel: BoundedStaleness
+              maxIntervalInSeconds: '10'
+              maxStalenessPrefix: '200'
         Hidden: false
         IncludeInResponse: false
         Flatten: false

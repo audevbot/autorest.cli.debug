@@ -61,6 +61,12 @@ EXAMPLES = '''
     resource_group: myResourceGroup
     front_door_name: myFrontDoor
     name: myHealthProbeSetting
+    health_probe_settings_parameters:
+      name: healthProbeSettings1
+      properties:
+        path: /
+        protocol: Http
+        intervalInSeconds: '120'
 - name: Delete HealthProbeSettings
   azure_rm_frontdoorhealthprobesetting:
     resource_group: myResourceGroup

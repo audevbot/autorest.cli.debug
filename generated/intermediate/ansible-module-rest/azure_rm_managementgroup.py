@@ -188,6 +188,16 @@ EXAMPLES = '''
 - name: PutManagementGroup
   azure_rm_managementgroup:
     group_id: myManagementGroup
+    create_management_group_request:
+      id: /providers/Microsoft.Management/managementGroups/ChildGroup
+      type: /providers/Microsoft.Management/managementGroups
+      name: ChildGroup
+      properties:
+        tenantId: 20000000-0000-0000-0000-000000000000
+        displayName: ChildGroup
+        details:
+          parent:
+            id: /providers/Microsoft.Management/managementGroups/RootGroup
 - name: PatchManagementGroup
   azure_rm_managementgroup:
     group_id: myManagementGroup

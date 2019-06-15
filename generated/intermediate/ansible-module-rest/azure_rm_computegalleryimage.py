@@ -163,6 +163,15 @@ EXAMPLES = '''
     resource_group: myResourceGroup
     gallery_name: myGallery
     name: myImage
+    gallery_image:
+      location: West US
+      properties:
+        osType: Windows
+        osState: Generalized
+        identifier:
+          publisher: myPublisherName
+          offer: myOfferName
+          sku: mySkuName
 - name: Delete a gallery image.
   azure_rm_computegalleryimage:
     resource_group: myResourceGroup

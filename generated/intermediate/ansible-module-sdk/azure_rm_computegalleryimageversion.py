@@ -181,6 +181,22 @@ EXAMPLES = '''
     gallery_name: myGallery
     gallery_image_name: myImage
     name: myVersion
+    gallery_image_version:
+      location: West US
+      properties:
+        publishingProfile:
+          targetRegions:
+            - name: West US
+              regionalReplicaCount: '1'
+            - name: East US
+              regionalReplicaCount: '2'
+              storageAccountType: Standard_ZRS
+          source:
+            managedImage:
+              id: >-
+                /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                resource_group }}/providers/Microsoft.Compute/images/{{
+                image_name }}
 - name: Delete a gallery Image Version.
   azure_rm_computegalleryimageversion:
     resource_group: myResourceGroup

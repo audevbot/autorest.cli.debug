@@ -65,6 +65,11 @@ EXAMPLES = '''
   azure_rm_eventgridtopic:
     resource_group: myResourceGroup
     name: myTopic
+    topic_info:
+      location: westus2
+      tags:
+        tag1: value1
+        tag2: value2
 - name: Topics_Update
   azure_rm_eventgridtopic:
     resource_group: myResourceGroup

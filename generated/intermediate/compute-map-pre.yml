@@ -64,11 +64,11 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - NameSwagger: parameters
-        NameAnsible: parameters
-        NamePythonSdk: parameters
-        NameGoSdk: Parameters
-        NameTerraform: Parameters
+      - NameSwagger: gallery
+        NameAnsible: gallery
+        NamePythonSdk: gallery
+        NameGoSdk: Gallery
+        NameTerraform: Gallery
         IdPortion: null
         Type: dict
         TypeName: Gallery
@@ -1376,11 +1376,11 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - NameSwagger: parameters
-        NameAnsible: parameters
-        NamePythonSdk: parameters
-        NameGoSdk: Parameters
-        NameTerraform: Parameters
+      - NameSwagger: galleryImage
+        NameAnsible: gallery_image
+        NamePythonSdk: gallery_image
+        NameGoSdk: GalleryImage
+        NameTerraform: GalleryImage
         IdPortion: null
         Type: dict
         TypeName: GalleryImage
@@ -4722,11 +4722,11 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - NameSwagger: parameters
-        NameAnsible: parameters
-        NamePythonSdk: parameters
-        NameGoSdk: Parameters
-        NameTerraform: Parameters
+      - NameSwagger: galleryImageVersion
+        NameAnsible: gallery_image_version
+        NamePythonSdk: gallery_image_version
+        NameGoSdk: GalleryImageVersion
+        NameTerraform: GalleryImageVersion
         IdPortion: null
         Type: dict
         TypeName: GalleryImageVersion

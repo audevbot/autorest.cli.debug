@@ -75,11 +75,11 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - NameSwagger: parameters
-        NameAnsible: parameters
-        NamePythonSdk: parameters
-        NameGoSdk: Parameters
-        NameTerraform: Parameters
+      - NameSwagger: eventSubscriptionInfo
+        NameAnsible: event_subscription_info
+        NamePythonSdk: event_subscription_info
+        NameGoSdk: EventSubscriptionInfo
+        NameTerraform: EventSubscriptionInfo
         IdPortion: null
         Type: dict
         TypeName: EventSubscription
@@ -4380,11 +4380,11 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - NameSwagger: parameters
-        NameAnsible: parameters
-        NamePythonSdk: parameters
-        NameGoSdk: Parameters
-        NameTerraform: Parameters
+      - NameSwagger: topicInfo
+        NameAnsible: topic_info
+        NamePythonSdk: topic_info
+        NameGoSdk: TopicInfo
+        NameTerraform: TopicInfo
         IdPortion: null
         Type: dict
         TypeName: Topic
