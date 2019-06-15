@@ -641,13 +641,13 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Basic
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Basic
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Standard
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Standard
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Premium
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Premium
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /sku/name
             PathPython: /sku/name
@@ -680,13 +680,13 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Basic
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Basic
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Standard
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Standard
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Premium
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Premium
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /sku/tier
             PathPython: /sku/tier
@@ -1239,13 +1239,13 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Basic
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Basic
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Standard
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Standard
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Premium
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Premium
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /sku/name
             PathPython: /sku/name
@@ -1278,13 +1278,13 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Basic
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Basic
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Standard
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Standard
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Premium
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Premium
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /sku/tier
             PathPython: /sku/tier
@@ -1850,13 +1850,13 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Basic
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Basic
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Standard
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Standard
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Premium
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Premium
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /sku/name
             PathPython: /sku/name
@@ -1889,13 +1889,13 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Basic
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Basic
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Standard
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Standard
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Premium
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Premium
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /sku/tier
             PathPython: /sku/tier
@@ -3609,13 +3609,13 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Accepted
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Accepted
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Succeeded
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Succeeded
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Failed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Failed
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/provisioningState
         PathPython: /provisioningState
@@ -3682,13 +3682,13 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Primary
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Primary
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: PrimaryNotReplicating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: PrimaryNotReplicating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Secondary
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Secondary
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/role
         PathPython: /role
@@ -4350,13 +4350,13 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Accepted
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Accepted
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Succeeded
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Succeeded
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Failed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Failed
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/provisioningState
         PathPython: /provisioningState
@@ -4485,13 +4485,13 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Primary
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Primary
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: PrimaryNotReplicating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: PrimaryNotReplicating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Secondary
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Secondary
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/role
         PathPython: /role
@@ -5732,31 +5732,31 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Active
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Active
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Disabled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Disabled
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Restoring
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Restoring
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: SendDisabled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: SendDisabled
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: ReceiveDisabled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: ReceiveDisabled
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Creating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Creating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Deleting
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Deleting
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Renaming
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Renaming
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Unknown
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Unknown
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/status
         PathPython: /status
@@ -6793,31 +6793,31 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Active
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Active
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Disabled
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Disabled
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Restoring
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Restoring
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: SendDisabled
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: SendDisabled
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: ReceiveDisabled
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: ReceiveDisabled
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Creating
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Creating
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Deleting
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Deleting
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Renaming
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Renaming
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Unknown
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Unknown
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/status
             PathPython: /status
@@ -7986,31 +7986,31 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Active
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Active
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Disabled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Disabled
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Restoring
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Restoring
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: SendDisabled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: SendDisabled
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: ReceiveDisabled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: ReceiveDisabled
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Creating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Creating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Deleting
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Deleting
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Renaming
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Renaming
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Unknown
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Unknown
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/status
         PathPython: /status
@@ -8815,31 +8815,31 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Active
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Active
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Disabled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Disabled
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Restoring
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Restoring
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: SendDisabled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: SendDisabled
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: ReceiveDisabled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: ReceiveDisabled
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Creating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Creating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Deleting
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Deleting
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Renaming
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Renaming
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Unknown
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Unknown
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/status
         PathPython: /status
@@ -9716,31 +9716,31 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Active
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Active
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Disabled
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Disabled
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Restoring
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Restoring
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: SendDisabled
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: SendDisabled
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: ReceiveDisabled
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: ReceiveDisabled
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Creating
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Creating
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Deleting
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Deleting
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Renaming
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Renaming
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Unknown
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Unknown
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/status
             PathPython: /status
@@ -10749,31 +10749,31 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Active
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Active
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Disabled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Disabled
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Restoring
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Restoring
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: SendDisabled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: SendDisabled
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: ReceiveDisabled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: ReceiveDisabled
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Creating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Creating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Deleting
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Deleting
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Renaming
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Renaming
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Unknown
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Unknown
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/status
         PathPython: /status
@@ -11606,31 +11606,31 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Active
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Active
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Disabled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Disabled
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Restoring
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Restoring
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: SendDisabled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: SendDisabled
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: ReceiveDisabled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: ReceiveDisabled
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Creating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Creating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Deleting
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Deleting
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Renaming
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Renaming
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Unknown
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Unknown
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/status
         PathPython: /status
@@ -12509,31 +12509,31 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Active
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Active
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Disabled
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Disabled
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Restoring
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Restoring
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: SendDisabled
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: SendDisabled
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: ReceiveDisabled
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: ReceiveDisabled
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Creating
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Creating
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Deleting
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Deleting
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Renaming
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Renaming
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Unknown
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Unknown
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/status
             PathPython: /status
@@ -13578,31 +13578,31 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Active
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Active
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Disabled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Disabled
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Restoring
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Restoring
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: SendDisabled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: SendDisabled
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: ReceiveDisabled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: ReceiveDisabled
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Creating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Creating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Deleting
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Deleting
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Renaming
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Renaming
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Unknown
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Unknown
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/status
         PathPython: /status
@@ -14267,10 +14267,10 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: SqlFilter
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: SqlFilter
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: CorrelationFilter
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: CorrelationFilter
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/filterType
         PathPython: /filterType
@@ -15086,10 +15086,10 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: SqlFilter
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: SqlFilter
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: CorrelationFilter
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: CorrelationFilter
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/filterType
             PathPython: /filterType
@@ -16174,10 +16174,10 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: SqlFilter
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: SqlFilter
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: CorrelationFilter
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: CorrelationFilter
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/filterType
         PathPython: /filterType
@@ -18407,31 +18407,31 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Active
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Active
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Disabled
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Disabled
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Restoring
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Restoring
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: SendDisabled
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: SendDisabled
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: ReceiveDisabled
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: ReceiveDisabled
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Creating
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Creating
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Deleting
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Deleting
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Renaming
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Renaming
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Unknown
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Unknown
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /value/properties/status
             PathPython: /value/status
@@ -18516,10 +18516,10 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: Avro
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Avro
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: AvroDeflate
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: AvroDeflate
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /value/properties/captureDescription/encoding
                 PathPython: /value/captureDescription/encoding

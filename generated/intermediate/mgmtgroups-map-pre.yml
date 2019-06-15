@@ -538,10 +538,10 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: /providers/Microsoft.Management/managementGroups
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: /providers/Microsoft.Management/managementGroups
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: /subscriptions
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: /subscriptions
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/children/type
             PathPython: /children/type
@@ -718,10 +718,10 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: /providers/Microsoft.Management/managementGroups
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: /providers/Microsoft.Management/managementGroups
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: /subscriptions
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: /subscriptions
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /properties/children/children/type
                 PathPython: /children/children/type
@@ -898,10 +898,10 @@ Modules:
                     SubOptions: []
                     EnumValues:
                       - Key: /providers/Microsoft.Management/managementGroups
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: /providers/Microsoft.Management/managementGroups
                         Description: !<tag:yaml.org,2002:js/undefined> ''
                       - Key: /subscriptions
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: /subscriptions
                         Description: !<tag:yaml.org,2002:js/undefined> ''
                     PathSwagger: /properties/children/children/children/type
                     PathPython: /children/children/children/type
@@ -2102,10 +2102,10 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: /providers/Microsoft.Management/managementGroups
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: /providers/Microsoft.Management/managementGroups
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: /subscriptions
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: /subscriptions
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/children/type
             PathPython: /children/type
@@ -2282,10 +2282,10 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: /providers/Microsoft.Management/managementGroups
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: /providers/Microsoft.Management/managementGroups
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                   - Key: /subscriptions
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: /subscriptions
                     Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /properties/children/children/type
                 PathPython: /children/children/type
@@ -2462,10 +2462,10 @@ Modules:
                     SubOptions: []
                     EnumValues:
                       - Key: /providers/Microsoft.Management/managementGroups
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: /providers/Microsoft.Management/managementGroups
                         Description: !<tag:yaml.org,2002:js/undefined> ''
                       - Key: /subscriptions
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: /subscriptions
                         Description: !<tag:yaml.org,2002:js/undefined> ''
                     PathSwagger: /properties/children/children/children/type
                     PathPython: /children/children/children/type

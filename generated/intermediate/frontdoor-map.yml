@@ -548,10 +548,10 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Enabled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Enabled
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Disabled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Disabled
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/enabledState
         PathPython: /enabledState
@@ -584,22 +584,22 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Creating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Creating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Enabling
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Enabling
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Enabled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Enabled
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Disabling
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Disabling
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Disabled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Disabled
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Deleting
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Deleting
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/resourceState
         PathPython: /resourceState
@@ -1142,10 +1142,10 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Enabled
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Enabled
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Disabled
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Disabled
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/enabledState
             PathPython: /enabledState
@@ -1178,22 +1178,22 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Creating
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Creating
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Enabling
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Enabling
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Enabled
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Enabled
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Disabling
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Disabling
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Disabled
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Disabled
                 Description: !<tag:yaml.org,2002:js/undefined> ''
               - Key: Deleting
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Deleting
                 Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/resourceState
             PathPython: /resourceState
@@ -2297,10 +2297,10 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Enabled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Enabled
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Disabled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Disabled
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/enabledState
         PathPython: /enabledState
@@ -2333,22 +2333,22 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Creating
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Creating
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Enabling
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Enabling
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Enabled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Enabled
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Disabling
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Disabling
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Disabled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Disabled
             Description: !<tag:yaml.org,2002:js/undefined> ''
           - Key: Deleting
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Deleting
             Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/resourceState
         PathPython: /resourceState

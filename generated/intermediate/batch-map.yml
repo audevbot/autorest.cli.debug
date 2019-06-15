@@ -314,12 +314,12 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: BatchService
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: BatchService
             Description: >-
               Pools will be allocated in subscriptions owned by the Batch
               service.
           - Key: UserSubscription
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: UserSubscription
             Description: Pools will be allocated in a subscription owned by the user.
         PathSwagger: /properties/poolAllocationMode
         PathPython: /poolAllocationMode
@@ -725,22 +725,22 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Invalid
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Invalid
                 Description: The account is in an invalid state.
               - Key: Creating
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Creating
                 Description: The account is being created.
               - Key: Deleting
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Deleting
                 Description: The account is being deleted.
               - Key: Succeeded
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Succeeded
                 Description: The account has been created and is ready for use.
               - Key: Failed
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Failed
                 Description: The last operation for the account is failed.
               - Key: Cancelled
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Cancelled
                 Description: The last operation for the account is cancelled.
             PathSwagger: /properties/provisioningState
             PathPython: /provisioningState
@@ -773,12 +773,12 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: BatchService
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: BatchService
                 Description: >-
                   Pools will be allocated in subscriptions owned by the Batch
                   service.
               - Key: UserSubscription
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: UserSubscription
                 Description: Pools will be allocated in a subscription owned by the user.
             PathSwagger: /properties/poolAllocationMode
             PathPython: /poolAllocationMode
@@ -1558,12 +1558,12 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: BatchService
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: BatchService
             Description: >-
               Pools will be allocated in subscriptions owned by the Batch
               service.
           - Key: UserSubscription
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: UserSubscription
             Description: Pools will be allocated in a subscription owned by the user.
         PathSwagger: /properties/poolAllocationMode
         PathPython: /poolAllocationMode
@@ -2205,12 +2205,12 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Pending
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Pending
             Description: >-
               The application package has been created but has not yet been
               activated.
           - Key: Active
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Active
             Description: The application package is ready for use.
         PathSwagger: /properties/state
         PathPython: /state
@@ -2937,12 +2937,12 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Pending
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Pending
             Description: >-
               The application package has been created but has not yet been
               activated.
           - Key: Active
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Active
             Description: The application package is ready for use.
         PathSwagger: /properties/state
         PathPython: /state
@@ -5177,12 +5177,12 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Pfx
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Pfx
             Description: >-
               The certificate is a PFX (PKCS#12) formatted certificate or
               certificate chain.
           - Key: Cer
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Cer
             Description: The certificate is a base64-encoded X.509 certificate.
         PathSwagger: /properties/format
         PathPython: /format
@@ -5309,16 +5309,16 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Succeeded
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Succeeded
             Description: The certificate is available for use in pools.
           - Key: Deleting
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Deleting
             Description: >-
               The user has requested that the certificate be deleted, but the
               delete operation has not yet completed. You may not reference the
               certificate when creating or updating pools.
           - Key: Failed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Failed
             Description: >-
               The user requested that the certificate be deleted, but there are
               pools that still have references to the certificate, or it is
@@ -6121,12 +6121,12 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Pfx
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Pfx
                 Description: >-
                   The certificate is a PFX (PKCS#12) formatted certificate or
                   certificate chain.
               - Key: Cer
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Cer
                 Description: The certificate is a base64-encoded X.509 certificate.
             PathSwagger: /properties/format
             PathPython: /format
@@ -6159,16 +6159,16 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Succeeded
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Succeeded
                 Description: The certificate is available for use in pools.
               - Key: Deleting
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Deleting
                 Description: >-
                   The user has requested that the certificate be deleted, but
                   the delete operation has not yet completed. You may not
                   reference the certificate when creating or updating pools.
               - Key: Failed
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Failed
                 Description: >-
                   The user requested that the certificate be deleted, but there
                   are pools that still have references to the certificate, or it
@@ -6761,12 +6761,12 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Pfx
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Pfx
             Description: >-
               The certificate is a PFX (PKCS#12) formatted certificate or
               certificate chain.
           - Key: Cer
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Cer
             Description: The certificate is a base64-encoded X.509 certificate.
         PathSwagger: /properties/format
         PathPython: /format
@@ -6829,16 +6829,16 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Succeeded
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Succeeded
             Description: The certificate is available for use in pools.
           - Key: Deleting
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Deleting
             Description: >-
               The user has requested that the certificate be deleted, but the
               delete operation has not yet completed. You may not reference the
               certificate when creating or updating pools.
           - Key: Failed
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Failed
             Description: >-
               The user requested that the certificate be deleted, but there are
               pools that still have references to the certificate, or it is
@@ -8415,13 +8415,13 @@ Modules:
                     SubOptions: []
                     EnumValues:
                       - Key: None
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: None
                         Description: The caching mode for the disk is not enabled.
                       - Key: ReadOnly
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: ReadOnly
                         Description: The caching mode for the disk is read only.
                       - Key: ReadWrite
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: ReadWrite
                         Description: The caching mode for the disk is read and write.
                     PathSwagger: >-
                       /properties/deploymentConfiguration/virtualMachineConfiguration/dataDisks/caching
@@ -8494,12 +8494,12 @@ Modules:
                     SubOptions: []
                     EnumValues:
                       - Key: Standard_LRS
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Standard_LRS
                         Description: >-
                           The data disk should use standard locally redundant
                           storage.
                       - Key: Premium_LRS
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Premium_LRS
                         Description: >-
                           The data disk should use premium locally redundant
                           storage.
@@ -8898,26 +8898,26 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: Requeue
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Requeue
                     Description: >-
                       Terminate running task processes and requeue the tasks.
                       The tasks will run again when a node is available. Remove
                       nodes as soon as tasks have been terminated.
                   - Key: Terminate
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Terminate
                     Description: >-
                       Terminate running tasks. The tasks will be completed with
                       failureInfo indicating that they were terminated, and will
                       not run again. Remove nodes as soon as tasks have been
                       terminated.
                   - Key: TaskCompletion
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: TaskCompletion
                     Description: >-
                       Allow currently running tasks to complete. Schedule no new
                       tasks while waiting. Remove nodes when all tasks have
                       completed.
                   - Key: RetainedData
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: RetainedData
                     Description: >-
                       Allow currently running tasks to complete, then wait for
                       all task data retention periods to expire. Schedule no new
@@ -9074,10 +9074,10 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Enabled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Enabled
             Description: Enable network communication between virtual machines.
           - Key: Disabled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Disabled
             Description: Disable network communication between virtual machines.
         PathSwagger: /properties/interNodeCommunication
         PathPython: /interNodeCommunication
@@ -9266,10 +9266,10 @@ Modules:
                     SubOptions: []
                     EnumValues:
                       - Key: TCP
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: TCP
                         Description: Use TCP for the endpoint.
                       - Key: UDP
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: UDP
                         Description: Use UDP for the endpoint.
                     PathSwagger: >-
                       /properties/networkConfiguration/endpointConfiguration/inboundNatPools/protocol
@@ -9547,10 +9547,10 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Spread
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Spread
                 Description: Tasks should be assigned evenly across all nodes in the pool.
               - Key: Pack
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Pack
                 Description: >-
                   As many tasks as possible (maxTasksPerNode) should be assigned
                   to each node in the pool before any tasks are assigned to the
@@ -9680,10 +9680,10 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: NonAdmin
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: NonAdmin
                 Description: The user is a standard user without elevated access.
               - Key: Admin
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Admin
                 Description: >-
                   The user is a user with elevated access and operates with full
                   Administrator permissions.
@@ -9878,12 +9878,12 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: Batch
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Batch
                     Description: >-
                       The LOGON32_LOGON_BATCH Win32 login mode. The batch login
                       mode is recommended for long running parallel processes.
                   - Key: Interactive
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Interactive
                     Description: >-
                       The LOGON32_LOGON_INTERACTIVE Win32 login mode. Some
                       applications require having permissions associated with
@@ -10506,12 +10506,12 @@ Modules:
                     SubOptions: []
                     EnumValues:
                       - Key: Task
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Task
                         Description: >-
                           Specifies that the service should create a new user
                           for the task.
                       - Key: Pool
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Pool
                         Description: >-
                           Specifies that the task runs as the common auto user
                           account which is created on every node in a pool.
@@ -10550,10 +10550,10 @@ Modules:
                     SubOptions: []
                     EnumValues:
                       - Key: NonAdmin
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: NonAdmin
                         Description: The user is a standard user without elevated access.
                       - Key: Admin
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Admin
                         Description: >-
                           The user is a user with elevated access and operates
                           with full Administrator permissions.
@@ -10999,12 +10999,12 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: CurrentUser
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: CurrentUser
                 Description: >-
                   Certificates should be installed to the CurrentUser
                   certificate store.
               - Key: LocalMachine
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: LocalMachine
                 Description: >-
                   Certificates should be installed to the LocalMachine
                   certificate store.
@@ -11075,17 +11075,17 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: StartTask
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: StartTask
                 Description: >-
                   The certificate should be visible to the user account under
                   which the start task is run.
               - Key: Task
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Task
                 Description: >-
                   The certificate should be visible to the user accounts under
                   which job tasks are run.
               - Key: RemoteUser
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: RemoteUser
                 Description: >-
                   The certificate should be visible to the user accounts under
                   which users remotely access the node.
@@ -11363,19 +11363,19 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Steady
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Steady
             Description: >-
               The pool is not resizing. There are no changes to the number of
               nodes in the pool in progress. A pool enters this state when it is
               created and when no operations are being performed on the pool to
               change the number of nodes.
           - Key: Resizing
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Resizing
             Description: >-
               The pool is resizing; that is, compute nodes are being added to or
               removed from the pool.
           - Key: Stopping
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Stopping
             Description: >-
               The pool was resizing, but the user has requested that the resize
               be stopped, but the stop request has not yet been completed.
@@ -11929,25 +11929,25 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Requeue
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Requeue
                 Description: >-
                   Terminate running task processes and requeue the tasks. The
                   tasks will run again when a node is available. Remove nodes as
                   soon as tasks have been terminated.
               - Key: Terminate
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Terminate
                 Description: >-
                   Terminate running tasks. The tasks will be completed with
                   failureInfo indicating that they were terminated, and will not
                   run again. Remove nodes as soon as tasks have been terminated.
               - Key: TaskCompletion
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: TaskCompletion
                 Description: >-
                   Allow currently running tasks to complete. Schedule no new
                   tasks while waiting. Remove nodes when all tasks have
                   completed.
               - Key: RetainedData
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: RetainedData
                 Description: >-
                   Allow currently running tasks to complete, then wait for all
                   task data retention periods to expire. Schedule no new tasks
@@ -12505,12 +12505,12 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Succeeded
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Succeeded
                 Description: >-
                   The pool is available to run tasks subject to the availability
                   of compute nodes.
               - Key: Deleting
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Deleting
                 Description: >-
                   The user has requested that the pool be deleted, but the
                   delete operation has not yet completed.
@@ -13126,13 +13126,13 @@ Modules:
                         SubOptions: []
                         EnumValues:
                           - Key: None
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: None
                             Description: The caching mode for the disk is not enabled.
                           - Key: ReadOnly
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: ReadOnly
                             Description: The caching mode for the disk is read only.
                           - Key: ReadWrite
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: ReadWrite
                             Description: The caching mode for the disk is read and write.
                         PathSwagger: >-
                           /properties/deploymentConfiguration/virtualMachineConfiguration/dataDisks/caching
@@ -13205,12 +13205,12 @@ Modules:
                         SubOptions: []
                         EnumValues:
                           - Key: Standard_LRS
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: Standard_LRS
                             Description: >-
                               The data disk should use standard locally
                               redundant storage.
                           - Key: Premium_LRS
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: Premium_LRS
                             Description: >-
                               The data disk should use premium locally redundant
                               storage.
@@ -13616,27 +13616,27 @@ Modules:
                     SubOptions: []
                     EnumValues:
                       - Key: Requeue
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Requeue
                         Description: >-
                           Terminate running task processes and requeue the
                           tasks. The tasks will run again when a node is
                           available. Remove nodes as soon as tasks have been
                           terminated.
                       - Key: Terminate
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Terminate
                         Description: >-
                           Terminate running tasks. The tasks will be completed
                           with failureInfo indicating that they were terminated,
                           and will not run again. Remove nodes as soon as tasks
                           have been terminated.
                       - Key: TaskCompletion
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: TaskCompletion
                         Description: >-
                           Allow currently running tasks to complete. Schedule no
                           new tasks while waiting. Remove nodes when all tasks
                           have completed.
                       - Key: RetainedData
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: RetainedData
                         Description: >-
                           Allow currently running tasks to complete, then wait
                           for all task data retention periods to expire.
@@ -13796,10 +13796,10 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Enabled
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Enabled
                 Description: Enable network communication between virtual machines.
               - Key: Disabled
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Disabled
                 Description: Disable network communication between virtual machines.
             PathSwagger: /properties/interNodeCommunication
             PathPython: /interNodeCommunication
@@ -13987,10 +13987,10 @@ Modules:
                         SubOptions: []
                         EnumValues:
                           - Key: TCP
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: TCP
                             Description: Use TCP for the endpoint.
                           - Key: UDP
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: UDP
                             Description: Use UDP for the endpoint.
                         PathSwagger: >-
                           /properties/networkConfiguration/endpointConfiguration/inboundNatPools/protocol
@@ -14268,12 +14268,12 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: Spread
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Spread
                     Description: >-
                       Tasks should be assigned evenly across all nodes in the
                       pool.
                   - Key: Pack
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Pack
                     Description: >-
                       As many tasks as possible (maxTasksPerNode) should be
                       assigned to each node in the pool before any tasks are
@@ -14403,10 +14403,10 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: NonAdmin
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: NonAdmin
                     Description: The user is a standard user without elevated access.
                   - Key: Admin
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Admin
                     Description: >-
                       The user is a user with elevated access and operates with
                       full Administrator permissions.
@@ -14605,13 +14605,13 @@ Modules:
                     SubOptions: []
                     EnumValues:
                       - Key: Batch
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Batch
                         Description: >-
                           The LOGON32_LOGON_BATCH Win32 login mode. The batch
                           login mode is recommended for long running parallel
                           processes.
                       - Key: Interactive
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Interactive
                         Description: >-
                           The LOGON32_LOGON_INTERACTIVE Win32 login mode. Some
                           applications require having permissions associated
@@ -15241,12 +15241,12 @@ Modules:
                         SubOptions: []
                         EnumValues:
                           - Key: Task
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: Task
                             Description: >-
                               Specifies that the service should create a new
                               user for the task.
                           - Key: Pool
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: Pool
                             Description: >-
                               Specifies that the task runs as the common auto
                               user account which is created on every node in a
@@ -15286,12 +15286,12 @@ Modules:
                         SubOptions: []
                         EnumValues:
                           - Key: NonAdmin
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: NonAdmin
                             Description: >-
                               The user is a standard user without elevated
                               access.
                           - Key: Admin
-                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Value: Admin
                             Description: >-
                               The user is a user with elevated access and
                               operates with full Administrator permissions.
@@ -15743,12 +15743,12 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: CurrentUser
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: CurrentUser
                     Description: >-
                       Certificates should be installed to the CurrentUser
                       certificate store.
                   - Key: LocalMachine
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: LocalMachine
                     Description: >-
                       Certificates should be installed to the LocalMachine
                       certificate store.
@@ -15820,17 +15820,17 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: StartTask
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: StartTask
                     Description: >-
                       The certificate should be visible to the user account
                       under which the start task is run.
                   - Key: Task
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Task
                     Description: >-
                       The certificate should be visible to the user accounts
                       under which job tasks are run.
                   - Key: RemoteUser
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: RemoteUser
                     Description: >-
                       The certificate should be visible to the user accounts
                       under which users remotely access the node.
@@ -17388,19 +17388,19 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Steady
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Steady
             Description: >-
               The pool is not resizing. There are no changes to the number of
               nodes in the pool in progress. A pool enters this state when it is
               created and when no operations are being performed on the pool to
               change the number of nodes.
           - Key: Resizing
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Resizing
             Description: >-
               The pool is resizing; that is, compute nodes are being added to or
               removed from the pool.
           - Key: Stopping
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Stopping
             Description: >-
               The pool was resizing, but the user has requested that the resize
               be stopped, but the stop request has not yet been completed.
@@ -18034,13 +18034,13 @@ Modules:
                     SubOptions: []
                     EnumValues:
                       - Key: None
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: None
                         Description: The caching mode for the disk is not enabled.
                       - Key: ReadOnly
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: ReadOnly
                         Description: The caching mode for the disk is read only.
                       - Key: ReadWrite
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: ReadWrite
                         Description: The caching mode for the disk is read and write.
                     PathSwagger: >-
                       /properties/deploymentConfiguration/virtualMachineConfiguration/dataDisks/caching
@@ -18113,12 +18113,12 @@ Modules:
                     SubOptions: []
                     EnumValues:
                       - Key: Standard_LRS
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Standard_LRS
                         Description: >-
                           The data disk should use standard locally redundant
                           storage.
                       - Key: Premium_LRS
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Premium_LRS
                         Description: >-
                           The data disk should use premium locally redundant
                           storage.
@@ -18577,26 +18577,26 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: Requeue
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Requeue
                     Description: >-
                       Terminate running task processes and requeue the tasks.
                       The tasks will run again when a node is available. Remove
                       nodes as soon as tasks have been terminated.
                   - Key: Terminate
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Terminate
                     Description: >-
                       Terminate running tasks. The tasks will be completed with
                       failureInfo indicating that they were terminated, and will
                       not run again. Remove nodes as soon as tasks have been
                       terminated.
                   - Key: TaskCompletion
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: TaskCompletion
                     Description: >-
                       Allow currently running tasks to complete. Schedule no new
                       tasks while waiting. Remove nodes when all tasks have
                       completed.
                   - Key: RetainedData
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: RetainedData
                     Description: >-
                       Allow currently running tasks to complete, then wait for
                       all task data retention periods to expire. Schedule no new
@@ -19065,10 +19065,10 @@ Modules:
         SubOptions: []
         EnumValues:
           - Key: Enabled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Enabled
             Description: Enable network communication between virtual machines.
           - Key: Disabled
-            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Value: Disabled
             Description: Disable network communication between virtual machines.
         PathSwagger: /properties/interNodeCommunication
         PathPython: /interNodeCommunication
@@ -19254,10 +19254,10 @@ Modules:
                     SubOptions: []
                     EnumValues:
                       - Key: TCP
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: TCP
                         Description: Use TCP for the endpoint.
                       - Key: UDP
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: UDP
                         Description: Use UDP for the endpoint.
                     PathSwagger: >-
                       /properties/networkConfiguration/endpointConfiguration/inboundNatPools/protocol
@@ -19532,10 +19532,10 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Spread
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Spread
                 Description: Tasks should be assigned evenly across all nodes in the pool.
               - Key: Pack
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Pack
                 Description: >-
                   As many tasks as possible (maxTasksPerNode) should be assigned
                   to each node in the pool before any tasks are assigned to the
@@ -19665,10 +19665,10 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: NonAdmin
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: NonAdmin
                 Description: The user is a standard user without elevated access.
               - Key: Admin
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Admin
                 Description: >-
                   The user is a user with elevated access and operates with full
                   Administrator permissions.
@@ -19863,12 +19863,12 @@ Modules:
                 SubOptions: []
                 EnumValues:
                   - Key: Batch
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Batch
                     Description: >-
                       The LOGON32_LOGON_BATCH Win32 login mode. The batch login
                       mode is recommended for long running parallel processes.
                   - Key: Interactive
-                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Value: Interactive
                     Description: >-
                       The LOGON32_LOGON_INTERACTIVE Win32 login mode. Some
                       applications require having permissions associated with
@@ -20491,12 +20491,12 @@ Modules:
                     SubOptions: []
                     EnumValues:
                       - Key: Task
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Task
                         Description: >-
                           Specifies that the service should create a new user
                           for the task.
                       - Key: Pool
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Pool
                         Description: >-
                           Specifies that the task runs as the common auto user
                           account which is created on every node in a pool.
@@ -20535,10 +20535,10 @@ Modules:
                     SubOptions: []
                     EnumValues:
                       - Key: NonAdmin
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: NonAdmin
                         Description: The user is a standard user without elevated access.
                       - Key: Admin
-                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Value: Admin
                         Description: >-
                           The user is a user with elevated access and operates
                           with full Administrator permissions.
@@ -20980,12 +20980,12 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: CurrentUser
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: CurrentUser
                 Description: >-
                   Certificates should be installed to the CurrentUser
                   certificate store.
               - Key: LocalMachine
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: LocalMachine
                 Description: >-
                   Certificates should be installed to the LocalMachine
                   certificate store.
@@ -21056,17 +21056,17 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: StartTask
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: StartTask
                 Description: >-
                   The certificate should be visible to the user account under
                   which the start task is run.
               - Key: Task
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Task
                 Description: >-
                   The certificate should be visible to the user accounts under
                   which job tasks are run.
               - Key: RemoteUser
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: RemoteUser
                 Description: >-
                   The certificate should be visible to the user accounts under
                   which users remotely access the node.
@@ -21355,25 +21355,25 @@ Modules:
             SubOptions: []
             EnumValues:
               - Key: Requeue
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Requeue
                 Description: >-
                   Terminate running task processes and requeue the tasks. The
                   tasks will run again when a node is available. Remove nodes as
                   soon as tasks have been terminated.
               - Key: Terminate
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: Terminate
                 Description: >-
                   Terminate running tasks. The tasks will be completed with
                   failureInfo indicating that they were terminated, and will not
                   run again. Remove nodes as soon as tasks have been terminated.
               - Key: TaskCompletion
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: TaskCompletion
                 Description: >-
                   Allow currently running tasks to complete. Schedule no new
                   tasks while waiting. Remove nodes when all tasks have
                   completed.
               - Key: RetainedData
-                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Value: RetainedData
                 Description: >-
                   Allow currently running tasks to complete, then wait for all
                   task data retention periods to expire. Schedule no new tasks
