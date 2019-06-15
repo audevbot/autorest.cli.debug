@@ -32,10 +32,6 @@ options:
   name:
     description:
       - Resource name.
-  load_balancing_settings_parameters:
-    description:
-      - LoadBalancingSettings properties needed to create a new Front Door.
-    required: true
   id:
     description:
       - Resource ID.
@@ -65,11 +61,6 @@ EXAMPLES = '''
     resource_group: myResourceGroup
     front_door_name: myFrontDoor
     name: myLoadBalancingSetting
-    load_balancing_settings_parameters:
-      name: loadBalancingSettings1
-      properties:
-        sampleSize: '4'
-        successfulSamplesRequired: '2'
 - name: Delete LoadBalancingSettings
   azure_rm_frontdoorloadbalancingsetting:
     resource_group: myResourceGroup
@@ -146,10 +137,6 @@ class AzureRMLoadBalancingSettings(AzureRMModuleBaseExt):
                 disposition='load_balancing_settings_name',
                 required=true
             ),
-            load_balancing_settings_parameters=dict(
-                type='dict',
-                required=true
-            ),
             id=dict(
                 type='str',
                 updatable=False,
@@ -170,7 +157,6 @@ class AzureRMLoadBalancingSettings(AzureRMModuleBaseExt):
         self.resource_group = None
         self.front_door_name = None
         self.name = None
-        self.load_balancing_settings_parameters = None
         self.type = None
         self.body = {}
 
@@ -244,7 +230,7 @@ class AzureRMLoadBalancingSettings(AzureRMModuleBaseExt):
             response = self.mgmt_client.load_balancing_settings.create_or_update(resource_group_name=self.resource_group,
                                                                                  front_door_name=self.front_door_name,
                                                                                  load_balancing_settings_name=self.name,
-                                                                                 load_balancing_settings_parameters=self.body)
+                                                                                 load_balancing_settings_parameters=self.loadBalancingSettingsParameters)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
         except CloudError as exc:

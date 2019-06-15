@@ -17,9 +17,4 @@
         resource_group: '{{resource_group}}'
         front_door_name: '{{front_door_name}}'
         name: '{{load_balancing_setting_name}}'
-        load_balancing_settings_parameters:
-          name: loadBalancingSettings1
-          properties:
-            sampleSize: '4'
-            successfulSamplesRequired: '2'
     

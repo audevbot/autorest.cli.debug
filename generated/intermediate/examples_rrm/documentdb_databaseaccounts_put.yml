@@ -15,11 +15,4 @@
       azure_rm_cosmosdbdatabaseaccount:
         resource_group: '{{resource_group}}'
         name: '{{database_account_name}}'
-        create_update_parameters:
-          location: westus
-          properties:
-            databaseAccountOfferType: Standard
-            locations:
-              - failoverPriority: '0'
-                locationName: southcentralus
     

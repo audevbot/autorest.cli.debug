@@ -39,12 +39,6 @@ objects:
             go_variable_name: name
             python_parameter_name: routing_rule_name
             python_variable_name: name
-          'routingRuleParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
-            id_portion: null
-            go_variable_name: routingRuleParameters
-            go_type_name: null
-            python_parameter_name: routing_rule_parameters
-            python_variable_name: routing_rule_parameters
       delete: !ruby/object:Api::Azure::SDKOperationDefinition
         async: true
         go_func_name: Delete
@@ -137,12 +131,6 @@ objects:
         input: true
         sample_value: myRoutingRule
         azure_sdk_references: ['routingRuleName', '/name']
-      - !ruby/object:Api::Type::NestedObject
-        name: 'routingRuleParameters'
-        description: 'Routing Rule properties needed to create a new Front Door.'
-        required: true
-        sample_value: [object Object]
-        azure_sdk_references: ['routingRuleParameters']
       - !ruby/object:Api::Type::String
         name: 'id'
         description: 'Resource ID.'

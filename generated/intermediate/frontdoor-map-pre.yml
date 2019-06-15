@@ -61,36 +61,6 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - NameSwagger: frontDoorParameters
-        NameAnsible: front_door_parameters
-        NamePythonSdk: front_door_parameters
-        NameGoSdk: FrontDoorParameters
-        NameTerraform: FrontDoorParameters
-        IdPortion: null
-        Type: dict
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: true
-        Documentation: Front Door properties needed to create a new Front Door.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
       - NameSwagger: parameters
         NameAnsible: parameters
         NamePythonSdk: parameters
@@ -2936,36 +2906,6 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - NameSwagger: routingRuleParameters
-        NameAnsible: routing_rule_parameters
-        NamePythonSdk: routing_rule_parameters
-        NameGoSdk: RoutingRuleParameters
-        NameTerraform: RoutingRuleParameters
-        IdPortion: null
-        Type: dict
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: true
-        Documentation: Routing Rule properties needed to create a new Front Door.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
       - NameSwagger: parameters
         NameAnsible: parameters
         NamePythonSdk: parameters
@@ -4241,36 +4181,6 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - NameSwagger: healthProbeSettingsParameters
-        NameAnsible: health_probe_settings_parameters
-        NamePythonSdk: health_probe_settings_parameters
-        NameGoSdk: HealthProbeSettingsParameters
-        NameTerraform: HealthProbeSettingsParameters
-        IdPortion: null
-        Type: dict
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: true
-        Documentation: HealthProbeSettings properties needed to create a new Front Door.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
       - NameSwagger: parameters
         NameAnsible: parameters
         NamePythonSdk: parameters
@@ -5123,36 +5033,6 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - NameSwagger: loadBalancingSettingsParameters
-        NameAnsible: load_balancing_settings_parameters
-        NamePythonSdk: load_balancing_settings_parameters
-        NameGoSdk: LoadBalancingSettingsParameters
-        NameTerraform: LoadBalancingSettingsParameters
-        IdPortion: null
-        Type: dict
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: true
-        Documentation: LoadBalancingSettings properties needed to create a new Front Door.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
       - NameSwagger: parameters
         NameAnsible: parameters
         NamePythonSdk: parameters
@@ -5992,36 +5872,6 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: backendPoolParameters
-        NameAnsible: backend_pool_parameters
-        NamePythonSdk: backend_pool_parameters
-        NameGoSdk: BackendPoolParameters
-        NameTerraform: BackendPoolParameters
-        IdPortion: null
-        Type: dict
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: true
-        Documentation: Backend Pool properties needed to create a new Pool.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
@@ -7047,36 +6897,6 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: frontendEndpointParameters
-        NameAnsible: frontend_endpoint_parameters
-        NamePythonSdk: frontend_endpoint_parameters
-        NameGoSdk: FrontendEndpointParameters
-        NameTerraform: FrontendEndpointParameters
-        IdPortion: null
-        Type: dict
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: true
-        Documentation: Frontend endpoint properties needed to create a new endpoint.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false

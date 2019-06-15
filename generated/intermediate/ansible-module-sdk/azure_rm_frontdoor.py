@@ -28,10 +28,6 @@ options:
   name:
     description:
       - Resource name.
-  front_door_parameters:
-    description:
-      - Front Door properties needed to create a new Front Door.
-    required: true
   location:
     description:
       - Resource location.
@@ -104,102 +100,6 @@ EXAMPLES = '''
   azure_rm_frontdoor:
     resource_group: myResourceGroup
     name: myFrontDoor
-    front_door_parameters:
-      id: >-
-        /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-        }}/providers/Microsoft.Network/frontDoors/{{ front_door_name }}
-      location: westus
-      tags:
-        tag1: value1
-        tag2: value2
-      properties:
-        routingRules:
-          - name: routingRule1
-            properties:
-              frontendEndpoints:
-                - id: >-
-                    /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                    resource_group }}/providers/Microsoft.Network/frontDoors/{{
-                    front_door_name }}/frontendEndpoints/{{
-                    frontend_endpoint_name }}
-                - id: >-
-                    /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                    resource_group }}/providers/Microsoft.Network/frontDoors/{{
-                    front_door_name }}/frontendEndpoints/{{
-                    frontend_endpoint_name }}
-              acceptedProtocols:
-                - Http
-              patternsToMatch:
-                - /*
-              routeConfiguration:
-                '@odata.type': >-
-                  #Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration
-                backendPool:
-                  id: >-
-                    /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                    resource_group }}/providers/Microsoft.Network/frontDoors/{{
-                    front_door_name }}/backendPools/{{ backend_pool_name }}
-              enabledState: Enabled
-        healthProbeSettings:
-          - name: healthProbeSettings1
-            properties:
-              path: /
-              protocol: Http
-              intervalInSeconds: '120'
-        loadBalancingSettings:
-          - name: loadBalancingSettings1
-            properties:
-              sampleSize: '4'
-              successfulSamplesRequired: '2'
-        backendPools:
-          - name: backendPool1
-            properties:
-              backends:
-                - address: w3.contoso.com
-                  httpPort: '80'
-                  httpsPort: '443'
-                  weight: '1'
-                  priority: '2'
-                - address: contoso.com.website-us-west-2.othercloud.net
-                  httpPort: '80'
-                  httpsPort: '443'
-                  weight: '2'
-                  priority: '1'
-                - address: contoso1.azurewebsites.net
-                  httpPort: '80'
-                  httpsPort: '443'
-                  weight: '1'
-                  priority: '1'
-              loadBalancingSettings:
-                id: >-
-                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                  resource_group }}/providers/Microsoft.Network/frontDoors/{{
-                  front_door_name }}/loadBalancingSettings/{{
-                  load_balancing_setting_name }}
-              healthProbeSettings:
-                id: >-
-                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                  resource_group }}/providers/Microsoft.Network/frontDoors/{{
-                  front_door_name }}/healthProbeSettings/{{
-                  health_probe_setting_name }}
-        frontendEndpoints:
-          - name: frontendEndpoint1
-            properties:
-              hostName: www.contoso.com
-              sessionAffinityEnabledState: Enabled
-              sessionAffinityTtlSeconds: '60'
-              webApplicationFirewallPolicyLink:
-                id: >-
-                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                  resource_group
-                  }}/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/{{
-                  front_door_web_application_firewall_policy_name }}
-          - name: default
-            properties:
-              hostName: frontDoor1.azurefd.net
-        backendPoolsSettings:
-          enforceCertificateNameCheck: Enabled
-        enabledState: Enabled
 - name: Delete Front Door
   azure_rm_frontdoor:
     resource_group: myResourceGroup
@@ -353,10 +253,6 @@ class AzureRMFrontDoors(AzureRMModuleBaseExt):
                 disposition='front_door_name',
                 required=true
             ),
-            front_door_parameters=dict(
-                type='dict',
-                required=true
-            ),
             location=dict(
                 type='str',
                 updatable=False,
@@ -415,7 +311,6 @@ class AzureRMFrontDoors(AzureRMModuleBaseExt):
 
         self.resource_group = None
         self.name = None
-        self.front_door_parameters = None
         self.id = None
         self.name = None
         self.type = None
@@ -492,7 +387,7 @@ class AzureRMFrontDoors(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.front_doors.create_or_update(resource_group_name=self.resource_group,
                                                                      front_door_name=self.name,
-                                                                     front_door_parameters=self.body)
+                                                                     front_door_parameters=self.frontDoorParameters)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
         except CloudError as exc:

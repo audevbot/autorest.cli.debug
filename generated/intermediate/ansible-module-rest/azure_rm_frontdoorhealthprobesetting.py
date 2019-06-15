@@ -32,10 +32,6 @@ options:
   name:
     description:
       - Resource name.
-  health_probe_settings_parameters:
-    description:
-      - HealthProbeSettings properties needed to create a new Front Door.
-    required: true
   id:
     description:
       - Resource ID.
@@ -65,12 +61,6 @@ EXAMPLES = '''
     resource_group: myResourceGroup
     front_door_name: myFrontDoor
     name: myHealthProbeSetting
-    health_probe_settings_parameters:
-      name: healthProbeSettings1
-      properties:
-        path: /
-        protocol: Http
-        intervalInSeconds: '120'
 - name: Delete HealthProbeSettings
   azure_rm_frontdoorhealthprobesetting:
     resource_group: myResourceGroup
@@ -142,11 +132,6 @@ class AzureRMHealthProbeSettings(AzureRMModuleBaseExt):
                 disposition='healthProbeSettingsName',
                 required=true
             ),
-            health_probe_settings_parameters=dict(
-                type='dict',
-                disposition='healthProbeSettingsParameters',
-                required=true
-            ),
             id=dict(
                 type='str',
                 updatable=False,
@@ -167,7 +152,6 @@ class AzureRMHealthProbeSettings(AzureRMModuleBaseExt):
         self.resource_group = None
         self.front_door_name = None
         self.name = None
-        self.health_probe_settings_parameters = None
         self.type = None
 
         self.results = dict(changed=False)

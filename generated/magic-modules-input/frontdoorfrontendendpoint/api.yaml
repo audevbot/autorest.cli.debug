@@ -39,12 +39,6 @@ objects:
             go_variable_name: name
             python_parameter_name: frontend_endpoint_name
             python_variable_name: name
-          'frontendEndpointParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
-            id_portion: null
-            go_variable_name: frontendEndpointParameters
-            go_type_name: null
-            python_parameter_name: frontend_endpoint_parameters
-            python_variable_name: frontend_endpoint_parameters
       delete: !ruby/object:Api::Azure::SDKOperationDefinition
         async: true
         go_func_name: Delete
@@ -137,12 +131,6 @@ objects:
         input: true
         sample_value: myFrontendEndpoint
         azure_sdk_references: ['frontendEndpointName', '/name']
-      - !ruby/object:Api::Type::NestedObject
-        name: 'frontendEndpointParameters'
-        description: 'Frontend endpoint properties needed to create a new endpoint.'
-        required: true
-        sample_value: [object Object]
-        azure_sdk_references: ['frontendEndpointParameters']
       - !ruby/object:Api::Type::String
         name: 'id'
         description: 'Resource ID.'

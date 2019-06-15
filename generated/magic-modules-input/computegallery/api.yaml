@@ -34,12 +34,6 @@ objects:
             go_variable_name: name
             python_parameter_name: gallery_name
             python_variable_name: name
-          'gallery': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
-            id_portion: null
-            go_variable_name: gallery
-            go_type_name: null
-            python_parameter_name: gallery
-            python_variable_name: gallery
       delete: !ruby/object:Api::Azure::SDKOperationDefinition
         async: true
         go_func_name: Delete
@@ -146,12 +140,6 @@ objects:
         input: true
         sample_value: myGallery
         azure_sdk_references: ['galleryName', '/name']
-      - !ruby/object:Api::Type::NestedObject
-        name: 'gallery'
-        description: 'Parameters supplied to the create or update Shared Image Gallery operation.'
-        required: true
-        sample_value: [object Object]
-        azure_sdk_references: ['gallery']
       - !ruby/object:Api::Azure::Type::Location
         name: 'location'
         description: 'Resource location'

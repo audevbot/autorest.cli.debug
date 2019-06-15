@@ -32,10 +32,6 @@ options:
   name:
     description:
       - Resource name.
-  backend_pool_parameters:
-    description:
-      - Backend Pool properties needed to create a new Pool.
-    required: true
   id:
     description:
       - Resource ID.
@@ -65,37 +61,6 @@ EXAMPLES = '''
     resource_group: myResourceGroup
     front_door_name: myFrontDoor
     name: myBackendPool
-    backend_pool_parameters:
-      name: backendPool1
-      properties:
-        backends:
-          - address: w3.contoso.com
-            httpPort: '80'
-            httpsPort: '443'
-            weight: '1'
-            priority: '2'
-          - address: contoso.com.website-us-west-2.othercloud.net
-            httpPort: '80'
-            httpsPort: '443'
-            weight: '2'
-            priority: '1'
-          - address: contoso1.azurewebsites.net
-            httpPort: '80'
-            httpsPort: '443'
-            weight: '1'
-            priority: '1'
-        loadBalancingSettings:
-          id: >-
-            /subscriptions/{{ subscription_id }}/resourceGroups/{{
-            resource_group }}/providers/Microsoft.Network/frontDoors/{{
-            front_door_name }}/loadBalancingSettings/{{
-            load_balancing_setting_name }}
-        healthProbeSettings:
-          id: >-
-            /subscriptions/{{ subscription_id }}/resourceGroups/{{
-            resource_group }}/providers/Microsoft.Network/frontDoors/{{
-            front_door_name }}/healthProbeSettings/{{ health_probe_setting_name
-            }}
 - name: Delete Backend Pool
   azure_rm_frontdoorbackendpool:
     resource_group: myResourceGroup
@@ -172,10 +137,6 @@ class AzureRMBackendPools(AzureRMModuleBaseExt):
                 disposition='backend_pool_name',
                 required=true
             ),
-            backend_pool_parameters=dict(
-                type='dict',
-                required=true
-            ),
             id=dict(
                 type='str',
                 updatable=False,
@@ -196,7 +157,6 @@ class AzureRMBackendPools(AzureRMModuleBaseExt):
         self.resource_group = None
         self.front_door_name = None
         self.name = None
-        self.backend_pool_parameters = None
         self.type = None
         self.body = {}
 
@@ -270,7 +230,7 @@ class AzureRMBackendPools(AzureRMModuleBaseExt):
             response = self.mgmt_client.backend_pools.create_or_update(resource_group_name=self.resource_group,
                                                                        front_door_name=self.front_door_name,
                                                                        backend_pool_name=self.name,
-                                                                       backend_pool_parameters=self.body)
+                                                                       backend_pool_parameters=self.backendPoolParameters)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
         except CloudError as exc:

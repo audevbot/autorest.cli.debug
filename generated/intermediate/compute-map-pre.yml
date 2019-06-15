@@ -64,38 +64,6 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - NameSwagger: gallery
-        NameAnsible: gallery
-        NamePythonSdk: gallery
-        NameGoSdk: Gallery
-        NameTerraform: Gallery
-        IdPortion: null
-        Type: dict
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: true
-        Documentation: >-
-          Parameters supplied to the create or update Shared Image Gallery
-          operation.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
       - NameSwagger: parameters
         NameAnsible: parameters
         NamePythonSdk: parameters
@@ -1404,36 +1372,6 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: galleryImage
-        NameAnsible: gallery_image
-        NamePythonSdk: gallery_image
-        NameGoSdk: GalleryImage
-        NameTerraform: GalleryImage
-        IdPortion: null
-        Type: dict
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: true
-        Documentation: Parameters supplied to the create or update gallery image operation.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
@@ -4780,38 +4718,6 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: galleryImageVersion
-        NameAnsible: gallery_image_version
-        NamePythonSdk: gallery_image_version
-        NameGoSdk: GalleryImageVersion
-        NameTerraform: GalleryImageVersion
-        IdPortion: null
-        Type: dict
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: true
-        Documentation: >-
-          Parameters supplied to the create or update gallery Image Version
-          operation.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false

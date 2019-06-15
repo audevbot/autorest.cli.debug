@@ -31,45 +31,6 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - NameSwagger: createManagementGroupRequest
-        NameAnsible: create_management_group_request
-        NamePythonSdk: create_management_group_request
-        NameGoSdk: CreateManagementGroupRequest
-        NameTerraform: CreateManagementGroupRequest
-        IdPortion: null
-        Type: dict
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: true
-        Documentation: Management group creation parameters.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue:
-          id: /providers/Microsoft.Management/managementGroups/ChildGroup
-          type: /providers/Microsoft.Management/managementGroups
-          name: ChildGroup
-          properties:
-            tenantId: 20000000-0000-0000-0000-000000000000
-            displayName: ChildGroup
-            details:
-              parent:
-                id: /providers/Microsoft.Management/managementGroups/RootGroup
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
       - NameSwagger: parameters
         NameAnsible: parameters
         NamePythonSdk: parameters

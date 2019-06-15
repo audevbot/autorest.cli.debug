@@ -28,10 +28,6 @@ options:
   name:
     description:
       - The name of the database account.
-  create_update_parameters:
-    description:
-      - The parameters to provide for the current database account.
-    required: true
   location:
     description:
       - The location of the resource group to which the resource belongs.
@@ -245,40 +241,10 @@ EXAMPLES = '''
   azure_rm_cosmosdbdatabaseaccount:
     resource_group: myResourceGroup
     name: myDatabaseAccount
-    create_update_parameters:
-      location: westus
-      properties:
-        databaseAccountOfferType: Standard
-        locations:
-          - failoverPriority: '0'
-            locationName: southcentralus
 - name: CosmosDBDatabaseAccountCreateMax
   azure_rm_cosmosdbdatabaseaccount:
     resource_group: myResourceGroup
     name: myDatabaseAccount
-    create_update_parameters:
-      location: westus
-      tags: {}
-      kind: GlobalDocumentDB
-      properties:
-        databaseAccountOfferType: Standard
-        ipRangeFilter: 10.10.10.10
-        isVirtualNetworkFilterEnabled: true
-        virtualNetworkRules:
-          - id: >-
-              /subscriptions/{{ subscription_id }}/resourceGroups/{{
-              resource_group }}/providers/Microsoft.Network/virtualNetworks/{{
-              virtual_network_name }}/subnets/{{ subnet_name }}
-            ignoreMissingVNetServiceEndpoint: false
-        locations:
-          - failoverPriority: '0'
-            locationName: southcentralus
-          - failoverPriority: '1'
-            locationName: eastus
-        consistencyPolicy:
-          defaultConsistencyLevel: BoundedStaleness
-          maxIntervalInSeconds: '10'
-          maxStalenessPrefix: '200'
 - name: CosmosDBDatabaseAccountDelete
   azure_rm_cosmosdbdatabaseaccount:
     resource_group: myResourceGroup
@@ -629,10 +595,6 @@ class AzureRMDatabaseAccounts(AzureRMModuleBaseExt):
                 disposition='account_name',
                 required=true
             ),
-            create_update_parameters=dict(
-                type='dict',
-                required=true
-            ),
             location=dict(
                 type='str',
                 updatable=False,
@@ -731,7 +693,6 @@ class AzureRMDatabaseAccounts(AzureRMModuleBaseExt):
 
         self.resource_group = None
         self.name = None
-        self.create_update_parameters = None
         self.id = None
         self.name = None
         self.type = None
@@ -809,7 +770,7 @@ class AzureRMDatabaseAccounts(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.database_accounts.create_or_update(resource_group_name=self.resource_group,
                                                                            account_name=self.name,
-                                                                           create_update_parameters=self.body)
+                                                                           create_update_parameters=self.createUpdateParameters)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
         except CloudError as exc:

@@ -29,12 +29,6 @@ objects:
             go_variable_name: groupID
             python_parameter_name: group_id
             python_variable_name: group_id
-          'createManagementGroupRequest': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
-            id_portion: null
-            go_variable_name: createManagementGroupRequest
-            go_type_name: null
-            python_parameter_name: create_management_group_request
-            python_variable_name: create_management_group_request
       update: !ruby/object:Api::Azure::SDKOperationDefinition
         go_func_name: Update
         python_func_name: update
@@ -167,12 +161,6 @@ objects:
         input: true
         sample_value: myManagementGroup
         azure_sdk_references: ['groupId']
-      - !ruby/object:Api::Type::NestedObject
-        name: 'createManagementGroupRequest'
-        description: 'Management group creation parameters.'
-        required: true
-        sample_value: [object Object]
-        azure_sdk_references: ['createManagementGroupRequest']
       - !ruby/object:Api::Type::String
         name: 'name'
         description: 'The name of the management group. For example, 00000000-0000-0000-0000-000000000000'

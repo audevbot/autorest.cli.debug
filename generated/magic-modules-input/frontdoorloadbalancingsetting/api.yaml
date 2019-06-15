@@ -39,12 +39,6 @@ objects:
             go_variable_name: name
             python_parameter_name: load_balancing_settings_name
             python_variable_name: name
-          'loadBalancingSettingsParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
-            id_portion: null
-            go_variable_name: loadBalancingSettingsParameters
-            go_type_name: null
-            python_parameter_name: load_balancing_settings_parameters
-            python_variable_name: load_balancing_settings_parameters
       delete: !ruby/object:Api::Azure::SDKOperationDefinition
         async: true
         go_func_name: Delete
@@ -137,12 +131,6 @@ objects:
         input: true
         sample_value: myLoadBalancingSetting
         azure_sdk_references: ['loadBalancingSettingsName', '/name']
-      - !ruby/object:Api::Type::NestedObject
-        name: 'loadBalancingSettingsParameters'
-        description: 'LoadBalancingSettings properties needed to create a new Front Door.'
-        required: true
-        sample_value: [object Object]
-        azure_sdk_references: ['loadBalancingSettingsParameters']
       - !ruby/object:Api::Type::String
         name: 'id'
         description: 'Resource ID.'

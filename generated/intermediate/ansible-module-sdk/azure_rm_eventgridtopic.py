@@ -28,10 +28,6 @@ options:
   name:
     description:
       - Name of the resource
-  topic_info:
-    description:
-      - Topic information
-    required: true
   location:
     description:
       - Location of the resource
@@ -69,11 +65,6 @@ EXAMPLES = '''
   azure_rm_eventgridtopic:
     resource_group: myResourceGroup
     name: myTopic
-    topic_info:
-      location: westus2
-      tags:
-        tag1: value1
-        tag2: value2
 - name: Topics_Update
   azure_rm_eventgridtopic:
     resource_group: myResourceGroup
@@ -175,10 +166,6 @@ class AzureRMTopics(AzureRMModuleBaseExt):
                 disposition='topic_name',
                 required=true
             ),
-            topic_info=dict(
-                type='dict',
-                required=true
-            ),
             location=dict(
                 type='str',
                 updatable=False,
@@ -194,7 +181,6 @@ class AzureRMTopics(AzureRMModuleBaseExt):
 
         self.resource_group = None
         self.name = None
-        self.topic_info = None
         self.id = None
         self.name = None
         self.type = None
@@ -271,7 +257,7 @@ class AzureRMTopics(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.topics.create_or_update(resource_group_name=self.resource_group,
                                                                 topic_name=self.name,
-                                                                topic_info=self.topic_info)
+                                                                topic_info=self.topicInfo)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
         except CloudError as exc:

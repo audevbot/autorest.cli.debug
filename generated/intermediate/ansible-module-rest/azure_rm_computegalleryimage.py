@@ -34,10 +34,6 @@ options:
   name:
     description:
       - Resource name
-  gallery_image:
-    description:
-      - Parameters supplied to the create or update gallery image operation.
-    required: true
   location:
     description:
       - Resource location
@@ -167,15 +163,6 @@ EXAMPLES = '''
     resource_group: myResourceGroup
     gallery_name: myGallery
     name: myImage
-    gallery_image:
-      location: West US
-      properties:
-        osType: Windows
-        osState: Generalized
-        identifier:
-          publisher: myPublisherName
-          offer: myOfferName
-          sku: mySkuName
 - name: Delete a gallery image.
   azure_rm_computegalleryimage:
     resource_group: myResourceGroup
@@ -425,11 +412,6 @@ class AzureRMGalleryImages(AzureRMModuleBaseExt):
                 disposition='galleryImageName',
                 required=true
             ),
-            gallery_image=dict(
-                type='dict',
-                disposition='galleryImage',
-                required=true
-            ),
             location=dict(
                 type='str',
                 updatable=False,
@@ -553,7 +535,6 @@ class AzureRMGalleryImages(AzureRMModuleBaseExt):
         self.resource_group = None
         self.gallery_name = None
         self.name = None
-        self.gallery_image = None
         self.id = None
         self.name = None
         self.type = None

@@ -6,10 +6,4 @@ task: !ruby/object:Provider::Ansible::Task
     resource_group: myResourceGroup
     front_door_name: myFrontDoor
     name: myHealthProbeSetting
-    health_probe_settings_parameters:
-      name: healthProbeSettings1
-      properties:
-        path: /
-        protocol: Http
-        intervalInSeconds: '120'
   

@@ -76,61 +76,6 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - NameSwagger: eventSubscriptionInfo
-        NameAnsible: event_subscription_info
-        NamePythonSdk: event_subscription_info
-        NameGoSdk: EventSubscriptionInfo
-        NameTerraform: EventSubscriptionInfo
-        IdPortion: null
-        Type: dict
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: true
-        Documentation: >-
-          Event subscription properties containing the destination and filter
-          information
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue:
-          properties:
-            destination:
-              endpointType: StorageQueue
-              properties:
-                resourceId: >-
-                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                  resource_group
-                  }}/providers/Microsoft.Storage/storageAccounts/{{
-                  storage_account_name }}
-                queueName: queue1
-            filter:
-              isSubjectCaseSensitive: false
-              subjectBeginsWith: ExamplePrefix
-              subjectEndsWith: ExampleSuffix
-            deadLetterDestination:
-              endpointType: StorageBlob
-              properties:
-                resourceId: >-
-                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                  resource_group
-                  }}/providers/Microsoft.Storage/storageAccounts/{{
-                  storage_account_name }}
-                blobContainerName: contosocontainer
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
       - NameSwagger: parameters
         NameAnsible: parameters
         NamePythonSdk: parameters
@@ -4434,40 +4379,6 @@ Modules:
         Comparison: ''
         Updatable: false
         ExampleValue: myTopic
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: topicInfo
-        NameAnsible: topic_info
-        NamePythonSdk: topic_info
-        NameGoSdk: TopicInfo
-        NameTerraform: TopicInfo
-        IdPortion: null
-        Type: dict
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: true
-        Documentation: Topic information
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue:
-          location: westus2
-          tags:
-            tag1: value1
-            tag2: value2
         Hidden: false
         IncludeInResponse: false
         Flatten: false

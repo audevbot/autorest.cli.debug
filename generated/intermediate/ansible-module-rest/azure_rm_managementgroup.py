@@ -25,10 +25,6 @@ options:
     description:
       - Management Group ID.
     required: true
-  create_management_group_request:
-    description:
-      - Management group creation parameters.
-    required: true
   name:
     description:
       - >-
@@ -192,16 +188,6 @@ EXAMPLES = '''
 - name: PutManagementGroup
   azure_rm_managementgroup:
     group_id: myManagementGroup
-    create_management_group_request:
-      id: /providers/Microsoft.Management/managementGroups/ChildGroup
-      type: /providers/Microsoft.Management/managementGroups
-      name: ChildGroup
-      properties:
-        tenantId: 20000000-0000-0000-0000-000000000000
-        displayName: ChildGroup
-        details:
-          parent:
-            id: /providers/Microsoft.Management/managementGroups/RootGroup
 - name: PatchManagementGroup
   azure_rm_managementgroup:
     group_id: myManagementGroup
@@ -478,11 +464,6 @@ class AzureRMManagementGroups(AzureRMModuleBaseExt):
                 disposition='groupId',
                 required=true
             ),
-            create_management_group_request=dict(
-                type='dict',
-                disposition='createManagementGroupRequest',
-                required=true
-            ),
             name=dict(
                 type='str',
                 updatable=False,
@@ -514,7 +495,6 @@ class AzureRMManagementGroups(AzureRMModuleBaseExt):
         )
 
         self.group_id = None
-        self.create_management_group_request = None
         self.id = None
         self.type = None
 

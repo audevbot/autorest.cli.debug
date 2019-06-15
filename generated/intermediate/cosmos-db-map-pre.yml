@@ -61,36 +61,6 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - NameSwagger: createUpdateParameters
-        NameAnsible: create_update_parameters
-        NamePythonSdk: create_update_parameters
-        NameGoSdk: CreateUpdateParameters
-        NameTerraform: CreateUpdateParameters
-        IdPortion: null
-        Type: dict
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: true
-        Documentation: The parameters to provide for the current database account.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
       - NameSwagger: parameters
         NameAnsible: parameters
         NamePythonSdk: parameters

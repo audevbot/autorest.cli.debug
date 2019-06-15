@@ -64,41 +64,6 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - NameSwagger: gallery
-        NameAnsible: gallery
-        NamePythonSdk: gallery
-        NameGoSdk: Gallery
-        NameTerraform: Gallery
-        IdPortion: null
-        Type: dict
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: true
-        Documentation: >-
-          Parameters supplied to the create or update Shared Image Gallery
-          operation.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue:
-          location: West US
-          properties:
-            description: This is the gallery description.
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
       - NameSwagger: parameters
         NameAnsible: parameters
         NamePythonSdk: parameters
@@ -1408,44 +1373,6 @@ Modules:
         Comparison: ''
         Updatable: false
         ExampleValue: myImage
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: galleryImage
-        NameAnsible: gallery_image
-        NamePythonSdk: gallery_image
-        NameGoSdk: GalleryImage
-        NameTerraform: GalleryImage
-        IdPortion: null
-        Type: dict
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: true
-        Documentation: Parameters supplied to the create or update gallery image operation.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue:
-          location: West US
-          properties:
-            osType: Windows
-            osState: Generalized
-            identifier:
-              publisher: myPublisherName
-              offer: myOfferName
-              sku: mySkuName
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -4792,53 +4719,6 @@ Modules:
         Comparison: ''
         Updatable: false
         ExampleValue: myVersion
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: galleryImageVersion
-        NameAnsible: gallery_image_version
-        NamePythonSdk: gallery_image_version
-        NameGoSdk: GalleryImageVersion
-        NameTerraform: GalleryImageVersion
-        IdPortion: null
-        Type: dict
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: true
-        Documentation: >-
-          Parameters supplied to the create or update gallery Image Version
-          operation.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue:
-          location: West US
-          properties:
-            publishingProfile:
-              targetRegions:
-                - name: West US
-                  regionalReplicaCount: '1'
-                - name: East US
-                  regionalReplicaCount: '2'
-                  storageAccountType: Standard_ZRS
-              source:
-                managedImage:
-                  id: >-
-                    /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                    resource_group }}/providers/Microsoft.Compute/images/{{
-                    image_name }}
         Hidden: false
         IncludeInResponse: false
         Flatten: false
