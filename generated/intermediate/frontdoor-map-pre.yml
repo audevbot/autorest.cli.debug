@@ -2942,7 +2942,7 @@ Modules:
         NameGoSdk: RoutingRuleParameters
         NameTerraform: RoutingRuleParameters
         IdPortion: null
-        Type: 'unknown[undefined {"$ref":"41"}]'
+        Type: dict
         TypeName: xxx
         TypeNameGo: null
         IsList: false
@@ -2961,10 +2961,161 @@ Modules:
         DispositionSdk: '*'
         DispositionRest: '*'
         Comparison: ''
-        Updatable: false
+        Updatable: true
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        Flatten: false
+      - NameSwagger: parameters
+        NameAnsible: parameters
+        NamePythonSdk: parameters
+        NameGoSdk: Parameters
+        NameTerraform: Parameters
+        IdPortion: null
+        Type: dict
+        TypeName: RoutingRule
+        TypeNameGo: RoutingRule
+        IsList: false
+        Required: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: Routing Rule properties needed to create a new Front Door.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: null
+        EnumValues: []
+        PathSwagger: ''
+        PathPython: null
+        PathGo: null
+        DispositionSdk: dictionary
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: false
+        Flatten: false
+      - NameSwagger: id
+        NameAnsible: id
+        NamePythonSdk: id
+        NameGoSdk: ID
+        NameTerraform: ID
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource ID.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /id
+        PathPython: /id
+        PathGo: /id
+        DispositionSdk: /
+        DispositionRest: /
+        Comparison: ''
+        Updatable: false
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - NameSwagger: properties
+        NameAnsible: properties
+        NamePythonSdk: properties
+        NameGoSdk: Properties
+        NameTerraform: Properties
+        IdPortion: null
+        Type: dict
+        TypeName: RoutingRuleProperties
+        TypeNameGo: RoutingRuleProperties
+        IsList: false
+        Required: false
+        Documentation: Properties of the Front Door Routing Rule
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties
+        PathPython: ''
+        PathGo: /properties
+        DispositionSdk: /
+        DispositionRest: /
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: true
+        IncludeInResponse: true
+        Flatten: false
+      - NameSwagger: name
+        NameAnsible: name
+        NamePythonSdk: name
+        NameGoSdk: Name
+        NameTerraform: Name
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource name.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /name
+        PathPython: /name
+        PathGo: /name
+        DispositionSdk: /
+        DispositionRest: /
+        Comparison: ''
+        Updatable: false
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - &ref_11
+        NameSwagger: type
+        NameAnsible: type
+        NamePythonSdk: type
+        NameGoSdk: Type
+        NameTerraform: Type
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource type.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: false
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /type
+        PathPython: /type
+        PathGo: /type
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: false
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
         Flatten: false
     Methods:
       - Name: CreateOrUpdate
@@ -3027,7 +3178,98 @@ Modules:
           }}/routingRules/{{ routing_rule_name }}
         HttpMethod: get
         IsAsync: false
-    ResponseFields: []
+    ResponseFields:
+      - NameSwagger: id
+        NameAnsible: id
+        NamePythonSdk: id
+        NameGoSdk: ID
+        NameTerraform: ID
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource ID.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /id
+        PathPython: /id
+        PathGo: /id
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - NameSwagger: properties
+        NameAnsible: properties
+        NamePythonSdk: properties
+        NameGoSdk: Properties
+        NameTerraform: Properties
+        IdPortion: null
+        Type: dict
+        TypeName: RoutingRuleProperties
+        TypeNameGo: RoutingRuleProperties
+        IsList: false
+        Required: false
+        Documentation: Properties of the Front Door Routing Rule
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties
+        PathPython: ''
+        PathGo: /properties
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: false
+        Flatten: false
+      - NameSwagger: name
+        NameAnsible: name
+        NamePythonSdk: name
+        NameGoSdk: Name
+        NameTerraform: Name
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource name.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /name
+        PathPython: /name
+        PathGo: /name
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: false
+        Flatten: false
+      - *ref_11
     ModuleOperationNameUpper: RoutingRules
     ModuleOperationName: routing_rules
     ObjectName: RoutingRule
@@ -3510,6 +3752,130 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
+      - &ref_12
+        NameSwagger: id
+        NameAnsible: id
+        NamePythonSdk: id
+        NameGoSdk: ID
+        NameTerraform: ID
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource ID.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: false
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /id
+        PathPython: /id
+        PathGo: /id
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: false
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - &ref_13
+        NameSwagger: properties
+        NameAnsible: properties
+        NamePythonSdk: properties
+        NameGoSdk: Properties
+        NameTerraform: Properties
+        IdPortion: null
+        Type: dict
+        TypeName: RoutingRuleProperties
+        TypeNameGo: RoutingRuleProperties
+        IsList: false
+        Required: false
+        Documentation: Properties of the Front Door Routing Rule
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: false
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties
+        PathPython: ''
+        PathGo: /properties
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: true
+        IncludeInResponse: true
+        Flatten: false
+      - &ref_14
+        NameSwagger: name
+        NameAnsible: name
+        NamePythonSdk: name
+        NameGoSdk: Name
+        NameTerraform: Name
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource name.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: false
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /name
+        PathPython: /name
+        PathGo: /name
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: false
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - &ref_15
+        NameSwagger: type
+        NameAnsible: type
+        NamePythonSdk: type
+        NameGoSdk: Type
+        NameTerraform: Type
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource type.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: false
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /type
+        PathPython: /type
+        PathGo: /type
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: false
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
     Methods:
       - Name: ListByFrontDoor
         Options:
@@ -3539,12 +3905,16 @@ Modules:
           }}/routingRules/{{ routing_rule_name }}
         HttpMethod: get
         IsAsync: false
-    ResponseFields: []
+    ResponseFields:
+      - *ref_12
+      - *ref_13
+      - *ref_14
+      - *ref_15
     ModuleOperationNameUpper: RoutingRules
     ModuleOperationName: routing_rules
     ObjectName: RoutingRule
     ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: null
+    ResourceNameFieldInResponse: name
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -3877,7 +4247,7 @@ Modules:
         NameGoSdk: HealthProbeSettingsParameters
         NameTerraform: HealthProbeSettingsParameters
         IdPortion: null
-        Type: 'unknown[undefined {"$ref":"173"}]'
+        Type: dict
         TypeName: xxx
         TypeNameGo: null
         IsList: false
@@ -3896,10 +4266,161 @@ Modules:
         DispositionSdk: '*'
         DispositionRest: '*'
         Comparison: ''
-        Updatable: false
+        Updatable: true
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        Flatten: false
+      - NameSwagger: parameters
+        NameAnsible: parameters
+        NamePythonSdk: parameters
+        NameGoSdk: Parameters
+        NameTerraform: Parameters
+        IdPortion: null
+        Type: dict
+        TypeName: HealthProbeSettingsModel
+        TypeNameGo: HealthProbeSettingsModel
+        IsList: false
+        Required: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: HealthProbeSettings properties needed to create a new Front Door.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: null
+        EnumValues: []
+        PathSwagger: ''
+        PathPython: null
+        PathGo: null
+        DispositionSdk: dictionary
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: false
+        Flatten: false
+      - NameSwagger: id
+        NameAnsible: id
+        NamePythonSdk: id
+        NameGoSdk: ID
+        NameTerraform: ID
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource ID.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /id
+        PathPython: /id
+        PathGo: /id
+        DispositionSdk: /
+        DispositionRest: /
+        Comparison: ''
+        Updatable: false
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - NameSwagger: properties
+        NameAnsible: properties
+        NamePythonSdk: properties
+        NameGoSdk: Properties
+        NameTerraform: Properties
+        IdPortion: null
+        Type: dict
+        TypeName: HealthProbeSettingsProperties
+        TypeNameGo: HealthProbeSettingsProperties
+        IsList: false
+        Required: false
+        Documentation: Properties of the health probe settings
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties
+        PathPython: ''
+        PathGo: /properties
+        DispositionSdk: /
+        DispositionRest: /
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: true
+        IncludeInResponse: true
+        Flatten: false
+      - NameSwagger: name
+        NameAnsible: name
+        NamePythonSdk: name
+        NameGoSdk: Name
+        NameTerraform: Name
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource name.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /name
+        PathPython: /name
+        PathGo: /name
+        DispositionSdk: /
+        DispositionRest: /
+        Comparison: ''
+        Updatable: false
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - &ref_16
+        NameSwagger: type
+        NameAnsible: type
+        NamePythonSdk: type
+        NameGoSdk: Type
+        NameTerraform: Type
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource type.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: false
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /type
+        PathPython: /type
+        PathGo: /type
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: false
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
         Flatten: false
     Methods:
       - Name: CreateOrUpdate
@@ -3962,7 +4483,98 @@ Modules:
           }}/healthProbeSettings/{{ health_probe_setting_name }}
         HttpMethod: get
         IsAsync: false
-    ResponseFields: []
+    ResponseFields:
+      - NameSwagger: id
+        NameAnsible: id
+        NamePythonSdk: id
+        NameGoSdk: ID
+        NameTerraform: ID
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource ID.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /id
+        PathPython: /id
+        PathGo: /id
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - NameSwagger: properties
+        NameAnsible: properties
+        NamePythonSdk: properties
+        NameGoSdk: Properties
+        NameTerraform: Properties
+        IdPortion: null
+        Type: dict
+        TypeName: HealthProbeSettingsProperties
+        TypeNameGo: HealthProbeSettingsProperties
+        IsList: false
+        Required: false
+        Documentation: Properties of the health probe settings
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties
+        PathPython: ''
+        PathGo: /properties
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: false
+        Flatten: false
+      - NameSwagger: name
+        NameAnsible: name
+        NamePythonSdk: name
+        NameGoSdk: Name
+        NameTerraform: Name
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource name.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /name
+        PathPython: /name
+        PathGo: /name
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: false
+        Flatten: false
+      - *ref_16
     ModuleOperationNameUpper: HealthProbeSettings
     ModuleOperationName: health_probe_settings
     ObjectName: HealthProbeSetting
@@ -4170,6 +4782,130 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
+      - &ref_17
+        NameSwagger: id
+        NameAnsible: id
+        NamePythonSdk: id
+        NameGoSdk: ID
+        NameTerraform: ID
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource ID.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: false
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /id
+        PathPython: /id
+        PathGo: /id
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: false
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - &ref_18
+        NameSwagger: properties
+        NameAnsible: properties
+        NamePythonSdk: properties
+        NameGoSdk: Properties
+        NameTerraform: Properties
+        IdPortion: null
+        Type: dict
+        TypeName: HealthProbeSettingsProperties
+        TypeNameGo: HealthProbeSettingsProperties
+        IsList: false
+        Required: false
+        Documentation: Properties of the health probe settings
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: false
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties
+        PathPython: ''
+        PathGo: /properties
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: true
+        IncludeInResponse: true
+        Flatten: false
+      - &ref_19
+        NameSwagger: name
+        NameAnsible: name
+        NamePythonSdk: name
+        NameGoSdk: Name
+        NameTerraform: Name
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource name.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: false
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /name
+        PathPython: /name
+        PathGo: /name
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: false
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - &ref_20
+        NameSwagger: type
+        NameAnsible: type
+        NamePythonSdk: type
+        NameGoSdk: Type
+        NameTerraform: Type
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource type.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: false
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /type
+        PathPython: /type
+        PathGo: /type
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: false
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
     Methods:
       - Name: ListByFrontDoor
         Options:
@@ -4199,12 +4935,16 @@ Modules:
           }}/healthProbeSettings/{{ health_probe_setting_name }}
         HttpMethod: get
         IsAsync: false
-    ResponseFields: []
+    ResponseFields:
+      - *ref_17
+      - *ref_18
+      - *ref_19
+      - *ref_20
     ModuleOperationNameUpper: HealthProbeSettings
     ModuleOperationName: health_probe_settings
     ObjectName: HealthProbeSetting
     ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: null
+    ResourceNameFieldInResponse: name
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -4389,7 +5129,7 @@ Modules:
         NameGoSdk: LoadBalancingSettingsParameters
         NameTerraform: LoadBalancingSettingsParameters
         IdPortion: null
-        Type: 'unknown[undefined {"$ref":"123"}]'
+        Type: dict
         TypeName: xxx
         TypeNameGo: null
         IsList: false
@@ -4408,10 +5148,161 @@ Modules:
         DispositionSdk: '*'
         DispositionRest: '*'
         Comparison: ''
-        Updatable: false
+        Updatable: true
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        Flatten: false
+      - NameSwagger: parameters
+        NameAnsible: parameters
+        NamePythonSdk: parameters
+        NameGoSdk: Parameters
+        NameTerraform: Parameters
+        IdPortion: null
+        Type: dict
+        TypeName: LoadBalancingSettingsModel
+        TypeNameGo: LoadBalancingSettingsModel
+        IsList: false
+        Required: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: LoadBalancingSettings properties needed to create a new Front Door.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: null
+        EnumValues: []
+        PathSwagger: ''
+        PathPython: null
+        PathGo: null
+        DispositionSdk: dictionary
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: false
+        Flatten: false
+      - NameSwagger: id
+        NameAnsible: id
+        NamePythonSdk: id
+        NameGoSdk: ID
+        NameTerraform: ID
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource ID.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /id
+        PathPython: /id
+        PathGo: /id
+        DispositionSdk: /
+        DispositionRest: /
+        Comparison: ''
+        Updatable: false
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - NameSwagger: properties
+        NameAnsible: properties
+        NamePythonSdk: properties
+        NameGoSdk: Properties
+        NameTerraform: Properties
+        IdPortion: null
+        Type: dict
+        TypeName: LoadBalancingSettingsProperties
+        TypeNameGo: LoadBalancingSettingsProperties
+        IsList: false
+        Required: false
+        Documentation: Properties of the load balancing settings
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties
+        PathPython: ''
+        PathGo: /properties
+        DispositionSdk: /
+        DispositionRest: /
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: true
+        IncludeInResponse: true
+        Flatten: false
+      - NameSwagger: name
+        NameAnsible: name
+        NamePythonSdk: name
+        NameGoSdk: Name
+        NameTerraform: Name
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource name.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /name
+        PathPython: /name
+        PathGo: /name
+        DispositionSdk: /
+        DispositionRest: /
+        Comparison: ''
+        Updatable: false
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - &ref_21
+        NameSwagger: type
+        NameAnsible: type
+        NamePythonSdk: type
+        NameGoSdk: Type
+        NameTerraform: Type
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource type.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: false
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /type
+        PathPython: /type
+        PathGo: /type
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: false
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
         Flatten: false
     Methods:
       - Name: CreateOrUpdate
@@ -4474,7 +5365,98 @@ Modules:
           }}/loadBalancingSettings/{{ load_balancing_setting_name }}
         HttpMethod: get
         IsAsync: false
-    ResponseFields: []
+    ResponseFields:
+      - NameSwagger: id
+        NameAnsible: id
+        NamePythonSdk: id
+        NameGoSdk: ID
+        NameTerraform: ID
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource ID.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /id
+        PathPython: /id
+        PathGo: /id
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - NameSwagger: properties
+        NameAnsible: properties
+        NamePythonSdk: properties
+        NameGoSdk: Properties
+        NameTerraform: Properties
+        IdPortion: null
+        Type: dict
+        TypeName: LoadBalancingSettingsProperties
+        TypeNameGo: LoadBalancingSettingsProperties
+        IsList: false
+        Required: false
+        Documentation: Properties of the load balancing settings
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties
+        PathPython: ''
+        PathGo: /properties
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: false
+        Flatten: false
+      - NameSwagger: name
+        NameAnsible: name
+        NamePythonSdk: name
+        NameGoSdk: Name
+        NameTerraform: Name
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource name.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /name
+        PathPython: /name
+        PathGo: /name
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: false
+        Flatten: false
+      - *ref_21
     ModuleOperationNameUpper: LoadBalancingSettings
     ModuleOperationName: load_balancing_settings
     ObjectName: LoadBalancingSetting
@@ -4677,6 +5659,130 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
+      - &ref_22
+        NameSwagger: id
+        NameAnsible: id
+        NamePythonSdk: id
+        NameGoSdk: ID
+        NameTerraform: ID
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource ID.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: false
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /id
+        PathPython: /id
+        PathGo: /id
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: false
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - &ref_23
+        NameSwagger: properties
+        NameAnsible: properties
+        NamePythonSdk: properties
+        NameGoSdk: Properties
+        NameTerraform: Properties
+        IdPortion: null
+        Type: dict
+        TypeName: LoadBalancingSettingsProperties
+        TypeNameGo: LoadBalancingSettingsProperties
+        IsList: false
+        Required: false
+        Documentation: Properties of the load balancing settings
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: false
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties
+        PathPython: ''
+        PathGo: /properties
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: true
+        IncludeInResponse: true
+        Flatten: false
+      - &ref_24
+        NameSwagger: name
+        NameAnsible: name
+        NamePythonSdk: name
+        NameGoSdk: Name
+        NameTerraform: Name
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource name.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: false
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /name
+        PathPython: /name
+        PathGo: /name
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: false
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - &ref_25
+        NameSwagger: type
+        NameAnsible: type
+        NamePythonSdk: type
+        NameGoSdk: Type
+        NameTerraform: Type
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource type.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: false
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /type
+        PathPython: /type
+        PathGo: /type
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: false
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
     Methods:
       - Name: ListByFrontDoor
         Options:
@@ -4706,12 +5812,16 @@ Modules:
           }}/loadBalancingSettings/{{ load_balancing_setting_name }}
         HttpMethod: get
         IsAsync: false
-    ResponseFields: []
+    ResponseFields:
+      - *ref_22
+      - *ref_23
+      - *ref_24
+      - *ref_25
     ModuleOperationNameUpper: LoadBalancingSettings
     ModuleOperationName: load_balancing_settings
     ObjectName: LoadBalancingSetting
     ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: null
+    ResourceNameFieldInResponse: name
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -4892,7 +6002,7 @@ Modules:
         NameGoSdk: BackendPoolParameters
         NameTerraform: BackendPoolParameters
         IdPortion: null
-        Type: 'unknown[undefined {"$ref":"221"}]'
+        Type: dict
         TypeName: xxx
         TypeNameGo: null
         IsList: false
@@ -4911,10 +6021,161 @@ Modules:
         DispositionSdk: '*'
         DispositionRest: '*'
         Comparison: ''
-        Updatable: false
+        Updatable: true
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        Flatten: false
+      - NameSwagger: parameters
+        NameAnsible: parameters
+        NamePythonSdk: parameters
+        NameGoSdk: Parameters
+        NameTerraform: Parameters
+        IdPortion: null
+        Type: dict
+        TypeName: BackendPool
+        TypeNameGo: BackendPool
+        IsList: false
+        Required: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: Backend Pool properties needed to create a new Pool.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: null
+        EnumValues: []
+        PathSwagger: ''
+        PathPython: null
+        PathGo: null
+        DispositionSdk: dictionary
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: false
+        Flatten: false
+      - NameSwagger: id
+        NameAnsible: id
+        NamePythonSdk: id
+        NameGoSdk: ID
+        NameTerraform: ID
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource ID.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /id
+        PathPython: /id
+        PathGo: /id
+        DispositionSdk: /
+        DispositionRest: /
+        Comparison: ''
+        Updatable: false
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - NameSwagger: properties
+        NameAnsible: properties
+        NamePythonSdk: properties
+        NameGoSdk: Properties
+        NameTerraform: Properties
+        IdPortion: null
+        Type: dict
+        TypeName: BackendPoolProperties
+        TypeNameGo: BackendPoolProperties
+        IsList: false
+        Required: false
+        Documentation: Properties of the Front Door Backend Pool
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties
+        PathPython: ''
+        PathGo: /properties
+        DispositionSdk: /
+        DispositionRest: /
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: true
+        IncludeInResponse: true
+        Flatten: false
+      - NameSwagger: name
+        NameAnsible: name
+        NamePythonSdk: name
+        NameGoSdk: Name
+        NameTerraform: Name
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource name.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /name
+        PathPython: /name
+        PathGo: /name
+        DispositionSdk: /
+        DispositionRest: /
+        Comparison: ''
+        Updatable: false
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - &ref_26
+        NameSwagger: type
+        NameAnsible: type
+        NamePythonSdk: type
+        NameGoSdk: Type
+        NameTerraform: Type
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource type.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: false
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /type
+        PathPython: /type
+        PathGo: /type
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: false
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
         Flatten: false
     Methods:
       - Name: CreateOrUpdate
@@ -4977,7 +6238,98 @@ Modules:
           }}/backendPools/{{ backend_pool_name }}
         HttpMethod: get
         IsAsync: false
-    ResponseFields: []
+    ResponseFields:
+      - NameSwagger: id
+        NameAnsible: id
+        NamePythonSdk: id
+        NameGoSdk: ID
+        NameTerraform: ID
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource ID.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /id
+        PathPython: /id
+        PathGo: /id
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - NameSwagger: properties
+        NameAnsible: properties
+        NamePythonSdk: properties
+        NameGoSdk: Properties
+        NameTerraform: Properties
+        IdPortion: null
+        Type: dict
+        TypeName: BackendPoolProperties
+        TypeNameGo: BackendPoolProperties
+        IsList: false
+        Required: false
+        Documentation: Properties of the Front Door Backend Pool
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties
+        PathPython: ''
+        PathGo: /properties
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: false
+        Flatten: false
+      - NameSwagger: name
+        NameAnsible: name
+        NamePythonSdk: name
+        NameGoSdk: Name
+        NameTerraform: Name
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource name.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /name
+        PathPython: /name
+        PathGo: /name
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: false
+        Flatten: false
+      - *ref_26
     ModuleOperationNameUpper: BackendPools
     ModuleOperationName: backend_pools
     ObjectName: BackendPool
@@ -5302,6 +6654,130 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
+      - &ref_27
+        NameSwagger: id
+        NameAnsible: id
+        NamePythonSdk: id
+        NameGoSdk: ID
+        NameTerraform: ID
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource ID.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: false
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /id
+        PathPython: /id
+        PathGo: /id
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: false
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - &ref_28
+        NameSwagger: properties
+        NameAnsible: properties
+        NamePythonSdk: properties
+        NameGoSdk: Properties
+        NameTerraform: Properties
+        IdPortion: null
+        Type: dict
+        TypeName: BackendPoolProperties
+        TypeNameGo: BackendPoolProperties
+        IsList: false
+        Required: false
+        Documentation: Properties of the Front Door Backend Pool
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: false
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties
+        PathPython: ''
+        PathGo: /properties
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: true
+        IncludeInResponse: true
+        Flatten: false
+      - &ref_29
+        NameSwagger: name
+        NameAnsible: name
+        NamePythonSdk: name
+        NameGoSdk: Name
+        NameTerraform: Name
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource name.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: false
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /name
+        PathPython: /name
+        PathGo: /name
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: false
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - &ref_30
+        NameSwagger: type
+        NameAnsible: type
+        NamePythonSdk: type
+        NameGoSdk: Type
+        NameTerraform: Type
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource type.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: false
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /type
+        PathPython: /type
+        PathGo: /type
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: false
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
     Methods:
       - Name: ListByFrontDoor
         Options:
@@ -5331,12 +6807,16 @@ Modules:
           }}/backendPools/{{ backend_pool_name }}
         HttpMethod: get
         IsAsync: false
-    ResponseFields: []
+    ResponseFields:
+      - *ref_27
+      - *ref_28
+      - *ref_29
+      - *ref_30
     ModuleOperationNameUpper: BackendPools
     ModuleOperationName: backend_pools
     ObjectName: BackendPool
     ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: null
+    ResourceNameFieldInResponse: name
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -5577,7 +7057,7 @@ Modules:
         NameGoSdk: FrontendEndpointParameters
         NameTerraform: FrontendEndpointParameters
         IdPortion: null
-        Type: 'unknown[undefined {"$ref":"315"}]'
+        Type: dict
         TypeName: xxx
         TypeNameGo: null
         IsList: false
@@ -5596,10 +7076,161 @@ Modules:
         DispositionSdk: '*'
         DispositionRest: '*'
         Comparison: ''
-        Updatable: false
+        Updatable: true
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        Flatten: false
+      - NameSwagger: parameters
+        NameAnsible: parameters
+        NamePythonSdk: parameters
+        NameGoSdk: Parameters
+        NameTerraform: Parameters
+        IdPortion: null
+        Type: dict
+        TypeName: FrontendEndpoint
+        TypeNameGo: FrontendEndpoint
+        IsList: false
+        Required: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: Frontend endpoint properties needed to create a new endpoint.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: null
+        EnumValues: []
+        PathSwagger: ''
+        PathPython: null
+        PathGo: null
+        DispositionSdk: dictionary
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: false
+        Flatten: false
+      - NameSwagger: id
+        NameAnsible: id
+        NamePythonSdk: id
+        NameGoSdk: ID
+        NameTerraform: ID
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource ID.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /id
+        PathPython: /id
+        PathGo: /id
+        DispositionSdk: /
+        DispositionRest: /
+        Comparison: ''
+        Updatable: false
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - NameSwagger: properties
+        NameAnsible: properties
+        NamePythonSdk: properties
+        NameGoSdk: Properties
+        NameTerraform: Properties
+        IdPortion: null
+        Type: dict
+        TypeName: FrontendEndpointProperties
+        TypeNameGo: FrontendEndpointProperties
+        IsList: false
+        Required: false
+        Documentation: Properties of the Frontend endpoint
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties
+        PathPython: ''
+        PathGo: /properties
+        DispositionSdk: /
+        DispositionRest: /
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: true
+        IncludeInResponse: true
+        Flatten: false
+      - NameSwagger: name
+        NameAnsible: name
+        NamePythonSdk: name
+        NameGoSdk: Name
+        NameTerraform: Name
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource name.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /name
+        PathPython: /name
+        PathGo: /name
+        DispositionSdk: /
+        DispositionRest: /
+        Comparison: ''
+        Updatable: false
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - &ref_31
+        NameSwagger: type
+        NameAnsible: type
+        NamePythonSdk: type
+        NameGoSdk: Type
+        NameTerraform: Type
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource type.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: false
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /type
+        PathPython: /type
+        PathGo: /type
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: false
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
         Flatten: false
     Methods:
       - Name: CreateOrUpdate
@@ -5662,7 +7293,98 @@ Modules:
           }}/frontendEndpoints/{{ frontend_endpoint_name }}
         HttpMethod: get
         IsAsync: false
-    ResponseFields: []
+    ResponseFields:
+      - NameSwagger: id
+        NameAnsible: id
+        NamePythonSdk: id
+        NameGoSdk: ID
+        NameTerraform: ID
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource ID.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /id
+        PathPython: /id
+        PathGo: /id
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - NameSwagger: properties
+        NameAnsible: properties
+        NamePythonSdk: properties
+        NameGoSdk: Properties
+        NameTerraform: Properties
+        IdPortion: null
+        Type: dict
+        TypeName: FrontendEndpointProperties
+        TypeNameGo: FrontendEndpointProperties
+        IsList: false
+        Required: false
+        Documentation: Properties of the Frontend endpoint
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties
+        PathPython: ''
+        PathGo: /properties
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: false
+        Flatten: false
+      - NameSwagger: name
+        NameAnsible: name
+        NamePythonSdk: name
+        NameGoSdk: Name
+        NameTerraform: Name
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource name.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /name
+        PathPython: /name
+        PathGo: /name
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: false
+        Flatten: false
+      - *ref_31
     ModuleOperationNameUpper: FrontendEndpoints
     ModuleOperationName: frontend_endpoints
     ObjectName: FrontendEndpoint
@@ -5895,6 +7617,130 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
+      - &ref_32
+        NameSwagger: id
+        NameAnsible: id
+        NamePythonSdk: id
+        NameGoSdk: ID
+        NameTerraform: ID
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource ID.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: false
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /id
+        PathPython: /id
+        PathGo: /id
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: false
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - &ref_33
+        NameSwagger: properties
+        NameAnsible: properties
+        NamePythonSdk: properties
+        NameGoSdk: Properties
+        NameTerraform: Properties
+        IdPortion: null
+        Type: dict
+        TypeName: FrontendEndpointProperties
+        TypeNameGo: FrontendEndpointProperties
+        IsList: false
+        Required: false
+        Documentation: Properties of the Frontend endpoint
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: false
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties
+        PathPython: ''
+        PathGo: /properties
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: true
+        IncludeInResponse: true
+        Flatten: false
+      - &ref_34
+        NameSwagger: name
+        NameAnsible: name
+        NamePythonSdk: name
+        NameGoSdk: Name
+        NameTerraform: Name
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource name.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: false
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /name
+        PathPython: /name
+        PathGo: /name
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: false
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - &ref_35
+        NameSwagger: type
+        NameAnsible: type
+        NamePythonSdk: type
+        NameGoSdk: Type
+        NameTerraform: Type
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: Resource type.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: false
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /type
+        PathPython: /type
+        PathGo: /type
+        DispositionSdk: '*'
+        DispositionRest: '*'
+        Comparison: ''
+        Updatable: false
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
     Methods:
       - Name: ListByFrontDoor
         Options:
@@ -5924,12 +7770,16 @@ Modules:
           }}/frontendEndpoints/{{ frontend_endpoint_name }}
         HttpMethod: get
         IsAsync: false
-    ResponseFields: []
+    ResponseFields:
+      - *ref_32
+      - *ref_33
+      - *ref_34
+      - *ref_35
     ModuleOperationNameUpper: FrontendEndpoints
     ModuleOperationName: frontend_endpoints
     ObjectName: FrontendEndpoint
     ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: null
+    ResourceNameFieldInResponse: name
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false

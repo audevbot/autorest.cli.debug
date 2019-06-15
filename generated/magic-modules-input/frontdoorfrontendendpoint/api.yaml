@@ -39,9 +39,10 @@ objects:
             go_variable_name: name
             python_parameter_name: frontend_endpoint_name
             python_variable_name: name
-          'frontendEndpointParameters': 
+          'frontendEndpointParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             id_portion: null
             go_variable_name: frontendEndpointParameters
+            go_type_name: null
             python_parameter_name: frontend_endpoint_parameters
             python_variable_name: frontend_endpoint_parameters
       delete: !ruby/object:Api::Azure::SDKOperationDefinition
@@ -84,6 +85,19 @@ objects:
             python_parameter_name: frontend_endpoint_name
             python_variable_name: name
         response:
+          '/id': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+            go_field_name: ID
+            python_field_name: id
+          '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
+            applicable_to: [go]
+            go_field_name: Properties
+            go_type_name: FrontendEndpointProperties
+          '/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+            go_field_name: Name
+            python_field_name: name
+          '/type': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+            go_field_name: Type
+            python_field_name: type
       list_by_front_door: !ruby/object:Api::Azure::SDKOperationDefinition
         go_func_name: ListByFrontDoor
         python_func_name: list_by_front_door
@@ -123,11 +137,28 @@ objects:
         input: true
         sample_value: myFrontendEndpoint
         azure_sdk_references: ['frontendEndpointName', '/name']
-      - 
+      - !ruby/object:Api::Type::NestedObject
         name: 'frontendEndpointParameters'
         description: 'Frontend endpoint properties needed to create a new endpoint.'
         required: true
-        input: true
         sample_value: [object Object]
         azure_sdk_references: ['frontendEndpointParameters']
+      - !ruby/object:Api::Type::String
+        name: 'id'
+        description: 'Resource ID.'
+        required: false
+        input: true
+        azure_sdk_references: ['/id']
+      - !ruby/object:Api::Type::String
+        name: 'name'
+        description: 'Resource name.'
+        required: false
+        input: true
+        azure_sdk_references: ['/name', '/name']
       # read only values included only in response
+      - !ruby/object:Api::Type::String
+        name: 'type'
+        description: 'Resource type.'
+        input: true
+        output: true
+        azure_sdk_references: ['/type']

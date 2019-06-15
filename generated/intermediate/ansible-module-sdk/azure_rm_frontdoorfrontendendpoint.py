@@ -31,12 +31,17 @@ options:
     required: true
   name:
     description:
-      - Name of the Frontend endpoint which is unique within the Front Door.
-    required: true
+      - Resource name.
   frontend_endpoint_parameters:
     description:
       - Frontend endpoint properties needed to create a new endpoint.
     required: true
+  id:
+    description:
+      - Resource ID.
+  type:
+    description:
+      - Resource type.
   state:
     description:
       - Assert the state of the FrontendEndpoint.
@@ -82,7 +87,30 @@ EXAMPLES = '''
 '''
 
 RETURN = '''
-{}
+id:
+  description:
+    - Resource ID.
+  returned: always
+  type: str
+  sample: null
+properties:
+  description:
+    - Properties of the Frontend endpoint
+  returned: always
+  type: dict
+  sample: null
+name:
+  description:
+    - Resource name.
+  returned: always
+  type: str
+  sample: null
+type:
+  description:
+    - Resource type.
+  returned: always
+  type: str
+  sample: null
 
 '''
 
@@ -126,9 +154,18 @@ class AzureRMFrontendEndpoints(AzureRMModuleBaseExt):
                 required=true
             ),
             frontend_endpoint_parameters=dict(
-                type='unknown[undefined {"$ref":"315"}]',
-                updatable=False,
+                type='dict',
                 required=true
+            ),
+            id=dict(
+                type='str',
+                updatable=False,
+                disposition='/'
+            ),
+            name=dict(
+                type='str',
+                updatable=False,
+                disposition='/'
             ),
             state=dict(
                 type='str',
@@ -141,6 +178,7 @@ class AzureRMFrontendEndpoints(AzureRMModuleBaseExt):
         self.front_door_name = None
         self.name = None
         self.frontend_endpoint_parameters = None
+        self.type = None
         self.body = {}
 
         self.results = dict(changed=False)
@@ -199,6 +237,12 @@ class AzureRMFrontendEndpoints(AzureRMModuleBaseExt):
         else:
             self.results['changed'] = False
             response = old_response
+
+        if response:
+           self.results["id"] = response["id"]
+           self.results["properties"] = response["properties"]
+           self.results["name"] = response["name"]
+           self.results["type"] = response["type"]
 
         return self.results
 

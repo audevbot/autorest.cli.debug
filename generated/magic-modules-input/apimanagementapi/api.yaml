@@ -197,10 +197,10 @@ objects:
           '/properties/path': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Path
-          '/protocols': 
+          '/protocols': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: protocols
-          '/properties/protocols': 
+          '/properties/protocols': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Protocols
           '/apiVersionSet': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -463,10 +463,10 @@ objects:
           '/properties/path': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Path
-          '/protocols': 
+          '/protocols': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: protocols
-          '/properties/protocols': 
+          '/properties/protocols': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Protocols
           '/apiVersionSet': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -744,10 +744,10 @@ objects:
           '/path': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: path
-          '/properties/protocols': 
+          '/properties/protocols': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Protocols
-          '/protocols': 
+          '/protocols': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: protocols
           '/properties/apiVersionSet': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -1006,7 +1006,7 @@ objects:
         required: true
         sample_value: newecho
         azure_sdk_references: ['/path', '/properties/path']
-      - 
+      - !ruby/object:Api::Type::String
         name: 'protocols'
         description: 'Describes on which protocols the operations in this API can be invoked.'
         required: false

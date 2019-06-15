@@ -31,7 +31,13 @@ options:
     required: true
   name:
     description:
-      - Name of the health probe settings which is unique within the Front Door.
+      - Resource name.
+  id:
+    description:
+      - Resource ID.
+  type:
+    description:
+      - Resource type.
 extends_documentation_fragment:
   - azure
 author:
@@ -63,7 +69,31 @@ health_probe_settings:
     healthprobesetting_name:
       description: The key is the name of the server that the values relate to.
       type: complex
-      contains: {}
+      contains:
+        id:
+          description:
+            - Resource ID.
+          returned: always
+          type: str
+          sample: null
+        properties:
+          description:
+            - Properties of the health probe settings
+          returned: always
+          type: dict
+          sample: null
+        name:
+          description:
+            - Resource name.
+          returned: always
+          type: str
+          sample: null
+        type:
+          description:
+            - Resource type.
+          returned: always
+          type: str
+          sample: null
 
 '''
 
@@ -94,6 +124,10 @@ class AzureRMHealthProbeSettingsInfo(AzureRMModuleBase):
         self.resource_group = None
         self.front_door_name = None
         self.name = None
+        self.id = None
+        self.properties = None
+        self.name = None
+        self.type = None
 
         self.results = dict(changed=False)
         self.mgmt_client = None

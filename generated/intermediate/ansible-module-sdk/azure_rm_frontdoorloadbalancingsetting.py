@@ -31,14 +31,17 @@ options:
     required: true
   name:
     description:
-      - >-
-        Name of the load balancing settings which is unique within the Front
-        Door.
-    required: true
+      - Resource name.
   load_balancing_settings_parameters:
     description:
       - LoadBalancingSettings properties needed to create a new Front Door.
     required: true
+  id:
+    description:
+      - Resource ID.
+  type:
+    description:
+      - Resource type.
   state:
     description:
       - Assert the state of the LoadBalancingSetting.
@@ -77,7 +80,30 @@ EXAMPLES = '''
 '''
 
 RETURN = '''
-{}
+id:
+  description:
+    - Resource ID.
+  returned: always
+  type: str
+  sample: null
+properties:
+  description:
+    - Properties of the load balancing settings
+  returned: always
+  type: dict
+  sample: null
+name:
+  description:
+    - Resource name.
+  returned: always
+  type: str
+  sample: null
+type:
+  description:
+    - Resource type.
+  returned: always
+  type: str
+  sample: null
 
 '''
 
@@ -121,9 +147,18 @@ class AzureRMLoadBalancingSettings(AzureRMModuleBaseExt):
                 required=true
             ),
             load_balancing_settings_parameters=dict(
-                type='unknown[undefined {"$ref":"123"}]',
-                updatable=False,
+                type='dict',
                 required=true
+            ),
+            id=dict(
+                type='str',
+                updatable=False,
+                disposition='/'
+            ),
+            name=dict(
+                type='str',
+                updatable=False,
+                disposition='/'
             ),
             state=dict(
                 type='str',
@@ -136,6 +171,7 @@ class AzureRMLoadBalancingSettings(AzureRMModuleBaseExt):
         self.front_door_name = None
         self.name = None
         self.load_balancing_settings_parameters = None
+        self.type = None
         self.body = {}
 
         self.results = dict(changed=False)
@@ -194,6 +230,12 @@ class AzureRMLoadBalancingSettings(AzureRMModuleBaseExt):
         else:
             self.results['changed'] = False
             response = old_response
+
+        if response:
+           self.results["id"] = response["id"]
+           self.results["properties"] = response["properties"]
+           self.results["name"] = response["name"]
+           self.results["type"] = response["type"]
 
         return self.results
 

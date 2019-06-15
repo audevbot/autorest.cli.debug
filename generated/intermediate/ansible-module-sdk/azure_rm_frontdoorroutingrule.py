@@ -31,12 +31,17 @@ options:
     required: true
   name:
     description:
-      - Name of the Routing Rule which is unique within the Front Door.
-    required: true
+      - Resource name.
   routing_rule_parameters:
     description:
       - Routing Rule properties needed to create a new Front Door.
     required: true
+  id:
+    description:
+      - Resource ID.
+  type:
+    description:
+      - Resource type.
   state:
     description:
       - Assert the state of the RoutingRule.
@@ -124,7 +129,30 @@ EXAMPLES = '''
 '''
 
 RETURN = '''
-{}
+id:
+  description:
+    - Resource ID.
+  returned: always
+  type: str
+  sample: null
+properties:
+  description:
+    - Properties of the Front Door Routing Rule
+  returned: always
+  type: dict
+  sample: null
+name:
+  description:
+    - Resource name.
+  returned: always
+  type: str
+  sample: null
+type:
+  description:
+    - Resource type.
+  returned: always
+  type: str
+  sample: null
 
 '''
 
@@ -168,9 +196,18 @@ class AzureRMRoutingRules(AzureRMModuleBaseExt):
                 required=true
             ),
             routing_rule_parameters=dict(
-                type='unknown[undefined {"$ref":"41"}]',
-                updatable=False,
+                type='dict',
                 required=true
+            ),
+            id=dict(
+                type='str',
+                updatable=False,
+                disposition='/'
+            ),
+            name=dict(
+                type='str',
+                updatable=False,
+                disposition='/'
             ),
             state=dict(
                 type='str',
@@ -183,6 +220,7 @@ class AzureRMRoutingRules(AzureRMModuleBaseExt):
         self.front_door_name = None
         self.name = None
         self.routing_rule_parameters = None
+        self.type = None
         self.body = {}
 
         self.results = dict(changed=False)
@@ -241,6 +279,12 @@ class AzureRMRoutingRules(AzureRMModuleBaseExt):
         else:
             self.results['changed'] = False
             response = old_response
+
+        if response:
+           self.results["id"] = response["id"]
+           self.results["properties"] = response["properties"]
+           self.results["name"] = response["name"]
+           self.results["type"] = response["type"]
 
         return self.results
 
