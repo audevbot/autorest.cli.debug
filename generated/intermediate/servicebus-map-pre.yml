@@ -18240,10 +18240,8 @@ Modules:
             NameTerraform: PartitionIds
             IdPortion: null
             Type: str
-            TypeName: >-
-              {"$id":"1044","$type":"SequenceType","elementType":{"$id":"1045","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1046","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1047","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1044","$type":"SequenceType","elementType":{"$id":"1045","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1046","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1047","fixed":false},"deprecated":false}
+            TypeName: String
+            TypeNameGo: String
             IsList: true
             Required: false
             Documentation: Current number of shards on the Event Hub.

@@ -446,10 +446,8 @@ Modules:
                 NameTerraform: SourceAddresses
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"103","$type":"SequenceType","elementType":{"$id":"104","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"105","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"106","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"103","$type":"SequenceType","elementType":{"$id":"104","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"105","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"106","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: List of source IP addresses for this rule.
@@ -512,10 +510,8 @@ Modules:
                 NameTerraform: TargetFqdns
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"117","$type":"SequenceType","elementType":{"$id":"118","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"119","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"120","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"117","$type":"SequenceType","elementType":{"$id":"118","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"119","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"120","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: List of FQDNs for this rule.
@@ -546,10 +542,8 @@ Modules:
                 NameTerraform: FqdnTags
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"125","$type":"SequenceType","elementType":{"$id":"126","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"127","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"128","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"125","$type":"SequenceType","elementType":{"$id":"126","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"127","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"128","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: List of FQDN Tags for this rule.
@@ -936,10 +930,8 @@ Modules:
                 NameTerraform: SourceAddresses
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"199","$type":"SequenceType","elementType":{"$id":"200","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"201","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"202","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"199","$type":"SequenceType","elementType":{"$id":"200","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"201","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"202","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: List of source IP addresses for this rule.
@@ -970,10 +962,8 @@ Modules:
                 NameTerraform: DestinationAddresses
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"207","$type":"SequenceType","elementType":{"$id":"208","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"209","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"210","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"207","$type":"SequenceType","elementType":{"$id":"208","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"209","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"210","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: List of destination IP addresses for this rule.
@@ -1004,10 +994,8 @@ Modules:
                 NameTerraform: DestinationPorts
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"215","$type":"SequenceType","elementType":{"$id":"216","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"217","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"218","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"215","$type":"SequenceType","elementType":{"$id":"216","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"217","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"218","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: List of destination ports.
@@ -1038,10 +1026,8 @@ Modules:
                 NameTerraform: Protocols
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"223","$type":"SequenceType","elementType":{"$id":"224","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"225","name":"TCP","serializedName":"TCP"},{"$id":"226","name":"UDP","serializedName":"UDP"},{"$id":"227","name":"Any","serializedName":"Any"},{"$id":"228","name":"ICMP","serializedName":"ICMP"}],"modelAsString":true,"underlyingType":{"$id":"229","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"230","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"231","fixed":false,"raw":"AzureFirewallNetworkRuleProtocol"},"deprecated":false},"name":{"$id":"232","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"223","$type":"SequenceType","elementType":{"$id":"224","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"225","name":"TCP","serializedName":"TCP"},{"$id":"226","name":"UDP","serializedName":"UDP"},{"$id":"227","name":"Any","serializedName":"Any"},{"$id":"228","name":"ICMP","serializedName":"ICMP"}],"modelAsString":true,"underlyingType":{"$id":"229","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"230","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"231","fixed":false,"raw":"AzureFirewallNetworkRuleProtocol"},"deprecated":false},"name":{"$id":"232","fixed":false},"deprecated":false}
+                TypeName: AzureFirewallNetworkRuleProtocol
+                TypeNameGo: AzureFirewallNetworkRuleProtocol
                 IsList: true
                 Required: false
                 Documentation: >-
@@ -1490,10 +1476,8 @@ Modules:
                 NameTerraform: Protocols
                 IdPortion: null
                 Type: 'unknown[undefined {"$ref":"224"}]'
-                TypeName: >-
-                  {"$id":"303","$type":"SequenceType","elementType":{"$ref":"224"},"name":{"$id":"304","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"303","$type":"SequenceType","elementType":{"$ref":"224"},"name":{"$id":"304","fixed":false},"deprecated":false}
+                TypeName: '{"$ref":"224"}'
+                TypeNameGo: '{"$ref":"224"}'
                 IsList: true
                 Required: false
                 Documentation: Array of AzureFirewallNetworkRuleProtocols.
@@ -1522,10 +1506,8 @@ Modules:
                 NameTerraform: SourceAddresses
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"309","$type":"SequenceType","elementType":{"$id":"310","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"311","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"312","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"309","$type":"SequenceType","elementType":{"$id":"310","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"311","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"312","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: List of source IP addresses for this rule.
@@ -1556,10 +1538,8 @@ Modules:
                 NameTerraform: DestinationAddresses
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"317","$type":"SequenceType","elementType":{"$id":"318","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"319","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"320","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"317","$type":"SequenceType","elementType":{"$id":"318","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"319","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"320","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: List of destination IP addresses.
@@ -1590,10 +1570,8 @@ Modules:
                 NameTerraform: DestinationPorts
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"325","$type":"SequenceType","elementType":{"$id":"326","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"327","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"328","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"325","$type":"SequenceType","elementType":{"$id":"326","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"327","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"328","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: List of destination ports.
@@ -2640,10 +2618,8 @@ Modules:
                         NameTerraform: SourceAddresses
                         IdPortion: null
                         Type: str
-                        TypeName: >-
-                          {"$id":"103","$type":"SequenceType","elementType":{"$id":"104","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"105","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"106","fixed":false},"deprecated":false}
-                        TypeNameGo: >-
-                          {"$id":"103","$type":"SequenceType","elementType":{"$id":"104","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"105","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"106","fixed":false},"deprecated":false}
+                        TypeName: String
+                        TypeNameGo: String
                         IsList: true
                         Required: false
                         Documentation: List of source IP addresses for this rule.
@@ -2706,10 +2682,8 @@ Modules:
                         NameTerraform: TargetFqdns
                         IdPortion: null
                         Type: str
-                        TypeName: >-
-                          {"$id":"117","$type":"SequenceType","elementType":{"$id":"118","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"119","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"120","fixed":false},"deprecated":false}
-                        TypeNameGo: >-
-                          {"$id":"117","$type":"SequenceType","elementType":{"$id":"118","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"119","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"120","fixed":false},"deprecated":false}
+                        TypeName: String
+                        TypeNameGo: String
                         IsList: true
                         Required: false
                         Documentation: List of FQDNs for this rule.
@@ -2740,10 +2714,8 @@ Modules:
                         NameTerraform: FqdnTags
                         IdPortion: null
                         Type: str
-                        TypeName: >-
-                          {"$id":"125","$type":"SequenceType","elementType":{"$id":"126","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"127","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"128","fixed":false},"deprecated":false}
-                        TypeNameGo: >-
-                          {"$id":"125","$type":"SequenceType","elementType":{"$id":"126","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"127","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"128","fixed":false},"deprecated":false}
+                        TypeName: String
+                        TypeNameGo: String
                         IsList: true
                         Required: false
                         Documentation: List of FQDN Tags for this rule.
@@ -3086,10 +3058,8 @@ Modules:
                         NameTerraform: SourceAddresses
                         IdPortion: null
                         Type: str
-                        TypeName: >-
-                          {"$id":"199","$type":"SequenceType","elementType":{"$id":"200","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"201","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"202","fixed":false},"deprecated":false}
-                        TypeNameGo: >-
-                          {"$id":"199","$type":"SequenceType","elementType":{"$id":"200","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"201","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"202","fixed":false},"deprecated":false}
+                        TypeName: String
+                        TypeNameGo: String
                         IsList: true
                         Required: false
                         Documentation: List of source IP addresses for this rule.
@@ -3120,10 +3090,8 @@ Modules:
                         NameTerraform: DestinationAddresses
                         IdPortion: null
                         Type: str
-                        TypeName: >-
-                          {"$id":"207","$type":"SequenceType","elementType":{"$id":"208","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"209","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"210","fixed":false},"deprecated":false}
-                        TypeNameGo: >-
-                          {"$id":"207","$type":"SequenceType","elementType":{"$id":"208","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"209","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"210","fixed":false},"deprecated":false}
+                        TypeName: String
+                        TypeNameGo: String
                         IsList: true
                         Required: false
                         Documentation: List of destination IP addresses for this rule.
@@ -3154,10 +3122,8 @@ Modules:
                         NameTerraform: DestinationPorts
                         IdPortion: null
                         Type: str
-                        TypeName: >-
-                          {"$id":"215","$type":"SequenceType","elementType":{"$id":"216","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"217","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"218","fixed":false},"deprecated":false}
-                        TypeNameGo: >-
-                          {"$id":"215","$type":"SequenceType","elementType":{"$id":"216","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"217","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"218","fixed":false},"deprecated":false}
+                        TypeName: String
+                        TypeNameGo: String
                         IsList: true
                         Required: false
                         Documentation: List of destination ports.
@@ -3188,10 +3154,8 @@ Modules:
                         NameTerraform: Protocols
                         IdPortion: null
                         Type: str
-                        TypeName: >-
-                          {"$id":"223","$type":"SequenceType","elementType":{"$id":"224","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"225","name":"TCP","serializedName":"TCP"},{"$id":"226","name":"UDP","serializedName":"UDP"},{"$id":"227","name":"Any","serializedName":"Any"},{"$id":"228","name":"ICMP","serializedName":"ICMP"}],"modelAsString":true,"underlyingType":{"$id":"229","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"230","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"231","fixed":false,"raw":"AzureFirewallNetworkRuleProtocol"},"deprecated":false},"name":{"$id":"232","fixed":false},"deprecated":false}
-                        TypeNameGo: >-
-                          {"$id":"223","$type":"SequenceType","elementType":{"$id":"224","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"225","name":"TCP","serializedName":"TCP"},{"$id":"226","name":"UDP","serializedName":"UDP"},{"$id":"227","name":"Any","serializedName":"Any"},{"$id":"228","name":"ICMP","serializedName":"ICMP"}],"modelAsString":true,"underlyingType":{"$id":"229","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"230","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"231","fixed":false,"raw":"AzureFirewallNetworkRuleProtocol"},"deprecated":false},"name":{"$id":"232","fixed":false},"deprecated":false}
+                        TypeName: AzureFirewallNetworkRuleProtocol
+                        TypeNameGo: AzureFirewallNetworkRuleProtocol
                         IsList: true
                         Required: false
                         Documentation: >-
@@ -3604,10 +3568,8 @@ Modules:
                         NameTerraform: Protocols
                         IdPortion: null
                         Type: 'unknown[undefined {"$ref":"224"}]'
-                        TypeName: >-
-                          {"$id":"303","$type":"SequenceType","elementType":{"$ref":"224"},"name":{"$id":"304","fixed":false},"deprecated":false}
-                        TypeNameGo: >-
-                          {"$id":"303","$type":"SequenceType","elementType":{"$ref":"224"},"name":{"$id":"304","fixed":false},"deprecated":false}
+                        TypeName: '{"$ref":"224"}'
+                        TypeNameGo: '{"$ref":"224"}'
                         IsList: true
                         Required: false
                         Documentation: Array of AzureFirewallNetworkRuleProtocols.
@@ -3638,10 +3600,8 @@ Modules:
                         NameTerraform: SourceAddresses
                         IdPortion: null
                         Type: str
-                        TypeName: >-
-                          {"$id":"309","$type":"SequenceType","elementType":{"$id":"310","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"311","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"312","fixed":false},"deprecated":false}
-                        TypeNameGo: >-
-                          {"$id":"309","$type":"SequenceType","elementType":{"$id":"310","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"311","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"312","fixed":false},"deprecated":false}
+                        TypeName: String
+                        TypeNameGo: String
                         IsList: true
                         Required: false
                         Documentation: List of source IP addresses for this rule.
@@ -3672,10 +3632,8 @@ Modules:
                         NameTerraform: DestinationAddresses
                         IdPortion: null
                         Type: str
-                        TypeName: >-
-                          {"$id":"317","$type":"SequenceType","elementType":{"$id":"318","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"319","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"320","fixed":false},"deprecated":false}
-                        TypeNameGo: >-
-                          {"$id":"317","$type":"SequenceType","elementType":{"$id":"318","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"319","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"320","fixed":false},"deprecated":false}
+                        TypeName: String
+                        TypeNameGo: String
                         IsList: true
                         Required: false
                         Documentation: List of destination IP addresses.
@@ -3706,10 +3664,8 @@ Modules:
                         NameTerraform: DestinationPorts
                         IdPortion: null
                         Type: str
-                        TypeName: >-
-                          {"$id":"325","$type":"SequenceType","elementType":{"$id":"326","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"327","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"328","fixed":false},"deprecated":false}
-                        TypeNameGo: >-
-                          {"$id":"325","$type":"SequenceType","elementType":{"$id":"326","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"327","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"328","fixed":false},"deprecated":false}
+                        TypeName: String
+                        TypeNameGo: String
                         IsList: true
                         Required: false
                         Documentation: List of destination ports.
@@ -4886,10 +4842,8 @@ Modules:
                 NameTerraform: SourceAddresses
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"103","$type":"SequenceType","elementType":{"$id":"104","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"105","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"106","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"103","$type":"SequenceType","elementType":{"$id":"104","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"105","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"106","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: List of source IP addresses for this rule.
@@ -4952,10 +4906,8 @@ Modules:
                 NameTerraform: TargetFqdns
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"117","$type":"SequenceType","elementType":{"$id":"118","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"119","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"120","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"117","$type":"SequenceType","elementType":{"$id":"118","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"119","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"120","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: List of FQDNs for this rule.
@@ -4986,10 +4938,8 @@ Modules:
                 NameTerraform: FqdnTags
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"125","$type":"SequenceType","elementType":{"$id":"126","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"127","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"128","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"125","$type":"SequenceType","elementType":{"$id":"126","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"127","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"128","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: List of FQDN Tags for this rule.
@@ -5374,10 +5324,8 @@ Modules:
                 NameTerraform: SourceAddresses
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"199","$type":"SequenceType","elementType":{"$id":"200","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"201","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"202","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"199","$type":"SequenceType","elementType":{"$id":"200","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"201","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"202","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: List of source IP addresses for this rule.
@@ -5408,10 +5356,8 @@ Modules:
                 NameTerraform: DestinationAddresses
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"207","$type":"SequenceType","elementType":{"$id":"208","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"209","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"210","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"207","$type":"SequenceType","elementType":{"$id":"208","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"209","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"210","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: List of destination IP addresses for this rule.
@@ -5442,10 +5388,8 @@ Modules:
                 NameTerraform: DestinationPorts
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"215","$type":"SequenceType","elementType":{"$id":"216","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"217","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"218","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"215","$type":"SequenceType","elementType":{"$id":"216","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"217","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"218","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: List of destination ports.
@@ -5476,10 +5420,8 @@ Modules:
                 NameTerraform: Protocols
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"223","$type":"SequenceType","elementType":{"$id":"224","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"225","name":"TCP","serializedName":"TCP"},{"$id":"226","name":"UDP","serializedName":"UDP"},{"$id":"227","name":"Any","serializedName":"Any"},{"$id":"228","name":"ICMP","serializedName":"ICMP"}],"modelAsString":true,"underlyingType":{"$id":"229","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"230","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"231","fixed":false,"raw":"AzureFirewallNetworkRuleProtocol"},"deprecated":false},"name":{"$id":"232","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"223","$type":"SequenceType","elementType":{"$id":"224","$type":"EnumType","modelAsExtensible":false,"values":[{"$id":"225","name":"TCP","serializedName":"TCP"},{"$id":"226","name":"UDP","serializedName":"UDP"},{"$id":"227","name":"Any","serializedName":"Any"},{"$id":"228","name":"ICMP","serializedName":"ICMP"}],"modelAsString":true,"underlyingType":{"$id":"229","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"230","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"231","fixed":false,"raw":"AzureFirewallNetworkRuleProtocol"},"deprecated":false},"name":{"$id":"232","fixed":false},"deprecated":false}
+                TypeName: AzureFirewallNetworkRuleProtocol
+                TypeNameGo: AzureFirewallNetworkRuleProtocol
                 IsList: true
                 Required: false
                 Documentation: >-
@@ -5926,10 +5868,8 @@ Modules:
                 NameTerraform: Protocols
                 IdPortion: null
                 Type: 'unknown[undefined {"$ref":"224"}]'
-                TypeName: >-
-                  {"$id":"303","$type":"SequenceType","elementType":{"$ref":"224"},"name":{"$id":"304","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"303","$type":"SequenceType","elementType":{"$ref":"224"},"name":{"$id":"304","fixed":false},"deprecated":false}
+                TypeName: '{"$ref":"224"}'
+                TypeNameGo: '{"$ref":"224"}'
                 IsList: true
                 Required: false
                 Documentation: Array of AzureFirewallNetworkRuleProtocols.
@@ -5958,10 +5898,8 @@ Modules:
                 NameTerraform: SourceAddresses
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"309","$type":"SequenceType","elementType":{"$id":"310","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"311","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"312","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"309","$type":"SequenceType","elementType":{"$id":"310","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"311","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"312","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: List of source IP addresses for this rule.
@@ -5992,10 +5930,8 @@ Modules:
                 NameTerraform: DestinationAddresses
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"317","$type":"SequenceType","elementType":{"$id":"318","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"319","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"320","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"317","$type":"SequenceType","elementType":{"$id":"318","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"319","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"320","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: List of destination IP addresses.
@@ -6026,10 +5962,8 @@ Modules:
                 NameTerraform: DestinationPorts
                 IdPortion: null
                 Type: str
-                TypeName: >-
-                  {"$id":"325","$type":"SequenceType","elementType":{"$id":"326","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"327","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"328","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"325","$type":"SequenceType","elementType":{"$id":"326","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"327","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"328","fixed":false},"deprecated":false}
+                TypeName: String
+                TypeNameGo: String
                 IsList: true
                 Required: false
                 Documentation: List of destination ports.
