@@ -917,7 +917,11 @@ class AzureRMAzureFirewalls(AzureRMModuleBaseExt):
                                 disposition='destinationPorts'
                             ),
                             protocols=dict(
-                                type='list'
+                                type='list',
+                                choices=['TCP',
+                                         'UDP',
+                                         'Any',
+                                         'ICMP']
                             ),
                             translated_address=dict(
                                 type='str',
@@ -964,7 +968,11 @@ class AzureRMAzureFirewalls(AzureRMModuleBaseExt):
                                 type='str'
                             ),
                             protocols=dict(
-                                type='list'
+                                type='list',
+                                choices=['TCP',
+                                         'UDP',
+                                         'Any',
+                                         'ICMP']
                             ),
                             source_addresses=dict(
                                 type='list',

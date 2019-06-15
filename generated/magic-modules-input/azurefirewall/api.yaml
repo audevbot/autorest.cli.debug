@@ -160,7 +160,7 @@ objects:
           '/natRuleCollections/rules/destinationPorts': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: destination_ports
-          '/natRuleCollections/rules/protocols': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/natRuleCollections/rules/protocols': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: protocols
           '/natRuleCollections/rules/translatedAddress': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -210,9 +210,10 @@ objects:
           '/properties/natRuleCollections/properties/rules/destinationPorts': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: DestinationPorts
-          '/properties/natRuleCollections/properties/rules/protocols': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/natRuleCollections/properties/rules/protocols': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [go]
             go_field_name: Protocols
+            go_enum_type_name: AzureFirewallNetworkRuleProtocol
           '/properties/natRuleCollections/properties/rules/translatedAddress': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: TranslatedAddress
@@ -243,7 +244,7 @@ objects:
           '/networkRuleCollections/rules/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: description
-          '/networkRuleCollections/rules/protocols': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/networkRuleCollections/rules/protocols': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: protocols
           '/networkRuleCollections/rules/sourceAddresses': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -287,9 +288,10 @@ objects:
           '/properties/networkRuleCollections/properties/rules/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Description
-          '/properties/networkRuleCollections/properties/rules/protocols': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/networkRuleCollections/properties/rules/protocols': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [go]
             go_field_name: Protocols
+            go_enum_type_name: AzureFirewallNetworkRuleProtocol
           '/properties/networkRuleCollections/properties/rules/sourceAddresses': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: SourceAddresses
@@ -511,9 +513,10 @@ objects:
           '/properties/natRuleCollections/properties/rules/destinationPorts': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: DestinationPorts
-          '/properties/natRuleCollections/properties/rules/protocols': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/natRuleCollections/properties/rules/protocols': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [go]
             go_field_name: Protocols
+            go_enum_type_name: AzureFirewallNetworkRuleProtocol
           '/properties/natRuleCollections/properties/rules/translatedAddress': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: TranslatedAddress
@@ -560,7 +563,7 @@ objects:
           '/natRuleCollections/rules/destinationPorts': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: destination_ports
-          '/natRuleCollections/rules/protocols': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/natRuleCollections/rules/protocols': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: protocols
           '/natRuleCollections/rules/translatedAddress': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -607,9 +610,10 @@ objects:
           '/properties/networkRuleCollections/properties/rules/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Description
-          '/properties/networkRuleCollections/properties/rules/protocols': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/networkRuleCollections/properties/rules/protocols': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [go]
             go_field_name: Protocols
+            go_enum_type_name: AzureFirewallNetworkRuleProtocol
           '/properties/networkRuleCollections/properties/rules/sourceAddresses': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: SourceAddresses
@@ -650,7 +654,7 @@ objects:
           '/networkRuleCollections/rules/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: description
-          '/networkRuleCollections/rules/protocols': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/networkRuleCollections/rules/protocols': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: protocols
           '/networkRuleCollections/rules/sourceAddresses': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -922,10 +926,16 @@ objects:
                 required: false
                 sample_value: 443
                 azure_sdk_references: ['/natRuleCollections/rules/destinationPorts', '/properties/natRuleCollections/properties/rules/destinationPorts']
-              - !ruby/object:Api::Type::String
+              - !ruby/object:Api::Type::Enum
                 name: 'protocols'
                 description: 'Array of AzureFirewallNetworkRuleProtocols applicable to this NAT rule.'
                 required: false
+                values:
+                  - :TCP
+                  - :UDP
+                  - :Any
+                  - :ICMP
+                default_value: :TCP
                 sample_value: TCP
                 azure_sdk_references: ['/natRuleCollections/rules/protocols', '/properties/natRuleCollections/properties/rules/protocols']
               - !ruby/object:Api::Type::String
@@ -992,10 +1002,16 @@ objects:
                 required: false
                 sample_value: Block traffic based on source IPs and ports
                 azure_sdk_references: ['/networkRuleCollections/rules/description', '/properties/networkRuleCollections/properties/rules/description']
-              - !ruby/object:Api::Type::String
+              - !ruby/object:Api::Type::Enum
                 name: 'protocols'
                 description: 'Array of AzureFirewallNetworkRuleProtocols.'
                 required: false
+                values:
+                  - :TCP
+                  - :UDP
+                  - :Any
+                  - :ICMP
+                default_value: :TCP
                 sample_value: TCP
                 azure_sdk_references: ['/networkRuleCollections/rules/protocols', '/properties/networkRuleCollections/properties/rules/protocols']
               - !ruby/object:Api::Type::String

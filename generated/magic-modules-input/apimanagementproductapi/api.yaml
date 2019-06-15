@@ -156,10 +156,14 @@ objects:
                 description: 'OAuth authorization server identifier.'
                 required: false
                 azure_sdk_references: ['/authenticationSettings/openid/openidProviderId', '/properties/authenticationSettings/openid/openidProviderId']
-              - !ruby/object:Api::Type::String
+              - !ruby/object:Api::Type::Enum
                 name: 'bearerTokenSendingMethods'
                 description: 'How to send token to the server.'
                 required: false
+                values:
+                  - :authorizationHeader
+                  - :query
+                default_value: :authorizationHeader
                 azure_sdk_references: ['/authenticationSettings/openid/bearerTokenSendingMethods', '/properties/authenticationSettings/openid/bearerTokenSendingMethods']
           - !ruby/object:Api::Type::Boolean
             name: 'subscriptionKeyRequired'
@@ -251,10 +255,14 @@ objects:
         description: 'Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.'
         required: true
         azure_sdk_references: ['/path', '/properties/path']
-      - !ruby/object:Api::Type::String
+      - !ruby/object:Api::Type::Enum
         name: 'protocols'
         description: 'Describes on which protocols the operations in this API can be invoked.'
         required: false
+        values:
+          - :http
+          - :https
+        default_value: :http
         azure_sdk_references: ['/protocols', '/properties/protocols']
       - !ruby/object:Api::Type::NestedObject
         name: 'apiVersionSet'

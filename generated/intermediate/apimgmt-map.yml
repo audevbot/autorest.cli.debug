@@ -365,7 +365,15 @@ Modules:
                 IncludeInArgSpec: true
                 NoLog: false
                 SubOptions: []
-                EnumValues: []
+                EnumValues:
+                  - Key: authorizationHeader
+                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Description: >-
+                      Access token will be transmitted in the Authorization
+                      header using Bearer schema
+                  - Key: query
+                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Description: Access token will be transmitted as query parameters.
                 PathSwagger: >-
                   /properties/authenticationSettings/openid/bearerTokenSendingMethods
                 PathPython: /authenticationSettings/openid/bearerTokenSendingMethods
@@ -929,7 +937,13 @@ Modules:
         IncludeInArgSpec: true
         NoLog: false
         SubOptions: []
-        EnumValues: []
+        EnumValues:
+          - Key: http
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: !<tag:yaml.org,2002:js/undefined> ''
+          - Key: https
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/protocols
         PathPython: /protocols
         PathGo: /properties/protocols
@@ -1849,7 +1863,15 @@ Modules:
                     IncludeInArgSpec: true
                     NoLog: false
                     SubOptions: []
-                    EnumValues: []
+                    EnumValues:
+                      - Key: authorizationHeader
+                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Description: >-
+                          Access token will be transmitted in the Authorization
+                          header using Bearer schema
+                      - Key: query
+                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Description: Access token will be transmitted as query parameters.
                     PathSwagger: >-
                       /properties/authenticationSettings/openid/bearerTokenSendingMethods
                     PathPython: /authenticationSettings/openid/bearerTokenSendingMethods
@@ -2410,7 +2432,13 @@ Modules:
             IncludeInArgSpec: true
             NoLog: false
             SubOptions: []
-            EnumValues: []
+            EnumValues:
+              - Key: http
+                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Description: !<tag:yaml.org,2002:js/undefined> ''
+              - Key: https
+                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/protocols
             PathPython: /protocols
             PathGo: /properties/protocols
@@ -4207,7 +4235,15 @@ Modules:
                 IncludeInArgSpec: true
                 NoLog: false
                 SubOptions: []
-                EnumValues: []
+                EnumValues:
+                  - Key: authorizationHeader
+                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Description: >-
+                      Access token will be transmitted in the Authorization
+                      header using Bearer schema
+                  - Key: query
+                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Description: Access token will be transmitted as query parameters.
                 PathSwagger: >-
                   /properties/authenticationSettings/openid/bearerTokenSendingMethods
                 PathPython: /authenticationSettings/openid/bearerTokenSendingMethods
@@ -4795,7 +4831,13 @@ Modules:
         IncludeInArgSpec: true
         NoLog: false
         SubOptions: []
-        EnumValues: []
+        EnumValues:
+          - Key: http
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: !<tag:yaml.org,2002:js/undefined> ''
+          - Key: https
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/protocols
         PathPython: /protocols
         PathGo: /properties/protocols
@@ -28819,7 +28861,17 @@ Modules:
                         IncludeInArgSpec: true
                         NoLog: false
                         SubOptions: []
-                        EnumValues: []
+                        EnumValues:
+                          - Key: authorizationHeader
+                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Description: >-
+                              Access token will be transmitted in the
+                              Authorization header using Bearer schema
+                          - Key: query
+                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Description: >-
+                              Access token will be transmitted as query
+                              parameters.
                         PathSwagger: >-
                           /value/api/authenticationSettings/openid/bearerTokenSendingMethods
                         PathPython: >-
@@ -29408,7 +29460,13 @@ Modules:
                 IncludeInArgSpec: true
                 NoLog: false
                 SubOptions: []
-                EnumValues: []
+                EnumValues:
+                  - Key: http
+                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Description: !<tag:yaml.org,2002:js/undefined> ''
+                  - Key: https
+                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /value/api/protocols
                 PathPython: /value/api/protocols
                 PathGo: /value/api/protocols
@@ -31685,7 +31743,31 @@ Modules:
         IncludeInArgSpec: true
         NoLog: false
         SubOptions: []
-        EnumValues: []
+        EnumValues:
+          - Key: HEAD
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: !<tag:yaml.org,2002:js/undefined> ''
+          - Key: OPTIONS
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: !<tag:yaml.org,2002:js/undefined> ''
+          - Key: TRACE
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: !<tag:yaml.org,2002:js/undefined> ''
+          - Key: GET
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: !<tag:yaml.org,2002:js/undefined> ''
+          - Key: POST
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: !<tag:yaml.org,2002:js/undefined> ''
+          - Key: PUT
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: !<tag:yaml.org,2002:js/undefined> ''
+          - Key: PATCH
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: !<tag:yaml.org,2002:js/undefined> ''
+          - Key: DELETE
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/authorizationMethods
         PathPython: /authorizationMethods
         PathGo: /properties/authorizationMethods
@@ -31720,7 +31802,13 @@ Modules:
         IncludeInArgSpec: true
         NoLog: false
         SubOptions: []
-        EnumValues: []
+        EnumValues:
+          - Key: Basic
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: Basic Client Authentication method.
+          - Key: Body
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: Body based Authentication method.
         PathSwagger: /properties/clientAuthenticationMethod
         PathPython: /clientAuthenticationMethod
         PathGo: /properties/clientAuthenticationMethod
@@ -31942,7 +32030,13 @@ Modules:
         IncludeInArgSpec: true
         NoLog: false
         SubOptions: []
-        EnumValues: []
+        EnumValues:
+          - Key: authorizationHeader
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: !<tag:yaml.org,2002:js/undefined> ''
+          - Key: query
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/bearerTokenSendingMethods
         PathPython: /bearerTokenSendingMethods
         PathGo: /properties/bearerTokenSendingMethods
@@ -32165,7 +32259,27 @@ Modules:
         IncludeInArgSpec: true
         NoLog: false
         SubOptions: []
-        EnumValues: []
+        EnumValues:
+          - Key: authorizationCode
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: >-
+              Authorization Code Grant flow as described
+              https://tools.ietf.org/html/rfc6749#section-4.1.
+          - Key: implicit
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: >-
+              Implicit Code Grant flow as described
+              https://tools.ietf.org/html/rfc6749#section-4.2.
+          - Key: resourceOwnerPassword
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: >-
+              Resource Owner Password Grant flow as described
+              https://tools.ietf.org/html/rfc6749#section-4.3.
+          - Key: clientCredentials
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: >-
+              Client Credentials Grant flow as described
+              https://tools.ietf.org/html/rfc6749#section-4.4.
         PathSwagger: /properties/grantTypes
         PathPython: /grantTypes
         PathGo: /properties/grantTypes
@@ -32457,7 +32571,31 @@ Modules:
             IncludeInArgSpec: true
             NoLog: false
             SubOptions: []
-            EnumValues: []
+            EnumValues:
+              - Key: HEAD
+                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Description: !<tag:yaml.org,2002:js/undefined> ''
+              - Key: OPTIONS
+                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Description: !<tag:yaml.org,2002:js/undefined> ''
+              - Key: TRACE
+                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Description: !<tag:yaml.org,2002:js/undefined> ''
+              - Key: GET
+                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Description: !<tag:yaml.org,2002:js/undefined> ''
+              - Key: POST
+                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Description: !<tag:yaml.org,2002:js/undefined> ''
+              - Key: PUT
+                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Description: !<tag:yaml.org,2002:js/undefined> ''
+              - Key: PATCH
+                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Description: !<tag:yaml.org,2002:js/undefined> ''
+              - Key: DELETE
+                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/authorizationMethods
             PathPython: /authorizationMethods
             PathGo: /properties/authorizationMethods
@@ -32492,7 +32630,13 @@ Modules:
             IncludeInArgSpec: true
             NoLog: false
             SubOptions: []
-            EnumValues: []
+            EnumValues:
+              - Key: Basic
+                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Description: Basic Client Authentication method.
+              - Key: Body
+                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Description: Body based Authentication method.
             PathSwagger: /properties/clientAuthenticationMethod
             PathPython: /clientAuthenticationMethod
             PathGo: /properties/clientAuthenticationMethod
@@ -32716,7 +32860,13 @@ Modules:
             IncludeInArgSpec: true
             NoLog: false
             SubOptions: []
-            EnumValues: []
+            EnumValues:
+              - Key: authorizationHeader
+                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Description: !<tag:yaml.org,2002:js/undefined> ''
+              - Key: query
+                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /properties/bearerTokenSendingMethods
             PathPython: /bearerTokenSendingMethods
             PathGo: /properties/bearerTokenSendingMethods
@@ -32939,7 +33089,27 @@ Modules:
             IncludeInArgSpec: true
             NoLog: false
             SubOptions: []
-            EnumValues: []
+            EnumValues:
+              - Key: authorizationCode
+                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Description: >-
+                  Authorization Code Grant flow as described
+                  https://tools.ietf.org/html/rfc6749#section-4.1.
+              - Key: implicit
+                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Description: >-
+                  Implicit Code Grant flow as described
+                  https://tools.ietf.org/html/rfc6749#section-4.2.
+              - Key: resourceOwnerPassword
+                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Description: >-
+                  Resource Owner Password Grant flow as described
+                  https://tools.ietf.org/html/rfc6749#section-4.3.
+              - Key: clientCredentials
+                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Description: >-
+                  Client Credentials Grant flow as described
+                  https://tools.ietf.org/html/rfc6749#section-4.4.
             PathSwagger: /properties/grantTypes
             PathPython: /grantTypes
             PathGo: /properties/grantTypes
@@ -33446,7 +33616,31 @@ Modules:
         IncludeInArgSpec: true
         NoLog: false
         SubOptions: []
-        EnumValues: []
+        EnumValues:
+          - Key: HEAD
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: !<tag:yaml.org,2002:js/undefined> ''
+          - Key: OPTIONS
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: !<tag:yaml.org,2002:js/undefined> ''
+          - Key: TRACE
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: !<tag:yaml.org,2002:js/undefined> ''
+          - Key: GET
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: !<tag:yaml.org,2002:js/undefined> ''
+          - Key: POST
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: !<tag:yaml.org,2002:js/undefined> ''
+          - Key: PUT
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: !<tag:yaml.org,2002:js/undefined> ''
+          - Key: PATCH
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: !<tag:yaml.org,2002:js/undefined> ''
+          - Key: DELETE
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/authorizationMethods
         PathPython: /authorizationMethods
         PathGo: /properties/authorizationMethods
@@ -33481,7 +33675,13 @@ Modules:
         IncludeInArgSpec: true
         NoLog: false
         SubOptions: []
-        EnumValues: []
+        EnumValues:
+          - Key: Basic
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: Basic Client Authentication method.
+          - Key: Body
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: Body based Authentication method.
         PathSwagger: /properties/clientAuthenticationMethod
         PathPython: /clientAuthenticationMethod
         PathGo: /properties/clientAuthenticationMethod
@@ -33703,7 +33903,13 @@ Modules:
         IncludeInArgSpec: true
         NoLog: false
         SubOptions: []
-        EnumValues: []
+        EnumValues:
+          - Key: authorizationHeader
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: !<tag:yaml.org,2002:js/undefined> ''
+          - Key: query
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/bearerTokenSendingMethods
         PathPython: /bearerTokenSendingMethods
         PathGo: /properties/bearerTokenSendingMethods
@@ -33926,7 +34132,27 @@ Modules:
         IncludeInArgSpec: true
         NoLog: false
         SubOptions: []
-        EnumValues: []
+        EnumValues:
+          - Key: authorizationCode
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: >-
+              Authorization Code Grant flow as described
+              https://tools.ietf.org/html/rfc6749#section-4.1.
+          - Key: implicit
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: >-
+              Implicit Code Grant flow as described
+              https://tools.ietf.org/html/rfc6749#section-4.2.
+          - Key: resourceOwnerPassword
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: >-
+              Resource Owner Password Grant flow as described
+              https://tools.ietf.org/html/rfc6749#section-4.3.
+          - Key: clientCredentials
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: >-
+              Client Credentials Grant flow as described
+              https://tools.ietf.org/html/rfc6749#section-4.4.
         PathSwagger: /properties/grantTypes
         PathPython: /grantTypes
         PathGo: /properties/grantTypes
@@ -71207,7 +71433,15 @@ Modules:
                 IncludeInArgSpec: true
                 NoLog: false
                 SubOptions: []
-                EnumValues: []
+                EnumValues:
+                  - Key: authorizationHeader
+                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Description: >-
+                      Access token will be transmitted in the Authorization
+                      header using Bearer schema
+                  - Key: query
+                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Description: Access token will be transmitted as query parameters.
                 PathSwagger: >-
                   /properties/authenticationSettings/openid/bearerTokenSendingMethods
                 PathPython: /authenticationSettings/openid/bearerTokenSendingMethods
@@ -71795,7 +72029,13 @@ Modules:
         IncludeInArgSpec: true
         NoLog: false
         SubOptions: []
-        EnumValues: []
+        EnumValues:
+          - Key: http
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: !<tag:yaml.org,2002:js/undefined> ''
+          - Key: https
+            Value: !<tag:yaml.org,2002:js/undefined> ''
+            Description: !<tag:yaml.org,2002:js/undefined> ''
         PathSwagger: /properties/protocols
         PathPython: /protocols
         PathGo: /properties/protocols
@@ -72649,7 +72889,15 @@ Modules:
                     IncludeInArgSpec: true
                     NoLog: false
                     SubOptions: []
-                    EnumValues: []
+                    EnumValues:
+                      - Key: authorizationHeader
+                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Description: >-
+                          Access token will be transmitted in the Authorization
+                          header using Bearer schema
+                      - Key: query
+                        Value: !<tag:yaml.org,2002:js/undefined> ''
+                        Description: Access token will be transmitted as query parameters.
                     PathSwagger: >-
                       /value/properties/authenticationSettings/openid/bearerTokenSendingMethods
                     PathPython: >-
@@ -73242,7 +73490,13 @@ Modules:
             IncludeInArgSpec: true
             NoLog: false
             SubOptions: []
-            EnumValues: []
+            EnumValues:
+              - Key: http
+                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Description: !<tag:yaml.org,2002:js/undefined> ''
+              - Key: https
+                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Description: !<tag:yaml.org,2002:js/undefined> ''
             PathSwagger: /value/properties/protocols
             PathPython: /value/protocols
             PathGo: /value/properties/protocols
@@ -83331,7 +83585,17 @@ Modules:
                         IncludeInArgSpec: true
                         NoLog: false
                         SubOptions: []
-                        EnumValues: []
+                        EnumValues:
+                          - Key: authorizationHeader
+                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Description: >-
+                              Access token will be transmitted in the
+                              Authorization header using Bearer schema
+                          - Key: query
+                            Value: !<tag:yaml.org,2002:js/undefined> ''
+                            Description: >-
+                              Access token will be transmitted as query
+                              parameters.
                         PathSwagger: >-
                           /value/api/authenticationSettings/openid/bearerTokenSendingMethods
                         PathPython: >-
@@ -83920,7 +84184,13 @@ Modules:
                 IncludeInArgSpec: true
                 NoLog: false
                 SubOptions: []
-                EnumValues: []
+                EnumValues:
+                  - Key: http
+                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Description: !<tag:yaml.org,2002:js/undefined> ''
+                  - Key: https
+                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Description: !<tag:yaml.org,2002:js/undefined> ''
                 PathSwagger: /value/api/protocols
                 PathPython: /value/api/protocols
                 PathGo: /value/api/protocols

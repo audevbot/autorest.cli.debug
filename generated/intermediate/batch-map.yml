@@ -11073,7 +11073,22 @@ Modules:
             IncludeInArgSpec: true
             NoLog: false
             SubOptions: []
-            EnumValues: []
+            EnumValues:
+              - Key: StartTask
+                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Description: >-
+                  The certificate should be visible to the user account under
+                  which the start task is run.
+              - Key: Task
+                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Description: >-
+                  The certificate should be visible to the user accounts under
+                  which job tasks are run.
+              - Key: RemoteUser
+                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Description: >-
+                  The certificate should be visible to the user accounts under
+                  which users remotely access the node.
             PathSwagger: /properties/certificates/visibility
             PathPython: /certificates/visibility
             PathGo: /properties/certificates/visibility
@@ -15803,7 +15818,22 @@ Modules:
                 IncludeInArgSpec: true
                 NoLog: false
                 SubOptions: []
-                EnumValues: []
+                EnumValues:
+                  - Key: StartTask
+                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Description: >-
+                      The certificate should be visible to the user account
+                      under which the start task is run.
+                  - Key: Task
+                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Description: >-
+                      The certificate should be visible to the user accounts
+                      under which job tasks are run.
+                  - Key: RemoteUser
+                    Value: !<tag:yaml.org,2002:js/undefined> ''
+                    Description: >-
+                      The certificate should be visible to the user accounts
+                      under which users remotely access the node.
                 PathSwagger: /properties/certificates/visibility
                 PathPython: /certificates/visibility
                 PathGo: /properties/certificates/visibility
@@ -21024,7 +21054,22 @@ Modules:
             IncludeInArgSpec: true
             NoLog: false
             SubOptions: []
-            EnumValues: []
+            EnumValues:
+              - Key: StartTask
+                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Description: >-
+                  The certificate should be visible to the user account under
+                  which the start task is run.
+              - Key: Task
+                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Description: >-
+                  The certificate should be visible to the user accounts under
+                  which job tasks are run.
+              - Key: RemoteUser
+                Value: !<tag:yaml.org,2002:js/undefined> ''
+                Description: >-
+                  The certificate should be visible to the user accounts under
+                  which users remotely access the node.
             PathSwagger: /properties/certificates/visibility
             PathPython: /certificates/visibility
             PathGo: /properties/certificates/visibility

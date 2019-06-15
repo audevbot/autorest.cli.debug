@@ -408,11 +408,21 @@ class AzureRMAuthorizationServer(AzureRMModuleBaseExt):
             ),
             authorization_methods=dict(
                 type='list',
-                disposition='/'
+                disposition='/',
+                choices=['HEAD',
+                         'OPTIONS',
+                         'TRACE',
+                         'GET',
+                         'POST',
+                         'PUT',
+                         'PATCH',
+                         'DELETE']
             ),
             client_authentication_method=dict(
                 type='list',
-                disposition='/'
+                disposition='/',
+                choices=['Basic',
+                         'Body']
             ),
             token_body_parameters=dict(
                 type='list',
@@ -442,7 +452,9 @@ class AzureRMAuthorizationServer(AzureRMModuleBaseExt):
             ),
             bearer_token_sending_methods=dict(
                 type='list',
-                disposition='/'
+                disposition='/',
+                choices=['authorizationHeader',
+                         'query']
             ),
             client_secret=dict(
                 type='str',
@@ -474,6 +486,10 @@ class AzureRMAuthorizationServer(AzureRMModuleBaseExt):
             grant_types=dict(
                 type='list',
                 disposition='/',
+                choices=['authorizationCode',
+                         'implicit',
+                         'resourceOwnerPassword',
+                         'clientCredentials'],
                 required=true
             ),
             client_id=dict(
