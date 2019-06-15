@@ -137,7 +137,7 @@ objects:
           '/properties/capabilities': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Capabilities
-            go_type_name: {"$id":"878","$type":"SequenceType","elementType":{"$ref":"29"},"name":{"$id":"879","fixed":false},"deprecated":false}
+            go_type_name: Capability
           '/properties/capabilities/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
@@ -150,7 +150,7 @@ objects:
           '/properties/virtualNetworkRules': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: VirtualNetworkRules
-            go_type_name: {"$id":"884","$type":"SequenceType","elementType":{"$ref":"89"},"name":{"$id":"885","fixed":false},"deprecated":false}
+            go_type_name: VirtualNetworkRule
           '/properties/virtualNetworkRules/id': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: ID
@@ -187,21 +187,21 @@ objects:
           '/properties/writeLocations': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: WriteLocations
-            go_type_name: {"$id":"157","$type":"SequenceType","elementType":{"$ref":"37"},"name":{"$id":"158","fixed":false},"deprecated":false}
+            go_type_name: Location
           '/writeLocations': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
             python_field_name: write_locations
           '/properties/readLocations': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: ReadLocations
-            go_type_name: {"$id":"163","$type":"SequenceType","elementType":{"$ref":"37"},"name":{"$id":"164","fixed":false},"deprecated":false}
+            go_type_name: Location
           '/readLocations': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
             python_field_name: read_locations
           '/properties/failoverPolicies': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: FailoverPolicies
-            go_type_name: {"$id":"169","$type":"SequenceType","elementType":{"$ref":"69"},"name":{"$id":"170","fixed":false},"deprecated":false}
+            go_type_name: FailoverPolicy
           '/failoverPolicies': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
             python_field_name: failover_policies

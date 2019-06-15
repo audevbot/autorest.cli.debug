@@ -5405,10 +5405,8 @@ Modules:
             NameTerraform: DataDiskImages
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"356","$type":"SequenceType","elementType":{"$ref":"339"},"name":{"$id":"357","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"356","$type":"SequenceType","elementType":{"$ref":"339"},"name":{"$id":"357","fixed":false},"deprecated":false}
+            TypeName: GalleryDataDiskImage
+            TypeNameGo: GalleryDataDiskImage
             IsList: true
             Required: false
             Documentation: A list of data disk images.
@@ -5617,10 +5615,8 @@ Modules:
             NameTerraform: Summary
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"408","$type":"SequenceType","elementType":{"$ref":"359"},"name":{"$id":"409","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"408","$type":"SequenceType","elementType":{"$ref":"359"},"name":{"$id":"409","fixed":false},"deprecated":false}
+            TypeName: RegionalReplicationStatus
+            TypeNameGo: RegionalReplicationStatus
             IsList: true
             Required: false
             Documentation: This is a summary of replication status for each region.
@@ -7238,10 +7234,8 @@ Modules:
             NameTerraform: DataDiskImages
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"356","$type":"SequenceType","elementType":{"$ref":"339"},"name":{"$id":"357","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"356","$type":"SequenceType","elementType":{"$ref":"339"},"name":{"$id":"357","fixed":false},"deprecated":false}
+            TypeName: GalleryDataDiskImage
+            TypeNameGo: GalleryDataDiskImage
             IsList: true
             Required: false
             Documentation: A list of data disk images.
@@ -7449,10 +7443,8 @@ Modules:
             NameTerraform: Summary
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"408","$type":"SequenceType","elementType":{"$ref":"359"},"name":{"$id":"409","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"408","$type":"SequenceType","elementType":{"$ref":"359"},"name":{"$id":"409","fixed":false},"deprecated":false}
+            TypeName: RegionalReplicationStatus
+            TypeNameGo: RegionalReplicationStatus
             IsList: true
             Required: false
             Documentation: This is a summary of replication status for each region.

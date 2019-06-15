@@ -654,7 +654,7 @@ properties:
                   description:
                     - Array of AzureFirewallNetworkRuleProtocols.
                   returned: always
-                  type: 'unknown[reference: 224]'
+                  type: 'unknown[reference: undefined]'
                   sample: null
                 source_addresses:
                   description:

@@ -9,10 +9,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"766","$type":"SequenceType","elementType":{"$ref":"749"},"name":{"$id":"767","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"766","$type":"SequenceType","elementType":{"$ref":"749"},"name":{"$id":"767","fixed":false},"deprecated":false}
+        TypeName: Operation
+        TypeNameGo: Operation
         IsList: true
         Required: false
         Documentation: >-
@@ -16841,10 +16839,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"964","$type":"SequenceType","elementType":{"$ref":"953"},"name":{"$id":"965","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"964","$type":"SequenceType","elementType":{"$ref":"953"},"name":{"$id":"965","fixed":false},"deprecated":false}
+        TypeName: PremiumMessagingRegions
+        TypeNameGo: PremiumMessagingRegions
         IsList: true
         Required: false
         Documentation: Result of the List PremiumMessagingRegions type.
@@ -17470,10 +17466,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"964","$type":"SequenceType","elementType":{"$ref":"953"},"name":{"$id":"965","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"964","$type":"SequenceType","elementType":{"$ref":"953"},"name":{"$id":"965","fixed":false},"deprecated":false}
+        TypeName: PremiumMessagingRegions
+        TypeNameGo: PremiumMessagingRegions
         IsList: true
         Required: false
         Documentation: Result of the List PremiumMessagingRegions type.
@@ -18108,10 +18102,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1092","$type":"SequenceType","elementType":{"$ref":"1081"},"name":{"$id":"1093","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1092","$type":"SequenceType","elementType":{"$ref":"1081"},"name":{"$id":"1093","fixed":false},"deprecated":false}
+        TypeName: Eventhub
+        TypeNameGo: Eventhub
         IsList: true
         Required: false
         Documentation: Result of the List EventHubs operation.

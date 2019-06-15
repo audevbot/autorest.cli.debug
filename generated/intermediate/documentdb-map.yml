@@ -431,10 +431,8 @@ Modules:
         NameTerraform: Locations
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"848","$type":"SequenceType","elementType":{"$ref":"37"},"name":{"$id":"849","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"848","$type":"SequenceType","elementType":{"$ref":"37"},"name":{"$id":"849","fixed":false},"deprecated":false}
+        TypeName: Location
+        TypeNameGo: Location
         IsList: true
         Required: true
         Documentation: >-
@@ -659,10 +657,8 @@ Modules:
         NameTerraform: Capabilities
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"878","$type":"SequenceType","elementType":{"$ref":"29"},"name":{"$id":"879","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"878","$type":"SequenceType","elementType":{"$ref":"29"},"name":{"$id":"879","fixed":false},"deprecated":false}
+        TypeName: Capability
+        TypeNameGo: Capability
         IsList: true
         Required: false
         Documentation: List of Cosmos DB capabilities for the account
@@ -724,10 +720,8 @@ Modules:
         NameTerraform: VirtualNetworkRules
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"884","$type":"SequenceType","elementType":{"$ref":"89"},"name":{"$id":"885","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"884","$type":"SequenceType","elementType":{"$ref":"89"},"name":{"$id":"885","fixed":false},"deprecated":false}
+        TypeName: VirtualNetworkRule
+        TypeNameGo: VirtualNetworkRule
         IsList: true
         Required: false
         Documentation: >-
@@ -915,10 +909,8 @@ Modules:
         NameTerraform: WriteLocations
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"157","$type":"SequenceType","elementType":{"$ref":"37"},"name":{"$id":"158","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"157","$type":"SequenceType","elementType":{"$ref":"37"},"name":{"$id":"158","fixed":false},"deprecated":false}
+        TypeName: Location
+        TypeNameGo: Location
         IsList: true
         Required: false
         Documentation: An array that contains the write location for the Cosmos DB account.
@@ -1107,10 +1099,8 @@ Modules:
         NameTerraform: ReadLocations
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"163","$type":"SequenceType","elementType":{"$ref":"37"},"name":{"$id":"164","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"163","$type":"SequenceType","elementType":{"$ref":"37"},"name":{"$id":"164","fixed":false},"deprecated":false}
+        TypeName: Location
+        TypeNameGo: Location
         IsList: true
         Required: false
         Documentation: >-
@@ -1301,10 +1291,8 @@ Modules:
         NameTerraform: FailoverPolicies
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"169","$type":"SequenceType","elementType":{"$ref":"69"},"name":{"$id":"170","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"169","$type":"SequenceType","elementType":{"$ref":"69"},"name":{"$id":"170","fixed":false},"deprecated":false}
+        TypeName: FailoverPolicy
+        TypeNameGo: FailoverPolicy
         IsList: true
         Required: false
         Documentation: >-
@@ -2329,10 +2317,8 @@ Modules:
             NameTerraform: Capabilities
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"151","$type":"SequenceType","elementType":{"$ref":"29"},"name":{"$id":"152","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"151","$type":"SequenceType","elementType":{"$ref":"29"},"name":{"$id":"152","fixed":false},"deprecated":false}
+            TypeName: Capability
+            TypeNameGo: Capability
             IsList: true
             Required: false
             Documentation: List of Cosmos DB capabilities for the account
@@ -2397,10 +2383,8 @@ Modules:
             NameTerraform: VirtualNetworkRules
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"175","$type":"SequenceType","elementType":{"$ref":"89"},"name":{"$id":"176","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"175","$type":"SequenceType","elementType":{"$ref":"89"},"name":{"$id":"176","fixed":false},"deprecated":false}
+            TypeName: VirtualNetworkRule
+            TypeNameGo: VirtualNetworkRule
             IsList: true
             Required: false
             Documentation: >-
@@ -3529,10 +3513,8 @@ Modules:
         NameTerraform: Capabilities
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"151","$type":"SequenceType","elementType":{"$ref":"29"},"name":{"$id":"152","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"151","$type":"SequenceType","elementType":{"$ref":"29"},"name":{"$id":"152","fixed":false},"deprecated":false}
+        TypeName: Capability
+        TypeNameGo: Capability
         IsList: true
         Required: false
         Documentation: List of Cosmos DB capabilities for the account
@@ -3594,10 +3576,8 @@ Modules:
         NameTerraform: WriteLocations
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"157","$type":"SequenceType","elementType":{"$ref":"37"},"name":{"$id":"158","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"157","$type":"SequenceType","elementType":{"$ref":"37"},"name":{"$id":"158","fixed":false},"deprecated":false}
+        TypeName: Location
+        TypeNameGo: Location
         IsList: true
         Required: false
         Documentation: An array that contains the write location for the Cosmos DB account.
@@ -3785,10 +3765,8 @@ Modules:
         NameTerraform: ReadLocations
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"163","$type":"SequenceType","elementType":{"$ref":"37"},"name":{"$id":"164","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"163","$type":"SequenceType","elementType":{"$ref":"37"},"name":{"$id":"164","fixed":false},"deprecated":false}
+        TypeName: Location
+        TypeNameGo: Location
         IsList: true
         Required: false
         Documentation: >-
@@ -3978,10 +3956,8 @@ Modules:
         NameTerraform: FailoverPolicies
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"169","$type":"SequenceType","elementType":{"$ref":"69"},"name":{"$id":"170","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"169","$type":"SequenceType","elementType":{"$ref":"69"},"name":{"$id":"170","fixed":false},"deprecated":false}
+        TypeName: FailoverPolicy
+        TypeNameGo: FailoverPolicy
         IsList: true
         Required: false
         Documentation: >-
@@ -4109,10 +4085,8 @@ Modules:
         NameTerraform: VirtualNetworkRules
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"175","$type":"SequenceType","elementType":{"$ref":"89"},"name":{"$id":"176","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"175","$type":"SequenceType","elementType":{"$ref":"89"},"name":{"$id":"176","fixed":false},"deprecated":false}
+        TypeName: VirtualNetworkRule
+        TypeNameGo: VirtualNetworkRule
         IsList: true
         Required: false
         Documentation: >-
@@ -5832,10 +5806,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1226","$type":"SequenceType","elementType":{"$ref":"1209"},"name":{"$id":"1227","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1226","$type":"SequenceType","elementType":{"$ref":"1209"},"name":{"$id":"1227","fixed":false},"deprecated":false}
+        TypeName: Operation
+        TypeNameGo: Operation
         IsList: true
         Required: false
         Documentation: List of operations supported by the Resource Provider.
@@ -6213,10 +6185,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1293","$type":"SequenceType","elementType":{"$ref":"1249"},"name":{"$id":"1294","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1293","$type":"SequenceType","elementType":{"$ref":"1249"},"name":{"$id":"1294","fixed":false},"deprecated":false}
+        TypeName: Usage
+        TypeNameGo: Usage
         IsList: true
         Required: false
         Documentation: The list of usages for the database. A usage is a point in time metric
@@ -6806,10 +6776,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1293","$type":"SequenceType","elementType":{"$ref":"1249"},"name":{"$id":"1294","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1293","$type":"SequenceType","elementType":{"$ref":"1249"},"name":{"$id":"1294","fixed":false},"deprecated":false}
+        TypeName: Usage
+        TypeNameGo: Usage
         IsList: true
         Required: false
         Documentation: The list of usages for the database. A usage is a point in time metric
@@ -7452,10 +7420,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1453","$type":"SequenceType","elementType":{"$ref":"1414"},"name":{"$id":"1454","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1453","$type":"SequenceType","elementType":{"$ref":"1414"},"name":{"$id":"1454","fixed":false},"deprecated":false}
+        TypeName: Metric
+        TypeNameGo: Metric
         IsList: true
         Required: false
         Documentation: The list of metrics for the account.
@@ -7703,10 +7669,8 @@ Modules:
             NameTerraform: MetricValues
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1445","$type":"SequenceType","elementType":{"$ref":"1376"},"name":{"$id":"1446","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1445","$type":"SequenceType","elementType":{"$ref":"1376"},"name":{"$id":"1446","fixed":false},"deprecated":false}
+            TypeName: MetricValue
+            TypeNameGo: MetricValue
             IsList: true
             Required: false
             Documentation: The metric values for the specified time window and timestep.
@@ -8122,10 +8086,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1453","$type":"SequenceType","elementType":{"$ref":"1414"},"name":{"$id":"1454","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1453","$type":"SequenceType","elementType":{"$ref":"1414"},"name":{"$id":"1454","fixed":false},"deprecated":false}
+        TypeName: Metric
+        TypeNameGo: Metric
         IsList: true
         Required: false
         Documentation: The list of metrics for the account.
@@ -8373,10 +8335,8 @@ Modules:
             NameTerraform: MetricValues
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1445","$type":"SequenceType","elementType":{"$ref":"1376"},"name":{"$id":"1446","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1445","$type":"SequenceType","elementType":{"$ref":"1376"},"name":{"$id":"1446","fixed":false},"deprecated":false}
+            TypeName: MetricValue
+            TypeNameGo: MetricValue
             IsList: true
             Required: false
             Documentation: The metric values for the specified time window and timestep.
@@ -8812,10 +8772,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1539","$type":"SequenceType","elementType":{"$ref":"1500"},"name":{"$id":"1540","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1539","$type":"SequenceType","elementType":{"$ref":"1500"},"name":{"$id":"1540","fixed":false},"deprecated":false}
+        TypeName: PercentileMetric
+        TypeNameGo: PercentileMetric
         IsList: true
         Required: false
         Documentation: The list of percentile metrics for the account.
@@ -9063,10 +9021,8 @@ Modules:
             NameTerraform: MetricValues
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1531","$type":"SequenceType","elementType":{"$ref":"1456"},"name":{"$id":"1532","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1531","$type":"SequenceType","elementType":{"$ref":"1456"},"name":{"$id":"1532","fixed":false},"deprecated":false}
+            TypeName: PercentileMetricValue
+            TypeNameGo: PercentileMetricValue
             IsList: true
             Required: false
             Documentation: >-
@@ -9692,10 +9648,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1539","$type":"SequenceType","elementType":{"$ref":"1500"},"name":{"$id":"1540","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1539","$type":"SequenceType","elementType":{"$ref":"1500"},"name":{"$id":"1540","fixed":false},"deprecated":false}
+        TypeName: PercentileMetric
+        TypeNameGo: PercentileMetric
         IsList: true
         Required: false
         Documentation: The list of percentile metrics for the account.
@@ -9943,10 +9897,8 @@ Modules:
             NameTerraform: MetricValues
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1531","$type":"SequenceType","elementType":{"$ref":"1456"},"name":{"$id":"1532","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1531","$type":"SequenceType","elementType":{"$ref":"1456"},"name":{"$id":"1532","fixed":false},"deprecated":false}
+            TypeName: PercentileMetricValue
+            TypeNameGo: PercentileMetricValue
             IsList: true
             Required: false
             Documentation: >-
@@ -10550,10 +10502,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1539","$type":"SequenceType","elementType":{"$ref":"1500"},"name":{"$id":"1540","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1539","$type":"SequenceType","elementType":{"$ref":"1500"},"name":{"$id":"1540","fixed":false},"deprecated":false}
+        TypeName: PercentileMetric
+        TypeNameGo: PercentileMetric
         IsList: true
         Required: false
         Documentation: The list of percentile metrics for the account.
@@ -10801,10 +10751,8 @@ Modules:
             NameTerraform: MetricValues
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1531","$type":"SequenceType","elementType":{"$ref":"1456"},"name":{"$id":"1532","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1531","$type":"SequenceType","elementType":{"$ref":"1456"},"name":{"$id":"1532","fixed":false},"deprecated":false}
+            TypeName: PercentileMetricValue
+            TypeNameGo: PercentileMetricValue
             IsList: true
             Required: false
             Documentation: >-
@@ -11492,10 +11440,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1561","$type":"SequenceType","elementType":{"$ref":"1542"},"name":{"$id":"1562","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1561","$type":"SequenceType","elementType":{"$ref":"1542"},"name":{"$id":"1562","fixed":false},"deprecated":false}
+        TypeName: PartitionMetric
+        TypeNameGo: PartitionMetric
         IsList: true
         Required: false
         Documentation: The list of partition-level metrics for the account.
@@ -11743,10 +11689,8 @@ Modules:
             NameTerraform: MetricValues
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1445","$type":"SequenceType","elementType":{"$ref":"1376"},"name":{"$id":"1446","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1445","$type":"SequenceType","elementType":{"$ref":"1376"},"name":{"$id":"1446","fixed":false},"deprecated":false}
+            TypeName: MetricValue
+            TypeNameGo: MetricValue
             IsList: true
             Required: false
             Documentation: The metric values for the specified time window and timestep.
@@ -12258,10 +12202,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1315","$type":"SequenceType","elementType":{"$ref":"1296"},"name":{"$id":"1316","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1315","$type":"SequenceType","elementType":{"$ref":"1296"},"name":{"$id":"1316","fixed":false},"deprecated":false}
+        TypeName: PartitionUsage
+        TypeNameGo: PartitionUsage
         IsList: true
         Required: false
         Documentation: >-
@@ -12900,10 +12842,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1561","$type":"SequenceType","elementType":{"$ref":"1542"},"name":{"$id":"1562","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1561","$type":"SequenceType","elementType":{"$ref":"1542"},"name":{"$id":"1562","fixed":false},"deprecated":false}
+        TypeName: PartitionMetric
+        TypeNameGo: PartitionMetric
         IsList: true
         Required: false
         Documentation: The list of partition-level metrics for the account.
@@ -13151,10 +13091,8 @@ Modules:
             NameTerraform: MetricValues
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1445","$type":"SequenceType","elementType":{"$ref":"1376"},"name":{"$id":"1446","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1445","$type":"SequenceType","elementType":{"$ref":"1376"},"name":{"$id":"1446","fixed":false},"deprecated":false}
+            TypeName: MetricValue
+            TypeNameGo: MetricValue
             IsList: true
             Required: false
             Documentation: The metric values for the specified time window and timestep.
@@ -13723,10 +13661,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1561","$type":"SequenceType","elementType":{"$ref":"1542"},"name":{"$id":"1562","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1561","$type":"SequenceType","elementType":{"$ref":"1542"},"name":{"$id":"1562","fixed":false},"deprecated":false}
+        TypeName: PartitionMetric
+        TypeNameGo: PartitionMetric
         IsList: true
         Required: false
         Documentation: The list of partition-level metrics for the account.
@@ -13974,10 +13910,8 @@ Modules:
             NameTerraform: MetricValues
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1445","$type":"SequenceType","elementType":{"$ref":"1376"},"name":{"$id":"1446","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1445","$type":"SequenceType","elementType":{"$ref":"1376"},"name":{"$id":"1446","fixed":false},"deprecated":false}
+            TypeName: MetricValue
+            TypeNameGo: MetricValue
             IsList: true
             Required: false
             Documentation: The metric values for the specified time window and timestep.

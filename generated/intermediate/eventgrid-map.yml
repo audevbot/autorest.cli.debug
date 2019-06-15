@@ -4037,10 +4037,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"306","$type":"SequenceType","elementType":{"$ref":"277"},"name":{"$id":"307","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"306","$type":"SequenceType","elementType":{"$ref":"277"},"name":{"$id":"307","fixed":false},"deprecated":false}
+        TypeName: Operation
+        TypeNameGo: Operation
         IsList: true
         Required: false
         Documentation: A collection of operations

@@ -916,11 +916,9 @@ Modules:
         NameGoSdk: Protocols
         NameTerraform: Protocols
         IdPortion: null
-        Type: 'unknown[reference: 350]'
-        TypeName: >-
-          {"$id":"556","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"557","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"556","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"557","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
+        Type: 'unknown[reference: undefined]'
+        TypeName: UnknownTypeName
+        TypeNameGo: UnknownTypeName
         IsList: true
         Required: false
         Documentation: >-
@@ -2411,11 +2409,9 @@ Modules:
             NameGoSdk: Protocols
             NameTerraform: Protocols
             IdPortion: null
-            Type: 'unknown[reference: 350]'
-            TypeName: >-
-              {"$id":"556","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"557","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"556","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"557","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
+            Type: 'unknown[reference: undefined]'
+            TypeName: UnknownTypeName
+            TypeNameGo: UnknownTypeName
             IsList: true
             Required: false
             Documentation: >-
@@ -4810,11 +4806,9 @@ Modules:
         NameGoSdk: Protocols
         NameTerraform: Protocols
         IdPortion: null
-        Type: 'unknown[reference: 350]'
-        TypeName: >-
-          {"$id":"556","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"557","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"556","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"557","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
+        Type: 'unknown[reference: undefined]'
+        TypeName: UnknownTypeName
+        TypeNameGo: UnknownTypeName
         IsList: true
         Required: false
         Documentation: >-
@@ -5463,10 +5457,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1422","$type":"SequenceType","elementType":{"$ref":"1367"},"name":{"$id":"1423","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1422","$type":"SequenceType","elementType":{"$ref":"1367"},"name":{"$id":"1423","fixed":false},"deprecated":false}
+        TypeName: ApiRevisionContract
+        TypeNameGo: ApiRevisionContract
         IsList: true
         Required: false
         Documentation: Page values.
@@ -7304,10 +7296,8 @@ Modules:
         NameTerraform: TemplateParameters
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1249","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1250","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1249","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1250","fixed":false},"deprecated":false}
+        TypeName: ParameterContract
+        TypeNameGo: ParameterContract
         IsList: true
         Required: false
         Documentation: Collection of URL template parameters.
@@ -7596,10 +7586,8 @@ Modules:
             NameTerraform: QueryParameters
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1210","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1211","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1210","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1211","fixed":false},"deprecated":false}
+            TypeName: ParameterContract
+            TypeNameGo: ParameterContract
             IsList: true
             Required: false
             Documentation: Collection of operation request query parameters.
@@ -7810,10 +7798,8 @@ Modules:
             NameTerraform: Headers
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1216","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1217","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1216","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1217","fixed":false},"deprecated":false}
+            TypeName: ParameterContract
+            TypeNameGo: ParameterContract
             IsList: true
             Required: false
             Documentation: Collection of operation request headers.
@@ -8024,10 +8010,8 @@ Modules:
             NameTerraform: Representations
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1222","$type":"SequenceType","elementType":{"$ref":"1141"},"name":{"$id":"1223","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1222","$type":"SequenceType","elementType":{"$ref":"1141"},"name":{"$id":"1223","fixed":false},"deprecated":false}
+            TypeName: RepresentationContract
+            TypeNameGo: RepresentationContract
             IsList: true
             Required: false
             Documentation: Collection of operation request representations.
@@ -8172,10 +8156,8 @@ Modules:
                 NameTerraform: FormParameters
                 IdPortion: null
                 Type: dict
-                TypeName: >-
-                  {"$id":"1170","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1171","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"1170","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1171","fixed":false},"deprecated":false}
+                TypeName: ParameterContract
+                TypeNameGo: ParameterContract
                 IsList: true
                 Required: false
                 Documentation: >-
@@ -8419,10 +8401,8 @@ Modules:
         NameTerraform: Responses
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1265","$type":"SequenceType","elementType":{"$ref":"1173"},"name":{"$id":"1266","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1265","$type":"SequenceType","elementType":{"$ref":"1173"},"name":{"$id":"1266","fixed":false},"deprecated":false}
+        TypeName: ResponseContract
+        TypeNameGo: ResponseContract
         IsList: true
         Required: false
         Documentation: Array of Operation responses.
@@ -8499,10 +8479,8 @@ Modules:
             NameTerraform: Representations
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1190","$type":"SequenceType","elementType":{"$ref":"1141"},"name":{"$id":"1191","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1190","$type":"SequenceType","elementType":{"$ref":"1141"},"name":{"$id":"1191","fixed":false},"deprecated":false}
+            TypeName: RepresentationContract
+            TypeNameGo: RepresentationContract
             IsList: true
             Required: false
             Documentation: Collection of operation response representations.
@@ -8647,10 +8625,8 @@ Modules:
                 NameTerraform: FormParameters
                 IdPortion: null
                 Type: dict
-                TypeName: >-
-                  {"$id":"1170","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1171","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"1170","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1171","fixed":false},"deprecated":false}
+                TypeName: ParameterContract
+                TypeNameGo: ParameterContract
                 IsList: true
                 Required: false
                 Documentation: >-
@@ -8884,10 +8860,8 @@ Modules:
             NameTerraform: Headers
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1196","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1197","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1196","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1197","fixed":false},"deprecated":false}
+            TypeName: ParameterContract
+            TypeNameGo: ParameterContract
             IsList: true
             Required: false
             Documentation: Collection of operation response headers.
@@ -9444,10 +9418,8 @@ Modules:
             NameTerraform: TemplateParameters
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1249","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1250","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1249","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1250","fixed":false},"deprecated":false}
+            TypeName: ParameterContract
+            TypeNameGo: ParameterContract
             IsList: true
             Required: false
             Documentation: Collection of URL template parameters.
@@ -9736,10 +9708,8 @@ Modules:
                 NameTerraform: QueryParameters
                 IdPortion: null
                 Type: dict
-                TypeName: >-
-                  {"$id":"1210","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1211","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"1210","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1211","fixed":false},"deprecated":false}
+                TypeName: ParameterContract
+                TypeNameGo: ParameterContract
                 IsList: true
                 Required: false
                 Documentation: Collection of operation request query parameters.
@@ -9950,10 +9920,8 @@ Modules:
                 NameTerraform: Headers
                 IdPortion: null
                 Type: dict
-                TypeName: >-
-                  {"$id":"1216","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1217","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"1216","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1217","fixed":false},"deprecated":false}
+                TypeName: ParameterContract
+                TypeNameGo: ParameterContract
                 IsList: true
                 Required: false
                 Documentation: Collection of operation request headers.
@@ -10164,10 +10132,8 @@ Modules:
                 NameTerraform: Representations
                 IdPortion: null
                 Type: dict
-                TypeName: >-
-                  {"$id":"1222","$type":"SequenceType","elementType":{"$ref":"1141"},"name":{"$id":"1223","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"1222","$type":"SequenceType","elementType":{"$ref":"1141"},"name":{"$id":"1223","fixed":false},"deprecated":false}
+                TypeName: RepresentationContract
+                TypeNameGo: RepresentationContract
                 IsList: true
                 Required: false
                 Documentation: Collection of operation request representations.
@@ -10313,10 +10279,8 @@ Modules:
                     NameTerraform: FormParameters
                     IdPortion: null
                     Type: dict
-                    TypeName: >-
-                      {"$id":"1170","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1171","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"1170","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1171","fixed":false},"deprecated":false}
+                    TypeName: ParameterContract
+                    TypeNameGo: ParameterContract
                     IsList: true
                     Required: false
                     Documentation: >-
@@ -10566,10 +10530,8 @@ Modules:
             NameTerraform: Responses
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1265","$type":"SequenceType","elementType":{"$ref":"1173"},"name":{"$id":"1266","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1265","$type":"SequenceType","elementType":{"$ref":"1173"},"name":{"$id":"1266","fixed":false},"deprecated":false}
+            TypeName: ResponseContract
+            TypeNameGo: ResponseContract
             IsList: true
             Required: false
             Documentation: Array of Operation responses.
@@ -10646,10 +10608,8 @@ Modules:
                 NameTerraform: Representations
                 IdPortion: null
                 Type: dict
-                TypeName: >-
-                  {"$id":"1190","$type":"SequenceType","elementType":{"$ref":"1141"},"name":{"$id":"1191","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"1190","$type":"SequenceType","elementType":{"$ref":"1141"},"name":{"$id":"1191","fixed":false},"deprecated":false}
+                TypeName: RepresentationContract
+                TypeNameGo: RepresentationContract
                 IsList: true
                 Required: false
                 Documentation: Collection of operation response representations.
@@ -10795,10 +10755,8 @@ Modules:
                     NameTerraform: FormParameters
                     IdPortion: null
                     Type: dict
-                    TypeName: >-
-                      {"$id":"1170","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1171","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"1170","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1171","fixed":false},"deprecated":false}
+                    TypeName: ParameterContract
+                    TypeNameGo: ParameterContract
                     IsList: true
                     Required: false
                     Documentation: >-
@@ -11036,10 +10994,8 @@ Modules:
                 NameTerraform: Headers
                 IdPortion: null
                 Type: dict
-                TypeName: >-
-                  {"$id":"1196","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1197","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"1196","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1197","fixed":false},"deprecated":false}
+                TypeName: ParameterContract
+                TypeNameGo: ParameterContract
                 IsList: true
                 Required: false
                 Documentation: Collection of operation response headers.
@@ -11908,10 +11864,8 @@ Modules:
         NameTerraform: TemplateParameters
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1249","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1250","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1249","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1250","fixed":false},"deprecated":false}
+        TypeName: ParameterContract
+        TypeNameGo: ParameterContract
         IsList: true
         Required: false
         Documentation: Collection of URL template parameters.
@@ -12200,10 +12154,8 @@ Modules:
             NameTerraform: QueryParameters
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1210","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1211","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1210","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1211","fixed":false},"deprecated":false}
+            TypeName: ParameterContract
+            TypeNameGo: ParameterContract
             IsList: true
             Required: false
             Documentation: Collection of operation request query parameters.
@@ -12414,10 +12366,8 @@ Modules:
             NameTerraform: Headers
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1216","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1217","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1216","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1217","fixed":false},"deprecated":false}
+            TypeName: ParameterContract
+            TypeNameGo: ParameterContract
             IsList: true
             Required: false
             Documentation: Collection of operation request headers.
@@ -12628,10 +12578,8 @@ Modules:
             NameTerraform: Representations
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1222","$type":"SequenceType","elementType":{"$ref":"1141"},"name":{"$id":"1223","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1222","$type":"SequenceType","elementType":{"$ref":"1141"},"name":{"$id":"1223","fixed":false},"deprecated":false}
+            TypeName: RepresentationContract
+            TypeNameGo: RepresentationContract
             IsList: true
             Required: false
             Documentation: Collection of operation request representations.
@@ -12776,10 +12724,8 @@ Modules:
                 NameTerraform: FormParameters
                 IdPortion: null
                 Type: dict
-                TypeName: >-
-                  {"$id":"1170","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1171","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"1170","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1171","fixed":false},"deprecated":false}
+                TypeName: ParameterContract
+                TypeNameGo: ParameterContract
                 IsList: true
                 Required: false
                 Documentation: >-
@@ -13023,10 +12969,8 @@ Modules:
         NameTerraform: Responses
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1265","$type":"SequenceType","elementType":{"$ref":"1173"},"name":{"$id":"1266","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1265","$type":"SequenceType","elementType":{"$ref":"1173"},"name":{"$id":"1266","fixed":false},"deprecated":false}
+        TypeName: ResponseContract
+        TypeNameGo: ResponseContract
         IsList: true
         Required: false
         Documentation: Array of Operation responses.
@@ -13103,10 +13047,8 @@ Modules:
             NameTerraform: Representations
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1190","$type":"SequenceType","elementType":{"$ref":"1141"},"name":{"$id":"1191","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1190","$type":"SequenceType","elementType":{"$ref":"1141"},"name":{"$id":"1191","fixed":false},"deprecated":false}
+            TypeName: RepresentationContract
+            TypeNameGo: RepresentationContract
             IsList: true
             Required: false
             Documentation: Collection of operation response representations.
@@ -13251,10 +13193,8 @@ Modules:
                 NameTerraform: FormParameters
                 IdPortion: null
                 Type: dict
-                TypeName: >-
-                  {"$id":"1170","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1171","fixed":false},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"1170","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1171","fixed":false},"deprecated":false}
+                TypeName: ParameterContract
+                TypeNameGo: ParameterContract
                 IsList: true
                 Required: false
                 Documentation: >-
@@ -13488,10 +13428,8 @@ Modules:
             NameTerraform: Headers
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1196","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1197","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1196","$type":"SequenceType","elementType":{"$ref":"1101"},"name":{"$id":"1197","fixed":false},"deprecated":false}
+            TypeName: ParameterContract
+            TypeNameGo: ParameterContract
             IsList: true
             Required: false
             Documentation: Collection of operation response headers.
@@ -16957,10 +16895,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1092","$type":"SequenceType","elementType":{"$ref":"1081"},"name":{"$id":"1093","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1092","$type":"SequenceType","elementType":{"$ref":"1081"},"name":{"$id":"1093","fixed":false},"deprecated":false}
+        TypeName: ProductContract
+        TypeNameGo: ProductContract
         IsList: true
         Required: false
         Documentation: Page values.
@@ -28624,10 +28560,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"633","$type":"SequenceType","elementType":{"$ref":"610"},"name":{"$id":"634","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"633","$type":"SequenceType","elementType":{"$ref":"610"},"name":{"$id":"634","fixed":false},"deprecated":false}
+        TypeName: TagResourceContract
+        TypeNameGo: TagResourceContract
         IsList: true
         Required: false
         Documentation: Page values.
@@ -29542,11 +29476,9 @@ Modules:
                 NameGoSdk: Protocols
                 NameTerraform: Protocols
                 IdPortion: null
-                Type: 'unknown[reference: 350]'
-                TypeName: >-
-                  {"$id":"593","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"594","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"593","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"594","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
+                Type: 'unknown[reference: undefined]'
+                TypeName: UnknownTypeName
+                TypeNameGo: UnknownTypeName
                 IsList: true
                 Required: false
                 Documentation: >-
@@ -31905,10 +31837,8 @@ Modules:
         NameTerraform: TokenBodyParameters
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1634","$type":"SequenceType","elementType":{"$ref":"1540"},"name":{"$id":"1635","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1634","$type":"SequenceType","elementType":{"$ref":"1540"},"name":{"$id":"1635","fixed":false},"deprecated":false}
+        TypeName: TokenBodyParameterContract
+        TypeNameGo: TokenBodyParameterContract
         IsList: true
         Required: false
         Documentation: >-
@@ -32733,10 +32663,8 @@ Modules:
             NameTerraform: TokenBodyParameters
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1634","$type":"SequenceType","elementType":{"$ref":"1540"},"name":{"$id":"1635","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1634","$type":"SequenceType","elementType":{"$ref":"1540"},"name":{"$id":"1635","fixed":false},"deprecated":false}
+            TypeName: TokenBodyParameterContract
+            TypeNameGo: TokenBodyParameterContract
             IsList: true
             Required: false
             Documentation: >-
@@ -33776,10 +33704,8 @@ Modules:
         NameTerraform: TokenBodyParameters
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1634","$type":"SequenceType","elementType":{"$ref":"1540"},"name":{"$id":"1635","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1634","$type":"SequenceType","elementType":{"$ref":"1540"},"name":{"$id":"1635","fixed":false},"deprecated":false}
+        TypeName: TokenBodyParameterContract
+        TypeNameGo: TokenBodyParameterContract
         IsList: true
         Required: false
         Documentation: >-
@@ -34902,10 +34828,8 @@ Modules:
             NameTerraform: ServerX509names
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1893","$type":"SequenceType","elementType":{"$ref":"1846"},"name":{"$id":"1894","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1893","$type":"SequenceType","elementType":{"$ref":"1846"},"name":{"$id":"1894","fixed":false},"deprecated":false}
+            TypeName: X509CertificateName
+            TypeNameGo: X509CertificateName
             IsList: true
             Required: false
             Documentation: Server X509 Certificate Names Collection
@@ -35978,10 +35902,8 @@ Modules:
                     NameTerraform: ServerX509names
                     IdPortion: null
                     Type: dict
-                    TypeName: >-
-                      {"$id":"1893","$type":"SequenceType","elementType":{"$ref":"1846"},"name":{"$id":"1894","fixed":false},"deprecated":false}
-                    TypeNameGo: >-
-                      {"$id":"1893","$type":"SequenceType","elementType":{"$ref":"1846"},"name":{"$id":"1894","fixed":false},"deprecated":false}
+                    TypeName: X509CertificateName
+                    TypeNameGo: X509CertificateName
                     IsList: true
                     Required: false
                     Documentation: Server X509 Certificate Names Collection
@@ -37393,10 +37315,8 @@ Modules:
             NameTerraform: ServerX509names
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"1893","$type":"SequenceType","elementType":{"$ref":"1846"},"name":{"$id":"1894","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"1893","$type":"SequenceType","elementType":{"$ref":"1846"},"name":{"$id":"1894","fixed":false},"deprecated":false}
+            TypeName: X509CertificateName
+            TypeNameGo: X509CertificateName
             IsList: true
             Required: false
             Documentation: Server X509 Certificate Names Collection
@@ -40346,10 +40266,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"2754","$type":"SequenceType","elementType":{"$ref":"2725"},"name":{"$id":"2755","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"2754","$type":"SequenceType","elementType":{"$ref":"2725"},"name":{"$id":"2755","fixed":false},"deprecated":false}
+        TypeName: Operation
+        TypeNameGo: Operation
         IsList: true
         Required: false
         Documentation: List of operations supported by the resource provider.
@@ -40785,10 +40703,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"2187","$type":"SequenceType","elementType":{"$ref":"2166"},"name":{"$id":"2188","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"2187","$type":"SequenceType","elementType":{"$ref":"2166"},"name":{"$id":"2188","fixed":false},"deprecated":false}
+        TypeName: ResourceSkuResult
+        TypeNameGo: ResourceSkuResult
         IsList: true
         Required: false
         Documentation: The list of skus available for the service.
@@ -41417,10 +41333,8 @@ Modules:
         NameTerraform: HostnameConfigurations
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"2467","$type":"SequenceType","elementType":{"$ref":"2244"},"name":{"$id":"2468","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"2467","$type":"SequenceType","elementType":{"$ref":"2244"},"name":{"$id":"2468","fixed":false},"deprecated":false}
+        TypeName: HostnameConfiguration
+        TypeNameGo: HostnameConfiguration
         IsList: true
         Required: false
         Documentation: Custom hostname configuration of the API Management service.
@@ -41936,10 +41850,8 @@ Modules:
         NameTerraform: AdditionalLocations
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"2493","$type":"SequenceType","elementType":{"$ref":"2331"},"name":{"$id":"2494","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"2493","$type":"SequenceType","elementType":{"$ref":"2331"},"name":{"$id":"2494","fixed":false},"deprecated":false}
+        TypeName: AdditionalLocation
+        TypeNameGo: AdditionalLocation
         IsList: true
         Required: false
         Documentation: Additional datacenter locations of the API Management service.
@@ -42386,10 +42298,8 @@ Modules:
         NameTerraform: Certificates
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"2507","$type":"SequenceType","elementType":{"$ref":"2216"},"name":{"$id":"2508","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"2507","$type":"SequenceType","elementType":{"$ref":"2216"},"name":{"$id":"2508","fixed":false},"deprecated":false}
+        TypeName: CertificateConfiguration
+        TypeNameGo: CertificateConfiguration
         IsList: true
         Required: false
         Documentation: >-
@@ -43664,10 +43574,8 @@ Modules:
             NameTerraform: HostnameConfigurations
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"2467","$type":"SequenceType","elementType":{"$ref":"2244"},"name":{"$id":"2468","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"2467","$type":"SequenceType","elementType":{"$ref":"2244"},"name":{"$id":"2468","fixed":false},"deprecated":false}
+            TypeName: HostnameConfiguration
+            TypeNameGo: HostnameConfiguration
             IsList: true
             Required: false
             Documentation: Custom hostname configuration of the API Management service.
@@ -44124,10 +44032,8 @@ Modules:
             NameTerraform: AdditionalLocations
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"2493","$type":"SequenceType","elementType":{"$ref":"2331"},"name":{"$id":"2494","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"2493","$type":"SequenceType","elementType":{"$ref":"2331"},"name":{"$id":"2494","fixed":false},"deprecated":false}
+            TypeName: AdditionalLocation
+            TypeNameGo: AdditionalLocation
             IsList: true
             Required: false
             Documentation: Additional datacenter locations of the API Management service.
@@ -44407,10 +44313,8 @@ Modules:
             NameTerraform: Certificates
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"2507","$type":"SequenceType","elementType":{"$ref":"2216"},"name":{"$id":"2508","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"2507","$type":"SequenceType","elementType":{"$ref":"2216"},"name":{"$id":"2508","fixed":false},"deprecated":false}
+            TypeName: CertificateConfiguration
+            TypeNameGo: CertificateConfiguration
             IsList: true
             Required: false
             Documentation: >-
@@ -46407,10 +46311,8 @@ Modules:
         NameTerraform: HostnameConfigurations
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"2467","$type":"SequenceType","elementType":{"$ref":"2244"},"name":{"$id":"2468","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"2467","$type":"SequenceType","elementType":{"$ref":"2244"},"name":{"$id":"2468","fixed":false},"deprecated":false}
+        TypeName: HostnameConfiguration
+        TypeNameGo: HostnameConfiguration
         IsList: true
         Required: false
         Documentation: Custom hostname configuration of the API Management service.
@@ -46993,10 +46895,8 @@ Modules:
         NameTerraform: AdditionalLocations
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"2493","$type":"SequenceType","elementType":{"$ref":"2331"},"name":{"$id":"2494","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"2493","$type":"SequenceType","elementType":{"$ref":"2331"},"name":{"$id":"2494","fixed":false},"deprecated":false}
+        TypeName: AdditionalLocation
+        TypeNameGo: AdditionalLocation
         IsList: true
         Required: false
         Documentation: Additional datacenter locations of the API Management service.
@@ -47438,10 +47338,8 @@ Modules:
         NameTerraform: Certificates
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"2507","$type":"SequenceType","elementType":{"$ref":"2216"},"name":{"$id":"2508","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"2507","$type":"SequenceType","elementType":{"$ref":"2216"},"name":{"$id":"2508","fixed":false},"deprecated":false}
+        TypeName: CertificateConfiguration
+        TypeNameGo: CertificateConfiguration
         IsList: true
         Required: false
         Documentation: >-
@@ -52201,10 +52099,8 @@ Modules:
         NameTerraform: Parameters
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"2812","$type":"SequenceType","elementType":{"$ref":"2763"},"name":{"$id":"2813","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"2812","$type":"SequenceType","elementType":{"$ref":"2763"},"name":{"$id":"2813","fixed":false},"deprecated":false}
+        TypeName: EmailTemplateParametersContractProperties
+        TypeNameGo: EmailTemplateParametersContractProperties
         IsList: true
         Required: false
         Documentation: Email Template Parameter values.
@@ -52675,10 +52571,8 @@ Modules:
             NameTerraform: Parameters
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"2856","$type":"SequenceType","elementType":{"$ref":"2763"},"name":{"$id":"2857","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"2856","$type":"SequenceType","elementType":{"$ref":"2763"},"name":{"$id":"2857","fixed":false},"deprecated":false}
+            TypeName: EmailTemplateParametersContractProperties
+            TypeNameGo: EmailTemplateParametersContractProperties
             IsList: true
             Required: false
             Documentation: Email Template Parameter values.
@@ -53344,10 +53238,8 @@ Modules:
         NameTerraform: Parameters
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"2856","$type":"SequenceType","elementType":{"$ref":"2763"},"name":{"$id":"2857","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"2856","$type":"SequenceType","elementType":{"$ref":"2763"},"name":{"$id":"2857","fixed":false},"deprecated":false}
+        TypeName: EmailTemplateParametersContractProperties
+        TypeNameGo: EmailTemplateParametersContractProperties
         IsList: true
         Required: false
         Documentation: Email Template Parameter values.
@@ -55375,10 +55267,8 @@ Modules:
         NameTerraform: Identities
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"2941","$type":"SequenceType","elementType":{"$ref":"2879"},"name":{"$id":"2942","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"2941","$type":"SequenceType","elementType":{"$ref":"2879"},"name":{"$id":"2942","fixed":false},"deprecated":false}
+        TypeName: UserIdentityContract
+        TypeNameGo: UserIdentityContract
         IsList: true
         Required: false
         Documentation: Collection of user identities.
@@ -55589,10 +55479,8 @@ Modules:
         NameTerraform: Groups
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"3047","$type":"SequenceType","elementType":{"$ref":"2981"},"name":{"$id":"3048","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"3047","$type":"SequenceType","elementType":{"$ref":"2981"},"name":{"$id":"3048","fixed":false},"deprecated":false}
+        TypeName: GroupContractProperties
+        TypeNameGo: GroupContractProperties
         IsList: true
         Required: false
         Documentation: Collection of groups user is part of.
@@ -56047,10 +55935,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"3061","$type":"SequenceType","elementType":{"$ref":"3050"},"name":{"$id":"3062","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"3061","$type":"SequenceType","elementType":{"$ref":"3050"},"name":{"$id":"3062","fixed":false},"deprecated":false}
+        TypeName: UserContract
+        TypeNameGo: UserContract
         IsList: true
         Required: false
         Documentation: Page values.
@@ -56268,10 +56154,8 @@ Modules:
             NameTerraform: Identities
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"2941","$type":"SequenceType","elementType":{"$ref":"2879"},"name":{"$id":"2942","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"2941","$type":"SequenceType","elementType":{"$ref":"2879"},"name":{"$id":"2942","fixed":false},"deprecated":false}
+            TypeName: UserIdentityContract
+            TypeNameGo: UserIdentityContract
             IsList: true
             Required: false
             Documentation: Collection of user identities.
@@ -56483,10 +56367,8 @@ Modules:
             NameTerraform: Groups
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"3047","$type":"SequenceType","elementType":{"$ref":"2981"},"name":{"$id":"3048","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"3047","$type":"SequenceType","elementType":{"$ref":"2981"},"name":{"$id":"3048","fixed":false},"deprecated":false}
+            TypeName: GroupContractProperties
+            TypeNameGo: GroupContractProperties
             IsList: true
             Required: false
             Documentation: Collection of groups user is part of.
@@ -62539,10 +62421,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"3466","$type":"SequenceType","elementType":{"$ref":"3455"},"name":{"$id":"3467","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"3466","$type":"SequenceType","elementType":{"$ref":"3455"},"name":{"$id":"3467","fixed":false},"deprecated":false}
+        TypeName: RecipientUserContract
+        TypeNameGo: RecipientUserContract
         IsList: true
         Required: false
         Documentation: Page values.
@@ -63357,10 +63237,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"3438","$type":"SequenceType","elementType":{"$ref":"3427"},"name":{"$id":"3439","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"3438","$type":"SequenceType","elementType":{"$ref":"3427"},"name":{"$id":"3439","fixed":false},"deprecated":false}
+        TypeName: RecipientEmailContract
+        TypeNameGo: RecipientEmailContract
         IsList: true
         Required: false
         Documentation: Page values.
@@ -66135,10 +66013,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"3652","$type":"SequenceType","elementType":{"$ref":"3621"},"name":{"$id":"3653","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"3652","$type":"SequenceType","elementType":{"$ref":"3621"},"name":{"$id":"3653","fixed":false},"deprecated":false}
+        TypeName: PolicySnippetContract
+        TypeNameGo: PolicySnippetContract
         IsList: true
         Required: false
         Documentation: Policy snippet value.
@@ -72198,11 +72074,9 @@ Modules:
         NameGoSdk: Protocols
         NameTerraform: Protocols
         IdPortion: null
-        Type: 'unknown[reference: 350]'
-        TypeName: >-
-          {"$id":"556","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"557","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"556","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"557","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
+        Type: 'unknown[reference: undefined]'
+        TypeName: UnknownTypeName
+        TypeNameGo: UnknownTypeName
         IsList: true
         Required: false
         Documentation: >-
@@ -72729,10 +72603,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"1454","$type":"SequenceType","elementType":{"$ref":"1437"},"name":{"$id":"1455","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"1454","$type":"SequenceType","elementType":{"$ref":"1437"},"name":{"$id":"1455","fixed":false},"deprecated":false}
+        TypeName: ApiContract
+        TypeNameGo: ApiContract
         IsList: true
         Required: false
         Documentation: Page values.
@@ -73661,11 +73533,9 @@ Modules:
             NameGoSdk: Protocols
             NameTerraform: Protocols
             IdPortion: null
-            Type: 'unknown[reference: 350]'
-            TypeName: >-
-              {"$id":"556","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"557","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"556","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"557","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
+            Type: 'unknown[reference: undefined]'
+            TypeName: UnknownTypeName
+            TypeNameGo: UnknownTypeName
             IsList: true
             Required: false
             Documentation: >-
@@ -74715,10 +74585,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"3141","$type":"SequenceType","elementType":{"$ref":"3100"},"name":{"$id":"3142","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"3141","$type":"SequenceType","elementType":{"$ref":"3100"},"name":{"$id":"3142","fixed":false},"deprecated":false}
+        TypeName: GroupContract
+        TypeNameGo: GroupContract
         IsList: true
         Required: false
         Documentation: Page values.
@@ -75268,10 +75136,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"3850","$type":"SequenceType","elementType":{"$ref":"3839"},"name":{"$id":"3851","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"3850","$type":"SequenceType","elementType":{"$ref":"3839"},"name":{"$id":"3851","fixed":false},"deprecated":false}
+        TypeName: SubscriptionContract
+        TypeNameGo: SubscriptionContract
         IsList: true
         Required: false
         Documentation: Page values.
@@ -78468,10 +78334,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"3984","$type":"SequenceType","elementType":{"$ref":"3949"},"name":{"$id":"3985","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"3984","$type":"SequenceType","elementType":{"$ref":"3949"},"name":{"$id":"3985","fixed":false},"deprecated":false}
+        TypeName: QuotaCounterContract
+        TypeNameGo: QuotaCounterContract
         IsList: true
         Required: false
         Documentation: Quota counter values.
@@ -79339,10 +79203,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"73","$type":"SequenceType","elementType":{"$ref":"48"},"name":{"$id":"74","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"73","$type":"SequenceType","elementType":{"$ref":"48"},"name":{"$id":"74","fixed":false},"deprecated":false}
+        TypeName: RegionContract
+        TypeNameGo: RegionContract
         IsList: true
         Required: false
         Documentation: Lists of Regions.
@@ -79682,10 +79544,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"4286","$type":"SequenceType","elementType":{"$ref":"4123"},"name":{"$id":"4287","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"4286","$type":"SequenceType","elementType":{"$ref":"4123"},"name":{"$id":"4287","fixed":false},"deprecated":false}
+        TypeName: ReportRecordContract
+        TypeNameGo: ReportRecordContract
         IsList: true
         Required: false
         Documentation: Page values.
@@ -83447,10 +83307,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"633","$type":"SequenceType","elementType":{"$ref":"610"},"name":{"$id":"634","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"633","$type":"SequenceType","elementType":{"$ref":"610"},"name":{"$id":"634","fixed":false},"deprecated":false}
+        TypeName: TagResourceContract
+        TypeNameGo: TagResourceContract
         IsList: true
         Required: false
         Documentation: Page values.
@@ -84365,11 +84223,9 @@ Modules:
                 NameGoSdk: Protocols
                 NameTerraform: Protocols
                 IdPortion: null
-                Type: 'unknown[reference: 350]'
-                TypeName: >-
-                  {"$id":"593","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"594","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
-                TypeNameGo: >-
-                  {"$id":"593","$type":"SequenceType","elementType":{"$ref":"350"},"name":{"$id":"594","fixed":false},"extensions":{"x-ms-enum":{"name":"Protocol","modelAsString":false}},"deprecated":false}
+                Type: 'unknown[reference: undefined]'
+                TypeName: UnknownTypeName
+                TypeNameGo: UnknownTypeName
                 IsList: true
                 Required: false
                 Documentation: >-
@@ -86324,10 +86180,8 @@ Modules:
         NameTerraform: Identities
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"2941","$type":"SequenceType","elementType":{"$ref":"2879"},"name":{"$id":"2942","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"2941","$type":"SequenceType","elementType":{"$ref":"2879"},"name":{"$id":"2942","fixed":false},"deprecated":false}
+        TypeName: UserIdentityContract
+        TypeNameGo: UserIdentityContract
         IsList: true
         Required: false
         Documentation: Collection of user identities.
@@ -86616,10 +86470,8 @@ Modules:
         NameTerraform: Groups
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"3047","$type":"SequenceType","elementType":{"$ref":"2981"},"name":{"$id":"3048","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"3047","$type":"SequenceType","elementType":{"$ref":"2981"},"name":{"$id":"3048","fixed":false},"deprecated":false}
+        TypeName: GroupContractProperties
+        TypeNameGo: GroupContractProperties
         IsList: true
         Required: false
         Documentation: Collection of groups user is part of.
@@ -87094,10 +86946,8 @@ Modules:
             NameTerraform: Identities
             IdPortion: null
             Type: dict
-            TypeName: >-
-              {"$id":"2941","$type":"SequenceType","elementType":{"$ref":"2879"},"name":{"$id":"2942","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"2941","$type":"SequenceType","elementType":{"$ref":"2879"},"name":{"$id":"2942","fixed":false},"deprecated":false}
+            TypeName: UserIdentityContract
+            TypeNameGo: UserIdentityContract
             IsList: true
             Required: false
             Documentation: Collection of user identities.
@@ -87768,10 +87618,8 @@ Modules:
         NameTerraform: Identities
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"2941","$type":"SequenceType","elementType":{"$ref":"2879"},"name":{"$id":"2942","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"2941","$type":"SequenceType","elementType":{"$ref":"2879"},"name":{"$id":"2942","fixed":false},"deprecated":false}
+        TypeName: UserIdentityContract
+        TypeNameGo: UserIdentityContract
         IsList: true
         Required: false
         Documentation: Collection of user identities.
@@ -87982,10 +87830,8 @@ Modules:
         NameTerraform: Groups
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"3047","$type":"SequenceType","elementType":{"$ref":"2981"},"name":{"$id":"3048","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"3047","$type":"SequenceType","elementType":{"$ref":"2981"},"name":{"$id":"3048","fixed":false},"deprecated":false}
+        TypeName: GroupContractProperties
+        TypeNameGo: GroupContractProperties
         IsList: true
         Required: false
         Documentation: Collection of groups user is part of.
@@ -88439,10 +88285,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"3141","$type":"SequenceType","elementType":{"$ref":"3100"},"name":{"$id":"3142","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"3141","$type":"SequenceType","elementType":{"$ref":"3100"},"name":{"$id":"3142","fixed":false},"deprecated":false}
+        TypeName: GroupContract
+        TypeNameGo: GroupContract
         IsList: true
         Required: false
         Documentation: Page values.
@@ -88960,10 +88804,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"3850","$type":"SequenceType","elementType":{"$ref":"3839"},"name":{"$id":"3851","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"3850","$type":"SequenceType","elementType":{"$ref":"3839"},"name":{"$id":"3851","fixed":false},"deprecated":false}
+        TypeName: SubscriptionContract
+        TypeNameGo: SubscriptionContract
         IsList: true
         Required: false
         Documentation: Page values.
@@ -89793,10 +89635,8 @@ Modules:
         NameTerraform: Value
         IdPortion: null
         Type: dict
-        TypeName: >-
-          {"$id":"4644","$type":"SequenceType","elementType":{"$ref":"2879"},"name":{"$id":"4645","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"4644","$type":"SequenceType","elementType":{"$ref":"2879"},"name":{"$id":"4645","fixed":false},"deprecated":false}
+        TypeName: UserIdentityContract
+        TypeNameGo: UserIdentityContract
         IsList: true
         Required: false
         Documentation: User Identity values.
@@ -90432,6 +90272,8 @@ Info:
   - '  ** FOUND OPTION serviceName'
   - '  ** FOUND OPTION apiId'
   - '  ** FOUND OPTION parameters'
+  - '  ** COULDN''T FIND undefined'
+  - '  ** COULDN''T FIND undefined'
   - '  ** FOUND OPTION resourceGroupName'
   - '  ** FOUND OPTION serviceName'
   - '  ** FOUND OPTION tags'
@@ -90442,6 +90284,7 @@ Info:
   - '  ** FOUND OPTION resourceGroupName'
   - '  ** FOUND OPTION serviceName'
   - '  ** FOUND OPTION apiId'
+  - '  ** COULDN''T FIND undefined'
   - '  ** FOUND OPTION resourceGroupName'
   - '  ** FOUND OPTION serviceName'
   - '  ** FOUND OPTION apiId'
@@ -90618,6 +90461,7 @@ Info:
   - '  ** FOUND OPTION serviceName'
   - '  ** FOUND OPTION apiId'
   - '  ** FOUND OPTION includeNotTaggedOperations'
+  - '  ** COULDN''T FIND undefined'
   - '  ** FOUND OPTION resourceGroupName'
   - '  ** FOUND OPTION serviceName'
   - '  ** FOUND OPTION versionSetId'
@@ -90810,9 +90654,11 @@ Info:
   - '  ** FOUND OPTION serviceName'
   - '  ** FOUND OPTION productId'
   - '  ** FOUND OPTION apiId'
+  - '  ** COULDN''T FIND undefined'
   - '  ** FOUND OPTION resourceGroupName'
   - '  ** FOUND OPTION serviceName'
   - '  ** FOUND OPTION productId'
+  - '  ** COULDN''T FIND undefined'
   - '  ** FOUND OPTION resourceGroupName'
   - '  ** FOUND OPTION serviceName'
   - '  ** FOUND OPTION productId'
@@ -90883,6 +90729,7 @@ Info:
   - '  ** FOUND OPTION sid'
   - '  ** FOUND OPTION resourceGroupName'
   - '  ** FOUND OPTION serviceName'
+  - '  ** COULDN''T FIND undefined'
   - '  ** FOUND OPTION resourceGroupName'
   - '  ** FOUND OPTION serviceName'
   - '  ** FOUND OPTION accessName'

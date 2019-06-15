@@ -142,7 +142,7 @@ objects:
           '/properties/children': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Children
-            go_type_name: {"$id":"295","$type":"SequenceType","elementType":{"$ref":"222"},"name":{"$id":"296","fixed":false},"deprecated":false}
+            go_type_name: ManagementGroupChildInfo
           '/children': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
             python_field_name: children
