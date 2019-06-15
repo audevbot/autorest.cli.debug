@@ -478,7 +478,7 @@ tag_resource:
                       Describes on which protocols the operations in this API
                       can be invoked.
                   returned: always
-                  type: 'unknown[undefined {"$ref":"350"}]'
+                  type: str
                   sample: null
             operation:
               description:

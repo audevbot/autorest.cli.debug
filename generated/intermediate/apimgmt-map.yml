@@ -915,9 +915,9 @@ Modules:
         NameGoSdk: Protocols
         NameTerraform: Protocols
         IdPortion: null
-        Type: 'unknown[undefined {"$ref":"350"}]'
-        TypeName: '{"$ref":"350"}'
-        TypeNameGo: '{"$ref":"350"}'
+        Type: str
+        TypeName: Protocol
+        TypeNameGo: Protocol
         IsList: true
         Required: false
         Documentation: >-
@@ -2396,9 +2396,9 @@ Modules:
             NameGoSdk: Protocols
             NameTerraform: Protocols
             IdPortion: null
-            Type: 'unknown[undefined {"$ref":"350"}]'
-            TypeName: '{"$ref":"350"}'
-            TypeNameGo: '{"$ref":"350"}'
+            Type: str
+            TypeName: Protocol
+            TypeNameGo: Protocol
             IsList: true
             Required: false
             Documentation: >-
@@ -4781,9 +4781,9 @@ Modules:
         NameGoSdk: Protocols
         NameTerraform: Protocols
         IdPortion: null
-        Type: 'unknown[undefined {"$ref":"350"}]'
-        TypeName: '{"$ref":"350"}'
-        TypeNameGo: '{"$ref":"350"}'
+        Type: str
+        TypeName: Protocol
+        TypeNameGo: Protocol
         IsList: true
         Required: false
         Documentation: >-
@@ -29394,9 +29394,9 @@ Modules:
                 NameGoSdk: Protocols
                 NameTerraform: Protocols
                 IdPortion: null
-                Type: 'unknown[undefined {"$ref":"350"}]'
-                TypeName: '{"$ref":"350"}'
-                TypeNameGo: '{"$ref":"350"}'
+                Type: str
+                TypeName: Protocol
+                TypeNameGo: Protocol
                 IsList: true
                 Required: false
                 Documentation: >-
@@ -71781,9 +71781,9 @@ Modules:
         NameGoSdk: Protocols
         NameTerraform: Protocols
         IdPortion: null
-        Type: 'unknown[undefined {"$ref":"350"}]'
-        TypeName: '{"$ref":"350"}'
-        TypeNameGo: '{"$ref":"350"}'
+        Type: str
+        TypeName: Protocol
+        TypeNameGo: Protocol
         IsList: true
         Required: false
         Documentation: >-
@@ -73228,9 +73228,9 @@ Modules:
             NameGoSdk: Protocols
             NameTerraform: Protocols
             IdPortion: null
-            Type: 'unknown[undefined {"$ref":"350"}]'
-            TypeName: '{"$ref":"350"}'
-            TypeNameGo: '{"$ref":"350"}'
+            Type: str
+            TypeName: Protocol
+            TypeNameGo: Protocol
             IsList: true
             Required: false
             Documentation: >-
@@ -83906,9 +83906,9 @@ Modules:
                 NameGoSdk: Protocols
                 NameTerraform: Protocols
                 IdPortion: null
-                Type: 'unknown[undefined {"$ref":"350"}]'
-                TypeName: '{"$ref":"350"}'
-                TypeNameGo: '{"$ref":"350"}'
+                Type: str
+                TypeName: Protocol
+                TypeNameGo: Protocol
                 IsList: true
                 Required: false
                 Documentation: >-

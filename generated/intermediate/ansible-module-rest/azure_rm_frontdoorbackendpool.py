@@ -31,12 +31,17 @@ options:
     required: true
   name:
     description:
-      - Name of the Backend Pool which is unique within the Front Door.
-    required: true
+      - Resource name.
   backend_pool_parameters:
     description:
       - Backend Pool properties needed to create a new Pool.
     required: true
+  id:
+    description:
+      - Resource ID.
+  type:
+    description:
+      - Resource type.
   state:
     description:
       - Assert the state of the BackendPool.
@@ -101,7 +106,30 @@ EXAMPLES = '''
 '''
 
 RETURN = '''
-{}
+id:
+  description:
+    - Resource ID.
+  returned: always
+  type: str
+  sample: null
+properties:
+  description:
+    - Properties of the Front Door Backend Pool
+  returned: always
+  type: dict
+  sample: null
+name:
+  description:
+    - Resource name.
+  returned: always
+  type: str
+  sample: null
+type:
+  description:
+    - Resource type.
+  returned: always
+  type: str
+  sample: null
 
 '''
 
@@ -140,10 +168,19 @@ class AzureRMBackendPools(AzureRMModuleBaseExt):
                 required=true
             ),
             backend_pool_parameters=dict(
-                type='unknown[undefined {"$ref":"221"}]',
-                updatable=False,
+                type='dict',
                 disposition='backendPoolParameters',
                 required=true
+            ),
+            id=dict(
+                type='str',
+                updatable=False,
+                disposition='/'
+            ),
+            name=dict(
+                type='str',
+                updatable=False,
+                disposition='/'
             ),
             state=dict(
                 type='str',
@@ -156,6 +193,7 @@ class AzureRMBackendPools(AzureRMModuleBaseExt):
         self.front_door_name = None
         self.name = None
         self.backend_pool_parameters = None
+        self.type = None
 
         self.results = dict(changed=False)
         self.mgmt_client = None
@@ -257,6 +295,12 @@ class AzureRMBackendPools(AzureRMModuleBaseExt):
             self.log('BackendPool instance unchanged')
             self.results['changed'] = False
             response = old_response
+
+        if response:
+           self.results["id"] = response["id"]
+           self.results["properties"] = response["properties"]
+           self.results["name"] = response["name"]
+           self.results["type"] = response["type"]
 
         return self.results
 

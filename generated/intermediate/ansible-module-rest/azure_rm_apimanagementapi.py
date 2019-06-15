@@ -567,7 +567,7 @@ properties:
           Describes on which protocols the operations in this API can be
           invoked.
       returned: always
-      type: 'unknown[undefined {"$ref":"350"}]'
+      type: str
       sample: null
     api_version_set:
       description:

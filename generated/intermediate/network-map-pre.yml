@@ -1475,9 +1475,9 @@ Modules:
                 NameGoSdk: Protocols
                 NameTerraform: Protocols
                 IdPortion: null
-                Type: 'unknown[undefined {"$ref":"224"}]'
-                TypeName: '{"$ref":"224"}'
-                TypeNameGo: '{"$ref":"224"}'
+                Type: str
+                TypeName: AzureFirewallNetworkRuleProtocol
+                TypeNameGo: AzureFirewallNetworkRuleProtocol
                 IsList: true
                 Required: false
                 Documentation: Array of AzureFirewallNetworkRuleProtocols.
@@ -3567,9 +3567,9 @@ Modules:
                         NameGoSdk: Protocols
                         NameTerraform: Protocols
                         IdPortion: null
-                        Type: 'unknown[undefined {"$ref":"224"}]'
-                        TypeName: '{"$ref":"224"}'
-                        TypeNameGo: '{"$ref":"224"}'
+                        Type: str
+                        TypeName: AzureFirewallNetworkRuleProtocol
+                        TypeNameGo: AzureFirewallNetworkRuleProtocol
                         IsList: true
                         Required: false
                         Documentation: Array of AzureFirewallNetworkRuleProtocols.
@@ -5867,9 +5867,9 @@ Modules:
                 NameGoSdk: Protocols
                 NameTerraform: Protocols
                 IdPortion: null
-                Type: 'unknown[undefined {"$ref":"224"}]'
-                TypeName: '{"$ref":"224"}'
-                TypeNameGo: '{"$ref":"224"}'
+                Type: str
+                TypeName: AzureFirewallNetworkRuleProtocol
+                TypeNameGo: AzureFirewallNetworkRuleProtocol
                 IsList: true
                 Required: false
                 Documentation: Array of AzureFirewallNetworkRuleProtocols.
