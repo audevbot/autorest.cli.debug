@@ -277,7 +277,7 @@ objects:
           '/responses': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
             python_field_name: responses
-          '/responses/statusCode': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/responses/statusCode': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: status_code
           '/responses/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -344,7 +344,7 @@ objects:
             applicable_to: [go]
             go_field_name: Responses
             go_type_name: ResponseContract
-          '/properties/responses/statusCode': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/responses/statusCode': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: StatusCode
           '/properties/responses/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -692,7 +692,7 @@ objects:
           '/responses': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
             python_field_name: responses
-          '/responses/statusCode': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/responses/statusCode': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: status_code
           '/responses/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -759,7 +759,7 @@ objects:
             applicable_to: [go]
             go_field_name: Responses
             go_type_name: ResponseContract
-          '/properties/responses/statusCode': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/responses/statusCode': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: StatusCode
           '/properties/responses/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -1128,7 +1128,7 @@ objects:
             applicable_to: [go]
             go_field_name: Responses
             go_type_name: ResponseContract
-          '/properties/responses/statusCode': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/responses/statusCode': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: StatusCode
           '/properties/responses/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -1197,7 +1197,7 @@ objects:
           '/responses': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
             python_field_name: responses
-          '/responses/statusCode': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/responses/statusCode': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: status_code
           '/responses/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -1547,7 +1547,7 @@ objects:
         required: false
         azure_sdk_references: ['/responses', '/properties/responses']
         properties:
-          - !ruby/object:Api::Azure::Type::[number]
+          - !ruby/object:Api::Azure::Type::Integer
             name: 'statusCode'
             description: 'Operation response HTTP status code.'
             required: true

@@ -93,20 +93,20 @@ objects:
           '/properties/backends/address': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Address
-          '/properties/backends/httpPort': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/backends/httpPort': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: HttpPort
-          '/properties/backends/httpsPort': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/backends/httpsPort': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: HttpsPort
           '/properties/backends/enabledState': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [go]
             go_field_name: EnabledState
             go_enum_type_name: backendEnabledState
-          '/properties/backends/priority': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/backends/priority': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: Priority
-          '/properties/backends/weight': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/backends/weight': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: Weight
           '/properties/backends/backendHostHeader': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -118,19 +118,19 @@ objects:
           '/backends/address': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: address
-          '/backends/httpPort': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/backends/httpPort': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: http_port
-          '/backends/httpsPort': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/backends/httpsPort': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: https_port
           '/backends/enabledState': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: enabled_state
-          '/backends/priority': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/backends/priority': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: priority
-          '/backends/weight': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/backends/weight': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: weight
           '/backends/backendHostHeader': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -231,12 +231,12 @@ objects:
             description: 'Location of the backend (IP address or FQDN)'
             required: false
             azure_sdk_references: ['/backends/address', '/properties/backends/address']
-          - !ruby/object:Api::Azure::Type::[number]
+          - !ruby/object:Api::Azure::Type::Integer
             name: 'httpPort'
             description: 'The HTTP TCP port number. Must be between 1 and 65535.'
             required: false
             azure_sdk_references: ['/backends/httpPort', '/properties/backends/httpPort']
-          - !ruby/object:Api::Azure::Type::[number]
+          - !ruby/object:Api::Azure::Type::Integer
             name: 'httpsPort'
             description: 'The HTTPS TCP port number. Must be between 1 and 65535.'
             required: false
@@ -250,12 +250,12 @@ objects:
               - :Disabled
             default_value: :Enabled
             azure_sdk_references: ['/backends/enabledState', '/properties/backends/enabledState']
-          - !ruby/object:Api::Azure::Type::[number]
+          - !ruby/object:Api::Azure::Type::Integer
             name: 'priority'
             description: 'Priority to use for load balancing. Higher priorities will not be used for load balancing if any lower priority backend is healthy.'
             required: false
             azure_sdk_references: ['/backends/priority', '/properties/backends/priority']
-          - !ruby/object:Api::Azure::Type::[number]
+          - !ruby/object:Api::Azure::Type::Integer
             name: 'weight'
             description: 'Weight of this endpoint for load balancing purposes.'
             required: false

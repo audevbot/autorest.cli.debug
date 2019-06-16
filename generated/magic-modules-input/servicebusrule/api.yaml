@@ -63,7 +63,7 @@ objects:
           '/action/sqlExpression': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: sql_expression
-          '/action/compatibilityLevel': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/action/compatibilityLevel': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: compatibility_level
           '/action/requiresPreprocessing': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
@@ -76,7 +76,7 @@ objects:
           '/properties/action/sqlExpression': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: SqlExpression
-          '/properties/action/compatibilityLevel': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/action/compatibilityLevel': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: CompatibilityLevel
           '/properties/action/requiresPreprocessing': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
@@ -242,7 +242,7 @@ objects:
           '/properties/action/sqlExpression': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: SqlExpression
-          '/properties/action/compatibilityLevel': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/action/compatibilityLevel': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: CompatibilityLevel
           '/properties/action/requiresPreprocessing': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
@@ -254,7 +254,7 @@ objects:
           '/action/sqlExpression': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: sql_expression
-          '/action/compatibilityLevel': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/action/compatibilityLevel': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: compatibility_level
           '/action/requiresPreprocessing': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
@@ -277,7 +277,7 @@ objects:
           '/properties/sqlFilter/requiresPreprocessing': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
             go_field_name: RequiresPreprocessing
-          '/properties/sqlFilter/compatibilityLevel': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/sqlFilter/compatibilityLevel': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: CompatibilityLevel
           '/sqlFilter': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -289,7 +289,7 @@ objects:
           '/sqlFilter/requiresPreprocessing': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [python]
             python_field_name: requires_preprocessing
-          '/sqlFilter/compatibilityLevel': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/sqlFilter/compatibilityLevel': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: compatibility_level
           '/properties/correlationFilter': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -439,7 +439,7 @@ objects:
             description: 'SQL expression. e.g. MyProperty='ABC''
             required: false
             azure_sdk_references: ['/action/sqlExpression', '/properties/action/sqlExpression']
-          - !ruby/object:Api::Azure::Type::[number]
+          - !ruby/object:Api::Azure::Type::Integer
             name: 'compatibilityLevel'
             description: 'This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.'
             required: false

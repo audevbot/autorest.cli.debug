@@ -71,10 +71,10 @@ objects:
           '/properties/approvalRequired': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
             go_field_name: ApprovalRequired
-          '/subscriptionsLimit': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/subscriptionsLimit': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: subscriptions_limit
-          '/properties/subscriptionsLimit': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/subscriptionsLimit': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: SubscriptionsLimit
           '/state': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
@@ -142,10 +142,10 @@ objects:
           '/properties/approvalRequired': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
             go_field_name: ApprovalRequired
-          '/subscriptionsLimit': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/subscriptionsLimit': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: subscriptions_limit
-          '/properties/subscriptionsLimit': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/subscriptionsLimit': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: SubscriptionsLimit
           '/state': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
@@ -228,10 +228,10 @@ objects:
           '/approvalRequired': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [python]
             python_field_name: approval_required
-          '/properties/subscriptionsLimit': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/subscriptionsLimit': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: SubscriptionsLimit
-          '/subscriptionsLimit': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/subscriptionsLimit': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: subscriptions_limit
           '/properties/state': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
@@ -329,7 +329,7 @@ objects:
         description: 'whether subscription approval is required. If false, new subscriptions will be approved automatically enabling developers to call the product’s APIs immediately after subscribing. If true, administrators must manually approve the subscription before the developer can any of the product’s APIs. Can be present only if subscriptionRequired property is present and has a value of false.'
         required: false
         azure_sdk_references: ['/approvalRequired', '/properties/approvalRequired']
-      - !ruby/object:Api::Azure::Type::[number]
+      - !ruby/object:Api::Azure::Type::Integer
         name: 'subscriptionsLimit'
         description: 'Whether the number of subscriptions a user can have to this product at the same time. Set to null or omit to allow unlimited per user subscriptions. Can be present only if subscriptionRequired property is present and has a value of false.'
         required: false

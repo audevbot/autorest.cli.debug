@@ -57,7 +57,7 @@ objects:
             go_field_name: Tier
             go_enum_type_name: SkuTier
             python_field_name: tier
-          '/sku/capacity': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/sku/capacity': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             go_field_name: Capacity
             python_field_name: capacity
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -101,7 +101,7 @@ objects:
             go_field_name: Tier
             go_enum_type_name: SkuTier
             python_field_name: tier
-          '/sku/capacity': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/sku/capacity': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             go_field_name: Capacity
             python_field_name: capacity
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -156,7 +156,7 @@ objects:
             go_field_name: Tier
             go_enum_type_name: SkuTier
             python_field_name: tier
-          '/sku/capacity': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/sku/capacity': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             go_field_name: Capacity
             python_field_name: capacity
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -289,7 +289,7 @@ objects:
             default_value: :Basic
             sample_value: Standard
             azure_sdk_references: ['/sku/tier']
-          - !ruby/object:Api::Azure::Type::[number]
+          - !ruby/object:Api::Azure::Type::Integer
             name: 'capacity'
             description: 'The specified messaging units for the tier. For Premium tier, capacity are 1,2 and 4.'
             required: false

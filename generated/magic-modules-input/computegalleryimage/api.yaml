@@ -166,20 +166,20 @@ objects:
             applicable_to: [go]
             go_field_name: VCpus
             go_type_name: ResourceRange
-          '/properties/recommended/vCPUs/min': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/recommended/vCPUs/min': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: Min
-          '/properties/recommended/vCPUs/max': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/recommended/vCPUs/max': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: Max
           '/properties/recommended/memory': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
             go_field_name: Memory
             go_type_name: ResourceRange
-          '/properties/recommended/memory/min': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/recommended/memory/min': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: Min
-          '/properties/recommended/memory/max': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/recommended/memory/max': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: Max
           '/recommended': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -188,19 +188,19 @@ objects:
           '/recommended/vCPUs': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [python]
             python_field_name: v_cpus
-          '/recommended/vCPUs/min': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/recommended/vCPUs/min': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: min
-          '/recommended/vCPUs/max': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/recommended/vCPUs/max': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: max
           '/recommended/memory': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [python]
             python_field_name: memory
-          '/recommended/memory/min': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/recommended/memory/min': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: min
-          '/recommended/memory/max': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/recommended/memory/max': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: max
           '/properties/disallowed': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -384,12 +384,12 @@ objects:
             required: false
             azure_sdk_references: ['/recommended/vCPUs', '/properties/recommended/vCPUs']
             properties:
-              - !ruby/object:Api::Azure::Type::[number]
+              - !ruby/object:Api::Azure::Type::Integer
                 name: 'min'
                 description: 'The minimum number of the resource.'
                 required: false
                 azure_sdk_references: ['/recommended/vCPUs/min', '/properties/recommended/vCPUs/min']
-              - !ruby/object:Api::Azure::Type::[number]
+              - !ruby/object:Api::Azure::Type::Integer
                 name: 'max'
                 description: 'The maximum number of the resource.'
                 required: false
@@ -400,12 +400,12 @@ objects:
             required: false
             azure_sdk_references: ['/recommended/memory', '/properties/recommended/memory']
             properties:
-              - !ruby/object:Api::Azure::Type::[number]
+              - !ruby/object:Api::Azure::Type::Integer
                 name: 'min'
                 description: 'The minimum number of the resource.'
                 required: false
                 azure_sdk_references: ['/recommended/memory/min', '/properties/recommended/memory/min']
-              - !ruby/object:Api::Azure::Type::[number]
+              - !ruby/object:Api::Azure::Type::Integer
                 name: 'max'
                 description: 'The maximum number of the resource.'
                 required: false

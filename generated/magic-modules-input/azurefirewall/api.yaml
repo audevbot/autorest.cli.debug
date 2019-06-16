@@ -55,7 +55,7 @@ objects:
           '/applicationRuleCollections': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
             python_field_name: application_rule_collections
-          '/applicationRuleCollections/priority': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/applicationRuleCollections/priority': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: priority
           '/applicationRuleCollections/action': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -93,7 +93,7 @@ objects:
             applicable_to: [go]
             go_field_name: Properties
             go_type_name: AzureFirewallApplicationRuleCollectionPropertiesFormat
-          '/properties/applicationRuleCollections/properties/priority': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/applicationRuleCollections/properties/priority': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: Priority
           '/properties/applicationRuleCollections/properties/action': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -133,7 +133,7 @@ objects:
           '/natRuleCollections': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
             python_field_name: nat_rule_collections
-          '/natRuleCollections/priority': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/natRuleCollections/priority': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: priority
           '/natRuleCollections/action': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -180,7 +180,7 @@ objects:
             applicable_to: [go]
             go_field_name: Properties
             go_type_name: AzureFirewallNatRuleCollectionProperties
-          '/properties/natRuleCollections/properties/priority': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/natRuleCollections/properties/priority': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: Priority
           '/properties/natRuleCollections/properties/action': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -226,7 +226,7 @@ objects:
           '/networkRuleCollections': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
             python_field_name: network_rule_collections
-          '/networkRuleCollections/priority': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/networkRuleCollections/priority': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: priority
           '/networkRuleCollections/action': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -267,7 +267,7 @@ objects:
             applicable_to: [go]
             go_field_name: Properties
             go_type_name: AzureFirewallNetworkRuleCollectionPropertiesFormat
-          '/properties/networkRuleCollections/properties/priority': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/networkRuleCollections/properties/priority': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: Priority
           '/properties/networkRuleCollections/properties/action': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -392,7 +392,7 @@ objects:
             applicable_to: [go]
             go_field_name: Properties
             go_type_name: AzureFirewallApplicationRuleCollectionPropertiesFormat
-          '/properties/applicationRuleCollections/properties/priority': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/applicationRuleCollections/properties/priority': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: Priority
           '/properties/applicationRuleCollections/properties/action': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -439,7 +439,7 @@ objects:
           '/applicationRuleCollections': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
             python_field_name: application_rule_collections
-          '/applicationRuleCollections/priority': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/applicationRuleCollections/priority': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: priority
           '/applicationRuleCollections/action': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -483,7 +483,7 @@ objects:
             applicable_to: [go]
             go_field_name: Properties
             go_type_name: AzureFirewallNatRuleCollectionProperties
-          '/properties/natRuleCollections/properties/priority': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/natRuleCollections/properties/priority': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: Priority
           '/properties/natRuleCollections/properties/action': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -536,7 +536,7 @@ objects:
           '/natRuleCollections': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
             python_field_name: nat_rule_collections
-          '/natRuleCollections/priority': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/natRuleCollections/priority': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: priority
           '/natRuleCollections/action': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -589,7 +589,7 @@ objects:
             applicable_to: [go]
             go_field_name: Properties
             go_type_name: AzureFirewallNetworkRuleCollectionPropertiesFormat
-          '/properties/networkRuleCollections/properties/priority': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/networkRuleCollections/properties/priority': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: Priority
           '/properties/networkRuleCollections/properties/action': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -636,7 +636,7 @@ objects:
           '/networkRuleCollections': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
             python_field_name: network_rule_collections
-          '/networkRuleCollections/priority': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/networkRuleCollections/priority': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: priority
           '/networkRuleCollections/action': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -803,7 +803,7 @@ objects:
         required: false
         azure_sdk_references: ['/applicationRuleCollections', '/properties/applicationRuleCollections']
         properties:
-          - !ruby/object:Api::Azure::Type::[number]
+          - !ruby/object:Api::Azure::Type::Integer
             name: 'priority'
             description: 'Priority of the application rule collection resource.'
             required: false
@@ -868,7 +868,7 @@ objects:
         required: false
         azure_sdk_references: ['/natRuleCollections', '/properties/natRuleCollections']
         properties:
-          - !ruby/object:Api::Azure::Type::[number]
+          - !ruby/object:Api::Azure::Type::Integer
             name: 'priority'
             description: 'Priority of the NAT rule collection resource.'
             required: false
@@ -962,7 +962,7 @@ objects:
         required: false
         azure_sdk_references: ['/networkRuleCollections', '/properties/networkRuleCollections']
         properties:
-          - !ruby/object:Api::Azure::Type::[number]
+          - !ruby/object:Api::Azure::Type::Integer
             name: 'priority'
             description: 'Priority of the network rule collection resource.'
             required: false

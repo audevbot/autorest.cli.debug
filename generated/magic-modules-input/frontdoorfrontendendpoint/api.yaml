@@ -99,10 +99,10 @@ objects:
           '/sessionAffinityEnabledState': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: session_affinity_enabled_state
-          '/properties/sessionAffinityTtlSeconds': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/sessionAffinityTtlSeconds': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: SessionAffinityTtlSeconds
-          '/sessionAffinityTtlSeconds': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/sessionAffinityTtlSeconds': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: session_affinity_ttl_seconds
           '/properties/webApplicationFirewallPolicyLink': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -211,7 +211,7 @@ objects:
           - :Disabled
         default_value: :Enabled
         azure_sdk_references: ['/sessionAffinityEnabledState', '/properties/sessionAffinityEnabledState']
-      - !ruby/object:Api::Azure::Type::[number]
+      - !ruby/object:Api::Azure::Type::Integer
         name: 'sessionAffinityTtlSeconds'
         description: 'UNUSED. This field will be ignored. The TTL to use in seconds for session affinity, if applicable.'
         required: false

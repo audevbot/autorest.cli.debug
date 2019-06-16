@@ -121,10 +121,10 @@ objects:
           '/provisioningState': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: provisioning_state
-          '/properties/pendingReplicationOperationsCount': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/pendingReplicationOperationsCount': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: PendingReplicationOperationsCount
-          '/pendingReplicationOperationsCount': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/pendingReplicationOperationsCount': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: pending_replication_operations_count
           '/properties/role': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
@@ -224,7 +224,7 @@ objects:
           - :Failed
         default_value: :Accepted
         azure_sdk_references: ['/provisioningState', '/properties/provisioningState']
-      - !ruby/object:Api::Azure::Type::[number]
+      - !ruby/object:Api::Azure::Type::Integer
         name: 'pendingReplicationOperationsCount'
         description: 'Number of entities pending to be replicated.'
         output: true
