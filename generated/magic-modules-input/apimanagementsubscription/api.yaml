@@ -396,31 +396,31 @@ objects:
         input: true
         azure_sdk_references: ['notify']
       # read only values included only in response
-      - 
+      - !ruby/object:Api::Azure::Type::[datetime]
         name: 'createdDate'
         description: 'Subscription creation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 '
         output: true
         azure_sdk_references: ['/createdDate', '/properties/createdDate']
-      - 
+      - !ruby/object:Api::Azure::Type::[datetime]
         name: 'startDate'
         description: 'Subscription activation date. The setting is for audit purposes only and the subscription is not automatically activated. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 '
         output: true
         azure_sdk_references: ['/startDate', '/properties/startDate']
-      - 
+      - !ruby/object:Api::Azure::Type::[datetime]
         name: 'expirationDate'
         description: 'Subscription expiration date. The setting is for audit purposes only and the subscription is not automatically expired. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 '
         output: true
         azure_sdk_references: ['/expirationDate', '/properties/expirationDate']
-      - 
+      - !ruby/object:Api::Azure::Type::[datetime]
         name: 'endDate'
         description: 'Date when subscription was cancelled or expired. The setting is for audit purposes only and the subscription is not automatically cancelled. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 '
         output: true
         azure_sdk_references: ['/endDate', '/properties/endDate']
-      - 
+      - !ruby/object:Api::Azure::Type::[datetime]
         name: 'notificationDate'
         description: 'Upcoming subscription expiration notification date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 '

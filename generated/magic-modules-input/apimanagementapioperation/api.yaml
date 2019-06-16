@@ -1547,7 +1547,7 @@ objects:
         required: false
         azure_sdk_references: ['/responses', '/properties/responses']
         properties:
-          - 
+          - !ruby/object:Api::Azure::Type::[number]
             name: 'statusCode'
             description: 'Operation response HTTP status code.'
             required: true

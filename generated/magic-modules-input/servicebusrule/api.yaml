@@ -439,7 +439,7 @@ objects:
             description: 'SQL expression. e.g. MyProperty='ABC''
             required: false
             azure_sdk_references: ['/action/sqlExpression', '/properties/action/sqlExpression']
-          - 
+          - !ruby/object:Api::Azure::Type::[number]
             name: 'compatibilityLevel'
             description: 'This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.'
             required: false

@@ -1061,7 +1061,7 @@ objects:
             required: false
             azure_sdk_references: ['/hostnameConfigurations/certificate', '/properties/hostnameConfigurations/certificate']
             properties:
-              - 
+              - !ruby/object:Api::Azure::Type::[datetime]
                 name: 'expiry'
                 description: 'Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.'
                 required: true
@@ -1120,7 +1120,7 @@ objects:
                 default_value: :Developer
                 sample_value: Premium
                 azure_sdk_references: ['/additionalLocations/sku/name', '/properties/additionalLocations/sku/name', '/name']
-              - 
+              - !ruby/object:Api::Azure::Type::[number]
                 name: 'capacity'
                 description: 'Capacity of the SKU (number of deployed units of the SKU). The default value is 1.'
                 required: false
@@ -1138,7 +1138,7 @@ objects:
                 required: false
                 sample_value: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.Network/virtualNetworks/{{ virtual_network_name }}/subnets/{{ name }}
                 azure_sdk_references: ['/additionalLocations/virtualNetworkConfiguration/subnetResourceId', '/properties/additionalLocations/virtualNetworkConfiguration/subnetResourceId']
-      - 
+      - !ruby/object:Api::Azure::Type::[unknown[DictionaryType {"$id":"2499","$type":"DictionaryType","valueType":{"$id":"2500","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2501","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2502","fixed":false},"deprecated":false}]]
         name: 'customProperties'
         description: 'Custom properties of the API Management service. Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168` will disable the cipher TLS_RSA_WITH_3DES_EDE_CBC_SHA for all TLS(1.0, 1.1 and 1.2). Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11` can be used to disable just TLS 1.1 and setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10` can be used to disable TLS 1.0 on an API Management service.'
         required: false
@@ -1178,7 +1178,7 @@ objects:
             required: false
             azure_sdk_references: ['/certificates/certificate', '/properties/certificates/certificate']
             properties:
-              - 
+              - !ruby/object:Api::Azure::Type::[datetime]
                 name: 'expiry'
                 description: 'Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.'
                 required: true
@@ -1240,7 +1240,7 @@ objects:
             default_value: :Developer
             sample_value: Basic
             azure_sdk_references: ['/sku/name', '/name']
-          - 
+          - !ruby/object:Api::Azure::Type::[number]
             name: 'capacity'
             description: 'Capacity of the SKU (number of deployed units of the SKU). The default value is 1.'
             required: false
@@ -1276,7 +1276,7 @@ objects:
         description: 'The provisioning state of the API Management service, which is targeted by the long running operation started on the service.'
         output: true
         azure_sdk_references: ['/targetProvisioningState', '/properties/targetProvisioningState']
-      - 
+      - !ruby/object:Api::Azure::Type::[datetime]
         name: 'createdAtUtc'
         description: 'Creation UTC date of the API Management service.The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.'
         output: true

@@ -320,7 +320,7 @@ objects:
             sample_value: http://sample.vault.azure.net/
             azure_sdk_references: ['/keyVaultReference/url', '/properties/keyVaultReference/url']
       # read only values included only in response
-      - 
+      - !ruby/object:Api::Azure::Type::[datetime]
         name: 'autoStorageAccountId'
         description: 'The UTC time at which storage keys were last synchronized with the Batch account.'
         output: true

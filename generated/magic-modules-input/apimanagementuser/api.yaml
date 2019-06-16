@@ -421,7 +421,7 @@ objects:
         sample_value: signup
         azure_sdk_references: ['/confirmation', '/properties/confirmation']
       # read only values included only in response
-      - 
+      - !ruby/object:Api::Azure::Type::[datetime]
         name: 'registrationDate'
         description: 'Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 '

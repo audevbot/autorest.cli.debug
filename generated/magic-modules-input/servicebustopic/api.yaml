@@ -316,12 +316,12 @@ objects:
         input: true
         sample_value: myTopic
         azure_sdk_references: ['topicName', '/name']
-      - 
+      - !ruby/object:Api::Azure::Type::[unknown-primary[timeSpan]]
         name: 'defaultMessageTimeToLive'
         description: 'ISO 8601 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.'
         required: false
         azure_sdk_references: ['/defaultMessageTimeToLive', '/properties/defaultMessageTimeToLive']
-      - 
+      - !ruby/object:Api::Azure::Type::[number]
         name: 'maxSizeInMegabytes'
         description: 'Maximum size of the topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024.'
         required: false
@@ -331,7 +331,7 @@ objects:
         description: 'Value indicating if this topic requires duplicate detection.'
         required: false
         azure_sdk_references: ['/requiresDuplicateDetection', '/properties/requiresDuplicateDetection']
-      - 
+      - !ruby/object:Api::Azure::Type::[unknown-primary[timeSpan]]
         name: 'duplicateDetectionHistoryTimeWindow'
         description: 'ISO8601 timespan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.'
         required: false
@@ -362,7 +362,7 @@ objects:
         description: 'Value that indicates whether the topic supports ordering.'
         required: false
         azure_sdk_references: ['/supportOrdering', '/properties/supportOrdering']
-      - 
+      - !ruby/object:Api::Azure::Type::[unknown-primary[timeSpan]]
         name: 'autoDeleteOnIdle'
         description: 'ISO 8601 timespan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.'
         required: false
@@ -379,27 +379,27 @@ objects:
         sample_value: true
         azure_sdk_references: ['/enableExpress', '/properties/enableExpress']
       # read only values included only in response
-      - 
+      - !ruby/object:Api::Azure::Type::[number]
         name: 'sizeInBytes'
         description: 'Size of the topic, in bytes.'
         output: true
         azure_sdk_references: ['/sizeInBytes', '/properties/sizeInBytes']
-      - 
+      - !ruby/object:Api::Azure::Type::[datetime]
         name: 'createdAt'
         description: 'Exact time the message was created.'
         output: true
         azure_sdk_references: ['/createdAt', '/properties/createdAt']
-      - 
+      - !ruby/object:Api::Azure::Type::[datetime]
         name: 'updatedAt'
         description: 'The exact time the message was updated.'
         output: true
         azure_sdk_references: ['/updatedAt', '/properties/updatedAt']
-      - 
+      - !ruby/object:Api::Azure::Type::[datetime]
         name: 'accessedAt'
         description: 'Last time the message was sent, or a request was received, for this topic.'
         output: true
         azure_sdk_references: ['/accessedAt', '/properties/accessedAt']
-      - 
+      - !ruby/object:Api::Azure::Type::[number]
         name: 'subscriptionCount'
         description: 'Number of subscriptions.'
         output: true
@@ -410,27 +410,27 @@ objects:
         output: true
         azure_sdk_references: ['/countDetails', '/properties/countDetails']
         properties:
-          - 
+          - !ruby/object:Api::Azure::Type::[number]
             name: 'activeMessageCount'
             description: 'Number of active messages in the queue, topic, or subscription.'
             required: false
             azure_sdk_references: ['/countDetails/activeMessageCount', '/properties/countDetails/activeMessageCount']
-          - 
+          - !ruby/object:Api::Azure::Type::[number]
             name: 'deadLetterMessageCount'
             description: 'Number of messages that are dead lettered.'
             required: false
             azure_sdk_references: ['/countDetails/deadLetterMessageCount', '/properties/countDetails/deadLetterMessageCount']
-          - 
+          - !ruby/object:Api::Azure::Type::[number]
             name: 'scheduledMessageCount'
             description: 'Number of scheduled messages.'
             required: false
             azure_sdk_references: ['/countDetails/scheduledMessageCount', '/properties/countDetails/scheduledMessageCount']
-          - 
+          - !ruby/object:Api::Azure::Type::[number]
             name: 'transferMessageCount'
             description: 'Number of messages transferred to another queue, topic, or subscription.'
             required: false
             azure_sdk_references: ['/countDetails/transferMessageCount', '/properties/countDetails/transferMessageCount']
-          - 
+          - !ruby/object:Api::Azure::Type::[number]
             name: 'transferDeadLetterMessageCount'
             description: 'Number of messages transferred into dead letters.'
             required: false

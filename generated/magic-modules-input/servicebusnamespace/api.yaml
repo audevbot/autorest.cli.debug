@@ -289,7 +289,7 @@ objects:
             default_value: :Basic
             sample_value: Standard
             azure_sdk_references: ['/sku/tier']
-          - 
+          - !ruby/object:Api::Azure::Type::[number]
             name: 'capacity'
             description: 'The specified messaging units for the tier. For Premium tier, capacity are 1,2 and 4.'
             required: false
@@ -300,12 +300,12 @@ objects:
         description: 'Provisioning state of the namespace.'
         output: true
         azure_sdk_references: ['/provisioningState', '/properties/provisioningState']
-      - 
+      - !ruby/object:Api::Azure::Type::[datetime]
         name: 'createdAt'
         description: 'The time the namespace was created.'
         output: true
         azure_sdk_references: ['/createdAt', '/properties/createdAt']
-      - 
+      - !ruby/object:Api::Azure::Type::[datetime]
         name: 'updatedAt'
         description: 'The time the namespace was updated.'
         output: true

@@ -236,7 +236,7 @@ objects:
             required: false
             sample_value: TestRunbook
             azure_sdk_references: ['/runbook/name', '/properties/runbook/name', '/name']
-      - 
+      - !ruby/object:Api::Azure::Type::[unknown[DictionaryType {"$id":"301","$type":"DictionaryType","valueType":{"$id":"302","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"303","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"304","fixed":false},"deprecated":false}]]
         name: 'parameters'
         description: 'Gets or sets the parameters of the job.'
         required: false
@@ -258,12 +258,12 @@ objects:
         description: 'Gets or sets the job started by.'
         output: true
         azure_sdk_references: ['/startedBy', '/properties/startedBy']
-      - 
+      - !ruby/object:Api::Azure::Type::[unknown-primary[uuid]]
         name: 'jobId'
         description: 'Gets or sets the id of the job.'
         output: true
         azure_sdk_references: ['/jobId', '/properties/jobId']
-      - 
+      - !ruby/object:Api::Azure::Type::[datetime]
         name: 'creationTime'
         description: 'Gets or sets the creation time of the job.'
         output: true
@@ -293,12 +293,12 @@ objects:
         description: 'Gets or sets the status details of the job.'
         output: true
         azure_sdk_references: ['/statusDetails', '/properties/statusDetails']
-      - 
+      - !ruby/object:Api::Azure::Type::[datetime]
         name: 'startTime'
         description: 'Gets or sets the start time of the job.'
         output: true
         azure_sdk_references: ['/startTime', '/properties/startTime']
-      - 
+      - !ruby/object:Api::Azure::Type::[datetime]
         name: 'endTime'
         description: 'Gets or sets the end time of the job.'
         output: true
@@ -308,12 +308,12 @@ objects:
         description: 'Gets or sets the exception of the job.'
         output: true
         azure_sdk_references: ['/exception', '/properties/exception']
-      - 
+      - !ruby/object:Api::Azure::Type::[datetime]
         name: 'lastModifiedTime'
         description: 'Gets or sets the last modified time of the job.'
         output: true
         azure_sdk_references: ['/lastModifiedTime', '/properties/lastModifiedTime']
-      - 
+      - !ruby/object:Api::Azure::Type::[datetime]
         name: 'lastStatusModifiedTime'
         description: 'Gets or sets the last status modified time of the job.'
         output: true

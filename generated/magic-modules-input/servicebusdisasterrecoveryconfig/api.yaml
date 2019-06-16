@@ -224,7 +224,7 @@ objects:
           - :Failed
         default_value: :Accepted
         azure_sdk_references: ['/provisioningState', '/properties/provisioningState']
-      - 
+      - !ruby/object:Api::Azure::Type::[number]
         name: 'pendingReplicationOperationsCount'
         description: 'Number of entities pending to be replicated.'
         output: true

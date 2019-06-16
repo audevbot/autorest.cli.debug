@@ -313,7 +313,7 @@ objects:
         sample_value: KG0UY40e...
         azure_sdk_references: ['/password', '/properties/password']
       # read only values included only in response
-      - 
+      - !ruby/object:Api::Azure::Type::[datetime]
         name: 'provisioningStateTransitionTime'
         description: 'undefined'
         output: true
@@ -328,7 +328,7 @@ objects:
           - :Failed
         default_value: :Succeeded
         azure_sdk_references: ['/previousProvisioningState', '/properties/previousProvisioningState']
-      - 
+      - !ruby/object:Api::Azure::Type::[datetime]
         name: 'previousProvisioningStateTransitionTime'
         description: 'undefined'
         output: true
