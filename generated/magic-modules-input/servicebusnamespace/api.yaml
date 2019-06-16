@@ -57,7 +57,7 @@ objects:
             go_field_name: Tier
             go_enum_type_name: SkuTier
             python_field_name: tier
-          '/sku/capacity': 
+          '/sku/capacity': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             go_field_name: Capacity
             python_field_name: capacity
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -101,7 +101,7 @@ objects:
             go_field_name: Tier
             go_enum_type_name: SkuTier
             python_field_name: tier
-          '/sku/capacity': 
+          '/sku/capacity': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             go_field_name: Capacity
             python_field_name: capacity
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -156,7 +156,7 @@ objects:
             go_field_name: Tier
             go_enum_type_name: SkuTier
             python_field_name: tier
-          '/sku/capacity': 
+          '/sku/capacity': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             go_field_name: Capacity
             python_field_name: capacity
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -169,16 +169,16 @@ objects:
           '/provisioningState': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: provisioning_state
-          '/properties/createdAt': 
+          '/properties/createdAt': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [go]
             go_field_name: CreatedAt
-          '/createdAt': 
+          '/createdAt': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [python]
             python_field_name: created_at
-          '/properties/updatedAt': 
+          '/properties/updatedAt': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [go]
             go_field_name: UpdatedAt
-          '/updatedAt': 
+          '/updatedAt': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [python]
             python_field_name: updated_at
           '/properties/serviceBusEndpoint': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -300,12 +300,12 @@ objects:
         description: 'Provisioning state of the namespace.'
         output: true
         azure_sdk_references: ['/provisioningState', '/properties/provisioningState']
-      - !ruby/object:Api::Azure::Type::[datetime]
+      - !ruby/object:Api::Azure::Type::DateTime
         name: 'createdAt'
         description: 'The time the namespace was created.'
         output: true
         azure_sdk_references: ['/createdAt', '/properties/createdAt']
-      - !ruby/object:Api::Azure::Type::[datetime]
+      - !ruby/object:Api::Azure::Type::DateTime
         name: 'updatedAt'
         description: 'The time the namespace was updated.'
         output: true

@@ -63,7 +63,7 @@ objects:
           '/action/sqlExpression': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: sql_expression
-          '/action/compatibilityLevel': 
+          '/action/compatibilityLevel': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: compatibility_level
           '/action/requiresPreprocessing': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
@@ -76,7 +76,7 @@ objects:
           '/properties/action/sqlExpression': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: SqlExpression
-          '/properties/action/compatibilityLevel': 
+          '/properties/action/compatibilityLevel': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: CompatibilityLevel
           '/properties/action/requiresPreprocessing': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
@@ -142,7 +142,7 @@ objects:
             applicable_to: [go]
             go_field_name: CorrelationFilter
             go_type_name: CorrelationFilter
-          '/properties/correlationFilter/properties': 
+          '/properties/correlationFilter/properties': !ruby/object:Api::Azure::SDKTypeDefinition::StringMapObject
             applicable_to: [go]
             go_field_name: Properties
           '/properties/correlationFilter/correlationId': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -242,7 +242,7 @@ objects:
           '/properties/action/sqlExpression': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: SqlExpression
-          '/properties/action/compatibilityLevel': 
+          '/properties/action/compatibilityLevel': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: CompatibilityLevel
           '/properties/action/requiresPreprocessing': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
@@ -254,7 +254,7 @@ objects:
           '/action/sqlExpression': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: sql_expression
-          '/action/compatibilityLevel': 
+          '/action/compatibilityLevel': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: compatibility_level
           '/action/requiresPreprocessing': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
@@ -277,7 +277,7 @@ objects:
           '/properties/sqlFilter/requiresPreprocessing': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
             go_field_name: RequiresPreprocessing
-          '/properties/sqlFilter/compatibilityLevel': 
+          '/properties/sqlFilter/compatibilityLevel': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: CompatibilityLevel
           '/sqlFilter': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -289,14 +289,14 @@ objects:
           '/sqlFilter/requiresPreprocessing': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [python]
             python_field_name: requires_preprocessing
-          '/sqlFilter/compatibilityLevel': 
+          '/sqlFilter/compatibilityLevel': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: compatibility_level
           '/properties/correlationFilter': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
             go_field_name: CorrelationFilter
             go_type_name: CorrelationFilter
-          '/properties/correlationFilter/properties': 
+          '/properties/correlationFilter/properties': !ruby/object:Api::Azure::SDKTypeDefinition::StringMapObject
             applicable_to: [go]
             go_field_name: Properties
           '/properties/correlationFilter/correlationId': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject

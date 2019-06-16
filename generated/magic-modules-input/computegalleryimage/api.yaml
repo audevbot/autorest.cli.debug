@@ -127,10 +127,10 @@ objects:
           '/osState': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: os_state
-          '/properties/endOfLifeDate': 
+          '/properties/endOfLifeDate': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [go]
             go_field_name: EndOfLifeDate
-          '/endOfLifeDate': 
+          '/endOfLifeDate': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [python]
             python_field_name: end_of_life_date
           '/properties/identifier': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -166,20 +166,20 @@ objects:
             applicable_to: [go]
             go_field_name: VCpus
             go_type_name: ResourceRange
-          '/properties/recommended/vCPUs/min': 
+          '/properties/recommended/vCPUs/min': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: Min
-          '/properties/recommended/vCPUs/max': 
+          '/properties/recommended/vCPUs/max': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: Max
           '/properties/recommended/memory': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
             go_field_name: Memory
             go_type_name: ResourceRange
-          '/properties/recommended/memory/min': 
+          '/properties/recommended/memory/min': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: Min
-          '/properties/recommended/memory/max': 
+          '/properties/recommended/memory/max': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: Max
           '/recommended': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -188,19 +188,19 @@ objects:
           '/recommended/vCPUs': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [python]
             python_field_name: v_cpus
-          '/recommended/vCPUs/min': 
+          '/recommended/vCPUs/min': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: min
-          '/recommended/vCPUs/max': 
+          '/recommended/vCPUs/max': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: max
           '/recommended/memory': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [python]
             python_field_name: memory
-          '/recommended/memory/min': 
+          '/recommended/memory/min': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: min
-          '/recommended/memory/max': 
+          '/recommended/memory/max': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: max
           '/properties/disallowed': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -346,7 +346,7 @@ objects:
           - :Specialized
         default_value: :Generalized
         azure_sdk_references: ['/osState', '/properties/osState']
-      - !ruby/object:Api::Azure::Type::[datetime]
+      - !ruby/object:Api::Azure::Type::DateTime
         name: 'endOfLifeDate'
         description: 'The end of life date of the gallery Image Definition. This property can be used for decommissioning purposes. This property is updatable.'
         required: false

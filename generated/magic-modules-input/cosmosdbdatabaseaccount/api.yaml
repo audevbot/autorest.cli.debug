@@ -86,10 +86,10 @@ objects:
             applicable_to: [go]
             go_field_name: DefaultConsistencyLevel
             go_enum_type_name: DefaultConsistencyLevel
-          '/properties/consistencyPolicy/maxStalenessPrefix': 
+          '/properties/consistencyPolicy/maxStalenessPrefix': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: MaxStalenessPrefix
-          '/properties/consistencyPolicy/maxIntervalInSeconds': 
+          '/properties/consistencyPolicy/maxIntervalInSeconds': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: MaxIntervalInSeconds
           '/consistencyPolicy': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -98,10 +98,10 @@ objects:
           '/consistencyPolicy/defaultConsistencyLevel': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: default_consistency_level
-          '/consistencyPolicy/maxStalenessPrefix': 
+          '/consistencyPolicy/maxStalenessPrefix': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: max_staleness_prefix
-          '/consistencyPolicy/maxIntervalInSeconds': 
+          '/consistencyPolicy/maxIntervalInSeconds': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: max_interval_in_seconds
           '/properties/databaseAccountOfferType': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject

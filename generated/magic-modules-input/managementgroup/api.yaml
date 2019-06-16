@@ -88,10 +88,10 @@ objects:
           '/properties/details/parent/displayName': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: DisplayName
-          '/properties/details/version': 
+          '/properties/details/version': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: Version
-          '/properties/details/updatedTime': 
+          '/properties/details/updatedTime': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [go]
             go_field_name: UpdatedTime
           '/properties/details/updatedBy': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -112,10 +112,10 @@ objects:
           '/details/parent/displayName': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: display_name
-          '/details/version': 
+          '/details/version': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: version
-          '/details/updatedTime': 
+          '/details/updatedTime': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [python]
             python_field_name: updated_time
           '/details/updatedBy': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject

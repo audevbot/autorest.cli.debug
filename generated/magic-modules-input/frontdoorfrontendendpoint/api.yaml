@@ -99,10 +99,10 @@ objects:
           '/sessionAffinityEnabledState': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: session_affinity_enabled_state
-          '/properties/sessionAffinityTtlSeconds': 
+          '/properties/sessionAffinityTtlSeconds': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: SessionAffinityTtlSeconds
-          '/sessionAffinityTtlSeconds': 
+          '/sessionAffinityTtlSeconds': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: session_affinity_ttl_seconds
           '/properties/webApplicationFirewallPolicyLink': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject

@@ -63,10 +63,10 @@ objects:
           '/properties/text': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Text
-          '/createdDate': 
+          '/createdDate': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [python]
             python_field_name: created_date
-          '/properties/createdDate': 
+          '/properties/createdDate': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [go]
             go_field_name: CreatedDate
           '/userId': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -144,10 +144,10 @@ objects:
           '/text': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: text
-          '/properties/createdDate': 
+          '/properties/createdDate': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [go]
             go_field_name: CreatedDate
-          '/createdDate': 
+          '/createdDate': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [python]
             python_field_name: created_date
           '/properties/userId': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -234,7 +234,7 @@ objects:
         required: true
         sample_value: Issue comment.
         azure_sdk_references: ['/text', '/properties/text']
-      - !ruby/object:Api::Azure::Type::[datetime]
+      - !ruby/object:Api::Azure::Type::DateTime
         name: 'createdDate'
         description: 'Date and time when the comment was created.'
         required: false

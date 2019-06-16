@@ -167,13 +167,13 @@ objects:
             applicable_to: [go]
             go_field_name: Properties
             go_type_name: LoadBalancingSettingsProperties
-          '/properties/loadBalancingSettings/properties/sampleSize': 
+          '/properties/loadBalancingSettings/properties/sampleSize': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: SampleSize
-          '/properties/loadBalancingSettings/properties/successfulSamplesRequired': 
+          '/properties/loadBalancingSettings/properties/successfulSamplesRequired': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: SuccessfulSamplesRequired
-          '/properties/loadBalancingSettings/properties/additionalLatencyMilliseconds': 
+          '/properties/loadBalancingSettings/properties/additionalLatencyMilliseconds': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: AdditionalLatencyMilliseconds
           '/properties/loadBalancingSettings/properties/resourceState': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
@@ -192,13 +192,13 @@ objects:
           '/loadBalancingSettings/id': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: id
-          '/loadBalancingSettings/sampleSize': 
+          '/loadBalancingSettings/sampleSize': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: sample_size
-          '/loadBalancingSettings/successfulSamplesRequired': 
+          '/loadBalancingSettings/successfulSamplesRequired': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: successful_samples_required
-          '/loadBalancingSettings/additionalLatencyMilliseconds': 
+          '/loadBalancingSettings/additionalLatencyMilliseconds': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: additional_latency_milliseconds
           '/loadBalancingSettings/resourceState': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
@@ -228,7 +228,7 @@ objects:
             applicable_to: [go]
             go_field_name: Protocol
             go_enum_type_name: Protocol
-          '/properties/healthProbeSettings/properties/intervalInSeconds': 
+          '/properties/healthProbeSettings/properties/intervalInSeconds': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: IntervalInSeconds
           '/properties/healthProbeSettings/properties/resourceState': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
@@ -253,7 +253,7 @@ objects:
           '/healthProbeSettings/protocol': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: protocol
-          '/healthProbeSettings/intervalInSeconds': 
+          '/healthProbeSettings/intervalInSeconds': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: interval_in_seconds
           '/healthProbeSettings/resourceState': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
@@ -283,20 +283,20 @@ objects:
           '/properties/backendPools/properties/backends/address': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Address
-          '/properties/backendPools/properties/backends/httpPort': 
+          '/properties/backendPools/properties/backends/httpPort': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: HttpPort
-          '/properties/backendPools/properties/backends/httpsPort': 
+          '/properties/backendPools/properties/backends/httpsPort': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: HttpsPort
           '/properties/backendPools/properties/backends/enabledState': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [go]
             go_field_name: EnabledState
             go_enum_type_name: backendEnabledState
-          '/properties/backendPools/properties/backends/priority': 
+          '/properties/backendPools/properties/backends/priority': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: Priority
-          '/properties/backendPools/properties/backends/weight': 
+          '/properties/backendPools/properties/backends/weight': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: Weight
           '/properties/backendPools/properties/backends/backendHostHeader': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -338,19 +338,19 @@ objects:
           '/backendPools/backends/address': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: address
-          '/backendPools/backends/httpPort': 
+          '/backendPools/backends/httpPort': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: http_port
-          '/backendPools/backends/httpsPort': 
+          '/backendPools/backends/httpsPort': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: https_port
           '/backendPools/backends/enabledState': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: enabled_state
-          '/backendPools/backends/priority': 
+          '/backendPools/backends/priority': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: priority
-          '/backendPools/backends/weight': 
+          '/backendPools/backends/weight': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: weight
           '/backendPools/backends/backendHostHeader': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -395,7 +395,7 @@ objects:
             applicable_to: [go]
             go_field_name: SessionAffinityEnabledState
             go_enum_type_name: SessionAffinityEnabledState
-          '/properties/frontendEndpoints/properties/sessionAffinityTtlSeconds': 
+          '/properties/frontendEndpoints/properties/sessionAffinityTtlSeconds': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: SessionAffinityTtlSeconds
           '/properties/frontendEndpoints/properties/webApplicationFirewallPolicyLink': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -439,7 +439,7 @@ objects:
           '/frontendEndpoints/sessionAffinityEnabledState': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: session_affinity_enabled_state
-          '/frontendEndpoints/sessionAffinityTtlSeconds': 
+          '/frontendEndpoints/sessionAffinityTtlSeconds': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: session_affinity_ttl_seconds
           '/frontendEndpoints/webApplicationFirewallPolicyLink': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject

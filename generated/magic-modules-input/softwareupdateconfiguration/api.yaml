@@ -88,7 +88,7 @@ objects:
           '/updateConfiguration/linux/rebootSetting': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: reboot_setting
-          '/updateConfiguration/duration': 
+          '/updateConfiguration/duration': !ruby/object:Api::Azure::SDKTypeDefinition::Timespan
             applicable_to: [python]
             python_field_name: duration
           '/updateConfiguration/azureVirtualMachines': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -163,7 +163,7 @@ objects:
           '/properties/updateConfiguration/linux/rebootSetting': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: RebootSetting
-          '/properties/updateConfiguration/duration': 
+          '/properties/updateConfiguration/duration': !ruby/object:Api::Azure::SDKTypeDefinition::Timespan
             applicable_to: [go]
             go_field_name: Duration
           '/properties/updateConfiguration/azureVirtualMachines': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -203,25 +203,25 @@ objects:
           '/scheduleInfo': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [python]
             python_field_name: schedule_info
-          '/scheduleInfo/startTime': 
+          '/scheduleInfo/startTime': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [python]
             python_field_name: start_time
-          '/scheduleInfo/expiryTime': 
+          '/scheduleInfo/expiryTime': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [python]
             python_field_name: expiry_time
-          '/scheduleInfo/expiryTimeOffsetMinutes': 
+          '/scheduleInfo/expiryTimeOffsetMinutes': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: expiry_time_offset_minutes
           '/scheduleInfo/isEnabled': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [python]
             python_field_name: is_enabled
-          '/scheduleInfo/nextRun': 
+          '/scheduleInfo/nextRun': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [python]
             python_field_name: next_run
-          '/scheduleInfo/nextRunOffsetMinutes': 
+          '/scheduleInfo/nextRunOffsetMinutes': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: next_run_offset_minutes
-          '/scheduleInfo/interval': 
+          '/scheduleInfo/interval': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: interval
           '/scheduleInfo/frequency': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
@@ -236,22 +236,22 @@ objects:
           '/scheduleInfo/advancedSchedule/weekDays': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: week_days
-          '/scheduleInfo/advancedSchedule/monthDays': 
+          '/scheduleInfo/advancedSchedule/monthDays': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: month_days
           '/scheduleInfo/advancedSchedule/monthlyOccurrences': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
             python_field_name: monthly_occurrences
-          '/scheduleInfo/advancedSchedule/monthlyOccurrences/occurrence': 
+          '/scheduleInfo/advancedSchedule/monthlyOccurrences/occurrence': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: occurrence
           '/scheduleInfo/advancedSchedule/monthlyOccurrences/day': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: day
-          '/scheduleInfo/creationTime': 
+          '/scheduleInfo/creationTime': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [python]
             python_field_name: creation_time
-          '/scheduleInfo/lastModifiedTime': 
+          '/scheduleInfo/lastModifiedTime': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [python]
             python_field_name: last_modified_time
           '/scheduleInfo/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -261,25 +261,25 @@ objects:
             applicable_to: [go]
             go_field_name: ScheduleInfo
             go_type_name: ScheduleProperties
-          '/properties/scheduleInfo/startTime': 
+          '/properties/scheduleInfo/startTime': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [go]
             go_field_name: StartTime
-          '/properties/scheduleInfo/expiryTime': 
+          '/properties/scheduleInfo/expiryTime': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [go]
             go_field_name: ExpiryTime
-          '/properties/scheduleInfo/expiryTimeOffsetMinutes': 
+          '/properties/scheduleInfo/expiryTimeOffsetMinutes': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: ExpiryTimeOffsetMinutes
           '/properties/scheduleInfo/isEnabled': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
             go_field_name: IsEnabled
-          '/properties/scheduleInfo/nextRun': 
+          '/properties/scheduleInfo/nextRun': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [go]
             go_field_name: NextRun
-          '/properties/scheduleInfo/nextRunOffsetMinutes': 
+          '/properties/scheduleInfo/nextRunOffsetMinutes': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: NextRunOffsetMinutes
-          '/properties/scheduleInfo/interval': 
+          '/properties/scheduleInfo/interval': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: Interval
           '/properties/scheduleInfo/frequency': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
@@ -296,24 +296,24 @@ objects:
           '/properties/scheduleInfo/advancedSchedule/weekDays': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: WeekDays
-          '/properties/scheduleInfo/advancedSchedule/monthDays': 
+          '/properties/scheduleInfo/advancedSchedule/monthDays': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: MonthDays
           '/properties/scheduleInfo/advancedSchedule/monthlyOccurrences': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: MonthlyOccurrences
             go_type_name: AdvancedScheduleMonthlyOccurrence
-          '/properties/scheduleInfo/advancedSchedule/monthlyOccurrences/occurrence': 
+          '/properties/scheduleInfo/advancedSchedule/monthlyOccurrences/occurrence': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: Occurrence
           '/properties/scheduleInfo/advancedSchedule/monthlyOccurrences/day': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [go]
             go_field_name: Day
             go_enum_type_name: ScheduleDay
-          '/properties/scheduleInfo/creationTime': 
+          '/properties/scheduleInfo/creationTime': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [go]
             go_field_name: CreationTime
-          '/properties/scheduleInfo/lastModifiedTime': 
+          '/properties/scheduleInfo/lastModifiedTime': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [go]
             go_field_name: LastModifiedTime
           '/properties/scheduleInfo/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -344,7 +344,7 @@ objects:
           '/tasks/preTask': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [python]
             python_field_name: pre_task
-          '/tasks/preTask/parameters': 
+          '/tasks/preTask/parameters': !ruby/object:Api::Azure::SDKTypeDefinition::StringMapObject
             applicable_to: [python]
             python_field_name: parameters
           '/tasks/preTask/source': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -353,7 +353,7 @@ objects:
           '/tasks/postTask': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [python]
             python_field_name: post_task
-          '/tasks/postTask/parameters': 
+          '/tasks/postTask/parameters': !ruby/object:Api::Azure::SDKTypeDefinition::StringMapObject
             applicable_to: [python]
             python_field_name: parameters
           '/tasks/postTask/source': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -367,7 +367,7 @@ objects:
             applicable_to: [go]
             go_field_name: PreTask
             go_type_name: taskProperties
-          '/properties/tasks/preTask/parameters': 
+          '/properties/tasks/preTask/parameters': !ruby/object:Api::Azure::SDKTypeDefinition::StringMapObject
             applicable_to: [go]
             go_field_name: Parameters
           '/properties/tasks/preTask/source': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -377,7 +377,7 @@ objects:
             applicable_to: [go]
             go_field_name: PostTask
             go_type_name: taskProperties
-          '/properties/tasks/postTask/parameters': 
+          '/properties/tasks/postTask/parameters': !ruby/object:Api::Azure::SDKTypeDefinition::StringMapObject
             applicable_to: [go]
             go_field_name: Parameters
           '/properties/tasks/postTask/source': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -545,7 +545,7 @@ objects:
                 description: 'Reboot setting for the software update configuration.'
                 required: false
                 azure_sdk_references: ['/updateConfiguration/linux/rebootSetting', '/properties/updateConfiguration/linux/rebootSetting']
-          - !ruby/object:Api::Azure::Type::[unknown-primary[timeSpan]]
+          - !ruby/object:Api::Azure::Type::Timespan
             name: 'duration'
             description: 'Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601'
             required: false
@@ -615,13 +615,13 @@ objects:
         required: true
         azure_sdk_references: ['/scheduleInfo', '/properties/scheduleInfo']
         properties:
-          - !ruby/object:Api::Azure::Type::[datetime]
+          - !ruby/object:Api::Azure::Type::DateTime
             name: 'startTime'
             description: 'Gets or sets the start time of the schedule.'
             required: false
             sample_value: 2017-10-19T12:22:57+00:00
             azure_sdk_references: ['/scheduleInfo/startTime', '/properties/scheduleInfo/startTime']
-          - !ruby/object:Api::Azure::Type::[datetime]
+          - !ruby/object:Api::Azure::Type::DateTime
             name: 'expiryTime'
             description: 'Gets or sets the end time of the schedule.'
             required: false
@@ -637,7 +637,7 @@ objects:
             description: 'Gets or sets a value indicating whether this schedule is enabled.'
             required: false
             azure_sdk_references: ['/scheduleInfo/isEnabled', '/properties/scheduleInfo/isEnabled']
-          - !ruby/object:Api::Azure::Type::[datetime]
+          - !ruby/object:Api::Azure::Type::DateTime
             name: 'nextRun'
             description: 'Gets or sets the next run time of the schedule.'
             required: false
@@ -714,12 +714,12 @@ objects:
                       - :Sunday
                     default_value: :Monday
                     azure_sdk_references: ['/scheduleInfo/advancedSchedule/monthlyOccurrences/day', '/properties/scheduleInfo/advancedSchedule/monthlyOccurrences/day']
-          - !ruby/object:Api::Azure::Type::[datetime]
+          - !ruby/object:Api::Azure::Type::DateTime
             name: 'creationTime'
             description: 'Gets or sets the creation time.'
             required: false
             azure_sdk_references: ['/scheduleInfo/creationTime', '/properties/scheduleInfo/creationTime']
-          - !ruby/object:Api::Azure::Type::[datetime]
+          - !ruby/object:Api::Azure::Type::DateTime
             name: 'lastModifiedTime'
             description: 'Gets or sets the last modified time.'
             required: false
@@ -757,7 +757,7 @@ objects:
             required: false
             azure_sdk_references: ['/tasks/preTask', '/properties/tasks/preTask']
             properties:
-              - !ruby/object:Api::Azure::Type::[unknown[DictionaryType {"$id":"354","$type":"DictionaryType","valueType":{"$id":"355","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"356","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"357","fixed":false},"deprecated":false}]]
+              - !ruby/object:Api::Type::KeyValuePairs
                 name: 'parameters'
                 description: 'Gets or sets the parameters of the task.'
                 required: false
@@ -774,7 +774,7 @@ objects:
             required: false
             azure_sdk_references: ['/tasks/postTask', '/properties/tasks/postTask']
             properties:
-              - !ruby/object:Api::Azure::Type::[unknown[DictionaryType {"$id":"354","$type":"DictionaryType","valueType":{"$id":"355","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"356","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"357","fixed":false},"deprecated":false}]]
+              - !ruby/object:Api::Type::KeyValuePairs
                 name: 'parameters'
                 description: 'Gets or sets the parameters of the task.'
                 required: false
@@ -791,7 +791,7 @@ objects:
         description: 'Provisioning state for the software update configuration, which only appears in the response.'
         output: true
         azure_sdk_references: ['/provisioningState', '/properties/provisioningState']
-      - !ruby/object:Api::Azure::Type::[datetime]
+      - !ruby/object:Api::Azure::Type::DateTime
         name: 'creationTime'
         description: 'Creation time of the resource, which only appears in the response.'
         output: true
@@ -801,7 +801,7 @@ objects:
         description: 'CreatedBy property, which only appears in the response.'
         output: true
         azure_sdk_references: ['/createdBy', '/properties/createdBy']
-      - !ruby/object:Api::Azure::Type::[datetime]
+      - !ruby/object:Api::Azure::Type::DateTime
         name: 'lastModifiedTime'
         description: 'Last time resource was modified, which only appears in the response.'
         output: true

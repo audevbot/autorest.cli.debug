@@ -38,10 +38,10 @@ objects:
             go_variable_name: name
             python_parameter_name: job_name
             python_variable_name: name
-          '/properties/parameters': 
+          '/properties/parameters': !ruby/object:Api::Azure::SDKTypeDefinition::StringMapObject
             applicable_to: [go]
             go_field_name: Parameters
-          '/parameters': 
+          '/parameters': !ruby/object:Api::Azure::SDKTypeDefinition::StringMapObject
             applicable_to: [python]
             python_field_name: parameters
           'clientRequestId': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -91,10 +91,10 @@ objects:
           '/runbook/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: name
-          '/properties/parameters': 
+          '/properties/parameters': !ruby/object:Api::Azure::SDKTypeDefinition::StringMapObject
             applicable_to: [go]
             go_field_name: Parameters
-          '/parameters': 
+          '/parameters': !ruby/object:Api::Azure::SDKTypeDefinition::StringMapObject
             applicable_to: [python]
             python_field_name: parameters
           '/properties/runOn': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -109,16 +109,16 @@ objects:
           '/startedBy': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: started_by
-          '/properties/jobId': 
+          '/properties/jobId': !ruby/object:Api::Azure::SDKTypeDefinition::[unknown-primary[uuid]]
             applicable_to: [go]
             go_field_name: JobID
-          '/jobId': 
+          '/jobId': !ruby/object:Api::Azure::SDKTypeDefinition::[unknown-primary[uuid]]
             applicable_to: [python]
             python_field_name: job_id
-          '/properties/creationTime': 
+          '/properties/creationTime': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [go]
             go_field_name: CreationTime
-          '/creationTime': 
+          '/creationTime': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [python]
             python_field_name: creation_time
           '/properties/status': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
@@ -134,16 +134,16 @@ objects:
           '/statusDetails': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: status_details
-          '/properties/startTime': 
+          '/properties/startTime': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [go]
             go_field_name: StartTime
-          '/startTime': 
+          '/startTime': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [python]
             python_field_name: start_time
-          '/properties/endTime': 
+          '/properties/endTime': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [go]
             go_field_name: EndTime
-          '/endTime': 
+          '/endTime': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [python]
             python_field_name: end_time
           '/properties/exception': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -152,16 +152,16 @@ objects:
           '/exception': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: exception
-          '/properties/lastModifiedTime': 
+          '/properties/lastModifiedTime': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [go]
             go_field_name: LastModifiedTime
-          '/lastModifiedTime': 
+          '/lastModifiedTime': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [python]
             python_field_name: last_modified_time
-          '/properties/lastStatusModifiedTime': 
+          '/properties/lastStatusModifiedTime': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [go]
             go_field_name: LastStatusModifiedTime
-          '/lastStatusModifiedTime': 
+          '/lastStatusModifiedTime': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [python]
             python_field_name: last_status_modified_time
           '/properties/provisioningState': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
@@ -236,7 +236,7 @@ objects:
             required: false
             sample_value: TestRunbook
             azure_sdk_references: ['/runbook/name', '/properties/runbook/name', '/name']
-      - !ruby/object:Api::Azure::Type::[unknown[DictionaryType {"$id":"301","$type":"DictionaryType","valueType":{"$id":"302","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"303","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"304","fixed":false},"deprecated":false}]]
+      - !ruby/object:Api::Type::KeyValuePairs
         name: 'parameters'
         description: 'Gets or sets the parameters of the job.'
         required: false
@@ -263,7 +263,7 @@ objects:
         description: 'Gets or sets the id of the job.'
         output: true
         azure_sdk_references: ['/jobId', '/properties/jobId']
-      - !ruby/object:Api::Azure::Type::[datetime]
+      - !ruby/object:Api::Azure::Type::DateTime
         name: 'creationTime'
         description: 'Gets or sets the creation time of the job.'
         output: true
@@ -293,12 +293,12 @@ objects:
         description: 'Gets or sets the status details of the job.'
         output: true
         azure_sdk_references: ['/statusDetails', '/properties/statusDetails']
-      - !ruby/object:Api::Azure::Type::[datetime]
+      - !ruby/object:Api::Azure::Type::DateTime
         name: 'startTime'
         description: 'Gets or sets the start time of the job.'
         output: true
         azure_sdk_references: ['/startTime', '/properties/startTime']
-      - !ruby/object:Api::Azure::Type::[datetime]
+      - !ruby/object:Api::Azure::Type::DateTime
         name: 'endTime'
         description: 'Gets or sets the end time of the job.'
         output: true
@@ -308,12 +308,12 @@ objects:
         description: 'Gets or sets the exception of the job.'
         output: true
         azure_sdk_references: ['/exception', '/properties/exception']
-      - !ruby/object:Api::Azure::Type::[datetime]
+      - !ruby/object:Api::Azure::Type::DateTime
         name: 'lastModifiedTime'
         description: 'Gets or sets the last modified time of the job.'
         output: true
         azure_sdk_references: ['/lastModifiedTime', '/properties/lastModifiedTime']
-      - !ruby/object:Api::Azure::Type::[datetime]
+      - !ruby/object:Api::Azure::Type::DateTime
         name: 'lastStatusModifiedTime'
         description: 'Gets or sets the last status modified time of the job.'
         output: true

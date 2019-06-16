@@ -71,10 +71,10 @@ objects:
           '/properties/approvalRequired': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
             go_field_name: ApprovalRequired
-          '/subscriptionsLimit': 
+          '/subscriptionsLimit': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: subscriptions_limit
-          '/properties/subscriptionsLimit': 
+          '/properties/subscriptionsLimit': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: SubscriptionsLimit
           '/state': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
@@ -142,10 +142,10 @@ objects:
           '/properties/approvalRequired': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
             go_field_name: ApprovalRequired
-          '/subscriptionsLimit': 
+          '/subscriptionsLimit': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: subscriptions_limit
-          '/properties/subscriptionsLimit': 
+          '/properties/subscriptionsLimit': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: SubscriptionsLimit
           '/state': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
@@ -228,10 +228,10 @@ objects:
           '/approvalRequired': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [python]
             python_field_name: approval_required
-          '/properties/subscriptionsLimit': 
+          '/properties/subscriptionsLimit': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: SubscriptionsLimit
-          '/subscriptionsLimit': 
+          '/subscriptionsLimit': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: subscriptions_limit
           '/properties/state': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
