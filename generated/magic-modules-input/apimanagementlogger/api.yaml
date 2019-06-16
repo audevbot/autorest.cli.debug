@@ -275,7 +275,7 @@ objects:
         required: false
         sample_value: adding a new logger
         azure_sdk_references: ['/description', '/properties/description']
-      - 
+      - !ruby/object:Api::Azure::Type::[unknown[DictionaryType {"$id":"3311","$type":"DictionaryType","valueType":{"$id":"3312","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"3313","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"3314","fixed":false},"deprecated":false}]]
         name: 'credentials'
         description: 'The name and SendRule connection string of the event hub for azureEventHub logger.
 Instrumentation key for applicationInsights logger.'

@@ -713,7 +713,7 @@ objects:
             required: true
             sample_value: EBA029198AA3E76EF0D70482626E5BCF148594A6
             azure_sdk_references: ['/serviceFabricCluster/clientCertificatethumbprint', '/properties/properties/serviceFabricCluster/clientCertificatethumbprint']
-          - 
+          - !ruby/object:Api::Azure::Type::[number]
             name: 'maxPartitionResolutionRetries'
             description: 'Maximum number of retries while attempting resolve the partition.'
             required: false
@@ -759,13 +759,13 @@ objects:
             description: 'List of Client Certificate Thumbprint.'
             required: false
             azure_sdk_references: ['/credentials/certificate', '/properties/credentials/certificate']
-          - 
+          - !ruby/object:Api::Azure::Type::[unknown[DictionaryType {"$id":"1825","$type":"DictionaryType","valueType":{"$id":"1826","$type":"SequenceType","elementType":{"$id":"1827","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1828","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1829","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1830","fixed":false},"deprecated":false}]]
             name: 'query'
             description: 'Query Parameter description.'
             required: false
             sample_value: [object Object]
             azure_sdk_references: ['/credentials/query', '/properties/credentials/query']
-          - 
+          - !ruby/object:Api::Azure::Type::[unknown[DictionaryType {"$id":"1835","$type":"DictionaryType","valueType":{"$id":"1836","$type":"SequenceType","elementType":{"$id":"1837","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1838","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1839","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1840","fixed":false},"deprecated":false}]]
             name: 'header'
             description: 'Header Parameter description.'
             required: false

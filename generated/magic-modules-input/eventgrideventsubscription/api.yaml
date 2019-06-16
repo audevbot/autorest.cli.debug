@@ -276,12 +276,12 @@ should be compared in a case sensitive manner.'
         required: false
         azure_sdk_references: ['/retryPolicy', '/properties/retryPolicy']
         properties:
-          - 
+          - !ruby/object:Api::Azure::Type::[number]
             name: 'maxDeliveryAttempts'
             description: 'Maximum number of delivery retry attempts for events.'
             required: false
             azure_sdk_references: ['/retryPolicy/maxDeliveryAttempts', '/properties/retryPolicy/maxDeliveryAttempts']
-          - 
+          - !ruby/object:Api::Azure::Type::[number]
             name: 'eventTimeToLiveInMinutes'
             description: 'Time To Live (in minutes) for events.'
             required: false

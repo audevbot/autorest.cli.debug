@@ -177,7 +177,7 @@ objects:
           - :Https
         default_value: :Http
         azure_sdk_references: ['/protocol', '/properties/protocol']
-      - 
+      - !ruby/object:Api::Azure::Type::[number]
         name: 'intervalInSeconds'
         description: 'The number of seconds between health probes.'
         required: false

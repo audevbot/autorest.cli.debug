@@ -346,7 +346,7 @@ objects:
           - :Specialized
         default_value: :Generalized
         azure_sdk_references: ['/osState', '/properties/osState']
-      - 
+      - !ruby/object:Api::Azure::Type::[datetime]
         name: 'endOfLifeDate'
         description: 'The end of life date of the gallery Image Definition. This property can be used for decommissioning purposes. This property is updatable.'
         required: false
@@ -384,12 +384,12 @@ objects:
             required: false
             azure_sdk_references: ['/recommended/vCPUs', '/properties/recommended/vCPUs']
             properties:
-              - 
+              - !ruby/object:Api::Azure::Type::[number]
                 name: 'min'
                 description: 'The minimum number of the resource.'
                 required: false
                 azure_sdk_references: ['/recommended/vCPUs/min', '/properties/recommended/vCPUs/min']
-              - 
+              - !ruby/object:Api::Azure::Type::[number]
                 name: 'max'
                 description: 'The maximum number of the resource.'
                 required: false
@@ -400,12 +400,12 @@ objects:
             required: false
             azure_sdk_references: ['/recommended/memory', '/properties/recommended/memory']
             properties:
-              - 
+              - !ruby/object:Api::Azure::Type::[number]
                 name: 'min'
                 description: 'The minimum number of the resource.'
                 required: false
                 azure_sdk_references: ['/recommended/memory/min', '/properties/recommended/memory/min']
-              - 
+              - !ruby/object:Api::Azure::Type::[number]
                 name: 'max'
                 description: 'The maximum number of the resource.'
                 required: false

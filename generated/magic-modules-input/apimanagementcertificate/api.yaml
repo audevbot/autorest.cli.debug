@@ -191,7 +191,7 @@ objects:
         description: 'Thumbprint of the certificate.'
         output: true
         azure_sdk_references: ['/thumbprint', '/properties/thumbprint']
-      - 
+      - !ruby/object:Api::Azure::Type::[datetime]
         name: 'expirationDate'
         description: 'Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 '

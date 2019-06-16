@@ -213,12 +213,12 @@ objects:
         description: 'The URL for the application package in Azure Storage.'
         output: true
         azure_sdk_references: ['/storageUrl', '/properties/storageUrl']
-      - 
+      - !ruby/object:Api::Azure::Type::[datetime]
         name: 'storageUrlExpiry'
         description: 'The UTC time at which the Azure Storage URL will expire.'
         output: true
         azure_sdk_references: ['/storageUrlExpiry', '/properties/storageUrlExpiry']
-      - 
+      - !ruby/object:Api::Azure::Type::[datetime]
         name: 'lastActivationTime'
         description: 'The time at which the package was last activated, if the package is active.'
         output: true

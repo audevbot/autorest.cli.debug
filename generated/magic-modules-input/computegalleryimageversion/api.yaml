@@ -298,7 +298,7 @@ objects:
                 description: 'The name of the region.'
                 required: true
                 azure_sdk_references: ['/publishingProfile/targetRegions/name', '/properties/publishingProfile/targetRegions/name', '/name']
-              - 
+              - !ruby/object:Api::Azure::Type::[number]
                 name: 'regionalReplicaCount'
                 description: 'The number of replicas of the Image Version to be created per region. This property is updatable.'
                 required: false
@@ -329,7 +329,7 @@ objects:
                     description: 'The managed artifact id.'
                     required: true
                     azure_sdk_references: ['/publishingProfile/source/managedImage/id', '/properties/publishingProfile/source/managedImage/id']
-          - 
+          - !ruby/object:Api::Azure::Type::[number]
             name: 'replicaCount'
             description: 'The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.'
             required: false
@@ -339,7 +339,7 @@ objects:
             description: 'If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.'
             required: false
             azure_sdk_references: ['/publishingProfile/excludeFromLatest', '/properties/publishingProfile/excludeFromLatest']
-          - 
+          - !ruby/object:Api::Azure::Type::[datetime]
             name: 'endOfLifeDate'
             description: 'The end of life date of the gallery Image Version. This property can be used for decommissioning purposes. This property is updatable.'
             required: false
@@ -379,7 +379,7 @@ objects:
             required: false
             azure_sdk_references: ['/storageProfile/osDiskImage', '/properties/storageProfile/osDiskImage']
             properties:
-              - 
+              - !ruby/object:Api::Azure::Type::[number]
                 name: 'sizeInGb'
                 description: 'This property indicates the size of the VHD to be created.'
                 required: false
@@ -400,7 +400,7 @@ objects:
             required: false
             azure_sdk_references: ['/storageProfile/dataDiskImages', '/properties/storageProfile/dataDiskImages']
             properties:
-              - 
+              - !ruby/object:Api::Azure::Type::[number]
                 name: 'sizeInGb'
                 description: 'This property indicates the size of the VHD to be created.'
                 required: false
@@ -415,7 +415,7 @@ objects:
                   - :ReadWrite
                 default_value: :None
                 azure_sdk_references: ['/storageProfile/dataDiskImages/hostCaching', '/properties/storageProfile/dataDiskImages/hostCaching']
-              - 
+              - !ruby/object:Api::Azure::Type::[number]
                 name: 'lun'
                 description: 'This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.'
                 required: false
@@ -464,7 +464,7 @@ objects:
                 description: 'The details of the replication status.'
                 required: false
                 azure_sdk_references: ['/replicationStatus/summary/details', '/properties/replicationStatus/summary/details']
-              - 
+              - !ruby/object:Api::Azure::Type::[number]
                 name: 'progress'
                 description: 'It indicates progress of the replication job.'
                 required: false

@@ -234,7 +234,7 @@ objects:
         required: true
         sample_value: Issue comment.
         azure_sdk_references: ['/text', '/properties/text']
-      - 
+      - !ruby/object:Api::Azure::Type::[datetime]
         name: 'createdDate'
         description: 'Date and time when the comment was created.'
         required: false

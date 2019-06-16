@@ -309,7 +309,7 @@ objects:
         input: true
         sample_value: myIssue
         azure_sdk_references: ['issueId']
-      - 
+      - !ruby/object:Api::Azure::Type::[datetime]
         name: 'createdDate'
         description: 'Date and time when the issue was created.'
         required: false

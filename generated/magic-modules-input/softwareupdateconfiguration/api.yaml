@@ -545,7 +545,7 @@ objects:
                 description: 'Reboot setting for the software update configuration.'
                 required: false
                 azure_sdk_references: ['/updateConfiguration/linux/rebootSetting', '/properties/updateConfiguration/linux/rebootSetting']
-          - 
+          - !ruby/object:Api::Azure::Type::[unknown-primary[timeSpan]]
             name: 'duration'
             description: 'Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601'
             required: false
@@ -615,19 +615,19 @@ objects:
         required: true
         azure_sdk_references: ['/scheduleInfo', '/properties/scheduleInfo']
         properties:
-          - 
+          - !ruby/object:Api::Azure::Type::[datetime]
             name: 'startTime'
             description: 'Gets or sets the start time of the schedule.'
             required: false
             sample_value: 2017-10-19T12:22:57+00:00
             azure_sdk_references: ['/scheduleInfo/startTime', '/properties/scheduleInfo/startTime']
-          - 
+          - !ruby/object:Api::Azure::Type::[datetime]
             name: 'expiryTime'
             description: 'Gets or sets the end time of the schedule.'
             required: false
             sample_value: 2018-11-09T11:22:57+00:00
             azure_sdk_references: ['/scheduleInfo/expiryTime', '/properties/scheduleInfo/expiryTime']
-          - 
+          - !ruby/object:Api::Azure::Type::[number]
             name: 'expiryTimeOffsetMinutes'
             description: 'Gets or sets the expiry time's offset in minutes.'
             required: false
@@ -637,17 +637,17 @@ objects:
             description: 'Gets or sets a value indicating whether this schedule is enabled.'
             required: false
             azure_sdk_references: ['/scheduleInfo/isEnabled', '/properties/scheduleInfo/isEnabled']
-          - 
+          - !ruby/object:Api::Azure::Type::[datetime]
             name: 'nextRun'
             description: 'Gets or sets the next run time of the schedule.'
             required: false
             azure_sdk_references: ['/scheduleInfo/nextRun', '/properties/scheduleInfo/nextRun']
-          - 
+          - !ruby/object:Api::Azure::Type::[number]
             name: 'nextRunOffsetMinutes'
             description: 'Gets or sets the next run time's offset in minutes.'
             required: false
             azure_sdk_references: ['/scheduleInfo/nextRunOffsetMinutes', '/properties/scheduleInfo/nextRunOffsetMinutes']
-          - 
+          - !ruby/object:Api::Azure::Type::[number]
             name: 'interval'
             description: 'Gets or sets the interval of the schedule.'
             required: false
@@ -684,7 +684,7 @@ objects:
                 required: false
                 sample_value: Thursday
                 azure_sdk_references: ['/scheduleInfo/advancedSchedule/weekDays', '/properties/scheduleInfo/advancedSchedule/weekDays']
-              - 
+              - !ruby/object:Api::Azure::Type::[number]
                 name: 'monthDays'
                 description: 'Days of the month that the job should execute on. Must be between 1 and 31.'
                 required: false
@@ -695,7 +695,7 @@ objects:
                 required: false
                 azure_sdk_references: ['/scheduleInfo/advancedSchedule/monthlyOccurrences', '/properties/scheduleInfo/advancedSchedule/monthlyOccurrences']
                 properties:
-                  - 
+                  - !ruby/object:Api::Azure::Type::[number]
                     name: 'occurrence'
                     description: 'Occurrence of the week within the month. Must be between 1 and 5'
                     required: false
@@ -714,12 +714,12 @@ objects:
                       - :Sunday
                     default_value: :Monday
                     azure_sdk_references: ['/scheduleInfo/advancedSchedule/monthlyOccurrences/day', '/properties/scheduleInfo/advancedSchedule/monthlyOccurrences/day']
-          - 
+          - !ruby/object:Api::Azure::Type::[datetime]
             name: 'creationTime'
             description: 'Gets or sets the creation time.'
             required: false
             azure_sdk_references: ['/scheduleInfo/creationTime', '/properties/scheduleInfo/creationTime']
-          - 
+          - !ruby/object:Api::Azure::Type::[datetime]
             name: 'lastModifiedTime'
             description: 'Gets or sets the last modified time.'
             required: false
@@ -757,7 +757,7 @@ objects:
             required: false
             azure_sdk_references: ['/tasks/preTask', '/properties/tasks/preTask']
             properties:
-              - 
+              - !ruby/object:Api::Azure::Type::[unknown[DictionaryType {"$id":"354","$type":"DictionaryType","valueType":{"$id":"355","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"356","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"357","fixed":false},"deprecated":false}]]
                 name: 'parameters'
                 description: 'Gets or sets the parameters of the task.'
                 required: false
@@ -774,7 +774,7 @@ objects:
             required: false
             azure_sdk_references: ['/tasks/postTask', '/properties/tasks/postTask']
             properties:
-              - 
+              - !ruby/object:Api::Azure::Type::[unknown[DictionaryType {"$id":"354","$type":"DictionaryType","valueType":{"$id":"355","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"356","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"357","fixed":false},"deprecated":false}]]
                 name: 'parameters'
                 description: 'Gets or sets the parameters of the task.'
                 required: false
@@ -791,7 +791,7 @@ objects:
         description: 'Provisioning state for the software update configuration, which only appears in the response.'
         output: true
         azure_sdk_references: ['/provisioningState', '/properties/provisioningState']
-      - 
+      - !ruby/object:Api::Azure::Type::[datetime]
         name: 'creationTime'
         description: 'Creation time of the resource, which only appears in the response.'
         output: true
@@ -801,7 +801,7 @@ objects:
         description: 'CreatedBy property, which only appears in the response.'
         output: true
         azure_sdk_references: ['/createdBy', '/properties/createdBy']
-      - 
+      - !ruby/object:Api::Azure::Type::[datetime]
         name: 'lastModifiedTime'
         description: 'Last time resource was modified, which only appears in the response.'
         output: true

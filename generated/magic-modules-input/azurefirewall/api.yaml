@@ -803,7 +803,7 @@ objects:
         required: false
         azure_sdk_references: ['/applicationRuleCollections', '/properties/applicationRuleCollections']
         properties:
-          - 
+          - !ruby/object:Api::Azure::Type::[number]
             name: 'priority'
             description: 'Priority of the application rule collection resource.'
             required: false
@@ -868,7 +868,7 @@ objects:
         required: false
         azure_sdk_references: ['/natRuleCollections', '/properties/natRuleCollections']
         properties:
-          - 
+          - !ruby/object:Api::Azure::Type::[number]
             name: 'priority'
             description: 'Priority of the NAT rule collection resource.'
             required: false
@@ -962,7 +962,7 @@ objects:
         required: false
         azure_sdk_references: ['/networkRuleCollections', '/properties/networkRuleCollections']
         properties:
-          - 
+          - !ruby/object:Api::Azure::Type::[number]
             name: 'priority'
             description: 'Priority of the network rule collection resource.'
             required: false
