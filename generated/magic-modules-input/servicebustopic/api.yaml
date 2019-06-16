@@ -53,10 +53,10 @@ objects:
           '/properties/defaultMessageTimeToLive': !ruby/object:Api::Azure::SDKTypeDefinition::Timespan
             applicable_to: [go]
             go_field_name: DefaultMessageTimeToLive
-          '/maxSizeInMegabytes': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/maxSizeInMegabytes': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: max_size_in_megabytes
-          '/properties/maxSizeInMegabytes': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/maxSizeInMegabytes': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: MaxSizeInMegabytes
           '/requiresDuplicateDetection': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
@@ -157,10 +157,10 @@ objects:
           '/defaultMessageTimeToLive': !ruby/object:Api::Azure::SDKTypeDefinition::Timespan
             applicable_to: [python]
             python_field_name: default_message_time_to_live
-          '/properties/maxSizeInMegabytes': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/maxSizeInMegabytes': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: MaxSizeInMegabytes
-          '/maxSizeInMegabytes': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/maxSizeInMegabytes': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: max_size_in_megabytes
           '/properties/requiresDuplicateDetection': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
@@ -212,10 +212,10 @@ objects:
           '/enableExpress': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [python]
             python_field_name: enable_express
-          '/properties/sizeInBytes': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/sizeInBytes': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: SizeInBytes
-          '/sizeInBytes': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/sizeInBytes': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: size_in_bytes
           '/properties/createdAt': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
@@ -236,10 +236,10 @@ objects:
           '/accessedAt': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [python]
             python_field_name: accessed_at
-          '/properties/subscriptionCount': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/subscriptionCount': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: SubscriptionCount
-          '/subscriptionCount': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/subscriptionCount': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: subscription_count
           '/properties/countDetails': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -321,7 +321,7 @@ objects:
         description: 'ISO 8601 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.'
         required: false
         azure_sdk_references: ['/defaultMessageTimeToLive', '/properties/defaultMessageTimeToLive']
-      - !ruby/object:Api::Azure::Type::[number]
+      - !ruby/object:Api::Azure::Type::Integer
         name: 'maxSizeInMegabytes'
         description: 'Maximum size of the topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024.'
         required: false
@@ -379,7 +379,7 @@ objects:
         sample_value: true
         azure_sdk_references: ['/enableExpress', '/properties/enableExpress']
       # read only values included only in response
-      - !ruby/object:Api::Azure::Type::[number]
+      - !ruby/object:Api::Azure::Type::Integer
         name: 'sizeInBytes'
         description: 'Size of the topic, in bytes.'
         output: true
@@ -399,7 +399,7 @@ objects:
         description: 'Last time the message was sent, or a request was received, for this topic.'
         output: true
         azure_sdk_references: ['/accessedAt', '/properties/accessedAt']
-      - !ruby/object:Api::Azure::Type::[number]
+      - !ruby/object:Api::Azure::Type::Integer
         name: 'subscriptionCount'
         description: 'Number of subscriptions.'
         output: true
@@ -410,27 +410,27 @@ objects:
         output: true
         azure_sdk_references: ['/countDetails', '/properties/countDetails']
         properties:
-          - !ruby/object:Api::Azure::Type::[number]
+          - !ruby/object:Api::Azure::Type::Integer
             name: 'activeMessageCount'
             description: 'Number of active messages in the queue, topic, or subscription.'
             required: false
             azure_sdk_references: ['/countDetails/activeMessageCount', '/properties/countDetails/activeMessageCount']
-          - !ruby/object:Api::Azure::Type::[number]
+          - !ruby/object:Api::Azure::Type::Integer
             name: 'deadLetterMessageCount'
             description: 'Number of messages that are dead lettered.'
             required: false
             azure_sdk_references: ['/countDetails/deadLetterMessageCount', '/properties/countDetails/deadLetterMessageCount']
-          - !ruby/object:Api::Azure::Type::[number]
+          - !ruby/object:Api::Azure::Type::Integer
             name: 'scheduledMessageCount'
             description: 'Number of scheduled messages.'
             required: false
             azure_sdk_references: ['/countDetails/scheduledMessageCount', '/properties/countDetails/scheduledMessageCount']
-          - !ruby/object:Api::Azure::Type::[number]
+          - !ruby/object:Api::Azure::Type::Integer
             name: 'transferMessageCount'
             description: 'Number of messages transferred to another queue, topic, or subscription.'
             required: false
             azure_sdk_references: ['/countDetails/transferMessageCount', '/properties/countDetails/transferMessageCount']
-          - !ruby/object:Api::Azure::Type::[number]
+          - !ruby/object:Api::Azure::Type::Integer
             name: 'transferDeadLetterMessageCount'
             description: 'Number of messages transferred into dead letters.'
             required: false

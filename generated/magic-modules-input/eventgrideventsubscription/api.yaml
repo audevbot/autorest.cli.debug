@@ -131,19 +131,19 @@ objects:
             applicable_to: [go]
             go_field_name: RetryPolicy
             go_type_name: RetryPolicy
-          '/properties/retryPolicy/maxDeliveryAttempts': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/retryPolicy/maxDeliveryAttempts': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: MaxDeliveryAttempts
-          '/properties/retryPolicy/eventTimeToLiveInMinutes': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/retryPolicy/eventTimeToLiveInMinutes': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: EventTimeToLiveInMinutes
           '/retryPolicy': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [python]
             python_field_name: retry_policy
-          '/retryPolicy/maxDeliveryAttempts': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/retryPolicy/maxDeliveryAttempts': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: max_delivery_attempts
-          '/retryPolicy/eventTimeToLiveInMinutes': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/retryPolicy/eventTimeToLiveInMinutes': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: event_time_to_live_in_minutes
           '/properties/deadLetterDestination': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -276,12 +276,12 @@ should be compared in a case sensitive manner.'
         required: false
         azure_sdk_references: ['/retryPolicy', '/properties/retryPolicy']
         properties:
-          - !ruby/object:Api::Azure::Type::[number]
+          - !ruby/object:Api::Azure::Type::Integer
             name: 'maxDeliveryAttempts'
             description: 'Maximum number of delivery retry attempts for events.'
             required: false
             azure_sdk_references: ['/retryPolicy/maxDeliveryAttempts', '/properties/retryPolicy/maxDeliveryAttempts']
-          - !ruby/object:Api::Azure::Type::[number]
+          - !ruby/object:Api::Azure::Type::Integer
             name: 'eventTimeToLiveInMinutes'
             description: 'Time To Live (in minutes) for events.'
             required: false

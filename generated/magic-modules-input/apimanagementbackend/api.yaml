@@ -75,7 +75,7 @@ objects:
           '/serviceFabricCluster/clientCertificatethumbprint': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: client_certificatethumbprint
-          '/serviceFabricCluster/maxPartitionResolutionRetries': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/serviceFabricCluster/maxPartitionResolutionRetries': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: max_partition_resolution_retries
           '/serviceFabricCluster/managementEndpoints': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -100,7 +100,7 @@ objects:
           '/properties/properties/serviceFabricCluster/clientCertificatethumbprint': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: ClientCertificatethumbprint
-          '/properties/properties/serviceFabricCluster/maxPartitionResolutionRetries': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/properties/serviceFabricCluster/maxPartitionResolutionRetries': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: MaxPartitionResolutionRetries
           '/properties/properties/serviceFabricCluster/managementEndpoints': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -276,7 +276,7 @@ objects:
           '/serviceFabricCluster/clientCertificatethumbprint': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: client_certificatethumbprint
-          '/serviceFabricCluster/maxPartitionResolutionRetries': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/serviceFabricCluster/maxPartitionResolutionRetries': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: max_partition_resolution_retries
           '/serviceFabricCluster/managementEndpoints': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -301,7 +301,7 @@ objects:
           '/properties/properties/serviceFabricCluster/clientCertificatethumbprint': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: ClientCertificatethumbprint
-          '/properties/properties/serviceFabricCluster/maxPartitionResolutionRetries': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/properties/serviceFabricCluster/maxPartitionResolutionRetries': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: MaxPartitionResolutionRetries
           '/properties/properties/serviceFabricCluster/managementEndpoints': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -493,7 +493,7 @@ objects:
           '/properties/properties/serviceFabricCluster/clientCertificatethumbprint': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: ClientCertificatethumbprint
-          '/properties/properties/serviceFabricCluster/maxPartitionResolutionRetries': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/properties/serviceFabricCluster/maxPartitionResolutionRetries': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: MaxPartitionResolutionRetries
           '/properties/properties/serviceFabricCluster/managementEndpoints': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -518,7 +518,7 @@ objects:
           '/serviceFabricCluster/clientCertificatethumbprint': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: client_certificatethumbprint
-          '/serviceFabricCluster/maxPartitionResolutionRetries': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/serviceFabricCluster/maxPartitionResolutionRetries': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: max_partition_resolution_retries
           '/serviceFabricCluster/managementEndpoints': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -713,7 +713,7 @@ objects:
             required: true
             sample_value: EBA029198AA3E76EF0D70482626E5BCF148594A6
             azure_sdk_references: ['/serviceFabricCluster/clientCertificatethumbprint', '/properties/properties/serviceFabricCluster/clientCertificatethumbprint']
-          - !ruby/object:Api::Azure::Type::[number]
+          - !ruby/object:Api::Azure::Type::Integer
             name: 'maxPartitionResolutionRetries'
             description: 'Maximum number of retries while attempting resolve the partition.'
             required: false

@@ -86,10 +86,10 @@ objects:
             applicable_to: [go]
             go_field_name: DefaultConsistencyLevel
             go_enum_type_name: DefaultConsistencyLevel
-          '/properties/consistencyPolicy/maxStalenessPrefix': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/consistencyPolicy/maxStalenessPrefix': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: MaxStalenessPrefix
-          '/properties/consistencyPolicy/maxIntervalInSeconds': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/properties/consistencyPolicy/maxIntervalInSeconds': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: MaxIntervalInSeconds
           '/consistencyPolicy': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -98,10 +98,10 @@ objects:
           '/consistencyPolicy/defaultConsistencyLevel': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: default_consistency_level
-          '/consistencyPolicy/maxStalenessPrefix': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/consistencyPolicy/maxStalenessPrefix': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: max_staleness_prefix
-          '/consistencyPolicy/maxIntervalInSeconds': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
+          '/consistencyPolicy/maxIntervalInSeconds': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: max_interval_in_seconds
           '/properties/databaseAccountOfferType': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -448,12 +448,12 @@ objects:
               - :ConsistentPrefix
             default_value: :Eventual
             azure_sdk_references: ['/consistencyPolicy/defaultConsistencyLevel', '/properties/consistencyPolicy/defaultConsistencyLevel']
-          - !ruby/object:Api::Azure::Type::[number]
+          - !ruby/object:Api::Azure::Type::Integer
             name: 'maxStalenessPrefix'
             description: 'When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.'
             required: false
             azure_sdk_references: ['/consistencyPolicy/maxStalenessPrefix', '/properties/consistencyPolicy/maxStalenessPrefix']
-          - !ruby/object:Api::Azure::Type::[number]
+          - !ruby/object:Api::Azure::Type::Integer
             name: 'maxIntervalInSeconds'
             description: 'When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.'
             required: false
@@ -469,7 +469,7 @@ objects:
             description: 'The name of the region.'
             required: false
             azure_sdk_references: ['/locations/locationName', '/properties/locations/locationName']
-          - !ruby/object:Api::Azure::Type::[number]
+          - !ruby/object:Api::Azure::Type::Integer
             name: 'failoverPriority'
             description: 'The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.'
             required: false
@@ -563,7 +563,7 @@ objects:
             description: 'undefined'
             required: false
             azure_sdk_references: ['/writeLocations/provisioningState', '/properties/writeLocations/provisioningState']
-          - !ruby/object:Api::Azure::Type::[number]
+          - !ruby/object:Api::Azure::Type::Integer
             name: 'failoverPriority'
             description: 'The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.'
             required: false
@@ -594,7 +594,7 @@ objects:
             description: 'undefined'
             required: false
             azure_sdk_references: ['/readLocations/provisioningState', '/properties/readLocations/provisioningState']
-          - !ruby/object:Api::Azure::Type::[number]
+          - !ruby/object:Api::Azure::Type::Integer
             name: 'failoverPriority'
             description: 'The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.'
             required: false
@@ -615,7 +615,7 @@ objects:
             description: 'The name of the region in which the database account exists.'
             required: false
             azure_sdk_references: ['/failoverPolicies/locationName', '/properties/failoverPolicies/locationName']
-          - !ruby/object:Api::Azure::Type::[number]
+          - !ruby/object:Api::Azure::Type::Integer
             name: 'failoverPriority'
             description: 'The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.'
             required: false
