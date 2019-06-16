@@ -86,22 +86,22 @@ objects:
             applicable_to: [go]
             go_field_name: Properties
             go_type_name: LoadBalancingSettingsProperties
-          '/properties/sampleSize': 
+          '/properties/sampleSize': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: SampleSize
-          '/sampleSize': 
+          '/sampleSize': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: sample_size
-          '/properties/successfulSamplesRequired': 
+          '/properties/successfulSamplesRequired': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: SuccessfulSamplesRequired
-          '/successfulSamplesRequired': 
+          '/successfulSamplesRequired': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: successful_samples_required
-          '/properties/additionalLatencyMilliseconds': 
+          '/properties/additionalLatencyMilliseconds': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: AdditionalLatencyMilliseconds
-          '/additionalLatencyMilliseconds': 
+          '/additionalLatencyMilliseconds': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: additional_latency_milliseconds
           '/properties/resourceState': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject

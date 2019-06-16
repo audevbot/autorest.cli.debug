@@ -52,10 +52,10 @@ objects:
             applicable_to: [go]
             go_field_name: Properties
             go_type_name: IssueContractProperties
-          '/createdDate': 
+          '/createdDate': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [python]
             python_field_name: created_date
-          '/properties/createdDate': 
+          '/properties/createdDate': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [go]
             go_field_name: CreatedDate
           '/state': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
@@ -122,10 +122,10 @@ objects:
             applicable_to: [go]
             go_field_name: Properties
             go_type_name: IssueContractProperties
-          '/createdDate': 
+          '/createdDate': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [python]
             python_field_name: created_date
-          '/properties/createdDate': 
+          '/properties/createdDate': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [go]
             go_field_name: CreatedDate
           '/state': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
@@ -212,10 +212,10 @@ objects:
             applicable_to: [go]
             go_field_name: Properties
             go_type_name: IssueContractProperties
-          '/properties/createdDate': 
+          '/properties/createdDate': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [go]
             go_field_name: CreatedDate
-          '/createdDate': 
+          '/createdDate': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [python]
             python_field_name: created_date
           '/properties/state': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
@@ -309,7 +309,7 @@ objects:
         input: true
         sample_value: myIssue
         azure_sdk_references: ['issueId']
-      - !ruby/object:Api::Azure::Type::[datetime]
+      - !ruby/object:Api::Azure::Type::DateTime
         name: 'createdDate'
         description: 'Date and time when the issue was created.'
         required: false

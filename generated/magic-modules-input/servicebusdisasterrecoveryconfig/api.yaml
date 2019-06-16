@@ -121,10 +121,10 @@ objects:
           '/provisioningState': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: provisioning_state
-          '/properties/pendingReplicationOperationsCount': 
+          '/properties/pendingReplicationOperationsCount': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: PendingReplicationOperationsCount
-          '/pendingReplicationOperationsCount': 
+          '/pendingReplicationOperationsCount': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: pending_replication_operations_count
           '/properties/role': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject

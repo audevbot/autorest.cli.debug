@@ -99,10 +99,10 @@ objects:
           '/protocol': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: protocol
-          '/properties/intervalInSeconds': 
+          '/properties/intervalInSeconds': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: IntervalInSeconds
-          '/intervalInSeconds': 
+          '/intervalInSeconds': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: interval_in_seconds
           '/properties/resourceState': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject

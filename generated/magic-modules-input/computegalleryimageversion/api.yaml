@@ -115,7 +115,7 @@ objects:
           '/properties/publishingProfile/targetRegions/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
-          '/properties/publishingProfile/targetRegions/regionalReplicaCount': 
+          '/properties/publishingProfile/targetRegions/regionalReplicaCount': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: RegionalReplicaCount
           '/properties/publishingProfile/targetRegions/storageAccountType': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
@@ -133,20 +133,20 @@ objects:
           '/properties/publishingProfile/source/managedImage/id': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: ID
-          '/properties/publishingProfile/replicaCount': 
+          '/properties/publishingProfile/replicaCount': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: ReplicaCount
           '/properties/publishingProfile/excludeFromLatest': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
             go_field_name: ExcludeFromLatest
-          '/properties/publishingProfile/endOfLifeDate': 
+          '/properties/publishingProfile/endOfLifeDate': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [go]
             go_field_name: EndOfLifeDate
           '/properties/publishingProfile/storageAccountType': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [go]
             go_field_name: StorageAccountType
             go_enum_type_name: StorageAccountType
-          '/properties/publishingProfile/publishedDate': 
+          '/properties/publishingProfile/publishedDate': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [go]
             go_field_name: PublishedDate
           '/publishingProfile': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -158,7 +158,7 @@ objects:
           '/publishingProfile/targetRegions/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: name
-          '/publishingProfile/targetRegions/regionalReplicaCount': 
+          '/publishingProfile/targetRegions/regionalReplicaCount': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: regional_replica_count
           '/publishingProfile/targetRegions/storageAccountType': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
@@ -173,19 +173,19 @@ objects:
           '/publishingProfile/source/managedImage/id': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: id
-          '/publishingProfile/replicaCount': 
+          '/publishingProfile/replicaCount': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: replica_count
           '/publishingProfile/excludeFromLatest': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [python]
             python_field_name: exclude_from_latest
-          '/publishingProfile/endOfLifeDate': 
+          '/publishingProfile/endOfLifeDate': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [python]
             python_field_name: end_of_life_date
           '/publishingProfile/storageAccountType': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: storage_account_type
-          '/publishingProfile/publishedDate': 
+          '/publishingProfile/publishedDate': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [python]
             python_field_name: published_date
           '/properties/provisioningState': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
@@ -339,7 +339,7 @@ objects:
             description: 'If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.'
             required: false
             azure_sdk_references: ['/publishingProfile/excludeFromLatest', '/properties/publishingProfile/excludeFromLatest']
-          - !ruby/object:Api::Azure::Type::[datetime]
+          - !ruby/object:Api::Azure::Type::DateTime
             name: 'endOfLifeDate'
             description: 'The end of life date of the gallery Image Version. This property can be used for decommissioning purposes. This property is updatable.'
             required: false

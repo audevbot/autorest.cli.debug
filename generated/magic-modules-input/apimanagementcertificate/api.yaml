@@ -114,10 +114,10 @@ objects:
           '/thumbprint': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: thumbprint
-          '/properties/expirationDate': 
+          '/properties/expirationDate': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [go]
             go_field_name: ExpirationDate
-          '/expirationDate': 
+          '/expirationDate': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [python]
             python_field_name: expiration_date
           '/id': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -191,7 +191,7 @@ objects:
         description: 'Thumbprint of the certificate.'
         output: true
         azure_sdk_references: ['/thumbprint', '/properties/thumbprint']
-      - !ruby/object:Api::Azure::Type::[datetime]
+      - !ruby/object:Api::Azure::Type::DateTime
         name: 'expirationDate'
         description: 'Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 '

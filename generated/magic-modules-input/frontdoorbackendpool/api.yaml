@@ -93,20 +93,20 @@ objects:
           '/properties/backends/address': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Address
-          '/properties/backends/httpPort': 
+          '/properties/backends/httpPort': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: HttpPort
-          '/properties/backends/httpsPort': 
+          '/properties/backends/httpsPort': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: HttpsPort
           '/properties/backends/enabledState': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [go]
             go_field_name: EnabledState
             go_enum_type_name: backendEnabledState
-          '/properties/backends/priority': 
+          '/properties/backends/priority': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: Priority
-          '/properties/backends/weight': 
+          '/properties/backends/weight': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: Weight
           '/properties/backends/backendHostHeader': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -118,19 +118,19 @@ objects:
           '/backends/address': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: address
-          '/backends/httpPort': 
+          '/backends/httpPort': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: http_port
-          '/backends/httpsPort': 
+          '/backends/httpsPort': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: https_port
           '/backends/enabledState': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: enabled_state
-          '/backends/priority': 
+          '/backends/priority': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: priority
-          '/backends/weight': 
+          '/backends/weight': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: weight
           '/backends/backendHostHeader': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject

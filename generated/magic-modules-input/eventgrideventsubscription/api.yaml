@@ -131,19 +131,19 @@ objects:
             applicable_to: [go]
             go_field_name: RetryPolicy
             go_type_name: RetryPolicy
-          '/properties/retryPolicy/maxDeliveryAttempts': 
+          '/properties/retryPolicy/maxDeliveryAttempts': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: MaxDeliveryAttempts
-          '/properties/retryPolicy/eventTimeToLiveInMinutes': 
+          '/properties/retryPolicy/eventTimeToLiveInMinutes': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: EventTimeToLiveInMinutes
           '/retryPolicy': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [python]
             python_field_name: retry_policy
-          '/retryPolicy/maxDeliveryAttempts': 
+          '/retryPolicy/maxDeliveryAttempts': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: max_delivery_attempts
-          '/retryPolicy/eventTimeToLiveInMinutes': 
+          '/retryPolicy/eventTimeToLiveInMinutes': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: event_time_to_live_in_minutes
           '/properties/deadLetterDestination': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject

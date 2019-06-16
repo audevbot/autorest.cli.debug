@@ -294,10 +294,10 @@ objects:
           '/lastName': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: last_name
-          '/properties/registrationDate': 
+          '/properties/registrationDate': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [go]
             go_field_name: RegistrationDate
-          '/registrationDate': 
+          '/registrationDate': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [python]
             python_field_name: registration_date
           '/properties/groups': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -421,7 +421,7 @@ objects:
         sample_value: signup
         azure_sdk_references: ['/confirmation', '/properties/confirmation']
       # read only values included only in response
-      - !ruby/object:Api::Azure::Type::[datetime]
+      - !ruby/object:Api::Azure::Type::DateTime
         name: 'registrationDate'
         description: 'Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 '

@@ -277,7 +277,7 @@ objects:
           '/responses': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
             python_field_name: responses
-          '/responses/statusCode': 
+          '/responses/statusCode': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: status_code
           '/responses/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -344,7 +344,7 @@ objects:
             applicable_to: [go]
             go_field_name: Responses
             go_type_name: ResponseContract
-          '/properties/responses/statusCode': 
+          '/properties/responses/statusCode': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: StatusCode
           '/properties/responses/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -692,7 +692,7 @@ objects:
           '/responses': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
             python_field_name: responses
-          '/responses/statusCode': 
+          '/responses/statusCode': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: status_code
           '/responses/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -759,7 +759,7 @@ objects:
             applicable_to: [go]
             go_field_name: Responses
             go_type_name: ResponseContract
-          '/properties/responses/statusCode': 
+          '/properties/responses/statusCode': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: StatusCode
           '/properties/responses/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -1128,7 +1128,7 @@ objects:
             applicable_to: [go]
             go_field_name: Responses
             go_type_name: ResponseContract
-          '/properties/responses/statusCode': 
+          '/properties/responses/statusCode': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [go]
             go_field_name: StatusCode
           '/properties/responses/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -1197,7 +1197,7 @@ objects:
           '/responses': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
             python_field_name: responses
-          '/responses/statusCode': 
+          '/responses/statusCode': !ruby/object:Api::Azure::SDKTypeDefinition::[number]
             applicable_to: [python]
             python_field_name: status_code
           '/responses/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject

@@ -200,10 +200,10 @@ objects:
           '/autoStorage/storageAccountId': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: storage_account_id
-          '/properties/autoStorage/lastKeySync': 
+          '/properties/autoStorage/lastKeySync': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [go]
             go_field_name: autoStorageAccountId
-          '/autoStorage/lastKeySync': 
+          '/autoStorage/lastKeySync': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
             applicable_to: [python]
             python_field_name: last_key_sync
           '/properties/poolAllocationMode': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
@@ -320,7 +320,7 @@ objects:
             sample_value: http://sample.vault.azure.net/
             azure_sdk_references: ['/keyVaultReference/url', '/properties/keyVaultReference/url']
       # read only values included only in response
-      - !ruby/object:Api::Azure::Type::[datetime]
+      - !ruby/object:Api::Azure::Type::DateTime
         name: 'autoStorageAccountId'
         description: 'The UTC time at which storage keys were last synchronized with the Batch account.'
         output: true
