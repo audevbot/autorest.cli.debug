@@ -79,7 +79,7 @@ objects:
           '/hostnameConfigurations/certificate': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [python]
             python_field_name: certificate
-          '/hostnameConfigurations/certificate/expiry': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/hostnameConfigurations/certificate/expiry': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [python]
             python_field_name: expiry
           '/hostnameConfigurations/certificate/thumbprint': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -118,7 +118,7 @@ objects:
             applicable_to: [go]
             go_field_name: Certificate
             go_type_name: CertificateInformation
-          '/properties/hostnameConfigurations/certificate/expiry': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/properties/hostnameConfigurations/certificate/expiry': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [go]
             go_field_name: Expiry
           '/properties/hostnameConfigurations/certificate/thumbprint': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -207,7 +207,7 @@ objects:
           '/certificates/certificate': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [python]
             python_field_name: certificate
-          '/certificates/certificate/expiry': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/certificates/certificate/expiry': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [python]
             python_field_name: expiry
           '/certificates/certificate/thumbprint': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -234,7 +234,7 @@ objects:
             applicable_to: [go]
             go_field_name: Certificate
             go_type_name: CertificateInformation
-          '/properties/certificates/certificate/expiry': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/properties/certificates/certificate/expiry': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [go]
             go_field_name: Expiry
           '/properties/certificates/certificate/thumbprint': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -349,7 +349,7 @@ objects:
           '/hostnameConfigurations/certificate': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [python]
             python_field_name: certificate
-          '/hostnameConfigurations/certificate/expiry': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/hostnameConfigurations/certificate/expiry': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [python]
             python_field_name: expiry
           '/hostnameConfigurations/certificate/thumbprint': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -388,7 +388,7 @@ objects:
             applicable_to: [go]
             go_field_name: Certificate
             go_type_name: CertificateInformation
-          '/properties/hostnameConfigurations/certificate/expiry': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/properties/hostnameConfigurations/certificate/expiry': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [go]
             go_field_name: Expiry
           '/properties/hostnameConfigurations/certificate/thumbprint': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -477,7 +477,7 @@ objects:
           '/certificates/certificate': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [python]
             python_field_name: certificate
-          '/certificates/certificate/expiry': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/certificates/certificate/expiry': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [python]
             python_field_name: expiry
           '/certificates/certificate/thumbprint': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -504,7 +504,7 @@ objects:
             applicable_to: [go]
             go_field_name: Certificate
             go_type_name: CertificateInformation
-          '/properties/certificates/certificate/expiry': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/properties/certificates/certificate/expiry': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [go]
             go_field_name: Expiry
           '/properties/certificates/certificate/thumbprint': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -632,7 +632,7 @@ objects:
             applicable_to: [go]
             go_field_name: Certificate
             go_type_name: CertificateInformation
-          '/properties/hostnameConfigurations/certificate/expiry': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/properties/hostnameConfigurations/certificate/expiry': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [go]
             go_field_name: Expiry
           '/properties/hostnameConfigurations/certificate/thumbprint': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -668,7 +668,7 @@ objects:
           '/hostnameConfigurations/certificate': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [python]
             python_field_name: certificate
-          '/hostnameConfigurations/certificate/expiry': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/hostnameConfigurations/certificate/expiry': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [python]
             python_field_name: expiry
           '/hostnameConfigurations/certificate/thumbprint': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -802,7 +802,7 @@ objects:
             applicable_to: [go]
             go_field_name: Certificate
             go_type_name: CertificateInformation
-          '/properties/certificates/certificate/expiry': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/properties/certificates/certificate/expiry': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [go]
             go_field_name: Expiry
           '/properties/certificates/certificate/thumbprint': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -826,7 +826,7 @@ objects:
           '/certificates/certificate': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [python]
             python_field_name: certificate
-          '/certificates/certificate/expiry': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/certificates/certificate/expiry': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [python]
             python_field_name: expiry
           '/certificates/certificate/thumbprint': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -872,10 +872,10 @@ objects:
           '/targetProvisioningState': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: target_provisioning_state
-          '/properties/createdAtUtc': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/properties/createdAtUtc': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [go]
             go_field_name: CreatedAtUtc
-          '/createdAtUtc': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/createdAtUtc': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [python]
             python_field_name: created_at_utc
           '/properties/gatewayUrl': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -1061,7 +1061,7 @@ objects:
             required: false
             azure_sdk_references: ['/hostnameConfigurations/certificate', '/properties/hostnameConfigurations/certificate']
             properties:
-              - !ruby/object:Api::Azure::Type::DateTime
+              - !ruby/object:Api::Azure::Type::ISO8601DateTime
                 name: 'expiry'
                 description: 'Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.'
                 required: true
@@ -1178,7 +1178,7 @@ objects:
             required: false
             azure_sdk_references: ['/certificates/certificate', '/properties/certificates/certificate']
             properties:
-              - !ruby/object:Api::Azure::Type::DateTime
+              - !ruby/object:Api::Azure::Type::ISO8601DateTime
                 name: 'expiry'
                 description: 'Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.'
                 required: true
@@ -1276,7 +1276,7 @@ objects:
         description: 'The provisioning state of the API Management service, which is targeted by the long running operation started on the service.'
         output: true
         azure_sdk_references: ['/targetProvisioningState', '/properties/targetProvisioningState']
-      - !ruby/object:Api::Azure::Type::DateTime
+      - !ruby/object:Api::Azure::Type::ISO8601DateTime
         name: 'createdAtUtc'
         description: 'Creation UTC date of the API Management service.The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.'
         output: true
