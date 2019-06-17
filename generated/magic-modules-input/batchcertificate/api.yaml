@@ -201,10 +201,10 @@ objects:
           '/format': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: format
-          '/properties/provisioningStateTransitionTime': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/properties/provisioningStateTransitionTime': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [go]
             go_field_name: ProvisioningStateTransitionTime
-          '/provisioningStateTransitionTime': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/provisioningStateTransitionTime': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [python]
             python_field_name: provisioning_state_transition_time
           '/properties/previousProvisioningState': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
@@ -214,10 +214,10 @@ objects:
           '/previousProvisioningState': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: previous_provisioning_state
-          '/properties/previousProvisioningStateTransitionTime': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/properties/previousProvisioningStateTransitionTime': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [go]
             go_field_name: PreviousProvisioningStateTransitionTime
-          '/previousProvisioningStateTransitionTime': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/previousProvisioningStateTransitionTime': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [python]
             python_field_name: previous_provisioning_state_transition_time
           '/properties/publicData': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -313,7 +313,7 @@ objects:
         sample_value: KG0UY40e...
         azure_sdk_references: ['/password', '/properties/password']
       # read only values included only in response
-      - !ruby/object:Api::Azure::Type::DateTime
+      - !ruby/object:Api::Azure::Type::ISO8601DateTime
         name: 'provisioningStateTransitionTime'
         description: 'undefined'
         output: true
@@ -328,7 +328,7 @@ objects:
           - :Failed
         default_value: :Succeeded
         azure_sdk_references: ['/previousProvisioningState', '/properties/previousProvisioningState']
-      - !ruby/object:Api::Azure::Type::DateTime
+      - !ruby/object:Api::Azure::Type::ISO8601DateTime
         name: 'previousProvisioningStateTransitionTime'
         description: 'undefined'
         output: true

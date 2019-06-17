@@ -47,10 +47,10 @@ objects:
             applicable_to: [go]
             go_field_name: Properties
             go_type_name: SBTopicProperties
-          '/defaultMessageTimeToLive': !ruby/object:Api::Azure::SDKTypeDefinition::Timespan
+          '/defaultMessageTimeToLive': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DurationObject
             applicable_to: [python]
             python_field_name: default_message_time_to_live
-          '/properties/defaultMessageTimeToLive': !ruby/object:Api::Azure::SDKTypeDefinition::Timespan
+          '/properties/defaultMessageTimeToLive': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DurationObject
             applicable_to: [go]
             go_field_name: DefaultMessageTimeToLive
           '/maxSizeInMegabytes': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
@@ -65,10 +65,10 @@ objects:
           '/properties/requiresDuplicateDetection': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
             go_field_name: RequiresDuplicateDetection
-          '/duplicateDetectionHistoryTimeWindow': !ruby/object:Api::Azure::SDKTypeDefinition::Timespan
+          '/duplicateDetectionHistoryTimeWindow': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DurationObject
             applicable_to: [python]
             python_field_name: duplicate_detection_history_time_window
-          '/properties/duplicateDetectionHistoryTimeWindow': !ruby/object:Api::Azure::SDKTypeDefinition::Timespan
+          '/properties/duplicateDetectionHistoryTimeWindow': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DurationObject
             applicable_to: [go]
             go_field_name: DuplicateDetectionHistoryTimeWindow
           '/enableBatchedOperations': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
@@ -90,10 +90,10 @@ objects:
           '/properties/supportOrdering': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
             go_field_name: SupportOrdering
-          '/autoDeleteOnIdle': !ruby/object:Api::Azure::SDKTypeDefinition::Timespan
+          '/autoDeleteOnIdle': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DurationObject
             applicable_to: [python]
             python_field_name: auto_delete_on_idle
-          '/properties/autoDeleteOnIdle': !ruby/object:Api::Azure::SDKTypeDefinition::Timespan
+          '/properties/autoDeleteOnIdle': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DurationObject
             applicable_to: [go]
             go_field_name: AutoDeleteOnIdle
           '/enablePartitioning': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
@@ -151,10 +151,10 @@ objects:
             applicable_to: [go]
             go_field_name: Properties
             go_type_name: SBTopicProperties
-          '/properties/defaultMessageTimeToLive': !ruby/object:Api::Azure::SDKTypeDefinition::Timespan
+          '/properties/defaultMessageTimeToLive': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DurationObject
             applicable_to: [go]
             go_field_name: DefaultMessageTimeToLive
-          '/defaultMessageTimeToLive': !ruby/object:Api::Azure::SDKTypeDefinition::Timespan
+          '/defaultMessageTimeToLive': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DurationObject
             applicable_to: [python]
             python_field_name: default_message_time_to_live
           '/properties/maxSizeInMegabytes': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
@@ -169,10 +169,10 @@ objects:
           '/requiresDuplicateDetection': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [python]
             python_field_name: requires_duplicate_detection
-          '/properties/duplicateDetectionHistoryTimeWindow': !ruby/object:Api::Azure::SDKTypeDefinition::Timespan
+          '/properties/duplicateDetectionHistoryTimeWindow': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DurationObject
             applicable_to: [go]
             go_field_name: DuplicateDetectionHistoryTimeWindow
-          '/duplicateDetectionHistoryTimeWindow': !ruby/object:Api::Azure::SDKTypeDefinition::Timespan
+          '/duplicateDetectionHistoryTimeWindow': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DurationObject
             applicable_to: [python]
             python_field_name: duplicate_detection_history_time_window
           '/properties/enableBatchedOperations': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
@@ -194,10 +194,10 @@ objects:
           '/supportOrdering': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [python]
             python_field_name: support_ordering
-          '/properties/autoDeleteOnIdle': !ruby/object:Api::Azure::SDKTypeDefinition::Timespan
+          '/properties/autoDeleteOnIdle': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DurationObject
             applicable_to: [go]
             go_field_name: AutoDeleteOnIdle
-          '/autoDeleteOnIdle': !ruby/object:Api::Azure::SDKTypeDefinition::Timespan
+          '/autoDeleteOnIdle': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DurationObject
             applicable_to: [python]
             python_field_name: auto_delete_on_idle
           '/properties/enablePartitioning': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
@@ -218,22 +218,22 @@ objects:
           '/sizeInBytes': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: size_in_bytes
-          '/properties/createdAt': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/properties/createdAt': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [go]
             go_field_name: CreatedAt
-          '/createdAt': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/createdAt': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [python]
             python_field_name: created_at
-          '/properties/updatedAt': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/properties/updatedAt': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [go]
             go_field_name: UpdatedAt
-          '/updatedAt': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/updatedAt': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [python]
             python_field_name: updated_at
-          '/properties/accessedAt': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/properties/accessedAt': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [go]
             go_field_name: AccessedAt
-          '/accessedAt': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/accessedAt': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [python]
             python_field_name: accessed_at
           '/properties/subscriptionCount': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
@@ -316,7 +316,7 @@ objects:
         input: true
         sample_value: myTopic
         azure_sdk_references: ['topicName', '/name']
-      - !ruby/object:Api::Azure::Type::Timespan
+      - !ruby/object:Api::Azure::Type::ISO8601Duration
         name: 'defaultMessageTimeToLive'
         description: 'ISO 8601 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.'
         required: false
@@ -331,7 +331,7 @@ objects:
         description: 'Value indicating if this topic requires duplicate detection.'
         required: false
         azure_sdk_references: ['/requiresDuplicateDetection', '/properties/requiresDuplicateDetection']
-      - !ruby/object:Api::Azure::Type::Timespan
+      - !ruby/object:Api::Azure::Type::ISO8601Duration
         name: 'duplicateDetectionHistoryTimeWindow'
         description: 'ISO8601 timespan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.'
         required: false
@@ -362,7 +362,7 @@ objects:
         description: 'Value that indicates whether the topic supports ordering.'
         required: false
         azure_sdk_references: ['/supportOrdering', '/properties/supportOrdering']
-      - !ruby/object:Api::Azure::Type::Timespan
+      - !ruby/object:Api::Azure::Type::ISO8601Duration
         name: 'autoDeleteOnIdle'
         description: 'ISO 8601 timespan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.'
         required: false
@@ -384,17 +384,17 @@ objects:
         description: 'Size of the topic, in bytes.'
         output: true
         azure_sdk_references: ['/sizeInBytes', '/properties/sizeInBytes']
-      - !ruby/object:Api::Azure::Type::DateTime
+      - !ruby/object:Api::Azure::Type::ISO8601DateTime
         name: 'createdAt'
         description: 'Exact time the message was created.'
         output: true
         azure_sdk_references: ['/createdAt', '/properties/createdAt']
-      - !ruby/object:Api::Azure::Type::DateTime
+      - !ruby/object:Api::Azure::Type::ISO8601DateTime
         name: 'updatedAt'
         description: 'The exact time the message was updated.'
         output: true
         azure_sdk_references: ['/updatedAt', '/properties/updatedAt']
-      - !ruby/object:Api::Azure::Type::DateTime
+      - !ruby/object:Api::Azure::Type::ISO8601DateTime
         name: 'accessedAt'
         description: 'Last time the message was sent, or a request was received, for this topic.'
         output: true

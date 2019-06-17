@@ -169,16 +169,16 @@ objects:
           '/provisioningState': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: provisioning_state
-          '/properties/createdAt': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/properties/createdAt': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [go]
             go_field_name: CreatedAt
-          '/createdAt': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/createdAt': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [python]
             python_field_name: created_at
-          '/properties/updatedAt': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/properties/updatedAt': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [go]
             go_field_name: UpdatedAt
-          '/updatedAt': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/updatedAt': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [python]
             python_field_name: updated_at
           '/properties/serviceBusEndpoint': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -300,12 +300,12 @@ objects:
         description: 'Provisioning state of the namespace.'
         output: true
         azure_sdk_references: ['/provisioningState', '/properties/provisioningState']
-      - !ruby/object:Api::Azure::Type::DateTime
+      - !ruby/object:Api::Azure::Type::ISO8601DateTime
         name: 'createdAt'
         description: 'The time the namespace was created.'
         output: true
         azure_sdk_references: ['/createdAt', '/properties/createdAt']
-      - !ruby/object:Api::Azure::Type::DateTime
+      - !ruby/object:Api::Azure::Type::ISO8601DateTime
         name: 'updatedAt'
         description: 'The time the namespace was updated.'
         output: true

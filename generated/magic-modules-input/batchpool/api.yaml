@@ -220,7 +220,7 @@ objects:
           '/scaleSettings/fixedScale': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [python]
             python_field_name: fixed_scale
-          '/scaleSettings/fixedScale/resizeTimeout': !ruby/object:Api::Azure::SDKTypeDefinition::Timespan
+          '/scaleSettings/fixedScale/resizeTimeout': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DurationObject
             applicable_to: [python]
             python_field_name: resize_timeout
           '/scaleSettings/fixedScale/targetDedicatedNodes': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
@@ -238,7 +238,7 @@ objects:
           '/scaleSettings/autoScale/formula': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: formula
-          '/scaleSettings/autoScale/evaluationInterval': !ruby/object:Api::Azure::SDKTypeDefinition::Timespan
+          '/scaleSettings/autoScale/evaluationInterval': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DurationObject
             applicable_to: [python]
             python_field_name: evaluation_interval
           '/properties/scaleSettings': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -249,7 +249,7 @@ objects:
             applicable_to: [go]
             go_field_name: FixedScale
             go_type_name: FixedScaleSettings
-          '/properties/scaleSettings/fixedScale/resizeTimeout': !ruby/object:Api::Azure::SDKTypeDefinition::Timespan
+          '/properties/scaleSettings/fixedScale/resizeTimeout': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DurationObject
             applicable_to: [go]
             go_field_name: ResizeTimeout
           '/properties/scaleSettings/fixedScale/targetDedicatedNodes': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
@@ -269,7 +269,7 @@ objects:
           '/properties/scaleSettings/autoScale/formula': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Formula
-          '/properties/scaleSettings/autoScale/evaluationInterval': !ruby/object:Api::Azure::SDKTypeDefinition::Timespan
+          '/properties/scaleSettings/autoScale/evaluationInterval': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DurationObject
             applicable_to: [go]
             go_field_name: EvaluationInterval
           '/interNodeCommunication': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
@@ -871,7 +871,7 @@ objects:
           '/scaleSettings/fixedScale': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [python]
             python_field_name: fixed_scale
-          '/scaleSettings/fixedScale/resizeTimeout': !ruby/object:Api::Azure::SDKTypeDefinition::Timespan
+          '/scaleSettings/fixedScale/resizeTimeout': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DurationObject
             applicable_to: [python]
             python_field_name: resize_timeout
           '/scaleSettings/fixedScale/targetDedicatedNodes': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
@@ -889,7 +889,7 @@ objects:
           '/scaleSettings/autoScale/formula': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: formula
-          '/scaleSettings/autoScale/evaluationInterval': !ruby/object:Api::Azure::SDKTypeDefinition::Timespan
+          '/scaleSettings/autoScale/evaluationInterval': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DurationObject
             applicable_to: [python]
             python_field_name: evaluation_interval
           '/properties/scaleSettings': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -900,7 +900,7 @@ objects:
             applicable_to: [go]
             go_field_name: FixedScale
             go_type_name: FixedScaleSettings
-          '/properties/scaleSettings/fixedScale/resizeTimeout': !ruby/object:Api::Azure::SDKTypeDefinition::Timespan
+          '/properties/scaleSettings/fixedScale/resizeTimeout': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DurationObject
             applicable_to: [go]
             go_field_name: ResizeTimeout
           '/properties/scaleSettings/fixedScale/targetDedicatedNodes': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
@@ -920,7 +920,7 @@ objects:
           '/properties/scaleSettings/autoScale/formula': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Formula
-          '/properties/scaleSettings/autoScale/evaluationInterval': !ruby/object:Api::Azure::SDKTypeDefinition::Timespan
+          '/properties/scaleSettings/autoScale/evaluationInterval': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DurationObject
             applicable_to: [go]
             go_field_name: EvaluationInterval
           '/interNodeCommunication': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
@@ -1540,7 +1540,7 @@ objects:
             applicable_to: [go]
             go_field_name: FixedScale
             go_type_name: FixedScaleSettings
-          '/properties/scaleSettings/fixedScale/resizeTimeout': !ruby/object:Api::Azure::SDKTypeDefinition::Timespan
+          '/properties/scaleSettings/fixedScale/resizeTimeout': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DurationObject
             applicable_to: [go]
             go_field_name: ResizeTimeout
           '/properties/scaleSettings/fixedScale/targetDedicatedNodes': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
@@ -1560,7 +1560,7 @@ objects:
           '/properties/scaleSettings/autoScale/formula': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Formula
-          '/properties/scaleSettings/autoScale/evaluationInterval': !ruby/object:Api::Azure::SDKTypeDefinition::Timespan
+          '/properties/scaleSettings/autoScale/evaluationInterval': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DurationObject
             applicable_to: [go]
             go_field_name: EvaluationInterval
           '/scaleSettings': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -1569,7 +1569,7 @@ objects:
           '/scaleSettings/fixedScale': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [python]
             python_field_name: fixed_scale
-          '/scaleSettings/fixedScale/resizeTimeout': !ruby/object:Api::Azure::SDKTypeDefinition::Timespan
+          '/scaleSettings/fixedScale/resizeTimeout': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DurationObject
             applicable_to: [python]
             python_field_name: resize_timeout
           '/scaleSettings/fixedScale/targetDedicatedNodes': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
@@ -1587,7 +1587,7 @@ objects:
           '/scaleSettings/autoScale/formula': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: formula
-          '/scaleSettings/autoScale/evaluationInterval': !ruby/object:Api::Azure::SDKTypeDefinition::Timespan
+          '/scaleSettings/autoScale/evaluationInterval': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DurationObject
             applicable_to: [python]
             python_field_name: evaluation_interval
           '/properties/interNodeCommunication': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
@@ -1989,22 +1989,22 @@ objects:
           '/applicationLicenses': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: application_licenses
-          '/properties/lastModified': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/properties/lastModified': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [go]
             go_field_name: LastModified
-          '/lastModified': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/lastModified': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [python]
             python_field_name: last_modified
-          '/properties/creationTime': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/properties/creationTime': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [go]
             go_field_name: CreationTime
-          '/creationTime': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/creationTime': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [python]
             python_field_name: creation_time
-          '/properties/provisioningStateTransitionTime': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/properties/provisioningStateTransitionTime': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [go]
             go_field_name: ProvisioningStateTransitionTime
-          '/provisioningStateTransitionTime': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/provisioningStateTransitionTime': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [python]
             python_field_name: provisioning_state_transition_time
           '/properties/allocationState': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
@@ -2014,10 +2014,10 @@ objects:
           '/allocationState': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: allocation_state
-          '/properties/allocationStateTransitionTime': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/properties/allocationStateTransitionTime': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [go]
             go_field_name: AllocationStateTransitionTime
-          '/allocationStateTransitionTime': !ruby/object:Api::Azure::SDKTypeDefinition::DateTimeObject
+          '/allocationStateTransitionTime': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [python]
             python_field_name: allocation_state_transition_time
           '/properties/currentDedicatedNodes': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
@@ -2277,7 +2277,7 @@ objects:
             required: false
             azure_sdk_references: ['/scaleSettings/fixedScale', '/properties/scaleSettings/fixedScale']
             properties:
-              - !ruby/object:Api::Azure::Type::Timespan
+              - !ruby/object:Api::Azure::Type::ISO8601Duration
                 name: 'resizeTimeout'
                 description: 'The default value is 15 minutes. Timeout values use ISO 8601 format. For example, use PT10M for 10 minutes. The minimum value is 5 minutes. If you specify a value less than 5 minutes, the Batch service rejects the request with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).'
                 required: false
@@ -2319,7 +2319,7 @@ objects:
                 required: true
                 sample_value: $TargetDedicatedNodes=34
                 azure_sdk_references: ['/scaleSettings/autoScale/formula', '/properties/scaleSettings/autoScale/formula']
-              - !ruby/object:Api::Azure::Type::Timespan
+              - !ruby/object:Api::Azure::Type::ISO8601Duration
                 name: 'evaluationInterval'
                 description: 'If omitted, the default value is 15 minutes (PT15M).'
                 required: false
@@ -2725,17 +2725,17 @@ objects:
         sample_value: app-license1
         azure_sdk_references: ['/applicationLicenses', '/properties/applicationLicenses']
       # read only values included only in response
-      - !ruby/object:Api::Azure::Type::DateTime
+      - !ruby/object:Api::Azure::Type::ISO8601DateTime
         name: 'lastModified'
         description: 'This is the last time at which the pool level data, such as the targetDedicatedNodes or autoScaleSettings, changed. It does not factor in node-level changes such as a compute node changing state.'
         output: true
         azure_sdk_references: ['/lastModified', '/properties/lastModified']
-      - !ruby/object:Api::Azure::Type::DateTime
+      - !ruby/object:Api::Azure::Type::ISO8601DateTime
         name: 'creationTime'
         description: 'undefined'
         output: true
         azure_sdk_references: ['/creationTime', '/properties/creationTime']
-      - !ruby/object:Api::Azure::Type::DateTime
+      - !ruby/object:Api::Azure::Type::ISO8601DateTime
         name: 'provisioningStateTransitionTime'
         description: 'undefined'
         output: true
@@ -2750,7 +2750,7 @@ objects:
           - :Stopping
         default_value: :Steady
         azure_sdk_references: ['/allocationState', '/properties/allocationState']
-      - !ruby/object:Api::Azure::Type::DateTime
+      - !ruby/object:Api::Azure::Type::ISO8601DateTime
         name: 'allocationStateTransitionTime'
         description: 'undefined'
         output: true
@@ -2771,7 +2771,7 @@ objects:
         output: true
         azure_sdk_references: ['/autoScaleRun', '/properties/autoScaleRun']
         properties:
-          - !ruby/object:Api::Azure::Type::DateTime
+          - !ruby/object:Api::Azure::Type::ISO8601DateTime
             name: 'evaluationTime'
             description: 'undefined'
             required: true
@@ -2834,7 +2834,7 @@ objects:
             description: 'undefined'
             required: false
             azure_sdk_references: ['/resizeOperationStatus/targetLowPriorityNodes', '/properties/resizeOperationStatus/targetLowPriorityNodes']
-          - !ruby/object:Api::Azure::Type::Timespan
+          - !ruby/object:Api::Azure::Type::ISO8601Duration
             name: 'resizeTimeout'
             description: 'The default value is 15 minutes. The minimum value is 5 minutes. If you specify a value less than 5 minutes, the Batch service returns an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).'
             required: false
@@ -2850,7 +2850,7 @@ objects:
               - :RetainedData
             default_value: :Requeue
             azure_sdk_references: ['/resizeOperationStatus/nodeDeallocationOption', '/properties/resizeOperationStatus/nodeDeallocationOption']
-          - !ruby/object:Api::Azure::Type::DateTime
+          - !ruby/object:Api::Azure::Type::ISO8601DateTime
             name: 'startTime'
             description: 'undefined'
             required: false

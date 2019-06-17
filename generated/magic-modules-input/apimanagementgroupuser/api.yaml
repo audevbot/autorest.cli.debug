@@ -165,7 +165,7 @@ objects:
         description: 'Email address.'
         required: false
         azure_sdk_references: ['/email', '/properties/email']
-      - !ruby/object:Api::Azure::Type::DateTime
+      - !ruby/object:Api::Azure::Type::ISO8601DateTime
         name: 'registrationDate'
         description: 'Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 '
