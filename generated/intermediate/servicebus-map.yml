@@ -18844,6 +18844,7 @@ Modules:
         MethodId: '3753'
 ServiceName: ServiceBusManagementClient
 MgmtClientName: ServiceBusManagementClient
+CliName: servicebus
 Namespace: azure.mgmt.servicebus
 Info:
   - '  ** FOUND OPTION resourceGroupName'

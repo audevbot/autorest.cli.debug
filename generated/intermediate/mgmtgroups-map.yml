@@ -3262,6 +3262,7 @@ Modules:
     Examples: []
 ServiceName: ManagementGroupsClient
 MgmtClientName: ManagementGroupsClient
+CliName: mgmtgroups
 Namespace: azure.mgmt.managementgroups
 Info:
   - '  ** FOUND OPTION groupId'

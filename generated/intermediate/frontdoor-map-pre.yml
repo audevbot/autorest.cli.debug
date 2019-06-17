@@ -17951,6 +17951,7 @@ Modules:
         MethodId: '1715'
 ServiceName: FrontdoorClient
 MgmtClientName: FrontdoorClient
+CliName: frontdoor
 Namespace: azure.mgmt.frontdoor
 Info:
   - '  ** FOUND OPTION resourceGroupName'
