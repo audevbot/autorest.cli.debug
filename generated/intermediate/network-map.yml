@@ -6992,6 +6992,7 @@ Modules:
         MethodId: '505'
 ServiceName: NetworkManagementClient
 MgmtClientName: NetworkManagementClient
+CliName: network
 Namespace: azure.mgmt.network
 Info:
   - '  ** FOUND OPTION resourceGroupName'

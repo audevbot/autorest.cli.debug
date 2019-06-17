@@ -6188,6 +6188,7 @@ Modules:
         MethodId: '1222'
 ServiceName: EventGridManagementClient
 MgmtClientName: EventGridManagementClient
+CliName: eventgrid
 Namespace: azure.mgmt.eventgrid
 Info:
   - '  ** FOUND OPTION scope'

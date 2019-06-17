@@ -14268,6 +14268,7 @@ Modules:
         MethodId: '4331'
 ServiceName: CosmosDB
 MgmtClientName: CosmosDB
+CliName: cosmos-db
 Namespace: azure.mgmt.cosmosdb
 Info:
   - '  ** FOUND OPTION resourceGroupName'

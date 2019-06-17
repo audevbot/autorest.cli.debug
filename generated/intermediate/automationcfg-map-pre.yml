@@ -5195,6 +5195,7 @@ Modules:
         MethodId: '607'
 ServiceName: UpdateManagementAPI
 MgmtClientName: UpdateManagementAPI
+CliName: automationcfg
 Namespace: azure.mgmt.automation
 Info:
   - '  ** FOUND OPTION resourceGroupName'

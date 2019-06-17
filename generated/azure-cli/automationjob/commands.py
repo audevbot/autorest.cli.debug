@@ -1,0 +1,25 @@
+# --------------------------------------------------------------------------------------------
+# Copyright (c) Microsoft Corporation. All rights reserved.
+# Licensed under the MIT License. See License.txt in the project root for license information.
+# --------------------------------------------------------------------------------------------
+
+# pylint: disable=line-too-long
+from azure.cli.core.commands import CliCommandType
+from azure.cli.command_modules.automationjob._client_factory import cf_automationjob
+def load_command_table(self, _):
+
+    automationjob_sdk = CliCommandType(
+        operations_tmpl='azure.mgmt.automationjob.operations#ApiManagementOperations.{}',
+        client_factory=cf_automationjob)
+
+
+    with self.command_group('automationaccounts jobs', automationjob_sdk, client_factory=cf_automationjob) as g:
+        g.custom_command('create', 'create_automationaccounts_jobs')
+        g.custom_command('list', 'list_automationaccounts_jobs')
+        g.custom_command('show', 'show_automationaccounts_jobs')
+    with self.command_group('automationaccounts jobs', automationjob_sdk, client_factory=cf_automationjob) as g:
+        g.custom_command('show', 'show_automationaccounts_jobs')
+        g.custom_command('list', 'list_automationaccounts_jobs')
+    with self.command_group('automationaccounts jobs streams', automationjob_sdk, client_factory=cf_automationjob) as g:
+        g.custom_command('show', 'show_automationaccounts_jobs_streams')
+        g.custom_command('list', 'list_automationaccounts_jobs_streams')

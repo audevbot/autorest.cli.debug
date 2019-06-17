@@ -22096,6 +22096,7 @@ Modules:
         MethodId: '2866'
 ServiceName: BatchManagement
 MgmtClientName: BatchManagement
+CliName: batch
 Namespace: azure.mgmt.batch
 Info:
   - '  ** FOUND OPTION resourceGroupName'

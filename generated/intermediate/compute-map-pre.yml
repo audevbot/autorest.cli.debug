@@ -8218,6 +8218,7 @@ Modules:
         MethodId: '921'
 ServiceName: SharedImageGalleryServiceClient
 MgmtClientName: SharedImageGalleryServiceClient
+CliName: compute
 Namespace: azure.mgmt.compute
 Info:
   - '  ** FOUND OPTION resourceGroupName'
