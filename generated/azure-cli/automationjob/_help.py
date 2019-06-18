@@ -8,52 +8,52 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 
 
-helps['automationaccounts jobs'] = """
+helps['automationjob jobs'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['automationaccounts jobs create'] = """
+helps['automationjob jobs create'] = """
     type: command
-    short-summary: create a automationaccounts jobs.
+    short-summary: create a automationjob jobs.
 """
 
-helps['automationaccounts jobs list'] = """
+helps['automationjob jobs list'] = """
     type: command
-    short-summary: list a automationaccounts jobs.
+    short-summary: list a automationjob jobs.
 """
 
-helps['automationaccounts jobs show'] = """
+helps['automationjob jobs show'] = """
     type: command
-    short-summary: show a automationaccounts jobs.
+    short-summary: show a automationjob jobs.
 """
 
-helps['automationaccounts jobs'] = """
+helps['automationjob jobs'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['automationaccounts jobs show'] = """
+helps['automationjob jobs show'] = """
     type: command
-    short-summary: show a automationaccounts jobs.
+    short-summary: show a automationjob jobs.
 """
 
-helps['automationaccounts jobs list'] = """
+helps['automationjob jobs list'] = """
     type: command
-    short-summary: list a automationaccounts jobs.
+    short-summary: list a automationjob jobs.
 """
 
-helps['automationaccounts jobs streams'] = """
+helps['automationjob jobs streams'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['automationaccounts jobs streams show'] = """
+helps['automationjob jobs streams show'] = """
     type: command
-    short-summary: show a automationaccounts jobs streams.
+    short-summary: show a automationjob jobs streams.
 """
 
-helps['automationaccounts jobs streams list'] = """
+helps['automationjob jobs streams list'] = """
     type: command
-    short-summary: list a automationaccounts jobs streams.
+    short-summary: list a automationjob jobs streams.
 """

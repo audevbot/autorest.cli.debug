@@ -8,64 +8,64 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 
 
-helps['managementgroups'] = """
+helps['mgmtgroups'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['managementgroups create'] = """
+helps['mgmtgroups create'] = """
     type: command
-    short-summary: create a managementgroups.
+    short-summary: create a mgmtgroups.
 """
 
-helps['managementgroups update'] = """
+helps['mgmtgroups update'] = """
     type: command
-    short-summary: update a managementgroups.
+    short-summary: update a mgmtgroups.
 """
 
-helps['managementgroups delete'] = """
+helps['mgmtgroups delete'] = """
     type: command
-    short-summary: delete a managementgroups.
+    short-summary: delete a mgmtgroups.
 """
 
-helps['managementgroups list'] = """
+helps['mgmtgroups list'] = """
     type: command
-    short-summary: list a managementgroups.
+    short-summary: list a mgmtgroups.
 """
 
-helps['managementgroups show'] = """
+helps['mgmtgroups show'] = """
     type: command
-    short-summary: show a managementgroups.
+    short-summary: show a mgmtgroups.
 """
 
-helps['managementgroups'] = """
+helps['mgmtgroups'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['managementgroups show'] = """
+helps['mgmtgroups show'] = """
     type: command
-    short-summary: show a managementgroups.
+    short-summary: show a mgmtgroups.
 """
 
-helps['managementgroups list'] = """
+helps['mgmtgroups list'] = """
     type: command
-    short-summary: list a managementgroups.
+    short-summary: list a mgmtgroups.
 """
 
-helps['managementgroups'] = """
+helps['mgmtgroups'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['managementgroups create'] = """
+helps['mgmtgroups create'] = """
     type: command
-    short-summary: create a managementgroups.
+    short-summary: create a mgmtgroups.
 """
 
-helps['managementgroups delete'] = """
+helps['mgmtgroups delete'] = """
     type: command
-    short-summary: delete a managementgroups.
+    short-summary: delete a mgmtgroups.
 """
 
 helps[''] = """

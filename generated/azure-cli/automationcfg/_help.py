@@ -8,32 +8,32 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 
 
-helps['automationaccounts softwareupdateconfigurations'] = """
+helps['automationcfg softwareupdateconfigurations'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['automationaccounts softwareupdateconfigurations create'] = """
+helps['automationcfg softwareupdateconfigurations create'] = """
     type: command
-    short-summary: create a automationaccounts softwareupdateconfigurations.
+    short-summary: create a automationcfg softwareupdateconfigurations.
 """
 
-helps['automationaccounts softwareupdateconfigurations delete'] = """
+helps['automationcfg softwareupdateconfigurations delete'] = """
     type: command
-    short-summary: delete a automationaccounts softwareupdateconfigurations.
+    short-summary: delete a automationcfg softwareupdateconfigurations.
 """
 
-helps['automationaccounts softwareupdateconfigurations list'] = """
+helps['automationcfg softwareupdateconfigurations list'] = """
     type: command
-    short-summary: list a automationaccounts softwareupdateconfigurations.
+    short-summary: list a automationcfg softwareupdateconfigurations.
 """
 
-helps['automationaccounts softwareupdateconfigurations'] = """
+helps['automationcfg softwareupdateconfigurations'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['automationaccounts softwareupdateconfigurations list'] = """
+helps['automationcfg softwareupdateconfigurations list'] = """
     type: command
-    short-summary: list a automationaccounts softwareupdateconfigurations.
+    short-summary: list a automationcfg softwareupdateconfigurations.
 """

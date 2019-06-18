@@ -7,141 +7,141 @@
 from knack.util import CLIError
 
 
-def create_batchaccounts(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts create`')
+def create_batch(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.batch_account.create()
 
 
-def update_batchaccounts(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts update`')
+def update_batch(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.batch_account.update()
 
 
-def delete_batchaccounts(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts delete`')
+def delete_batch(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.batch_account.delete()
 
 
-def list_batchaccounts(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts list`')
+def list_batch(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.batch_account.list()
 
 
-def show_batchaccounts(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts show`')
+def show_batch(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.batch_account.show()
 
 
-def show_batchaccounts(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts show`')
+def show_batch(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.batch_account.show()
 
 
-def list_batchaccounts(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts list`')
+def list_batch(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.batch_account.list()
 
 
-def create_batchaccounts applications versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts applications versions create`')
+def create_batch applications versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.application_package.create()
 
 
-def delete_batchaccounts applications versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts applications versions delete`')
+def delete_batch applications versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.application_package.delete()
 
 
-def list_batchaccounts applications versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts applications versions list`')
+def list_batch applications versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.application_package.list()
 
 
-def show_batchaccounts applications versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts applications versions show`')
+def show_batch applications versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.application_package.show()
 
 
-def show_batchaccounts applications versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts applications versions show`')
+def show_batch applications versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.application_package.show()
 
 
-def list_batchaccounts applications versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts applications versions list`')
+def list_batch applications versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.application_package.list()
 
 
-def create_batchaccounts applications(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts applications create`')
+def create_batch applications(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.application.create()
 
 
-def update_batchaccounts applications(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts applications update`')
+def update_batch applications(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.application.update()
 
 
-def delete_batchaccounts applications(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts applications delete`')
+def delete_batch applications(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.application.delete()
 
 
-def list_batchaccounts applications(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts applications list`')
+def list_batch applications(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.application.list()
 
 
-def show_batchaccounts applications(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts applications show`')
+def show_batch applications(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.application.show()
 
 
-def show_batchaccounts applications(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts applications show`')
+def show_batch applications(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.application.show()
 
 
-def list_batchaccounts applications(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts applications list`')
+def list_batch applications(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.application.list()
 
 
 def list_(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement ` list`')
+    return client.operations.list()
 
 
-def create_batchaccounts certificates(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts certificates create`')
+def create_batch certificates(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.certificate.create()
 
 
-def update_batchaccounts certificates(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts certificates update`')
+def update_batch certificates(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.certificate.update()
 
 
-def delete_batchaccounts certificates(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts certificates delete`')
+def delete_batch certificates(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.certificate.delete()
 
 
-def list_batchaccounts certificates(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts certificates list`')
+def list_batch certificates(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.certificate.list()
 
 
-def show_batchaccounts certificates(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts certificates show`')
+def show_batch certificates(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.certificate.show()
 
 
-def show_batchaccounts certificates(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts certificates show`')
+def show_batch certificates(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.certificate.show()
 
 
-def list_batchaccounts certificates(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts certificates list`')
+def list_batch certificates(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.certificate.list()
 
 
-def create_batchaccounts pools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts pools create`')
+def create_batch pools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.pool.create()
 
 
-def update_batchaccounts pools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts pools update`')
+def update_batch pools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.pool.update()
 
 
-def delete_batchaccounts pools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts pools delete`')
+def delete_batch pools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.pool.delete()
 
 
-def list_batchaccounts pools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts pools list`')
+def list_batch pools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.pool.list()
 
 
-def show_batchaccounts pools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts pools show`')
+def show_batch pools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.pool.show()
 
 
-def show_batchaccounts pools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts pools show`')
+def show_batch pools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.pool.show()
 
 
-def list_batchaccounts pools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `batchaccounts pools list`')
+def list_batch pools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.pool.list()

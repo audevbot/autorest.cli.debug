@@ -14,93 +14,93 @@ def load_arguments(self, _):
 
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('galleries') as c:
+    with self.argument_context('compute') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('galleries_name', galleries_name_type, options_list=['--name', '-n'])
+        c.argument('compute_name', compute_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('galleries') as c:
+    with self.argument_context('compute') as c:
         c.argument('compute_name', compute_name_type, id_part=None)
 
-    with self.argument_context('galleries') as c:
+    with self.argument_context('compute') as c:
         c.argument('compute_name', compute_name_type, id_part=None)
 
-    with self.argument_context('galleries') as c:
+    with self.argument_context('compute') as c:
         c.argument('compute_name', compute_name_type, id_part=None)
 
-    with self.argument_context('galleries') as c:
+    with self.argument_context('compute') as c:
         c.argument('compute_name', compute_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('galleries') as c:
+    with self.argument_context('compute') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('galleries_name', galleries_name_type, options_list=['--name', '-n'])
+        c.argument('compute_name', compute_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('galleries') as c:
+    with self.argument_context('compute') as c:
         c.argument('compute_name', compute_name_type, id_part=None)
 
-    with self.argument_context('galleries') as c:
+    with self.argument_context('compute') as c:
         c.argument('compute_name', compute_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('galleries images') as c:
+    with self.argument_context('compute images') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('galleries images_name', galleries images_name_type, options_list=['--name', '-n'])
+        c.argument('compute images_name', compute images_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('galleries images') as c:
+    with self.argument_context('compute images') as c:
         c.argument('compute_name', compute_name_type, id_part=None)
 
-    with self.argument_context('galleries images') as c:
+    with self.argument_context('compute images') as c:
         c.argument('compute_name', compute_name_type, id_part=None)
 
-    with self.argument_context('galleries images') as c:
+    with self.argument_context('compute images') as c:
         c.argument('compute_name', compute_name_type, id_part=None)
 
-    with self.argument_context('galleries images') as c:
+    with self.argument_context('compute images') as c:
         c.argument('compute_name', compute_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('galleries images') as c:
+    with self.argument_context('compute images') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('galleries images_name', galleries images_name_type, options_list=['--name', '-n'])
+        c.argument('compute images_name', compute images_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('galleries images') as c:
+    with self.argument_context('compute images') as c:
         c.argument('compute_name', compute_name_type, id_part=None)
 
-    with self.argument_context('galleries images') as c:
+    with self.argument_context('compute images') as c:
         c.argument('compute_name', compute_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('galleries images versions') as c:
+    with self.argument_context('compute images versions') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('galleries images versions_name', galleries images versions_name_type, options_list=['--name', '-n'])
+        c.argument('compute images versions_name', compute images versions_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('galleries images versions') as c:
+    with self.argument_context('compute images versions') as c:
         c.argument('compute_name', compute_name_type, id_part=None)
 
-    with self.argument_context('galleries images versions') as c:
+    with self.argument_context('compute images versions') as c:
         c.argument('compute_name', compute_name_type, id_part=None)
 
-    with self.argument_context('galleries images versions') as c:
+    with self.argument_context('compute images versions') as c:
         c.argument('compute_name', compute_name_type, id_part=None)
 
-    with self.argument_context('galleries images versions') as c:
+    with self.argument_context('compute images versions') as c:
         c.argument('compute_name', compute_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('galleries images versions') as c:
+    with self.argument_context('compute images versions') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('galleries images versions_name', galleries images versions_name_type, options_list=['--name', '-n'])
+        c.argument('compute images versions_name', compute images versions_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('galleries images versions') as c:
+    with self.argument_context('compute images versions') as c:
         c.argument('compute_name', compute_name_type, id_part=None)
 
-    with self.argument_context('galleries images versions') as c:
+    with self.argument_context('compute images versions') as c:
         c.argument('compute_name', compute_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 

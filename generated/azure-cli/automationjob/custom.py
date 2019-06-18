@@ -7,29 +7,29 @@
 from knack.util import CLIError
 
 
-def create_automationaccounts jobs(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `automationaccounts jobs create`')
+def create_automationjob jobs(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.job.create()
 
 
-def list_automationaccounts jobs(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `automationaccounts jobs list`')
+def list_automationjob jobs(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.job.list()
 
 
-def show_automationaccounts jobs(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `automationaccounts jobs show`')
+def show_automationjob jobs(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.job.show()
 
 
-def show_automationaccounts jobs(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `automationaccounts jobs show`')
+def show_automationjob jobs(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.job.show()
 
 
-def list_automationaccounts jobs(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `automationaccounts jobs list`')
+def list_automationjob jobs(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.job.list()
 
 
-def show_automationaccounts jobs streams(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `automationaccounts jobs streams show`')
+def show_automationjob jobs streams(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.job_stream.show()
 
 
-def list_automationaccounts jobs streams(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `automationaccounts jobs streams list`')
+def list_automationjob jobs streams(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.job_stream.list()

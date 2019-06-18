@@ -7,73 +7,73 @@
 from knack.util import CLIError
 
 
-def create_galleries(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `galleries create`')
+def create_compute(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.galleries.create()
 
 
-def delete_galleries(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `galleries delete`')
+def delete_compute(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.galleries.delete()
 
 
-def list_galleries(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `galleries list`')
+def list_compute(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.galleries.list()
 
 
-def show_galleries(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `galleries show`')
+def show_compute(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.galleries.show()
 
 
-def show_galleries(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `galleries show`')
+def show_compute(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.galleries.show()
 
 
-def list_galleries(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `galleries list`')
+def list_compute(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.galleries.list()
 
 
-def create_galleries images(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `galleries images create`')
+def create_compute images(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.gallery_images.create()
 
 
-def delete_galleries images(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `galleries images delete`')
+def delete_compute images(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.gallery_images.delete()
 
 
-def list_galleries images(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `galleries images list`')
+def list_compute images(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.gallery_images.list()
 
 
-def show_galleries images(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `galleries images show`')
+def show_compute images(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.gallery_images.show()
 
 
-def show_galleries images(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `galleries images show`')
+def show_compute images(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.gallery_images.show()
 
 
-def list_galleries images(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `galleries images list`')
+def list_compute images(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.gallery_images.list()
 
 
-def create_galleries images versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `galleries images versions create`')
+def create_compute images versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.gallery_image_versions.create()
 
 
-def delete_galleries images versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `galleries images versions delete`')
+def delete_compute images versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.gallery_image_versions.delete()
 
 
-def list_galleries images versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `galleries images versions list`')
+def list_compute images versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.gallery_image_versions.list()
 
 
-def show_galleries images versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `galleries images versions show`')
+def show_compute images versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.gallery_image_versions.show()
 
 
-def show_galleries images versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `galleries images versions show`')
+def show_compute images versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.gallery_image_versions.show()
 
 
-def list_galleries images versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `galleries images versions list`')
+def list_compute images versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.gallery_image_versions.list()

@@ -8,122 +8,122 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 
 
-helps['galleries'] = """
+helps['compute'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['galleries create'] = """
+helps['compute create'] = """
     type: command
-    short-summary: create a galleries.
+    short-summary: create a compute.
 """
 
-helps['galleries delete'] = """
+helps['compute delete'] = """
     type: command
-    short-summary: delete a galleries.
+    short-summary: delete a compute.
 """
 
-helps['galleries list'] = """
+helps['compute list'] = """
     type: command
-    short-summary: list a galleries.
+    short-summary: list a compute.
 """
 
-helps['galleries show'] = """
+helps['compute show'] = """
     type: command
-    short-summary: show a galleries.
+    short-summary: show a compute.
 """
 
-helps['galleries'] = """
+helps['compute'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['galleries show'] = """
+helps['compute show'] = """
     type: command
-    short-summary: show a galleries.
+    short-summary: show a compute.
 """
 
-helps['galleries list'] = """
+helps['compute list'] = """
     type: command
-    short-summary: list a galleries.
+    short-summary: list a compute.
 """
 
-helps['galleries images'] = """
+helps['compute images'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['galleries images create'] = """
+helps['compute images create'] = """
     type: command
-    short-summary: create a galleries images.
+    short-summary: create a compute images.
 """
 
-helps['galleries images delete'] = """
+helps['compute images delete'] = """
     type: command
-    short-summary: delete a galleries images.
+    short-summary: delete a compute images.
 """
 
-helps['galleries images list'] = """
+helps['compute images list'] = """
     type: command
-    short-summary: list a galleries images.
+    short-summary: list a compute images.
 """
 
-helps['galleries images show'] = """
+helps['compute images show'] = """
     type: command
-    short-summary: show a galleries images.
+    short-summary: show a compute images.
 """
 
-helps['galleries images'] = """
+helps['compute images'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['galleries images show'] = """
+helps['compute images show'] = """
     type: command
-    short-summary: show a galleries images.
+    short-summary: show a compute images.
 """
 
-helps['galleries images list'] = """
+helps['compute images list'] = """
     type: command
-    short-summary: list a galleries images.
+    short-summary: list a compute images.
 """
 
-helps['galleries images versions'] = """
+helps['compute images versions'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['galleries images versions create'] = """
+helps['compute images versions create'] = """
     type: command
-    short-summary: create a galleries images versions.
+    short-summary: create a compute images versions.
 """
 
-helps['galleries images versions delete'] = """
+helps['compute images versions delete'] = """
     type: command
-    short-summary: delete a galleries images versions.
+    short-summary: delete a compute images versions.
 """
 
-helps['galleries images versions list'] = """
+helps['compute images versions list'] = """
     type: command
-    short-summary: list a galleries images versions.
+    short-summary: list a compute images versions.
 """
 
-helps['galleries images versions show'] = """
+helps['compute images versions show'] = """
     type: command
-    short-summary: show a galleries images versions.
+    short-summary: show a compute images versions.
 """
 
-helps['galleries images versions'] = """
+helps['compute images versions'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['galleries images versions show'] = """
+helps['compute images versions show'] = """
     type: command
-    short-summary: show a galleries images versions.
+    short-summary: show a compute images versions.
 """
 
-helps['galleries images versions list'] = """
+helps['compute images versions list'] = """
     type: command
-    short-summary: list a galleries images versions.
+    short-summary: list a compute images versions.
 """

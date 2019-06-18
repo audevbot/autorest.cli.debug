@@ -8,49 +8,49 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 
 
-helps['eventsubscriptions'] = """
+helps['eventgrid eventsubscriptions'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['eventsubscriptions create'] = """
+helps['eventgrid eventsubscriptions create'] = """
     type: command
-    short-summary: create a eventsubscriptions.
+    short-summary: create a eventgrid eventsubscriptions.
 """
 
-helps['eventsubscriptions update'] = """
+helps['eventgrid eventsubscriptions update'] = """
     type: command
-    short-summary: update a eventsubscriptions.
+    short-summary: update a eventgrid eventsubscriptions.
 """
 
-helps['eventsubscriptions delete'] = """
+helps['eventgrid eventsubscriptions delete'] = """
     type: command
-    short-summary: delete a eventsubscriptions.
+    short-summary: delete a eventgrid eventsubscriptions.
 """
 
-helps['eventsubscriptions list'] = """
+helps['eventgrid eventsubscriptions list'] = """
     type: command
-    short-summary: list a eventsubscriptions.
+    short-summary: list a eventgrid eventsubscriptions.
 """
 
-helps['eventsubscriptions show'] = """
+helps['eventgrid eventsubscriptions show'] = """
     type: command
-    short-summary: show a eventsubscriptions.
+    short-summary: show a eventgrid eventsubscriptions.
 """
 
-helps['eventsubscriptions locations topictypes providers {providernamespace} {resourcetypename}'] = """
+helps['eventgrid eventsubscriptions locations topictypes providers {providernamespace} {resourcetypename}'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['eventsubscriptions locations topictypes providers {providernamespace} {resourcetypename} list'] = """
+helps['eventgrid eventsubscriptions locations topictypes providers {providernamespace} {resourcetypename} list'] = """
     type: command
-    short-summary: list a eventsubscriptions locations topictypes providers {providernamespace} {resourcetypename}.
+    short-summary: list a eventgrid eventsubscriptions locations topictypes providers {providernamespace} {resourcetypename}.
 """
 
-helps['eventsubscriptions locations topictypes providers {providernamespace} {resourcetypename} show'] = """
+helps['eventgrid eventsubscriptions locations topictypes providers {providernamespace} {resourcetypename} show'] = """
     type: command
-    short-summary: show a eventsubscriptions locations topictypes providers {providernamespace} {resourcetypename}.
+    short-summary: show a eventgrid eventsubscriptions locations topictypes providers {providernamespace} {resourcetypename}.
 """
 
 helps[''] = """
@@ -63,62 +63,62 @@ helps[' list'] = """
     short-summary: list a .
 """
 
-helps['topics'] = """
+helps['eventgrid'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['topics create'] = """
+helps['eventgrid create'] = """
     type: command
-    short-summary: create a topics.
+    short-summary: create a eventgrid.
 """
 
-helps['topics update'] = """
+helps['eventgrid update'] = """
     type: command
-    short-summary: update a topics.
+    short-summary: update a eventgrid.
 """
 
-helps['topics delete'] = """
+helps['eventgrid delete'] = """
     type: command
-    short-summary: delete a topics.
+    short-summary: delete a eventgrid.
 """
 
-helps['topics list'] = """
+helps['eventgrid list'] = """
     type: command
-    short-summary: list a topics.
+    short-summary: list a eventgrid.
 """
 
-helps['topics show'] = """
+helps['eventgrid show'] = """
     type: command
-    short-summary: show a topics.
+    short-summary: show a eventgrid.
 """
 
-helps['topics providers {providernamespace} {resourcetypename}'] = """
+helps['eventgrid providers {providernamespace} {resourcetypename}'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['topics providers {providernamespace} {resourcetypename} list'] = """
+helps['eventgrid providers {providernamespace} {resourcetypename} list'] = """
     type: command
-    short-summary: list a topics providers {providernamespace} {resourcetypename}.
+    short-summary: list a eventgrid providers {providernamespace} {resourcetypename}.
 """
 
-helps['topics providers {providernamespace} {resourcetypename} show'] = """
+helps['eventgrid providers {providernamespace} {resourcetypename} show'] = """
     type: command
-    short-summary: show a topics providers {providernamespace} {resourcetypename}.
+    short-summary: show a eventgrid providers {providernamespace} {resourcetypename}.
 """
 
-helps['topictypes'] = """
+helps['eventgrid'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['topictypes list'] = """
+helps['eventgrid list'] = """
     type: command
-    short-summary: list a topictypes.
+    short-summary: list a eventgrid.
 """
 
-helps['topictypes show'] = """
+helps['eventgrid show'] = """
     type: command
-    short-summary: show a topictypes.
+    short-summary: show a eventgrid.
 """

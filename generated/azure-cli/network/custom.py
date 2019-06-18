@@ -7,25 +7,25 @@
 from knack.util import CLIError
 
 
-def create_azurefirewalls(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `azurefirewalls create`')
+def create_network(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.azure_firewalls.create()
 
 
-def delete_azurefirewalls(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `azurefirewalls delete`')
+def delete_network(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.azure_firewalls.delete()
 
 
-def list_azurefirewalls(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `azurefirewalls list`')
+def list_network(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.azure_firewalls.list()
 
 
-def show_azurefirewalls(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `azurefirewalls show`')
+def show_network(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.azure_firewalls.show()
 
 
-def show_azurefirewalls(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `azurefirewalls show`')
+def show_network(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.azure_firewalls.show()
 
 
-def list_azurefirewalls(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `azurefirewalls list`')
+def list_network(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.azure_firewalls.list()

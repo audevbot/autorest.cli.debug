@@ -13,27 +13,27 @@ def load_command_table(self, _):
         client_factory=cf_compute)
 
 
-    with self.command_group('galleries', compute_sdk, client_factory=cf_compute) as g:
-        g.custom_command('create', 'create_galleries')
-        g.custom_command('delete', 'delete_galleries')
-        g.custom_command('list', 'list_galleries')
-        g.custom_command('show', 'show_galleries')
-    with self.command_group('galleries', compute_sdk, client_factory=cf_compute) as g:
-        g.custom_command('show', 'show_galleries')
-        g.custom_command('list', 'list_galleries')
-    with self.command_group('galleries images', compute_sdk, client_factory=cf_compute) as g:
-        g.custom_command('create', 'create_galleries_images')
-        g.custom_command('delete', 'delete_galleries_images')
-        g.custom_command('list', 'list_galleries_images')
-        g.custom_command('show', 'show_galleries_images')
-    with self.command_group('galleries images', compute_sdk, client_factory=cf_compute) as g:
-        g.custom_command('show', 'show_galleries_images')
-        g.custom_command('list', 'list_galleries_images')
-    with self.command_group('galleries images versions', compute_sdk, client_factory=cf_compute) as g:
-        g.custom_command('create', 'create_galleries_images_versions')
-        g.custom_command('delete', 'delete_galleries_images_versions')
-        g.custom_command('list', 'list_galleries_images_versions')
-        g.custom_command('show', 'show_galleries_images_versions')
-    with self.command_group('galleries images versions', compute_sdk, client_factory=cf_compute) as g:
-        g.custom_command('show', 'show_galleries_images_versions')
-        g.custom_command('list', 'list_galleries_images_versions')
+    with self.command_group('compute', compute_sdk, client_factory=cf_compute) as g:
+        g.custom_command('create', 'create_compute')
+        g.custom_command('delete', 'delete_compute')
+        g.custom_command('list', 'list_compute')
+        g.custom_command('show', 'show_compute')
+    with self.command_group('compute', compute_sdk, client_factory=cf_compute) as g:
+        g.custom_command('show', 'show_compute')
+        g.custom_command('list', 'list_compute')
+    with self.command_group('compute images', compute_sdk, client_factory=cf_compute) as g:
+        g.custom_command('create', 'create_compute_images')
+        g.custom_command('delete', 'delete_compute_images')
+        g.custom_command('list', 'list_compute_images')
+        g.custom_command('show', 'show_compute_images')
+    with self.command_group('compute images', compute_sdk, client_factory=cf_compute) as g:
+        g.custom_command('show', 'show_compute_images')
+        g.custom_command('list', 'list_compute_images')
+    with self.command_group('compute images versions', compute_sdk, client_factory=cf_compute) as g:
+        g.custom_command('create', 'create_compute_images_versions')
+        g.custom_command('delete', 'delete_compute_images_versions')
+        g.custom_command('list', 'list_compute_images_versions')
+        g.custom_command('show', 'show_compute_images_versions')
+    with self.command_group('compute images versions', compute_sdk, client_factory=cf_compute) as g:
+        g.custom_command('show', 'show_compute_images_versions')
+        g.custom_command('list', 'list_compute_images_versions')
