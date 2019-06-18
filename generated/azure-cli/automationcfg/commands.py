@@ -13,9 +13,9 @@ def load_command_table(self, _):
         client_factory=cf_automationcfg)
 
 
-    with self.command_group('automationaccounts softwareupdateconfigurations', automationcfg_sdk, client_factory=cf_automationcfg) as g:
-        g.custom_command('create', 'create_automationaccounts_softwareupdateconfigurations')
-        g.custom_command('delete', 'delete_automationaccounts_softwareupdateconfigurations')
-        g.custom_command('list', 'list_automationaccounts_softwareupdateconfigurations')
-    with self.command_group('automationaccounts softwareupdateconfigurations', automationcfg_sdk, client_factory=cf_automationcfg) as g:
-        g.custom_command('list', 'list_automationaccounts_softwareupdateconfigurations')
+    with self.command_group('automationcfg softwareupdateconfigurations', automationcfg_sdk, client_factory=cf_automationcfg) as g:
+        g.custom_command('create', 'create_automationcfg_softwareupdateconfigurations')
+        g.custom_command('delete', 'delete_automationcfg_softwareupdateconfigurations')
+        g.custom_command('list', 'list_automationcfg_softwareupdateconfigurations')
+    with self.command_group('automationcfg softwareupdateconfigurations', automationcfg_sdk, client_factory=cf_automationcfg) as g:
+        g.custom_command('list', 'list_automationcfg_softwareupdateconfigurations')

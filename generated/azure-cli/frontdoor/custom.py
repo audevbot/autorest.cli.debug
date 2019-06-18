@@ -7,145 +7,145 @@
 from knack.util import CLIError
 
 
-def create_frontdoors(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors create`')
+def create_frontdoor(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.front_doors.create()
 
 
-def delete_frontdoors(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors delete`')
+def delete_frontdoor(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.front_doors.delete()
 
 
-def list_frontdoors(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors list`')
+def list_frontdoor(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.front_doors.list()
 
 
-def show_frontdoors(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors show`')
+def show_frontdoor(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.front_doors.show()
 
 
-def show_frontdoors(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors show`')
+def show_frontdoor(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.front_doors.show()
 
 
-def list_frontdoors(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors list`')
+def list_frontdoor(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.front_doors.list()
 
 
-def create_frontdoors routingrules(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors routingrules create`')
+def create_frontdoor routingrules(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.routing_rules.create()
 
 
-def delete_frontdoors routingrules(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors routingrules delete`')
+def delete_frontdoor routingrules(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.routing_rules.delete()
 
 
-def list_frontdoors routingrules(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors routingrules list`')
+def list_frontdoor routingrules(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.routing_rules.list()
 
 
-def show_frontdoors routingrules(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors routingrules show`')
+def show_frontdoor routingrules(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.routing_rules.show()
 
 
-def show_frontdoors routingrules(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors routingrules show`')
+def show_frontdoor routingrules(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.routing_rules.show()
 
 
-def list_frontdoors routingrules(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors routingrules list`')
+def list_frontdoor routingrules(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.routing_rules.list()
 
 
-def create_frontdoors healthprobesettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors healthprobesettings create`')
+def create_frontdoor healthprobesettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.health_probe_settings.create()
 
 
-def delete_frontdoors healthprobesettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors healthprobesettings delete`')
+def delete_frontdoor healthprobesettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.health_probe_settings.delete()
 
 
-def list_frontdoors healthprobesettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors healthprobesettings list`')
+def list_frontdoor healthprobesettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.health_probe_settings.list()
 
 
-def show_frontdoors healthprobesettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors healthprobesettings show`')
+def show_frontdoor healthprobesettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.health_probe_settings.show()
 
 
-def show_frontdoors healthprobesettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors healthprobesettings show`')
+def show_frontdoor healthprobesettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.health_probe_settings.show()
 
 
-def list_frontdoors healthprobesettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors healthprobesettings list`')
+def list_frontdoor healthprobesettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.health_probe_settings.list()
 
 
-def create_frontdoors loadbalancingsettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors loadbalancingsettings create`')
+def create_frontdoor loadbalancingsettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.load_balancing_settings.create()
 
 
-def delete_frontdoors loadbalancingsettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors loadbalancingsettings delete`')
+def delete_frontdoor loadbalancingsettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.load_balancing_settings.delete()
 
 
-def list_frontdoors loadbalancingsettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors loadbalancingsettings list`')
+def list_frontdoor loadbalancingsettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.load_balancing_settings.list()
 
 
-def show_frontdoors loadbalancingsettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors loadbalancingsettings show`')
+def show_frontdoor loadbalancingsettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.load_balancing_settings.show()
 
 
-def show_frontdoors loadbalancingsettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors loadbalancingsettings show`')
+def show_frontdoor loadbalancingsettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.load_balancing_settings.show()
 
 
-def list_frontdoors loadbalancingsettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors loadbalancingsettings list`')
+def list_frontdoor loadbalancingsettings(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.load_balancing_settings.list()
 
 
-def create_frontdoors backendpools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors backendpools create`')
+def create_frontdoor backendpools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.backend_pools.create()
 
 
-def delete_frontdoors backendpools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors backendpools delete`')
+def delete_frontdoor backendpools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.backend_pools.delete()
 
 
-def list_frontdoors backendpools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors backendpools list`')
+def list_frontdoor backendpools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.backend_pools.list()
 
 
-def show_frontdoors backendpools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors backendpools show`')
+def show_frontdoor backendpools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.backend_pools.show()
 
 
-def show_frontdoors backendpools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors backendpools show`')
+def show_frontdoor backendpools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.backend_pools.show()
 
 
-def list_frontdoors backendpools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors backendpools list`')
+def list_frontdoor backendpools(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.backend_pools.list()
 
 
-def create_frontdoors frontendendpoints(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors frontendendpoints create`')
+def create_frontdoor frontendendpoints(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.frontend_endpoints.create()
 
 
-def delete_frontdoors frontendendpoints(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors frontendendpoints delete`')
+def delete_frontdoor frontendendpoints(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.frontend_endpoints.delete()
 
 
-def list_frontdoors frontendendpoints(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors frontendendpoints list`')
+def list_frontdoor frontendendpoints(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.frontend_endpoints.list()
 
 
-def show_frontdoors frontendendpoints(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors frontendendpoints show`')
+def show_frontdoor frontendendpoints(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.frontend_endpoints.show()
 
 
-def show_frontdoors frontendendpoints(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors frontendendpoints show`')
+def show_frontdoor frontendendpoints(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.frontend_endpoints.show()
 
 
-def list_frontdoors frontendendpoints(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `frontdoors frontendendpoints list`')
+def list_frontdoor frontendendpoints(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.frontend_endpoints.list()

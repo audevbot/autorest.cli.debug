@@ -18,274 +18,274 @@ helps[' list'] = """
     short-summary: list a .
 """
 
-helps['namespaces'] = """
+helps['servicebus'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['namespaces create'] = """
+helps['servicebus create'] = """
     type: command
-    short-summary: create a namespaces.
+    short-summary: create a servicebus.
 """
 
-helps['namespaces update'] = """
+helps['servicebus update'] = """
     type: command
-    short-summary: update a namespaces.
+    short-summary: update a servicebus.
 """
 
-helps['namespaces delete'] = """
+helps['servicebus delete'] = """
     type: command
-    short-summary: delete a namespaces.
+    short-summary: delete a servicebus.
 """
 
-helps['namespaces list'] = """
+helps['servicebus list'] = """
     type: command
-    short-summary: list a namespaces.
+    short-summary: list a servicebus.
 """
 
-helps['namespaces show'] = """
+helps['servicebus show'] = """
     type: command
-    short-summary: show a namespaces.
+    short-summary: show a servicebus.
 """
 
-helps['namespaces authorizationrules'] = """
+helps['servicebus authorizationrules'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['namespaces authorizationrules list'] = """
+helps['servicebus authorizationrules list'] = """
     type: command
-    short-summary: list a namespaces authorizationrules.
+    short-summary: list a servicebus authorizationrules.
 """
 
-helps['namespaces authorizationrules show'] = """
+helps['servicebus authorizationrules show'] = """
     type: command
-    short-summary: show a namespaces authorizationrules.
+    short-summary: show a servicebus authorizationrules.
 """
 
-helps['namespaces disasterrecoveryconfigs'] = """
+helps['servicebus disasterrecoveryconfigs'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['namespaces disasterrecoveryconfigs create'] = """
+helps['servicebus disasterrecoveryconfigs create'] = """
     type: command
-    short-summary: create a namespaces disasterrecoveryconfigs.
+    short-summary: create a servicebus disasterrecoveryconfigs.
 """
 
-helps['namespaces disasterrecoveryconfigs delete'] = """
+helps['servicebus disasterrecoveryconfigs delete'] = """
     type: command
-    short-summary: delete a namespaces disasterrecoveryconfigs.
+    short-summary: delete a servicebus disasterrecoveryconfigs.
 """
 
-helps['namespaces disasterrecoveryconfigs list'] = """
+helps['servicebus disasterrecoveryconfigs list'] = """
     type: command
-    short-summary: list a namespaces disasterrecoveryconfigs.
+    short-summary: list a servicebus disasterrecoveryconfigs.
 """
 
-helps['namespaces disasterrecoveryconfigs show'] = """
+helps['servicebus disasterrecoveryconfigs show'] = """
     type: command
-    short-summary: show a namespaces disasterrecoveryconfigs.
+    short-summary: show a servicebus disasterrecoveryconfigs.
 """
 
-helps['namespaces disasterrecoveryconfigs authorizationrules'] = """
+helps['servicebus disasterrecoveryconfigs authorizationrules'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['namespaces disasterrecoveryconfigs authorizationrules list'] = """
+helps['servicebus disasterrecoveryconfigs authorizationrules list'] = """
     type: command
-    short-summary: list a namespaces disasterrecoveryconfigs authorizationrules.
+    short-summary: list a servicebus disasterrecoveryconfigs authorizationrules.
 """
 
-helps['namespaces disasterrecoveryconfigs authorizationrules show'] = """
+helps['servicebus disasterrecoveryconfigs authorizationrules show'] = """
     type: command
-    short-summary: show a namespaces disasterrecoveryconfigs authorizationrules.
+    short-summary: show a servicebus disasterrecoveryconfigs authorizationrules.
 """
 
-helps['namespaces migrationconfigurations'] = """
+helps['servicebus migrationconfigurations'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['namespaces migrationconfigurations show'] = """
+helps['servicebus migrationconfigurations show'] = """
     type: command
-    short-summary: show a namespaces migrationconfigurations.
+    short-summary: show a servicebus migrationconfigurations.
 """
 
-helps['namespaces migrationconfigurations list'] = """
+helps['servicebus migrationconfigurations list'] = """
     type: command
-    short-summary: list a namespaces migrationconfigurations.
+    short-summary: list a servicebus migrationconfigurations.
 """
 
-helps['namespaces queues'] = """
+helps['servicebus queues'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['namespaces queues create'] = """
+helps['servicebus queues create'] = """
     type: command
-    short-summary: create a namespaces queues.
+    short-summary: create a servicebus queues.
 """
 
-helps['namespaces queues delete'] = """
+helps['servicebus queues delete'] = """
     type: command
-    short-summary: delete a namespaces queues.
+    short-summary: delete a servicebus queues.
 """
 
-helps['namespaces queues list'] = """
+helps['servicebus queues list'] = """
     type: command
-    short-summary: list a namespaces queues.
+    short-summary: list a servicebus queues.
 """
 
-helps['namespaces queues show'] = """
+helps['servicebus queues show'] = """
     type: command
-    short-summary: show a namespaces queues.
+    short-summary: show a servicebus queues.
 """
 
-helps['namespaces queues authorizationrules'] = """
+helps['servicebus queues authorizationrules'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['namespaces queues authorizationrules list'] = """
+helps['servicebus queues authorizationrules list'] = """
     type: command
-    short-summary: list a namespaces queues authorizationrules.
+    short-summary: list a servicebus queues authorizationrules.
 """
 
-helps['namespaces queues authorizationrules show'] = """
+helps['servicebus queues authorizationrules show'] = """
     type: command
-    short-summary: show a namespaces queues authorizationrules.
+    short-summary: show a servicebus queues authorizationrules.
 """
 
-helps['namespaces topics'] = """
+helps['servicebus topics'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['namespaces topics create'] = """
+helps['servicebus topics create'] = """
     type: command
-    short-summary: create a namespaces topics.
+    short-summary: create a servicebus topics.
 """
 
-helps['namespaces topics delete'] = """
+helps['servicebus topics delete'] = """
     type: command
-    short-summary: delete a namespaces topics.
+    short-summary: delete a servicebus topics.
 """
 
-helps['namespaces topics list'] = """
+helps['servicebus topics list'] = """
     type: command
-    short-summary: list a namespaces topics.
+    short-summary: list a servicebus topics.
 """
 
-helps['namespaces topics show'] = """
+helps['servicebus topics show'] = """
     type: command
-    short-summary: show a namespaces topics.
+    short-summary: show a servicebus topics.
 """
 
-helps['namespaces topics authorizationrules'] = """
+helps['servicebus topics authorizationrules'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['namespaces topics authorizationrules list'] = """
+helps['servicebus topics authorizationrules list'] = """
     type: command
-    short-summary: list a namespaces topics authorizationrules.
+    short-summary: list a servicebus topics authorizationrules.
 """
 
-helps['namespaces topics authorizationrules show'] = """
+helps['servicebus topics authorizationrules show'] = """
     type: command
-    short-summary: show a namespaces topics authorizationrules.
+    short-summary: show a servicebus topics authorizationrules.
 """
 
-helps['namespaces topics subscriptions'] = """
+helps['servicebus topics subscriptions'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['namespaces topics subscriptions create'] = """
+helps['servicebus topics subscriptions create'] = """
     type: command
-    short-summary: create a namespaces topics subscriptions.
+    short-summary: create a servicebus topics subscriptions.
 """
 
-helps['namespaces topics subscriptions delete'] = """
+helps['servicebus topics subscriptions delete'] = """
     type: command
-    short-summary: delete a namespaces topics subscriptions.
+    short-summary: delete a servicebus topics subscriptions.
 """
 
-helps['namespaces topics subscriptions list'] = """
+helps['servicebus topics subscriptions list'] = """
     type: command
-    short-summary: list a namespaces topics subscriptions.
+    short-summary: list a servicebus topics subscriptions.
 """
 
-helps['namespaces topics subscriptions show'] = """
+helps['servicebus topics subscriptions show'] = """
     type: command
-    short-summary: show a namespaces topics subscriptions.
+    short-summary: show a servicebus topics subscriptions.
 """
 
-helps['namespaces topics subscriptions'] = """
+helps['servicebus topics subscriptions'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['namespaces topics subscriptions list'] = """
+helps['servicebus topics subscriptions list'] = """
     type: command
-    short-summary: list a namespaces topics subscriptions.
+    short-summary: list a servicebus topics subscriptions.
 """
 
-helps['namespaces topics subscriptions show'] = """
+helps['servicebus topics subscriptions show'] = """
     type: command
-    short-summary: show a namespaces topics subscriptions.
+    short-summary: show a servicebus topics subscriptions.
 """
 
-helps['namespaces topics subscriptions rules'] = """
+helps['servicebus topics subscriptions rules'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['namespaces topics subscriptions rules create'] = """
+helps['servicebus topics subscriptions rules create'] = """
     type: command
-    short-summary: create a namespaces topics subscriptions rules.
+    short-summary: create a servicebus topics subscriptions rules.
 """
 
-helps['namespaces topics subscriptions rules delete'] = """
+helps['servicebus topics subscriptions rules delete'] = """
     type: command
-    short-summary: delete a namespaces topics subscriptions rules.
+    short-summary: delete a servicebus topics subscriptions rules.
 """
 
-helps['namespaces topics subscriptions rules list'] = """
+helps['servicebus topics subscriptions rules list'] = """
     type: command
-    short-summary: list a namespaces topics subscriptions rules.
+    short-summary: list a servicebus topics subscriptions rules.
 """
 
-helps['namespaces topics subscriptions rules show'] = """
+helps['servicebus topics subscriptions rules show'] = """
     type: command
-    short-summary: show a namespaces topics subscriptions rules.
+    short-summary: show a servicebus topics subscriptions rules.
 """
 
-helps['namespaces topics subscriptions rules'] = """
+helps['servicebus topics subscriptions rules'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['namespaces topics subscriptions rules show'] = """
+helps['servicebus topics subscriptions rules show'] = """
     type: command
-    short-summary: show a namespaces topics subscriptions rules.
+    short-summary: show a servicebus topics subscriptions rules.
 """
 
-helps['namespaces topics subscriptions rules list'] = """
+helps['servicebus topics subscriptions rules list'] = """
     type: command
-    short-summary: list a namespaces topics subscriptions rules.
+    short-summary: list a servicebus topics subscriptions rules.
 """
 
-helps['sku'] = """
+helps['servicebus'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['sku list'] = """
+helps['servicebus list'] = """
     type: command
-    short-summary: list a sku.
+    short-summary: list a servicebus.
 """
 
 helps[''] = """
@@ -298,12 +298,12 @@ helps[' list'] = """
     short-summary: list a .
 """
 
-helps['namespaces'] = """
+helps['servicebus'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['namespaces list'] = """
+helps['servicebus list'] = """
     type: command
-    short-summary: list a namespaces.
+    short-summary: list a servicebus.
 """

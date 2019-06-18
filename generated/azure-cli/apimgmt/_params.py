@@ -14,570 +14,570 @@ def load_arguments(self, _):
 
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service apis') as c:
+    with self.argument_context('apimgmt apis') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service apis_name', service apis_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt apis_name', apimgmt apis_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service apis') as c:
+    with self.argument_context('apimgmt apis') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis') as c:
+    with self.argument_context('apimgmt apis') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis') as c:
+    with self.argument_context('apimgmt apis') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis') as c:
+    with self.argument_context('apimgmt apis') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis') as c:
+    with self.argument_context('apimgmt apis') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service apis') as c:
+    with self.argument_context('apimgmt apis') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service apis_name', service apis_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt apis_name', apimgmt apis_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service apis') as c:
+    with self.argument_context('apimgmt apis') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis') as c:
+    with self.argument_context('apimgmt apis') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service apis') as c:
+    with self.argument_context('apimgmt apis') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service apis_name', service apis_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt apis_name', apimgmt apis_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service apis') as c:
+    with self.argument_context('apimgmt apis') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service apis releases') as c:
+    with self.argument_context('apimgmt apis releases') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service apis releases_name', service apis releases_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt apis releases_name', apimgmt apis releases_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service apis releases') as c:
+    with self.argument_context('apimgmt apis releases') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis releases') as c:
+    with self.argument_context('apimgmt apis releases') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis releases') as c:
+    with self.argument_context('apimgmt apis releases') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis releases') as c:
+    with self.argument_context('apimgmt apis releases') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis releases') as c:
+    with self.argument_context('apimgmt apis releases') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service apis releases') as c:
+    with self.argument_context('apimgmt apis releases') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service apis releases_name', service apis releases_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt apis releases_name', apimgmt apis releases_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service apis releases') as c:
+    with self.argument_context('apimgmt apis releases') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis releases') as c:
+    with self.argument_context('apimgmt apis releases') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service apis operations') as c:
+    with self.argument_context('apimgmt apis operations') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service apis operations_name', service apis operations_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt apis operations_name', apimgmt apis operations_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service apis operations') as c:
+    with self.argument_context('apimgmt apis operations') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis operations') as c:
+    with self.argument_context('apimgmt apis operations') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis operations') as c:
+    with self.argument_context('apimgmt apis operations') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis operations') as c:
+    with self.argument_context('apimgmt apis operations') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis operations') as c:
+    with self.argument_context('apimgmt apis operations') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service apis operations') as c:
+    with self.argument_context('apimgmt apis operations') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service apis operations_name', service apis operations_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt apis operations_name', apimgmt apis operations_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service apis operations') as c:
+    with self.argument_context('apimgmt apis operations') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis operations') as c:
+    with self.argument_context('apimgmt apis operations') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service apis operations policies') as c:
+    with self.argument_context('apimgmt apis operations policies') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service apis operations policies_name', service apis operations policies_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt apis operations policies_name', apimgmt apis operations policies_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service apis operations policies') as c:
+    with self.argument_context('apimgmt apis operations policies') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis operations policies') as c:
+    with self.argument_context('apimgmt apis operations policies') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis operations policies') as c:
+    with self.argument_context('apimgmt apis operations policies') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis operations policies') as c:
+    with self.argument_context('apimgmt apis operations policies') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service apis operations policies') as c:
+    with self.argument_context('apimgmt apis operations policies') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service apis operations policies_name', service apis operations policies_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt apis operations policies_name', apimgmt apis operations policies_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service apis operations policies') as c:
+    with self.argument_context('apimgmt apis operations policies') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis operations policies') as c:
+    with self.argument_context('apimgmt apis operations policies') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service tags') as c:
+    with self.argument_context('apimgmt tags') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service tags_name', service tags_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt tags_name', apimgmt tags_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service tags') as c:
+    with self.argument_context('apimgmt tags') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service tags') as c:
+    with self.argument_context('apimgmt tags') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service tags') as c:
+    with self.argument_context('apimgmt tags') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service tags') as c:
+    with self.argument_context('apimgmt tags') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service tags') as c:
+    with self.argument_context('apimgmt tags') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service tags apis products operations') as c:
+    with self.argument_context('apimgmt tags apis products operations') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service tags apis products operations_name', service tags apis products operations_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt tags apis products operations_name', apimgmt tags apis products operations_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service tags apis products operations') as c:
+    with self.argument_context('apimgmt tags apis products operations') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service tags apis products operations') as c:
+    with self.argument_context('apimgmt tags apis products operations') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service apis') as c:
+    with self.argument_context('apimgmt apis') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service apis_name', service apis_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt apis_name', apimgmt apis_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service apis') as c:
+    with self.argument_context('apimgmt apis') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service apis policies') as c:
+    with self.argument_context('apimgmt apis policies') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service apis policies_name', service apis policies_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt apis policies_name', apimgmt apis policies_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service apis policies') as c:
+    with self.argument_context('apimgmt apis policies') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis policies') as c:
+    with self.argument_context('apimgmt apis policies') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis policies') as c:
+    with self.argument_context('apimgmt apis policies') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis policies') as c:
+    with self.argument_context('apimgmt apis policies') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service apis policies') as c:
+    with self.argument_context('apimgmt apis policies') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service apis policies_name', service apis policies_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt apis policies_name', apimgmt apis policies_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service apis policies') as c:
+    with self.argument_context('apimgmt apis policies') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis policies') as c:
+    with self.argument_context('apimgmt apis policies') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service apis schemas') as c:
+    with self.argument_context('apimgmt apis schemas') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service apis schemas_name', service apis schemas_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt apis schemas_name', apimgmt apis schemas_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service apis schemas') as c:
+    with self.argument_context('apimgmt apis schemas') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis schemas') as c:
+    with self.argument_context('apimgmt apis schemas') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis schemas') as c:
+    with self.argument_context('apimgmt apis schemas') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis schemas') as c:
+    with self.argument_context('apimgmt apis schemas') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service apis schemas') as c:
+    with self.argument_context('apimgmt apis schemas') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service apis schemas_name', service apis schemas_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt apis schemas_name', apimgmt apis schemas_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service apis schemas') as c:
+    with self.argument_context('apimgmt apis schemas') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis schemas') as c:
+    with self.argument_context('apimgmt apis schemas') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service apis diagnostics') as c:
+    with self.argument_context('apimgmt apis diagnostics') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service apis diagnostics_name', service apis diagnostics_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt apis diagnostics_name', apimgmt apis diagnostics_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service apis diagnostics') as c:
+    with self.argument_context('apimgmt apis diagnostics') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis diagnostics') as c:
+    with self.argument_context('apimgmt apis diagnostics') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis diagnostics') as c:
+    with self.argument_context('apimgmt apis diagnostics') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis diagnostics') as c:
+    with self.argument_context('apimgmt apis diagnostics') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis diagnostics') as c:
+    with self.argument_context('apimgmt apis diagnostics') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service apis diagnostics') as c:
+    with self.argument_context('apimgmt apis diagnostics') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service apis diagnostics_name', service apis diagnostics_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt apis diagnostics_name', apimgmt apis diagnostics_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service apis diagnostics') as c:
+    with self.argument_context('apimgmt apis diagnostics') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis diagnostics') as c:
+    with self.argument_context('apimgmt apis diagnostics') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service apis issues') as c:
+    with self.argument_context('apimgmt apis issues') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service apis issues_name', service apis issues_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt apis issues_name', apimgmt apis issues_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service apis issues') as c:
+    with self.argument_context('apimgmt apis issues') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis issues') as c:
+    with self.argument_context('apimgmt apis issues') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis issues') as c:
+    with self.argument_context('apimgmt apis issues') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis issues') as c:
+    with self.argument_context('apimgmt apis issues') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis issues') as c:
+    with self.argument_context('apimgmt apis issues') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service apis issues') as c:
+    with self.argument_context('apimgmt apis issues') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service apis issues_name', service apis issues_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt apis issues_name', apimgmt apis issues_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service apis issues') as c:
+    with self.argument_context('apimgmt apis issues') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis issues') as c:
+    with self.argument_context('apimgmt apis issues') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service apis issues comments') as c:
+    with self.argument_context('apimgmt apis issues comments') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service apis issues comments_name', service apis issues comments_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt apis issues comments_name', apimgmt apis issues comments_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service apis issues comments') as c:
+    with self.argument_context('apimgmt apis issues comments') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis issues comments') as c:
+    with self.argument_context('apimgmt apis issues comments') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis issues comments') as c:
+    with self.argument_context('apimgmt apis issues comments') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis issues comments') as c:
+    with self.argument_context('apimgmt apis issues comments') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service apis issues comments') as c:
+    with self.argument_context('apimgmt apis issues comments') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service apis issues comments_name', service apis issues comments_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt apis issues comments_name', apimgmt apis issues comments_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service apis issues comments') as c:
+    with self.argument_context('apimgmt apis issues comments') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis issues comments') as c:
+    with self.argument_context('apimgmt apis issues comments') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service apis issues attachments') as c:
+    with self.argument_context('apimgmt apis issues attachments') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service apis issues attachments_name', service apis issues attachments_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt apis issues attachments_name', apimgmt apis issues attachments_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service apis issues attachments') as c:
+    with self.argument_context('apimgmt apis issues attachments') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis issues attachments') as c:
+    with self.argument_context('apimgmt apis issues attachments') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis issues attachments') as c:
+    with self.argument_context('apimgmt apis issues attachments') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis issues attachments') as c:
+    with self.argument_context('apimgmt apis issues attachments') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service apis issues attachments') as c:
+    with self.argument_context('apimgmt apis issues attachments') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service apis issues attachments_name', service apis issues attachments_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt apis issues attachments_name', apimgmt apis issues attachments_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service apis issues attachments') as c:
+    with self.argument_context('apimgmt apis issues attachments') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis issues attachments') as c:
+    with self.argument_context('apimgmt apis issues attachments') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service apis tagdescriptions') as c:
+    with self.argument_context('apimgmt apis tagdescriptions') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service apis tagdescriptions_name', service apis tagdescriptions_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt apis tagdescriptions_name', apimgmt apis tagdescriptions_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service apis tagdescriptions') as c:
+    with self.argument_context('apimgmt apis tagdescriptions') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis tagdescriptions') as c:
+    with self.argument_context('apimgmt apis tagdescriptions') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis tagdescriptions') as c:
+    with self.argument_context('apimgmt apis tagdescriptions') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis tagdescriptions') as c:
+    with self.argument_context('apimgmt apis tagdescriptions') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service apis tagdescriptions') as c:
+    with self.argument_context('apimgmt apis tagdescriptions') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service apis tagdescriptions_name', service apis tagdescriptions_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt apis tagdescriptions_name', apimgmt apis tagdescriptions_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service apis tagdescriptions') as c:
+    with self.argument_context('apimgmt apis tagdescriptions') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apis tagdescriptions') as c:
+    with self.argument_context('apimgmt apis tagdescriptions') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service apis') as c:
+    with self.argument_context('apimgmt apis') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service apis_name', service apis_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt apis_name', apimgmt apis_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service apis') as c:
+    with self.argument_context('apimgmt apis') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service apiversionsets') as c:
+    with self.argument_context('apimgmt apiversionsets') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service apiversionsets_name', service apiversionsets_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt apiversionsets_name', apimgmt apiversionsets_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service apiversionsets') as c:
+    with self.argument_context('apimgmt apiversionsets') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apiversionsets') as c:
+    with self.argument_context('apimgmt apiversionsets') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apiversionsets') as c:
+    with self.argument_context('apimgmt apiversionsets') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apiversionsets') as c:
+    with self.argument_context('apimgmt apiversionsets') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apiversionsets') as c:
+    with self.argument_context('apimgmt apiversionsets') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service apiversionsets') as c:
+    with self.argument_context('apimgmt apiversionsets') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service apiversionsets_name', service apiversionsets_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt apiversionsets_name', apimgmt apiversionsets_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service apiversionsets') as c:
+    with self.argument_context('apimgmt apiversionsets') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service apiversionsets') as c:
+    with self.argument_context('apimgmt apiversionsets') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service authorizationservers') as c:
+    with self.argument_context('apimgmt authorizationservers') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service authorizationservers_name', service authorizationservers_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt authorizationservers_name', apimgmt authorizationservers_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service authorizationservers') as c:
+    with self.argument_context('apimgmt authorizationservers') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service authorizationservers') as c:
+    with self.argument_context('apimgmt authorizationservers') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service authorizationservers') as c:
+    with self.argument_context('apimgmt authorizationservers') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service authorizationservers') as c:
+    with self.argument_context('apimgmt authorizationservers') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service authorizationservers') as c:
+    with self.argument_context('apimgmt authorizationservers') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service authorizationservers') as c:
+    with self.argument_context('apimgmt authorizationservers') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service authorizationservers_name', service authorizationservers_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt authorizationservers_name', apimgmt authorizationservers_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service authorizationservers') as c:
+    with self.argument_context('apimgmt authorizationservers') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service authorizationservers') as c:
+    with self.argument_context('apimgmt authorizationservers') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service backends') as c:
+    with self.argument_context('apimgmt backends') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service backends_name', service backends_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt backends_name', apimgmt backends_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service backends') as c:
+    with self.argument_context('apimgmt backends') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service backends') as c:
+    with self.argument_context('apimgmt backends') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service backends') as c:
+    with self.argument_context('apimgmt backends') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service backends') as c:
+    with self.argument_context('apimgmt backends') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service backends') as c:
+    with self.argument_context('apimgmt backends') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service backends') as c:
+    with self.argument_context('apimgmt backends') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service backends_name', service backends_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt backends_name', apimgmt backends_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service backends') as c:
+    with self.argument_context('apimgmt backends') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service backends') as c:
+    with self.argument_context('apimgmt backends') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service caches') as c:
+    with self.argument_context('apimgmt caches') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service caches_name', service caches_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt caches_name', apimgmt caches_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service caches') as c:
+    with self.argument_context('apimgmt caches') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service caches') as c:
+    with self.argument_context('apimgmt caches') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service caches') as c:
+    with self.argument_context('apimgmt caches') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service caches') as c:
+    with self.argument_context('apimgmt caches') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service caches') as c:
+    with self.argument_context('apimgmt caches') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service caches') as c:
+    with self.argument_context('apimgmt caches') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service caches_name', service caches_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt caches_name', apimgmt caches_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service caches') as c:
+    with self.argument_context('apimgmt caches') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service caches') as c:
+    with self.argument_context('apimgmt caches') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service certificates') as c:
+    with self.argument_context('apimgmt certificates') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service certificates_name', service certificates_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt certificates_name', apimgmt certificates_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service certificates') as c:
+    with self.argument_context('apimgmt certificates') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service certificates') as c:
+    with self.argument_context('apimgmt certificates') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service certificates') as c:
+    with self.argument_context('apimgmt certificates') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service certificates') as c:
+    with self.argument_context('apimgmt certificates') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service certificates') as c:
+    with self.argument_context('apimgmt certificates') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service certificates_name', service certificates_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt certificates_name', apimgmt certificates_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service certificates') as c:
+    with self.argument_context('apimgmt certificates') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service certificates') as c:
+    with self.argument_context('apimgmt certificates') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
@@ -590,798 +590,798 @@ def load_arguments(self, _):
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service_name', service_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt_name', apimgmt_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service_name', service_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt_name', apimgmt_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service_name', service_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt_name', apimgmt_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service diagnostics') as c:
+    with self.argument_context('apimgmt diagnostics') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service diagnostics_name', service diagnostics_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt diagnostics_name', apimgmt diagnostics_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service diagnostics') as c:
+    with self.argument_context('apimgmt diagnostics') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service diagnostics') as c:
+    with self.argument_context('apimgmt diagnostics') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service diagnostics') as c:
+    with self.argument_context('apimgmt diagnostics') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service diagnostics') as c:
+    with self.argument_context('apimgmt diagnostics') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service diagnostics') as c:
+    with self.argument_context('apimgmt diagnostics') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service diagnostics') as c:
+    with self.argument_context('apimgmt diagnostics') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service diagnostics_name', service diagnostics_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt diagnostics_name', apimgmt diagnostics_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service diagnostics') as c:
+    with self.argument_context('apimgmt diagnostics') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service diagnostics') as c:
+    with self.argument_context('apimgmt diagnostics') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service templates') as c:
+    with self.argument_context('apimgmt templates') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service templates_name', service templates_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt templates_name', apimgmt templates_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service templates') as c:
+    with self.argument_context('apimgmt templates') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service templates') as c:
+    with self.argument_context('apimgmt templates') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service templates') as c:
+    with self.argument_context('apimgmt templates') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service templates') as c:
+    with self.argument_context('apimgmt templates') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service templates') as c:
+    with self.argument_context('apimgmt templates') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service templates') as c:
+    with self.argument_context('apimgmt templates') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service templates_name', service templates_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt templates_name', apimgmt templates_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service templates') as c:
+    with self.argument_context('apimgmt templates') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service templates') as c:
+    with self.argument_context('apimgmt templates') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service groups') as c:
+    with self.argument_context('apimgmt groups') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service groups_name', service groups_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt groups_name', apimgmt groups_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service groups') as c:
+    with self.argument_context('apimgmt groups') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service groups') as c:
+    with self.argument_context('apimgmt groups') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service groups') as c:
+    with self.argument_context('apimgmt groups') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service groups') as c:
+    with self.argument_context('apimgmt groups') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service groups') as c:
+    with self.argument_context('apimgmt groups') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service groups') as c:
+    with self.argument_context('apimgmt groups') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service groups_name', service groups_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt groups_name', apimgmt groups_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service groups') as c:
+    with self.argument_context('apimgmt groups') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service groups') as c:
+    with self.argument_context('apimgmt groups') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service groups users') as c:
+    with self.argument_context('apimgmt groups users') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service groups users_name', service groups users_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt groups users_name', apimgmt groups users_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service groups users') as c:
+    with self.argument_context('apimgmt groups users') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service groups users') as c:
+    with self.argument_context('apimgmt groups users') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service groups users') as c:
+    with self.argument_context('apimgmt groups users') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service groups') as c:
+    with self.argument_context('apimgmt groups') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service groups_name', service groups_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt groups_name', apimgmt groups_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service groups') as c:
+    with self.argument_context('apimgmt groups') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service identityproviders') as c:
+    with self.argument_context('apimgmt identityproviders') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service identityproviders_name', service identityproviders_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt identityproviders_name', apimgmt identityproviders_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service identityproviders') as c:
+    with self.argument_context('apimgmt identityproviders') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service identityproviders') as c:
+    with self.argument_context('apimgmt identityproviders') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service identityproviders') as c:
+    with self.argument_context('apimgmt identityproviders') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service identityproviders') as c:
+    with self.argument_context('apimgmt identityproviders') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service identityproviders') as c:
+    with self.argument_context('apimgmt identityproviders') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service identityproviders') as c:
+    with self.argument_context('apimgmt identityproviders') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service identityproviders_name', service identityproviders_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt identityproviders_name', apimgmt identityproviders_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service identityproviders') as c:
+    with self.argument_context('apimgmt identityproviders') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service identityproviders') as c:
+    with self.argument_context('apimgmt identityproviders') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service issues') as c:
+    with self.argument_context('apimgmt issues') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service issues_name', service issues_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt issues_name', apimgmt issues_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service issues') as c:
+    with self.argument_context('apimgmt issues') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service issues') as c:
+    with self.argument_context('apimgmt issues') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service loggers') as c:
+    with self.argument_context('apimgmt loggers') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service loggers_name', service loggers_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt loggers_name', apimgmt loggers_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service loggers') as c:
+    with self.argument_context('apimgmt loggers') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service loggers') as c:
+    with self.argument_context('apimgmt loggers') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service loggers') as c:
+    with self.argument_context('apimgmt loggers') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service loggers') as c:
+    with self.argument_context('apimgmt loggers') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service loggers') as c:
+    with self.argument_context('apimgmt loggers') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service loggers') as c:
+    with self.argument_context('apimgmt loggers') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service loggers_name', service loggers_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt loggers_name', apimgmt loggers_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service loggers') as c:
+    with self.argument_context('apimgmt loggers') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service loggers') as c:
+    with self.argument_context('apimgmt loggers') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service locations') as c:
+    with self.argument_context('apimgmt locations') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service locations_name', service locations_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt locations_name', apimgmt locations_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service locations') as c:
+    with self.argument_context('apimgmt locations') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service notifications') as c:
+    with self.argument_context('apimgmt notifications') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service notifications_name', service notifications_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt notifications_name', apimgmt notifications_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service notifications') as c:
+    with self.argument_context('apimgmt notifications') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service notifications') as c:
+    with self.argument_context('apimgmt notifications') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service notifications') as c:
+    with self.argument_context('apimgmt notifications') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service notifications') as c:
+    with self.argument_context('apimgmt notifications') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service notifications_name', service notifications_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt notifications_name', apimgmt notifications_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service notifications') as c:
+    with self.argument_context('apimgmt notifications') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service notifications') as c:
+    with self.argument_context('apimgmt notifications') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service notifications recipientusers') as c:
+    with self.argument_context('apimgmt notifications recipientusers') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service notifications recipientusers_name', service notifications recipientusers_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt notifications recipientusers_name', apimgmt notifications recipientusers_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service notifications recipientusers') as c:
+    with self.argument_context('apimgmt notifications recipientusers') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service notifications recipientusers') as c:
+    with self.argument_context('apimgmt notifications recipientusers') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service notifications recipientusers') as c:
+    with self.argument_context('apimgmt notifications recipientusers') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service notifications') as c:
+    with self.argument_context('apimgmt notifications') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service notifications_name', service notifications_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt notifications_name', apimgmt notifications_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service notifications') as c:
+    with self.argument_context('apimgmt notifications') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service notifications recipientemails') as c:
+    with self.argument_context('apimgmt notifications recipientemails') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service notifications recipientemails_name', service notifications recipientemails_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt notifications recipientemails_name', apimgmt notifications recipientemails_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service notifications recipientemails') as c:
+    with self.argument_context('apimgmt notifications recipientemails') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service notifications recipientemails') as c:
+    with self.argument_context('apimgmt notifications recipientemails') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service notifications recipientemails') as c:
+    with self.argument_context('apimgmt notifications recipientemails') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service notifications') as c:
+    with self.argument_context('apimgmt notifications') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service notifications_name', service notifications_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt notifications_name', apimgmt notifications_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service notifications') as c:
+    with self.argument_context('apimgmt notifications') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service openidconnectproviders') as c:
+    with self.argument_context('apimgmt openidconnectproviders') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service openidconnectproviders_name', service openidconnectproviders_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt openidconnectproviders_name', apimgmt openidconnectproviders_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service openidconnectproviders') as c:
+    with self.argument_context('apimgmt openidconnectproviders') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service openidconnectproviders') as c:
+    with self.argument_context('apimgmt openidconnectproviders') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service openidconnectproviders') as c:
+    with self.argument_context('apimgmt openidconnectproviders') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service openidconnectproviders') as c:
+    with self.argument_context('apimgmt openidconnectproviders') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service openidconnectproviders') as c:
+    with self.argument_context('apimgmt openidconnectproviders') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service openidconnectproviders') as c:
+    with self.argument_context('apimgmt openidconnectproviders') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service openidconnectproviders_name', service openidconnectproviders_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt openidconnectproviders_name', apimgmt openidconnectproviders_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service openidconnectproviders') as c:
+    with self.argument_context('apimgmt openidconnectproviders') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service openidconnectproviders') as c:
+    with self.argument_context('apimgmt openidconnectproviders') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service policies') as c:
+    with self.argument_context('apimgmt policies') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service policies_name', service policies_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt policies_name', apimgmt policies_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service policies') as c:
+    with self.argument_context('apimgmt policies') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service policies') as c:
+    with self.argument_context('apimgmt policies') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service policies') as c:
+    with self.argument_context('apimgmt policies') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service policies') as c:
+    with self.argument_context('apimgmt policies') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service policies') as c:
+    with self.argument_context('apimgmt policies') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service policies_name', service policies_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt policies_name', apimgmt policies_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service policies') as c:
+    with self.argument_context('apimgmt policies') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service policies') as c:
+    with self.argument_context('apimgmt policies') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service_name', service_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt_name', apimgmt_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service_name', service_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt_name', apimgmt_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service_name', service_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt_name', apimgmt_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service_name', service_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt_name', apimgmt_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service_name', service_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt_name', apimgmt_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service_name', service_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt_name', apimgmt_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service_name', service_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt_name', apimgmt_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service products') as c:
+    with self.argument_context('apimgmt products') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service products_name', service products_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt products_name', apimgmt products_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service products') as c:
+    with self.argument_context('apimgmt products') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service products') as c:
+    with self.argument_context('apimgmt products') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service products') as c:
+    with self.argument_context('apimgmt products') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service products') as c:
+    with self.argument_context('apimgmt products') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service products') as c:
+    with self.argument_context('apimgmt products') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service products') as c:
+    with self.argument_context('apimgmt products') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service products_name', service products_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt products_name', apimgmt products_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service products') as c:
+    with self.argument_context('apimgmt products') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service products') as c:
+    with self.argument_context('apimgmt products') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service products apis') as c:
+    with self.argument_context('apimgmt products apis') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service products apis_name', service products apis_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt products apis_name', apimgmt products apis_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service products apis') as c:
+    with self.argument_context('apimgmt products apis') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service products apis') as c:
+    with self.argument_context('apimgmt products apis') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service products apis') as c:
+    with self.argument_context('apimgmt products apis') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service products') as c:
+    with self.argument_context('apimgmt products') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service products_name', service products_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt products_name', apimgmt products_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service products') as c:
+    with self.argument_context('apimgmt products') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service products groups') as c:
+    with self.argument_context('apimgmt products groups') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service products groups_name', service products groups_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt products groups_name', apimgmt products groups_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service products groups') as c:
+    with self.argument_context('apimgmt products groups') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service products groups') as c:
+    with self.argument_context('apimgmt products groups') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service products groups') as c:
+    with self.argument_context('apimgmt products groups') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service products') as c:
+    with self.argument_context('apimgmt products') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service products_name', service products_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt products_name', apimgmt products_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service products') as c:
+    with self.argument_context('apimgmt products') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service products') as c:
+    with self.argument_context('apimgmt products') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service products_name', service products_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt products_name', apimgmt products_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service products') as c:
+    with self.argument_context('apimgmt products') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service products policies') as c:
+    with self.argument_context('apimgmt products policies') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service products policies_name', service products policies_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt products policies_name', apimgmt products policies_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service products policies') as c:
+    with self.argument_context('apimgmt products policies') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service products policies') as c:
+    with self.argument_context('apimgmt products policies') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service products policies') as c:
+    with self.argument_context('apimgmt products policies') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service products policies') as c:
+    with self.argument_context('apimgmt products policies') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service products policies') as c:
+    with self.argument_context('apimgmt products policies') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service products policies_name', service products policies_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt products policies_name', apimgmt products policies_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service products policies') as c:
+    with self.argument_context('apimgmt products policies') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service products policies') as c:
+    with self.argument_context('apimgmt products policies') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service properties') as c:
+    with self.argument_context('apimgmt properties') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service properties_name', service properties_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt properties_name', apimgmt properties_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service properties') as c:
+    with self.argument_context('apimgmt properties') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service properties') as c:
+    with self.argument_context('apimgmt properties') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service properties') as c:
+    with self.argument_context('apimgmt properties') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service properties') as c:
+    with self.argument_context('apimgmt properties') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service properties') as c:
+    with self.argument_context('apimgmt properties') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service properties') as c:
+    with self.argument_context('apimgmt properties') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service properties_name', service properties_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt properties_name', apimgmt properties_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service properties') as c:
+    with self.argument_context('apimgmt properties') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service properties') as c:
+    with self.argument_context('apimgmt properties') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service quotas') as c:
+    with self.argument_context('apimgmt quotas') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service quotas_name', service quotas_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt quotas_name', apimgmt quotas_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service quotas') as c:
+    with self.argument_context('apimgmt quotas') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service quotas periods') as c:
+    with self.argument_context('apimgmt quotas periods') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service quotas periods_name', service quotas periods_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt quotas periods_name', apimgmt quotas periods_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service quotas periods') as c:
+    with self.argument_context('apimgmt quotas periods') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service_name', service_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt_name', apimgmt_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service_name', service_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt_name', apimgmt_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service subscriptions') as c:
+    with self.argument_context('apimgmt subscriptions') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service subscriptions_name', service subscriptions_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt subscriptions_name', apimgmt subscriptions_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service subscriptions') as c:
+    with self.argument_context('apimgmt subscriptions') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service subscriptions') as c:
+    with self.argument_context('apimgmt subscriptions') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service subscriptions') as c:
+    with self.argument_context('apimgmt subscriptions') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service subscriptions') as c:
+    with self.argument_context('apimgmt subscriptions') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service subscriptions') as c:
+    with self.argument_context('apimgmt subscriptions') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service subscriptions') as c:
+    with self.argument_context('apimgmt subscriptions') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service subscriptions_name', service subscriptions_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt subscriptions_name', apimgmt subscriptions_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service subscriptions') as c:
+    with self.argument_context('apimgmt subscriptions') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service subscriptions') as c:
+    with self.argument_context('apimgmt subscriptions') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service_name', service_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt_name', apimgmt_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service') as c:
+    with self.argument_context('apimgmt') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service tenant') as c:
+    with self.argument_context('apimgmt tenant') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service tenant_name', service tenant_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt tenant_name', apimgmt tenant_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service tenant') as c:
+    with self.argument_context('apimgmt tenant') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service tenant') as c:
+    with self.argument_context('apimgmt tenant') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service tenant_name', service tenant_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt tenant_name', apimgmt tenant_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service tenant') as c:
+    with self.argument_context('apimgmt tenant') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service tenant') as c:
+    with self.argument_context('apimgmt tenant') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service tenant_name', service tenant_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt tenant_name', apimgmt tenant_name_type, options_list=['--name', '-n'])
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service users') as c:
+    with self.argument_context('apimgmt users') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service users_name', service users_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt users_name', apimgmt users_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service users') as c:
+    with self.argument_context('apimgmt users') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service users') as c:
+    with self.argument_context('apimgmt users') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service users') as c:
+    with self.argument_context('apimgmt users') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service users') as c:
+    with self.argument_context('apimgmt users') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
 
-    with self.argument_context('service users') as c:
-        c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
-    apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
-
-    with self.argument_context('service users') as c:
-        c.argument('tags', tags_type)
-        c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service users_name', service users_name_type, options_list=['--name', '-n'])
-
-    with self.argument_context('service users') as c:
-        c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
-
-    with self.argument_context('service users') as c:
+    with self.argument_context('apimgmt users') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service users') as c:
+    with self.argument_context('apimgmt users') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service users_name', service users_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt users_name', apimgmt users_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service users') as c:
+    with self.argument_context('apimgmt users') as c:
+        c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
+
+    with self.argument_context('apimgmt users') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service users') as c:
+    with self.argument_context('apimgmt users') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service users_name', service users_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt users_name', apimgmt users_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service users') as c:
+    with self.argument_context('apimgmt users') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service users') as c:
+    with self.argument_context('apimgmt users') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service users_name', service users_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt users_name', apimgmt users_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service users') as c:
+    with self.argument_context('apimgmt users') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('service apis') as c:
+    with self.argument_context('apimgmt users') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('service apis_name', service apis_name_type, options_list=['--name', '-n'])
+        c.argument('apimgmt users_name', apimgmt users_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('service apis') as c:
+    with self.argument_context('apimgmt users') as c:
+        c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
+    apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
+
+    with self.argument_context('apimgmt apis') as c:
+        c.argument('tags', tags_type)
+        c.argument('location', validator=get_default_location_from_resource_group)
+        c.argument('apimgmt apis_name', apimgmt apis_name_type, options_list=['--name', '-n'])
+
+    with self.argument_context('apimgmt apis') as c:
         c.argument('apimgmt_name', apimgmt_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 

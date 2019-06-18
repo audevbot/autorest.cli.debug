@@ -13,51 +13,51 @@ def load_command_table(self, _):
         client_factory=cf_frontdoor)
 
 
-    with self.command_group('frontdoors', frontdoor_sdk, client_factory=cf_frontdoor) as g:
-        g.custom_command('create', 'create_frontdoors')
-        g.custom_command('delete', 'delete_frontdoors')
-        g.custom_command('list', 'list_frontdoors')
-        g.custom_command('show', 'show_frontdoors')
-    with self.command_group('frontdoors', frontdoor_sdk, client_factory=cf_frontdoor) as g:
-        g.custom_command('show', 'show_frontdoors')
-        g.custom_command('list', 'list_frontdoors')
-    with self.command_group('frontdoors routingrules', frontdoor_sdk, client_factory=cf_frontdoor) as g:
-        g.custom_command('create', 'create_frontdoors_routingrules')
-        g.custom_command('delete', 'delete_frontdoors_routingrules')
-        g.custom_command('list', 'list_frontdoors_routingrules')
-        g.custom_command('show', 'show_frontdoors_routingrules')
-    with self.command_group('frontdoors routingrules', frontdoor_sdk, client_factory=cf_frontdoor) as g:
-        g.custom_command('show', 'show_frontdoors_routingrules')
-        g.custom_command('list', 'list_frontdoors_routingrules')
-    with self.command_group('frontdoors healthprobesettings', frontdoor_sdk, client_factory=cf_frontdoor) as g:
-        g.custom_command('create', 'create_frontdoors_healthprobesettings')
-        g.custom_command('delete', 'delete_frontdoors_healthprobesettings')
-        g.custom_command('list', 'list_frontdoors_healthprobesettings')
-        g.custom_command('show', 'show_frontdoors_healthprobesettings')
-    with self.command_group('frontdoors healthprobesettings', frontdoor_sdk, client_factory=cf_frontdoor) as g:
-        g.custom_command('show', 'show_frontdoors_healthprobesettings')
-        g.custom_command('list', 'list_frontdoors_healthprobesettings')
-    with self.command_group('frontdoors loadbalancingsettings', frontdoor_sdk, client_factory=cf_frontdoor) as g:
-        g.custom_command('create', 'create_frontdoors_loadbalancingsettings')
-        g.custom_command('delete', 'delete_frontdoors_loadbalancingsettings')
-        g.custom_command('list', 'list_frontdoors_loadbalancingsettings')
-        g.custom_command('show', 'show_frontdoors_loadbalancingsettings')
-    with self.command_group('frontdoors loadbalancingsettings', frontdoor_sdk, client_factory=cf_frontdoor) as g:
-        g.custom_command('show', 'show_frontdoors_loadbalancingsettings')
-        g.custom_command('list', 'list_frontdoors_loadbalancingsettings')
-    with self.command_group('frontdoors backendpools', frontdoor_sdk, client_factory=cf_frontdoor) as g:
-        g.custom_command('create', 'create_frontdoors_backendpools')
-        g.custom_command('delete', 'delete_frontdoors_backendpools')
-        g.custom_command('list', 'list_frontdoors_backendpools')
-        g.custom_command('show', 'show_frontdoors_backendpools')
-    with self.command_group('frontdoors backendpools', frontdoor_sdk, client_factory=cf_frontdoor) as g:
-        g.custom_command('show', 'show_frontdoors_backendpools')
-        g.custom_command('list', 'list_frontdoors_backendpools')
-    with self.command_group('frontdoors frontendendpoints', frontdoor_sdk, client_factory=cf_frontdoor) as g:
-        g.custom_command('create', 'create_frontdoors_frontendendpoints')
-        g.custom_command('delete', 'delete_frontdoors_frontendendpoints')
-        g.custom_command('list', 'list_frontdoors_frontendendpoints')
-        g.custom_command('show', 'show_frontdoors_frontendendpoints')
-    with self.command_group('frontdoors frontendendpoints', frontdoor_sdk, client_factory=cf_frontdoor) as g:
-        g.custom_command('show', 'show_frontdoors_frontendendpoints')
-        g.custom_command('list', 'list_frontdoors_frontendendpoints')
+    with self.command_group('frontdoor', frontdoor_sdk, client_factory=cf_frontdoor) as g:
+        g.custom_command('create', 'create_frontdoor')
+        g.custom_command('delete', 'delete_frontdoor')
+        g.custom_command('list', 'list_frontdoor')
+        g.custom_command('show', 'show_frontdoor')
+    with self.command_group('frontdoor', frontdoor_sdk, client_factory=cf_frontdoor) as g:
+        g.custom_command('show', 'show_frontdoor')
+        g.custom_command('list', 'list_frontdoor')
+    with self.command_group('frontdoor routingrules', frontdoor_sdk, client_factory=cf_frontdoor) as g:
+        g.custom_command('create', 'create_frontdoor_routingrules')
+        g.custom_command('delete', 'delete_frontdoor_routingrules')
+        g.custom_command('list', 'list_frontdoor_routingrules')
+        g.custom_command('show', 'show_frontdoor_routingrules')
+    with self.command_group('frontdoor routingrules', frontdoor_sdk, client_factory=cf_frontdoor) as g:
+        g.custom_command('show', 'show_frontdoor_routingrules')
+        g.custom_command('list', 'list_frontdoor_routingrules')
+    with self.command_group('frontdoor healthprobesettings', frontdoor_sdk, client_factory=cf_frontdoor) as g:
+        g.custom_command('create', 'create_frontdoor_healthprobesettings')
+        g.custom_command('delete', 'delete_frontdoor_healthprobesettings')
+        g.custom_command('list', 'list_frontdoor_healthprobesettings')
+        g.custom_command('show', 'show_frontdoor_healthprobesettings')
+    with self.command_group('frontdoor healthprobesettings', frontdoor_sdk, client_factory=cf_frontdoor) as g:
+        g.custom_command('show', 'show_frontdoor_healthprobesettings')
+        g.custom_command('list', 'list_frontdoor_healthprobesettings')
+    with self.command_group('frontdoor loadbalancingsettings', frontdoor_sdk, client_factory=cf_frontdoor) as g:
+        g.custom_command('create', 'create_frontdoor_loadbalancingsettings')
+        g.custom_command('delete', 'delete_frontdoor_loadbalancingsettings')
+        g.custom_command('list', 'list_frontdoor_loadbalancingsettings')
+        g.custom_command('show', 'show_frontdoor_loadbalancingsettings')
+    with self.command_group('frontdoor loadbalancingsettings', frontdoor_sdk, client_factory=cf_frontdoor) as g:
+        g.custom_command('show', 'show_frontdoor_loadbalancingsettings')
+        g.custom_command('list', 'list_frontdoor_loadbalancingsettings')
+    with self.command_group('frontdoor backendpools', frontdoor_sdk, client_factory=cf_frontdoor) as g:
+        g.custom_command('create', 'create_frontdoor_backendpools')
+        g.custom_command('delete', 'delete_frontdoor_backendpools')
+        g.custom_command('list', 'list_frontdoor_backendpools')
+        g.custom_command('show', 'show_frontdoor_backendpools')
+    with self.command_group('frontdoor backendpools', frontdoor_sdk, client_factory=cf_frontdoor) as g:
+        g.custom_command('show', 'show_frontdoor_backendpools')
+        g.custom_command('list', 'list_frontdoor_backendpools')
+    with self.command_group('frontdoor frontendendpoints', frontdoor_sdk, client_factory=cf_frontdoor) as g:
+        g.custom_command('create', 'create_frontdoor_frontendendpoints')
+        g.custom_command('delete', 'delete_frontdoor_frontendendpoints')
+        g.custom_command('list', 'list_frontdoor_frontendendpoints')
+        g.custom_command('show', 'show_frontdoor_frontendendpoints')
+    with self.command_group('frontdoor frontendendpoints', frontdoor_sdk, client_factory=cf_frontdoor) as g:
+        g.custom_command('show', 'show_frontdoor_frontendendpoints')
+        g.custom_command('list', 'list_frontdoor_frontendendpoints')

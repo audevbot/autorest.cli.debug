@@ -7,69 +7,69 @@
 from knack.util import CLIError
 
 
-def create_eventsubscriptions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `eventsubscriptions create`')
+def create_eventgrid eventsubscriptions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.event_subscriptions.create()
 
 
-def update_eventsubscriptions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `eventsubscriptions update`')
+def update_eventgrid eventsubscriptions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.event_subscriptions.update()
 
 
-def delete_eventsubscriptions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `eventsubscriptions delete`')
+def delete_eventgrid eventsubscriptions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.event_subscriptions.delete()
 
 
-def list_eventsubscriptions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `eventsubscriptions list`')
+def list_eventgrid eventsubscriptions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.event_subscriptions.list()
 
 
-def show_eventsubscriptions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `eventsubscriptions show`')
+def show_eventgrid eventsubscriptions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.event_subscriptions.show()
 
 
-def list_eventsubscriptions locations topictypes providers {providernamespace} {resourcetypename}(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `eventsubscriptions locations topictypes providers {providernamespace} {resourcetypename} list`')
+def list_eventgrid eventsubscriptions locations topictypes providers {providernamespace} {resourcetypename}(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.event_subscriptions.list()
 
 
-def show_eventsubscriptions locations topictypes providers {providernamespace} {resourcetypename}(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `eventsubscriptions locations topictypes providers {providernamespace} {resourcetypename} show`')
+def show_eventgrid eventsubscriptions locations topictypes providers {providernamespace} {resourcetypename}(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.event_subscriptions.show()
 
 
 def list_(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement ` list`')
+    return client.operations.list()
 
 
-def create_topics(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `topics create`')
+def create_eventgrid(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.topics.create()
 
 
-def update_topics(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `topics update`')
+def update_eventgrid(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.topics.update()
 
 
-def delete_topics(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `topics delete`')
+def delete_eventgrid(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.topics.delete()
 
 
-def list_topics(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `topics list`')
+def list_eventgrid(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.topics.list()
 
 
-def show_topics(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `topics show`')
+def show_eventgrid(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.topics.show()
 
 
-def list_topics providers {providernamespace} {resourcetypename}(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `topics providers {providernamespace} {resourcetypename} list`')
+def list_eventgrid providers {providernamespace} {resourcetypename}(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.topics.list()
 
 
-def show_topics providers {providernamespace} {resourcetypename}(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `topics providers {providernamespace} {resourcetypename} show`')
+def show_eventgrid providers {providernamespace} {resourcetypename}(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.topics.show()
 
 
-def list_topictypes(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `topictypes list`')
+def list_eventgrid(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.topic_types.list()
 
 
-def show_topictypes(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `topictypes show`')
+def show_eventgrid(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.topic_types.show()

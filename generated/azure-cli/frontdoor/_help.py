@@ -8,242 +8,242 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 
 
-helps['frontdoors'] = """
+helps['frontdoor'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['frontdoors create'] = """
+helps['frontdoor create'] = """
     type: command
-    short-summary: create a frontdoors.
+    short-summary: create a frontdoor.
 """
 
-helps['frontdoors delete'] = """
+helps['frontdoor delete'] = """
     type: command
-    short-summary: delete a frontdoors.
+    short-summary: delete a frontdoor.
 """
 
-helps['frontdoors list'] = """
+helps['frontdoor list'] = """
     type: command
-    short-summary: list a frontdoors.
+    short-summary: list a frontdoor.
 """
 
-helps['frontdoors show'] = """
+helps['frontdoor show'] = """
     type: command
-    short-summary: show a frontdoors.
+    short-summary: show a frontdoor.
 """
 
-helps['frontdoors'] = """
+helps['frontdoor'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['frontdoors show'] = """
+helps['frontdoor show'] = """
     type: command
-    short-summary: show a frontdoors.
+    short-summary: show a frontdoor.
 """
 
-helps['frontdoors list'] = """
+helps['frontdoor list'] = """
     type: command
-    short-summary: list a frontdoors.
+    short-summary: list a frontdoor.
 """
 
-helps['frontdoors routingrules'] = """
+helps['frontdoor routingrules'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['frontdoors routingrules create'] = """
+helps['frontdoor routingrules create'] = """
     type: command
-    short-summary: create a frontdoors routingrules.
+    short-summary: create a frontdoor routingrules.
 """
 
-helps['frontdoors routingrules delete'] = """
+helps['frontdoor routingrules delete'] = """
     type: command
-    short-summary: delete a frontdoors routingrules.
+    short-summary: delete a frontdoor routingrules.
 """
 
-helps['frontdoors routingrules list'] = """
+helps['frontdoor routingrules list'] = """
     type: command
-    short-summary: list a frontdoors routingrules.
+    short-summary: list a frontdoor routingrules.
 """
 
-helps['frontdoors routingrules show'] = """
+helps['frontdoor routingrules show'] = """
     type: command
-    short-summary: show a frontdoors routingrules.
+    short-summary: show a frontdoor routingrules.
 """
 
-helps['frontdoors routingrules'] = """
+helps['frontdoor routingrules'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['frontdoors routingrules show'] = """
+helps['frontdoor routingrules show'] = """
     type: command
-    short-summary: show a frontdoors routingrules.
+    short-summary: show a frontdoor routingrules.
 """
 
-helps['frontdoors routingrules list'] = """
+helps['frontdoor routingrules list'] = """
     type: command
-    short-summary: list a frontdoors routingrules.
+    short-summary: list a frontdoor routingrules.
 """
 
-helps['frontdoors healthprobesettings'] = """
+helps['frontdoor healthprobesettings'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['frontdoors healthprobesettings create'] = """
+helps['frontdoor healthprobesettings create'] = """
     type: command
-    short-summary: create a frontdoors healthprobesettings.
+    short-summary: create a frontdoor healthprobesettings.
 """
 
-helps['frontdoors healthprobesettings delete'] = """
+helps['frontdoor healthprobesettings delete'] = """
     type: command
-    short-summary: delete a frontdoors healthprobesettings.
+    short-summary: delete a frontdoor healthprobesettings.
 """
 
-helps['frontdoors healthprobesettings list'] = """
+helps['frontdoor healthprobesettings list'] = """
     type: command
-    short-summary: list a frontdoors healthprobesettings.
+    short-summary: list a frontdoor healthprobesettings.
 """
 
-helps['frontdoors healthprobesettings show'] = """
+helps['frontdoor healthprobesettings show'] = """
     type: command
-    short-summary: show a frontdoors healthprobesettings.
+    short-summary: show a frontdoor healthprobesettings.
 """
 
-helps['frontdoors healthprobesettings'] = """
+helps['frontdoor healthprobesettings'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['frontdoors healthprobesettings show'] = """
+helps['frontdoor healthprobesettings show'] = """
     type: command
-    short-summary: show a frontdoors healthprobesettings.
+    short-summary: show a frontdoor healthprobesettings.
 """
 
-helps['frontdoors healthprobesettings list'] = """
+helps['frontdoor healthprobesettings list'] = """
     type: command
-    short-summary: list a frontdoors healthprobesettings.
+    short-summary: list a frontdoor healthprobesettings.
 """
 
-helps['frontdoors loadbalancingsettings'] = """
+helps['frontdoor loadbalancingsettings'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['frontdoors loadbalancingsettings create'] = """
+helps['frontdoor loadbalancingsettings create'] = """
     type: command
-    short-summary: create a frontdoors loadbalancingsettings.
+    short-summary: create a frontdoor loadbalancingsettings.
 """
 
-helps['frontdoors loadbalancingsettings delete'] = """
+helps['frontdoor loadbalancingsettings delete'] = """
     type: command
-    short-summary: delete a frontdoors loadbalancingsettings.
+    short-summary: delete a frontdoor loadbalancingsettings.
 """
 
-helps['frontdoors loadbalancingsettings list'] = """
+helps['frontdoor loadbalancingsettings list'] = """
     type: command
-    short-summary: list a frontdoors loadbalancingsettings.
+    short-summary: list a frontdoor loadbalancingsettings.
 """
 
-helps['frontdoors loadbalancingsettings show'] = """
+helps['frontdoor loadbalancingsettings show'] = """
     type: command
-    short-summary: show a frontdoors loadbalancingsettings.
+    short-summary: show a frontdoor loadbalancingsettings.
 """
 
-helps['frontdoors loadbalancingsettings'] = """
+helps['frontdoor loadbalancingsettings'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['frontdoors loadbalancingsettings show'] = """
+helps['frontdoor loadbalancingsettings show'] = """
     type: command
-    short-summary: show a frontdoors loadbalancingsettings.
+    short-summary: show a frontdoor loadbalancingsettings.
 """
 
-helps['frontdoors loadbalancingsettings list'] = """
+helps['frontdoor loadbalancingsettings list'] = """
     type: command
-    short-summary: list a frontdoors loadbalancingsettings.
+    short-summary: list a frontdoor loadbalancingsettings.
 """
 
-helps['frontdoors backendpools'] = """
+helps['frontdoor backendpools'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['frontdoors backendpools create'] = """
+helps['frontdoor backendpools create'] = """
     type: command
-    short-summary: create a frontdoors backendpools.
+    short-summary: create a frontdoor backendpools.
 """
 
-helps['frontdoors backendpools delete'] = """
+helps['frontdoor backendpools delete'] = """
     type: command
-    short-summary: delete a frontdoors backendpools.
+    short-summary: delete a frontdoor backendpools.
 """
 
-helps['frontdoors backendpools list'] = """
+helps['frontdoor backendpools list'] = """
     type: command
-    short-summary: list a frontdoors backendpools.
+    short-summary: list a frontdoor backendpools.
 """
 
-helps['frontdoors backendpools show'] = """
+helps['frontdoor backendpools show'] = """
     type: command
-    short-summary: show a frontdoors backendpools.
+    short-summary: show a frontdoor backendpools.
 """
 
-helps['frontdoors backendpools'] = """
+helps['frontdoor backendpools'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['frontdoors backendpools show'] = """
+helps['frontdoor backendpools show'] = """
     type: command
-    short-summary: show a frontdoors backendpools.
+    short-summary: show a frontdoor backendpools.
 """
 
-helps['frontdoors backendpools list'] = """
+helps['frontdoor backendpools list'] = """
     type: command
-    short-summary: list a frontdoors backendpools.
+    short-summary: list a frontdoor backendpools.
 """
 
-helps['frontdoors frontendendpoints'] = """
+helps['frontdoor frontendendpoints'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['frontdoors frontendendpoints create'] = """
+helps['frontdoor frontendendpoints create'] = """
     type: command
-    short-summary: create a frontdoors frontendendpoints.
+    short-summary: create a frontdoor frontendendpoints.
 """
 
-helps['frontdoors frontendendpoints delete'] = """
+helps['frontdoor frontendendpoints delete'] = """
     type: command
-    short-summary: delete a frontdoors frontendendpoints.
+    short-summary: delete a frontdoor frontendendpoints.
 """
 
-helps['frontdoors frontendendpoints list'] = """
+helps['frontdoor frontendendpoints list'] = """
     type: command
-    short-summary: list a frontdoors frontendendpoints.
+    short-summary: list a frontdoor frontendendpoints.
 """
 
-helps['frontdoors frontendendpoints show'] = """
+helps['frontdoor frontendendpoints show'] = """
     type: command
-    short-summary: show a frontdoors frontendendpoints.
+    short-summary: show a frontdoor frontendendpoints.
 """
 
-helps['frontdoors frontendendpoints'] = """
+helps['frontdoor frontendendpoints'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['frontdoors frontendendpoints show'] = """
+helps['frontdoor frontendendpoints show'] = """
     type: command
-    short-summary: show a frontdoors frontendendpoints.
+    short-summary: show a frontdoor frontendendpoints.
 """
 
-helps['frontdoors frontendendpoints list'] = """
+helps['frontdoor frontendendpoints list'] = """
     type: command
-    short-summary: list a frontdoors frontendendpoints.
+    short-summary: list a frontdoor frontendendpoints.
 """

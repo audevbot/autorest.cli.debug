@@ -7,41 +7,41 @@
 from knack.util import CLIError
 
 
-def create_managementgroups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `managementgroups create`')
+def create_mgmtgroups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.management_groups.create()
 
 
-def update_managementgroups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `managementgroups update`')
+def update_mgmtgroups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.management_groups.update()
 
 
-def delete_managementgroups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `managementgroups delete`')
+def delete_mgmtgroups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.management_groups.delete()
 
 
-def list_managementgroups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `managementgroups list`')
+def list_mgmtgroups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.management_groups.list()
 
 
-def show_managementgroups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `managementgroups show`')
+def show_mgmtgroups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.management_groups.show()
 
 
-def show_managementgroups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `managementgroups show`')
+def show_mgmtgroups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.management_groups.show()
 
 
-def list_managementgroups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `managementgroups list`')
+def list_mgmtgroups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.management_groups.list()
 
 
-def create_managementgroups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `managementgroups create`')
+def create_mgmtgroups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.management_group_subscriptions.create()
 
 
-def delete_managementgroups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `managementgroups delete`')
+def delete_mgmtgroups(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+    return client.management_group_subscriptions.delete()
 
 
 def list_(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
-    raise CLIError('TODO: Implement ` list`')
+    return client.operations.list()

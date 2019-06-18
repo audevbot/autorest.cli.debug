@@ -13,13 +13,13 @@ def load_command_table(self, _):
         client_factory=cf_automationjob)
 
 
-    with self.command_group('automationaccounts jobs', automationjob_sdk, client_factory=cf_automationjob) as g:
-        g.custom_command('create', 'create_automationaccounts_jobs')
-        g.custom_command('list', 'list_automationaccounts_jobs')
-        g.custom_command('show', 'show_automationaccounts_jobs')
-    with self.command_group('automationaccounts jobs', automationjob_sdk, client_factory=cf_automationjob) as g:
-        g.custom_command('show', 'show_automationaccounts_jobs')
-        g.custom_command('list', 'list_automationaccounts_jobs')
-    with self.command_group('automationaccounts jobs streams', automationjob_sdk, client_factory=cf_automationjob) as g:
-        g.custom_command('show', 'show_automationaccounts_jobs_streams')
-        g.custom_command('list', 'list_automationaccounts_jobs_streams')
+    with self.command_group('automationjob jobs', automationjob_sdk, client_factory=cf_automationjob) as g:
+        g.custom_command('create', 'create_automationjob_jobs')
+        g.custom_command('list', 'list_automationjob_jobs')
+        g.custom_command('show', 'show_automationjob_jobs')
+    with self.command_group('automationjob jobs', automationjob_sdk, client_factory=cf_automationjob) as g:
+        g.custom_command('show', 'show_automationjob_jobs')
+        g.custom_command('list', 'list_automationjob_jobs')
+    with self.command_group('automationjob jobs streams', automationjob_sdk, client_factory=cf_automationjob) as g:
+        g.custom_command('show', 'show_automationjob_jobs_streams')
+        g.custom_command('list', 'list_automationjob_jobs_streams')

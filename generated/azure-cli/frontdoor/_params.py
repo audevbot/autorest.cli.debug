@@ -14,183 +14,183 @@ def load_arguments(self, _):
 
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('frontdoors') as c:
+    with self.argument_context('frontdoor') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('frontdoors_name', frontdoors_name_type, options_list=['--name', '-n'])
+        c.argument('frontdoor_name', frontdoor_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('frontdoors') as c:
+    with self.argument_context('frontdoor') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
 
-    with self.argument_context('frontdoors') as c:
+    with self.argument_context('frontdoor') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
 
-    with self.argument_context('frontdoors') as c:
+    with self.argument_context('frontdoor') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
 
-    with self.argument_context('frontdoors') as c:
+    with self.argument_context('frontdoor') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('frontdoors') as c:
+    with self.argument_context('frontdoor') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('frontdoors_name', frontdoors_name_type, options_list=['--name', '-n'])
+        c.argument('frontdoor_name', frontdoor_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('frontdoors') as c:
+    with self.argument_context('frontdoor') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
 
-    with self.argument_context('frontdoors') as c:
+    with self.argument_context('frontdoor') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('frontdoors routingrules') as c:
+    with self.argument_context('frontdoor routingrules') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('frontdoors routingrules_name', frontdoors routingrules_name_type, options_list=['--name', '-n'])
+        c.argument('frontdoor routingrules_name', frontdoor routingrules_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('frontdoors routingrules') as c:
+    with self.argument_context('frontdoor routingrules') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
 
-    with self.argument_context('frontdoors routingrules') as c:
+    with self.argument_context('frontdoor routingrules') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
 
-    with self.argument_context('frontdoors routingrules') as c:
+    with self.argument_context('frontdoor routingrules') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
 
-    with self.argument_context('frontdoors routingrules') as c:
+    with self.argument_context('frontdoor routingrules') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('frontdoors routingrules') as c:
+    with self.argument_context('frontdoor routingrules') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('frontdoors routingrules_name', frontdoors routingrules_name_type, options_list=['--name', '-n'])
+        c.argument('frontdoor routingrules_name', frontdoor routingrules_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('frontdoors routingrules') as c:
+    with self.argument_context('frontdoor routingrules') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
 
-    with self.argument_context('frontdoors routingrules') as c:
+    with self.argument_context('frontdoor routingrules') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('frontdoors healthprobesettings') as c:
+    with self.argument_context('frontdoor healthprobesettings') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('frontdoors healthprobesettings_name', frontdoors healthprobesettings_name_type, options_list=['--name', '-n'])
+        c.argument('frontdoor healthprobesettings_name', frontdoor healthprobesettings_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('frontdoors healthprobesettings') as c:
+    with self.argument_context('frontdoor healthprobesettings') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
 
-    with self.argument_context('frontdoors healthprobesettings') as c:
+    with self.argument_context('frontdoor healthprobesettings') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
 
-    with self.argument_context('frontdoors healthprobesettings') as c:
+    with self.argument_context('frontdoor healthprobesettings') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
 
-    with self.argument_context('frontdoors healthprobesettings') as c:
+    with self.argument_context('frontdoor healthprobesettings') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('frontdoors healthprobesettings') as c:
+    with self.argument_context('frontdoor healthprobesettings') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('frontdoors healthprobesettings_name', frontdoors healthprobesettings_name_type, options_list=['--name', '-n'])
+        c.argument('frontdoor healthprobesettings_name', frontdoor healthprobesettings_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('frontdoors healthprobesettings') as c:
+    with self.argument_context('frontdoor healthprobesettings') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
 
-    with self.argument_context('frontdoors healthprobesettings') as c:
+    with self.argument_context('frontdoor healthprobesettings') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('frontdoors loadbalancingsettings') as c:
+    with self.argument_context('frontdoor loadbalancingsettings') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('frontdoors loadbalancingsettings_name', frontdoors loadbalancingsettings_name_type, options_list=['--name', '-n'])
+        c.argument('frontdoor loadbalancingsettings_name', frontdoor loadbalancingsettings_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('frontdoors loadbalancingsettings') as c:
+    with self.argument_context('frontdoor loadbalancingsettings') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
 
-    with self.argument_context('frontdoors loadbalancingsettings') as c:
+    with self.argument_context('frontdoor loadbalancingsettings') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
 
-    with self.argument_context('frontdoors loadbalancingsettings') as c:
+    with self.argument_context('frontdoor loadbalancingsettings') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
 
-    with self.argument_context('frontdoors loadbalancingsettings') as c:
+    with self.argument_context('frontdoor loadbalancingsettings') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('frontdoors loadbalancingsettings') as c:
+    with self.argument_context('frontdoor loadbalancingsettings') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('frontdoors loadbalancingsettings_name', frontdoors loadbalancingsettings_name_type, options_list=['--name', '-n'])
+        c.argument('frontdoor loadbalancingsettings_name', frontdoor loadbalancingsettings_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('frontdoors loadbalancingsettings') as c:
+    with self.argument_context('frontdoor loadbalancingsettings') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
 
-    with self.argument_context('frontdoors loadbalancingsettings') as c:
+    with self.argument_context('frontdoor loadbalancingsettings') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('frontdoors backendpools') as c:
+    with self.argument_context('frontdoor backendpools') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('frontdoors backendpools_name', frontdoors backendpools_name_type, options_list=['--name', '-n'])
+        c.argument('frontdoor backendpools_name', frontdoor backendpools_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('frontdoors backendpools') as c:
+    with self.argument_context('frontdoor backendpools') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
 
-    with self.argument_context('frontdoors backendpools') as c:
+    with self.argument_context('frontdoor backendpools') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
 
-    with self.argument_context('frontdoors backendpools') as c:
+    with self.argument_context('frontdoor backendpools') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
 
-    with self.argument_context('frontdoors backendpools') as c:
+    with self.argument_context('frontdoor backendpools') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('frontdoors backendpools') as c:
+    with self.argument_context('frontdoor backendpools') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('frontdoors backendpools_name', frontdoors backendpools_name_type, options_list=['--name', '-n'])
+        c.argument('frontdoor backendpools_name', frontdoor backendpools_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('frontdoors backendpools') as c:
+    with self.argument_context('frontdoor backendpools') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
 
-    with self.argument_context('frontdoors backendpools') as c:
+    with self.argument_context('frontdoor backendpools') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('frontdoors frontendendpoints') as c:
+    with self.argument_context('frontdoor frontendendpoints') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('frontdoors frontendendpoints_name', frontdoors frontendendpoints_name_type, options_list=['--name', '-n'])
+        c.argument('frontdoor frontendendpoints_name', frontdoor frontendendpoints_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('frontdoors frontendendpoints') as c:
+    with self.argument_context('frontdoor frontendendpoints') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
 
-    with self.argument_context('frontdoors frontendendpoints') as c:
+    with self.argument_context('frontdoor frontendendpoints') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
 
-    with self.argument_context('frontdoors frontendendpoints') as c:
+    with self.argument_context('frontdoor frontendendpoints') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
 
-    with self.argument_context('frontdoors frontendendpoints') as c:
+    with self.argument_context('frontdoor frontendendpoints') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('frontdoors frontendendpoints') as c:
+    with self.argument_context('frontdoor frontendendpoints') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('frontdoors frontendendpoints_name', frontdoors frontendendpoints_name_type, options_list=['--name', '-n'])
+        c.argument('frontdoor frontendendpoints_name', frontdoor frontendendpoints_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('frontdoors frontendendpoints') as c:
+    with self.argument_context('frontdoor frontendendpoints') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
 
-    with self.argument_context('frontdoors frontendendpoints') as c:
+    with self.argument_context('frontdoor frontendendpoints') as c:
         c.argument('frontdoor_name', frontdoor_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
