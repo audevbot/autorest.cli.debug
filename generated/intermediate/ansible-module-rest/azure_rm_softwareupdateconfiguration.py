@@ -328,8 +328,10 @@ EXAMPLES = '''
                     - tag2Value3
               filterOperator: All
         non_azure_queries:
-          - {}
-          - {}
+          - function_alias: SavedSearch1
+            workspace_id: WorkspaceId1
+          - function_alias: SavedSearch2
+            workspace_id: WorkspaceId2
     schedule_info:
       start_time: '2017-10-19T12:22:57+00:00'
       expiry_time: '2018-11-09T11:22:57+00:00'
@@ -739,7 +741,7 @@ properties:
               returned: always
               type: >-
                 unknown[DictionaryType
-                {"$id":"354","$type":"DictionaryType","valueType":{"$id":"355","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"356","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"357","fixed":false},"deprecated":false}]
+                {"$id":"355","$type":"DictionaryType","valueType":{"$id":"356","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"357","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"358","fixed":false},"deprecated":false}]
               sample: null
             source:
               description:
@@ -760,7 +762,7 @@ properties:
               returned: always
               type: >-
                 unknown[DictionaryType
-                {"$id":"354","$type":"DictionaryType","valueType":{"$id":"355","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"356","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"357","fixed":false},"deprecated":false}]
+                {"$id":"355","$type":"DictionaryType","valueType":{"$id":"356","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"357","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"358","fixed":false},"deprecated":false}]
               sample: null
             source:
               description:
@@ -968,7 +970,8 @@ class AzureRMSoftwareUpdateConfigurations(AzureRMModuleBaseExt):
                                  'Day',
                                  'Hour',
                                  'Week',
-                                 'Month']
+                                 'Month',
+                                 'Minute']
                     ),
                     time_zone=dict(
                         type='str',
@@ -1041,7 +1044,7 @@ class AzureRMSoftwareUpdateConfigurations(AzureRMModuleBaseExt):
                         disposition='preTask',
                         options=dict(
                             parameters=dict(
-                                type='unknown[DictionaryType {"$id":"354","$type":"DictionaryType","valueType":{"$id":"355","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"356","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"357","fixed":false},"deprecated":false}]'
+                                type='unknown[DictionaryType {"$id":"355","$type":"DictionaryType","valueType":{"$id":"356","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"357","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"358","fixed":false},"deprecated":false}]'
                             ),
                             source=dict(
                                 type='str'
@@ -1053,7 +1056,7 @@ class AzureRMSoftwareUpdateConfigurations(AzureRMModuleBaseExt):
                         disposition='postTask',
                         options=dict(
                             parameters=dict(
-                                type='unknown[DictionaryType {"$id":"354","$type":"DictionaryType","valueType":{"$id":"355","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"356","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"357","fixed":false},"deprecated":false}]'
+                                type='unknown[DictionaryType {"$id":"355","$type":"DictionaryType","valueType":{"$id":"356","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"357","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"358","fixed":false},"deprecated":false}]'
                             ),
                             source=dict(
                                 type='str'

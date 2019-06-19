@@ -18,9 +18,9 @@ def load_command_table(self, _):
         g.custom_command('delete', 'delete_cosmos-db')
         g.custom_command('list', 'list_cosmos-db')
         g.custom_command('show', 'show_cosmos-db')
-    with self.command_group('cosmos-db tables databases keyspaces containers collections', cosmos-db_sdk, client_factory=cf_cosmos-db) as g:
-        g.custom_command('list', 'list_cosmos-db_tables_databases_keyspaces_containers_collections')
-        g.custom_command('show', 'show_cosmos-db_tables_databases_keyspaces_containers_collections')
+    with self.command_group('cosmos-db tables databases keyspaces graphs containers collections', cosmos-db_sdk, client_factory=cf_cosmos-db) as g:
+        g.custom_command('list', 'list_cosmos-db_tables_databases_keyspaces_graphs_containers_collections')
+        g.custom_command('show', 'show_cosmos-db_tables_databases_keyspaces_graphs_containers_collections')
     with self.command_group('', cosmos-db_sdk, client_factory=cf_cosmos-db) as g:
         g.custom_command('list', 'list_')
     with self.command_group('cosmos-db databases', cosmos-db_sdk, client_factory=cf_cosmos-db) as g:

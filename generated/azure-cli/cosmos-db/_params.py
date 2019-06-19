@@ -32,15 +32,15 @@ def load_arguments(self, _):
         c.argument('cosmos-db_name', cosmos-db_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('cosmos-db tables databases keyspaces containers collections') as c:
+    with self.argument_context('cosmos-db tables databases keyspaces graphs containers collections') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('cosmos-db tables databases keyspaces containers collections_name', cosmos-db tables databases keyspaces containers collections_name_type, options_list=['--name', '-n'])
+        c.argument('cosmos-db tables databases keyspaces graphs containers collections_name', cosmos-db tables databases keyspaces graphs containers collections_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('cosmos-db tables databases keyspaces containers collections') as c:
+    with self.argument_context('cosmos-db tables databases keyspaces graphs containers collections') as c:
         c.argument('cosmos-db_name', cosmos-db_name_type, id_part=None)
 
-    with self.argument_context('cosmos-db tables databases keyspaces containers collections') as c:
+    with self.argument_context('cosmos-db tables databases keyspaces graphs containers collections') as c:
         c.argument('cosmos-db_name', cosmos-db_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 

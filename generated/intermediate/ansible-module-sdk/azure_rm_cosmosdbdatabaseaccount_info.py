@@ -24,24 +24,27 @@ options:
   resource_group:
     description:
       - Name of an Azure resource group.
+  account_name:
+    description:
+      - Cosmos DB database account name.
+  table_name:
+    description:
+      - Cosmos DB table name.
+  database_name:
+    description:
+      - Cosmos DB database name.
+  keyspace_name:
+    description:
+      - Cosmos DB keyspace name.
+  graph_name:
+    description:
+      - Cosmos DB graph name.
+  container_name:
+    description:
+      - Cosmos DB container name.
   name:
     description:
       - The name of the database account.
-  table_rid:
-    description:
-      - Cosmos DB table rid.
-  database_rid:
-    description:
-      - Cosmos DB database rid.
-  keyspace_rid:
-    description:
-      - Cosmos DB keyspace rid.
-  container_rid:
-    description:
-      - Cosmos DB container rid.
-  collection_rid:
-    description:
-      - Cosmos DB collection rid.
   id:
     description:
       - The unique resource identifier of the database account.
@@ -147,6 +150,11 @@ options:
             indicates a write region. The maximum value for a failover priority
             = (total number of regions - 1). Failover priority values must be
             unique for each of the regions in which the database account exists.
+      is_zone_redundant:
+        description:
+          - >-
+            Flag to indicate whether or not this region is an AvailabilityZone
+            region
   read_locations:
     description:
       - >-
@@ -177,6 +185,11 @@ options:
             indicates a write region. The maximum value for a failover priority
             = (total number of regions - 1). Failover priority values must be
             unique for each of the regions in which the database account exists.
+      is_zone_redundant:
+        description:
+          - >-
+            Flag to indicate whether or not this region is an AvailabilityZone
+            region
   failover_policies:
     description:
       - An array that contains the regions ordered by their failover priorities.
@@ -231,112 +244,161 @@ EXAMPLES = '''
 - name: CosmosDBDatabaseAccountGet
   azure_rm_cosmosdbdatabaseaccount_info:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
+    account_name: myDatabaseAccount
 - name: CosmosDBDatabaseAccountGetUsages
   azure_rm_cosmosdbdatabaseaccount_info:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
+    account_name: myDatabaseAccount
 - name: CosmosDBDatabaseAccountGetMetrics
   azure_rm_cosmosdbdatabaseaccount_info:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
+    account_name: myDatabaseAccount
 - name: CosmosDBDatabaseAccountListReadOnlyKeys
   azure_rm_cosmosdbdatabaseaccount_info:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
+    account_name: myDatabaseAccount
 - name: CosmosDBDatabaseAccountGetMetricDefinitions
   azure_rm_cosmosdbdatabaseaccount_info:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
+    account_name: myDatabaseAccount
 - name: CosmosDBTableList
   azure_rm_cosmosdbdatabaseaccount_info:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
+    account_name: myDatabaseAccount
 - name: CosmosDBSqlDatabaseList
   azure_rm_cosmosdbdatabaseaccount_info:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
-- name: CosmosDBMongoDatabaseList
+    account_name: myDatabaseAccount
+- name: CosmosDBMongoDBDatabaseList
   azure_rm_cosmosdbdatabaseaccount_info:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
+    account_name: myDatabaseAccount
 - name: CosmosDBGremlinDatabaseList
   azure_rm_cosmosdbdatabaseaccount_info:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
+    account_name: myDatabaseAccount
 - name: CosmosDBCassandraKeyspaceList
   azure_rm_cosmosdbdatabaseaccount_info:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
+    account_name: myDatabaseAccount
 - name: CosmosDBTableGet
   azure_rm_cosmosdbdatabaseaccount_info:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
-    table_rid: myTable
+    account_name: myDatabaseAccount
+    table_name: myTable
 - name: CosmosDBSqlDatabaseGet
   azure_rm_cosmosdbdatabaseaccount_info:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
-    database_rid: myDatabase
-- name: CosmosDBMongoDatabaseGet
+    account_name: myDatabaseAccount
+    database_name: myDatabase
+- name: CosmosDBMongoDBDatabaseGet
   azure_rm_cosmosdbdatabaseaccount_info:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
-    database_rid: myDatabase
+    account_name: myDatabaseAccount
+    database_name: myDatabase
 - name: CosmosDBGremlinDatabaseGet
   azure_rm_cosmosdbdatabaseaccount_info:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
-    database_rid: myDatabase
+    account_name: myDatabaseAccount
+    database_name: myDatabase
 - name: CosmosDBCassandraKeyspaceGet
   azure_rm_cosmosdbdatabaseaccount_info:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
-    keyspace_rid: myKeyspace
+    account_name: myDatabaseAccount
+    keyspace_name: myKeyspace
+- name: CosmosDBGremlinGraphList
+  azure_rm_cosmosdbdatabaseaccount_info:
+    resource_group: myResourceGroup
+    account_name: myDatabaseAccount
+    database_name: myDatabase
 - name: CosmosDBSqlContainerList
   azure_rm_cosmosdbdatabaseaccount_info:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
-    database_rid: myDatabase
+    account_name: myDatabaseAccount
+    database_name: myDatabase
 - name: CosmosDBCassandraTableList
   azure_rm_cosmosdbdatabaseaccount_info:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
-    keyspace_rid: myKeyspace
-- name: CosmosDBMongoCollectionList
+    account_name: myDatabaseAccount
+    keyspace_name: myKeyspace
+- name: CosmosDBTableThroughputGet
   azure_rm_cosmosdbdatabaseaccount_info:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
-    database_rid: myDatabase
-- name: CosmosDBGremlinContainerList
+    account_name: myDatabaseAccount
+    table_name: myTable
+- name: CosmosDBMongoDBCollectionList
   azure_rm_cosmosdbdatabaseaccount_info:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
-    database_rid: myDatabase
+    account_name: myDatabaseAccount
+    database_name: myDatabase
+- name: CosmosDBSqlDatabaseThroughputGet
+  azure_rm_cosmosdbdatabaseaccount_info:
+    resource_group: myResourceGroup
+    account_name: myDatabaseAccount
+    database_name: myDatabase
+- name: CosmosDBGremlinGraphGet
+  azure_rm_cosmosdbdatabaseaccount_info:
+    resource_group: myResourceGroup
+    account_name: myDatabaseAccount
+    database_name: myDatabase
+    graph_name: myGraph
+- name: CosmosDBGremlinDatabaseThroughputGet
+  azure_rm_cosmosdbdatabaseaccount_info:
+    resource_group: myResourceGroup
+    account_name: myDatabaseAccount
+    database_name: myDatabase
+- name: CosmosDBMongoDBDatabaseThroughputGet
+  azure_rm_cosmosdbdatabaseaccount_info:
+    resource_group: myResourceGroup
+    account_name: myDatabaseAccount
+    database_name: myDatabase
 - name: CosmosDBCassandraTableGet
   azure_rm_cosmosdbdatabaseaccount_info:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
-    table_rid: myTable
-    keyspace_rid: myKeyspace
+    account_name: myDatabaseAccount
+    table_name: myTable
+    keyspace_name: myKeyspace
+- name: CosmosDBCassandraKeyspaceThroughputGet
+  azure_rm_cosmosdbdatabaseaccount_info:
+    resource_group: myResourceGroup
+    account_name: myDatabaseAccount
+    keyspace_name: myKeyspace
 - name: CosmosDBSqlContainerGet
   azure_rm_cosmosdbdatabaseaccount_info:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
-    database_rid: myDatabase
-    container_rid: myContainer
-- name: CosmosDBMongoCollectionGet
+    account_name: myDatabaseAccount
+    database_name: myDatabase
+    container_name: myContainer
+- name: CosmosDBMongoDBCollectionGet
   azure_rm_cosmosdbdatabaseaccount_info:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
-    database_rid: myDatabase
-    collection_rid: myCollection
-- name: CosmosDBGremlinContainerGet
+    account_name: myDatabaseAccount
+    database_name: myDatabase
+    name: myCollection
+- name: CosmosDBGremlinGraphThroughputGet
   azure_rm_cosmosdbdatabaseaccount_info:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
-    database_rid: myDatabase
-    container_rid: myContainer
+    account_name: myDatabaseAccount
+    database_name: myDatabase
+    graph_name: myGraph
+- name: CosmosDBCassandraTableThroughputGet
+  azure_rm_cosmosdbdatabaseaccount_info:
+    resource_group: myResourceGroup
+    account_name: myDatabaseAccount
+    table_name: myTable
+    keyspace_name: myKeyspace
+- name: CosmosDBSqlContainerThroughputGet
+  azure_rm_cosmosdbdatabaseaccount_info:
+    resource_group: myResourceGroup
+    account_name: myDatabaseAccount
+    database_name: myDatabase
+    container_name: myContainer
+- name: CosmosDBMongoDBCollectionThroughputGet
+  azure_rm_cosmosdbdatabaseaccount_info:
+    resource_group: myResourceGroup
+    account_name: myDatabaseAccount
+    database_name: myDatabase
+    name: myCollection
 
 '''
 
@@ -382,7 +444,7 @@ database_accounts:
           returned: always
           type: >-
             unknown[DictionaryType
-            {"$id":"229","$type":"DictionaryType","valueType":{"$id":"230","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"231","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"232","fixed":false},"deprecated":false}]
+            {"$id":"235","$type":"DictionaryType","valueType":{"$id":"236","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"237","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"238","fixed":false},"deprecated":false}]
           sample: null
         kind:
           description:
@@ -421,33 +483,37 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
             resource_group=dict(
                 type='str'
             ),
+            account_name=dict(
+                type='str'
+            ),
+            table_name=dict(
+                type='str'
+            ),
+            database_name=dict(
+                type='str'
+            ),
+            keyspace_name=dict(
+                type='str'
+            ),
+            graph_name=dict(
+                type='str'
+            ),
+            container_name=dict(
+                type='str'
+            ),
             name=dict(
-                type='str'
-            ),
-            table_rid=dict(
-                type='str'
-            ),
-            database_rid=dict(
-                type='str'
-            ),
-            keyspace_rid=dict(
-                type='str'
-            ),
-            container_rid=dict(
-                type='str'
-            ),
-            collection_rid=dict(
                 type='str'
             )
         )
 
         self.resource_group = None
+        self.account_name = None
+        self.table_name = None
+        self.database_name = None
+        self.keyspace_name = None
+        self.graph_name = None
+        self.container_name = None
         self.name = None
-        self.table_rid = None
-        self.database_rid = None
-        self.keyspace_rid = None
-        self.container_rid = None
-        self.collection_rid = None
         self.id = None
         self.name = None
         self.type = None
@@ -479,90 +545,130 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
-            self.database_rid is not None and
-            self.collection_rid is not None):
-            self.results['database_accounts'] = self.format_item(self.getmongocollection())
+            self.account_name is not None and
+            self.database_name is not None and
+            self.name is not None):
+            self.results['database_accounts'] = self.format_item(self.getmongodbcollectionthroughput())
         elif (self.resource_group is not None and
-              self.name is not None and
-              self.database_rid is not None and
-              self.container_rid is not None):
+              self.account_name is not None and
+              self.database_name is not None and
+              self.container_name is not None):
+            self.results['database_accounts'] = self.format_item(self.getsqlcontainerthroughput())
+        elif (self.resource_group is not None and
+              self.account_name is not None and
+              self.database_name is not None and
+              self.graph_name is not None):
+            self.results['database_accounts'] = self.format_item(self.getgremlingraphthroughput())
+        elif (self.resource_group is not None and
+              self.account_name is not None and
+              self.keyspace_name is not None and
+              self.table_name is not None):
+            self.results['database_accounts'] = self.format_item(self.getcassandratablethroughput())
+        elif (self.resource_group is not None and
+              self.account_name is not None and
+              self.database_name is not None and
+              self.name is not None):
+            self.results['database_accounts'] = self.format_item(self.getmongodbcollection())
+        elif (self.resource_group is not None and
+              self.account_name is not None and
+              self.database_name is not None and
+              self.container_name is not None):
             self.results['database_accounts'] = self.format_item(self.getsqlcontainer())
         elif (self.resource_group is not None and
-              self.name is not None and
-              self.database_rid is not None and
-              self.container_rid is not None):
-            self.results['database_accounts'] = self.format_item(self.getgremlincontainer())
+              self.account_name is not None and
+              self.database_name is not None):
+            self.results['database_accounts'] = self.format_item(self.getsqldatabasethroughput())
         elif (self.resource_group is not None and
-              self.name is not None and
-              self.keyspace_rid is not None and
-              self.table_rid is not None):
+              self.account_name is not None and
+              self.database_name is not None):
+            self.results['database_accounts'] = self.format_item(self.getgremlindatabasethroughput())
+        elif (self.resource_group is not None and
+              self.account_name is not None and
+              self.database_name is not None):
+            self.results['database_accounts'] = self.format_item(self.getmongodbdatabasethroughput())
+        elif (self.resource_group is not None and
+              self.account_name is not None and
+              self.keyspace_name is not None):
+            self.results['database_accounts'] = self.format_item(self.getcassandrakeyspacethroughput())
+        elif (self.resource_group is not None and
+              self.account_name is not None and
+              self.keyspace_name is not None and
+              self.table_name is not None):
             self.results['database_accounts'] = self.format_item(self.getcassandratable())
         elif (self.resource_group is not None and
-              self.name is not None and
-              self.database_rid is not None):
-            self.results['database_accounts'] = self.format_item(self.listmongocollections())
+              self.account_name is not None and
+              self.database_name is not None and
+              self.graph_name is not None):
+            self.results['database_accounts'] = self.format_item(self.getgremlingraph())
         elif (self.resource_group is not None and
-              self.name is not None and
-              self.database_rid is not None):
+              self.account_name is not None and
+              self.table_name is not None):
+            self.results['database_accounts'] = self.format_item(self.gettablethroughput())
+        elif (self.resource_group is not None and
+              self.account_name is not None and
+              self.database_name is not None):
+            self.results['database_accounts'] = self.format_item(self.listmongodbcollections())
+        elif (self.resource_group is not None and
+              self.account_name is not None and
+              self.database_name is not None):
             self.results['database_accounts'] = self.format_item(self.listsqlcontainers())
         elif (self.resource_group is not None and
-              self.name is not None and
-              self.database_rid is not None):
-            self.results['database_accounts'] = self.format_item(self.listgremlincontainers())
+              self.account_name is not None and
+              self.database_name is not None):
+            self.results['database_accounts'] = self.format_item(self.listgremlingraphs())
         elif (self.resource_group is not None and
-              self.name is not None and
-              self.keyspace_rid is not None):
+              self.account_name is not None and
+              self.keyspace_name is not None):
             self.results['database_accounts'] = self.format_item(self.listcassandratables())
         elif (self.resource_group is not None and
-              self.name is not None and
-              self.database_rid is not None):
+              self.account_name is not None and
+              self.database_name is not None):
             self.results['database_accounts'] = self.format_item(self.getsqldatabase())
         elif (self.resource_group is not None and
-              self.name is not None and
-              self.database_rid is not None):
-            self.results['database_accounts'] = self.format_item(self.getmongodatabase())
+              self.account_name is not None and
+              self.database_name is not None):
+            self.results['database_accounts'] = self.format_item(self.getmongodbdatabase())
         elif (self.resource_group is not None and
-              self.name is not None and
-              self.database_rid is not None):
+              self.account_name is not None and
+              self.database_name is not None):
             self.results['database_accounts'] = self.format_item(self.getgremlindatabase())
         elif (self.resource_group is not None and
-              self.name is not None and
-              self.keyspace_rid is not None):
+              self.account_name is not None and
+              self.keyspace_name is not None):
             self.results['database_accounts'] = self.format_item(self.getcassandrakeyspace())
         elif (self.resource_group is not None and
-              self.name is not None and
-              self.table_rid is not None):
+              self.account_name is not None and
+              self.table_name is not None):
             self.results['database_accounts'] = self.format_item(self.gettable())
         elif (self.resource_group is not None and
-              self.name is not None):
-            self.results['database_accounts'] = self.format_item(self.listcassandrakeyspaces())
+              self.account_name is not None):
+            self.results['database_accounts'] = self.format_item(self.listmongodbdatabases())
         elif (self.resource_group is not None and
-              self.name is not None):
+              self.account_name is not None):
             self.results['database_accounts'] = self.format_item(self.listsqldatabases())
         elif (self.resource_group is not None and
-              self.name is not None):
-            self.results['database_accounts'] = self.format_item(self.listmongodatabases())
-        elif (self.resource_group is not None and
-              self.name is not None):
+              self.account_name is not None):
             self.results['database_accounts'] = self.format_item(self.listgremlindatabases())
         elif (self.resource_group is not None and
-              self.name is not None):
+              self.account_name is not None):
+            self.results['database_accounts'] = self.format_item(self.listcassandrakeyspaces())
+        elif (self.resource_group is not None and
+              self.account_name is not None):
             self.results['database_accounts'] = self.format_item(self.listtables())
         elif (self.resource_group is not None and
-              self.name is not None):
+              self.account_name is not None):
             self.results['database_accounts'] = self.format_item(self.listmetricdefinitions())
         elif (self.resource_group is not None and
-              self.name is not None):
+              self.account_name is not None):
             self.results['database_accounts'] = self.format_item(self.getreadonlykeys())
         elif (self.resource_group is not None and
-              self.name is not None):
+              self.account_name is not None):
             self.results['database_accounts'] = self.format_item(self.listmetrics())
         elif (self.resource_group is not None and
-              self.name is not None):
+              self.account_name is not None):
             self.results['database_accounts'] = self.format_item(self.listusages())
         elif (self.resource_group is not None and
-              self.name is not None):
+              self.account_name is not None):
             self.results['database_accounts'] = self.format_item(self.get())
         elif (self.resource_group is not None):
             self.results['database_accounts'] = self.format_item(self.listbyresourcegroup())
@@ -570,14 +676,66 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
             self.results['database_accounts'] = [self.format_item(self.list())]
         return self.results
 
-    def getmongocollection(self):
+    def getmongodbcollectionthroughput(self):
         response = None
 
         try:
-            response = self.mgmt_client.database_accounts.get_mongo_collection(resource_group_name=self.resource_group,
-                                                                               account_name=self.name,
-                                                                               database_rid=self.database_rid,
-                                                                               collection_rid=self.collection_rid)
+            response = self.mgmt_client.database_accounts.get_mongo_dbcollection_throughput(resource_group_name=self.resource_group,
+                                                                                            account_name=self.account_name,
+                                                                                            database_name=self.database_name,
+                                                                                            collection_name=self.name)
+        except CloudError as e:
+            self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
+
+        return response.as_dict()
+
+    def getsqlcontainerthroughput(self):
+        response = None
+
+        try:
+            response = self.mgmt_client.database_accounts.get_sql_container_throughput(resource_group_name=self.resource_group,
+                                                                                       account_name=self.account_name,
+                                                                                       database_name=self.database_name,
+                                                                                       container_name=self.container_name)
+        except CloudError as e:
+            self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
+
+        return response.as_dict()
+
+    def getgremlingraphthroughput(self):
+        response = None
+
+        try:
+            response = self.mgmt_client.database_accounts.get_gremlin_graph_throughput(resource_group_name=self.resource_group,
+                                                                                       account_name=self.account_name,
+                                                                                       database_name=self.database_name,
+                                                                                       graph_name=self.graph_name)
+        except CloudError as e:
+            self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
+
+        return response.as_dict()
+
+    def getcassandratablethroughput(self):
+        response = None
+
+        try:
+            response = self.mgmt_client.database_accounts.get_cassandra_table_throughput(resource_group_name=self.resource_group,
+                                                                                         account_name=self.account_name,
+                                                                                         keyspace_name=self.keyspace_name,
+                                                                                         table_name=self.table_name)
+        except CloudError as e:
+            self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
+
+        return response.as_dict()
+
+    def getmongodbcollection(self):
+        response = None
+
+        try:
+            response = self.mgmt_client.database_accounts.get_mongo_dbcollection(resource_group_name=self.resource_group,
+                                                                                 account_name=self.account_name,
+                                                                                 database_name=self.database_name,
+                                                                                 collection_name=self.name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 
@@ -588,22 +746,57 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.database_accounts.get_sql_container(resource_group_name=self.resource_group,
-                                                                            account_name=self.name,
-                                                                            database_rid=self.database_rid,
-                                                                            container_rid=self.container_rid)
+                                                                            account_name=self.account_name,
+                                                                            database_name=self.database_name,
+                                                                            container_name=self.container_name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 
         return response.as_dict()
 
-    def getgremlincontainer(self):
+    def getsqldatabasethroughput(self):
         response = None
 
         try:
-            response = self.mgmt_client.database_accounts.get_gremlin_container(resource_group_name=self.resource_group,
-                                                                                account_name=self.name,
-                                                                                database_rid=self.database_rid,
-                                                                                container_rid=self.container_rid)
+            response = self.mgmt_client.database_accounts.get_sql_database_throughput(resource_group_name=self.resource_group,
+                                                                                      account_name=self.account_name,
+                                                                                      database_name=self.database_name)
+        except CloudError as e:
+            self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
+
+        return response.as_dict()
+
+    def getgremlindatabasethroughput(self):
+        response = None
+
+        try:
+            response = self.mgmt_client.database_accounts.get_gremlin_database_throughput(resource_group_name=self.resource_group,
+                                                                                          account_name=self.account_name,
+                                                                                          database_name=self.database_name)
+        except CloudError as e:
+            self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
+
+        return response.as_dict()
+
+    def getmongodbdatabasethroughput(self):
+        response = None
+
+        try:
+            response = self.mgmt_client.database_accounts.get_mongo_dbdatabase_throughput(resource_group_name=self.resource_group,
+                                                                                          account_name=self.account_name,
+                                                                                          database_name=self.database_name)
+        except CloudError as e:
+            self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
+
+        return response.as_dict()
+
+    def getcassandrakeyspacethroughput(self):
+        response = None
+
+        try:
+            response = self.mgmt_client.database_accounts.get_cassandra_keyspace_throughput(resource_group_name=self.resource_group,
+                                                                                            account_name=self.account_name,
+                                                                                            keyspace_name=self.keyspace_name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 
@@ -614,21 +807,46 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.database_accounts.get_cassandra_table(resource_group_name=self.resource_group,
-                                                                              account_name=self.name,
-                                                                              keyspace_rid=self.keyspace_rid,
-                                                                              table_rid=self.table_rid)
+                                                                              account_name=self.account_name,
+                                                                              keyspace_name=self.keyspace_name,
+                                                                              table_name=self.table_name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 
         return response.as_dict()
 
-    def listmongocollections(self):
+    def getgremlingraph(self):
         response = None
 
         try:
-            response = self.mgmt_client.database_accounts.list_mongo_collections(resource_group_name=self.resource_group,
-                                                                                 account_name=self.name,
-                                                                                 database_rid=self.database_rid)
+            response = self.mgmt_client.database_accounts.get_gremlin_graph(resource_group_name=self.resource_group,
+                                                                            account_name=self.account_name,
+                                                                            database_name=self.database_name,
+                                                                            graph_name=self.graph_name)
+        except CloudError as e:
+            self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
+
+        return response.as_dict()
+
+    def gettablethroughput(self):
+        response = None
+
+        try:
+            response = self.mgmt_client.database_accounts.get_table_throughput(resource_group_name=self.resource_group,
+                                                                               account_name=self.account_name,
+                                                                               table_name=self.table_name)
+        except CloudError as e:
+            self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
+
+        return response.as_dict()
+
+    def listmongodbcollections(self):
+        response = None
+
+        try:
+            response = self.mgmt_client.database_accounts.list_mongo_dbcollections(resource_group_name=self.resource_group,
+                                                                                   account_name=self.account_name,
+                                                                                   database_name=self.database_name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 
@@ -639,20 +857,20 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.database_accounts.list_sql_containers(resource_group_name=self.resource_group,
-                                                                              account_name=self.name,
-                                                                              database_rid=self.database_rid)
+                                                                              account_name=self.account_name,
+                                                                              database_name=self.database_name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 
         return response.as_dict()
 
-    def listgremlincontainers(self):
+    def listgremlingraphs(self):
         response = None
 
         try:
-            response = self.mgmt_client.database_accounts.list_gremlin_containers(resource_group_name=self.resource_group,
-                                                                                  account_name=self.name,
-                                                                                  database_rid=self.database_rid)
+            response = self.mgmt_client.database_accounts.list_gremlin_graphs(resource_group_name=self.resource_group,
+                                                                              account_name=self.account_name,
+                                                                              database_name=self.database_name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 
@@ -663,8 +881,8 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.database_accounts.list_cassandra_tables(resource_group_name=self.resource_group,
-                                                                                account_name=self.name,
-                                                                                keyspace_rid=self.keyspace_rid)
+                                                                                account_name=self.account_name,
+                                                                                keyspace_name=self.keyspace_name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 
@@ -675,20 +893,20 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.database_accounts.get_sql_database(resource_group_name=self.resource_group,
-                                                                           account_name=self.name,
-                                                                           database_rid=self.database_rid)
+                                                                           account_name=self.account_name,
+                                                                           database_name=self.database_name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 
         return response.as_dict()
 
-    def getmongodatabase(self):
+    def getmongodbdatabase(self):
         response = None
 
         try:
-            response = self.mgmt_client.database_accounts.get_mongo_database(resource_group_name=self.resource_group,
-                                                                             account_name=self.name,
-                                                                             database_rid=self.database_rid)
+            response = self.mgmt_client.database_accounts.get_mongo_dbdatabase(resource_group_name=self.resource_group,
+                                                                               account_name=self.account_name,
+                                                                               database_name=self.database_name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 
@@ -699,8 +917,8 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.database_accounts.get_gremlin_database(resource_group_name=self.resource_group,
-                                                                               account_name=self.name,
-                                                                               database_rid=self.database_rid)
+                                                                               account_name=self.account_name,
+                                                                               database_name=self.database_name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 
@@ -711,8 +929,8 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.database_accounts.get_cassandra_keyspace(resource_group_name=self.resource_group,
-                                                                                 account_name=self.name,
-                                                                                 keyspace_rid=self.keyspace_rid)
+                                                                                 account_name=self.account_name,
+                                                                                 keyspace_name=self.keyspace_name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 
@@ -723,19 +941,19 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.database_accounts.get_table(resource_group_name=self.resource_group,
-                                                                    account_name=self.name,
-                                                                    table_rid=self.table_rid)
+                                                                    account_name=self.account_name,
+                                                                    table_name=self.table_name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 
         return response.as_dict()
 
-    def listcassandrakeyspaces(self):
+    def listmongodbdatabases(self):
         response = None
 
         try:
-            response = self.mgmt_client.database_accounts.list_cassandra_keyspaces(resource_group_name=self.resource_group,
-                                                                                   account_name=self.name)
+            response = self.mgmt_client.database_accounts.list_mongo_dbdatabases(resource_group_name=self.resource_group,
+                                                                                 account_name=self.account_name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 
@@ -746,18 +964,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.database_accounts.list_sql_databases(resource_group_name=self.resource_group,
-                                                                             account_name=self.name)
-        except CloudError as e:
-            self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
-
-        return response.as_dict()
-
-    def listmongodatabases(self):
-        response = None
-
-        try:
-            response = self.mgmt_client.database_accounts.list_mongo_databases(resource_group_name=self.resource_group,
-                                                                               account_name=self.name)
+                                                                             account_name=self.account_name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 
@@ -768,7 +975,18 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.database_accounts.list_gremlin_databases(resource_group_name=self.resource_group,
-                                                                                 account_name=self.name)
+                                                                                 account_name=self.account_name)
+        except CloudError as e:
+            self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
+
+        return response.as_dict()
+
+    def listcassandrakeyspaces(self):
+        response = None
+
+        try:
+            response = self.mgmt_client.database_accounts.list_cassandra_keyspaces(resource_group_name=self.resource_group,
+                                                                                   account_name=self.account_name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 
@@ -779,7 +997,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.database_accounts.list_tables(resource_group_name=self.resource_group,
-                                                                      account_name=self.name)
+                                                                      account_name=self.account_name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 
@@ -790,7 +1008,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.database_accounts.list_metric_definitions(resource_group_name=self.resource_group,
-                                                                                  account_name=self.name)
+                                                                                  account_name=self.account_name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 
@@ -801,7 +1019,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.database_accounts.get_read_only_keys(resource_group_name=self.resource_group,
-                                                                             account_name=self.name)
+                                                                             account_name=self.account_name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 
@@ -812,7 +1030,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.database_accounts.list_metrics(resource_group_name=self.resource_group,
-                                                                       account_name=self.name)
+                                                                       account_name=self.account_name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 
@@ -823,7 +1041,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.database_accounts.list_usages(resource_group_name=self.resource_group,
-                                                                      account_name=self.name)
+                                                                      account_name=self.account_name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 
@@ -834,7 +1052,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.database_accounts.get(resource_group_name=self.resource_group,
-                                                              account_name=self.name)
+                                                              account_name=self.account_name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 

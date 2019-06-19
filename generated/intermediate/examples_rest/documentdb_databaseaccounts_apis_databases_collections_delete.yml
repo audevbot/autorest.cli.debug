@@ -10,7 +10,7 @@
     database_name: myDatabase
     collection_name: myCollection
   tasks:
-    - name: CosmosDBMongoCollectionDelete
+    - name: CosmosDBMongoDBCollectionDelete
       azure_rm_resource:
         method: DELETE
         api_version: '2015-04-08'

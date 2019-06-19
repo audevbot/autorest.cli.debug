@@ -12,7 +12,7 @@
     - name: CosmosDBGremlinDatabaseList
       azure_rm_cosmosdbdatabaseaccount_info:
         resource_group: '{{resource_group}}'
-        name: '{{database_account_name}}'
+        account_name: '{{database_account_name}}'
     
       register: output
     - debug:

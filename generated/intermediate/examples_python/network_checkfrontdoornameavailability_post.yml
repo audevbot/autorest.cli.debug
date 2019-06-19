@@ -22,7 +22,7 @@ SUBSCRIPTION_ID = os.environ['AZURE_SUBSCRIPTION_ID']
 
 BODY = {
   "name": "sampleName",
-  "type": "Microsoft.Network/FrontDoors"
+  "type": "Microsoft.Network/frontDoors"
 }
 
 API_VERSION = '2019-04-01'

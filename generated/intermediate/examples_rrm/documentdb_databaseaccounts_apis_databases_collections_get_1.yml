@@ -11,12 +11,12 @@
     collection_name: myCollection
   tasks:
 
-    - name: CosmosDBMongoCollectionGet
+    - name: CosmosDBMongoDBCollectionGet
       azure_rm_cosmosdbdatabaseaccount_info:
         resource_group: '{{resource_group}}'
-        name: '{{database_account_name}}'
-        database_rid: '{{database_name}}'
-        collection_rid: '{{collection_name}}'
+        account_name: '{{database_account_name}}'
+        database_name: '{{database_name}}'
+        name: '{{collection_name}}'
     
       register: output
     - debug:

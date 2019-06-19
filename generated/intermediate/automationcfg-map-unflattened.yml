@@ -1210,6 +1210,11 @@ Modules:
                   - Key: Month
                     Value: Month
                     Description: !<tag:yaml.org,2002:js/undefined> ''
+                  - Key: Minute
+                    Value: Minute
+                    Description: >-
+                      The minimum allowed interval for Minute schedules is 15
+                      minutes.
                 PathSwagger: /properties/scheduleInfo/frequency
                 PathPython: /scheduleInfo/frequency
                 PathGo: /properties/scheduleInfo/frequency
@@ -1732,11 +1737,11 @@ Modules:
                     IdPortion: null
                     Type: >-
                       unknown[DictionaryType
-                      {"$id":"354","$type":"DictionaryType","valueType":{"$id":"355","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"356","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"357","fixed":false},"deprecated":false}]
+                      {"$id":"355","$type":"DictionaryType","valueType":{"$id":"356","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"357","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"358","fixed":false},"deprecated":false}]
                     TypeName: >-
-                      {"$id":"354","$type":"DictionaryType","valueType":{"$id":"355","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"356","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"357","fixed":false},"deprecated":false}
+                      {"$id":"355","$type":"DictionaryType","valueType":{"$id":"356","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"357","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"358","fixed":false},"deprecated":false}
                     TypeNameGo: >-
-                      {"$id":"354","$type":"DictionaryType","valueType":{"$id":"355","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"356","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"357","fixed":false},"deprecated":false}
+                      {"$id":"355","$type":"DictionaryType","valueType":{"$id":"356","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"357","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"358","fixed":false},"deprecated":false}
                     IsList: false
                     Required: false
                     Documentation: Gets or sets the parameters of the task.
@@ -1826,11 +1831,11 @@ Modules:
                     IdPortion: null
                     Type: >-
                       unknown[DictionaryType
-                      {"$id":"354","$type":"DictionaryType","valueType":{"$id":"355","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"356","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"357","fixed":false},"deprecated":false}]
+                      {"$id":"355","$type":"DictionaryType","valueType":{"$id":"356","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"357","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"358","fixed":false},"deprecated":false}]
                     TypeName: >-
-                      {"$id":"354","$type":"DictionaryType","valueType":{"$id":"355","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"356","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"357","fixed":false},"deprecated":false}
+                      {"$id":"355","$type":"DictionaryType","valueType":{"$id":"356","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"357","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"358","fixed":false},"deprecated":false}
                     TypeNameGo: >-
-                      {"$id":"354","$type":"DictionaryType","valueType":{"$id":"355","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"356","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"357","fixed":false},"deprecated":false}
+                      {"$id":"355","$type":"DictionaryType","valueType":{"$id":"356","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"357","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"358","fixed":false},"deprecated":false}
                     IsList: false
                     Required: false
                     Documentation: Gets or sets the parameters of the task.
@@ -3302,6 +3307,11 @@ Modules:
                   - Key: Month
                     Value: Month
                     Description: !<tag:yaml.org,2002:js/undefined> ''
+                  - Key: Minute
+                    Value: Minute
+                    Description: >-
+                      The minimum allowed interval for Minute schedules is 15
+                      minutes.
                 PathSwagger: /properties/scheduleInfo/frequency
                 PathPython: /scheduleInfo/frequency
                 PathGo: /properties/scheduleInfo/frequency
@@ -3798,11 +3808,11 @@ Modules:
                     IdPortion: null
                     Type: >-
                       unknown[DictionaryType
-                      {"$id":"354","$type":"DictionaryType","valueType":{"$id":"355","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"356","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"357","fixed":false},"deprecated":false}]
+                      {"$id":"355","$type":"DictionaryType","valueType":{"$id":"356","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"357","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"358","fixed":false},"deprecated":false}]
                     TypeName: >-
-                      {"$id":"354","$type":"DictionaryType","valueType":{"$id":"355","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"356","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"357","fixed":false},"deprecated":false}
+                      {"$id":"355","$type":"DictionaryType","valueType":{"$id":"356","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"357","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"358","fixed":false},"deprecated":false}
                     TypeNameGo: >-
-                      {"$id":"354","$type":"DictionaryType","valueType":{"$id":"355","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"356","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"357","fixed":false},"deprecated":false}
+                      {"$id":"355","$type":"DictionaryType","valueType":{"$id":"356","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"357","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"358","fixed":false},"deprecated":false}
                     IsList: false
                     Required: false
                     Documentation: Gets or sets the parameters of the task.
@@ -3892,11 +3902,11 @@ Modules:
                     IdPortion: null
                     Type: >-
                       unknown[DictionaryType
-                      {"$id":"354","$type":"DictionaryType","valueType":{"$id":"355","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"356","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"357","fixed":false},"deprecated":false}]
+                      {"$id":"355","$type":"DictionaryType","valueType":{"$id":"356","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"357","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"358","fixed":false},"deprecated":false}]
                     TypeName: >-
-                      {"$id":"354","$type":"DictionaryType","valueType":{"$id":"355","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"356","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"357","fixed":false},"deprecated":false}
+                      {"$id":"355","$type":"DictionaryType","valueType":{"$id":"356","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"357","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"358","fixed":false},"deprecated":false}
                     TypeNameGo: >-
-                      {"$id":"354","$type":"DictionaryType","valueType":{"$id":"355","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"356","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"357","fixed":false},"deprecated":false}
+                      {"$id":"355","$type":"DictionaryType","valueType":{"$id":"356","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"357","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"358","fixed":false},"deprecated":false}
                     IsList: false
                     Required: false
                     Documentation: Gets or sets the parameters of the task.
@@ -4044,10 +4054,10 @@ Modules:
                           - Japan East
                           - UK South
                     nonAzureQueries:
-                      - FunctionAlias: SavedSearch1
-                        WorkspaceId: WorkspaceId1
-                      - FunctionAlias: SavedSearch2
-                        WorkspaceId: WorkspaceId2
+                      - functionAlias: SavedSearch1
+                        workspaceId: WorkspaceId1
+                      - functionAlias: SavedSearch2
+                        workspaceId: WorkspaceId2
                 scheduleInfo:
                   frequency: Hour
                   startTime: '2017-10-19T12:22:57+00:00'
@@ -4242,8 +4252,8 @@ Modules:
         References:
           - '# ref##timeZone##America/Los_Angeles'
           - automation_automationaccounts_put
-        OperationId: '559'
-        MethodId: '560'
+        OperationId: '560'
+        MethodId: '561'
       - Example:
           parameters:
             subscriptionId: 51766542-3ed7-4a72-a187-0c8ab644ddab
@@ -4274,8 +4284,8 @@ Modules:
             value: mySoftwareUpdateConfiguration
             swaggerName: softwareUpdateConfigurationName
         References: []
-        OperationId: '559'
-        MethodId: '649'
+        OperationId: '560'
+        MethodId: '650'
   - ModuleName: azure_rm_softwareupdateconfiguration_info
     Options:
       - NameSwagger: resourceGroupName
@@ -4628,6 +4638,11 @@ Modules:
                   - Key: Month
                     Value: Month
                     Description: !<tag:yaml.org,2002:js/undefined> ''
+                  - Key: Minute
+                    Value: Minute
+                    Description: >-
+                      The minimum allowed interval for Minute schedules is 15
+                      minutes.
                 PathSwagger: /value/properties/frequency
                 PathPython: /value/frequency
                 PathGo: /value/properties/frequency
@@ -5001,8 +5016,8 @@ Modules:
             value: myAutomationAccount
             swaggerName: automationAccountName
         References: []
-        OperationId: '559'
-        MethodId: '692'
+        OperationId: '560'
+        MethodId: '693'
       - Example:
           parameters:
             subscriptionId: 1a7d4044-286c-4acb-969a-96639265bf2e
@@ -5109,8 +5124,8 @@ Modules:
             value: myAutomationAccount
             swaggerName: automationAccountName
         References: []
-        OperationId: '559'
-        MethodId: '692'
+        OperationId: '560'
+        MethodId: '693'
       - Example:
           parameters:
             subscriptionId: 51766542-3ed7-4a72-a187-0c8ab644ddab
@@ -5214,8 +5229,8 @@ Modules:
             value: mySoftwareUpdateConfiguration
             swaggerName: softwareUpdateConfigurationName
         References: []
-        OperationId: '559'
-        MethodId: '607'
+        OperationId: '560'
+        MethodId: '608'
 ServiceName: UpdateManagementAPI
 MgmtClientName: UpdateManagementAPI
 CliName: automationcfg

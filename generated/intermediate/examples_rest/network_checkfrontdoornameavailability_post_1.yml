@@ -13,4 +13,4 @@
         resource_type: checkFrontDoorNameAvailability
         body:
           name: sampleName
-          type: Microsoft.Network/FrontDoors/frontendEndpoints
+          type: Microsoft.Network/frontDoors/frontendEndpoints

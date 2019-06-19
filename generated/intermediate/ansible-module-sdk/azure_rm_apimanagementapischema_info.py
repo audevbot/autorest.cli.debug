@@ -51,15 +51,15 @@ options:
       - >-
         Must be a valid a media type used in a Content-Type header as defined in
         the RFC 2616. Media type of the schema document (e.g. application/json,
-        application/xml).
+        application/xml). </br> - `Swagger` Schema use
+        `application/vnd.ms-azure-apim.swagger.definitions+json` </br> - `WSDL`
+        Schema use `application/vnd.ms-azure-apim.xsd+xml` </br> - `OpenApi`
+        Schema use `application/vnd.oai.openapi.components+json` </br> - `WADL
+        Schema` use `application/vnd.ms-azure-apim.wadl.grammars+xml`. 
     required: true
   document:
     description:
       - Properties of the Schema Document.
-    suboptions:
-      value:
-        description:
-          - Json escaped string defining the document representing the Schema.
 extends_documentation_fragment:
   - azure
 author:

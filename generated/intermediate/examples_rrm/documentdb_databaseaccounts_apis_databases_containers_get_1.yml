@@ -14,9 +14,9 @@
     - name: CosmosDBSqlContainerGet
       azure_rm_cosmosdbdatabaseaccount_info:
         resource_group: '{{resource_group}}'
-        name: '{{database_account_name}}'
-        database_rid: '{{database_name}}'
-        container_rid: '{{container_name}}'
+        account_name: '{{database_account_name}}'
+        database_name: '{{database_name}}'
+        container_name: '{{container_name}}'
     
       register: output
     - debug:

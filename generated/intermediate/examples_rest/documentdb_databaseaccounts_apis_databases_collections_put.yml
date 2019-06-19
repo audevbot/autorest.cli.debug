@@ -11,7 +11,7 @@
     database_name: myDatabase
     collection_name: myCollection
   tasks:
-    - name: CosmosDBMongoCollectionCreateUpdate
+    - name: CosmosDBMongoDBCollectionCreateUpdate
       azure_rm_resource:
         idempotency: true
         api_version: '2015-04-08'

@@ -182,9 +182,7 @@ options:
             required: true
           capacity:
             description:
-              - >-
-                Capacity of the SKU (number of deployed units of the SKU). The
-                default value is 1.
+              - Capacity of the SKU (number of deployed units of the SKU).
       public_ip_addresses:
         description:
           - >-
@@ -223,14 +221,27 @@ options:
   custom_properties:
     description:
       - >-
-        Custom properties of the API Management service. Setting
+        Custom properties of the API Management service.</br>Setting
         `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168`
         will disable the cipher TLS_RSA_WITH_3DES_EDE_CBC_SHA for all TLS(1.0,
-        1.1 and 1.2). Setting
+        1.1 and 1.2).</br>Setting
         `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11`
-        can be used to disable just TLS 1.1 and setting
+        can be used to disable just TLS 1.1.</br>Setting
         `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10`
-        can be used to disable TLS 1.0 on an API Management service.
+        can be used to disable TLS 1.0 on an API Management service.</br>Setting
+        `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11`
+        can be used to disable just TLS 1.1 for communications with
+        backends.</br>Setting
+        `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10`
+        can be used to disable TLS 1.0 for communications with
+        backends.</br>Setting
+        `Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2`
+        can be used to enable HTTP2 protocol on an API Management
+        service.</br>Not specifying any of these properties on PATCH operation
+        will reset omitted properties' values to their defaults. For all the
+        settings except Http2 the default value is `True` if the service was
+        created on or before April 1st 2018 and `False` otherwise. Http2
+        setting's default value is `False`.
   certificates:
     description:
       - >-
@@ -304,9 +315,7 @@ options:
         required: true
       capacity:
         description:
-          - >-
-            Capacity of the SKU (number of deployed units of the SKU). The
-            default value is 1.
+          - Capacity of the SKU (number of deployed units of the SKU).
   identity:
     description:
       - Managed service identity of the Api Management service.
@@ -395,7 +404,7 @@ api_management_service:
           returned: always
           type: >-
             unknown[DictionaryType
-            {"$id":"2610","$type":"DictionaryType","valueType":{"$id":"2611","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2612","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2613","fixed":false},"deprecated":false}]
+            {"$id":"2630","$type":"DictionaryType","valueType":{"$id":"2631","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2632","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2633","fixed":false},"deprecated":false}]
           sample: null
         properties:
           description:
@@ -418,9 +427,7 @@ api_management_service:
               sample: null
             capacity:
               description:
-                - >-
-                  Capacity of the SKU (number of deployed units of the SKU). The
-                  default value is 1.
+                - Capacity of the SKU (number of deployed units of the SKU).
               returned: always
               type: number
               sample: null

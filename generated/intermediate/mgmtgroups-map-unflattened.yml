@@ -1467,8 +1467,8 @@ Modules:
             #
             ref##id##/providers/Microsoft.Management/managementGroups/RootGroup
           - resourcegroups_put
-        OperationId: '826'
-        MethodId: '896'
+        OperationId: '884'
+        MethodId: '954'
       - Example:
           parameters:
             api-version: 2018-03-01-preview
@@ -1511,8 +1511,8 @@ Modules:
             #
             ref##parentGroupId##/providers/Microsoft.Management/managementGroups/AlternateRootGroup
           - management_managementgroups_put
-        OperationId: '826'
-        MethodId: '927'
+        OperationId: '884'
+        MethodId: '985'
       - Example:
           parameters:
             api-version: 2018-03-01-preview
@@ -1538,8 +1538,8 @@ Modules:
             value: myManagementGroup
             swaggerName: groupId
         References: []
-        OperationId: '826'
-        MethodId: '955'
+        OperationId: '884'
+        MethodId: '1013'
   - ModuleName: azure_rm_managementgroup_info
     Options:
       - NameSwagger: groupId
@@ -2713,8 +2713,8 @@ Modules:
         Filename: management_managementgroups_get
         Variables: []
         References: []
-        OperationId: '826'
-        MethodId: '827'
+        OperationId: '884'
+        MethodId: '885'
       - Example:
           parameters:
             api-version: 2018-03-01-preview
@@ -2750,8 +2750,8 @@ Modules:
             value: myManagementGroup
             swaggerName: groupId
         References: []
-        OperationId: '826'
-        MethodId: '851'
+        OperationId: '884'
+        MethodId: '909'
       - Example:
           parameters:
             api-version: 2018-03-01-preview
@@ -2811,8 +2811,8 @@ Modules:
             value: myManagementGroup
             swaggerName: groupId
         References: []
-        OperationId: '826'
-        MethodId: '851'
+        OperationId: '884'
+        MethodId: '909'
       - Example:
           parameters:
             api-version: 2018-03-01-preview
@@ -2882,8 +2882,8 @@ Modules:
             value: myManagementGroup
             swaggerName: groupId
         References: []
-        OperationId: '826'
-        MethodId: '851'
+        OperationId: '884'
+        MethodId: '909'
   - ModuleName: azure_rm_managementgroupsubscription
     Options:
       - NameSwagger: groupId
@@ -2971,8 +2971,8 @@ Modules:
             swaggerName: groupId
         References:
           - management_managementgroups_put
-        OperationId: '982'
-        MethodId: '983'
+        OperationId: '1070'
+        MethodId: '1071'
       - Example:
           parameters:
             api-version: 2018-03-01-preview
@@ -2992,8 +2992,8 @@ Modules:
             value: myManagementGroup
             swaggerName: groupId
         References: []
-        OperationId: '982'
-        MethodId: '1013'
+        OperationId: '1070'
+        MethodId: '1101'
   - ModuleName: azure_rm_managementgroupsoperation_info
     Options:
       - &ref_14

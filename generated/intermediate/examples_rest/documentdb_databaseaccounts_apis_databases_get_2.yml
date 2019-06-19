@@ -8,7 +8,7 @@
     database_account_name: myDatabaseAccount
     apis_name: myApis
   tasks:
-    - name: CosmosDBMongoDatabaseList
+    - name: CosmosDBMongoDBDatabaseList
       azure_rm_resource_facts:
         api_version: '2015-04-08'
         resource_group: '{{ resource_group }}'

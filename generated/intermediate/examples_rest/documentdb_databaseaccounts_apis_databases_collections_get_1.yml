@@ -10,7 +10,7 @@
     database_name: myDatabase
     collection_name: myCollection
   tasks:
-    - name: CosmosDBMongoCollectionGet
+    - name: CosmosDBMongoDBCollectionGet
       azure_rm_resource_facts:
         api_version: '2015-04-08'
         resource_group: '{{ resource_group }}'

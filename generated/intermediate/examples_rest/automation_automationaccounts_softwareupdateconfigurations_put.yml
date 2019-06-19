@@ -62,10 +62,10 @@
                       - Japan East
                       - UK South
                 nonAzureQueries:
-                  - FunctionAlias: SavedSearch1
-                    WorkspaceId: WorkspaceId1
-                  - FunctionAlias: SavedSearch2
-                    WorkspaceId: WorkspaceId2
+                  - functionAlias: SavedSearch1
+                    workspaceId: WorkspaceId1
+                  - functionAlias: SavedSearch2
+                    workspaceId: WorkspaceId2
             scheduleInfo:
               frequency: Hour
               startTime: '2017-10-19T12:22:57+00:00'

@@ -9,7 +9,7 @@
     apis_name: myApis
     database_name: myDatabase
   tasks:
-    - name: CosmosDBMongoDatabaseDelete
+    - name: CosmosDBMongoDBDatabaseDelete
       azure_rm_resource:
         method: DELETE
         api_version: '2015-04-08'

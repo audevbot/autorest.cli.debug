@@ -1,4 +1,4 @@
-# CosmosDBMongoCollectionGet
+# CosmosDBMongoDBCollectionGet
 RESOURCE_GROUP="myresourcegroup"
 DATABASE_ACCOUNT_NAME="mydatabaseaccount"
 APIS_NAME="myapis"

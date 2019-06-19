@@ -1435,6 +1435,16 @@ modelTypes:
           x-ms-enum:
             name: ScheduleFrequency
             modelAsString: true
+            values:
+              - value: OneTime
+              - value: Day
+              - value: Hour
+              - value: Week
+              - value: Month
+              - value: Minute
+                description: >-
+                  The minimum allowed interval for Minute schedules is 15
+                  minutes.
         isRequired: false
         isConstant: false
         name:
@@ -1462,83 +1472,87 @@ modelTypes:
             - $id: '302'
               name: Month
               serializedName: Month
+            - $id: '303'
+              description: The minimum allowed interval for Minute schedules is 15 minutes.
+              name: Minute
+              serializedName: Minute
           modelAsString: true
           underlyingType:
-            $id: '303'
+            $id: '304'
             $type: PrimaryType
             knownPrimaryType: string
             name:
-              $id: '304'
+              $id: '305'
               fixed: false
               raw: String
             deprecated: false
           name:
-            $id: '305'
+            $id: '306'
             fixed: false
             raw: ScheduleFrequency
           deprecated: false
-      - $id: '306'
+      - $id: '307'
         isReadOnly: false
         realPath:
           - timeZone
         collectionFormat: none
         defaultValue:
-          $id: '307'
+          $id: '308'
           fixed: false
         deprecated: false
         documentation:
-          $id: '308'
+          $id: '309'
           fixed: false
           raw: Gets or sets the time zone of the schedule.
         isRequired: false
         isConstant: false
         name:
-          $id: '309'
+          $id: '310'
           fixed: false
           raw: timeZone
         serializedName: timeZone
         modelType:
-          $id: '310'
+          $id: '311'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '311'
+            $id: '312'
             fixed: false
             raw: String
           deprecated: false
-      - $id: '312'
+      - $id: '313'
         isReadOnly: false
         realPath:
           - advancedSchedule
         collectionFormat: none
         defaultValue:
-          $id: '313'
+          $id: '314'
           fixed: false
         deprecated: false
         documentation:
-          $id: '314'
+          $id: '315'
           fixed: false
           raw: Gets or sets the advanced schedule.
         isRequired: false
         isConstant: false
         name:
-          $id: '315'
+          $id: '316'
           fixed: false
           raw: advancedSchedule
         serializedName: advancedSchedule
         modelType:
           $ref: '220'
-      - $id: '316'
+      - $id: '317'
         isReadOnly: false
         realPath:
           - creationTime
         collectionFormat: none
         defaultValue:
-          $id: '317'
+          $id: '318'
           fixed: false
         deprecated: false
         documentation:
-          $id: '318'
+          $id: '319'
           fixed: false
           raw: Gets or sets the creation time.
         extensions:
@@ -1546,31 +1560,31 @@ modelTypes:
         isRequired: false
         isConstant: false
         name:
-          $id: '319'
+          $id: '320'
           fixed: false
           raw: creationTime
         serializedName: creationTime
         modelType:
-          $id: '320'
+          $id: '321'
           $type: PrimaryType
           format: date-time
           knownPrimaryType: dateTime
           name:
-            $id: '321'
+            $id: '322'
             fixed: false
             raw: DateTime
           deprecated: false
-      - $id: '322'
+      - $id: '323'
         isReadOnly: false
         realPath:
           - lastModifiedTime
         collectionFormat: none
         defaultValue:
-          $id: '323'
+          $id: '324'
           fixed: false
         deprecated: false
         documentation:
-          $id: '324'
+          $id: '325'
           fixed: false
           raw: Gets or sets the last modified time.
         extensions:
@@ -1578,46 +1592,46 @@ modelTypes:
         isRequired: false
         isConstant: false
         name:
-          $id: '325'
+          $id: '326'
           fixed: false
           raw: lastModifiedTime
         serializedName: lastModifiedTime
         modelType:
-          $id: '326'
+          $id: '327'
           $type: PrimaryType
           format: date-time
           knownPrimaryType: dateTime
           name:
-            $id: '327'
+            $id: '328'
             fixed: false
             raw: DateTime
           deprecated: false
-      - $id: '328'
+      - $id: '329'
         isReadOnly: false
         realPath:
           - description
         collectionFormat: none
         defaultValue:
-          $id: '329'
+          $id: '330'
           fixed: false
         deprecated: false
         documentation:
-          $id: '330'
+          $id: '331'
           fixed: false
           raw: Gets or sets the description.
         isRequired: false
         isConstant: false
         name:
-          $id: '331'
+          $id: '332'
           fixed: false
           raw: description
         serializedName: description
         modelType:
-          $id: '332'
+          $id: '333'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '333'
+            $id: '334'
             fixed: false
             raw: String
           deprecated: false
@@ -1625,68 +1639,68 @@ modelTypes:
     documentation: Definition of schedule parameters.
     containsConstantProperties: false
     name:
-      $id: '334'
+      $id: '335'
       fixed: false
       raw: ScheduleProperties
     deprecated: false
-  - $id: '335'
+  - $id: '336'
     $type: CompositeType
     properties:
-      - $id: '336'
+      - $id: '337'
         isReadOnly: false
         realPath:
           - code
         collectionFormat: none
         defaultValue:
-          $id: '337'
+          $id: '338'
           fixed: false
         deprecated: false
         documentation:
-          $id: '338'
+          $id: '339'
           fixed: false
           raw: Error code
         isRequired: false
         isConstant: false
         name:
-          $id: '339'
+          $id: '340'
           fixed: false
           raw: code
         serializedName: code
         modelType:
-          $id: '340'
+          $id: '341'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '341'
+            $id: '342'
             fixed: false
             raw: String
           deprecated: false
-      - $id: '342'
+      - $id: '343'
         isReadOnly: false
         realPath:
           - message
         collectionFormat: none
         defaultValue:
-          $id: '343'
+          $id: '344'
           fixed: false
         deprecated: false
         documentation:
-          $id: '344'
+          $id: '345'
           fixed: false
           raw: Error message indicating why the operation failed.
         isRequired: false
         isConstant: false
         name:
-          $id: '345'
+          $id: '346'
           fixed: false
           raw: message
         serializedName: message
         modelType:
-          $id: '346'
+          $id: '347'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '347'
+            $id: '348'
             fixed: false
             raw: String
           deprecated: false
@@ -1694,76 +1708,76 @@ modelTypes:
     documentation: Error response of an operation failure
     containsConstantProperties: false
     name:
-      $id: '348'
+      $id: '349'
       fixed: false
       raw: ErrorResponse
     deprecated: false
-  - $id: '349'
+  - $id: '350'
     $type: CompositeType
     properties:
-      - $id: '350'
+      - $id: '351'
         isReadOnly: false
         realPath:
           - parameters
         collectionFormat: none
         defaultValue:
-          $id: '351'
+          $id: '352'
           fixed: false
         deprecated: false
         documentation:
-          $id: '352'
+          $id: '353'
           fixed: false
           raw: Gets or sets the parameters of the task.
         isRequired: false
         isConstant: false
         name:
-          $id: '353'
+          $id: '354'
           fixed: false
           raw: parameters
         serializedName: parameters
         modelType:
-          $id: '354'
+          $id: '355'
           $type: DictionaryType
           valueType:
-            $id: '355'
+            $id: '356'
             $type: PrimaryType
             knownPrimaryType: string
             name:
-              $id: '356'
+              $id: '357'
               fixed: false
               raw: String
             deprecated: false
           supportsAdditionalProperties: false
           name:
-            $id: '357'
+            $id: '358'
             fixed: false
           deprecated: false
-      - $id: '358'
+      - $id: '359'
         isReadOnly: false
         realPath:
           - source
         collectionFormat: none
         defaultValue:
-          $id: '359'
+          $id: '360'
           fixed: false
         deprecated: false
         documentation:
-          $id: '360'
+          $id: '361'
           fixed: false
           raw: Gets or sets the name of the runbook.
         isRequired: false
         isConstant: false
         name:
-          $id: '361'
+          $id: '362'
           fixed: false
           raw: source
         serializedName: source
         modelType:
-          $id: '362'
+          $id: '363'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '363'
+            $id: '364'
             fixed: false
             raw: String
           deprecated: false
@@ -1771,123 +1785,123 @@ modelTypes:
     documentation: Task properties of the software update configuration.
     containsConstantProperties: false
     name:
-      $id: '364'
+      $id: '365'
       fixed: false
       raw: taskProperties
     deprecated: false
-  - $id: '365'
+  - $id: '366'
     $type: CompositeType
     properties:
-      - $id: '366'
+      - $id: '367'
         isReadOnly: false
         realPath:
           - preTask
         collectionFormat: none
         defaultValue:
-          $id: '367'
+          $id: '368'
           fixed: false
         deprecated: false
         documentation:
-          $id: '368'
+          $id: '369'
           fixed: false
           raw: Pre task properties.
         isRequired: false
         isConstant: false
         name:
-          $id: '369'
+          $id: '370'
           fixed: false
           raw: preTask
         serializedName: preTask
         modelType:
-          $ref: '349'
-      - $id: '370'
+          $ref: '350'
+      - $id: '371'
         isReadOnly: false
         realPath:
           - postTask
         collectionFormat: none
         defaultValue:
-          $id: '371'
+          $id: '372'
           fixed: false
         deprecated: false
         documentation:
-          $id: '372'
+          $id: '373'
           fixed: false
           raw: Post task properties.
         isRequired: false
         isConstant: false
         name:
-          $id: '373'
+          $id: '374'
           fixed: false
           raw: postTask
         serializedName: postTask
         modelType:
-          $ref: '349'
+          $ref: '350'
     serializedName: softwareUpdateConfigurationTasks
     documentation: Task properties of the software update configuration.
     containsConstantProperties: false
     name:
-      $id: '374'
+      $id: '375'
       fixed: false
       raw: softwareUpdateConfigurationTasks
     deprecated: false
-  - $id: '375'
+  - $id: '376'
     $type: CompositeType
     properties:
-      - $id: '376'
+      - $id: '377'
         isReadOnly: false
         realPath:
           - updateConfiguration
         collectionFormat: none
         defaultValue:
-          $id: '377'
+          $id: '378'
           fixed: false
         deprecated: false
         documentation:
-          $id: '378'
+          $id: '379'
           fixed: false
           raw: update specific properties for the Software update configuration
         isRequired: true
         isConstant: false
         name:
-          $id: '379'
+          $id: '380'
           fixed: false
           raw: updateConfiguration
         serializedName: updateConfiguration
         modelType:
           $ref: '151'
-      - $id: '380'
+      - $id: '381'
         isReadOnly: false
         realPath:
           - scheduleInfo
         collectionFormat: none
         defaultValue:
-          $id: '381'
+          $id: '382'
           fixed: false
         deprecated: false
         documentation:
-          $id: '382'
+          $id: '383'
           fixed: false
           raw: Schedule information for the Software update configuration
         isRequired: true
         isConstant: false
         name:
-          $id: '383'
+          $id: '384'
           fixed: false
           raw: scheduleInfo
         serializedName: scheduleInfo
         modelType:
           $ref: '244'
-      - $id: '384'
+      - $id: '385'
         isReadOnly: true
         realPath:
           - provisioningState
         collectionFormat: none
         defaultValue:
-          $id: '385'
+          $id: '386'
           fixed: false
         deprecated: false
         documentation:
-          $id: '386'
+          $id: '387'
           fixed: false
           raw: >-
             Provisioning state for the software update configuration, which only
@@ -1895,52 +1909,52 @@ modelTypes:
         isRequired: false
         isConstant: false
         name:
-          $id: '387'
+          $id: '388'
           fixed: false
           raw: provisioningState
         serializedName: provisioningState
         modelType:
-          $id: '388'
+          $id: '389'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '389'
+            $id: '390'
             fixed: false
             raw: String
           deprecated: false
-      - $id: '390'
+      - $id: '391'
         isReadOnly: false
         realPath:
           - error
         collectionFormat: none
         defaultValue:
-          $id: '391'
+          $id: '392'
           fixed: false
         deprecated: false
         documentation:
-          $id: '392'
+          $id: '393'
           fixed: false
           raw: Details of provisioning error
         isRequired: false
         isConstant: false
         name:
-          $id: '393'
+          $id: '394'
           fixed: false
           raw: error
         serializedName: error
         modelType:
-          $ref: '335'
-      - $id: '394'
+          $ref: '336'
+      - $id: '395'
         isReadOnly: true
         realPath:
           - creationTime
         collectionFormat: none
         defaultValue:
-          $id: '395'
+          $id: '396'
           fixed: false
         deprecated: false
         documentation:
-          $id: '396'
+          $id: '397'
           fixed: false
           raw: 'Creation time of the resource, which only appears in the response.'
         extensions:
@@ -1948,60 +1962,60 @@ modelTypes:
         isRequired: false
         isConstant: false
         name:
-          $id: '397'
+          $id: '398'
           fixed: false
           raw: creationTime
         serializedName: creationTime
         modelType:
-          $id: '398'
+          $id: '399'
           $type: PrimaryType
           format: date-time
           knownPrimaryType: dateTime
           name:
-            $id: '399'
+            $id: '400'
             fixed: false
             raw: DateTime
           deprecated: false
-      - $id: '400'
+      - $id: '401'
         isReadOnly: true
         realPath:
           - createdBy
         collectionFormat: none
         defaultValue:
-          $id: '401'
+          $id: '402'
           fixed: false
         deprecated: false
         documentation:
-          $id: '402'
+          $id: '403'
           fixed: false
           raw: 'CreatedBy property, which only appears in the response.'
         isRequired: false
         isConstant: false
         name:
-          $id: '403'
+          $id: '404'
           fixed: false
           raw: createdBy
         serializedName: createdBy
         modelType:
-          $id: '404'
+          $id: '405'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '405'
+            $id: '406'
             fixed: false
             raw: String
           deprecated: false
-      - $id: '406'
+      - $id: '407'
         isReadOnly: true
         realPath:
           - lastModifiedTime
         collectionFormat: none
         defaultValue:
-          $id: '407'
+          $id: '408'
           fixed: false
         deprecated: false
         documentation:
-          $id: '408'
+          $id: '409'
           fixed: false
           raw: 'Last time resource was modified, which only appears in the response.'
         extensions:
@@ -2009,180 +2023,180 @@ modelTypes:
         isRequired: false
         isConstant: false
         name:
-          $id: '409'
+          $id: '410'
           fixed: false
           raw: lastModifiedTime
         serializedName: lastModifiedTime
         modelType:
-          $id: '410'
+          $id: '411'
           $type: PrimaryType
           format: date-time
           knownPrimaryType: dateTime
           name:
-            $id: '411'
+            $id: '412'
             fixed: false
             raw: DateTime
           deprecated: false
-      - $id: '412'
+      - $id: '413'
         isReadOnly: true
         realPath:
           - lastModifiedBy
         collectionFormat: none
         defaultValue:
-          $id: '413'
+          $id: '414'
           fixed: false
         deprecated: false
         documentation:
-          $id: '414'
+          $id: '415'
           fixed: false
           raw: 'LastModifiedBy property, which only appears in the response.'
         isRequired: false
         isConstant: false
         name:
-          $id: '415'
+          $id: '416'
           fixed: false
           raw: lastModifiedBy
         serializedName: lastModifiedBy
         modelType:
-          $id: '416'
+          $id: '417'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '417'
+            $id: '418'
             fixed: false
             raw: String
           deprecated: false
-      - $id: '418'
+      - $id: '419'
         isReadOnly: false
         realPath:
           - tasks
         collectionFormat: none
         defaultValue:
-          $id: '419'
+          $id: '420'
           fixed: false
         deprecated: false
         documentation:
-          $id: '420'
+          $id: '421'
           fixed: false
           raw: Tasks information for the Software update configuration.
         isRequired: false
         isConstant: false
         name:
-          $id: '421'
+          $id: '422'
           fixed: false
           raw: tasks
         serializedName: tasks
         modelType:
-          $ref: '365'
+          $ref: '366'
     serializedName: softwareUpdateConfigurationProperties
     documentation: Software update configuration properties.
     containsConstantProperties: false
     name:
-      $id: '422'
+      $id: '423'
       fixed: false
       raw: softwareUpdateConfigurationProperties
     deprecated: false
-  - $id: '423'
+  - $id: '424'
     $type: CompositeType
     properties:
-      - $id: '424'
+      - $id: '425'
         isReadOnly: true
         realPath:
           - name
         collectionFormat: none
         defaultValue:
-          $id: '425'
+          $id: '426'
           fixed: false
         deprecated: false
         documentation:
-          $id: '426'
+          $id: '427'
           fixed: false
           raw: Resource name.
         isRequired: false
         isConstant: false
         name:
-          $id: '427'
+          $id: '428'
           fixed: false
           raw: name
         serializedName: name
         modelType:
-          $id: '428'
+          $id: '429'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '429'
+            $id: '430'
             fixed: false
             raw: String
           deprecated: false
-      - $id: '430'
+      - $id: '431'
         isReadOnly: true
         realPath:
           - id
         collectionFormat: none
         defaultValue:
-          $id: '431'
+          $id: '432'
           fixed: false
         deprecated: false
         documentation:
-          $id: '432'
+          $id: '433'
           fixed: false
           raw: Resource Id.
         isRequired: false
         isConstant: false
         name:
-          $id: '433'
+          $id: '434'
           fixed: false
           raw: id
         serializedName: id
         modelType:
-          $id: '434'
+          $id: '435'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '435'
+            $id: '436'
             fixed: false
             raw: String
           deprecated: false
-      - $id: '436'
+      - $id: '437'
         isReadOnly: true
         realPath:
           - type
         collectionFormat: none
         defaultValue:
-          $id: '437'
+          $id: '438'
           fixed: false
         deprecated: false
         documentation:
-          $id: '438'
+          $id: '439'
           fixed: false
           raw: Resource type
         isRequired: false
         isConstant: false
         name:
-          $id: '439'
+          $id: '440'
           fixed: false
           raw: type
         serializedName: type
         modelType:
-          $id: '440'
+          $id: '441'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '441'
+            $id: '442'
             fixed: false
             raw: String
           deprecated: false
-      - $id: '442'
+      - $id: '443'
         isReadOnly: false
         realPath:
           - properties
         collectionFormat: none
         defaultValue:
-          $id: '443'
+          $id: '444'
           fixed: false
         deprecated: false
         documentation:
-          $id: '444'
+          $id: '445'
           fixed: false
           raw: Software update configuration properties.
         extensions:
@@ -2190,36 +2204,36 @@ modelTypes:
         isRequired: true
         isConstant: false
         name:
-          $id: '445'
+          $id: '446'
           fixed: false
           raw: properties
         serializedName: properties
         modelType:
-          $ref: '375'
+          $ref: '376'
     serializedName: softwareUpdateConfiguration
     documentation: Software update configuration properties.
     containsConstantProperties: false
     name:
-      $id: '446'
+      $id: '447'
       fixed: false
       raw: softwareUpdateConfiguration
     extensions:
       x-ms-azure-resource: true
     deprecated: false
-  - $id: '447'
+  - $id: '448'
     $type: CompositeType
     properties:
-      - $id: '448'
+      - $id: '449'
         isReadOnly: false
         realPath:
           - azureVirtualMachines
         collectionFormat: none
         defaultValue:
-          $id: '449'
+          $id: '450'
           fixed: false
         deprecated: false
         documentation:
-          $id: '450'
+          $id: '451'
           fixed: false
           raw: >-
             List of azure resource Ids for azure virtual machines targeted by
@@ -2227,37 +2241,37 @@ modelTypes:
         isRequired: false
         isConstant: false
         name:
-          $id: '451'
+          $id: '452'
           fixed: false
           raw: azureVirtualMachines
         serializedName: azureVirtualMachines
         modelType:
-          $id: '452'
+          $id: '453'
           $type: SequenceType
           elementType:
-            $id: '453'
+            $id: '454'
             $type: PrimaryType
             knownPrimaryType: string
             name:
-              $id: '454'
+              $id: '455'
               fixed: false
               raw: String
             deprecated: false
           name:
-            $id: '455'
+            $id: '456'
             fixed: false
           deprecated: false
-      - $id: '456'
+      - $id: '457'
         isReadOnly: false
         realPath:
           - duration
         collectionFormat: none
         defaultValue:
-          $id: '457'
+          $id: '458'
           fixed: false
         deprecated: false
         documentation:
-          $id: '458'
+          $id: '459'
           fixed: false
           raw: >-
             Maximum time allowed for the software update configuration run.
@@ -2266,17 +2280,17 @@ modelTypes:
         isRequired: false
         isConstant: false
         name:
-          $id: '459'
+          $id: '460'
           fixed: false
           raw: duration
         serializedName: duration
         modelType:
-          $id: '460'
+          $id: '461'
           $type: PrimaryType
           format: duration
           knownPrimaryType: timeSpan
           name:
-            $id: '461'
+            $id: '462'
             fixed: false
             raw: TimeSpan
           deprecated: false
@@ -2286,46 +2300,46 @@ modelTypes:
       configuration
     containsConstantProperties: false
     name:
-      $id: '462'
+      $id: '463'
       fixed: false
       raw: collectionItemUpdateConfiguration
     deprecated: false
-  - $id: '463'
+  - $id: '464'
     $type: CompositeType
     properties:
-      - $id: '464'
+      - $id: '465'
         isReadOnly: false
         realPath:
           - updateConfiguration
         collectionFormat: none
         defaultValue:
-          $id: '465'
+          $id: '466'
           fixed: false
         deprecated: false
         documentation:
-          $id: '466'
+          $id: '467'
           fixed: false
           raw: Update specific properties of the software update configuration.
         isRequired: false
         isConstant: false
         name:
-          $id: '467'
+          $id: '468'
           fixed: false
           raw: updateConfiguration
         serializedName: updateConfiguration
         modelType:
-          $ref: '447'
-      - $id: '468'
+          $ref: '448'
+      - $id: '469'
         isReadOnly: false
         realPath:
           - frequency
         collectionFormat: none
         defaultValue:
-          $id: '469'
+          $id: '470'
           fixed: false
         deprecated: false
         documentation:
-          $id: '470'
+          $id: '471'
           fixed: false
           raw: >-
             execution frequency of the schedule associated with the software
@@ -2334,26 +2348,36 @@ modelTypes:
           x-ms-enum:
             name: ScheduleFrequency
             modelAsString: true
+            values:
+              - value: OneTime
+              - value: Day
+              - value: Hour
+              - value: Week
+              - value: Month
+              - value: Minute
+                description: >-
+                  The minimum allowed interval for Minute schedules is 15
+                  minutes.
         isRequired: false
         isConstant: false
         name:
-          $id: '471'
+          $id: '472'
           fixed: false
           raw: frequency
         serializedName: frequency
         modelType:
           $ref: '297'
-      - $id: '472'
+      - $id: '473'
         isReadOnly: false
         realPath:
           - startTime
         collectionFormat: none
         defaultValue:
-          $id: '473'
+          $id: '474'
           fixed: false
         deprecated: false
         documentation:
-          $id: '474'
+          $id: '475'
           fixed: false
           raw: the start time of the update.
         extensions:
@@ -2361,31 +2385,31 @@ modelTypes:
         isRequired: false
         isConstant: false
         name:
-          $id: '475'
+          $id: '476'
           fixed: false
           raw: startTime
         serializedName: startTime
         modelType:
-          $id: '476'
+          $id: '477'
           $type: PrimaryType
           format: date-time
           knownPrimaryType: dateTime
           name:
-            $id: '477'
+            $id: '478'
             fixed: false
             raw: DateTime
           deprecated: false
-      - $id: '478'
+      - $id: '479'
         isReadOnly: true
         realPath:
           - creationTime
         collectionFormat: none
         defaultValue:
-          $id: '479'
+          $id: '480'
           fixed: false
         deprecated: false
         documentation:
-          $id: '480'
+          $id: '481'
           fixed: false
           raw: >-
             Creation time of the software update configuration, which only
@@ -2395,31 +2419,31 @@ modelTypes:
         isRequired: false
         isConstant: false
         name:
-          $id: '481'
+          $id: '482'
           fixed: false
           raw: creationTime
         serializedName: creationTime
         modelType:
-          $id: '482'
+          $id: '483'
           $type: PrimaryType
           format: date-time
           knownPrimaryType: dateTime
           name:
-            $id: '483'
+            $id: '484'
             fixed: false
             raw: DateTime
           deprecated: false
-      - $id: '484'
+      - $id: '485'
         isReadOnly: true
         realPath:
           - lastModifiedTime
         collectionFormat: none
         defaultValue:
-          $id: '485'
+          $id: '486'
           fixed: false
         deprecated: false
         documentation:
-          $id: '486'
+          $id: '487'
           fixed: false
           raw: >-
             Last time software update configuration was modified, which only
@@ -2429,31 +2453,31 @@ modelTypes:
         isRequired: false
         isConstant: false
         name:
-          $id: '487'
+          $id: '488'
           fixed: false
           raw: lastModifiedTime
         serializedName: lastModifiedTime
         modelType:
-          $id: '488'
+          $id: '489'
           $type: PrimaryType
           format: date-time
           knownPrimaryType: dateTime
           name:
-            $id: '489'
+            $id: '490'
             fixed: false
             raw: DateTime
           deprecated: false
-      - $id: '490'
+      - $id: '491'
         isReadOnly: true
         realPath:
           - provisioningState
         collectionFormat: none
         defaultValue:
-          $id: '491'
+          $id: '492'
           fixed: false
         deprecated: false
         documentation:
-          $id: '492'
+          $id: '493'
           fixed: false
           raw: >-
             Provisioning state for the software update configuration, which only
@@ -2461,30 +2485,30 @@ modelTypes:
         isRequired: false
         isConstant: false
         name:
-          $id: '493'
+          $id: '494'
           fixed: false
           raw: provisioningState
         serializedName: provisioningState
         modelType:
-          $id: '494'
+          $id: '495'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '495'
+            $id: '496'
             fixed: false
             raw: String
           deprecated: false
-      - $id: '496'
+      - $id: '497'
         isReadOnly: false
         realPath:
           - nextRun
         collectionFormat: none
         defaultValue:
-          $id: '497'
+          $id: '498'
           fixed: false
         deprecated: false
         documentation:
-          $id: '498'
+          $id: '499'
           fixed: false
           raw: ext run time of the update.
         extensions:
@@ -2492,17 +2516,17 @@ modelTypes:
         isRequired: false
         isConstant: false
         name:
-          $id: '499'
+          $id: '500'
           fixed: false
           raw: nextRun
         serializedName: nextRun
         modelType:
-          $id: '500'
+          $id: '501'
           $type: PrimaryType
           format: date-time
           knownPrimaryType: dateTime
           name:
-            $id: '501'
+            $id: '502'
             fixed: false
             raw: DateTime
           deprecated: false
@@ -2510,82 +2534,82 @@ modelTypes:
     documentation: Software update configuration collection item properties.
     containsConstantProperties: false
     name:
-      $id: '502'
+      $id: '503'
       fixed: false
       raw: softwareUpdateConfigurationCollectionItemProperties
     deprecated: false
-  - $id: '503'
+  - $id: '504'
     $type: CompositeType
     properties:
-      - $id: '504'
+      - $id: '505'
         isReadOnly: true
         realPath:
           - name
         collectionFormat: none
         defaultValue:
-          $id: '505'
+          $id: '506'
           fixed: false
         deprecated: false
         documentation:
-          $id: '506'
+          $id: '507'
           fixed: false
           raw: Name of the software update configuration.
         isRequired: false
         isConstant: false
         name:
-          $id: '507'
+          $id: '508'
           fixed: false
           raw: name
         serializedName: name
         modelType:
-          $id: '508'
+          $id: '509'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '509'
+            $id: '510'
             fixed: false
             raw: String
           deprecated: false
-      - $id: '510'
+      - $id: '511'
         isReadOnly: true
         realPath:
           - id
         collectionFormat: none
         defaultValue:
-          $id: '511'
+          $id: '512'
           fixed: false
         deprecated: false
         documentation:
-          $id: '512'
+          $id: '513'
           fixed: false
           raw: Resource Id of the software update configuration
         isRequired: false
         isConstant: false
         name:
-          $id: '513'
+          $id: '514'
           fixed: false
           raw: id
         serializedName: id
         modelType:
-          $id: '514'
+          $id: '515'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '515'
+            $id: '516'
             fixed: false
             raw: String
           deprecated: false
-      - $id: '516'
+      - $id: '517'
         isReadOnly: false
         realPath:
           - properties
         collectionFormat: none
         defaultValue:
-          $id: '517'
+          $id: '518'
           fixed: false
         deprecated: false
         documentation:
-          $id: '518'
+          $id: '519'
           fixed: false
           raw: Software update configuration properties.
         extensions:
@@ -2593,34 +2617,34 @@ modelTypes:
         isRequired: true
         isConstant: false
         name:
-          $id: '519'
+          $id: '520'
           fixed: false
           raw: properties
         serializedName: properties
         modelType:
-          $ref: '463'
+          $ref: '464'
     serializedName: softwareUpdateConfigurationCollectionItem
     documentation: Software update configuration collection item properties.
     containsConstantProperties: false
     name:
-      $id: '520'
+      $id: '521'
       fixed: false
       raw: softwareUpdateConfigurationCollectionItem
     deprecated: false
-  - $id: '521'
+  - $id: '522'
     $type: CompositeType
     properties:
-      - $id: '522'
+      - $id: '523'
         isReadOnly: false
         realPath:
           - value
         collectionFormat: none
         defaultValue:
-          $id: '523'
+          $id: '524'
           fixed: false
         deprecated: false
         documentation:
-          $id: '524'
+          $id: '525'
           fixed: false
           raw: >-
             outer object returned when listing all software update
@@ -2628,29 +2652,29 @@ modelTypes:
         isRequired: false
         isConstant: false
         name:
-          $id: '525'
+          $id: '526'
           fixed: false
           raw: value
         serializedName: value
         modelType:
-          $id: '526'
+          $id: '527'
           $type: SequenceType
           elementType:
-            $ref: '503'
+            $ref: '504'
           name:
-            $id: '527'
+            $id: '528'
             fixed: false
           deprecated: false
     serializedName: softwareUpdateConfigurationListResult
     documentation: result of listing all software update configuration
     containsConstantProperties: false
     name:
-      $id: '528'
+      $id: '529'
       fixed: false
       raw: softwareUpdateConfigurationListResult
     deprecated: false
 errorTypes:
-  - $ref: '335'
+  - $ref: '336'
 enumTypes:
   - $ref: '156'
   - $ref: '7'
@@ -2671,17 +2695,17 @@ extensions:
 codeGenExtensions:
   useDateTimeOffset: true
 properties:
-  - $id: '529'
+  - $id: '530'
     isReadOnly: false
     realPath:
       - clientRequestId
     collectionFormat: none
     defaultValue:
-      $id: '530'
+      $id: '531'
       fixed: false
     deprecated: false
     documentation:
-      $id: '531'
+      $id: '532'
       fixed: false
       raw: Identifies this specific client request.
     extensions:
@@ -2689,59 +2713,59 @@ properties:
     isRequired: false
     isConstant: false
     name:
-      $id: '532'
+      $id: '533'
       fixed: false
       raw: clientRequestId
     serializedName: clientRequestId
     modelType:
-      $id: '533'
+      $id: '534'
       $type: PrimaryType
       knownPrimaryType: string
       name:
-        $id: '534'
+        $id: '535'
         fixed: false
         raw: String
       deprecated: false
-  - $id: '535'
+  - $id: '536'
     isReadOnly: false
     realPath:
       - api-version
     collectionFormat: none
     defaultValue:
-      $id: '536'
+      $id: '537'
       fixed: false
     deprecated: false
     documentation:
-      $id: '537'
+      $id: '538'
       fixed: false
       raw: Client Api Version.
     isRequired: true
     isConstant: false
     name:
-      $id: '538'
+      $id: '539'
       fixed: false
       raw: api-version
     serializedName: api-version
     modelType:
-      $id: '539'
+      $id: '540'
       $type: PrimaryType
       knownPrimaryType: string
       name:
-        $id: '540'
+        $id: '541'
         fixed: false
         raw: String
       deprecated: false
-  - $id: '541'
+  - $id: '542'
     isReadOnly: false
     realPath:
       - automationAccountName
     collectionFormat: none
     defaultValue:
-      $id: '542'
+      $id: '543'
       fixed: false
     deprecated: false
     documentation:
-      $id: '543'
+      $id: '544'
       fixed: false
       raw: The name of the automation account.
     extensions:
@@ -2749,20 +2773,20 @@ properties:
     isRequired: true
     isConstant: false
     name:
-      $id: '544'
+      $id: '545'
       fixed: false
       raw: automationAccountName
     serializedName: automationAccountName
     modelType:
-      $id: '545'
+      $id: '546'
       $type: PrimaryType
       knownPrimaryType: string
       name:
-        $id: '546'
+        $id: '547'
         fixed: false
         raw: String
       deprecated: false
-  - $id: '547'
+  - $id: '548'
     isReadOnly: false
     realPath:
       - resourceGroupName
@@ -2772,11 +2796,11 @@ properties:
       MinLength: '1'
       Pattern: '^[-\w\._]+$'
     defaultValue:
-      $id: '548'
+      $id: '549'
       fixed: false
     deprecated: false
     documentation:
-      $id: '549'
+      $id: '550'
       fixed: false
       raw: Name of an Azure Resource group.
     extensions:
@@ -2784,30 +2808,30 @@ properties:
     isRequired: true
     isConstant: false
     name:
-      $id: '550'
+      $id: '551'
       fixed: false
       raw: resourceGroupName
     serializedName: resourceGroupName
     modelType:
-      $id: '551'
+      $id: '552'
       $type: PrimaryType
       knownPrimaryType: string
       name:
-        $id: '552'
+        $id: '553'
         fixed: false
         raw: String
       deprecated: false
-  - $id: '553'
+  - $id: '554'
     isReadOnly: false
     realPath:
       - subscriptionId
     collectionFormat: none
     defaultValue:
-      $id: '554'
+      $id: '555'
       fixed: false
     deprecated: false
     documentation:
-      $id: '555'
+      $id: '556'
       fixed: false
       raw: >-
         Gets subscription credentials which uniquely identify Microsoft Azure
@@ -2816,35 +2840,35 @@ properties:
     isRequired: true
     isConstant: false
     name:
-      $id: '556'
+      $id: '557'
       fixed: false
       raw: subscriptionId
     serializedName: subscriptionId
     modelType:
-      $id: '557'
+      $id: '558'
       $type: PrimaryType
       knownPrimaryType: string
       name:
-        $id: '558'
+        $id: '559'
         fixed: false
         raw: String
       deprecated: false
 operations:
-  - $id: '559'
+  - $id: '560'
     methods:
-      - $id: '560'
+      - $id: '561'
         parameters:
-          - $id: '561'
+          - $id: '562'
             clientProperty:
-              $ref: '553'
+              $ref: '554'
             location: path
             collectionFormat: none
             defaultValue:
-              $id: '562'
+              $id: '563'
               fixed: false
             deprecated: false
             documentation:
-              $id: '563'
+              $id: '564'
               fixed: false
               raw: >-
                 Gets subscription credentials which uniquely identify Microsoft
@@ -2853,22 +2877,22 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '564'
+              $id: '565'
               fixed: false
               raw: subscriptionId
             serializedName: subscriptionId
             modelType:
-              $id: '565'
+              $id: '566'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '566'
+                $id: '567'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '567'
+          - $id: '568'
             clientProperty:
-              $ref: '547'
+              $ref: '548'
             location: path
             collectionFormat: none
             constraints:
@@ -2876,11 +2900,11 @@ operations:
               MinLength: '1'
               Pattern: '^[-\w\._]+$'
             defaultValue:
-              $id: '568'
+              $id: '569'
               fixed: false
             deprecated: false
             documentation:
-              $id: '569'
+              $id: '570'
               fixed: false
               raw: Name of an Azure Resource group.
             extensions:
@@ -2888,30 +2912,30 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '570'
+              $id: '571'
               fixed: false
               raw: resourceGroupName
             serializedName: resourceGroupName
             modelType:
-              $id: '571'
+              $id: '572'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '572'
+                $id: '573'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '573'
+          - $id: '574'
             clientProperty:
-              $ref: '541'
+              $ref: '542'
             location: path
             collectionFormat: none
             defaultValue:
-              $id: '574'
+              $id: '575'
               fixed: false
             deprecated: false
             documentation:
-              $id: '575'
+              $id: '576'
               fixed: false
               raw: The name of the automation account.
             extensions:
@@ -2919,86 +2943,86 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '576'
+              $id: '577'
               fixed: false
               raw: automationAccountName
             serializedName: automationAccountName
             modelType:
-              $id: '577'
+              $id: '578'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '578'
+                $id: '579'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '579'
+          - $id: '580'
             location: path
             collectionFormat: none
             defaultValue:
-              $id: '580'
+              $id: '581'
               fixed: false
             deprecated: false
             documentation:
-              $id: '581'
+              $id: '582'
               fixed: false
               raw: The name of the software update configuration to be created.
             isRequired: true
             isConstant: false
             name:
-              $id: '582'
+              $id: '583'
               fixed: false
               raw: softwareUpdateConfigurationName
             serializedName: softwareUpdateConfigurationName
             modelType:
-              $id: '583'
+              $id: '584'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '584'
+                $id: '585'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '585'
+          - $id: '586'
             clientProperty:
-              $ref: '535'
+              $ref: '536'
             location: query
             collectionFormat: none
             defaultValue:
-              $id: '586'
+              $id: '587'
               fixed: false
             deprecated: false
             documentation:
-              $id: '587'
+              $id: '588'
               fixed: false
               raw: Client Api Version.
             isRequired: true
             isConstant: false
             name:
-              $id: '588'
+              $id: '589'
               fixed: false
               raw: api-version
             serializedName: api-version
             modelType:
-              $id: '589'
+              $id: '590'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '590'
+                $id: '591'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '591'
+          - $id: '592'
             clientProperty:
-              $ref: '529'
+              $ref: '530'
             location: header
             collectionFormat: none
             defaultValue:
-              $id: '592'
+              $id: '593'
               fixed: false
             deprecated: false
             documentation:
-              $id: '593'
+              $id: '594'
               fixed: false
               raw: Identifies this specific client request.
             extensions:
@@ -3006,28 +3030,28 @@ operations:
             isRequired: false
             isConstant: false
             name:
-              $id: '594'
+              $id: '595'
               fixed: false
               raw: clientRequestId
             serializedName: clientRequestId
             modelType:
-              $id: '595'
+              $id: '596'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '596'
+                $id: '597'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '597'
+          - $id: '598'
             location: body
             collectionFormat: none
             defaultValue:
-              $id: '598'
+              $id: '599'
               fixed: false
             deprecated: false
             documentation:
-              $id: '599'
+              $id: '600'
               fixed: false
               raw: Request body.
             extensions:
@@ -3035,18 +3059,18 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '600'
+              $id: '601'
               fixed: false
               raw: parameters
             serializedName: parameters
             modelType:
-              $ref: '423'
+              $ref: '424'
         name:
-          $id: '601'
+          $id: '602'
           fixed: false
           raw: Create
         group:
-          $id: '602'
+          $id: '603'
           fixed: false
           raw: SoftwareUpdateConfigurations
         serializedName: SoftwareUpdateConfigurations_Create
@@ -3056,24 +3080,24 @@ operations:
         httpMethod: put
         responses:
           OK:
-            $id: '603'
-            body:
-              $ref: '423'
-            isNullable: true
-          Created:
             $id: '604'
             body:
-              $ref: '423'
+              $ref: '424'
+            isNullable: true
+          Created:
+            $id: '605'
+            body:
+              $ref: '424'
             isNullable: true
         defaultResponse:
-          $id: '605'
-          body:
-            $ref: '335'
-          isNullable: true
-        returnType:
           $id: '606'
           body:
-            $ref: '423'
+            $ref: '336'
+          isNullable: true
+        returnType:
+          $id: '607'
+          body:
+            $ref: '424'
           isNullable: true
         description: >-
           Create a new software update configuration with the name given in the
@@ -3134,10 +3158,10 @@ operations:
                               - Japan East
                               - UK South
                         nonAzureQueries:
-                          - FunctionAlias: SavedSearch1
-                            WorkspaceId: WorkspaceId1
-                          - FunctionAlias: SavedSearch2
-                            WorkspaceId: WorkspaceId2
+                          - functionAlias: SavedSearch1
+                            workspaceId: WorkspaceId1
+                          - functionAlias: SavedSearch2
+                            workspaceId: WorkspaceId2
                     scheduleInfo:
                       frequency: Hour
                       startTime: '2017-10-19T12:22:57+00:00'
@@ -3314,19 +3338,19 @@ operations:
           x-ms-requestBody-index: '6'
         deprecated: false
         hidden: false
-      - $id: '607'
+      - $id: '608'
         parameters:
-          - $id: '608'
+          - $id: '609'
             clientProperty:
-              $ref: '553'
+              $ref: '554'
             location: path
             collectionFormat: none
             defaultValue:
-              $id: '609'
+              $id: '610'
               fixed: false
             deprecated: false
             documentation:
-              $id: '610'
+              $id: '611'
               fixed: false
               raw: >-
                 Gets subscription credentials which uniquely identify Microsoft
@@ -3335,22 +3359,22 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '611'
+              $id: '612'
               fixed: false
               raw: subscriptionId
             serializedName: subscriptionId
             modelType:
-              $id: '612'
+              $id: '613'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '613'
+                $id: '614'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '614'
+          - $id: '615'
             clientProperty:
-              $ref: '547'
+              $ref: '548'
             location: path
             collectionFormat: none
             constraints:
@@ -3358,11 +3382,11 @@ operations:
               MinLength: '1'
               Pattern: '^[-\w\._]+$'
             defaultValue:
-              $id: '615'
+              $id: '616'
               fixed: false
             deprecated: false
             documentation:
-              $id: '616'
+              $id: '617'
               fixed: false
               raw: Name of an Azure Resource group.
             extensions:
@@ -3370,30 +3394,30 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '617'
+              $id: '618'
               fixed: false
               raw: resourceGroupName
             serializedName: resourceGroupName
             modelType:
-              $id: '618'
+              $id: '619'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '619'
+                $id: '620'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '620'
+          - $id: '621'
             clientProperty:
-              $ref: '541'
+              $ref: '542'
             location: path
             collectionFormat: none
             defaultValue:
-              $id: '621'
+              $id: '622'
               fixed: false
             deprecated: false
             documentation:
-              $id: '622'
+              $id: '623'
               fixed: false
               raw: The name of the automation account.
             extensions:
@@ -3401,86 +3425,86 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '623'
+              $id: '624'
               fixed: false
               raw: automationAccountName
             serializedName: automationAccountName
             modelType:
-              $id: '624'
+              $id: '625'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '625'
+                $id: '626'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '626'
+          - $id: '627'
             location: path
             collectionFormat: none
             defaultValue:
-              $id: '627'
+              $id: '628'
               fixed: false
             deprecated: false
             documentation:
-              $id: '628'
+              $id: '629'
               fixed: false
               raw: The name of the software update configuration to be created.
             isRequired: true
             isConstant: false
             name:
-              $id: '629'
+              $id: '630'
               fixed: false
               raw: softwareUpdateConfigurationName
             serializedName: softwareUpdateConfigurationName
             modelType:
-              $id: '630'
+              $id: '631'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '631'
+                $id: '632'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '632'
+          - $id: '633'
             clientProperty:
-              $ref: '535'
+              $ref: '536'
             location: query
             collectionFormat: none
             defaultValue:
-              $id: '633'
+              $id: '634'
               fixed: false
             deprecated: false
             documentation:
-              $id: '634'
+              $id: '635'
               fixed: false
               raw: Client Api Version.
             isRequired: true
             isConstant: false
             name:
-              $id: '635'
+              $id: '636'
               fixed: false
               raw: api-version
             serializedName: api-version
             modelType:
-              $id: '636'
+              $id: '637'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '637'
+                $id: '638'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '638'
+          - $id: '639'
             clientProperty:
-              $ref: '529'
+              $ref: '530'
             location: header
             collectionFormat: none
             defaultValue:
-              $id: '639'
+              $id: '640'
               fixed: false
             deprecated: false
             documentation:
-              $id: '640'
+              $id: '641'
               fixed: false
               raw: Identifies this specific client request.
             extensions:
@@ -3488,25 +3512,25 @@ operations:
             isRequired: false
             isConstant: false
             name:
-              $id: '641'
+              $id: '642'
               fixed: false
               raw: clientRequestId
             serializedName: clientRequestId
             modelType:
-              $id: '642'
+              $id: '643'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '643'
+                $id: '644'
                 fixed: false
                 raw: String
               deprecated: false
         name:
-          $id: '644'
+          $id: '645'
           fixed: false
           raw: GetByName
         group:
-          $id: '645'
+          $id: '646'
           fixed: false
           raw: SoftwareUpdateConfigurations
         serializedName: SoftwareUpdateConfigurations_GetByName
@@ -3516,19 +3540,19 @@ operations:
         httpMethod: get
         responses:
           OK:
-            $id: '646'
+            $id: '647'
             body:
-              $ref: '423'
+              $ref: '424'
             isNullable: true
         defaultResponse:
-          $id: '647'
-          body:
-            $ref: '335'
-          isNullable: true
-        returnType:
           $id: '648'
           body:
-            $ref: '423'
+            $ref: '336'
+          isNullable: true
+        returnType:
+          $id: '649'
+          body:
+            $ref: '424'
           isNullable: true
         description: Get a single software update configuration by name.
         externalDocsUrl: 'http://aka.ms/azureautomationsdk/softwareupdateconfigurationoperations'
@@ -3623,19 +3647,19 @@ operations:
                       lastModifiedTime: '2017-10-19T18:54:50.68+00:00'
         deprecated: false
         hidden: false
-      - $id: '649'
+      - $id: '650'
         parameters:
-          - $id: '650'
+          - $id: '651'
             clientProperty:
-              $ref: '553'
+              $ref: '554'
             location: path
             collectionFormat: none
             defaultValue:
-              $id: '651'
+              $id: '652'
               fixed: false
             deprecated: false
             documentation:
-              $id: '652'
+              $id: '653'
               fixed: false
               raw: >-
                 Gets subscription credentials which uniquely identify Microsoft
@@ -3644,22 +3668,22 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '653'
+              $id: '654'
               fixed: false
               raw: subscriptionId
             serializedName: subscriptionId
             modelType:
-              $id: '654'
+              $id: '655'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '655'
+                $id: '656'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '656'
+          - $id: '657'
             clientProperty:
-              $ref: '547'
+              $ref: '548'
             location: path
             collectionFormat: none
             constraints:
@@ -3667,11 +3691,11 @@ operations:
               MinLength: '1'
               Pattern: '^[-\w\._]+$'
             defaultValue:
-              $id: '657'
+              $id: '658'
               fixed: false
             deprecated: false
             documentation:
-              $id: '658'
+              $id: '659'
               fixed: false
               raw: Name of an Azure Resource group.
             extensions:
@@ -3679,30 +3703,30 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '659'
+              $id: '660'
               fixed: false
               raw: resourceGroupName
             serializedName: resourceGroupName
             modelType:
-              $id: '660'
+              $id: '661'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '661'
+                $id: '662'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '662'
+          - $id: '663'
             clientProperty:
-              $ref: '541'
+              $ref: '542'
             location: path
             collectionFormat: none
             defaultValue:
-              $id: '663'
+              $id: '664'
               fixed: false
             deprecated: false
             documentation:
-              $id: '664'
+              $id: '665'
               fixed: false
               raw: The name of the automation account.
             extensions:
@@ -3710,86 +3734,86 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '665'
+              $id: '666'
               fixed: false
               raw: automationAccountName
             serializedName: automationAccountName
             modelType:
-              $id: '666'
+              $id: '667'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '667'
+                $id: '668'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '668'
+          - $id: '669'
             location: path
             collectionFormat: none
             defaultValue:
-              $id: '669'
+              $id: '670'
               fixed: false
             deprecated: false
             documentation:
-              $id: '670'
+              $id: '671'
               fixed: false
               raw: The name of the software update configuration to be created.
             isRequired: true
             isConstant: false
             name:
-              $id: '671'
+              $id: '672'
               fixed: false
               raw: softwareUpdateConfigurationName
             serializedName: softwareUpdateConfigurationName
             modelType:
-              $id: '672'
+              $id: '673'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '673'
+                $id: '674'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '674'
+          - $id: '675'
             clientProperty:
-              $ref: '535'
+              $ref: '536'
             location: query
             collectionFormat: none
             defaultValue:
-              $id: '675'
+              $id: '676'
               fixed: false
             deprecated: false
             documentation:
-              $id: '676'
+              $id: '677'
               fixed: false
               raw: Client Api Version.
             isRequired: true
             isConstant: false
             name:
-              $id: '677'
+              $id: '678'
               fixed: false
               raw: api-version
             serializedName: api-version
             modelType:
-              $id: '678'
+              $id: '679'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '679'
+                $id: '680'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '680'
+          - $id: '681'
             clientProperty:
-              $ref: '529'
+              $ref: '530'
             location: header
             collectionFormat: none
             defaultValue:
-              $id: '681'
+              $id: '682'
               fixed: false
             deprecated: false
             documentation:
-              $id: '682'
+              $id: '683'
               fixed: false
               raw: Identifies this specific client request.
             extensions:
@@ -3797,25 +3821,25 @@ operations:
             isRequired: false
             isConstant: false
             name:
-              $id: '683'
+              $id: '684'
               fixed: false
               raw: clientRequestId
             serializedName: clientRequestId
             modelType:
-              $id: '684'
+              $id: '685'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '685'
+                $id: '686'
                 fixed: false
                 raw: String
               deprecated: false
         name:
-          $id: '686'
+          $id: '687'
           fixed: false
           raw: Delete
         group:
-          $id: '687'
+          $id: '688'
           fixed: false
           raw: SoftwareUpdateConfigurations
         serializedName: SoftwareUpdateConfigurations_Delete
@@ -3825,18 +3849,18 @@ operations:
         httpMethod: delete
         responses:
           OK:
-            $id: '688'
-            isNullable: true
-          NoContent:
             $id: '689'
             isNullable: true
+          NoContent:
+            $id: '690'
+            isNullable: true
         defaultResponse:
-          $id: '690'
+          $id: '691'
           body:
-            $ref: '335'
+            $ref: '336'
           isNullable: true
         returnType:
-          $id: '691'
+          $id: '692'
           isNullable: true
         description: delete a specific software update configuration.
         externalDocsUrl: 'http://aka.ms/azureautomationsdk/softwareupdateconfigurationoperations'
@@ -3858,19 +3882,19 @@ operations:
                 '204': {}
         deprecated: false
         hidden: false
-      - $id: '692'
+      - $id: '693'
         parameters:
-          - $id: '693'
+          - $id: '694'
             clientProperty:
-              $ref: '553'
+              $ref: '554'
             location: path
             collectionFormat: none
             defaultValue:
-              $id: '694'
+              $id: '695'
               fixed: false
             deprecated: false
             documentation:
-              $id: '695'
+              $id: '696'
               fixed: false
               raw: >-
                 Gets subscription credentials which uniquely identify Microsoft
@@ -3879,22 +3903,22 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '696'
+              $id: '697'
               fixed: false
               raw: subscriptionId
             serializedName: subscriptionId
             modelType:
-              $id: '697'
+              $id: '698'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '698'
+                $id: '699'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '699'
+          - $id: '700'
             clientProperty:
-              $ref: '547'
+              $ref: '548'
             location: path
             collectionFormat: none
             constraints:
@@ -3902,11 +3926,11 @@ operations:
               MinLength: '1'
               Pattern: '^[-\w\._]+$'
             defaultValue:
-              $id: '700'
+              $id: '701'
               fixed: false
             deprecated: false
             documentation:
-              $id: '701'
+              $id: '702'
               fixed: false
               raw: Name of an Azure Resource group.
             extensions:
@@ -3914,30 +3938,30 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '702'
+              $id: '703'
               fixed: false
               raw: resourceGroupName
             serializedName: resourceGroupName
             modelType:
-              $id: '703'
+              $id: '704'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '704'
+                $id: '705'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '705'
+          - $id: '706'
             clientProperty:
-              $ref: '541'
+              $ref: '542'
             location: path
             collectionFormat: none
             defaultValue:
-              $id: '706'
+              $id: '707'
               fixed: false
             deprecated: false
             documentation:
-              $id: '707'
+              $id: '708'
               fixed: false
               raw: The name of the automation account.
             extensions:
@@ -3945,59 +3969,59 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '708'
+              $id: '709'
               fixed: false
               raw: automationAccountName
             serializedName: automationAccountName
             modelType:
-              $id: '709'
+              $id: '710'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '710'
+                $id: '711'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '711'
+          - $id: '712'
             clientProperty:
-              $ref: '535'
+              $ref: '536'
             location: query
             collectionFormat: none
             defaultValue:
-              $id: '712'
+              $id: '713'
               fixed: false
             deprecated: false
             documentation:
-              $id: '713'
+              $id: '714'
               fixed: false
               raw: Client Api Version.
             isRequired: true
             isConstant: false
             name:
-              $id: '714'
+              $id: '715'
               fixed: false
               raw: api-version
             serializedName: api-version
             modelType:
-              $id: '715'
+              $id: '716'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '716'
+                $id: '717'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '717'
+          - $id: '718'
             clientProperty:
-              $ref: '529'
+              $ref: '530'
             location: header
             collectionFormat: none
             defaultValue:
-              $id: '718'
+              $id: '719'
               fixed: false
             deprecated: false
             documentation:
-              $id: '719'
+              $id: '720'
               fixed: false
               raw: Identifies this specific client request.
             extensions:
@@ -4005,52 +4029,52 @@ operations:
             isRequired: false
             isConstant: false
             name:
-              $id: '720'
+              $id: '721'
               fixed: false
               raw: clientRequestId
             serializedName: clientRequestId
             modelType:
-              $id: '721'
+              $id: '722'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '722'
+                $id: '723'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '723'
+          - $id: '724'
             location: query
             collectionFormat: none
             defaultValue:
-              $id: '724'
+              $id: '725'
               fixed: false
             deprecated: false
             documentation:
-              $id: '725'
+              $id: '726'
               fixed: false
               raw: The filter to apply on the operation.
             isRequired: false
             isConstant: false
             name:
-              $id: '726'
+              $id: '727'
               fixed: false
               raw: $filter
             serializedName: $filter
             modelType:
-              $id: '727'
+              $id: '728'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '728'
+                $id: '729'
                 fixed: false
                 raw: String
               deprecated: false
         name:
-          $id: '729'
+          $id: '730'
           fixed: false
           raw: List
         group:
-          $id: '730'
+          $id: '731'
           fixed: false
           raw: SoftwareUpdateConfigurations
         serializedName: SoftwareUpdateConfigurations_List
@@ -4060,19 +4084,19 @@ operations:
         httpMethod: get
         responses:
           OK:
-            $id: '731'
+            $id: '732'
             body:
-              $ref: '521'
+              $ref: '522'
             isNullable: true
         defaultResponse:
-          $id: '732'
-          body:
-            $ref: '335'
-          isNullable: true
-        returnType:
           $id: '733'
           body:
-            $ref: '521'
+            $ref: '336'
+          isNullable: true
+        returnType:
+          $id: '734'
+          body:
+            $ref: '522'
           isNullable: true
         description: Get all software update configurations for the account.
         externalDocsUrl: 'http://aka.ms/azureautomationsdk/softwareupdateconfigurationoperations'
@@ -4300,10 +4324,10 @@ operations:
         deprecated: false
         hidden: false
     name:
-      $id: '734'
+      $id: '735'
       fixed: false
       raw: SoftwareUpdateConfigurations
     typeName:
-      $id: '735'
+      $id: '736'
       fixed: false
     nameForProperty: SoftwareUpdateConfigurations
