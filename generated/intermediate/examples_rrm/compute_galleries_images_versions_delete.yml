@@ -1,0 +1,20 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    gallery_name: myGallery
+    image_name: myImage
+    version_name: myVersion
+  tasks:
+
+    - name: Delete a gallery Image Version.
+      azure_rm_computegalleryimageversion:
+        resource_group: '{{resource_group}}'
+        gallery_name: '{{gallery_name}}'
+        gallery_image_name: '{{image_name}}'
+        name: '{{version_name}}'
+        state: absent
+    

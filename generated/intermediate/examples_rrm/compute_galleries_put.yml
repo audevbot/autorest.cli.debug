@@ -1,0 +1,22 @@
+- import_playbook: resourcegroups_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    gallery_name: myGallery
+  tasks:
+
+    - name: Create or update a simple gallery.
+      azure_rm_computegallery:
+        resource_group: '{{resource_group}}'
+        name: '{{gallery_name}}'
+        gallery:
+          location: West US
+          properties:
+            description: This is the gallery description.
+    

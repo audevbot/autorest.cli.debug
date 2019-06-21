@@ -1,0 +1,15 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars: {}
+  tasks:
+    - name: ListManagementGroups
+      azure_rm_resource_facts:
+        api_version: 2018-03-01-preview
+        provider: Management
+        resource_type: managementGroups
+      register: output
+    - debug:
+        var: output

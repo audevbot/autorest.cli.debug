@@ -1,0 +1,14 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+  tasks:
+
+    - name: BatchAccountList
+      azure_rm_batchaccount_info: {}
+    
+      register: output
+    - debug:
+        var: output

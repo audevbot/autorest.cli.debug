@@ -1,0 +1,42 @@
+- import_playbook: compute_images_put.yml
+- import_playbook: compute_galleries_images_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    gallery_name: myGallery
+    image_name: myImage
+    version_name: myVersion
+  tasks:
+    - name: Create or update a simple gallery Image Version.
+      azure_rm_resource:
+        idempotency: true
+        api_version: '2019-03-01'
+        resource_group: '{{ resource_group }}'
+        provider: Compute
+        resource_type: galleries
+        resource_name: '{{ gallery_name }}'
+        subresource:
+          - type: images
+            name: '{{ image_name }}'
+          - type: versions
+            name: '{{ version_name }}'
+        body:
+          location: West US
+          properties:
+            publishingProfile:
+              targetRegions:
+                - name: West US
+                  regionalReplicaCount: '1'
+                - name: East US
+                  regionalReplicaCount: '2'
+                  storageAccountType: Standard_ZRS
+              source:
+                managedImage:
+                  id: >-
+                    /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                    resource_group }}/providers/Microsoft.Compute/images/{{
+                    image_name }}

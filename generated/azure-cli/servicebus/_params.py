@@ -34,7 +34,6 @@ def load_arguments(self, _):
         c.argument('service_bus_endpoint', id_part=None, help='Endpoint you can use to perform Service Bus operations.')
         c.argument('metric_id', id_part=None, help='Identifier for Azure Insights metrics')
         c.argument('id', id_part=None, help='Resource Id')
-        c.argument('name', id_part=None, help='Resource name')
         c.argument('type', id_part=None, help='Resource type')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -51,7 +50,6 @@ def load_arguments(self, _):
         c.argument('service_bus_endpoint', id_part=None, help='Endpoint you can use to perform Service Bus operations.')
         c.argument('metric_id', id_part=None, help='Identifier for Azure Insights metrics')
         c.argument('id', id_part=None, help='Resource Id')
-        c.argument('name', id_part=None, help='Resource name')
         c.argument('type', id_part=None, help='Resource type')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -102,7 +100,6 @@ def load_arguments(self, _):
         c.argument('pending_replication_operations_count', id_part=None, help='Number of entities pending to be replicated.')
         c.argument('role', id_part=None, help='role of namespace in GEO DR - possible values \'Primary\' or \'PrimaryNotReplicating\' or \'Secondary\'')
         c.argument('id', id_part=None, help='Resource Id')
-        c.argument('name', id_part=None, help='Resource name')
         c.argument('type', id_part=None, help='Resource type')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -190,7 +187,6 @@ def load_arguments(self, _):
         c.argument('size_in_bytes', id_part=None, help='The size of the queue, in bytes.')
         c.argument('message_count', id_part=None, help='The number of messages in the queue.')
         c.argument('id', id_part=None, help='Resource Id')
-        c.argument('name', id_part=None, help='Resource name')
         c.argument('type', id_part=None, help='Resource type')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -257,7 +253,6 @@ def load_arguments(self, _):
         c.argument('subscription_count', id_part=None, help='Number of subscriptions.')
         c.argument('count_details', id_part=None, help='Message count details')
         c.argument('id', id_part=None, help='Resource Id')
-        c.argument('name', id_part=None, help='Resource name')
         c.argument('type', id_part=None, help='Resource type')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -326,7 +321,6 @@ def load_arguments(self, _):
         c.argument('updated_at', id_part=None, help='The exact time the message was updated.')
         c.argument('count_details', id_part=None, help='Message count details')
         c.argument('id', id_part=None, help='Resource Id')
-        c.argument('name', id_part=None, help='Resource name')
         c.argument('type', id_part=None, help='Resource type')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -386,7 +380,6 @@ def load_arguments(self, _):
         c.argument('sql_filter', id_part=None, help='Properties of sqlFilter')
         c.argument('correlation_filter', id_part=None, help='Properties of correlationFilter')
         c.argument('id', id_part=None, help='Resource Id')
-        c.argument('name', id_part=None, help='Resource name')
         c.argument('type', id_part=None, help='Resource type')
         c.argument('resource_id', name_arg_type, id_part=None)
 

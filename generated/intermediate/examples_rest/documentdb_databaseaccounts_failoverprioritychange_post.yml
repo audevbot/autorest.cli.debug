@@ -1,0 +1,25 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    database_account_name: myDatabaseAccount
+  tasks:
+    - name: CosmosDBDatabaseAccountFailoverPriorityChange
+      azure_rm_resource:
+        method: POST
+        api_version: '2015-04-08'
+        resource_group: '{{ resource_group }}'
+        provider: DocumentDB
+        resource_type: databaseAccounts
+        resource_name: '{{ database_account_name }}'
+        subresource:
+          - type: failoverPriorityChange
+        body:
+          failoverPolicies:
+            - locationName: eastus
+              failoverPriority: '0'
+            - locationName: westus
+              failoverPriority: '1'

@@ -1,0 +1,23 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    database_account_name: myDatabaseAccount
+    api_name: myApi
+    database_name: myDatabase
+    graph_name: myGraph
+  tasks:
+
+    - name: CosmosDBGremlinGraphGet
+      azure_rm_cosmosdbdatabaseaccount_info:
+        resource_group: '{{resource_group}}'
+        account_name: '{{database_account_name}}'
+        database_name: '{{database_name}}'
+        graph_name: '{{graph_name}}'
+    
+      register: output
+    - debug:
+        var: output

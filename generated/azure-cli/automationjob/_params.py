@@ -36,7 +36,6 @@ def load_arguments(self, _):
         c.argument('provisioning_state', id_part=None, help='The current provisioning state of the job.')
         c.argument('client_request_id', id_part=None, help='Identifies this specific client request.')
         c.argument('id', id_part=None, help='Fully qualified resource Id for the resource')
-        c.argument('name', id_part=None, help='The name of the resource')
         c.argument('type', id_part=None, help='The type of the resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 

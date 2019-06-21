@@ -24,7 +24,6 @@ def create_servicebus(cmd, client,
                       service_bus_endpoint,
                       metric_id,
                       id,
-                      name,
                       type):
     return client.namespaces.create()
 
@@ -42,7 +41,6 @@ def update_servicebus(cmd, client,
                       service_bus_endpoint,
                       metric_id,
                       id,
-                      name,
                       type):
     return client.namespaces.update()
 
@@ -90,7 +88,6 @@ def create_servicebus_disasterrecoveryconfig(cmd, client,
                                              pending_replication_operations_count,
                                              role,
                                              id,
-                                             name,
                                              type):
     return client.disaster_recovery_configs.create()
 
@@ -173,7 +170,6 @@ def create_servicebus_queue(cmd, client,
                             size_in_bytes,
                             message_count,
                             id,
-                            name,
                             type):
     return client.queues.create()
 
@@ -237,7 +233,6 @@ def create_servicebus_topic(cmd, client,
                             subscription_count,
                             count_details,
                             id,
-                            name,
                             type):
     return client.topics.create()
 
@@ -303,7 +298,6 @@ def create_servicebus_topic_subscription(cmd, client,
                                          updated_at,
                                          count_details,
                                          id,
-                                         name,
                                          type):
     return client.subscriptions.create()
 
@@ -360,7 +354,6 @@ def create_servicebus_topic_subscription_rule(cmd, client,
                                               sql_filter,
                                               correlation_filter,
                                               id,
-                                              name,
                                               type):
     return client.rules.create()
 

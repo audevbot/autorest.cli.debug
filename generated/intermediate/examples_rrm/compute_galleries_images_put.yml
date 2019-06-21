@@ -1,0 +1,29 @@
+- import_playbook: compute_galleries_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    gallery_name: myGallery
+    image_name: myImage
+  tasks:
+
+    - name: Create or update a simple gallery image.
+      azure_rm_computegalleryimage:
+        resource_group: '{{resource_group}}'
+        gallery_name: '{{gallery_name}}'
+        name: '{{image_name}}'
+        gallery_image:
+          location: West US
+          properties:
+            osType: Windows
+            osState: Generalized
+            identifier:
+              publisher: myPublisherName
+              offer: myOfferName
+              sku: mySkuName
+    

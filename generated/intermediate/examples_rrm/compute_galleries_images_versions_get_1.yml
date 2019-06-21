@@ -1,0 +1,22 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    gallery_name: myGallery
+    image_name: myImage
+    version_name: myVersion
+  tasks:
+
+    - name: Get a gallery Image Version with replication status.
+      azure_rm_computegalleryimageversion_info:
+        resource_group: '{{resource_group}}'
+        gallery_name: '{{gallery_name}}'
+        gallery_image_name: '{{image_name}}'
+        name: '{{version_name}}'
+    
+      register: output
+    - debug:
+        var: output

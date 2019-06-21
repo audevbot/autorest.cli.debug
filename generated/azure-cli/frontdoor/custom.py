@@ -25,7 +25,6 @@ def create_frontdoor(cmd, client,
                      provisioning_state,
                      cname,
                      id,
-                     name,
                      type):
     return client.front_doors.create()
 
@@ -72,7 +71,6 @@ def create_frontdoor_routingrule(cmd, client,
                                  enabled_state,
                                  route_configuration,
                                  resource_state,
-                                 name,
                                  type):
     return client.routing_rules.create()
 
@@ -122,7 +120,6 @@ def create_frontdoor_healthprobesetting(cmd, client,
                                         protocol,
                                         interval_in_seconds,
                                         resource_state,
-                                        name,
                                         type):
     return client.health_probe_settings.create()
 
@@ -172,7 +169,6 @@ def create_frontdoor_loadbalancingsetting(cmd, client,
                                           successful_samples_required,
                                           additional_latency_milliseconds,
                                           resource_state,
-                                          name,
                                           type):
     return client.load_balancing_settings.create()
 
@@ -222,7 +218,6 @@ def create_frontdoor_backendpool(cmd, client,
                                  load_balancing_settings,
                                  health_probe_settings,
                                  resource_state,
-                                 name,
                                  type):
     return client.backend_pools.create()
 
@@ -276,7 +271,6 @@ def create_frontdoor_frontendendpoint(cmd, client,
                                       custom_https_provisioning_state,
                                       custom_https_provisioning_substate,
                                       custom_https_configuration,
-                                      name,
                                       type):
     return client.frontend_endpoints.create()
 
