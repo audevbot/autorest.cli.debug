@@ -196,13 +196,13 @@ EXAMPLES = '''
     resource_group: myResourceGroup
     name: myService
     product_id: myProduct
-    api_id: myApis
+    api_id: myApi
 - name: ApiManagementDeleteProductApi
   azure_rm_apimanagementproductapi:
     resource_group: myResourceGroup
     name: myService
     product_id: myProduct
-    api_id: myApis
+    api_id: myApi
     state: absent
 
 '''

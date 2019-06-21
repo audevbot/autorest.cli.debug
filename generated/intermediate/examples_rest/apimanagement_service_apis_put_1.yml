@@ -7,7 +7,7 @@
   vars:
     resource_group: myResourceGroup
     service_name: myService
-    apis_name: myApis
+    api_name: myApi
   tasks:
     - name: ApiManagementCreateApiUsingSwaggerImport
       azure_rm_resource:
@@ -19,7 +19,7 @@
         resource_name: '{{ service_name }}'
         subresource:
           - type: apis
-            name: '{{ apis_name }}'
+            name: '{{ api_name }}'
         body:
           properties:
             format: swagger-link-json

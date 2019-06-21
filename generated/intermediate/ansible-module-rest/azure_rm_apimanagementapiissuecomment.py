@@ -83,7 +83,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapiissuecomment:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     issue_id: myIssue
     comment_id: myComment
     text: Issue comment.
@@ -96,7 +96,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapiissuecomment:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     issue_id: myIssue
     comment_id: myComment
     state: absent
@@ -272,7 +272,7 @@ class AzureRMApiIssueComment(AzureRMModuleBaseExt):
                     '/service' +
                     '/{{ service_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/issues' +
                     '/{{ issue_name }}' +
                     '/comments' +
@@ -280,7 +280,7 @@ class AzureRMApiIssueComment(AzureRMModuleBaseExt):
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ service_name }}', self.service_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ issue_name }}', self.issue_name)
         self.url = self.url.replace('{{ comment_name }}', self.name)
 

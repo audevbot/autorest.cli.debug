@@ -7,7 +7,7 @@
     resource_group: myResourceGroup
     service_name: myService
     product_name: myProduct
-    apis_name: myApis
+    api_name: myApi
   tasks:
     - name: ApiManagementDeleteProductApi
       azure_rm_resource:
@@ -21,4 +21,4 @@
           - type: products
             name: '{{ product_name }}'
           - type: apis
-            name: '{{ apis_name }}'
+            name: '{{ api_name }}'

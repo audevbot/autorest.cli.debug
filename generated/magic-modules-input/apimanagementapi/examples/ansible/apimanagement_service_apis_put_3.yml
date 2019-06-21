@@ -5,7 +5,7 @@ task: !ruby/object:Provider::Ansible::Task
   code:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     path: currency
     value: 'http://www.webservicex.net/CurrencyConvertor.asmx?WSDL'
     format: wsdl-link

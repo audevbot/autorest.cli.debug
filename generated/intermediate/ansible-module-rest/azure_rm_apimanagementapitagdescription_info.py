@@ -70,12 +70,12 @@ EXAMPLES = '''
   azure_rm_apimanagementapitagdescription_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
 - name: ApiManagementGetApiTagDescription
   azure_rm_apimanagementapitagdescription_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     tag_id: myTagDescription
 
 '''
@@ -202,13 +202,13 @@ class AzureRMApiTagDescriptionInfo(AzureRMModuleBase):
                     '/service' +
                     '/{{ service_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/tagDescriptions' +
                     '/{{ tag_description_name }}')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ service_name }}', self.service_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ tag_description_name }}', self.name)
 
         try:
@@ -240,12 +240,12 @@ class AzureRMApiTagDescriptionInfo(AzureRMModuleBase):
                     '/service' +
                     '/{{ service_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/tagDescriptions')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ service_name }}', self.service_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ tag_description_name }}', self.name)
 
         try:

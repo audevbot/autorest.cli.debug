@@ -8,7 +8,7 @@ task: !ruby/object:Provider::Ansible::Task
     api_id: >-
       /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
       }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{
-      apis_name }}
+      api_name }}
     release_id: myRelease
     notes: yahooagain
   

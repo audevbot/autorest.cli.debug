@@ -10,14 +10,14 @@
   vars:
     resource_group: myResourceGroup
     service_name: myService
-    apis_name: myApis
+    api_name: myApi
   tasks:
 
     - name: ApiManagementCreateApiUsingWadlImport
       azure_rm_apimanagementapi:
         resource_group: '{{resource_group}}'
         name: '{{service_name}}'
-        api_id: '{{apis_name}}'
+        api_id: '{{api_name}}'
         path: collector
         value: >-
           https://developer.cisco.com/media/wae-release-6-2-api-reference/wae-collector-rest-api/application.wadl

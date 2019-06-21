@@ -21,7 +21,7 @@ import uuid
 SUBSCRIPTION_ID = os.environ['AZURE_SUBSCRIPTION_ID']
 RESOURCE_GROUP = "myresourcegroup"
 DATABASE_ACCOUNT_NAME = "mydatabaseaccount"
-APIS_NAME = "myapis"
+API_NAME = "myapi"
 DATABASE_NAME = "mydatabase"
 CONTAINER_NAME = "mycontainer"
 
@@ -100,7 +100,7 @@ def run_example():
     header_parameters['Content-Type'] = 'application/json; charset=utf-8'
 
     operation_config = {}
-    request = service_client.put("/subscriptions/" + SUBSCRIPTION + "/resourceGroups/" + RESOURCE_GR + "/providers/Microsoft.DocumentDB/databaseAccounts/" + DATABASE_ACCOUNT_N + "/apis/" + APIS_N + "/databases/" + DATABASE_N + "/containers/" + CONTAINER_N, query_parameters)
+    request = service_client.put("/subscriptions/" + SUBSCRIPTION + "/resourceGroups/" + RESOURCE_GR + "/providers/Microsoft.DocumentDB/databaseAccounts/" + DATABASE_ACCOUNT_N + "/apis/" + API_N + "/databases/" + DATABASE_N + "/containers/" + CONTAINER_N, query_parameters)
     response = service_client.send(request, header_parameters, BODY, **operation_config)
     print(response.text)
 

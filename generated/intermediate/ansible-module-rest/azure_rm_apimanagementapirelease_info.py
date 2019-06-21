@@ -65,12 +65,12 @@ EXAMPLES = '''
   azure_rm_apimanagementapirelease_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
 - name: ApiManagementGetApiRelease
   azure_rm_apimanagementapirelease_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     release_id: myRelease
 
 '''
@@ -197,13 +197,13 @@ class AzureRMApiReleaseInfo(AzureRMModuleBase):
                     '/service' +
                     '/{{ service_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/releases' +
                     '/{{ release_name }}')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ service_name }}', self.service_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ release_name }}', self.name)
 
         try:
@@ -235,12 +235,12 @@ class AzureRMApiReleaseInfo(AzureRMModuleBase):
                     '/service' +
                     '/{{ service_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/releases')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ service_name }}', self.service_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ release_name }}', self.name)
 
         try:

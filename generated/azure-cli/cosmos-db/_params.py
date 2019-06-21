@@ -32,15 +32,15 @@ def load_arguments(self, _):
         c.argument('cosmos-db_name', cosmos-db_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('cosmos-db tables databases keyspaces graphs containers collections') as c:
+    with self.argument_context('cosmos-db table database keyspace graph container collection') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('cosmos-db tables databases keyspaces graphs containers collections_name', cosmos-db tables databases keyspaces graphs containers collections_name_type, options_list=['--name', '-n'])
+        c.argument('cosmos-db table database keyspace graph container collection_name', cosmos-db table database keyspace graph container collection_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('cosmos-db tables databases keyspaces graphs containers collections') as c:
+    with self.argument_context('cosmos-db table database keyspace graph container collection') as c:
         c.argument('cosmos-db_name', cosmos-db_name_type, id_part=None)
 
-    with self.argument_context('cosmos-db tables databases keyspaces graphs containers collections') as c:
+    with self.argument_context('cosmos-db table database keyspace graph container collection') as c:
         c.argument('cosmos-db_name', cosmos-db_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
@@ -53,30 +53,30 @@ def load_arguments(self, _):
         c.argument('cosmos-db_name', cosmos-db_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('cosmos-db databases') as c:
+    with self.argument_context('cosmos-db database') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('cosmos-db databases_name', cosmos-db databases_name_type, options_list=['--name', '-n'])
+        c.argument('cosmos-db database_name', cosmos-db database_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('cosmos-db databases') as c:
+    with self.argument_context('cosmos-db database') as c:
         c.argument('cosmos-db_name', cosmos-db_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('cosmos-db databases collections') as c:
+    with self.argument_context('cosmos-db database collection') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('cosmos-db databases collections_name', cosmos-db databases collections_name_type, options_list=['--name', '-n'])
+        c.argument('cosmos-db database collection_name', cosmos-db database collection_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('cosmos-db databases collections') as c:
+    with self.argument_context('cosmos-db database collection') as c:
         c.argument('cosmos-db_name', cosmos-db_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('cosmos-db region databases collections') as c:
+    with self.argument_context('cosmos-db region database collection') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('cosmos-db region databases collections_name', cosmos-db region databases collections_name_type, options_list=['--name', '-n'])
+        c.argument('cosmos-db region database collection_name', cosmos-db region database collection_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('cosmos-db region databases collections') as c:
+    with self.argument_context('cosmos-db region database collection') as c:
         c.argument('cosmos-db_name', cosmos-db_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
@@ -116,39 +116,39 @@ def load_arguments(self, _):
         c.argument('cosmos-db_name', cosmos-db_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('cosmos-db region databases collections') as c:
+    with self.argument_context('cosmos-db region database collection') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('cosmos-db region databases collections_name', cosmos-db region databases collections_name_type, options_list=['--name', '-n'])
+        c.argument('cosmos-db region database collection_name', cosmos-db region database collection_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('cosmos-db region databases collections') as c:
+    with self.argument_context('cosmos-db region database collection') as c:
         c.argument('cosmos-db_name', cosmos-db_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('cosmos-db databases collections') as c:
+    with self.argument_context('cosmos-db database collection') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('cosmos-db databases collections_name', cosmos-db databases collections_name_type, options_list=['--name', '-n'])
+        c.argument('cosmos-db database collection_name', cosmos-db database collection_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('cosmos-db databases collections') as c:
+    with self.argument_context('cosmos-db database collection') as c:
         c.argument('cosmos-db_name', cosmos-db_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('cosmos-db databases collections partitionkeyrangeid') as c:
+    with self.argument_context('cosmos-db database collection partitionkeyrangeid') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('cosmos-db databases collections partitionkeyrangeid_name', cosmos-db databases collections partitionkeyrangeid_name_type, options_list=['--name', '-n'])
+        c.argument('cosmos-db database collection partitionkeyrangeid_name', cosmos-db database collection partitionkeyrangeid_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('cosmos-db databases collections partitionkeyrangeid') as c:
+    with self.argument_context('cosmos-db database collection partitionkeyrangeid') as c:
         c.argument('cosmos-db_name', cosmos-db_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('cosmos-db region databases collections partitionkeyrangeid') as c:
+    with self.argument_context('cosmos-db region database collection partitionkeyrangeid') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('cosmos-db region databases collections partitionkeyrangeid_name', cosmos-db region databases collections partitionkeyrangeid_name_type, options_list=['--name', '-n'])
+        c.argument('cosmos-db region database collection partitionkeyrangeid_name', cosmos-db region database collection partitionkeyrangeid_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('cosmos-db region databases collections partitionkeyrangeid') as c:
+    with self.argument_context('cosmos-db region database collection partitionkeyrangeid') as c:
         c.argument('cosmos-db_name', cosmos-db_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 

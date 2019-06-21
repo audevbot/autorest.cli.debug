@@ -8,52 +8,52 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 
 
-helps['automationjob jobs'] = """
+helps['automationjob job'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['automationjob jobs create'] = """
+helps['automationjob job create'] = """
     type: command
-    short-summary: create a automationjob jobs.
+    short-summary: create a automationjob job.
 """
 
-helps['automationjob jobs list'] = """
+helps['automationjob job list'] = """
     type: command
-    short-summary: list a automationjob jobs.
+    short-summary: list a automationjob job.
 """
 
-helps['automationjob jobs show'] = """
+helps['automationjob job show'] = """
     type: command
-    short-summary: show a automationjob jobs.
+    short-summary: show a automationjob job.
 """
 
-helps['automationjob jobs'] = """
+helps['automationjob job'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['automationjob jobs show'] = """
+helps['automationjob job show'] = """
     type: command
-    short-summary: show a automationjob jobs.
+    short-summary: show a automationjob job.
 """
 
-helps['automationjob jobs list'] = """
+helps['automationjob job list'] = """
     type: command
-    short-summary: list a automationjob jobs.
+    short-summary: list a automationjob job.
 """
 
-helps['automationjob jobs streams'] = """
+helps['automationjob job stream'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['automationjob jobs streams show'] = """
+helps['automationjob job stream show'] = """
     type: command
-    short-summary: show a automationjob jobs streams.
+    short-summary: show a automationjob job stream.
 """
 
-helps['automationjob jobs streams list'] = """
+helps['automationjob job stream list'] = """
     type: command
-    short-summary: list a automationjob jobs streams.
+    short-summary: list a automationjob job stream.
 """

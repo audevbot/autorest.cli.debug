@@ -85,7 +85,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapirevision_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
 
 '''
 
@@ -243,12 +243,12 @@ class AzureRMApiRevisionInfo(AzureRMModuleBase):
                     '/service' +
                     '/{{ service_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/revisions')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ service_name }}', self.service_name)
-        self.url = self.url.replace('{{ apis_name }}', self.name)
+        self.url = self.url.replace('{{ api_name }}', self.name)
 
         try:
             response = self.mgmt_client.query(self.url,

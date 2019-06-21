@@ -1541,7 +1541,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}
+          }}/apis/{{ api_name }}
         HttpMethod: put
         IsAsync: true
       - Name: Update
@@ -1560,7 +1560,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}
+          }}/apis/{{ api_name }}
         HttpMethod: patch
         IsAsync: false
       - Name: Delete
@@ -1578,7 +1578,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}
+          }}/apis/{{ api_name }}
         HttpMethod: delete
         IsAsync: false
       - Name: ListByService
@@ -1621,7 +1621,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}
+          }}/apis/{{ api_name }}
         HttpMethod: get
         IsAsync: false
     ResponseFields:
@@ -2708,7 +2708,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
                 type: Microsoft.ApiManagement/service/apis
                 name: petstoreapi
                 properties:
@@ -2727,7 +2727,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
                 type: Microsoft.ApiManagement/service/apis
                 name: petstoreapi
                 properties:
@@ -2748,7 +2748,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}
+          }}/apis/{{ api_name }}
         Method: put
         Name: ApiManagementCreateApiUsingOai3Import
         Filename: apimanagement_service_apis_put
@@ -2759,8 +2759,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
         References:
           - >-
@@ -2787,7 +2787,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
                 type: Microsoft.ApiManagement/service/apis
                 name: petstoreapi
                 properties:
@@ -2812,7 +2812,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
                 type: Microsoft.ApiManagement/service/apis
                 name: petstoreapi
                 properties:
@@ -2839,7 +2839,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}
+          }}/apis/{{ api_name }}
         Method: put
         Name: ApiManagementCreateApiUsingSwaggerImport
         Filename: apimanagement_service_apis_put_1
@@ -2850,8 +2850,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
         References:
           - '# ref##value##http://petstore.swagger.io/v2/swagger.json'
@@ -2877,7 +2877,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
                 type: Microsoft.ApiManagement/service/apis
                 name: collectorwadl
                 properties:
@@ -2897,7 +2897,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
                 type: Microsoft.ApiManagement/service/apis
                 name: collectorwadl
                 properties:
@@ -2919,7 +2919,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}
+          }}/apis/{{ api_name }}
         Method: put
         Name: ApiManagementCreateApiUsingWadlImport
         Filename: apimanagement_service_apis_put_2
@@ -2930,8 +2930,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
         References:
           - >-
@@ -2961,7 +2961,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
                 type: Microsoft.ApiManagement/service/apis
                 name: soapApi
                 properties:
@@ -2980,7 +2980,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
                 type: Microsoft.ApiManagement/service/apis
                 name: soapApi
                 properties:
@@ -3001,7 +3001,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}
+          }}/apis/{{ api_name }}
         Method: put
         Name: ApiManagementCreateSoapToRestApiUsingWsdlImport
         Filename: apimanagement_service_apis_put_3
@@ -3012,8 +3012,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
         References:
           - '# ref##value##http://www.webservicex.net/CurrencyConvertor.asmx?WSDL'
@@ -3042,7 +3042,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
                 type: Microsoft.ApiManagement/service/apis
                 name: soapApi
                 properties:
@@ -3062,7 +3062,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
                 type: Microsoft.ApiManagement/service/apis
                 name: soapApi
                 properties:
@@ -3084,7 +3084,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}
+          }}/apis/{{ api_name }}
         Method: put
         Name: ApiManagementCreateSoapPassThroughApiUsingWsdlImport
         Filename: apimanagement_service_apis_put_4
@@ -3095,8 +3095,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
         References:
           - '# ref##value##http://www.webservicex.net/CurrencyConvertor.asmx?WSDL'
@@ -3132,7 +3132,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
                 type: Microsoft.ApiManagement/service/apis
                 name: apiid9419
                 properties:
@@ -3158,7 +3158,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
                 type: Microsoft.ApiManagement/service/apis
                 name: apiid9419
                 properties:
@@ -3186,7 +3186,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}
+          }}/apis/{{ api_name }}
         Method: put
         Name: ApiManagementCreateApi
         Filename: apimanagement_service_apis_put_5
@@ -3197,8 +3197,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
         References:
           - '# ref##serviceUrl##http://newechoapi.cloudapp.net/api'
@@ -3219,7 +3219,7 @@ Modules:
                 sourceApiId: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
                 apiRevisionDescription: Creating a Revision of an existing API
           responses:
             '200':
@@ -3227,7 +3227,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
                 type: Microsoft.ApiManagement/service/apis
                 name: echo-api;rev=3
                 properties:
@@ -3247,7 +3247,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
                 type: Microsoft.ApiManagement/service/apis
                 name: echo-api;rev=3
                 properties:
@@ -3269,7 +3269,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}
+          }}/apis/{{ api_name }}
         Method: put
         Name: ApiManagementCreateApiRevisionFromExistingApi
         Filename: apimanagement_service_apis_put_6
@@ -3280,8 +3280,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
         References:
           - '# ref##serviceUrl##http://echoapi.cloudapp.net/apiv3'
@@ -3313,7 +3313,7 @@ Modules:
                 sourceApiId: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
                 apiVersionSetId: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
@@ -3324,7 +3324,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
                 type: Microsoft.ApiManagement/service/apis
                 name: echoapiv3
                 properties:
@@ -3362,7 +3362,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
                 type: Microsoft.ApiManagement/service/apis
                 name: echoapiv3
                 properties:
@@ -3402,7 +3402,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}
+          }}/apis/{{ api_name }}
         Method: put
         Name: ApiManagementCreateApiNewVersionUsingExistingApi
         Filename: apimanagement_service_apis_put_7
@@ -3413,8 +3413,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: api_version_set_name
             value: myApiVersionSet
@@ -3447,14 +3447,14 @@ Modules:
                 sourceApiId: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
           responses:
             '200':
               body:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
                 type: Microsoft.ApiManagement/service/apis
                 name: echoapi2
                 properties:
@@ -3476,7 +3476,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
                 type: Microsoft.ApiManagement/service/apis
                 name: echoapi2
                 properties:
@@ -3500,7 +3500,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}
+          }}/apis/{{ api_name }}
         Method: put
         Name: ApiManagementCreateApiClone
         Filename: apimanagement_service_apis_put_8
@@ -3511,8 +3511,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
         References:
           - '# ref##serviceUrl##http://echoapi.cloudapp.net/api'
@@ -3554,7 +3554,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
                 type: Microsoft.ApiManagement/service/apis
                 name: 58da4c4ccdae970a08121230
                 properties:
@@ -3584,7 +3584,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
                 type: Microsoft.ApiManagement/service/apis
                 name: 58da4c4ccdae970a08121230
                 properties:
@@ -3616,7 +3616,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}
+          }}/apis/{{ api_name }}
         Method: put
         Name: ApiManagementCreateApiWithOpenIdConnect
         Filename: apimanagement_service_apis_put_9
@@ -3627,8 +3627,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
         References:
           - >-
@@ -3659,7 +3659,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}
+          }}/apis/{{ api_name }}
         Method: patch
         Name: ApiManagementUpdateApi
         Filename: apimanagement_service_apis_patch
@@ -3670,8 +3670,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
         References:
           - '# ref##serviceUrl##http://echoapi.cloudapp.net/api2'
@@ -3692,7 +3692,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}
+          }}/apis/{{ api_name }}
         Method: delete
         Name: ApiManagementDeleteApi
         Filename: apimanagement_service_apis_delete
@@ -3703,8 +3703,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
         References: []
         OperationId: '5849'
@@ -5106,7 +5106,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}
+          }}/apis/{{ api_name }}
         HttpMethod: get
         IsAsync: false
     ResponseFields:
@@ -5139,7 +5139,7 @@ Modules:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     type: Microsoft.ApiManagement/service/apis
                     name: a1
                     properties:
@@ -5160,7 +5160,7 @@ Modules:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     type: Microsoft.ApiManagement/service/apis
                     name: 5a73933b8f27f7cc82a2d533
                     properties:
@@ -5182,7 +5182,7 @@ Modules:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     type: Microsoft.ApiManagement/service/apis
                     name: echo-api
                     properties:
@@ -5197,7 +5197,7 @@ Modules:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     type: Microsoft.ApiManagement/service/apis
                     name: 5a7390baa5816a110435aee0
                     properties:
@@ -5278,7 +5278,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
                 type: Microsoft.ApiManagement/service/apis
                 name: 57d1f7558aa04f15146d9d8a
                 properties:
@@ -5297,7 +5297,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}
+          }}/apis/{{ api_name }}
         Method: get
         Name: ApiManagementGetApiContract
         Filename: apimanagement_service_apis_get_1
@@ -5308,8 +5308,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
         References: []
         OperationId: '5849'
@@ -5327,7 +5327,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
                 type: Microsoft.ApiManagement/service/apis
                 name: echo-api;rev=3
                 properties:
@@ -5344,7 +5344,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}
+          }}/apis/{{ api_name }}
         Method: get
         Name: ApiManagementGetApiRevisionContract
         Filename: apimanagement_service_apis_get_2
@@ -5355,8 +5355,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
         References: []
         OperationId: '5849'
@@ -5776,7 +5776,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/revisions
+          }}/apis/{{ api_name }}/revisions
         HttpMethod: get
         IsAsync: false
     ResponseFields:
@@ -5808,7 +5808,7 @@ Modules:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     apiRevision: '1'
                     createdDateTime: '2018-02-01T22:21:20.467Z'
                     updatedDateTime: '2018-02-01T22:21:20.467Z'
@@ -5818,7 +5818,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/revisions
+          }}/apis/{{ api_name }}/revisions
         Method: get
         Name: ApiManagementListApiRevisions
         Filename: apimanagement_service_apis_revisions_get
@@ -5829,8 +5829,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
         References: []
         OperationId: '6181'
@@ -6256,7 +6256,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/releases/{{ release_name }}
+          }}/apis/{{ api_name }}/releases/{{ release_name }}
         HttpMethod: put
         IsAsync: false
       - Name: Update
@@ -6277,7 +6277,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/releases/{{ release_name }}
+          }}/apis/{{ api_name }}/releases/{{ release_name }}
         HttpMethod: patch
         IsAsync: false
       - Name: Delete
@@ -6296,7 +6296,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/releases/{{ release_name }}
+          }}/apis/{{ api_name }}/releases/{{ release_name }}
         HttpMethod: delete
         IsAsync: false
       - Name: ListByService
@@ -6311,7 +6311,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/releases
+          }}/apis/{{ api_name }}/releases
         HttpMethod: get
         IsAsync: false
       - Name: Get
@@ -6328,7 +6328,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/releases/{{ release_name }}
+          }}/apis/{{ api_name }}/releases/{{ release_name }}
         HttpMethod: get
         IsAsync: false
     ResponseFields:
@@ -6451,7 +6451,7 @@ Modules:
                 apiId: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
                 notes: yahooagain
           responses:
             '200':
@@ -6459,7 +6459,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}/releases/{{ release_name
+                  service_name }}/apis/{{ api_name }}/releases/{{ release_name
                   }}
                 type: Microsoft.ApiManagement/service/apis/releases
                 name: testrev
@@ -6468,7 +6468,7 @@ Modules:
                     /subscriptions/{{ subscription_id }}/resourceGroups/{{
                     resource_group
                     }}/providers/Microsoft.ApiManagement/service/{{ service_name
-                    }}/apis/{{ apis_name }}
+                    }}/apis/{{ api_name }}
                   createdDateTime: '2018-02-08T20:52:00.65Z'
                   updatedDateTime: '2018-02-08T20:52:00.65Z'
                   notes: yahooagain
@@ -6477,7 +6477,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}/releases/{{ release_name
+                  service_name }}/apis/{{ api_name }}/releases/{{ release_name
                   }}
                 type: Microsoft.ApiManagement/service/apis/releases
                 name: testrev
@@ -6486,14 +6486,14 @@ Modules:
                     /subscriptions/{{ subscription_id }}/resourceGroups/{{
                     resource_group
                     }}/providers/Microsoft.ApiManagement/service/{{ service_name
-                    }}/apis/{{ apis_name }}
+                    }}/apis/{{ api_name }}
                   createdDateTime: '2018-02-08T20:52:00.65Z'
                   updatedDateTime: '2018-02-08T20:52:00.65Z'
                   notes: yahooagain
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/releases/{{ release_name }}
+          }}/apis/{{ api_name }}/releases/{{ release_name }}
         Method: put
         Name: ApiManagementCreateApiRelease
         Filename: apimanagement_service_apis_releases_put
@@ -6504,8 +6504,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: release_name
             value: myRelease
@@ -6529,14 +6529,14 @@ Modules:
                 apiId: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
                 notes: yahooagain
           responses:
             '204': {}
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/releases/{{ release_name }}
+          }}/apis/{{ api_name }}/releases/{{ release_name }}
         Method: patch
         Name: ApiManagementUpdateApiRelease
         Filename: apimanagement_service_apis_releases_patch
@@ -6547,8 +6547,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: release_name
             value: myRelease
@@ -6573,7 +6573,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/releases/{{ release_name }}
+          }}/apis/{{ api_name }}/releases/{{ release_name }}
         Method: delete
         Name: ApiManagementDeleteApiRelease
         Filename: apimanagement_service_apis_releases_delete
@@ -6584,8 +6584,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: release_name
             value: myRelease
@@ -6978,7 +6978,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/releases
+          }}/apis/{{ api_name }}/releases
         HttpMethod: get
         IsAsync: false
       - Name: Get
@@ -6995,7 +6995,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/releases/{{ release_name }}
+          }}/apis/{{ api_name }}/releases/{{ release_name }}
         HttpMethod: get
         IsAsync: false
     ResponseFields:
@@ -7029,7 +7029,7 @@ Modules:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/releases/{{
+                      service_name }}/apis/{{ api_name }}/releases/{{
                       release_name }}
                     type: Microsoft.ApiManagement/service/apis/releases
                     name: 5a7cb545298324c53224a799
@@ -7041,7 +7041,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/releases
+          }}/apis/{{ api_name }}/releases
         Method: get
         Name: ApiManagementListApiReleases
         Filename: apimanagement_service_apis_releases_get
@@ -7052,8 +7052,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
         References: []
         OperationId: '6238'
@@ -7072,7 +7072,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}/releases/{{ release_name
+                  service_name }}/apis/{{ api_name }}/releases/{{ release_name
                   }}
                 type: Microsoft.ApiManagement/service/apis/releases
                 name: 5a7cb545298324c53224a799
@@ -7081,14 +7081,14 @@ Modules:
                     /subscriptions/{{ subscription_id }}/resourceGroups/{{
                     resource_group
                     }}/providers/Microsoft.ApiManagement/service/{{ service_name
-                    }}/apis/{{ apis_name }}
+                    }}/apis/{{ api_name }}
                   createdDateTime: '2018-02-08T20:38:29.173Z'
                   updatedDateTime: '2018-02-08T20:38:29.173Z'
                   notes: yahoo
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/releases/{{ release_name }}
+          }}/apis/{{ api_name }}/releases/{{ release_name }}
         Method: get
         Name: ApiManagementGetApiRelease
         Filename: apimanagement_service_apis_releases_get_1
@@ -7099,8 +7099,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: release_name
             value: myRelease
@@ -9307,7 +9307,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operations/{{ operation_name }}
+          }}/apis/{{ api_name }}/operations/{{ operation_name }}
         HttpMethod: put
         IsAsync: false
       - Name: Update
@@ -9328,7 +9328,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operations/{{ operation_name }}
+          }}/apis/{{ api_name }}/operations/{{ operation_name }}
         HttpMethod: patch
         IsAsync: false
       - Name: Delete
@@ -9347,7 +9347,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operations/{{ operation_name }}
+          }}/apis/{{ api_name }}/operations/{{ operation_name }}
         HttpMethod: delete
         IsAsync: false
       - Name: ListByApi
@@ -9363,7 +9363,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operations
+          }}/apis/{{ api_name }}/operations
         HttpMethod: get
         IsAsync: false
       - Name: Get
@@ -9380,7 +9380,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operations/{{ operation_name }}
+          }}/apis/{{ api_name }}/operations/{{ operation_name }}
         HttpMethod: get
         IsAsync: false
     ResponseFields:
@@ -11378,7 +11378,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}/operations/{{
+                  service_name }}/apis/{{ api_name }}/operations/{{
                   operation_name }}
                 type: Microsoft.ApiManagement/service/apis/operations
                 name: newoperations
@@ -11408,7 +11408,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}/operations/{{
+                  service_name }}/apis/{{ api_name }}/operations/{{
                   operation_name }}
                 type: Microsoft.ApiManagement/service/apis/operations
                 name: newoperations
@@ -11436,7 +11436,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operations/{{ operation_name }}
+          }}/apis/{{ api_name }}/operations/{{ operation_name }}
         Method: put
         Name: ApiManagementCreateApiOperation
         Filename: apimanagement_service_apis_operations_put
@@ -11447,8 +11447,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: operation_name
             value: myOperation
@@ -11501,7 +11501,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operations/{{ operation_name }}
+          }}/apis/{{ api_name }}/operations/{{ operation_name }}
         Method: patch
         Name: ApiManagementUpdateApiOperation
         Filename: apimanagement_service_apis_operations_patch
@@ -11512,8 +11512,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: operation_name
             value: myOperation
@@ -11538,7 +11538,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operations/{{ operation_name }}
+          }}/apis/{{ api_name }}/operations/{{ operation_name }}
         Method: delete
         Name: ApiManagementDeleteApiOperation
         Filename: apimanagement_service_apis_operations_delete
@@ -11549,8 +11549,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: operation_name
             value: myOperation
@@ -13754,7 +13754,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operations
+          }}/apis/{{ api_name }}/operations
         HttpMethod: get
         IsAsync: false
       - Name: Get
@@ -13771,7 +13771,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operations/{{ operation_name }}
+          }}/apis/{{ api_name }}/operations/{{ operation_name }}
         HttpMethod: get
         IsAsync: false
     ResponseFields:
@@ -13806,7 +13806,7 @@ Modules:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/operations/{{
+                      service_name }}/apis/{{ api_name }}/operations/{{
                       operation_name }}
                     type: Microsoft.ApiManagement/service/apis/operations
                     name: 57d2ef278aa04f0ad01d6cdc
@@ -13819,7 +13819,7 @@ Modules:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/operations/{{
+                      service_name }}/apis/{{ api_name }}/operations/{{
                       operation_name }}
                     type: Microsoft.ApiManagement/service/apis/operations
                     name: 57d2ef278aa04f0ad01d6cda
@@ -13832,7 +13832,7 @@ Modules:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/operations/{{
+                      service_name }}/apis/{{ api_name }}/operations/{{
                       operation_name }}
                     type: Microsoft.ApiManagement/service/apis/operations
                     name: 57d2ef278aa04f0ad01d6cd9
@@ -13845,7 +13845,7 @@ Modules:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/operations/{{
+                      service_name }}/apis/{{ api_name }}/operations/{{
                       operation_name }}
                     type: Microsoft.ApiManagement/service/apis/operations
                     name: 57d2ef278aa04f0ad01d6cdb
@@ -13857,7 +13857,7 @@ Modules:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/operations/{{
+                      service_name }}/apis/{{ api_name }}/operations/{{
                       operation_name }}
                     type: Microsoft.ApiManagement/service/apis/operations
                     name: 57d2ef278aa04f0ad01d6cd8
@@ -13870,7 +13870,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operations
+          }}/apis/{{ api_name }}/operations
         Method: get
         Name: ApiManagementListApiOperations
         Filename: apimanagement_service_apis_operations_get
@@ -13881,8 +13881,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
         References: []
         OperationId: '6533'
@@ -13901,7 +13901,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}/operations/{{
+                  service_name }}/apis/{{ api_name }}/operations/{{
                   operation_name }}
                 type: Microsoft.ApiManagement/service/apis/operations
                 name: 57d2ef278aa04f0ad01d6cdc
@@ -13931,7 +13931,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operations/{{ operation_name }}
+          }}/apis/{{ api_name }}/operations/{{ operation_name }}
         Method: get
         Name: ApiManagementGetApiOperation
         Filename: apimanagement_service_apis_operations_get_1
@@ -13942,8 +13942,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: operation_name
             value: myOperation
@@ -13965,7 +13965,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}/operations/{{
+                  service_name }}/apis/{{ api_name }}/operations/{{
                   operation_name }}
                 type: Microsoft.ApiManagement/service/apis/operations
                 name: loginUser
@@ -14017,7 +14017,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operations/{{ operation_name }}
+          }}/apis/{{ api_name }}/operations/{{ operation_name }}
         Method: get
         Name: ApiManagementGetApiOperationPetStore
         Filename: apimanagement_service_apis_operations_get_2
@@ -14028,8 +14028,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: operation_name
             value: myOperation
@@ -14445,7 +14445,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operations/{{ operation_name }}/policies/{{
+          }}/apis/{{ api_name }}/operations/{{ operation_name }}/policies/{{
           policy_name }}
         HttpMethod: put
         IsAsync: false
@@ -14467,7 +14467,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operations/{{ operation_name }}/policies/{{
+          }}/apis/{{ api_name }}/operations/{{ operation_name }}/policies/{{
           policy_name }}
         HttpMethod: delete
         IsAsync: false
@@ -14485,7 +14485,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operations/{{ operation_name }}/policies
+          }}/apis/{{ api_name }}/operations/{{ operation_name }}/policies
         HttpMethod: get
         IsAsync: false
       - Name: Get
@@ -14505,7 +14505,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operations/{{ operation_name }}/policies/{{
+          }}/apis/{{ api_name }}/operations/{{ operation_name }}/policies/{{
           policy_name }}
         HttpMethod: get
         IsAsync: false
@@ -14654,7 +14654,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}/operations/{{
+                  service_name }}/apis/{{ api_name }}/operations/{{
                   operation_name }}/policies/{{ policy_name }}
                 type: Microsoft.ApiManagement/service/apis/operations/policies
                 name: policy
@@ -14665,7 +14665,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}/operations/{{
+                  service_name }}/apis/{{ api_name }}/operations/{{
                   operation_name }}/policies/{{ policy_name }}
                 type: Microsoft.ApiManagement/service/apis/operations/policies
                 name: policy
@@ -14674,7 +14674,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operations/{{ operation_name }}/policies/{{
+          }}/apis/{{ api_name }}/operations/{{ operation_name }}/policies/{{
           policy_name }}
         Method: put
         Name: ApiManagementCreateApiOperationPolicy
@@ -14686,8 +14686,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: operation_name
             value: myOperation
@@ -14718,7 +14718,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operations/{{ operation_name }}/policies/{{
+          }}/apis/{{ api_name }}/operations/{{ operation_name }}/policies/{{
           policy_name }}
         Method: delete
         Name: ApiManagementDeleteApiOperationPolicy
@@ -14730,8 +14730,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: operation_name
             value: myOperation
@@ -15146,7 +15146,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operations/{{ operation_name }}/policies
+          }}/apis/{{ api_name }}/operations/{{ operation_name }}/policies
         HttpMethod: get
         IsAsync: false
       - Name: Get
@@ -15166,7 +15166,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operations/{{ operation_name }}/policies/{{
+          }}/apis/{{ api_name }}/operations/{{ operation_name }}/policies/{{
           policy_name }}
         HttpMethod: get
         IsAsync: false
@@ -15202,7 +15202,7 @@ Modules:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/operations/{{
+                      service_name }}/apis/{{ api_name }}/operations/{{
                       operation_name }}/policies/{{ policy_name }}
                     type: Microsoft.ApiManagement/service/apis/operations/policies
                     name: policy
@@ -15212,7 +15212,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operations/{{ operation_name }}/policies
+          }}/apis/{{ api_name }}/operations/{{ operation_name }}/policies
         Method: get
         Name: ApiManagementListApiOperationPolicies
         Filename: apimanagement_service_apis_operations_policies_get
@@ -15223,8 +15223,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: operation_name
             value: myOperation
@@ -15247,7 +15247,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}/operations/{{
+                  service_name }}/apis/{{ api_name }}/operations/{{
                   operation_name }}/policies/{{ policy_name }}
                 type: Microsoft.ApiManagement/service/apis/operations/policies
                 name: policy
@@ -15256,7 +15256,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operations/{{ operation_name }}/policies/{{
+          }}/apis/{{ api_name }}/operations/{{ operation_name }}/policies/{{
           policy_name }}
         Method: get
         Name: ApiManagementGetApiOperationPolicy
@@ -15268,8 +15268,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: operation_name
             value: myOperation
@@ -15652,7 +15652,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/tags
+          }}/apis/{{ api_name }}/tags
         HttpMethod: get
         IsAsync: false
       - Name: GetByApi
@@ -15669,7 +15669,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/tags/{{ tag_name }}
+          }}/apis/{{ api_name }}/tags/{{ tag_name }}
         HttpMethod: get
         IsAsync: false
       - Name: ListByProduct
@@ -15718,7 +15718,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operations/{{ operation_name }}/tags
+          }}/apis/{{ api_name }}/operations/{{ operation_name }}/tags
         HttpMethod: get
         IsAsync: false
       - Name: GetByOperation
@@ -15737,7 +15737,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operations/{{ operation_name }}/tags/{{
+          }}/apis/{{ api_name }}/operations/{{ operation_name }}/tags/{{
           tag_name }}
         HttpMethod: get
         IsAsync: false
@@ -16349,7 +16349,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/tags
+          }}/apis/{{ api_name }}/tags
         HttpMethod: get
         IsAsync: false
       - Name: GetByApi
@@ -16366,7 +16366,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/tags/{{ tag_name }}
+          }}/apis/{{ api_name }}/tags/{{ tag_name }}
         HttpMethod: get
         IsAsync: false
       - Name: ListByProduct
@@ -16415,7 +16415,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operations/{{ operation_name }}/tags
+          }}/apis/{{ api_name }}/operations/{{ operation_name }}/tags
         HttpMethod: get
         IsAsync: false
       - Name: GetByOperation
@@ -16434,7 +16434,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operations/{{ operation_name }}/tags/{{
+          }}/apis/{{ api_name }}/operations/{{ operation_name }}/tags/{{
           tag_name }}
         HttpMethod: get
         IsAsync: false
@@ -16561,7 +16561,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/tags
+          }}/apis/{{ api_name }}/tags
         Method: get
         Name: ApiManagementListApiTags
         Filename: apimanagement_service_apis_tags_get
@@ -16572,8 +16572,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
         References: []
         OperationId: '7093'
@@ -16600,7 +16600,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/tags/{{ tag_name }}
+          }}/apis/{{ api_name }}/tags/{{ tag_name }}
         Method: get
         Name: ApiManagementGetApiTag
         Filename: apimanagement_service_apis_tags_get_1
@@ -16611,8 +16611,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: tag_name
             value: myTag
@@ -16728,7 +16728,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operations/{{ operation_name }}/tags
+          }}/apis/{{ api_name }}/operations/{{ operation_name }}/tags
         Method: get
         Name: ApiManagementListApiOperationTags
         Filename: apimanagement_service_apis_operations_tags_get
@@ -16739,8 +16739,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: operation_name
             value: myOperation
@@ -16771,7 +16771,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operations/{{ operation_name }}/tags/{{
+          }}/apis/{{ api_name }}/operations/{{ operation_name }}/tags/{{
           tag_name }}
         Method: get
         Name: ApiManagementGetApiOperationTag
@@ -16783,8 +16783,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: operation_name
             value: myOperation
@@ -17325,7 +17325,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/products
+          }}/apis/{{ api_name }}/products
         HttpMethod: get
         IsAsync: false
     ResponseFields:
@@ -17373,7 +17373,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/products
+          }}/apis/{{ api_name }}/products
         Method: get
         Name: ApiManagementListApiProducts
         Filename: apimanagement_service_apis_products_get
@@ -17384,8 +17384,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
         References: []
         OperationId: '8060'
@@ -17764,7 +17764,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/policies/{{ policy_name }}
+          }}/apis/{{ api_name }}/policies/{{ policy_name }}
         HttpMethod: put
         IsAsync: false
       - Name: Delete
@@ -17783,7 +17783,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/policies/{{ policy_name }}
+          }}/apis/{{ api_name }}/policies/{{ policy_name }}
         HttpMethod: delete
         IsAsync: false
       - Name: ListByApi
@@ -17798,7 +17798,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/policies
+          }}/apis/{{ api_name }}/policies
         HttpMethod: get
         IsAsync: false
       - Name: Get
@@ -17816,7 +17816,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/policies/{{ policy_name }}
+          }}/apis/{{ api_name }}/policies/{{ policy_name }}
         HttpMethod: get
         IsAsync: false
     ResponseFields:
@@ -17963,8 +17963,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}/policies/{{ policy_name
-                  }}
+                  service_name }}/apis/{{ api_name }}/policies/{{ policy_name }}
                 type: Microsoft.ApiManagement/service/apis/policies
                 name: policy
                 properties:
@@ -17974,8 +17973,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}/policies/{{ policy_name
-                  }}
+                  service_name }}/apis/{{ api_name }}/policies/{{ policy_name }}
                 type: Microsoft.ApiManagement/service/apis/policies
                 name: policy
                 properties:
@@ -17983,7 +17981,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/policies/{{ policy_name }}
+          }}/apis/{{ api_name }}/policies/{{ policy_name }}
         Method: put
         Name: ApiManagementCreateApiPolicy
         Filename: apimanagement_service_apis_policies_put
@@ -17994,8 +17992,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: policy_name
             value: myPolicy
@@ -18026,7 +18024,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}/operations/{{
+                  service_name }}/apis/{{ api_name }}/operations/{{
                   operation_name }}/policies/{{ policy_name }}
                 type: Microsoft.ApiManagement/service/apis/operations/policies
                 name: policy
@@ -18037,7 +18035,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}/operations/{{
+                  service_name }}/apis/{{ api_name }}/operations/{{
                   operation_name }}/policies/{{ policy_name }}
                 type: Microsoft.ApiManagement/service/apis/operations/policies
                 name: policy
@@ -18046,7 +18044,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/policies/{{ policy_name }}
+          }}/apis/{{ api_name }}/policies/{{ policy_name }}
         Method: put
         Name: ApiManagementCreateApiPolicyNonXmlEncoded
         Filename: apimanagement_service_apis_policies_put_1
@@ -18057,8 +18055,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: policy_name
             value: myPolicy
@@ -18082,7 +18080,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/policies/{{ policy_name }}
+          }}/apis/{{ api_name }}/policies/{{ policy_name }}
         Method: delete
         Name: ApiManagementDeleteApiPolicy
         Filename: apimanagement_service_apis_policies_delete
@@ -18093,8 +18091,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: policy_name
             value: myPolicy
@@ -18472,7 +18470,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/policies
+          }}/apis/{{ api_name }}/policies
         HttpMethod: get
         IsAsync: false
       - Name: Get
@@ -18490,7 +18488,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/policies/{{ policy_name }}
+          }}/apis/{{ api_name }}/policies/{{ policy_name }}
         HttpMethod: get
         IsAsync: false
     ResponseFields:
@@ -18524,7 +18522,7 @@ Modules:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/policies/{{
+                      service_name }}/apis/{{ api_name }}/policies/{{
                       policy_name }}
                     type: Microsoft.ApiManagement/service/apis/policies
                     name: policy
@@ -18534,7 +18532,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/policies
+          }}/apis/{{ api_name }}/policies
         Method: get
         Name: ApiManagementListApiPolicies
         Filename: apimanagement_service_apis_policies_get
@@ -18545,8 +18543,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
         References: []
         OperationId: '8117'
@@ -18565,8 +18563,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}/policies/{{ policy_name
-                  }}
+                  service_name }}/apis/{{ api_name }}/policies/{{ policy_name }}
                 type: Microsoft.ApiManagement/service/apis/policies
                 name: policy
                 properties:
@@ -18574,7 +18571,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/policies/{{ policy_name }}
+          }}/apis/{{ api_name }}/policies/{{ policy_name }}
         Method: get
         Name: ApiManagementGetApiPolicy
         Filename: apimanagement_service_apis_policies_get_1
@@ -18585,8 +18582,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: policy_name
             value: myPolicy
@@ -18990,7 +18987,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/schemas/{{ schema_name }}
+          }}/apis/{{ api_name }}/schemas/{{ schema_name }}
         HttpMethod: put
         IsAsync: false
       - Name: Delete
@@ -19010,7 +19007,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/schemas/{{ schema_name }}
+          }}/apis/{{ api_name }}/schemas/{{ schema_name }}
         HttpMethod: delete
         IsAsync: false
       - Name: ListByApi
@@ -19025,7 +19022,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/schemas
+          }}/apis/{{ api_name }}/schemas
         HttpMethod: get
         IsAsync: false
       - Name: Get
@@ -19042,7 +19039,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/schemas/{{ schema_name }}
+          }}/apis/{{ api_name }}/schemas/{{ schema_name }}
         HttpMethod: get
         IsAsync: false
     ResponseFields:
@@ -19177,7 +19174,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}/schemas/{{ schema_name }}
+                  service_name }}/apis/{{ api_name }}/schemas/{{ schema_name }}
                 type: Microsoft.ApiManagement/service/apis/schemas
                 name: ec12520d-9d48-4e7b-8f39-698ca2ac63f1
                 properties:
@@ -19189,7 +19186,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}/schemas/{{ schema_name }}
+                  service_name }}/apis/{{ api_name }}/schemas/{{ schema_name }}
                 type: Microsoft.ApiManagement/service/apis/schemas
                 name: ec12520d-9d48-4e7b-8f39-698ca2ac63f1
                 properties:
@@ -19199,7 +19196,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/schemas/{{ schema_name }}
+          }}/apis/{{ api_name }}/schemas/{{ schema_name }}
         Method: put
         Name: ApiManagementCreateApiSchema
         Filename: apimanagement_service_apis_schemas_put
@@ -19210,8 +19207,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: schema_name
             value: mySchema
@@ -19236,7 +19233,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/schemas/{{ schema_name }}
+          }}/apis/{{ api_name }}/schemas/{{ schema_name }}
         Method: delete
         Name: ApiManagementDeleteApiSchema
         Filename: apimanagement_service_apis_schemas_delete
@@ -19247,8 +19244,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: schema_name
             value: mySchema
@@ -19588,7 +19585,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/schemas
+          }}/apis/{{ api_name }}/schemas
         HttpMethod: get
         IsAsync: false
       - Name: Get
@@ -19605,7 +19602,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/schemas/{{ schema_name }}
+          }}/apis/{{ api_name }}/schemas/{{ schema_name }}
         HttpMethod: get
         IsAsync: false
     ResponseFields:
@@ -19639,8 +19636,8 @@ Modules:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/schemas/{{
-                      schema_name }}
+                      service_name }}/apis/{{ api_name }}/schemas/{{ schema_name
+                      }}
                     type: Microsoft.ApiManagement/service/apis/schemas
                     name: 59d5b28e1f7fab116402044e
                     properties:
@@ -19649,7 +19646,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/schemas
+          }}/apis/{{ api_name }}/schemas
         Method: get
         Name: ApiManagementListApiSchemas
         Filename: apimanagement_service_apis_schemas_get
@@ -19660,8 +19657,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
         References: []
         OperationId: '8346'
@@ -19680,7 +19677,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}/schemas/{{ schema_name }}
+                  service_name }}/apis/{{ api_name }}/schemas/{{ schema_name }}
                 type: Microsoft.ApiManagement/service/apis/schemas
                 name: ec12520d-9d48-4e7b-8f39-698ca2ac63f1
                 properties:
@@ -19690,7 +19687,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/schemas/{{ schema_name }}
+          }}/apis/{{ api_name }}/schemas/{{ schema_name }}
         Method: get
         Name: ApiManagementGetApiSchema
         Filename: apimanagement_service_apis_schemas_get_1
@@ -19701,8 +19698,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: schema_name
             value: mySchema
@@ -20740,7 +20737,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/diagnostics/{{ diagnostic_name }}
+          }}/apis/{{ api_name }}/diagnostics/{{ diagnostic_name }}
         HttpMethod: put
         IsAsync: false
       - Name: Update
@@ -20761,7 +20758,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/diagnostics/{{ diagnostic_name }}
+          }}/apis/{{ api_name }}/diagnostics/{{ diagnostic_name }}
         HttpMethod: patch
         IsAsync: false
       - Name: Delete
@@ -20780,7 +20777,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/diagnostics/{{ diagnostic_name }}
+          }}/apis/{{ api_name }}/diagnostics/{{ diagnostic_name }}
         HttpMethod: delete
         IsAsync: false
       - Name: ListByService
@@ -20795,7 +20792,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/diagnostics
+          }}/apis/{{ api_name }}/diagnostics
         HttpMethod: get
         IsAsync: false
       - Name: Get
@@ -20812,7 +20809,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/diagnostics/{{ diagnostic_name }}
+          }}/apis/{{ api_name }}/diagnostics/{{ diagnostic_name }}
         HttpMethod: get
         IsAsync: false
     ResponseFields:
@@ -21640,7 +21637,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}/diagnostics/{{
+                  service_name }}/apis/{{ api_name }}/diagnostics/{{
                   diagnostic_name }}
                 type: Microsoft.ApiManagement/service/apis/diagnostics
                 name: applicationinsights
@@ -21677,7 +21674,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}/diagnostics/{{
+                  service_name }}/apis/{{ api_name }}/diagnostics/{{
                   diagnostic_name }}
                 type: Microsoft.ApiManagement/service/apis/diagnostics
                 name: applicationinsights
@@ -21712,7 +21709,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/diagnostics/{{ diagnostic_name }}
+          }}/apis/{{ api_name }}/diagnostics/{{ diagnostic_name }}
         Method: put
         Name: ApiManagementCreateApiDiagnostic
         Filename: apimanagement_service_apis_diagnostics_put
@@ -21723,8 +21720,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: diagnostic_name
             value: myDiagnostic
@@ -21777,7 +21774,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/diagnostics/{{ diagnostic_name }}
+          }}/apis/{{ api_name }}/diagnostics/{{ diagnostic_name }}
         Method: patch
         Name: ApiManagementUpdateApiDiagnostic
         Filename: apimanagement_service_apis_diagnostics_patch
@@ -21788,8 +21785,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: diagnostic_name
             value: myDiagnostic
@@ -21814,7 +21811,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/diagnostics/{{ diagnostic_name }}
+          }}/apis/{{ api_name }}/diagnostics/{{ diagnostic_name }}
         Method: delete
         Name: ApiManagementDeleteApiDiagnostic
         Filename: apimanagement_service_apis_diagnostics_delete
@@ -21825,8 +21822,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: diagnostic_name
             value: myDiagnostic
@@ -22830,7 +22827,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/diagnostics
+          }}/apis/{{ api_name }}/diagnostics
         HttpMethod: get
         IsAsync: false
       - Name: Get
@@ -22847,7 +22844,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/diagnostics/{{ diagnostic_name }}
+          }}/apis/{{ api_name }}/diagnostics/{{ diagnostic_name }}
         HttpMethod: get
         IsAsync: false
     ResponseFields:
@@ -22881,7 +22878,7 @@ Modules:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/diagnostics/{{
+                      service_name }}/apis/{{ api_name }}/diagnostics/{{
                       diagnostic_name }}
                     type: Microsoft.ApiManagement/service/apis/diagnostics
                     name: default
@@ -22917,7 +22914,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/diagnostics
+          }}/apis/{{ api_name }}/diagnostics
         Method: get
         Name: ApiManagementListApiDiagnostics
         Filename: apimanagement_service_apis_diagnostics_get
@@ -22928,8 +22925,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
         References: []
         OperationId: '8595'
@@ -22948,7 +22945,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}/diagnostics/{{
+                  service_name }}/apis/{{ api_name }}/diagnostics/{{
                   diagnostic_name }}
                 type: Microsoft.ApiManagement/service/apis/diagnostics
                 name: applicationinsights
@@ -22983,7 +22980,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/diagnostics/{{ diagnostic_name }}
+          }}/apis/{{ api_name }}/diagnostics/{{ diagnostic_name }}
         Method: get
         Name: ApiManagementGetApiDiagnostic
         Filename: apimanagement_service_apis_diagnostics_get_1
@@ -22994,8 +22991,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: diagnostic_name
             value: myDiagnostic
@@ -23495,7 +23492,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues/{{ issue_name }}
+          }}/apis/{{ api_name }}/issues/{{ issue_name }}
         HttpMethod: put
         IsAsync: false
       - Name: Update
@@ -23516,7 +23513,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues/{{ issue_name }}
+          }}/apis/{{ api_name }}/issues/{{ issue_name }}
         HttpMethod: patch
         IsAsync: false
       - Name: Delete
@@ -23535,7 +23532,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues/{{ issue_name }}
+          }}/apis/{{ api_name }}/issues/{{ issue_name }}
         HttpMethod: delete
         IsAsync: false
       - Name: ListByService
@@ -23551,7 +23548,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues
+          }}/apis/{{ api_name }}/issues
         HttpMethod: get
         IsAsync: false
       - Name: Get
@@ -23569,7 +23566,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues/{{ issue_name }}
+          }}/apis/{{ api_name }}/issues/{{ issue_name }}
         HttpMethod: get
         IsAsync: false
     ResponseFields:
@@ -23836,7 +23833,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}/issues/{{ issue_name }}
+                  service_name }}/apis/{{ api_name }}/issues/{{ issue_name }}
                 type: Microsoft.ApiManagement/service/apis/issues
                 name: 57d2ef278aa04f0ad01d6cdc
                 properties:
@@ -23854,7 +23851,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}/issues/{{ issue_name }}
+                  service_name }}/apis/{{ api_name }}/issues/{{ issue_name }}
                 type: Microsoft.ApiManagement/service/apis/issues
                 name: 57d2ef278aa04f0ad01d6cdc
                 properties:
@@ -23870,7 +23867,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues/{{ issue_name }}
+          }}/apis/{{ api_name }}/issues/{{ issue_name }}
         Method: put
         Name: ApiManagementCreateApiIssue
         Filename: apimanagement_service_apis_issues_put
@@ -23881,8 +23878,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: issue_name
             value: myIssue
@@ -23912,7 +23909,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues/{{ issue_name }}
+          }}/apis/{{ api_name }}/issues/{{ issue_name }}
         Method: patch
         Name: ApiManagementUpdateApiIssue
         Filename: apimanagement_service_apis_issues_patch
@@ -23923,8 +23920,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: issue_name
             value: myIssue
@@ -23948,7 +23945,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues/{{ issue_name }}
+          }}/apis/{{ api_name }}/issues/{{ issue_name }}
         Method: delete
         Name: ApiManagementDeleteApiIssue
         Filename: apimanagement_service_apis_issues_delete
@@ -23959,8 +23956,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: issue_name
             value: myIssue
@@ -24457,7 +24454,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues
+          }}/apis/{{ api_name }}/issues
         HttpMethod: get
         IsAsync: false
       - Name: Get
@@ -24475,7 +24472,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues/{{ issue_name }}
+          }}/apis/{{ api_name }}/issues/{{ issue_name }}
         HttpMethod: get
         IsAsync: false
     ResponseFields:
@@ -24509,7 +24506,7 @@ Modules:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/issues/{{ issue_name
+                      service_name }}/apis/{{ api_name }}/issues/{{ issue_name
                       }}
                     type: Microsoft.ApiManagement/service/apis/issues
                     name: 57d2ef278aa04f0ad01d6cdc
@@ -24527,12 +24524,12 @@ Modules:
                         /subscriptions/{{ subscription_id }}/resourceGroups/{{
                         resource_group
                         }}/providers/Microsoft.ApiManagement/service/{{
-                        service_name }}/apis/{{ apis_name }}
+                        service_name }}/apis/{{ api_name }}
                 nextLink: ''
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues
+          }}/apis/{{ api_name }}/issues
         Method: get
         Name: ApiManagementListApiIssues
         Filename: apimanagement_service_apis_issues_get
@@ -24543,8 +24540,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
         References: []
         OperationId: '8890'
@@ -24563,7 +24560,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}/issues/{{ issue_name }}
+                  service_name }}/apis/{{ api_name }}/issues/{{ issue_name }}
                 type: Microsoft.ApiManagement/service/apis/issues
                 name: 57d2ef278aa04f0ad01d6cdc
                 properties:
@@ -24580,11 +24577,11 @@ Modules:
                     /subscriptions/{{ subscription_id }}/resourceGroups/{{
                     resource_group
                     }}/providers/Microsoft.ApiManagement/service/{{ service_name
-                    }}/apis/{{ apis_name }}
+                    }}/apis/{{ api_name }}
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues/{{ issue_name }}
+          }}/apis/{{ api_name }}/issues/{{ issue_name }}
         Method: get
         Name: ApiManagementGetApiIssue
         Filename: apimanagement_service_apis_issues_get_1
@@ -24595,8 +24592,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: issue_name
             value: myIssue
@@ -25025,7 +25022,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues/{{ issue_name }}/comments/{{
+          }}/apis/{{ api_name }}/issues/{{ issue_name }}/comments/{{
           comment_name }}
         HttpMethod: put
         IsAsync: false
@@ -25047,7 +25044,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues/{{ issue_name }}/comments/{{
+          }}/apis/{{ api_name }}/issues/{{ issue_name }}/comments/{{
           comment_name }}
         HttpMethod: delete
         IsAsync: false
@@ -25065,7 +25062,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues/{{ issue_name }}/comments
+          }}/apis/{{ api_name }}/issues/{{ issue_name }}/comments
         HttpMethod: get
         IsAsync: false
       - Name: Get
@@ -25084,7 +25081,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues/{{ issue_name }}/comments/{{
+          }}/apis/{{ api_name }}/issues/{{ issue_name }}/comments/{{
           comment_name }}
         HttpMethod: get
         IsAsync: false
@@ -25246,7 +25243,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}/issues/{{ issue_name
+                  service_name }}/apis/{{ api_name }}/issues/{{ issue_name
                   }}/comments/{{ comment_name }}
                 type: Microsoft.ApiManagement/service/apis/issues/comments
                 name: 599e29ab193c3c0bd0b3e2fb
@@ -25263,7 +25260,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}/issues/{{ issue_name
+                  service_name }}/apis/{{ api_name }}/issues/{{ issue_name
                   }}/comments/{{ comment_name }}
                 type: Microsoft.ApiManagement/service/apis/issues/comments
                 name: 599e29ab193c3c0bd0b3e2fb
@@ -25278,7 +25275,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues/{{ issue_name }}/comments/{{
+          }}/apis/{{ api_name }}/issues/{{ issue_name }}/comments/{{
           comment_name }}
         Method: put
         Name: ApiManagementCreateApiIssueComment
@@ -25290,8 +25287,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: issue_name
             value: myIssue
@@ -25323,7 +25320,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues/{{ issue_name }}/comments/{{
+          }}/apis/{{ api_name }}/issues/{{ issue_name }}/comments/{{
           comment_name }}
         Method: delete
         Name: ApiManagementDeleteApiIssueComment
@@ -25335,8 +25332,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: issue_name
             value: myIssue
@@ -25734,7 +25731,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues/{{ issue_name }}/comments
+          }}/apis/{{ api_name }}/issues/{{ issue_name }}/comments
         HttpMethod: get
         IsAsync: false
       - Name: Get
@@ -25753,7 +25750,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues/{{ issue_name }}/comments/{{
+          }}/apis/{{ api_name }}/issues/{{ issue_name }}/comments/{{
           comment_name }}
         HttpMethod: get
         IsAsync: false
@@ -25789,7 +25786,7 @@ Modules:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/issues/{{ issue_name
+                      service_name }}/apis/{{ api_name }}/issues/{{ issue_name
                       }}/comments/{{ comment_name }}
                     type: Microsoft.ApiManagement/service/apis/issues/comments
                     name: 599e29ab193c3c0bd0b3e2fb
@@ -25805,7 +25802,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues/{{ issue_name }}/comments
+          }}/apis/{{ api_name }}/issues/{{ issue_name }}/comments
         Method: get
         Name: ApiManagementListApiIssueComments
         Filename: apimanagement_service_apis_issues_comments_get
@@ -25816,8 +25813,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: issue_name
             value: myIssue
@@ -25840,7 +25837,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}/issues/{{ issue_name
+                  service_name }}/apis/{{ api_name }}/issues/{{ issue_name
                   }}/comments/{{ comment_name }}
                 type: Microsoft.ApiManagement/service/apis/issues/comments
                 name: 599e29ab193c3c0bd0b3e2fb
@@ -25855,7 +25852,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues/{{ issue_name }}/comments/{{
+          }}/apis/{{ api_name }}/issues/{{ issue_name }}/comments/{{
           comment_name }}
         Method: get
         Name: ApiManagementGetApiIssueComment
@@ -25867,8 +25864,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: issue_name
             value: myIssue
@@ -26302,7 +26299,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues/{{ issue_name }}/attachments/{{
+          }}/apis/{{ api_name }}/issues/{{ issue_name }}/attachments/{{
           attachment_name }}
         HttpMethod: put
         IsAsync: false
@@ -26324,7 +26321,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues/{{ issue_name }}/attachments/{{
+          }}/apis/{{ api_name }}/issues/{{ issue_name }}/attachments/{{
           attachment_name }}
         HttpMethod: delete
         IsAsync: false
@@ -26342,7 +26339,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues/{{ issue_name }}/attachments
+          }}/apis/{{ api_name }}/issues/{{ issue_name }}/attachments
         HttpMethod: get
         IsAsync: false
       - Name: Get
@@ -26361,7 +26358,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues/{{ issue_name }}/attachments/{{
+          }}/apis/{{ api_name }}/issues/{{ issue_name }}/attachments/{{
           attachment_name }}
         HttpMethod: get
         IsAsync: false
@@ -26523,7 +26520,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}/issues/{{ issue_name
+                  service_name }}/apis/{{ api_name }}/issues/{{ issue_name
                   }}/attachments/{{ attachment_name }}
                 type: Microsoft.ApiManagement/service/apis/issues/attachments
                 name: 57d2ef278aa04f0888cba3f3
@@ -26536,7 +26533,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}/issues/{{ issue_name
+                  service_name }}/apis/{{ api_name }}/issues/{{ issue_name
                   }}/attachments/{{ attachment_name }}
                 type: Microsoft.ApiManagement/service/apis/issues/attachments
                 name: 57d2ef278aa04f0888cba3f3
@@ -26547,7 +26544,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues/{{ issue_name }}/attachments/{{
+          }}/apis/{{ api_name }}/issues/{{ issue_name }}/attachments/{{
           attachment_name }}
         Method: put
         Name: ApiManagementCreateApiIssueAttachment
@@ -26559,8 +26556,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: issue_name
             value: myIssue
@@ -26589,7 +26586,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues/{{ issue_name }}/attachments/{{
+          }}/apis/{{ api_name }}/issues/{{ issue_name }}/attachments/{{
           attachment_name }}
         Method: delete
         Name: ApiManagementDeleteApiIssueAttachment
@@ -26601,8 +26598,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: issue_name
             value: myIssue
@@ -27002,7 +26999,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues/{{ issue_name }}/attachments
+          }}/apis/{{ api_name }}/issues/{{ issue_name }}/attachments
         HttpMethod: get
         IsAsync: false
       - Name: Get
@@ -27021,7 +27018,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues/{{ issue_name }}/attachments/{{
+          }}/apis/{{ api_name }}/issues/{{ issue_name }}/attachments/{{
           attachment_name }}
         HttpMethod: get
         IsAsync: false
@@ -27057,7 +27054,7 @@ Modules:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/issues/{{ issue_name
+                      service_name }}/apis/{{ api_name }}/issues/{{ issue_name
                       }}/attachments/{{ attachment_name }}
                     type: Microsoft.ApiManagement/service/apis/issues/attachments
                     name: 57d2ef278aa04f0888cba3f3
@@ -27069,7 +27066,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues/{{ issue_name }}/attachments
+          }}/apis/{{ api_name }}/issues/{{ issue_name }}/attachments
         Method: get
         Name: ApiManagementListApiIssueAttachments
         Filename: apimanagement_service_apis_issues_attachments_get
@@ -27080,8 +27077,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: issue_name
             value: myIssue
@@ -27104,7 +27101,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}/issues/{{ issue_name
+                  service_name }}/apis/{{ api_name }}/issues/{{ issue_name
                   }}/attachments/{{ attachment_name }}
                 type: Microsoft.ApiManagement/service/apis/issues/attachments
                 name: 57d2ef278aa04f0888cba3f3
@@ -27115,7 +27112,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/issues/{{ issue_name }}/attachments/{{
+          }}/apis/{{ api_name }}/issues/{{ issue_name }}/attachments/{{
           attachment_name }}
         Method: get
         Name: ApiManagementGetApiIssueAttachment
@@ -27127,8 +27124,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: issue_name
             value: myIssue
@@ -27558,7 +27555,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/tagDescriptions/{{ tag_description_name }}
+          }}/apis/{{ api_name }}/tagDescriptions/{{ tag_description_name }}
         HttpMethod: put
         IsAsync: false
       - Name: Delete
@@ -27577,7 +27574,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/tagDescriptions/{{ tag_description_name }}
+          }}/apis/{{ api_name }}/tagDescriptions/{{ tag_description_name }}
         HttpMethod: delete
         IsAsync: false
       - Name: ListByService
@@ -27592,7 +27589,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/tagDescriptions
+          }}/apis/{{ api_name }}/tagDescriptions
         HttpMethod: get
         IsAsync: false
       - Name: Get
@@ -27609,7 +27606,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/tagDescriptions/{{ tag_description_name }}
+          }}/apis/{{ api_name }}/tagDescriptions/{{ tag_description_name }}
         HttpMethod: get
         IsAsync: false
     ResponseFields:
@@ -27793,7 +27790,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/tagDescriptions/{{ tag_description_name }}
+          }}/apis/{{ api_name }}/tagDescriptions/{{ tag_description_name }}
         Method: put
         Name: ApiManagementCreateApiTagDescription
         Filename: apimanagement_service_apis_tagdescriptions_put
@@ -27804,8 +27801,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: tag_description_name
             value: myTagDescription
@@ -27830,7 +27827,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/tagDescriptions/{{ tag_description_name }}
+          }}/apis/{{ api_name }}/tagDescriptions/{{ tag_description_name }}
         Method: delete
         Name: ApiManagementDeleteApiTagDescription
         Filename: apimanagement_service_apis_tagdescriptions_delete
@@ -27841,8 +27838,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: tag_description_name
             value: myTagDescription
@@ -28234,7 +28231,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/tagDescriptions
+          }}/apis/{{ api_name }}/tagDescriptions
         HttpMethod: get
         IsAsync: false
       - Name: Get
@@ -28251,7 +28248,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/tagDescriptions/{{ tag_description_name }}
+          }}/apis/{{ api_name }}/tagDescriptions/{{ tag_description_name }}
         HttpMethod: get
         IsAsync: false
     ResponseFields:
@@ -28296,7 +28293,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/tagDescriptions
+          }}/apis/{{ api_name }}/tagDescriptions
         Method: get
         Name: ApiManagementListApiTagDescriptions
         Filename: apimanagement_service_apis_tagdescriptions_get
@@ -28307,8 +28304,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
         References: []
         OperationId: '9743'
@@ -28338,7 +28335,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/tagDescriptions/{{ tag_description_name }}
+          }}/apis/{{ api_name }}/tagDescriptions/{{ tag_description_name }}
         Method: get
         Name: ApiManagementGetApiTagDescription
         Filename: apimanagement_service_apis_tagdescriptions_get_1
@@ -28349,8 +28346,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
           - name: tag_description_name
             value: myTagDescription
@@ -30084,7 +30081,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operationsByTags
+          }}/apis/{{ api_name }}/operationsByTags
         HttpMethod: get
         IsAsync: false
     ResponseFields:
@@ -30133,7 +30130,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}/operationsByTags
+          }}/apis/{{ api_name }}/operationsByTags
         Method: get
         Name: ApiManagementListApiOperationsByTags
         Filename: apimanagement_service_apis_operationsbytags_get
@@ -30144,8 +30141,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
         References: []
         OperationId: '9986'
@@ -58846,7 +58843,7 @@ Modules:
                         /subscriptions/{{ subscription_id }}/resourceGroups/{{
                         resource_group
                         }}/providers/Microsoft.ApiManagement/service/{{
-                        service_name }}/apis/{{ apis_name }}
+                        service_name }}/apis/{{ api_name }}
                 nextLink: ''
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
@@ -58894,7 +58891,7 @@ Modules:
                     /subscriptions/{{ subscription_id }}/resourceGroups/{{
                     resource_group
                     }}/providers/Microsoft.ApiManagement/service/{{ service_name
-                    }}/apis/{{ apis_name }}
+                    }}/apis/{{ api_name }}
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -72247,7 +72244,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/products/{{ product_name }}/apis/{{ apis_name }}
+          }}/products/{{ product_name }}/apis/{{ api_name }}
         HttpMethod: put
         IsAsync: false
       - Name: Delete
@@ -72264,7 +72261,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/products/{{ product_name }}/apis/{{ apis_name }}
+          }}/products/{{ product_name }}/apis/{{ api_name }}
         HttpMethod: delete
         IsAsync: false
       - Name: ListByProduct
@@ -72312,7 +72309,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
                 type: Microsoft.ApiManagement/service/apis
                 name: 5931a75ae4bbd512a88c680b
                 properties:
@@ -72332,7 +72329,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
                 type: Microsoft.ApiManagement/service/apis
                 name: 5931a75ae4bbd512a88c680b
                 properties:
@@ -72350,7 +72347,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/products/{{ product_name }}/apis/{{ apis_name }}
+          }}/products/{{ product_name }}/apis/{{ api_name }}
         Method: put
         Name: ApiManagementCreateProductApi
         Filename: apimanagement_service_products_apis_put
@@ -72364,8 +72361,8 @@ Modules:
           - name: product_name
             value: myProduct
             swaggerName: productId
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
         References:
           - apimanagement_service_products_put
@@ -72386,7 +72383,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/products/{{ product_name }}/apis/{{ apis_name }}
+          }}/products/{{ product_name }}/apis/{{ api_name }}
         Method: delete
         Name: ApiManagementDeleteProductApi
         Filename: apimanagement_service_products_apis_delete
@@ -72400,8 +72397,8 @@ Modules:
           - name: product_name
             value: myProduct
             swaggerName: productId
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
         References: []
         OperationId: '15016'
@@ -73782,7 +73779,7 @@ Modules:
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
                       service_name }}/products/{{ product_name }}/apis/{{
-                      apis_name }}
+                      api_name }}
                     type: Microsoft.ApiManagement/service/products/apis
                     name: 57681820a40f7eb6c49f6aca
                     properties:
@@ -90018,7 +90015,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}
+          }}/apis/{{ api_name }}
         HttpMethod: get
         IsAsync: false
     ResponseFields:
@@ -90100,7 +90097,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
                 format: swagger-link-json
                 value:
                   link: >-
@@ -90110,7 +90107,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}
+          }}/apis/{{ api_name }}
         Method: get
         Name: ApiManagementGetApiExportInOpenApi2dot0
         Filename: apimanagement_service_apis_get_3
@@ -90121,8 +90118,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
         References: []
         OperationId: '17968'
@@ -90142,7 +90139,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/apis/{{ apis_name }}
+                  service_name }}/apis/{{ api_name }}
                 format: openapi-link
                 value:
                   link: >-
@@ -90152,7 +90149,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/apis/{{ apis_name }}
+          }}/apis/{{ api_name }}
         Method: get
         Name: ApiManagementGetApiExportInOpenApi3dot0
         Filename: apimanagement_service_apis_get_4
@@ -90163,8 +90160,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: apiId
         References: []
         OperationId: '17968'

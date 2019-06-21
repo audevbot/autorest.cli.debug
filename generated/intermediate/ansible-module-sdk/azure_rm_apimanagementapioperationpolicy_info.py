@@ -69,13 +69,13 @@ EXAMPLES = '''
   azure_rm_apimanagementapioperationpolicy_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     operation_id: myOperation
 - name: ApiManagementGetApiOperationPolicy
   azure_rm_apimanagementapioperationpolicy_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     operation_id: myOperation
     policy_id: myPolicy
 

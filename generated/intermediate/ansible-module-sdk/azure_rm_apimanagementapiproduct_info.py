@@ -111,7 +111,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapiproduct_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
 
 '''
 

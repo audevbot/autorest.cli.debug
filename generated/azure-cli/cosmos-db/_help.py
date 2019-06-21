@@ -33,19 +33,19 @@ helps['cosmos-db show'] = """
     short-summary: show a cosmos-db.
 """
 
-helps['cosmos-db tables databases keyspaces graphs containers collections'] = """
+helps['cosmos-db table database keyspace graph container collection'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['cosmos-db tables databases keyspaces graphs containers collections list'] = """
+helps['cosmos-db table database keyspace graph container collection list'] = """
     type: command
-    short-summary: list a cosmos-db tables databases keyspaces graphs containers collections.
+    short-summary: list a cosmos-db table database keyspace graph container collection.
 """
 
-helps['cosmos-db tables databases keyspaces graphs containers collections show'] = """
+helps['cosmos-db table database keyspace graph container collection show'] = """
     type: command
-    short-summary: show a cosmos-db tables databases keyspaces graphs containers collections.
+    short-summary: show a cosmos-db table database keyspace graph container collection.
 """
 
 helps[''] = """
@@ -58,34 +58,34 @@ helps[' list'] = """
     short-summary: list a .
 """
 
-helps['cosmos-db databases'] = """
+helps['cosmos-db database'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['cosmos-db databases list'] = """
+helps['cosmos-db database list'] = """
     type: command
-    short-summary: list a cosmos-db databases.
+    short-summary: list a cosmos-db database.
 """
 
-helps['cosmos-db databases collections'] = """
+helps['cosmos-db database collection'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['cosmos-db databases collections list'] = """
+helps['cosmos-db database collection list'] = """
     type: command
-    short-summary: list a cosmos-db databases collections.
+    short-summary: list a cosmos-db database collection.
 """
 
-helps['cosmos-db region databases collections'] = """
+helps['cosmos-db region database collection'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['cosmos-db region databases collections list'] = """
+helps['cosmos-db region database collection list'] = """
     type: command
-    short-summary: list a cosmos-db region databases collections.
+    short-summary: list a cosmos-db region database collection.
 """
 
 helps['cosmos-db region'] = """
@@ -128,42 +128,42 @@ helps['cosmos-db list'] = """
     short-summary: list a cosmos-db.
 """
 
-helps['cosmos-db region databases collections'] = """
+helps['cosmos-db region database collection'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['cosmos-db region databases collections list'] = """
+helps['cosmos-db region database collection list'] = """
     type: command
-    short-summary: list a cosmos-db region databases collections.
+    short-summary: list a cosmos-db region database collection.
 """
 
-helps['cosmos-db databases collections'] = """
+helps['cosmos-db database collection'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['cosmos-db databases collections list'] = """
+helps['cosmos-db database collection list'] = """
     type: command
-    short-summary: list a cosmos-db databases collections.
+    short-summary: list a cosmos-db database collection.
 """
 
-helps['cosmos-db databases collections partitionkeyrangeid'] = """
+helps['cosmos-db database collection partitionkeyrangeid'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['cosmos-db databases collections partitionkeyrangeid list'] = """
+helps['cosmos-db database collection partitionkeyrangeid list'] = """
     type: command
-    short-summary: list a cosmos-db databases collections partitionkeyrangeid.
+    short-summary: list a cosmos-db database collection partitionkeyrangeid.
 """
 
-helps['cosmos-db region databases collections partitionkeyrangeid'] = """
+helps['cosmos-db region database collection partitionkeyrangeid'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['cosmos-db region databases collections partitionkeyrangeid list'] = """
+helps['cosmos-db region database collection partitionkeyrangeid list'] = """
     type: command
-    short-summary: list a cosmos-db region databases collections partitionkeyrangeid.
+    short-summary: list a cosmos-db region database collection partitionkeyrangeid.
 """

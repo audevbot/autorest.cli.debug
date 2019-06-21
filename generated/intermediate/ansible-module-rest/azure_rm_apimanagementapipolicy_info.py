@@ -63,12 +63,12 @@ EXAMPLES = '''
   azure_rm_apimanagementapipolicy_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
 - name: ApiManagementGetApiPolicy
   azure_rm_apimanagementapipolicy_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     policy_id: myPolicy
 
 '''
@@ -199,13 +199,13 @@ class AzureRMApiPolicyInfo(AzureRMModuleBase):
                     '/service' +
                     '/{{ service_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/policies' +
                     '/{{ policy_name }}')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ service_name }}', self.service_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ policy_name }}', self.name)
 
         try:
@@ -237,12 +237,12 @@ class AzureRMApiPolicyInfo(AzureRMModuleBase):
                     '/service' +
                     '/{{ service_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/policies')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ service_name }}', self.service_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ policy_name }}', self.name)
 
         try:

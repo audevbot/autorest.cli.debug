@@ -70,12 +70,12 @@ EXAMPLES = '''
   azure_rm_apimanagementapitagdescription_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
 - name: ApiManagementGetApiTagDescription
   azure_rm_apimanagementapitagdescription_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     tag_id: myTagDescription
 
 '''

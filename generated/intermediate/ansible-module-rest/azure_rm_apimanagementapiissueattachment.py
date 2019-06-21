@@ -88,7 +88,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapiissueattachment:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     issue_id: myIssue
     attachment_id: myAttachment
     title: Issue attachment.
@@ -98,7 +98,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapiissueattachment:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     issue_id: myIssue
     attachment_id: myAttachment
     state: absent
@@ -274,7 +274,7 @@ class AzureRMApiIssueAttachment(AzureRMModuleBaseExt):
                     '/service' +
                     '/{{ service_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/issues' +
                     '/{{ issue_name }}' +
                     '/attachments' +
@@ -282,7 +282,7 @@ class AzureRMApiIssueAttachment(AzureRMModuleBaseExt):
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ service_name }}', self.service_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ issue_name }}', self.issue_name)
         self.url = self.url.replace('{{ attachment_name }}', self.name)
 

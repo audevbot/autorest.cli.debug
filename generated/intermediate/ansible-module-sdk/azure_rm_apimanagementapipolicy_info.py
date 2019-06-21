@@ -63,12 +63,12 @@ EXAMPLES = '''
   azure_rm_apimanagementapipolicy_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
 - name: ApiManagementGetApiPolicy
   azure_rm_apimanagementapipolicy_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     policy_id: myPolicy
 
 '''

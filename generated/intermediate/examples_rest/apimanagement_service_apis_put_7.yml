@@ -9,7 +9,7 @@
   vars:
     resource_group: myResourceGroup
     service_name: myService
-    apis_name: myApis
+    api_name: myApi
     api_version_set_name: myApiVersionSet
   tasks:
     - name: ApiManagementCreateApiNewVersionUsingExistingApi
@@ -22,7 +22,7 @@
         resource_name: '{{ service_name }}'
         subresource:
           - type: apis
-            name: '{{ apis_name }}'
+            name: '{{ api_name }}'
         body:
           properties:
             displayName: Echo API2
@@ -40,7 +40,7 @@
             sourceApiId: >-
               /subscriptions/{{ subscription_id }}/resourceGroups/{{
               resource_group }}/providers/Microsoft.ApiManagement/service/{{
-              service_name }}/apis/{{ apis_name }}
+              service_name }}/apis/{{ api_name }}
             apiVersionSetId: >-
               /subscriptions/{{ subscription_id }}/resourceGroups/{{
               resource_group }}/providers/Microsoft.ApiManagement/service/{{

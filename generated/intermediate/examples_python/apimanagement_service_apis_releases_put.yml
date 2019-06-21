@@ -21,12 +21,12 @@ import uuid
 SUBSCRIPTION_ID = os.environ['AZURE_SUBSCRIPTION_ID']
 RESOURCE_GROUP = "myresourcegroup"
 SERVICE_NAME = "myservice"
-APIS_NAME = "myapis"
+API_NAME = "myapi"
 RELEASE_NAME = "myrelease"
 
 BODY = {
   "properties": {
-    "apiId": "/subscriptions/" + SUBSCRIPTION_ID + "/resourceGroups/" + RESOURCE_GROUP + "/providers/Microsoft.ApiManagement/service/" + SERVICE_NAME + "/apis/" + APIS_NAME + "",
+    "apiId": "/subscriptions/" + SUBSCRIPTION_ID + "/resourceGroups/" + RESOURCE_GROUP + "/providers/Microsoft.ApiManagement/service/" + SERVICE_NAME + "/apis/" + API_NAME + "",
     "notes": "yahooagain"
   }
 }
@@ -55,7 +55,7 @@ def run_example():
     header_parameters['Content-Type'] = 'application/json; charset=utf-8'
 
     operation_config = {}
-    request = service_client.put("/subscriptions/" + SUBSCRIPTION + "/resourceGroups/" + RESOURCE_GR + "/providers/Microsoft.ApiManagement/service/" + SERVICE_N + "/apis/" + APIS_N + "/releases/" + RELEASE_N, query_parameters)
+    request = service_client.put("/subscriptions/" + SUBSCRIPTION + "/resourceGroups/" + RESOURCE_GR + "/providers/Microsoft.ApiManagement/service/" + SERVICE_N + "/apis/" + API_N + "/releases/" + RELEASE_N, query_parameters)
     response = service_client.send(request, header_parameters, BODY, **operation_config)
     print(response.text)
 

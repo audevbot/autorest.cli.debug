@@ -314,19 +314,19 @@ EXAMPLES = '''
   azure_rm_apimanagementapioperation_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     operation_id: 57d2ef278aa04f0ad01d6cdc
 - name: ApiManagementGetApiOperation
   azure_rm_apimanagementapioperation_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     operation_id: myOperation
 - name: ApiManagementGetApiOperationPetStore
   azure_rm_apimanagementapioperation_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     operation_id: myOperation
 
 '''
@@ -454,13 +454,13 @@ class AzureRMApiOperationInfo(AzureRMModuleBase):
                     '/service' +
                     '/{{ service_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/operations' +
                     '/{{ operation_name }}')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ service_name }}', self.service_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ operation_name }}', self.name)
 
         try:
@@ -492,12 +492,12 @@ class AzureRMApiOperationInfo(AzureRMModuleBase):
                     '/service' +
                     '/{{ service_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/operations')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ service_name }}', self.service_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ operation_name }}', self.name)
 
         try:

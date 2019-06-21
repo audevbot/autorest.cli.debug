@@ -53,89 +53,89 @@ helps['batch list'] = """
     short-summary: list a batch.
 """
 
-helps['batch applications versions'] = """
+helps['batch application version'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['batch applications versions create'] = """
+helps['batch application version create'] = """
     type: command
-    short-summary: create a batch applications versions.
+    short-summary: create a batch application version.
 """
 
-helps['batch applications versions delete'] = """
+helps['batch application version delete'] = """
     type: command
-    short-summary: delete a batch applications versions.
+    short-summary: delete a batch application version.
 """
 
-helps['batch applications versions list'] = """
+helps['batch application version list'] = """
     type: command
-    short-summary: list a batch applications versions.
+    short-summary: list a batch application version.
 """
 
-helps['batch applications versions show'] = """
+helps['batch application version show'] = """
     type: command
-    short-summary: show a batch applications versions.
+    short-summary: show a batch application version.
 """
 
-helps['batch applications versions'] = """
+helps['batch application version'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['batch applications versions show'] = """
+helps['batch application version show'] = """
     type: command
-    short-summary: show a batch applications versions.
+    short-summary: show a batch application version.
 """
 
-helps['batch applications versions list'] = """
+helps['batch application version list'] = """
     type: command
-    short-summary: list a batch applications versions.
+    short-summary: list a batch application version.
 """
 
-helps['batch applications'] = """
+helps['batch application'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['batch applications create'] = """
+helps['batch application create'] = """
     type: command
-    short-summary: create a batch applications.
+    short-summary: create a batch application.
 """
 
-helps['batch applications update'] = """
+helps['batch application update'] = """
     type: command
-    short-summary: update a batch applications.
+    short-summary: update a batch application.
 """
 
-helps['batch applications delete'] = """
+helps['batch application delete'] = """
     type: command
-    short-summary: delete a batch applications.
+    short-summary: delete a batch application.
 """
 
-helps['batch applications list'] = """
+helps['batch application list'] = """
     type: command
-    short-summary: list a batch applications.
+    short-summary: list a batch application.
 """
 
-helps['batch applications show'] = """
+helps['batch application show'] = """
     type: command
-    short-summary: show a batch applications.
+    short-summary: show a batch application.
 """
 
-helps['batch applications'] = """
+helps['batch application'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['batch applications show'] = """
+helps['batch application show'] = """
     type: command
-    short-summary: show a batch applications.
+    short-summary: show a batch application.
 """
 
-helps['batch applications list'] = """
+helps['batch application list'] = """
     type: command
-    short-summary: list a batch applications.
+    short-summary: list a batch application.
 """
 
 helps['batch'] = """
@@ -153,92 +153,92 @@ helps[' list'] = """
     short-summary: list a .
 """
 
-helps['batch certificates'] = """
+helps['batch certificate'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['batch certificates create'] = """
+helps['batch certificate create'] = """
     type: command
-    short-summary: create a batch certificates.
+    short-summary: create a batch certificate.
 """
 
-helps['batch certificates update'] = """
+helps['batch certificate update'] = """
     type: command
-    short-summary: update a batch certificates.
+    short-summary: update a batch certificate.
 """
 
-helps['batch certificates delete'] = """
+helps['batch certificate delete'] = """
     type: command
-    short-summary: delete a batch certificates.
+    short-summary: delete a batch certificate.
 """
 
-helps['batch certificates list'] = """
+helps['batch certificate list'] = """
     type: command
-    short-summary: list a batch certificates.
+    short-summary: list a batch certificate.
 """
 
-helps['batch certificates show'] = """
+helps['batch certificate show'] = """
     type: command
-    short-summary: show a batch certificates.
+    short-summary: show a batch certificate.
 """
 
-helps['batch certificates'] = """
+helps['batch certificate'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['batch certificates show'] = """
+helps['batch certificate show'] = """
     type: command
-    short-summary: show a batch certificates.
+    short-summary: show a batch certificate.
 """
 
-helps['batch certificates list'] = """
+helps['batch certificate list'] = """
     type: command
-    short-summary: list a batch certificates.
+    short-summary: list a batch certificate.
 """
 
-helps['batch pools'] = """
+helps['batch pool'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['batch pools create'] = """
+helps['batch pool create'] = """
     type: command
-    short-summary: create a batch pools.
+    short-summary: create a batch pool.
 """
 
-helps['batch pools update'] = """
+helps['batch pool update'] = """
     type: command
-    short-summary: update a batch pools.
+    short-summary: update a batch pool.
 """
 
-helps['batch pools delete'] = """
+helps['batch pool delete'] = """
     type: command
-    short-summary: delete a batch pools.
+    short-summary: delete a batch pool.
 """
 
-helps['batch pools list'] = """
+helps['batch pool list'] = """
     type: command
-    short-summary: list a batch pools.
+    short-summary: list a batch pool.
 """
 
-helps['batch pools show'] = """
+helps['batch pool show'] = """
     type: command
-    short-summary: show a batch pools.
+    short-summary: show a batch pool.
 """
 
-helps['batch pools'] = """
+helps['batch pool'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['batch pools show'] = """
+helps['batch pool show'] = """
     type: command
-    short-summary: show a batch pools.
+    short-summary: show a batch pool.
 """
 
-helps['batch pools list'] = """
+helps['batch pool list'] = """
     type: command
-    short-summary: list a batch pools.
+    short-summary: list a batch pool.
 """

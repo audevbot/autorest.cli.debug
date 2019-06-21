@@ -9,7 +9,7 @@
   vars:
     resource_group: myResourceGroup
     service_name: myService
-    apis_name: myApis
+    api_name: myApi
     policy_name: myPolicy
   tasks:
 
@@ -17,7 +17,7 @@
       azure_rm_apimanagementapipolicy:
         resource_group: '{{resource_group}}'
         name: '{{service_name}}'
-        api_id: '{{apis_name}}'
+        api_id: '{{api_name}}'
         policy_id: '{{policy_name}}'
         value: "<policies>\r\n     <inbound>\r\n     <base />\r\n  <set-header name=\"newvalue\" exists-action=\"override\">\r\n   <value>\"@(context.Request.Headers.FirstOrDefault(h => h.Ke==\"Via\"))\" </value>\r\n    </set-header>\r\n  </inbound>\r\n      </policies>"
         format: rawxml

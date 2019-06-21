@@ -208,7 +208,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapi:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     path: petstore
     value: >-
       https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/petstore.yaml
@@ -217,7 +217,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapi:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     path: petstore
     value: 'http://petstore.swagger.io/v2/swagger.json'
     format: swagger-link-json
@@ -225,7 +225,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapi:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     path: collector
     value: >-
       https://developer.cisco.com/media/wae-release-6-2-api-reference/wae-collector-rest-api/application.wadl
@@ -234,7 +234,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapi:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     path: currency
     value: 'http://www.webservicex.net/CurrencyConvertor.asmx?WSDL'
     format: wsdl-link
@@ -245,7 +245,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapi:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     path: currency
     value: 'http://www.webservicex.net/CurrencyConvertor.asmx?WSDL'
     format: wsdl-link
@@ -257,7 +257,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapi:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     description: apidescription5200
     authentication_settings:
       o_auth2:
@@ -276,19 +276,19 @@ EXAMPLES = '''
   azure_rm_apimanagementapi:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     api_revision_description: Creating a Revision of an existing API
     source_api_id: >-
       /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
       }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{
-      apis_name }}
+      api_name }}
     service_url: 'http://echoapi.cloudapp.net/apiv3'
     path: echo
 - name: ApiManagementCreateApiNewVersionUsingExistingApi
   azure_rm_apimanagementapi:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     description: >-
       Create Echo API into a new Version using Existing Version Set and Copy all
       Operations.
@@ -302,7 +302,7 @@ EXAMPLES = '''
     source_api_id: >-
       /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
       }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{
-      apis_name }}
+      api_name }}
     display_name: Echo API2
     service_url: 'http://echoapi.cloudapp.net/api'
     path: echo2
@@ -313,14 +313,14 @@ EXAMPLES = '''
   azure_rm_apimanagementapi:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     description: Copy of Existing Echo Api including Operations.
     is_current: true
     subscription_required: true
     source_api_id: >-
       /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
       }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{
-      apis_name }}
+      api_name }}
     display_name: Echo API2
     service_url: 'http://echoapi.cloudapp.net/api'
     path: echo2
@@ -331,7 +331,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapi:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     description: >-
       This is a sample server Petstore server.  You can find out more about
       Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net,
@@ -354,7 +354,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapi:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     display_name: Echo API New
     service_url: 'http://echoapi.cloudapp.net/api2'
     path: newecho
@@ -362,7 +362,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapi:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     state: absent
 
 '''

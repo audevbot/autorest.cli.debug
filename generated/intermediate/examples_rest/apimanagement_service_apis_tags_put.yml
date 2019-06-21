@@ -7,7 +7,7 @@
   vars:
     resource_group: myResourceGroup
     service_name: myService
-    apis_name: myApis
+    api_name: myApi
     tag_name: myTag
   tasks:
     - name: ApiManagementCreateApiTag
@@ -20,7 +20,7 @@
         resource_name: '{{ service_name }}'
         subresource:
           - type: apis
-            name: '{{ apis_name }}'
+            name: '{{ api_name }}'
           - type: tags
             name: '{{ tag_name }}'
         body: !<tag:yaml.org,2002:js/undefined> ''

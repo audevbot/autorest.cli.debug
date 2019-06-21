@@ -83,7 +83,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapiissuecomment:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     issue_id: myIssue
     comment_id: myComment
     text: Issue comment.
@@ -96,7 +96,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapiissuecomment:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     issue_id: myIssue
     comment_id: myComment
     state: absent

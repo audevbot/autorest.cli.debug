@@ -8,7 +8,7 @@
   vars:
     resource_group: myResourceGroup
     service_name: myService
-    apis_name: myApis
+    api_name: myApi
     release_name: myRelease
   tasks:
     - name: ApiManagementCreateApiRelease
@@ -21,7 +21,7 @@
         resource_name: '{{ service_name }}'
         subresource:
           - type: apis
-            name: '{{ apis_name }}'
+            name: '{{ api_name }}'
           - type: releases
             name: '{{ release_name }}'
         body:
@@ -29,5 +29,5 @@
             apiId: >-
               /subscriptions/{{ subscription_id }}/resourceGroups/{{
               resource_group }}/providers/Microsoft.ApiManagement/service/{{
-              service_name }}/apis/{{ apis_name }}
+              service_name }}/apis/{{ api_name }}
             notes: yahooagain

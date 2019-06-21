@@ -683,7 +683,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
                     '/databaseAccounts' +
                     '/{{ database_account_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/databases' +
                     '/{{ database_name }}' +
                     '/collections' +
@@ -693,7 +693,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -727,7 +727,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
                     '/databaseAccounts' +
                     '/{{ database_account_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/databases' +
                     '/{{ database_name }}' +
                     '/containers' +
@@ -737,7 +737,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -771,7 +771,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
                     '/databaseAccounts' +
                     '/{{ database_account_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/databases' +
                     '/{{ database_name }}' +
                     '/graphs' +
@@ -781,7 +781,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -815,7 +815,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
                     '/databaseAccounts' +
                     '/{{ database_account_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/keyspaces' +
                     '/{{ keyspace_name }}' +
                     '/tables' +
@@ -825,7 +825,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -859,7 +859,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
                     '/databaseAccounts' +
                     '/{{ database_account_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/databases' +
                     '/{{ database_name }}' +
                     '/collections' +
@@ -867,7 +867,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -901,7 +901,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
                     '/databaseAccounts' +
                     '/{{ database_account_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/databases' +
                     '/{{ database_name }}' +
                     '/containers' +
@@ -909,7 +909,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -943,7 +943,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
                     '/databaseAccounts' +
                     '/{{ database_account_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/keyspaces' +
                     '/{{ keyspace_name }}' +
                     '/settings' +
@@ -951,7 +951,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -985,7 +985,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
                     '/databaseAccounts' +
                     '/{{ database_account_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/databases' +
                     '/{{ database_name }}' +
                     '/settings' +
@@ -993,7 +993,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -1027,7 +1027,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
                     '/databaseAccounts' +
                     '/{{ database_account_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/databases' +
                     '/{{ database_name }}' +
                     '/settings' +
@@ -1035,7 +1035,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -1069,7 +1069,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
                     '/databaseAccounts' +
                     '/{{ database_account_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/databases' +
                     '/{{ database_name }}' +
                     '/settings' +
@@ -1077,7 +1077,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -1111,7 +1111,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
                     '/databaseAccounts' +
                     '/{{ database_account_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/keyspaces' +
                     '/{{ keyspace_name }}' +
                     '/tables' +
@@ -1119,7 +1119,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -1153,7 +1153,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
                     '/databaseAccounts' +
                     '/{{ database_account_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/databases' +
                     '/{{ database_name }}' +
                     '/graphs' +
@@ -1161,7 +1161,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -1195,7 +1195,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
                     '/databaseAccounts' +
                     '/{{ database_account_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/tables' +
                     '/{{ table_name }}' +
                     '/settings' +
@@ -1203,7 +1203,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -1237,14 +1237,14 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
                     '/databaseAccounts' +
                     '/{{ database_account_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/databases' +
                     '/{{ database_name }}' +
                     '/collections')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -1278,14 +1278,14 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
                     '/databaseAccounts' +
                     '/{{ database_account_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/databases' +
                     '/{{ database_name }}' +
                     '/containers')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -1319,14 +1319,14 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
                     '/databaseAccounts' +
                     '/{{ database_account_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/keyspaces' +
                     '/{{ keyspace_name }}' +
                     '/tables')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -1360,14 +1360,14 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
                     '/databaseAccounts' +
                     '/{{ database_account_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/databases' +
                     '/{{ database_name }}' +
                     '/graphs')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -1401,13 +1401,13 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
                     '/databaseAccounts' +
                     '/{{ database_account_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/databases' +
                     '/{{ database_name }}')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -1441,13 +1441,13 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
                     '/databaseAccounts' +
                     '/{{ database_account_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/databases' +
                     '/{{ database_name }}')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -1481,13 +1481,13 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
                     '/databaseAccounts' +
                     '/{{ database_account_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/keyspaces' +
                     '/{{ keyspace_name }}')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -1521,13 +1521,13 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
                     '/databaseAccounts' +
                     '/{{ database_account_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/databases' +
                     '/{{ database_name }}')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -1561,13 +1561,13 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
                     '/databaseAccounts' +
                     '/{{ database_account_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/tables' +
                     '/{{ table_name }}')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -1601,12 +1601,12 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
                     '/databaseAccounts' +
                     '/{{ database_account_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/keyspaces')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -1640,12 +1640,12 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
                     '/databaseAccounts' +
                     '/{{ database_account_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/databases')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -1679,12 +1679,12 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
                     '/databaseAccounts' +
                     '/{{ database_account_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/databases')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -1718,12 +1718,12 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
                     '/databaseAccounts' +
                     '/{{ database_account_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/databases')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -1757,12 +1757,12 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
                     '/databaseAccounts' +
                     '/{{ database_account_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/tables')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -1799,7 +1799,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -1836,7 +1836,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -1873,7 +1873,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -1910,7 +1910,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -1946,7 +1946,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -1981,7 +1981,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)
@@ -2014,7 +2014,7 @@ class AzureRMDatabaseAccountsInfo(AzureRMModuleBase):
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ database_account_name }}', self.database_account_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ database_name }}', self.database_name)
         self.url = self.url.replace('{{ collection_name }}', self.collection_name)
         self.url = self.url.replace('{{ setting_name }}', self.name)

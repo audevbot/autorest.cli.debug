@@ -6,7 +6,7 @@
   vars:
     resource_group: myResourceGroup
     service_name: myService
-    apis_name: myApis
+    api_name: myApi
     operation_name: myOperation
     policy_name: myPolicy
   tasks:
@@ -19,7 +19,7 @@
         resource_name: '{{ service_name }}'
         subresource:
           - type: apis
-            name: '{{ apis_name }}'
+            name: '{{ api_name }}'
           - type: operations
             name: '{{ operation_name }}'
           - type: policies

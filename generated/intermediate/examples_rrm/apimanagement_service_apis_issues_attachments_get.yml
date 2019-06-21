@@ -6,7 +6,7 @@
   vars:
     resource_group: myResourceGroup
     service_name: myService
-    apis_name: myApis
+    api_name: myApi
     issue_name: myIssue
   tasks:
 
@@ -14,7 +14,7 @@
       azure_rm_apimanagementapiissueattachment_info:
         resource_group: '{{resource_group}}'
         name: '{{service_name}}'
-        api_id: '{{apis_name}}'
+        api_id: '{{api_name}}'
         issue_id: '{{issue_name}}'
     
       register: output

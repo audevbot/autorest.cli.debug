@@ -5,6 +5,6 @@ task: !ruby/object:Provider::Ansible::Task
   code:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     state: absent
   

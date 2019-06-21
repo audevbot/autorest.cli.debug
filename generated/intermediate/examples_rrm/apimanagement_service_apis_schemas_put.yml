@@ -10,7 +10,7 @@
   vars:
     resource_group: myResourceGroup
     service_name: myService
-    apis_name: myApis
+    api_name: myApi
     schema_name: mySchema
   tasks:
 
@@ -18,7 +18,7 @@
       azure_rm_apimanagementapischema:
         resource_group: '{{resource_group}}'
         name: '{{service_name}}'
-        api_id: '{{apis_name}}'
+        api_id: '{{api_name}}'
         schema_id: '{{schema_name}}'
         content_type: application/vnd.ms-azure-apim.xsd+xml
         document:

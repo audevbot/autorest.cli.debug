@@ -7,7 +7,7 @@
     resource_group: myResourceGroup
     service_name: myService
     product_name: myProduct
-    apis_name: myApis
+    api_name: myApi
   tasks:
 
     - name: ApiManagementDeleteProductApi
@@ -15,6 +15,6 @@
         resource_group: '{{resource_group}}'
         name: '{{service_name}}'
         product_id: '{{product_name}}'
-        api_id: '{{apis_name}}'
+        api_id: '{{api_name}}'
         state: absent
     

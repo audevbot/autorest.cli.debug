@@ -47,66 +47,66 @@ def load_arguments(self, _):
         c.argument('batch_name', batch_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('batch applications versions') as c:
+    with self.argument_context('batch application version') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('batch applications versions_name', batch applications versions_name_type, options_list=['--name', '-n'])
+        c.argument('batch application version_name', batch application version_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('batch applications versions') as c:
+    with self.argument_context('batch application version') as c:
         c.argument('batch_name', batch_name_type, id_part=None)
 
-    with self.argument_context('batch applications versions') as c:
+    with self.argument_context('batch application version') as c:
         c.argument('batch_name', batch_name_type, id_part=None)
 
-    with self.argument_context('batch applications versions') as c:
+    with self.argument_context('batch application version') as c:
         c.argument('batch_name', batch_name_type, id_part=None)
 
-    with self.argument_context('batch applications versions') as c:
+    with self.argument_context('batch application version') as c:
         c.argument('batch_name', batch_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('batch applications versions') as c:
+    with self.argument_context('batch application version') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('batch applications versions_name', batch applications versions_name_type, options_list=['--name', '-n'])
+        c.argument('batch application version_name', batch application version_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('batch applications versions') as c:
+    with self.argument_context('batch application version') as c:
         c.argument('batch_name', batch_name_type, id_part=None)
 
-    with self.argument_context('batch applications versions') as c:
+    with self.argument_context('batch application version') as c:
         c.argument('batch_name', batch_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('batch applications') as c:
+    with self.argument_context('batch application') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('batch applications_name', batch applications_name_type, options_list=['--name', '-n'])
+        c.argument('batch application_name', batch application_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('batch applications') as c:
+    with self.argument_context('batch application') as c:
         c.argument('batch_name', batch_name_type, id_part=None)
 
-    with self.argument_context('batch applications') as c:
+    with self.argument_context('batch application') as c:
         c.argument('batch_name', batch_name_type, id_part=None)
 
-    with self.argument_context('batch applications') as c:
+    with self.argument_context('batch application') as c:
         c.argument('batch_name', batch_name_type, id_part=None)
 
-    with self.argument_context('batch applications') as c:
+    with self.argument_context('batch application') as c:
         c.argument('batch_name', batch_name_type, id_part=None)
 
-    with self.argument_context('batch applications') as c:
+    with self.argument_context('batch application') as c:
         c.argument('batch_name', batch_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('batch applications') as c:
+    with self.argument_context('batch application') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('batch applications_name', batch applications_name_type, options_list=['--name', '-n'])
+        c.argument('batch application_name', batch application_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('batch applications') as c:
+    with self.argument_context('batch application') as c:
         c.argument('batch_name', batch_name_type, id_part=None)
 
-    with self.argument_context('batch applications') as c:
+    with self.argument_context('batch application') as c:
         c.argument('batch_name', batch_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
@@ -125,69 +125,69 @@ def load_arguments(self, _):
         c.argument('batch_name', batch_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('batch certificates') as c:
+    with self.argument_context('batch certificate') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('batch certificates_name', batch certificates_name_type, options_list=['--name', '-n'])
+        c.argument('batch certificate_name', batch certificate_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('batch certificates') as c:
+    with self.argument_context('batch certificate') as c:
         c.argument('batch_name', batch_name_type, id_part=None)
 
-    with self.argument_context('batch certificates') as c:
+    with self.argument_context('batch certificate') as c:
         c.argument('batch_name', batch_name_type, id_part=None)
 
-    with self.argument_context('batch certificates') as c:
+    with self.argument_context('batch certificate') as c:
         c.argument('batch_name', batch_name_type, id_part=None)
 
-    with self.argument_context('batch certificates') as c:
+    with self.argument_context('batch certificate') as c:
         c.argument('batch_name', batch_name_type, id_part=None)
 
-    with self.argument_context('batch certificates') as c:
+    with self.argument_context('batch certificate') as c:
         c.argument('batch_name', batch_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('batch certificates') as c:
+    with self.argument_context('batch certificate') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('batch certificates_name', batch certificates_name_type, options_list=['--name', '-n'])
+        c.argument('batch certificate_name', batch certificate_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('batch certificates') as c:
+    with self.argument_context('batch certificate') as c:
         c.argument('batch_name', batch_name_type, id_part=None)
 
-    with self.argument_context('batch certificates') as c:
+    with self.argument_context('batch certificate') as c:
         c.argument('batch_name', batch_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('batch pools') as c:
+    with self.argument_context('batch pool') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('batch pools_name', batch pools_name_type, options_list=['--name', '-n'])
+        c.argument('batch pool_name', batch pool_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('batch pools') as c:
+    with self.argument_context('batch pool') as c:
         c.argument('batch_name', batch_name_type, id_part=None)
 
-    with self.argument_context('batch pools') as c:
+    with self.argument_context('batch pool') as c:
         c.argument('batch_name', batch_name_type, id_part=None)
 
-    with self.argument_context('batch pools') as c:
+    with self.argument_context('batch pool') as c:
         c.argument('batch_name', batch_name_type, id_part=None)
 
-    with self.argument_context('batch pools') as c:
+    with self.argument_context('batch pool') as c:
         c.argument('batch_name', batch_name_type, id_part=None)
 
-    with self.argument_context('batch pools') as c:
+    with self.argument_context('batch pool') as c:
         c.argument('batch_name', batch_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('batch pools') as c:
+    with self.argument_context('batch pool') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('batch pools_name', batch pools_name_type, options_list=['--name', '-n'])
+        c.argument('batch pool_name', batch pool_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('batch pools') as c:
+    with self.argument_context('batch pool') as c:
         c.argument('batch_name', batch_name_type, id_part=None)
 
-    with self.argument_context('batch pools') as c:
+    with self.argument_context('batch pool') as c:
         c.argument('batch_name', batch_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 

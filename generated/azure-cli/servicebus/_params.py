@@ -44,177 +44,177 @@ def load_arguments(self, _):
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('servicebus authorizationrules') as c:
+    with self.argument_context('servicebus authorizationrule') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('servicebus authorizationrules_name', servicebus authorizationrules_name_type, options_list=['--name', '-n'])
+        c.argument('servicebus authorizationrule_name', servicebus authorizationrule_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('servicebus authorizationrules') as c:
+    with self.argument_context('servicebus authorizationrule') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
 
-    with self.argument_context('servicebus authorizationrules') as c:
+    with self.argument_context('servicebus authorizationrule') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('servicebus disasterrecoveryconfigs') as c:
+    with self.argument_context('servicebus disasterrecoveryconfig') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('servicebus disasterrecoveryconfigs_name', servicebus disasterrecoveryconfigs_name_type, options_list=['--name', '-n'])
+        c.argument('servicebus disasterrecoveryconfig_name', servicebus disasterrecoveryconfig_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('servicebus disasterrecoveryconfigs') as c:
+    with self.argument_context('servicebus disasterrecoveryconfig') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
 
-    with self.argument_context('servicebus disasterrecoveryconfigs') as c:
+    with self.argument_context('servicebus disasterrecoveryconfig') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
 
-    with self.argument_context('servicebus disasterrecoveryconfigs') as c:
+    with self.argument_context('servicebus disasterrecoveryconfig') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
 
-    with self.argument_context('servicebus disasterrecoveryconfigs') as c:
+    with self.argument_context('servicebus disasterrecoveryconfig') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('servicebus disasterrecoveryconfigs authorizationrules') as c:
+    with self.argument_context('servicebus disasterrecoveryconfig authorizationrule') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('servicebus disasterrecoveryconfigs authorizationrules_name', servicebus disasterrecoveryconfigs authorizationrules_name_type, options_list=['--name', '-n'])
+        c.argument('servicebus disasterrecoveryconfig authorizationrule_name', servicebus disasterrecoveryconfig authorizationrule_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('servicebus disasterrecoveryconfigs authorizationrules') as c:
+    with self.argument_context('servicebus disasterrecoveryconfig authorizationrule') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
 
-    with self.argument_context('servicebus disasterrecoveryconfigs authorizationrules') as c:
+    with self.argument_context('servicebus disasterrecoveryconfig authorizationrule') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('servicebus migrationconfigurations') as c:
+    with self.argument_context('servicebus migrationconfiguration') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('servicebus migrationconfigurations_name', servicebus migrationconfigurations_name_type, options_list=['--name', '-n'])
+        c.argument('servicebus migrationconfiguration_name', servicebus migrationconfiguration_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('servicebus migrationconfigurations') as c:
+    with self.argument_context('servicebus migrationconfiguration') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
 
-    with self.argument_context('servicebus migrationconfigurations') as c:
+    with self.argument_context('servicebus migrationconfiguration') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('servicebus queues') as c:
+    with self.argument_context('servicebus queue') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('servicebus queues_name', servicebus queues_name_type, options_list=['--name', '-n'])
+        c.argument('servicebus queue_name', servicebus queue_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('servicebus queues') as c:
+    with self.argument_context('servicebus queue') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
 
-    with self.argument_context('servicebus queues') as c:
+    with self.argument_context('servicebus queue') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
 
-    with self.argument_context('servicebus queues') as c:
+    with self.argument_context('servicebus queue') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
 
-    with self.argument_context('servicebus queues') as c:
+    with self.argument_context('servicebus queue') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('servicebus queues authorizationrules') as c:
+    with self.argument_context('servicebus queue authorizationrule') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('servicebus queues authorizationrules_name', servicebus queues authorizationrules_name_type, options_list=['--name', '-n'])
+        c.argument('servicebus queue authorizationrule_name', servicebus queue authorizationrule_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('servicebus queues authorizationrules') as c:
+    with self.argument_context('servicebus queue authorizationrule') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
 
-    with self.argument_context('servicebus queues authorizationrules') as c:
+    with self.argument_context('servicebus queue authorizationrule') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('servicebus topics') as c:
+    with self.argument_context('servicebus topic') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('servicebus topics_name', servicebus topics_name_type, options_list=['--name', '-n'])
+        c.argument('servicebus topic_name', servicebus topic_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('servicebus topics') as c:
+    with self.argument_context('servicebus topic') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
 
-    with self.argument_context('servicebus topics') as c:
+    with self.argument_context('servicebus topic') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
 
-    with self.argument_context('servicebus topics') as c:
+    with self.argument_context('servicebus topic') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
 
-    with self.argument_context('servicebus topics') as c:
+    with self.argument_context('servicebus topic') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('servicebus topics authorizationrules') as c:
+    with self.argument_context('servicebus topic authorizationrule') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('servicebus topics authorizationrules_name', servicebus topics authorizationrules_name_type, options_list=['--name', '-n'])
+        c.argument('servicebus topic authorizationrule_name', servicebus topic authorizationrule_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('servicebus topics authorizationrules') as c:
+    with self.argument_context('servicebus topic authorizationrule') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
 
-    with self.argument_context('servicebus topics authorizationrules') as c:
+    with self.argument_context('servicebus topic authorizationrule') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('servicebus topics subscriptions') as c:
+    with self.argument_context('servicebus topic subscription') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('servicebus topics subscriptions_name', servicebus topics subscriptions_name_type, options_list=['--name', '-n'])
+        c.argument('servicebus topic subscription_name', servicebus topic subscription_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('servicebus topics subscriptions') as c:
+    with self.argument_context('servicebus topic subscription') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
 
-    with self.argument_context('servicebus topics subscriptions') as c:
+    with self.argument_context('servicebus topic subscription') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
 
-    with self.argument_context('servicebus topics subscriptions') as c:
+    with self.argument_context('servicebus topic subscription') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
 
-    with self.argument_context('servicebus topics subscriptions') as c:
+    with self.argument_context('servicebus topic subscription') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('servicebus topics subscriptions') as c:
+    with self.argument_context('servicebus topic subscription') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('servicebus topics subscriptions_name', servicebus topics subscriptions_name_type, options_list=['--name', '-n'])
+        c.argument('servicebus topic subscription_name', servicebus topic subscription_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('servicebus topics subscriptions') as c:
+    with self.argument_context('servicebus topic subscription') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
 
-    with self.argument_context('servicebus topics subscriptions') as c:
+    with self.argument_context('servicebus topic subscription') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('servicebus topics subscriptions rules') as c:
+    with self.argument_context('servicebus topic subscription rule') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('servicebus topics subscriptions rules_name', servicebus topics subscriptions rules_name_type, options_list=['--name', '-n'])
+        c.argument('servicebus topic subscription rule_name', servicebus topic subscription rule_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('servicebus topics subscriptions rules') as c:
+    with self.argument_context('servicebus topic subscription rule') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
 
-    with self.argument_context('servicebus topics subscriptions rules') as c:
+    with self.argument_context('servicebus topic subscription rule') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
 
-    with self.argument_context('servicebus topics subscriptions rules') as c:
+    with self.argument_context('servicebus topic subscription rule') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
 
-    with self.argument_context('servicebus topics subscriptions rules') as c:
+    with self.argument_context('servicebus topic subscription rule') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('servicebus topics subscriptions rules') as c:
+    with self.argument_context('servicebus topic subscription rule') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('servicebus topics subscriptions rules_name', servicebus topics subscriptions rules_name_type, options_list=['--name', '-n'])
+        c.argument('servicebus topic subscription rule_name', servicebus topic subscription rule_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('servicebus topics subscriptions rules') as c:
+    with self.argument_context('servicebus topic subscription rule') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
 
-    with self.argument_context('servicebus topics subscriptions rules') as c:
+    with self.argument_context('servicebus topic subscription rule') as c:
         c.argument('servicebus_name', servicebus_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 

@@ -81,7 +81,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapitagdescription:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     tag_id: myTagDescription
     description: >-
       Some description that will be displayed for operation's tag if the tag is
@@ -92,7 +92,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapitagdescription:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     tag_id: myTagDescription
     state: absent
 

@@ -22,7 +22,7 @@ SUBSCRIPTION_ID = os.environ['AZURE_SUBSCRIPTION_ID']
 RESOURCE_GROUP = "myresourcegroup"
 SERVICE_NAME = "myservice"
 PRODUCT_NAME = "myproduct"
-APIS_NAME = "myapis"
+API_NAME = "myapi"
 
 BODY = {}
 
@@ -49,7 +49,7 @@ def run_example():
     header_parameters = {}
 
     operation_config = {}
-    request = service_client.put("/subscriptions/" + SUBSCRIPTION + "/resourceGroups/" + RESOURCE_GR + "/providers/Microsoft.ApiManagement/service/" + SERVICE_N + "/products/" + PRODUCT_N + "/apis/" + APIS_N, query_parameters)
+    request = service_client.put("/subscriptions/" + SUBSCRIPTION + "/resourceGroups/" + RESOURCE_GR + "/providers/Microsoft.ApiManagement/service/" + SERVICE_N + "/products/" + PRODUCT_N + "/apis/" + API_N, query_parameters)
     response = service_client.send(request, header_parameters, BODY, **operation_config)
     print(response.text)
 
