@@ -31,49 +31,49 @@ def list_compute(cmd, client, resource_group_name, apimanagement_name, location=
     return client.galleries.list()
 
 
-def create_compute images(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+def create_compute_images(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
     return client.gallery_images.create()
 
 
-def delete_compute images(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+def delete_compute_images(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
     return client.gallery_images.delete()
 
 
-def list_compute images(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+def list_compute_images(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
     return client.gallery_images.list()
 
 
-def show_compute images(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+def show_compute_images(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
     return client.gallery_images.show()
 
 
-def show_compute images(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+def show_compute_images(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
     return client.gallery_images.show()
 
 
-def list_compute images(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+def list_compute_images(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
     return client.gallery_images.list()
 
 
-def create_compute images versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+def create_compute_images_versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
     return client.gallery_image_versions.create()
 
 
-def delete_compute images versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+def delete_compute_images_versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
     return client.gallery_image_versions.delete()
 
 
-def list_compute images versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+def list_compute_images_versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
     return client.gallery_image_versions.list()
 
 
-def show_compute images versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+def show_compute_images_versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
     return client.gallery_image_versions.show()
 
 
-def show_compute images versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+def show_compute_images_versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
     return client.gallery_image_versions.show()
 
 
-def list_compute images versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+def list_compute_images_versions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
     return client.gallery_image_versions.list()
