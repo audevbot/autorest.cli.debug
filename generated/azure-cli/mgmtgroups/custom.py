@@ -9,27 +9,27 @@ from knack.util import CLIError
 
 def create_mgmtgroups(cmd, client,
                       group_id,
-                      properties,
-                      display_name,
-                      details,
-                      tenant_id,
-                      roles,
-                      children,
-                      id,
-                      type):
+                      properties=None,
+                      display_name=None,
+                      details=None,
+                      tenant_id=None,
+                      roles=None,
+                      children=None,
+                      id=None,
+                      type=None):
     return client.management_groups.create()
 
 
 def update_mgmtgroups(cmd, client,
                       group_id,
-                      properties,
-                      display_name,
-                      details,
-                      tenant_id,
-                      roles,
-                      children,
-                      id,
-                      type):
+                      properties=None,
+                      display_name=None,
+                      details=None,
+                      tenant_id=None,
+                      roles=None,
+                      children=None,
+                      id=None,
+                      type=None):
     return client.management_groups.update()
 
 

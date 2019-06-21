@@ -10,17 +10,17 @@ from knack.util import CLIError
 def create_network(cmd, client,
                    resource_group,
                    name,
-                   id,
-                   location,
-                   tags,
-                   properties,
-                   application_rule_collections,
-                   nat_rule_collections,
-                   network_rule_collections,
-                   ip_configurations,
-                   provisioning_state,
-                   type,
-                   etag):
+                   id=None,
+                   location=None,
+                   tags=None,
+                   properties=None,
+                   application_rule_collections=None,
+                   nat_rule_collections=None,
+                   network_rule_collections=None,
+                   ip_configurations=None,
+                   provisioning_state=None,
+                   type=None,
+                   etag=None):
     return client.azure_firewalls.create()
 
 
