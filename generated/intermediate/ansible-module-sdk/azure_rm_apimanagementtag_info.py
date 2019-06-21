@@ -83,13 +83,13 @@ EXAMPLES = '''
   azure_rm_apimanagementtag_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
 - name: ApiManagementGetApiTag
   azure_rm_apimanagementtag_info:
     resource_group: myResourceGroup
     name: myService
     tag_id: myTag
-    api_id: myApis
+    api_id: myApi
 - name: ApiManagementListProductTags
   azure_rm_apimanagementtag_info:
     resource_group: myResourceGroup
@@ -105,14 +105,14 @@ EXAMPLES = '''
   azure_rm_apimanagementtag_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     operation_id: myOperation
 - name: ApiManagementGetApiOperationTag
   azure_rm_apimanagementtag_info:
     resource_group: myResourceGroup
     name: myService
     tag_id: myTag
-    api_id: myApis
+    api_id: myApi
     operation_id: myOperation
 
 '''

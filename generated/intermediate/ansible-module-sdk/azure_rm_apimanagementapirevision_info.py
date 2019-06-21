@@ -85,7 +85,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapirevision_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
 
 '''
 

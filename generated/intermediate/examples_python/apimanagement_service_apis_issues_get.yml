@@ -21,7 +21,7 @@ import uuid
 SUBSCRIPTION_ID = os.environ['AZURE_SUBSCRIPTION_ID']
 RESOURCE_GROUP = "myresourcegroup"
 SERVICE_NAME = "myservice"
-APIS_NAME = "myapis"
+API_NAME = "myapi"
 
 BODY = {}
 
@@ -48,7 +48,7 @@ def run_example():
     header_parameters = {}
 
     operation_config = {}
-    request = service_client.get("/subscriptions/" + SUBSCRIPTION + "/resourceGroups/" + RESOURCE_GR + "/providers/Microsoft.ApiManagement/service/" + SERVICE_N + "/apis/" + APIS_N + "/issues", query_parameters)
+    request = service_client.get("/subscriptions/" + SUBSCRIPTION + "/resourceGroups/" + RESOURCE_GR + "/providers/Microsoft.ApiManagement/service/" + SERVICE_N + "/apis/" + API_N + "/issues", query_parameters)
     response = service_client.send(request, header_parameters, BODY, **operation_config)
     print(response.text)
 

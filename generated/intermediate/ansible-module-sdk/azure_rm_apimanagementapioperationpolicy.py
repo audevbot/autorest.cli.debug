@@ -80,7 +80,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapioperationpolicy:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     operation_id: myOperation
     policy_id: myPolicy
     value: >-
@@ -91,7 +91,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapioperationpolicy:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     operation_id: myOperation
     policy_id: myPolicy
     state: absent

@@ -1696,7 +1696,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/tables
+          database_account_name }}/apis/{{ api_name }}/tables
         HttpMethod: get
         IsAsync: false
       - Name: ListSqlDatabases
@@ -1709,7 +1709,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases
+          database_account_name }}/apis/{{ api_name }}/databases
         HttpMethod: get
         IsAsync: false
       - Name: ListMongoDBDatabases
@@ -1722,7 +1722,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases
+          database_account_name }}/apis/{{ api_name }}/databases
         HttpMethod: get
         IsAsync: false
       - Name: ListGremlinDatabases
@@ -1735,7 +1735,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases
+          database_account_name }}/apis/{{ api_name }}/databases
         HttpMethod: get
         IsAsync: false
       - Name: ListCassandraKeyspaces
@@ -1748,7 +1748,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/keyspaces
+          database_account_name }}/apis/{{ api_name }}/keyspaces
         HttpMethod: get
         IsAsync: false
       - Name: GetTable
@@ -1763,7 +1763,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/tables/{{ table_name }}
+          database_account_name }}/apis/{{ api_name }}/tables/{{ table_name }}
         HttpMethod: get
         IsAsync: false
       - Name: GetSqlDatabase
@@ -1778,7 +1778,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}
         HttpMethod: get
         IsAsync: false
@@ -1794,7 +1794,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}
         HttpMethod: get
         IsAsync: false
@@ -1810,7 +1810,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}
         HttpMethod: get
         IsAsync: false
@@ -1826,7 +1826,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/keyspaces/{{
+          database_account_name }}/apis/{{ api_name }}/keyspaces/{{
           keyspace_name }}
         HttpMethod: get
         IsAsync: false
@@ -1842,7 +1842,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/graphs
         HttpMethod: get
         IsAsync: false
@@ -1858,7 +1858,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/containers
         HttpMethod: get
         IsAsync: false
@@ -1874,7 +1874,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/keyspaces/{{
+          database_account_name }}/apis/{{ api_name }}/keyspaces/{{
           keyspace_name }}/tables
         HttpMethod: get
         IsAsync: false
@@ -1890,7 +1890,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/tables/{{ table_name
+          database_account_name }}/apis/{{ api_name }}/tables/{{ table_name
           }}/settings/{{ setting_name }}
         HttpMethod: get
         IsAsync: false
@@ -1906,7 +1906,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/collections
         HttpMethod: get
         IsAsync: false
@@ -1922,7 +1922,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/settings/{{ setting_name }}
         HttpMethod: get
         IsAsync: false
@@ -1940,7 +1940,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/graphs/{{ graph_name }}
         HttpMethod: get
         IsAsync: false
@@ -1956,7 +1956,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/settings/{{ setting_name }}
         HttpMethod: get
         IsAsync: false
@@ -1972,7 +1972,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/settings/{{ setting_name }}
         HttpMethod: get
         IsAsync: false
@@ -1990,7 +1990,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/keyspaces/{{
+          database_account_name }}/apis/{{ api_name }}/keyspaces/{{
           keyspace_name }}/tables/{{ table_name }}
         HttpMethod: get
         IsAsync: false
@@ -2006,7 +2006,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/keyspaces/{{
+          database_account_name }}/apis/{{ api_name }}/keyspaces/{{
           keyspace_name }}/settings/{{ setting_name }}
         HttpMethod: get
         IsAsync: false
@@ -2024,7 +2024,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/containers/{{ container_name }}
         HttpMethod: get
         IsAsync: false
@@ -2042,7 +2042,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/collections/{{ collection_name }}
         HttpMethod: get
         IsAsync: false
@@ -2060,7 +2060,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/graphs/{{ graph_name }}/settings/{{ setting_name }}
         HttpMethod: get
         IsAsync: false
@@ -2078,7 +2078,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/keyspaces/{{
+          database_account_name }}/apis/{{ api_name }}/keyspaces/{{
           keyspace_name }}/tables/{{ table_name }}/settings/{{ setting_name }}
         HttpMethod: get
         IsAsync: false
@@ -2096,7 +2096,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/containers/{{ container_name }}/settings/{{
           setting_name }}
         HttpMethod: get
@@ -2115,7 +2115,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/collections/{{ collection_name }}/settings/{{
           setting_name }}
         HttpMethod: get
@@ -4543,7 +4543,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/collections/{{ collection_name }}/settings/{{
           setting_name }}
         HttpMethod: get
@@ -4562,7 +4562,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/containers/{{ container_name }}/settings/{{
           setting_name }}
         HttpMethod: get
@@ -4581,7 +4581,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/graphs/{{ graph_name }}/settings/{{ setting_name }}
         HttpMethod: get
         IsAsync: false
@@ -4599,7 +4599,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/keyspaces/{{
+          database_account_name }}/apis/{{ api_name }}/keyspaces/{{
           keyspace_name }}/tables/{{ table_name }}/settings/{{ setting_name }}
         HttpMethod: get
         IsAsync: false
@@ -4617,7 +4617,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/collections/{{ collection_name }}
         HttpMethod: get
         IsAsync: false
@@ -4635,7 +4635,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/containers/{{ container_name }}
         HttpMethod: get
         IsAsync: false
@@ -4651,7 +4651,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/keyspaces/{{
+          database_account_name }}/apis/{{ api_name }}/keyspaces/{{
           keyspace_name }}/settings/{{ setting_name }}
         HttpMethod: get
         IsAsync: false
@@ -4667,7 +4667,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/settings/{{ setting_name }}
         HttpMethod: get
         IsAsync: false
@@ -4683,7 +4683,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/settings/{{ setting_name }}
         HttpMethod: get
         IsAsync: false
@@ -4699,7 +4699,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/settings/{{ setting_name }}
         HttpMethod: get
         IsAsync: false
@@ -4717,7 +4717,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/keyspaces/{{
+          database_account_name }}/apis/{{ api_name }}/keyspaces/{{
           keyspace_name }}/tables/{{ table_name }}
         HttpMethod: get
         IsAsync: false
@@ -4735,7 +4735,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/graphs/{{ graph_name }}
         HttpMethod: get
         IsAsync: false
@@ -4751,7 +4751,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/tables/{{ table_name
+          database_account_name }}/apis/{{ api_name }}/tables/{{ table_name
           }}/settings/{{ setting_name }}
         HttpMethod: get
         IsAsync: false
@@ -4767,7 +4767,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/collections
         HttpMethod: get
         IsAsync: false
@@ -4783,7 +4783,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/containers
         HttpMethod: get
         IsAsync: false
@@ -4799,7 +4799,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/keyspaces/{{
+          database_account_name }}/apis/{{ api_name }}/keyspaces/{{
           keyspace_name }}/tables
         HttpMethod: get
         IsAsync: false
@@ -4815,7 +4815,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/graphs
         HttpMethod: get
         IsAsync: false
@@ -4831,7 +4831,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}
         HttpMethod: get
         IsAsync: false
@@ -4847,7 +4847,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}
         HttpMethod: get
         IsAsync: false
@@ -4863,7 +4863,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/keyspaces/{{
+          database_account_name }}/apis/{{ api_name }}/keyspaces/{{
           keyspace_name }}
         HttpMethod: get
         IsAsync: false
@@ -4879,7 +4879,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}
         HttpMethod: get
         IsAsync: false
@@ -4895,7 +4895,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/tables/{{ table_name }}
+          database_account_name }}/apis/{{ api_name }}/tables/{{ table_name }}
         HttpMethod: get
         IsAsync: false
       - Name: ListCassandraKeyspaces
@@ -4908,7 +4908,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/keyspaces
+          database_account_name }}/apis/{{ api_name }}/keyspaces
         HttpMethod: get
         IsAsync: false
       - Name: ListGremlinDatabases
@@ -4921,7 +4921,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases
+          database_account_name }}/apis/{{ api_name }}/databases
         HttpMethod: get
         IsAsync: false
       - Name: ListSqlDatabases
@@ -4934,7 +4934,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases
+          database_account_name }}/apis/{{ api_name }}/databases
         HttpMethod: get
         IsAsync: false
       - Name: ListMongoDBDatabases
@@ -4947,7 +4947,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases
+          database_account_name }}/apis/{{ api_name }}/databases
         HttpMethod: get
         IsAsync: false
       - Name: ListTables
@@ -4960,7 +4960,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/tables
+          database_account_name }}/apis/{{ api_name }}/tables
         HttpMethod: get
         IsAsync: false
       - Name: ListMetricDefinitions
@@ -5418,7 +5418,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/tables
+          database_account_name }}/apis/{{ api_name }}/tables
         Method: get
         Name: CosmosDBTableList
         Filename: documentdb_databaseaccounts_apis_tables_get
@@ -5429,8 +5429,8 @@ Modules:
           - name: database_account_name
             value: myDatabaseAccount
             swaggerName: accountName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: abl
         References: []
         OperationId: '1818'
@@ -5458,7 +5458,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases
+          database_account_name }}/apis/{{ api_name }}/databases
         Method: get
         Name: CosmosDBSqlDatabaseList
         Filename: documentdb_databaseaccounts_apis_databases_get
@@ -5469,8 +5469,8 @@ Modules:
           - name: database_account_name
             value: myDatabaseAccount
             swaggerName: accountName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: q
         References: []
         OperationId: '1818'
@@ -5493,7 +5493,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases
+          database_account_name }}/apis/{{ api_name }}/databases
         Method: get
         Name: CosmosDBMongoDBDatabaseList
         Filename: documentdb_databaseaccounts_apis_databases_get_2
@@ -5504,8 +5504,8 @@ Modules:
           - name: database_account_name
             value: myDatabaseAccount
             swaggerName: accountName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: ongod
         References: []
         OperationId: '1818'
@@ -5531,7 +5531,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases
+          database_account_name }}/apis/{{ api_name }}/databases
         Method: get
         Name: CosmosDBGremlinDatabaseList
         Filename: documentdb_databaseaccounts_apis_databases_get_4
@@ -5542,8 +5542,8 @@ Modules:
           - name: database_account_name
             value: myDatabaseAccount
             swaggerName: accountName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: remli
         References: []
         OperationId: '1818'
@@ -5566,7 +5566,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/keyspaces
+          database_account_name }}/apis/{{ api_name }}/keyspaces
         Method: get
         Name: CosmosDBCassandraKeyspaceList
         Filename: documentdb_databaseaccounts_apis_keyspaces_get
@@ -5577,8 +5577,8 @@ Modules:
           - name: database_account_name
             value: myDatabaseAccount
             swaggerName: accountName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: assandr
         References: []
         OperationId: '1818'
@@ -5601,7 +5601,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/tables/{{ table_name }}
+          database_account_name }}/apis/{{ api_name }}/tables/{{ table_name }}
         Method: get
         Name: CosmosDBTableGet
         Filename: documentdb_databaseaccounts_apis_tables_get_1
@@ -5612,8 +5612,8 @@ Modules:
           - name: database_account_name
             value: myDatabaseAccount
             swaggerName: accountName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: abl
           - name: table_name
             value: myTable
@@ -5644,7 +5644,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}
         Method: get
         Name: CosmosDBSqlDatabaseGet
@@ -5656,8 +5656,8 @@ Modules:
           - name: database_account_name
             value: myDatabaseAccount
             swaggerName: accountName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: q
           - name: database_name
             value: myDatabase
@@ -5683,7 +5683,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}
         Method: get
         Name: CosmosDBMongoDBDatabaseGet
@@ -5695,8 +5695,8 @@ Modules:
           - name: database_account_name
             value: myDatabaseAccount
             swaggerName: accountName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: ongod
           - name: database_name
             value: myDatabase
@@ -5725,7 +5725,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}
         Method: get
         Name: CosmosDBGremlinDatabaseGet
@@ -5737,8 +5737,8 @@ Modules:
           - name: database_account_name
             value: myDatabaseAccount
             swaggerName: accountName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: remli
           - name: database_name
             value: myDatabase
@@ -5764,7 +5764,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/keyspaces/{{
+          database_account_name }}/apis/{{ api_name }}/keyspaces/{{
           keyspace_name }}
         Method: get
         Name: CosmosDBCassandraKeyspaceGet
@@ -5776,8 +5776,8 @@ Modules:
           - name: database_account_name
             value: myDatabaseAccount
             swaggerName: accountName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: assandr
           - name: keyspace_name
             value: myKeyspace
@@ -5833,7 +5833,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/graphs
         Method: get
         Name: CosmosDBGremlinGraphList
@@ -5845,8 +5845,8 @@ Modules:
           - name: database_account_name
             value: myDatabaseAccount
             swaggerName: accountName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: remli
           - name: database_name
             value: myDatabase
@@ -5902,7 +5902,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/containers
         Method: get
         Name: CosmosDBSqlContainerList
@@ -5914,8 +5914,8 @@ Modules:
           - name: database_account_name
             value: myDatabaseAccount
             swaggerName: accountName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: q
           - name: database_name
             value: myDatabase
@@ -5953,7 +5953,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/keyspaces/{{
+          database_account_name }}/apis/{{ api_name }}/keyspaces/{{
           keyspace_name }}/tables
         Method: get
         Name: CosmosDBCassandraTableList
@@ -5965,8 +5965,8 @@ Modules:
           - name: database_account_name
             value: myDatabaseAccount
             swaggerName: accountName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: assandr
           - name: keyspace_name
             value: myKeyspace
@@ -5989,7 +5989,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/tables/{{ table_name
+          database_account_name }}/apis/{{ api_name }}/tables/{{ table_name
           }}/settings/{{ setting_name }}
         Method: get
         Name: CosmosDBTableThroughputGet
@@ -6001,8 +6001,8 @@ Modules:
           - name: database_account_name
             value: myDatabaseAccount
             swaggerName: accountName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: abl
           - name: table_name
             value: myTable
@@ -6042,7 +6042,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/collections
         Method: get
         Name: CosmosDBMongoDBCollectionList
@@ -6054,8 +6054,8 @@ Modules:
           - name: database_account_name
             value: myDatabaseAccount
             swaggerName: accountName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: ongod
           - name: database_name
             value: myDatabase
@@ -6078,7 +6078,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/settings/{{ setting_name }}
         Method: get
         Name: CosmosDBSqlDatabaseThroughputGet
@@ -6090,8 +6090,8 @@ Modules:
           - name: database_account_name
             value: myDatabaseAccount
             swaggerName: accountName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: q
           - name: database_name
             value: myDatabase
@@ -6149,7 +6149,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/graphs/{{ graph_name }}
         Method: get
         Name: CosmosDBGremlinGraphGet
@@ -6161,8 +6161,8 @@ Modules:
           - name: database_account_name
             value: myDatabaseAccount
             swaggerName: accountName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: remli
           - name: database_name
             value: myDatabase
@@ -6188,7 +6188,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/settings/{{ setting_name }}
         Method: get
         Name: CosmosDBGremlinDatabaseThroughputGet
@@ -6200,8 +6200,8 @@ Modules:
           - name: database_account_name
             value: myDatabaseAccount
             swaggerName: accountName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: remli
           - name: database_name
             value: myDatabase
@@ -6227,7 +6227,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/settings/{{ setting_name }}
         Method: get
         Name: CosmosDBMongoDBDatabaseThroughputGet
@@ -6239,8 +6239,8 @@ Modules:
           - name: database_account_name
             value: myDatabaseAccount
             swaggerName: accountName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: ongod
           - name: database_name
             value: myDatabase
@@ -6280,7 +6280,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/keyspaces/{{
+          database_account_name }}/apis/{{ api_name }}/keyspaces/{{
           keyspace_name }}/tables/{{ table_name }}
         Method: get
         Name: CosmosDBCassandraTableGet
@@ -6292,8 +6292,8 @@ Modules:
           - name: database_account_name
             value: myDatabaseAccount
             swaggerName: accountName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: assandr
           - name: keyspace_name
             value: myKeyspace
@@ -6319,7 +6319,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/keyspaces/{{
+          database_account_name }}/apis/{{ api_name }}/keyspaces/{{
           keyspace_name }}/settings/{{ setting_name }}
         Method: get
         Name: CosmosDBCassandraKeyspaceThroughputGet
@@ -6331,8 +6331,8 @@ Modules:
           - name: database_account_name
             value: myDatabaseAccount
             swaggerName: accountName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: assandr
           - name: keyspace_name
             value: myKeyspace
@@ -6391,7 +6391,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/containers/{{ container_name }}
         Method: get
         Name: CosmosDBSqlContainerGet
@@ -6403,8 +6403,8 @@ Modules:
           - name: database_account_name
             value: myDatabaseAccount
             swaggerName: accountName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: q
           - name: database_name
             value: myDatabase
@@ -6444,7 +6444,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/collections/{{ collection_name }}
         Method: get
         Name: CosmosDBMongoDBCollectionGet
@@ -6456,8 +6456,8 @@ Modules:
           - name: database_account_name
             value: myDatabaseAccount
             swaggerName: accountName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: ongod
           - name: database_name
             value: myDatabase
@@ -6484,7 +6484,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/graphs/{{ graph_name }}/settings/{{ setting_name }}
         Method: get
         Name: CosmosDBGremlinGraphThroughputGet
@@ -6496,8 +6496,8 @@ Modules:
           - name: database_account_name
             value: myDatabaseAccount
             swaggerName: accountName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: remli
           - name: database_name
             value: myDatabase
@@ -6527,7 +6527,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/keyspaces/{{
+          database_account_name }}/apis/{{ api_name }}/keyspaces/{{
           keyspace_name }}/tables/{{ table_name }}/settings/{{ setting_name }}
         Method: get
         Name: CosmosDBCassandraTableThroughputGet
@@ -6539,8 +6539,8 @@ Modules:
           - name: database_account_name
             value: myDatabaseAccount
             swaggerName: accountName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: assandr
           - name: keyspace_name
             value: myKeyspace
@@ -6570,7 +6570,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/containers/{{ container_name }}/settings/{{
           setting_name }}
         Method: get
@@ -6583,8 +6583,8 @@ Modules:
           - name: database_account_name
             value: myDatabaseAccount
             swaggerName: accountName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: q
           - name: database_name
             value: myDatabase
@@ -6614,7 +6614,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.DocumentDB/databaseAccounts/{{
-          database_account_name }}/apis/{{ apis_name }}/databases/{{
+          database_account_name }}/apis/{{ api_name }}/databases/{{
           database_name }}/collections/{{ collection_name }}/settings/{{
           setting_name }}
         Method: get
@@ -6627,8 +6627,8 @@ Modules:
           - name: database_account_name
             value: myDatabaseAccount
             swaggerName: accountName
-          - name: apis_name
-            value: myApis
+          - name: api_name
+            value: myApi
             swaggerName: ongod
           - name: database_name
             value: myDatabase

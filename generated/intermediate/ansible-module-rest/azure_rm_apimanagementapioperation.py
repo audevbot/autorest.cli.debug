@@ -325,7 +325,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapioperation:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     operation_id: myOperation
     template_parameters: []
     description: This can only be done by the logged in user.
@@ -351,7 +351,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapioperation:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     operation_id: myOperation
     template_parameters: []
     request:
@@ -381,7 +381,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapioperation:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     operation_id: myOperation
     state: absent
 
@@ -1171,13 +1171,13 @@ class AzureRMApiOperation(AzureRMModuleBaseExt):
                     '/service' +
                     '/{{ service_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/operations' +
                     '/{{ operation_name }}')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ service_name }}', self.service_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ operation_name }}', self.name)
 
         old_response = self.get_resource()

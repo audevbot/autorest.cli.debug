@@ -14,36 +14,36 @@ def load_arguments(self, _):
 
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('eventgrid eventsubscriptions') as c:
+    with self.argument_context('eventgrid eventsubscription') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('eventgrid eventsubscriptions_name', eventgrid eventsubscriptions_name_type, options_list=['--name', '-n'])
+        c.argument('eventgrid eventsubscription_name', eventgrid eventsubscription_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('eventgrid eventsubscriptions') as c:
+    with self.argument_context('eventgrid eventsubscription') as c:
         c.argument('eventgrid_name', eventgrid_name_type, id_part=None)
 
-    with self.argument_context('eventgrid eventsubscriptions') as c:
+    with self.argument_context('eventgrid eventsubscription') as c:
         c.argument('eventgrid_name', eventgrid_name_type, id_part=None)
 
-    with self.argument_context('eventgrid eventsubscriptions') as c:
+    with self.argument_context('eventgrid eventsubscription') as c:
         c.argument('eventgrid_name', eventgrid_name_type, id_part=None)
 
-    with self.argument_context('eventgrid eventsubscriptions') as c:
+    with self.argument_context('eventgrid eventsubscription') as c:
         c.argument('eventgrid_name', eventgrid_name_type, id_part=None)
 
-    with self.argument_context('eventgrid eventsubscriptions') as c:
+    with self.argument_context('eventgrid eventsubscription') as c:
         c.argument('eventgrid_name', eventgrid_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('eventgrid eventsubscriptions locations topictypes providers {providernamespace} {resourcetypename}') as c:
+    with self.argument_context('eventgrid eventsubscription location topictype provider {providernamespace} {resourcetypename}') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('eventgrid eventsubscriptions locations topictypes providers {providernamespace} {resourcetypename}_name', eventgrid eventsubscriptions locations topictypes providers {providernamespace} {resourcetypename}_name_type, options_list=['--name', '-n'])
+        c.argument('eventgrid eventsubscription location topictype provider {providernamespace} {resourcetypename}_name', eventgrid eventsubscription location topictype provider {providernamespace} {resourcetypename}_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('eventgrid eventsubscriptions locations topictypes providers {providernamespace} {resourcetypename}') as c:
+    with self.argument_context('eventgrid eventsubscription location topictype provider {providernamespace} {resourcetypename}') as c:
         c.argument('eventgrid_name', eventgrid_name_type, id_part=None)
 
-    with self.argument_context('eventgrid eventsubscriptions locations topictypes providers {providernamespace} {resourcetypename}') as c:
+    with self.argument_context('eventgrid eventsubscription location topictype provider {providernamespace} {resourcetypename}') as c:
         c.argument('eventgrid_name', eventgrid_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
@@ -77,15 +77,15 @@ def load_arguments(self, _):
         c.argument('eventgrid_name', eventgrid_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('eventgrid providers {providernamespace} {resourcetypename}') as c:
+    with self.argument_context('eventgrid provider {providernamespace} {resourcetypename}') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('eventgrid providers {providernamespace} {resourcetypename}_name', eventgrid providers {providernamespace} {resourcetypename}_name_type, options_list=['--name', '-n'])
+        c.argument('eventgrid provider {providernamespace} {resourcetypename}_name', eventgrid provider {providernamespace} {resourcetypename}_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('eventgrid providers {providernamespace} {resourcetypename}') as c:
+    with self.argument_context('eventgrid provider {providernamespace} {resourcetypename}') as c:
         c.argument('eventgrid_name', eventgrid_name_type, id_part=None)
 
-    with self.argument_context('eventgrid providers {providernamespace} {resourcetypename}') as c:
+    with self.argument_context('eventgrid provider {providernamespace} {resourcetypename}') as c:
         c.argument('eventgrid_name', eventgrid_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 

@@ -80,7 +80,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapiissue:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     issue_id: myIssue
     created_date: '2018-02-01T22:21:20.467Z'
     state: open
@@ -94,14 +94,14 @@ EXAMPLES = '''
   azure_rm_apimanagementapiissue:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     issue_id: myIssue
     state: closed
 - name: ApiManagementDeleteApiIssue
   azure_rm_apimanagementapiissue:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     issue_id: myIssue
     state: absent
 

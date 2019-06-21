@@ -87,7 +87,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapischema:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     schema_id: mySchema
     content_type: application/vnd.ms-azure-apim.xsd+xml
     document:
@@ -96,7 +96,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapischema:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     schema_id: mySchema
     state: absent
 

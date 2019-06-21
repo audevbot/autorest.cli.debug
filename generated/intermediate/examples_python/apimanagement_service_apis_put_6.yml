@@ -21,13 +21,13 @@ import uuid
 SUBSCRIPTION_ID = os.environ['AZURE_SUBSCRIPTION_ID']
 RESOURCE_GROUP = "myresourcegroup"
 SERVICE_NAME = "myservice"
-APIS_NAME = "myapis"
+API_NAME = "myapi"
 
 BODY = {
   "properties": {
     "path": "echo",
     "serviceUrl": "http://echoapi.cloudapp.net/apiv3",
-    "sourceApiId": "/subscriptions/" + SUBSCRIPTION_ID + "/resourceGroups/" + RESOURCE_GROUP + "/providers/Microsoft.ApiManagement/service/" + SERVICE_NAME + "/apis/" + APIS_NAME + "",
+    "sourceApiId": "/subscriptions/" + SUBSCRIPTION_ID + "/resourceGroups/" + RESOURCE_GROUP + "/providers/Microsoft.ApiManagement/service/" + SERVICE_NAME + "/apis/" + API_NAME + "",
     "apiRevisionDescription": "Creating a Revision of an existing API"
   }
 }
@@ -56,7 +56,7 @@ def run_example():
     header_parameters['Content-Type'] = 'application/json; charset=utf-8'
 
     operation_config = {}
-    request = service_client.put("/subscriptions/" + SUBSCRIPTION + "/resourceGroups/" + RESOURCE_GR + "/providers/Microsoft.ApiManagement/service/" + SERVICE_N + "/apis/" + APIS_N, query_parameters)
+    request = service_client.put("/subscriptions/" + SUBSCRIPTION + "/resourceGroups/" + RESOURCE_GR + "/providers/Microsoft.ApiManagement/service/" + SERVICE_N + "/apis/" + API_N, query_parameters)
     response = service_client.send(request, header_parameters, BODY, **operation_config)
     print(response.text)
 

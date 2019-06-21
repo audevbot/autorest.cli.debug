@@ -10,7 +10,7 @@
   vars:
     resource_group: myResourceGroup
     service_name: myService
-    apis_name: myApis
+    api_name: myApi
     release_name: myRelease
   tasks:
 
@@ -21,7 +21,7 @@
         api_id: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{
-          apis_name }}
+          api_name }}
         release_id: '{{release_name}}'
         notes: yahooagain
     

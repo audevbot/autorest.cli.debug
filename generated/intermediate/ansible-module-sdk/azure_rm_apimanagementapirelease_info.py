@@ -65,12 +65,12 @@ EXAMPLES = '''
   azure_rm_apimanagementapirelease_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
 - name: ApiManagementGetApiRelease
   azure_rm_apimanagementapirelease_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     release_id: myRelease
 
 '''

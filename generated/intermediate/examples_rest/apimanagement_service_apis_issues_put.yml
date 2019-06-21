@@ -8,7 +8,7 @@
   vars:
     resource_group: myResourceGroup
     service_name: myService
-    apis_name: myApis
+    api_name: myApi
     issue_name: myIssue
     user_name: myUser
   tasks:
@@ -22,7 +22,7 @@
         resource_name: '{{ service_name }}'
         subresource:
           - type: apis
-            name: '{{ apis_name }}'
+            name: '{{ api_name }}'
           - type: issues
             name: '{{ issue_name }}'
         body:

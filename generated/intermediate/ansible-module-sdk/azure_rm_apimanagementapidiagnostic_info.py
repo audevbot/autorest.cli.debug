@@ -147,12 +147,12 @@ EXAMPLES = '''
   azure_rm_apimanagementapidiagnostic_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
 - name: ApiManagementGetApiDiagnostic
   azure_rm_apimanagementapidiagnostic_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     diagnostic_id: myDiagnostic
 
 '''

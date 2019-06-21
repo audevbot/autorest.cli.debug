@@ -325,7 +325,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapioperation:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     operation_id: myOperation
     template_parameters: []
     description: This can only be done by the logged in user.
@@ -351,7 +351,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapioperation:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     operation_id: myOperation
     template_parameters: []
     request:
@@ -381,7 +381,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapioperation:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     operation_id: myOperation
     state: absent
 

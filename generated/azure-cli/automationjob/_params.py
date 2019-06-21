@@ -14,42 +14,42 @@ def load_arguments(self, _):
 
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('automationjob jobs') as c:
+    with self.argument_context('automationjob job') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('automationjob jobs_name', automationjob jobs_name_type, options_list=['--name', '-n'])
+        c.argument('automationjob job_name', automationjob job_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('automationjob jobs') as c:
+    with self.argument_context('automationjob job') as c:
         c.argument('automationjob_name', automationjob_name_type, id_part=None)
 
-    with self.argument_context('automationjob jobs') as c:
+    with self.argument_context('automationjob job') as c:
         c.argument('automationjob_name', automationjob_name_type, id_part=None)
 
-    with self.argument_context('automationjob jobs') as c:
+    with self.argument_context('automationjob job') as c:
         c.argument('automationjob_name', automationjob_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('automationjob jobs') as c:
+    with self.argument_context('automationjob job') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('automationjob jobs_name', automationjob jobs_name_type, options_list=['--name', '-n'])
+        c.argument('automationjob job_name', automationjob job_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('automationjob jobs') as c:
+    with self.argument_context('automationjob job') as c:
         c.argument('automationjob_name', automationjob_name_type, id_part=None)
 
-    with self.argument_context('automationjob jobs') as c:
+    with self.argument_context('automationjob job') as c:
         c.argument('automationjob_name', automationjob_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
-    with self.argument_context('automationjob jobs streams') as c:
+    with self.argument_context('automationjob job stream') as c:
         c.argument('tags', tags_type)
         c.argument('location', validator=get_default_location_from_resource_group)
-        c.argument('automationjob jobs streams_name', automationjob jobs streams_name_type, options_list=['--name', '-n'])
+        c.argument('automationjob job stream_name', automationjob job stream_name_type, options_list=['--name', '-n'])
 
-    with self.argument_context('automationjob jobs streams') as c:
+    with self.argument_context('automationjob job stream') as c:
         c.argument('automationjob_name', automationjob_name_type, id_part=None)
 
-    with self.argument_context('automationjob jobs streams') as c:
+    with self.argument_context('automationjob job stream') as c:
         c.argument('automationjob_name', automationjob_name_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 

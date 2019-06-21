@@ -5,7 +5,7 @@ task: !ruby/object:Provider::Ansible::Task
   code:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     tag_id: myTagDescription
     description: >-
       Some description that will be displayed for operation's tag if the tag is

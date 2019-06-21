@@ -74,7 +74,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapipolicy:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     policy_id: myPolicy
     value: >-
       <policies> <inbound /> <backend>    <forward-request />  </backend> 
@@ -84,7 +84,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapipolicy:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     policy_id: myPolicy
     value: "<policies>\r\n     <inbound>\r\n     <base />\r\n  <set-header name=\"newvalue\" exists-action=\"override\">\r\n   <value>\"@(context.Request.Headers.FirstOrDefault(h => h.Ke==\"Via\"))\" </value>\r\n    </set-header>\r\n  </inbound>\r\n      </policies>"
     format: rawxml
@@ -92,7 +92,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapipolicy:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     policy_id: myPolicy
     state: absent
 

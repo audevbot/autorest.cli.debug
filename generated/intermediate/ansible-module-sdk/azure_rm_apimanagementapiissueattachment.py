@@ -88,7 +88,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapiissueattachment:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     issue_id: myIssue
     attachment_id: myAttachment
     title: Issue attachment.
@@ -98,7 +98,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapiissueattachment:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     issue_id: myIssue
     attachment_id: myAttachment
     state: absent

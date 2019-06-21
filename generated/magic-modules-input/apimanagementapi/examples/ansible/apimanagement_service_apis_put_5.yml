@@ -5,7 +5,7 @@ task: !ruby/object:Provider::Ansible::Task
   code:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     description: apidescription5200
     authentication_settings:
       o_auth2:

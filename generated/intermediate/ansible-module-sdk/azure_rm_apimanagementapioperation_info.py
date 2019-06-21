@@ -314,19 +314,19 @@ EXAMPLES = '''
   azure_rm_apimanagementapioperation_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     operation_id: 57d2ef278aa04f0ad01d6cdc
 - name: ApiManagementGetApiOperation
   azure_rm_apimanagementapioperation_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     operation_id: myOperation
 - name: ApiManagementGetApiOperationPetStore
   azure_rm_apimanagementapioperation_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     operation_id: myOperation
 
 '''

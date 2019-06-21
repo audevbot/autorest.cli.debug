@@ -31346,7 +31346,7 @@ operations:
                           /subscriptions/{{ subscription_id }}/resourceGroups/{{
                           resource_group
                           }}/providers/Microsoft.ApiManagement/service/{{
-                          service_name }}/apis/{{ apis_name }}
+                          service_name }}/apis/{{ api_name }}
                         type: Microsoft.ApiManagement/service/apis
                         name: a1
                         properties:
@@ -31367,7 +31367,7 @@ operations:
                           /subscriptions/{{ subscription_id }}/resourceGroups/{{
                           resource_group
                           }}/providers/Microsoft.ApiManagement/service/{{
-                          service_name }}/apis/{{ apis_name }}
+                          service_name }}/apis/{{ api_name }}
                         type: Microsoft.ApiManagement/service/apis
                         name: 5a73933b8f27f7cc82a2d533
                         properties:
@@ -31389,7 +31389,7 @@ operations:
                           /subscriptions/{{ subscription_id }}/resourceGroups/{{
                           resource_group
                           }}/providers/Microsoft.ApiManagement/service/{{
-                          service_name }}/apis/{{ apis_name }}
+                          service_name }}/apis/{{ api_name }}
                         type: Microsoft.ApiManagement/service/apis
                         name: echo-api
                         properties:
@@ -31404,7 +31404,7 @@ operations:
                           /subscriptions/{{ subscription_id }}/resourceGroups/{{
                           resource_group
                           }}/providers/Microsoft.ApiManagement/service/{{
-                          service_name }}/apis/{{ apis_name }}
+                          service_name }}/apis/{{ api_name }}
                         type: Microsoft.ApiManagement/service/apis
                         name: 5a7390baa5816a110435aee0
                         properties:
@@ -31871,7 +31871,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     type: Microsoft.ApiManagement/service/apis
                     name: 57d1f7558aa04f15146d9d8a
                     properties:
@@ -31901,7 +31901,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     type: Microsoft.ApiManagement/service/apis
                     name: echo-api;rev=3
                     properties:
@@ -32214,7 +32214,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     type: Microsoft.ApiManagement/service/apis
                     name: petstoreapi
                     properties:
@@ -32234,7 +32234,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     type: Microsoft.ApiManagement/service/apis
                     name: petstoreapi
                     properties:
@@ -32271,7 +32271,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     type: Microsoft.ApiManagement/service/apis
                     name: petstoreapi
                     properties:
@@ -32298,7 +32298,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     type: Microsoft.ApiManagement/service/apis
                     name: petstoreapi
                     properties:
@@ -32343,7 +32343,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     type: Microsoft.ApiManagement/service/apis
                     name: collectorwadl
                     properties:
@@ -32364,7 +32364,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     type: Microsoft.ApiManagement/service/apis
                     name: collectorwadl
                     properties:
@@ -32405,7 +32405,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     type: Microsoft.ApiManagement/service/apis
                     name: soapApi
                     properties:
@@ -32425,7 +32425,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     type: Microsoft.ApiManagement/service/apis
                     name: soapApi
                     properties:
@@ -32466,7 +32466,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     type: Microsoft.ApiManagement/service/apis
                     name: soapApi
                     properties:
@@ -32487,7 +32487,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     type: Microsoft.ApiManagement/service/apis
                     name: soapApi
                     properties:
@@ -32536,7 +32536,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     type: Microsoft.ApiManagement/service/apis
                     name: apiid9419
                     properties:
@@ -32563,7 +32563,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     type: Microsoft.ApiManagement/service/apis
                     name: apiid9419
                     properties:
@@ -32603,7 +32603,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     apiRevisionDescription: Creating a Revision of an existing API
               responses:
                 '200':
@@ -32612,7 +32612,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     type: Microsoft.ApiManagement/service/apis
                     name: echo-api;rev=3
                     properties:
@@ -32633,7 +32633,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     type: Microsoft.ApiManagement/service/apis
                     name: echo-api;rev=3
                     properties:
@@ -32677,7 +32677,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     apiVersionSetId: >-
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
@@ -32690,7 +32690,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     type: Microsoft.ApiManagement/service/apis
                     name: echoapiv3
                     properties:
@@ -32731,7 +32731,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     type: Microsoft.ApiManagement/service/apis
                     name: echoapiv3
                     properties:
@@ -32792,7 +32792,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
               responses:
                 '200':
                   body:
@@ -32800,7 +32800,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     type: Microsoft.ApiManagement/service/apis
                     name: echoapi2
                     properties:
@@ -32823,7 +32823,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     type: Microsoft.ApiManagement/service/apis
                     name: echoapi2
                     properties:
@@ -32880,7 +32880,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     type: Microsoft.ApiManagement/service/apis
                     name: 58da4c4ccdae970a08121230
                     properties:
@@ -32912,7 +32912,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     type: Microsoft.ApiManagement/service/apis
                     name: 58da4c4ccdae970a08121230
                     properties:
@@ -34130,7 +34130,7 @@ operations:
                           /subscriptions/{{ subscription_id }}/resourceGroups/{{
                           resource_group
                           }}/providers/Microsoft.ApiManagement/service/{{
-                          service_name }}/apis/{{ apis_name }}
+                          service_name }}/apis/{{ api_name }}
                         apiRevision: '1'
                         createdDateTime: '2018-02-01T22:21:20.467Z'
                         updatedDateTime: '2018-02-01T22:21:20.467Z'
@@ -34472,7 +34472,7 @@ operations:
                           /subscriptions/{{ subscription_id }}/resourceGroups/{{
                           resource_group
                           }}/providers/Microsoft.ApiManagement/service/{{
-                          service_name }}/apis/{{ apis_name }}/releases/{{
+                          service_name }}/apis/{{ api_name }}/releases/{{
                           release_name }}
                         type: Microsoft.ApiManagement/service/apis/releases
                         name: 5a7cb545298324c53224a799
@@ -34999,7 +34999,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/releases/{{
+                      service_name }}/apis/{{ api_name }}/releases/{{
                       release_name }}
                     type: Microsoft.ApiManagement/service/apis/releases
                     name: 5a7cb545298324c53224a799
@@ -35008,7 +35008,7 @@ operations:
                         /subscriptions/{{ subscription_id }}/resourceGroups/{{
                         resource_group
                         }}/providers/Microsoft.ApiManagement/service/{{
-                        service_name }}/apis/{{ apis_name }}
+                        service_name }}/apis/{{ api_name }}
                       createdDateTime: '2018-02-08T20:38:29.173Z'
                       updatedDateTime: '2018-02-08T20:38:29.173Z'
                       notes: yahoo
@@ -35334,7 +35334,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     notes: yahooagain
               responses:
                 '200':
@@ -35343,7 +35343,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/releases/{{
+                      service_name }}/apis/{{ api_name }}/releases/{{
                       release_name }}
                     type: Microsoft.ApiManagement/service/apis/releases
                     name: testrev
@@ -35352,7 +35352,7 @@ operations:
                         /subscriptions/{{ subscription_id }}/resourceGroups/{{
                         resource_group
                         }}/providers/Microsoft.ApiManagement/service/{{
-                        service_name }}/apis/{{ apis_name }}
+                        service_name }}/apis/{{ api_name }}
                       createdDateTime: '2018-02-08T20:52:00.65Z'
                       updatedDateTime: '2018-02-08T20:52:00.65Z'
                       notes: yahooagain
@@ -35362,7 +35362,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/releases/{{
+                      service_name }}/apis/{{ api_name }}/releases/{{
                       release_name }}
                     type: Microsoft.ApiManagement/service/apis/releases
                     name: testrev
@@ -35371,7 +35371,7 @@ operations:
                         /subscriptions/{{ subscription_id }}/resourceGroups/{{
                         resource_group
                         }}/providers/Microsoft.ApiManagement/service/{{
-                        service_name }}/apis/{{ apis_name }}
+                        service_name }}/apis/{{ api_name }}
                       createdDateTime: '2018-02-08T20:52:00.65Z'
                       updatedDateTime: '2018-02-08T20:52:00.65Z'
                       notes: yahooagain
@@ -35685,7 +35685,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     notes: yahooagain
               responses:
                 '204': {}
@@ -36338,7 +36338,7 @@ operations:
                           /subscriptions/{{ subscription_id }}/resourceGroups/{{
                           resource_group
                           }}/providers/Microsoft.ApiManagement/service/{{
-                          service_name }}/apis/{{ apis_name }}/operations/{{
+                          service_name }}/apis/{{ api_name }}/operations/{{
                           operation_name }}
                         type: Microsoft.ApiManagement/service/apis/operations
                         name: 57d2ef278aa04f0ad01d6cdc
@@ -36351,7 +36351,7 @@ operations:
                           /subscriptions/{{ subscription_id }}/resourceGroups/{{
                           resource_group
                           }}/providers/Microsoft.ApiManagement/service/{{
-                          service_name }}/apis/{{ apis_name }}/operations/{{
+                          service_name }}/apis/{{ api_name }}/operations/{{
                           operation_name }}
                         type: Microsoft.ApiManagement/service/apis/operations
                         name: 57d2ef278aa04f0ad01d6cda
@@ -36364,7 +36364,7 @@ operations:
                           /subscriptions/{{ subscription_id }}/resourceGroups/{{
                           resource_group
                           }}/providers/Microsoft.ApiManagement/service/{{
-                          service_name }}/apis/{{ apis_name }}/operations/{{
+                          service_name }}/apis/{{ api_name }}/operations/{{
                           operation_name }}
                         type: Microsoft.ApiManagement/service/apis/operations
                         name: 57d2ef278aa04f0ad01d6cd9
@@ -36377,7 +36377,7 @@ operations:
                           /subscriptions/{{ subscription_id }}/resourceGroups/{{
                           resource_group
                           }}/providers/Microsoft.ApiManagement/service/{{
-                          service_name }}/apis/{{ apis_name }}/operations/{{
+                          service_name }}/apis/{{ api_name }}/operations/{{
                           operation_name }}
                         type: Microsoft.ApiManagement/service/apis/operations
                         name: 57d2ef278aa04f0ad01d6cdb
@@ -36390,7 +36390,7 @@ operations:
                           /subscriptions/{{ subscription_id }}/resourceGroups/{{
                           resource_group
                           }}/providers/Microsoft.ApiManagement/service/{{
-                          service_name }}/apis/{{ apis_name }}/operations/{{
+                          service_name }}/apis/{{ api_name }}/operations/{{
                           operation_name }}
                         type: Microsoft.ApiManagement/service/apis/operations
                         name: 57d2ef278aa04f0ad01d6cd8
@@ -36922,7 +36922,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/operations/{{
+                      service_name }}/apis/{{ api_name }}/operations/{{
                       operation_name }}
                     type: Microsoft.ApiManagement/service/apis/operations
                     name: 57d2ef278aa04f0ad01d6cdc
@@ -36965,7 +36965,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/operations/{{
+                      service_name }}/apis/{{ api_name }}/operations/{{
                       operation_name }}
                     type: Microsoft.ApiManagement/service/apis/operations
                     name: loginUser
@@ -37361,7 +37361,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/operations/{{
+                      service_name }}/apis/{{ api_name }}/operations/{{
                       operation_name }}
                     type: Microsoft.ApiManagement/service/apis/operations
                     name: newoperations
@@ -37392,7 +37392,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/operations/{{
+                      service_name }}/apis/{{ api_name }}/operations/{{
                       operation_name }}
                     type: Microsoft.ApiManagement/service/apis/operations
                     name: newoperations
@@ -38304,7 +38304,7 @@ operations:
                           /subscriptions/{{ subscription_id }}/resourceGroups/{{
                           resource_group
                           }}/providers/Microsoft.ApiManagement/service/{{
-                          service_name }}/apis/{{ apis_name }}/operations/{{
+                          service_name }}/apis/{{ api_name }}/operations/{{
                           operation_name }}/policies/{{ policy_name }}
                         type: >-
                           Microsoft.ApiManagement/service/apis/operations/policies
@@ -38922,7 +38922,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/operations/{{
+                      service_name }}/apis/{{ api_name }}/operations/{{
                       operation_name }}/policies/{{ policy_name }}
                     type: Microsoft.ApiManagement/service/apis/operations/policies
                     name: policy
@@ -39292,7 +39292,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/operations/{{
+                      service_name }}/apis/{{ api_name }}/operations/{{
                       operation_name }}/policies/{{ policy_name }}
                     type: Microsoft.ApiManagement/service/apis/operations/policies
                     name: policy
@@ -39304,7 +39304,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/operations/{{
+                      service_name }}/apis/{{ api_name }}/operations/{{
                       operation_name }}/policies/{{ policy_name }}
                     type: Microsoft.ApiManagement/service/apis/operations/policies
                     name: policy
@@ -46140,7 +46140,7 @@ operations:
                           /subscriptions/{{ subscription_id }}/resourceGroups/{{
                           resource_group
                           }}/providers/Microsoft.ApiManagement/service/{{
-                          service_name }}/apis/{{ apis_name }}/policies/{{
+                          service_name }}/apis/{{ api_name }}/policies/{{
                           policy_name }}
                         type: Microsoft.ApiManagement/service/apis/policies
                         name: policy
@@ -46683,7 +46683,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/policies/{{
+                      service_name }}/apis/{{ api_name }}/policies/{{
                       policy_name }}
                     type: Microsoft.ApiManagement/service/apis/policies
                     name: policy
@@ -47015,7 +47015,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/policies/{{
+                      service_name }}/apis/{{ api_name }}/policies/{{
                       policy_name }}
                     type: Microsoft.ApiManagement/service/apis/policies
                     name: policy
@@ -47027,7 +47027,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/policies/{{
+                      service_name }}/apis/{{ api_name }}/policies/{{
                       policy_name }}
                     type: Microsoft.ApiManagement/service/apis/policies
                     name: policy
@@ -47053,7 +47053,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/operations/{{
+                      service_name }}/apis/{{ api_name }}/operations/{{
                       operation_name }}/policies/{{ policy_name }}
                     type: Microsoft.ApiManagement/service/apis/operations/policies
                     name: policy
@@ -47065,7 +47065,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/operations/{{
+                      service_name }}/apis/{{ api_name }}/operations/{{
                       operation_name }}/policies/{{ policy_name }}
                     type: Microsoft.ApiManagement/service/apis/operations/policies
                     name: policy
@@ -47682,7 +47682,7 @@ operations:
                           /subscriptions/{{ subscription_id }}/resourceGroups/{{
                           resource_group
                           }}/providers/Microsoft.ApiManagement/service/{{
-                          service_name }}/apis/{{ apis_name }}/schemas/{{
+                          service_name }}/apis/{{ api_name }}/schemas/{{
                           schema_name }}
                         type: Microsoft.ApiManagement/service/apis/schemas
                         name: 59d5b28e1f7fab116402044e
@@ -48211,8 +48211,8 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/schemas/{{
-                      schema_name }}
+                      service_name }}/apis/{{ api_name }}/schemas/{{ schema_name
+                      }}
                     type: Microsoft.ApiManagement/service/apis/schemas
                     name: ec12520d-9d48-4e7b-8f39-698ca2ac63f1
                     properties:
@@ -48548,8 +48548,8 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/schemas/{{
-                      schema_name }}
+                      service_name }}/apis/{{ api_name }}/schemas/{{ schema_name
+                      }}
                     type: Microsoft.ApiManagement/service/apis/schemas
                     name: ec12520d-9d48-4e7b-8f39-698ca2ac63f1
                     properties:
@@ -48562,8 +48562,8 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/schemas/{{
-                      schema_name }}
+                      service_name }}/apis/{{ api_name }}/schemas/{{ schema_name
+                      }}
                     type: Microsoft.ApiManagement/service/apis/schemas
                     name: ec12520d-9d48-4e7b-8f39-698ca2ac63f1
                     properties:
@@ -49212,7 +49212,7 @@ operations:
                           /subscriptions/{{ subscription_id }}/resourceGroups/{{
                           resource_group
                           }}/providers/Microsoft.ApiManagement/service/{{
-                          service_name }}/apis/{{ apis_name }}/diagnostics/{{
+                          service_name }}/apis/{{ api_name }}/diagnostics/{{
                           diagnostic_name }}
                         type: Microsoft.ApiManagement/service/apis/diagnostics
                         name: default
@@ -49767,7 +49767,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/diagnostics/{{
+                      service_name }}/apis/{{ api_name }}/diagnostics/{{
                       diagnostic_name }}
                     type: Microsoft.ApiManagement/service/apis/diagnostics
                     name: applicationinsights
@@ -50151,7 +50151,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/diagnostics/{{
+                      service_name }}/apis/{{ api_name }}/diagnostics/{{
                       diagnostic_name }}
                     type: Microsoft.ApiManagement/service/apis/diagnostics
                     name: applicationinsights
@@ -50189,7 +50189,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/diagnostics/{{
+                      service_name }}/apis/{{ api_name }}/diagnostics/{{
                       diagnostic_name }}
                     type: Microsoft.ApiManagement/service/apis/diagnostics
                     name: applicationinsights
@@ -51199,7 +51199,7 @@ operations:
                           /subscriptions/{{ subscription_id }}/resourceGroups/{{
                           resource_group
                           }}/providers/Microsoft.ApiManagement/service/{{
-                          service_name }}/apis/{{ apis_name }}/issues/{{
+                          service_name }}/apis/{{ api_name }}/issues/{{
                           issue_name }}
                         type: Microsoft.ApiManagement/service/apis/issues
                         name: 57d2ef278aa04f0ad01d6cdc
@@ -51217,7 +51217,7 @@ operations:
                             /subscriptions/{{ subscription_id
                             }}/resourceGroups/{{ resource_group
                             }}/providers/Microsoft.ApiManagement/service/{{
-                            service_name }}/apis/{{ apis_name }}
+                            service_name }}/apis/{{ api_name }}
                     nextLink: ''
           x-ms-pageable:
             nextLinkName: nextLink
@@ -51766,7 +51766,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/issues/{{ issue_name
+                      service_name }}/apis/{{ api_name }}/issues/{{ issue_name
                       }}
                     type: Microsoft.ApiManagement/service/apis/issues
                     name: 57d2ef278aa04f0ad01d6cdc
@@ -51784,7 +51784,7 @@ operations:
                         /subscriptions/{{ subscription_id }}/resourceGroups/{{
                         resource_group
                         }}/providers/Microsoft.ApiManagement/service/{{
-                        service_name }}/apis/{{ apis_name }}
+                        service_name }}/apis/{{ api_name }}
         deprecated: false
         hidden: false
       - $id: '9041'
@@ -52119,7 +52119,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/issues/{{ issue_name
+                      service_name }}/apis/{{ api_name }}/issues/{{ issue_name
                       }}
                     type: Microsoft.ApiManagement/service/apis/issues
                     name: 57d2ef278aa04f0ad01d6cdc
@@ -52139,7 +52139,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/issues/{{ issue_name
+                      service_name }}/apis/{{ api_name }}/issues/{{ issue_name
                       }}
                     type: Microsoft.ApiManagement/service/apis/issues
                     name: 57d2ef278aa04f0ad01d6cdc
@@ -53113,7 +53113,7 @@ operations:
                           /subscriptions/{{ subscription_id }}/resourceGroups/{{
                           resource_group
                           }}/providers/Microsoft.ApiManagement/service/{{
-                          service_name }}/apis/{{ apis_name }}/issues/{{
+                          service_name }}/apis/{{ api_name }}/issues/{{
                           issue_name }}/comments/{{ comment_name }}
                         type: Microsoft.ApiManagement/service/apis/issues/comments
                         name: 599e29ab193c3c0bd0b3e2fb
@@ -53724,7 +53724,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/issues/{{ issue_name
+                      service_name }}/apis/{{ api_name }}/issues/{{ issue_name
                       }}/comments/{{ comment_name }}
                     type: Microsoft.ApiManagement/service/apis/issues/comments
                     name: 599e29ab193c3c0bd0b3e2fb
@@ -54108,7 +54108,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/issues/{{ issue_name
+                      service_name }}/apis/{{ api_name }}/issues/{{ issue_name
                       }}/comments/{{ comment_name }}
                     type: Microsoft.ApiManagement/service/apis/issues/comments
                     name: 599e29ab193c3c0bd0b3e2fb
@@ -54126,7 +54126,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/issues/{{ issue_name
+                      service_name }}/apis/{{ api_name }}/issues/{{ issue_name
                       }}/comments/{{ comment_name }}
                     type: Microsoft.ApiManagement/service/apis/issues/comments
                     name: 599e29ab193c3c0bd0b3e2fb
@@ -54829,7 +54829,7 @@ operations:
                           /subscriptions/{{ subscription_id }}/resourceGroups/{{
                           resource_group
                           }}/providers/Microsoft.ApiManagement/service/{{
-                          service_name }}/apis/{{ apis_name }}/issues/{{
+                          service_name }}/apis/{{ api_name }}/issues/{{
                           issue_name }}/attachments/{{ attachment_name }}
                         type: >-
                           Microsoft.ApiManagement/service/apis/issues/attachments
@@ -55437,7 +55437,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/issues/{{ issue_name
+                      service_name }}/apis/{{ api_name }}/issues/{{ issue_name
                       }}/attachments/{{ attachment_name }}
                     type: Microsoft.ApiManagement/service/apis/issues/attachments
                     name: 57d2ef278aa04f0888cba3f3
@@ -55813,7 +55813,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/issues/{{ issue_name
+                      service_name }}/apis/{{ api_name }}/issues/{{ issue_name
                       }}/attachments/{{ attachment_name }}
                     type: Microsoft.ApiManagement/service/apis/issues/attachments
                     name: 57d2ef278aa04f0888cba3f3
@@ -55827,7 +55827,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}/issues/{{ issue_name
+                      service_name }}/apis/{{ api_name }}/issues/{{ issue_name
                       }}/attachments/{{ attachment_name }}
                     type: Microsoft.ApiManagement/service/apis/issues/attachments
                     name: 57d2ef278aa04f0888cba3f3
@@ -77675,7 +77675,7 @@ operations:
                             /subscriptions/{{ subscription_id
                             }}/resourceGroups/{{ resource_group
                             }}/providers/Microsoft.ApiManagement/service/{{
-                            service_name }}/apis/{{ apis_name }}
+                            service_name }}/apis/{{ api_name }}
                     nextLink: ''
           x-ms-pageable:
             nextLinkName: nextLink
@@ -77920,7 +77920,7 @@ operations:
                         /subscriptions/{{ subscription_id }}/resourceGroups/{{
                         resource_group
                         }}/providers/Microsoft.ApiManagement/service/{{
-                        service_name }}/apis/{{ apis_name }}
+                        service_name }}/apis/{{ api_name }}
         deprecated: false
         hidden: false
     name:
@@ -90947,7 +90947,7 @@ operations:
                           resource_group
                           }}/providers/Microsoft.ApiManagement/service/{{
                           service_name }}/products/{{ product_name }}/apis/{{
-                          apis_name }}
+                          api_name }}
                         type: Microsoft.ApiManagement/service/products/apis
                         name: 57681820a40f7eb6c49f6aca
                         properties:
@@ -91473,7 +91473,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     type: Microsoft.ApiManagement/service/apis
                     name: 5931a75ae4bbd512a88c680b
                     properties:
@@ -91494,7 +91494,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     type: Microsoft.ApiManagement/service/apis
                     name: 5931a75ae4bbd512a88c680b
                     properties:
@@ -109304,7 +109304,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     format: swagger-link-json
                     value:
                       link: >-
@@ -109327,7 +109327,7 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/apis/{{ apis_name }}
+                      service_name }}/apis/{{ api_name }}
                     format: openapi-link
                     value:
                       link: >-

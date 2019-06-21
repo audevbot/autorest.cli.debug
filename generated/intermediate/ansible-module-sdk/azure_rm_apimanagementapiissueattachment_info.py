@@ -77,13 +77,13 @@ EXAMPLES = '''
   azure_rm_apimanagementapiissueattachment_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     issue_id: myIssue
 - name: ApiManagementGetApiIssueAttachment
   azure_rm_apimanagementapiissueattachment_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     issue_id: myIssue
     attachment_id: myAttachment
 

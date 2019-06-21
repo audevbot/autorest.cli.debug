@@ -5,7 +5,7 @@ task: !ruby/object:Provider::Ansible::Task
   code:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     description: >-
       This is a sample server Petstore server.  You can find out more about
       Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net,

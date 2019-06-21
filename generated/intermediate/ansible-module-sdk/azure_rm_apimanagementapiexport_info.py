@@ -70,14 +70,14 @@ EXAMPLES = '''
   azure_rm_apimanagementapiexport_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     format: swagger-link
     export: 'true'
 - name: ApiManagementGetApiExportInOpenApi3dot0
   azure_rm_apimanagementapiexport_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     format: openapi-link
     export: 'true'
 

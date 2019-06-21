@@ -72,13 +72,13 @@ EXAMPLES = '''
   azure_rm_apimanagementapiissuecomment_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     issue_id: myIssue
 - name: ApiManagementGetApiIssueComment
   azure_rm_apimanagementapiissuecomment_info:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     issue_id: myIssue
     comment_id: myComment
 

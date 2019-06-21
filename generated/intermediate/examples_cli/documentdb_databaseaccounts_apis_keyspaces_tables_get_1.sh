@@ -1,8 +1,8 @@
 # CosmosDBCassandraTableGet
 RESOURCE_GROUP="myresourcegroup"
 DATABASE_ACCOUNT_NAME="mydatabaseaccount"
-APIS_NAME="myapis"
+API_NAME="myapi"
 KEYSPACE_NAME="mykeyspace"
 TABLE_NAME="mytable"
 
-az resource show --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.DocumentDB/databaseAccounts/$DATABASE_ACCOUNT_NAME/apis/$APIS_NAME/keyspaces/$KEYSPACE_NAME/tables/$TABLE_NAME --api-version 2015-04-08
+az resource show --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.DocumentDB/databaseAccounts/$DATABASE_ACCOUNT_NAME/apis/$API_NAME/keyspaces/$KEYSPACE_NAME/tables/$TABLE_NAME --api-version 2015-04-08

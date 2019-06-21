@@ -196,13 +196,13 @@ EXAMPLES = '''
     resource_group: myResourceGroup
     name: myService
     product_id: myProduct
-    api_id: myApis
+    api_id: myApi
 - name: ApiManagementDeleteProductApi
   azure_rm_apimanagementproductapi:
     resource_group: myResourceGroup
     name: myService
     product_id: myProduct
-    api_id: myApis
+    api_id: myApi
     state: absent
 
 '''
@@ -481,12 +481,12 @@ class AzureRMProductApi(AzureRMModuleBaseExt):
                     '/products' +
                     '/{{ product_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}')
+                    '/{{ api_name }}')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ service_name }}', self.service_name)
         self.url = self.url.replace('{{ product_name }}', self.product_name)
-        self.url = self.url.replace('{{ apis_name }}', self.name)
+        self.url = self.url.replace('{{ api_name }}', self.name)
 
         old_response = self.get_resource()
 

@@ -6,7 +6,7 @@
   vars:
     resource_group: myResourceGroup
     service_name: myService
-    apis_name: myApis
+    api_name: myApi
     tag_name: myTag
   tasks:
 
@@ -15,7 +15,7 @@
         resource_group: '{{resource_group}}'
         name: '{{service_name}}'
         tag_id: '{{tag_name}}'
-        api_id: '{{apis_name}}'
+        api_id: '{{api_name}}'
     
       register: output
     - debug:

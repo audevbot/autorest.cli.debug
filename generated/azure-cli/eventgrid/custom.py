@@ -7,31 +7,31 @@
 from knack.util import CLIError
 
 
-def create_eventgrid_eventsubscriptions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+def create_eventgrid_eventsubscription(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
     return client.event_subscriptions.create()
 
 
-def update_eventgrid_eventsubscriptions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+def update_eventgrid_eventsubscription(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
     return client.event_subscriptions.update()
 
 
-def delete_eventgrid_eventsubscriptions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+def delete_eventgrid_eventsubscription(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
     return client.event_subscriptions.delete()
 
 
-def list_eventgrid_eventsubscriptions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+def list_eventgrid_eventsubscription(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
     return client.event_subscriptions.list()
 
 
-def show_eventgrid_eventsubscriptions(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+def show_eventgrid_eventsubscription(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
     return client.event_subscriptions.show()
 
 
-def list_eventgrid_eventsubscriptions_locations_topictypes_providers_{providernamespace}_{resourcetypename}(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+def list_eventgrid_eventsubscription_location_topictype_provider_{providernamespace}_{resourcetypename}(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
     return client.event_subscriptions.list()
 
 
-def show_eventgrid_eventsubscriptions_locations_topictypes_providers_{providernamespace}_{resourcetypename}(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+def show_eventgrid_eventsubscription_location_topictype_provider_{providernamespace}_{resourcetypename}(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
     return client.event_subscriptions.show()
 
 
@@ -59,11 +59,11 @@ def show_eventgrid(cmd, client, resource_group_name, apimanagement_name, locatio
     return client.topics.show()
 
 
-def list_eventgrid_providers_{providernamespace}_{resourcetypename}(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+def list_eventgrid_provider_{providernamespace}_{resourcetypename}(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
     return client.topics.list()
 
 
-def show_eventgrid_providers_{providernamespace}_{resourcetypename}(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+def show_eventgrid_provider_{providernamespace}_{resourcetypename}(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
     return client.topics.show()
 
 

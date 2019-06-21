@@ -12,7 +12,7 @@
   vars:
     resource_group: myResourceGroup
     service_name: myService
-    apis_name: myApis
+    api_name: myApi
     api_version_set_name: myApiVersionSet
   tasks:
 
@@ -20,7 +20,7 @@
       azure_rm_apimanagementapi:
         resource_group: '{{resource_group}}'
         name: '{{service_name}}'
-        api_id: '{{apis_name}}'
+        api_id: '{{api_name}}'
         description: >-
           Create Echo API into a new Version using Existing Version Set and Copy all
           Operations.
@@ -34,7 +34,7 @@
         source_api_id: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{
-          apis_name }}
+          api_name }}
         display_name: Echo API2
         service_url: 'http://echoapi.cloudapp.net/api'
         path: echo2

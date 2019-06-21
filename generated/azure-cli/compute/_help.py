@@ -48,82 +48,82 @@ helps['compute list'] = """
     short-summary: list a compute.
 """
 
-helps['compute images'] = """
+helps['compute image'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['compute images create'] = """
+helps['compute image create'] = """
     type: command
-    short-summary: create a compute images.
+    short-summary: create a compute image.
 """
 
-helps['compute images delete'] = """
+helps['compute image delete'] = """
     type: command
-    short-summary: delete a compute images.
+    short-summary: delete a compute image.
 """
 
-helps['compute images list'] = """
+helps['compute image list'] = """
     type: command
-    short-summary: list a compute images.
+    short-summary: list a compute image.
 """
 
-helps['compute images show'] = """
+helps['compute image show'] = """
     type: command
-    short-summary: show a compute images.
+    short-summary: show a compute image.
 """
 
-helps['compute images'] = """
+helps['compute image'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['compute images show'] = """
+helps['compute image show'] = """
     type: command
-    short-summary: show a compute images.
+    short-summary: show a compute image.
 """
 
-helps['compute images list'] = """
+helps['compute image list'] = """
     type: command
-    short-summary: list a compute images.
+    short-summary: list a compute image.
 """
 
-helps['compute images versions'] = """
+helps['compute image version'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['compute images versions create'] = """
+helps['compute image version create'] = """
     type: command
-    short-summary: create a compute images versions.
+    short-summary: create a compute image version.
 """
 
-helps['compute images versions delete'] = """
+helps['compute image version delete'] = """
     type: command
-    short-summary: delete a compute images versions.
+    short-summary: delete a compute image version.
 """
 
-helps['compute images versions list'] = """
+helps['compute image version list'] = """
     type: command
-    short-summary: list a compute images versions.
+    short-summary: list a compute image version.
 """
 
-helps['compute images versions show'] = """
+helps['compute image version show'] = """
     type: command
-    short-summary: show a compute images versions.
+    short-summary: show a compute image version.
 """
 
-helps['compute images versions'] = """
+helps['compute image version'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['compute images versions show'] = """
+helps['compute image version show'] = """
     type: command
-    short-summary: show a compute images versions.
+    short-summary: show a compute image version.
 """
 
-helps['compute images versions list'] = """
+helps['compute image version list'] = """
     type: command
-    short-summary: list a compute images versions.
+    short-summary: list a compute image version.
 """

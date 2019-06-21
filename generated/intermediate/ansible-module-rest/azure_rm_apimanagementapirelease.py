@@ -79,7 +79,7 @@ EXAMPLES = '''
     api_id: >-
       /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
       }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{
-      apis_name }}
+      api_name }}
     release_id: myRelease
     notes: yahooagain
 - name: ApiManagementUpdateApiRelease
@@ -89,14 +89,14 @@ EXAMPLES = '''
     api_id: >-
       /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
       }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{
-      apis_name }}
+      api_name }}
     release_id: myRelease
     notes: yahooagain
 - name: ApiManagementDeleteApiRelease
   azure_rm_apimanagementapirelease:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     release_id: myRelease
     state: absent
 
@@ -266,13 +266,13 @@ class AzureRMApiRelease(AzureRMModuleBaseExt):
                     '/service' +
                     '/{{ service_name }}' +
                     '/apis' +
-                    '/{{ apis_name }}' +
+                    '/{{ api_name }}' +
                     '/releases' +
                     '/{{ release_name }}')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ service_name }}', self.service_name)
-        self.url = self.url.replace('{{ apis_name }}', self.apis_name)
+        self.url = self.url.replace('{{ api_name }}', self.api_name)
         self.url = self.url.replace('{{ release_name }}', self.name)
 
         old_response = self.get_resource()

@@ -158,7 +158,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapidiagnostic:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     diagnostic_id: myDiagnostic
     always_log: allErrors
     logger_id: /loggers/applicationinsights
@@ -191,7 +191,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapidiagnostic:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     diagnostic_id: myDiagnostic
     always_log: allErrors
     logger_id: /loggers/applicationinsights
@@ -224,7 +224,7 @@ EXAMPLES = '''
   azure_rm_apimanagementapidiagnostic:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     diagnostic_id: myDiagnostic
     state: absent
 

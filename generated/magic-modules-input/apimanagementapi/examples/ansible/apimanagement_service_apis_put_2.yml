@@ -5,7 +5,7 @@ task: !ruby/object:Provider::Ansible::Task
   code:
     resource_group: myResourceGroup
     name: myService
-    api_id: myApis
+    api_id: myApi
     path: collector
     value: >-
       https://developer.cisco.com/media/wae-release-6-2-api-reference/wae-collector-rest-api/application.wadl

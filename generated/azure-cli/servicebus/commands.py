@@ -21,52 +21,52 @@ def load_command_table(self, _):
         g.custom_command('delete', 'delete_servicebus')
         g.custom_command('list', 'list_servicebus')
         g.custom_command('show', 'show_servicebus')
-    with self.command_group('servicebus authorizationrules', servicebus_sdk, client_factory=cf_servicebus) as g:
-        g.custom_command('list', 'list_servicebus_authorizationrules')
-        g.custom_command('show', 'show_servicebus_authorizationrules')
-    with self.command_group('servicebus disasterrecoveryconfigs', servicebus_sdk, client_factory=cf_servicebus) as g:
-        g.custom_command('create', 'create_servicebus_disasterrecoveryconfigs')
-        g.custom_command('delete', 'delete_servicebus_disasterrecoveryconfigs')
-        g.custom_command('list', 'list_servicebus_disasterrecoveryconfigs')
-        g.custom_command('show', 'show_servicebus_disasterrecoveryconfigs')
-    with self.command_group('servicebus disasterrecoveryconfigs authorizationrules', servicebus_sdk, client_factory=cf_servicebus) as g:
-        g.custom_command('list', 'list_servicebus_disasterrecoveryconfigs_authorizationrules')
-        g.custom_command('show', 'show_servicebus_disasterrecoveryconfigs_authorizationrules')
-    with self.command_group('servicebus migrationconfigurations', servicebus_sdk, client_factory=cf_servicebus) as g:
-        g.custom_command('show', 'show_servicebus_migrationconfigurations')
-        g.custom_command('list', 'list_servicebus_migrationconfigurations')
-    with self.command_group('servicebus queues', servicebus_sdk, client_factory=cf_servicebus) as g:
-        g.custom_command('create', 'create_servicebus_queues')
-        g.custom_command('delete', 'delete_servicebus_queues')
-        g.custom_command('list', 'list_servicebus_queues')
-        g.custom_command('show', 'show_servicebus_queues')
-    with self.command_group('servicebus queues authorizationrules', servicebus_sdk, client_factory=cf_servicebus) as g:
-        g.custom_command('list', 'list_servicebus_queues_authorizationrules')
-        g.custom_command('show', 'show_servicebus_queues_authorizationrules')
-    with self.command_group('servicebus topics', servicebus_sdk, client_factory=cf_servicebus) as g:
-        g.custom_command('create', 'create_servicebus_topics')
-        g.custom_command('delete', 'delete_servicebus_topics')
-        g.custom_command('list', 'list_servicebus_topics')
-        g.custom_command('show', 'show_servicebus_topics')
-    with self.command_group('servicebus topics authorizationrules', servicebus_sdk, client_factory=cf_servicebus) as g:
-        g.custom_command('list', 'list_servicebus_topics_authorizationrules')
-        g.custom_command('show', 'show_servicebus_topics_authorizationrules')
-    with self.command_group('servicebus topics subscriptions', servicebus_sdk, client_factory=cf_servicebus) as g:
-        g.custom_command('create', 'create_servicebus_topics_subscriptions')
-        g.custom_command('delete', 'delete_servicebus_topics_subscriptions')
-        g.custom_command('list', 'list_servicebus_topics_subscriptions')
-        g.custom_command('show', 'show_servicebus_topics_subscriptions')
-    with self.command_group('servicebus topics subscriptions', servicebus_sdk, client_factory=cf_servicebus) as g:
-        g.custom_command('list', 'list_servicebus_topics_subscriptions')
-        g.custom_command('show', 'show_servicebus_topics_subscriptions')
-    with self.command_group('servicebus topics subscriptions rules', servicebus_sdk, client_factory=cf_servicebus) as g:
-        g.custom_command('create', 'create_servicebus_topics_subscriptions_rules')
-        g.custom_command('delete', 'delete_servicebus_topics_subscriptions_rules')
-        g.custom_command('list', 'list_servicebus_topics_subscriptions_rules')
-        g.custom_command('show', 'show_servicebus_topics_subscriptions_rules')
-    with self.command_group('servicebus topics subscriptions rules', servicebus_sdk, client_factory=cf_servicebus) as g:
-        g.custom_command('show', 'show_servicebus_topics_subscriptions_rules')
-        g.custom_command('list', 'list_servicebus_topics_subscriptions_rules')
+    with self.command_group('servicebus authorizationrule', servicebus_sdk, client_factory=cf_servicebus) as g:
+        g.custom_command('list', 'list_servicebus_authorizationrule')
+        g.custom_command('show', 'show_servicebus_authorizationrule')
+    with self.command_group('servicebus disasterrecoveryconfig', servicebus_sdk, client_factory=cf_servicebus) as g:
+        g.custom_command('create', 'create_servicebus_disasterrecoveryconfig')
+        g.custom_command('delete', 'delete_servicebus_disasterrecoveryconfig')
+        g.custom_command('list', 'list_servicebus_disasterrecoveryconfig')
+        g.custom_command('show', 'show_servicebus_disasterrecoveryconfig')
+    with self.command_group('servicebus disasterrecoveryconfig authorizationrule', servicebus_sdk, client_factory=cf_servicebus) as g:
+        g.custom_command('list', 'list_servicebus_disasterrecoveryconfig_authorizationrule')
+        g.custom_command('show', 'show_servicebus_disasterrecoveryconfig_authorizationrule')
+    with self.command_group('servicebus migrationconfiguration', servicebus_sdk, client_factory=cf_servicebus) as g:
+        g.custom_command('show', 'show_servicebus_migrationconfiguration')
+        g.custom_command('list', 'list_servicebus_migrationconfiguration')
+    with self.command_group('servicebus queue', servicebus_sdk, client_factory=cf_servicebus) as g:
+        g.custom_command('create', 'create_servicebus_queue')
+        g.custom_command('delete', 'delete_servicebus_queue')
+        g.custom_command('list', 'list_servicebus_queue')
+        g.custom_command('show', 'show_servicebus_queue')
+    with self.command_group('servicebus queue authorizationrule', servicebus_sdk, client_factory=cf_servicebus) as g:
+        g.custom_command('list', 'list_servicebus_queue_authorizationrule')
+        g.custom_command('show', 'show_servicebus_queue_authorizationrule')
+    with self.command_group('servicebus topic', servicebus_sdk, client_factory=cf_servicebus) as g:
+        g.custom_command('create', 'create_servicebus_topic')
+        g.custom_command('delete', 'delete_servicebus_topic')
+        g.custom_command('list', 'list_servicebus_topic')
+        g.custom_command('show', 'show_servicebus_topic')
+    with self.command_group('servicebus topic authorizationrule', servicebus_sdk, client_factory=cf_servicebus) as g:
+        g.custom_command('list', 'list_servicebus_topic_authorizationrule')
+        g.custom_command('show', 'show_servicebus_topic_authorizationrule')
+    with self.command_group('servicebus topic subscription', servicebus_sdk, client_factory=cf_servicebus) as g:
+        g.custom_command('create', 'create_servicebus_topic_subscription')
+        g.custom_command('delete', 'delete_servicebus_topic_subscription')
+        g.custom_command('list', 'list_servicebus_topic_subscription')
+        g.custom_command('show', 'show_servicebus_topic_subscription')
+    with self.command_group('servicebus topic subscription', servicebus_sdk, client_factory=cf_servicebus) as g:
+        g.custom_command('list', 'list_servicebus_topic_subscription')
+        g.custom_command('show', 'show_servicebus_topic_subscription')
+    with self.command_group('servicebus topic subscription rule', servicebus_sdk, client_factory=cf_servicebus) as g:
+        g.custom_command('create', 'create_servicebus_topic_subscription_rule')
+        g.custom_command('delete', 'delete_servicebus_topic_subscription_rule')
+        g.custom_command('list', 'list_servicebus_topic_subscription_rule')
+        g.custom_command('show', 'show_servicebus_topic_subscription_rule')
+    with self.command_group('servicebus topic subscription rule', servicebus_sdk, client_factory=cf_servicebus) as g:
+        g.custom_command('show', 'show_servicebus_topic_subscription_rule')
+        g.custom_command('list', 'list_servicebus_topic_subscription_rule')
     with self.command_group('servicebus', servicebus_sdk, client_factory=cf_servicebus) as g:
         g.custom_command('list', 'list_servicebus')
     with self.command_group('', servicebus_sdk, client_factory=cf_servicebus) as g:

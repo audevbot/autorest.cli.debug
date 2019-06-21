@@ -6,7 +6,7 @@
   vars:
     resource_group: myResourceGroup
     service_name: myService
-    apis_name: myApis
+    api_name: myApi
     operation_name: myOperation
     policy_name: myPolicy
   tasks:
@@ -15,7 +15,7 @@
       azure_rm_apimanagementapioperationpolicy:
         resource_group: '{{resource_group}}'
         name: '{{service_name}}'
-        api_id: '{{apis_name}}'
+        api_id: '{{api_name}}'
         operation_id: '{{operation_name}}'
         policy_id: '{{policy_name}}'
         state: absent

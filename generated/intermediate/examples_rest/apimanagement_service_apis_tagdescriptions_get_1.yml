@@ -6,7 +6,7 @@
   vars:
     resource_group: myResourceGroup
     service_name: myService
-    apis_name: myApis
+    api_name: myApi
     tag_description_name: myTagDescription
   tasks:
     - name: ApiManagementGetApiTagDescription
@@ -18,7 +18,7 @@
         resource_name: '{{ service_name }}'
         subresource:
           - type: apis
-            name: '{{ apis_name }}'
+            name: '{{ api_name }}'
           - type: tagDescriptions
             name: '{{ tag_description_name }}'
       register: output
