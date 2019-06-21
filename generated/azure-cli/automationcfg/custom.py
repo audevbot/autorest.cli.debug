@@ -7,17 +7,17 @@
 from knack.util import CLIError
 
 
-def create_automationcfg softwareupdateconfigurations(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+def create_automationcfg_softwareupdateconfigurations(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
     return client.software_update_configurations.create()
 
 
-def delete_automationcfg softwareupdateconfigurations(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+def delete_automationcfg_softwareupdateconfigurations(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
     return client.software_update_configurations.delete()
 
 
-def list_automationcfg softwareupdateconfigurations(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+def list_automationcfg_softwareupdateconfigurations(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
     return client.software_update_configurations.list()
 
 
-def list_automationcfg softwareupdateconfigurations(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+def list_automationcfg_softwareupdateconfigurations(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
     return client.software_update_configurations.list()
