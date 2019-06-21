@@ -43,7 +43,6 @@ def load_arguments(self, _):
         c.argument('api_type', id_part=None, help='Type of Api to create.   * `http` creates a SOAP to REST API   * `soap` creates a SOAP pass-through API .')
         c.argument('is_online', id_part=None, help='Indicates if API revision is accessible via the gateway.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt api update') as c:
@@ -74,7 +73,6 @@ def load_arguments(self, _):
         c.argument('api_type', id_part=None, help='Type of Api to create.   * `http` creates a SOAP to REST API   * `soap` creates a SOAP pass-through API .')
         c.argument('is_online', id_part=None, help='Indicates if API revision is accessible via the gateway.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt api delete') as c:
@@ -131,7 +129,6 @@ def load_arguments(self, _):
         c.argument('api_id', id_part=None, help='API identifier. Must be unique in the current API Management service instance.')
         c.argument('release_id', id_part=None, help='Release identifier within an API. Must be unique in the current API Management service instance.')
         c.argument('properties', id_part=None, help='ApiRelease entity contract properties.')
-        c.argument('api_id', id_part=None, help='Identifier of the API the release belongs to.')
         c.argument('notes', id_part=None, help='Release Notes')
         c.argument('created_date_time', id_part=None, help='The time the API was released. The date conforms to the following format: yyyy-MM-ddTHH:mm:ssZ as specified by the ISO 8601 standard.')
         c.argument('updated_date_time', id_part=None, help='The time the API release was updated.')
@@ -145,7 +142,6 @@ def load_arguments(self, _):
         c.argument('api_id', id_part=None, help='API identifier. Must be unique in the current API Management service instance.')
         c.argument('release_id', id_part=None, help='Release identifier within an API. Must be unique in the current API Management service instance.')
         c.argument('properties', id_part=None, help='ApiRelease entity contract properties.')
-        c.argument('api_id', id_part=None, help='Identifier of the API the release belongs to.')
         c.argument('notes', id_part=None, help='Release Notes')
         c.argument('created_date_time', id_part=None, help='The time the API was released. The date conforms to the following format: yyyy-MM-ddTHH:mm:ssZ as specified by the ISO 8601 standard.')
         c.argument('updated_date_time', id_part=None, help='The time the API release was updated.')
@@ -609,7 +605,6 @@ def load_arguments(self, _):
         c.argument('properties', id_part=None, help='Properties of the Issue.')
         c.argument('created_date', id_part=None, help='Date and time when the issue was created.')
         c.argument('state', id_part=None, help='Status of the issue.')
-        c.argument('api_id', id_part=None, help='A resource identifier for the API the issue was created for.')
         c.argument('title', id_part=None, help='The issue title.')
         c.argument('description', id_part=None, help='Text describing the issue.')
         c.argument('user_id', id_part=None, help='A resource identifier for the user created the issue.')
@@ -625,7 +620,6 @@ def load_arguments(self, _):
         c.argument('properties', id_part=None, help='Properties of the Issue.')
         c.argument('created_date', id_part=None, help='Date and time when the issue was created.')
         c.argument('state', id_part=None, help='Status of the issue.')
-        c.argument('api_id', id_part=None, help='A resource identifier for the API the issue was created for.')
         c.argument('title', id_part=None, help='The issue title.')
         c.argument('description', id_part=None, help='Text describing the issue.')
         c.argument('user_id', id_part=None, help='A resource identifier for the user created the issue.')
@@ -1034,7 +1028,6 @@ def load_arguments(self, _):
         c.argument('title', id_part=None, help='Backend Title.')
         c.argument('description', id_part=None, help='Backend Description.')
         c.argument('resource_id', id_part=None, help='Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.')
-        c.argument('properties', id_part=None, help='Backend Properties contract')
         c.argument('service_fabric_cluster', id_part=None, help='Backend Service Fabric Cluster Properties')
         c.argument('credentials', id_part=None, help='Backend Credentials Contract Properties')
         c.argument('proxy', id_part=None, help='Backend Proxy Contract Properties')
@@ -1053,7 +1046,6 @@ def load_arguments(self, _):
         c.argument('title', id_part=None, help='Backend Title.')
         c.argument('description', id_part=None, help='Backend Description.')
         c.argument('resource_id', id_part=None, help='Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.')
-        c.argument('properties', id_part=None, help='Backend Properties contract')
         c.argument('service_fabric_cluster', id_part=None, help='Backend Service Fabric Cluster Properties')
         c.argument('credentials', id_part=None, help='Backend Credentials Contract Properties')
         c.argument('proxy', id_part=None, help='Backend Proxy Contract Properties')
@@ -1482,7 +1474,6 @@ def load_arguments(self, _):
         c.argument('external_id', id_part=None, help='Identifier of the external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.')
         c.argument('built_in', id_part=None, help='true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt group update') as c:
@@ -1496,7 +1487,6 @@ def load_arguments(self, _):
         c.argument('external_id', id_part=None, help='Identifier of the external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.')
         c.argument('built_in', id_part=None, help='true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt group delete') as c:
@@ -1598,7 +1588,6 @@ def load_arguments(self, _):
         c.argument('client_id', id_part=None, help='Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.')
         c.argument('client_secret', id_part=None, help='Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt identityprovider update') as c:
@@ -1616,7 +1605,6 @@ def load_arguments(self, _):
         c.argument('client_id', id_part=None, help='Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.')
         c.argument('client_secret', id_part=None, help='Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt identityprovider delete') as c:
@@ -1802,7 +1790,6 @@ def load_arguments(self, _):
         c.argument('id', id_part=None, help='Resource ID.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('properties', id_part=None, help='Recipient User entity contract properties.')
-        c.argument('user_id', id_part=None, help='API Management UserId subscribed to notification.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt notification recipientuser delete') as c:
@@ -1840,7 +1827,6 @@ def load_arguments(self, _):
         c.argument('id', id_part=None, help='Resource ID.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('properties', id_part=None, help='Recipient Email contract properties.')
-        c.argument('email', id_part=None, help='User Email subscribed to notification.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt notification recipientemail delete') as c:
@@ -2187,7 +2173,6 @@ def load_arguments(self, _):
         c.argument('description', id_part=None, help='Description of the API. May include HTML formatting tags.')
         c.argument('authentication_settings', id_part=None, help='Collection of authentication settings included into this API.')
         c.argument('subscription_key_parameter_names', id_part=None, help='Protocols over which API is made available.')
-        c.argument('type', id_part=None, help='Type of API.')
         c.argument('api_revision', id_part=None, help='Describes the Revision of the Api. If no value is provided, default revision 1 is created')
         c.argument('api_version', id_part=None, help='Indicates the Version identifier of the API if the API is versioned')
         c.argument('is_current', id_part=None, help='Indicates if API revision is current api revision.')
@@ -2242,7 +2227,6 @@ def load_arguments(self, _):
         c.argument('display_name', id_part=None, help='Group name.')
         c.argument('description', id_part=None, help='Group description. Can contain HTML formatting tags.')
         c.argument('built_in', id_part=None, help='true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.')
-        c.argument('type', id_part=None, help='Group type.')
         c.argument('external_id', id_part=None, help='For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
