@@ -8,34 +8,34 @@ from knack.util import CLIError
 
 
 def create_eventgrid_eventsubscription(cmd, client,
-                                       scope,
+                                       scope=None,
                                        name,
-                                       properties,
-                                       destination,
-                                       filter,
-                                       labels,
-                                       retry_policy,
-                                       dead_letter_destination,
-                                       topic,
-                                       provisioning_state,
-                                       id,
-                                       type):
+                                       properties=None,
+                                       destination=None,
+                                       filter=None,
+                                       labels=None,
+                                       retry_policy=None,
+                                       dead_letter_destination=None,
+                                       topic=None,
+                                       provisioning_state=None,
+                                       id=None,
+                                       type=None):
     return client.event_subscriptions.create()
 
 
 def update_eventgrid_eventsubscription(cmd, client,
-                                       scope,
+                                       scope=None,
                                        name,
-                                       properties,
-                                       destination,
-                                       filter,
-                                       labels,
-                                       retry_policy,
-                                       dead_letter_destination,
-                                       topic,
-                                       provisioning_state,
-                                       id,
-                                       type):
+                                       properties=None,
+                                       destination=None,
+                                       filter=None,
+                                       labels=None,
+                                       retry_policy=None,
+                                       dead_letter_destination=None,
+                                       topic=None,
+                                       provisioning_state=None,
+                                       id=None,
+                                       type=None):
     return client.event_subscriptions.update()
 
 
@@ -83,26 +83,26 @@ def list_(cmd, client):
 def create_eventgrid(cmd, client,
                      resource_group,
                      name,
-                     location,
-                     tags,
-                     properties,
-                     provisioning_state,
-                     endpoint,
-                     id,
-                     type):
+                     location=None,
+                     tags=None,
+                     properties=None,
+                     provisioning_state=None,
+                     endpoint=None,
+                     id=None,
+                     type=None):
     return client.topics.create()
 
 
 def update_eventgrid(cmd, client,
                      resource_group,
                      name,
-                     location,
-                     tags,
-                     properties,
-                     provisioning_state,
-                     endpoint,
-                     id,
-                     type):
+                     location=None,
+                     tags=None,
+                     properties=None,
+                     provisioning_state=None,
+                     endpoint=None,
+                     id=None,
+                     type=None):
     return client.topics.update()
 
 

@@ -10,22 +10,22 @@ from knack.util import CLIError
 def create_frontdoor(cmd, client,
                      resource_group,
                      name,
-                     location,
-                     tags,
-                     properties,
-                     friendly_name,
-                     routing_rules,
-                     load_balancing_settings,
-                     health_probe_settings,
-                     backend_pools,
-                     frontend_endpoints,
-                     backend_pools_settings,
-                     enabled_state,
-                     resource_state,
-                     provisioning_state,
-                     cname,
-                     id,
-                     type):
+                     location=None,
+                     tags=None,
+                     properties=None,
+                     friendly_name=None,
+                     routing_rules=None,
+                     load_balancing_settings=None,
+                     health_probe_settings=None,
+                     backend_pools=None,
+                     frontend_endpoints=None,
+                     backend_pools_settings=None,
+                     enabled_state=None,
+                     resource_state=None,
+                     provisioning_state=None,
+                     cname=None,
+                     id=None,
+                     type=None):
     return client.front_doors.create()
 
 
@@ -63,15 +63,15 @@ def create_frontdoor_routingrule(cmd, client,
                                  resource_group,
                                  front_door_name,
                                  name,
-                                 id,
-                                 properties,
-                                 frontend_endpoints,
-                                 accepted_protocols,
-                                 patterns_to_match,
-                                 enabled_state,
-                                 route_configuration,
-                                 resource_state,
-                                 type):
+                                 id=None,
+                                 properties=None,
+                                 frontend_endpoints=None,
+                                 accepted_protocols=None,
+                                 patterns_to_match=None,
+                                 enabled_state=None,
+                                 route_configuration=None,
+                                 resource_state=None,
+                                 type=None):
     return client.routing_rules.create()
 
 
@@ -114,13 +114,13 @@ def create_frontdoor_healthprobesetting(cmd, client,
                                         resource_group,
                                         front_door_name,
                                         name,
-                                        id,
-                                        properties,
-                                        path,
-                                        protocol,
-                                        interval_in_seconds,
-                                        resource_state,
-                                        type):
+                                        id=None,
+                                        properties=None,
+                                        path=None,
+                                        protocol=None,
+                                        interval_in_seconds=None,
+                                        resource_state=None,
+                                        type=None):
     return client.health_probe_settings.create()
 
 
@@ -163,13 +163,13 @@ def create_frontdoor_loadbalancingsetting(cmd, client,
                                           resource_group,
                                           front_door_name,
                                           name,
-                                          id,
-                                          properties,
-                                          sample_size,
-                                          successful_samples_required,
-                                          additional_latency_milliseconds,
-                                          resource_state,
-                                          type):
+                                          id=None,
+                                          properties=None,
+                                          sample_size=None,
+                                          successful_samples_required=None,
+                                          additional_latency_milliseconds=None,
+                                          resource_state=None,
+                                          type=None):
     return client.load_balancing_settings.create()
 
 
@@ -212,13 +212,13 @@ def create_frontdoor_backendpool(cmd, client,
                                  resource_group,
                                  front_door_name,
                                  name,
-                                 id,
-                                 properties,
-                                 backends,
-                                 load_balancing_settings,
-                                 health_probe_settings,
-                                 resource_state,
-                                 type):
+                                 id=None,
+                                 properties=None,
+                                 backends=None,
+                                 load_balancing_settings=None,
+                                 health_probe_settings=None,
+                                 resource_state=None,
+                                 type=None):
     return client.backend_pools.create()
 
 
@@ -261,17 +261,17 @@ def create_frontdoor_frontendendpoint(cmd, client,
                                       resource_group,
                                       front_door_name,
                                       name,
-                                      id,
-                                      properties,
-                                      host_name,
-                                      session_affinity_enabled_state,
-                                      session_affinity_ttl_seconds,
-                                      web_application_firewall_policy_link,
-                                      resource_state,
-                                      custom_https_provisioning_state,
-                                      custom_https_provisioning_substate,
-                                      custom_https_configuration,
-                                      type):
+                                      id=None,
+                                      properties=None,
+                                      host_name=None,
+                                      session_affinity_enabled_state=None,
+                                      session_affinity_ttl_seconds=None,
+                                      web_application_firewall_policy_link=None,
+                                      resource_state=None,
+                                      custom_https_provisioning_state=None,
+                                      custom_https_provisioning_substate=None,
+                                      custom_https_configuration=None,
+                                      type=None):
     return client.frontend_endpoints.create()
 
 
