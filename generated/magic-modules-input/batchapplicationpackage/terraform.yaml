@@ -1,3 +1,0 @@
-overrides: !ruby/object:Provider::ResourceOverrides
-  ApplicationPackage: !ruby/object:Provider::Azure::Terraform::ResourceOverride
-    properties: {}

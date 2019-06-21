@@ -1,3 +1,0 @@
-overrides: !ruby/object:Provider::ResourceOverrides
-  GalleryImageVersion: !ruby/object:Provider::Azure::Terraform::ResourceOverride
-    properties: {}
