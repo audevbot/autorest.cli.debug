@@ -10,7 +10,7 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 helps[''] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Operation.
 """
 
 helps[' list'] = """
@@ -20,7 +20,7 @@ helps[' list'] = """
 
 helps['servicebus'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Namespace.
 """
 
 helps['servicebus create'] = """
@@ -50,7 +50,7 @@ helps['servicebus show'] = """
 
 helps['servicebus authorizationrule'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Namespace.
 """
 
 helps['servicebus authorizationrule list'] = """
@@ -65,7 +65,7 @@ helps['servicebus authorizationrule show'] = """
 
 helps['servicebus disasterrecoveryconfig'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage DisasterRecoveryConfig.
 """
 
 helps['servicebus disasterrecoveryconfig create'] = """
@@ -90,7 +90,7 @@ helps['servicebus disasterrecoveryconfig show'] = """
 
 helps['servicebus disasterrecoveryconfig authorizationrule'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage DisasterRecoveryConfig.
 """
 
 helps['servicebus disasterrecoveryconfig authorizationrule list'] = """
@@ -105,7 +105,7 @@ helps['servicebus disasterrecoveryconfig authorizationrule show'] = """
 
 helps['servicebus migrationconfiguration'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage MigrationConfig.
 """
 
 helps['servicebus migrationconfiguration show'] = """
@@ -120,7 +120,7 @@ helps['servicebus migrationconfiguration list'] = """
 
 helps['servicebus queue'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Queue.
 """
 
 helps['servicebus queue create'] = """
@@ -145,7 +145,7 @@ helps['servicebus queue show'] = """
 
 helps['servicebus queue authorizationrule'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Queue.
 """
 
 helps['servicebus queue authorizationrule list'] = """
@@ -160,7 +160,7 @@ helps['servicebus queue authorizationrule show'] = """
 
 helps['servicebus topic'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Topic.
 """
 
 helps['servicebus topic create'] = """
@@ -185,7 +185,7 @@ helps['servicebus topic show'] = """
 
 helps['servicebus topic authorizationrule'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Topic.
 """
 
 helps['servicebus topic authorizationrule list'] = """
@@ -200,7 +200,7 @@ helps['servicebus topic authorizationrule show'] = """
 
 helps['servicebus topic subscription'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Subscription.
 """
 
 helps['servicebus topic subscription create'] = """
@@ -225,7 +225,7 @@ helps['servicebus topic subscription show'] = """
 
 helps['servicebus topic subscription'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Subscription.
 """
 
 helps['servicebus topic subscription list'] = """
@@ -240,7 +240,7 @@ helps['servicebus topic subscription show'] = """
 
 helps['servicebus topic subscription rule'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Rule.
 """
 
 helps['servicebus topic subscription rule create'] = """
@@ -265,7 +265,7 @@ helps['servicebus topic subscription rule show'] = """
 
 helps['servicebus topic subscription rule'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Rule.
 """
 
 helps['servicebus topic subscription rule show'] = """
@@ -280,7 +280,7 @@ helps['servicebus topic subscription rule list'] = """
 
 helps['servicebus'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Region.
 """
 
 helps['servicebus list'] = """
@@ -290,7 +290,7 @@ helps['servicebus list'] = """
 
 helps[''] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage PremiumMessagingRegion.
 """
 
 helps[' list'] = """
@@ -300,7 +300,7 @@ helps[' list'] = """
 
 helps['servicebus'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage EventHub.
 """
 
 helps['servicebus list'] = """

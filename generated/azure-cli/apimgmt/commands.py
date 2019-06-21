@@ -353,7 +353,6 @@ def load_command_table(self, _):
         g.custom_command('show', 'show_apimgmt_tenant')
     with self.command_group('apimgmt tenant', apimgmt_sdk, client_factory=cf_apimgmt) as g:
         g.custom_command('show', 'show_apimgmt_tenant')
-    with self.command_group('apimgmt tenant', apimgmt_sdk, client_factory=cf_apimgmt) as g:
     with self.command_group('apimgmt user', apimgmt_sdk, client_factory=cf_apimgmt) as g:
         g.custom_command('create', 'create_apimgmt_user')
         g.custom_command('update', 'update_apimgmt_user')

@@ -10,7 +10,7 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 helps['compute'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Gallery.
 """
 
 helps['compute create'] = """
@@ -35,7 +35,7 @@ helps['compute show'] = """
 
 helps['compute'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Gallery.
 """
 
 helps['compute show'] = """
@@ -50,7 +50,7 @@ helps['compute list'] = """
 
 helps['compute image'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage GalleryImage.
 """
 
 helps['compute image create'] = """
@@ -75,7 +75,7 @@ helps['compute image show'] = """
 
 helps['compute image'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage GalleryImage.
 """
 
 helps['compute image show'] = """
@@ -90,7 +90,7 @@ helps['compute image list'] = """
 
 helps['compute image version'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage GalleryImageVersion.
 """
 
 helps['compute image version create'] = """
@@ -115,7 +115,7 @@ helps['compute image version show'] = """
 
 helps['compute image version'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage GalleryImageVersion.
 """
 
 helps['compute image version show'] = """

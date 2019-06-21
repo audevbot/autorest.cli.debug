@@ -10,7 +10,7 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 helps['cosmos-db'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage DatabaseAccount.
 """
 
 helps['cosmos-db create'] = """
@@ -35,7 +35,7 @@ helps['cosmos-db show'] = """
 
 helps['cosmos-db table database keyspace graph container collection'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage DatabaseAccount.
 """
 
 helps['cosmos-db table database keyspace graph container collection list'] = """
@@ -50,7 +50,7 @@ helps['cosmos-db table database keyspace graph container collection show'] = """
 
 helps[''] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Operation.
 """
 
 helps[' list'] = """
@@ -60,7 +60,7 @@ helps[' list'] = """
 
 helps['cosmos-db database'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Database.
 """
 
 helps['cosmos-db database list'] = """
@@ -70,7 +70,7 @@ helps['cosmos-db database list'] = """
 
 helps['cosmos-db database collection'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Collection.
 """
 
 helps['cosmos-db database collection list'] = """
@@ -80,7 +80,7 @@ helps['cosmos-db database collection list'] = """
 
 helps['cosmos-db region database collection'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage CollectionRegion.
 """
 
 helps['cosmos-db region database collection list'] = """
@@ -90,7 +90,7 @@ helps['cosmos-db region database collection list'] = """
 
 helps['cosmos-db region'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage DatabaseAccountRegion.
 """
 
 helps['cosmos-db region list'] = """
@@ -100,7 +100,7 @@ helps['cosmos-db region list'] = """
 
 helps['cosmos-db sourceregion targetregion'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage PercentileSourceTarget.
 """
 
 helps['cosmos-db sourceregion targetregion list'] = """
@@ -110,7 +110,7 @@ helps['cosmos-db sourceregion targetregion list'] = """
 
 helps['cosmos-db targetregion'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage PercentileTarget.
 """
 
 helps['cosmos-db targetregion list'] = """
@@ -120,7 +120,7 @@ helps['cosmos-db targetregion list'] = """
 
 helps['cosmos-db'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Percentile.
 """
 
 helps['cosmos-db list'] = """
@@ -130,7 +130,7 @@ helps['cosmos-db list'] = """
 
 helps['cosmos-db region database collection'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage CollectionPartitionRegion.
 """
 
 helps['cosmos-db region database collection list'] = """
@@ -140,7 +140,7 @@ helps['cosmos-db region database collection list'] = """
 
 helps['cosmos-db database collection'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage CollectionPartition.
 """
 
 helps['cosmos-db database collection list'] = """
@@ -150,7 +150,7 @@ helps['cosmos-db database collection list'] = """
 
 helps['cosmos-db database collection partitionkeyrangeid'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage PartitionKeyRangeId.
 """
 
 helps['cosmos-db database collection partitionkeyrangeid list'] = """
@@ -160,7 +160,7 @@ helps['cosmos-db database collection partitionkeyrangeid list'] = """
 
 helps['cosmos-db region database collection partitionkeyrangeid'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage PartitionKeyRangeIdRegion.
 """
 
 helps['cosmos-db region database collection partitionkeyrangeid list'] = """

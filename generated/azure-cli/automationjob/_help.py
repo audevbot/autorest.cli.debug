@@ -10,7 +10,7 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 helps['automationjob job'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Job.
 """
 
 helps['automationjob job create'] = """
@@ -30,7 +30,7 @@ helps['automationjob job show'] = """
 
 helps['automationjob job'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Job.
 """
 
 helps['automationjob job show'] = """
@@ -45,7 +45,7 @@ helps['automationjob job list'] = """
 
 helps['automationjob job stream'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage JobStream.
 """
 
 helps['automationjob job stream show'] = """

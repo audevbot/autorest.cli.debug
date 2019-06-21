@@ -10,7 +10,7 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 helps['mgmtgroups'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage ManagementGroup.
 """
 
 helps['mgmtgroups create'] = """
@@ -40,7 +40,7 @@ helps['mgmtgroups show'] = """
 
 helps['mgmtgroups'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage ManagementGroup.
 """
 
 helps['mgmtgroups show'] = """
@@ -55,7 +55,7 @@ helps['mgmtgroups list'] = """
 
 helps['mgmtgroups'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage ManagementGroupSubscription.
 """
 
 helps['mgmtgroups create'] = """
@@ -70,7 +70,7 @@ helps['mgmtgroups delete'] = """
 
 helps[''] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Operation.
 """
 
 helps[' list'] = """

@@ -10,7 +10,7 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 helps['automationcfg softwareupdateconfiguration'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage SoftwareUpdateConfiguration.
 """
 
 helps['automationcfg softwareupdateconfiguration create'] = """
@@ -30,7 +30,7 @@ helps['automationcfg softwareupdateconfiguration list'] = """
 
 helps['automationcfg softwareupdateconfiguration'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage SoftwareUpdateConfiguration.
 """
 
 helps['automationcfg softwareupdateconfiguration list'] = """
