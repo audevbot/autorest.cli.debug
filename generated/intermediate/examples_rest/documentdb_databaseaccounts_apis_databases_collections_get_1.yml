@@ -1,0 +1,29 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    database_account_name: myDatabaseAccount
+    api_name: myApi
+    database_name: myDatabase
+    collection_name: myCollection
+  tasks:
+    - name: CosmosDBMongoDBCollectionGet
+      azure_rm_resource_facts:
+        api_version: '2015-04-08'
+        resource_group: '{{ resource_group }}'
+        provider: DocumentDB
+        resource_type: databaseAccounts
+        resource_name: '{{ database_account_name }}'
+        subresource:
+          - type: apis
+            name: '{{ api_name }}'
+          - type: databases
+            name: '{{ database_name }}'
+          - type: collections
+            name: '{{ collection_name }}'
+      register: output
+    - debug:
+        var: output

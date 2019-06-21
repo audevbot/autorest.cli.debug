@@ -1,0 +1,21 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    gallery_name: myGallery
+    image_name: myImage
+  tasks:
+    - name: Delete a gallery image.
+      azure_rm_resource:
+        method: DELETE
+        api_version: '2019-03-01'
+        resource_group: '{{ resource_group }}'
+        provider: Compute
+        resource_type: galleries
+        resource_name: '{{ gallery_name }}'
+        subresource:
+          - type: images
+            name: '{{ image_name }}'

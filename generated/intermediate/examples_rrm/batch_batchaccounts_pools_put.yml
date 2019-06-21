@@ -1,0 +1,27 @@
+- import_playbook: batch_batchaccounts_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    batch_account_name: myBatchAccount
+    pool_name: myPool
+  tasks:
+
+    - name: CreatePool - Minimal CloudServiceConfiguration
+      azure_rm_batchpool:
+        resource_group: '{{resource_group}}'
+        account_name: '{{batch_account_name}}'
+        name: '{{pool_name}}'
+        vm_size: STANDARD_D4
+        deployment_configuration:
+          cloud_service_configuration:
+            os_family: '5'
+        scale_settings:
+          fixed_scale:
+            target_dedicated_nodes: '3'
+    

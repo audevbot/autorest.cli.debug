@@ -43,7 +43,6 @@ def load_arguments(self, _):
         c.argument('api_type', id_part=None, help='Type of Api to create.   * `http` creates a SOAP to REST API   * `soap` creates a SOAP pass-through API .')
         c.argument('is_online', id_part=None, help='Indicates if API revision is accessible via the gateway.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -75,7 +74,6 @@ def load_arguments(self, _):
         c.argument('api_type', id_part=None, help='Type of Api to create.   * `http` creates a SOAP to REST API   * `soap` creates a SOAP pass-through API .')
         c.argument('is_online', id_part=None, help='Indicates if API revision is accessible via the gateway.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -138,7 +136,6 @@ def load_arguments(self, _):
         c.argument('created_date_time', id_part=None, help='The time the API was released. The date conforms to the following format: yyyy-MM-ddTHH:mm:ssZ as specified by the ISO 8601 standard.')
         c.argument('updated_date_time', id_part=None, help='The time the API release was updated.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -153,7 +150,6 @@ def load_arguments(self, _):
         c.argument('created_date_time', id_part=None, help='The time the API was released. The date conforms to the following format: yyyy-MM-ddTHH:mm:ssZ as specified by the ISO 8601 standard.')
         c.argument('updated_date_time', id_part=None, help='The time the API release was updated.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -216,7 +212,6 @@ def load_arguments(self, _):
         c.argument('method', id_part=None, help='A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.')
         c.argument('url_template', id_part=None, help='Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -235,7 +230,6 @@ def load_arguments(self, _):
         c.argument('method', id_part=None, help='A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.')
         c.argument('url_template', id_part=None, help='Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -293,7 +287,6 @@ def load_arguments(self, _):
         c.argument('value', id_part=None, help='Contents of the Policy as defined by the format.')
         c.argument('format', id_part=None, help='Format of the policyContent.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -353,7 +346,6 @@ def load_arguments(self, _):
         c.argument('properties', id_part=None, help='Properties supplied to Create Tag operation.')
         c.argument('display_name', id_part=None, help='Tag name.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -364,7 +356,6 @@ def load_arguments(self, _):
         c.argument('properties', id_part=None, help='Properties supplied to Create Tag operation.')
         c.argument('display_name', id_part=None, help='Tag name.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -431,7 +422,6 @@ def load_arguments(self, _):
         c.argument('value', id_part=None, help='Contents of the Policy as defined by the format.')
         c.argument('format', id_part=None, help='Format of the policyContent.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -488,7 +478,6 @@ def load_arguments(self, _):
         c.argument('content_type', id_part=None, help='Must be a valid a media type used in a Content-Type header as defined in the RFC 2616. Media type of the schema document (e.g. application/json, application/xml). </br> - `Swagger` Schema use `application/vnd.ms-azure-apim.swagger.definitions+json` </br> - `WSDL` Schema use `application/vnd.ms-azure-apim.xsd+xml` </br> - `OpenApi` Schema use `application/vnd.oai.openapi.components+json` </br> - `WADL Schema` use `application/vnd.ms-azure-apim.wadl.grammars+xml`.')
         c.argument('document', id_part=None, help='Create or update Properties of the Schema Document.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -549,7 +538,6 @@ def load_arguments(self, _):
         c.argument('backend', id_part=None, help='Diagnostic settings for incoming/outgoing HTTP messages to the Backend')
         c.argument('enable_http_correlation_headers', id_part=None, help='Whether to process Correlation Headers coming to Api Management Service. Only applicable to Application Insights diagnostics. Default is true.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -566,7 +554,6 @@ def load_arguments(self, _):
         c.argument('backend', id_part=None, help='Diagnostic settings for incoming/outgoing HTTP messages to the Backend')
         c.argument('enable_http_correlation_headers', id_part=None, help='Whether to process Correlation Headers coming to Api Management Service. Only applicable to Application Insights diagnostics. Default is true.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -627,7 +614,6 @@ def load_arguments(self, _):
         c.argument('description', id_part=None, help='Text describing the issue.')
         c.argument('user_id', id_part=None, help='A resource identifier for the user created the issue.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -644,7 +630,6 @@ def load_arguments(self, _):
         c.argument('description', id_part=None, help='Text describing the issue.')
         c.argument('user_id', id_part=None, help='A resource identifier for the user created the issue.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -703,7 +688,6 @@ def load_arguments(self, _):
         c.argument('created_date', id_part=None, help='Date and time when the comment was created.')
         c.argument('user_id', id_part=None, help='A resource identifier for the user who left the comment.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -767,7 +751,6 @@ def load_arguments(self, _):
         c.argument('content_format', id_part=None, help='Either \'link\' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the \'content\' property.')
         c.argument('content', id_part=None, help='An HTTP link or Base64-encoded binary data.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -831,7 +814,6 @@ def load_arguments(self, _):
         c.argument('external_docs_description', id_part=None, help='Description of the external resources describing the tag.')
         c.argument('display_name', id_part=None, help='Tag name.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -899,7 +881,6 @@ def load_arguments(self, _):
         c.argument('display_name', id_part=None, help='Name of API Version Set')
         c.argument('versioning_scheme', id_part=None, help='An value that determines where the API Version identifer will be located in a HTTP request.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -914,7 +895,6 @@ def load_arguments(self, _):
         c.argument('display_name', id_part=None, help='Name of API Version Set')
         c.argument('versioning_scheme', id_part=None, help='An value that determines where the API Version identifer will be located in a HTTP request.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -979,7 +959,6 @@ def load_arguments(self, _):
         c.argument('grant_types', id_part=None, help='Form of an authorization grant, which the client uses to request the access token.')
         c.argument('client_id', id_part=None, help='Client or app id registered with this authorization server.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -1005,7 +984,6 @@ def load_arguments(self, _):
         c.argument('grant_types', id_part=None, help='Form of an authorization grant, which the client uses to request the access token.')
         c.argument('client_id', id_part=None, help='Client or app id registered with this authorization server.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -1064,7 +1042,6 @@ def load_arguments(self, _):
         c.argument('url', id_part=None, help='Runtime Url of the Backend.')
         c.argument('protocol', id_part=None, help='Backend communication protocol.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -1084,7 +1061,6 @@ def load_arguments(self, _):
         c.argument('url', id_part=None, help='Runtime Url of the Backend.')
         c.argument('protocol', id_part=None, help='Backend communication protocol.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -1136,7 +1112,6 @@ def load_arguments(self, _):
         c.argument('connection_string', id_part=None, help='Runtime connection string to cache')
         c.argument('resource_id', id_part=None, help='Original uri of entity in external system cache points to')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -1149,7 +1124,6 @@ def load_arguments(self, _):
         c.argument('connection_string', id_part=None, help='Runtime connection string to cache')
         c.argument('resource_id', id_part=None, help='Original uri of entity in external system cache points to')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -1203,7 +1177,6 @@ def load_arguments(self, _):
         c.argument('thumbprint', id_part=None, help='Thumbprint of the certificate.')
         c.argument('expiration_date', id_part=None, help='Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard. ')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -1289,7 +1262,6 @@ def load_arguments(self, _):
         c.argument('identity', id_part=None, help='Managed service identity of the Api Management service.')
         c.argument('location', id_part=None, help='Resource location.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource is set to Microsoft.ApiManagement.')
         c.argument('etag', id_part=None, help='ETag of the resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
@@ -1323,7 +1295,6 @@ def load_arguments(self, _):
         c.argument('identity', id_part=None, help='Managed service identity of the Api Management service.')
         c.argument('location', id_part=None, help='Resource location.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource is set to Microsoft.ApiManagement.')
         c.argument('etag', id_part=None, help='ETag of the resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
@@ -1374,7 +1345,6 @@ def load_arguments(self, _):
         c.argument('backend', id_part=None, help='Diagnostic settings for incoming/outgoing HTTP messages to the Backend')
         c.argument('enable_http_correlation_headers', id_part=None, help='Whether to process Correlation Headers coming to Api Management Service. Only applicable to Application Insights diagnostics. Default is true.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -1390,7 +1360,6 @@ def load_arguments(self, _):
         c.argument('backend', id_part=None, help='Diagnostic settings for incoming/outgoing HTTP messages to the Backend')
         c.argument('enable_http_correlation_headers', id_part=None, help='Whether to process Correlation Headers coming to Api Management Service. Only applicable to Application Insights diagnostics. Default is true.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -1445,7 +1414,6 @@ def load_arguments(self, _):
         c.argument('parameters', id_part=None, help='Email Template Parameter values.')
         c.argument('is_default', id_part=None, help='Whether the template is the default template provided by Api Management or has been edited.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -1461,7 +1429,6 @@ def load_arguments(self, _):
         c.argument('parameters', id_part=None, help='Email Template Parameter values.')
         c.argument('is_default', id_part=None, help='Whether the template is the default template provided by Api Management or has been edited.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -1515,7 +1482,6 @@ def load_arguments(self, _):
         c.argument('external_id', id_part=None, help='Identifier of the external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.')
         c.argument('built_in', id_part=None, help='true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -1530,7 +1496,6 @@ def load_arguments(self, _):
         c.argument('external_id', id_part=None, help='Identifier of the external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.')
         c.argument('built_in', id_part=None, help='true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -1579,7 +1544,6 @@ def load_arguments(self, _):
         c.argument('group_id', id_part=None, help='Group identifier. Must be unique in the current API Management service instance.')
         c.argument('user_id', id_part=None, help='User identifier. Must be unique in the current API Management service instance.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('properties', id_part=None, help='User entity contract properties.')
         c.argument('state', id_part=None, help='Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.')
@@ -1634,7 +1598,6 @@ def load_arguments(self, _):
         c.argument('client_id', id_part=None, help='Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.')
         c.argument('client_secret', id_part=None, help='Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -1653,7 +1616,6 @@ def load_arguments(self, _):
         c.argument('client_id', id_part=None, help='Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.')
         c.argument('client_secret', id_part=None, help='Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -1723,7 +1685,6 @@ def load_arguments(self, _):
         c.argument('is_buffered', id_part=None, help='Whether records are buffered in the logger before publishing. Default is assumed to be true.')
         c.argument('resource_id', id_part=None, help='Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -1738,7 +1699,6 @@ def load_arguments(self, _):
         c.argument('is_buffered', id_part=None, help='Whether records are buffered in the logger before publishing. Default is assumed to be true.')
         c.argument('resource_id', id_part=None, help='Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -1795,7 +1755,6 @@ def load_arguments(self, _):
         c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('name', id_part=None, help='Notification Name Identifier.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('properties', id_part=None, help='Notification entity contract properties.')
         c.argument('title', id_part=None, help='Title of the Notification.')
@@ -1841,7 +1800,6 @@ def load_arguments(self, _):
         c.argument('name', id_part=None, help='Notification Name Identifier.')
         c.argument('user_id', id_part=None, help='User identifier. Must be unique in the current API Management service instance.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('properties', id_part=None, help='Recipient User entity contract properties.')
         c.argument('user_id', id_part=None, help='API Management UserId subscribed to notification.')
@@ -1880,7 +1838,6 @@ def load_arguments(self, _):
         c.argument('name', id_part=None, help='Notification Name Identifier.')
         c.argument('email', id_part=None, help='Email identifier.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('properties', id_part=None, help='Recipient Email contract properties.')
         c.argument('email', id_part=None, help='User Email subscribed to notification.')
@@ -1924,7 +1881,6 @@ def load_arguments(self, _):
         c.argument('client_id', id_part=None, help='Client ID of developer console which is the client application.')
         c.argument('client_secret', id_part=None, help='Client Secret of developer console which is the client application.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -1939,7 +1895,6 @@ def load_arguments(self, _):
         c.argument('client_id', id_part=None, help='Client ID of developer console which is the client application.')
         c.argument('client_secret', id_part=None, help='Client Secret of developer console which is the client application.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -1990,7 +1945,6 @@ def load_arguments(self, _):
         c.argument('value', id_part=None, help='Contents of the Policy as defined by the format.')
         c.argument('format', id_part=None, help='Format of the policyContent.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -2047,7 +2001,6 @@ def load_arguments(self, _):
         c.argument('properties', id_part=None, help='Sign-in settings contract properties.')
         c.argument('enabled', id_part=None, help='Redirect Anonymous users to the Sign-In page.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -2057,7 +2010,6 @@ def load_arguments(self, _):
         c.argument('properties', id_part=None, help='Sign-in settings contract properties.')
         c.argument('enabled', id_part=None, help='Redirect Anonymous users to the Sign-In page.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -2084,7 +2036,6 @@ def load_arguments(self, _):
         c.argument('enabled', id_part=None, help='Allow users to sign up on a developer portal.')
         c.argument('terms_of_service', id_part=None, help='Terms of service contract properties.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -2095,7 +2046,6 @@ def load_arguments(self, _):
         c.argument('enabled', id_part=None, help='Allow users to sign up on a developer portal.')
         c.argument('terms_of_service', id_part=None, help='Terms of service contract properties.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -2124,7 +2074,6 @@ def load_arguments(self, _):
         c.argument('subscriptions', id_part=None, help='Subscriptions delegation settings.')
         c.argument('user_registration', id_part=None, help='User registration delegation settings.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -2137,7 +2086,6 @@ def load_arguments(self, _):
         c.argument('subscriptions', id_part=None, help='Subscriptions delegation settings.')
         c.argument('user_registration', id_part=None, help='User registration delegation settings.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -2170,7 +2118,6 @@ def load_arguments(self, _):
         c.argument('state', id_part=None, help='whether product is published or not. Published products are discoverable by users of developer portal. Non published products are visible only to administrators. Default state of Product is notPublished.')
         c.argument('display_name', id_part=None, help='Product name.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -2187,7 +2134,6 @@ def load_arguments(self, _):
         c.argument('state', id_part=None, help='whether product is published or not. Published products are discoverable by users of developer portal. Non published products are visible only to administrators. Default state of Product is notPublished.')
         c.argument('display_name', id_part=None, help='Product name.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -2236,7 +2182,6 @@ def load_arguments(self, _):
         c.argument('product_id', id_part=None, help='Product identifier. Must be unique in the current API Management service instance.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('properties', id_part=None, help='Api entity contract properties.')
         c.argument('description', id_part=None, help='Description of the API. May include HTML formatting tags.')
@@ -2292,7 +2237,6 @@ def load_arguments(self, _):
         c.argument('product_id', id_part=None, help='Product identifier. Must be unique in the current API Management service instance.')
         c.argument('group_id', id_part=None, help='Group identifier. Must be unique in the current API Management service instance.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('properties', id_part=None, help='Group entity contract properties.')
         c.argument('display_name', id_part=None, help='Group name.')
@@ -2347,7 +2291,6 @@ def load_arguments(self, _):
         c.argument('value', id_part=None, help='Contents of the Policy as defined by the format.')
         c.argument('format', id_part=None, help='Format of the policyContent.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -2405,7 +2348,6 @@ def load_arguments(self, _):
         c.argument('display_name', id_part=None, help='Unique name of Property. It may contain only letters, digits, period, dash, and underscore characters.')
         c.argument('value', id_part=None, help='Value of the property. Can contain policy expressions. It may not be empty or consist only of whitespace.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -2419,7 +2361,6 @@ def load_arguments(self, _):
         c.argument('display_name', id_part=None, help='Unique name of Property. It may contain only letters, digits, period, dash, and underscore characters.')
         c.argument('value', id_part=None, help='Value of the property. Can contain policy expressions. It may not be empty or consist only of whitespace.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -2517,7 +2458,6 @@ def load_arguments(self, _):
         c.argument('state_comment', id_part=None, help='Optional subscription comment added by an administrator.')
         c.argument('notify', id_part=None, help='Notify change in Subscription State.   - If false, do not send any email notification for change of state of subscription   - If true, send email notification of change of state of subscription ')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -2541,7 +2481,6 @@ def load_arguments(self, _):
         c.argument('state_comment', id_part=None, help='Optional subscription comment added by an administrator.')
         c.argument('notify', id_part=None, help='Notify change in Subscription State.   - If false, do not send any email notification for change of state of subscription   - If true, send email notification of change of state of subscription ')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -2628,7 +2567,6 @@ def load_arguments(self, _):
         c.argument('registration_date', id_part=None, help='Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard. ')
         c.argument('groups', id_part=None, help='Collection of groups user is part of.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -2648,7 +2586,6 @@ def load_arguments(self, _):
         c.argument('registration_date', id_part=None, help='Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard. ')
         c.argument('groups', id_part=None, help='Collection of groups user is part of.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 

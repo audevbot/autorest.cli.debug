@@ -1,0 +1,14 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+  tasks:
+
+    - name: List galleries in a subscription.
+      azure_rm_computegallery_info: {}
+    
+      register: output
+    - debug:
+        var: output

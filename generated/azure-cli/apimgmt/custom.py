@@ -35,7 +35,6 @@ def create_apimgmt_api(cmd, client,
                        api_type,
                        is_online,
                        id,
-                       name,
                        type):
     return client.api.create()
 
@@ -68,7 +67,6 @@ def update_apimgmt_api(cmd, client,
                        api_type,
                        is_online,
                        id,
-                       name,
                        type):
     return client.api.update()
 
@@ -126,7 +124,6 @@ def create_apimgmt_api_release(cmd, client,
                                created_date_time,
                                updated_date_time,
                                id,
-                               name,
                                type):
     return client.api_release.create()
 
@@ -142,7 +139,6 @@ def update_apimgmt_api_release(cmd, client,
                                created_date_time,
                                updated_date_time,
                                id,
-                               name,
                                type):
     return client.api_release.update()
 
@@ -202,7 +198,6 @@ def create_apimgmt_api_operation(cmd, client,
                                  method,
                                  url_template,
                                  id,
-                                 name,
                                  type):
     return client.api_operation.create()
 
@@ -222,7 +217,6 @@ def update_apimgmt_api_operation(cmd, client,
                                  method,
                                  url_template,
                                  id,
-                                 name,
                                  type):
     return client.api_operation.update()
 
@@ -277,7 +271,6 @@ def create_apimgmt_api_operation_policy(cmd, client,
                                         value,
                                         format,
                                         id,
-                                        name,
                                         type):
     return client.api_operation_policy.create()
 
@@ -334,7 +327,6 @@ def create_apimgmt_tag(cmd, client,
                        properties,
                        display_name,
                        id,
-                       name,
                        type):
     return client.tag.create()
 
@@ -346,7 +338,6 @@ def update_apimgmt_tag(cmd, client,
                        properties,
                        display_name,
                        id,
-                       name,
                        type):
     return client.tag.update()
 
@@ -408,7 +399,6 @@ def create_apimgmt_api_policy(cmd, client,
                               value,
                               format,
                               id,
-                              name,
                               type):
     return client.api_policy.create()
 
@@ -462,7 +452,6 @@ def create_apimgmt_api_schema(cmd, client,
                               content_type,
                               document,
                               id,
-                              name,
                               type):
     return client.api_schema.create()
 
@@ -520,7 +509,6 @@ def create_apimgmt_api_diagnostic(cmd, client,
                                   backend,
                                   enable_http_correlation_headers,
                                   id,
-                                  name,
                                   type):
     return client.api_diagnostic.create()
 
@@ -538,7 +526,6 @@ def update_apimgmt_api_diagnostic(cmd, client,
                                   backend,
                                   enable_http_correlation_headers,
                                   id,
-                                  name,
                                   type):
     return client.api_diagnostic.update()
 
@@ -596,7 +583,6 @@ def create_apimgmt_api_issue(cmd, client,
                              description,
                              user_id,
                              id,
-                             name,
                              type):
     return client.api_issue.create()
 
@@ -614,7 +600,6 @@ def update_apimgmt_api_issue(cmd, client,
                              description,
                              user_id,
                              id,
-                             name,
                              type):
     return client.api_issue.update()
 
@@ -670,7 +655,6 @@ def create_apimgmt_api_issue_comment(cmd, client,
                                      created_date,
                                      user_id,
                                      id,
-                                     name,
                                      type):
     return client.api_issue_comment.create()
 
@@ -731,7 +715,6 @@ def create_apimgmt_api_issue_attachment(cmd, client,
                                         content_format,
                                         content,
                                         id,
-                                        name,
                                         type):
     return client.api_issue_attachment.create()
 
@@ -792,7 +775,6 @@ def create_apimgmt_api_tagdescription(cmd, client,
                                       external_docs_description,
                                       display_name,
                                       id,
-                                      name,
                                       type):
     return client.api_tag_description.create()
 
@@ -855,7 +837,6 @@ def create_apimgmt_apiversionset(cmd, client,
                                  display_name,
                                  versioning_scheme,
                                  id,
-                                 name,
                                  type):
     return client.api_version_set.create()
 
@@ -871,7 +852,6 @@ def update_apimgmt_apiversionset(cmd, client,
                                  display_name,
                                  versioning_scheme,
                                  id,
-                                 name,
                                  type):
     return client.api_version_set.update()
 
@@ -933,7 +913,6 @@ def create_apimgmt_authorizationserver(cmd, client,
                                        grant_types,
                                        client_id,
                                        id,
-                                       name,
                                        type):
     return client.authorization_server.create()
 
@@ -960,7 +939,6 @@ def update_apimgmt_authorizationserver(cmd, client,
                                        grant_types,
                                        client_id,
                                        id,
-                                       name,
                                        type):
     return client.authorization_server.update()
 
@@ -1016,7 +994,6 @@ def create_apimgmt_backend(cmd, client,
                            url,
                            protocol,
                            id,
-                           name,
                            type):
     return client.backend.create()
 
@@ -1037,7 +1014,6 @@ def update_apimgmt_backend(cmd, client,
                            url,
                            protocol,
                            id,
-                           name,
                            type):
     return client.backend.update()
 
@@ -1086,7 +1062,6 @@ def create_apimgmt_cache(cmd, client,
                          connection_string,
                          resource_id,
                          id,
-                         name,
                          type):
     return client.cache.create()
 
@@ -1100,7 +1075,6 @@ def update_apimgmt_cache(cmd, client,
                          connection_string,
                          resource_id,
                          id,
-                         name,
                          type):
     return client.cache.update()
 
@@ -1151,7 +1125,6 @@ def create_apimgmt_certificate(cmd, client,
                                thumbprint,
                                expiration_date,
                                id,
-                               name,
                                type):
     return client.certificate.create()
 
@@ -1230,7 +1203,6 @@ def create_apimgmt(cmd, client,
                    identity,
                    location,
                    id,
-                   name,
                    type,
                    etag):
     return client.api_management_service.create()
@@ -1265,7 +1237,6 @@ def update_apimgmt(cmd, client,
                    identity,
                    location,
                    id,
-                   name,
                    type,
                    etag):
     return client.api_management_service.update()
@@ -1313,7 +1284,6 @@ def create_apimgmt_diagnostic(cmd, client,
                               backend,
                               enable_http_correlation_headers,
                               id,
-                              name,
                               type):
     return client.diagnostic.create()
 
@@ -1330,7 +1300,6 @@ def update_apimgmt_diagnostic(cmd, client,
                               backend,
                               enable_http_correlation_headers,
                               id,
-                              name,
                               type):
     return client.diagnostic.update()
 
@@ -1382,7 +1351,6 @@ def create_apimgmt_template(cmd, client,
                             parameters,
                             is_default,
                             id,
-                            name,
                             type):
     return client.email_template.create()
 
@@ -1399,7 +1367,6 @@ def update_apimgmt_template(cmd, client,
                             parameters,
                             is_default,
                             id,
-                            name,
                             type):
     return client.email_template.update()
 
@@ -1450,7 +1417,6 @@ def create_apimgmt_group(cmd, client,
                          external_id,
                          built_in,
                          id,
-                         name,
                          type):
     return client.group.create()
 
@@ -1466,7 +1432,6 @@ def update_apimgmt_group(cmd, client,
                          external_id,
                          built_in,
                          id,
-                         name,
                          type):
     return client.group.update()
 
@@ -1512,7 +1477,6 @@ def create_apimgmt_group_user(cmd, client,
                               group_id,
                               user_id,
                               id,
-                              name,
                               type,
                               properties,
                               state,
@@ -1564,7 +1528,6 @@ def create_apimgmt_identityprovider(cmd, client,
                                     client_id,
                                     client_secret,
                                     id,
-                                    name,
                                     type):
     return client.identity_provider.create()
 
@@ -1584,7 +1547,6 @@ def update_apimgmt_identityprovider(cmd, client,
                                     client_id,
                                     client_secret,
                                     id,
-                                    name,
                                     type):
     return client.identity_provider.update()
 
@@ -1649,7 +1611,6 @@ def create_apimgmt_logger(cmd, client,
                           is_buffered,
                           resource_id,
                           id,
-                          name,
                           type):
     return client.logger.create()
 
@@ -1665,7 +1626,6 @@ def update_apimgmt_logger(cmd, client,
                           is_buffered,
                           resource_id,
                           id,
-                          name,
                           type):
     return client.logger.update()
 
@@ -1717,7 +1677,6 @@ def create_apimgmt_notification(cmd, client,
                                 service_name,
                                 name,
                                 id,
-                                name,
                                 type,
                                 properties,
                                 title,
@@ -1760,7 +1719,6 @@ def create_apimgmt_notification_recipientuser(cmd, client,
                                               name,
                                               user_id,
                                               id,
-                                              name,
                                               type,
                                               properties,
                                               user_id):
@@ -1796,7 +1754,6 @@ def create_apimgmt_notification_recipientemail(cmd, client,
                                                name,
                                                email,
                                                id,
-                                               name,
                                                type,
                                                properties,
                                                email):
@@ -1837,7 +1794,6 @@ def create_apimgmt_openidconnectprovider(cmd, client,
                                          client_id,
                                          client_secret,
                                          id,
-                                         name,
                                          type):
     return client.open_id_connect_provider.create()
 
@@ -1853,7 +1809,6 @@ def update_apimgmt_openidconnectprovider(cmd, client,
                                          client_id,
                                          client_secret,
                                          id,
-                                         name,
                                          type):
     return client.open_id_connect_provider.update()
 
@@ -1901,7 +1856,6 @@ def create_apimgmt_policy(cmd, client,
                           value,
                           format,
                           id,
-                          name,
                           type):
     return client.policy.create()
 
@@ -1953,7 +1907,6 @@ def create_apimgmt(cmd, client,
                    properties,
                    enabled,
                    id,
-                   name,
                    type):
     return client.sign_in_settings.create()
 
@@ -1964,7 +1917,6 @@ def update_apimgmt(cmd, client,
                    properties,
                    enabled,
                    id,
-                   name,
                    type):
     return client.sign_in_settings.update()
 
@@ -1988,7 +1940,6 @@ def create_apimgmt(cmd, client,
                    enabled,
                    terms_of_service,
                    id,
-                   name,
                    type):
     return client.sign_up_settings.create()
 
@@ -2000,7 +1951,6 @@ def update_apimgmt(cmd, client,
                    enabled,
                    terms_of_service,
                    id,
-                   name,
                    type):
     return client.sign_up_settings.update()
 
@@ -2026,7 +1976,6 @@ def create_apimgmt(cmd, client,
                    subscriptions,
                    user_registration,
                    id,
-                   name,
                    type):
     return client.delegation_settings.create()
 
@@ -2040,7 +1989,6 @@ def update_apimgmt(cmd, client,
                    subscriptions,
                    user_registration,
                    id,
-                   name,
                    type):
     return client.delegation_settings.update()
 
@@ -2070,7 +2018,6 @@ def create_apimgmt_product(cmd, client,
                            state,
                            display_name,
                            id,
-                           name,
                            type):
     return client.product.create()
 
@@ -2088,7 +2035,6 @@ def update_apimgmt_product(cmd, client,
                            state,
                            display_name,
                            id,
-                           name,
                            type):
     return client.product.update()
 
@@ -2134,7 +2080,6 @@ def create_apimgmt_product_api(cmd, client,
                                product_id,
                                api_id,
                                id,
-                               name,
                                type,
                                properties,
                                description,
@@ -2187,7 +2132,6 @@ def create_apimgmt_product_group(cmd, client,
                                  product_id,
                                  group_id,
                                  id,
-                                 name,
                                  type,
                                  properties,
                                  display_name,
@@ -2237,7 +2181,6 @@ def create_apimgmt_product_policy(cmd, client,
                                   value,
                                   format,
                                   id,
-                                  name,
                                   type):
     return client.product_policy.create()
 
@@ -2292,7 +2235,6 @@ def create_apimgmt_property(cmd, client,
                             display_name,
                             value,
                             id,
-                            name,
                             type):
     return client.property.create()
 
@@ -2307,7 +2249,6 @@ def update_apimgmt_property(cmd, client,
                             display_name,
                             value,
                             id,
-                            name,
                             type):
     return client.property.update()
 
@@ -2394,7 +2335,6 @@ def create_apimgmt_subscription(cmd, client,
                                 state_comment,
                                 notify,
                                 id,
-                                name,
                                 type):
     return client.subscription.create()
 
@@ -2419,7 +2359,6 @@ def update_apimgmt_subscription(cmd, client,
                                 state_comment,
                                 notify,
                                 id,
-                                name,
                                 type):
     return client.subscription.update()
 
@@ -2495,7 +2434,6 @@ def create_apimgmt_user(cmd, client,
                         registration_date,
                         groups,
                         id,
-                        name,
                         type):
     return client.user.create()
 
@@ -2516,7 +2454,6 @@ def update_apimgmt_user(cmd, client,
                         registration_date,
                         groups,
                         id,
-                        name,
                         type):
     return client.user.update()
 

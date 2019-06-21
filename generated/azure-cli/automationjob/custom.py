@@ -28,7 +28,6 @@ def create_automationjob_job(cmd, client,
                              provisioning_state,
                              client_request_id,
                              id,
-                             name,
                              type):
     return client.job.create()
 

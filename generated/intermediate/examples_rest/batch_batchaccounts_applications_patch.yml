@@ -1,0 +1,27 @@
+- import_playbook: batch_batchaccounts_applications_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    batch_account_name: myBatchAccount
+    application_name: myApplication
+  tasks:
+    - name: ApplicationUpdate
+      azure_rm_resource:
+        method: PATCH
+        api_version: '2018-12-01'
+        resource_group: '{{ resource_group }}'
+        provider: Batch
+        resource_type: batchAccounts
+        resource_name: '{{ batch_account_name }}'
+        subresource:
+          - type: applications
+            name: '{{ application_name }}'
+        body:
+          properties:
+            allowUpdates: true
+            displayName: myAppName
+            defaultVersion: '2'

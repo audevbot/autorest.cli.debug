@@ -1,0 +1,14 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars: {}
+  tasks:
+    - name: GetEntities
+      azure_rm_resource:
+        method: POST
+        api_version: 2018-01-01-preview
+        provider: Management
+        resource_type: getEntities
+        body: !<tag:yaml.org,2002:js/undefined> ''

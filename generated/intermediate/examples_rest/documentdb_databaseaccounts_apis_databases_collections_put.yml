@@ -1,0 +1,42 @@
+- import_playbook: documentdb_databaseaccounts_apis_databases_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    database_account_name: myDatabaseAccount
+    api_name: myApi
+    database_name: myDatabase
+    collection_name: myCollection
+  tasks:
+    - name: CosmosDBMongoDBCollectionCreateUpdate
+      azure_rm_resource:
+        idempotency: true
+        api_version: '2015-04-08'
+        resource_group: '{{ resource_group }}'
+        provider: DocumentDB
+        resource_type: databaseAccounts
+        resource_name: '{{ database_account_name }}'
+        subresource:
+          - type: apis
+            name: '{{ api_name }}'
+          - type: databases
+            name: '{{ database_name }}'
+          - type: collections
+            name: '{{ collection_name }}'
+        body:
+          properties:
+            resource:
+              id: testcoll
+              indexes:
+                - key:
+                    keys:
+                      - testKey
+                  options:
+                    expireAfterSeconds: '100'
+                    unique: true
+              shardKey:
+                testKey: Hash
+            options: {}

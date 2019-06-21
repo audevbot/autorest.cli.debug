@@ -27,7 +27,6 @@ def load_arguments(self, _):
         c.argument('topic', id_part=None, help='Name of the topic of the event subscription.')
         c.argument('provisioning_state', id_part=None, help='Provisioning state of the event subscription.')
         c.argument('id', id_part=None, help='Fully qualified identifier of the resource')
-        c.argument('name', id_part=None, help='Name of the resource')
         c.argument('type', id_part=None, help='Type of the resource')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -43,7 +42,6 @@ def load_arguments(self, _):
         c.argument('topic', id_part=None, help='Name of the topic of the event subscription.')
         c.argument('provisioning_state', id_part=None, help='Provisioning state of the event subscription.')
         c.argument('id', id_part=None, help='Fully qualified identifier of the resource')
-        c.argument('name', id_part=None, help='Name of the resource')
         c.argument('type', id_part=None, help='Type of the resource')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -103,7 +101,6 @@ def load_arguments(self, _):
         c.argument('provisioning_state', id_part=None, help='Provisioning state of the topic.')
         c.argument('endpoint', id_part=None, help='Endpoint for the topic.')
         c.argument('id', id_part=None, help='Fully qualified identifier of the resource')
-        c.argument('name', id_part=None, help='Name of the resource')
         c.argument('type', id_part=None, help='Type of the resource')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -116,7 +113,6 @@ def load_arguments(self, _):
         c.argument('provisioning_state', id_part=None, help='Provisioning state of the topic.')
         c.argument('endpoint', id_part=None, help='Endpoint for the topic.')
         c.argument('id', id_part=None, help='Fully qualified identifier of the resource')
-        c.argument('name', id_part=None, help='Name of the resource')
         c.argument('type', id_part=None, help='Type of the resource')
         c.argument('resource_id', name_arg_type, id_part=None)
 

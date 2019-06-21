@@ -1,0 +1,32 @@
+- import_playbook: documentdb_databaseaccounts_apis_tables_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    database_account_name: myDatabaseAccount
+    api_name: myApi
+    table_name: myTable
+    setting_name: mySetting
+  tasks:
+    - name: CosmosDBTableThroughputUpdate
+      azure_rm_resource:
+        idempotency: true
+        api_version: '2015-04-08'
+        resource_group: '{{ resource_group }}'
+        provider: DocumentDB
+        resource_type: databaseAccounts
+        resource_name: '{{ database_account_name }}'
+        subresource:
+          - type: apis
+            name: '{{ api_name }}'
+          - type: tables
+            name: '{{ table_name }}'
+          - type: settings
+            name: '{{ setting_name }}'
+        body:
+          properties:
+            resource:
+              throughput: '400'

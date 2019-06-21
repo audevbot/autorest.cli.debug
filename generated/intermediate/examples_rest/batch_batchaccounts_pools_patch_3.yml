@@ -1,0 +1,52 @@
+- import_playbook: batch_batchaccounts_pools_applications_put.yml
+- import_playbook: batch_batchaccounts_pools_applications_put.yml
+- import_playbook: batch_batchaccounts_pools_certificates_put.yml
+- import_playbook: batch_batchaccounts_pools_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    batch_account_name: myBatchAccount
+    pool_name: myPool
+    application_name: myApplication
+    certificate_name: myCertificate
+  tasks:
+    - name: UpdatePool - Other Properties
+      azure_rm_resource:
+        method: PATCH
+        api_version: '2018-12-01'
+        resource_group: '{{ resource_group }}'
+        provider: Batch
+        resource_type: batchAccounts
+        resource_name: '{{ batch_account_name }}'
+        subresource:
+          - type: pools
+            name: '{{ pool_name }}'
+        body:
+          properties:
+            metadata:
+              - name: key1
+                value: value1
+            applicationPackages:
+              - id: >-
+                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                  resource_group }}/providers/Microsoft.Batch/batchAccounts/{{
+                  batch_account_name }}/pools/{{ pool_name }}/applications/{{
+                  application_name }}
+              - id: >-
+                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                  resource_group }}/providers/Microsoft.Batch/batchAccounts/{{
+                  batch_account_name }}/pools/{{ pool_name }}/applications/{{
+                  application_name }}
+                version: '1.0'
+            certificates:
+              - id: >-
+                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                  resource_group }}/providers/Microsoft.Batch/batchAccounts/{{
+                  batch_account_name }}/pools/{{ pool_name }}/certificates/{{
+                  certificate_name }}
+                storeLocation: LocalMachine
+                storeName: MY

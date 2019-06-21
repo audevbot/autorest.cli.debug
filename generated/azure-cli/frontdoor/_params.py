@@ -33,7 +33,6 @@ def load_arguments(self, _):
         c.argument('provisioning_state', id_part=None, help='Provisioning state of the Front Door.')
         c.argument('cname', id_part=None, help='The host that each frontendEndpoint must CNAME to.')
         c.argument('id', id_part=None, help='Resource ID.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -83,7 +82,6 @@ def load_arguments(self, _):
         c.argument('enabled_state', id_part=None, help='Whether to enable use of this rule. Permitted values are \'Enabled\' or \'Disabled\'')
         c.argument('route_configuration', id_part=None, help='A reference to the routing configuration.')
         c.argument('resource_state', id_part=None, help='Resource status.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -136,7 +134,6 @@ def load_arguments(self, _):
         c.argument('protocol', id_part=None, help='Protocol scheme to use for this probe')
         c.argument('interval_in_seconds', id_part=None, help='The number of seconds between health probes.')
         c.argument('resource_state', id_part=None, help='Resource status.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -189,7 +186,6 @@ def load_arguments(self, _):
         c.argument('successful_samples_required', id_part=None, help='The number of samples within the sample period that must succeed')
         c.argument('additional_latency_milliseconds', id_part=None, help='The additional latency in milliseconds for probes to fall into the lowest latency bucket')
         c.argument('resource_state', id_part=None, help='Resource status.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -242,7 +238,6 @@ def load_arguments(self, _):
         c.argument('load_balancing_settings', id_part=None, help='Load balancing settings for a backend pool')
         c.argument('health_probe_settings', id_part=None, help='L7 health probe settings for a backend pool')
         c.argument('resource_state', id_part=None, help='Resource status.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
@@ -299,7 +294,6 @@ def load_arguments(self, _):
         c.argument('custom_https_provisioning_state', id_part=None, help='Provisioning status of Custom Https of the frontendEndpoint.')
         c.argument('custom_https_provisioning_substate', id_part=None, help='Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.')
         c.argument('custom_https_configuration', id_part=None, help='The configuration specifying how to enable HTTPS')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('type', id_part=None, help='Resource type.')
         c.argument('resource_id', name_arg_type, id_part=None)
 

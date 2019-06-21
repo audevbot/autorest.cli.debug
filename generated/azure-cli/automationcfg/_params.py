@@ -30,7 +30,6 @@ def load_arguments(self, _):
         c.argument('created_by', id_part=None, help='CreatedBy property, which only appears in the response.')
         c.argument('last_modified_time', id_part=None, help='Last time resource was modified, which only appears in the response.')
         c.argument('last_modified_by', id_part=None, help='LastModifiedBy property, which only appears in the response.')
-        c.argument('name', id_part=None, help='Resource name.')
         c.argument('id', id_part=None, help='Resource Id.')
         c.argument('type', id_part=None, help='Resource type')
         c.argument('resource_id', name_arg_type, id_part=None)

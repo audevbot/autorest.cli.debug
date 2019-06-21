@@ -22,7 +22,6 @@ def create_automationcfg_softwareupdateconfiguration(cmd, client,
                                                      created_by,
                                                      last_modified_time,
                                                      last_modified_by,
-                                                     name,
                                                      id,
                                                      type):
     return client.software_update_configurations.create()

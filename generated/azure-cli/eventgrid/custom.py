@@ -19,7 +19,6 @@ def create_eventgrid_eventsubscription(cmd, client,
                                        topic,
                                        provisioning_state,
                                        id,
-                                       name,
                                        type):
     return client.event_subscriptions.create()
 
@@ -36,7 +35,6 @@ def update_eventgrid_eventsubscription(cmd, client,
                                        topic,
                                        provisioning_state,
                                        id,
-                                       name,
                                        type):
     return client.event_subscriptions.update()
 
@@ -91,7 +89,6 @@ def create_eventgrid(cmd, client,
                      provisioning_state,
                      endpoint,
                      id,
-                     name,
                      type):
     return client.topics.create()
 
@@ -105,7 +102,6 @@ def update_eventgrid(cmd, client,
                      provisioning_state,
                      endpoint,
                      id,
-                     name,
                      type):
     return client.topics.update()
 

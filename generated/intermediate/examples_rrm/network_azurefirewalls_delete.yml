@@ -1,0 +1,16 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    azure_firewall_name: myAzureFirewall
+  tasks:
+
+    - name: Delete Azure Firewall
+      azure_rm_azurefirewall:
+        resource_group: '{{resource_group}}'
+        name: '{{azure_firewall_name}}'
+        state: absent
+    

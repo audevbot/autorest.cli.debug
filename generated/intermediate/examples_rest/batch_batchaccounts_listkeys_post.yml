@@ -1,0 +1,20 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    batch_account_name: myBatchAccount
+  tasks:
+    - name: BatchAccountGetKeys
+      azure_rm_resource:
+        method: POST
+        api_version: '2018-12-01'
+        resource_group: '{{ resource_group }}'
+        provider: Batch
+        resource_type: batchAccounts
+        resource_name: '{{ batch_account_name }}'
+        subresource:
+          - type: listKeys
+        body: !<tag:yaml.org,2002:js/undefined> ''
