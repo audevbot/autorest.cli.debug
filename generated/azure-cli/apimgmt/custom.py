@@ -34,8 +34,7 @@ def create_apimgmt_api(cmd, client,
                        wsdl_selector,
                        api_type,
                        is_online,
-                       id,
-                       type):
+                       id):
     return client.api.create()
 
 
@@ -66,8 +65,7 @@ def update_apimgmt_api(cmd, client,
                        wsdl_selector,
                        api_type,
                        is_online,
-                       id,
-                       type):
+                       id):
     return client.api.update()
 
 
@@ -119,7 +117,6 @@ def create_apimgmt_api_release(cmd, client,
                                api_id,
                                release_id,
                                properties,
-                               api_id,
                                notes,
                                created_date_time,
                                updated_date_time,
@@ -134,7 +131,6 @@ def update_apimgmt_api_release(cmd, client,
                                api_id,
                                release_id,
                                properties,
-                               api_id,
                                notes,
                                created_date_time,
                                updated_date_time,
@@ -578,7 +574,6 @@ def create_apimgmt_api_issue(cmd, client,
                              properties,
                              created_date,
                              state,
-                             api_id,
                              title,
                              description,
                              user_id,
@@ -595,7 +590,6 @@ def update_apimgmt_api_issue(cmd, client,
                              properties,
                              created_date,
                              state,
-                             api_id,
                              title,
                              description,
                              user_id,
@@ -986,7 +980,6 @@ def create_apimgmt_backend(cmd, client,
                            title,
                            description,
                            resource_id,
-                           properties,
                            service_fabric_cluster,
                            credentials,
                            proxy,
@@ -1006,7 +999,6 @@ def update_apimgmt_backend(cmd, client,
                            title,
                            description,
                            resource_id,
-                           properties,
                            service_fabric_cluster,
                            credentials,
                            proxy,
@@ -1416,8 +1408,7 @@ def create_apimgmt_group(cmd, client,
                          type,
                          external_id,
                          built_in,
-                         id,
-                         type):
+                         id):
     return client.group.create()
 
 
@@ -1431,8 +1422,7 @@ def update_apimgmt_group(cmd, client,
                          type,
                          external_id,
                          built_in,
-                         id,
-                         type):
+                         id):
     return client.group.update()
 
 
@@ -1527,8 +1517,7 @@ def create_apimgmt_identityprovider(cmd, client,
                                     password_reset_policy_name,
                                     client_id,
                                     client_secret,
-                                    id,
-                                    type):
+                                    id):
     return client.identity_provider.create()
 
 
@@ -1546,8 +1535,7 @@ def update_apimgmt_identityprovider(cmd, client,
                                     password_reset_policy_name,
                                     client_id,
                                     client_secret,
-                                    id,
-                                    type):
+                                    id):
     return client.identity_provider.update()
 
 
@@ -1720,8 +1708,7 @@ def create_apimgmt_notification_recipientuser(cmd, client,
                                               user_id,
                                               id,
                                               type,
-                                              properties,
-                                              user_id):
+                                              properties):
     return client.notification_recipient_user.create()
 
 
@@ -1755,8 +1742,7 @@ def create_apimgmt_notification_recipientemail(cmd, client,
                                                email,
                                                id,
                                                type,
-                                               properties,
-                                               email):
+                                               properties):
     return client.notification_recipient_email.create()
 
 
@@ -2085,7 +2071,6 @@ def create_apimgmt_product_api(cmd, client,
                                description,
                                authentication_settings,
                                subscription_key_parameter_names,
-                               type,
                                api_revision,
                                api_version,
                                is_current,
@@ -2137,7 +2122,6 @@ def create_apimgmt_product_group(cmd, client,
                                  display_name,
                                  description,
                                  built_in,
-                                 type,
                                  external_id):
     return client.product_group.create()
 
