@@ -166,7 +166,7 @@ properties:
       returned: always
       type: >-
         unknown[DictionaryType
-        {"$id":"3311","$type":"DictionaryType","valueType":{"$id":"3312","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"3313","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"3314","fixed":false},"deprecated":false}]
+        {"$id":"3331","$type":"DictionaryType","valueType":{"$id":"3332","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"3333","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"3334","fixed":false},"deprecated":false}]
       sample: null
     is_buffered:
       description:
@@ -238,7 +238,7 @@ class AzureRMLogger(AzureRMModuleBaseExt):
                 disposition='/'
             ),
             credentials=dict(
-                type='unknown[DictionaryType {"$id":"3311","$type":"DictionaryType","valueType":{"$id":"3312","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"3313","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"3314","fixed":false},"deprecated":false}]',
+                type='unknown[DictionaryType {"$id":"3331","$type":"DictionaryType","valueType":{"$id":"3332","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"3333","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"3334","fixed":false},"deprecated":false}]',
                 disposition='/',
                 required=true
             ),

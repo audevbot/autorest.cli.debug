@@ -1,0 +1,22 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    database_account_name: myDatabaseAccount
+    apis_name: myApis
+    keyspace_name: myKeyspace
+    setting_name: mySetting
+  tasks:
+
+    - name: CosmosDBCassandraKeyspaceThroughputGet
+      azure_rm_cosmosdbdatabaseaccount_info:
+        resource_group: '{{resource_group}}'
+        account_name: '{{database_account_name}}'
+        keyspace_name: '{{keyspace_name}}'
+    
+      register: output
+    - debug:
+        var: output

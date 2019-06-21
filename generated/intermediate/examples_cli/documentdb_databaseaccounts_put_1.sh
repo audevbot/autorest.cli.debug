@@ -22,11 +22,13 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
     "locations": [
       {
         "failoverPriority": "0",
-        "locationName": "southcentralus"
+        "locationName": "southcentralus",
+        "isZoneRedundant": False
       },
       {
         "failoverPriority": "1",
-        "locationName": "eastus"
+        "locationName": "eastus",
+        "isZoneRedundant": False
       }
     ],
     "consistencyPolicy": {

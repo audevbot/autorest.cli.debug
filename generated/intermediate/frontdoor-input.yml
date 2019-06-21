@@ -4720,7 +4720,7 @@ operations:
                 api-version: '2019-04-01'
                 checkFrontDoorNameAvailabilityInput:
                   name: sampleName
-                  type: Microsoft.Network/FrontDoors
+                  type: Microsoft.Network/frontDoors
               responses:
                 '200':
                   body:
@@ -4856,7 +4856,7 @@ operations:
                 subscriptionId: subid
                 checkFrontDoorNameAvailabilityInput:
                   name: sampleName
-                  type: Microsoft.Network/FrontDoors/frontendEndpoints
+                  type: Microsoft.Network/frontDoors/frontendEndpoints
               responses:
                 '200':
                   body:
@@ -6844,7 +6844,7 @@ operations:
                 resourceGroupName: rg1
                 frontDoorName: frontDoor1
                 customDomainProperties:
-                  hostname: www.someDomain.com
+                  hostName: www.someDomain.com
               responses:
                 '200':
                   body:

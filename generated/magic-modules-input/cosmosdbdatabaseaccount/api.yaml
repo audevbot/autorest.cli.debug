@@ -88,6 +88,9 @@ objects:
           '/locations/failoverPriority': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [python]
             python_field_name: failover_priority
+          '/locations/isZoneRedundant': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
+            applicable_to: [python]
+            python_field_name: is_zone_redundant
           '/properties/locations': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Locations
@@ -98,6 +101,9 @@ objects:
           '/properties/locations/failoverPriority': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
             applicable_to: [go]
             go_field_name: FailoverPriority
+          '/properties/locations/isZoneRedundant': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
+            applicable_to: [go]
+            go_field_name: IsZoneRedundant
           '/databaseAccountOfferType': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: database_account_offer_type
@@ -417,9 +423,9 @@ objects:
             go_variable_name: name
             python_parameter_name: account_name
             python_variable_name: name
-      list_mongo_databases: !ruby/object:Api::Azure::SDKOperationDefinition
-        go_func_name: ListMongoDatabases
-        python_func_name: list_mongo_databases
+      list_mongo_dbdatabases: !ruby/object:Api::Azure::SDKOperationDefinition
+        go_func_name: ListMongoDBDatabases
+        python_func_name: list_mongo_dbdatabases
         request:
           'resourceGroupName': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             id_portion: resourceGroups
@@ -459,6 +465,20 @@ objects:
             go_variable_name: name
             python_parameter_name: account_name
             python_variable_name: name
+      list_gremlin_graphs: !ruby/object:Api::Azure::SDKOperationDefinition
+        go_func_name: ListGremlinGraphs
+        python_func_name: list_gremlin_graphs
+        request:
+          'resourceGroupName': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+            id_portion: resourceGroups
+            go_variable_name: resourceGroup
+            python_parameter_name: resource_group_name
+            python_variable_name: resource_group
+          'accountName': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+            id_portion: databaseAccounts
+            go_variable_name: name
+            python_parameter_name: account_name
+            python_variable_name: name
       list_sql_containers: !ruby/object:Api::Azure::SDKOperationDefinition
         go_func_name: ListSqlContainers
         python_func_name: list_sql_containers
@@ -487,23 +507,9 @@ objects:
             go_variable_name: name
             python_parameter_name: account_name
             python_variable_name: name
-      list_mongo_collections: !ruby/object:Api::Azure::SDKOperationDefinition
-        go_func_name: ListMongoCollections
-        python_func_name: list_mongo_collections
-        request:
-          'resourceGroupName': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
-            id_portion: resourceGroups
-            go_variable_name: resourceGroup
-            python_parameter_name: resource_group_name
-            python_variable_name: resource_group
-          'accountName': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
-            id_portion: databaseAccounts
-            go_variable_name: name
-            python_parameter_name: account_name
-            python_variable_name: name
-      list_gremlin_containers: !ruby/object:Api::Azure::SDKOperationDefinition
-        go_func_name: ListGremlinContainers
-        python_func_name: list_gremlin_containers
+      list_mongo_dbcollections: !ruby/object:Api::Azure::SDKOperationDefinition
+        go_func_name: ListMongoDBCollections
+        python_func_name: list_mongo_dbcollections
         request:
           'resourceGroupName': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             id_portion: resourceGroups
@@ -600,6 +606,11 @@ objects:
             description: 'The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.'
             required: false
             azure_sdk_references: ['/locations/failoverPriority', '/properties/locations/failoverPriority']
+          - !ruby/object:Api::Type::Boolean
+            name: 'isZoneRedundant'
+            description: 'Flag to indicate whether or not this region is an AvailabilityZone region'
+            required: false
+            azure_sdk_references: ['/locations/isZoneRedundant', '/properties/locations/isZoneRedundant']
       - !ruby/object:Api::Type::String
         name: 'databaseAccountOfferType'
         description: 'The offer type for the database'
@@ -694,6 +705,11 @@ objects:
             description: 'The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.'
             required: false
             azure_sdk_references: ['/writeLocations/failoverPriority', '/properties/writeLocations/failoverPriority']
+          - !ruby/object:Api::Type::Boolean
+            name: 'isZoneRedundant'
+            description: 'Flag to indicate whether or not this region is an AvailabilityZone region'
+            required: false
+            azure_sdk_references: ['/writeLocations/isZoneRedundant', '/properties/writeLocations/isZoneRedundant']
       - !ruby/object:Api::Type::NestedObject
         name: 'readLocations'
         description: 'An array that contains of the read locations enabled for the Cosmos DB account.'
@@ -725,6 +741,11 @@ objects:
             description: 'The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.'
             required: false
             azure_sdk_references: ['/readLocations/failoverPriority', '/properties/readLocations/failoverPriority']
+          - !ruby/object:Api::Type::Boolean
+            name: 'isZoneRedundant'
+            description: 'Flag to indicate whether or not this region is an AvailabilityZone region'
+            required: false
+            azure_sdk_references: ['/readLocations/isZoneRedundant', '/properties/readLocations/isZoneRedundant']
       - !ruby/object:Api::Type::NestedObject
         name: 'failoverPolicies'
         description: 'An array that contains the regions ordered by their failover priorities.'

@@ -355,7 +355,7 @@ properties:
           returned: always
           type: >-
             unknown[DictionaryType
-            {"$id":"1825","$type":"DictionaryType","valueType":{"$id":"1826","$type":"SequenceType","elementType":{"$id":"1827","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1828","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1829","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1830","fixed":false},"deprecated":false}]
+            {"$id":"1845","$type":"DictionaryType","valueType":{"$id":"1846","$type":"SequenceType","elementType":{"$id":"1847","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1848","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1849","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1850","fixed":false},"deprecated":false}]
           sample: null
         header:
           description:
@@ -363,7 +363,7 @@ properties:
           returned: always
           type: >-
             unknown[DictionaryType
-            {"$id":"1835","$type":"DictionaryType","valueType":{"$id":"1836","$type":"SequenceType","elementType":{"$id":"1837","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1838","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1839","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1840","fixed":false},"deprecated":false}]
+            {"$id":"1855","$type":"DictionaryType","valueType":{"$id":"1856","$type":"SequenceType","elementType":{"$id":"1857","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1858","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1859","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1860","fixed":false},"deprecated":false}]
           sample: null
         authorization:
           description:
@@ -540,10 +540,10 @@ class AzureRMBackend(AzureRMModuleBaseExt):
                         type='list'
                     ),
                     query=dict(
-                        type='unknown[DictionaryType {"$id":"1825","$type":"DictionaryType","valueType":{"$id":"1826","$type":"SequenceType","elementType":{"$id":"1827","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1828","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1829","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1830","fixed":false},"deprecated":false}]'
+                        type='unknown[DictionaryType {"$id":"1845","$type":"DictionaryType","valueType":{"$id":"1846","$type":"SequenceType","elementType":{"$id":"1847","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1848","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1849","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1850","fixed":false},"deprecated":false}]'
                     ),
                     header=dict(
-                        type='unknown[DictionaryType {"$id":"1835","$type":"DictionaryType","valueType":{"$id":"1836","$type":"SequenceType","elementType":{"$id":"1837","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1838","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1839","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1840","fixed":false},"deprecated":false}]'
+                        type='unknown[DictionaryType {"$id":"1855","$type":"DictionaryType","valueType":{"$id":"1856","$type":"SequenceType","elementType":{"$id":"1857","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1858","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1859","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1860","fixed":false},"deprecated":false}]'
                     ),
                     authorization=dict(
                         type='dict',

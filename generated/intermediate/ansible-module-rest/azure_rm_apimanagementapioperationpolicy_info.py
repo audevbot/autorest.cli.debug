@@ -41,6 +41,9 @@ options:
         Operation identifier within an API. Must be unique in the current API
         Management service instance.
     required: true
+  format:
+    description:
+      - Format of the policyContent.
   policy_id:
     description:
       - The identifier of the Policy.
@@ -54,9 +57,6 @@ options:
     description:
       - Contents of the Policy as defined by the format.
     required: true
-  format:
-    description:
-      - Format of the policyContent.
 extends_documentation_fragment:
   - azure
 author:
@@ -147,6 +147,9 @@ class AzureRMApiOperationPolicyInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
+            format=dict(
+                type='str'
+            ),
             policy_id=dict(
                 type='str'
             )
@@ -156,6 +159,7 @@ class AzureRMApiOperationPolicyInfo(AzureRMModuleBase):
         self.name = None
         self.api_id = None
         self.operation_id = None
+        self.format = None
         self.policy_id = None
         self.id = None
         self.name = None

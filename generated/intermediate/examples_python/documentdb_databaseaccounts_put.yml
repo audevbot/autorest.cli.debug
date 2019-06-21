@@ -29,7 +29,8 @@ BODY = {
     "locations": [
       {
         "failoverPriority": "0",
-        "locationName": "southcentralus"
+        "locationName": "southcentralus",
+        "isZoneRedundant": False
       }
     ]
   }

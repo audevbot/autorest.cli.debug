@@ -60,12 +60,12 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
         ],
         "nonAzureQueries": [
           {
-            "FunctionAlias": "SavedSearch1",
-            "WorkspaceId": "WorkspaceId1"
+            "functionAlias": "SavedSearch1",
+            "workspaceId": "WorkspaceId1"
           },
           {
-            "FunctionAlias": "SavedSearch2",
-            "WorkspaceId": "WorkspaceId2"
+            "functionAlias": "SavedSearch2",
+            "workspaceId": "WorkspaceId2"
           }
         ]
       }

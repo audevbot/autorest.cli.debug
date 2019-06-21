@@ -14,9 +14,9 @@
     - name: CosmosDBCassandraTableGet
       azure_rm_cosmosdbdatabaseaccount_info:
         resource_group: '{{resource_group}}'
-        name: '{{database_account_name}}'
-        table_rid: '{{table_name}}'
-        keyspace_rid: '{{keyspace_name}}'
+        account_name: '{{database_account_name}}'
+        table_name: '{{table_name}}'
+        keyspace_name: '{{keyspace_name}}'
     
       register: output
     - debug:

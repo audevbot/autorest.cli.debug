@@ -33,19 +33,19 @@ helps['cosmos-db show'] = """
     short-summary: show a cosmos-db.
 """
 
-helps['cosmos-db tables databases keyspaces containers collections'] = """
+helps['cosmos-db tables databases keyspaces graphs containers collections'] = """
     type: group
     short-summary: Commands to manage Apimanagements.
 """
 
-helps['cosmos-db tables databases keyspaces containers collections list'] = """
+helps['cosmos-db tables databases keyspaces graphs containers collections list'] = """
     type: command
-    short-summary: list a cosmos-db tables databases keyspaces containers collections.
+    short-summary: list a cosmos-db tables databases keyspaces graphs containers collections.
 """
 
-helps['cosmos-db tables databases keyspaces containers collections show'] = """
+helps['cosmos-db tables databases keyspaces graphs containers collections show'] = """
     type: command
-    short-summary: show a cosmos-db tables databases keyspaces containers collections.
+    short-summary: show a cosmos-db tables databases keyspaces graphs containers collections.
 """
 
 helps[''] = """

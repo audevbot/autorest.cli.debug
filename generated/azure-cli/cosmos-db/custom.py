@@ -23,11 +23,11 @@ def show_cosmos-db(cmd, client, resource_group_name, apimanagement_name, locatio
     return client.database_accounts.show()
 
 
-def list_cosmos-db tables databases keyspaces containers collections(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+def list_cosmos-db tables databases keyspaces graphs containers collections(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
     return client.database_accounts.list()
 
 
-def show_cosmos-db tables databases keyspaces containers collections(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
+def show_cosmos-db tables databases keyspaces graphs containers collections(cmd, client, resource_group_name, apimanagement_name, location=None, tags=None):
     return client.database_accounts.show()
 
 

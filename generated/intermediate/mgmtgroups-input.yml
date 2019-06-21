@@ -1857,13 +1857,13 @@ modelTypes:
             fixed: false
             raw: String
           deprecated: false
-    serializedName: EntityParentGroupInfo
-    documentation: (Optional) The ID of the parent management group.
+    serializedName: DescendantParentGroupInfo
+    documentation: The ID of the parent management group.
     containsConstantProperties: false
     name:
       $id: '364'
       fixed: false
-      raw: EntityParentGroupInfo
+      raw: DescendantParentGroupInfo
     deprecated: false
   - $id: '365'
     $type: CompositeType
@@ -1871,7 +1871,7 @@ modelTypes:
       - $id: '366'
         isReadOnly: false
         realPath:
-          - tenantId
+          - displayName
         collectionFormat: none
         defaultValue:
           $id: '367'
@@ -1880,9 +1880,7 @@ modelTypes:
         documentation:
           $id: '368'
           fixed: false
-          raw: >-
-            The AAD Tenant ID associated with the entity. For example,
-            00000000-0000-0000-0000-000000000000
+          raw: The friendly name of the management group.
         extensions:
           x-nullable: true
         isRequired: false
@@ -1890,8 +1888,8 @@ modelTypes:
         name:
           $id: '369'
           fixed: false
-          raw: tenantId
-        serializedName: tenantId
+          raw: displayName
+        serializedName: displayName
         modelType:
           $id: '370'
           $type: PrimaryType
@@ -1903,8 +1901,9 @@ modelTypes:
           deprecated: false
       - $id: '372'
         isReadOnly: false
+        summary: Parent
         realPath:
-          - displayName
+          - parent
         collectionFormat: none
         defaultValue:
           $id: '373'
@@ -1913,7 +1912,6 @@ modelTypes:
         documentation:
           $id: '374'
           fixed: false
-          raw: The friendly name of the management group.
         extensions:
           x-nullable: true
         isRequired: false
@@ -1921,22 +1919,25 @@ modelTypes:
         name:
           $id: '375'
           fixed: false
-          raw: displayName
-        serializedName: displayName
+          raw: parent
+        serializedName: parent
         modelType:
-          $id: '376'
-          $type: PrimaryType
-          knownPrimaryType: string
-          name:
-            $id: '377'
-            fixed: false
-            raw: String
-          deprecated: false
+          $ref: '357'
+    serializedName: DescendantInfoProperties
+    documentation: The generic properties of an descendant.
+    containsConstantProperties: false
+    name:
+      $id: '376'
+      fixed: false
+      raw: DescendantInfoProperties
+    deprecated: false
+  - $id: '377'
+    $type: CompositeType
+    properties:
       - $id: '378'
-        isReadOnly: false
-        summary: Parent
+        isReadOnly: true
         realPath:
-          - parent
+          - id
         collectionFormat: none
         defaultValue:
           $id: '379'
@@ -1945,6 +1946,10 @@ modelTypes:
         documentation:
           $id: '380'
           fixed: false
+          raw: >-
+            The fully qualified ID for the descendant.  For example,
+            /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+            or /subscriptions/0000000-0000-0000-0000-000000000000
         extensions:
           x-nullable: true
         isRequired: false
@@ -1952,217 +1957,233 @@ modelTypes:
         name:
           $id: '381'
           fixed: false
-          raw: parent
-        serializedName: parent
+          raw: id
+        serializedName: id
         modelType:
-          $ref: '357'
-      - $id: '382'
-        isReadOnly: false
-        summary: Permissions
+          $id: '382'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '383'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '384'
+        isReadOnly: true
         realPath:
-          - permissions
+          - type
         collectionFormat: none
         defaultValue:
-          $id: '383'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '384'
-          fixed: false
-        isRequired: false
-        isConstant: false
-        name:
           $id: '385'
           fixed: false
-          raw: permissions
-        serializedName: permissions
-        modelType:
-          $id: '386'
-          $type: EnumType
-          modelAsExtensible: false
-          values:
-            - $id: '387'
-              name: noaccess
-              serializedName: noaccess
-            - $id: '388'
-              name: view
-              serializedName: view
-            - $id: '389'
-              name: edit
-              serializedName: edit
-            - $id: '390'
-              name: delete
-              serializedName: delete
-          modelAsString: true
-          underlyingType:
-            $id: '391'
-            $type: PrimaryType
-            knownPrimaryType: string
-            name:
-              $id: '392'
-              fixed: false
-              raw: String
-            deprecated: false
-          name:
-            $id: '393'
-            fixed: false
-            raw: ''
-          deprecated: false
-      - $id: '394'
-        isReadOnly: false
-        summary: Inherited Permissions
-        realPath:
-          - inheritedPermissions
-        collectionFormat: none
-        defaultValue:
-          $id: '395'
-          fixed: false
         deprecated: false
         documentation:
-          $id: '396'
+          $id: '386'
           fixed: false
+          raw: >-
+            The type of the resource. For example,
+            /providers/Microsoft.Management/managementGroups or /subscriptions
+        extensions:
+          x-nullable: true
         isRequired: false
         isConstant: false
         name:
+          $id: '387'
+          fixed: false
+          raw: type
+        serializedName: type
+        modelType:
+          $id: '388'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '389'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '390'
+        isReadOnly: true
+        realPath:
+          - name
+        collectionFormat: none
+        defaultValue:
+          $id: '391'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '392'
+          fixed: false
+          raw: >-
+            The name of the descendant. For example,
+            00000000-0000-0000-0000-000000000000
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '393'
+          fixed: false
+          raw: name
+        serializedName: name
+        modelType:
+          $id: '394'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '395'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '396'
+        isReadOnly: false
+        summary: Properties
+        realPath:
+          - properties
+        collectionFormat: none
+        defaultValue:
           $id: '397'
           fixed: false
-          raw: inheritedPermissions
-        serializedName: inheritedPermissions
-        modelType:
-          $id: '398'
-          $type: EnumType
-          modelAsExtensible: false
-          values:
-            - $id: '399'
-              name: noaccess
-              serializedName: noaccess
-            - $id: '400'
-              name: view
-              serializedName: view
-            - $id: '401'
-              name: edit
-              serializedName: edit
-            - $id: '402'
-              name: delete
-              serializedName: delete
-          modelAsString: true
-          underlyingType:
-            $id: '403'
-            $type: PrimaryType
-            knownPrimaryType: string
-            name:
-              $id: '404'
-              fixed: false
-              raw: String
-            deprecated: false
-          name:
-            $id: '405'
-            fixed: false
-            raw: ''
-          deprecated: false
-      - $id: '406'
-        isReadOnly: false
-        summary: Number of Descendants
-        realPath:
-          - numberOfDescendants
-        collectionFormat: none
-        defaultValue:
-          $id: '407'
-          fixed: false
         deprecated: false
         documentation:
-          $id: '408'
+          $id: '398'
           fixed: false
         extensions:
+          x-ms-client-flatten: true
           x-nullable: true
         isRequired: false
         isConstant: false
         name:
+          $id: '399'
+          fixed: false
+          raw: properties
+        serializedName: properties
+        modelType:
+          $ref: '365'
+    serializedName: DescendantInfo
+    documentation: The descendant.
+    containsConstantProperties: false
+    name:
+      $id: '400'
+      fixed: false
+      raw: DescendantInfo
+    deprecated: false
+  - $id: '401'
+    $type: CompositeType
+    properties:
+      - $id: '402'
+        isReadOnly: false
+        realPath:
+          - value
+        collectionFormat: none
+        defaultValue:
+          $id: '403'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '404'
+          fixed: false
+          raw: The list of descendants.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '405'
+          fixed: false
+          raw: value
+        serializedName: value
+        modelType:
+          $id: '406'
+          $type: SequenceType
+          elementType:
+            $ref: '377'
+          name:
+            $id: '407'
+            fixed: false
+          deprecated: false
+      - $id: '408'
+        isReadOnly: true
+        realPath:
+          - nextLink
+        collectionFormat: none
+        defaultValue:
           $id: '409'
           fixed: false
-          raw: numberOfDescendants
-        serializedName: numberOfDescendants
-        modelType:
-          $id: '410'
-          $type: PrimaryType
-          knownPrimaryType: int
-          name:
-            $id: '411'
-            fixed: false
-            raw: Int
-          deprecated: false
-      - $id: '412'
-        isReadOnly: false
-        summary: Number of Children
-        realPath:
-          - numberOfChildren
-        collectionFormat: none
-        defaultValue:
-          $id: '413'
-          fixed: false
         deprecated: false
         documentation:
-          $id: '414'
+          $id: '410'
           fixed: false
-          raw: >-
-            Number of children is the number of Groups and Subscriptions that
-            are exactly one level underneath the current Group.
-        extensions:
-          x-nullable: true
+          raw: The URL to use for getting the next set of results.
         isRequired: false
         isConstant: false
         name:
-          $id: '415'
+          $id: '411'
           fixed: false
-          raw: numberOfChildren
-        serializedName: numberOfChildren
+          raw: nextLink
+        serializedName: nextLink
         modelType:
-          $id: '416'
+          $id: '412'
           $type: PrimaryType
-          knownPrimaryType: int
+          knownPrimaryType: string
           name:
-            $id: '417'
+            $id: '413'
             fixed: false
-            raw: Int
+            raw: String
           deprecated: false
-      - $id: '418'
+    serializedName: DescendantListResult
+    documentation: Describes the result of the request to view descendants.
+    containsConstantProperties: false
+    name:
+      $id: '414'
+      fixed: false
+      raw: DescendantListResult
+    deprecated: false
+  - $id: '415'
+    $type: CompositeType
+    properties:
+      - $id: '416'
         isReadOnly: false
-        summary: Number of Child Groups
         realPath:
-          - numberOfChildGroups
+          - id
         collectionFormat: none
         defaultValue:
+          $id: '417'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '418'
+          fixed: false
+          raw: >-
+            The fully qualified ID for the parent management group.  For
+            example,
+            /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+        isRequired: false
+        isConstant: false
+        name:
           $id: '419'
           fixed: false
-        deprecated: false
-        documentation:
-          $id: '420'
-          fixed: false
-          raw: >-
-            Number of child groups is the number of Groups that are exactly one
-            level underneath the current Group.
-        extensions:
-          x-nullable: true
-        isRequired: false
-        isConstant: false
-        name:
-          $id: '421'
-          fixed: false
-          raw: numberOfChildGroups
-        serializedName: numberOfChildGroups
+          raw: id
+        serializedName: id
         modelType:
-          $id: '422'
+          $id: '420'
           $type: PrimaryType
-          knownPrimaryType: int
+          knownPrimaryType: string
           name:
-            $id: '423'
+            $id: '421'
             fixed: false
-            raw: Int
+            raw: String
           deprecated: false
+    serializedName: EntityParentGroupInfo
+    documentation: (Optional) The ID of the parent management group.
+    containsConstantProperties: false
+    name:
+      $id: '422'
+      fixed: false
+      raw: EntityParentGroupInfo
+    deprecated: false
+  - $id: '423'
+    $type: CompositeType
+    properties:
       - $id: '424'
         isReadOnly: false
         realPath:
-          - parentDisplayNameChain
+          - tenantId
         collectionFormat: none
         defaultValue:
           $id: '425'
@@ -2172,8 +2193,8 @@ modelTypes:
           $id: '426'
           fixed: false
           raw: >-
-            The parent display name chain from the root group to the immediate
-            parent
+            The AAD Tenant ID associated with the entity. For example,
+            00000000-0000-0000-0000-000000000000
         extensions:
           x-nullable: true
         isRequired: false
@@ -2181,35 +2202,326 @@ modelTypes:
         name:
           $id: '427'
           fixed: false
-          raw: parentDisplayNameChain
-        serializedName: parentDisplayNameChain
+          raw: tenantId
+        serializedName: tenantId
         modelType:
           $id: '428'
-          $type: SequenceType
-          elementType:
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
             $id: '429'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '430'
+        isReadOnly: false
+        realPath:
+          - displayName
+        collectionFormat: none
+        defaultValue:
+          $id: '431'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '432'
+          fixed: false
+          raw: The friendly name of the management group.
+        extensions:
+          x-nullable: true
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '433'
+          fixed: false
+          raw: displayName
+        serializedName: displayName
+        modelType:
+          $id: '434'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '435'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '436'
+        isReadOnly: false
+        summary: Parent
+        realPath:
+          - parent
+        collectionFormat: none
+        defaultValue:
+          $id: '437'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '438'
+          fixed: false
+        extensions:
+          x-nullable: true
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '439'
+          fixed: false
+          raw: parent
+        serializedName: parent
+        modelType:
+          $ref: '415'
+      - $id: '440'
+        isReadOnly: false
+        summary: Permissions
+        realPath:
+          - permissions
+        collectionFormat: none
+        defaultValue:
+          $id: '441'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '442'
+          fixed: false
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '443'
+          fixed: false
+          raw: permissions
+        serializedName: permissions
+        modelType:
+          $id: '444'
+          $type: EnumType
+          modelAsExtensible: false
+          values:
+            - $id: '445'
+              name: noaccess
+              serializedName: noaccess
+            - $id: '446'
+              name: view
+              serializedName: view
+            - $id: '447'
+              name: edit
+              serializedName: edit
+            - $id: '448'
+              name: delete
+              serializedName: delete
+          modelAsString: true
+          underlyingType:
+            $id: '449'
             $type: PrimaryType
             knownPrimaryType: string
             name:
-              $id: '430'
+              $id: '450'
               fixed: false
               raw: String
             deprecated: false
           name:
-            $id: '431'
+            $id: '451'
+            fixed: false
+            raw: ''
+          deprecated: false
+      - $id: '452'
+        isReadOnly: false
+        summary: Inherited Permissions
+        realPath:
+          - inheritedPermissions
+        collectionFormat: none
+        defaultValue:
+          $id: '453'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '454'
+          fixed: false
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '455'
+          fixed: false
+          raw: inheritedPermissions
+        serializedName: inheritedPermissions
+        modelType:
+          $id: '456'
+          $type: EnumType
+          modelAsExtensible: false
+          values:
+            - $id: '457'
+              name: noaccess
+              serializedName: noaccess
+            - $id: '458'
+              name: view
+              serializedName: view
+            - $id: '459'
+              name: edit
+              serializedName: edit
+            - $id: '460'
+              name: delete
+              serializedName: delete
+          modelAsString: true
+          underlyingType:
+            $id: '461'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              $id: '462'
+              fixed: false
+              raw: String
+            deprecated: false
+          name:
+            $id: '463'
+            fixed: false
+            raw: ''
+          deprecated: false
+      - $id: '464'
+        isReadOnly: false
+        summary: Number of Descendants
+        realPath:
+          - numberOfDescendants
+        collectionFormat: none
+        defaultValue:
+          $id: '465'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '466'
+          fixed: false
+        extensions:
+          x-nullable: true
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '467'
+          fixed: false
+          raw: numberOfDescendants
+        serializedName: numberOfDescendants
+        modelType:
+          $id: '468'
+          $type: PrimaryType
+          knownPrimaryType: int
+          name:
+            $id: '469'
+            fixed: false
+            raw: Int
+          deprecated: false
+      - $id: '470'
+        isReadOnly: false
+        summary: Number of Children
+        realPath:
+          - numberOfChildren
+        collectionFormat: none
+        defaultValue:
+          $id: '471'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '472'
+          fixed: false
+          raw: >-
+            Number of children is the number of Groups and Subscriptions that
+            are exactly one level underneath the current Group.
+        extensions:
+          x-nullable: true
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '473'
+          fixed: false
+          raw: numberOfChildren
+        serializedName: numberOfChildren
+        modelType:
+          $id: '474'
+          $type: PrimaryType
+          knownPrimaryType: int
+          name:
+            $id: '475'
+            fixed: false
+            raw: Int
+          deprecated: false
+      - $id: '476'
+        isReadOnly: false
+        summary: Number of Child Groups
+        realPath:
+          - numberOfChildGroups
+        collectionFormat: none
+        defaultValue:
+          $id: '477'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '478'
+          fixed: false
+          raw: >-
+            Number of child groups is the number of Groups that are exactly one
+            level underneath the current Group.
+        extensions:
+          x-nullable: true
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '479'
+          fixed: false
+          raw: numberOfChildGroups
+        serializedName: numberOfChildGroups
+        modelType:
+          $id: '480'
+          $type: PrimaryType
+          knownPrimaryType: int
+          name:
+            $id: '481'
+            fixed: false
+            raw: Int
+          deprecated: false
+      - $id: '482'
+        isReadOnly: false
+        realPath:
+          - parentDisplayNameChain
+        collectionFormat: none
+        defaultValue:
+          $id: '483'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '484'
+          fixed: false
+          raw: >-
+            The parent display name chain from the root group to the immediate
+            parent
+        extensions:
+          x-nullable: true
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '485'
+          fixed: false
+          raw: parentDisplayNameChain
+        serializedName: parentDisplayNameChain
+        modelType:
+          $id: '486'
+          $type: SequenceType
+          elementType:
+            $id: '487'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              $id: '488'
+              fixed: false
+              raw: String
+            deprecated: false
+          name:
+            $id: '489'
             fixed: false
           deprecated: false
-      - $id: '432'
+      - $id: '490'
         isReadOnly: false
         realPath:
           - parentNameChain
         collectionFormat: none
         defaultValue:
-          $id: '433'
+          $id: '491'
           fixed: false
         deprecated: false
         documentation:
-          $id: '434'
+          $id: '492'
           fixed: false
           raw: The parent name chain from the root group to the immediate parent
         extensions:
@@ -2217,48 +2529,48 @@ modelTypes:
         isRequired: false
         isConstant: false
         name:
-          $id: '435'
+          $id: '493'
           fixed: false
           raw: parentNameChain
         serializedName: parentNameChain
         modelType:
-          $id: '436'
+          $id: '494'
           $type: SequenceType
           elementType:
-            $id: '437'
+            $id: '495'
             $type: PrimaryType
             knownPrimaryType: string
             name:
-              $id: '438'
+              $id: '496'
               fixed: false
               raw: String
             deprecated: false
           name:
-            $id: '439'
+            $id: '497'
             fixed: false
           deprecated: false
     serializedName: EntityInfoProperties
     documentation: The generic properties of an entity.
     containsConstantProperties: false
     name:
-      $id: '440'
+      $id: '498'
       fixed: false
       raw: EntityInfoProperties
     deprecated: false
-  - $id: '441'
+  - $id: '499'
     $type: CompositeType
     properties:
-      - $id: '442'
+      - $id: '500'
         isReadOnly: true
         realPath:
           - id
         collectionFormat: none
         defaultValue:
-          $id: '443'
+          $id: '501'
           fixed: false
         deprecated: false
         documentation:
-          $id: '444'
+          $id: '502'
           fixed: false
           raw: >-
             The fully qualified ID for the entity.  For example,
@@ -2268,30 +2580,30 @@ modelTypes:
         isRequired: false
         isConstant: false
         name:
-          $id: '445'
+          $id: '503'
           fixed: false
           raw: id
         serializedName: id
         modelType:
-          $id: '446'
+          $id: '504'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '447'
+            $id: '505'
             fixed: false
             raw: String
           deprecated: false
-      - $id: '448'
+      - $id: '506'
         isReadOnly: true
         realPath:
           - type
         collectionFormat: none
         defaultValue:
-          $id: '449'
+          $id: '507'
           fixed: false
         deprecated: false
         documentation:
-          $id: '450'
+          $id: '508'
           fixed: false
           raw: >-
             The type of the resource. For example,
@@ -2301,30 +2613,30 @@ modelTypes:
         isRequired: false
         isConstant: false
         name:
-          $id: '451'
+          $id: '509'
           fixed: false
           raw: type
         serializedName: type
         modelType:
-          $id: '452'
+          $id: '510'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '453'
+            $id: '511'
             fixed: false
             raw: String
           deprecated: false
-      - $id: '454'
+      - $id: '512'
         isReadOnly: true
         realPath:
           - name
         collectionFormat: none
         defaultValue:
-          $id: '455'
+          $id: '513'
           fixed: false
         deprecated: false
         documentation:
-          $id: '456'
+          $id: '514'
           fixed: false
           raw: >-
             The name of the entity. For example,
@@ -2332,31 +2644,31 @@ modelTypes:
         isRequired: false
         isConstant: false
         name:
-          $id: '457'
+          $id: '515'
           fixed: false
           raw: name
         serializedName: name
         modelType:
-          $id: '458'
+          $id: '516'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '459'
+            $id: '517'
             fixed: false
             raw: String
           deprecated: false
-      - $id: '460'
+      - $id: '518'
         isReadOnly: false
         summary: Properties
         realPath:
           - properties
         collectionFormat: none
         defaultValue:
-          $id: '461'
+          $id: '519'
           fixed: false
         deprecated: false
         documentation:
-          $id: '462'
+          $id: '520'
           fixed: false
         extensions:
           x-ms-client-flatten: true
@@ -2364,379 +2676,85 @@ modelTypes:
         isRequired: false
         isConstant: false
         name:
-          $id: '463'
+          $id: '521'
           fixed: false
           raw: properties
         serializedName: properties
         modelType:
-          $ref: '365'
+          $ref: '423'
     serializedName: EntityInfo
     documentation: The entity.
     containsConstantProperties: false
     name:
-      $id: '464'
+      $id: '522'
       fixed: false
       raw: EntityInfo
     deprecated: false
-  - $id: '465'
+  - $id: '523'
     $type: CompositeType
     properties:
-      - $id: '466'
+      - $id: '524'
         isReadOnly: false
         realPath:
           - value
         collectionFormat: none
         defaultValue:
-          $id: '467'
+          $id: '525'
           fixed: false
         deprecated: false
         documentation:
-          $id: '468'
+          $id: '526'
           fixed: false
           raw: The list of entities.
         isRequired: false
         isConstant: false
         name:
-          $id: '469'
+          $id: '527'
           fixed: false
           raw: value
         serializedName: value
         modelType:
-          $id: '470'
+          $id: '528'
           $type: SequenceType
           elementType:
-            $ref: '441'
+            $ref: '499'
           name:
-            $id: '471'
+            $id: '529'
             fixed: false
           deprecated: false
-      - $id: '472'
+      - $id: '530'
         isReadOnly: true
         realPath:
           - count
         collectionFormat: none
         defaultValue:
-          $id: '473'
+          $id: '531'
           fixed: false
         deprecated: false
         documentation:
-          $id: '474'
+          $id: '532'
           fixed: false
           raw: Total count of records that match the filter
         isRequired: false
         isConstant: false
         name:
-          $id: '475'
+          $id: '533'
           fixed: false
           raw: count
         serializedName: count
         modelType:
-          $id: '476'
+          $id: '534'
           $type: PrimaryType
           knownPrimaryType: int
           name:
-            $id: '477'
+            $id: '535'
             fixed: false
             raw: Int
           deprecated: false
-      - $id: '478'
+      - $id: '536'
         isReadOnly: true
         realPath:
           - nextLink
-        collectionFormat: none
-        defaultValue:
-          $id: '479'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '480'
-          fixed: false
-          raw: The URL to use for getting the next set of results.
-        isRequired: false
-        isConstant: false
-        name:
-          $id: '481'
-          fixed: false
-          raw: nextLink
-        serializedName: nextLink
-        modelType:
-          $id: '482'
-          $type: PrimaryType
-          knownPrimaryType: string
-          name:
-            $id: '483'
-            fixed: false
-            raw: String
-          deprecated: false
-    serializedName: EntityListResult
-    documentation: Describes the result of the request to view entities.
-    containsConstantProperties: false
-    name:
-      $id: '484'
-      fixed: false
-      raw: EntityListResult
-    deprecated: false
-  - $id: '485'
-    $type: CompositeType
-    properties:
-      - $id: '486'
-        isReadOnly: false
-        realPath:
-          - displayName
-        collectionFormat: none
-        defaultValue:
-          $id: '487'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '488'
-          fixed: false
-          raw: The friendly name of the management group.
-        isRequired: false
-        isConstant: false
-        name:
-          $id: '489'
-          fixed: false
-          raw: displayName
-        serializedName: displayName
-        modelType:
-          $id: '490'
-          $type: PrimaryType
-          knownPrimaryType: string
-          name:
-            $id: '491'
-            fixed: false
-            raw: String
-          deprecated: false
-      - $id: '492'
-        isReadOnly: false
-        summary: Permissions
-        realPath:
-          - permissions
-        collectionFormat: none
-        defaultValue:
-          $id: '493'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '494'
-          fixed: false
-        isRequired: false
-        isConstant: false
-        name:
-          $id: '495'
-          fixed: false
-          raw: permissions
-        serializedName: permissions
-        modelType:
-          $id: '496'
-          $type: EnumType
-          modelAsExtensible: false
-          values:
-            - $id: '497'
-              name: noaccess
-              serializedName: noaccess
-            - $id: '498'
-              name: view
-              serializedName: view
-            - $id: '499'
-              name: edit
-              serializedName: edit
-            - $id: '500'
-              name: delete
-              serializedName: delete
-          modelAsString: true
-          underlyingType:
-            $id: '501'
-            $type: PrimaryType
-            knownPrimaryType: string
-            name:
-              $id: '502'
-              fixed: false
-              raw: String
-            deprecated: false
-          name:
-            $id: '503'
-            fixed: false
-            raw: ''
-          deprecated: false
-      - $id: '504'
-        isReadOnly: false
-        realPath:
-          - children
-        collectionFormat: none
-        defaultValue:
-          $id: '505'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '506'
-          fixed: false
-          raw: The list of children.
-        extensions:
-          x-nullable: true
-        isRequired: false
-        isConstant: false
-        name:
-          $id: '507'
-          fixed: false
-          raw: children
-        serializedName: children
-        modelType:
-          $id: '508'
-          $type: SequenceType
-          elementType:
-            $id: '509'
-            $type: CompositeType
-            properties:
-              - $id: '510'
-                isReadOnly: true
-                realPath:
-                  - id
-                collectionFormat: none
-                defaultValue:
-                  $id: '511'
-                  fixed: false
-                deprecated: false
-                documentation:
-                  $id: '512'
-                  fixed: false
-                  raw: >-
-                    The fully qualified ID for the management group.  For
-                    example,
-                    /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
-                isRequired: false
-                isConstant: false
-                name:
-                  $id: '513'
-                  fixed: false
-                  raw: id
-                serializedName: id
-                modelType:
-                  $id: '514'
-                  $type: PrimaryType
-                  knownPrimaryType: string
-                  name:
-                    $id: '515'
-                    fixed: false
-                    raw: String
-                  deprecated: false
-              - $id: '516'
-                isReadOnly: true
-                realPath:
-                  - type
-                collectionFormat: none
-                defaultValue:
-                  $id: '517'
-                  fixed: false
-                deprecated: false
-                documentation:
-                  $id: '518'
-                  fixed: false
-                  raw: >-
-                    The type of the resource.  For example,
-                    /providers/Microsoft.Management/managementGroups
-                isRequired: false
-                isConstant: false
-                name:
-                  $id: '519'
-                  fixed: false
-                  raw: type
-                serializedName: type
-                modelType:
-                  $id: '520'
-                  $type: PrimaryType
-                  knownPrimaryType: string
-                  name:
-                    $id: '521'
-                    fixed: false
-                    raw: String
-                  deprecated: false
-              - $id: '522'
-                isReadOnly: true
-                realPath:
-                  - name
-                collectionFormat: none
-                defaultValue:
-                  $id: '523'
-                  fixed: false
-                deprecated: false
-                documentation:
-                  $id: '524'
-                  fixed: false
-                  raw: >-
-                    The name of the management group. For example,
-                    00000000-0000-0000-0000-000000000000
-                isRequired: false
-                isConstant: false
-                name:
-                  $id: '525'
-                  fixed: false
-                  raw: name
-                serializedName: name
-                modelType:
-                  $id: '526'
-                  $type: PrimaryType
-                  knownPrimaryType: string
-                  name:
-                    $id: '527'
-                    fixed: false
-                    raw: String
-                  deprecated: false
-              - $id: '528'
-                isReadOnly: false
-                summary: Properties
-                realPath:
-                  - properties
-                collectionFormat: none
-                defaultValue:
-                  $id: '529'
-                  fixed: false
-                deprecated: false
-                documentation:
-                  $id: '530'
-                  fixed: false
-                extensions:
-                  x-ms-client-flatten: true
-                isRequired: false
-                isConstant: false
-                name:
-                  $id: '531'
-                  fixed: false
-                  raw: properties
-                serializedName: properties
-                modelType:
-                  $ref: '485'
-            serializedName: EntityHierarchyItem
-            documentation: The management group details for the hierarchy view.
-            containsConstantProperties: false
-            name:
-              $id: '532'
-              fixed: false
-              raw: EntityHierarchyItem
-            extensions:
-              x-ms-azure-resource: true
-            deprecated: false
-          name:
-            $id: '533'
-            fixed: false
-          deprecated: false
-    serializedName: EntityHierarchyItemProperties
-    documentation: The generic properties of a management group.
-    containsConstantProperties: false
-    name:
-      $id: '534'
-      fixed: false
-      raw: EntityHierarchyItemProperties
-    deprecated: false
-  - $ref: '509'
-  - $id: '535'
-    $type: CompositeType
-    properties:
-      - $id: '536'
-        isReadOnly: false
-        realPath:
-          - displayName
         collectionFormat: none
         defaultValue:
           $id: '537'
@@ -2745,16 +2763,14 @@ modelTypes:
         documentation:
           $id: '538'
           fixed: false
-          raw: The friendly name of the management group.
-        extensions:
-          x-nullable: true
+          raw: The URL to use for getting the next set of results.
         isRequired: false
         isConstant: false
         name:
           $id: '539'
           fixed: false
-          raw: displayName
-        serializedName: displayName
+          raw: nextLink
+        serializedName: nextLink
         modelType:
           $id: '540'
           $type: PrimaryType
@@ -2764,17 +2780,313 @@ modelTypes:
             fixed: false
             raw: String
           deprecated: false
-      - $id: '542'
+    serializedName: EntityListResult
+    documentation: Describes the result of the request to view entities.
+    containsConstantProperties: false
+    name:
+      $id: '542'
+      fixed: false
+      raw: EntityListResult
+    deprecated: false
+  - $id: '543'
+    $type: CompositeType
+    properties:
+      - $id: '544'
+        isReadOnly: false
+        realPath:
+          - displayName
+        collectionFormat: none
+        defaultValue:
+          $id: '545'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '546'
+          fixed: false
+          raw: The friendly name of the management group.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '547'
+          fixed: false
+          raw: displayName
+        serializedName: displayName
+        modelType:
+          $id: '548'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '549'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '550'
+        isReadOnly: false
+        summary: Permissions
+        realPath:
+          - permissions
+        collectionFormat: none
+        defaultValue:
+          $id: '551'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '552'
+          fixed: false
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '553'
+          fixed: false
+          raw: permissions
+        serializedName: permissions
+        modelType:
+          $id: '554'
+          $type: EnumType
+          modelAsExtensible: false
+          values:
+            - $id: '555'
+              name: noaccess
+              serializedName: noaccess
+            - $id: '556'
+              name: view
+              serializedName: view
+            - $id: '557'
+              name: edit
+              serializedName: edit
+            - $id: '558'
+              name: delete
+              serializedName: delete
+          modelAsString: true
+          underlyingType:
+            $id: '559'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              $id: '560'
+              fixed: false
+              raw: String
+            deprecated: false
+          name:
+            $id: '561'
+            fixed: false
+            raw: ''
+          deprecated: false
+      - $id: '562'
+        isReadOnly: false
+        realPath:
+          - children
+        collectionFormat: none
+        defaultValue:
+          $id: '563'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '564'
+          fixed: false
+          raw: The list of children.
+        extensions:
+          x-nullable: true
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '565'
+          fixed: false
+          raw: children
+        serializedName: children
+        modelType:
+          $id: '566'
+          $type: SequenceType
+          elementType:
+            $id: '567'
+            $type: CompositeType
+            properties:
+              - $id: '568'
+                isReadOnly: true
+                realPath:
+                  - id
+                collectionFormat: none
+                defaultValue:
+                  $id: '569'
+                  fixed: false
+                deprecated: false
+                documentation:
+                  $id: '570'
+                  fixed: false
+                  raw: >-
+                    The fully qualified ID for the management group.  For
+                    example,
+                    /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+                isRequired: false
+                isConstant: false
+                name:
+                  $id: '571'
+                  fixed: false
+                  raw: id
+                serializedName: id
+                modelType:
+                  $id: '572'
+                  $type: PrimaryType
+                  knownPrimaryType: string
+                  name:
+                    $id: '573'
+                    fixed: false
+                    raw: String
+                  deprecated: false
+              - $id: '574'
+                isReadOnly: true
+                realPath:
+                  - type
+                collectionFormat: none
+                defaultValue:
+                  $id: '575'
+                  fixed: false
+                deprecated: false
+                documentation:
+                  $id: '576'
+                  fixed: false
+                  raw: >-
+                    The type of the resource.  For example,
+                    /providers/Microsoft.Management/managementGroups
+                isRequired: false
+                isConstant: false
+                name:
+                  $id: '577'
+                  fixed: false
+                  raw: type
+                serializedName: type
+                modelType:
+                  $id: '578'
+                  $type: PrimaryType
+                  knownPrimaryType: string
+                  name:
+                    $id: '579'
+                    fixed: false
+                    raw: String
+                  deprecated: false
+              - $id: '580'
+                isReadOnly: true
+                realPath:
+                  - name
+                collectionFormat: none
+                defaultValue:
+                  $id: '581'
+                  fixed: false
+                deprecated: false
+                documentation:
+                  $id: '582'
+                  fixed: false
+                  raw: >-
+                    The name of the management group. For example,
+                    00000000-0000-0000-0000-000000000000
+                isRequired: false
+                isConstant: false
+                name:
+                  $id: '583'
+                  fixed: false
+                  raw: name
+                serializedName: name
+                modelType:
+                  $id: '584'
+                  $type: PrimaryType
+                  knownPrimaryType: string
+                  name:
+                    $id: '585'
+                    fixed: false
+                    raw: String
+                  deprecated: false
+              - $id: '586'
+                isReadOnly: false
+                summary: Properties
+                realPath:
+                  - properties
+                collectionFormat: none
+                defaultValue:
+                  $id: '587'
+                  fixed: false
+                deprecated: false
+                documentation:
+                  $id: '588'
+                  fixed: false
+                extensions:
+                  x-ms-client-flatten: true
+                isRequired: false
+                isConstant: false
+                name:
+                  $id: '589'
+                  fixed: false
+                  raw: properties
+                serializedName: properties
+                modelType:
+                  $ref: '543'
+            serializedName: EntityHierarchyItem
+            documentation: The management group details for the hierarchy view.
+            containsConstantProperties: false
+            name:
+              $id: '590'
+              fixed: false
+              raw: EntityHierarchyItem
+            extensions:
+              x-ms-azure-resource: true
+            deprecated: false
+          name:
+            $id: '591'
+            fixed: false
+          deprecated: false
+    serializedName: EntityHierarchyItemProperties
+    documentation: The generic properties of a management group.
+    containsConstantProperties: false
+    name:
+      $id: '592'
+      fixed: false
+      raw: EntityHierarchyItemProperties
+    deprecated: false
+  - $ref: '567'
+  - $id: '593'
+    $type: CompositeType
+    properties:
+      - $id: '594'
+        isReadOnly: false
+        realPath:
+          - displayName
+        collectionFormat: none
+        defaultValue:
+          $id: '595'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '596'
+          fixed: false
+          raw: The friendly name of the management group.
+        extensions:
+          x-nullable: true
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '597'
+          fixed: false
+          raw: displayName
+        serializedName: displayName
+        modelType:
+          $id: '598'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '599'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '600'
         isReadOnly: false
         realPath:
           - parentId
         collectionFormat: none
         defaultValue:
-          $id: '543'
+          $id: '601'
           fixed: false
         deprecated: false
         documentation:
-          $id: '544'
+          $id: '602'
           fixed: false
           raw: >-
             (Optional) The fully qualified ID for the parent management group. 
@@ -2785,16 +3097,16 @@ modelTypes:
         isRequired: false
         isConstant: false
         name:
-          $id: '545'
+          $id: '603'
           fixed: false
           raw: parentId
         serializedName: parentId
         modelType:
-          $id: '546'
+          $id: '604'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '547'
+            $id: '605'
             fixed: false
             raw: String
           deprecated: false
@@ -2802,24 +3114,24 @@ modelTypes:
     documentation: Management group patch parameters.
     containsConstantProperties: false
     name:
-      $id: '548'
+      $id: '606'
       fixed: false
       raw: PatchManagementGroupRequest
     deprecated: false
-  - $id: '549'
+  - $id: '607'
     $type: CompositeType
     properties:
-      - $id: '550'
+      - $id: '608'
         isReadOnly: false
         realPath:
           - id
         collectionFormat: none
         defaultValue:
-          $id: '551'
+          $id: '609'
           fixed: false
         deprecated: false
         documentation:
-          $id: '552'
+          $id: '610'
           fixed: false
           raw: >-
             The fully qualified ID for the parent management group.  For
@@ -2828,74 +3140,74 @@ modelTypes:
         isRequired: false
         isConstant: false
         name:
-          $id: '553'
+          $id: '611'
           fixed: false
           raw: id
         serializedName: id
         modelType:
-          $id: '554'
+          $id: '612'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '555'
+            $id: '613'
             fixed: false
             raw: String
           deprecated: false
-      - $id: '556'
+      - $id: '614'
         isReadOnly: true
         realPath:
           - name
         collectionFormat: none
         defaultValue:
-          $id: '557'
+          $id: '615'
           fixed: false
         deprecated: false
         documentation:
-          $id: '558'
+          $id: '616'
           fixed: false
           raw: The name of the parent management group
         isRequired: false
         isConstant: false
         name:
-          $id: '559'
+          $id: '617'
           fixed: false
           raw: name
         serializedName: name
         modelType:
-          $id: '560'
+          $id: '618'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '561'
+            $id: '619'
             fixed: false
             raw: String
           deprecated: false
-      - $id: '562'
+      - $id: '620'
         isReadOnly: true
         realPath:
           - displayName
         collectionFormat: none
         defaultValue:
-          $id: '563'
+          $id: '621'
           fixed: false
         deprecated: false
         documentation:
-          $id: '564'
+          $id: '622'
           fixed: false
           raw: The friendly name of the parent management group.
         isRequired: false
         isConstant: false
         name:
-          $id: '565'
+          $id: '623'
           fixed: false
           raw: displayName
         serializedName: displayName
         modelType:
-          $id: '566'
+          $id: '624'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '567'
+            $id: '625'
             fixed: false
             raw: String
           deprecated: false
@@ -2903,147 +3215,147 @@ modelTypes:
     documentation: (Optional) The ID of the parent management group used during creation.
     containsConstantProperties: false
     name:
-      $id: '568'
+      $id: '626'
       fixed: false
       raw: CreateParentGroupInfo
     deprecated: false
-  - $id: '569'
+  - $id: '627'
     $type: CompositeType
     properties:
-      - $id: '570'
+      - $id: '628'
         isReadOnly: true
         realPath:
           - version
         collectionFormat: none
         defaultValue:
-          $id: '571'
+          $id: '629'
           fixed: false
         deprecated: false
         documentation:
-          $id: '572'
+          $id: '630'
           fixed: false
           raw: The version number of the object.
         isRequired: false
         isConstant: false
         name:
-          $id: '573'
+          $id: '631'
           fixed: false
           raw: version
         serializedName: version
         modelType:
-          $id: '574'
+          $id: '632'
           $type: PrimaryType
           format: int32
           knownPrimaryType: double
           name:
-            $id: '575'
+            $id: '633'
             fixed: false
             raw: Double
           deprecated: false
-      - $id: '576'
+      - $id: '634'
         isReadOnly: true
         realPath:
           - updatedTime
         collectionFormat: none
         defaultValue:
-          $id: '577'
+          $id: '635'
           fixed: false
         deprecated: false
         documentation:
-          $id: '578'
+          $id: '636'
           fixed: false
           raw: The date and time when this object was last updated.
         isRequired: false
         isConstant: false
         name:
-          $id: '579'
+          $id: '637'
           fixed: false
           raw: updatedTime
         serializedName: updatedTime
         modelType:
-          $id: '580'
+          $id: '638'
           $type: PrimaryType
           format: date-time
           knownPrimaryType: dateTime
           name:
-            $id: '581'
+            $id: '639'
             fixed: false
             raw: DateTime
           deprecated: false
-      - $id: '582'
+      - $id: '640'
         isReadOnly: true
         realPath:
           - updatedBy
         collectionFormat: none
         defaultValue:
-          $id: '583'
+          $id: '641'
           fixed: false
         deprecated: false
         documentation:
-          $id: '584'
+          $id: '642'
           fixed: false
           raw: The identity of the principal or process that updated the object.
         isRequired: false
         isConstant: false
         name:
-          $id: '585'
+          $id: '643'
           fixed: false
           raw: updatedBy
         serializedName: updatedBy
         modelType:
-          $id: '586'
+          $id: '644'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '587'
+            $id: '645'
             fixed: false
             raw: String
           deprecated: false
-      - $id: '588'
+      - $id: '646'
         isReadOnly: false
         summary: Parent
         realPath:
           - parent
         collectionFormat: none
         defaultValue:
-          $id: '589'
+          $id: '647'
           fixed: false
         deprecated: false
         documentation:
-          $id: '590'
+          $id: '648'
           fixed: false
         isRequired: false
         isConstant: false
         name:
-          $id: '591'
+          $id: '649'
           fixed: false
           raw: parent
         serializedName: parent
         modelType:
-          $ref: '549'
+          $ref: '607'
     serializedName: CreateManagementGroupDetails
     documentation: The details of a management group used during creation.
     containsConstantProperties: false
     name:
-      $id: '592'
+      $id: '650'
       fixed: false
       raw: CreateManagementGroupDetails
     deprecated: false
-  - $id: '593'
+  - $id: '651'
     $type: CompositeType
     properties:
-      - $id: '594'
+      - $id: '652'
         isReadOnly: true
         summary: The type of child resource.
         realPath:
           - type
         collectionFormat: none
         defaultValue:
-          $id: '595'
+          $id: '653'
           fixed: false
         deprecated: false
         documentation:
-          $id: '596'
+          $id: '654'
           fixed: false
           raw: >-
             The fully qualified resource type which includes provider namespace
@@ -3051,47 +3363,47 @@ modelTypes:
         isRequired: false
         isConstant: false
         name:
-          $id: '597'
+          $id: '655'
           fixed: false
           raw: type
         serializedName: type
         modelType:
-          $id: '598'
+          $id: '656'
           $type: EnumType
           modelAsExtensible: false
           values:
-            - $id: '599'
+            - $id: '657'
               name: /providers/Microsoft.Management/managementGroups
               serializedName: /providers/Microsoft.Management/managementGroups
-            - $id: '600'
+            - $id: '658'
               name: /subscriptions
               serializedName: /subscriptions
           modelAsString: true
           underlyingType:
-            $id: '601'
+            $id: '659'
             $type: PrimaryType
             knownPrimaryType: string
             name:
-              $id: '602'
+              $id: '660'
               fixed: false
               raw: String
             deprecated: false
           name:
-            $id: '603'
+            $id: '661'
             fixed: false
             raw: ''
           deprecated: false
-      - $id: '604'
+      - $id: '662'
         isReadOnly: true
         realPath:
           - id
         collectionFormat: none
         defaultValue:
-          $id: '605'
+          $id: '663'
           fixed: false
         deprecated: false
         documentation:
-          $id: '606'
+          $id: '664'
           fixed: false
           raw: >-
             The fully qualified ID for the child resource (management group or
@@ -3100,164 +3412,164 @@ modelTypes:
         isRequired: false
         isConstant: false
         name:
-          $id: '607'
+          $id: '665'
           fixed: false
           raw: id
         serializedName: id
         modelType:
-          $id: '608'
+          $id: '666'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '609'
+            $id: '667'
             fixed: false
             raw: String
           deprecated: false
-      - $id: '610'
+      - $id: '668'
         isReadOnly: true
         realPath:
           - name
         collectionFormat: none
         defaultValue:
-          $id: '611'
+          $id: '669'
           fixed: false
         deprecated: false
         documentation:
-          $id: '612'
+          $id: '670'
           fixed: false
           raw: The name of the child entity.
         isRequired: false
         isConstant: false
         name:
-          $id: '613'
+          $id: '671'
           fixed: false
           raw: name
         serializedName: name
         modelType:
-          $id: '614'
+          $id: '672'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '615'
+            $id: '673'
             fixed: false
             raw: String
           deprecated: false
-      - $id: '616'
+      - $id: '674'
         isReadOnly: true
         realPath:
           - displayName
         collectionFormat: none
         defaultValue:
-          $id: '617'
+          $id: '675'
           fixed: false
         deprecated: false
         documentation:
-          $id: '618'
+          $id: '676'
           fixed: false
           raw: The friendly name of the child resource.
         isRequired: false
         isConstant: false
         name:
-          $id: '619'
+          $id: '677'
           fixed: false
           raw: displayName
         serializedName: displayName
         modelType:
-          $id: '620'
+          $id: '678'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '621'
+            $id: '679'
             fixed: false
             raw: String
           deprecated: false
-      - $id: '622'
+      - $id: '680'
         isReadOnly: true
         realPath:
           - roles
         collectionFormat: none
         defaultValue:
-          $id: '623'
+          $id: '681'
           fixed: false
         deprecated: false
         documentation:
-          $id: '624'
+          $id: '682'
           fixed: false
           raw: The roles definitions associated with the management group.
         isRequired: false
         isConstant: false
         name:
-          $id: '625'
+          $id: '683'
           fixed: false
           raw: roles
         serializedName: roles
         modelType:
-          $id: '626'
+          $id: '684'
           $type: SequenceType
           elementType:
-            $id: '627'
+            $id: '685'
             $type: PrimaryType
             knownPrimaryType: string
             name:
-              $id: '628'
+              $id: '686'
               fixed: false
               raw: String
             deprecated: false
           name:
-            $id: '629'
+            $id: '687'
             fixed: false
           deprecated: false
-      - $id: '630'
+      - $id: '688'
         isReadOnly: true
         realPath:
           - children
         collectionFormat: none
         defaultValue:
-          $id: '631'
+          $id: '689'
           fixed: false
         deprecated: false
         documentation:
-          $id: '632'
+          $id: '690'
           fixed: false
           raw: The list of children.
         isRequired: false
         isConstant: false
         name:
-          $id: '633'
+          $id: '691'
           fixed: false
           raw: children
         serializedName: children
         modelType:
-          $id: '634'
+          $id: '692'
           $type: SequenceType
           elementType:
-            $ref: '593'
+            $ref: '651'
           name:
-            $id: '635'
+            $id: '693'
             fixed: false
           deprecated: false
     serializedName: CreateManagementGroupChildInfo
     documentation: The child information of a management group used during creation.
     containsConstantProperties: false
     name:
-      $id: '636'
+      $id: '694'
       fixed: false
       raw: CreateManagementGroupChildInfo
     deprecated: false
-  - $id: '637'
+  - $id: '695'
     $type: CompositeType
     properties:
-      - $id: '638'
+      - $id: '696'
         isReadOnly: true
         realPath:
           - tenantId
         collectionFormat: none
         defaultValue:
-          $id: '639'
+          $id: '697'
           fixed: false
         deprecated: false
         documentation:
-          $id: '640'
+          $id: '698'
           fixed: false
           raw: >-
             The AAD Tenant ID associated with the management group. For example,
@@ -3265,30 +3577,30 @@ modelTypes:
         isRequired: false
         isConstant: false
         name:
-          $id: '641'
+          $id: '699'
           fixed: false
           raw: tenantId
         serializedName: tenantId
         modelType:
-          $id: '642'
+          $id: '700'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '643'
+            $id: '701'
             fixed: false
             raw: String
           deprecated: false
-      - $id: '644'
+      - $id: '702'
         isReadOnly: false
         realPath:
           - displayName
         collectionFormat: none
         defaultValue:
-          $id: '645'
+          $id: '703'
           fixed: false
         deprecated: false
         documentation:
-          $id: '646'
+          $id: '704'
           fixed: false
           raw: >-
             The friendly name of the management group. If no value is passed
@@ -3298,30 +3610,30 @@ modelTypes:
         isRequired: false
         isConstant: false
         name:
-          $id: '647'
+          $id: '705'
           fixed: false
           raw: displayName
         serializedName: displayName
         modelType:
-          $id: '648'
+          $id: '706'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '649'
+            $id: '707'
             fixed: false
             raw: String
           deprecated: false
-      - $id: '650'
+      - $id: '708'
         isReadOnly: true
         realPath:
           - roles
         collectionFormat: none
         defaultValue:
-          $id: '651'
+          $id: '709'
           fixed: false
         deprecated: false
         documentation:
-          $id: '652'
+          $id: '710'
           fixed: false
           raw: The roles definitions associated with the management group.
         extensions:
@@ -3329,59 +3641,59 @@ modelTypes:
         isRequired: false
         isConstant: false
         name:
-          $id: '653'
+          $id: '711'
           fixed: false
           raw: roles
         serializedName: roles
         modelType:
-          $id: '654'
+          $id: '712'
           $type: SequenceType
           elementType:
-            $id: '655'
+            $id: '713'
             $type: PrimaryType
             knownPrimaryType: string
             name:
-              $id: '656'
+              $id: '714'
               fixed: false
               raw: String
             deprecated: false
           name:
-            $id: '657'
+            $id: '715'
             fixed: false
           deprecated: false
-      - $id: '658'
+      - $id: '716'
         isReadOnly: false
         summary: Details
         realPath:
           - details
         collectionFormat: none
         defaultValue:
-          $id: '659'
+          $id: '717'
           fixed: false
         deprecated: false
         documentation:
-          $id: '660'
+          $id: '718'
           fixed: false
         isRequired: false
         isConstant: false
         name:
-          $id: '661'
+          $id: '719'
           fixed: false
           raw: details
         serializedName: details
         modelType:
-          $ref: '569'
-      - $id: '662'
+          $ref: '627'
+      - $id: '720'
         isReadOnly: true
         realPath:
           - children
         collectionFormat: none
         defaultValue:
-          $id: '663'
+          $id: '721'
           fixed: false
         deprecated: false
         documentation:
-          $id: '664'
+          $id: '722'
           fixed: false
           raw: The list of children.
         extensions:
@@ -3389,41 +3701,41 @@ modelTypes:
         isRequired: false
         isConstant: false
         name:
-          $id: '665'
+          $id: '723'
           fixed: false
           raw: children
         serializedName: children
         modelType:
-          $id: '666'
+          $id: '724'
           $type: SequenceType
           elementType:
-            $ref: '593'
+            $ref: '651'
           name:
-            $id: '667'
+            $id: '725'
             fixed: false
           deprecated: false
     serializedName: CreateManagementGroupProperties
     documentation: The generic properties of a management group used during creation.
     containsConstantProperties: false
     name:
-      $id: '668'
+      $id: '726'
       fixed: false
       raw: CreateManagementGroupProperties
     deprecated: false
-  - $id: '669'
+  - $id: '727'
     $type: CompositeType
     properties:
-      - $id: '670'
+      - $id: '728'
         isReadOnly: true
         realPath:
           - id
         collectionFormat: none
         defaultValue:
-          $id: '671'
+          $id: '729'
           fixed: false
         deprecated: false
         documentation:
-          $id: '672'
+          $id: '730'
           fixed: false
           raw: >-
             The fully qualified ID for the management group.  For example,
@@ -3431,30 +3743,30 @@ modelTypes:
         isRequired: false
         isConstant: false
         name:
-          $id: '673'
+          $id: '731'
           fixed: false
           raw: id
         serializedName: id
         modelType:
-          $id: '674'
+          $id: '732'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '675'
+            $id: '733'
             fixed: false
             raw: String
           deprecated: false
-      - $id: '676'
+      - $id: '734'
         isReadOnly: true
         realPath:
           - type
         collectionFormat: none
         defaultValue:
-          $id: '677'
+          $id: '735'
           fixed: false
         deprecated: false
         documentation:
-          $id: '678'
+          $id: '736'
           fixed: false
           raw: >-
             The type of the resource.  For example,
@@ -3462,30 +3774,30 @@ modelTypes:
         isRequired: false
         isConstant: false
         name:
-          $id: '679'
+          $id: '737'
           fixed: false
           raw: type
         serializedName: type
         modelType:
-          $id: '680'
+          $id: '738'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '681'
+            $id: '739'
             fixed: false
             raw: String
           deprecated: false
-      - $id: '682'
+      - $id: '740'
         isReadOnly: false
         realPath:
           - name
         collectionFormat: none
         defaultValue:
-          $id: '683'
+          $id: '741'
           fixed: false
         deprecated: false
         documentation:
-          $id: '684'
+          $id: '742'
           fixed: false
           raw: >-
             The name of the management group. For example,
@@ -3493,96 +3805,96 @@ modelTypes:
         isRequired: false
         isConstant: false
         name:
-          $id: '685'
+          $id: '743'
           fixed: false
           raw: name
         serializedName: name
         modelType:
-          $id: '686'
+          $id: '744'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '687'
+            $id: '745'
             fixed: false
             raw: String
           deprecated: false
-      - $id: '688'
+      - $id: '746'
         isReadOnly: false
         summary: Properties
         realPath:
           - properties
         collectionFormat: none
         defaultValue:
-          $id: '689'
+          $id: '747'
           fixed: false
         deprecated: false
         documentation:
-          $id: '690'
+          $id: '748'
           fixed: false
         extensions:
           x-ms-client-flatten: true
         isRequired: false
         isConstant: false
         name:
-          $id: '691'
+          $id: '749'
           fixed: false
           raw: properties
         serializedName: properties
         modelType:
-          $ref: '637'
+          $ref: '695'
     serializedName: CreateManagementGroupRequest
     documentation: Management group creation parameters.
     containsConstantProperties: false
     name:
-      $id: '692'
+      $id: '750'
       fixed: false
       raw: CreateManagementGroupRequest
     extensions:
       x-ms-azure-resource: true
     deprecated: false
-  - $id: '693'
+  - $id: '751'
     $type: CompositeType
     properties:
-      - $id: '694'
+      - $id: '752'
         isReadOnly: false
         realPath:
           - name
         collectionFormat: none
         defaultValue:
-          $id: '695'
+          $id: '753'
           fixed: false
         deprecated: false
         documentation:
-          $id: '696'
+          $id: '754'
           fixed: false
           raw: the name to check for availability
         isRequired: false
         isConstant: false
         name:
-          $id: '697'
+          $id: '755'
           fixed: false
           raw: name
         serializedName: name
         modelType:
-          $id: '698'
+          $id: '756'
           $type: PrimaryType
           knownPrimaryType: string
           name:
-            $id: '699'
+            $id: '757'
             fixed: false
             raw: String
           deprecated: false
-      - $id: '700'
+      - $id: '758'
         isReadOnly: false
         realPath:
           - type
         collectionFormat: none
         defaultValue:
-          $id: '701'
+          $id: '759'
           fixed: false
         deprecated: false
         documentation:
-          $id: '702'
+          $id: '760'
           fixed: false
           raw: fully qualified resource type which includes provider namespace
         extensions:
@@ -3594,30 +3906,30 @@ modelTypes:
         isRequired: false
         isConstant: false
         name:
-          $id: '703'
+          $id: '761'
           fixed: false
           raw: type
         serializedName: type
         modelType:
-          $id: '704'
+          $id: '762'
           $type: EnumType
           modelAsExtensible: false
           values:
-            - $id: '705'
+            - $id: '763'
               name: /providers/Microsoft.Management/managementGroups
               serializedName: /providers/Microsoft.Management/managementGroups
           modelAsString: false
           underlyingType:
-            $id: '706'
+            $id: '764'
             $type: PrimaryType
             knownPrimaryType: string
             name:
-              $id: '707'
+              $id: '765'
               fixed: false
               raw: String
             deprecated: false
           name:
-            $id: '708'
+            $id: '766'
             fixed: false
             raw: Type
           deprecated: false
@@ -3625,7 +3937,7 @@ modelTypes:
     documentation: Management group name availability check parameters.
     containsConstantProperties: false
     name:
-      $id: '709'
+      $id: '767'
       fixed: false
       raw: CheckNameAvailabilityRequest
     deprecated: false
@@ -3634,7 +3946,7 @@ errorTypes:
 enumTypes:
   - $ref: '91'
   - $ref: '115'
-  - $ref: '704'
+  - $ref: '762'
 name: ManagementGroupsClient
 namespace: Azure.mgmt.managementgroups
 modelsName: Models
@@ -3649,17 +3961,17 @@ extensions:
     - azure_auth:
         - user_impersonation
 properties:
-  - $id: '710'
+  - $id: '768'
     isReadOnly: false
     realPath:
       - groupId
     collectionFormat: none
     defaultValue:
-      $id: '711'
+      $id: '769'
       fixed: false
     deprecated: false
     documentation:
-      $id: '712'
+      $id: '770'
       fixed: false
       raw: Management Group ID.
     extensions:
@@ -3667,30 +3979,30 @@ properties:
     isRequired: true
     isConstant: false
     name:
-      $id: '713'
+      $id: '771'
       fixed: false
       raw: groupId
     serializedName: groupId
     modelType:
-      $id: '714'
+      $id: '772'
       $type: PrimaryType
       knownPrimaryType: string
       name:
-        $id: '715'
+        $id: '773'
         fixed: false
         raw: String
       deprecated: false
-  - $id: '716'
+  - $id: '774'
     isReadOnly: false
     realPath:
       - subscriptionId
     collectionFormat: none
     defaultValue:
-      $id: '717'
+      $id: '775'
       fixed: false
     deprecated: false
     documentation:
-      $id: '718'
+      $id: '776'
       fixed: false
       raw: Subscription ID.
     extensions:
@@ -3698,30 +4010,30 @@ properties:
     isRequired: true
     isConstant: false
     name:
-      $id: '719'
+      $id: '777'
       fixed: false
       raw: subscriptionId
     serializedName: subscriptionId
     modelType:
-      $id: '720'
+      $id: '778'
       $type: PrimaryType
       knownPrimaryType: string
       name:
-        $id: '721'
+        $id: '779'
         fixed: false
         raw: String
       deprecated: false
-  - $id: '722'
+  - $id: '780'
     isReadOnly: false
     realPath:
       - api-version
     collectionFormat: none
     defaultValue:
-      $id: '723'
+      $id: '781'
       fixed: false
     deprecated: false
     documentation:
-      $id: '724'
+      $id: '782'
       fixed: false
       raw: >-
         Version of the API to be used with the client request. The current
@@ -3729,30 +4041,30 @@ properties:
     isRequired: true
     isConstant: false
     name:
-      $id: '725'
+      $id: '783'
       fixed: false
       raw: api-version
     serializedName: api-version
     modelType:
-      $id: '726'
+      $id: '784'
       $type: PrimaryType
       knownPrimaryType: string
       name:
-        $id: '727'
+        $id: '785'
         fixed: false
         raw: String
       deprecated: false
-  - $id: '728'
+  - $id: '786'
     isReadOnly: false
     realPath:
       - $expand
     collectionFormat: none
     defaultValue:
-      $id: '729'
+      $id: '787'
       fixed: false
     deprecated: false
     documentation:
-      $id: '730'
+      $id: '788'
       fixed: false
       raw: >-
         The $expand=children query string parameter allows clients to request
@@ -3762,44 +4074,44 @@ properties:
     isRequired: false
     isConstant: false
     name:
-      $id: '731'
+      $id: '789'
       fixed: false
       raw: $expand
     serializedName: $expand
     modelType:
-      $id: '732'
+      $id: '790'
       $type: EnumType
       modelAsExtensible: false
       values:
-        - $id: '733'
+        - $id: '791'
           name: children
           serializedName: children
       modelAsString: true
       underlyingType:
-        $id: '734'
+        $id: '792'
         $type: PrimaryType
         knownPrimaryType: string
         name:
-          $id: '735'
+          $id: '793'
           fixed: false
           raw: String
         deprecated: false
       name:
-        $id: '736'
+        $id: '794'
         fixed: false
         raw: ''
       deprecated: false
-  - $id: '737'
+  - $id: '795'
     isReadOnly: false
     realPath:
       - $recurse
     collectionFormat: none
     defaultValue:
-      $id: '738'
+      $id: '796'
       fixed: false
     deprecated: false
     documentation:
-      $id: '739'
+      $id: '797'
       fixed: false
       raw: >-
         The $recurse=true query string parameter allows clients to request
@@ -3810,30 +4122,30 @@ properties:
     isRequired: false
     isConstant: false
     name:
-      $id: '740'
+      $id: '798'
       fixed: false
       raw: $recurse
     serializedName: $recurse
     modelType:
-      $id: '741'
+      $id: '799'
       $type: PrimaryType
       knownPrimaryType: boolean
       name:
-        $id: '742'
+        $id: '800'
         fixed: false
         raw: Boolean
       deprecated: false
-  - $id: '743'
+  - $id: '801'
     isReadOnly: false
     realPath:
       - $filter
     collectionFormat: none
     defaultValue:
-      $id: '744'
+      $id: '802'
       fixed: false
     deprecated: false
     documentation:
-      $id: '745'
+      $id: '803'
       fixed: false
       raw: >-
         A filter which allows the exclusion of subscriptions from results (i.e.
@@ -3843,30 +4155,30 @@ properties:
     isRequired: false
     isConstant: false
     name:
-      $id: '746'
+      $id: '804'
       fixed: false
       raw: $filter
     serializedName: $filter
     modelType:
-      $id: '747'
+      $id: '805'
       $type: PrimaryType
       knownPrimaryType: string
       name:
-        $id: '748'
+        $id: '806'
         fixed: false
         raw: String
       deprecated: false
-  - $id: '749'
+  - $id: '807'
     isReadOnly: false
     realPath:
       - $filter
     collectionFormat: none
     defaultValue:
-      $id: '750'
+      $id: '808'
       fixed: false
     deprecated: false
     documentation:
-      $id: '751'
+      $id: '809'
       fixed: false
       raw: >-
         The filter parameter allows you to filter on the name or display name
@@ -3881,30 +4193,30 @@ properties:
     isRequired: false
     isConstant: false
     name:
-      $id: '752'
+      $id: '810'
       fixed: false
       raw: Filter1
     serializedName: $filter
     modelType:
-      $id: '753'
+      $id: '811'
       $type: PrimaryType
       knownPrimaryType: string
       name:
-        $id: '754'
+        $id: '812'
         fixed: false
         raw: String
       deprecated: false
-  - $id: '755'
+  - $id: '813'
     isReadOnly: false
     realPath:
       - $select
     collectionFormat: none
     defaultValue:
-      $id: '756'
+      $id: '814'
       fixed: false
     deprecated: false
     documentation:
-      $id: '757'
+      $id: '815'
       fixed: false
       raw: >-
         This parameter specifies the fields to include in the response. Can
@@ -3917,30 +4229,30 @@ properties:
     isRequired: false
     isConstant: false
     name:
-      $id: '758'
+      $id: '816'
       fixed: false
       raw: $select
     serializedName: $select
     modelType:
-      $id: '759'
+      $id: '817'
       $type: PrimaryType
       knownPrimaryType: string
       name:
-        $id: '760'
+        $id: '818'
         fixed: false
         raw: String
       deprecated: false
-  - $id: '761'
+  - $id: '819'
     isReadOnly: false
     realPath:
       - $search
     collectionFormat: none
     defaultValue:
-      $id: '762'
+      $id: '820'
       fixed: false
     deprecated: false
     documentation:
-      $id: '763'
+      $id: '821'
       fixed: false
       raw: >-
         The $search parameter is used in conjunction with the $filter parameter
@@ -3958,56 +4270,56 @@ properties:
     isRequired: false
     isConstant: false
     name:
-      $id: '764'
+      $id: '822'
       fixed: false
       raw: $search
     serializedName: $search
     modelType:
-      $id: '765'
+      $id: '823'
       $type: EnumType
       modelAsExtensible: false
       values:
-        - $id: '766'
+        - $id: '824'
           name: AllowedParents
           serializedName: AllowedParents
-        - $id: '767'
+        - $id: '825'
           name: AllowedChildren
           serializedName: AllowedChildren
-        - $id: '768'
+        - $id: '826'
           name: ParentAndFirstLevelChildren
           serializedName: ParentAndFirstLevelChildren
-        - $id: '769'
+        - $id: '827'
           name: ParentOnly
           serializedName: ParentOnly
-        - $id: '770'
+        - $id: '828'
           name: ChildrenOnly
           serializedName: ChildrenOnly
       modelAsString: true
       underlyingType:
-        $id: '771'
+        $id: '829'
         $type: PrimaryType
         knownPrimaryType: string
         name:
-          $id: '772'
+          $id: '830'
           fixed: false
           raw: String
         deprecated: false
       name:
-        $id: '773'
+        $id: '831'
         fixed: false
         raw: ''
       deprecated: false
-  - $id: '774'
+  - $id: '832'
     isReadOnly: false
     realPath:
       - groupName
     collectionFormat: none
     defaultValue:
-      $id: '775'
+      $id: '833'
       fixed: false
     deprecated: false
     documentation:
-      $id: '776'
+      $id: '834'
       fixed: false
       raw: >-
         A filter which allows the get entities call to focus on a particular
@@ -4017,30 +4329,30 @@ properties:
     isRequired: false
     isConstant: false
     name:
-      $id: '777'
+      $id: '835'
       fixed: false
       raw: groupName
     serializedName: groupName
     modelType:
-      $id: '778'
+      $id: '836'
       $type: PrimaryType
       knownPrimaryType: string
       name:
-        $id: '779'
+        $id: '837'
         fixed: false
         raw: String
       deprecated: false
-  - $id: '780'
+  - $id: '838'
     isReadOnly: false
     realPath:
       - operationResultId
     collectionFormat: none
     defaultValue:
-      $id: '781'
+      $id: '839'
       fixed: false
     deprecated: false
     documentation:
-      $id: '782'
+      $id: '840'
       fixed: false
       raw: The id of the operation result.
     extensions:
@@ -4048,47 +4360,47 @@ properties:
     isRequired: true
     isConstant: false
     name:
-      $id: '783'
+      $id: '841'
       fixed: false
       raw: operationResultId
     serializedName: operationResultId
     modelType:
-      $id: '784'
+      $id: '842'
       $type: EnumType
       modelAsExtensible: false
       values:
-        - $id: '785'
+        - $id: '843'
           name: create
           serializedName: create
-        - $id: '786'
+        - $id: '844'
           name: delete
           serializedName: delete
       modelAsString: true
       underlyingType:
-        $id: '787'
+        $id: '845'
         $type: PrimaryType
         knownPrimaryType: string
         name:
-          $id: '788'
+          $id: '846'
           fixed: false
           raw: String
         deprecated: false
       name:
-        $id: '789'
+        $id: '847'
         fixed: false
         raw: ''
       deprecated: false
-  - $id: '790'
+  - $id: '848'
     isReadOnly: false
     realPath:
       - $skip
     collectionFormat: none
     defaultValue:
-      $id: '791'
+      $id: '849'
       fixed: false
     deprecated: false
     documentation:
-      $id: '792'
+      $id: '850'
       fixed: false
       raw: >-
         Number of entities to skip over when retrieving results. Passing this in
@@ -4098,30 +4410,30 @@ properties:
     isRequired: false
     isConstant: false
     name:
-      $id: '793'
+      $id: '851'
       fixed: false
       raw: $skip
     serializedName: $skip
     modelType:
-      $id: '794'
+      $id: '852'
       $type: PrimaryType
       knownPrimaryType: int
       name:
-        $id: '795'
+        $id: '853'
         fixed: false
         raw: Int
       deprecated: false
-  - $id: '796'
+  - $id: '854'
     isReadOnly: false
     realPath:
       - $top
     collectionFormat: none
     defaultValue:
-      $id: '797'
+      $id: '855'
       fixed: false
     deprecated: false
     documentation:
-      $id: '798'
+      $id: '856'
       fixed: false
       raw: >-
         Number of elements to return when retrieving results. Passing this in
@@ -4131,30 +4443,30 @@ properties:
     isRequired: false
     isConstant: false
     name:
-      $id: '799'
+      $id: '857'
       fixed: false
       raw: $top
     serializedName: $top
     modelType:
-      $id: '800'
+      $id: '858'
       $type: PrimaryType
       knownPrimaryType: int
       name:
-        $id: '801'
+        $id: '859'
         fixed: false
         raw: Int
       deprecated: false
-  - $id: '802'
+  - $id: '860'
     isReadOnly: false
     realPath:
       - $skiptoken
     collectionFormat: none
     defaultValue:
-      $id: '803'
+      $id: '861'
       fixed: false
     deprecated: false
     documentation:
-      $id: '804'
+      $id: '862'
       fixed: false
       raw: >-
         Page continuation token is only used if a previous operation returned a
@@ -4166,31 +4478,31 @@ properties:
     isRequired: false
     isConstant: false
     name:
-      $id: '805'
+      $id: '863'
       fixed: false
       raw: $skiptoken
     serializedName: $skiptoken
     modelType:
-      $id: '806'
+      $id: '864'
       $type: PrimaryType
       knownPrimaryType: string
       name:
-        $id: '807'
+        $id: '865'
         fixed: false
         raw: String
       deprecated: false
-  - $id: '808'
+  - $id: '866'
     isReadOnly: false
     realPath:
       - Cache-Control
     collectionFormat: none
     defaultValue:
-      $id: '809'
+      $id: '867'
       fixed: false
       raw: no-cache
     deprecated: false
     documentation:
-      $id: '810'
+      $id: '868'
       fixed: false
       raw: Indicates that the request shouldn't utilize any caches.
     extensions:
@@ -4198,30 +4510,30 @@ properties:
     isRequired: false
     isConstant: false
     name:
-      $id: '811'
+      $id: '869'
       fixed: false
       raw: Cache-Control
     serializedName: Cache-Control
     modelType:
-      $id: '812'
+      $id: '870'
       $type: PrimaryType
       knownPrimaryType: string
       name:
-        $id: '813'
+        $id: '871'
         fixed: false
         raw: String
       deprecated: false
-  - $id: '814'
+  - $id: '872'
     isReadOnly: false
     realPath:
       - $view
     collectionFormat: none
     defaultValue:
-      $id: '815'
+      $id: '873'
       fixed: false
     deprecated: false
     documentation:
-      $id: '816'
+      $id: '874'
       fixed: false
       raw: >-
         The view parameter allows clients to filter the type of data that is
@@ -4231,58 +4543,58 @@ properties:
     isRequired: false
     isConstant: false
     name:
-      $id: '817'
+      $id: '875'
       fixed: false
       raw: $view
     serializedName: $view
     modelType:
-      $id: '818'
+      $id: '876'
       $type: EnumType
       modelAsExtensible: false
       values:
-        - $id: '819'
+        - $id: '877'
           name: FullHierarchy
           serializedName: FullHierarchy
-        - $id: '820'
+        - $id: '878'
           name: GroupsOnly
           serializedName: GroupsOnly
-        - $id: '821'
+        - $id: '879'
           name: SubscriptionsOnly
           serializedName: SubscriptionsOnly
-        - $id: '822'
+        - $id: '880'
           name: Audit
           serializedName: Audit
       modelAsString: true
       underlyingType:
-        $id: '823'
+        $id: '881'
         $type: PrimaryType
         knownPrimaryType: string
         name:
-          $id: '824'
+          $id: '882'
           fixed: false
           raw: String
         deprecated: false
       name:
-        $id: '825'
+        $id: '883'
         fixed: false
         raw: ''
       deprecated: false
 operations:
-  - $id: '826'
+  - $id: '884'
     methods:
-      - $id: '827'
+      - $id: '885'
         parameters:
-          - $id: '828'
+          - $id: '886'
             clientProperty:
-              $ref: '722'
+              $ref: '780'
             location: query
             collectionFormat: none
             defaultValue:
-              $id: '829'
+              $id: '887'
               fixed: false
             deprecated: false
             documentation:
-              $id: '830'
+              $id: '888'
               fixed: false
               raw: >-
                 Version of the API to be used with the client request. The
@@ -4290,31 +4602,31 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '831'
+              $id: '889'
               fixed: false
               raw: api-version
             serializedName: api-version
             modelType:
-              $id: '832'
+              $id: '890'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '833'
+                $id: '891'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '834'
+          - $id: '892'
             clientProperty:
-              $ref: '808'
+              $ref: '866'
             location: header
             collectionFormat: none
             defaultValue:
-              $id: '835'
+              $id: '893'
               fixed: false
               raw: no-cache
             deprecated: false
             documentation:
-              $id: '836'
+              $id: '894'
               fixed: false
               raw: Indicates that the request shouldn't utilize any caches.
             extensions:
@@ -4322,30 +4634,30 @@ operations:
             isRequired: false
             isConstant: false
             name:
-              $id: '837'
+              $id: '895'
               fixed: false
               raw: Cache-Control
             serializedName: Cache-Control
             modelType:
-              $id: '838'
+              $id: '896'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '839'
+                $id: '897'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '840'
+          - $id: '898'
             clientProperty:
-              $ref: '802'
+              $ref: '860'
             location: query
             collectionFormat: none
             defaultValue:
-              $id: '841'
+              $id: '899'
               fixed: false
             deprecated: false
             documentation:
-              $id: '842'
+              $id: '900'
               fixed: false
               raw: >-
                 Page continuation token is only used if a previous operation
@@ -4358,25 +4670,25 @@ operations:
             isRequired: false
             isConstant: false
             name:
-              $id: '843'
+              $id: '901'
               fixed: false
               raw: $skiptoken
             serializedName: $skiptoken
             modelType:
-              $id: '844'
+              $id: '902'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '845'
+                $id: '903'
                 fixed: false
                 raw: String
               deprecated: false
         name:
-          $id: '846'
+          $id: '904'
           fixed: false
           raw: List
         group:
-          $id: '847'
+          $id: '905'
           fixed: false
           raw: ManagementGroups
         serializedName: ManagementGroups_List
@@ -4385,17 +4697,17 @@ operations:
         httpMethod: get
         responses:
           OK:
-            $id: '848'
+            $id: '906'
             body:
               $ref: '164'
             isNullable: true
         defaultResponse:
-          $id: '849'
+          $id: '907'
           body:
             $ref: '22'
           isNullable: true
         returnType:
-          $id: '850'
+          $id: '908'
           body:
             $ref: '164'
           isNullable: true
@@ -4432,19 +4744,19 @@ operations:
                     nextLink: null
         deprecated: false
         hidden: false
-      - $id: '851'
+      - $id: '909'
         parameters:
-          - $id: '852'
+          - $id: '910'
             clientProperty:
-              $ref: '710'
+              $ref: '768'
             location: path
             collectionFormat: none
             defaultValue:
-              $id: '853'
+              $id: '911'
               fixed: false
             deprecated: false
             documentation:
-              $id: '854'
+              $id: '912'
               fixed: false
               raw: Management Group ID.
             extensions:
@@ -4452,30 +4764,30 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '855'
+              $id: '913'
               fixed: false
               raw: groupId
             serializedName: groupId
             modelType:
-              $id: '856'
+              $id: '914'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '857'
+                $id: '915'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '858'
+          - $id: '916'
             clientProperty:
-              $ref: '722'
+              $ref: '780'
             location: query
             collectionFormat: none
             defaultValue:
-              $id: '859'
+              $id: '917'
               fixed: false
             deprecated: false
             documentation:
-              $id: '860'
+              $id: '918'
               fixed: false
               raw: >-
                 Version of the API to be used with the client request. The
@@ -4483,30 +4795,30 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '861'
+              $id: '919'
               fixed: false
               raw: api-version
             serializedName: api-version
             modelType:
-              $id: '862'
+              $id: '920'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '863'
+                $id: '921'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '864'
+          - $id: '922'
             clientProperty:
-              $ref: '728'
+              $ref: '786'
             location: query
             collectionFormat: none
             defaultValue:
-              $id: '865'
+              $id: '923'
               fixed: false
             deprecated: false
             documentation:
-              $id: '866'
+              $id: '924'
               fixed: false
               raw: >-
                 The $expand=children query string parameter allows clients to
@@ -4516,44 +4828,44 @@ operations:
             isRequired: false
             isConstant: false
             name:
-              $id: '867'
+              $id: '925'
               fixed: false
               raw: $expand
             serializedName: $expand
             modelType:
-              $id: '868'
+              $id: '926'
               $type: EnumType
               modelAsExtensible: false
               values:
-                - $id: '869'
+                - $id: '927'
                   name: children
                   serializedName: children
               modelAsString: true
               underlyingType:
-                $id: '870'
+                $id: '928'
                 $type: PrimaryType
                 knownPrimaryType: string
                 name:
-                  $id: '871'
+                  $id: '929'
                   fixed: false
                   raw: String
                 deprecated: false
               name:
-                $id: '872'
+                $id: '930'
                 fixed: false
                 raw: ''
               deprecated: false
-          - $id: '873'
+          - $id: '931'
             clientProperty:
-              $ref: '737'
+              $ref: '795'
             location: query
             collectionFormat: none
             defaultValue:
-              $id: '874'
+              $id: '932'
               fixed: false
             deprecated: false
             documentation:
-              $id: '875'
+              $id: '933'
               fixed: false
               raw: >-
                 The $recurse=true query string parameter allows clients to
@@ -4565,30 +4877,30 @@ operations:
             isRequired: false
             isConstant: false
             name:
-              $id: '876'
+              $id: '934'
               fixed: false
               raw: $recurse
             serializedName: $recurse
             modelType:
-              $id: '877'
+              $id: '935'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
-                $id: '878'
+                $id: '936'
                 fixed: false
                 raw: Boolean
               deprecated: false
-          - $id: '879'
+          - $id: '937'
             clientProperty:
-              $ref: '743'
+              $ref: '801'
             location: query
             collectionFormat: none
             defaultValue:
-              $id: '880'
+              $id: '938'
               fixed: false
             deprecated: false
             documentation:
-              $id: '881'
+              $id: '939'
               fixed: false
               raw: >-
                 A filter which allows the exclusion of subscriptions from
@@ -4598,31 +4910,31 @@ operations:
             isRequired: false
             isConstant: false
             name:
-              $id: '882'
+              $id: '940'
               fixed: false
               raw: $filter
             serializedName: $filter
             modelType:
-              $id: '883'
+              $id: '941'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '884'
+                $id: '942'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '885'
+          - $id: '943'
             clientProperty:
-              $ref: '808'
+              $ref: '866'
             location: header
             collectionFormat: none
             defaultValue:
-              $id: '886'
+              $id: '944'
               fixed: false
               raw: no-cache
             deprecated: false
             documentation:
-              $id: '887'
+              $id: '945'
               fixed: false
               raw: Indicates that the request shouldn't utilize any caches.
             extensions:
@@ -4630,25 +4942,25 @@ operations:
             isRequired: false
             isConstant: false
             name:
-              $id: '888'
+              $id: '946'
               fixed: false
               raw: Cache-Control
             serializedName: Cache-Control
             modelType:
-              $id: '889'
+              $id: '947'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '890'
+                $id: '948'
                 fixed: false
                 raw: String
               deprecated: false
         name:
-          $id: '891'
+          $id: '949'
           fixed: false
           raw: Get
         group:
-          $id: '892'
+          $id: '950'
           fixed: false
           raw: ManagementGroups
         serializedName: ManagementGroups_Get
@@ -4657,17 +4969,17 @@ operations:
         httpMethod: get
         responses:
           OK:
-            $id: '893'
+            $id: '951'
             body:
               $ref: '298'
             isNullable: true
         defaultResponse:
-          $id: '894'
+          $id: '952'
           body:
             $ref: '22'
           isNullable: true
         returnType:
-          $id: '895'
+          $id: '953'
           body:
             $ref: '298'
           isNullable: true
@@ -4810,19 +5122,19 @@ operations:
                               /providers/Microsoft.Authorization/roleDefinitions/8e3af657-a8ff-443c-a75c-2fe8c4bcb635
         deprecated: false
         hidden: false
-      - $id: '896'
+      - $id: '954'
         parameters:
-          - $id: '897'
+          - $id: '955'
             clientProperty:
-              $ref: '710'
+              $ref: '768'
             location: path
             collectionFormat: none
             defaultValue:
-              $id: '898'
+              $id: '956'
               fixed: false
             deprecated: false
             documentation:
-              $id: '899'
+              $id: '957'
               fixed: false
               raw: Management Group ID.
             extensions:
@@ -4830,30 +5142,30 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '900'
+              $id: '958'
               fixed: false
               raw: groupId
             serializedName: groupId
             modelType:
-              $id: '901'
+              $id: '959'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '902'
+                $id: '960'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '903'
+          - $id: '961'
             clientProperty:
-              $ref: '722'
+              $ref: '780'
             location: query
             collectionFormat: none
             defaultValue:
-              $id: '904'
+              $id: '962'
               fixed: false
             deprecated: false
             documentation:
-              $id: '905'
+              $id: '963'
               fixed: false
               raw: >-
                 Version of the API to be used with the client request. The
@@ -4861,31 +5173,31 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '906'
+              $id: '964'
               fixed: false
               raw: api-version
             serializedName: api-version
             modelType:
-              $id: '907'
+              $id: '965'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '908'
+                $id: '966'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '909'
+          - $id: '967'
             clientProperty:
-              $ref: '808'
+              $ref: '866'
             location: header
             collectionFormat: none
             defaultValue:
-              $id: '910'
+              $id: '968'
               fixed: false
               raw: no-cache
             deprecated: false
             documentation:
-              $id: '911'
+              $id: '969'
               fixed: false
               raw: Indicates that the request shouldn't utilize any caches.
             extensions:
@@ -4893,28 +5205,28 @@ operations:
             isRequired: false
             isConstant: false
             name:
-              $id: '912'
+              $id: '970'
               fixed: false
               raw: Cache-Control
             serializedName: Cache-Control
             modelType:
-              $id: '913'
+              $id: '971'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '914'
+                $id: '972'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '915'
+          - $id: '973'
             location: body
             collectionFormat: none
             defaultValue:
-              $id: '916'
+              $id: '974'
               fixed: false
             deprecated: false
             documentation:
-              $id: '917'
+              $id: '975'
               fixed: false
               raw: Management group creation parameters.
             extensions:
@@ -4923,18 +5235,18 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '918'
+              $id: '976'
               fixed: false
               raw: createManagementGroupRequest
             serializedName: createManagementGroupRequest
             modelType:
-              $ref: '669'
+              $ref: '727'
         name:
-          $id: '919'
+          $id: '977'
           fixed: false
           raw: CreateOrUpdate
         group:
-          $id: '920'
+          $id: '978'
           fixed: false
           raw: ManagementGroups
         serializedName: ManagementGroups_CreateOrUpdate
@@ -4943,28 +5255,28 @@ operations:
         httpMethod: put
         responses:
           OK:
-            $id: '921'
+            $id: '979'
             body:
               $ref: '298'
             isNullable: true
           Accepted:
-            $id: '922'
+            $id: '980'
             body:
               $ref: '333'
             isNullable: true
         defaultResponse:
-          $id: '923'
+          $id: '981'
           body:
             $ref: '22'
           isNullable: true
         returnType:
-          $id: '924'
+          $id: '982'
           body:
-            $id: '925'
+            $id: '983'
             $type: PrimaryType
             knownPrimaryType: object
             name:
-              $id: '926'
+              $id: '984'
               fixed: false
               raw: Object
             deprecated: false
@@ -5025,19 +5337,19 @@ operations:
           x-ms-long-running-operation: true
         deprecated: false
         hidden: false
-      - $id: '927'
+      - $id: '985'
         parameters:
-          - $id: '928'
+          - $id: '986'
             clientProperty:
-              $ref: '710'
+              $ref: '768'
             location: path
             collectionFormat: none
             defaultValue:
-              $id: '929'
+              $id: '987'
               fixed: false
             deprecated: false
             documentation:
-              $id: '930'
+              $id: '988'
               fixed: false
               raw: Management Group ID.
             extensions:
@@ -5045,30 +5357,30 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '931'
+              $id: '989'
               fixed: false
               raw: groupId
             serializedName: groupId
             modelType:
-              $id: '932'
+              $id: '990'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '933'
+                $id: '991'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '934'
+          - $id: '992'
             clientProperty:
-              $ref: '722'
+              $ref: '780'
             location: query
             collectionFormat: none
             defaultValue:
-              $id: '935'
+              $id: '993'
               fixed: false
             deprecated: false
             documentation:
-              $id: '936'
+              $id: '994'
               fixed: false
               raw: >-
                 Version of the API to be used with the client request. The
@@ -5076,31 +5388,31 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '937'
+              $id: '995'
               fixed: false
               raw: api-version
             serializedName: api-version
             modelType:
-              $id: '938'
+              $id: '996'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '939'
+                $id: '997'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '940'
+          - $id: '998'
             clientProperty:
-              $ref: '808'
+              $ref: '866'
             location: header
             collectionFormat: none
             defaultValue:
-              $id: '941'
+              $id: '999'
               fixed: false
               raw: no-cache
             deprecated: false
             documentation:
-              $id: '942'
+              $id: '1000'
               fixed: false
               raw: Indicates that the request shouldn't utilize any caches.
             extensions:
@@ -5108,28 +5420,28 @@ operations:
             isRequired: false
             isConstant: false
             name:
-              $id: '943'
+              $id: '1001'
               fixed: false
               raw: Cache-Control
             serializedName: Cache-Control
             modelType:
-              $id: '944'
+              $id: '1002'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '945'
+                $id: '1003'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '946'
+          - $id: '1004'
             location: body
             collectionFormat: none
             defaultValue:
-              $id: '947'
+              $id: '1005'
               fixed: false
             deprecated: false
             documentation:
-              $id: '948'
+              $id: '1006'
               fixed: false
               raw: Management group patch parameters.
             extensions:
@@ -5138,18 +5450,18 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '949'
+              $id: '1007'
               fixed: false
               raw: patchGroupRequest
             serializedName: patchGroupRequest
             modelType:
-              $ref: '535'
+              $ref: '593'
         name:
-          $id: '950'
+          $id: '1008'
           fixed: false
           raw: Update
         group:
-          $id: '951'
+          $id: '1009'
           fixed: false
           raw: ManagementGroups
         serializedName: ManagementGroups_Update
@@ -5158,17 +5470,17 @@ operations:
         httpMethod: patch
         responses:
           OK:
-            $id: '952'
+            $id: '1010'
             body:
               $ref: '298'
             isNullable: true
         defaultResponse:
-          $id: '953'
+          $id: '1011'
           body:
             $ref: '22'
           isNullable: true
         returnType:
-          $id: '954'
+          $id: '1012'
           body:
             $ref: '298'
           isNullable: true
@@ -5209,342 +5521,11 @@ operations:
                           displayName: AlternateRootGroup
         deprecated: false
         hidden: false
-      - $id: '955'
-        parameters:
-          - $id: '956'
-            clientProperty:
-              $ref: '710'
-            location: path
-            collectionFormat: none
-            defaultValue:
-              $id: '957'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '958'
-              fixed: false
-              raw: Management Group ID.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '959'
-              fixed: false
-              raw: groupId
-            serializedName: groupId
-            modelType:
-              $id: '960'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '961'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '962'
-            clientProperty:
-              $ref: '722'
-            location: query
-            collectionFormat: none
-            defaultValue:
-              $id: '963'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '964'
-              fixed: false
-              raw: >-
-                Version of the API to be used with the client request. The
-                current version is 2018-01-01-preview.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '965'
-              fixed: false
-              raw: api-version
-            serializedName: api-version
-            modelType:
-              $id: '966'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '967'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '968'
-            clientProperty:
-              $ref: '808'
-            location: header
-            collectionFormat: none
-            defaultValue:
-              $id: '969'
-              fixed: false
-              raw: no-cache
-            deprecated: false
-            documentation:
-              $id: '970'
-              fixed: false
-              raw: Indicates that the request shouldn't utilize any caches.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: false
-            isConstant: false
-            name:
-              $id: '971'
-              fixed: false
-              raw: Cache-Control
-            serializedName: Cache-Control
-            modelType:
-              $id: '972'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '973'
-                fixed: false
-                raw: String
-              deprecated: false
-        name:
-          $id: '974'
-          fixed: false
-          raw: Delete
-        group:
-          $id: '975'
-          fixed: false
-          raw: ManagementGroups
-        serializedName: ManagementGroups_Delete
-        url: '/providers/Microsoft.Management/managementGroups/{groupId}'
-        isAbsoluteUrl: false
-        httpMethod: delete
-        responses:
-          Accepted:
-            $id: '976'
-            body:
-              $ref: '333'
-            isNullable: true
-          NoContent:
-            $id: '977'
-            isNullable: true
-        defaultResponse:
-          $id: '978'
-          body:
-            $ref: '22'
-          isNullable: true
-        returnType:
-          $id: '979'
-          body:
-            $ref: '333'
-          isNullable: true
-        description: >-
-          Delete management group. If a management group contains child
-          resources, the request will fail.
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        extensions:
-          x-ms-examples:
-            DeleteManagementGroup:
-              parameters:
-                api-version: 2018-03-01-preview
-                groupId: GroupToDelete
-                Cache-Control: no-cache
-              responses:
-                '202':
-                  body:
-                    id: >-
-                      /providers/Microsoft.Management/managementGroups/GroupToDelete
-                    type: /providers/Microsoft.Management/managementGroups
-                    name: GroupToDelete
-                    properties:
-                      provisioningState: Updating
-                '204': {}
-          x-ms-long-running-operation: true
-        deprecated: false
-        hidden: false
-    name:
-      $id: '980'
-      fixed: false
-      raw: ManagementGroups
-    typeName:
-      $id: '981'
-      fixed: false
-    nameForProperty: ManagementGroups
-  - $id: '982'
-    methods:
-      - $id: '983'
-        parameters:
-          - $id: '984'
-            clientProperty:
-              $ref: '710'
-            location: path
-            collectionFormat: none
-            defaultValue:
-              $id: '985'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '986'
-              fixed: false
-              raw: Management Group ID.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '987'
-              fixed: false
-              raw: groupId
-            serializedName: groupId
-            modelType:
-              $id: '988'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '989'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '990'
-            clientProperty:
-              $ref: '716'
-            location: path
-            collectionFormat: none
-            defaultValue:
-              $id: '991'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '992'
-              fixed: false
-              raw: Subscription ID.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '993'
-              fixed: false
-              raw: subscriptionId
-            serializedName: subscriptionId
-            modelType:
-              $id: '994'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '995'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '996'
-            clientProperty:
-              $ref: '722'
-            location: query
-            collectionFormat: none
-            defaultValue:
-              $id: '997'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '998'
-              fixed: false
-              raw: >-
-                Version of the API to be used with the client request. The
-                current version is 2018-01-01-preview.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '999'
-              fixed: false
-              raw: api-version
-            serializedName: api-version
-            modelType:
-              $id: '1000'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1001'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1002'
-            clientProperty:
-              $ref: '808'
-            location: header
-            collectionFormat: none
-            defaultValue:
-              $id: '1003'
-              fixed: false
-              raw: no-cache
-            deprecated: false
-            documentation:
-              $id: '1004'
-              fixed: false
-              raw: Indicates that the request shouldn't utilize any caches.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: false
-            isConstant: false
-            name:
-              $id: '1005'
-              fixed: false
-              raw: Cache-Control
-            serializedName: Cache-Control
-            modelType:
-              $id: '1006'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1007'
-                fixed: false
-                raw: String
-              deprecated: false
-        name:
-          $id: '1008'
-          fixed: false
-          raw: Create
-        group:
-          $id: '1009'
-          fixed: false
-          raw: ManagementGroupSubscriptions
-        serializedName: ManagementGroupSubscriptions_Create
-        url: >-
-          /providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}
-        isAbsoluteUrl: false
-        httpMethod: put
-        responses:
-          NoContent:
-            $id: '1010'
-            isNullable: true
-        defaultResponse:
-          $id: '1011'
-          body:
-            $ref: '22'
-          isNullable: true
-        returnType:
-          $id: '1012'
-          isNullable: true
-        description: Associates existing subscription with the management group.
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        extensions:
-          x-ms-examples:
-            AddSubscriptionToManagementGroup:
-              parameters:
-                api-version: 2018-03-01-preview
-                groupId: Group
-                subscriptionId: 728bcbe4-8d56-4510-86c2-4921b8beefbc
-                Cache-Control: no-cache
-              responses:
-                '204': {}
-        deprecated: false
-        hidden: false
       - $id: '1013'
         parameters:
           - $id: '1014'
             clientProperty:
-              $ref: '710'
+              $ref: '768'
             location: path
             collectionFormat: none
             defaultValue:
@@ -5575,8 +5556,8 @@ operations:
               deprecated: false
           - $id: '1020'
             clientProperty:
-              $ref: '716'
-            location: path
+              $ref: '780'
+            location: query
             collectionFormat: none
             defaultValue:
               $id: '1021'
@@ -5585,16 +5566,16 @@ operations:
             documentation:
               $id: '1022'
               fixed: false
-              raw: Subscription ID.
-            extensions:
-              x-ms-parameter-location: method
+              raw: >-
+                Version of the API to be used with the client request. The
+                current version is 2018-01-01-preview.
             isRequired: true
             isConstant: false
             name:
               $id: '1023'
               fixed: false
-              raw: subscriptionId
-            serializedName: subscriptionId
+              raw: api-version
+            serializedName: api-version
             modelType:
               $id: '1024'
               $type: PrimaryType
@@ -5606,26 +5587,27 @@ operations:
               deprecated: false
           - $id: '1026'
             clientProperty:
-              $ref: '722'
-            location: query
+              $ref: '866'
+            location: header
             collectionFormat: none
             defaultValue:
               $id: '1027'
               fixed: false
+              raw: no-cache
             deprecated: false
             documentation:
               $id: '1028'
               fixed: false
-              raw: >-
-                Version of the API to be used with the client request. The
-                current version is 2018-01-01-preview.
-            isRequired: true
+              raw: Indicates that the request shouldn't utilize any caches.
+            extensions:
+              x-ms-parameter-location: method
+            isRequired: false
             isConstant: false
             name:
               $id: '1029'
               fixed: false
-              raw: api-version
-            serializedName: api-version
+              raw: Cache-Control
+            serializedName: Cache-Control
             modelType:
               $id: '1030'
               $type: PrimaryType
@@ -5635,18 +5617,378 @@ operations:
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '1032'
+        name:
+          $id: '1032'
+          fixed: false
+          raw: Delete
+        group:
+          $id: '1033'
+          fixed: false
+          raw: ManagementGroups
+        serializedName: ManagementGroups_Delete
+        url: '/providers/Microsoft.Management/managementGroups/{groupId}'
+        isAbsoluteUrl: false
+        httpMethod: delete
+        responses:
+          Accepted:
+            $id: '1034'
+            body:
+              $ref: '333'
+            isNullable: true
+          NoContent:
+            $id: '1035'
+            isNullable: true
+        defaultResponse:
+          $id: '1036'
+          body:
+            $ref: '22'
+          isNullable: true
+        returnType:
+          $id: '1037'
+          body:
+            $ref: '333'
+          isNullable: true
+        description: >-
+          Delete management group. If a management group contains child
+          resources, the request will fail.
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        extensions:
+          x-ms-examples:
+            DeleteManagementGroup:
+              parameters:
+                api-version: 2018-03-01-preview
+                groupId: GroupToDelete
+                Cache-Control: no-cache
+              responses:
+                '202':
+                  body:
+                    id: >-
+                      /providers/Microsoft.Management/managementGroups/GroupToDelete
+                    type: /providers/Microsoft.Management/managementGroups
+                    name: GroupToDelete
+                    properties:
+                      provisioningState: Updating
+                '204': {}
+          x-ms-long-running-operation: true
+        deprecated: false
+        hidden: false
+      - $id: '1038'
+        parameters:
+          - $id: '1039'
             clientProperty:
-              $ref: '808'
+              $ref: '768'
+            location: path
+            collectionFormat: none
+            defaultValue:
+              $id: '1040'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '1041'
+              fixed: false
+              raw: Management Group ID.
+            extensions:
+              x-ms-parameter-location: method
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '1042'
+              fixed: false
+              raw: groupId
+            serializedName: groupId
+            modelType:
+              $id: '1043'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '1044'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '1045'
+            clientProperty:
+              $ref: '780'
+            location: query
+            collectionFormat: none
+            defaultValue:
+              $id: '1046'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '1047'
+              fixed: false
+              raw: >-
+                Version of the API to be used with the client request. The
+                current version is 2018-01-01-preview.
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '1048'
+              fixed: false
+              raw: api-version
+            serializedName: api-version
+            modelType:
+              $id: '1049'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '1050'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '1051'
+            clientProperty:
+              $ref: '860'
+            location: query
+            collectionFormat: none
+            defaultValue:
+              $id: '1052'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '1053'
+              fixed: false
+              raw: >-
+                Page continuation token is only used if a previous operation
+                returned a partial result. If a previous response contains a
+                nextLink element, the value of the nextLink element will include
+                a token parameter that specifies a starting point to use for
+                subsequent calls.
+            extensions:
+              x-ms-parameter-location: method
+            isRequired: false
+            isConstant: false
+            name:
+              $id: '1054'
+              fixed: false
+              raw: $skiptoken
+            serializedName: $skiptoken
+            modelType:
+              $id: '1055'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '1056'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '1057'
+            clientProperty:
+              $ref: '854'
+            location: query
+            collectionFormat: none
+            defaultValue:
+              $id: '1058'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '1059'
+              fixed: false
+              raw: >-
+                Number of elements to return when retrieving results. Passing
+                this in will override $skipToken.
+            extensions:
+              x-ms-parameter-location: method
+            isRequired: false
+            isConstant: false
+            name:
+              $id: '1060'
+              fixed: false
+              raw: $top
+            serializedName: $top
+            modelType:
+              $id: '1061'
+              $type: PrimaryType
+              knownPrimaryType: int
+              name:
+                $id: '1062'
+                fixed: false
+                raw: Int
+              deprecated: false
+        name:
+          $id: '1063'
+          fixed: false
+          raw: GetDescendants
+        group:
+          $id: '1064'
+          fixed: false
+          raw: ManagementGroups
+        serializedName: ManagementGroups_GetDescendants
+        url: '/providers/Microsoft.Management/managementGroups/{groupId}/descendants'
+        isAbsoluteUrl: false
+        httpMethod: post
+        responses:
+          OK:
+            $id: '1065'
+            body:
+              $ref: '401'
+            isNullable: true
+        defaultResponse:
+          $id: '1066'
+          body:
+            $ref: '22'
+          isNullable: true
+        returnType:
+          $id: '1067'
+          body:
+            $ref: '401'
+          isNullable: true
+        description: |
+          List all entities that descend from a management group.
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        extensions:
+          x-ms-pageable:
+            nextLinkName: nextLink
+          x-ms-examples:
+            GetDescendants:
+              parameters:
+                api-version: 2018-03-01-preview
+                groupId: 20000000-0000-0000-0000-000000000000
+              responses:
+                '200':
+                  body:
+                    value:
+                      - id: >-
+                          /providers/Microsoft.Management/managementGroups/20000000-0001-0000-0000-000000000000
+                        type: /providers/Microsoft.Management/managementGroups
+                        name: 20000000-0001-0000-0000-000000000000
+                        properties:
+                          displayName: Group 1
+                          parent:
+                            id: >-
+                              /providers/Microsoft.Management/managementGroups/20000000-0000-0000-0000-000000000000
+                      - id: '/subscriptions/{{ subscription_id }}'
+                        type: '/subscriptions/{{ subscription_id }}'
+                        name: 20000000-0004-0000-0000-000000000000
+                        properties:
+                          displayName: Subscription 4
+                          parent:
+                            id: >-
+                              /providers/Microsoft.Management/managementGroups/20000000-0000-0000-0000-000000000000
+                    nextLink: null
+        deprecated: false
+        hidden: false
+    name:
+      $id: '1068'
+      fixed: false
+      raw: ManagementGroups
+    typeName:
+      $id: '1069'
+      fixed: false
+    nameForProperty: ManagementGroups
+  - $id: '1070'
+    methods:
+      - $id: '1071'
+        parameters:
+          - $id: '1072'
+            clientProperty:
+              $ref: '768'
+            location: path
+            collectionFormat: none
+            defaultValue:
+              $id: '1073'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '1074'
+              fixed: false
+              raw: Management Group ID.
+            extensions:
+              x-ms-parameter-location: method
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '1075'
+              fixed: false
+              raw: groupId
+            serializedName: groupId
+            modelType:
+              $id: '1076'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '1077'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '1078'
+            clientProperty:
+              $ref: '774'
+            location: path
+            collectionFormat: none
+            defaultValue:
+              $id: '1079'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '1080'
+              fixed: false
+              raw: Subscription ID.
+            extensions:
+              x-ms-parameter-location: method
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '1081'
+              fixed: false
+              raw: subscriptionId
+            serializedName: subscriptionId
+            modelType:
+              $id: '1082'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '1083'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '1084'
+            clientProperty:
+              $ref: '780'
+            location: query
+            collectionFormat: none
+            defaultValue:
+              $id: '1085'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '1086'
+              fixed: false
+              raw: >-
+                Version of the API to be used with the client request. The
+                current version is 2018-01-01-preview.
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '1087'
+              fixed: false
+              raw: api-version
+            serializedName: api-version
+            modelType:
+              $id: '1088'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '1089'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '1090'
+            clientProperty:
+              $ref: '866'
             location: header
             collectionFormat: none
             defaultValue:
-              $id: '1033'
+              $id: '1091'
               fixed: false
               raw: no-cache
             deprecated: false
             documentation:
-              $id: '1034'
+              $id: '1092'
               fixed: false
               raw: Indicates that the request shouldn't utilize any caches.
             extensions:
@@ -5654,25 +5996,193 @@ operations:
             isRequired: false
             isConstant: false
             name:
-              $id: '1035'
+              $id: '1093'
               fixed: false
               raw: Cache-Control
             serializedName: Cache-Control
             modelType:
-              $id: '1036'
+              $id: '1094'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '1037'
+                $id: '1095'
                 fixed: false
                 raw: String
               deprecated: false
         name:
-          $id: '1038'
+          $id: '1096'
+          fixed: false
+          raw: Create
+        group:
+          $id: '1097'
+          fixed: false
+          raw: ManagementGroupSubscriptions
+        serializedName: ManagementGroupSubscriptions_Create
+        url: >-
+          /providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}
+        isAbsoluteUrl: false
+        httpMethod: put
+        responses:
+          NoContent:
+            $id: '1098'
+            isNullable: true
+        defaultResponse:
+          $id: '1099'
+          body:
+            $ref: '22'
+          isNullable: true
+        returnType:
+          $id: '1100'
+          isNullable: true
+        description: Associates existing subscription with the management group.
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        extensions:
+          x-ms-examples:
+            AddSubscriptionToManagementGroup:
+              parameters:
+                api-version: 2018-03-01-preview
+                groupId: Group
+                subscriptionId: 728bcbe4-8d56-4510-86c2-4921b8beefbc
+                Cache-Control: no-cache
+              responses:
+                '204': {}
+        deprecated: false
+        hidden: false
+      - $id: '1101'
+        parameters:
+          - $id: '1102'
+            clientProperty:
+              $ref: '768'
+            location: path
+            collectionFormat: none
+            defaultValue:
+              $id: '1103'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '1104'
+              fixed: false
+              raw: Management Group ID.
+            extensions:
+              x-ms-parameter-location: method
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '1105'
+              fixed: false
+              raw: groupId
+            serializedName: groupId
+            modelType:
+              $id: '1106'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '1107'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '1108'
+            clientProperty:
+              $ref: '774'
+            location: path
+            collectionFormat: none
+            defaultValue:
+              $id: '1109'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '1110'
+              fixed: false
+              raw: Subscription ID.
+            extensions:
+              x-ms-parameter-location: method
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '1111'
+              fixed: false
+              raw: subscriptionId
+            serializedName: subscriptionId
+            modelType:
+              $id: '1112'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '1113'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '1114'
+            clientProperty:
+              $ref: '780'
+            location: query
+            collectionFormat: none
+            defaultValue:
+              $id: '1115'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '1116'
+              fixed: false
+              raw: >-
+                Version of the API to be used with the client request. The
+                current version is 2018-01-01-preview.
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '1117'
+              fixed: false
+              raw: api-version
+            serializedName: api-version
+            modelType:
+              $id: '1118'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '1119'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '1120'
+            clientProperty:
+              $ref: '866'
+            location: header
+            collectionFormat: none
+            defaultValue:
+              $id: '1121'
+              fixed: false
+              raw: no-cache
+            deprecated: false
+            documentation:
+              $id: '1122'
+              fixed: false
+              raw: Indicates that the request shouldn't utilize any caches.
+            extensions:
+              x-ms-parameter-location: method
+            isRequired: false
+            isConstant: false
+            name:
+              $id: '1123'
+              fixed: false
+              raw: Cache-Control
+            serializedName: Cache-Control
+            modelType:
+              $id: '1124'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '1125'
+                fixed: false
+                raw: String
+              deprecated: false
+        name:
+          $id: '1126'
           fixed: false
           raw: Delete
         group:
-          $id: '1039'
+          $id: '1127'
           fixed: false
           raw: ManagementGroupSubscriptions
         serializedName: ManagementGroupSubscriptions_Delete
@@ -5682,15 +6192,15 @@ operations:
         httpMethod: delete
         responses:
           NoContent:
-            $id: '1040'
+            $id: '1128'
             isNullable: true
         defaultResponse:
-          $id: '1041'
+          $id: '1129'
           body:
             $ref: '22'
           isNullable: true
         returnType:
-          $id: '1042'
+          $id: '1130'
           isNullable: true
         description: De-associates subscription from the management group.
         requestContentType: application/json; charset=utf-8
@@ -5709,28 +6219,28 @@ operations:
         deprecated: false
         hidden: false
     name:
-      $id: '1043'
+      $id: '1131'
       fixed: false
       raw: ManagementGroupSubscriptions
     typeName:
-      $id: '1044'
+      $id: '1132'
       fixed: false
     nameForProperty: ManagementGroupSubscriptions
-  - $id: '1045'
+  - $id: '1133'
     methods:
-      - $id: '1046'
+      - $id: '1134'
         parameters:
-          - $id: '1047'
+          - $id: '1135'
             clientProperty:
-              $ref: '722'
+              $ref: '780'
             location: query
             collectionFormat: none
             defaultValue:
-              $id: '1048'
+              $id: '1136'
               fixed: false
             deprecated: false
             documentation:
-              $id: '1049'
+              $id: '1137'
               fixed: false
               raw: >-
                 Version of the API to be used with the client request. The
@@ -5738,25 +6248,25 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '1050'
+              $id: '1138'
               fixed: false
               raw: api-version
             serializedName: api-version
             modelType:
-              $id: '1051'
+              $id: '1139'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '1052'
+                $id: '1140'
                 fixed: false
                 raw: String
               deprecated: false
         name:
-          $id: '1053'
+          $id: '1141'
           fixed: false
           raw: List
         group:
-          $id: '1054'
+          $id: '1142'
           fixed: false
           raw: Operations
         serializedName: Operations_List
@@ -5765,17 +6275,17 @@ operations:
         httpMethod: get
         responses:
           OK:
-            $id: '1055'
+            $id: '1143'
             body:
               $ref: '66'
             isNullable: true
         defaultResponse:
-          $id: '1056'
+          $id: '1144'
           body:
             $ref: '22'
           isNullable: true
         returnType:
-          $id: '1057'
+          $id: '1145'
           body:
             $ref: '66'
           isNullable: true
@@ -5789,28 +6299,28 @@ operations:
         deprecated: false
         hidden: false
     name:
-      $id: '1058'
+      $id: '1146'
       fixed: false
       raw: Operations
     typeName:
-      $id: '1059'
+      $id: '1147'
       fixed: false
     nameForProperty: Operations
-  - $id: '1060'
+  - $id: '1148'
     methods:
-      - $id: '1061'
+      - $id: '1149'
         parameters:
-          - $id: '1062'
+          - $id: '1150'
             clientProperty:
-              $ref: '722'
+              $ref: '780'
             location: query
             collectionFormat: none
             defaultValue:
-              $id: '1063'
+              $id: '1151'
               fixed: false
             deprecated: false
             documentation:
-              $id: '1064'
+              $id: '1152'
               fixed: false
               raw: >-
                 Version of the API to be used with the client request. The
@@ -5818,28 +6328,28 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '1065'
+              $id: '1153'
               fixed: false
               raw: api-version
             serializedName: api-version
             modelType:
-              $id: '1066'
+              $id: '1154'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '1067'
+                $id: '1155'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '1068'
+          - $id: '1156'
             location: body
             collectionFormat: none
             defaultValue:
-              $id: '1069'
+              $id: '1157'
               fixed: false
             deprecated: false
             documentation:
-              $id: '1070'
+              $id: '1158'
               fixed: false
               raw: Management group name availability check parameters.
             extensions:
@@ -5848,18 +6358,18 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '1071'
+              $id: '1159'
               fixed: false
               raw: checkNameAvailabilityRequest
             serializedName: checkNameAvailabilityRequest
             modelType:
-              $ref: '693'
+              $ref: '751'
         name:
-          $id: '1072'
+          $id: '1160'
           fixed: false
           raw: CheckNameAvailability
         group:
-          $id: '1073'
+          $id: '1161'
           fixed: false
           raw: ''
         serializedName: CheckNameAvailability
@@ -5868,17 +6378,17 @@ operations:
         httpMethod: post
         responses:
           OK:
-            $id: '1074'
+            $id: '1162'
             body:
               $ref: '80'
             isNullable: true
         defaultResponse:
-          $id: '1075'
+          $id: '1163'
           body:
             $ref: '22'
           isNullable: true
         returnType:
-          $id: '1076'
+          $id: '1164'
           body:
             $ref: '80'
           isNullable: true
@@ -5903,19 +6413,19 @@ operations:
                   message: <error message>
         deprecated: false
         hidden: false
-      - $id: '1077'
+      - $id: '1165'
         parameters:
-          - $id: '1078'
+          - $id: '1166'
             clientProperty:
-              $ref: '722'
+              $ref: '780'
             location: query
             collectionFormat: none
             defaultValue:
-              $id: '1079'
+              $id: '1167'
               fixed: false
             deprecated: false
             documentation:
-              $id: '1080'
+              $id: '1168'
               fixed: false
               raw: >-
                 Version of the API to be used with the client request. The
@@ -5923,25 +6433,25 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '1081'
+              $id: '1169'
               fixed: false
               raw: api-version
             serializedName: api-version
             modelType:
-              $id: '1082'
+              $id: '1170'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '1083'
+                $id: '1171'
                 fixed: false
                 raw: String
               deprecated: false
         name:
-          $id: '1084'
+          $id: '1172'
           fixed: false
           raw: StartTenantBackfill
         group:
-          $id: '1085'
+          $id: '1173'
           fixed: false
           raw: ''
         serializedName: StartTenantBackfill
@@ -5950,17 +6460,17 @@ operations:
         httpMethod: post
         responses:
           OK:
-            $id: '1086'
+            $id: '1174'
             body:
               $ref: '104'
             isNullable: true
         defaultResponse:
-          $id: '1087'
+          $id: '1175'
           body:
             $ref: '22'
           isNullable: true
         returnType:
-          $id: '1088'
+          $id: '1176'
           body:
             $ref: '104'
           isNullable: true
@@ -5980,19 +6490,19 @@ operations:
                   status: Started
         deprecated: false
         hidden: false
-      - $id: '1089'
+      - $id: '1177'
         parameters:
-          - $id: '1090'
+          - $id: '1178'
             clientProperty:
-              $ref: '722'
+              $ref: '780'
             location: query
             collectionFormat: none
             defaultValue:
-              $id: '1091'
+              $id: '1179'
               fixed: false
             deprecated: false
             documentation:
-              $id: '1092'
+              $id: '1180'
               fixed: false
               raw: >-
                 Version of the API to be used with the client request. The
@@ -6000,25 +6510,25 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '1093'
+              $id: '1181'
               fixed: false
               raw: api-version
             serializedName: api-version
             modelType:
-              $id: '1094'
+              $id: '1182'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '1095'
+                $id: '1183'
                 fixed: false
                 raw: String
               deprecated: false
         name:
-          $id: '1096'
+          $id: '1184'
           fixed: false
           raw: TenantBackfillStatus
         group:
-          $id: '1097'
+          $id: '1185'
           fixed: false
           raw: ''
         serializedName: TenantBackfillStatus
@@ -6027,17 +6537,17 @@ operations:
         httpMethod: post
         responses:
           OK:
-            $id: '1098'
+            $id: '1186'
             body:
               $ref: '104'
             isNullable: true
         defaultResponse:
-          $id: '1099'
+          $id: '1187'
           body:
             $ref: '22'
           isNullable: true
         returnType:
-          $id: '1100'
+          $id: '1188'
           body:
             $ref: '104'
           isNullable: true
@@ -6058,28 +6568,28 @@ operations:
         deprecated: false
         hidden: false
     name:
-      $id: '1101'
+      $id: '1189'
       fixed: false
       raw: ''
     typeName:
-      $id: '1102'
+      $id: '1190'
       fixed: false
     nameForProperty: ManagementGroupsClient
-  - $id: '1103'
+  - $id: '1191'
     methods:
-      - $id: '1104'
+      - $id: '1192'
         parameters:
-          - $id: '1105'
+          - $id: '1193'
             clientProperty:
-              $ref: '722'
+              $ref: '780'
             location: query
             collectionFormat: none
             defaultValue:
-              $id: '1106'
+              $id: '1194'
               fixed: false
             deprecated: false
             documentation:
-              $id: '1107'
+              $id: '1195'
               fixed: false
               raw: >-
                 Version of the API to be used with the client request. The
@@ -6087,30 +6597,30 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '1108'
+              $id: '1196'
               fixed: false
               raw: api-version
             serializedName: api-version
             modelType:
-              $id: '1109'
+              $id: '1197'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '1110'
+                $id: '1198'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '1111'
+          - $id: '1199'
             clientProperty:
-              $ref: '802'
+              $ref: '860'
             location: query
             collectionFormat: none
             defaultValue:
-              $id: '1112'
+              $id: '1200'
               fixed: false
             deprecated: false
             documentation:
-              $id: '1113'
+              $id: '1201'
               fixed: false
               raw: >-
                 Page continuation token is only used if a previous operation
@@ -6123,30 +6633,30 @@ operations:
             isRequired: false
             isConstant: false
             name:
-              $id: '1114'
+              $id: '1202'
               fixed: false
               raw: $skiptoken
             serializedName: $skiptoken
             modelType:
-              $id: '1115'
+              $id: '1203'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '1116'
+                $id: '1204'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '1117'
+          - $id: '1205'
             clientProperty:
-              $ref: '790'
+              $ref: '848'
             location: query
             collectionFormat: none
             defaultValue:
-              $id: '1118'
+              $id: '1206'
               fixed: false
             deprecated: false
             documentation:
-              $id: '1119'
+              $id: '1207'
               fixed: false
               raw: >-
                 Number of entities to skip over when retrieving results. Passing
@@ -6156,30 +6666,30 @@ operations:
             isRequired: false
             isConstant: false
             name:
-              $id: '1120'
+              $id: '1208'
               fixed: false
               raw: $skip
             serializedName: $skip
             modelType:
-              $id: '1121'
+              $id: '1209'
               $type: PrimaryType
               knownPrimaryType: int
               name:
-                $id: '1122'
+                $id: '1210'
                 fixed: false
                 raw: Int
               deprecated: false
-          - $id: '1123'
+          - $id: '1211'
             clientProperty:
-              $ref: '796'
+              $ref: '854'
             location: query
             collectionFormat: none
             defaultValue:
-              $id: '1124'
+              $id: '1212'
               fixed: false
             deprecated: false
             documentation:
-              $id: '1125'
+              $id: '1213'
               fixed: false
               raw: >-
                 Number of elements to return when retrieving results. Passing
@@ -6189,30 +6699,30 @@ operations:
             isRequired: false
             isConstant: false
             name:
-              $id: '1126'
+              $id: '1214'
               fixed: false
               raw: $top
             serializedName: $top
             modelType:
-              $id: '1127'
+              $id: '1215'
               $type: PrimaryType
               knownPrimaryType: int
               name:
-                $id: '1128'
+                $id: '1216'
                 fixed: false
                 raw: Int
               deprecated: false
-          - $id: '1129'
+          - $id: '1217'
             clientProperty:
-              $ref: '755'
+              $ref: '813'
             location: query
             collectionFormat: none
             defaultValue:
-              $id: '1130'
+              $id: '1218'
               fixed: false
             deprecated: false
             documentation:
-              $id: '1131'
+              $id: '1219'
               fixed: false
               raw: >-
                 This parameter specifies the fields to include in the response.
@@ -6226,30 +6736,30 @@ operations:
             isRequired: false
             isConstant: false
             name:
-              $id: '1132'
+              $id: '1220'
               fixed: false
               raw: $select
             serializedName: $select
             modelType:
-              $id: '1133'
+              $id: '1221'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '1134'
+                $id: '1222'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '1135'
+          - $id: '1223'
             clientProperty:
-              $ref: '761'
+              $ref: '819'
             location: query
             collectionFormat: none
             defaultValue:
-              $id: '1136'
+              $id: '1224'
               fixed: false
             deprecated: false
             documentation:
-              $id: '1137'
+              $id: '1225'
               fixed: false
               raw: >-
                 The $search parameter is used in conjunction with the $filter
@@ -6268,56 +6778,56 @@ operations:
             isRequired: false
             isConstant: false
             name:
-              $id: '1138'
+              $id: '1226'
               fixed: false
               raw: $search
             serializedName: $search
             modelType:
-              $id: '1139'
+              $id: '1227'
               $type: EnumType
               modelAsExtensible: false
               values:
-                - $id: '1140'
+                - $id: '1228'
                   name: AllowedParents
                   serializedName: AllowedParents
-                - $id: '1141'
+                - $id: '1229'
                   name: AllowedChildren
                   serializedName: AllowedChildren
-                - $id: '1142'
+                - $id: '1230'
                   name: ParentAndFirstLevelChildren
                   serializedName: ParentAndFirstLevelChildren
-                - $id: '1143'
+                - $id: '1231'
                   name: ParentOnly
                   serializedName: ParentOnly
-                - $id: '1144'
+                - $id: '1232'
                   name: ChildrenOnly
                   serializedName: ChildrenOnly
               modelAsString: true
               underlyingType:
-                $id: '1145'
+                $id: '1233'
                 $type: PrimaryType
                 knownPrimaryType: string
                 name:
-                  $id: '1146'
+                  $id: '1234'
                   fixed: false
                   raw: String
                 deprecated: false
               name:
-                $id: '1147'
+                $id: '1235'
                 fixed: false
                 raw: ''
               deprecated: false
-          - $id: '1148'
+          - $id: '1236'
             clientProperty:
-              $ref: '743'
+              $ref: '801'
             location: query
             collectionFormat: none
             defaultValue:
-              $id: '1149'
+              $id: '1237'
               fixed: false
             deprecated: false
             documentation:
-              $id: '1150'
+              $id: '1238'
               fixed: false
               raw: >-
                 The filter parameter allows you to filter on the name or display
@@ -6332,30 +6842,30 @@ operations:
             isRequired: false
             isConstant: false
             name:
-              $id: '1151'
+              $id: '1239'
               fixed: false
               raw: $filter
             serializedName: $filter
             modelType:
-              $id: '1152'
+              $id: '1240'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '1153'
+                $id: '1241'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '1154'
+          - $id: '1242'
             clientProperty:
-              $ref: '814'
+              $ref: '872'
             location: query
             collectionFormat: none
             defaultValue:
-              $id: '1155'
+              $id: '1243'
               fixed: false
             deprecated: false
             documentation:
-              $id: '1156'
+              $id: '1244'
               fixed: false
               raw: >-
                 The view parameter allows clients to filter the type of data
@@ -6365,53 +6875,53 @@ operations:
             isRequired: false
             isConstant: false
             name:
-              $id: '1157'
+              $id: '1245'
               fixed: false
               raw: $view
             serializedName: $view
             modelType:
-              $id: '1158'
+              $id: '1246'
               $type: EnumType
               modelAsExtensible: false
               values:
-                - $id: '1159'
+                - $id: '1247'
                   name: FullHierarchy
                   serializedName: FullHierarchy
-                - $id: '1160'
+                - $id: '1248'
                   name: GroupsOnly
                   serializedName: GroupsOnly
-                - $id: '1161'
+                - $id: '1249'
                   name: SubscriptionsOnly
                   serializedName: SubscriptionsOnly
-                - $id: '1162'
+                - $id: '1250'
                   name: Audit
                   serializedName: Audit
               modelAsString: true
               underlyingType:
-                $id: '1163'
+                $id: '1251'
                 $type: PrimaryType
                 knownPrimaryType: string
                 name:
-                  $id: '1164'
+                  $id: '1252'
                   fixed: false
                   raw: String
                 deprecated: false
               name:
-                $id: '1165'
+                $id: '1253'
                 fixed: false
                 raw: ''
               deprecated: false
-          - $id: '1166'
+          - $id: '1254'
             clientProperty:
-              $ref: '774'
+              $ref: '832'
             location: query
             collectionFormat: none
             defaultValue:
-              $id: '1167'
+              $id: '1255'
               fixed: false
             deprecated: false
             documentation:
-              $id: '1168'
+              $id: '1256'
               fixed: false
               raw: >-
                 A filter which allows the get entities call to focus on a
@@ -6421,31 +6931,31 @@ operations:
             isRequired: false
             isConstant: false
             name:
-              $id: '1169'
+              $id: '1257'
               fixed: false
               raw: groupName
             serializedName: groupName
             modelType:
-              $id: '1170'
+              $id: '1258'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '1171'
+                $id: '1259'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '1172'
+          - $id: '1260'
             clientProperty:
-              $ref: '808'
+              $ref: '866'
             location: header
             collectionFormat: none
             defaultValue:
-              $id: '1173'
+              $id: '1261'
               fixed: false
               raw: no-cache
             deprecated: false
             documentation:
-              $id: '1174'
+              $id: '1262'
               fixed: false
               raw: Indicates that the request shouldn't utilize any caches.
             extensions:
@@ -6453,25 +6963,25 @@ operations:
             isRequired: false
             isConstant: false
             name:
-              $id: '1175'
+              $id: '1263'
               fixed: false
               raw: Cache-Control
             serializedName: Cache-Control
             modelType:
-              $id: '1176'
+              $id: '1264'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '1177'
+                $id: '1265'
                 fixed: false
                 raw: String
               deprecated: false
         name:
-          $id: '1178'
+          $id: '1266'
           fixed: false
           raw: List
         group:
-          $id: '1179'
+          $id: '1267'
           fixed: false
           raw: Entities
         serializedName: Entities_List
@@ -6480,19 +6990,19 @@ operations:
         httpMethod: post
         responses:
           OK:
-            $id: '1180'
+            $id: '1268'
             body:
-              $ref: '465'
+              $ref: '523'
             isNullable: true
         defaultResponse:
-          $id: '1181'
+          $id: '1269'
           body:
             $ref: '22'
           isNullable: true
         returnType:
-          $id: '1182'
+          $id: '1270'
           body:
-            $ref: '465'
+            $ref: '523'
           isNullable: true
         description: >-
           List all entities (Management Groups, Subscriptions, etc.) for the
@@ -6558,10 +7068,10 @@ operations:
         deprecated: false
         hidden: false
     name:
-      $id: '1183'
+      $id: '1271'
       fixed: false
       raw: Entities
     typeName:
-      $id: '1184'
+      $id: '1272'
       fixed: false
     nameForProperty: Entities

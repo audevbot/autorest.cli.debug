@@ -23,7 +23,7 @@ RESOURCE_GROUP = "myresourcegroup"
 FRONT_DOOR_NAME = "myfrontdoor"
 
 BODY = {
-  "hostname": "www.someDomain.com"
+  "hostName": "www.someDomain.com"
 }
 
 API_VERSION = '2019-04-01'

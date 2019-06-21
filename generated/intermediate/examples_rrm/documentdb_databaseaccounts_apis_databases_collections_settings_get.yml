@@ -1,0 +1,24 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    database_account_name: myDatabaseAccount
+    apis_name: myApis
+    database_name: myDatabase
+    collection_name: myCollection
+    setting_name: mySetting
+  tasks:
+
+    - name: CosmosDBMongoDBCollectionThroughputGet
+      azure_rm_cosmosdbdatabaseaccount_info:
+        resource_group: '{{resource_group}}'
+        account_name: '{{database_account_name}}'
+        database_name: '{{database_name}}'
+        name: '{{collection_name}}'
+    
+      register: output
+    - debug:
+        var: output

@@ -78,6 +78,11 @@ options:
             indicates a write region. The maximum value for a failover priority
             = (total number of regions - 1). Failover priority values must be
             unique for each of the regions in which the database account exists.
+      is_zone_redundant:
+        description:
+          - >-
+            Flag to indicate whether or not this region is an AvailabilityZone
+            region
   database_account_offer_type:
     description:
       - The offer type for the database
@@ -162,6 +167,11 @@ options:
             indicates a write region. The maximum value for a failover priority
             = (total number of regions - 1). Failover priority values must be
             unique for each of the regions in which the database account exists.
+      is_zone_redundant:
+        description:
+          - >-
+            Flag to indicate whether or not this region is an AvailabilityZone
+            region
   read_locations:
     description:
       - >-
@@ -192,6 +202,11 @@ options:
             indicates a write region. The maximum value for a failover priority
             = (total number of regions - 1). Failover priority values must be
             unique for each of the regions in which the database account exists.
+      is_zone_redundant:
+        description:
+          - >-
+            Flag to indicate whether or not this region is an AvailabilityZone
+            region
   failover_policies:
     description:
       - An array that contains the regions ordered by their failover priorities.
@@ -248,6 +263,7 @@ EXAMPLES = '''
         locations:
           - failoverPriority: '0'
             locationName: southcentralus
+            isZoneRedundant: false
 - name: CosmosDBDatabaseAccountCreateMax
   azure_rm_cosmosdbdatabaseaccount:
     resource_group: myResourceGroup
@@ -269,8 +285,10 @@ EXAMPLES = '''
         locations:
           - failoverPriority: '0'
             locationName: southcentralus
+            isZoneRedundant: false
           - failoverPriority: '1'
             locationName: eastus
+            isZoneRedundant: false
         consistencyPolicy:
           defaultConsistencyLevel: BoundedStaleness
           maxIntervalInSeconds: '10'
@@ -314,7 +332,7 @@ tags:
   returned: always
   type: >-
     unknown[DictionaryType
-    {"$id":"229","$type":"DictionaryType","valueType":{"$id":"230","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"231","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"232","fixed":false},"deprecated":false}]
+    {"$id":"235","$type":"DictionaryType","valueType":{"$id":"236","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"237","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"238","fixed":false},"deprecated":false}]
   sample: null
 kind:
   description:
@@ -475,6 +493,14 @@ properties:
           returned: always
           type: number
           sample: null
+        is_zone_redundant:
+          description:
+            - >-
+              Flag to indicate whether or not this region is an AvailabilityZone
+              region
+          returned: always
+          type: boolean
+          sample: null
     read_locations:
       description:
         - >-
@@ -522,6 +548,14 @@ properties:
               account exists.
           returned: always
           type: number
+          sample: null
+        is_zone_redundant:
+          description:
+            - >-
+              Flag to indicate whether or not this region is an AvailabilityZone
+              region
+          returned: always
+          type: boolean
           sample: null
     failover_policies:
       description:
@@ -668,6 +702,10 @@ class AzureRMDatabaseAccounts(AzureRMModuleBaseExt):
                     failover_priority=dict(
                         type='number',
                         disposition='failoverPriority'
+                    ),
+                    is_zone_redundant=dict(
+                        type='boolean',
+                        disposition='isZoneRedundant'
                     )
                 )
             ),
