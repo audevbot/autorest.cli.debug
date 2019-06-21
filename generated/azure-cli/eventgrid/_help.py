@@ -10,7 +10,7 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 helps['eventgrid eventsubscription'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage EventSubscription.
 """
 
 helps['eventgrid eventsubscription create'] = """
@@ -40,7 +40,7 @@ helps['eventgrid eventsubscription show'] = """
 
 helps['eventgrid eventsubscription location topictype provider {providernamespace} {resourcetypename}'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage EventSubscription.
 """
 
 helps['eventgrid eventsubscription location topictype provider {providernamespace} {resourcetypename} list'] = """
@@ -55,7 +55,7 @@ helps['eventgrid eventsubscription location topictype provider {providernamespac
 
 helps[''] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Operation.
 """
 
 helps[' list'] = """
@@ -65,7 +65,7 @@ helps[' list'] = """
 
 helps['eventgrid'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Topic.
 """
 
 helps['eventgrid create'] = """
@@ -95,7 +95,7 @@ helps['eventgrid show'] = """
 
 helps['eventgrid provider {providernamespace} {resourcetypename}'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Topic.
 """
 
 helps['eventgrid provider {providernamespace} {resourcetypename} list'] = """
@@ -110,7 +110,7 @@ helps['eventgrid provider {providernamespace} {resourcetypename} show'] = """
 
 helps['eventgrid'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage TopicType.
 """
 
 helps['eventgrid list'] = """

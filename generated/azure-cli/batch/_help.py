@@ -10,7 +10,7 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 helps['batch'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage BatchAccount.
 """
 
 helps['batch create'] = """
@@ -40,7 +40,7 @@ helps['batch show'] = """
 
 helps['batch'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage BatchAccount.
 """
 
 helps['batch show'] = """
@@ -55,7 +55,7 @@ helps['batch list'] = """
 
 helps['batch application version'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage ApplicationPackage.
 """
 
 helps['batch application version create'] = """
@@ -80,7 +80,7 @@ helps['batch application version show'] = """
 
 helps['batch application version'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage ApplicationPackage.
 """
 
 helps['batch application version show'] = """
@@ -95,7 +95,7 @@ helps['batch application version list'] = """
 
 helps['batch application'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Application.
 """
 
 helps['batch application create'] = """
@@ -125,7 +125,7 @@ helps['batch application show'] = """
 
 helps['batch application'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Application.
 """
 
 helps['batch application show'] = """
@@ -140,12 +140,12 @@ helps['batch application list'] = """
 
 helps['batch'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Location.
 """
 
 helps[''] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Operation.
 """
 
 helps[' list'] = """
@@ -155,7 +155,7 @@ helps[' list'] = """
 
 helps['batch certificate'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Certificate.
 """
 
 helps['batch certificate create'] = """
@@ -185,7 +185,7 @@ helps['batch certificate show'] = """
 
 helps['batch certificate'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Certificate.
 """
 
 helps['batch certificate show'] = """
@@ -200,7 +200,7 @@ helps['batch certificate list'] = """
 
 helps['batch pool'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Pool.
 """
 
 helps['batch pool create'] = """
@@ -230,7 +230,7 @@ helps['batch pool show'] = """
 
 helps['batch pool'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage Pool.
 """
 
 helps['batch pool show'] = """

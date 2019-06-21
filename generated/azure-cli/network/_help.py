@@ -10,7 +10,7 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 helps['network'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage AzureFirewall.
 """
 
 helps['network create'] = """
@@ -35,7 +35,7 @@ helps['network show'] = """
 
 helps['network'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage AzureFirewall.
 """
 
 helps['network show'] = """

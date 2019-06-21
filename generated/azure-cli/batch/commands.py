@@ -39,7 +39,6 @@ def load_command_table(self, _):
     with self.command_group('batch application', batch_sdk, client_factory=cf_batch) as g:
         g.custom_command('show', 'show_batch_application')
         g.custom_command('list', 'list_batch_application')
-    with self.command_group('batch', batch_sdk, client_factory=cf_batch) as g:
     with self.command_group('', batch_sdk, client_factory=cf_batch) as g:
         g.custom_command('list', 'list_')
     with self.command_group('batch certificate', batch_sdk, client_factory=cf_batch) as g:

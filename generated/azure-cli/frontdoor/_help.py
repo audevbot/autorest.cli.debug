@@ -10,7 +10,7 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 helps['frontdoor'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage FrontDoor.
 """
 
 helps['frontdoor create'] = """
@@ -35,7 +35,7 @@ helps['frontdoor show'] = """
 
 helps['frontdoor'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage FrontDoor.
 """
 
 helps['frontdoor show'] = """
@@ -50,7 +50,7 @@ helps['frontdoor list'] = """
 
 helps['frontdoor routingrule'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage RoutingRule.
 """
 
 helps['frontdoor routingrule create'] = """
@@ -75,7 +75,7 @@ helps['frontdoor routingrule show'] = """
 
 helps['frontdoor routingrule'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage RoutingRule.
 """
 
 helps['frontdoor routingrule show'] = """
@@ -90,7 +90,7 @@ helps['frontdoor routingrule list'] = """
 
 helps['frontdoor healthprobesetting'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage HealthProbeSetting.
 """
 
 helps['frontdoor healthprobesetting create'] = """
@@ -115,7 +115,7 @@ helps['frontdoor healthprobesetting show'] = """
 
 helps['frontdoor healthprobesetting'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage HealthProbeSetting.
 """
 
 helps['frontdoor healthprobesetting show'] = """
@@ -130,7 +130,7 @@ helps['frontdoor healthprobesetting list'] = """
 
 helps['frontdoor loadbalancingsetting'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage LoadBalancingSetting.
 """
 
 helps['frontdoor loadbalancingsetting create'] = """
@@ -155,7 +155,7 @@ helps['frontdoor loadbalancingsetting show'] = """
 
 helps['frontdoor loadbalancingsetting'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage LoadBalancingSetting.
 """
 
 helps['frontdoor loadbalancingsetting show'] = """
@@ -170,7 +170,7 @@ helps['frontdoor loadbalancingsetting list'] = """
 
 helps['frontdoor backendpool'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage BackendPool.
 """
 
 helps['frontdoor backendpool create'] = """
@@ -195,7 +195,7 @@ helps['frontdoor backendpool show'] = """
 
 helps['frontdoor backendpool'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage BackendPool.
 """
 
 helps['frontdoor backendpool show'] = """
@@ -210,7 +210,7 @@ helps['frontdoor backendpool list'] = """
 
 helps['frontdoor frontendendpoint'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage FrontendEndpoint.
 """
 
 helps['frontdoor frontendendpoint create'] = """
@@ -235,7 +235,7 @@ helps['frontdoor frontendendpoint show'] = """
 
 helps['frontdoor frontendendpoint'] = """
     type: group
-    short-summary: Commands to manage Apimanagements.
+    short-summary: Commands to manage FrontendEndpoint.
 """
 
 helps['frontdoor frontendendpoint show'] = """
