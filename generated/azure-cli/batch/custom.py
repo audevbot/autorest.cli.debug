@@ -18,7 +18,7 @@ def create_batch(cmd, client,
                  key_vault_reference=None,
                  account_endpoint=None,
                  id=None):
-    return client.batch_account.create()
+    return client.batch_account.create(resource_group, name, body)
 
 
 def update_batch(cmd, client,
@@ -33,37 +33,37 @@ def update_batch(cmd, client,
                  key_vault_reference=None,
                  account_endpoint=None,
                  id=None):
-    return client.batch_account.update()
+    return client.batch_account.update(resource_group, name, body)
 
 
 def delete_batch(cmd, client,
                  resource_group,
                  name):
-    return client.batch_account.delete()
+    return client.batch_account.delete(resource_group, name)
 
 
 def list_batch(cmd, client,
                resource_group,
                name):
-    return client.batch_account.list()
+    return client.batch_account.list(resource_group, name)
 
 
 def show_batch(cmd, client,
                resource_group,
                name):
-    return client.batch_account.show()
+    return client.batch_account.show(resource_group, name)
 
 
 def show_batch(cmd, client,
                resource_group,
                name):
-    return client.batch_account.show()
+    return client.batch_account.show(resource_group, name)
 
 
 def list_batch(cmd, client,
                resource_group,
                name):
-    return client.batch_account.list()
+    return client.batch_account.list(resource_group, name)
 
 
 def create_batch_application_version(cmd, client,
@@ -79,7 +79,7 @@ def create_batch_application_version(cmd, client,
                                      last_activation_time=None,
                                      id=None,
                                      etag=None):
-    return client.application_package.create()
+    return client.application_package.create(resource_group, account_name, application_name, name)
 
 
 def delete_batch_application_version(cmd, client,
@@ -87,7 +87,7 @@ def delete_batch_application_version(cmd, client,
                                      account_name,
                                      application_name,
                                      name):
-    return client.application_package.delete()
+    return client.application_package.delete(resource_group, account_name, application_name, name)
 
 
 def list_batch_application_version(cmd, client,
@@ -95,7 +95,7 @@ def list_batch_application_version(cmd, client,
                                    account_name,
                                    application_name,
                                    name):
-    return client.application_package.list()
+    return client.application_package.list(resource_group, account_name, application_name, name)
 
 
 def show_batch_application_version(cmd, client,
@@ -103,7 +103,7 @@ def show_batch_application_version(cmd, client,
                                    account_name,
                                    application_name,
                                    name):
-    return client.application_package.show()
+    return client.application_package.show(resource_group, account_name, application_name, name)
 
 
 def show_batch_application_version(cmd, client,
@@ -111,7 +111,7 @@ def show_batch_application_version(cmd, client,
                                    account_name,
                                    application_name,
                                    name):
-    return client.application_package.show()
+    return client.application_package.show(resource_group, account_name, application_name, name)
 
 
 def list_batch_application_version(cmd, client,
@@ -119,7 +119,7 @@ def list_batch_application_version(cmd, client,
                                    account_name,
                                    application_name,
                                    name):
-    return client.application_package.list()
+    return client.application_package.list(resource_group, account_name, application_name, name)
 
 
 def create_batch_application(cmd, client,
@@ -132,7 +132,7 @@ def create_batch_application(cmd, client,
                              default_version=None,
                              id=None,
                              etag=None):
-    return client.application.create()
+    return client.application.create(resource_group, account_name, name)
 
 
 def update_batch_application(cmd, client,
@@ -145,42 +145,42 @@ def update_batch_application(cmd, client,
                              default_version=None,
                              id=None,
                              etag=None):
-    return client.application.update()
+    return client.application.update(resource_group, account_name, name, body)
 
 
 def delete_batch_application(cmd, client,
                              resource_group,
                              account_name,
                              name):
-    return client.application.delete()
+    return client.application.delete(resource_group, account_name, name)
 
 
 def list_batch_application(cmd, client,
                            resource_group,
                            account_name,
                            name):
-    return client.application.list()
+    return client.application.list(resource_group, account_name, name)
 
 
 def show_batch_application(cmd, client,
                            resource_group,
                            account_name,
                            name):
-    return client.application.show()
+    return client.application.show(resource_group, account_name, name)
 
 
 def show_batch_application(cmd, client,
                            resource_group,
                            account_name,
                            name):
-    return client.application.show()
+    return client.application.show(resource_group, account_name, name)
 
 
 def list_batch_application(cmd, client,
                            resource_group,
                            account_name,
                            name):
-    return client.application.list()
+    return client.application.list(resource_group, account_name, name)
 
 
 def list_(cmd, client):
@@ -204,7 +204,7 @@ def create_batch_certificate(cmd, client,
                              delete_certificate_error=None,
                              id=None,
                              etag=None):
-    return client.certificate.create()
+    return client.certificate.create(resource_group, account_name, name, body)
 
 
 def update_batch_certificate(cmd, client,
@@ -224,42 +224,42 @@ def update_batch_certificate(cmd, client,
                              delete_certificate_error=None,
                              id=None,
                              etag=None):
-    return client.certificate.update()
+    return client.certificate.update(resource_group, account_name, name, body)
 
 
 def delete_batch_certificate(cmd, client,
                              resource_group,
                              account_name,
                              name):
-    return client.certificate.delete()
+    return client.certificate.delete(resource_group, account_name, name)
 
 
 def list_batch_certificate(cmd, client,
                            resource_group,
                            account_name,
                            name):
-    return client.certificate.list()
+    return client.certificate.list(resource_group, account_name, name)
 
 
 def show_batch_certificate(cmd, client,
                            resource_group,
                            account_name,
                            name):
-    return client.certificate.show()
+    return client.certificate.show(resource_group, account_name, name)
 
 
 def show_batch_certificate(cmd, client,
                            resource_group,
                            account_name,
                            name):
-    return client.certificate.show()
+    return client.certificate.show(resource_group, account_name, name)
 
 
 def list_batch_certificate(cmd, client,
                            resource_group,
                            account_name,
                            name):
-    return client.certificate.list()
+    return client.certificate.list(resource_group, account_name, name)
 
 
 def create_batch_pool(cmd, client,
@@ -292,7 +292,7 @@ def create_batch_pool(cmd, client,
                       resize_operation_status=None,
                       id=None,
                       etag=None):
-    return client.pool.create()
+    return client.pool.create(resource_group, account_name, name, body)
 
 
 def update_batch_pool(cmd, client,
@@ -325,39 +325,39 @@ def update_batch_pool(cmd, client,
                       resize_operation_status=None,
                       id=None,
                       etag=None):
-    return client.pool.update()
+    return client.pool.update(resource_group, account_name, name, body)
 
 
 def delete_batch_pool(cmd, client,
                       resource_group,
                       account_name,
                       name):
-    return client.pool.delete()
+    return client.pool.delete(resource_group, account_name, name)
 
 
 def list_batch_pool(cmd, client,
                     resource_group,
                     account_name,
                     name):
-    return client.pool.list()
+    return client.pool.list(resource_group, account_name, name)
 
 
 def show_batch_pool(cmd, client,
                     resource_group,
                     account_name,
                     name):
-    return client.pool.show()
+    return client.pool.show(resource_group, account_name, name)
 
 
 def show_batch_pool(cmd, client,
                     resource_group,
                     account_name,
                     name):
-    return client.pool.show()
+    return client.pool.show(resource_group, account_name, name)
 
 
 def list_batch_pool(cmd, client,
                     resource_group,
                     account_name,
                     name):
-    return client.pool.list()
+    return client.pool.list(resource_group, account_name, name)

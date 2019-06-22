@@ -23,14 +23,14 @@ def create_automationcfg_softwareupdateconfiguration(cmd, client,
                                                      last_modified_by=None,
                                                      id=None,
                                                      type=None):
-    return client.software_update_configurations.create()
+    return client.software_update_configurations.create(resource_group, automation_account_name, name, body)
 
 
 def delete_automationcfg_softwareupdateconfiguration(cmd, client,
                                                      resource_group,
                                                      automation_account_name,
                                                      name):
-    return client.software_update_configurations.delete()
+    return client.software_update_configurations.delete(resource_group, automation_account_name, name)
 
 
 def list_automationcfg_softwareupdateconfiguration(cmd, client,

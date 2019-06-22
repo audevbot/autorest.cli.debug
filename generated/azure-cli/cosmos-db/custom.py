@@ -29,25 +29,25 @@ def create_cosmos-db(cmd, client,
                      failover_policies=None,
                      id=None,
                      type=None):
-    return client.database_accounts.create()
+    return client.database_accounts.create(resource_group, name, createUpdateParameters)
 
 
 def delete_cosmos-db(cmd, client,
                      resource_group,
                      name):
-    return client.database_accounts.delete()
+    return client.database_accounts.delete(resource_group, name)
 
 
 def list_cosmos-db(cmd, client,
                    resource_group,
                    name):
-    return client.database_accounts.list()
+    return client.database_accounts.list(resource_group, name)
 
 
 def show_cosmos-db(cmd, client,
                    resource_group,
                    name):
-    return client.database_accounts.show()
+    return client.database_accounts.show(resource_group, name)
 
 
 def list_cosmos-db_table_database_keyspace_graph_container_collection(cmd, client,
@@ -59,7 +59,7 @@ def list_cosmos-db_table_database_keyspace_graph_container_collection(cmd, clien
                                                                       graph_name,
                                                                       container_name,
                                                                       name):
-    return client.database_accounts.list()
+    return client.database_accounts.list(resource_group, account_name)
 
 
 def show_cosmos-db_table_database_keyspace_graph_container_collection(cmd, client,
@@ -71,7 +71,7 @@ def show_cosmos-db_table_database_keyspace_graph_container_collection(cmd, clien
                                                                       graph_name,
                                                                       container_name,
                                                                       name):
-    return client.database_accounts.show()
+    return client.database_accounts.show(resource_group, account_name)
 
 
 def list_(cmd, client):

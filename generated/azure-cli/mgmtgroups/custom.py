@@ -16,7 +16,7 @@ def create_mgmtgroups(cmd, client,
                       children=None,
                       id=None,
                       type=None):
-    return client.management_groups.create()
+    return client.management_groups.create(group_id, createManagementGroupRequest)
 
 
 def update_mgmtgroups(cmd, client,
@@ -29,42 +29,42 @@ def update_mgmtgroups(cmd, client,
                       children=None,
                       id=None,
                       type=None):
-    return client.management_groups.update()
+    return client.management_groups.update(group_id, createManagementGroupRequest)
 
 
 def delete_mgmtgroups(cmd, client,
                       group_id):
-    return client.management_groups.delete()
+    return client.management_groups.delete(group_id)
 
 
 def list_mgmtgroups(cmd, client,
                     group_id):
-    return client.management_groups.list()
+    return client.management_groups.list(group_id)
 
 
 def show_mgmtgroups(cmd, client,
                     group_id):
-    return client.management_groups.show()
+    return client.management_groups.show(group_id)
 
 
 def show_mgmtgroups(cmd, client,
                     group_id):
-    return client.management_groups.show()
+    return client.management_groups.show(group_id)
 
 
 def list_mgmtgroups(cmd, client,
                     group_id):
-    return client.management_groups.list()
+    return client.management_groups.list(group_id)
 
 
 def create_mgmtgroups(cmd, client,
                       group_id):
-    return client.management_group_subscriptions.create()
+    return client.management_group_subscriptions.create(group_id)
 
 
 def delete_mgmtgroups(cmd, client,
                       group_id):
-    return client.management_group_subscriptions.delete()
+    return client.management_group_subscriptions.delete(group_id)
 
 
 def list_(cmd, client):
