@@ -28,35 +28,35 @@ def create_automationjob_job(cmd, client,
                              client_request_id=None,
                              id=None,
                              type=None):
-    return client.job.create()
+    return client.job.create(resource_group, automation_account_name, name, body)
 
 
 def list_automationjob_job(cmd, client,
                            resource_group,
                            automation_account_name,
                            name):
-    return client.job.list()
+    return client.job.list(resource_group, automation_account_name, name)
 
 
 def show_automationjob_job(cmd, client,
                            resource_group,
                            automation_account_name,
                            name):
-    return client.job.show()
+    return client.job.show(resource_group, automation_account_name, name)
 
 
 def show_automationjob_job(cmd, client,
                            resource_group,
                            automation_account_name,
                            name):
-    return client.job.show()
+    return client.job.show(resource_group, automation_account_name, name)
 
 
 def list_automationjob_job(cmd, client,
                            resource_group,
                            automation_account_name,
                            name):
-    return client.job.list()
+    return client.job.list(resource_group, automation_account_name, name)
 
 
 def show_automationjob_job_stream(cmd, client,
@@ -64,7 +64,7 @@ def show_automationjob_job_stream(cmd, client,
                                   automation_account_name,
                                   name,
                                   job_stream_id):
-    return client.job_stream.show()
+    return client.job_stream.show(resource_group, automation_account_name, name, job_stream_id)
 
 
 def list_automationjob_job_stream(cmd, client,
@@ -72,4 +72,4 @@ def list_automationjob_job_stream(cmd, client,
                                   automation_account_name,
                                   name,
                                   job_stream_id):
-    return client.job_stream.list()
+    return client.job_stream.list(resource_group, automation_account_name, name, job_stream_id)

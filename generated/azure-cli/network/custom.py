@@ -20,34 +20,34 @@ def create_network(cmd, client,
                    provisioning_state=None,
                    type=None,
                    etag=None):
-    return client.azure_firewalls.create()
+    return client.azure_firewalls.create(resource_group, name, body)
 
 
 def delete_network(cmd, client,
                    resource_group,
                    name):
-    return client.azure_firewalls.delete()
+    return client.azure_firewalls.delete(resource_group, name)
 
 
 def list_network(cmd, client,
                  resource_group,
                  name):
-    return client.azure_firewalls.list()
+    return client.azure_firewalls.list(resource_group, name)
 
 
 def show_network(cmd, client,
                  resource_group,
                  name):
-    return client.azure_firewalls.show()
+    return client.azure_firewalls.show(resource_group, name)
 
 
 def show_network(cmd, client,
                  resource_group,
                  name):
-    return client.azure_firewalls.show()
+    return client.azure_firewalls.show(resource_group, name)
 
 
 def list_network(cmd, client,
                  resource_group,
                  name):
-    return client.azure_firewalls.list()
+    return client.azure_firewalls.list(resource_group, name)

@@ -25,37 +25,37 @@ def create_frontdoor(cmd, client,
                      cname=None,
                      id=None,
                      type=None):
-    return client.front_doors.create()
+    return client.front_doors.create(resource_group, name, frontDoorParameters)
 
 
 def delete_frontdoor(cmd, client,
                      resource_group,
                      name):
-    return client.front_doors.delete()
+    return client.front_doors.delete(resource_group, name)
 
 
 def list_frontdoor(cmd, client,
                    resource_group,
                    name):
-    return client.front_doors.list()
+    return client.front_doors.list(resource_group, name)
 
 
 def show_frontdoor(cmd, client,
                    resource_group,
                    name):
-    return client.front_doors.show()
+    return client.front_doors.show(resource_group, name)
 
 
 def show_frontdoor(cmd, client,
                    resource_group,
                    name):
-    return client.front_doors.show()
+    return client.front_doors.show(resource_group, name)
 
 
 def list_frontdoor(cmd, client,
                    resource_group,
                    name):
-    return client.front_doors.list()
+    return client.front_doors.list(resource_group, name)
 
 
 def create_frontdoor_routingrule(cmd, client,
@@ -71,42 +71,42 @@ def create_frontdoor_routingrule(cmd, client,
                                  route_configuration=None,
                                  resource_state=None,
                                  type=None):
-    return client.routing_rules.create()
+    return client.routing_rules.create(resource_group, front_door_name, name, routingRuleParameters)
 
 
 def delete_frontdoor_routingrule(cmd, client,
                                  resource_group,
                                  front_door_name,
                                  name):
-    return client.routing_rules.delete()
+    return client.routing_rules.delete(resource_group, front_door_name, name)
 
 
 def list_frontdoor_routingrule(cmd, client,
                                resource_group,
                                front_door_name,
                                name):
-    return client.routing_rules.list()
+    return client.routing_rules.list(resource_group, front_door_name, name)
 
 
 def show_frontdoor_routingrule(cmd, client,
                                resource_group,
                                front_door_name,
                                name):
-    return client.routing_rules.show()
+    return client.routing_rules.show(resource_group, front_door_name, name)
 
 
 def show_frontdoor_routingrule(cmd, client,
                                resource_group,
                                front_door_name,
                                name):
-    return client.routing_rules.show()
+    return client.routing_rules.show(resource_group, front_door_name, name)
 
 
 def list_frontdoor_routingrule(cmd, client,
                                resource_group,
                                front_door_name,
                                name):
-    return client.routing_rules.list()
+    return client.routing_rules.list(resource_group, front_door_name, name)
 
 
 def create_frontdoor_healthprobesetting(cmd, client,
@@ -120,42 +120,42 @@ def create_frontdoor_healthprobesetting(cmd, client,
                                         interval_in_seconds=None,
                                         resource_state=None,
                                         type=None):
-    return client.health_probe_settings.create()
+    return client.health_probe_settings.create(resource_group, front_door_name, name, healthProbeSettingsParameters)
 
 
 def delete_frontdoor_healthprobesetting(cmd, client,
                                         resource_group,
                                         front_door_name,
                                         name):
-    return client.health_probe_settings.delete()
+    return client.health_probe_settings.delete(resource_group, front_door_name, name)
 
 
 def list_frontdoor_healthprobesetting(cmd, client,
                                       resource_group,
                                       front_door_name,
                                       name):
-    return client.health_probe_settings.list()
+    return client.health_probe_settings.list(resource_group, front_door_name, name)
 
 
 def show_frontdoor_healthprobesetting(cmd, client,
                                       resource_group,
                                       front_door_name,
                                       name):
-    return client.health_probe_settings.show()
+    return client.health_probe_settings.show(resource_group, front_door_name, name)
 
 
 def show_frontdoor_healthprobesetting(cmd, client,
                                       resource_group,
                                       front_door_name,
                                       name):
-    return client.health_probe_settings.show()
+    return client.health_probe_settings.show(resource_group, front_door_name, name)
 
 
 def list_frontdoor_healthprobesetting(cmd, client,
                                       resource_group,
                                       front_door_name,
                                       name):
-    return client.health_probe_settings.list()
+    return client.health_probe_settings.list(resource_group, front_door_name, name)
 
 
 def create_frontdoor_loadbalancingsetting(cmd, client,
@@ -169,42 +169,42 @@ def create_frontdoor_loadbalancingsetting(cmd, client,
                                           additional_latency_milliseconds=None,
                                           resource_state=None,
                                           type=None):
-    return client.load_balancing_settings.create()
+    return client.load_balancing_settings.create(resource_group, front_door_name, name, loadBalancingSettingsParameters)
 
 
 def delete_frontdoor_loadbalancingsetting(cmd, client,
                                           resource_group,
                                           front_door_name,
                                           name):
-    return client.load_balancing_settings.delete()
+    return client.load_balancing_settings.delete(resource_group, front_door_name, name)
 
 
 def list_frontdoor_loadbalancingsetting(cmd, client,
                                         resource_group,
                                         front_door_name,
                                         name):
-    return client.load_balancing_settings.list()
+    return client.load_balancing_settings.list(resource_group, front_door_name, name)
 
 
 def show_frontdoor_loadbalancingsetting(cmd, client,
                                         resource_group,
                                         front_door_name,
                                         name):
-    return client.load_balancing_settings.show()
+    return client.load_balancing_settings.show(resource_group, front_door_name, name)
 
 
 def show_frontdoor_loadbalancingsetting(cmd, client,
                                         resource_group,
                                         front_door_name,
                                         name):
-    return client.load_balancing_settings.show()
+    return client.load_balancing_settings.show(resource_group, front_door_name, name)
 
 
 def list_frontdoor_loadbalancingsetting(cmd, client,
                                         resource_group,
                                         front_door_name,
                                         name):
-    return client.load_balancing_settings.list()
+    return client.load_balancing_settings.list(resource_group, front_door_name, name)
 
 
 def create_frontdoor_backendpool(cmd, client,
@@ -218,42 +218,42 @@ def create_frontdoor_backendpool(cmd, client,
                                  health_probe_settings=None,
                                  resource_state=None,
                                  type=None):
-    return client.backend_pools.create()
+    return client.backend_pools.create(resource_group, front_door_name, name, backendPoolParameters)
 
 
 def delete_frontdoor_backendpool(cmd, client,
                                  resource_group,
                                  front_door_name,
                                  name):
-    return client.backend_pools.delete()
+    return client.backend_pools.delete(resource_group, front_door_name, name)
 
 
 def list_frontdoor_backendpool(cmd, client,
                                resource_group,
                                front_door_name,
                                name):
-    return client.backend_pools.list()
+    return client.backend_pools.list(resource_group, front_door_name, name)
 
 
 def show_frontdoor_backendpool(cmd, client,
                                resource_group,
                                front_door_name,
                                name):
-    return client.backend_pools.show()
+    return client.backend_pools.show(resource_group, front_door_name, name)
 
 
 def show_frontdoor_backendpool(cmd, client,
                                resource_group,
                                front_door_name,
                                name):
-    return client.backend_pools.show()
+    return client.backend_pools.show(resource_group, front_door_name, name)
 
 
 def list_frontdoor_backendpool(cmd, client,
                                resource_group,
                                front_door_name,
                                name):
-    return client.backend_pools.list()
+    return client.backend_pools.list(resource_group, front_door_name, name)
 
 
 def create_frontdoor_frontendendpoint(cmd, client,
@@ -271,39 +271,39 @@ def create_frontdoor_frontendendpoint(cmd, client,
                                       custom_https_provisioning_substate=None,
                                       custom_https_configuration=None,
                                       type=None):
-    return client.frontend_endpoints.create()
+    return client.frontend_endpoints.create(resource_group, front_door_name, name, frontendEndpointParameters)
 
 
 def delete_frontdoor_frontendendpoint(cmd, client,
                                       resource_group,
                                       front_door_name,
                                       name):
-    return client.frontend_endpoints.delete()
+    return client.frontend_endpoints.delete(resource_group, front_door_name, name)
 
 
 def list_frontdoor_frontendendpoint(cmd, client,
                                     resource_group,
                                     front_door_name,
                                     name):
-    return client.frontend_endpoints.list()
+    return client.frontend_endpoints.list(resource_group, front_door_name, name)
 
 
 def show_frontdoor_frontendendpoint(cmd, client,
                                     resource_group,
                                     front_door_name,
                                     name):
-    return client.frontend_endpoints.show()
+    return client.frontend_endpoints.show(resource_group, front_door_name, name)
 
 
 def show_frontdoor_frontendendpoint(cmd, client,
                                     resource_group,
                                     front_door_name,
                                     name):
-    return client.frontend_endpoints.show()
+    return client.frontend_endpoints.show(resource_group, front_door_name, name)
 
 
 def list_frontdoor_frontendendpoint(cmd, client,
                                     resource_group,
                                     front_door_name,
                                     name):
-    return client.frontend_endpoints.list()
+    return client.frontend_endpoints.list(resource_group, front_door_name, name)

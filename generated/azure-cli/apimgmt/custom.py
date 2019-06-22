@@ -34,7 +34,7 @@ def create_apimgmt_api(cmd, client,
                        api_type=None,
                        is_online=None,
                        id=None):
-    return client.api.create()
+    return client.api.create(resource_group, name, api_id, body)
 
 
 def update_apimgmt_api(cmd, client,
@@ -65,42 +65,42 @@ def update_apimgmt_api(cmd, client,
                        api_type=None,
                        is_online=None,
                        id=None):
-    return client.api.update()
+    return client.api.update(resource_group, name, api_id, body)
 
 
 def delete_apimgmt_api(cmd, client,
                        resource_group,
                        name,
                        api_id):
-    return client.api.delete()
+    return client.api.delete(resource_group, name, api_id, If-Match)
 
 
 def list_apimgmt_api(cmd, client,
                      resource_group,
                      name,
                      api_id):
-    return client.api.list()
+    return client.api.list(resource_group, name, api_id)
 
 
 def show_apimgmt_api(cmd, client,
                      resource_group,
                      name,
                      api_id):
-    return client.api.show()
+    return client.api.show(resource_group, name, api_id)
 
 
 def show_apimgmt_api(cmd, client,
                      resource_group,
                      name,
                      api_id):
-    return client.api.show()
+    return client.api.show(resource_group, name, api_id)
 
 
 def list_apimgmt_api(cmd, client,
                      resource_group,
                      name,
                      api_id):
-    return client.api.list()
+    return client.api.list(resource_group, name, api_id)
 
 
 def list_apimgmt_api(cmd, client,
@@ -121,7 +121,7 @@ def create_apimgmt_api_release(cmd, client,
                                updated_date_time=None,
                                id=None,
                                type=None):
-    return client.api_release.create()
+    return client.api_release.create(resource_group, name, api_id, release_id, body)
 
 
 def update_apimgmt_api_release(cmd, client,
@@ -135,7 +135,7 @@ def update_apimgmt_api_release(cmd, client,
                                updated_date_time=None,
                                id=None,
                                type=None):
-    return client.api_release.update()
+    return client.api_release.update(resource_group, name, api_id, release_id, body)
 
 
 def delete_apimgmt_api_release(cmd, client,
@@ -143,7 +143,7 @@ def delete_apimgmt_api_release(cmd, client,
                                name,
                                api_id,
                                release_id):
-    return client.api_release.delete()
+    return client.api_release.delete(resource_group, name, api_id, release_id, If-Match)
 
 
 def list_apimgmt_api_release(cmd, client,
@@ -151,7 +151,7 @@ def list_apimgmt_api_release(cmd, client,
                              name,
                              api_id,
                              release_id):
-    return client.api_release.list()
+    return client.api_release.list(resource_group, name, api_id, release_id)
 
 
 def show_apimgmt_api_release(cmd, client,
@@ -159,7 +159,7 @@ def show_apimgmt_api_release(cmd, client,
                              name,
                              api_id,
                              release_id):
-    return client.api_release.show()
+    return client.api_release.show(resource_group, name, api_id, release_id)
 
 
 def show_apimgmt_api_release(cmd, client,
@@ -167,7 +167,7 @@ def show_apimgmt_api_release(cmd, client,
                              name,
                              api_id,
                              release_id):
-    return client.api_release.show()
+    return client.api_release.show(resource_group, name, api_id, release_id)
 
 
 def list_apimgmt_api_release(cmd, client,
@@ -175,7 +175,7 @@ def list_apimgmt_api_release(cmd, client,
                              name,
                              api_id,
                              release_id):
-    return client.api_release.list()
+    return client.api_release.list(resource_group, name, api_id, release_id)
 
 
 def create_apimgmt_api_operation(cmd, client,
@@ -194,7 +194,7 @@ def create_apimgmt_api_operation(cmd, client,
                                  url_template=None,
                                  id=None,
                                  type=None):
-    return client.api_operation.create()
+    return client.api_operation.create(resource_group, name, api_id, operation_id, body)
 
 
 def update_apimgmt_api_operation(cmd, client,
@@ -213,7 +213,7 @@ def update_apimgmt_api_operation(cmd, client,
                                  url_template=None,
                                  id=None,
                                  type=None):
-    return client.api_operation.update()
+    return client.api_operation.update(resource_group, name, api_id, operation_id, body)
 
 
 def delete_apimgmt_api_operation(cmd, client,
@@ -221,7 +221,7 @@ def delete_apimgmt_api_operation(cmd, client,
                                  name,
                                  api_id,
                                  operation_id):
-    return client.api_operation.delete()
+    return client.api_operation.delete(resource_group, name, api_id, operation_id, If-Match)
 
 
 def list_apimgmt_api_operation(cmd, client,
@@ -229,7 +229,7 @@ def list_apimgmt_api_operation(cmd, client,
                                name,
                                api_id,
                                operation_id):
-    return client.api_operation.list()
+    return client.api_operation.list(resource_group, name, api_id, operation_id)
 
 
 def show_apimgmt_api_operation(cmd, client,
@@ -237,7 +237,7 @@ def show_apimgmt_api_operation(cmd, client,
                                name,
                                api_id,
                                operation_id):
-    return client.api_operation.show()
+    return client.api_operation.show(resource_group, name, api_id, operation_id)
 
 
 def show_apimgmt_api_operation(cmd, client,
@@ -245,7 +245,7 @@ def show_apimgmt_api_operation(cmd, client,
                                name,
                                api_id,
                                operation_id):
-    return client.api_operation.show()
+    return client.api_operation.show(resource_group, name, api_id, operation_id)
 
 
 def list_apimgmt_api_operation(cmd, client,
@@ -253,7 +253,7 @@ def list_apimgmt_api_operation(cmd, client,
                                name,
                                api_id,
                                operation_id):
-    return client.api_operation.list()
+    return client.api_operation.list(resource_group, name, api_id, operation_id)
 
 
 def create_apimgmt_api_operation_policy(cmd, client,
@@ -267,7 +267,7 @@ def create_apimgmt_api_operation_policy(cmd, client,
                                         format=None,
                                         id=None,
                                         type=None):
-    return client.api_operation_policy.create()
+    return client.api_operation_policy.create(resource_group, name, api_id, operation_id, policy_id, body)
 
 
 def delete_apimgmt_api_operation_policy(cmd, client,
@@ -276,7 +276,7 @@ def delete_apimgmt_api_operation_policy(cmd, client,
                                         api_id,
                                         operation_id,
                                         policy_id):
-    return client.api_operation_policy.delete()
+    return client.api_operation_policy.delete(resource_group, name, api_id, operation_id, policy_id, If-Match)
 
 
 def list_apimgmt_api_operation_policy(cmd, client,
@@ -285,7 +285,7 @@ def list_apimgmt_api_operation_policy(cmd, client,
                                       api_id,
                                       operation_id,
                                       policy_id):
-    return client.api_operation_policy.list()
+    return client.api_operation_policy.list(resource_group, name, api_id, operation_id, policy_id)
 
 
 def show_apimgmt_api_operation_policy(cmd, client,
@@ -294,7 +294,7 @@ def show_apimgmt_api_operation_policy(cmd, client,
                                       api_id,
                                       operation_id,
                                       policy_id):
-    return client.api_operation_policy.show()
+    return client.api_operation_policy.show(resource_group, name, api_id, operation_id, policy_id)
 
 
 def show_apimgmt_api_operation_policy(cmd, client,
@@ -303,7 +303,7 @@ def show_apimgmt_api_operation_policy(cmd, client,
                                       api_id,
                                       operation_id,
                                       policy_id):
-    return client.api_operation_policy.show()
+    return client.api_operation_policy.show(resource_group, name, api_id, operation_id, policy_id)
 
 
 def list_apimgmt_api_operation_policy(cmd, client,
@@ -312,7 +312,7 @@ def list_apimgmt_api_operation_policy(cmd, client,
                                       api_id,
                                       operation_id,
                                       policy_id):
-    return client.api_operation_policy.list()
+    return client.api_operation_policy.list(resource_group, name, api_id, operation_id, policy_id)
 
 
 def create_apimgmt_tag(cmd, client,
@@ -323,7 +323,7 @@ def create_apimgmt_tag(cmd, client,
                        display_name=None,
                        id=None,
                        type=None):
-    return client.tag.create()
+    return client.tag.create(resource_group, name, tag_id, body)
 
 
 def update_apimgmt_tag(cmd, client,
@@ -334,28 +334,28 @@ def update_apimgmt_tag(cmd, client,
                        display_name=None,
                        id=None,
                        type=None):
-    return client.tag.update()
+    return client.tag.update(resource_group, name, tag_id, body)
 
 
 def delete_apimgmt_tag(cmd, client,
                        resource_group,
                        name,
                        tag_id):
-    return client.tag.delete()
+    return client.tag.delete(resource_group, name, tag_id, If-Match)
 
 
 def list_apimgmt_tag(cmd, client,
                      resource_group,
                      name,
                      tag_id):
-    return client.tag.list()
+    return client.tag.list(resource_group, name, tag_id)
 
 
 def show_apimgmt_tag(cmd, client,
                      resource_group,
                      name,
                      tag_id):
-    return client.tag.show()
+    return client.tag.show(resource_group, name, tag_id)
 
 
 def list_apimgmt_tag_api_product_operation(cmd, client,
@@ -365,7 +365,7 @@ def list_apimgmt_tag_api_product_operation(cmd, client,
                                            api_id,
                                            product_id,
                                            operation_id):
-    return client.tag.list()
+    return client.tag.list(resource_group, name, tag_id)
 
 
 def show_apimgmt_tag_api_product_operation(cmd, client,
@@ -375,7 +375,7 @@ def show_apimgmt_tag_api_product_operation(cmd, client,
                                            api_id,
                                            product_id,
                                            operation_id):
-    return client.tag.show()
+    return client.tag.show(resource_group, name, tag_id)
 
 
 def list_apimgmt_api(cmd, client,
@@ -395,7 +395,7 @@ def create_apimgmt_api_policy(cmd, client,
                               format=None,
                               id=None,
                               type=None):
-    return client.api_policy.create()
+    return client.api_policy.create(resource_group, name, api_id, policy_id, body)
 
 
 def delete_apimgmt_api_policy(cmd, client,
@@ -403,7 +403,7 @@ def delete_apimgmt_api_policy(cmd, client,
                               name,
                               api_id,
                               policy_id):
-    return client.api_policy.delete()
+    return client.api_policy.delete(resource_group, name, api_id, policy_id, If-Match)
 
 
 def list_apimgmt_api_policy(cmd, client,
@@ -411,7 +411,7 @@ def list_apimgmt_api_policy(cmd, client,
                             name,
                             api_id,
                             policy_id):
-    return client.api_policy.list()
+    return client.api_policy.list(resource_group, name, api_id, policy_id)
 
 
 def show_apimgmt_api_policy(cmd, client,
@@ -419,7 +419,7 @@ def show_apimgmt_api_policy(cmd, client,
                             name,
                             api_id,
                             policy_id):
-    return client.api_policy.show()
+    return client.api_policy.show(resource_group, name, api_id, policy_id)
 
 
 def show_apimgmt_api_policy(cmd, client,
@@ -427,7 +427,7 @@ def show_apimgmt_api_policy(cmd, client,
                             name,
                             api_id,
                             policy_id):
-    return client.api_policy.show()
+    return client.api_policy.show(resource_group, name, api_id, policy_id)
 
 
 def list_apimgmt_api_policy(cmd, client,
@@ -435,7 +435,7 @@ def list_apimgmt_api_policy(cmd, client,
                             name,
                             api_id,
                             policy_id):
-    return client.api_policy.list()
+    return client.api_policy.list(resource_group, name, api_id, policy_id)
 
 
 def create_apimgmt_api_schema(cmd, client,
@@ -448,7 +448,7 @@ def create_apimgmt_api_schema(cmd, client,
                               document=None,
                               id=None,
                               type=None):
-    return client.api_schema.create()
+    return client.api_schema.create(resource_group, name, api_id, schema_id, body)
 
 
 def delete_apimgmt_api_schema(cmd, client,
@@ -456,7 +456,7 @@ def delete_apimgmt_api_schema(cmd, client,
                               name,
                               api_id,
                               schema_id):
-    return client.api_schema.delete()
+    return client.api_schema.delete(resource_group, name, api_id, schema_id, If-Match)
 
 
 def list_apimgmt_api_schema(cmd, client,
@@ -464,7 +464,7 @@ def list_apimgmt_api_schema(cmd, client,
                             name,
                             api_id,
                             schema_id):
-    return client.api_schema.list()
+    return client.api_schema.list(resource_group, name, api_id, schema_id)
 
 
 def show_apimgmt_api_schema(cmd, client,
@@ -472,7 +472,7 @@ def show_apimgmt_api_schema(cmd, client,
                             name,
                             api_id,
                             schema_id):
-    return client.api_schema.show()
+    return client.api_schema.show(resource_group, name, api_id, schema_id)
 
 
 def show_apimgmt_api_schema(cmd, client,
@@ -480,7 +480,7 @@ def show_apimgmt_api_schema(cmd, client,
                             name,
                             api_id,
                             schema_id):
-    return client.api_schema.show()
+    return client.api_schema.show(resource_group, name, api_id, schema_id)
 
 
 def list_apimgmt_api_schema(cmd, client,
@@ -488,7 +488,7 @@ def list_apimgmt_api_schema(cmd, client,
                             name,
                             api_id,
                             schema_id):
-    return client.api_schema.list()
+    return client.api_schema.list(resource_group, name, api_id, schema_id)
 
 
 def create_apimgmt_api_diagnostic(cmd, client,
@@ -505,7 +505,7 @@ def create_apimgmt_api_diagnostic(cmd, client,
                                   enable_http_correlation_headers=None,
                                   id=None,
                                   type=None):
-    return client.api_diagnostic.create()
+    return client.api_diagnostic.create(resource_group, name, api_id, diagnostic_id, body)
 
 
 def update_apimgmt_api_diagnostic(cmd, client,
@@ -522,7 +522,7 @@ def update_apimgmt_api_diagnostic(cmd, client,
                                   enable_http_correlation_headers=None,
                                   id=None,
                                   type=None):
-    return client.api_diagnostic.update()
+    return client.api_diagnostic.update(resource_group, name, api_id, diagnostic_id, body)
 
 
 def delete_apimgmt_api_diagnostic(cmd, client,
@@ -530,7 +530,7 @@ def delete_apimgmt_api_diagnostic(cmd, client,
                                   name,
                                   api_id,
                                   diagnostic_id):
-    return client.api_diagnostic.delete()
+    return client.api_diagnostic.delete(resource_group, name, api_id, diagnostic_id, If-Match)
 
 
 def list_apimgmt_api_diagnostic(cmd, client,
@@ -538,7 +538,7 @@ def list_apimgmt_api_diagnostic(cmd, client,
                                 name,
                                 api_id,
                                 diagnostic_id):
-    return client.api_diagnostic.list()
+    return client.api_diagnostic.list(resource_group, name, api_id, diagnostic_id)
 
 
 def show_apimgmt_api_diagnostic(cmd, client,
@@ -546,7 +546,7 @@ def show_apimgmt_api_diagnostic(cmd, client,
                                 name,
                                 api_id,
                                 diagnostic_id):
-    return client.api_diagnostic.show()
+    return client.api_diagnostic.show(resource_group, name, api_id, diagnostic_id)
 
 
 def show_apimgmt_api_diagnostic(cmd, client,
@@ -554,7 +554,7 @@ def show_apimgmt_api_diagnostic(cmd, client,
                                 name,
                                 api_id,
                                 diagnostic_id):
-    return client.api_diagnostic.show()
+    return client.api_diagnostic.show(resource_group, name, api_id, diagnostic_id)
 
 
 def list_apimgmt_api_diagnostic(cmd, client,
@@ -562,7 +562,7 @@ def list_apimgmt_api_diagnostic(cmd, client,
                                 name,
                                 api_id,
                                 diagnostic_id):
-    return client.api_diagnostic.list()
+    return client.api_diagnostic.list(resource_group, name, api_id, diagnostic_id)
 
 
 def create_apimgmt_api_issue(cmd, client,
@@ -578,7 +578,7 @@ def create_apimgmt_api_issue(cmd, client,
                              user_id=None,
                              id=None,
                              type=None):
-    return client.api_issue.create()
+    return client.api_issue.create(resource_group, name, api_id, issue_id, body)
 
 
 def update_apimgmt_api_issue(cmd, client,
@@ -594,7 +594,7 @@ def update_apimgmt_api_issue(cmd, client,
                              user_id=None,
                              id=None,
                              type=None):
-    return client.api_issue.update()
+    return client.api_issue.update(resource_group, name, api_id, issue_id, body)
 
 
 def delete_apimgmt_api_issue(cmd, client,
@@ -602,7 +602,7 @@ def delete_apimgmt_api_issue(cmd, client,
                              name,
                              api_id,
                              issue_id):
-    return client.api_issue.delete()
+    return client.api_issue.delete(resource_group, name, api_id, issue_id, If-Match)
 
 
 def list_apimgmt_api_issue(cmd, client,
@@ -610,7 +610,7 @@ def list_apimgmt_api_issue(cmd, client,
                            name,
                            api_id,
                            issue_id):
-    return client.api_issue.list()
+    return client.api_issue.list(resource_group, name, api_id, issue_id)
 
 
 def show_apimgmt_api_issue(cmd, client,
@@ -618,7 +618,7 @@ def show_apimgmt_api_issue(cmd, client,
                            name,
                            api_id,
                            issue_id):
-    return client.api_issue.show()
+    return client.api_issue.show(resource_group, name, api_id, issue_id)
 
 
 def show_apimgmt_api_issue(cmd, client,
@@ -626,7 +626,7 @@ def show_apimgmt_api_issue(cmd, client,
                            name,
                            api_id,
                            issue_id):
-    return client.api_issue.show()
+    return client.api_issue.show(resource_group, name, api_id, issue_id)
 
 
 def list_apimgmt_api_issue(cmd, client,
@@ -634,7 +634,7 @@ def list_apimgmt_api_issue(cmd, client,
                            name,
                            api_id,
                            issue_id):
-    return client.api_issue.list()
+    return client.api_issue.list(resource_group, name, api_id, issue_id)
 
 
 def create_apimgmt_api_issue_comment(cmd, client,
@@ -649,7 +649,7 @@ def create_apimgmt_api_issue_comment(cmd, client,
                                      user_id=None,
                                      id=None,
                                      type=None):
-    return client.api_issue_comment.create()
+    return client.api_issue_comment.create(resource_group, name, api_id, issue_id, comment_id, body)
 
 
 def delete_apimgmt_api_issue_comment(cmd, client,
@@ -658,7 +658,7 @@ def delete_apimgmt_api_issue_comment(cmd, client,
                                      api_id,
                                      issue_id,
                                      comment_id):
-    return client.api_issue_comment.delete()
+    return client.api_issue_comment.delete(resource_group, name, api_id, issue_id, comment_id, If-Match)
 
 
 def list_apimgmt_api_issue_comment(cmd, client,
@@ -667,7 +667,7 @@ def list_apimgmt_api_issue_comment(cmd, client,
                                    api_id,
                                    issue_id,
                                    comment_id):
-    return client.api_issue_comment.list()
+    return client.api_issue_comment.list(resource_group, name, api_id, issue_id, comment_id)
 
 
 def show_apimgmt_api_issue_comment(cmd, client,
@@ -676,7 +676,7 @@ def show_apimgmt_api_issue_comment(cmd, client,
                                    api_id,
                                    issue_id,
                                    comment_id):
-    return client.api_issue_comment.show()
+    return client.api_issue_comment.show(resource_group, name, api_id, issue_id, comment_id)
 
 
 def show_apimgmt_api_issue_comment(cmd, client,
@@ -685,7 +685,7 @@ def show_apimgmt_api_issue_comment(cmd, client,
                                    api_id,
                                    issue_id,
                                    comment_id):
-    return client.api_issue_comment.show()
+    return client.api_issue_comment.show(resource_group, name, api_id, issue_id, comment_id)
 
 
 def list_apimgmt_api_issue_comment(cmd, client,
@@ -694,7 +694,7 @@ def list_apimgmt_api_issue_comment(cmd, client,
                                    api_id,
                                    issue_id,
                                    comment_id):
-    return client.api_issue_comment.list()
+    return client.api_issue_comment.list(resource_group, name, api_id, issue_id, comment_id)
 
 
 def create_apimgmt_api_issue_attachment(cmd, client,
@@ -709,7 +709,7 @@ def create_apimgmt_api_issue_attachment(cmd, client,
                                         content=None,
                                         id=None,
                                         type=None):
-    return client.api_issue_attachment.create()
+    return client.api_issue_attachment.create(resource_group, name, api_id, issue_id, attachment_id, body)
 
 
 def delete_apimgmt_api_issue_attachment(cmd, client,
@@ -718,7 +718,7 @@ def delete_apimgmt_api_issue_attachment(cmd, client,
                                         api_id,
                                         issue_id,
                                         attachment_id):
-    return client.api_issue_attachment.delete()
+    return client.api_issue_attachment.delete(resource_group, name, api_id, issue_id, attachment_id, If-Match)
 
 
 def list_apimgmt_api_issue_attachment(cmd, client,
@@ -727,7 +727,7 @@ def list_apimgmt_api_issue_attachment(cmd, client,
                                       api_id,
                                       issue_id,
                                       attachment_id):
-    return client.api_issue_attachment.list()
+    return client.api_issue_attachment.list(resource_group, name, api_id, issue_id, attachment_id)
 
 
 def show_apimgmt_api_issue_attachment(cmd, client,
@@ -736,7 +736,7 @@ def show_apimgmt_api_issue_attachment(cmd, client,
                                       api_id,
                                       issue_id,
                                       attachment_id):
-    return client.api_issue_attachment.show()
+    return client.api_issue_attachment.show(resource_group, name, api_id, issue_id, attachment_id)
 
 
 def show_apimgmt_api_issue_attachment(cmd, client,
@@ -745,7 +745,7 @@ def show_apimgmt_api_issue_attachment(cmd, client,
                                       api_id,
                                       issue_id,
                                       attachment_id):
-    return client.api_issue_attachment.show()
+    return client.api_issue_attachment.show(resource_group, name, api_id, issue_id, attachment_id)
 
 
 def list_apimgmt_api_issue_attachment(cmd, client,
@@ -754,7 +754,7 @@ def list_apimgmt_api_issue_attachment(cmd, client,
                                       api_id,
                                       issue_id,
                                       attachment_id):
-    return client.api_issue_attachment.list()
+    return client.api_issue_attachment.list(resource_group, name, api_id, issue_id, attachment_id)
 
 
 def create_apimgmt_api_tagdescription(cmd, client,
@@ -769,7 +769,7 @@ def create_apimgmt_api_tagdescription(cmd, client,
                                       display_name=None,
                                       id=None,
                                       type=None):
-    return client.api_tag_description.create()
+    return client.api_tag_description.create(resource_group, name, api_id, tag_id, body)
 
 
 def delete_apimgmt_api_tagdescription(cmd, client,
@@ -777,7 +777,7 @@ def delete_apimgmt_api_tagdescription(cmd, client,
                                       name,
                                       api_id,
                                       tag_id):
-    return client.api_tag_description.delete()
+    return client.api_tag_description.delete(resource_group, name, api_id, tag_id, If-Match)
 
 
 def list_apimgmt_api_tagdescription(cmd, client,
@@ -785,7 +785,7 @@ def list_apimgmt_api_tagdescription(cmd, client,
                                     name,
                                     api_id,
                                     tag_id):
-    return client.api_tag_description.list()
+    return client.api_tag_description.list(resource_group, name, api_id, tag_id)
 
 
 def show_apimgmt_api_tagdescription(cmd, client,
@@ -793,7 +793,7 @@ def show_apimgmt_api_tagdescription(cmd, client,
                                     name,
                                     api_id,
                                     tag_id):
-    return client.api_tag_description.show()
+    return client.api_tag_description.show(resource_group, name, api_id, tag_id)
 
 
 def show_apimgmt_api_tagdescription(cmd, client,
@@ -801,7 +801,7 @@ def show_apimgmt_api_tagdescription(cmd, client,
                                     name,
                                     api_id,
                                     tag_id):
-    return client.api_tag_description.show()
+    return client.api_tag_description.show(resource_group, name, api_id, tag_id)
 
 
 def list_apimgmt_api_tagdescription(cmd, client,
@@ -809,7 +809,7 @@ def list_apimgmt_api_tagdescription(cmd, client,
                                     name,
                                     api_id,
                                     tag_id):
-    return client.api_tag_description.list()
+    return client.api_tag_description.list(resource_group, name, api_id, tag_id)
 
 
 def list_apimgmt_api(cmd, client,
@@ -831,7 +831,7 @@ def create_apimgmt_apiversionset(cmd, client,
                                  versioning_scheme=None,
                                  id=None,
                                  type=None):
-    return client.api_version_set.create()
+    return client.api_version_set.create(resource_group, name, version_set_id, body)
 
 
 def update_apimgmt_apiversionset(cmd, client,
@@ -846,42 +846,42 @@ def update_apimgmt_apiversionset(cmd, client,
                                  versioning_scheme=None,
                                  id=None,
                                  type=None):
-    return client.api_version_set.update()
+    return client.api_version_set.update(resource_group, name, version_set_id, body)
 
 
 def delete_apimgmt_apiversionset(cmd, client,
                                  resource_group,
                                  name,
                                  version_set_id):
-    return client.api_version_set.delete()
+    return client.api_version_set.delete(resource_group, name, version_set_id, If-Match)
 
 
 def list_apimgmt_apiversionset(cmd, client,
                                resource_group,
                                name,
                                version_set_id):
-    return client.api_version_set.list()
+    return client.api_version_set.list(resource_group, name, version_set_id)
 
 
 def show_apimgmt_apiversionset(cmd, client,
                                resource_group,
                                name,
                                version_set_id):
-    return client.api_version_set.show()
+    return client.api_version_set.show(resource_group, name, version_set_id)
 
 
 def show_apimgmt_apiversionset(cmd, client,
                                resource_group,
                                name,
                                version_set_id):
-    return client.api_version_set.show()
+    return client.api_version_set.show(resource_group, name, version_set_id)
 
 
 def list_apimgmt_apiversionset(cmd, client,
                                resource_group,
                                name,
                                version_set_id):
-    return client.api_version_set.list()
+    return client.api_version_set.list(resource_group, name, version_set_id)
 
 
 def create_apimgmt_authorizationserver(cmd, client,
@@ -907,7 +907,7 @@ def create_apimgmt_authorizationserver(cmd, client,
                                        client_id=None,
                                        id=None,
                                        type=None):
-    return client.authorization_server.create()
+    return client.authorization_server.create(resource_group, name, authsid, body)
 
 
 def update_apimgmt_authorizationserver(cmd, client,
@@ -933,42 +933,42 @@ def update_apimgmt_authorizationserver(cmd, client,
                                        client_id=None,
                                        id=None,
                                        type=None):
-    return client.authorization_server.update()
+    return client.authorization_server.update(resource_group, name, authsid, body)
 
 
 def delete_apimgmt_authorizationserver(cmd, client,
                                        resource_group,
                                        name,
                                        authsid):
-    return client.authorization_server.delete()
+    return client.authorization_server.delete(resource_group, name, authsid, If-Match)
 
 
 def list_apimgmt_authorizationserver(cmd, client,
                                      resource_group,
                                      name,
                                      authsid):
-    return client.authorization_server.list()
+    return client.authorization_server.list(resource_group, name, authsid)
 
 
 def show_apimgmt_authorizationserver(cmd, client,
                                      resource_group,
                                      name,
                                      authsid):
-    return client.authorization_server.show()
+    return client.authorization_server.show(resource_group, name, authsid)
 
 
 def show_apimgmt_authorizationserver(cmd, client,
                                      resource_group,
                                      name,
                                      authsid):
-    return client.authorization_server.show()
+    return client.authorization_server.show(resource_group, name, authsid)
 
 
 def list_apimgmt_authorizationserver(cmd, client,
                                      resource_group,
                                      name,
                                      authsid):
-    return client.authorization_server.list()
+    return client.authorization_server.list(resource_group, name, authsid)
 
 
 def create_apimgmt_backend(cmd, client,
@@ -987,7 +987,7 @@ def create_apimgmt_backend(cmd, client,
                            protocol=None,
                            id=None,
                            type=None):
-    return client.backend.create()
+    return client.backend.create(resource_group, name, backend_id, body)
 
 
 def update_apimgmt_backend(cmd, client,
@@ -1006,42 +1006,42 @@ def update_apimgmt_backend(cmd, client,
                            protocol=None,
                            id=None,
                            type=None):
-    return client.backend.update()
+    return client.backend.update(resource_group, name, backend_id, body)
 
 
 def delete_apimgmt_backend(cmd, client,
                            resource_group,
                            name,
                            backend_id):
-    return client.backend.delete()
+    return client.backend.delete(resource_group, name, backend_id, If-Match)
 
 
 def list_apimgmt_backend(cmd, client,
                          resource_group,
                          name,
                          backend_id):
-    return client.backend.list()
+    return client.backend.list(resource_group, name, backend_id)
 
 
 def show_apimgmt_backend(cmd, client,
                          resource_group,
                          name,
                          backend_id):
-    return client.backend.show()
+    return client.backend.show(resource_group, name, backend_id)
 
 
 def show_apimgmt_backend(cmd, client,
                          resource_group,
                          name,
                          backend_id):
-    return client.backend.show()
+    return client.backend.show(resource_group, name, backend_id)
 
 
 def list_apimgmt_backend(cmd, client,
                          resource_group,
                          name,
                          backend_id):
-    return client.backend.list()
+    return client.backend.list(resource_group, name, backend_id)
 
 
 def create_apimgmt_cache(cmd, client,
@@ -1054,7 +1054,7 @@ def create_apimgmt_cache(cmd, client,
                          resource_id=None,
                          id=None,
                          type=None):
-    return client.cache.create()
+    return client.cache.create(resource_group, name, cache_id, body)
 
 
 def update_apimgmt_cache(cmd, client,
@@ -1067,42 +1067,42 @@ def update_apimgmt_cache(cmd, client,
                          resource_id=None,
                          id=None,
                          type=None):
-    return client.cache.update()
+    return client.cache.update(resource_group, name, cache_id, body)
 
 
 def delete_apimgmt_cache(cmd, client,
                          resource_group,
                          name,
                          cache_id):
-    return client.cache.delete()
+    return client.cache.delete(resource_group, name, cache_id, If-Match)
 
 
 def list_apimgmt_cache(cmd, client,
                        resource_group,
                        name,
                        cache_id):
-    return client.cache.list()
+    return client.cache.list(resource_group, name, cache_id)
 
 
 def show_apimgmt_cache(cmd, client,
                        resource_group,
                        name,
                        cache_id):
-    return client.cache.show()
+    return client.cache.show(resource_group, name, cache_id)
 
 
 def show_apimgmt_cache(cmd, client,
                        resource_group,
                        name,
                        cache_id):
-    return client.cache.show()
+    return client.cache.show(resource_group, name, cache_id)
 
 
 def list_apimgmt_cache(cmd, client,
                        resource_group,
                        name,
                        cache_id):
-    return client.cache.list()
+    return client.cache.list(resource_group, name, cache_id)
 
 
 def create_apimgmt_certificate(cmd, client,
@@ -1117,42 +1117,42 @@ def create_apimgmt_certificate(cmd, client,
                                expiration_date=None,
                                id=None,
                                type=None):
-    return client.certificate.create()
+    return client.certificate.create(resource_group, name, certificate_id, body)
 
 
 def delete_apimgmt_certificate(cmd, client,
                                resource_group,
                                name,
                                certificate_id):
-    return client.certificate.delete()
+    return client.certificate.delete(resource_group, name, certificate_id, If-Match)
 
 
 def list_apimgmt_certificate(cmd, client,
                              resource_group,
                              name,
                              certificate_id):
-    return client.certificate.list()
+    return client.certificate.list(resource_group, name, certificate_id)
 
 
 def show_apimgmt_certificate(cmd, client,
                              resource_group,
                              name,
                              certificate_id):
-    return client.certificate.show()
+    return client.certificate.show(resource_group, name, certificate_id)
 
 
 def show_apimgmt_certificate(cmd, client,
                              resource_group,
                              name,
                              certificate_id):
-    return client.certificate.show()
+    return client.certificate.show(resource_group, name, certificate_id)
 
 
 def list_apimgmt_certificate(cmd, client,
                              resource_group,
                              name,
                              certificate_id):
-    return client.certificate.list()
+    return client.certificate.list(resource_group, name, certificate_id)
 
 
 def list_(cmd, client):
@@ -1196,7 +1196,7 @@ def create_apimgmt(cmd, client,
                    id=None,
                    type=None,
                    etag=None):
-    return client.api_management_service.create()
+    return client.api_management_service.create(resource_group, name, body)
 
 
 def update_apimgmt(cmd, client,
@@ -1230,37 +1230,37 @@ def update_apimgmt(cmd, client,
                    id=None,
                    type=None,
                    etag=None):
-    return client.api_management_service.update()
+    return client.api_management_service.update(resource_group, name, body)
 
 
 def delete_apimgmt(cmd, client,
                    resource_group,
                    name):
-    return client.api_management_service.delete()
+    return client.api_management_service.delete(resource_group, name)
 
 
 def list_apimgmt(cmd, client,
                  resource_group,
                  name):
-    return client.api_management_service.list()
+    return client.api_management_service.list(resource_group, name)
 
 
 def show_apimgmt(cmd, client,
                  resource_group,
                  name):
-    return client.api_management_service.show()
+    return client.api_management_service.show(resource_group, name)
 
 
 def show_apimgmt(cmd, client,
                  resource_group,
                  name):
-    return client.api_management_service.show()
+    return client.api_management_service.show(resource_group, name)
 
 
 def list_apimgmt(cmd, client,
                  resource_group,
                  name):
-    return client.api_management_service.list()
+    return client.api_management_service.list(resource_group, name)
 
 
 def create_apimgmt_diagnostic(cmd, client,
@@ -1276,7 +1276,7 @@ def create_apimgmt_diagnostic(cmd, client,
                               enable_http_correlation_headers=None,
                               id=None,
                               type=None):
-    return client.diagnostic.create()
+    return client.diagnostic.create(resource_group, name, diagnostic_id, body)
 
 
 def update_apimgmt_diagnostic(cmd, client,
@@ -1292,42 +1292,42 @@ def update_apimgmt_diagnostic(cmd, client,
                               enable_http_correlation_headers=None,
                               id=None,
                               type=None):
-    return client.diagnostic.update()
+    return client.diagnostic.update(resource_group, name, diagnostic_id, body)
 
 
 def delete_apimgmt_diagnostic(cmd, client,
                               resource_group,
                               name,
                               diagnostic_id):
-    return client.diagnostic.delete()
+    return client.diagnostic.delete(resource_group, name, diagnostic_id, If-Match)
 
 
 def list_apimgmt_diagnostic(cmd, client,
                             resource_group,
                             name,
                             diagnostic_id):
-    return client.diagnostic.list()
+    return client.diagnostic.list(resource_group, name, diagnostic_id)
 
 
 def show_apimgmt_diagnostic(cmd, client,
                             resource_group,
                             name,
                             diagnostic_id):
-    return client.diagnostic.show()
+    return client.diagnostic.show(resource_group, name, diagnostic_id)
 
 
 def show_apimgmt_diagnostic(cmd, client,
                             resource_group,
                             name,
                             diagnostic_id):
-    return client.diagnostic.show()
+    return client.diagnostic.show(resource_group, name, diagnostic_id)
 
 
 def list_apimgmt_diagnostic(cmd, client,
                             resource_group,
                             name,
                             diagnostic_id):
-    return client.diagnostic.list()
+    return client.diagnostic.list(resource_group, name, diagnostic_id)
 
 
 def create_apimgmt_template(cmd, client,
@@ -1343,7 +1343,7 @@ def create_apimgmt_template(cmd, client,
                             is_default=None,
                             id=None,
                             type=None):
-    return client.email_template.create()
+    return client.email_template.create(resource_group, service_name, name, body)
 
 
 def update_apimgmt_template(cmd, client,
@@ -1359,42 +1359,42 @@ def update_apimgmt_template(cmd, client,
                             is_default=None,
                             id=None,
                             type=None):
-    return client.email_template.update()
+    return client.email_template.update(resource_group, service_name, name, body)
 
 
 def delete_apimgmt_template(cmd, client,
                             resource_group,
                             service_name,
                             name):
-    return client.email_template.delete()
+    return client.email_template.delete(resource_group, service_name, name, If-Match)
 
 
 def list_apimgmt_template(cmd, client,
                           resource_group,
                           service_name,
                           name):
-    return client.email_template.list()
+    return client.email_template.list(resource_group, service_name, name)
 
 
 def show_apimgmt_template(cmd, client,
                           resource_group,
                           service_name,
                           name):
-    return client.email_template.show()
+    return client.email_template.show(resource_group, service_name, name)
 
 
 def show_apimgmt_template(cmd, client,
                           resource_group,
                           service_name,
                           name):
-    return client.email_template.show()
+    return client.email_template.show(resource_group, service_name, name)
 
 
 def list_apimgmt_template(cmd, client,
                           resource_group,
                           service_name,
                           name):
-    return client.email_template.list()
+    return client.email_template.list(resource_group, service_name, name)
 
 
 def create_apimgmt_group(cmd, client,
@@ -1408,7 +1408,7 @@ def create_apimgmt_group(cmd, client,
                          external_id=None,
                          built_in=None,
                          id=None):
-    return client.group.create()
+    return client.group.create(resource_group, name, group_id, body)
 
 
 def update_apimgmt_group(cmd, client,
@@ -1422,42 +1422,42 @@ def update_apimgmt_group(cmd, client,
                          external_id=None,
                          built_in=None,
                          id=None):
-    return client.group.update()
+    return client.group.update(resource_group, name, group_id, body)
 
 
 def delete_apimgmt_group(cmd, client,
                          resource_group,
                          name,
                          group_id):
-    return client.group.delete()
+    return client.group.delete(resource_group, name, group_id, If-Match)
 
 
 def list_apimgmt_group(cmd, client,
                        resource_group,
                        name,
                        group_id):
-    return client.group.list()
+    return client.group.list(resource_group, name, group_id)
 
 
 def show_apimgmt_group(cmd, client,
                        resource_group,
                        name,
                        group_id):
-    return client.group.show()
+    return client.group.show(resource_group, name, group_id)
 
 
 def show_apimgmt_group(cmd, client,
                        resource_group,
                        name,
                        group_id):
-    return client.group.show()
+    return client.group.show(resource_group, name, group_id)
 
 
 def list_apimgmt_group(cmd, client,
                        resource_group,
                        name,
                        group_id):
-    return client.group.list()
+    return client.group.list(resource_group, name, group_id)
 
 
 def create_apimgmt_group_user(cmd, client,
@@ -1476,7 +1476,7 @@ def create_apimgmt_group_user(cmd, client,
                               email=None,
                               registration_date=None,
                               groups=None):
-    return client.group_user.create()
+    return client.group_user.create(resource_group, name, group_id, user_id)
 
 
 def delete_apimgmt_group_user(cmd, client,
@@ -1484,7 +1484,7 @@ def delete_apimgmt_group_user(cmd, client,
                               name,
                               group_id,
                               user_id):
-    return client.group_user.delete()
+    return client.group_user.delete(resource_group, name, group_id, user_id)
 
 
 def list_apimgmt_group_user(cmd, client,
@@ -1517,7 +1517,7 @@ def create_apimgmt_identityprovider(cmd, client,
                                     client_id=None,
                                     client_secret=None,
                                     id=None):
-    return client.identity_provider.create()
+    return client.identity_provider.create(resource_group, service_name, name, body)
 
 
 def update_apimgmt_identityprovider(cmd, client,
@@ -1535,56 +1535,56 @@ def update_apimgmt_identityprovider(cmd, client,
                                     client_id=None,
                                     client_secret=None,
                                     id=None):
-    return client.identity_provider.update()
+    return client.identity_provider.update(resource_group, service_name, name, body)
 
 
 def delete_apimgmt_identityprovider(cmd, client,
                                     resource_group,
                                     service_name,
                                     name):
-    return client.identity_provider.delete()
+    return client.identity_provider.delete(resource_group, service_name, name, If-Match)
 
 
 def list_apimgmt_identityprovider(cmd, client,
                                   resource_group,
                                   service_name,
                                   name):
-    return client.identity_provider.list()
+    return client.identity_provider.list(resource_group, service_name, name)
 
 
 def show_apimgmt_identityprovider(cmd, client,
                                   resource_group,
                                   service_name,
                                   name):
-    return client.identity_provider.show()
+    return client.identity_provider.show(resource_group, service_name, name)
 
 
 def show_apimgmt_identityprovider(cmd, client,
                                   resource_group,
                                   service_name,
                                   name):
-    return client.identity_provider.show()
+    return client.identity_provider.show(resource_group, service_name, name)
 
 
 def list_apimgmt_identityprovider(cmd, client,
                                   resource_group,
                                   service_name,
                                   name):
-    return client.identity_provider.list()
+    return client.identity_provider.list(resource_group, service_name, name)
 
 
 def show_apimgmt_issue(cmd, client,
                        resource_group,
                        name,
                        issue_id):
-    return client.issue.show()
+    return client.issue.show(resource_group, name, issue_id)
 
 
 def list_apimgmt_issue(cmd, client,
                        resource_group,
                        name,
                        issue_id):
-    return client.issue.list()
+    return client.issue.list(resource_group, name, issue_id)
 
 
 def create_apimgmt_logger(cmd, client,
@@ -1599,7 +1599,7 @@ def create_apimgmt_logger(cmd, client,
                           resource_id=None,
                           id=None,
                           type=None):
-    return client.logger.create()
+    return client.logger.create(resource_group, name, logger_id, body)
 
 
 def update_apimgmt_logger(cmd, client,
@@ -1614,42 +1614,42 @@ def update_apimgmt_logger(cmd, client,
                           resource_id=None,
                           id=None,
                           type=None):
-    return client.logger.update()
+    return client.logger.update(resource_group, name, logger_id, body)
 
 
 def delete_apimgmt_logger(cmd, client,
                           resource_group,
                           name,
                           logger_id):
-    return client.logger.delete()
+    return client.logger.delete(resource_group, name, logger_id, If-Match)
 
 
 def list_apimgmt_logger(cmd, client,
                         resource_group,
                         name,
                         logger_id):
-    return client.logger.list()
+    return client.logger.list(resource_group, name, logger_id)
 
 
 def show_apimgmt_logger(cmd, client,
                         resource_group,
                         name,
                         logger_id):
-    return client.logger.show()
+    return client.logger.show(resource_group, name, logger_id)
 
 
 def show_apimgmt_logger(cmd, client,
                         resource_group,
                         name,
                         logger_id):
-    return client.logger.show()
+    return client.logger.show(resource_group, name, logger_id)
 
 
 def list_apimgmt_logger(cmd, client,
                         resource_group,
                         name,
                         logger_id):
-    return client.logger.list()
+    return client.logger.list(resource_group, name, logger_id)
 
 
 def list_apimgmt_location(cmd, client,
@@ -1669,35 +1669,35 @@ def create_apimgmt_notification(cmd, client,
                                 title=None,
                                 description=None,
                                 recipients=None):
-    return client.notification.create()
+    return client.notification.create(resource_group, service_name, name)
 
 
 def list_apimgmt_notification(cmd, client,
                               resource_group,
                               service_name,
                               name):
-    return client.notification.list()
+    return client.notification.list(resource_group, service_name, name)
 
 
 def show_apimgmt_notification(cmd, client,
                               resource_group,
                               service_name,
                               name):
-    return client.notification.show()
+    return client.notification.show(resource_group, service_name, name)
 
 
 def show_apimgmt_notification(cmd, client,
                               resource_group,
                               service_name,
                               name):
-    return client.notification.show()
+    return client.notification.show(resource_group, service_name, name)
 
 
 def list_apimgmt_notification(cmd, client,
                               resource_group,
                               service_name,
                               name):
-    return client.notification.list()
+    return client.notification.list(resource_group, service_name, name)
 
 
 def create_apimgmt_notification_recipientuser(cmd, client,
@@ -1708,7 +1708,7 @@ def create_apimgmt_notification_recipientuser(cmd, client,
                                               id=None,
                                               type=None,
                                               properties=None):
-    return client.notification_recipient_user.create()
+    return client.notification_recipient_user.create(resource_group, service_name, name, user_id)
 
 
 def delete_apimgmt_notification_recipientuser(cmd, client,
@@ -1716,7 +1716,7 @@ def delete_apimgmt_notification_recipientuser(cmd, client,
                                               service_name,
                                               name,
                                               user_id):
-    return client.notification_recipient_user.delete()
+    return client.notification_recipient_user.delete(resource_group, service_name, name, user_id)
 
 
 def list_apimgmt_notification_recipientuser(cmd, client,
@@ -1742,7 +1742,7 @@ def create_apimgmt_notification_recipientemail(cmd, client,
                                                id=None,
                                                type=None,
                                                properties=None):
-    return client.notification_recipient_email.create()
+    return client.notification_recipient_email.create(resource_group, service_name, name, email)
 
 
 def delete_apimgmt_notification_recipientemail(cmd, client,
@@ -1750,7 +1750,7 @@ def delete_apimgmt_notification_recipientemail(cmd, client,
                                                service_name,
                                                name,
                                                email):
-    return client.notification_recipient_email.delete()
+    return client.notification_recipient_email.delete(resource_group, service_name, name, email)
 
 
 def list_apimgmt_notification_recipientemail(cmd, client,
@@ -1780,7 +1780,7 @@ def create_apimgmt_openidconnectprovider(cmd, client,
                                          client_secret=None,
                                          id=None,
                                          type=None):
-    return client.open_id_connect_provider.create()
+    return client.open_id_connect_provider.create(resource_group, name, opid, body)
 
 
 def update_apimgmt_openidconnectprovider(cmd, client,
@@ -1795,42 +1795,42 @@ def update_apimgmt_openidconnectprovider(cmd, client,
                                          client_secret=None,
                                          id=None,
                                          type=None):
-    return client.open_id_connect_provider.update()
+    return client.open_id_connect_provider.update(resource_group, name, opid, body)
 
 
 def delete_apimgmt_openidconnectprovider(cmd, client,
                                          resource_group,
                                          name,
                                          opid):
-    return client.open_id_connect_provider.delete()
+    return client.open_id_connect_provider.delete(resource_group, name, opid, If-Match)
 
 
 def list_apimgmt_openidconnectprovider(cmd, client,
                                        resource_group,
                                        name,
                                        opid):
-    return client.open_id_connect_provider.list()
+    return client.open_id_connect_provider.list(resource_group, name, opid)
 
 
 def show_apimgmt_openidconnectprovider(cmd, client,
                                        resource_group,
                                        name,
                                        opid):
-    return client.open_id_connect_provider.show()
+    return client.open_id_connect_provider.show(resource_group, name, opid)
 
 
 def show_apimgmt_openidconnectprovider(cmd, client,
                                        resource_group,
                                        name,
                                        opid):
-    return client.open_id_connect_provider.show()
+    return client.open_id_connect_provider.show(resource_group, name, opid)
 
 
 def list_apimgmt_openidconnectprovider(cmd, client,
                                        resource_group,
                                        name,
                                        opid):
-    return client.open_id_connect_provider.list()
+    return client.open_id_connect_provider.list(resource_group, name, opid)
 
 
 def create_apimgmt_policy(cmd, client,
@@ -1842,42 +1842,42 @@ def create_apimgmt_policy(cmd, client,
                           format=None,
                           id=None,
                           type=None):
-    return client.policy.create()
+    return client.policy.create(resource_group, name, policy_id, body)
 
 
 def delete_apimgmt_policy(cmd, client,
                           resource_group,
                           name,
                           policy_id):
-    return client.policy.delete()
+    return client.policy.delete(resource_group, name, policy_id, If-Match)
 
 
 def list_apimgmt_policy(cmd, client,
                         resource_group,
                         name,
                         policy_id):
-    return client.policy.list()
+    return client.policy.list(resource_group, name, policy_id)
 
 
 def show_apimgmt_policy(cmd, client,
                         resource_group,
                         name,
                         policy_id):
-    return client.policy.show()
+    return client.policy.show(resource_group, name, policy_id)
 
 
 def show_apimgmt_policy(cmd, client,
                         resource_group,
                         name,
                         policy_id):
-    return client.policy.show()
+    return client.policy.show(resource_group, name, policy_id)
 
 
 def list_apimgmt_policy(cmd, client,
                         resource_group,
                         name,
                         policy_id):
-    return client.policy.list()
+    return client.policy.list(resource_group, name, policy_id)
 
 
 def list_apimgmt(cmd, client,
@@ -1893,7 +1893,7 @@ def create_apimgmt(cmd, client,
                    enabled=None,
                    id=None,
                    type=None):
-    return client.sign_in_settings.create()
+    return client.sign_in_settings.create(resource_group, name, body)
 
 
 def update_apimgmt(cmd, client,
@@ -1903,19 +1903,19 @@ def update_apimgmt(cmd, client,
                    enabled=None,
                    id=None,
                    type=None):
-    return client.sign_in_settings.update()
+    return client.sign_in_settings.update(resource_group, name, body)
 
 
 def show_apimgmt(cmd, client,
                  resource_group,
                  name):
-    return client.sign_in_settings.show()
+    return client.sign_in_settings.show(resource_group, name)
 
 
 def show_apimgmt(cmd, client,
                  resource_group,
                  name):
-    return client.sign_in_settings.show()
+    return client.sign_in_settings.show(resource_group, name)
 
 
 def create_apimgmt(cmd, client,
@@ -1926,7 +1926,7 @@ def create_apimgmt(cmd, client,
                    terms_of_service=None,
                    id=None,
                    type=None):
-    return client.sign_up_settings.create()
+    return client.sign_up_settings.create(resource_group, name, body)
 
 
 def update_apimgmt(cmd, client,
@@ -1937,19 +1937,19 @@ def update_apimgmt(cmd, client,
                    terms_of_service=None,
                    id=None,
                    type=None):
-    return client.sign_up_settings.update()
+    return client.sign_up_settings.update(resource_group, name, body)
 
 
 def show_apimgmt(cmd, client,
                  resource_group,
                  name):
-    return client.sign_up_settings.show()
+    return client.sign_up_settings.show(resource_group, name)
 
 
 def show_apimgmt(cmd, client,
                  resource_group,
                  name):
-    return client.sign_up_settings.show()
+    return client.sign_up_settings.show(resource_group, name)
 
 
 def create_apimgmt(cmd, client,
@@ -1962,7 +1962,7 @@ def create_apimgmt(cmd, client,
                    user_registration=None,
                    id=None,
                    type=None):
-    return client.delegation_settings.create()
+    return client.delegation_settings.create(resource_group, name, body)
 
 
 def update_apimgmt(cmd, client,
@@ -1975,19 +1975,19 @@ def update_apimgmt(cmd, client,
                    user_registration=None,
                    id=None,
                    type=None):
-    return client.delegation_settings.update()
+    return client.delegation_settings.update(resource_group, name, body)
 
 
 def show_apimgmt(cmd, client,
                  resource_group,
                  name):
-    return client.delegation_settings.show()
+    return client.delegation_settings.show(resource_group, name)
 
 
 def show_apimgmt(cmd, client,
                  resource_group,
                  name):
-    return client.delegation_settings.show()
+    return client.delegation_settings.show(resource_group, name)
 
 
 def create_apimgmt_product(cmd, client,
@@ -2004,7 +2004,7 @@ def create_apimgmt_product(cmd, client,
                            display_name=None,
                            id=None,
                            type=None):
-    return client.product.create()
+    return client.product.create(resource_group, name, product_id, body)
 
 
 def update_apimgmt_product(cmd, client,
@@ -2021,42 +2021,42 @@ def update_apimgmt_product(cmd, client,
                            display_name=None,
                            id=None,
                            type=None):
-    return client.product.update()
+    return client.product.update(resource_group, name, product_id, body)
 
 
 def delete_apimgmt_product(cmd, client,
                            resource_group,
                            name,
                            product_id):
-    return client.product.delete()
+    return client.product.delete(resource_group, name, product_id, If-Match)
 
 
 def list_apimgmt_product(cmd, client,
                          resource_group,
                          name,
                          product_id):
-    return client.product.list()
+    return client.product.list(resource_group, name, product_id)
 
 
 def show_apimgmt_product(cmd, client,
                          resource_group,
                          name,
                          product_id):
-    return client.product.show()
+    return client.product.show(resource_group, name, product_id)
 
 
 def show_apimgmt_product(cmd, client,
                          resource_group,
                          name,
                          product_id):
-    return client.product.show()
+    return client.product.show(resource_group, name, product_id)
 
 
 def list_apimgmt_product(cmd, client,
                          resource_group,
                          name,
                          product_id):
-    return client.product.list()
+    return client.product.list(resource_group, name, product_id)
 
 
 def create_apimgmt_product_api(cmd, client,
@@ -2084,7 +2084,7 @@ def create_apimgmt_product_api(cmd, client,
                                path=None,
                                protocols=None,
                                api_version_set=None):
-    return client.product_api.create()
+    return client.product_api.create(resource_group, name, product_id, api_id)
 
 
 def delete_apimgmt_product_api(cmd, client,
@@ -2092,7 +2092,7 @@ def delete_apimgmt_product_api(cmd, client,
                                name,
                                product_id,
                                api_id):
-    return client.product_api.delete()
+    return client.product_api.delete(resource_group, name, product_id, api_id)
 
 
 def list_apimgmt_product_api(cmd, client,
@@ -2122,7 +2122,7 @@ def create_apimgmt_product_group(cmd, client,
                                  description=None,
                                  built_in=None,
                                  external_id=None):
-    return client.product_group.create()
+    return client.product_group.create(resource_group, name, product_id, group_id)
 
 
 def delete_apimgmt_product_group(cmd, client,
@@ -2130,7 +2130,7 @@ def delete_apimgmt_product_group(cmd, client,
                                  name,
                                  product_id,
                                  group_id):
-    return client.product_group.delete()
+    return client.product_group.delete(resource_group, name, product_id, group_id)
 
 
 def list_apimgmt_product_group(cmd, client,
@@ -2165,7 +2165,7 @@ def create_apimgmt_product_policy(cmd, client,
                                   format=None,
                                   id=None,
                                   type=None):
-    return client.product_policy.create()
+    return client.product_policy.create(resource_group, name, product_id, policy_id, body)
 
 
 def delete_apimgmt_product_policy(cmd, client,
@@ -2173,7 +2173,7 @@ def delete_apimgmt_product_policy(cmd, client,
                                   name,
                                   product_id,
                                   policy_id):
-    return client.product_policy.delete()
+    return client.product_policy.delete(resource_group, name, product_id, policy_id, If-Match)
 
 
 def list_apimgmt_product_policy(cmd, client,
@@ -2181,7 +2181,7 @@ def list_apimgmt_product_policy(cmd, client,
                                 name,
                                 product_id,
                                 policy_id):
-    return client.product_policy.list()
+    return client.product_policy.list(resource_group, name, product_id, policy_id)
 
 
 def show_apimgmt_product_policy(cmd, client,
@@ -2189,7 +2189,7 @@ def show_apimgmt_product_policy(cmd, client,
                                 name,
                                 product_id,
                                 policy_id):
-    return client.product_policy.show()
+    return client.product_policy.show(resource_group, name, product_id, policy_id)
 
 
 def show_apimgmt_product_policy(cmd, client,
@@ -2197,7 +2197,7 @@ def show_apimgmt_product_policy(cmd, client,
                                 name,
                                 product_id,
                                 policy_id):
-    return client.product_policy.show()
+    return client.product_policy.show(resource_group, name, product_id, policy_id)
 
 
 def list_apimgmt_product_policy(cmd, client,
@@ -2205,7 +2205,7 @@ def list_apimgmt_product_policy(cmd, client,
                                 name,
                                 product_id,
                                 policy_id):
-    return client.product_policy.list()
+    return client.product_policy.list(resource_group, name, product_id, policy_id)
 
 
 def create_apimgmt_property(cmd, client,
@@ -2219,7 +2219,7 @@ def create_apimgmt_property(cmd, client,
                             value=None,
                             id=None,
                             type=None):
-    return client.property.create()
+    return client.property.create(resource_group, name, prop_id, body)
 
 
 def update_apimgmt_property(cmd, client,
@@ -2233,42 +2233,42 @@ def update_apimgmt_property(cmd, client,
                             value=None,
                             id=None,
                             type=None):
-    return client.property.update()
+    return client.property.update(resource_group, name, prop_id, body)
 
 
 def delete_apimgmt_property(cmd, client,
                             resource_group,
                             name,
                             prop_id):
-    return client.property.delete()
+    return client.property.delete(resource_group, name, prop_id, If-Match)
 
 
 def list_apimgmt_property(cmd, client,
                           resource_group,
                           name,
                           prop_id):
-    return client.property.list()
+    return client.property.list(resource_group, name, prop_id)
 
 
 def show_apimgmt_property(cmd, client,
                           resource_group,
                           name,
                           prop_id):
-    return client.property.show()
+    return client.property.show(resource_group, name, prop_id)
 
 
 def show_apimgmt_property(cmd, client,
                           resource_group,
                           name,
                           prop_id):
-    return client.property.show()
+    return client.property.show(resource_group, name, prop_id)
 
 
 def list_apimgmt_property(cmd, client,
                           resource_group,
                           name,
                           prop_id):
-    return client.property.list()
+    return client.property.list(resource_group, name, prop_id)
 
 
 def list_apimgmt_quota(cmd, client,
@@ -2283,7 +2283,7 @@ def show_apimgmt_quota_period(cmd, client,
                               name,
                               quota_counter_key,
                               quota_period_key):
-    return client.quota_by_period_keys.show()
+    return client.quota_by_period_keys.show(resource_group, name, quota_counter_key, quota_period_key)
 
 
 def list_apimgmt(cmd, client,
@@ -2319,7 +2319,7 @@ def create_apimgmt_subscription(cmd, client,
                                 notify=None,
                                 id=None,
                                 type=None):
-    return client.subscription.create()
+    return client.subscription.create(resource_group, name, sid, body)
 
 
 def update_apimgmt_subscription(cmd, client,
@@ -2343,42 +2343,42 @@ def update_apimgmt_subscription(cmd, client,
                                 notify=None,
                                 id=None,
                                 type=None):
-    return client.subscription.update()
+    return client.subscription.update(resource_group, name, sid, body)
 
 
 def delete_apimgmt_subscription(cmd, client,
                                 resource_group,
                                 name,
                                 sid):
-    return client.subscription.delete()
+    return client.subscription.delete(resource_group, name, sid, If-Match)
 
 
 def list_apimgmt_subscription(cmd, client,
                               resource_group,
                               name,
                               sid):
-    return client.subscription.list()
+    return client.subscription.list(resource_group, name, sid)
 
 
 def show_apimgmt_subscription(cmd, client,
                               resource_group,
                               name,
                               sid):
-    return client.subscription.show()
+    return client.subscription.show(resource_group, name, sid)
 
 
 def list_apimgmt_subscription(cmd, client,
                               resource_group,
                               name,
                               sid):
-    return client.subscription.list()
+    return client.subscription.list(resource_group, name, sid)
 
 
 def show_apimgmt_subscription(cmd, client,
                               resource_group,
                               name,
                               sid):
-    return client.subscription.show()
+    return client.subscription.show(resource_group, name, sid)
 
 
 def list_apimgmt(cmd, client,
@@ -2391,14 +2391,14 @@ def show_apimgmt_tenant(cmd, client,
                         resource_group,
                         service_name,
                         name):
-    return client.tenant_access.show()
+    return client.tenant_access.show(resource_group, service_name, name)
 
 
 def show_apimgmt_tenant(cmd, client,
                         resource_group,
                         service_name,
                         name):
-    return client.tenant_access_git.show()
+    return client.tenant_access_git.show(resource_group, service_name, name)
 
 
 def create_apimgmt_user(cmd, client,
@@ -2418,7 +2418,7 @@ def create_apimgmt_user(cmd, client,
                         groups=None,
                         id=None,
                         type=None):
-    return client.user.create()
+    return client.user.create(resource_group, name, user_id, body)
 
 
 def update_apimgmt_user(cmd, client,
@@ -2438,42 +2438,42 @@ def update_apimgmt_user(cmd, client,
                         groups=None,
                         id=None,
                         type=None):
-    return client.user.update()
+    return client.user.update(resource_group, name, user_id, body)
 
 
 def delete_apimgmt_user(cmd, client,
                         resource_group,
                         name,
                         user_id):
-    return client.user.delete()
+    return client.user.delete(resource_group, name, user_id, If-Match)
 
 
 def list_apimgmt_user(cmd, client,
                       resource_group,
                       name,
                       user_id):
-    return client.user.list()
+    return client.user.list(resource_group, name, user_id)
 
 
 def show_apimgmt_user(cmd, client,
                       resource_group,
                       name,
                       user_id):
-    return client.user.show()
+    return client.user.show(resource_group, name, user_id)
 
 
 def show_apimgmt_user(cmd, client,
                       resource_group,
                       name,
                       user_id):
-    return client.user.show()
+    return client.user.show(resource_group, name, user_id)
 
 
 def list_apimgmt_user(cmd, client,
                       resource_group,
                       name,
                       user_id):
-    return client.user.list()
+    return client.user.list(resource_group, name, user_id)
 
 
 def list_apimgmt_user(cmd, client,
@@ -2501,4 +2501,4 @@ def show_apimgmt_api(cmd, client,
                      resource_group,
                      name,
                      api_id):
-    return client.api_export.show()
+    return client.api_export.show(resource_group, name, api_id, format, export)

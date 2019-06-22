@@ -24,7 +24,7 @@ def create_servicebus(cmd, client,
                       metric_id=None,
                       id=None,
                       type=None):
-    return client.namespaces.create()
+    return client.namespaces.create(resource_group, name, body)
 
 
 def update_servicebus(cmd, client,
@@ -41,39 +41,39 @@ def update_servicebus(cmd, client,
                       metric_id=None,
                       id=None,
                       type=None):
-    return client.namespaces.update()
+    return client.namespaces.update(resource_group, name, body)
 
 
 def delete_servicebus(cmd, client,
                       resource_group,
                       name):
-    return client.namespaces.delete()
+    return client.namespaces.delete(resource_group, name)
 
 
 def list_servicebus(cmd, client,
                     resource_group,
                     name):
-    return client.namespaces.list()
+    return client.namespaces.list(resource_group, name)
 
 
 def show_servicebus(cmd, client,
                     resource_group,
                     name):
-    return client.namespaces.show()
+    return client.namespaces.show(resource_group, name)
 
 
 def list_servicebus_authorizationrule(cmd, client,
                                       resource_group,
                                       namespace_name,
                                       name):
-    return client.namespaces.list()
+    return client.namespaces.list(resource_group, namespace_name)
 
 
 def show_servicebus_authorizationrule(cmd, client,
                                       resource_group,
                                       namespace_name,
                                       name):
-    return client.namespaces.show()
+    return client.namespaces.show(resource_group, namespace_name)
 
 
 def create_servicebus_disasterrecoveryconfig(cmd, client,
@@ -88,28 +88,28 @@ def create_servicebus_disasterrecoveryconfig(cmd, client,
                                              role=None,
                                              id=None,
                                              type=None):
-    return client.disaster_recovery_configs.create()
+    return client.disaster_recovery_configs.create(resource_group, name, alias, body)
 
 
 def delete_servicebus_disasterrecoveryconfig(cmd, client,
                                              resource_group,
                                              name,
                                              alias):
-    return client.disaster_recovery_configs.delete()
+    return client.disaster_recovery_configs.delete(resource_group, name, alias)
 
 
 def list_servicebus_disasterrecoveryconfig(cmd, client,
                                            resource_group,
                                            name,
                                            alias):
-    return client.disaster_recovery_configs.list()
+    return client.disaster_recovery_configs.list(resource_group, name, alias)
 
 
 def show_servicebus_disasterrecoveryconfig(cmd, client,
                                            resource_group,
                                            name,
                                            alias):
-    return client.disaster_recovery_configs.show()
+    return client.disaster_recovery_configs.show(resource_group, name, alias)
 
 
 def list_servicebus_disasterrecoveryconfig_authorizationrule(cmd, client,
@@ -117,7 +117,7 @@ def list_servicebus_disasterrecoveryconfig_authorizationrule(cmd, client,
                                                              namespace_name,
                                                              alias,
                                                              name):
-    return client.disaster_recovery_configs.list()
+    return client.disaster_recovery_configs.list(resource_group, namespace_name, alias)
 
 
 def show_servicebus_disasterrecoveryconfig_authorizationrule(cmd, client,
@@ -125,21 +125,21 @@ def show_servicebus_disasterrecoveryconfig_authorizationrule(cmd, client,
                                                              namespace_name,
                                                              alias,
                                                              name):
-    return client.disaster_recovery_configs.show()
+    return client.disaster_recovery_configs.show(resource_group, namespace_name, alias)
 
 
 def show_servicebus_migrationconfiguration(cmd, client,
                                            resource_group,
                                            namespace_name,
                                            name):
-    return client.migration_configs.show()
+    return client.migration_configs.show(resource_group, namespace_name, name)
 
 
 def list_servicebus_migrationconfiguration(cmd, client,
                                            resource_group,
                                            namespace_name,
                                            name):
-    return client.migration_configs.list()
+    return client.migration_configs.list(resource_group, namespace_name, name)
 
 
 def create_servicebus_queue(cmd, client,
@@ -170,28 +170,28 @@ def create_servicebus_queue(cmd, client,
                             message_count=None,
                             id=None,
                             type=None):
-    return client.queues.create()
+    return client.queues.create(resource_group, namespace_name, name, body)
 
 
 def delete_servicebus_queue(cmd, client,
                             resource_group,
                             namespace_name,
                             name):
-    return client.queues.delete()
+    return client.queues.delete(resource_group, namespace_name, name)
 
 
 def list_servicebus_queue(cmd, client,
                           resource_group,
                           namespace_name,
                           name):
-    return client.queues.list()
+    return client.queues.list(resource_group, namespace_name, name)
 
 
 def show_servicebus_queue(cmd, client,
                           resource_group,
                           namespace_name,
                           name):
-    return client.queues.show()
+    return client.queues.show(resource_group, namespace_name, name)
 
 
 def list_servicebus_queue_authorizationrule(cmd, client,
@@ -199,7 +199,7 @@ def list_servicebus_queue_authorizationrule(cmd, client,
                                             namespace_name,
                                             queue_name,
                                             name):
-    return client.queues.list()
+    return client.queues.list(resource_group, namespace_name, queue_name)
 
 
 def show_servicebus_queue_authorizationrule(cmd, client,
@@ -207,7 +207,7 @@ def show_servicebus_queue_authorizationrule(cmd, client,
                                             namespace_name,
                                             queue_name,
                                             name):
-    return client.queues.show()
+    return client.queues.show(resource_group, namespace_name, queue_name)
 
 
 def create_servicebus_topic(cmd, client,
@@ -233,28 +233,28 @@ def create_servicebus_topic(cmd, client,
                             count_details=None,
                             id=None,
                             type=None):
-    return client.topics.create()
+    return client.topics.create(resource_group, namespace_name, name, body)
 
 
 def delete_servicebus_topic(cmd, client,
                             resource_group,
                             namespace_name,
                             name):
-    return client.topics.delete()
+    return client.topics.delete(resource_group, namespace_name, name)
 
 
 def list_servicebus_topic(cmd, client,
                           resource_group,
                           namespace_name,
                           name):
-    return client.topics.list()
+    return client.topics.list(resource_group, namespace_name, name)
 
 
 def show_servicebus_topic(cmd, client,
                           resource_group,
                           namespace_name,
                           name):
-    return client.topics.show()
+    return client.topics.show(resource_group, namespace_name, name)
 
 
 def list_servicebus_topic_authorizationrule(cmd, client,
@@ -262,7 +262,7 @@ def list_servicebus_topic_authorizationrule(cmd, client,
                                             namespace_name,
                                             topic_name,
                                             name):
-    return client.topics.list()
+    return client.topics.list(resource_group, namespace_name, topic_name)
 
 
 def show_servicebus_topic_authorizationrule(cmd, client,
@@ -270,7 +270,7 @@ def show_servicebus_topic_authorizationrule(cmd, client,
                                             namespace_name,
                                             topic_name,
                                             name):
-    return client.topics.show()
+    return client.topics.show(resource_group, namespace_name, topic_name)
 
 
 def create_servicebus_topic_subscription(cmd, client,
@@ -298,7 +298,7 @@ def create_servicebus_topic_subscription(cmd, client,
                                          count_details=None,
                                          id=None,
                                          type=None):
-    return client.subscriptions.create()
+    return client.subscriptions.create(resource_group, namespace_name, topic_name, name, body)
 
 
 def delete_servicebus_topic_subscription(cmd, client,
@@ -306,7 +306,7 @@ def delete_servicebus_topic_subscription(cmd, client,
                                          namespace_name,
                                          topic_name,
                                          name):
-    return client.subscriptions.delete()
+    return client.subscriptions.delete(resource_group, namespace_name, topic_name, name)
 
 
 def list_servicebus_topic_subscription(cmd, client,
@@ -314,7 +314,7 @@ def list_servicebus_topic_subscription(cmd, client,
                                        namespace_name,
                                        topic_name,
                                        name):
-    return client.subscriptions.list()
+    return client.subscriptions.list(resource_group, namespace_name, topic_name, name)
 
 
 def show_servicebus_topic_subscription(cmd, client,
@@ -322,7 +322,7 @@ def show_servicebus_topic_subscription(cmd, client,
                                        namespace_name,
                                        topic_name,
                                        name):
-    return client.subscriptions.show()
+    return client.subscriptions.show(resource_group, namespace_name, topic_name, name)
 
 
 def list_servicebus_topic_subscription(cmd, client,
@@ -330,7 +330,7 @@ def list_servicebus_topic_subscription(cmd, client,
                                        namespace_name,
                                        topic_name,
                                        name):
-    return client.subscriptions.list()
+    return client.subscriptions.list(resource_group, namespace_name, topic_name, name)
 
 
 def show_servicebus_topic_subscription(cmd, client,
@@ -338,7 +338,7 @@ def show_servicebus_topic_subscription(cmd, client,
                                        namespace_name,
                                        topic_name,
                                        name):
-    return client.subscriptions.show()
+    return client.subscriptions.show(resource_group, namespace_name, topic_name, name)
 
 
 def create_servicebus_topic_subscription_rule(cmd, client,
@@ -354,7 +354,7 @@ def create_servicebus_topic_subscription_rule(cmd, client,
                                               correlation_filter=None,
                                               id=None,
                                               type=None):
-    return client.rules.create()
+    return client.rules.create(resource_group, namespace_name, topic_name, subscription_name, name, body)
 
 
 def delete_servicebus_topic_subscription_rule(cmd, client,
@@ -363,7 +363,7 @@ def delete_servicebus_topic_subscription_rule(cmd, client,
                                               topic_name,
                                               subscription_name,
                                               name):
-    return client.rules.delete()
+    return client.rules.delete(resource_group, namespace_name, topic_name, subscription_name, name)
 
 
 def list_servicebus_topic_subscription_rule(cmd, client,
@@ -372,7 +372,7 @@ def list_servicebus_topic_subscription_rule(cmd, client,
                                             topic_name,
                                             subscription_name,
                                             name):
-    return client.rules.list()
+    return client.rules.list(resource_group, namespace_name, topic_name, subscription_name, name)
 
 
 def show_servicebus_topic_subscription_rule(cmd, client,
@@ -381,7 +381,7 @@ def show_servicebus_topic_subscription_rule(cmd, client,
                                             topic_name,
                                             subscription_name,
                                             name):
-    return client.rules.show()
+    return client.rules.show(resource_group, namespace_name, topic_name, subscription_name, name)
 
 
 def show_servicebus_topic_subscription_rule(cmd, client,
@@ -390,7 +390,7 @@ def show_servicebus_topic_subscription_rule(cmd, client,
                                             topic_name,
                                             subscription_name,
                                             name):
-    return client.rules.show()
+    return client.rules.show(resource_group, namespace_name, topic_name, subscription_name, name)
 
 
 def list_servicebus_topic_subscription_rule(cmd, client,
@@ -399,7 +399,7 @@ def list_servicebus_topic_subscription_rule(cmd, client,
                                             topic_name,
                                             subscription_name,
                                             name):
-    return client.rules.list()
+    return client.rules.list(resource_group, namespace_name, topic_name, subscription_name, name)
 
 
 def list_servicebus(cmd, client,
