@@ -7,6 +7,7 @@ from knack.util import CLIError
 
 
 def list_(cmd, client):
+    body={}
     return client.operations.list()
 
 
@@ -24,7 +25,17 @@ def create_servicebus(cmd, client,
                       metric_id=None,
                       id=None,
                       type=None):
-    return client.namespaces.create(resource_group, name, body)
+    body={}
+    body['location'] = location
+    body['tags'] = tags
+    body['sku'] = sku
+    body['properties'] = properties
+    body['provisioning_state'] = provisioning_state
+    body['created_at'] = created_at
+    body['updated_at'] = updated_at
+    body['service_bus_endpoint'] = service_bus_endpoint
+    body['metric_id'] = metric_id
+    return client.namespaces.create_or_update(resource_group_name=resource_group, namespace_name=name, parameters=body)
 
 
 def update_servicebus(cmd, client,
@@ -41,39 +52,54 @@ def update_servicebus(cmd, client,
                       metric_id=None,
                       id=None,
                       type=None):
-    return client.namespaces.update(resource_group, name, body)
+    body={}
+    body['location'] = location
+    body['tags'] = tags
+    body['sku'] = sku
+    body['properties'] = properties
+    body['provisioning_state'] = provisioning_state
+    body['created_at'] = created_at
+    body['updated_at'] = updated_at
+    body['service_bus_endpoint'] = service_bus_endpoint
+    body['metric_id'] = metric_id
+    return client.namespaces.create_or_update(resource_group_name=resource_group, namespace_name=name, parameters=body)
 
 
 def delete_servicebus(cmd, client,
                       resource_group,
                       name):
-    return client.namespaces.delete(resource_group, name)
+    body={}
+    return client.namespaces.delete(resource_group_name=resource_group, namespace_name=name)
 
 
 def list_servicebus(cmd, client,
                     resource_group,
                     name):
-    return client.namespaces.list(resource_group, name)
+    body={}
+    return client.namespaces.list(resource_group_name=resource_group, namespace_name=name)
 
 
 def show_servicebus(cmd, client,
                     resource_group,
                     name):
-    return client.namespaces.show(resource_group, name)
+    body={}
+    return client.namespaces.get(resource_group_name=resource_group, namespace_name=name)
 
 
 def list_servicebus_authorizationrule(cmd, client,
                                       resource_group,
                                       namespace_name,
                                       name):
-    return client.namespaces.list(resource_group, namespace_name)
+    body={}
+    return client.namespaces.list_authorization_rules(resource_group_name=resource_group, namespace_name=namespace_name)
 
 
 def show_servicebus_authorizationrule(cmd, client,
                                       resource_group,
                                       namespace_name,
                                       name):
-    return client.namespaces.show(resource_group, namespace_name)
+    body={}
+    return client.namespaces.get(resource_group_name=resource_group, namespace_name=namespace_name)
 
 
 def create_servicebus_disasterrecoveryconfig(cmd, client,
@@ -88,28 +114,38 @@ def create_servicebus_disasterrecoveryconfig(cmd, client,
                                              role=None,
                                              id=None,
                                              type=None):
-    return client.disaster_recovery_configs.create(resource_group, name, alias, body)
+    body={}
+    body['properties'] = properties
+    body['partner_namespace'] = partner_namespace
+    body['alternate_name'] = alternate_name
+    body['provisioning_state'] = provisioning_state
+    body['pending_replication_operations_count'] = pending_replication_operations_count
+    body['role'] = role
+    return client.disaster_recovery_configs.create_or_update(resource_group_name=resource_group, namespace_name=name, alias=alias, parameters=body)
 
 
 def delete_servicebus_disasterrecoveryconfig(cmd, client,
                                              resource_group,
                                              name,
                                              alias):
-    return client.disaster_recovery_configs.delete(resource_group, name, alias)
+    body={}
+    return client.disaster_recovery_configs.delete(resource_group_name=resource_group, namespace_name=name, alias=alias)
 
 
 def list_servicebus_disasterrecoveryconfig(cmd, client,
                                            resource_group,
                                            name,
                                            alias):
-    return client.disaster_recovery_configs.list(resource_group, name, alias)
+    body={}
+    return client.disaster_recovery_configs.list(resource_group_name=resource_group, namespace_name=name, alias=alias)
 
 
 def show_servicebus_disasterrecoveryconfig(cmd, client,
                                            resource_group,
                                            name,
                                            alias):
-    return client.disaster_recovery_configs.show(resource_group, name, alias)
+    body={}
+    return client.disaster_recovery_configs.get(resource_group_name=resource_group, namespace_name=name, alias=alias)
 
 
 def list_servicebus_disasterrecoveryconfig_authorizationrule(cmd, client,
@@ -117,7 +153,8 @@ def list_servicebus_disasterrecoveryconfig_authorizationrule(cmd, client,
                                                              namespace_name,
                                                              alias,
                                                              name):
-    return client.disaster_recovery_configs.list(resource_group, namespace_name, alias)
+    body={}
+    return client.disaster_recovery_configs.list_authorization_rules(resource_group_name=resource_group, namespace_name=namespace_name, alias=alias)
 
 
 def show_servicebus_disasterrecoveryconfig_authorizationrule(cmd, client,
@@ -125,21 +162,24 @@ def show_servicebus_disasterrecoveryconfig_authorizationrule(cmd, client,
                                                              namespace_name,
                                                              alias,
                                                              name):
-    return client.disaster_recovery_configs.show(resource_group, namespace_name, alias)
+    body={}
+    return client.disaster_recovery_configs.get(resource_group_name=resource_group, namespace_name=namespace_name, alias=alias)
 
 
 def show_servicebus_migrationconfiguration(cmd, client,
                                            resource_group,
                                            namespace_name,
                                            name):
-    return client.migration_configs.show(resource_group, namespace_name, name)
+    body={}
+    return client.migration_configs.get(resource_group_name=resource_group, namespace_name=namespace_name, config_name=name)
 
 
 def list_servicebus_migrationconfiguration(cmd, client,
                                            resource_group,
                                            namespace_name,
                                            name):
-    return client.migration_configs.list(resource_group, namespace_name, name)
+    body={}
+    return client.migration_configs.list(resource_group_name=resource_group, namespace_name=namespace_name, config_name=name)
 
 
 def create_servicebus_queue(cmd, client,
@@ -170,28 +210,54 @@ def create_servicebus_queue(cmd, client,
                             message_count=None,
                             id=None,
                             type=None):
-    return client.queues.create(resource_group, namespace_name, name, body)
+    body={}
+    body['properties'] = properties
+    body['lock_duration'] = lock_duration
+    body['max_size_in_megabytes'] = max_size_in_megabytes
+    body['requires_duplicate_detection'] = requires_duplicate_detection
+    body['requires_session'] = requires_session
+    body['default_message_time_to_live'] = default_message_time_to_live
+    body['dead_lettering_on_message_expiration'] = dead_lettering_on_message_expiration
+    body['duplicate_detection_history_time_window'] = duplicate_detection_history_time_window
+    body['max_delivery_count'] = max_delivery_count
+    body['status'] = status
+    body['enable_batched_operations'] = enable_batched_operations
+    body['auto_delete_on_idle'] = auto_delete_on_idle
+    body['enable_partitioning'] = enable_partitioning
+    body['enable_express'] = enable_express
+    body['forward_to'] = forward_to
+    body['forward_dead_lettered_messages_to'] = forward_dead_lettered_messages_to
+    body['count_details'] = count_details
+    body['created_at'] = created_at
+    body['updated_at'] = updated_at
+    body['accessed_at'] = accessed_at
+    body['size_in_bytes'] = size_in_bytes
+    body['message_count'] = message_count
+    return client.queues.create_or_update(resource_group_name=resource_group, namespace_name=namespace_name, queue_name=name, parameters=body)
 
 
 def delete_servicebus_queue(cmd, client,
                             resource_group,
                             namespace_name,
                             name):
-    return client.queues.delete(resource_group, namespace_name, name)
+    body={}
+    return client.queues.delete(resource_group_name=resource_group, namespace_name=namespace_name, queue_name=name)
 
 
 def list_servicebus_queue(cmd, client,
                           resource_group,
                           namespace_name,
                           name):
-    return client.queues.list(resource_group, namespace_name, name)
+    body={}
+    return client.queues.list_by_namespace(resource_group_name=resource_group, namespace_name=namespace_name, queue_name=name)
 
 
 def show_servicebus_queue(cmd, client,
                           resource_group,
                           namespace_name,
                           name):
-    return client.queues.show(resource_group, namespace_name, name)
+    body={}
+    return client.queues.get(resource_group_name=resource_group, namespace_name=namespace_name, queue_name=name)
 
 
 def list_servicebus_queue_authorizationrule(cmd, client,
@@ -199,7 +265,8 @@ def list_servicebus_queue_authorizationrule(cmd, client,
                                             namespace_name,
                                             queue_name,
                                             name):
-    return client.queues.list(resource_group, namespace_name, queue_name)
+    body={}
+    return client.queues.list_authorization_rules(resource_group_name=resource_group, namespace_name=namespace_name, queue_name=queue_name)
 
 
 def show_servicebus_queue_authorizationrule(cmd, client,
@@ -207,7 +274,8 @@ def show_servicebus_queue_authorizationrule(cmd, client,
                                             namespace_name,
                                             queue_name,
                                             name):
-    return client.queues.show(resource_group, namespace_name, queue_name)
+    body={}
+    return client.queues.get(resource_group_name=resource_group, namespace_name=namespace_name, queue_name=queue_name)
 
 
 def create_servicebus_topic(cmd, client,
@@ -233,28 +301,49 @@ def create_servicebus_topic(cmd, client,
                             count_details=None,
                             id=None,
                             type=None):
-    return client.topics.create(resource_group, namespace_name, name, body)
+    body={}
+    body['properties'] = properties
+    body['default_message_time_to_live'] = default_message_time_to_live
+    body['max_size_in_megabytes'] = max_size_in_megabytes
+    body['requires_duplicate_detection'] = requires_duplicate_detection
+    body['duplicate_detection_history_time_window'] = duplicate_detection_history_time_window
+    body['enable_batched_operations'] = enable_batched_operations
+    body['status'] = status
+    body['support_ordering'] = support_ordering
+    body['auto_delete_on_idle'] = auto_delete_on_idle
+    body['enable_partitioning'] = enable_partitioning
+    body['enable_express'] = enable_express
+    body['size_in_bytes'] = size_in_bytes
+    body['created_at'] = created_at
+    body['updated_at'] = updated_at
+    body['accessed_at'] = accessed_at
+    body['subscription_count'] = subscription_count
+    body['count_details'] = count_details
+    return client.topics.create_or_update(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=name, parameters=body)
 
 
 def delete_servicebus_topic(cmd, client,
                             resource_group,
                             namespace_name,
                             name):
-    return client.topics.delete(resource_group, namespace_name, name)
+    body={}
+    return client.topics.delete(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=name)
 
 
 def list_servicebus_topic(cmd, client,
                           resource_group,
                           namespace_name,
                           name):
-    return client.topics.list(resource_group, namespace_name, name)
+    body={}
+    return client.topics.list_by_namespace(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=name)
 
 
 def show_servicebus_topic(cmd, client,
                           resource_group,
                           namespace_name,
                           name):
-    return client.topics.show(resource_group, namespace_name, name)
+    body={}
+    return client.topics.get(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=name)
 
 
 def list_servicebus_topic_authorizationrule(cmd, client,
@@ -262,7 +351,8 @@ def list_servicebus_topic_authorizationrule(cmd, client,
                                             namespace_name,
                                             topic_name,
                                             name):
-    return client.topics.list(resource_group, namespace_name, topic_name)
+    body={}
+    return client.topics.list_authorization_rules(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name)
 
 
 def show_servicebus_topic_authorizationrule(cmd, client,
@@ -270,7 +360,8 @@ def show_servicebus_topic_authorizationrule(cmd, client,
                                             namespace_name,
                                             topic_name,
                                             name):
-    return client.topics.show(resource_group, namespace_name, topic_name)
+    body={}
+    return client.topics.get(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name)
 
 
 def create_servicebus_topic_subscription(cmd, client,
@@ -298,7 +389,26 @@ def create_servicebus_topic_subscription(cmd, client,
                                          count_details=None,
                                          id=None,
                                          type=None):
-    return client.subscriptions.create(resource_group, namespace_name, topic_name, name, body)
+    body={}
+    body['properties'] = properties
+    body['lock_duration'] = lock_duration
+    body['requires_session'] = requires_session
+    body['default_message_time_to_live'] = default_message_time_to_live
+    body['dead_lettering_on_filter_evaluation_exceptions'] = dead_lettering_on_filter_evaluation_exceptions
+    body['dead_lettering_on_message_expiration'] = dead_lettering_on_message_expiration
+    body['duplicate_detection_history_time_window'] = duplicate_detection_history_time_window
+    body['max_delivery_count'] = max_delivery_count
+    body['status'] = status
+    body['enable_batched_operations'] = enable_batched_operations
+    body['auto_delete_on_idle'] = auto_delete_on_idle
+    body['forward_to'] = forward_to
+    body['forward_dead_lettered_messages_to'] = forward_dead_lettered_messages_to
+    body['message_count'] = message_count
+    body['created_at'] = created_at
+    body['accessed_at'] = accessed_at
+    body['updated_at'] = updated_at
+    body['count_details'] = count_details
+    return client.subscriptions.create_or_update(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=name, parameters=body)
 
 
 def delete_servicebus_topic_subscription(cmd, client,
@@ -306,7 +416,8 @@ def delete_servicebus_topic_subscription(cmd, client,
                                          namespace_name,
                                          topic_name,
                                          name):
-    return client.subscriptions.delete(resource_group, namespace_name, topic_name, name)
+    body={}
+    return client.subscriptions.delete(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=name)
 
 
 def list_servicebus_topic_subscription(cmd, client,
@@ -314,7 +425,8 @@ def list_servicebus_topic_subscription(cmd, client,
                                        namespace_name,
                                        topic_name,
                                        name):
-    return client.subscriptions.list(resource_group, namespace_name, topic_name, name)
+    body={}
+    return client.subscriptions.list_by_topic(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=name)
 
 
 def show_servicebus_topic_subscription(cmd, client,
@@ -322,7 +434,8 @@ def show_servicebus_topic_subscription(cmd, client,
                                        namespace_name,
                                        topic_name,
                                        name):
-    return client.subscriptions.show(resource_group, namespace_name, topic_name, name)
+    body={}
+    return client.subscriptions.get(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=name)
 
 
 def list_servicebus_topic_subscription(cmd, client,
@@ -330,7 +443,8 @@ def list_servicebus_topic_subscription(cmd, client,
                                        namespace_name,
                                        topic_name,
                                        name):
-    return client.subscriptions.list(resource_group, namespace_name, topic_name, name)
+    body={}
+    return client.subscriptions.list_by_topic(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=name)
 
 
 def show_servicebus_topic_subscription(cmd, client,
@@ -338,7 +452,8 @@ def show_servicebus_topic_subscription(cmd, client,
                                        namespace_name,
                                        topic_name,
                                        name):
-    return client.subscriptions.show(resource_group, namespace_name, topic_name, name)
+    body={}
+    return client.subscriptions.get(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=name)
 
 
 def create_servicebus_topic_subscription_rule(cmd, client,
@@ -354,7 +469,13 @@ def create_servicebus_topic_subscription_rule(cmd, client,
                                               correlation_filter=None,
                                               id=None,
                                               type=None):
-    return client.rules.create(resource_group, namespace_name, topic_name, subscription_name, name, body)
+    body={}
+    body['properties'] = properties
+    body['action'] = action
+    body['filter_type'] = filter_type
+    body['sql_filter'] = sql_filter
+    body['correlation_filter'] = correlation_filter
+    return client.rules.create_or_update(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=subscription_name, rule_name=name, parameters=body)
 
 
 def delete_servicebus_topic_subscription_rule(cmd, client,
@@ -363,7 +484,8 @@ def delete_servicebus_topic_subscription_rule(cmd, client,
                                               topic_name,
                                               subscription_name,
                                               name):
-    return client.rules.delete(resource_group, namespace_name, topic_name, subscription_name, name)
+    body={}
+    return client.rules.delete(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=subscription_name, rule_name=name)
 
 
 def list_servicebus_topic_subscription_rule(cmd, client,
@@ -372,7 +494,8 @@ def list_servicebus_topic_subscription_rule(cmd, client,
                                             topic_name,
                                             subscription_name,
                                             name):
-    return client.rules.list(resource_group, namespace_name, topic_name, subscription_name, name)
+    body={}
+    return client.rules.list_by_subscriptions(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=subscription_name, rule_name=name)
 
 
 def show_servicebus_topic_subscription_rule(cmd, client,
@@ -381,7 +504,8 @@ def show_servicebus_topic_subscription_rule(cmd, client,
                                             topic_name,
                                             subscription_name,
                                             name):
-    return client.rules.show(resource_group, namespace_name, topic_name, subscription_name, name)
+    body={}
+    return client.rules.get(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=subscription_name, rule_name=name)
 
 
 def show_servicebus_topic_subscription_rule(cmd, client,
@@ -390,7 +514,8 @@ def show_servicebus_topic_subscription_rule(cmd, client,
                                             topic_name,
                                             subscription_name,
                                             name):
-    return client.rules.show(resource_group, namespace_name, topic_name, subscription_name, name)
+    body={}
+    return client.rules.get(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=subscription_name, rule_name=name)
 
 
 def list_servicebus_topic_subscription_rule(cmd, client,
@@ -399,19 +524,23 @@ def list_servicebus_topic_subscription_rule(cmd, client,
                                             topic_name,
                                             subscription_name,
                                             name):
-    return client.rules.list(resource_group, namespace_name, topic_name, subscription_name, name)
+    body={}
+    return client.rules.list_by_subscriptions(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=subscription_name, rule_name=name)
 
 
 def list_servicebus(cmd, client,
                     sku):
-    return client.regions.list()
+    body={}
+    return client.regions.list_by_sku()
 
 
 def list_(cmd, client):
+    body={}
     return client.premium_messaging_regions.list()
 
 
 def list_servicebus(cmd, client,
                     resource_group,
                     name):
-    return client.event_hubs.list()
+    body={}
+    return client.event_hubs.list_by_namespace()

@@ -19,7 +19,16 @@ def create_eventgrid_eventsubscription(cmd, client,
                                        provisioning_state=None,
                                        id=None,
                                        type=None):
-    return client.event_subscriptions.create(scope, name, eventSubscriptionInfo)
+    body={}
+    body['properties'] = properties
+    body['destination'] = destination
+    body['filter'] = filter
+    body['labels'] = labels
+    body['retry_policy'] = retry_policy
+    body['dead_letter_destination'] = dead_letter_destination
+    body['topic'] = topic
+    body['provisioning_state'] = provisioning_state
+    return client.event_subscriptions.create_or_update(scope=scope, event_subscription_name=name, eventSubscriptionInfo=eventSubscriptionInfo)
 
 
 def update_eventgrid_eventsubscription(cmd, client,
@@ -35,22 +44,34 @@ def update_eventgrid_eventsubscription(cmd, client,
                                        provisioning_state=None,
                                        id=None,
                                        type=None):
-    return client.event_subscriptions.update(scope, name, eventSubscriptionInfo)
+    body={}
+    body['properties'] = properties
+    body['destination'] = destination
+    body['filter'] = filter
+    body['labels'] = labels
+    body['retry_policy'] = retry_policy
+    body['dead_letter_destination'] = dead_letter_destination
+    body['topic'] = topic
+    body['provisioning_state'] = provisioning_state
+    return client.event_subscriptions.create_or_update(scope=scope, event_subscription_name=name, eventSubscriptionInfo=eventSubscriptionInfo)
 
 
 def delete_eventgrid_eventsubscription(cmd, client,
                                        name):
-    return client.event_subscriptions.delete(scope, name)
+    body={}
+    return client.event_subscriptions.delete(scope=scope, event_subscription_name=name)
 
 
 def list_eventgrid_eventsubscription(cmd, client,
                                      name):
-    return client.event_subscriptions.list(scope, name)
+    body={}
+    return client.event_subscriptions.list_global_by_subscription(scope=scope, event_subscription_name=name)
 
 
 def show_eventgrid_eventsubscription(cmd, client,
                                      name):
-    return client.event_subscriptions.show(scope, name)
+    body={}
+    return client.event_subscriptions.get(scope=scope, event_subscription_name=name)
 
 
 def list_eventgrid_eventsubscription_location_topictype_provider_{providernamespace}_{resourcetypename}(cmd, client,
@@ -61,7 +82,8 @@ def list_eventgrid_eventsubscription_location_topictype_provider_{providernamesp
                                                                                                         provider_namespace,
                                                                                                         resource_type_name,
                                                                                                         name):
-    return client.event_subscriptions.list(scope, event_subscription_name)
+    body={}
+    return client.event_subscriptions.list_by_resource(scope=scope, event_subscription_name=event_subscription_name)
 
 
 def show_eventgrid_eventsubscription_location_topictype_provider_{providernamespace}_{resourcetypename}(cmd, client,
@@ -72,10 +94,12 @@ def show_eventgrid_eventsubscription_location_topictype_provider_{providernamesp
                                                                                                         provider_namespace,
                                                                                                         resource_type_name,
                                                                                                         name):
-    return client.event_subscriptions.show(scope, event_subscription_name)
+    body={}
+    return client.event_subscriptions.get(scope=scope, event_subscription_name=event_subscription_name)
 
 
 def list_(cmd, client):
+    body={}
     return client.operations.list()
 
 
@@ -89,7 +113,13 @@ def create_eventgrid(cmd, client,
                      endpoint=None,
                      id=None,
                      type=None):
-    return client.topics.create(resource_group, name, topicInfo)
+    body={}
+    body['location'] = location
+    body['tags'] = tags
+    body['properties'] = properties
+    body['provisioning_state'] = provisioning_state
+    body['endpoint'] = endpoint
+    return client.topics.create_or_update(resource_group_name=resource_group, topic_name=name, topicInfo=topicInfo)
 
 
 def update_eventgrid(cmd, client,
@@ -102,25 +132,34 @@ def update_eventgrid(cmd, client,
                      endpoint=None,
                      id=None,
                      type=None):
-    return client.topics.update(resource_group, name, topicInfo)
+    body={}
+    body['location'] = location
+    body['tags'] = tags
+    body['properties'] = properties
+    body['provisioning_state'] = provisioning_state
+    body['endpoint'] = endpoint
+    return client.topics.create_or_update(resource_group_name=resource_group, topic_name=name, topicInfo=topicInfo)
 
 
 def delete_eventgrid(cmd, client,
                      resource_group,
                      name):
-    return client.topics.delete(resource_group, name)
+    body={}
+    return client.topics.delete(resource_group_name=resource_group, topic_name=name)
 
 
 def list_eventgrid(cmd, client,
                    resource_group,
                    name):
-    return client.topics.list(resource_group, name)
+    body={}
+    return client.topics.list_by_subscription(resource_group_name=resource_group, topic_name=name)
 
 
 def show_eventgrid(cmd, client,
                    resource_group,
                    name):
-    return client.topics.show(resource_group, name)
+    body={}
+    return client.topics.get(resource_group_name=resource_group, topic_name=name)
 
 
 def list_eventgrid_provider_{providernamespace}_{resourcetypename}(cmd, client,
@@ -129,7 +168,8 @@ def list_eventgrid_provider_{providernamespace}_{resourcetypename}(cmd, client,
                                                                    provider_namespace,
                                                                    resource_type_name,
                                                                    name):
-    return client.topics.list(resource_group, topic_name)
+    body={}
+    return client.topics.list_event_types(resource_group_name=resource_group, topic_name=topic_name)
 
 
 def show_eventgrid_provider_{providernamespace}_{resourcetypename}(cmd, client,
@@ -138,14 +178,17 @@ def show_eventgrid_provider_{providernamespace}_{resourcetypename}(cmd, client,
                                                                    provider_namespace,
                                                                    resource_type_name,
                                                                    name):
-    return client.topics.show(resource_group, topic_name)
+    body={}
+    return client.topics.get(resource_group_name=resource_group, topic_name=topic_name)
 
 
 def list_eventgrid(cmd, client,
                    name):
-    return client.topic_types.list(name)
+    body={}
+    return client.topic_types.list_event_types(topic_type_name=name)
 
 
 def show_eventgrid(cmd, client,
                    name):
-    return client.topic_types.show(name)
+    body={}
+    return client.topic_types.get(topic_type_name=name)
