@@ -8,92 +8,92 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 
 
-helps['compute'] = """
+helps['compute gallery'] = """
     type: group
     short-summary: Commands to manage Gallery.
 """
 
-helps['compute create'] = """
+helps['compute gallery create'] = """
     type: command
-    short-summary: create a compute.
+    short-summary: create a compute gallery.
 """
 
-helps['compute update'] = """
+helps['compute gallery update'] = """
     type: command
-    short-summary: update a compute.
+    short-summary: update a compute gallery.
 """
 
-helps['compute delete'] = """
+helps['compute gallery delete'] = """
     type: command
-    short-summary: delete a compute.
+    short-summary: delete a compute gallery.
 """
 
-helps['compute list'] = """
+helps['compute gallery list'] = """
     type: command
-    short-summary: list a compute.
+    short-summary: list a compute gallery.
 """
 
-helps['compute show'] = """
+helps['compute gallery show'] = """
     type: command
-    short-summary: show a compute.
+    short-summary: show a compute gallery.
 """
 
-helps['compute image'] = """
+helps['compute gallery image'] = """
     type: group
     short-summary: Commands to manage GalleryImage.
 """
 
-helps['compute image create'] = """
+helps['compute gallery image create'] = """
     type: command
-    short-summary: create a compute image.
+    short-summary: create a compute gallery image.
 """
 
-helps['compute image update'] = """
+helps['compute gallery image update'] = """
     type: command
-    short-summary: update a compute image.
+    short-summary: update a compute gallery image.
 """
 
-helps['compute image delete'] = """
+helps['compute gallery image delete'] = """
     type: command
-    short-summary: delete a compute image.
+    short-summary: delete a compute gallery image.
 """
 
-helps['compute image list'] = """
+helps['compute gallery image list'] = """
     type: command
-    short-summary: list a compute image.
+    short-summary: list a compute gallery image.
 """
 
-helps['compute image show'] = """
+helps['compute gallery image show'] = """
     type: command
-    short-summary: show a compute image.
+    short-summary: show a compute gallery image.
 """
 
-helps['compute image version'] = """
+helps['compute gallery image version'] = """
     type: group
     short-summary: Commands to manage GalleryImageVersion.
 """
 
-helps['compute image version create'] = """
+helps['compute gallery image version create'] = """
     type: command
-    short-summary: create a compute image version.
+    short-summary: create a compute gallery image version.
 """
 
-helps['compute image version update'] = """
+helps['compute gallery image version update'] = """
     type: command
-    short-summary: update a compute image version.
+    short-summary: update a compute gallery image version.
 """
 
-helps['compute image version delete'] = """
+helps['compute gallery image version delete'] = """
     type: command
-    short-summary: delete a compute image version.
+    short-summary: delete a compute gallery image version.
 """
 
-helps['compute image version list'] = """
+helps['compute gallery image version list'] = """
     type: command
-    short-summary: list a compute image version.
+    short-summary: list a compute gallery image version.
 """
 
-helps['compute image version show'] = """
+helps['compute gallery image version show'] = """
     type: command
-    short-summary: show a compute image version.
+    short-summary: show a compute gallery image version.
 """

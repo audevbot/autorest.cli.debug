@@ -8,182 +8,182 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 
 
-helps['frontdoor'] = """
+helps['frontdoor frontdoor'] = """
     type: group
     short-summary: Commands to manage FrontDoor.
 """
 
-helps['frontdoor create'] = """
+helps['frontdoor frontdoor create'] = """
     type: command
-    short-summary: create a frontdoor.
+    short-summary: create a frontdoor frontdoor.
 """
 
-helps['frontdoor update'] = """
+helps['frontdoor frontdoor update'] = """
     type: command
-    short-summary: update a frontdoor.
+    short-summary: update a frontdoor frontdoor.
 """
 
-helps['frontdoor delete'] = """
+helps['frontdoor frontdoor delete'] = """
     type: command
-    short-summary: delete a frontdoor.
+    short-summary: delete a frontdoor frontdoor.
 """
 
-helps['frontdoor list'] = """
+helps['frontdoor frontdoor list'] = """
     type: command
-    short-summary: list a frontdoor.
+    short-summary: list a frontdoor frontdoor.
 """
 
-helps['frontdoor show'] = """
+helps['frontdoor frontdoor show'] = """
     type: command
-    short-summary: show a frontdoor.
+    short-summary: show a frontdoor frontdoor.
 """
 
-helps['frontdoor routingrule'] = """
+helps['frontdoor frontdoor routingrule'] = """
     type: group
     short-summary: Commands to manage RoutingRule.
 """
 
-helps['frontdoor routingrule create'] = """
+helps['frontdoor frontdoor routingrule create'] = """
     type: command
-    short-summary: create a frontdoor routingrule.
+    short-summary: create a frontdoor frontdoor routingrule.
 """
 
-helps['frontdoor routingrule update'] = """
+helps['frontdoor frontdoor routingrule update'] = """
     type: command
-    short-summary: update a frontdoor routingrule.
+    short-summary: update a frontdoor frontdoor routingrule.
 """
 
-helps['frontdoor routingrule delete'] = """
+helps['frontdoor frontdoor routingrule delete'] = """
     type: command
-    short-summary: delete a frontdoor routingrule.
+    short-summary: delete a frontdoor frontdoor routingrule.
 """
 
-helps['frontdoor routingrule list'] = """
+helps['frontdoor frontdoor routingrule list'] = """
     type: command
-    short-summary: list a frontdoor routingrule.
+    short-summary: list a frontdoor frontdoor routingrule.
 """
 
-helps['frontdoor routingrule show'] = """
+helps['frontdoor frontdoor routingrule show'] = """
     type: command
-    short-summary: show a frontdoor routingrule.
+    short-summary: show a frontdoor frontdoor routingrule.
 """
 
-helps['frontdoor healthprobesetting'] = """
+helps['frontdoor frontdoor healthprobesetting'] = """
     type: group
     short-summary: Commands to manage HealthProbeSetting.
 """
 
-helps['frontdoor healthprobesetting create'] = """
+helps['frontdoor frontdoor healthprobesetting create'] = """
     type: command
-    short-summary: create a frontdoor healthprobesetting.
+    short-summary: create a frontdoor frontdoor healthprobesetting.
 """
 
-helps['frontdoor healthprobesetting update'] = """
+helps['frontdoor frontdoor healthprobesetting update'] = """
     type: command
-    short-summary: update a frontdoor healthprobesetting.
+    short-summary: update a frontdoor frontdoor healthprobesetting.
 """
 
-helps['frontdoor healthprobesetting delete'] = """
+helps['frontdoor frontdoor healthprobesetting delete'] = """
     type: command
-    short-summary: delete a frontdoor healthprobesetting.
+    short-summary: delete a frontdoor frontdoor healthprobesetting.
 """
 
-helps['frontdoor healthprobesetting list'] = """
+helps['frontdoor frontdoor healthprobesetting list'] = """
     type: command
-    short-summary: list a frontdoor healthprobesetting.
+    short-summary: list a frontdoor frontdoor healthprobesetting.
 """
 
-helps['frontdoor healthprobesetting show'] = """
+helps['frontdoor frontdoor healthprobesetting show'] = """
     type: command
-    short-summary: show a frontdoor healthprobesetting.
+    short-summary: show a frontdoor frontdoor healthprobesetting.
 """
 
-helps['frontdoor loadbalancingsetting'] = """
+helps['frontdoor frontdoor loadbalancingsetting'] = """
     type: group
     short-summary: Commands to manage LoadBalancingSetting.
 """
 
-helps['frontdoor loadbalancingsetting create'] = """
+helps['frontdoor frontdoor loadbalancingsetting create'] = """
     type: command
-    short-summary: create a frontdoor loadbalancingsetting.
+    short-summary: create a frontdoor frontdoor loadbalancingsetting.
 """
 
-helps['frontdoor loadbalancingsetting update'] = """
+helps['frontdoor frontdoor loadbalancingsetting update'] = """
     type: command
-    short-summary: update a frontdoor loadbalancingsetting.
+    short-summary: update a frontdoor frontdoor loadbalancingsetting.
 """
 
-helps['frontdoor loadbalancingsetting delete'] = """
+helps['frontdoor frontdoor loadbalancingsetting delete'] = """
     type: command
-    short-summary: delete a frontdoor loadbalancingsetting.
+    short-summary: delete a frontdoor frontdoor loadbalancingsetting.
 """
 
-helps['frontdoor loadbalancingsetting list'] = """
+helps['frontdoor frontdoor loadbalancingsetting list'] = """
     type: command
-    short-summary: list a frontdoor loadbalancingsetting.
+    short-summary: list a frontdoor frontdoor loadbalancingsetting.
 """
 
-helps['frontdoor loadbalancingsetting show'] = """
+helps['frontdoor frontdoor loadbalancingsetting show'] = """
     type: command
-    short-summary: show a frontdoor loadbalancingsetting.
+    short-summary: show a frontdoor frontdoor loadbalancingsetting.
 """
 
-helps['frontdoor backendpool'] = """
+helps['frontdoor frontdoor backendpool'] = """
     type: group
     short-summary: Commands to manage BackendPool.
 """
 
-helps['frontdoor backendpool create'] = """
+helps['frontdoor frontdoor backendpool create'] = """
     type: command
-    short-summary: create a frontdoor backendpool.
+    short-summary: create a frontdoor frontdoor backendpool.
 """
 
-helps['frontdoor backendpool update'] = """
+helps['frontdoor frontdoor backendpool update'] = """
     type: command
-    short-summary: update a frontdoor backendpool.
+    short-summary: update a frontdoor frontdoor backendpool.
 """
 
-helps['frontdoor backendpool delete'] = """
+helps['frontdoor frontdoor backendpool delete'] = """
     type: command
-    short-summary: delete a frontdoor backendpool.
+    short-summary: delete a frontdoor frontdoor backendpool.
 """
 
-helps['frontdoor backendpool list'] = """
+helps['frontdoor frontdoor backendpool list'] = """
     type: command
-    short-summary: list a frontdoor backendpool.
+    short-summary: list a frontdoor frontdoor backendpool.
 """
 
-helps['frontdoor backendpool show'] = """
+helps['frontdoor frontdoor backendpool show'] = """
     type: command
-    short-summary: show a frontdoor backendpool.
+    short-summary: show a frontdoor frontdoor backendpool.
 """
 
-helps['frontdoor frontendendpoint'] = """
+helps['frontdoor frontdoor frontendendpoint'] = """
     type: group
     short-summary: Commands to manage FrontendEndpoint.
 """
 
-helps['frontdoor frontendendpoint create'] = """
+helps['frontdoor frontdoor frontendendpoint create'] = """
     type: command
-    short-summary: create a frontdoor frontendendpoint.
+    short-summary: create a frontdoor frontdoor frontendendpoint.
 """
 
-helps['frontdoor frontendendpoint update'] = """
+helps['frontdoor frontdoor frontendendpoint update'] = """
     type: command
-    short-summary: update a frontdoor frontendendpoint.
+    short-summary: update a frontdoor frontdoor frontendendpoint.
 """
 
-helps['frontdoor frontendendpoint delete'] = """
+helps['frontdoor frontdoor frontendendpoint delete'] = """
     type: command
-    short-summary: delete a frontdoor frontendendpoint.
+    short-summary: delete a frontdoor frontdoor frontendendpoint.
 """
 
-helps['frontdoor frontendendpoint list'] = """
+helps['frontdoor frontdoor frontendendpoint list'] = """
     type: command
-    short-summary: list a frontdoor frontendendpoint.
+    short-summary: list a frontdoor frontdoor frontendendpoint.
 """
 
-helps['frontdoor frontendendpoint show'] = """
+helps['frontdoor frontdoor frontendendpoint show'] = """
     type: command
-    short-summary: show a frontdoor frontendendpoint.
+    short-summary: show a frontdoor frontdoor frontendendpoint.
 """

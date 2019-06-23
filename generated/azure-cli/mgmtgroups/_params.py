@@ -15,7 +15,7 @@ def load_arguments(self, _):
     name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
 
 
-    with self.argument_context('mgmtgroups create') as c:
+    with self.argument_context('mgmtgroups managementgroup create') as c:
         c.argument('group_id', id_part=None, help='Management Group ID.')
         c.argument('properties', id_part=None, help='undefined')
         c.argument('display_name', id_part=None, help='The friendly name of the management group. If no value is passed then this  field will be set to the groupId.')
@@ -27,7 +27,7 @@ def load_arguments(self, _):
         c.argument('type', id_part=None, help='The type of the resource.  For example, /providers/Microsoft.Management/managementGroups')
         c.argument('resource_id', name_arg_type, id_part=None)
 
-    with self.argument_context('mgmtgroups update') as c:
+    with self.argument_context('mgmtgroups managementgroup update') as c:
         c.argument('group_id', id_part=None, help='Management Group ID.')
         c.argument('properties', id_part=None, help='undefined')
         c.argument('display_name', id_part=None, help='The friendly name of the management group. If no value is passed then this  field will be set to the groupId.')
@@ -39,28 +39,28 @@ def load_arguments(self, _):
         c.argument('type', id_part=None, help='The type of the resource.  For example, /providers/Microsoft.Management/managementGroups')
         c.argument('resource_id', name_arg_type, id_part=None)
 
-    with self.argument_context('mgmtgroups delete') as c:
+    with self.argument_context('mgmtgroups managementgroup delete') as c:
         c.argument('group_id', id_part=None, help='Management Group ID.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
-    with self.argument_context('mgmtgroups list') as c:
+    with self.argument_context('mgmtgroups managementgroup list') as c:
         c.argument('group_id', id_part=None, help='Management Group ID.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
-    with self.argument_context('mgmtgroups show') as c:
+    with self.argument_context('mgmtgroups managementgroup show') as c:
         c.argument('group_id', id_part=None, help='Management Group ID.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
     name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
 
 
-    with self.argument_context('mgmtgroups create') as c:
+    with self.argument_context('mgmtgroups managementgroup create') as c:
         c.argument('group_id', id_part=None, help='Management Group ID.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
-    with self.argument_context('mgmtgroups delete') as c:
+    with self.argument_context('mgmtgroups managementgroup delete') as c:
         c.argument('group_id', id_part=None, help='Management Group ID.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)

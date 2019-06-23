@@ -15,7 +15,7 @@ def load_arguments(self, _):
     name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
 
 
-    with self.argument_context('compute create') as c:
+    with self.argument_context('compute gallery create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('name', id_part=None, help='The name of the Shared Image Gallery. The allowed characters are alphabets and numbers with dots and periods allowed in the middle. The maximum length is 80 characters.')
         c.argument('location', id_part=None, help='Resource location')
@@ -28,7 +28,7 @@ def load_arguments(self, _):
         c.argument('type', id_part=None, help='Resource type')
         c.argument('resource_id', name_arg_type, id_part=None)
 
-    with self.argument_context('compute update') as c:
+    with self.argument_context('compute gallery update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('name', id_part=None, help='The name of the Shared Image Gallery. The allowed characters are alphabets and numbers with dots and periods allowed in the middle. The maximum length is 80 characters.')
         c.argument('location', id_part=None, help='Resource location')
@@ -41,19 +41,19 @@ def load_arguments(self, _):
         c.argument('type', id_part=None, help='Resource type')
         c.argument('resource_id', name_arg_type, id_part=None)
 
-    with self.argument_context('compute delete') as c:
+    with self.argument_context('compute gallery delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('name', id_part=None, help='The name of the Shared Image Gallery. The allowed characters are alphabets and numbers with dots and periods allowed in the middle. The maximum length is 80 characters.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
-    with self.argument_context('compute list') as c:
+    with self.argument_context('compute gallery list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('name', id_part=None, help='The name of the Shared Image Gallery. The allowed characters are alphabets and numbers with dots and periods allowed in the middle. The maximum length is 80 characters.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
-    with self.argument_context('compute show') as c:
+    with self.argument_context('compute gallery show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('name', id_part=None, help='The name of the Shared Image Gallery. The allowed characters are alphabets and numbers with dots and periods allowed in the middle. The maximum length is 80 characters.')
         c.argument('resource_id', name_arg_type, id_part=None)
@@ -61,7 +61,7 @@ def load_arguments(self, _):
     name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
 
 
-    with self.argument_context('compute image create') as c:
+    with self.argument_context('compute gallery image create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('gallery_name', id_part=None, help='The name of the Shared Image Gallery in which the Image Definition is to be created.')
         c.argument('name', id_part=None, help='The name of the gallery Image Definition to be created or updated. The allowed characters are alphabets and numbers with dots, dashes, and periods allowed in the middle. The maximum length is 80 characters.')
@@ -84,7 +84,7 @@ def load_arguments(self, _):
         c.argument('type', id_part=None, help='Resource type')
         c.argument('resource_id', name_arg_type, id_part=None)
 
-    with self.argument_context('compute image update') as c:
+    with self.argument_context('compute gallery image update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('gallery_name', id_part=None, help='The name of the Shared Image Gallery in which the Image Definition is to be created.')
         c.argument('name', id_part=None, help='The name of the gallery Image Definition to be created or updated. The allowed characters are alphabets and numbers with dots, dashes, and periods allowed in the middle. The maximum length is 80 characters.')
@@ -107,21 +107,21 @@ def load_arguments(self, _):
         c.argument('type', id_part=None, help='Resource type')
         c.argument('resource_id', name_arg_type, id_part=None)
 
-    with self.argument_context('compute image delete') as c:
+    with self.argument_context('compute gallery image delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('gallery_name', id_part=None, help='The name of the Shared Image Gallery in which the Image Definition is to be created.')
         c.argument('name', id_part=None, help='The name of the gallery Image Definition to be created or updated. The allowed characters are alphabets and numbers with dots, dashes, and periods allowed in the middle. The maximum length is 80 characters.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
-    with self.argument_context('compute image list') as c:
+    with self.argument_context('compute gallery image list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('gallery_name', id_part=None, help='The name of the Shared Image Gallery in which the Image Definition is to be created.')
         c.argument('name', id_part=None, help='The name of the gallery Image Definition to be created or updated. The allowed characters are alphabets and numbers with dots, dashes, and periods allowed in the middle. The maximum length is 80 characters.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
-    with self.argument_context('compute image show') as c:
+    with self.argument_context('compute gallery image show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('gallery_name', id_part=None, help='The name of the Shared Image Gallery in which the Image Definition is to be created.')
         c.argument('name', id_part=None, help='The name of the gallery Image Definition to be created or updated. The allowed characters are alphabets and numbers with dots, dashes, and periods allowed in the middle. The maximum length is 80 characters.')
@@ -130,7 +130,7 @@ def load_arguments(self, _):
     name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
 
 
-    with self.argument_context('compute image version create') as c:
+    with self.argument_context('compute gallery image version create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('gallery_name', id_part=None, help='The name of the Shared Image Gallery in which the Image Definition resides.')
         c.argument('gallery_image_name', id_part=None, help='The name of the gallery Image Definition in which the Image Version is to be created.')
@@ -146,7 +146,7 @@ def load_arguments(self, _):
         c.argument('type', id_part=None, help='Resource type')
         c.argument('resource_id', name_arg_type, id_part=None)
 
-    with self.argument_context('compute image version update') as c:
+    with self.argument_context('compute gallery image version update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('gallery_name', id_part=None, help='The name of the Shared Image Gallery in which the Image Definition resides.')
         c.argument('gallery_image_name', id_part=None, help='The name of the gallery Image Definition in which the Image Version is to be created.')
@@ -162,7 +162,7 @@ def load_arguments(self, _):
         c.argument('type', id_part=None, help='Resource type')
         c.argument('resource_id', name_arg_type, id_part=None)
 
-    with self.argument_context('compute image version delete') as c:
+    with self.argument_context('compute gallery image version delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('gallery_name', id_part=None, help='The name of the Shared Image Gallery in which the Image Definition resides.')
         c.argument('gallery_image_name', id_part=None, help='The name of the gallery Image Definition in which the Image Version is to be created.')
@@ -170,7 +170,7 @@ def load_arguments(self, _):
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
-    with self.argument_context('compute image version list') as c:
+    with self.argument_context('compute gallery image version list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('gallery_name', id_part=None, help='The name of the Shared Image Gallery in which the Image Definition resides.')
         c.argument('gallery_image_name', id_part=None, help='The name of the gallery Image Definition in which the Image Version is to be created.')
@@ -178,7 +178,7 @@ def load_arguments(self, _):
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
-    with self.argument_context('compute image version show') as c:
+    with self.argument_context('compute gallery image version show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('gallery_name', id_part=None, help='The name of the Shared Image Gallery in which the Image Definition resides.')
         c.argument('gallery_image_name', id_part=None, help='The name of the gallery Image Definition in which the Image Version is to be created.')

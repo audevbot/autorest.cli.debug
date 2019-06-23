@@ -6,18 +6,18 @@
 from knack.util import CLIError
 
 # module equivalent: azure_rm_batchaccount
-def create_batch(cmd, client,
-                 resource_group,
-                 name,
-                 location=None,
-                 tags=None,
-                 properties=None,
-                 auto_storage=None,
-                 auto_storage_account_id=None,
-                 pool_allocation_mode=None,
-                 key_vault_reference=None,
-                 account_endpoint=None,
-                 id=None):
+def create_batch_batchaccount(cmd, client,
+                              resource_group,
+                              name,
+                              location=None,
+                              tags=None,
+                              properties=None,
+                              auto_storage=None,
+                              auto_storage_account_id=None,
+                              pool_allocation_mode=None,
+                              key_vault_reference=None,
+                              account_endpoint=None,
+                              id=None):
     body={}
     body['location'] = location
     body['tags'] = tags
@@ -30,18 +30,18 @@ def create_batch(cmd, client,
     return client.batch_account.create(resource_group_name=resource_group, account_name=name, parameters=body)
 
 # module equivalent: azure_rm_batchaccount
-def update_batch(cmd, client,
-                 resource_group,
-                 name,
-                 location=None,
-                 tags=None,
-                 properties=None,
-                 auto_storage=None,
-                 auto_storage_account_id=None,
-                 pool_allocation_mode=None,
-                 key_vault_reference=None,
-                 account_endpoint=None,
-                 id=None):
+def update_batch_batchaccount(cmd, client,
+                              resource_group,
+                              name,
+                              location=None,
+                              tags=None,
+                              properties=None,
+                              auto_storage=None,
+                              auto_storage_account_id=None,
+                              pool_allocation_mode=None,
+                              key_vault_reference=None,
+                              account_endpoint=None,
+                              id=None):
     body={}
     body['location'] = location
     body['tags'] = tags
@@ -54,37 +54,37 @@ def update_batch(cmd, client,
     return client.batch_account.update(resource_group_name=resource_group, account_name=name, parameters=body)
 
 # module equivalent: azure_rm_batchaccount
-def delete_batch(cmd, client,
-                 resource_group,
-                 name):
+def delete_batch_batchaccount(cmd, client,
+                              resource_group,
+                              name):
     return client.batch_account.delete(resource_group_name=resource_group, account_name=name)
 
 # module equivalent: azure_rm_batchaccount
-def list_batch(cmd, client,
-               resource_group,
-               name):
+def list_batch_batchaccount(cmd, client,
+                            resource_group,
+                            name):
     return client.batch_account.list(resource_group_name=resource_group, account_name=name)
 
 # module equivalent: azure_rm_batchaccount
-def show_batch(cmd, client,
-               resource_group,
-               name):
+def show_batch_batchaccount(cmd, client,
+                            resource_group,
+                            name):
     return client.batch_account.get(resource_group_name=resource_group, account_name=name)
 
 # module equivalent: azure_rm_batchapplicationpackage
-def create_batch_application_version(cmd, client,
-                                     resource_group,
-                                     account_name,
-                                     application_name,
-                                     name,
-                                     properties=None,
-                                     state=None,
-                                     format=None,
-                                     storage_url=None,
-                                     storage_url_expiry=None,
-                                     last_activation_time=None,
-                                     id=None,
-                                     etag=None):
+def create_batch_batchaccount_application_version(cmd, client,
+                                                  resource_group,
+                                                  account_name,
+                                                  application_name,
+                                                  name,
+                                                  properties=None,
+                                                  state=None,
+                                                  format=None,
+                                                  storage_url=None,
+                                                  storage_url_expiry=None,
+                                                  last_activation_time=None,
+                                                  id=None,
+                                                  etag=None):
     body={}
     body['properties'] = properties
     body['state'] = state
@@ -95,40 +95,40 @@ def create_batch_application_version(cmd, client,
     return client.application_package.create(resource_group_name=resource_group, account_name=account_name, application_name=application_name, version_name=name)
 
 # module equivalent: azure_rm_batchapplicationpackage
-def delete_batch_application_version(cmd, client,
-                                     resource_group,
-                                     account_name,
-                                     application_name,
-                                     name):
+def delete_batch_batchaccount_application_version(cmd, client,
+                                                  resource_group,
+                                                  account_name,
+                                                  application_name,
+                                                  name):
     return client.application_package.delete(resource_group_name=resource_group, account_name=account_name, application_name=application_name, version_name=name)
 
 # module equivalent: azure_rm_batchapplicationpackage
-def list_batch_application_version(cmd, client,
-                                   resource_group,
-                                   account_name,
-                                   application_name,
-                                   name):
+def list_batch_batchaccount_application_version(cmd, client,
+                                                resource_group,
+                                                account_name,
+                                                application_name,
+                                                name):
     return client.application_package.list(resource_group_name=resource_group, account_name=account_name, application_name=application_name, version_name=name)
 
 # module equivalent: azure_rm_batchapplicationpackage
-def show_batch_application_version(cmd, client,
-                                   resource_group,
-                                   account_name,
-                                   application_name,
-                                   name):
+def show_batch_batchaccount_application_version(cmd, client,
+                                                resource_group,
+                                                account_name,
+                                                application_name,
+                                                name):
     return client.application_package.get(resource_group_name=resource_group, account_name=account_name, application_name=application_name, version_name=name)
 
 # module equivalent: azure_rm_batchapplication
-def create_batch_application(cmd, client,
-                             resource_group,
-                             account_name,
-                             name,
-                             properties=None,
-                             display_name=None,
-                             allow_updates=None,
-                             default_version=None,
-                             id=None,
-                             etag=None):
+def create_batch_batchaccount_application(cmd, client,
+                                          resource_group,
+                                          account_name,
+                                          name,
+                                          properties=None,
+                                          display_name=None,
+                                          allow_updates=None,
+                                          default_version=None,
+                                          id=None,
+                                          etag=None):
     body={}
     body['properties'] = properties
     body['display_name'] = display_name
@@ -137,16 +137,16 @@ def create_batch_application(cmd, client,
     return client.application.create(resource_group_name=resource_group, account_name=account_name, application_name=name)
 
 # module equivalent: azure_rm_batchapplication
-def update_batch_application(cmd, client,
-                             resource_group,
-                             account_name,
-                             name,
-                             properties=None,
-                             display_name=None,
-                             allow_updates=None,
-                             default_version=None,
-                             id=None,
-                             etag=None):
+def update_batch_batchaccount_application(cmd, client,
+                                          resource_group,
+                                          account_name,
+                                          name,
+                                          properties=None,
+                                          display_name=None,
+                                          allow_updates=None,
+                                          default_version=None,
+                                          id=None,
+                                          etag=None):
     body={}
     body['properties'] = properties
     body['display_name'] = display_name
@@ -155,44 +155,44 @@ def update_batch_application(cmd, client,
     return client.application.update(resource_group_name=resource_group, account_name=account_name, application_name=name, parameters=body)
 
 # module equivalent: azure_rm_batchapplication
-def delete_batch_application(cmd, client,
-                             resource_group,
-                             account_name,
-                             name):
+def delete_batch_batchaccount_application(cmd, client,
+                                          resource_group,
+                                          account_name,
+                                          name):
     return client.application.delete(resource_group_name=resource_group, account_name=account_name, application_name=name)
 
 # module equivalent: azure_rm_batchapplication
-def list_batch_application(cmd, client,
-                           resource_group,
-                           account_name,
-                           name):
+def list_batch_batchaccount_application(cmd, client,
+                                        resource_group,
+                                        account_name,
+                                        name):
     return client.application.list(resource_group_name=resource_group, account_name=account_name, application_name=name)
 
 # module equivalent: azure_rm_batchapplication
-def show_batch_application(cmd, client,
-                           resource_group,
-                           account_name,
-                           name):
+def show_batch_batchaccount_application(cmd, client,
+                                        resource_group,
+                                        account_name,
+                                        name):
     return client.application.get(resource_group_name=resource_group, account_name=account_name, application_name=name)
 
 # module equivalent: azure_rm_batchcertificate
-def create_batch_certificate(cmd, client,
-                             resource_group,
-                             account_name,
-                             name,
-                             properties=None,
-                             thumbprint_algorithm=None,
-                             thumbprint=None,
-                             format=None,
-                             data=None,
-                             password=None,
-                             provisioning_state_transition_time=None,
-                             previous_provisioning_state=None,
-                             previous_provisioning_state_transition_time=None,
-                             public_data=None,
-                             delete_certificate_error=None,
-                             id=None,
-                             etag=None):
+def create_batch_batchaccount_certificate(cmd, client,
+                                          resource_group,
+                                          account_name,
+                                          name,
+                                          properties=None,
+                                          thumbprint_algorithm=None,
+                                          thumbprint=None,
+                                          format=None,
+                                          data=None,
+                                          password=None,
+                                          provisioning_state_transition_time=None,
+                                          previous_provisioning_state=None,
+                                          previous_provisioning_state_transition_time=None,
+                                          public_data=None,
+                                          delete_certificate_error=None,
+                                          id=None,
+                                          etag=None):
     body={}
     body['properties'] = properties
     body['thumbprint_algorithm'] = thumbprint_algorithm
@@ -208,23 +208,23 @@ def create_batch_certificate(cmd, client,
     return client.certificate.create(resource_group_name=resource_group, account_name=account_name, certificate_name=name, parameters=body)
 
 # module equivalent: azure_rm_batchcertificate
-def update_batch_certificate(cmd, client,
-                             resource_group,
-                             account_name,
-                             name,
-                             properties=None,
-                             thumbprint_algorithm=None,
-                             thumbprint=None,
-                             format=None,
-                             data=None,
-                             password=None,
-                             provisioning_state_transition_time=None,
-                             previous_provisioning_state=None,
-                             previous_provisioning_state_transition_time=None,
-                             public_data=None,
-                             delete_certificate_error=None,
-                             id=None,
-                             etag=None):
+def update_batch_batchaccount_certificate(cmd, client,
+                                          resource_group,
+                                          account_name,
+                                          name,
+                                          properties=None,
+                                          thumbprint_algorithm=None,
+                                          thumbprint=None,
+                                          format=None,
+                                          data=None,
+                                          password=None,
+                                          provisioning_state_transition_time=None,
+                                          previous_provisioning_state=None,
+                                          previous_provisioning_state_transition_time=None,
+                                          public_data=None,
+                                          delete_certificate_error=None,
+                                          id=None,
+                                          etag=None):
     body={}
     body['properties'] = properties
     body['thumbprint_algorithm'] = thumbprint_algorithm
@@ -240,57 +240,57 @@ def update_batch_certificate(cmd, client,
     return client.certificate.update(resource_group_name=resource_group, account_name=account_name, certificate_name=name, parameters=body)
 
 # module equivalent: azure_rm_batchcertificate
-def delete_batch_certificate(cmd, client,
-                             resource_group,
-                             account_name,
-                             name):
+def delete_batch_batchaccount_certificate(cmd, client,
+                                          resource_group,
+                                          account_name,
+                                          name):
     return client.certificate.delete(resource_group_name=resource_group, account_name=account_name, certificate_name=name)
 
 # module equivalent: azure_rm_batchcertificate
-def list_batch_certificate(cmd, client,
-                           resource_group,
-                           account_name,
-                           name):
+def list_batch_batchaccount_certificate(cmd, client,
+                                        resource_group,
+                                        account_name,
+                                        name):
     return client.certificate.list_by_batch_account(resource_group_name=resource_group, account_name=account_name, certificate_name=name)
 
 # module equivalent: azure_rm_batchcertificate
-def show_batch_certificate(cmd, client,
-                           resource_group,
-                           account_name,
-                           name):
+def show_batch_batchaccount_certificate(cmd, client,
+                                        resource_group,
+                                        account_name,
+                                        name):
     return client.certificate.get(resource_group_name=resource_group, account_name=account_name, certificate_name=name)
 
 # module equivalent: azure_rm_batchpool
-def create_batch_pool(cmd, client,
-                      resource_group,
-                      account_name,
-                      name,
-                      properties=None,
-                      display_name=None,
-                      vm_size=None,
-                      deployment_configuration=None,
-                      scale_settings=None,
-                      inter_node_communication=None,
-                      network_configuration=None,
-                      max_tasks_per_node=None,
-                      task_scheduling_policy=None,
-                      user_accounts=None,
-                      metadata=None,
-                      start_task=None,
-                      certificates=None,
-                      application_packages=None,
-                      application_licenses=None,
-                      last_modified=None,
-                      creation_time=None,
-                      provisioning_state_transition_time=None,
-                      allocation_state=None,
-                      allocation_state_transition_time=None,
-                      current_dedicated_nodes=None,
-                      current_low_priority_nodes=None,
-                      auto_scale_run=None,
-                      resize_operation_status=None,
-                      id=None,
-                      etag=None):
+def create_batch_batchaccount_pool(cmd, client,
+                                   resource_group,
+                                   account_name,
+                                   name,
+                                   properties=None,
+                                   display_name=None,
+                                   vm_size=None,
+                                   deployment_configuration=None,
+                                   scale_settings=None,
+                                   inter_node_communication=None,
+                                   network_configuration=None,
+                                   max_tasks_per_node=None,
+                                   task_scheduling_policy=None,
+                                   user_accounts=None,
+                                   metadata=None,
+                                   start_task=None,
+                                   certificates=None,
+                                   application_packages=None,
+                                   application_licenses=None,
+                                   last_modified=None,
+                                   creation_time=None,
+                                   provisioning_state_transition_time=None,
+                                   allocation_state=None,
+                                   allocation_state_transition_time=None,
+                                   current_dedicated_nodes=None,
+                                   current_low_priority_nodes=None,
+                                   auto_scale_run=None,
+                                   resize_operation_status=None,
+                                   id=None,
+                                   etag=None):
     body={}
     body['properties'] = properties
     body['display_name'] = display_name
@@ -319,36 +319,36 @@ def create_batch_pool(cmd, client,
     return client.pool.create(resource_group_name=resource_group, account_name=account_name, pool_name=name, parameters=body)
 
 # module equivalent: azure_rm_batchpool
-def update_batch_pool(cmd, client,
-                      resource_group,
-                      account_name,
-                      name,
-                      properties=None,
-                      display_name=None,
-                      vm_size=None,
-                      deployment_configuration=None,
-                      scale_settings=None,
-                      inter_node_communication=None,
-                      network_configuration=None,
-                      max_tasks_per_node=None,
-                      task_scheduling_policy=None,
-                      user_accounts=None,
-                      metadata=None,
-                      start_task=None,
-                      certificates=None,
-                      application_packages=None,
-                      application_licenses=None,
-                      last_modified=None,
-                      creation_time=None,
-                      provisioning_state_transition_time=None,
-                      allocation_state=None,
-                      allocation_state_transition_time=None,
-                      current_dedicated_nodes=None,
-                      current_low_priority_nodes=None,
-                      auto_scale_run=None,
-                      resize_operation_status=None,
-                      id=None,
-                      etag=None):
+def update_batch_batchaccount_pool(cmd, client,
+                                   resource_group,
+                                   account_name,
+                                   name,
+                                   properties=None,
+                                   display_name=None,
+                                   vm_size=None,
+                                   deployment_configuration=None,
+                                   scale_settings=None,
+                                   inter_node_communication=None,
+                                   network_configuration=None,
+                                   max_tasks_per_node=None,
+                                   task_scheduling_policy=None,
+                                   user_accounts=None,
+                                   metadata=None,
+                                   start_task=None,
+                                   certificates=None,
+                                   application_packages=None,
+                                   application_licenses=None,
+                                   last_modified=None,
+                                   creation_time=None,
+                                   provisioning_state_transition_time=None,
+                                   allocation_state=None,
+                                   allocation_state_transition_time=None,
+                                   current_dedicated_nodes=None,
+                                   current_low_priority_nodes=None,
+                                   auto_scale_run=None,
+                                   resize_operation_status=None,
+                                   id=None,
+                                   etag=None):
     body={}
     body['properties'] = properties
     body['display_name'] = display_name
@@ -377,22 +377,22 @@ def update_batch_pool(cmd, client,
     return client.pool.update(resource_group_name=resource_group, account_name=account_name, pool_name=name, parameters=body)
 
 # module equivalent: azure_rm_batchpool
-def delete_batch_pool(cmd, client,
-                      resource_group,
-                      account_name,
-                      name):
+def delete_batch_batchaccount_pool(cmd, client,
+                                   resource_group,
+                                   account_name,
+                                   name):
     return client.pool.delete(resource_group_name=resource_group, account_name=account_name, pool_name=name)
 
 # module equivalent: azure_rm_batchpool
-def list_batch_pool(cmd, client,
-                    resource_group,
-                    account_name,
-                    name):
+def list_batch_batchaccount_pool(cmd, client,
+                                 resource_group,
+                                 account_name,
+                                 name):
     return client.pool.list_by_batch_account(resource_group_name=resource_group, account_name=account_name, pool_name=name)
 
 # module equivalent: azure_rm_batchpool
-def show_batch_pool(cmd, client,
-                    resource_group,
-                    account_name,
-                    name):
+def show_batch_batchaccount_pool(cmd, client,
+                                 resource_group,
+                                 account_name,
+                                 name):
     return client.pool.get(resource_group_name=resource_group, account_name=account_name, pool_name=name)
