@@ -54,21 +54,18 @@ def create_cosmos-db(cmd, client,
 def delete_cosmos-db(cmd, client,
                      resource_group,
                      name):
-    body={}
     return client.database_accounts.delete(resource_group_name=resource_group, account_name=name)
 
 
 def list_cosmos-db(cmd, client,
                    resource_group,
                    name):
-    body={}
     return client.database_accounts.list(resource_group_name=resource_group, account_name=name)
 
 
 def show_cosmos-db(cmd, client,
                    resource_group,
                    name):
-    body={}
     return client.database_accounts.get(resource_group_name=resource_group, account_name=name)
 
 
@@ -81,7 +78,6 @@ def list_cosmos-db_table_database_keyspace_graph_container_collection(cmd, clien
                                                                       graph_name,
                                                                       container_name,
                                                                       name):
-    body={}
     return client.database_accounts.list_mongo_dbcollections(resource_group_name=resource_group, account_name=account_name)
 
 
@@ -94,12 +90,10 @@ def show_cosmos-db_table_database_keyspace_graph_container_collection(cmd, clien
                                                                       graph_name,
                                                                       container_name,
                                                                       name):
-    body={}
     return client.database_accounts.get(resource_group_name=resource_group, account_name=account_name)
 
 
 def list_(cmd, client):
-    body={}
     return client.operations.list()
 
 
@@ -107,7 +101,6 @@ def list_cosmos-db_database(cmd, client,
                             resource_group,
                             name,
                             database_rid):
-    body={}
     return client.database.list_metric_definitions()
 
 
@@ -116,7 +109,6 @@ def list_cosmos-db_database_collection(cmd, client,
                                        name,
                                        database_rid,
                                        collection_rid):
-    body={}
     return client.collection.list_metric_definitions()
 
 
@@ -126,7 +118,6 @@ def list_cosmos-db_region_database_collection(cmd, client,
                                               region,
                                               database_rid,
                                               collection_rid):
-    body={}
     return client.collection_region.list_metrics()
 
 
@@ -134,7 +125,6 @@ def list_cosmos-db_region(cmd, client,
                           resource_group,
                           name,
                           region):
-    body={}
     return client.database_account_region.list_metrics()
 
 
@@ -143,7 +133,6 @@ def list_cosmos-db_sourceregion_targetregion(cmd, client,
                                              name,
                                              source_region,
                                              target_region):
-    body={}
     return client.percentile_source_target.list_metrics()
 
 
@@ -151,14 +140,12 @@ def list_cosmos-db_targetregion(cmd, client,
                                 resource_group,
                                 name,
                                 target_region):
-    body={}
     return client.percentile_target.list_metrics()
 
 
 def list_cosmos-db(cmd, client,
                    resource_group,
                    name):
-    body={}
     return client.percentile.list_metrics()
 
 
@@ -168,7 +155,6 @@ def list_cosmos-db_region_database_collection(cmd, client,
                                               region,
                                               database_rid,
                                               collection_rid):
-    body={}
     return client.collection_partition_region.list_metrics()
 
 
@@ -177,7 +163,6 @@ def list_cosmos-db_database_collection(cmd, client,
                                        name,
                                        database_rid,
                                        collection_rid):
-    body={}
     return client.collection_partition.list_usages()
 
 
@@ -187,7 +172,6 @@ def list_cosmos-db_database_collection_partitionkeyrangeid(cmd, client,
                                                            database_rid,
                                                            collection_rid,
                                                            partition_key_range_id):
-    body={}
     return client.partition_key_range_id.list_metrics()
 
 
@@ -198,5 +182,4 @@ def list_cosmos-db_region_database_collection_partitionkeyrangeid(cmd, client,
                                                                   database_rid,
                                                                   collection_rid,
                                                                   partition_key_range_id):
-    body={}
     return client.partition_key_range_id_region.list_metrics()

@@ -57,35 +57,30 @@ def update_batch(cmd, client,
 def delete_batch(cmd, client,
                  resource_group,
                  name):
-    body={}
     return client.batch_account.delete(resource_group_name=resource_group, account_name=name)
 
 
 def list_batch(cmd, client,
                resource_group,
                name):
-    body={}
     return client.batch_account.list(resource_group_name=resource_group, account_name=name)
 
 
 def show_batch(cmd, client,
                resource_group,
                name):
-    body={}
     return client.batch_account.get(resource_group_name=resource_group, account_name=name)
 
 
 def show_batch(cmd, client,
                resource_group,
                name):
-    body={}
     return client.batch_account.get(resource_group_name=resource_group, account_name=name)
 
 
 def list_batch(cmd, client,
                resource_group,
                name):
-    body={}
     return client.batch_account.list_by_resource_group(resource_group_name=resource_group, account_name=name)
 
 
@@ -117,7 +112,6 @@ def delete_batch_application_version(cmd, client,
                                      account_name,
                                      application_name,
                                      name):
-    body={}
     return client.application_package.delete(resource_group_name=resource_group, account_name=account_name, application_name=application_name, version_name=name)
 
 
@@ -126,7 +120,6 @@ def list_batch_application_version(cmd, client,
                                    account_name,
                                    application_name,
                                    name):
-    body={}
     return client.application_package.list(resource_group_name=resource_group, account_name=account_name, application_name=application_name, version_name=name)
 
 
@@ -135,7 +128,6 @@ def show_batch_application_version(cmd, client,
                                    account_name,
                                    application_name,
                                    name):
-    body={}
     return client.application_package.get(resource_group_name=resource_group, account_name=account_name, application_name=application_name, version_name=name)
 
 
@@ -144,7 +136,6 @@ def show_batch_application_version(cmd, client,
                                    account_name,
                                    application_name,
                                    name):
-    body={}
     return client.application_package.get(resource_group_name=resource_group, account_name=account_name, application_name=application_name, version_name=name)
 
 
@@ -153,7 +144,6 @@ def list_batch_application_version(cmd, client,
                                    account_name,
                                    application_name,
                                    name):
-    body={}
     return client.application_package.list(resource_group_name=resource_group, account_name=account_name, application_name=application_name, version_name=name)
 
 
@@ -197,7 +187,6 @@ def delete_batch_application(cmd, client,
                              resource_group,
                              account_name,
                              name):
-    body={}
     return client.application.delete(resource_group_name=resource_group, account_name=account_name, application_name=name)
 
 
@@ -205,7 +194,6 @@ def list_batch_application(cmd, client,
                            resource_group,
                            account_name,
                            name):
-    body={}
     return client.application.list(resource_group_name=resource_group, account_name=account_name, application_name=name)
 
 
@@ -213,7 +201,6 @@ def show_batch_application(cmd, client,
                            resource_group,
                            account_name,
                            name):
-    body={}
     return client.application.get(resource_group_name=resource_group, account_name=account_name, application_name=name)
 
 
@@ -221,7 +208,6 @@ def show_batch_application(cmd, client,
                            resource_group,
                            account_name,
                            name):
-    body={}
     return client.application.get(resource_group_name=resource_group, account_name=account_name, application_name=name)
 
 
@@ -229,12 +215,10 @@ def list_batch_application(cmd, client,
                            resource_group,
                            account_name,
                            name):
-    body={}
     return client.application.list(resource_group_name=resource_group, account_name=account_name, application_name=name)
 
 
 def list_(cmd, client):
-    body={}
     return client.operations.list()
 
 
@@ -306,7 +290,6 @@ def delete_batch_certificate(cmd, client,
                              resource_group,
                              account_name,
                              name):
-    body={}
     return client.certificate.delete(resource_group_name=resource_group, account_name=account_name, certificate_name=name)
 
 
@@ -314,7 +297,6 @@ def list_batch_certificate(cmd, client,
                            resource_group,
                            account_name,
                            name):
-    body={}
     return client.certificate.list_by_batch_account(resource_group_name=resource_group, account_name=account_name, certificate_name=name)
 
 
@@ -322,7 +304,6 @@ def show_batch_certificate(cmd, client,
                            resource_group,
                            account_name,
                            name):
-    body={}
     return client.certificate.get(resource_group_name=resource_group, account_name=account_name, certificate_name=name)
 
 
@@ -330,7 +311,6 @@ def show_batch_certificate(cmd, client,
                            resource_group,
                            account_name,
                            name):
-    body={}
     return client.certificate.get(resource_group_name=resource_group, account_name=account_name, certificate_name=name)
 
 
@@ -338,7 +318,6 @@ def list_batch_certificate(cmd, client,
                            resource_group,
                            account_name,
                            name):
-    body={}
     return client.certificate.list_by_batch_account(resource_group_name=resource_group, account_name=account_name, certificate_name=name)
 
 
@@ -462,7 +441,6 @@ def delete_batch_pool(cmd, client,
                       resource_group,
                       account_name,
                       name):
-    body={}
     return client.pool.delete(resource_group_name=resource_group, account_name=account_name, pool_name=name)
 
 
@@ -470,7 +448,6 @@ def list_batch_pool(cmd, client,
                     resource_group,
                     account_name,
                     name):
-    body={}
     return client.pool.list_by_batch_account(resource_group_name=resource_group, account_name=account_name, pool_name=name)
 
 
@@ -478,7 +455,6 @@ def show_batch_pool(cmd, client,
                     resource_group,
                     account_name,
                     name):
-    body={}
     return client.pool.get(resource_group_name=resource_group, account_name=account_name, pool_name=name)
 
 
@@ -486,7 +462,6 @@ def show_batch_pool(cmd, client,
                     resource_group,
                     account_name,
                     name):
-    body={}
     return client.pool.get(resource_group_name=resource_group, account_name=account_name, pool_name=name)
 
 
@@ -494,5 +469,4 @@ def list_batch_pool(cmd, client,
                     resource_group,
                     account_name,
                     name):
-    body={}
     return client.pool.list_by_batch_account(resource_group_name=resource_group, account_name=account_name, pool_name=name)

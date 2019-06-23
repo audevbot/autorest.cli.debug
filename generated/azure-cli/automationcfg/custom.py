@@ -41,7 +41,6 @@ def delete_automationcfg_softwareupdateconfiguration(cmd, client,
                                                      resource_group,
                                                      automation_account_name,
                                                      name):
-    body={}
     return client.software_update_configurations.delete(resource_group_name=resource_group, automation_account_name=automation_account_name, software_update_configuration_name=name)
 
 
@@ -49,7 +48,6 @@ def list_automationcfg_softwareupdateconfiguration(cmd, client,
                                                    resource_group,
                                                    automation_account_name,
                                                    name):
-    body={}
     return client.software_update_configurations.list()
 
 
@@ -57,5 +55,4 @@ def list_automationcfg_softwareupdateconfiguration(cmd, client,
                                                    resource_group,
                                                    automation_account_name,
                                                    name):
-    body={}
     return client.software_update_configurations.list()

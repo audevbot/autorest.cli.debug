@@ -46,35 +46,30 @@ def create_frontdoor(cmd, client,
 def delete_frontdoor(cmd, client,
                      resource_group,
                      name):
-    body={}
     return client.front_doors.delete(resource_group_name=resource_group, front_door_name=name)
 
 
 def list_frontdoor(cmd, client,
                    resource_group,
                    name):
-    body={}
     return client.front_doors.list(resource_group_name=resource_group, front_door_name=name)
 
 
 def show_frontdoor(cmd, client,
                    resource_group,
                    name):
-    body={}
     return client.front_doors.get(resource_group_name=resource_group, front_door_name=name)
 
 
 def show_frontdoor(cmd, client,
                    resource_group,
                    name):
-    body={}
     return client.front_doors.get(resource_group_name=resource_group, front_door_name=name)
 
 
 def list_frontdoor(cmd, client,
                    resource_group,
                    name):
-    body={}
     return client.front_doors.list_by_resource_group(resource_group_name=resource_group, front_door_name=name)
 
 
@@ -107,7 +102,6 @@ def delete_frontdoor_routingrule(cmd, client,
                                  resource_group,
                                  front_door_name,
                                  name):
-    body={}
     return client.routing_rules.delete(resource_group_name=resource_group, front_door_name=front_door_name, routing_rule_name=name)
 
 
@@ -115,7 +109,6 @@ def list_frontdoor_routingrule(cmd, client,
                                resource_group,
                                front_door_name,
                                name):
-    body={}
     return client.routing_rules.list_by_front_door(resource_group_name=resource_group, front_door_name=front_door_name, routing_rule_name=name)
 
 
@@ -123,7 +116,6 @@ def show_frontdoor_routingrule(cmd, client,
                                resource_group,
                                front_door_name,
                                name):
-    body={}
     return client.routing_rules.get(resource_group_name=resource_group, front_door_name=front_door_name, routing_rule_name=name)
 
 
@@ -131,7 +123,6 @@ def show_frontdoor_routingrule(cmd, client,
                                resource_group,
                                front_door_name,
                                name):
-    body={}
     return client.routing_rules.get(resource_group_name=resource_group, front_door_name=front_door_name, routing_rule_name=name)
 
 
@@ -139,7 +130,6 @@ def list_frontdoor_routingrule(cmd, client,
                                resource_group,
                                front_door_name,
                                name):
-    body={}
     return client.routing_rules.list_by_front_door(resource_group_name=resource_group, front_door_name=front_door_name, routing_rule_name=name)
 
 
@@ -168,7 +158,6 @@ def delete_frontdoor_healthprobesetting(cmd, client,
                                         resource_group,
                                         front_door_name,
                                         name):
-    body={}
     return client.health_probe_settings.delete(resource_group_name=resource_group, front_door_name=front_door_name, health_probe_settings_name=name)
 
 
@@ -176,7 +165,6 @@ def list_frontdoor_healthprobesetting(cmd, client,
                                       resource_group,
                                       front_door_name,
                                       name):
-    body={}
     return client.health_probe_settings.list_by_front_door(resource_group_name=resource_group, front_door_name=front_door_name, health_probe_settings_name=name)
 
 
@@ -184,7 +172,6 @@ def show_frontdoor_healthprobesetting(cmd, client,
                                       resource_group,
                                       front_door_name,
                                       name):
-    body={}
     return client.health_probe_settings.get(resource_group_name=resource_group, front_door_name=front_door_name, health_probe_settings_name=name)
 
 
@@ -192,7 +179,6 @@ def show_frontdoor_healthprobesetting(cmd, client,
                                       resource_group,
                                       front_door_name,
                                       name):
-    body={}
     return client.health_probe_settings.get(resource_group_name=resource_group, front_door_name=front_door_name, health_probe_settings_name=name)
 
 
@@ -200,7 +186,6 @@ def list_frontdoor_healthprobesetting(cmd, client,
                                       resource_group,
                                       front_door_name,
                                       name):
-    body={}
     return client.health_probe_settings.list_by_front_door(resource_group_name=resource_group, front_door_name=front_door_name, health_probe_settings_name=name)
 
 
@@ -229,7 +214,6 @@ def delete_frontdoor_loadbalancingsetting(cmd, client,
                                           resource_group,
                                           front_door_name,
                                           name):
-    body={}
     return client.load_balancing_settings.delete(resource_group_name=resource_group, front_door_name=front_door_name, load_balancing_settings_name=name)
 
 
@@ -237,7 +221,6 @@ def list_frontdoor_loadbalancingsetting(cmd, client,
                                         resource_group,
                                         front_door_name,
                                         name):
-    body={}
     return client.load_balancing_settings.list_by_front_door(resource_group_name=resource_group, front_door_name=front_door_name, load_balancing_settings_name=name)
 
 
@@ -245,7 +228,6 @@ def show_frontdoor_loadbalancingsetting(cmd, client,
                                         resource_group,
                                         front_door_name,
                                         name):
-    body={}
     return client.load_balancing_settings.get(resource_group_name=resource_group, front_door_name=front_door_name, load_balancing_settings_name=name)
 
 
@@ -253,7 +235,6 @@ def show_frontdoor_loadbalancingsetting(cmd, client,
                                         resource_group,
                                         front_door_name,
                                         name):
-    body={}
     return client.load_balancing_settings.get(resource_group_name=resource_group, front_door_name=front_door_name, load_balancing_settings_name=name)
 
 
@@ -261,7 +242,6 @@ def list_frontdoor_loadbalancingsetting(cmd, client,
                                         resource_group,
                                         front_door_name,
                                         name):
-    body={}
     return client.load_balancing_settings.list_by_front_door(resource_group_name=resource_group, front_door_name=front_door_name, load_balancing_settings_name=name)
 
 
@@ -290,7 +270,6 @@ def delete_frontdoor_backendpool(cmd, client,
                                  resource_group,
                                  front_door_name,
                                  name):
-    body={}
     return client.backend_pools.delete(resource_group_name=resource_group, front_door_name=front_door_name, backend_pool_name=name)
 
 
@@ -298,7 +277,6 @@ def list_frontdoor_backendpool(cmd, client,
                                resource_group,
                                front_door_name,
                                name):
-    body={}
     return client.backend_pools.list_by_front_door(resource_group_name=resource_group, front_door_name=front_door_name, backend_pool_name=name)
 
 
@@ -306,7 +284,6 @@ def show_frontdoor_backendpool(cmd, client,
                                resource_group,
                                front_door_name,
                                name):
-    body={}
     return client.backend_pools.get(resource_group_name=resource_group, front_door_name=front_door_name, backend_pool_name=name)
 
 
@@ -314,7 +291,6 @@ def show_frontdoor_backendpool(cmd, client,
                                resource_group,
                                front_door_name,
                                name):
-    body={}
     return client.backend_pools.get(resource_group_name=resource_group, front_door_name=front_door_name, backend_pool_name=name)
 
 
@@ -322,7 +298,6 @@ def list_frontdoor_backendpool(cmd, client,
                                resource_group,
                                front_door_name,
                                name):
-    body={}
     return client.backend_pools.list_by_front_door(resource_group_name=resource_group, front_door_name=front_door_name, backend_pool_name=name)
 
 
@@ -359,7 +334,6 @@ def delete_frontdoor_frontendendpoint(cmd, client,
                                       resource_group,
                                       front_door_name,
                                       name):
-    body={}
     return client.frontend_endpoints.delete(resource_group_name=resource_group, front_door_name=front_door_name, frontend_endpoint_name=name)
 
 
@@ -367,7 +341,6 @@ def list_frontdoor_frontendendpoint(cmd, client,
                                     resource_group,
                                     front_door_name,
                                     name):
-    body={}
     return client.frontend_endpoints.list_by_front_door(resource_group_name=resource_group, front_door_name=front_door_name, frontend_endpoint_name=name)
 
 
@@ -375,7 +348,6 @@ def show_frontdoor_frontendendpoint(cmd, client,
                                     resource_group,
                                     front_door_name,
                                     name):
-    body={}
     return client.frontend_endpoints.get(resource_group_name=resource_group, front_door_name=front_door_name, frontend_endpoint_name=name)
 
 
@@ -383,7 +355,6 @@ def show_frontdoor_frontendendpoint(cmd, client,
                                     resource_group,
                                     front_door_name,
                                     name):
-    body={}
     return client.frontend_endpoints.get(resource_group_name=resource_group, front_door_name=front_door_name, frontend_endpoint_name=name)
 
 
@@ -391,5 +362,4 @@ def list_frontdoor_frontendendpoint(cmd, client,
                                     resource_group,
                                     front_door_name,
                                     name):
-    body={}
     return client.frontend_endpoints.list_by_front_door(resource_group_name=resource_group, front_door_name=front_door_name, frontend_endpoint_name=name)
