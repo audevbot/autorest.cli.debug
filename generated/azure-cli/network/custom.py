@@ -20,34 +20,49 @@ def create_network(cmd, client,
                    provisioning_state=None,
                    type=None,
                    etag=None):
-    return client.azure_firewalls.create(resource_group, name, body)
+    body={}
+    body['id'] = id
+    body['location'] = location
+    body['tags'] = tags
+    body['properties'] = properties
+    body['application_rule_collections'] = application_rule_collections
+    body['nat_rule_collections'] = nat_rule_collections
+    body['network_rule_collections'] = network_rule_collections
+    body['ip_configurations'] = ip_configurations
+    body['provisioning_state'] = provisioning_state
+    return client.azure_firewalls.create_or_update(resource_group_name=resource_group, azure_firewall_name=name, parameters=body)
 
 
 def delete_network(cmd, client,
                    resource_group,
                    name):
-    return client.azure_firewalls.delete(resource_group, name)
+    body={}
+    return client.azure_firewalls.delete(resource_group_name=resource_group, azure_firewall_name=name)
 
 
 def list_network(cmd, client,
                  resource_group,
                  name):
-    return client.azure_firewalls.list(resource_group, name)
+    body={}
+    return client.azure_firewalls.list_all(resource_group_name=resource_group, azure_firewall_name=name)
 
 
 def show_network(cmd, client,
                  resource_group,
                  name):
-    return client.azure_firewalls.show(resource_group, name)
+    body={}
+    return client.azure_firewalls.get(resource_group_name=resource_group, azure_firewall_name=name)
 
 
 def show_network(cmd, client,
                  resource_group,
                  name):
-    return client.azure_firewalls.show(resource_group, name)
+    body={}
+    return client.azure_firewalls.get(resource_group_name=resource_group, azure_firewall_name=name)
 
 
 def list_network(cmd, client,
                  resource_group,
                  name):
-    return client.azure_firewalls.list(resource_group, name)
+    body={}
+    return client.azure_firewalls.list(resource_group_name=resource_group, azure_firewall_name=name)

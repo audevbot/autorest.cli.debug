@@ -18,7 +18,16 @@ def create_batch(cmd, client,
                  key_vault_reference=None,
                  account_endpoint=None,
                  id=None):
-    return client.batch_account.create(resource_group, name, body)
+    body={}
+    body['location'] = location
+    body['tags'] = tags
+    body['properties'] = properties
+    body['auto_storage'] = auto_storage
+    body.get('auto_storage', {}).get('storage_account_id', {})['storage_account_id'] = storage_account_id
+    body['pool_allocation_mode'] = pool_allocation_mode
+    body['key_vault_reference'] = key_vault_reference
+    body['account_endpoint'] = account_endpoint
+    return client.batch_account.create(resource_group_name=resource_group, account_name=name, parameters=body)
 
 
 def update_batch(cmd, client,
@@ -33,37 +42,51 @@ def update_batch(cmd, client,
                  key_vault_reference=None,
                  account_endpoint=None,
                  id=None):
-    return client.batch_account.update(resource_group, name, body)
+    body={}
+    body['location'] = location
+    body['tags'] = tags
+    body['properties'] = properties
+    body['auto_storage'] = auto_storage
+    body.get('auto_storage', {}).get('storage_account_id', {})['storage_account_id'] = storage_account_id
+    body['pool_allocation_mode'] = pool_allocation_mode
+    body['key_vault_reference'] = key_vault_reference
+    body['account_endpoint'] = account_endpoint
+    return client.batch_account.update(resource_group_name=resource_group, account_name=name, parameters=body)
 
 
 def delete_batch(cmd, client,
                  resource_group,
                  name):
-    return client.batch_account.delete(resource_group, name)
+    body={}
+    return client.batch_account.delete(resource_group_name=resource_group, account_name=name)
 
 
 def list_batch(cmd, client,
                resource_group,
                name):
-    return client.batch_account.list(resource_group, name)
+    body={}
+    return client.batch_account.list(resource_group_name=resource_group, account_name=name)
 
 
 def show_batch(cmd, client,
                resource_group,
                name):
-    return client.batch_account.show(resource_group, name)
+    body={}
+    return client.batch_account.get(resource_group_name=resource_group, account_name=name)
 
 
 def show_batch(cmd, client,
                resource_group,
                name):
-    return client.batch_account.show(resource_group, name)
+    body={}
+    return client.batch_account.get(resource_group_name=resource_group, account_name=name)
 
 
 def list_batch(cmd, client,
                resource_group,
                name):
-    return client.batch_account.list(resource_group, name)
+    body={}
+    return client.batch_account.list_by_resource_group(resource_group_name=resource_group, account_name=name)
 
 
 def create_batch_application_version(cmd, client,
@@ -79,7 +102,14 @@ def create_batch_application_version(cmd, client,
                                      last_activation_time=None,
                                      id=None,
                                      etag=None):
-    return client.application_package.create(resource_group, account_name, application_name, name)
+    body={}
+    body['properties'] = properties
+    body['state'] = state
+    body['format'] = format
+    body['storage_url'] = storage_url
+    body['storage_url_expiry'] = storage_url_expiry
+    body['last_activation_time'] = last_activation_time
+    return client.application_package.create(resource_group_name=resource_group, account_name=account_name, application_name=application_name, version_name=name)
 
 
 def delete_batch_application_version(cmd, client,
@@ -87,7 +117,8 @@ def delete_batch_application_version(cmd, client,
                                      account_name,
                                      application_name,
                                      name):
-    return client.application_package.delete(resource_group, account_name, application_name, name)
+    body={}
+    return client.application_package.delete(resource_group_name=resource_group, account_name=account_name, application_name=application_name, version_name=name)
 
 
 def list_batch_application_version(cmd, client,
@@ -95,7 +126,8 @@ def list_batch_application_version(cmd, client,
                                    account_name,
                                    application_name,
                                    name):
-    return client.application_package.list(resource_group, account_name, application_name, name)
+    body={}
+    return client.application_package.list(resource_group_name=resource_group, account_name=account_name, application_name=application_name, version_name=name)
 
 
 def show_batch_application_version(cmd, client,
@@ -103,7 +135,8 @@ def show_batch_application_version(cmd, client,
                                    account_name,
                                    application_name,
                                    name):
-    return client.application_package.show(resource_group, account_name, application_name, name)
+    body={}
+    return client.application_package.get(resource_group_name=resource_group, account_name=account_name, application_name=application_name, version_name=name)
 
 
 def show_batch_application_version(cmd, client,
@@ -111,7 +144,8 @@ def show_batch_application_version(cmd, client,
                                    account_name,
                                    application_name,
                                    name):
-    return client.application_package.show(resource_group, account_name, application_name, name)
+    body={}
+    return client.application_package.get(resource_group_name=resource_group, account_name=account_name, application_name=application_name, version_name=name)
 
 
 def list_batch_application_version(cmd, client,
@@ -119,7 +153,8 @@ def list_batch_application_version(cmd, client,
                                    account_name,
                                    application_name,
                                    name):
-    return client.application_package.list(resource_group, account_name, application_name, name)
+    body={}
+    return client.application_package.list(resource_group_name=resource_group, account_name=account_name, application_name=application_name, version_name=name)
 
 
 def create_batch_application(cmd, client,
@@ -132,7 +167,12 @@ def create_batch_application(cmd, client,
                              default_version=None,
                              id=None,
                              etag=None):
-    return client.application.create(resource_group, account_name, name)
+    body={}
+    body['properties'] = properties
+    body['display_name'] = display_name
+    body['allow_updates'] = allow_updates
+    body['default_version'] = default_version
+    return client.application.create(resource_group_name=resource_group, account_name=account_name, application_name=name)
 
 
 def update_batch_application(cmd, client,
@@ -145,45 +185,56 @@ def update_batch_application(cmd, client,
                              default_version=None,
                              id=None,
                              etag=None):
-    return client.application.update(resource_group, account_name, name, body)
+    body={}
+    body['properties'] = properties
+    body['display_name'] = display_name
+    body['allow_updates'] = allow_updates
+    body['default_version'] = default_version
+    return client.application.update(resource_group_name=resource_group, account_name=account_name, application_name=name, parameters=body)
 
 
 def delete_batch_application(cmd, client,
                              resource_group,
                              account_name,
                              name):
-    return client.application.delete(resource_group, account_name, name)
+    body={}
+    return client.application.delete(resource_group_name=resource_group, account_name=account_name, application_name=name)
 
 
 def list_batch_application(cmd, client,
                            resource_group,
                            account_name,
                            name):
-    return client.application.list(resource_group, account_name, name)
+    body={}
+    return client.application.list(resource_group_name=resource_group, account_name=account_name, application_name=name)
 
 
 def show_batch_application(cmd, client,
                            resource_group,
                            account_name,
                            name):
-    return client.application.show(resource_group, account_name, name)
+    body={}
+    return client.application.get(resource_group_name=resource_group, account_name=account_name, application_name=name)
 
 
 def show_batch_application(cmd, client,
                            resource_group,
                            account_name,
                            name):
-    return client.application.show(resource_group, account_name, name)
+    body={}
+    return client.application.get(resource_group_name=resource_group, account_name=account_name, application_name=name)
 
 
 def list_batch_application(cmd, client,
                            resource_group,
                            account_name,
                            name):
-    return client.application.list(resource_group, account_name, name)
+    body={}
+    return client.application.list(resource_group_name=resource_group, account_name=account_name, application_name=name)
 
 
 def list_(cmd, client):
+    body={}
     return client.operations.list()
 
 
@@ -204,7 +255,19 @@ def create_batch_certificate(cmd, client,
                              delete_certificate_error=None,
                              id=None,
                              etag=None):
-    return client.certificate.create(resource_group, account_name, name, body)
+    body={}
+    body['properties'] = properties
+    body['thumbprint_algorithm'] = thumbprint_algorithm
+    body['thumbprint'] = thumbprint
+    body['format'] = format
+    body['data'] = data
+    body['password'] = password
+    body['provisioning_state_transition_time'] = provisioning_state_transition_time
+    body['previous_provisioning_state'] = previous_provisioning_state
+    body['previous_provisioning_state_transition_time'] = previous_provisioning_state_transition_time
+    body['public_data'] = public_data
+    body['delete_certificate_error'] = delete_certificate_error
+    return client.certificate.create(resource_group_name=resource_group, account_name=account_name, certificate_name=name, parameters=body)
 
 
 def update_batch_certificate(cmd, client,
@@ -224,42 +287,59 @@ def update_batch_certificate(cmd, client,
                              delete_certificate_error=None,
                              id=None,
                              etag=None):
-    return client.certificate.update(resource_group, account_name, name, body)
+    body={}
+    body['properties'] = properties
+    body['thumbprint_algorithm'] = thumbprint_algorithm
+    body['thumbprint'] = thumbprint
+    body['format'] = format
+    body['data'] = data
+    body['password'] = password
+    body['provisioning_state_transition_time'] = provisioning_state_transition_time
+    body['previous_provisioning_state'] = previous_provisioning_state
+    body['previous_provisioning_state_transition_time'] = previous_provisioning_state_transition_time
+    body['public_data'] = public_data
+    body['delete_certificate_error'] = delete_certificate_error
+    return client.certificate.update(resource_group_name=resource_group, account_name=account_name, certificate_name=name, parameters=body)
 
 
 def delete_batch_certificate(cmd, client,
                              resource_group,
                              account_name,
                              name):
-    return client.certificate.delete(resource_group, account_name, name)
+    body={}
+    return client.certificate.delete(resource_group_name=resource_group, account_name=account_name, certificate_name=name)
 
 
 def list_batch_certificate(cmd, client,
                            resource_group,
                            account_name,
                            name):
-    return client.certificate.list(resource_group, account_name, name)
+    body={}
+    return client.certificate.list_by_batch_account(resource_group_name=resource_group, account_name=account_name, certificate_name=name)
 
 
 def show_batch_certificate(cmd, client,
                            resource_group,
                            account_name,
                            name):
-    return client.certificate.show(resource_group, account_name, name)
+    body={}
+    return client.certificate.get(resource_group_name=resource_group, account_name=account_name, certificate_name=name)
 
 
 def show_batch_certificate(cmd, client,
                            resource_group,
                            account_name,
                            name):
-    return client.certificate.show(resource_group, account_name, name)
+    body={}
+    return client.certificate.get(resource_group_name=resource_group, account_name=account_name, certificate_name=name)
 
 
 def list_batch_certificate(cmd, client,
                            resource_group,
                            account_name,
                            name):
-    return client.certificate.list(resource_group, account_name, name)
+    body={}
+    return client.certificate.list_by_batch_account(resource_group_name=resource_group, account_name=account_name, certificate_name=name)
 
 
 def create_batch_pool(cmd, client,
@@ -292,7 +372,32 @@ def create_batch_pool(cmd, client,
                       resize_operation_status=None,
                       id=None,
                       etag=None):
-    return client.pool.create(resource_group, account_name, name, body)
+    body={}
+    body['properties'] = properties
+    body['display_name'] = display_name
+    body['vm_size'] = vm_size
+    body['deployment_configuration'] = deployment_configuration
+    body['scale_settings'] = scale_settings
+    body['inter_node_communication'] = inter_node_communication
+    body['network_configuration'] = network_configuration
+    body['max_tasks_per_node'] = max_tasks_per_node
+    body['task_scheduling_policy'] = task_scheduling_policy
+    body['user_accounts'] = user_accounts
+    body['metadata'] = metadata
+    body['start_task'] = start_task
+    body['certificates'] = certificates
+    body['application_packages'] = application_packages
+    body['application_licenses'] = application_licenses
+    body['last_modified'] = last_modified
+    body['creation_time'] = creation_time
+    body['provisioning_state_transition_time'] = provisioning_state_transition_time
+    body['allocation_state'] = allocation_state
+    body['allocation_state_transition_time'] = allocation_state_transition_time
+    body['current_dedicated_nodes'] = current_dedicated_nodes
+    body['current_low_priority_nodes'] = current_low_priority_nodes
+    body['auto_scale_run'] = auto_scale_run
+    body['resize_operation_status'] = resize_operation_status
+    return client.pool.create(resource_group_name=resource_group, account_name=account_name, pool_name=name, parameters=body)
 
 
 def update_batch_pool(cmd, client,
@@ -325,39 +430,69 @@ def update_batch_pool(cmd, client,
                       resize_operation_status=None,
                       id=None,
                       etag=None):
-    return client.pool.update(resource_group, account_name, name, body)
+    body={}
+    body['properties'] = properties
+    body['display_name'] = display_name
+    body['vm_size'] = vm_size
+    body['deployment_configuration'] = deployment_configuration
+    body['scale_settings'] = scale_settings
+    body['inter_node_communication'] = inter_node_communication
+    body['network_configuration'] = network_configuration
+    body['max_tasks_per_node'] = max_tasks_per_node
+    body['task_scheduling_policy'] = task_scheduling_policy
+    body['user_accounts'] = user_accounts
+    body['metadata'] = metadata
+    body['start_task'] = start_task
+    body['certificates'] = certificates
+    body['application_packages'] = application_packages
+    body['application_licenses'] = application_licenses
+    body['last_modified'] = last_modified
+    body['creation_time'] = creation_time
+    body['provisioning_state_transition_time'] = provisioning_state_transition_time
+    body['allocation_state'] = allocation_state
+    body['allocation_state_transition_time'] = allocation_state_transition_time
+    body['current_dedicated_nodes'] = current_dedicated_nodes
+    body['current_low_priority_nodes'] = current_low_priority_nodes
+    body['auto_scale_run'] = auto_scale_run
+    body['resize_operation_status'] = resize_operation_status
+    return client.pool.update(resource_group_name=resource_group, account_name=account_name, pool_name=name, parameters=body)
 
 
 def delete_batch_pool(cmd, client,
                       resource_group,
                       account_name,
                       name):
-    return client.pool.delete(resource_group, account_name, name)
+    body={}
+    return client.pool.delete(resource_group_name=resource_group, account_name=account_name, pool_name=name)
 
 
 def list_batch_pool(cmd, client,
                     resource_group,
                     account_name,
                     name):
-    return client.pool.list(resource_group, account_name, name)
+    body={}
+    return client.pool.list_by_batch_account(resource_group_name=resource_group, account_name=account_name, pool_name=name)
 
 
 def show_batch_pool(cmd, client,
                     resource_group,
                     account_name,
                     name):
-    return client.pool.show(resource_group, account_name, name)
+    body={}
+    return client.pool.get(resource_group_name=resource_group, account_name=account_name, pool_name=name)
 
 
 def show_batch_pool(cmd, client,
                     resource_group,
                     account_name,
                     name):
-    return client.pool.show(resource_group, account_name, name)
+    body={}
+    return client.pool.get(resource_group_name=resource_group, account_name=account_name, pool_name=name)
 
 
 def list_batch_pool(cmd, client,
                     resource_group,
                     account_name,
                     name):
-    return client.pool.list(resource_group, account_name, name)
+    body={}
+    return client.pool.list_by_batch_account(resource_group_name=resource_group, account_name=account_name, pool_name=name)
