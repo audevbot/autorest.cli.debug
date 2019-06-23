@@ -5,7 +5,7 @@
 
 from knack.util import CLIError
 
-
+# module equivalent: azure_rm_automationjob
 def create_automationjob_job(cmd, client,
                              resource_group,
                              automation_account_name,
@@ -46,35 +46,35 @@ def create_automationjob_job(cmd, client,
     body['provisioning_state'] = provisioning_state
     return client.job.create(resource_group_name=resource_group, automation_account_name=automation_account_name, job_name=name, parameters=body)
 
-
+# module equivalent: azure_rm_automationjob
 def list_automationjob_job(cmd, client,
                            resource_group,
                            automation_account_name,
                            name):
     return client.job.list_by_automation_account(resource_group_name=resource_group, automation_account_name=automation_account_name, job_name=name)
 
-
+# module equivalent: azure_rm_automationjob
 def show_automationjob_job(cmd, client,
                            resource_group,
                            automation_account_name,
                            name):
     return client.job.get(resource_group_name=resource_group, automation_account_name=automation_account_name, job_name=name)
 
-
+# module equivalent: azure_rm_automationjob_info
 def show_automationjob_job(cmd, client,
                            resource_group,
                            automation_account_name,
                            name):
     return client.job.get(resource_group_name=resource_group, automation_account_name=automation_account_name, job_name=name)
 
-
+# module equivalent: azure_rm_automationjob_info
 def list_automationjob_job(cmd, client,
                            resource_group,
                            automation_account_name,
                            name):
     return client.job.list_by_automation_account(resource_group_name=resource_group, automation_account_name=automation_account_name, job_name=name)
 
-
+# module equivalent: azure_rm_automationjobstream_info
 def show_automationjob_job_stream(cmd, client,
                                   resource_group,
                                   automation_account_name,
@@ -82,7 +82,7 @@ def show_automationjob_job_stream(cmd, client,
                                   job_stream_id):
     return client.job_stream.get(resource_group_name=resource_group, automation_account_name=automation_account_name, job_name=name, job_stream_id=job_stream_id)
 
-
+# module equivalent: azure_rm_automationjobstream_info
 def list_automationjob_job_stream(cmd, client,
                                   resource_group,
                                   automation_account_name,

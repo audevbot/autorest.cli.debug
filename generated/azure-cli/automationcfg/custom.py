@@ -5,7 +5,7 @@
 
 from knack.util import CLIError
 
-
+# module equivalent: azure_rm_softwareupdateconfiguration
 def create_automationcfg_softwareupdateconfiguration(cmd, client,
                                                      resource_group,
                                                      automation_account_name,
@@ -36,21 +36,21 @@ def create_automationcfg_softwareupdateconfiguration(cmd, client,
     body['last_modified_by'] = last_modified_by
     return client.software_update_configurations.create(resource_group_name=resource_group, automation_account_name=automation_account_name, software_update_configuration_name=name, parameters=body)
 
-
+# module equivalent: azure_rm_softwareupdateconfiguration
 def delete_automationcfg_softwareupdateconfiguration(cmd, client,
                                                      resource_group,
                                                      automation_account_name,
                                                      name):
     return client.software_update_configurations.delete(resource_group_name=resource_group, automation_account_name=automation_account_name, software_update_configuration_name=name)
 
-
+# module equivalent: azure_rm_softwareupdateconfiguration
 def list_automationcfg_softwareupdateconfiguration(cmd, client,
                                                    resource_group,
                                                    automation_account_name,
                                                    name):
     return client.software_update_configurations.list()
 
-
+# module equivalent: azure_rm_softwareupdateconfiguration_info
 def list_automationcfg_softwareupdateconfiguration(cmd, client,
                                                    resource_group,
                                                    automation_account_name,

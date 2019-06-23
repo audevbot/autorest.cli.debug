@@ -5,7 +5,7 @@
 
 from knack.util import CLIError
 
-
+# module equivalent: azure_rm_azurefirewall
 def create_network(cmd, client,
                    resource_group,
                    name,
@@ -32,7 +32,7 @@ def create_network(cmd, client,
     body['provisioning_state'] = provisioning_state
     return client.azure_firewalls.create_or_update(resource_group_name=resource_group, azure_firewall_name=name, parameters=body)
 
-
+# module equivalent: azure_rm_azurefirewall
 def update_network(cmd, client,
                    resource_group,
                    name,
@@ -59,31 +59,31 @@ def update_network(cmd, client,
     body['provisioning_state'] = provisioning_state
     return client.azure_firewalls.create_or_update(resource_group_name=resource_group, azure_firewall_name=name, parameters=body)
 
-
+# module equivalent: azure_rm_azurefirewall
 def delete_network(cmd, client,
                    resource_group,
                    name):
     return client.azure_firewalls.delete(resource_group_name=resource_group, azure_firewall_name=name)
 
-
+# module equivalent: azure_rm_azurefirewall
 def list_network(cmd, client,
                  resource_group,
                  name):
     return client.azure_firewalls.list_all(resource_group_name=resource_group, azure_firewall_name=name)
 
-
+# module equivalent: azure_rm_azurefirewall
 def show_network(cmd, client,
                  resource_group,
                  name):
     return client.azure_firewalls.get(resource_group_name=resource_group, azure_firewall_name=name)
 
-
+# module equivalent: azure_rm_azurefirewall_info
 def show_network(cmd, client,
                  resource_group,
                  name):
     return client.azure_firewalls.get(resource_group_name=resource_group, azure_firewall_name=name)
 
-
+# module equivalent: azure_rm_azurefirewall_info
 def list_network(cmd, client,
                  resource_group,
                  name):
