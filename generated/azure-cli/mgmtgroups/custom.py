@@ -48,31 +48,26 @@ def update_mgmtgroups(cmd, client,
 
 def delete_mgmtgroups(cmd, client,
                       group_id):
-    body={}
     return client.management_groups.delete(group_id=group_id)
 
 
 def list_mgmtgroups(cmd, client,
                     group_id):
-    body={}
     return client.management_groups.list(group_id=group_id)
 
 
 def show_mgmtgroups(cmd, client,
                     group_id):
-    body={}
     return client.management_groups.get(group_id=group_id)
 
 
 def show_mgmtgroups(cmd, client,
                     group_id):
-    body={}
     return client.management_groups.get(group_id=group_id)
 
 
 def list_mgmtgroups(cmd, client,
                     group_id):
-    body={}
     return client.management_groups.list(group_id=group_id)
 
 
@@ -84,10 +79,8 @@ def create_mgmtgroups(cmd, client,
 
 def delete_mgmtgroups(cmd, client,
                       group_id):
-    body={}
     return client.management_group_subscriptions.delete(group_id=group_id)
 
 
 def list_(cmd, client):
-    body={}
     return client.operations.list()

@@ -51,7 +51,6 @@ def list_automationjob_job(cmd, client,
                            resource_group,
                            automation_account_name,
                            name):
-    body={}
     return client.job.list_by_automation_account(resource_group_name=resource_group, automation_account_name=automation_account_name, job_name=name)
 
 
@@ -59,7 +58,6 @@ def show_automationjob_job(cmd, client,
                            resource_group,
                            automation_account_name,
                            name):
-    body={}
     return client.job.get(resource_group_name=resource_group, automation_account_name=automation_account_name, job_name=name)
 
 
@@ -67,7 +65,6 @@ def show_automationjob_job(cmd, client,
                            resource_group,
                            automation_account_name,
                            name):
-    body={}
     return client.job.get(resource_group_name=resource_group, automation_account_name=automation_account_name, job_name=name)
 
 
@@ -75,7 +72,6 @@ def list_automationjob_job(cmd, client,
                            resource_group,
                            automation_account_name,
                            name):
-    body={}
     return client.job.list_by_automation_account(resource_group_name=resource_group, automation_account_name=automation_account_name, job_name=name)
 
 
@@ -84,7 +80,6 @@ def show_automationjob_job_stream(cmd, client,
                                   automation_account_name,
                                   name,
                                   job_stream_id):
-    body={}
     return client.job_stream.get(resource_group_name=resource_group, automation_account_name=automation_account_name, job_name=name, job_stream_id=job_stream_id)
 
 
@@ -93,5 +88,4 @@ def list_automationjob_job_stream(cmd, client,
                                   automation_account_name,
                                   name,
                                   job_stream_id):
-    body={}
     return client.job_stream.list_by_job(resource_group_name=resource_group, automation_account_name=automation_account_name, job_name=name, job_stream_id=job_stream_id)

@@ -30,35 +30,30 @@ def create_compute(cmd, client,
 def delete_compute(cmd, client,
                    resource_group,
                    name):
-    body={}
     return client.galleries.delete(resource_group_name=resource_group, gallery_name=name)
 
 
 def list_compute(cmd, client,
                  resource_group,
                  name):
-    body={}
     return client.galleries.list(resource_group_name=resource_group, gallery_name=name)
 
 
 def show_compute(cmd, client,
                  resource_group,
                  name):
-    body={}
     return client.galleries.get(resource_group_name=resource_group, gallery_name=name)
 
 
 def show_compute(cmd, client,
                  resource_group,
                  name):
-    body={}
     return client.galleries.get(resource_group_name=resource_group, gallery_name=name)
 
 
 def list_compute(cmd, client,
                  resource_group,
                  name):
-    body={}
     return client.galleries.list_by_resource_group(resource_group_name=resource_group, gallery_name=name)
 
 
@@ -106,7 +101,6 @@ def delete_compute_image(cmd, client,
                          resource_group,
                          gallery_name,
                          name):
-    body={}
     return client.gallery_images.delete(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=name)
 
 
@@ -114,7 +108,6 @@ def list_compute_image(cmd, client,
                        resource_group,
                        gallery_name,
                        name):
-    body={}
     return client.gallery_images.list_by_gallery(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=name)
 
 
@@ -122,7 +115,6 @@ def show_compute_image(cmd, client,
                        resource_group,
                        gallery_name,
                        name):
-    body={}
     return client.gallery_images.get(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=name)
 
 
@@ -130,7 +122,6 @@ def show_compute_image(cmd, client,
                        resource_group,
                        gallery_name,
                        name):
-    body={}
     return client.gallery_images.get(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=name)
 
 
@@ -138,7 +129,6 @@ def list_compute_image(cmd, client,
                        resource_group,
                        gallery_name,
                        name):
-    body={}
     return client.gallery_images.list_by_gallery(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=name)
 
 
@@ -172,7 +162,6 @@ def delete_compute_image_version(cmd, client,
                                  gallery_name,
                                  gallery_image_name,
                                  name):
-    body={}
     return client.gallery_image_versions.delete(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=gallery_image_name, gallery_image_version_name=name)
 
 
@@ -181,7 +170,6 @@ def list_compute_image_version(cmd, client,
                                gallery_name,
                                gallery_image_name,
                                name):
-    body={}
     return client.gallery_image_versions.list_by_gallery_image(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=gallery_image_name, gallery_image_version_name=name)
 
 
@@ -190,7 +178,6 @@ def show_compute_image_version(cmd, client,
                                gallery_name,
                                gallery_image_name,
                                name):
-    body={}
     return client.gallery_image_versions.get(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=gallery_image_name, gallery_image_version_name=name)
 
 
@@ -199,7 +186,6 @@ def show_compute_image_version(cmd, client,
                                gallery_name,
                                gallery_image_name,
                                name):
-    body={}
     return client.gallery_image_versions.get(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=gallery_image_name, gallery_image_version_name=name)
 
 
@@ -208,5 +194,4 @@ def list_compute_image_version(cmd, client,
                                gallery_name,
                                gallery_image_name,
                                name):
-    body={}
     return client.gallery_image_versions.list_by_gallery_image(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=gallery_image_name, gallery_image_version_name=name)
