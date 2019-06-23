@@ -27,33 +27,3 @@ helps['automationjob job show'] = """
     type: command
     short-summary: show a automationjob job.
 """
-
-helps['automationjob job'] = """
-    type: group
-    short-summary: Commands to manage Job.
-"""
-
-helps['automationjob job show'] = """
-    type: command
-    short-summary: show a automationjob job.
-"""
-
-helps['automationjob job list'] = """
-    type: command
-    short-summary: list a automationjob job.
-"""
-
-helps['automationjob job stream'] = """
-    type: group
-    short-summary: Commands to manage JobStream.
-"""
-
-helps['automationjob job stream show'] = """
-    type: command
-    short-summary: show a automationjob job stream.
-"""
-
-helps['automationjob job stream list'] = """
-    type: command
-    short-summary: list a automationjob job stream.
-"""

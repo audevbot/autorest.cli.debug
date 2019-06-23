@@ -37,18 +37,3 @@ helps['network show'] = """
     type: command
     short-summary: show a network.
 """
-
-helps['network'] = """
-    type: group
-    short-summary: Commands to manage AzureFirewall.
-"""
-
-helps['network show'] = """
-    type: command
-    short-summary: show a network.
-"""
-
-helps['network list'] = """
-    type: command
-    short-summary: list a network.
-"""

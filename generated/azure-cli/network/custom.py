@@ -76,15 +76,3 @@ def show_network(cmd, client,
                  resource_group,
                  name):
     return client.azure_firewalls.get(resource_group_name=resource_group, azure_firewall_name=name)
-
-# module equivalent: azure_rm_azurefirewall_info
-def show_network(cmd, client,
-                 resource_group,
-                 name):
-    return client.azure_firewalls.get(resource_group_name=resource_group, azure_firewall_name=name)
-
-# module equivalent: azure_rm_azurefirewall_info
-def list_network(cmd, client,
-                 resource_group,
-                 name):
-    return client.azure_firewalls.list(resource_group_name=resource_group, azure_firewall_name=name)

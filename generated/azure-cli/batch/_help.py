@@ -38,21 +38,6 @@ helps['batch show'] = """
     short-summary: show a batch.
 """
 
-helps['batch'] = """
-    type: group
-    short-summary: Commands to manage BatchAccount.
-"""
-
-helps['batch show'] = """
-    type: command
-    short-summary: show a batch.
-"""
-
-helps['batch list'] = """
-    type: command
-    short-summary: list a batch.
-"""
-
 helps['batch application version'] = """
     type: group
     short-summary: Commands to manage ApplicationPackage.
@@ -76,21 +61,6 @@ helps['batch application version list'] = """
 helps['batch application version show'] = """
     type: command
     short-summary: show a batch application version.
-"""
-
-helps['batch application version'] = """
-    type: group
-    short-summary: Commands to manage ApplicationPackage.
-"""
-
-helps['batch application version show'] = """
-    type: command
-    short-summary: show a batch application version.
-"""
-
-helps['batch application version list'] = """
-    type: command
-    short-summary: list a batch application version.
 """
 
 helps['batch application'] = """
@@ -123,36 +93,6 @@ helps['batch application show'] = """
     short-summary: show a batch application.
 """
 
-helps['batch application'] = """
-    type: group
-    short-summary: Commands to manage Application.
-"""
-
-helps['batch application show'] = """
-    type: command
-    short-summary: show a batch application.
-"""
-
-helps['batch application list'] = """
-    type: command
-    short-summary: list a batch application.
-"""
-
-helps['batch'] = """
-    type: group
-    short-summary: Commands to manage Location.
-"""
-
-helps[''] = """
-    type: group
-    short-summary: Commands to manage Operation.
-"""
-
-helps[' list'] = """
-    type: command
-    short-summary: list a .
-"""
-
 helps['batch certificate'] = """
     type: group
     short-summary: Commands to manage Certificate.
@@ -183,21 +123,6 @@ helps['batch certificate show'] = """
     short-summary: show a batch certificate.
 """
 
-helps['batch certificate'] = """
-    type: group
-    short-summary: Commands to manage Certificate.
-"""
-
-helps['batch certificate show'] = """
-    type: command
-    short-summary: show a batch certificate.
-"""
-
-helps['batch certificate list'] = """
-    type: command
-    short-summary: list a batch certificate.
-"""
-
 helps['batch pool'] = """
     type: group
     short-summary: Commands to manage Pool.
@@ -226,19 +151,4 @@ helps['batch pool list'] = """
 helps['batch pool show'] = """
     type: command
     short-summary: show a batch pool.
-"""
-
-helps['batch pool'] = """
-    type: group
-    short-summary: Commands to manage Pool.
-"""
-
-helps['batch pool show'] = """
-    type: command
-    short-summary: show a batch pool.
-"""
-
-helps['batch pool list'] = """
-    type: command
-    short-summary: list a batch pool.
 """

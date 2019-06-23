@@ -38,31 +38,6 @@ helps['eventgrid eventsubscription show'] = """
     short-summary: show a eventgrid eventsubscription.
 """
 
-helps['eventgrid eventsubscription location topictype provider {providernamespace} {resourcetypename}'] = """
-    type: group
-    short-summary: Commands to manage EventSubscription.
-"""
-
-helps['eventgrid eventsubscription location topictype provider {providernamespace} {resourcetypename} list'] = """
-    type: command
-    short-summary: list a eventgrid eventsubscription location topictype provider {providernamespace} {resourcetypename}.
-"""
-
-helps['eventgrid eventsubscription location topictype provider {providernamespace} {resourcetypename} show'] = """
-    type: command
-    short-summary: show a eventgrid eventsubscription location topictype provider {providernamespace} {resourcetypename}.
-"""
-
-helps[''] = """
-    type: group
-    short-summary: Commands to manage Operation.
-"""
-
-helps[' list'] = """
-    type: command
-    short-summary: list a .
-"""
-
 helps['eventgrid'] = """
     type: group
     short-summary: Commands to manage Topic.
@@ -81,36 +56,6 @@ helps['eventgrid update'] = """
 helps['eventgrid delete'] = """
     type: command
     short-summary: delete a eventgrid.
-"""
-
-helps['eventgrid list'] = """
-    type: command
-    short-summary: list a eventgrid.
-"""
-
-helps['eventgrid show'] = """
-    type: command
-    short-summary: show a eventgrid.
-"""
-
-helps['eventgrid provider {providernamespace} {resourcetypename}'] = """
-    type: group
-    short-summary: Commands to manage Topic.
-"""
-
-helps['eventgrid provider {providernamespace} {resourcetypename} list'] = """
-    type: command
-    short-summary: list a eventgrid provider {providernamespace} {resourcetypename}.
-"""
-
-helps['eventgrid provider {providernamespace} {resourcetypename} show'] = """
-    type: command
-    short-summary: show a eventgrid provider {providernamespace} {resourcetypename}.
-"""
-
-helps['eventgrid'] = """
-    type: group
-    short-summary: Commands to manage TopicType.
 """
 
 helps['eventgrid list'] = """

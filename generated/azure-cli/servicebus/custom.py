@@ -5,10 +5,6 @@
 
 from knack.util import CLIError
 
-# module equivalent: azure_rm_servicebusoperation_info
-def list_(cmd, client):
-    return client.operations.list()
-
 # module equivalent: azure_rm_servicebusnamespace
 def create_servicebus(cmd, client,
                       resource_group,
@@ -81,20 +77,6 @@ def show_servicebus(cmd, client,
                     name):
     return client.namespaces.get(resource_group_name=resource_group, namespace_name=name)
 
-# module equivalent: azure_rm_servicebusnamespace_info
-def list_servicebus_authorizationrule(cmd, client,
-                                      resource_group,
-                                      namespace_name,
-                                      name):
-    return client.namespaces.list_authorization_rules(resource_group_name=resource_group, namespace_name=namespace_name)
-
-# module equivalent: azure_rm_servicebusnamespace_info
-def show_servicebus_authorizationrule(cmd, client,
-                                      resource_group,
-                                      namespace_name,
-                                      name):
-    return client.namespaces.get(resource_group_name=resource_group, namespace_name=namespace_name)
-
 # module equivalent: azure_rm_servicebusdisasterrecoveryconfig
 def create_servicebus_disasterrecoveryconfig(cmd, client,
                                              resource_group,
@@ -159,36 +141,6 @@ def show_servicebus_disasterrecoveryconfig(cmd, client,
                                            name,
                                            alias):
     return client.disaster_recovery_configs.get(resource_group_name=resource_group, namespace_name=name, alias=alias)
-
-# module equivalent: azure_rm_servicebusdisasterrecoveryconfig_info
-def list_servicebus_disasterrecoveryconfig_authorizationrule(cmd, client,
-                                                             resource_group,
-                                                             namespace_name,
-                                                             alias,
-                                                             name):
-    return client.disaster_recovery_configs.list_authorization_rules(resource_group_name=resource_group, namespace_name=namespace_name, alias=alias)
-
-# module equivalent: azure_rm_servicebusdisasterrecoveryconfig_info
-def show_servicebus_disasterrecoveryconfig_authorizationrule(cmd, client,
-                                                             resource_group,
-                                                             namespace_name,
-                                                             alias,
-                                                             name):
-    return client.disaster_recovery_configs.get(resource_group_name=resource_group, namespace_name=namespace_name, alias=alias)
-
-# module equivalent: azure_rm_servicebusmigrationconfig_info
-def show_servicebus_migrationconfiguration(cmd, client,
-                                           resource_group,
-                                           namespace_name,
-                                           name):
-    return client.migration_configs.get(resource_group_name=resource_group, namespace_name=namespace_name, config_name=name)
-
-# module equivalent: azure_rm_servicebusmigrationconfig_info
-def list_servicebus_migrationconfiguration(cmd, client,
-                                           resource_group,
-                                           namespace_name,
-                                           name):
-    return client.migration_configs.list(resource_group_name=resource_group, namespace_name=namespace_name, config_name=name)
 
 # module equivalent: azure_rm_servicebusqueue
 def create_servicebus_queue(cmd, client,
@@ -319,22 +271,6 @@ def show_servicebus_queue(cmd, client,
                           name):
     return client.queues.get(resource_group_name=resource_group, namespace_name=namespace_name, queue_name=name)
 
-# module equivalent: azure_rm_servicebusqueue_info
-def list_servicebus_queue_authorizationrule(cmd, client,
-                                            resource_group,
-                                            namespace_name,
-                                            queue_name,
-                                            name):
-    return client.queues.list_authorization_rules(resource_group_name=resource_group, namespace_name=namespace_name, queue_name=queue_name)
-
-# module equivalent: azure_rm_servicebusqueue_info
-def show_servicebus_queue_authorizationrule(cmd, client,
-                                            resource_group,
-                                            namespace_name,
-                                            queue_name,
-                                            name):
-    return client.queues.get(resource_group_name=resource_group, namespace_name=namespace_name, queue_name=queue_name)
-
 # module equivalent: azure_rm_servicebustopic
 def create_servicebus_topic(cmd, client,
                             resource_group,
@@ -443,22 +379,6 @@ def show_servicebus_topic(cmd, client,
                           namespace_name,
                           name):
     return client.topics.get(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=name)
-
-# module equivalent: azure_rm_servicebustopic_info
-def list_servicebus_topic_authorizationrule(cmd, client,
-                                            resource_group,
-                                            namespace_name,
-                                            topic_name,
-                                            name):
-    return client.topics.list_authorization_rules(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name)
-
-# module equivalent: azure_rm_servicebustopic_info
-def show_servicebus_topic_authorizationrule(cmd, client,
-                                            resource_group,
-                                            namespace_name,
-                                            topic_name,
-                                            name):
-    return client.topics.get(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name)
 
 # module equivalent: azure_rm_servicebussubscription
 def create_servicebus_topic_subscription(cmd, client,
@@ -578,22 +498,6 @@ def show_servicebus_topic_subscription(cmd, client,
                                        name):
     return client.subscriptions.get(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=name)
 
-# module equivalent: azure_rm_servicebussubscription_info
-def list_servicebus_topic_subscription(cmd, client,
-                                       resource_group,
-                                       namespace_name,
-                                       topic_name,
-                                       name):
-    return client.subscriptions.list_by_topic(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=name)
-
-# module equivalent: azure_rm_servicebussubscription_info
-def show_servicebus_topic_subscription(cmd, client,
-                                       resource_group,
-                                       namespace_name,
-                                       topic_name,
-                                       name):
-    return client.subscriptions.get(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=name)
-
 # module equivalent: azure_rm_servicebusrule
 def create_servicebus_topic_subscription_rule(cmd, client,
                                               resource_group,
@@ -664,36 +568,3 @@ def show_servicebus_topic_subscription_rule(cmd, client,
                                             subscription_name,
                                             name):
     return client.rules.get(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=subscription_name, rule_name=name)
-
-# module equivalent: azure_rm_servicebusrule_info
-def show_servicebus_topic_subscription_rule(cmd, client,
-                                            resource_group,
-                                            namespace_name,
-                                            topic_name,
-                                            subscription_name,
-                                            name):
-    return client.rules.get(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=subscription_name, rule_name=name)
-
-# module equivalent: azure_rm_servicebusrule_info
-def list_servicebus_topic_subscription_rule(cmd, client,
-                                            resource_group,
-                                            namespace_name,
-                                            topic_name,
-                                            subscription_name,
-                                            name):
-    return client.rules.list_by_subscriptions(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=subscription_name, rule_name=name)
-
-# module equivalent: azure_rm_servicebusregion_info
-def list_servicebus(cmd, client,
-                    sku):
-    return client.regions.list_by_sku()
-
-# module equivalent: azure_rm_servicebuspremiummessagingregion_info
-def list_(cmd, client):
-    return client.premium_messaging_regions.list()
-
-# module equivalent: azure_rm_servicebuseventhub_info
-def list_servicebus(cmd, client,
-                    resource_group,
-                    name):
-    return client.event_hubs.list_by_namespace()

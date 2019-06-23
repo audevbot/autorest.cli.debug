@@ -65,18 +65,6 @@ def show_compute(cmd, client,
                  name):
     return client.galleries.get(resource_group_name=resource_group, gallery_name=name)
 
-# module equivalent: azure_rm_computegallery_info
-def show_compute(cmd, client,
-                 resource_group,
-                 name):
-    return client.galleries.get(resource_group_name=resource_group, gallery_name=name)
-
-# module equivalent: azure_rm_computegallery_info
-def list_compute(cmd, client,
-                 resource_group,
-                 name):
-    return client.galleries.list_by_resource_group(resource_group_name=resource_group, gallery_name=name)
-
 # module equivalent: azure_rm_computegalleryimage
 def create_compute_image(cmd, client,
                          resource_group,
@@ -178,20 +166,6 @@ def show_compute_image(cmd, client,
                        name):
     return client.gallery_images.get(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=name)
 
-# module equivalent: azure_rm_computegalleryimage_info
-def show_compute_image(cmd, client,
-                       resource_group,
-                       gallery_name,
-                       name):
-    return client.gallery_images.get(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=name)
-
-# module equivalent: azure_rm_computegalleryimage_info
-def list_compute_image(cmd, client,
-                       resource_group,
-                       gallery_name,
-                       name):
-    return client.gallery_images.list_by_gallery(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=name)
-
 # module equivalent: azure_rm_computegalleryimageversion
 def create_compute_image_version(cmd, client,
                                  resource_group,
@@ -265,19 +239,3 @@ def show_compute_image_version(cmd, client,
                                gallery_image_name,
                                name):
     return client.gallery_image_versions.get(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=gallery_image_name, gallery_image_version_name=name)
-
-# module equivalent: azure_rm_computegalleryimageversion_info
-def show_compute_image_version(cmd, client,
-                               resource_group,
-                               gallery_name,
-                               gallery_image_name,
-                               name):
-    return client.gallery_image_versions.get(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=gallery_image_name, gallery_image_version_name=name)
-
-# module equivalent: azure_rm_computegalleryimageversion_info
-def list_compute_image_version(cmd, client,
-                               resource_group,
-                               gallery_name,
-                               gallery_image_name,
-                               name):
-    return client.gallery_image_versions.list_by_gallery_image(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=gallery_image_name, gallery_image_version_name=name)

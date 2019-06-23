@@ -63,20 +63,6 @@ def load_arguments(self, _):
     name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
 
 
-    with self.argument_context('batch show') as c:
-        c.argument('resource_group', id_part=None, help='The name of the resource group that contains the Batch account.')
-        c.argument('name', id_part=None, help='The name of the Batch account.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-
-    with self.argument_context('batch list') as c:
-        c.argument('resource_group', id_part=None, help='The name of the resource group that contains the Batch account.')
-        c.argument('name', id_part=None, help='The name of the Batch account.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-    name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
-
-
     with self.argument_context('batch application version create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group that contains the Batch account.')
         c.argument('account_name', id_part=None, help='The name of the Batch account.')
@@ -109,24 +95,6 @@ def load_arguments(self, _):
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('batch application version show') as c:
-        c.argument('resource_group', id_part=None, help='The name of the resource group that contains the Batch account.')
-        c.argument('account_name', id_part=None, help='The name of the Batch account.')
-        c.argument('application_name', id_part=None, help='The name of the application. This must be unique within the account.')
-        c.argument('name', id_part=None, help='The version of the application.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-    name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
-
-
-    with self.argument_context('batch application version show') as c:
-        c.argument('resource_group', id_part=None, help='The name of the resource group that contains the Batch account.')
-        c.argument('account_name', id_part=None, help='The name of the Batch account.')
-        c.argument('application_name', id_part=None, help='The name of the application. This must be unique within the account.')
-        c.argument('name', id_part=None, help='The version of the application.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-
-    with self.argument_context('batch application version list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group that contains the Batch account.')
         c.argument('account_name', id_part=None, help='The name of the Batch account.')
         c.argument('application_name', id_part=None, help='The name of the application. This must be unique within the account.')
@@ -178,30 +146,6 @@ def load_arguments(self, _):
         c.argument('resource_group', id_part=None, help='The name of the resource group that contains the Batch account.')
         c.argument('account_name', id_part=None, help='The name of the Batch account.')
         c.argument('name', id_part=None, help='The name of the application. This must be unique within the account.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-    name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
-
-
-    with self.argument_context('batch application show') as c:
-        c.argument('resource_group', id_part=None, help='The name of the resource group that contains the Batch account.')
-        c.argument('account_name', id_part=None, help='The name of the Batch account.')
-        c.argument('name', id_part=None, help='The name of the application. This must be unique within the account.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-
-    with self.argument_context('batch application list') as c:
-        c.argument('resource_group', id_part=None, help='The name of the resource group that contains the Batch account.')
-        c.argument('account_name', id_part=None, help='The name of the Batch account.')
-        c.argument('name', id_part=None, help='The name of the application. This must be unique within the account.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-    name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
-
-    name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
-
-
-    with self.argument_context(' list') as c:
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
     name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
@@ -260,22 +204,6 @@ def load_arguments(self, _):
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('batch certificate show') as c:
-        c.argument('resource_group', id_part=None, help='The name of the resource group that contains the Batch account.')
-        c.argument('account_name', id_part=None, help='The name of the Batch account.')
-        c.argument('name', id_part=None, help='The identifier for the certificate. This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request. For example SHA1-a3d1c5.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-    name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
-
-
-    with self.argument_context('batch certificate show') as c:
-        c.argument('resource_group', id_part=None, help='The name of the resource group that contains the Batch account.')
-        c.argument('account_name', id_part=None, help='The name of the Batch account.')
-        c.argument('name', id_part=None, help='The identifier for the certificate. This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request. For example SHA1-a3d1c5.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-
-    with self.argument_context('batch certificate list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group that contains the Batch account.')
         c.argument('account_name', id_part=None, help='The name of the Batch account.')
         c.argument('name', id_part=None, help='The identifier for the certificate. This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request. For example SHA1-a3d1c5.')
@@ -363,22 +291,6 @@ def load_arguments(self, _):
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('batch pool show') as c:
-        c.argument('resource_group', id_part=None, help='The name of the resource group that contains the Batch account.')
-        c.argument('account_name', id_part=None, help='The name of the Batch account.')
-        c.argument('name', id_part=None, help='The pool name. This must be unique within the account.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-    name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
-
-
-    with self.argument_context('batch pool show') as c:
-        c.argument('resource_group', id_part=None, help='The name of the resource group that contains the Batch account.')
-        c.argument('account_name', id_part=None, help='The name of the Batch account.')
-        c.argument('name', id_part=None, help='The pool name. This must be unique within the account.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-
-    with self.argument_context('batch pool list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group that contains the Batch account.')
         c.argument('account_name', id_part=None, help='The name of the Batch account.')
         c.argument('name', id_part=None, help='The pool name. This must be unique within the account.')
