@@ -8,16 +8,6 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 
 
-helps[''] = """
-    type: group
-    short-summary: Commands to manage Operation.
-"""
-
-helps[' list'] = """
-    type: command
-    short-summary: list a .
-"""
-
 helps['servicebus'] = """
     type: group
     short-summary: Commands to manage Namespace.
@@ -46,21 +36,6 @@ helps['servicebus list'] = """
 helps['servicebus show'] = """
     type: command
     short-summary: show a servicebus.
-"""
-
-helps['servicebus authorizationrule'] = """
-    type: group
-    short-summary: Commands to manage Namespace.
-"""
-
-helps['servicebus authorizationrule list'] = """
-    type: command
-    short-summary: list a servicebus authorizationrule.
-"""
-
-helps['servicebus authorizationrule show'] = """
-    type: command
-    short-summary: show a servicebus authorizationrule.
 """
 
 helps['servicebus disasterrecoveryconfig'] = """
@@ -93,36 +68,6 @@ helps['servicebus disasterrecoveryconfig show'] = """
     short-summary: show a servicebus disasterrecoveryconfig.
 """
 
-helps['servicebus disasterrecoveryconfig authorizationrule'] = """
-    type: group
-    short-summary: Commands to manage DisasterRecoveryConfig.
-"""
-
-helps['servicebus disasterrecoveryconfig authorizationrule list'] = """
-    type: command
-    short-summary: list a servicebus disasterrecoveryconfig authorizationrule.
-"""
-
-helps['servicebus disasterrecoveryconfig authorizationrule show'] = """
-    type: command
-    short-summary: show a servicebus disasterrecoveryconfig authorizationrule.
-"""
-
-helps['servicebus migrationconfiguration'] = """
-    type: group
-    short-summary: Commands to manage MigrationConfig.
-"""
-
-helps['servicebus migrationconfiguration show'] = """
-    type: command
-    short-summary: show a servicebus migrationconfiguration.
-"""
-
-helps['servicebus migrationconfiguration list'] = """
-    type: command
-    short-summary: list a servicebus migrationconfiguration.
-"""
-
 helps['servicebus queue'] = """
     type: group
     short-summary: Commands to manage Queue.
@@ -151,21 +96,6 @@ helps['servicebus queue list'] = """
 helps['servicebus queue show'] = """
     type: command
     short-summary: show a servicebus queue.
-"""
-
-helps['servicebus queue authorizationrule'] = """
-    type: group
-    short-summary: Commands to manage Queue.
-"""
-
-helps['servicebus queue authorizationrule list'] = """
-    type: command
-    short-summary: list a servicebus queue authorizationrule.
-"""
-
-helps['servicebus queue authorizationrule show'] = """
-    type: command
-    short-summary: show a servicebus queue authorizationrule.
 """
 
 helps['servicebus topic'] = """
@@ -198,21 +128,6 @@ helps['servicebus topic show'] = """
     short-summary: show a servicebus topic.
 """
 
-helps['servicebus topic authorizationrule'] = """
-    type: group
-    short-summary: Commands to manage Topic.
-"""
-
-helps['servicebus topic authorizationrule list'] = """
-    type: command
-    short-summary: list a servicebus topic authorizationrule.
-"""
-
-helps['servicebus topic authorizationrule show'] = """
-    type: command
-    short-summary: show a servicebus topic authorizationrule.
-"""
-
 helps['servicebus topic subscription'] = """
     type: group
     short-summary: Commands to manage Subscription.
@@ -231,21 +146,6 @@ helps['servicebus topic subscription update'] = """
 helps['servicebus topic subscription delete'] = """
     type: command
     short-summary: delete a servicebus topic subscription.
-"""
-
-helps['servicebus topic subscription list'] = """
-    type: command
-    short-summary: list a servicebus topic subscription.
-"""
-
-helps['servicebus topic subscription show'] = """
-    type: command
-    short-summary: show a servicebus topic subscription.
-"""
-
-helps['servicebus topic subscription'] = """
-    type: group
-    short-summary: Commands to manage Subscription.
 """
 
 helps['servicebus topic subscription list'] = """
@@ -286,49 +186,4 @@ helps['servicebus topic subscription rule list'] = """
 helps['servicebus topic subscription rule show'] = """
     type: command
     short-summary: show a servicebus topic subscription rule.
-"""
-
-helps['servicebus topic subscription rule'] = """
-    type: group
-    short-summary: Commands to manage Rule.
-"""
-
-helps['servicebus topic subscription rule show'] = """
-    type: command
-    short-summary: show a servicebus topic subscription rule.
-"""
-
-helps['servicebus topic subscription rule list'] = """
-    type: command
-    short-summary: list a servicebus topic subscription rule.
-"""
-
-helps['servicebus'] = """
-    type: group
-    short-summary: Commands to manage Region.
-"""
-
-helps['servicebus list'] = """
-    type: command
-    short-summary: list a servicebus.
-"""
-
-helps[''] = """
-    type: group
-    short-summary: Commands to manage PremiumMessagingRegion.
-"""
-
-helps[' list'] = """
-    type: command
-    short-summary: list a .
-"""
-
-helps['servicebus'] = """
-    type: group
-    short-summary: Commands to manage EventHub.
-"""
-
-helps['servicebus list'] = """
-    type: command
-    short-summary: list a servicebus.
 """

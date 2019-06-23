@@ -19,6 +19,3 @@ def load_command_table(self, _):
         g.custom_command('delete', 'delete_network')
         g.custom_command('list', 'list_network')
         g.custom_command('show', 'show_network')
-    with self.command_group('network', network_sdk, client_factory=cf_network) as g:
-        g.custom_command('show', 'show_network')
-        g.custom_command('list', 'list_network')

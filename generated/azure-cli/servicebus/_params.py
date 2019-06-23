@@ -15,12 +15,6 @@ def load_arguments(self, _):
     name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
 
 
-    with self.argument_context(' list') as c:
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-    name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
-
-
     with self.argument_context('servicebus create') as c:
         c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
         c.argument('name', id_part=None, help='The namespace name.')
@@ -73,22 +67,6 @@ def load_arguments(self, _):
     name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
 
 
-    with self.argument_context('servicebus authorizationrule list') as c:
-        c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
-        c.argument('namespace_name', id_part=None, help='The namespace name')
-        c.argument('name', id_part=None, help='The authorization rule name.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-
-    with self.argument_context('servicebus authorizationrule show') as c:
-        c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
-        c.argument('namespace_name', id_part=None, help='The namespace name')
-        c.argument('name', id_part=None, help='The authorization rule name.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-    name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
-
-
     with self.argument_context('servicebus disasterrecoveryconfig create') as c:
         c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
         c.argument('name', id_part=None, help='The namespace name')
@@ -135,40 +113,6 @@ def load_arguments(self, _):
         c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
         c.argument('name', id_part=None, help='The namespace name')
         c.argument('alias', id_part=None, help='The Disaster Recovery configuration name')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-    name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
-
-
-    with self.argument_context('servicebus disasterrecoveryconfig authorizationrule list') as c:
-        c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
-        c.argument('namespace_name', id_part=None, help='The namespace name')
-        c.argument('alias', id_part=None, help='The Disaster Recovery configuration name')
-        c.argument('name', id_part=None, help='The authorization rule name.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-
-    with self.argument_context('servicebus disasterrecoveryconfig authorizationrule show') as c:
-        c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
-        c.argument('namespace_name', id_part=None, help='The namespace name')
-        c.argument('alias', id_part=None, help='The Disaster Recovery configuration name')
-        c.argument('name', id_part=None, help='The authorization rule name.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-    name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
-
-
-    with self.argument_context('servicebus migrationconfiguration show') as c:
-        c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
-        c.argument('namespace_name', id_part=None, help='The namespace name')
-        c.argument('name', id_part=None, help='The configuration name. Should always be "$default".')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-
-    with self.argument_context('servicebus migrationconfiguration list') as c:
-        c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
-        c.argument('namespace_name', id_part=None, help='The namespace name')
-        c.argument('name', id_part=None, help='The configuration name. Should always be "$default".')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
     name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
@@ -257,24 +201,6 @@ def load_arguments(self, _):
     name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
 
 
-    with self.argument_context('servicebus queue authorizationrule list') as c:
-        c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
-        c.argument('namespace_name', id_part=None, help='The namespace name')
-        c.argument('queue_name', id_part=None, help='The queue name.')
-        c.argument('name', id_part=None, help='The authorization rule name.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-
-    with self.argument_context('servicebus queue authorizationrule show') as c:
-        c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
-        c.argument('namespace_name', id_part=None, help='The namespace name')
-        c.argument('queue_name', id_part=None, help='The queue name.')
-        c.argument('name', id_part=None, help='The authorization rule name.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-    name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
-
-
     with self.argument_context('servicebus topic create') as c:
         c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
         c.argument('namespace_name', id_part=None, help='The namespace name')
@@ -343,24 +269,6 @@ def load_arguments(self, _):
         c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
         c.argument('namespace_name', id_part=None, help='The namespace name')
         c.argument('name', id_part=None, help='The topic name.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-    name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
-
-
-    with self.argument_context('servicebus topic authorizationrule list') as c:
-        c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
-        c.argument('namespace_name', id_part=None, help='The namespace name')
-        c.argument('topic_name', id_part=None, help='The topic name.')
-        c.argument('name', id_part=None, help='The authorization rule name.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-
-    with self.argument_context('servicebus topic authorizationrule show') as c:
-        c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
-        c.argument('namespace_name', id_part=None, help='The namespace name')
-        c.argument('topic_name', id_part=None, help='The topic name.')
-        c.argument('name', id_part=None, help='The authorization rule name.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
     name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
@@ -446,24 +354,6 @@ def load_arguments(self, _):
     name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
 
 
-    with self.argument_context('servicebus topic subscription list') as c:
-        c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
-        c.argument('namespace_name', id_part=None, help='The namespace name')
-        c.argument('topic_name', id_part=None, help='The topic name.')
-        c.argument('name', id_part=None, help='The subscription name.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-
-    with self.argument_context('servicebus topic subscription show') as c:
-        c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
-        c.argument('namespace_name', id_part=None, help='The namespace name')
-        c.argument('topic_name', id_part=None, help='The topic name.')
-        c.argument('name', id_part=None, help='The subscription name.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-    name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
-
-
     with self.argument_context('servicebus topic subscription rule create') as c:
         c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
         c.argument('namespace_name', id_part=None, help='The namespace name')
@@ -518,47 +408,6 @@ def load_arguments(self, _):
         c.argument('topic_name', id_part=None, help='The topic name.')
         c.argument('subscription_name', id_part=None, help='The subscription name.')
         c.argument('name', id_part=None, help='The rule name.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-    name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
-
-
-    with self.argument_context('servicebus topic subscription rule show') as c:
-        c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
-        c.argument('namespace_name', id_part=None, help='The namespace name')
-        c.argument('topic_name', id_part=None, help='The topic name.')
-        c.argument('subscription_name', id_part=None, help='The subscription name.')
-        c.argument('name', id_part=None, help='The rule name.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-
-    with self.argument_context('servicebus topic subscription rule list') as c:
-        c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
-        c.argument('namespace_name', id_part=None, help='The namespace name')
-        c.argument('topic_name', id_part=None, help='The topic name.')
-        c.argument('subscription_name', id_part=None, help='The subscription name.')
-        c.argument('name', id_part=None, help='The rule name.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-    name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
-
-
-    with self.argument_context('servicebus list') as c:
-        c.argument('sku', id_part=None, help='The sku type.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-    name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
-
-
-    with self.argument_context(' list') as c:
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-    name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
-
-
-    with self.argument_context('servicebus list') as c:
-        c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
-        c.argument('name', id_part=None, help='The namespace name')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')

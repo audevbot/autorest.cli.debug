@@ -60,16 +60,6 @@ def show_mgmtgroups(cmd, client,
                     group_id):
     return client.management_groups.get(group_id=group_id)
 
-# module equivalent: azure_rm_managementgroup_info
-def show_mgmtgroups(cmd, client,
-                    group_id):
-    return client.management_groups.get(group_id=group_id)
-
-# module equivalent: azure_rm_managementgroup_info
-def list_mgmtgroups(cmd, client,
-                    group_id):
-    return client.management_groups.list(group_id=group_id)
-
 # module equivalent: azure_rm_managementgroupsubscription
 def create_mgmtgroups(cmd, client,
                       group_id):
@@ -80,7 +70,3 @@ def create_mgmtgroups(cmd, client,
 def delete_mgmtgroups(cmd, client,
                       group_id):
     return client.management_group_subscriptions.delete(group_id=group_id)
-
-# module equivalent: azure_rm_managementgroupsoperation_info
-def list_(cmd, client):
-    return client.operations.list()

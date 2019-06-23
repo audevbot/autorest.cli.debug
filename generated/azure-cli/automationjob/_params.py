@@ -52,40 +52,6 @@ def load_arguments(self, _):
         c.argument('name', id_part=None, help='The job name.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
-    name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
-
-
-    with self.argument_context('automationjob job show') as c:
-        c.argument('resource_group', id_part=None, help='Name of an Azure Resource group.')
-        c.argument('automation_account_name', id_part=None, help='The name of the automation account.')
-        c.argument('name', id_part=None, help='The job name.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-
-    with self.argument_context('automationjob job list') as c:
-        c.argument('resource_group', id_part=None, help='Name of an Azure Resource group.')
-        c.argument('automation_account_name', id_part=None, help='The name of the automation account.')
-        c.argument('name', id_part=None, help='The job name.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-    name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
-
-
-    with self.argument_context('automationjob job stream show') as c:
-        c.argument('resource_group', id_part=None, help='Name of an Azure Resource group.')
-        c.argument('automation_account_name', id_part=None, help='The name of the automation account.')
-        c.argument('name', id_part=None, help='The job name.')
-        c.argument('job_stream_id', id_part=None, help='The job stream id.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-
-    with self.argument_context('automationjob job stream list') as c:
-        c.argument('resource_group', id_part=None, help='Name of an Azure Resource group.')
-        c.argument('automation_account_name', id_part=None, help='The name of the automation account.')
-        c.argument('name', id_part=None, help='The job name.')
-        c.argument('job_stream_id', id_part=None, help='The job stream id.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
 
     with self.argument_context('apimanagement') as c:

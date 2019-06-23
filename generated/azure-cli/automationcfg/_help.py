@@ -27,13 +27,3 @@ helps['automationcfg softwareupdateconfiguration list'] = """
     type: command
     short-summary: list a automationcfg softwareupdateconfiguration.
 """
-
-helps['automationcfg softwareupdateconfiguration'] = """
-    type: group
-    short-summary: Commands to manage SoftwareUpdateConfiguration.
-"""
-
-helps['automationcfg softwareupdateconfiguration list'] = """
-    type: command
-    short-summary: list a automationcfg softwareupdateconfiguration.
-"""

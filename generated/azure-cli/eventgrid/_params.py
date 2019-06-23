@@ -62,36 +62,6 @@ def load_arguments(self, _):
     name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
 
 
-    with self.argument_context('eventgrid eventsubscription location topictype provider {providernamespace} {resourcetypename} list') as c:
-        c.argument('event_subscription_name', id_part=None, help='Name of the event subscription')
-        c.argument('location', id_part=None, help='Name of the location')
-        c.argument('topic_type_name', id_part=None, help='Name of the topic type')
-        c.argument('resource_group', id_part=None, help='The name of the resource group within the user\'s subscription.')
-        c.argument('provider_namespace', id_part=None, help='Namespace of the provider of the topic')
-        c.argument('resource_type_name', id_part=None, help='Name of the resource type')
-        c.argument('name', id_part=None, help='Name of the resource')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-
-    with self.argument_context('eventgrid eventsubscription location topictype provider {providernamespace} {resourcetypename} show') as c:
-        c.argument('event_subscription_name', id_part=None, help='Name of the event subscription')
-        c.argument('location', id_part=None, help='Name of the location')
-        c.argument('topic_type_name', id_part=None, help='Name of the topic type')
-        c.argument('resource_group', id_part=None, help='The name of the resource group within the user\'s subscription.')
-        c.argument('provider_namespace', id_part=None, help='Namespace of the provider of the topic')
-        c.argument('resource_type_name', id_part=None, help='Name of the resource type')
-        c.argument('name', id_part=None, help='Name of the resource')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-    name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
-
-
-    with self.argument_context(' list') as c:
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-    name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
-
-
     with self.argument_context('eventgrid create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group within the user\'s subscription.')
         c.argument('name', id_part=None, help='Name of the topic')
@@ -131,38 +101,6 @@ def load_arguments(self, _):
     with self.argument_context('eventgrid show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group within the user\'s subscription.')
         c.argument('name', id_part=None, help='Name of the topic')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-    name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
-
-
-    with self.argument_context('eventgrid provider {providernamespace} {resourcetypename} list') as c:
-        c.argument('resource_group', id_part=None, help='The name of the resource group within the user\'s subscription.')
-        c.argument('topic_name', id_part=None, help='Name of the topic')
-        c.argument('provider_namespace', id_part=None, help='Namespace of the provider of the topic')
-        c.argument('resource_type_name', id_part=None, help='Name of the topic type')
-        c.argument('name', id_part=None, help='Name of the topic')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-
-    with self.argument_context('eventgrid provider {providernamespace} {resourcetypename} show') as c:
-        c.argument('resource_group', id_part=None, help='The name of the resource group within the user\'s subscription.')
-        c.argument('topic_name', id_part=None, help='Name of the topic')
-        c.argument('provider_namespace', id_part=None, help='Namespace of the provider of the topic')
-        c.argument('resource_type_name', id_part=None, help='Name of the topic type')
-        c.argument('name', id_part=None, help='Name of the topic')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-    name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
-
-
-    with self.argument_context('eventgrid list') as c:
-        c.argument('name', id_part=None, help='Name of the topic type')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-
-    with self.argument_context('eventgrid show') as c:
-        c.argument('name', id_part=None, help='Name of the topic type')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')

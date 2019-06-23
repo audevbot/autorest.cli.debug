@@ -38,21 +38,6 @@ helps['frontdoor show'] = """
     short-summary: show a frontdoor.
 """
 
-helps['frontdoor'] = """
-    type: group
-    short-summary: Commands to manage FrontDoor.
-"""
-
-helps['frontdoor show'] = """
-    type: command
-    short-summary: show a frontdoor.
-"""
-
-helps['frontdoor list'] = """
-    type: command
-    short-summary: list a frontdoor.
-"""
-
 helps['frontdoor routingrule'] = """
     type: group
     short-summary: Commands to manage RoutingRule.
@@ -81,21 +66,6 @@ helps['frontdoor routingrule list'] = """
 helps['frontdoor routingrule show'] = """
     type: command
     short-summary: show a frontdoor routingrule.
-"""
-
-helps['frontdoor routingrule'] = """
-    type: group
-    short-summary: Commands to manage RoutingRule.
-"""
-
-helps['frontdoor routingrule show'] = """
-    type: command
-    short-summary: show a frontdoor routingrule.
-"""
-
-helps['frontdoor routingrule list'] = """
-    type: command
-    short-summary: list a frontdoor routingrule.
 """
 
 helps['frontdoor healthprobesetting'] = """
@@ -128,21 +98,6 @@ helps['frontdoor healthprobesetting show'] = """
     short-summary: show a frontdoor healthprobesetting.
 """
 
-helps['frontdoor healthprobesetting'] = """
-    type: group
-    short-summary: Commands to manage HealthProbeSetting.
-"""
-
-helps['frontdoor healthprobesetting show'] = """
-    type: command
-    short-summary: show a frontdoor healthprobesetting.
-"""
-
-helps['frontdoor healthprobesetting list'] = """
-    type: command
-    short-summary: list a frontdoor healthprobesetting.
-"""
-
 helps['frontdoor loadbalancingsetting'] = """
     type: group
     short-summary: Commands to manage LoadBalancingSetting.
@@ -171,21 +126,6 @@ helps['frontdoor loadbalancingsetting list'] = """
 helps['frontdoor loadbalancingsetting show'] = """
     type: command
     short-summary: show a frontdoor loadbalancingsetting.
-"""
-
-helps['frontdoor loadbalancingsetting'] = """
-    type: group
-    short-summary: Commands to manage LoadBalancingSetting.
-"""
-
-helps['frontdoor loadbalancingsetting show'] = """
-    type: command
-    short-summary: show a frontdoor loadbalancingsetting.
-"""
-
-helps['frontdoor loadbalancingsetting list'] = """
-    type: command
-    short-summary: list a frontdoor loadbalancingsetting.
 """
 
 helps['frontdoor backendpool'] = """
@@ -218,21 +158,6 @@ helps['frontdoor backendpool show'] = """
     short-summary: show a frontdoor backendpool.
 """
 
-helps['frontdoor backendpool'] = """
-    type: group
-    short-summary: Commands to manage BackendPool.
-"""
-
-helps['frontdoor backendpool show'] = """
-    type: command
-    short-summary: show a frontdoor backendpool.
-"""
-
-helps['frontdoor backendpool list'] = """
-    type: command
-    short-summary: list a frontdoor backendpool.
-"""
-
 helps['frontdoor frontendendpoint'] = """
     type: group
     short-summary: Commands to manage FrontendEndpoint.
@@ -261,19 +186,4 @@ helps['frontdoor frontendendpoint list'] = """
 helps['frontdoor frontendendpoint show'] = """
     type: command
     short-summary: show a frontdoor frontendendpoint.
-"""
-
-helps['frontdoor frontendendpoint'] = """
-    type: group
-    short-summary: Commands to manage FrontendEndpoint.
-"""
-
-helps['frontdoor frontendendpoint show'] = """
-    type: command
-    short-summary: show a frontdoor frontendendpoint.
-"""
-
-helps['frontdoor frontendendpoint list'] = """
-    type: command
-    short-summary: list a frontdoor frontendendpoint.
 """

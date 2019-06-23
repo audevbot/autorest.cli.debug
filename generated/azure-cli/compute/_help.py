@@ -38,21 +38,6 @@ helps['compute show'] = """
     short-summary: show a compute.
 """
 
-helps['compute'] = """
-    type: group
-    short-summary: Commands to manage Gallery.
-"""
-
-helps['compute show'] = """
-    type: command
-    short-summary: show a compute.
-"""
-
-helps['compute list'] = """
-    type: command
-    short-summary: list a compute.
-"""
-
 helps['compute image'] = """
     type: group
     short-summary: Commands to manage GalleryImage.
@@ -83,21 +68,6 @@ helps['compute image show'] = """
     short-summary: show a compute image.
 """
 
-helps['compute image'] = """
-    type: group
-    short-summary: Commands to manage GalleryImage.
-"""
-
-helps['compute image show'] = """
-    type: command
-    short-summary: show a compute image.
-"""
-
-helps['compute image list'] = """
-    type: command
-    short-summary: list a compute image.
-"""
-
 helps['compute image version'] = """
     type: group
     short-summary: Commands to manage GalleryImageVersion.
@@ -126,19 +96,4 @@ helps['compute image version list'] = """
 helps['compute image version show'] = """
     type: command
     short-summary: show a compute image version.
-"""
-
-helps['compute image version'] = """
-    type: group
-    short-summary: Commands to manage GalleryImageVersion.
-"""
-
-helps['compute image version show'] = """
-    type: command
-    short-summary: show a compute image version.
-"""
-
-helps['compute image version list'] = """
-    type: command
-    short-summary: list a compute image version.
 """

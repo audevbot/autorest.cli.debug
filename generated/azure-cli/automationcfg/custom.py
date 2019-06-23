@@ -49,10 +49,3 @@ def list_automationcfg_softwareupdateconfiguration(cmd, client,
                                                    automation_account_name,
                                                    name):
     return client.software_update_configurations.list()
-
-# module equivalent: azure_rm_softwareupdateconfiguration_info
-def list_automationcfg_softwareupdateconfiguration(cmd, client,
-                                                   resource_group,
-                                                   automation_account_name,
-                                                   name):
-    return client.software_update_configurations.list()

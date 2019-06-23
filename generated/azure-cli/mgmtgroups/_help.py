@@ -40,21 +40,6 @@ helps['mgmtgroups show'] = """
 
 helps['mgmtgroups'] = """
     type: group
-    short-summary: Commands to manage ManagementGroup.
-"""
-
-helps['mgmtgroups show'] = """
-    type: command
-    short-summary: show a mgmtgroups.
-"""
-
-helps['mgmtgroups list'] = """
-    type: command
-    short-summary: list a mgmtgroups.
-"""
-
-helps['mgmtgroups'] = """
-    type: group
     short-summary: Commands to manage ManagementGroupSubscription.
 """
 
@@ -66,14 +51,4 @@ helps['mgmtgroups create'] = """
 helps['mgmtgroups delete'] = """
     type: command
     short-summary: delete a mgmtgroups.
-"""
-
-helps[''] = """
-    type: group
-    short-summary: Commands to manage Operation.
-"""
-
-helps[' list'] = """
-    type: command
-    short-summary: list a .
 """

@@ -61,20 +61,6 @@ def load_arguments(self, _):
     name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
 
 
-    with self.argument_context('compute show') as c:
-        c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the Shared Image Gallery.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-
-    with self.argument_context('compute list') as c:
-        c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the Shared Image Gallery.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-    name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
-
-
     with self.argument_context('compute image create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('gallery_name', id_part=None, help='The name of the Shared Image Gallery in which the Image Definition is to be created.')
@@ -144,22 +130,6 @@ def load_arguments(self, _):
     name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
 
 
-    with self.argument_context('compute image show') as c:
-        c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('gallery_name', id_part=None, help='The name of the Shared Image Gallery from which the Image Definitions are to be retrieved.')
-        c.argument('name', id_part=None, help='The name of the gallery Image Definition to be retrieved.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-
-    with self.argument_context('compute image list') as c:
-        c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('gallery_name', id_part=None, help='The name of the Shared Image Gallery from which the Image Definitions are to be retrieved.')
-        c.argument('name', id_part=None, help='The name of the gallery Image Definition to be retrieved.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-    name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
-
-
     with self.argument_context('compute image version create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('gallery_name', id_part=None, help='The name of the Shared Image Gallery in which the Image Definition resides.')
@@ -213,24 +183,6 @@ def load_arguments(self, _):
         c.argument('gallery_name', id_part=None, help='The name of the Shared Image Gallery in which the Image Definition resides.')
         c.argument('gallery_image_name', id_part=None, help='The name of the gallery Image Definition in which the Image Version is to be created.')
         c.argument('name', id_part=None, help='The name of the gallery Image Version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: <MajorVersion>.<MinorVersion>.<Patch>')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-    name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
-
-
-    with self.argument_context('compute image version show') as c:
-        c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('gallery_name', id_part=None, help='The name of the Shared Image Gallery in which the Image Definition resides.')
-        c.argument('gallery_image_name', id_part=None, help='The name of the gallery Image Definition in which the Image Version resides.')
-        c.argument('name', id_part=None, help='The name of the gallery Image Version to be retrieved.')
-        c.argument('resource_id', name_arg_type, id_part=None)
-        c.argument('rest_body', name_arg_type, id_part=None)
-
-    with self.argument_context('compute image version list') as c:
-        c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('gallery_name', id_part=None, help='The name of the Shared Image Gallery in which the Image Definition resides.')
-        c.argument('gallery_image_name', id_part=None, help='The name of the gallery Image Definition in which the Image Version resides.')
-        c.argument('name', id_part=None, help='The name of the gallery Image Version to be retrieved.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')
