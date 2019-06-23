@@ -6,17 +6,17 @@
 from knack.util import CLIError
 
 # module equivalent: azure_rm_computegallery
-def create_compute(cmd, client,
-                   resource_group,
-                   name,
-                   location=None,
-                   tags=None,
-                   properties=None,
-                   description=None,
-                   identifier=None,
-                   provisioning_state=None,
-                   id=None,
-                   type=None):
+def create_compute_gallery(cmd, client,
+                           resource_group,
+                           name,
+                           location=None,
+                           tags=None,
+                           properties=None,
+                           description=None,
+                           identifier=None,
+                           provisioning_state=None,
+                           id=None,
+                           type=None):
     body={}
     body['location'] = location
     body['tags'] = tags
@@ -27,17 +27,17 @@ def create_compute(cmd, client,
     return client.galleries.create_or_update(resource_group_name=resource_group, gallery_name=name, gallery=gallery)
 
 # module equivalent: azure_rm_computegallery
-def update_compute(cmd, client,
-                   resource_group,
-                   name,
-                   location=None,
-                   tags=None,
-                   properties=None,
-                   description=None,
-                   identifier=None,
-                   provisioning_state=None,
-                   id=None,
-                   type=None):
+def update_compute_gallery(cmd, client,
+                           resource_group,
+                           name,
+                           location=None,
+                           tags=None,
+                           properties=None,
+                           description=None,
+                           identifier=None,
+                           provisioning_state=None,
+                           id=None,
+                           type=None):
     body={}
     body['location'] = location
     body['tags'] = tags
@@ -48,45 +48,45 @@ def update_compute(cmd, client,
     return client.galleries.create_or_update(resource_group_name=resource_group, gallery_name=name, gallery=gallery)
 
 # module equivalent: azure_rm_computegallery
-def delete_compute(cmd, client,
-                   resource_group,
-                   name):
+def delete_compute_gallery(cmd, client,
+                           resource_group,
+                           name):
     return client.galleries.delete(resource_group_name=resource_group, gallery_name=name)
 
 # module equivalent: azure_rm_computegallery
-def list_compute(cmd, client,
-                 resource_group,
-                 name):
+def list_compute_gallery(cmd, client,
+                         resource_group,
+                         name):
     return client.galleries.list(resource_group_name=resource_group, gallery_name=name)
 
 # module equivalent: azure_rm_computegallery
-def show_compute(cmd, client,
-                 resource_group,
-                 name):
+def show_compute_gallery(cmd, client,
+                         resource_group,
+                         name):
     return client.galleries.get(resource_group_name=resource_group, gallery_name=name)
 
 # module equivalent: azure_rm_computegalleryimage
-def create_compute_image(cmd, client,
-                         resource_group,
-                         gallery_name,
-                         name,
-                         location=None,
-                         tags=None,
-                         properties=None,
-                         description=None,
-                         eula=None,
-                         privacy_statement_uri=None,
-                         release_note_uri=None,
-                         os_type=None,
-                         os_state=None,
-                         end_of_life_date=None,
-                         identifier=None,
-                         recommended=None,
-                         disallowed=None,
-                         purchase_plan=None,
-                         provisioning_state=None,
-                         id=None,
-                         type=None):
+def create_compute_gallery_image(cmd, client,
+                                 resource_group,
+                                 gallery_name,
+                                 name,
+                                 location=None,
+                                 tags=None,
+                                 properties=None,
+                                 description=None,
+                                 eula=None,
+                                 privacy_statement_uri=None,
+                                 release_note_uri=None,
+                                 os_type=None,
+                                 os_state=None,
+                                 end_of_life_date=None,
+                                 identifier=None,
+                                 recommended=None,
+                                 disallowed=None,
+                                 purchase_plan=None,
+                                 provisioning_state=None,
+                                 id=None,
+                                 type=None):
     body={}
     body['location'] = location
     body['tags'] = tags
@@ -106,27 +106,27 @@ def create_compute_image(cmd, client,
     return client.gallery_images.create_or_update(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=name, galleryImage=galleryImage)
 
 # module equivalent: azure_rm_computegalleryimage
-def update_compute_image(cmd, client,
-                         resource_group,
-                         gallery_name,
-                         name,
-                         location=None,
-                         tags=None,
-                         properties=None,
-                         description=None,
-                         eula=None,
-                         privacy_statement_uri=None,
-                         release_note_uri=None,
-                         os_type=None,
-                         os_state=None,
-                         end_of_life_date=None,
-                         identifier=None,
-                         recommended=None,
-                         disallowed=None,
-                         purchase_plan=None,
-                         provisioning_state=None,
-                         id=None,
-                         type=None):
+def update_compute_gallery_image(cmd, client,
+                                 resource_group,
+                                 gallery_name,
+                                 name,
+                                 location=None,
+                                 tags=None,
+                                 properties=None,
+                                 description=None,
+                                 eula=None,
+                                 privacy_statement_uri=None,
+                                 release_note_uri=None,
+                                 os_type=None,
+                                 os_state=None,
+                                 end_of_life_date=None,
+                                 identifier=None,
+                                 recommended=None,
+                                 disallowed=None,
+                                 purchase_plan=None,
+                                 provisioning_state=None,
+                                 id=None,
+                                 type=None):
     body={}
     body['location'] = location
     body['tags'] = tags
@@ -146,41 +146,41 @@ def update_compute_image(cmd, client,
     return client.gallery_images.create_or_update(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=name, galleryImage=galleryImage)
 
 # module equivalent: azure_rm_computegalleryimage
-def delete_compute_image(cmd, client,
-                         resource_group,
-                         gallery_name,
-                         name):
+def delete_compute_gallery_image(cmd, client,
+                                 resource_group,
+                                 gallery_name,
+                                 name):
     return client.gallery_images.delete(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=name)
 
 # module equivalent: azure_rm_computegalleryimage
-def list_compute_image(cmd, client,
-                       resource_group,
-                       gallery_name,
-                       name):
+def list_compute_gallery_image(cmd, client,
+                               resource_group,
+                               gallery_name,
+                               name):
     return client.gallery_images.list_by_gallery(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=name)
 
 # module equivalent: azure_rm_computegalleryimage
-def show_compute_image(cmd, client,
-                       resource_group,
-                       gallery_name,
-                       name):
+def show_compute_gallery_image(cmd, client,
+                               resource_group,
+                               gallery_name,
+                               name):
     return client.gallery_images.get(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=name)
 
 # module equivalent: azure_rm_computegalleryimageversion
-def create_compute_image_version(cmd, client,
-                                 resource_group,
-                                 gallery_name,
-                                 gallery_image_name,
-                                 name,
-                                 location=None,
-                                 tags=None,
-                                 properties=None,
-                                 publishing_profile=None,
-                                 provisioning_state=None,
-                                 storage_profile=None,
-                                 replication_status=None,
-                                 id=None,
-                                 type=None):
+def create_compute_gallery_image_version(cmd, client,
+                                         resource_group,
+                                         gallery_name,
+                                         gallery_image_name,
+                                         name,
+                                         location=None,
+                                         tags=None,
+                                         properties=None,
+                                         publishing_profile=None,
+                                         provisioning_state=None,
+                                         storage_profile=None,
+                                         replication_status=None,
+                                         id=None,
+                                         type=None):
     body={}
     body['location'] = location
     body['tags'] = tags
@@ -192,20 +192,20 @@ def create_compute_image_version(cmd, client,
     return client.gallery_image_versions.create_or_update(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=gallery_image_name, gallery_image_version_name=name, galleryImageVersion=galleryImageVersion)
 
 # module equivalent: azure_rm_computegalleryimageversion
-def update_compute_image_version(cmd, client,
-                                 resource_group,
-                                 gallery_name,
-                                 gallery_image_name,
-                                 name,
-                                 location=None,
-                                 tags=None,
-                                 properties=None,
-                                 publishing_profile=None,
-                                 provisioning_state=None,
-                                 storage_profile=None,
-                                 replication_status=None,
-                                 id=None,
-                                 type=None):
+def update_compute_gallery_image_version(cmd, client,
+                                         resource_group,
+                                         gallery_name,
+                                         gallery_image_name,
+                                         name,
+                                         location=None,
+                                         tags=None,
+                                         properties=None,
+                                         publishing_profile=None,
+                                         provisioning_state=None,
+                                         storage_profile=None,
+                                         replication_status=None,
+                                         id=None,
+                                         type=None):
     body={}
     body['location'] = location
     body['tags'] = tags
@@ -217,25 +217,25 @@ def update_compute_image_version(cmd, client,
     return client.gallery_image_versions.create_or_update(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=gallery_image_name, gallery_image_version_name=name, galleryImageVersion=galleryImageVersion)
 
 # module equivalent: azure_rm_computegalleryimageversion
-def delete_compute_image_version(cmd, client,
-                                 resource_group,
-                                 gallery_name,
-                                 gallery_image_name,
-                                 name):
+def delete_compute_gallery_image_version(cmd, client,
+                                         resource_group,
+                                         gallery_name,
+                                         gallery_image_name,
+                                         name):
     return client.gallery_image_versions.delete(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=gallery_image_name, gallery_image_version_name=name)
 
 # module equivalent: azure_rm_computegalleryimageversion
-def list_compute_image_version(cmd, client,
-                               resource_group,
-                               gallery_name,
-                               gallery_image_name,
-                               name):
+def list_compute_gallery_image_version(cmd, client,
+                                       resource_group,
+                                       gallery_name,
+                                       gallery_image_name,
+                                       name):
     return client.gallery_image_versions.list_by_gallery_image(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=gallery_image_name, gallery_image_version_name=name)
 
 # module equivalent: azure_rm_computegalleryimageversion
-def show_compute_image_version(cmd, client,
-                               resource_group,
-                               gallery_name,
-                               gallery_image_name,
-                               name):
+def show_compute_gallery_image_version(cmd, client,
+                                       resource_group,
+                                       gallery_name,
+                                       gallery_image_name,
+                                       name):
     return client.gallery_image_versions.get(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=gallery_image_name, gallery_image_version_name=name)

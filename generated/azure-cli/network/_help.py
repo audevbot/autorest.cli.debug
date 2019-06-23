@@ -8,32 +8,32 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 
 
-helps['network'] = """
+helps['network azurefirewall'] = """
     type: group
     short-summary: Commands to manage AzureFirewall.
 """
 
-helps['network create'] = """
+helps['network azurefirewall create'] = """
     type: command
-    short-summary: create a network.
+    short-summary: create a network azurefirewall.
 """
 
-helps['network update'] = """
+helps['network azurefirewall update'] = """
     type: command
-    short-summary: update a network.
+    short-summary: update a network azurefirewall.
 """
 
-helps['network delete'] = """
+helps['network azurefirewall delete'] = """
     type: command
-    short-summary: delete a network.
+    short-summary: delete a network azurefirewall.
 """
 
-helps['network list'] = """
+helps['network azurefirewall list'] = """
     type: command
-    short-summary: list a network.
+    short-summary: list a network azurefirewall.
 """
 
-helps['network show'] = """
+helps['network azurefirewall show'] = """
     type: command
-    short-summary: show a network.
+    short-summary: show a network azurefirewall.
 """

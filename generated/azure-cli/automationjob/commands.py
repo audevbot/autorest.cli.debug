@@ -13,7 +13,7 @@ def load_command_table(self, _):
         client_factory=cf_automationjob)
 
 
-    with self.command_group('automationjob job', automationjob_sdk, client_factory=cf_automationjob) as g:
-        g.custom_command('create', 'create_automationjob_job')
-        g.custom_command('list', 'list_automationjob_job')
-        g.custom_command('show', 'show_automationjob_job')
+    with self.command_group('automationjob automationaccount job', automationjob_sdk, client_factory=cf_automationjob) as g:
+        g.custom_command('create', 'create_automationjob_automationaccount_job')
+        g.custom_command('list', 'list_automationjob_automationaccount_job')
+        g.custom_command('show', 'show_automationjob_automationaccount_job')

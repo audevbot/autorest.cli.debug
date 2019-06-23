@@ -6,23 +6,23 @@
 from knack.util import CLIError
 
 # module equivalent: azure_rm_softwareupdateconfiguration
-def create_automationcfg_softwareupdateconfiguration(cmd, client,
-                                                     resource_group,
-                                                     automation_account_name,
-                                                     name,
-                                                     client_request_id=None,
-                                                     properties=None,
-                                                     update_configuration=None,
-                                                     schedule_info=None,
-                                                     error=None,
-                                                     tasks=None,
-                                                     provisioning_state=None,
-                                                     creation_time=None,
-                                                     created_by=None,
-                                                     last_modified_time=None,
-                                                     last_modified_by=None,
-                                                     id=None,
-                                                     type=None):
+def create_automationcfg_automationaccount_softwareupdateconfiguration(cmd, client,
+                                                                       resource_group,
+                                                                       automation_account_name,
+                                                                       name,
+                                                                       client_request_id=None,
+                                                                       properties=None,
+                                                                       update_configuration=None,
+                                                                       schedule_info=None,
+                                                                       error=None,
+                                                                       tasks=None,
+                                                                       provisioning_state=None,
+                                                                       creation_time=None,
+                                                                       created_by=None,
+                                                                       last_modified_time=None,
+                                                                       last_modified_by=None,
+                                                                       id=None,
+                                                                       type=None):
     body={}
     body['properties'] = properties
     body['update_configuration'] = update_configuration
@@ -37,15 +37,15 @@ def create_automationcfg_softwareupdateconfiguration(cmd, client,
     return client.software_update_configurations.create(resource_group_name=resource_group, automation_account_name=automation_account_name, software_update_configuration_name=name, parameters=body)
 
 # module equivalent: azure_rm_softwareupdateconfiguration
-def delete_automationcfg_softwareupdateconfiguration(cmd, client,
-                                                     resource_group,
-                                                     automation_account_name,
-                                                     name):
+def delete_automationcfg_automationaccount_softwareupdateconfiguration(cmd, client,
+                                                                       resource_group,
+                                                                       automation_account_name,
+                                                                       name):
     return client.software_update_configurations.delete(resource_group_name=resource_group, automation_account_name=automation_account_name, software_update_configuration_name=name)
 
 # module equivalent: azure_rm_softwareupdateconfiguration
-def list_automationcfg_softwareupdateconfiguration(cmd, client,
-                                                   resource_group,
-                                                   automation_account_name,
-                                                   name):
+def list_automationcfg_automationaccount_softwareupdateconfiguration(cmd, client,
+                                                                     resource_group,
+                                                                     automation_account_name,
+                                                                     name):
     return client.software_update_configurations.list()

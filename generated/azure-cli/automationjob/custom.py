@@ -6,28 +6,28 @@
 from knack.util import CLIError
 
 # module equivalent: azure_rm_automationjob
-def create_automationjob_job(cmd, client,
-                             resource_group,
-                             automation_account_name,
-                             name,
-                             properties=None,
-                             runbook=None,
-                             parameters=None,
-                             run_on=None,
-                             started_by=None,
-                             job_id=None,
-                             creation_time=None,
-                             status=None,
-                             status_details=None,
-                             start_time=None,
-                             end_time=None,
-                             exception=None,
-                             last_modified_time=None,
-                             last_status_modified_time=None,
-                             provisioning_state=None,
-                             client_request_id=None,
-                             id=None,
-                             type=None):
+def create_automationjob_automationaccount_job(cmd, client,
+                                               resource_group,
+                                               automation_account_name,
+                                               name,
+                                               properties=None,
+                                               runbook=None,
+                                               parameters=None,
+                                               run_on=None,
+                                               started_by=None,
+                                               job_id=None,
+                                               creation_time=None,
+                                               status=None,
+                                               status_details=None,
+                                               start_time=None,
+                                               end_time=None,
+                                               exception=None,
+                                               last_modified_time=None,
+                                               last_status_modified_time=None,
+                                               provisioning_state=None,
+                                               client_request_id=None,
+                                               id=None,
+                                               type=None):
     body={}
     body['properties'] = properties
     body['runbook'] = runbook
@@ -47,15 +47,15 @@ def create_automationjob_job(cmd, client,
     return client.job.create(resource_group_name=resource_group, automation_account_name=automation_account_name, job_name=name, parameters=body)
 
 # module equivalent: azure_rm_automationjob
-def list_automationjob_job(cmd, client,
-                           resource_group,
-                           automation_account_name,
-                           name):
+def list_automationjob_automationaccount_job(cmd, client,
+                                             resource_group,
+                                             automation_account_name,
+                                             name):
     return client.job.list_by_automation_account(resource_group_name=resource_group, automation_account_name=automation_account_name, job_name=name)
 
 # module equivalent: azure_rm_automationjob
-def show_automationjob_job(cmd, client,
-                           resource_group,
-                           automation_account_name,
-                           name):
+def show_automationjob_automationaccount_job(cmd, client,
+                                             resource_group,
+                                             automation_account_name,
+                                             name):
     return client.job.get(resource_group_name=resource_group, automation_account_name=automation_account_name, job_name=name)

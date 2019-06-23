@@ -8,32 +8,32 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 
 
-helps['cosmos-db'] = """
+helps['cosmos-db databaseaccount'] = """
     type: group
     short-summary: Commands to manage DatabaseAccount.
 """
 
-helps['cosmos-db create'] = """
+helps['cosmos-db databaseaccount create'] = """
     type: command
-    short-summary: create a cosmos-db.
+    short-summary: create a cosmos-db databaseaccount.
 """
 
-helps['cosmos-db update'] = """
+helps['cosmos-db databaseaccount update'] = """
     type: command
-    short-summary: update a cosmos-db.
+    short-summary: update a cosmos-db databaseaccount.
 """
 
-helps['cosmos-db delete'] = """
+helps['cosmos-db databaseaccount delete'] = """
     type: command
-    short-summary: delete a cosmos-db.
+    short-summary: delete a cosmos-db databaseaccount.
 """
 
-helps['cosmos-db list'] = """
+helps['cosmos-db databaseaccount list'] = """
     type: command
-    short-summary: list a cosmos-db.
+    short-summary: list a cosmos-db databaseaccount.
 """
 
-helps['cosmos-db show'] = """
+helps['cosmos-db databaseaccount show'] = """
     type: command
-    short-summary: show a cosmos-db.
+    short-summary: show a cosmos-db databaseaccount.
 """

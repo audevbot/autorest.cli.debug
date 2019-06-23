@@ -15,7 +15,7 @@ def load_arguments(self, _):
     name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
 
 
-    with self.argument_context('cosmos-db create') as c:
+    with self.argument_context('cosmos-db databaseaccount create') as c:
         c.argument('resource_group', id_part=None, help='Name of an Azure resource group.')
         c.argument('name', id_part=None, help='Cosmos DB database account name.')
         c.argument('location', id_part=None, help='The location of the resource group to which the resource belongs.')
@@ -40,7 +40,7 @@ def load_arguments(self, _):
         c.argument('type', id_part=None, help='The type of Azure resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
-    with self.argument_context('cosmos-db update') as c:
+    with self.argument_context('cosmos-db databaseaccount update') as c:
         c.argument('resource_group', id_part=None, help='Name of an Azure resource group.')
         c.argument('name', id_part=None, help='Cosmos DB database account name.')
         c.argument('location', id_part=None, help='The location of the resource group to which the resource belongs.')
@@ -65,19 +65,19 @@ def load_arguments(self, _):
         c.argument('type', id_part=None, help='The type of Azure resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
-    with self.argument_context('cosmos-db delete') as c:
+    with self.argument_context('cosmos-db databaseaccount delete') as c:
         c.argument('resource_group', id_part=None, help='Name of an Azure resource group.')
         c.argument('name', id_part=None, help='Cosmos DB database account name.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
-    with self.argument_context('cosmos-db list') as c:
+    with self.argument_context('cosmos-db databaseaccount list') as c:
         c.argument('resource_group', id_part=None, help='Name of an Azure resource group.')
         c.argument('name', id_part=None, help='Cosmos DB database account name.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
-    with self.argument_context('cosmos-db show') as c:
+    with self.argument_context('cosmos-db databaseaccount show') as c:
         c.argument('resource_group', id_part=None, help='Name of an Azure resource group.')
         c.argument('name', id_part=None, help='Cosmos DB database account name.')
         c.argument('resource_id', name_arg_type, id_part=None)

@@ -15,7 +15,7 @@ def load_arguments(self, _):
     name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
 
 
-    with self.argument_context('eventgrid eventsubscription create') as c:
+    with self.argument_context('eventgrid  eventsubscription create') as c:
         c.argument('scope', id_part=None, help='The identifier of the resource to which the event subscription needs to be created or updated. The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic. For example, use \'/subscriptions/{subscriptionId}/\' for a subscription, \'/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}\' for a resource group, and \'/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\' for a resource, and \'/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}\' for an EventGrid topic.')
         c.argument('name', id_part=None, help='Name of the event subscription. Event subscription names must be between 3 and 64 characters in length and should use alphanumeric letters only.')
         c.argument('properties', id_part=None, help='Properties of the event subscription')
@@ -30,7 +30,7 @@ def load_arguments(self, _):
         c.argument('type', id_part=None, help='Type of the resource')
         c.argument('resource_id', name_arg_type, id_part=None)
 
-    with self.argument_context('eventgrid eventsubscription update') as c:
+    with self.argument_context('eventgrid  eventsubscription update') as c:
         c.argument('scope', id_part=None, help='The identifier of the resource to which the event subscription needs to be created or updated. The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic. For example, use \'/subscriptions/{subscriptionId}/\' for a subscription, \'/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}\' for a resource group, and \'/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\' for a resource, and \'/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}\' for an EventGrid topic.')
         c.argument('name', id_part=None, help='Name of the event subscription. Event subscription names must be between 3 and 64 characters in length and should use alphanumeric letters only.')
         c.argument('properties', id_part=None, help='Properties of the event subscription')
@@ -45,24 +45,24 @@ def load_arguments(self, _):
         c.argument('type', id_part=None, help='Type of the resource')
         c.argument('resource_id', name_arg_type, id_part=None)
 
-    with self.argument_context('eventgrid eventsubscription delete') as c:
+    with self.argument_context('eventgrid  eventsubscription delete') as c:
         c.argument('name', id_part=None, help='Name of the event subscription. Event subscription names must be between 3 and 64 characters in length and should use alphanumeric letters only.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
-    with self.argument_context('eventgrid eventsubscription list') as c:
+    with self.argument_context('eventgrid  eventsubscription list') as c:
         c.argument('name', id_part=None, help='Name of the event subscription. Event subscription names must be between 3 and 64 characters in length and should use alphanumeric letters only.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
-    with self.argument_context('eventgrid eventsubscription show') as c:
+    with self.argument_context('eventgrid  eventsubscription show') as c:
         c.argument('name', id_part=None, help='Name of the event subscription. Event subscription names must be between 3 and 64 characters in length and should use alphanumeric letters only.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
     name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
 
 
-    with self.argument_context('eventgrid create') as c:
+    with self.argument_context('eventgrid topic create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group within the user\'s subscription.')
         c.argument('name', id_part=None, help='Name of the topic')
         c.argument('location', id_part=None, help='Location of the resource')
@@ -74,7 +74,7 @@ def load_arguments(self, _):
         c.argument('type', id_part=None, help='Type of the resource')
         c.argument('resource_id', name_arg_type, id_part=None)
 
-    with self.argument_context('eventgrid update') as c:
+    with self.argument_context('eventgrid topic update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group within the user\'s subscription.')
         c.argument('name', id_part=None, help='Name of the topic')
         c.argument('location', id_part=None, help='Location of the resource')
@@ -86,19 +86,19 @@ def load_arguments(self, _):
         c.argument('type', id_part=None, help='Type of the resource')
         c.argument('resource_id', name_arg_type, id_part=None)
 
-    with self.argument_context('eventgrid delete') as c:
+    with self.argument_context('eventgrid topic delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group within the user\'s subscription.')
         c.argument('name', id_part=None, help='Name of the topic')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
-    with self.argument_context('eventgrid list') as c:
+    with self.argument_context('eventgrid topic list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group within the user\'s subscription.')
         c.argument('name', id_part=None, help='Name of the topic')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
-    with self.argument_context('eventgrid show') as c:
+    with self.argument_context('eventgrid topic show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group within the user\'s subscription.')
         c.argument('name', id_part=None, help='Name of the topic')
         c.argument('resource_id', name_arg_type, id_part=None)
