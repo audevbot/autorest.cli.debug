@@ -18,6 +18,11 @@ helps['cosmos-db create'] = """
     short-summary: create a cosmos-db.
 """
 
+helps['cosmos-db update'] = """
+    type: command
+    short-summary: update a cosmos-db.
+"""
+
 helps['cosmos-db delete'] = """
     type: command
     short-summary: delete a cosmos-db.

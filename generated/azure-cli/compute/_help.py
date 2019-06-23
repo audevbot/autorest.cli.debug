@@ -18,6 +18,11 @@ helps['compute create'] = """
     short-summary: create a compute.
 """
 
+helps['compute update'] = """
+    type: command
+    short-summary: update a compute.
+"""
+
 helps['compute delete'] = """
     type: command
     short-summary: delete a compute.
@@ -58,6 +63,11 @@ helps['compute image create'] = """
     short-summary: create a compute image.
 """
 
+helps['compute image update'] = """
+    type: command
+    short-summary: update a compute image.
+"""
+
 helps['compute image delete'] = """
     type: command
     short-summary: delete a compute image.
@@ -96,6 +106,11 @@ helps['compute image version'] = """
 helps['compute image version create'] = """
     type: command
     short-summary: create a compute image version.
+"""
+
+helps['compute image version update'] = """
+    type: command
+    short-summary: update a compute image version.
 """
 
 helps['compute image version delete'] = """

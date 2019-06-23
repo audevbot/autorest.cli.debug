@@ -352,6 +352,24 @@ def create_apimgmt_api_operation_policy(cmd, client,
     return client.api_operation_policy.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, operation_id=operation_id, policy_id=policy_id, parameters=body)
 
 
+def update_apimgmt_api_operation_policy(cmd, client,
+                                        resource_group,
+                                        name,
+                                        api_id,
+                                        operation_id,
+                                        policy_id,
+                                        properties=None,
+                                        value=None,
+                                        format=None,
+                                        id=None,
+                                        type=None):
+    body={}
+    body['properties'] = properties
+    body['value'] = value
+    body['format'] = format
+    return client.api_operation_policy.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, operation_id=operation_id, policy_id=policy_id, parameters=body)
+
+
 def delete_apimgmt_api_operation_policy(cmd, client,
                                         resource_group,
                                         name,
@@ -490,6 +508,23 @@ def create_apimgmt_api_policy(cmd, client,
     return client.api_policy.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, policy_id=policy_id, parameters=body)
 
 
+def update_apimgmt_api_policy(cmd, client,
+                              resource_group,
+                              name,
+                              api_id,
+                              policy_id,
+                              properties=None,
+                              value=None,
+                              format=None,
+                              id=None,
+                              type=None):
+    body={}
+    body['properties'] = properties
+    body['value'] = value
+    body['format'] = format
+    return client.api_policy.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, policy_id=policy_id, parameters=body)
+
+
 def delete_apimgmt_api_policy(cmd, client,
                               resource_group,
                               name,
@@ -531,6 +566,23 @@ def list_apimgmt_api_policy(cmd, client,
 
 
 def create_apimgmt_api_schema(cmd, client,
+                              resource_group,
+                              name,
+                              api_id,
+                              schema_id,
+                              properties=None,
+                              content_type=None,
+                              document=None,
+                              id=None,
+                              type=None):
+    body={}
+    body['properties'] = properties
+    body['content_type'] = content_type
+    body['document'] = document
+    return client.api_schema.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, schema_id=schema_id, parameters=body)
+
+
+def update_apimgmt_api_schema(cmd, client,
                               resource_group,
                               name,
                               api_id,
@@ -783,6 +835,26 @@ def create_apimgmt_api_issue_comment(cmd, client,
     return client.api_issue_comment.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, issue_id=issue_id, comment_id=comment_id, parameters=body)
 
 
+def update_apimgmt_api_issue_comment(cmd, client,
+                                     resource_group,
+                                     name,
+                                     api_id,
+                                     issue_id,
+                                     comment_id,
+                                     properties=None,
+                                     text=None,
+                                     created_date=None,
+                                     user_id=None,
+                                     id=None,
+                                     type=None):
+    body={}
+    body['properties'] = properties
+    body['text'] = text
+    body['created_date'] = created_date
+    body['user_id'] = user_id
+    return client.api_issue_comment.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, issue_id=issue_id, comment_id=comment_id, parameters=body)
+
+
 def delete_apimgmt_api_issue_comment(cmd, client,
                                      resource_group,
                                      name,
@@ -848,6 +920,26 @@ def create_apimgmt_api_issue_attachment(cmd, client,
     return client.api_issue_attachment.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, issue_id=issue_id, attachment_id=attachment_id, parameters=body)
 
 
+def update_apimgmt_api_issue_attachment(cmd, client,
+                                        resource_group,
+                                        name,
+                                        api_id,
+                                        issue_id,
+                                        attachment_id,
+                                        properties=None,
+                                        title=None,
+                                        content_format=None,
+                                        content=None,
+                                        id=None,
+                                        type=None):
+    body={}
+    body['properties'] = properties
+    body['title'] = title
+    body['content_format'] = content_format
+    body['content'] = content
+    return client.api_issue_attachment.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, issue_id=issue_id, attachment_id=attachment_id, parameters=body)
+
+
 def delete_apimgmt_api_issue_attachment(cmd, client,
                                         resource_group,
                                         name,
@@ -894,6 +986,27 @@ def list_apimgmt_api_issue_attachment(cmd, client,
 
 
 def create_apimgmt_api_tagdescription(cmd, client,
+                                      resource_group,
+                                      name,
+                                      api_id,
+                                      tag_id,
+                                      properties=None,
+                                      description=None,
+                                      external_docs_url=None,
+                                      external_docs_description=None,
+                                      display_name=None,
+                                      id=None,
+                                      type=None):
+    body={}
+    body['properties'] = properties
+    body['description'] = description
+    body['external_docs_url'] = external_docs_url
+    body['external_docs_description'] = external_docs_description
+    body['display_name'] = display_name
+    return client.api_tag_description.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, tag_id=tag_id, parameters=body)
+
+
+def update_apimgmt_api_tagdescription(cmd, client,
                                       resource_group,
                                       name,
                                       api_id,
@@ -1330,6 +1443,28 @@ def list_apimgmt_cache(cmd, client,
 
 
 def create_apimgmt_certificate(cmd, client,
+                               resource_group,
+                               name,
+                               certificate_id,
+                               properties=None,
+                               data=None,
+                               password=None,
+                               subject=None,
+                               thumbprint=None,
+                               expiration_date=None,
+                               id=None,
+                               type=None):
+    body={}
+    body['properties'] = properties
+    body['data'] = data
+    body['password'] = password
+    body['subject'] = subject
+    body['thumbprint'] = thumbprint
+    body['expiration_date'] = expiration_date
+    return client.certificate.create_or_update(resource_group_name=resource_group, service_name=name, certificate_id=certificate_id, parameters=body)
+
+
+def update_apimgmt_certificate(cmd, client,
                                resource_group,
                                name,
                                certificate_id,
@@ -2050,6 +2185,23 @@ def create_apimgmt_notification(cmd, client,
     return client.notification.create_or_update(resource_group_name=resource_group, service_name=service_name, notification_name=name)
 
 
+def update_apimgmt_notification(cmd, client,
+                                resource_group,
+                                service_name,
+                                name,
+                                id=None,
+                                type=None,
+                                properties=None,
+                                title=None,
+                                description=None,
+                                recipients=None):
+    body={}
+    body['title'] = title
+    body['description'] = description
+    body['recipients'] = recipients
+    return client.notification.create_or_update(resource_group_name=resource_group, service_name=service_name, notification_name=name)
+
+
 def list_apimgmt_notification(cmd, client,
                               resource_group,
                               service_name,
@@ -2090,6 +2242,18 @@ def create_apimgmt_notification_recipientuser(cmd, client,
     return client.notification_recipient_user.create_or_update(resource_group_name=resource_group, service_name=service_name, notification_name=name, user_id=user_id)
 
 
+def update_apimgmt_notification_recipientuser(cmd, client,
+                                              resource_group,
+                                              service_name,
+                                              name,
+                                              user_id,
+                                              id=None,
+                                              type=None,
+                                              properties=None):
+    body={}
+    return client.notification_recipient_user.create_or_update(resource_group_name=resource_group, service_name=service_name, notification_name=name, user_id=user_id)
+
+
 def delete_apimgmt_notification_recipientuser(cmd, client,
                                               resource_group,
                                               service_name,
@@ -2114,6 +2278,18 @@ def list_apimgmt_notification(cmd, client,
 
 
 def create_apimgmt_notification_recipientemail(cmd, client,
+                                               resource_group,
+                                               service_name,
+                                               name,
+                                               email,
+                                               id=None,
+                                               type=None,
+                                               properties=None):
+    body={}
+    return client.notification_recipient_email.create_or_update(resource_group_name=resource_group, service_name=service_name, notification_name=name, email=email)
+
+
+def update_apimgmt_notification_recipientemail(cmd, client,
                                                resource_group,
                                                service_name,
                                                name,
@@ -2228,6 +2404,22 @@ def list_apimgmt_openidconnectprovider(cmd, client,
 
 
 def create_apimgmt_policy(cmd, client,
+                          resource_group,
+                          name,
+                          policy_id,
+                          properties=None,
+                          value=None,
+                          format=None,
+                          id=None,
+                          type=None):
+    body={}
+    body['properties'] = properties
+    body['value'] = value
+    body['format'] = format
+    return client.policy.create_or_update(resource_group_name=resource_group, service_name=name, policy_id=policy_id, parameters=body)
+
+
+def update_apimgmt_policy(cmd, client,
                           resource_group,
                           name,
                           policy_id,
@@ -2547,6 +2739,52 @@ def create_apimgmt_product_api(cmd, client,
     return client.product_api.create_or_update(resource_group_name=resource_group, service_name=name, product_id=product_id, api_id=api_id)
 
 
+def update_apimgmt_product_api(cmd, client,
+                               resource_group,
+                               name,
+                               product_id,
+                               api_id,
+                               id=None,
+                               type=None,
+                               properties=None,
+                               description=None,
+                               authentication_settings=None,
+                               subscription_key_parameter_names=None,
+                               api_revision=None,
+                               api_version=None,
+                               is_current=None,
+                               is_online=None,
+                               api_revision_description=None,
+                               api_version_description=None,
+                               api_version_set_id=None,
+                               subscription_required=None,
+                               source_api_id=None,
+                               display_name=None,
+                               service_url=None,
+                               path=None,
+                               protocols=None,
+                               api_version_set=None):
+    body={}
+    body['description'] = description
+    body['authentication_settings'] = authentication_settings
+    body['subscription_key_parameter_names'] = subscription_key_parameter_names
+    body['api_revision'] = api_revision
+    body['api_version'] = api_version
+    body['is_current'] = is_current
+    body['is_online'] = is_online
+    body['api_revision_description'] = api_revision_description
+    body['api_version_description'] = api_version_description
+    body['api_version_set_id'] = api_version_set_id
+    body['subscription_required'] = subscription_required
+    body['source_api_id'] = source_api_id
+    body['display_name'] = display_name
+    body['service_url'] = service_url
+    body['path'] = path
+    body['protocols'] = protocols
+    body['api_version_set'] = api_version_set
+    return client.product_api.create_or_update(resource_group_name=resource_group, service_name=name, product_id=product_id, api_id=api_id)
+
+
 def delete_apimgmt_product_api(cmd, client,
                                resource_group,
                                name,
@@ -2571,6 +2809,26 @@ def list_apimgmt_product(cmd, client,
 
 
 def create_apimgmt_product_group(cmd, client,
+                                 resource_group,
+                                 name,
+                                 product_id,
+                                 group_id,
+                                 id=None,
+                                 type=None,
+                                 properties=None,
+                                 display_name=None,
+                                 description=None,
+                                 built_in=None,
+                                 external_id=None):
+    body={}
+    body['display_name'] = display_name
+    body['description'] = description
+    body['built_in'] = built_in
+    body['external_id'] = external_id
+    return client.product_group.create_or_update(resource_group_name=resource_group, service_name=name, product_id=product_id, group_id=group_id)
+
+
+def update_apimgmt_product_group(cmd, client,
                                  resource_group,
                                  name,
                                  product_id,
@@ -2621,6 +2879,23 @@ def list_apimgmt_product(cmd, client,
 
 
 def create_apimgmt_product_policy(cmd, client,
+                                  resource_group,
+                                  name,
+                                  product_id,
+                                  policy_id,
+                                  properties=None,
+                                  value=None,
+                                  format=None,
+                                  id=None,
+                                  type=None):
+    body={}
+    body['properties'] = properties
+    body['value'] = value
+    body['format'] = format
+    return client.product_policy.create_or_update(resource_group_name=resource_group, service_name=name, product_id=product_id, policy_id=policy_id, parameters=body)
+
+
+def update_apimgmt_product_policy(cmd, client,
                                   resource_group,
                                   name,
                                   product_id,

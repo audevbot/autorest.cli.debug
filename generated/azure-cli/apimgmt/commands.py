@@ -44,6 +44,7 @@ def load_command_table(self, _):
         g.custom_command('list', 'list_apimgmt_api_operation')
     with self.command_group('apimgmt api operation policy', apimgmt_sdk, client_factory=cf_apimgmt) as g:
         g.custom_command('create', 'create_apimgmt_api_operation_policy')
+        g.custom_command('update', 'update_apimgmt_api_operation_policy')
         g.custom_command('delete', 'delete_apimgmt_api_operation_policy')
         g.custom_command('list', 'list_apimgmt_api_operation_policy')
         g.custom_command('show', 'show_apimgmt_api_operation_policy')
@@ -63,6 +64,7 @@ def load_command_table(self, _):
         g.custom_command('list', 'list_apimgmt_api')
     with self.command_group('apimgmt api policy', apimgmt_sdk, client_factory=cf_apimgmt) as g:
         g.custom_command('create', 'create_apimgmt_api_policy')
+        g.custom_command('update', 'update_apimgmt_api_policy')
         g.custom_command('delete', 'delete_apimgmt_api_policy')
         g.custom_command('list', 'list_apimgmt_api_policy')
         g.custom_command('show', 'show_apimgmt_api_policy')
@@ -71,6 +73,7 @@ def load_command_table(self, _):
         g.custom_command('list', 'list_apimgmt_api_policy')
     with self.command_group('apimgmt api schema', apimgmt_sdk, client_factory=cf_apimgmt) as g:
         g.custom_command('create', 'create_apimgmt_api_schema')
+        g.custom_command('update', 'update_apimgmt_api_schema')
         g.custom_command('delete', 'delete_apimgmt_api_schema')
         g.custom_command('list', 'list_apimgmt_api_schema')
         g.custom_command('show', 'show_apimgmt_api_schema')
@@ -97,6 +100,7 @@ def load_command_table(self, _):
         g.custom_command('list', 'list_apimgmt_api_issue')
     with self.command_group('apimgmt api issue comment', apimgmt_sdk, client_factory=cf_apimgmt) as g:
         g.custom_command('create', 'create_apimgmt_api_issue_comment')
+        g.custom_command('update', 'update_apimgmt_api_issue_comment')
         g.custom_command('delete', 'delete_apimgmt_api_issue_comment')
         g.custom_command('list', 'list_apimgmt_api_issue_comment')
         g.custom_command('show', 'show_apimgmt_api_issue_comment')
@@ -105,6 +109,7 @@ def load_command_table(self, _):
         g.custom_command('list', 'list_apimgmt_api_issue_comment')
     with self.command_group('apimgmt api issue attachment', apimgmt_sdk, client_factory=cf_apimgmt) as g:
         g.custom_command('create', 'create_apimgmt_api_issue_attachment')
+        g.custom_command('update', 'update_apimgmt_api_issue_attachment')
         g.custom_command('delete', 'delete_apimgmt_api_issue_attachment')
         g.custom_command('list', 'list_apimgmt_api_issue_attachment')
         g.custom_command('show', 'show_apimgmt_api_issue_attachment')
@@ -113,6 +118,7 @@ def load_command_table(self, _):
         g.custom_command('list', 'list_apimgmt_api_issue_attachment')
     with self.command_group('apimgmt api tagdescription', apimgmt_sdk, client_factory=cf_apimgmt) as g:
         g.custom_command('create', 'create_apimgmt_api_tagdescription')
+        g.custom_command('update', 'update_apimgmt_api_tagdescription')
         g.custom_command('delete', 'delete_apimgmt_api_tagdescription')
         g.custom_command('list', 'list_apimgmt_api_tagdescription')
         g.custom_command('show', 'show_apimgmt_api_tagdescription')
@@ -159,6 +165,7 @@ def load_command_table(self, _):
         g.custom_command('list', 'list_apimgmt_cache')
     with self.command_group('apimgmt certificate', apimgmt_sdk, client_factory=cf_apimgmt) as g:
         g.custom_command('create', 'create_apimgmt_certificate')
+        g.custom_command('update', 'update_apimgmt_certificate')
         g.custom_command('delete', 'delete_apimgmt_certificate')
         g.custom_command('list', 'list_apimgmt_certificate')
         g.custom_command('show', 'show_apimgmt_certificate')
@@ -236,6 +243,7 @@ def load_command_table(self, _):
         g.custom_command('list', 'list_apimgmt_location')
     with self.command_group('apimgmt notification', apimgmt_sdk, client_factory=cf_apimgmt) as g:
         g.custom_command('create', 'create_apimgmt_notification')
+        g.custom_command('update', 'update_apimgmt_notification')
         g.custom_command('list', 'list_apimgmt_notification')
         g.custom_command('show', 'show_apimgmt_notification')
     with self.command_group('apimgmt notification', apimgmt_sdk, client_factory=cf_apimgmt) as g:
@@ -243,12 +251,14 @@ def load_command_table(self, _):
         g.custom_command('list', 'list_apimgmt_notification')
     with self.command_group('apimgmt notification recipientuser', apimgmt_sdk, client_factory=cf_apimgmt) as g:
         g.custom_command('create', 'create_apimgmt_notification_recipientuser')
+        g.custom_command('update', 'update_apimgmt_notification_recipientuser')
         g.custom_command('delete', 'delete_apimgmt_notification_recipientuser')
         g.custom_command('list', 'list_apimgmt_notification_recipientuser')
     with self.command_group('apimgmt notification', apimgmt_sdk, client_factory=cf_apimgmt) as g:
         g.custom_command('list', 'list_apimgmt_notification')
     with self.command_group('apimgmt notification recipientemail', apimgmt_sdk, client_factory=cf_apimgmt) as g:
         g.custom_command('create', 'create_apimgmt_notification_recipientemail')
+        g.custom_command('update', 'update_apimgmt_notification_recipientemail')
         g.custom_command('delete', 'delete_apimgmt_notification_recipientemail')
         g.custom_command('list', 'list_apimgmt_notification_recipientemail')
     with self.command_group('apimgmt notification', apimgmt_sdk, client_factory=cf_apimgmt) as g:
@@ -264,6 +274,7 @@ def load_command_table(self, _):
         g.custom_command('list', 'list_apimgmt_openidconnectprovider')
     with self.command_group('apimgmt policy', apimgmt_sdk, client_factory=cf_apimgmt) as g:
         g.custom_command('create', 'create_apimgmt_policy')
+        g.custom_command('update', 'update_apimgmt_policy')
         g.custom_command('delete', 'delete_apimgmt_policy')
         g.custom_command('list', 'list_apimgmt_policy')
         g.custom_command('show', 'show_apimgmt_policy')
@@ -301,12 +312,14 @@ def load_command_table(self, _):
         g.custom_command('list', 'list_apimgmt_product')
     with self.command_group('apimgmt product api', apimgmt_sdk, client_factory=cf_apimgmt) as g:
         g.custom_command('create', 'create_apimgmt_product_api')
+        g.custom_command('update', 'update_apimgmt_product_api')
         g.custom_command('delete', 'delete_apimgmt_product_api')
         g.custom_command('list', 'list_apimgmt_product_api')
     with self.command_group('apimgmt product', apimgmt_sdk, client_factory=cf_apimgmt) as g:
         g.custom_command('list', 'list_apimgmt_product')
     with self.command_group('apimgmt product group', apimgmt_sdk, client_factory=cf_apimgmt) as g:
         g.custom_command('create', 'create_apimgmt_product_group')
+        g.custom_command('update', 'update_apimgmt_product_group')
         g.custom_command('delete', 'delete_apimgmt_product_group')
         g.custom_command('list', 'list_apimgmt_product_group')
     with self.command_group('apimgmt product', apimgmt_sdk, client_factory=cf_apimgmt) as g:
@@ -315,6 +328,7 @@ def load_command_table(self, _):
         g.custom_command('list', 'list_apimgmt_product')
     with self.command_group('apimgmt product policy', apimgmt_sdk, client_factory=cf_apimgmt) as g:
         g.custom_command('create', 'create_apimgmt_product_policy')
+        g.custom_command('update', 'update_apimgmt_product_policy')
         g.custom_command('delete', 'delete_apimgmt_product_policy')
         g.custom_command('list', 'list_apimgmt_product_policy')
         g.custom_command('show', 'show_apimgmt_product_policy')

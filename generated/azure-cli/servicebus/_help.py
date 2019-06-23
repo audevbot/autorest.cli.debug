@@ -73,6 +73,11 @@ helps['servicebus disasterrecoveryconfig create'] = """
     short-summary: create a servicebus disasterrecoveryconfig.
 """
 
+helps['servicebus disasterrecoveryconfig update'] = """
+    type: command
+    short-summary: update a servicebus disasterrecoveryconfig.
+"""
+
 helps['servicebus disasterrecoveryconfig delete'] = """
     type: command
     short-summary: delete a servicebus disasterrecoveryconfig.
@@ -128,6 +133,11 @@ helps['servicebus queue create'] = """
     short-summary: create a servicebus queue.
 """
 
+helps['servicebus queue update'] = """
+    type: command
+    short-summary: update a servicebus queue.
+"""
+
 helps['servicebus queue delete'] = """
     type: command
     short-summary: delete a servicebus queue.
@@ -166,6 +176,11 @@ helps['servicebus topic'] = """
 helps['servicebus topic create'] = """
     type: command
     short-summary: create a servicebus topic.
+"""
+
+helps['servicebus topic update'] = """
+    type: command
+    short-summary: update a servicebus topic.
 """
 
 helps['servicebus topic delete'] = """
@@ -208,6 +223,11 @@ helps['servicebus topic subscription create'] = """
     short-summary: create a servicebus topic subscription.
 """
 
+helps['servicebus topic subscription update'] = """
+    type: command
+    short-summary: update a servicebus topic subscription.
+"""
+
 helps['servicebus topic subscription delete'] = """
     type: command
     short-summary: delete a servicebus topic subscription.
@@ -246,6 +266,11 @@ helps['servicebus topic subscription rule'] = """
 helps['servicebus topic subscription rule create'] = """
     type: command
     short-summary: create a servicebus topic subscription rule.
+"""
+
+helps['servicebus topic subscription rule update'] = """
+    type: command
+    short-summary: update a servicebus topic subscription rule.
 """
 
 helps['servicebus topic subscription rule delete'] = """

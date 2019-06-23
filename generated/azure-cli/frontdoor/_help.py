@@ -18,6 +18,11 @@ helps['frontdoor create'] = """
     short-summary: create a frontdoor.
 """
 
+helps['frontdoor update'] = """
+    type: command
+    short-summary: update a frontdoor.
+"""
+
 helps['frontdoor delete'] = """
     type: command
     short-summary: delete a frontdoor.
@@ -56,6 +61,11 @@ helps['frontdoor routingrule'] = """
 helps['frontdoor routingrule create'] = """
     type: command
     short-summary: create a frontdoor routingrule.
+"""
+
+helps['frontdoor routingrule update'] = """
+    type: command
+    short-summary: update a frontdoor routingrule.
 """
 
 helps['frontdoor routingrule delete'] = """
@@ -98,6 +108,11 @@ helps['frontdoor healthprobesetting create'] = """
     short-summary: create a frontdoor healthprobesetting.
 """
 
+helps['frontdoor healthprobesetting update'] = """
+    type: command
+    short-summary: update a frontdoor healthprobesetting.
+"""
+
 helps['frontdoor healthprobesetting delete'] = """
     type: command
     short-summary: delete a frontdoor healthprobesetting.
@@ -136,6 +151,11 @@ helps['frontdoor loadbalancingsetting'] = """
 helps['frontdoor loadbalancingsetting create'] = """
     type: command
     short-summary: create a frontdoor loadbalancingsetting.
+"""
+
+helps['frontdoor loadbalancingsetting update'] = """
+    type: command
+    short-summary: update a frontdoor loadbalancingsetting.
 """
 
 helps['frontdoor loadbalancingsetting delete'] = """
@@ -178,6 +198,11 @@ helps['frontdoor backendpool create'] = """
     short-summary: create a frontdoor backendpool.
 """
 
+helps['frontdoor backendpool update'] = """
+    type: command
+    short-summary: update a frontdoor backendpool.
+"""
+
 helps['frontdoor backendpool delete'] = """
     type: command
     short-summary: delete a frontdoor backendpool.
@@ -216,6 +241,11 @@ helps['frontdoor frontendendpoint'] = """
 helps['frontdoor frontendendpoint create'] = """
     type: command
     short-summary: create a frontdoor frontendendpoint.
+"""
+
+helps['frontdoor frontendendpoint update'] = """
+    type: command
+    short-summary: update a frontdoor frontendendpoint.
 """
 
 helps['frontdoor frontendendpoint delete'] = """
