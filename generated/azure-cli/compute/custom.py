@@ -5,7 +5,7 @@
 
 from knack.util import CLIError
 
-
+# module equivalent: azure_rm_computegallery
 def create_compute(cmd, client,
                    resource_group,
                    name,
@@ -26,7 +26,7 @@ def create_compute(cmd, client,
     body['provisioning_state'] = provisioning_state
     return client.galleries.create_or_update(resource_group_name=resource_group, gallery_name=name, gallery=gallery)
 
-
+# module equivalent: azure_rm_computegallery
 def update_compute(cmd, client,
                    resource_group,
                    name,
@@ -47,37 +47,37 @@ def update_compute(cmd, client,
     body['provisioning_state'] = provisioning_state
     return client.galleries.create_or_update(resource_group_name=resource_group, gallery_name=name, gallery=gallery)
 
-
+# module equivalent: azure_rm_computegallery
 def delete_compute(cmd, client,
                    resource_group,
                    name):
     return client.galleries.delete(resource_group_name=resource_group, gallery_name=name)
 
-
+# module equivalent: azure_rm_computegallery
 def list_compute(cmd, client,
                  resource_group,
                  name):
     return client.galleries.list(resource_group_name=resource_group, gallery_name=name)
 
-
+# module equivalent: azure_rm_computegallery
 def show_compute(cmd, client,
                  resource_group,
                  name):
     return client.galleries.get(resource_group_name=resource_group, gallery_name=name)
 
-
+# module equivalent: azure_rm_computegallery_info
 def show_compute(cmd, client,
                  resource_group,
                  name):
     return client.galleries.get(resource_group_name=resource_group, gallery_name=name)
 
-
+# module equivalent: azure_rm_computegallery_info
 def list_compute(cmd, client,
                  resource_group,
                  name):
     return client.galleries.list_by_resource_group(resource_group_name=resource_group, gallery_name=name)
 
-
+# module equivalent: azure_rm_computegalleryimage
 def create_compute_image(cmd, client,
                          resource_group,
                          gallery_name,
@@ -117,7 +117,7 @@ def create_compute_image(cmd, client,
     body['provisioning_state'] = provisioning_state
     return client.gallery_images.create_or_update(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=name, galleryImage=galleryImage)
 
-
+# module equivalent: azure_rm_computegalleryimage
 def update_compute_image(cmd, client,
                          resource_group,
                          gallery_name,
@@ -157,42 +157,42 @@ def update_compute_image(cmd, client,
     body['provisioning_state'] = provisioning_state
     return client.gallery_images.create_or_update(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=name, galleryImage=galleryImage)
 
-
+# module equivalent: azure_rm_computegalleryimage
 def delete_compute_image(cmd, client,
                          resource_group,
                          gallery_name,
                          name):
     return client.gallery_images.delete(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=name)
 
-
+# module equivalent: azure_rm_computegalleryimage
 def list_compute_image(cmd, client,
                        resource_group,
                        gallery_name,
                        name):
     return client.gallery_images.list_by_gallery(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=name)
 
-
+# module equivalent: azure_rm_computegalleryimage
 def show_compute_image(cmd, client,
                        resource_group,
                        gallery_name,
                        name):
     return client.gallery_images.get(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=name)
 
-
+# module equivalent: azure_rm_computegalleryimage_info
 def show_compute_image(cmd, client,
                        resource_group,
                        gallery_name,
                        name):
     return client.gallery_images.get(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=name)
 
-
+# module equivalent: azure_rm_computegalleryimage_info
 def list_compute_image(cmd, client,
                        resource_group,
                        gallery_name,
                        name):
     return client.gallery_images.list_by_gallery(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=name)
 
-
+# module equivalent: azure_rm_computegalleryimageversion
 def create_compute_image_version(cmd, client,
                                  resource_group,
                                  gallery_name,
@@ -217,7 +217,7 @@ def create_compute_image_version(cmd, client,
     body['replication_status'] = replication_status
     return client.gallery_image_versions.create_or_update(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=gallery_image_name, gallery_image_version_name=name, galleryImageVersion=galleryImageVersion)
 
-
+# module equivalent: azure_rm_computegalleryimageversion
 def update_compute_image_version(cmd, client,
                                  resource_group,
                                  gallery_name,
@@ -242,7 +242,7 @@ def update_compute_image_version(cmd, client,
     body['replication_status'] = replication_status
     return client.gallery_image_versions.create_or_update(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=gallery_image_name, gallery_image_version_name=name, galleryImageVersion=galleryImageVersion)
 
-
+# module equivalent: azure_rm_computegalleryimageversion
 def delete_compute_image_version(cmd, client,
                                  resource_group,
                                  gallery_name,
@@ -250,7 +250,7 @@ def delete_compute_image_version(cmd, client,
                                  name):
     return client.gallery_image_versions.delete(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=gallery_image_name, gallery_image_version_name=name)
 
-
+# module equivalent: azure_rm_computegalleryimageversion
 def list_compute_image_version(cmd, client,
                                resource_group,
                                gallery_name,
@@ -258,7 +258,7 @@ def list_compute_image_version(cmd, client,
                                name):
     return client.gallery_image_versions.list_by_gallery_image(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=gallery_image_name, gallery_image_version_name=name)
 
-
+# module equivalent: azure_rm_computegalleryimageversion
 def show_compute_image_version(cmd, client,
                                resource_group,
                                gallery_name,
@@ -266,7 +266,7 @@ def show_compute_image_version(cmd, client,
                                name):
     return client.gallery_image_versions.get(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=gallery_image_name, gallery_image_version_name=name)
 
-
+# module equivalent: azure_rm_computegalleryimageversion_info
 def show_compute_image_version(cmd, client,
                                resource_group,
                                gallery_name,
@@ -274,7 +274,7 @@ def show_compute_image_version(cmd, client,
                                name):
     return client.gallery_image_versions.get(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=gallery_image_name, gallery_image_version_name=name)
 
-
+# module equivalent: azure_rm_computegalleryimageversion_info
 def list_compute_image_version(cmd, client,
                                resource_group,
                                gallery_name,

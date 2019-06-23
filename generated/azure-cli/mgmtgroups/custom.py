@@ -5,7 +5,7 @@
 
 from knack.util import CLIError
 
-
+# module equivalent: azure_rm_managementgroup
 def create_mgmtgroups(cmd, client,
                       group_id,
                       properties=None,
@@ -25,7 +25,7 @@ def create_mgmtgroups(cmd, client,
     body['children'] = children
     return client.management_groups.create_or_update(group_id=group_id, createManagementGroupRequest=createManagementGroupRequest)
 
-
+# module equivalent: azure_rm_managementgroup
 def update_mgmtgroups(cmd, client,
                       group_id,
                       properties=None,
@@ -45,42 +45,42 @@ def update_mgmtgroups(cmd, client,
     body['children'] = children
     return client.management_groups.create_or_update(group_id=group_id, createManagementGroupRequest=createManagementGroupRequest)
 
-
+# module equivalent: azure_rm_managementgroup
 def delete_mgmtgroups(cmd, client,
                       group_id):
     return client.management_groups.delete(group_id=group_id)
 
-
+# module equivalent: azure_rm_managementgroup
 def list_mgmtgroups(cmd, client,
                     group_id):
     return client.management_groups.list(group_id=group_id)
 
-
+# module equivalent: azure_rm_managementgroup
 def show_mgmtgroups(cmd, client,
                     group_id):
     return client.management_groups.get(group_id=group_id)
 
-
+# module equivalent: azure_rm_managementgroup_info
 def show_mgmtgroups(cmd, client,
                     group_id):
     return client.management_groups.get(group_id=group_id)
 
-
+# module equivalent: azure_rm_managementgroup_info
 def list_mgmtgroups(cmd, client,
                     group_id):
     return client.management_groups.list(group_id=group_id)
 
-
+# module equivalent: azure_rm_managementgroupsubscription
 def create_mgmtgroups(cmd, client,
                       group_id):
     body={}
     return client.management_group_subscriptions.create(group_id=group_id)
 
-
+# module equivalent: azure_rm_managementgroupsubscription
 def delete_mgmtgroups(cmd, client,
                       group_id):
     return client.management_group_subscriptions.delete(group_id=group_id)
 
-
+# module equivalent: azure_rm_managementgroupsoperation_info
 def list_(cmd, client):
     return client.operations.list()

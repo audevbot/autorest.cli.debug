@@ -5,7 +5,7 @@
 
 from knack.util import CLIError
 
-
+# module equivalent: azure_rm_cosmosdbdatabaseaccount
 def create_cosmos-db(cmd, client,
                      resource_group,
                      name,
@@ -50,7 +50,7 @@ def create_cosmos-db(cmd, client,
     body['failover_policies'] = failover_policies
     return client.database_accounts.create_or_update(resource_group_name=resource_group, account_name=name, createUpdateParameters=createUpdateParameters)
 
-
+# module equivalent: azure_rm_cosmosdbdatabaseaccount
 def update_cosmos-db(cmd, client,
                      resource_group,
                      name,
@@ -95,25 +95,25 @@ def update_cosmos-db(cmd, client,
     body['failover_policies'] = failover_policies
     return client.database_accounts.create_or_update(resource_group_name=resource_group, account_name=name, createUpdateParameters=createUpdateParameters)
 
-
+# module equivalent: azure_rm_cosmosdbdatabaseaccount
 def delete_cosmos-db(cmd, client,
                      resource_group,
                      name):
     return client.database_accounts.delete(resource_group_name=resource_group, account_name=name)
 
-
+# module equivalent: azure_rm_cosmosdbdatabaseaccount
 def list_cosmos-db(cmd, client,
                    resource_group,
                    name):
     return client.database_accounts.list(resource_group_name=resource_group, account_name=name)
 
-
+# module equivalent: azure_rm_cosmosdbdatabaseaccount
 def show_cosmos-db(cmd, client,
                    resource_group,
                    name):
     return client.database_accounts.get(resource_group_name=resource_group, account_name=name)
 
-
+# module equivalent: azure_rm_cosmosdbdatabaseaccount_info
 def list_cosmos-db_table_database_keyspace_graph_container_collection(cmd, client,
                                                                       resource_group,
                                                                       account_name,
@@ -125,7 +125,7 @@ def list_cosmos-db_table_database_keyspace_graph_container_collection(cmd, clien
                                                                       name):
     return client.database_accounts.list_mongo_dbcollections(resource_group_name=resource_group, account_name=account_name)
 
-
+# module equivalent: azure_rm_cosmosdbdatabaseaccount_info
 def show_cosmos-db_table_database_keyspace_graph_container_collection(cmd, client,
                                                                       resource_group,
                                                                       account_name,
@@ -137,18 +137,18 @@ def show_cosmos-db_table_database_keyspace_graph_container_collection(cmd, clien
                                                                       name):
     return client.database_accounts.get(resource_group_name=resource_group, account_name=account_name)
 
-
+# module equivalent: azure_rm_cosmosdboperation_info
 def list_(cmd, client):
     return client.operations.list()
 
-
+# module equivalent: azure_rm_cosmosdbdatabase_info
 def list_cosmos-db_database(cmd, client,
                             resource_group,
                             name,
                             database_rid):
     return client.database.list_metric_definitions()
 
-
+# module equivalent: azure_rm_cosmosdbcollection_info
 def list_cosmos-db_database_collection(cmd, client,
                                        resource_group,
                                        name,
@@ -156,7 +156,7 @@ def list_cosmos-db_database_collection(cmd, client,
                                        collection_rid):
     return client.collection.list_metric_definitions()
 
-
+# module equivalent: azure_rm_cosmosdbcollectionregion_info
 def list_cosmos-db_region_database_collection(cmd, client,
                                               resource_group,
                                               name,
@@ -165,14 +165,14 @@ def list_cosmos-db_region_database_collection(cmd, client,
                                               collection_rid):
     return client.collection_region.list_metrics()
 
-
+# module equivalent: azure_rm_cosmosdbdatabaseaccountregion_info
 def list_cosmos-db_region(cmd, client,
                           resource_group,
                           name,
                           region):
     return client.database_account_region.list_metrics()
 
-
+# module equivalent: azure_rm_cosmosdbpercentilesourcetarget_info
 def list_cosmos-db_sourceregion_targetregion(cmd, client,
                                              resource_group,
                                              name,
@@ -180,20 +180,20 @@ def list_cosmos-db_sourceregion_targetregion(cmd, client,
                                              target_region):
     return client.percentile_source_target.list_metrics()
 
-
+# module equivalent: azure_rm_cosmosdbpercentiletarget_info
 def list_cosmos-db_targetregion(cmd, client,
                                 resource_group,
                                 name,
                                 target_region):
     return client.percentile_target.list_metrics()
 
-
+# module equivalent: azure_rm_cosmosdbpercentile_info
 def list_cosmos-db(cmd, client,
                    resource_group,
                    name):
     return client.percentile.list_metrics()
 
-
+# module equivalent: azure_rm_cosmosdbcollectionpartitionregion_info
 def list_cosmos-db_region_database_collection(cmd, client,
                                               resource_group,
                                               name,
@@ -202,7 +202,7 @@ def list_cosmos-db_region_database_collection(cmd, client,
                                               collection_rid):
     return client.collection_partition_region.list_metrics()
 
-
+# module equivalent: azure_rm_cosmosdbcollectionpartition_info
 def list_cosmos-db_database_collection(cmd, client,
                                        resource_group,
                                        name,
@@ -210,7 +210,7 @@ def list_cosmos-db_database_collection(cmd, client,
                                        collection_rid):
     return client.collection_partition.list_usages()
 
-
+# module equivalent: azure_rm_cosmosdbpartitionkeyrangeid_info
 def list_cosmos-db_database_collection_partitionkeyrangeid(cmd, client,
                                                            resource_group,
                                                            name,
@@ -219,7 +219,7 @@ def list_cosmos-db_database_collection_partitionkeyrangeid(cmd, client,
                                                            partition_key_range_id):
     return client.partition_key_range_id.list_metrics()
 
-
+# module equivalent: azure_rm_cosmosdbpartitionkeyrangeidregion_info
 def list_cosmos-db_region_database_collection_partitionkeyrangeid(cmd, client,
                                                                   resource_group,
                                                                   name,
