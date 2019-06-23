@@ -163,6 +163,11 @@ helps['apimgmt api operation policy create'] = """
     short-summary: create a apimgmt api operation policy.
 """
 
+helps['apimgmt api operation policy update'] = """
+    type: command
+    short-summary: update a apimgmt api operation policy.
+"""
+
 helps['apimgmt api operation policy delete'] = """
     type: command
     short-summary: delete a apimgmt api operation policy.
@@ -258,6 +263,11 @@ helps['apimgmt api policy create'] = """
     short-summary: create a apimgmt api policy.
 """
 
+helps['apimgmt api policy update'] = """
+    type: command
+    short-summary: update a apimgmt api policy.
+"""
+
 helps['apimgmt api policy delete'] = """
     type: command
     short-summary: delete a apimgmt api policy.
@@ -296,6 +306,11 @@ helps['apimgmt api schema'] = """
 helps['apimgmt api schema create'] = """
     type: command
     short-summary: create a apimgmt api schema.
+"""
+
+helps['apimgmt api schema update'] = """
+    type: command
+    short-summary: update a apimgmt api schema.
 """
 
 helps['apimgmt api schema delete'] = """
@@ -428,6 +443,11 @@ helps['apimgmt api issue comment create'] = """
     short-summary: create a apimgmt api issue comment.
 """
 
+helps['apimgmt api issue comment update'] = """
+    type: command
+    short-summary: update a apimgmt api issue comment.
+"""
+
 helps['apimgmt api issue comment delete'] = """
     type: command
     short-summary: delete a apimgmt api issue comment.
@@ -468,6 +488,11 @@ helps['apimgmt api issue attachment create'] = """
     short-summary: create a apimgmt api issue attachment.
 """
 
+helps['apimgmt api issue attachment update'] = """
+    type: command
+    short-summary: update a apimgmt api issue attachment.
+"""
+
 helps['apimgmt api issue attachment delete'] = """
     type: command
     short-summary: delete a apimgmt api issue attachment.
@@ -506,6 +531,11 @@ helps['apimgmt api tagdescription'] = """
 helps['apimgmt api tagdescription create'] = """
     type: command
     short-summary: create a apimgmt api tagdescription.
+"""
+
+helps['apimgmt api tagdescription update'] = """
+    type: command
+    short-summary: update a apimgmt api tagdescription.
 """
 
 helps['apimgmt api tagdescription delete'] = """
@@ -736,6 +766,11 @@ helps['apimgmt certificate'] = """
 helps['apimgmt certificate create'] = """
     type: command
     short-summary: create a apimgmt certificate.
+"""
+
+helps['apimgmt certificate update'] = """
+    type: command
+    short-summary: update a apimgmt certificate.
 """
 
 helps['apimgmt certificate delete'] = """
@@ -1123,6 +1158,11 @@ helps['apimgmt notification create'] = """
     short-summary: create a apimgmt notification.
 """
 
+helps['apimgmt notification update'] = """
+    type: command
+    short-summary: update a apimgmt notification.
+"""
+
 helps['apimgmt notification list'] = """
     type: command
     short-summary: list a apimgmt notification.
@@ -1158,6 +1198,11 @@ helps['apimgmt notification recipientuser create'] = """
     short-summary: create a apimgmt notification recipientuser.
 """
 
+helps['apimgmt notification recipientuser update'] = """
+    type: command
+    short-summary: update a apimgmt notification recipientuser.
+"""
+
 helps['apimgmt notification recipientuser delete'] = """
     type: command
     short-summary: delete a apimgmt notification recipientuser.
@@ -1186,6 +1231,11 @@ helps['apimgmt notification recipientemail'] = """
 helps['apimgmt notification recipientemail create'] = """
     type: command
     short-summary: create a apimgmt notification recipientemail.
+"""
+
+helps['apimgmt notification recipientemail update'] = """
+    type: command
+    short-summary: update a apimgmt notification recipientemail.
 """
 
 helps['apimgmt notification recipientemail delete'] = """
@@ -1261,6 +1311,11 @@ helps['apimgmt policy'] = """
 helps['apimgmt policy create'] = """
     type: command
     short-summary: create a apimgmt policy.
+"""
+
+helps['apimgmt policy update'] = """
+    type: command
+    short-summary: update a apimgmt policy.
 """
 
 helps['apimgmt policy delete'] = """
@@ -1448,6 +1503,11 @@ helps['apimgmt product api create'] = """
     short-summary: create a apimgmt product api.
 """
 
+helps['apimgmt product api update'] = """
+    type: command
+    short-summary: update a apimgmt product api.
+"""
+
 helps['apimgmt product api delete'] = """
     type: command
     short-summary: delete a apimgmt product api.
@@ -1476,6 +1536,11 @@ helps['apimgmt product group'] = """
 helps['apimgmt product group create'] = """
     type: command
     short-summary: create a apimgmt product group.
+"""
+
+helps['apimgmt product group update'] = """
+    type: command
+    short-summary: update a apimgmt product group.
 """
 
 helps['apimgmt product group delete'] = """
@@ -1516,6 +1581,11 @@ helps['apimgmt product policy'] = """
 helps['apimgmt product policy create'] = """
     type: command
     short-summary: create a apimgmt product policy.
+"""
+
+helps['apimgmt product policy update'] = """
+    type: command
+    short-summary: update a apimgmt product policy.
 """
 
 helps['apimgmt product policy delete'] = """

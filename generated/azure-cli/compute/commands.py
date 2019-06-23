@@ -15,6 +15,7 @@ def load_command_table(self, _):
 
     with self.command_group('compute', compute_sdk, client_factory=cf_compute) as g:
         g.custom_command('create', 'create_compute')
+        g.custom_command('update', 'update_compute')
         g.custom_command('delete', 'delete_compute')
         g.custom_command('list', 'list_compute')
         g.custom_command('show', 'show_compute')
@@ -23,6 +24,7 @@ def load_command_table(self, _):
         g.custom_command('list', 'list_compute')
     with self.command_group('compute image', compute_sdk, client_factory=cf_compute) as g:
         g.custom_command('create', 'create_compute_image')
+        g.custom_command('update', 'update_compute_image')
         g.custom_command('delete', 'delete_compute_image')
         g.custom_command('list', 'list_compute_image')
         g.custom_command('show', 'show_compute_image')
@@ -31,6 +33,7 @@ def load_command_table(self, _):
         g.custom_command('list', 'list_compute_image')
     with self.command_group('compute image version', compute_sdk, client_factory=cf_compute) as g:
         g.custom_command('create', 'create_compute_image_version')
+        g.custom_command('update', 'update_compute_image_version')
         g.custom_command('delete', 'delete_compute_image_version')
         g.custom_command('list', 'list_compute_image_version')
         g.custom_command('show', 'show_compute_image_version')

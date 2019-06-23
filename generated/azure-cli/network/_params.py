@@ -31,6 +31,22 @@ def load_arguments(self, _):
         c.argument('etag', id_part=None, help='Gets a unique read-only string that changes whenever the resource is updated.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
+    with self.argument_context('network update') as c:
+        c.argument('resource_group', id_part=None, help='The name of the resource group.')
+        c.argument('name', id_part=None, help='The name of the Azure Firewall.')
+        c.argument('id', id_part=None, help='Resource ID.')
+        c.argument('location', id_part=None, help='Resource location.')
+        c.argument('tags', id_part=None, help='Resource tags.')
+        c.argument('properties', id_part=None, help='undefined')
+        c.argument('application_rule_collections', id_part=None, help='Collection of application rule collections used by Azure Firewall.')
+        c.argument('nat_rule_collections', id_part=None, help='Collection of NAT rule collections used by Azure Firewall.')
+        c.argument('network_rule_collections', id_part=None, help='Collection of network rule collections used by Azure Firewall.')
+        c.argument('ip_configurations', id_part=None, help='IP configuration of the Azure Firewall resource.')
+        c.argument('provisioning_state', id_part=None, help='The provisioning state of the resource.')
+        c.argument('type', id_part=None, help='Resource type.')
+        c.argument('etag', id_part=None, help='Gets a unique read-only string that changes whenever the resource is updated.')
+        c.argument('resource_id', name_arg_type, id_part=None)
+
     with self.argument_context('network delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('name', id_part=None, help='The name of the Azure Firewall.')

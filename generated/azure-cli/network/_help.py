@@ -18,6 +18,11 @@ helps['network create'] = """
     short-summary: create a network.
 """
 
+helps['network update'] = """
+    type: command
+    short-summary: update a network.
+"""
+
 helps['network delete'] = """
     type: command
     short-summary: delete a network.
