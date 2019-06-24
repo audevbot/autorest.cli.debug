@@ -8,182 +8,182 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 
 
-helps['servicebus namespace'] = """
+helps['servicebus'] = """
     type: group
     short-summary: Commands to manage Namespace.
 """
 
-helps['servicebus namespace create'] = """
+helps['servicebus create'] = """
     type: command
-    short-summary: create a servicebus namespace.
+    short-summary: create a servicebus.
 """
 
-helps['servicebus namespace update'] = """
+helps['servicebus update'] = """
     type: command
-    short-summary: update a servicebus namespace.
+    short-summary: update a servicebus.
 """
 
-helps['servicebus namespace delete'] = """
+helps['servicebus delete'] = """
     type: command
-    short-summary: delete a servicebus namespace.
+    short-summary: delete a servicebus.
 """
 
-helps['servicebus namespace list'] = """
+helps['servicebus list'] = """
     type: command
-    short-summary: list a servicebus namespace.
+    short-summary: list a servicebus.
 """
 
-helps['servicebus namespace show'] = """
+helps['servicebus show'] = """
     type: command
-    short-summary: show a servicebus namespace.
+    short-summary: show a servicebus.
 """
 
-helps['servicebus namespace disasterrecoveryconfig'] = """
+helps['servicebus disasterrecoveryconfig'] = """
     type: group
     short-summary: Commands to manage DisasterRecoveryConfig.
 """
 
-helps['servicebus namespace disasterrecoveryconfig create'] = """
+helps['servicebus disasterrecoveryconfig create'] = """
     type: command
-    short-summary: create a servicebus namespace disasterrecoveryconfig.
+    short-summary: create a servicebus disasterrecoveryconfig.
 """
 
-helps['servicebus namespace disasterrecoveryconfig update'] = """
+helps['servicebus disasterrecoveryconfig update'] = """
     type: command
-    short-summary: update a servicebus namespace disasterrecoveryconfig.
+    short-summary: update a servicebus disasterrecoveryconfig.
 """
 
-helps['servicebus namespace disasterrecoveryconfig delete'] = """
+helps['servicebus disasterrecoveryconfig delete'] = """
     type: command
-    short-summary: delete a servicebus namespace disasterrecoveryconfig.
+    short-summary: delete a servicebus disasterrecoveryconfig.
 """
 
-helps['servicebus namespace disasterrecoveryconfig list'] = """
+helps['servicebus disasterrecoveryconfig list'] = """
     type: command
-    short-summary: list a servicebus namespace disasterrecoveryconfig.
+    short-summary: list a servicebus disasterrecoveryconfig.
 """
 
-helps['servicebus namespace disasterrecoveryconfig show'] = """
+helps['servicebus disasterrecoveryconfig show'] = """
     type: command
-    short-summary: show a servicebus namespace disasterrecoveryconfig.
+    short-summary: show a servicebus disasterrecoveryconfig.
 """
 
-helps['servicebus namespace queue'] = """
+helps['servicebus queue'] = """
     type: group
     short-summary: Commands to manage Queue.
 """
 
-helps['servicebus namespace queue create'] = """
+helps['servicebus queue create'] = """
     type: command
-    short-summary: create a servicebus namespace queue.
+    short-summary: create a servicebus queue.
 """
 
-helps['servicebus namespace queue update'] = """
+helps['servicebus queue update'] = """
     type: command
-    short-summary: update a servicebus namespace queue.
+    short-summary: update a servicebus queue.
 """
 
-helps['servicebus namespace queue delete'] = """
+helps['servicebus queue delete'] = """
     type: command
-    short-summary: delete a servicebus namespace queue.
+    short-summary: delete a servicebus queue.
 """
 
-helps['servicebus namespace queue list'] = """
+helps['servicebus queue list'] = """
     type: command
-    short-summary: list a servicebus namespace queue.
+    short-summary: list a servicebus queue.
 """
 
-helps['servicebus namespace queue show'] = """
+helps['servicebus queue show'] = """
     type: command
-    short-summary: show a servicebus namespace queue.
+    short-summary: show a servicebus queue.
 """
 
-helps['servicebus namespace topic'] = """
+helps['servicebus topic'] = """
     type: group
     short-summary: Commands to manage Topic.
 """
 
-helps['servicebus namespace topic create'] = """
+helps['servicebus topic create'] = """
     type: command
-    short-summary: create a servicebus namespace topic.
+    short-summary: create a servicebus topic.
 """
 
-helps['servicebus namespace topic update'] = """
+helps['servicebus topic update'] = """
     type: command
-    short-summary: update a servicebus namespace topic.
+    short-summary: update a servicebus topic.
 """
 
-helps['servicebus namespace topic delete'] = """
+helps['servicebus topic delete'] = """
     type: command
-    short-summary: delete a servicebus namespace topic.
+    short-summary: delete a servicebus topic.
 """
 
-helps['servicebus namespace topic list'] = """
+helps['servicebus topic list'] = """
     type: command
-    short-summary: list a servicebus namespace topic.
+    short-summary: list a servicebus topic.
 """
 
-helps['servicebus namespace topic show'] = """
+helps['servicebus topic show'] = """
     type: command
-    short-summary: show a servicebus namespace topic.
+    short-summary: show a servicebus topic.
 """
 
-helps['servicebus namespace topic subscription'] = """
+helps['servicebus topic'] = """
     type: group
     short-summary: Commands to manage Subscription.
 """
 
-helps['servicebus namespace topic subscription create'] = """
+helps['servicebus topic create'] = """
     type: command
-    short-summary: create a servicebus namespace topic subscription.
+    short-summary: create a servicebus topic.
 """
 
-helps['servicebus namespace topic subscription update'] = """
+helps['servicebus topic update'] = """
     type: command
-    short-summary: update a servicebus namespace topic subscription.
+    short-summary: update a servicebus topic.
 """
 
-helps['servicebus namespace topic subscription delete'] = """
+helps['servicebus topic delete'] = """
     type: command
-    short-summary: delete a servicebus namespace topic subscription.
+    short-summary: delete a servicebus topic.
 """
 
-helps['servicebus namespace topic subscription list'] = """
+helps['servicebus topic list'] = """
     type: command
-    short-summary: list a servicebus namespace topic subscription.
+    short-summary: list a servicebus topic.
 """
 
-helps['servicebus namespace topic subscription show'] = """
+helps['servicebus topic show'] = """
     type: command
-    short-summary: show a servicebus namespace topic subscription.
+    short-summary: show a servicebus topic.
 """
 
-helps['servicebus namespace topic subscription rule'] = """
+helps['servicebus topic rule'] = """
     type: group
     short-summary: Commands to manage Rule.
 """
 
-helps['servicebus namespace topic subscription rule create'] = """
+helps['servicebus topic rule create'] = """
     type: command
-    short-summary: create a servicebus namespace topic subscription rule.
+    short-summary: create a servicebus topic rule.
 """
 
-helps['servicebus namespace topic subscription rule update'] = """
+helps['servicebus topic rule update'] = """
     type: command
-    short-summary: update a servicebus namespace topic subscription rule.
+    short-summary: update a servicebus topic rule.
 """
 
-helps['servicebus namespace topic subscription rule delete'] = """
+helps['servicebus topic rule delete'] = """
     type: command
-    short-summary: delete a servicebus namespace topic subscription rule.
+    short-summary: delete a servicebus topic rule.
 """
 
-helps['servicebus namespace topic subscription rule list'] = """
+helps['servicebus topic rule list'] = """
     type: command
-    short-summary: list a servicebus namespace topic subscription rule.
+    short-summary: list a servicebus topic rule.
 """
 
-helps['servicebus namespace topic subscription rule show'] = """
+helps['servicebus topic rule show'] = """
     type: command
-    short-summary: show a servicebus namespace topic subscription rule.
+    short-summary: show a servicebus topic rule.
 """

@@ -8,47 +8,47 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 
 
-helps['mgmtgroups managementgroup'] = """
+helps['mgmtgroups'] = """
     type: group
     short-summary: Commands to manage ManagementGroup.
 """
 
-helps['mgmtgroups managementgroup create'] = """
+helps['mgmtgroups create'] = """
     type: command
-    short-summary: create a mgmtgroups managementgroup.
+    short-summary: create a mgmtgroups.
 """
 
-helps['mgmtgroups managementgroup update'] = """
+helps['mgmtgroups update'] = """
     type: command
-    short-summary: update a mgmtgroups managementgroup.
+    short-summary: update a mgmtgroups.
 """
 
-helps['mgmtgroups managementgroup delete'] = """
+helps['mgmtgroups delete'] = """
     type: command
-    short-summary: delete a mgmtgroups managementgroup.
+    short-summary: delete a mgmtgroups.
 """
 
-helps['mgmtgroups managementgroup list'] = """
+helps['mgmtgroups list'] = """
     type: command
-    short-summary: list a mgmtgroups managementgroup.
+    short-summary: list a mgmtgroups.
 """
 
-helps['mgmtgroups managementgroup show'] = """
+helps['mgmtgroups show'] = """
     type: command
-    short-summary: show a mgmtgroups managementgroup.
+    short-summary: show a mgmtgroups.
 """
 
-helps['mgmtgroups managementgroup'] = """
+helps['mgmtgroups'] = """
     type: group
     short-summary: Commands to manage ManagementGroupSubscription.
 """
 
-helps['mgmtgroups managementgroup create'] = """
+helps['mgmtgroups create'] = """
     type: command
-    short-summary: create a mgmtgroups managementgroup.
+    short-summary: create a mgmtgroups.
 """
 
-helps['mgmtgroups managementgroup delete'] = """
+helps['mgmtgroups delete'] = """
     type: command
-    short-summary: delete a mgmtgroups managementgroup.
+    short-summary: delete a mgmtgroups.
 """

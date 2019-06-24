@@ -6,19 +6,19 @@
 from knack.util import CLIError
 
 # module equivalent: azure_rm_eventgrideventsubscription
-def create_eventgrid__eventsubscription(cmd, client,
-                                        scope=None,
-                                        name,
-                                        properties=None,
-                                        destination=None,
-                                        filter=None,
-                                        labels=None,
-                                        retry_policy=None,
-                                        dead_letter_destination=None,
-                                        topic=None,
-                                        provisioning_state=None,
-                                        id=None,
-                                        type=None):
+def create_eventgrid(cmd, client,
+                     scope=None,
+                     name,
+                     properties=None,
+                     destination=None,
+                     filter=None,
+                     labels=None,
+                     retry_policy=None,
+                     dead_letter_destination=None,
+                     topic=None,
+                     provisioning_state=None,
+                     id=None,
+                     type=None):
     body={}
     body['properties'] = properties
     body['destination'] = destination
@@ -31,19 +31,19 @@ def create_eventgrid__eventsubscription(cmd, client,
     return client.event_subscriptions.create_or_update(scope=scope, event_subscription_name=name, eventSubscriptionInfo=eventSubscriptionInfo)
 
 # module equivalent: azure_rm_eventgrideventsubscription
-def update_eventgrid__eventsubscription(cmd, client,
-                                        scope=None,
-                                        name,
-                                        properties=None,
-                                        destination=None,
-                                        filter=None,
-                                        labels=None,
-                                        retry_policy=None,
-                                        dead_letter_destination=None,
-                                        topic=None,
-                                        provisioning_state=None,
-                                        id=None,
-                                        type=None):
+def update_eventgrid(cmd, client,
+                     scope=None,
+                     name,
+                     properties=None,
+                     destination=None,
+                     filter=None,
+                     labels=None,
+                     retry_policy=None,
+                     dead_letter_destination=None,
+                     topic=None,
+                     provisioning_state=None,
+                     id=None,
+                     type=None):
     body={}
     body['properties'] = properties
     body['destination'] = destination
@@ -56,31 +56,31 @@ def update_eventgrid__eventsubscription(cmd, client,
     return client.event_subscriptions.create_or_update(scope=scope, event_subscription_name=name, eventSubscriptionInfo=eventSubscriptionInfo)
 
 # module equivalent: azure_rm_eventgrideventsubscription
-def delete_eventgrid__eventsubscription(cmd, client,
-                                        name):
+def delete_eventgrid(cmd, client,
+                     name):
     return client.event_subscriptions.delete(scope=scope, event_subscription_name=name)
 
 # module equivalent: azure_rm_eventgrideventsubscription
-def list_eventgrid__eventsubscription(cmd, client,
-                                      name):
+def list_eventgrid(cmd, client,
+                   name):
     return client.event_subscriptions.list_global_by_subscription(scope=scope, event_subscription_name=name)
 
 # module equivalent: azure_rm_eventgrideventsubscription
-def show_eventgrid__eventsubscription(cmd, client,
-                                      name):
+def show_eventgrid(cmd, client,
+                   name):
     return client.event_subscriptions.get(scope=scope, event_subscription_name=name)
 
 # module equivalent: azure_rm_eventgridtopic
-def create_eventgrid_topic(cmd, client,
-                           resource_group,
-                           name,
-                           location=None,
-                           tags=None,
-                           properties=None,
-                           provisioning_state=None,
-                           endpoint=None,
-                           id=None,
-                           type=None):
+def create_eventgrid(cmd, client,
+                     resource_group,
+                     name,
+                     location=None,
+                     tags=None,
+                     properties=None,
+                     provisioning_state=None,
+                     endpoint=None,
+                     id=None,
+                     type=None):
     body={}
     body['location'] = location
     body['tags'] = tags
@@ -90,16 +90,16 @@ def create_eventgrid_topic(cmd, client,
     return client.topics.create_or_update(resource_group_name=resource_group, topic_name=name, topicInfo=topicInfo)
 
 # module equivalent: azure_rm_eventgridtopic
-def update_eventgrid_topic(cmd, client,
-                           resource_group,
-                           name,
-                           location=None,
-                           tags=None,
-                           properties=None,
-                           provisioning_state=None,
-                           endpoint=None,
-                           id=None,
-                           type=None):
+def update_eventgrid(cmd, client,
+                     resource_group,
+                     name,
+                     location=None,
+                     tags=None,
+                     properties=None,
+                     provisioning_state=None,
+                     endpoint=None,
+                     id=None,
+                     type=None):
     body={}
     body['location'] = location
     body['tags'] = tags
@@ -109,19 +109,19 @@ def update_eventgrid_topic(cmd, client,
     return client.topics.create_or_update(resource_group_name=resource_group, topic_name=name, topicInfo=topicInfo)
 
 # module equivalent: azure_rm_eventgridtopic
-def delete_eventgrid_topic(cmd, client,
-                           resource_group,
-                           name):
+def delete_eventgrid(cmd, client,
+                     resource_group,
+                     name):
     return client.topics.delete(resource_group_name=resource_group, topic_name=name)
 
 # module equivalent: azure_rm_eventgridtopic
-def list_eventgrid_topic(cmd, client,
-                         resource_group,
-                         name):
+def list_eventgrid(cmd, client,
+                   resource_group,
+                   name):
     return client.topics.list_by_subscription(resource_group_name=resource_group, topic_name=name)
 
 # module equivalent: azure_rm_eventgridtopic
-def show_eventgrid_topic(cmd, client,
-                         resource_group,
-                         name):
+def show_eventgrid(cmd, client,
+                   resource_group,
+                   name):
     return client.topics.get(resource_group_name=resource_group, topic_name=name)

@@ -13,12 +13,12 @@ def load_command_table(self, _):
         client_factory=cf_mgmtgroups)
 
 
-    with self.command_group('mgmtgroups managementgroup', mgmtgroups_sdk, client_factory=cf_mgmtgroups) as g:
-        g.custom_command('create', 'create_mgmtgroups_managementgroup')
-        g.custom_command('update', 'update_mgmtgroups_managementgroup')
-        g.custom_command('delete', 'delete_mgmtgroups_managementgroup')
-        g.custom_command('list', 'list_mgmtgroups_managementgroup')
-        g.custom_command('show', 'show_mgmtgroups_managementgroup')
-    with self.command_group('mgmtgroups managementgroup', mgmtgroups_sdk, client_factory=cf_mgmtgroups) as g:
-        g.custom_command('create', 'create_mgmtgroups_managementgroup')
-        g.custom_command('delete', 'delete_mgmtgroups_managementgroup')
+    with self.command_group('mgmtgroups', mgmtgroups_sdk, client_factory=cf_mgmtgroups) as g:
+        g.custom_command('create', 'create_mgmtgroups')
+        g.custom_command('update', 'update_mgmtgroups')
+        g.custom_command('delete', 'delete_mgmtgroups')
+        g.custom_command('list', 'list_mgmtgroups')
+        g.custom_command('show', 'show_mgmtgroups')
+    with self.command_group('mgmtgroups', mgmtgroups_sdk, client_factory=cf_mgmtgroups) as g:
+        g.custom_command('create', 'create_mgmtgroups')
+        g.custom_command('delete', 'delete_mgmtgroups')

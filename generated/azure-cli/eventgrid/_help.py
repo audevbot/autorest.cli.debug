@@ -8,62 +8,62 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 
 
-helps['eventgrid  eventsubscription'] = """
+helps['eventgrid'] = """
     type: group
     short-summary: Commands to manage EventSubscription.
 """
 
-helps['eventgrid  eventsubscription create'] = """
+helps['eventgrid create'] = """
     type: command
-    short-summary: create a eventgrid  eventsubscription.
+    short-summary: create a eventgrid.
 """
 
-helps['eventgrid  eventsubscription update'] = """
+helps['eventgrid update'] = """
     type: command
-    short-summary: update a eventgrid  eventsubscription.
+    short-summary: update a eventgrid.
 """
 
-helps['eventgrid  eventsubscription delete'] = """
+helps['eventgrid delete'] = """
     type: command
-    short-summary: delete a eventgrid  eventsubscription.
+    short-summary: delete a eventgrid.
 """
 
-helps['eventgrid  eventsubscription list'] = """
+helps['eventgrid list'] = """
     type: command
-    short-summary: list a eventgrid  eventsubscription.
+    short-summary: list a eventgrid.
 """
 
-helps['eventgrid  eventsubscription show'] = """
+helps['eventgrid show'] = """
     type: command
-    short-summary: show a eventgrid  eventsubscription.
+    short-summary: show a eventgrid.
 """
 
-helps['eventgrid topic'] = """
+helps['eventgrid'] = """
     type: group
     short-summary: Commands to manage Topic.
 """
 
-helps['eventgrid topic create'] = """
+helps['eventgrid create'] = """
     type: command
-    short-summary: create a eventgrid topic.
+    short-summary: create a eventgrid.
 """
 
-helps['eventgrid topic update'] = """
+helps['eventgrid update'] = """
     type: command
-    short-summary: update a eventgrid topic.
+    short-summary: update a eventgrid.
 """
 
-helps['eventgrid topic delete'] = """
+helps['eventgrid delete'] = """
     type: command
-    short-summary: delete a eventgrid topic.
+    short-summary: delete a eventgrid.
 """
 
-helps['eventgrid topic list'] = """
+helps['eventgrid list'] = """
     type: command
-    short-summary: list a eventgrid topic.
+    short-summary: list a eventgrid.
 """
 
-helps['eventgrid topic show'] = """
+helps['eventgrid show'] = """
     type: command
-    short-summary: show a eventgrid topic.
+    short-summary: show a eventgrid.
 """

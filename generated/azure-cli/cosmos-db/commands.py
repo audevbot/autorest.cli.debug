@@ -13,9 +13,9 @@ def load_command_table(self, _):
         client_factory=cf_cosmos-db)
 
 
-    with self.command_group('cosmos-db databaseaccount', cosmos-db_sdk, client_factory=cf_cosmos-db) as g:
-        g.custom_command('create', 'create_cosmos-db_databaseaccount')
-        g.custom_command('update', 'update_cosmos-db_databaseaccount')
-        g.custom_command('delete', 'delete_cosmos-db_databaseaccount')
-        g.custom_command('list', 'list_cosmos-db_databaseaccount')
-        g.custom_command('show', 'show_cosmos-db_databaseaccount')
+    with self.command_group('cosmos-db', cosmos-db_sdk, client_factory=cf_cosmos-db) as g:
+        g.custom_command('create', 'create_cosmos-db')
+        g.custom_command('update', 'update_cosmos-db')
+        g.custom_command('delete', 'delete_cosmos-db')
+        g.custom_command('list', 'list_cosmos-db')
+        g.custom_command('show', 'show_cosmos-db')

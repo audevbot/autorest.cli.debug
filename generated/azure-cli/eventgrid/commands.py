@@ -13,15 +13,15 @@ def load_command_table(self, _):
         client_factory=cf_eventgrid)
 
 
-    with self.command_group('eventgrid  eventsubscription', eventgrid_sdk, client_factory=cf_eventgrid) as g:
-        g.custom_command('create', 'create_eventgrid__eventsubscription')
-        g.custom_command('update', 'update_eventgrid__eventsubscription')
-        g.custom_command('delete', 'delete_eventgrid__eventsubscription')
-        g.custom_command('list', 'list_eventgrid__eventsubscription')
-        g.custom_command('show', 'show_eventgrid__eventsubscription')
-    with self.command_group('eventgrid topic', eventgrid_sdk, client_factory=cf_eventgrid) as g:
-        g.custom_command('create', 'create_eventgrid_topic')
-        g.custom_command('update', 'update_eventgrid_topic')
-        g.custom_command('delete', 'delete_eventgrid_topic')
-        g.custom_command('list', 'list_eventgrid_topic')
-        g.custom_command('show', 'show_eventgrid_topic')
+    with self.command_group('eventgrid', eventgrid_sdk, client_factory=cf_eventgrid) as g:
+        g.custom_command('create', 'create_eventgrid')
+        g.custom_command('update', 'update_eventgrid')
+        g.custom_command('delete', 'delete_eventgrid')
+        g.custom_command('list', 'list_eventgrid')
+        g.custom_command('show', 'show_eventgrid')
+    with self.command_group('eventgrid', eventgrid_sdk, client_factory=cf_eventgrid) as g:
+        g.custom_command('create', 'create_eventgrid')
+        g.custom_command('update', 'update_eventgrid')
+        g.custom_command('delete', 'delete_eventgrid')
+        g.custom_command('list', 'list_eventgrid')
+        g.custom_command('show', 'show_eventgrid')

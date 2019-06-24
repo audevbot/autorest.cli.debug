@@ -8,22 +8,22 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 
 
-helps['automationjob automationaccount job'] = """
+helps['automationjob job'] = """
     type: group
     short-summary: Commands to manage Job.
 """
 
-helps['automationjob automationaccount job create'] = """
+helps['automationjob job create'] = """
     type: command
-    short-summary: create a automationjob automationaccount job.
+    short-summary: create a automationjob job.
 """
 
-helps['automationjob automationaccount job list'] = """
+helps['automationjob job list'] = """
     type: command
-    short-summary: list a automationjob automationaccount job.
+    short-summary: list a automationjob job.
 """
 
-helps['automationjob automationaccount job show'] = """
+helps['automationjob job show'] = """
     type: command
-    short-summary: show a automationjob automationaccount job.
+    short-summary: show a automationjob job.
 """
