@@ -274,7 +274,7 @@ def load_arguments(self, _):
     name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
 
 
-    with self.argument_context('servicebus topic create') as c:
+    with self.argument_context('servicebus topic subscription create') as c:
         c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
         c.argument('namespace_name', id_part=None, help='The namespace name')
         c.argument('topic_name', id_part=None, help='The topic name.')
@@ -301,7 +301,7 @@ def load_arguments(self, _):
         c.argument('type', id_part=None, help='Resource type')
         c.argument('resource_id', name_arg_type, id_part=None)
 
-    with self.argument_context('servicebus topic update') as c:
+    with self.argument_context('servicebus topic subscription update') as c:
         c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
         c.argument('namespace_name', id_part=None, help='The namespace name')
         c.argument('topic_name', id_part=None, help='The topic name.')
@@ -328,7 +328,7 @@ def load_arguments(self, _):
         c.argument('type', id_part=None, help='Resource type')
         c.argument('resource_id', name_arg_type, id_part=None)
 
-    with self.argument_context('servicebus topic delete') as c:
+    with self.argument_context('servicebus topic subscription delete') as c:
         c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
         c.argument('namespace_name', id_part=None, help='The namespace name')
         c.argument('topic_name', id_part=None, help='The topic name.')
@@ -336,7 +336,7 @@ def load_arguments(self, _):
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
-    with self.argument_context('servicebus topic list') as c:
+    with self.argument_context('servicebus topic subscription list') as c:
         c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
         c.argument('namespace_name', id_part=None, help='The namespace name')
         c.argument('topic_name', id_part=None, help='The topic name.')
@@ -344,7 +344,7 @@ def load_arguments(self, _):
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
-    with self.argument_context('servicebus topic show') as c:
+    with self.argument_context('servicebus topic subscription show') as c:
         c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
         c.argument('namespace_name', id_part=None, help='The namespace name')
         c.argument('topic_name', id_part=None, help='The topic name.')
@@ -354,7 +354,7 @@ def load_arguments(self, _):
     name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
 
 
-    with self.argument_context('servicebus topic rule create') as c:
+    with self.argument_context('servicebus topic subscription rule create') as c:
         c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
         c.argument('namespace_name', id_part=None, help='The namespace name')
         c.argument('topic_name', id_part=None, help='The topic name.')
@@ -369,7 +369,7 @@ def load_arguments(self, _):
         c.argument('type', id_part=None, help='Resource type')
         c.argument('resource_id', name_arg_type, id_part=None)
 
-    with self.argument_context('servicebus topic rule update') as c:
+    with self.argument_context('servicebus topic subscription rule update') as c:
         c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
         c.argument('namespace_name', id_part=None, help='The namespace name')
         c.argument('topic_name', id_part=None, help='The topic name.')
@@ -384,7 +384,7 @@ def load_arguments(self, _):
         c.argument('type', id_part=None, help='Resource type')
         c.argument('resource_id', name_arg_type, id_part=None)
 
-    with self.argument_context('servicebus topic rule delete') as c:
+    with self.argument_context('servicebus topic subscription rule delete') as c:
         c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
         c.argument('namespace_name', id_part=None, help='The namespace name')
         c.argument('topic_name', id_part=None, help='The topic name.')
@@ -393,7 +393,7 @@ def load_arguments(self, _):
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
-    with self.argument_context('servicebus topic rule list') as c:
+    with self.argument_context('servicebus topic subscription rule list') as c:
         c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
         c.argument('namespace_name', id_part=None, help='The namespace name')
         c.argument('topic_name', id_part=None, help='The topic name.')
@@ -402,7 +402,7 @@ def load_arguments(self, _):
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
-    with self.argument_context('servicebus topic rule show') as c:
+    with self.argument_context('servicebus topic subscription rule show') as c:
         c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
         c.argument('namespace_name', id_part=None, help='The namespace name')
         c.argument('topic_name', id_part=None, help='The topic name.')

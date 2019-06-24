@@ -37,15 +37,15 @@ def load_command_table(self, _):
         g.custom_command('delete', 'delete_servicebus_topic')
         g.custom_command('list', 'list_servicebus_topic')
         g.custom_command('show', 'show_servicebus_topic')
-    with self.command_group('servicebus topic', servicebus_sdk, client_factory=cf_servicebus) as g:
-        g.custom_command('create', 'create_servicebus_topic')
-        g.custom_command('update', 'update_servicebus_topic')
-        g.custom_command('delete', 'delete_servicebus_topic')
-        g.custom_command('list', 'list_servicebus_topic')
-        g.custom_command('show', 'show_servicebus_topic')
-    with self.command_group('servicebus topic rule', servicebus_sdk, client_factory=cf_servicebus) as g:
-        g.custom_command('create', 'create_servicebus_topic_rule')
-        g.custom_command('update', 'update_servicebus_topic_rule')
-        g.custom_command('delete', 'delete_servicebus_topic_rule')
-        g.custom_command('list', 'list_servicebus_topic_rule')
-        g.custom_command('show', 'show_servicebus_topic_rule')
+    with self.command_group('servicebus topic subscription', servicebus_sdk, client_factory=cf_servicebus) as g:
+        g.custom_command('create', 'create_servicebus_topic_subscription')
+        g.custom_command('update', 'update_servicebus_topic_subscription')
+        g.custom_command('delete', 'delete_servicebus_topic_subscription')
+        g.custom_command('list', 'list_servicebus_topic_subscription')
+        g.custom_command('show', 'show_servicebus_topic_subscription')
+    with self.command_group('servicebus topic subscription rule', servicebus_sdk, client_factory=cf_servicebus) as g:
+        g.custom_command('create', 'create_servicebus_topic_subscription_rule')
+        g.custom_command('update', 'update_servicebus_topic_subscription_rule')
+        g.custom_command('delete', 'delete_servicebus_topic_subscription_rule')
+        g.custom_command('list', 'list_servicebus_topic_subscription_rule')
+        g.custom_command('show', 'show_servicebus_topic_subscription_rule')

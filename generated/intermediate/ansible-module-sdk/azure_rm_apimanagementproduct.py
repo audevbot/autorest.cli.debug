@@ -381,8 +381,7 @@ class AzureRMProduct(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.product.delete(resource_group_name=self.resource_group,
                                                        service_name=self.name,
-                                                       product_id=self.product_id,
-                                                       if-match=self.If-Match)
+                                                       product_id=self.product_id)
         except CloudError as e:
             self.log('Error attempting to delete the Product instance.')
             self.fail('Error deleting the Product instance: {0}'.format(str(e)))

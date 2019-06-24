@@ -310,8 +310,7 @@ class AzureRMApiSchema(AzureRMModuleBaseExt):
             response = self.mgmt_client.api_schema.delete(resource_group_name=self.resource_group,
                                                           service_name=self.name,
                                                           api_id=self.api_id,
-                                                          schema_id=self.schema_id,
-                                                          if-match=self.If-Match)
+                                                          schema_id=self.schema_id)
         except CloudError as e:
             self.log('Error attempting to delete the ApiSchema instance.')
             self.fail('Error deleting the ApiSchema instance: {0}'.format(str(e)))

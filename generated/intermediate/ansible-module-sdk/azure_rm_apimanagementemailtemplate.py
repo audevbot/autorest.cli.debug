@@ -363,8 +363,7 @@ class AzureRMEmailTemplate(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.email_template.delete(resource_group_name=self.resource_group,
                                                               service_name=self.service_name,
-                                                              template_name=self.name,
-                                                              if-match=self.If-Match)
+                                                              template_name=self.name)
         except CloudError as e:
             self.log('Error attempting to delete the EmailTemplate instance.')
             self.fail('Error deleting the EmailTemplate instance: {0}'.format(str(e)))

@@ -305,8 +305,7 @@ class AzureRMApiOperationPolicy(AzureRMModuleBaseExt):
                                                                     service_name=self.name,
                                                                     api_id=self.api_id,
                                                                     operation_id=self.operation_id,
-                                                                    policy_id=self.policy_id,
-                                                                    if-match=self.If-Match)
+                                                                    policy_id=self.policy_id)
         except CloudError as e:
             self.log('Error attempting to delete the ApiOperationPolicy instance.')
             self.fail('Error deleting the ApiOperationPolicy instance: {0}'.format(str(e)))

@@ -483,8 +483,7 @@ class AzureRMSubscription(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.subscription.delete(resource_group_name=self.resource_group,
                                                             service_name=self.name,
-                                                            sid=self.sid,
-                                                            if-match=self.If-Match)
+                                                            sid=self.sid)
         except CloudError as e:
             self.log('Error attempting to delete the Subscription instance.')
             self.fail('Error deleting the Subscription instance: {0}'.format(str(e)))

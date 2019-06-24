@@ -381,31 +381,31 @@ def show_servicebus_topic(cmd, client,
     return client.topics.get(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=name)
 
 # module equivalent: azure_rm_servicebussubscription
-def create_servicebus_topic(cmd, client,
-                            resource_group,
-                            namespace_name,
-                            topic_name,
-                            name,
-                            properties=None,
-                            lock_duration=None,
-                            requires_session=None,
-                            default_message_time_to_live=None,
-                            dead_lettering_on_filter_evaluation_exceptions=None,
-                            dead_lettering_on_message_expiration=None,
-                            duplicate_detection_history_time_window=None,
-                            max_delivery_count=None,
-                            status=None,
-                            enable_batched_operations=None,
-                            auto_delete_on_idle=None,
-                            forward_to=None,
-                            forward_dead_lettered_messages_to=None,
-                            message_count=None,
-                            created_at=None,
-                            accessed_at=None,
-                            updated_at=None,
-                            count_details=None,
-                            id=None,
-                            type=None):
+def create_servicebus_topic_subscription(cmd, client,
+                                         resource_group,
+                                         namespace_name,
+                                         topic_name,
+                                         name,
+                                         properties=None,
+                                         lock_duration=None,
+                                         requires_session=None,
+                                         default_message_time_to_live=None,
+                                         dead_lettering_on_filter_evaluation_exceptions=None,
+                                         dead_lettering_on_message_expiration=None,
+                                         duplicate_detection_history_time_window=None,
+                                         max_delivery_count=None,
+                                         status=None,
+                                         enable_batched_operations=None,
+                                         auto_delete_on_idle=None,
+                                         forward_to=None,
+                                         forward_dead_lettered_messages_to=None,
+                                         message_count=None,
+                                         created_at=None,
+                                         accessed_at=None,
+                                         updated_at=None,
+                                         count_details=None,
+                                         id=None,
+                                         type=None):
     body={}
     body['properties'] = properties
     body['lock_duration'] = lock_duration
@@ -428,31 +428,31 @@ def create_servicebus_topic(cmd, client,
     return client.subscriptions.create_or_update(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=name, parameters=body)
 
 # module equivalent: azure_rm_servicebussubscription
-def update_servicebus_topic(cmd, client,
-                            resource_group,
-                            namespace_name,
-                            topic_name,
-                            name,
-                            properties=None,
-                            lock_duration=None,
-                            requires_session=None,
-                            default_message_time_to_live=None,
-                            dead_lettering_on_filter_evaluation_exceptions=None,
-                            dead_lettering_on_message_expiration=None,
-                            duplicate_detection_history_time_window=None,
-                            max_delivery_count=None,
-                            status=None,
-                            enable_batched_operations=None,
-                            auto_delete_on_idle=None,
-                            forward_to=None,
-                            forward_dead_lettered_messages_to=None,
-                            message_count=None,
-                            created_at=None,
-                            accessed_at=None,
-                            updated_at=None,
-                            count_details=None,
-                            id=None,
-                            type=None):
+def update_servicebus_topic_subscription(cmd, client,
+                                         resource_group,
+                                         namespace_name,
+                                         topic_name,
+                                         name,
+                                         properties=None,
+                                         lock_duration=None,
+                                         requires_session=None,
+                                         default_message_time_to_live=None,
+                                         dead_lettering_on_filter_evaluation_exceptions=None,
+                                         dead_lettering_on_message_expiration=None,
+                                         duplicate_detection_history_time_window=None,
+                                         max_delivery_count=None,
+                                         status=None,
+                                         enable_batched_operations=None,
+                                         auto_delete_on_idle=None,
+                                         forward_to=None,
+                                         forward_dead_lettered_messages_to=None,
+                                         message_count=None,
+                                         created_at=None,
+                                         accessed_at=None,
+                                         updated_at=None,
+                                         count_details=None,
+                                         id=None,
+                                         type=None):
     body={}
     body['properties'] = properties
     body['lock_duration'] = lock_duration
@@ -475,43 +475,43 @@ def update_servicebus_topic(cmd, client,
     return client.subscriptions.create_or_update(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=name, parameters=body)
 
 # module equivalent: azure_rm_servicebussubscription
-def delete_servicebus_topic(cmd, client,
-                            resource_group,
-                            namespace_name,
-                            topic_name,
-                            name):
+def delete_servicebus_topic_subscription(cmd, client,
+                                         resource_group,
+                                         namespace_name,
+                                         topic_name,
+                                         name):
     return client.subscriptions.delete(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=name)
 
 # module equivalent: azure_rm_servicebussubscription
-def list_servicebus_topic(cmd, client,
-                          resource_group,
-                          namespace_name,
-                          topic_name,
-                          name):
+def list_servicebus_topic_subscription(cmd, client,
+                                       resource_group,
+                                       namespace_name,
+                                       topic_name,
+                                       name):
     return client.subscriptions.list_by_topic(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=name)
 
 # module equivalent: azure_rm_servicebussubscription
-def show_servicebus_topic(cmd, client,
-                          resource_group,
-                          namespace_name,
-                          topic_name,
-                          name):
+def show_servicebus_topic_subscription(cmd, client,
+                                       resource_group,
+                                       namespace_name,
+                                       topic_name,
+                                       name):
     return client.subscriptions.get(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=name)
 
 # module equivalent: azure_rm_servicebusrule
-def create_servicebus_topic_rule(cmd, client,
-                                 resource_group,
-                                 namespace_name,
-                                 topic_name,
-                                 subscription_name,
-                                 name,
-                                 properties=None,
-                                 action=None,
-                                 filter_type=None,
-                                 sql_filter=None,
-                                 correlation_filter=None,
-                                 id=None,
-                                 type=None):
+def create_servicebus_topic_subscription_rule(cmd, client,
+                                              resource_group,
+                                              namespace_name,
+                                              topic_name,
+                                              subscription_name,
+                                              name,
+                                              properties=None,
+                                              action=None,
+                                              filter_type=None,
+                                              sql_filter=None,
+                                              correlation_filter=None,
+                                              id=None,
+                                              type=None):
     body={}
     body['properties'] = properties
     body['action'] = action
@@ -521,19 +521,19 @@ def create_servicebus_topic_rule(cmd, client,
     return client.rules.create_or_update(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=subscription_name, rule_name=name, parameters=body)
 
 # module equivalent: azure_rm_servicebusrule
-def update_servicebus_topic_rule(cmd, client,
-                                 resource_group,
-                                 namespace_name,
-                                 topic_name,
-                                 subscription_name,
-                                 name,
-                                 properties=None,
-                                 action=None,
-                                 filter_type=None,
-                                 sql_filter=None,
-                                 correlation_filter=None,
-                                 id=None,
-                                 type=None):
+def update_servicebus_topic_subscription_rule(cmd, client,
+                                              resource_group,
+                                              namespace_name,
+                                              topic_name,
+                                              subscription_name,
+                                              name,
+                                              properties=None,
+                                              action=None,
+                                              filter_type=None,
+                                              sql_filter=None,
+                                              correlation_filter=None,
+                                              id=None,
+                                              type=None):
     body={}
     body['properties'] = properties
     body['action'] = action
@@ -543,28 +543,28 @@ def update_servicebus_topic_rule(cmd, client,
     return client.rules.create_or_update(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=subscription_name, rule_name=name, parameters=body)
 
 # module equivalent: azure_rm_servicebusrule
-def delete_servicebus_topic_rule(cmd, client,
-                                 resource_group,
-                                 namespace_name,
-                                 topic_name,
-                                 subscription_name,
-                                 name):
+def delete_servicebus_topic_subscription_rule(cmd, client,
+                                              resource_group,
+                                              namespace_name,
+                                              topic_name,
+                                              subscription_name,
+                                              name):
     return client.rules.delete(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=subscription_name, rule_name=name)
 
 # module equivalent: azure_rm_servicebusrule
-def list_servicebus_topic_rule(cmd, client,
-                               resource_group,
-                               namespace_name,
-                               topic_name,
-                               subscription_name,
-                               name):
+def list_servicebus_topic_subscription_rule(cmd, client,
+                                            resource_group,
+                                            namespace_name,
+                                            topic_name,
+                                            subscription_name,
+                                            name):
     return client.rules.list_by_subscriptions(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=subscription_name, rule_name=name)
 
 # module equivalent: azure_rm_servicebusrule
-def show_servicebus_topic_rule(cmd, client,
-                               resource_group,
-                               namespace_name,
-                               topic_name,
-                               subscription_name,
-                               name):
+def show_servicebus_topic_subscription_rule(cmd, client,
+                                            resource_group,
+                                            namespace_name,
+                                            topic_name,
+                                            subscription_name,
+                                            name):
     return client.rules.get(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=subscription_name, rule_name=name)

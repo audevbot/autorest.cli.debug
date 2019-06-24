@@ -934,8 +934,7 @@ class AzureRMApi(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.api.delete(resource_group_name=self.resource_group,
                                                    service_name=self.name,
-                                                   api_id=self.api_id,
-                                                   if-match=self.If-Match)
+                                                   api_id=self.api_id)
         except CloudError as e:
             self.log('Error attempting to delete the Api instance.')
             self.fail('Error deleting the Api instance: {0}'.format(str(e)))

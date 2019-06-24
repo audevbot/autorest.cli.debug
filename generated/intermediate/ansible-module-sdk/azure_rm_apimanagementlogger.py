@@ -348,8 +348,7 @@ class AzureRMLogger(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.logger.delete(resource_group_name=self.resource_group,
                                                       service_name=self.name,
-                                                      logger_id=self.logger_id,
-                                                      if-match=self.If-Match)
+                                                      logger_id=self.logger_id)
         except CloudError as e:
             self.log('Error attempting to delete the Logger instance.')
             self.fail('Error deleting the Logger instance: {0}'.format(str(e)))

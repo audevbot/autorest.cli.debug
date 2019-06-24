@@ -595,8 +595,7 @@ class AzureRMAuthorizationServer(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.authorization_server.delete(resource_group_name=self.resource_group,
                                                                     service_name=self.name,
-                                                                    authsid=self.authsid,
-                                                                    if-match=self.If-Match)
+                                                                    authsid=self.authsid)
         except CloudError as e:
             self.log('Error attempting to delete the AuthorizationServer instance.')
             self.fail('Error deleting the AuthorizationServer instance: {0}'.format(str(e)))

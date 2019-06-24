@@ -470,8 +470,7 @@ class AzureRMUser(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.user.delete(resource_group_name=self.resource_group,
                                                     service_name=self.name,
-                                                    user_id=self.user_id,
-                                                    if-match=self.If-Match)
+                                                    user_id=self.user_id)
         except CloudError as e:
             self.log('Error attempting to delete the User instance.')
             self.fail('Error deleting the User instance: {0}'.format(str(e)))

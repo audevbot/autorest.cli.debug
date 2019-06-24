@@ -38,17 +38,17 @@ helps['mgmtgroups show'] = """
     short-summary: show a mgmtgroups.
 """
 
-helps['mgmtgroups'] = """
+helps['mgmtgroups subscription'] = """
     type: group
     short-summary: Commands to manage ManagementGroupSubscription.
 """
 
-helps['mgmtgroups create'] = """
+helps['mgmtgroups subscription create'] = """
     type: command
-    short-summary: create a mgmtgroups.
+    short-summary: create a mgmtgroups subscription.
 """
 
-helps['mgmtgroups delete'] = """
+helps['mgmtgroups subscription delete'] = """
     type: command
-    short-summary: delete a mgmtgroups.
+    short-summary: delete a mgmtgroups subscription.
 """

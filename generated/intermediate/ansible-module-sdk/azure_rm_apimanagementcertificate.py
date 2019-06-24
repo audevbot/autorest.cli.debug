@@ -298,8 +298,7 @@ class AzureRMCertificate(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.certificate.delete(resource_group_name=self.resource_group,
                                                            service_name=self.name,
-                                                           certificate_id=self.certificate_id,
-                                                           if-match=self.If-Match)
+                                                           certificate_id=self.certificate_id)
         except CloudError as e:
             self.log('Error attempting to delete the Certificate instance.')
             self.fail('Error deleting the Certificate instance: {0}'.format(str(e)))

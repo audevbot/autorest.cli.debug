@@ -6204,7 +6204,6 @@ Modules:
           - accountName
           - certificateName
           - parameters
-          - If-Match
           - If-None-Match
         RequiredOptions:
           - resourceGroupName
@@ -6223,7 +6222,6 @@ Modules:
           - accountName
           - certificateName
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - accountName
@@ -12716,7 +12714,6 @@ Modules:
           - accountName
           - poolName
           - parameters
-          - If-Match
           - If-None-Match
         RequiredOptions:
           - resourceGroupName
@@ -12735,7 +12732,6 @@ Modules:
           - accountName
           - poolName
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - accountName

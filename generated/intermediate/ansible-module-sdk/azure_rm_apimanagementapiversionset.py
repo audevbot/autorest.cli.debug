@@ -333,8 +333,7 @@ class AzureRMApiVersionSet(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.api_version_set.delete(resource_group_name=self.resource_group,
                                                                service_name=self.name,
-                                                               version_set_id=self.version_set_id,
-                                                               if-match=self.If-Match)
+                                                               version_set_id=self.version_set_id)
         except CloudError as e:
             self.log('Error attempting to delete the ApiVersionSet instance.')
             self.fail('Error deleting the ApiVersionSet instance: {0}'.format(str(e)))

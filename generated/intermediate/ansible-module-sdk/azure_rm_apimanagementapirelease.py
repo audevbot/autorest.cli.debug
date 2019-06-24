@@ -313,8 +313,7 @@ class AzureRMApiRelease(AzureRMModuleBaseExt):
             response = self.mgmt_client.api_release.delete(resource_group_name=self.resource_group,
                                                            service_name=self.name,
                                                            api_id=self.api_id,
-                                                           release_id=self.release_id,
-                                                           if-match=self.If-Match)
+                                                           release_id=self.release_id)
         except CloudError as e:
             self.log('Error attempting to delete the ApiRelease instance.')
             self.fail('Error deleting the ApiRelease instance: {0}'.format(str(e)))

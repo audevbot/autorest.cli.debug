@@ -320,8 +320,7 @@ class AzureRMApiIssueComment(AzureRMModuleBaseExt):
                                                                  service_name=self.name,
                                                                  api_id=self.api_id,
                                                                  issue_id=self.issue_id,
-                                                                 comment_id=self.comment_id,
-                                                                 if-match=self.If-Match)
+                                                                 comment_id=self.comment_id)
         except CloudError as e:
             self.log('Error attempting to delete the ApiIssueComment instance.')
             self.fail('Error deleting the ApiIssueComment instance: {0}'.format(str(e)))

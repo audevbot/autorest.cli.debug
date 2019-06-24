@@ -308,8 +308,7 @@ class AzureRMApiTagDescription(AzureRMModuleBaseExt):
             response = self.mgmt_client.api_tag_description.delete(resource_group_name=self.resource_group,
                                                                    service_name=self.name,
                                                                    api_id=self.api_id,
-                                                                   tag_id=self.tag_id,
-                                                                   if-match=self.If-Match)
+                                                                   tag_id=self.tag_id)
         except CloudError as e:
             self.log('Error attempting to delete the ApiTagDescription instance.')
             self.fail('Error deleting the ApiTagDescription instance: {0}'.format(str(e)))

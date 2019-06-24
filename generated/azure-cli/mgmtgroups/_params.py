@@ -56,11 +56,11 @@ def load_arguments(self, _):
     name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
 
 
-    with self.argument_context('mgmtgroups create') as c:
+    with self.argument_context('mgmtgroups subscription create') as c:
         c.argument('group_id', id_part=None, help='Management Group ID.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
-    with self.argument_context('mgmtgroups delete') as c:
+    with self.argument_context('mgmtgroups subscription delete') as c:
         c.argument('group_id', id_part=None, help='Management Group ID.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)

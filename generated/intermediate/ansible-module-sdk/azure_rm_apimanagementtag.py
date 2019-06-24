@@ -258,8 +258,7 @@ class AzureRMTag(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.tag.delete(resource_group_name=self.resource_group,
                                                    service_name=self.name,
-                                                   tag_id=self.tag_id,
-                                                   if-match=self.If-Match)
+                                                   tag_id=self.tag_id)
         except CloudError as e:
             self.log('Error attempting to delete the Tag instance.')
             self.fail('Error deleting the Tag instance: {0}'.format(str(e)))

@@ -1053,34 +1053,34 @@ helps['apimgmt property show'] = """
     short-summary: show a apimgmt property.
 """
 
-helps['apimgmt'] = """
+helps['apimgmt subscription'] = """
     type: group
     short-summary: Commands to manage Subscription.
 """
 
-helps['apimgmt create'] = """
+helps['apimgmt subscription create'] = """
     type: command
-    short-summary: create a apimgmt.
+    short-summary: create a apimgmt subscription.
 """
 
-helps['apimgmt update'] = """
+helps['apimgmt subscription update'] = """
     type: command
-    short-summary: update a apimgmt.
+    short-summary: update a apimgmt subscription.
 """
 
-helps['apimgmt delete'] = """
+helps['apimgmt subscription delete'] = """
     type: command
-    short-summary: delete a apimgmt.
+    short-summary: delete a apimgmt subscription.
 """
 
-helps['apimgmt list'] = """
+helps['apimgmt subscription list'] = """
     type: command
-    short-summary: list a apimgmt.
+    short-summary: list a apimgmt subscription.
 """
 
-helps['apimgmt show'] = """
+helps['apimgmt subscription show'] = """
     type: command
-    short-summary: show a apimgmt.
+    short-summary: show a apimgmt subscription.
 """
 
 helps['apimgmt user'] = """

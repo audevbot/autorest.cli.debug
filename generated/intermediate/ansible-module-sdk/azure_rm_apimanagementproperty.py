@@ -315,8 +315,7 @@ class AzureRMProperty(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.property.delete(resource_group_name=self.resource_group,
                                                         service_name=self.name,
-                                                        prop_id=self.prop_id,
-                                                        if-match=self.If-Match)
+                                                        prop_id=self.prop_id)
         except CloudError as e:
             self.log('Error attempting to delete the Property instance.')
             self.fail('Error deleting the Property instance: {0}'.format(str(e)))
