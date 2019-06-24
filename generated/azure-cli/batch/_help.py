@@ -8,147 +8,147 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 
 
-helps['batch batchaccount'] = """
+helps['batch'] = """
     type: group
     short-summary: Commands to manage BatchAccount.
 """
 
-helps['batch batchaccount create'] = """
+helps['batch create'] = """
     type: command
-    short-summary: create a batch batchaccount.
+    short-summary: create a batch.
 """
 
-helps['batch batchaccount update'] = """
+helps['batch update'] = """
     type: command
-    short-summary: update a batch batchaccount.
+    short-summary: update a batch.
 """
 
-helps['batch batchaccount delete'] = """
+helps['batch delete'] = """
     type: command
-    short-summary: delete a batch batchaccount.
+    short-summary: delete a batch.
 """
 
-helps['batch batchaccount list'] = """
+helps['batch list'] = """
     type: command
-    short-summary: list a batch batchaccount.
+    short-summary: list a batch.
 """
 
-helps['batch batchaccount show'] = """
+helps['batch show'] = """
     type: command
-    short-summary: show a batch batchaccount.
+    short-summary: show a batch.
 """
 
-helps['batch batchaccount application version'] = """
+helps['batch application version'] = """
     type: group
     short-summary: Commands to manage ApplicationPackage.
 """
 
-helps['batch batchaccount application version create'] = """
+helps['batch application version create'] = """
     type: command
-    short-summary: create a batch batchaccount application version.
+    short-summary: create a batch application version.
 """
 
-helps['batch batchaccount application version delete'] = """
+helps['batch application version delete'] = """
     type: command
-    short-summary: delete a batch batchaccount application version.
+    short-summary: delete a batch application version.
 """
 
-helps['batch batchaccount application version list'] = """
+helps['batch application version list'] = """
     type: command
-    short-summary: list a batch batchaccount application version.
+    short-summary: list a batch application version.
 """
 
-helps['batch batchaccount application version show'] = """
+helps['batch application version show'] = """
     type: command
-    short-summary: show a batch batchaccount application version.
+    short-summary: show a batch application version.
 """
 
-helps['batch batchaccount application'] = """
+helps['batch application'] = """
     type: group
     short-summary: Commands to manage Application.
 """
 
-helps['batch batchaccount application create'] = """
+helps['batch application create'] = """
     type: command
-    short-summary: create a batch batchaccount application.
+    short-summary: create a batch application.
 """
 
-helps['batch batchaccount application update'] = """
+helps['batch application update'] = """
     type: command
-    short-summary: update a batch batchaccount application.
+    short-summary: update a batch application.
 """
 
-helps['batch batchaccount application delete'] = """
+helps['batch application delete'] = """
     type: command
-    short-summary: delete a batch batchaccount application.
+    short-summary: delete a batch application.
 """
 
-helps['batch batchaccount application list'] = """
+helps['batch application list'] = """
     type: command
-    short-summary: list a batch batchaccount application.
+    short-summary: list a batch application.
 """
 
-helps['batch batchaccount application show'] = """
+helps['batch application show'] = """
     type: command
-    short-summary: show a batch batchaccount application.
+    short-summary: show a batch application.
 """
 
-helps['batch batchaccount certificate'] = """
+helps['batch certificate'] = """
     type: group
     short-summary: Commands to manage Certificate.
 """
 
-helps['batch batchaccount certificate create'] = """
+helps['batch certificate create'] = """
     type: command
-    short-summary: create a batch batchaccount certificate.
+    short-summary: create a batch certificate.
 """
 
-helps['batch batchaccount certificate update'] = """
+helps['batch certificate update'] = """
     type: command
-    short-summary: update a batch batchaccount certificate.
+    short-summary: update a batch certificate.
 """
 
-helps['batch batchaccount certificate delete'] = """
+helps['batch certificate delete'] = """
     type: command
-    short-summary: delete a batch batchaccount certificate.
+    short-summary: delete a batch certificate.
 """
 
-helps['batch batchaccount certificate list'] = """
+helps['batch certificate list'] = """
     type: command
-    short-summary: list a batch batchaccount certificate.
+    short-summary: list a batch certificate.
 """
 
-helps['batch batchaccount certificate show'] = """
+helps['batch certificate show'] = """
     type: command
-    short-summary: show a batch batchaccount certificate.
+    short-summary: show a batch certificate.
 """
 
-helps['batch batchaccount pool'] = """
+helps['batch pool'] = """
     type: group
     short-summary: Commands to manage Pool.
 """
 
-helps['batch batchaccount pool create'] = """
+helps['batch pool create'] = """
     type: command
-    short-summary: create a batch batchaccount pool.
+    short-summary: create a batch pool.
 """
 
-helps['batch batchaccount pool update'] = """
+helps['batch pool update'] = """
     type: command
-    short-summary: update a batch batchaccount pool.
+    short-summary: update a batch pool.
 """
 
-helps['batch batchaccount pool delete'] = """
+helps['batch pool delete'] = """
     type: command
-    short-summary: delete a batch batchaccount pool.
+    short-summary: delete a batch pool.
 """
 
-helps['batch batchaccount pool list'] = """
+helps['batch pool list'] = """
     type: command
-    short-summary: list a batch batchaccount pool.
+    short-summary: list a batch pool.
 """
 
-helps['batch batchaccount pool show'] = """
+helps['batch pool show'] = """
     type: command
-    short-summary: show a batch batchaccount pool.
+    short-summary: show a batch pool.
 """

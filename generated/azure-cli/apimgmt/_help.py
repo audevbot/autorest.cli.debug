@@ -8,1107 +8,1107 @@ from knack.help_files import helps  # pylint: disable=unused-import
 
 
 
-helps['apimgmt service api'] = """
+helps['apimgmt api'] = """
     type: group
     short-summary: Commands to manage Api.
 """
 
-helps['apimgmt service api create'] = """
+helps['apimgmt api create'] = """
     type: command
-    short-summary: create a apimgmt service api.
+    short-summary: create a apimgmt api.
 """
 
-helps['apimgmt service api update'] = """
+helps['apimgmt api update'] = """
     type: command
-    short-summary: update a apimgmt service api.
+    short-summary: update a apimgmt api.
 """
 
-helps['apimgmt service api delete'] = """
+helps['apimgmt api delete'] = """
     type: command
-    short-summary: delete a apimgmt service api.
+    short-summary: delete a apimgmt api.
 """
 
-helps['apimgmt service api list'] = """
+helps['apimgmt api list'] = """
     type: command
-    short-summary: list a apimgmt service api.
+    short-summary: list a apimgmt api.
 """
 
-helps['apimgmt service api show'] = """
+helps['apimgmt api show'] = """
     type: command
-    short-summary: show a apimgmt service api.
+    short-summary: show a apimgmt api.
 """
 
-helps['apimgmt service api release'] = """
+helps['apimgmt api release'] = """
     type: group
     short-summary: Commands to manage ApiRelease.
 """
 
-helps['apimgmt service api release create'] = """
+helps['apimgmt api release create'] = """
     type: command
-    short-summary: create a apimgmt service api release.
+    short-summary: create a apimgmt api release.
 """
 
-helps['apimgmt service api release update'] = """
+helps['apimgmt api release update'] = """
     type: command
-    short-summary: update a apimgmt service api release.
+    short-summary: update a apimgmt api release.
 """
 
-helps['apimgmt service api release delete'] = """
+helps['apimgmt api release delete'] = """
     type: command
-    short-summary: delete a apimgmt service api release.
+    short-summary: delete a apimgmt api release.
 """
 
-helps['apimgmt service api release list'] = """
+helps['apimgmt api release list'] = """
     type: command
-    short-summary: list a apimgmt service api release.
+    short-summary: list a apimgmt api release.
 """
 
-helps['apimgmt service api release show'] = """
+helps['apimgmt api release show'] = """
     type: command
-    short-summary: show a apimgmt service api release.
+    short-summary: show a apimgmt api release.
 """
 
-helps['apimgmt service api operation'] = """
+helps['apimgmt api operation'] = """
     type: group
     short-summary: Commands to manage ApiOperation.
 """
 
-helps['apimgmt service api operation create'] = """
+helps['apimgmt api operation create'] = """
     type: command
-    short-summary: create a apimgmt service api operation.
+    short-summary: create a apimgmt api operation.
 """
 
-helps['apimgmt service api operation update'] = """
+helps['apimgmt api operation update'] = """
     type: command
-    short-summary: update a apimgmt service api operation.
+    short-summary: update a apimgmt api operation.
 """
 
-helps['apimgmt service api operation delete'] = """
+helps['apimgmt api operation delete'] = """
     type: command
-    short-summary: delete a apimgmt service api operation.
+    short-summary: delete a apimgmt api operation.
 """
 
-helps['apimgmt service api operation list'] = """
+helps['apimgmt api operation list'] = """
     type: command
-    short-summary: list a apimgmt service api operation.
+    short-summary: list a apimgmt api operation.
 """
 
-helps['apimgmt service api operation show'] = """
+helps['apimgmt api operation show'] = """
     type: command
-    short-summary: show a apimgmt service api operation.
+    short-summary: show a apimgmt api operation.
 """
 
-helps['apimgmt service api operation policy'] = """
+helps['apimgmt api operation policy'] = """
     type: group
     short-summary: Commands to manage ApiOperationPolicy.
 """
 
-helps['apimgmt service api operation policy create'] = """
+helps['apimgmt api operation policy create'] = """
     type: command
-    short-summary: create a apimgmt service api operation policy.
+    short-summary: create a apimgmt api operation policy.
 """
 
-helps['apimgmt service api operation policy update'] = """
+helps['apimgmt api operation policy update'] = """
     type: command
-    short-summary: update a apimgmt service api operation policy.
+    short-summary: update a apimgmt api operation policy.
 """
 
-helps['apimgmt service api operation policy delete'] = """
+helps['apimgmt api operation policy delete'] = """
     type: command
-    short-summary: delete a apimgmt service api operation policy.
+    short-summary: delete a apimgmt api operation policy.
 """
 
-helps['apimgmt service api operation policy list'] = """
+helps['apimgmt api operation policy list'] = """
     type: command
-    short-summary: list a apimgmt service api operation policy.
+    short-summary: list a apimgmt api operation policy.
 """
 
-helps['apimgmt service api operation policy show'] = """
+helps['apimgmt api operation policy show'] = """
     type: command
-    short-summary: show a apimgmt service api operation policy.
+    short-summary: show a apimgmt api operation policy.
 """
 
-helps['apimgmt service tag'] = """
+helps['apimgmt tag'] = """
     type: group
     short-summary: Commands to manage Tag.
 """
 
-helps['apimgmt service tag create'] = """
+helps['apimgmt tag create'] = """
     type: command
-    short-summary: create a apimgmt service tag.
+    short-summary: create a apimgmt tag.
 """
 
-helps['apimgmt service tag update'] = """
+helps['apimgmt tag update'] = """
     type: command
-    short-summary: update a apimgmt service tag.
+    short-summary: update a apimgmt tag.
 """
 
-helps['apimgmt service tag delete'] = """
+helps['apimgmt tag delete'] = """
     type: command
-    short-summary: delete a apimgmt service tag.
+    short-summary: delete a apimgmt tag.
 """
 
-helps['apimgmt service tag list'] = """
+helps['apimgmt tag list'] = """
     type: command
-    short-summary: list a apimgmt service tag.
+    short-summary: list a apimgmt tag.
 """
 
-helps['apimgmt service tag show'] = """
+helps['apimgmt tag show'] = """
     type: command
-    short-summary: show a apimgmt service tag.
+    short-summary: show a apimgmt tag.
 """
 
-helps['apimgmt service api policy'] = """
+helps['apimgmt api policy'] = """
     type: group
     short-summary: Commands to manage ApiPolicy.
 """
 
-helps['apimgmt service api policy create'] = """
+helps['apimgmt api policy create'] = """
     type: command
-    short-summary: create a apimgmt service api policy.
+    short-summary: create a apimgmt api policy.
 """
 
-helps['apimgmt service api policy update'] = """
+helps['apimgmt api policy update'] = """
     type: command
-    short-summary: update a apimgmt service api policy.
+    short-summary: update a apimgmt api policy.
 """
 
-helps['apimgmt service api policy delete'] = """
+helps['apimgmt api policy delete'] = """
     type: command
-    short-summary: delete a apimgmt service api policy.
+    short-summary: delete a apimgmt api policy.
 """
 
-helps['apimgmt service api policy list'] = """
+helps['apimgmt api policy list'] = """
     type: command
-    short-summary: list a apimgmt service api policy.
+    short-summary: list a apimgmt api policy.
 """
 
-helps['apimgmt service api policy show'] = """
+helps['apimgmt api policy show'] = """
     type: command
-    short-summary: show a apimgmt service api policy.
+    short-summary: show a apimgmt api policy.
 """
 
-helps['apimgmt service api schema'] = """
+helps['apimgmt api schema'] = """
     type: group
     short-summary: Commands to manage ApiSchema.
 """
 
-helps['apimgmt service api schema create'] = """
+helps['apimgmt api schema create'] = """
     type: command
-    short-summary: create a apimgmt service api schema.
+    short-summary: create a apimgmt api schema.
 """
 
-helps['apimgmt service api schema update'] = """
+helps['apimgmt api schema update'] = """
     type: command
-    short-summary: update a apimgmt service api schema.
+    short-summary: update a apimgmt api schema.
 """
 
-helps['apimgmt service api schema delete'] = """
+helps['apimgmt api schema delete'] = """
     type: command
-    short-summary: delete a apimgmt service api schema.
+    short-summary: delete a apimgmt api schema.
 """
 
-helps['apimgmt service api schema list'] = """
+helps['apimgmt api schema list'] = """
     type: command
-    short-summary: list a apimgmt service api schema.
+    short-summary: list a apimgmt api schema.
 """
 
-helps['apimgmt service api schema show'] = """
+helps['apimgmt api schema show'] = """
     type: command
-    short-summary: show a apimgmt service api schema.
+    short-summary: show a apimgmt api schema.
 """
 
-helps['apimgmt service api diagnostic'] = """
+helps['apimgmt api diagnostic'] = """
     type: group
     short-summary: Commands to manage ApiDiagnostic.
 """
 
-helps['apimgmt service api diagnostic create'] = """
+helps['apimgmt api diagnostic create'] = """
     type: command
-    short-summary: create a apimgmt service api diagnostic.
+    short-summary: create a apimgmt api diagnostic.
 """
 
-helps['apimgmt service api diagnostic update'] = """
+helps['apimgmt api diagnostic update'] = """
     type: command
-    short-summary: update a apimgmt service api diagnostic.
+    short-summary: update a apimgmt api diagnostic.
 """
 
-helps['apimgmt service api diagnostic delete'] = """
+helps['apimgmt api diagnostic delete'] = """
     type: command
-    short-summary: delete a apimgmt service api diagnostic.
+    short-summary: delete a apimgmt api diagnostic.
 """
 
-helps['apimgmt service api diagnostic list'] = """
+helps['apimgmt api diagnostic list'] = """
     type: command
-    short-summary: list a apimgmt service api diagnostic.
+    short-summary: list a apimgmt api diagnostic.
 """
 
-helps['apimgmt service api diagnostic show'] = """
+helps['apimgmt api diagnostic show'] = """
     type: command
-    short-summary: show a apimgmt service api diagnostic.
+    short-summary: show a apimgmt api diagnostic.
 """
 
-helps['apimgmt service api issue'] = """
+helps['apimgmt api issue'] = """
     type: group
     short-summary: Commands to manage ApiIssue.
 """
 
-helps['apimgmt service api issue create'] = """
+helps['apimgmt api issue create'] = """
     type: command
-    short-summary: create a apimgmt service api issue.
+    short-summary: create a apimgmt api issue.
 """
 
-helps['apimgmt service api issue update'] = """
+helps['apimgmt api issue update'] = """
     type: command
-    short-summary: update a apimgmt service api issue.
+    short-summary: update a apimgmt api issue.
 """
 
-helps['apimgmt service api issue delete'] = """
+helps['apimgmt api issue delete'] = """
     type: command
-    short-summary: delete a apimgmt service api issue.
+    short-summary: delete a apimgmt api issue.
 """
 
-helps['apimgmt service api issue list'] = """
+helps['apimgmt api issue list'] = """
     type: command
-    short-summary: list a apimgmt service api issue.
+    short-summary: list a apimgmt api issue.
 """
 
-helps['apimgmt service api issue show'] = """
+helps['apimgmt api issue show'] = """
     type: command
-    short-summary: show a apimgmt service api issue.
+    short-summary: show a apimgmt api issue.
 """
 
-helps['apimgmt service api issue comment'] = """
+helps['apimgmt api issue comment'] = """
     type: group
     short-summary: Commands to manage ApiIssueComment.
 """
 
-helps['apimgmt service api issue comment create'] = """
+helps['apimgmt api issue comment create'] = """
     type: command
-    short-summary: create a apimgmt service api issue comment.
+    short-summary: create a apimgmt api issue comment.
 """
 
-helps['apimgmt service api issue comment update'] = """
+helps['apimgmt api issue comment update'] = """
     type: command
-    short-summary: update a apimgmt service api issue comment.
+    short-summary: update a apimgmt api issue comment.
 """
 
-helps['apimgmt service api issue comment delete'] = """
+helps['apimgmt api issue comment delete'] = """
     type: command
-    short-summary: delete a apimgmt service api issue comment.
+    short-summary: delete a apimgmt api issue comment.
 """
 
-helps['apimgmt service api issue comment list'] = """
+helps['apimgmt api issue comment list'] = """
     type: command
-    short-summary: list a apimgmt service api issue comment.
+    short-summary: list a apimgmt api issue comment.
 """
 
-helps['apimgmt service api issue comment show'] = """
+helps['apimgmt api issue comment show'] = """
     type: command
-    short-summary: show a apimgmt service api issue comment.
+    short-summary: show a apimgmt api issue comment.
 """
 
-helps['apimgmt service api issue attachment'] = """
+helps['apimgmt api issue attachment'] = """
     type: group
     short-summary: Commands to manage ApiIssueAttachment.
 """
 
-helps['apimgmt service api issue attachment create'] = """
+helps['apimgmt api issue attachment create'] = """
     type: command
-    short-summary: create a apimgmt service api issue attachment.
+    short-summary: create a apimgmt api issue attachment.
 """
 
-helps['apimgmt service api issue attachment update'] = """
+helps['apimgmt api issue attachment update'] = """
     type: command
-    short-summary: update a apimgmt service api issue attachment.
+    short-summary: update a apimgmt api issue attachment.
 """
 
-helps['apimgmt service api issue attachment delete'] = """
+helps['apimgmt api issue attachment delete'] = """
     type: command
-    short-summary: delete a apimgmt service api issue attachment.
+    short-summary: delete a apimgmt api issue attachment.
 """
 
-helps['apimgmt service api issue attachment list'] = """
+helps['apimgmt api issue attachment list'] = """
     type: command
-    short-summary: list a apimgmt service api issue attachment.
+    short-summary: list a apimgmt api issue attachment.
 """
 
-helps['apimgmt service api issue attachment show'] = """
+helps['apimgmt api issue attachment show'] = """
     type: command
-    short-summary: show a apimgmt service api issue attachment.
+    short-summary: show a apimgmt api issue attachment.
 """
 
-helps['apimgmt service api tagdescription'] = """
+helps['apimgmt api tagdescription'] = """
     type: group
     short-summary: Commands to manage ApiTagDescription.
 """
 
-helps['apimgmt service api tagdescription create'] = """
+helps['apimgmt api tagdescription create'] = """
     type: command
-    short-summary: create a apimgmt service api tagdescription.
+    short-summary: create a apimgmt api tagdescription.
 """
 
-helps['apimgmt service api tagdescription update'] = """
+helps['apimgmt api tagdescription update'] = """
     type: command
-    short-summary: update a apimgmt service api tagdescription.
+    short-summary: update a apimgmt api tagdescription.
 """
 
-helps['apimgmt service api tagdescription delete'] = """
+helps['apimgmt api tagdescription delete'] = """
     type: command
-    short-summary: delete a apimgmt service api tagdescription.
+    short-summary: delete a apimgmt api tagdescription.
 """
 
-helps['apimgmt service api tagdescription list'] = """
+helps['apimgmt api tagdescription list'] = """
     type: command
-    short-summary: list a apimgmt service api tagdescription.
+    short-summary: list a apimgmt api tagdescription.
 """
 
-helps['apimgmt service api tagdescription show'] = """
+helps['apimgmt api tagdescription show'] = """
     type: command
-    short-summary: show a apimgmt service api tagdescription.
+    short-summary: show a apimgmt api tagdescription.
 """
 
-helps['apimgmt service apiversionset'] = """
+helps['apimgmt apiversionset'] = """
     type: group
     short-summary: Commands to manage ApiVersionSet.
 """
 
-helps['apimgmt service apiversionset create'] = """
+helps['apimgmt apiversionset create'] = """
     type: command
-    short-summary: create a apimgmt service apiversionset.
+    short-summary: create a apimgmt apiversionset.
 """
 
-helps['apimgmt service apiversionset update'] = """
+helps['apimgmt apiversionset update'] = """
     type: command
-    short-summary: update a apimgmt service apiversionset.
+    short-summary: update a apimgmt apiversionset.
 """
 
-helps['apimgmt service apiversionset delete'] = """
+helps['apimgmt apiversionset delete'] = """
     type: command
-    short-summary: delete a apimgmt service apiversionset.
+    short-summary: delete a apimgmt apiversionset.
 """
 
-helps['apimgmt service apiversionset list'] = """
+helps['apimgmt apiversionset list'] = """
     type: command
-    short-summary: list a apimgmt service apiversionset.
+    short-summary: list a apimgmt apiversionset.
 """
 
-helps['apimgmt service apiversionset show'] = """
+helps['apimgmt apiversionset show'] = """
     type: command
-    short-summary: show a apimgmt service apiversionset.
+    short-summary: show a apimgmt apiversionset.
 """
 
-helps['apimgmt service authorizationserver'] = """
+helps['apimgmt authorizationserver'] = """
     type: group
     short-summary: Commands to manage AuthorizationServer.
 """
 
-helps['apimgmt service authorizationserver create'] = """
+helps['apimgmt authorizationserver create'] = """
     type: command
-    short-summary: create a apimgmt service authorizationserver.
+    short-summary: create a apimgmt authorizationserver.
 """
 
-helps['apimgmt service authorizationserver update'] = """
+helps['apimgmt authorizationserver update'] = """
     type: command
-    short-summary: update a apimgmt service authorizationserver.
+    short-summary: update a apimgmt authorizationserver.
 """
 
-helps['apimgmt service authorizationserver delete'] = """
+helps['apimgmt authorizationserver delete'] = """
     type: command
-    short-summary: delete a apimgmt service authorizationserver.
+    short-summary: delete a apimgmt authorizationserver.
 """
 
-helps['apimgmt service authorizationserver list'] = """
+helps['apimgmt authorizationserver list'] = """
     type: command
-    short-summary: list a apimgmt service authorizationserver.
+    short-summary: list a apimgmt authorizationserver.
 """
 
-helps['apimgmt service authorizationserver show'] = """
+helps['apimgmt authorizationserver show'] = """
     type: command
-    short-summary: show a apimgmt service authorizationserver.
+    short-summary: show a apimgmt authorizationserver.
 """
 
-helps['apimgmt service backend'] = """
+helps['apimgmt backend'] = """
     type: group
     short-summary: Commands to manage Backend.
 """
 
-helps['apimgmt service backend create'] = """
+helps['apimgmt backend create'] = """
     type: command
-    short-summary: create a apimgmt service backend.
+    short-summary: create a apimgmt backend.
 """
 
-helps['apimgmt service backend update'] = """
+helps['apimgmt backend update'] = """
     type: command
-    short-summary: update a apimgmt service backend.
+    short-summary: update a apimgmt backend.
 """
 
-helps['apimgmt service backend delete'] = """
+helps['apimgmt backend delete'] = """
     type: command
-    short-summary: delete a apimgmt service backend.
+    short-summary: delete a apimgmt backend.
 """
 
-helps['apimgmt service backend list'] = """
+helps['apimgmt backend list'] = """
     type: command
-    short-summary: list a apimgmt service backend.
+    short-summary: list a apimgmt backend.
 """
 
-helps['apimgmt service backend show'] = """
+helps['apimgmt backend show'] = """
     type: command
-    short-summary: show a apimgmt service backend.
+    short-summary: show a apimgmt backend.
 """
 
-helps['apimgmt service cache'] = """
+helps['apimgmt cache'] = """
     type: group
     short-summary: Commands to manage Cache.
 """
 
-helps['apimgmt service cache create'] = """
+helps['apimgmt cache create'] = """
     type: command
-    short-summary: create a apimgmt service cache.
+    short-summary: create a apimgmt cache.
 """
 
-helps['apimgmt service cache update'] = """
+helps['apimgmt cache update'] = """
     type: command
-    short-summary: update a apimgmt service cache.
+    short-summary: update a apimgmt cache.
 """
 
-helps['apimgmt service cache delete'] = """
+helps['apimgmt cache delete'] = """
     type: command
-    short-summary: delete a apimgmt service cache.
+    short-summary: delete a apimgmt cache.
 """
 
-helps['apimgmt service cache list'] = """
+helps['apimgmt cache list'] = """
     type: command
-    short-summary: list a apimgmt service cache.
+    short-summary: list a apimgmt cache.
 """
 
-helps['apimgmt service cache show'] = """
+helps['apimgmt cache show'] = """
     type: command
-    short-summary: show a apimgmt service cache.
+    short-summary: show a apimgmt cache.
 """
 
-helps['apimgmt service certificate'] = """
+helps['apimgmt certificate'] = """
     type: group
     short-summary: Commands to manage Certificate.
 """
 
-helps['apimgmt service certificate create'] = """
+helps['apimgmt certificate create'] = """
     type: command
-    short-summary: create a apimgmt service certificate.
+    short-summary: create a apimgmt certificate.
 """
 
-helps['apimgmt service certificate update'] = """
+helps['apimgmt certificate update'] = """
     type: command
-    short-summary: update a apimgmt service certificate.
+    short-summary: update a apimgmt certificate.
 """
 
-helps['apimgmt service certificate delete'] = """
+helps['apimgmt certificate delete'] = """
     type: command
-    short-summary: delete a apimgmt service certificate.
+    short-summary: delete a apimgmt certificate.
 """
 
-helps['apimgmt service certificate list'] = """
+helps['apimgmt certificate list'] = """
     type: command
-    short-summary: list a apimgmt service certificate.
+    short-summary: list a apimgmt certificate.
 """
 
-helps['apimgmt service certificate show'] = """
+helps['apimgmt certificate show'] = """
     type: command
-    short-summary: show a apimgmt service certificate.
+    short-summary: show a apimgmt certificate.
 """
 
-helps['apimgmt service'] = """
+helps['apimgmt'] = """
     type: group
     short-summary: Commands to manage ApiManagementService.
 """
 
-helps['apimgmt service create'] = """
+helps['apimgmt create'] = """
     type: command
-    short-summary: create a apimgmt service.
+    short-summary: create a apimgmt.
 """
 
-helps['apimgmt service update'] = """
+helps['apimgmt update'] = """
     type: command
-    short-summary: update a apimgmt service.
+    short-summary: update a apimgmt.
 """
 
-helps['apimgmt service delete'] = """
+helps['apimgmt delete'] = """
     type: command
-    short-summary: delete a apimgmt service.
+    short-summary: delete a apimgmt.
 """
 
-helps['apimgmt service list'] = """
+helps['apimgmt list'] = """
     type: command
-    short-summary: list a apimgmt service.
+    short-summary: list a apimgmt.
 """
 
-helps['apimgmt service show'] = """
+helps['apimgmt show'] = """
     type: command
-    short-summary: show a apimgmt service.
+    short-summary: show a apimgmt.
 """
 
-helps['apimgmt service diagnostic'] = """
+helps['apimgmt diagnostic'] = """
     type: group
     short-summary: Commands to manage Diagnostic.
 """
 
-helps['apimgmt service diagnostic create'] = """
+helps['apimgmt diagnostic create'] = """
     type: command
-    short-summary: create a apimgmt service diagnostic.
+    short-summary: create a apimgmt diagnostic.
 """
 
-helps['apimgmt service diagnostic update'] = """
+helps['apimgmt diagnostic update'] = """
     type: command
-    short-summary: update a apimgmt service diagnostic.
+    short-summary: update a apimgmt diagnostic.
 """
 
-helps['apimgmt service diagnostic delete'] = """
+helps['apimgmt diagnostic delete'] = """
     type: command
-    short-summary: delete a apimgmt service diagnostic.
+    short-summary: delete a apimgmt diagnostic.
 """
 
-helps['apimgmt service diagnostic list'] = """
+helps['apimgmt diagnostic list'] = """
     type: command
-    short-summary: list a apimgmt service diagnostic.
+    short-summary: list a apimgmt diagnostic.
 """
 
-helps['apimgmt service diagnostic show'] = """
+helps['apimgmt diagnostic show'] = """
     type: command
-    short-summary: show a apimgmt service diagnostic.
+    short-summary: show a apimgmt diagnostic.
 """
 
-helps['apimgmt service template'] = """
+helps['apimgmt template'] = """
     type: group
     short-summary: Commands to manage EmailTemplate.
 """
 
-helps['apimgmt service template create'] = """
+helps['apimgmt template create'] = """
     type: command
-    short-summary: create a apimgmt service template.
+    short-summary: create a apimgmt template.
 """
 
-helps['apimgmt service template update'] = """
+helps['apimgmt template update'] = """
     type: command
-    short-summary: update a apimgmt service template.
+    short-summary: update a apimgmt template.
 """
 
-helps['apimgmt service template delete'] = """
+helps['apimgmt template delete'] = """
     type: command
-    short-summary: delete a apimgmt service template.
+    short-summary: delete a apimgmt template.
 """
 
-helps['apimgmt service template list'] = """
+helps['apimgmt template list'] = """
     type: command
-    short-summary: list a apimgmt service template.
+    short-summary: list a apimgmt template.
 """
 
-helps['apimgmt service template show'] = """
+helps['apimgmt template show'] = """
     type: command
-    short-summary: show a apimgmt service template.
+    short-summary: show a apimgmt template.
 """
 
-helps['apimgmt service group'] = """
+helps['apimgmt group'] = """
     type: group
     short-summary: Commands to manage Group.
 """
 
-helps['apimgmt service group create'] = """
+helps['apimgmt group create'] = """
     type: command
-    short-summary: create a apimgmt service group.
+    short-summary: create a apimgmt group.
 """
 
-helps['apimgmt service group update'] = """
+helps['apimgmt group update'] = """
     type: command
-    short-summary: update a apimgmt service group.
+    short-summary: update a apimgmt group.
 """
 
-helps['apimgmt service group delete'] = """
+helps['apimgmt group delete'] = """
     type: command
-    short-summary: delete a apimgmt service group.
+    short-summary: delete a apimgmt group.
 """
 
-helps['apimgmt service group list'] = """
+helps['apimgmt group list'] = """
     type: command
-    short-summary: list a apimgmt service group.
+    short-summary: list a apimgmt group.
 """
 
-helps['apimgmt service group show'] = """
+helps['apimgmt group show'] = """
     type: command
-    short-summary: show a apimgmt service group.
+    short-summary: show a apimgmt group.
 """
 
-helps['apimgmt service group user'] = """
+helps['apimgmt group user'] = """
     type: group
     short-summary: Commands to manage GroupUser.
 """
 
-helps['apimgmt service group user create'] = """
+helps['apimgmt group user create'] = """
     type: command
-    short-summary: create a apimgmt service group user.
+    short-summary: create a apimgmt group user.
 """
 
-helps['apimgmt service group user delete'] = """
+helps['apimgmt group user delete'] = """
     type: command
-    short-summary: delete a apimgmt service group user.
+    short-summary: delete a apimgmt group user.
 """
 
-helps['apimgmt service group user list'] = """
+helps['apimgmt group user list'] = """
     type: command
-    short-summary: list a apimgmt service group user.
+    short-summary: list a apimgmt group user.
 """
 
-helps['apimgmt service identityprovider'] = """
+helps['apimgmt identityprovider'] = """
     type: group
     short-summary: Commands to manage IdentityProvider.
 """
 
-helps['apimgmt service identityprovider create'] = """
+helps['apimgmt identityprovider create'] = """
     type: command
-    short-summary: create a apimgmt service identityprovider.
+    short-summary: create a apimgmt identityprovider.
 """
 
-helps['apimgmt service identityprovider update'] = """
+helps['apimgmt identityprovider update'] = """
     type: command
-    short-summary: update a apimgmt service identityprovider.
+    short-summary: update a apimgmt identityprovider.
 """
 
-helps['apimgmt service identityprovider delete'] = """
+helps['apimgmt identityprovider delete'] = """
     type: command
-    short-summary: delete a apimgmt service identityprovider.
+    short-summary: delete a apimgmt identityprovider.
 """
 
-helps['apimgmt service identityprovider list'] = """
+helps['apimgmt identityprovider list'] = """
     type: command
-    short-summary: list a apimgmt service identityprovider.
+    short-summary: list a apimgmt identityprovider.
 """
 
-helps['apimgmt service identityprovider show'] = """
+helps['apimgmt identityprovider show'] = """
     type: command
-    short-summary: show a apimgmt service identityprovider.
+    short-summary: show a apimgmt identityprovider.
 """
 
-helps['apimgmt service logger'] = """
+helps['apimgmt logger'] = """
     type: group
     short-summary: Commands to manage Logger.
 """
 
-helps['apimgmt service logger create'] = """
+helps['apimgmt logger create'] = """
     type: command
-    short-summary: create a apimgmt service logger.
+    short-summary: create a apimgmt logger.
 """
 
-helps['apimgmt service logger update'] = """
+helps['apimgmt logger update'] = """
     type: command
-    short-summary: update a apimgmt service logger.
+    short-summary: update a apimgmt logger.
 """
 
-helps['apimgmt service logger delete'] = """
+helps['apimgmt logger delete'] = """
     type: command
-    short-summary: delete a apimgmt service logger.
+    short-summary: delete a apimgmt logger.
 """
 
-helps['apimgmt service logger list'] = """
+helps['apimgmt logger list'] = """
     type: command
-    short-summary: list a apimgmt service logger.
+    short-summary: list a apimgmt logger.
 """
 
-helps['apimgmt service logger show'] = """
+helps['apimgmt logger show'] = """
     type: command
-    short-summary: show a apimgmt service logger.
+    short-summary: show a apimgmt logger.
 """
 
-helps['apimgmt service notification'] = """
+helps['apimgmt notification'] = """
     type: group
     short-summary: Commands to manage Notification.
 """
 
-helps['apimgmt service notification create'] = """
+helps['apimgmt notification create'] = """
     type: command
-    short-summary: create a apimgmt service notification.
+    short-summary: create a apimgmt notification.
 """
 
-helps['apimgmt service notification update'] = """
+helps['apimgmt notification update'] = """
     type: command
-    short-summary: update a apimgmt service notification.
+    short-summary: update a apimgmt notification.
 """
 
-helps['apimgmt service notification list'] = """
+helps['apimgmt notification list'] = """
     type: command
-    short-summary: list a apimgmt service notification.
+    short-summary: list a apimgmt notification.
 """
 
-helps['apimgmt service notification show'] = """
+helps['apimgmt notification show'] = """
     type: command
-    short-summary: show a apimgmt service notification.
+    short-summary: show a apimgmt notification.
 """
 
-helps['apimgmt service notification recipientuser'] = """
+helps['apimgmt notification recipientuser'] = """
     type: group
     short-summary: Commands to manage NotificationRecipientUser.
 """
 
-helps['apimgmt service notification recipientuser create'] = """
+helps['apimgmt notification recipientuser create'] = """
     type: command
-    short-summary: create a apimgmt service notification recipientuser.
+    short-summary: create a apimgmt notification recipientuser.
 """
 
-helps['apimgmt service notification recipientuser update'] = """
+helps['apimgmt notification recipientuser update'] = """
     type: command
-    short-summary: update a apimgmt service notification recipientuser.
+    short-summary: update a apimgmt notification recipientuser.
 """
 
-helps['apimgmt service notification recipientuser delete'] = """
+helps['apimgmt notification recipientuser delete'] = """
     type: command
-    short-summary: delete a apimgmt service notification recipientuser.
+    short-summary: delete a apimgmt notification recipientuser.
 """
 
-helps['apimgmt service notification recipientuser list'] = """
+helps['apimgmt notification recipientuser list'] = """
     type: command
-    short-summary: list a apimgmt service notification recipientuser.
+    short-summary: list a apimgmt notification recipientuser.
 """
 
-helps['apimgmt service notification recipientemail'] = """
+helps['apimgmt notification recipientemail'] = """
     type: group
     short-summary: Commands to manage NotificationRecipientEmail.
 """
 
-helps['apimgmt service notification recipientemail create'] = """
+helps['apimgmt notification recipientemail create'] = """
     type: command
-    short-summary: create a apimgmt service notification recipientemail.
+    short-summary: create a apimgmt notification recipientemail.
 """
 
-helps['apimgmt service notification recipientemail update'] = """
+helps['apimgmt notification recipientemail update'] = """
     type: command
-    short-summary: update a apimgmt service notification recipientemail.
+    short-summary: update a apimgmt notification recipientemail.
 """
 
-helps['apimgmt service notification recipientemail delete'] = """
+helps['apimgmt notification recipientemail delete'] = """
     type: command
-    short-summary: delete a apimgmt service notification recipientemail.
+    short-summary: delete a apimgmt notification recipientemail.
 """
 
-helps['apimgmt service notification recipientemail list'] = """
+helps['apimgmt notification recipientemail list'] = """
     type: command
-    short-summary: list a apimgmt service notification recipientemail.
+    short-summary: list a apimgmt notification recipientemail.
 """
 
-helps['apimgmt service openidconnectprovider'] = """
+helps['apimgmt openidconnectprovider'] = """
     type: group
     short-summary: Commands to manage OpenIdConnectProvider.
 """
 
-helps['apimgmt service openidconnectprovider create'] = """
+helps['apimgmt openidconnectprovider create'] = """
     type: command
-    short-summary: create a apimgmt service openidconnectprovider.
+    short-summary: create a apimgmt openidconnectprovider.
 """
 
-helps['apimgmt service openidconnectprovider update'] = """
+helps['apimgmt openidconnectprovider update'] = """
     type: command
-    short-summary: update a apimgmt service openidconnectprovider.
+    short-summary: update a apimgmt openidconnectprovider.
 """
 
-helps['apimgmt service openidconnectprovider delete'] = """
+helps['apimgmt openidconnectprovider delete'] = """
     type: command
-    short-summary: delete a apimgmt service openidconnectprovider.
+    short-summary: delete a apimgmt openidconnectprovider.
 """
 
-helps['apimgmt service openidconnectprovider list'] = """
+helps['apimgmt openidconnectprovider list'] = """
     type: command
-    short-summary: list a apimgmt service openidconnectprovider.
+    short-summary: list a apimgmt openidconnectprovider.
 """
 
-helps['apimgmt service openidconnectprovider show'] = """
+helps['apimgmt openidconnectprovider show'] = """
     type: command
-    short-summary: show a apimgmt service openidconnectprovider.
+    short-summary: show a apimgmt openidconnectprovider.
 """
 
-helps['apimgmt service policy'] = """
+helps['apimgmt policy'] = """
     type: group
     short-summary: Commands to manage Policy.
 """
 
-helps['apimgmt service policy create'] = """
+helps['apimgmt policy create'] = """
     type: command
-    short-summary: create a apimgmt service policy.
+    short-summary: create a apimgmt policy.
 """
 
-helps['apimgmt service policy update'] = """
+helps['apimgmt policy update'] = """
     type: command
-    short-summary: update a apimgmt service policy.
+    short-summary: update a apimgmt policy.
 """
 
-helps['apimgmt service policy delete'] = """
+helps['apimgmt policy delete'] = """
     type: command
-    short-summary: delete a apimgmt service policy.
+    short-summary: delete a apimgmt policy.
 """
 
-helps['apimgmt service policy list'] = """
+helps['apimgmt policy list'] = """
     type: command
-    short-summary: list a apimgmt service policy.
+    short-summary: list a apimgmt policy.
 """
 
-helps['apimgmt service policy show'] = """
+helps['apimgmt policy show'] = """
     type: command
-    short-summary: show a apimgmt service policy.
+    short-summary: show a apimgmt policy.
 """
 
-helps['apimgmt service'] = """
+helps['apimgmt portalsetting'] = """
     type: group
     short-summary: Commands to manage SignInSetting.
 """
 
-helps['apimgmt service create'] = """
+helps['apimgmt portalsetting create'] = """
     type: command
-    short-summary: create a apimgmt service.
+    short-summary: create a apimgmt portalsetting.
 """
 
-helps['apimgmt service update'] = """
+helps['apimgmt portalsetting update'] = """
     type: command
-    short-summary: update a apimgmt service.
+    short-summary: update a apimgmt portalsetting.
 """
 
-helps['apimgmt service show'] = """
+helps['apimgmt portalsetting show'] = """
     type: command
-    short-summary: show a apimgmt service.
+    short-summary: show a apimgmt portalsetting.
 """
 
-helps['apimgmt service'] = """
+helps['apimgmt portalsetting'] = """
     type: group
     short-summary: Commands to manage SignUpSetting.
 """
 
-helps['apimgmt service create'] = """
+helps['apimgmt portalsetting create'] = """
     type: command
-    short-summary: create a apimgmt service.
+    short-summary: create a apimgmt portalsetting.
 """
 
-helps['apimgmt service update'] = """
+helps['apimgmt portalsetting update'] = """
     type: command
-    short-summary: update a apimgmt service.
+    short-summary: update a apimgmt portalsetting.
 """
 
-helps['apimgmt service show'] = """
+helps['apimgmt portalsetting show'] = """
     type: command
-    short-summary: show a apimgmt service.
+    short-summary: show a apimgmt portalsetting.
 """
 
-helps['apimgmt service'] = """
+helps['apimgmt portalsetting'] = """
     type: group
     short-summary: Commands to manage DelegationSetting.
 """
 
-helps['apimgmt service create'] = """
+helps['apimgmt portalsetting create'] = """
     type: command
-    short-summary: create a apimgmt service.
+    short-summary: create a apimgmt portalsetting.
 """
 
-helps['apimgmt service update'] = """
+helps['apimgmt portalsetting update'] = """
     type: command
-    short-summary: update a apimgmt service.
+    short-summary: update a apimgmt portalsetting.
 """
 
-helps['apimgmt service show'] = """
+helps['apimgmt portalsetting show'] = """
     type: command
-    short-summary: show a apimgmt service.
+    short-summary: show a apimgmt portalsetting.
 """
 
-helps['apimgmt service product'] = """
+helps['apimgmt product'] = """
     type: group
     short-summary: Commands to manage Product.
 """
 
-helps['apimgmt service product create'] = """
+helps['apimgmt product create'] = """
     type: command
-    short-summary: create a apimgmt service product.
+    short-summary: create a apimgmt product.
 """
 
-helps['apimgmt service product update'] = """
+helps['apimgmt product update'] = """
     type: command
-    short-summary: update a apimgmt service product.
+    short-summary: update a apimgmt product.
 """
 
-helps['apimgmt service product delete'] = """
+helps['apimgmt product delete'] = """
     type: command
-    short-summary: delete a apimgmt service product.
+    short-summary: delete a apimgmt product.
 """
 
-helps['apimgmt service product list'] = """
+helps['apimgmt product list'] = """
     type: command
-    short-summary: list a apimgmt service product.
+    short-summary: list a apimgmt product.
 """
 
-helps['apimgmt service product show'] = """
+helps['apimgmt product show'] = """
     type: command
-    short-summary: show a apimgmt service product.
+    short-summary: show a apimgmt product.
 """
 
-helps['apimgmt service product api'] = """
+helps['apimgmt product api'] = """
     type: group
     short-summary: Commands to manage ProductApi.
 """
 
-helps['apimgmt service product api create'] = """
+helps['apimgmt product api create'] = """
     type: command
-    short-summary: create a apimgmt service product api.
+    short-summary: create a apimgmt product api.
 """
 
-helps['apimgmt service product api update'] = """
+helps['apimgmt product api update'] = """
     type: command
-    short-summary: update a apimgmt service product api.
+    short-summary: update a apimgmt product api.
 """
 
-helps['apimgmt service product api delete'] = """
+helps['apimgmt product api delete'] = """
     type: command
-    short-summary: delete a apimgmt service product api.
+    short-summary: delete a apimgmt product api.
 """
 
-helps['apimgmt service product api list'] = """
+helps['apimgmt product api list'] = """
     type: command
-    short-summary: list a apimgmt service product api.
+    short-summary: list a apimgmt product api.
 """
 
-helps['apimgmt service product group'] = """
+helps['apimgmt product group'] = """
     type: group
     short-summary: Commands to manage ProductGroup.
 """
 
-helps['apimgmt service product group create'] = """
+helps['apimgmt product group create'] = """
     type: command
-    short-summary: create a apimgmt service product group.
+    short-summary: create a apimgmt product group.
 """
 
-helps['apimgmt service product group update'] = """
+helps['apimgmt product group update'] = """
     type: command
-    short-summary: update a apimgmt service product group.
+    short-summary: update a apimgmt product group.
 """
 
-helps['apimgmt service product group delete'] = """
+helps['apimgmt product group delete'] = """
     type: command
-    short-summary: delete a apimgmt service product group.
+    short-summary: delete a apimgmt product group.
 """
 
-helps['apimgmt service product group list'] = """
+helps['apimgmt product group list'] = """
     type: command
-    short-summary: list a apimgmt service product group.
+    short-summary: list a apimgmt product group.
 """
 
-helps['apimgmt service product policy'] = """
+helps['apimgmt product policy'] = """
     type: group
     short-summary: Commands to manage ProductPolicy.
 """
 
-helps['apimgmt service product policy create'] = """
+helps['apimgmt product policy create'] = """
     type: command
-    short-summary: create a apimgmt service product policy.
+    short-summary: create a apimgmt product policy.
 """
 
-helps['apimgmt service product policy update'] = """
+helps['apimgmt product policy update'] = """
     type: command
-    short-summary: update a apimgmt service product policy.
+    short-summary: update a apimgmt product policy.
 """
 
-helps['apimgmt service product policy delete'] = """
+helps['apimgmt product policy delete'] = """
     type: command
-    short-summary: delete a apimgmt service product policy.
+    short-summary: delete a apimgmt product policy.
 """
 
-helps['apimgmt service product policy list'] = """
+helps['apimgmt product policy list'] = """
     type: command
-    short-summary: list a apimgmt service product policy.
+    short-summary: list a apimgmt product policy.
 """
 
-helps['apimgmt service product policy show'] = """
+helps['apimgmt product policy show'] = """
     type: command
-    short-summary: show a apimgmt service product policy.
+    short-summary: show a apimgmt product policy.
 """
 
-helps['apimgmt service property'] = """
+helps['apimgmt property'] = """
     type: group
     short-summary: Commands to manage Property.
 """
 
-helps['apimgmt service property create'] = """
+helps['apimgmt property create'] = """
     type: command
-    short-summary: create a apimgmt service property.
+    short-summary: create a apimgmt property.
 """
 
-helps['apimgmt service property update'] = """
+helps['apimgmt property update'] = """
     type: command
-    short-summary: update a apimgmt service property.
+    short-summary: update a apimgmt property.
 """
 
-helps['apimgmt service property delete'] = """
+helps['apimgmt property delete'] = """
     type: command
-    short-summary: delete a apimgmt service property.
+    short-summary: delete a apimgmt property.
 """
 
-helps['apimgmt service property list'] = """
+helps['apimgmt property list'] = """
     type: command
-    short-summary: list a apimgmt service property.
+    short-summary: list a apimgmt property.
 """
 
-helps['apimgmt service property show'] = """
+helps['apimgmt property show'] = """
     type: command
-    short-summary: show a apimgmt service property.
+    short-summary: show a apimgmt property.
 """
 
-helps['apimgmt service subscription'] = """
+helps['apimgmt'] = """
     type: group
     short-summary: Commands to manage Subscription.
 """
 
-helps['apimgmt service subscription create'] = """
+helps['apimgmt create'] = """
     type: command
-    short-summary: create a apimgmt service subscription.
+    short-summary: create a apimgmt.
 """
 
-helps['apimgmt service subscription update'] = """
+helps['apimgmt update'] = """
     type: command
-    short-summary: update a apimgmt service subscription.
+    short-summary: update a apimgmt.
 """
 
-helps['apimgmt service subscription delete'] = """
+helps['apimgmt delete'] = """
     type: command
-    short-summary: delete a apimgmt service subscription.
+    short-summary: delete a apimgmt.
 """
 
-helps['apimgmt service subscription list'] = """
+helps['apimgmt list'] = """
     type: command
-    short-summary: list a apimgmt service subscription.
+    short-summary: list a apimgmt.
 """
 
-helps['apimgmt service subscription show'] = """
+helps['apimgmt show'] = """
     type: command
-    short-summary: show a apimgmt service subscription.
+    short-summary: show a apimgmt.
 """
 
-helps['apimgmt service user'] = """
+helps['apimgmt user'] = """
     type: group
     short-summary: Commands to manage User.
 """
 
-helps['apimgmt service user create'] = """
+helps['apimgmt user create'] = """
     type: command
-    short-summary: create a apimgmt service user.
+    short-summary: create a apimgmt user.
 """
 
-helps['apimgmt service user update'] = """
+helps['apimgmt user update'] = """
     type: command
-    short-summary: update a apimgmt service user.
+    short-summary: update a apimgmt user.
 """
 
-helps['apimgmt service user delete'] = """
+helps['apimgmt user delete'] = """
     type: command
-    short-summary: delete a apimgmt service user.
+    short-summary: delete a apimgmt user.
 """
 
-helps['apimgmt service user list'] = """
+helps['apimgmt user list'] = """
     type: command
-    short-summary: list a apimgmt service user.
+    short-summary: list a apimgmt user.
 """
 
-helps['apimgmt service user show'] = """
+helps['apimgmt user show'] = """
     type: command
-    short-summary: show a apimgmt service user.
+    short-summary: show a apimgmt user.
 """

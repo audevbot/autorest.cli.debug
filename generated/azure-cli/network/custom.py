@@ -6,20 +6,20 @@
 from knack.util import CLIError
 
 # module equivalent: azure_rm_azurefirewall
-def create_network_azurefirewall(cmd, client,
-                                 resource_group,
-                                 name,
-                                 id=None,
-                                 location=None,
-                                 tags=None,
-                                 properties=None,
-                                 application_rule_collections=None,
-                                 nat_rule_collections=None,
-                                 network_rule_collections=None,
-                                 ip_configurations=None,
-                                 provisioning_state=None,
-                                 type=None,
-                                 etag=None):
+def create_network(cmd, client,
+                   resource_group,
+                   name,
+                   id=None,
+                   location=None,
+                   tags=None,
+                   properties=None,
+                   application_rule_collections=None,
+                   nat_rule_collections=None,
+                   network_rule_collections=None,
+                   ip_configurations=None,
+                   provisioning_state=None,
+                   type=None,
+                   etag=None):
     body={}
     body['id'] = id
     body['location'] = location
@@ -33,20 +33,20 @@ def create_network_azurefirewall(cmd, client,
     return client.azure_firewalls.create_or_update(resource_group_name=resource_group, azure_firewall_name=name, parameters=body)
 
 # module equivalent: azure_rm_azurefirewall
-def update_network_azurefirewall(cmd, client,
-                                 resource_group,
-                                 name,
-                                 id=None,
-                                 location=None,
-                                 tags=None,
-                                 properties=None,
-                                 application_rule_collections=None,
-                                 nat_rule_collections=None,
-                                 network_rule_collections=None,
-                                 ip_configurations=None,
-                                 provisioning_state=None,
-                                 type=None,
-                                 etag=None):
+def update_network(cmd, client,
+                   resource_group,
+                   name,
+                   id=None,
+                   location=None,
+                   tags=None,
+                   properties=None,
+                   application_rule_collections=None,
+                   nat_rule_collections=None,
+                   network_rule_collections=None,
+                   ip_configurations=None,
+                   provisioning_state=None,
+                   type=None,
+                   etag=None):
     body={}
     body['id'] = id
     body['location'] = location
@@ -60,19 +60,19 @@ def update_network_azurefirewall(cmd, client,
     return client.azure_firewalls.create_or_update(resource_group_name=resource_group, azure_firewall_name=name, parameters=body)
 
 # module equivalent: azure_rm_azurefirewall
-def delete_network_azurefirewall(cmd, client,
-                                 resource_group,
-                                 name):
+def delete_network(cmd, client,
+                   resource_group,
+                   name):
     return client.azure_firewalls.delete(resource_group_name=resource_group, azure_firewall_name=name)
 
 # module equivalent: azure_rm_azurefirewall
-def list_network_azurefirewall(cmd, client,
-                               resource_group,
-                               name):
+def list_network(cmd, client,
+                 resource_group,
+                 name):
     return client.azure_firewalls.list_all(resource_group_name=resource_group, azure_firewall_name=name)
 
 # module equivalent: azure_rm_azurefirewall
-def show_network_azurefirewall(cmd, client,
-                               resource_group,
-                               name):
+def show_network(cmd, client,
+                 resource_group,
+                 name):
     return client.azure_firewalls.get(resource_group_name=resource_group, azure_firewall_name=name)

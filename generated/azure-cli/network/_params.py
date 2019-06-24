@@ -15,7 +15,7 @@ def load_arguments(self, _):
     name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
 
 
-    with self.argument_context('network azurefirewall create') as c:
+    with self.argument_context('network create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('name', id_part=None, help='The name of the Azure Firewall.')
         c.argument('id', id_part=None, help='Resource ID.')
@@ -31,7 +31,7 @@ def load_arguments(self, _):
         c.argument('etag', id_part=None, help='Gets a unique read-only string that changes whenever the resource is updated.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
-    with self.argument_context('network azurefirewall update') as c:
+    with self.argument_context('network update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('name', id_part=None, help='The name of the Azure Firewall.')
         c.argument('id', id_part=None, help='Resource ID.')
@@ -47,19 +47,19 @@ def load_arguments(self, _):
         c.argument('etag', id_part=None, help='Gets a unique read-only string that changes whenever the resource is updated.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
-    with self.argument_context('network azurefirewall delete') as c:
+    with self.argument_context('network delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('name', id_part=None, help='The name of the Azure Firewall.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
-    with self.argument_context('network azurefirewall list') as c:
+    with self.argument_context('network list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('name', id_part=None, help='The name of the Azure Firewall.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
-    with self.argument_context('network azurefirewall show') as c:
+    with self.argument_context('network show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('name', id_part=None, help='The name of the Azure Firewall.')
         c.argument('resource_id', name_arg_type, id_part=None)

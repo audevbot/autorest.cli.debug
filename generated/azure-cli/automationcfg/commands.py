@@ -13,7 +13,7 @@ def load_command_table(self, _):
         client_factory=cf_automationcfg)
 
 
-    with self.command_group('automationcfg automationaccount softwareupdateconfiguration', automationcfg_sdk, client_factory=cf_automationcfg) as g:
-        g.custom_command('create', 'create_automationcfg_automationaccount_softwareupdateconfiguration')
-        g.custom_command('delete', 'delete_automationcfg_automationaccount_softwareupdateconfiguration')
-        g.custom_command('list', 'list_automationcfg_automationaccount_softwareupdateconfiguration')
+    with self.command_group('automationcfg softwareupdateconfiguration', automationcfg_sdk, client_factory=cf_automationcfg) as g:
+        g.custom_command('create', 'create_automationcfg_softwareupdateconfiguration')
+        g.custom_command('delete', 'delete_automationcfg_softwareupdateconfiguration')
+        g.custom_command('list', 'list_automationcfg_softwareupdateconfiguration')
