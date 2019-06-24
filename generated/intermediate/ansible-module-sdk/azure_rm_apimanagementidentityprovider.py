@@ -385,8 +385,7 @@ class AzureRMIdentityProvider(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.identity_provider.delete(resource_group_name=self.resource_group,
                                                                  service_name=self.service_name,
-                                                                 identity_provider_name=self.name,
-                                                                 if-match=self.If-Match)
+                                                                 identity_provider_name=self.name)
         except CloudError as e:
             self.log('Error attempting to delete the IdentityProvider instance.')
             self.fail('Error deleting the IdentityProvider instance: {0}'.format(str(e)))

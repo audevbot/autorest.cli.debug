@@ -286,8 +286,7 @@ class AzureRMProductPolicy(AzureRMModuleBaseExt):
             response = self.mgmt_client.product_policy.delete(resource_group_name=self.resource_group,
                                                               service_name=self.name,
                                                               product_id=self.product_id,
-                                                              policy_id=self.policy_id,
-                                                              if-match=self.If-Match)
+                                                              policy_id=self.policy_id)
         except CloudError as e:
             self.log('Error attempting to delete the ProductPolicy instance.')
             self.fail('Error deleting the ProductPolicy instance: {0}'.format(str(e)))

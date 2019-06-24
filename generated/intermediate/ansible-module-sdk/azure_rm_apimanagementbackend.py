@@ -699,8 +699,7 @@ class AzureRMBackend(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.backend.delete(resource_group_name=self.resource_group,
                                                        service_name=self.name,
-                                                       backend_id=self.backend_id,
-                                                       if-match=self.If-Match)
+                                                       backend_id=self.backend_id)
         except CloudError as e:
             self.log('Error attempting to delete the Backend instance.')
             self.fail('Error deleting the Backend instance: {0}'.format(str(e)))

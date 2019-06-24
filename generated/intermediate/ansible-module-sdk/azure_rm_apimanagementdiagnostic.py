@@ -652,8 +652,7 @@ class AzureRMDiagnostic(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.diagnostic.delete(resource_group_name=self.resource_group,
                                                           service_name=self.name,
-                                                          diagnostic_id=self.diagnostic_id,
-                                                          if-match=self.If-Match)
+                                                          diagnostic_id=self.diagnostic_id)
         except CloudError as e:
             self.log('Error attempting to delete the Diagnostic instance.')
             self.fail('Error deleting the Diagnostic instance: {0}'.format(str(e)))

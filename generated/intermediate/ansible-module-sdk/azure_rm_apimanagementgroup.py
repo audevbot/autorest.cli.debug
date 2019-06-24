@@ -327,8 +327,7 @@ class AzureRMGroup(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.group.delete(resource_group_name=self.resource_group,
                                                      service_name=self.name,
-                                                     group_id=self.group_id,
-                                                     if-match=self.If-Match)
+                                                     group_id=self.group_id)
         except CloudError as e:
             self.log('Error attempting to delete the Group instance.')
             self.fail('Error deleting the Group instance: {0}'.format(str(e)))

@@ -297,8 +297,7 @@ class AzureRMApiPolicy(AzureRMModuleBaseExt):
             response = self.mgmt_client.api_policy.delete(resource_group_name=self.resource_group,
                                                           service_name=self.name,
                                                           api_id=self.api_id,
-                                                          policy_id=self.policy_id,
-                                                          if-match=self.If-Match)
+                                                          policy_id=self.policy_id)
         except CloudError as e:
             self.log('Error attempting to delete the ApiPolicy instance.')
             self.fail('Error deleting the ApiPolicy instance: {0}'.format(str(e)))

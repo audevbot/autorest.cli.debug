@@ -669,8 +669,7 @@ class AzureRMApiDiagnostic(AzureRMModuleBaseExt):
             response = self.mgmt_client.api_diagnostic.delete(resource_group_name=self.resource_group,
                                                               service_name=self.name,
                                                               api_id=self.api_id,
-                                                              diagnostic_id=self.diagnostic_id,
-                                                              if-match=self.If-Match)
+                                                              diagnostic_id=self.diagnostic_id)
         except CloudError as e:
             self.log('Error attempting to delete the ApiDiagnostic instance.')
             self.fail('Error deleting the ApiDiagnostic instance: {0}'.format(str(e)))

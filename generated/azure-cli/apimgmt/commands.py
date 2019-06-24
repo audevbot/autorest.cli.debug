@@ -222,12 +222,12 @@ def load_command_table(self, _):
         g.custom_command('delete', 'delete_apimgmt_property')
         g.custom_command('list', 'list_apimgmt_property')
         g.custom_command('show', 'show_apimgmt_property')
-    with self.command_group('apimgmt', apimgmt_sdk, client_factory=cf_apimgmt) as g:
-        g.custom_command('create', 'create_apimgmt')
-        g.custom_command('update', 'update_apimgmt')
-        g.custom_command('delete', 'delete_apimgmt')
-        g.custom_command('list', 'list_apimgmt')
-        g.custom_command('show', 'show_apimgmt')
+    with self.command_group('apimgmt subscription', apimgmt_sdk, client_factory=cf_apimgmt) as g:
+        g.custom_command('create', 'create_apimgmt_subscription')
+        g.custom_command('update', 'update_apimgmt_subscription')
+        g.custom_command('delete', 'delete_apimgmt_subscription')
+        g.custom_command('list', 'list_apimgmt_subscription')
+        g.custom_command('show', 'show_apimgmt_subscription')
     with self.command_group('apimgmt user', apimgmt_sdk, client_factory=cf_apimgmt) as g:
         g.custom_command('create', 'create_apimgmt_user')
         g.custom_command('update', 'update_apimgmt_user')

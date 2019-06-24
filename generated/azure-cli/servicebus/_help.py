@@ -128,62 +128,62 @@ helps['servicebus topic show'] = """
     short-summary: show a servicebus topic.
 """
 
-helps['servicebus topic'] = """
+helps['servicebus topic subscription'] = """
     type: group
     short-summary: Commands to manage Subscription.
 """
 
-helps['servicebus topic create'] = """
+helps['servicebus topic subscription create'] = """
     type: command
-    short-summary: create a servicebus topic.
+    short-summary: create a servicebus topic subscription.
 """
 
-helps['servicebus topic update'] = """
+helps['servicebus topic subscription update'] = """
     type: command
-    short-summary: update a servicebus topic.
+    short-summary: update a servicebus topic subscription.
 """
 
-helps['servicebus topic delete'] = """
+helps['servicebus topic subscription delete'] = """
     type: command
-    short-summary: delete a servicebus topic.
+    short-summary: delete a servicebus topic subscription.
 """
 
-helps['servicebus topic list'] = """
+helps['servicebus topic subscription list'] = """
     type: command
-    short-summary: list a servicebus topic.
+    short-summary: list a servicebus topic subscription.
 """
 
-helps['servicebus topic show'] = """
+helps['servicebus topic subscription show'] = """
     type: command
-    short-summary: show a servicebus topic.
+    short-summary: show a servicebus topic subscription.
 """
 
-helps['servicebus topic rule'] = """
+helps['servicebus topic subscription rule'] = """
     type: group
     short-summary: Commands to manage Rule.
 """
 
-helps['servicebus topic rule create'] = """
+helps['servicebus topic subscription rule create'] = """
     type: command
-    short-summary: create a servicebus topic rule.
+    short-summary: create a servicebus topic subscription rule.
 """
 
-helps['servicebus topic rule update'] = """
+helps['servicebus topic subscription rule update'] = """
     type: command
-    short-summary: update a servicebus topic rule.
+    short-summary: update a servicebus topic subscription rule.
 """
 
-helps['servicebus topic rule delete'] = """
+helps['servicebus topic subscription rule delete'] = """
     type: command
-    short-summary: delete a servicebus topic rule.
+    short-summary: delete a servicebus topic subscription rule.
 """
 
-helps['servicebus topic rule list'] = """
+helps['servicebus topic subscription rule list'] = """
     type: command
-    short-summary: list a servicebus topic rule.
+    short-summary: list a servicebus topic subscription rule.
 """
 
-helps['servicebus topic rule show'] = """
+helps['servicebus topic subscription rule show'] = """
     type: command
-    short-summary: show a servicebus topic rule.
+    short-summary: show a servicebus topic subscription rule.
 """

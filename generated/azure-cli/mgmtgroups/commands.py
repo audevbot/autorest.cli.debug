@@ -19,6 +19,6 @@ def load_command_table(self, _):
         g.custom_command('delete', 'delete_mgmtgroups')
         g.custom_command('list', 'list_mgmtgroups')
         g.custom_command('show', 'show_mgmtgroups')
-    with self.command_group('mgmtgroups', mgmtgroups_sdk, client_factory=cf_mgmtgroups) as g:
-        g.custom_command('create', 'create_mgmtgroups')
-        g.custom_command('delete', 'delete_mgmtgroups')
+    with self.command_group('mgmtgroups subscription', mgmtgroups_sdk, client_factory=cf_mgmtgroups) as g:
+        g.custom_command('create', 'create_mgmtgroups_subscription')
+        g.custom_command('delete', 'delete_mgmtgroups_subscription')

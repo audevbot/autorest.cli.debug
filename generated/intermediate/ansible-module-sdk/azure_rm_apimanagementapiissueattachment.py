@@ -322,8 +322,7 @@ class AzureRMApiIssueAttachment(AzureRMModuleBaseExt):
                                                                     service_name=self.name,
                                                                     api_id=self.api_id,
                                                                     issue_id=self.issue_id,
-                                                                    attachment_id=self.attachment_id,
-                                                                    if-match=self.If-Match)
+                                                                    attachment_id=self.attachment_id)
         except CloudError as e:
             self.log('Error attempting to delete the ApiIssueAttachment instance.')
             self.fail('Error deleting the ApiIssueAttachment instance: {0}'.format(str(e)))

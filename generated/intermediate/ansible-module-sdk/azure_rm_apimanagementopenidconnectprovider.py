@@ -316,8 +316,7 @@ class AzureRMOpenIdConnectProvider(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.open_id_connect_provider.delete(resource_group_name=self.resource_group,
                                                                         service_name=self.name,
-                                                                        opid=self.opid,
-                                                                        if-match=self.If-Match)
+                                                                        opid=self.opid)
         except CloudError as e:
             self.log('Error attempting to delete the OpenIdConnectProvider instance.')
             self.fail('Error deleting the OpenIdConnectProvider instance: {0}'.format(str(e)))

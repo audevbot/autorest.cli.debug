@@ -1532,7 +1532,6 @@ Modules:
           - serviceName
           - apiId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -1550,13 +1549,11 @@ Modules:
           - serviceName
           - apiId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - apiId
           - parameters
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -1569,12 +1566,10 @@ Modules:
           - serviceName
           - apiId
           - deleteRevisions
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - apiId
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -6246,7 +6241,6 @@ Modules:
           - apiId
           - releaseId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -6266,14 +6260,12 @@ Modules:
           - apiId
           - releaseId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - apiId
           - releaseId
           - parameters
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -6286,13 +6278,11 @@ Modules:
           - serviceName
           - apiId
           - releaseId
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - apiId
           - releaseId
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -9297,7 +9287,6 @@ Modules:
           - apiId
           - operationId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -9317,14 +9306,12 @@ Modules:
           - apiId
           - operationId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - apiId
           - operationId
           - parameters
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -9337,13 +9324,11 @@ Modules:
           - serviceName
           - apiId
           - operationId
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - apiId
           - operationId
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -14434,7 +14419,6 @@ Modules:
           - operationId
           - policyId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -14456,14 +14440,12 @@ Modules:
           - apiId
           - operationId
           - policyId
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - apiId
           - operationId
           - policyId
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -15564,7 +15546,6 @@ Modules:
           - serviceName
           - tagId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -15582,13 +15563,11 @@ Modules:
           - serviceName
           - tagId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - tagId
           - parameters
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -15600,12 +15579,10 @@ Modules:
           - resourceGroupName
           - serviceName
           - tagId
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - tagId
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -17754,7 +17731,6 @@ Modules:
           - apiId
           - policyId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -17773,13 +17749,11 @@ Modules:
           - serviceName
           - apiId
           - policyId
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - apiId
           - policyId
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -18977,7 +18951,6 @@ Modules:
           - apiId
           - schemaId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -18997,13 +18970,11 @@ Modules:
           - apiId
           - schemaId
           - force
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - apiId
           - schemaId
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -20727,7 +20698,6 @@ Modules:
           - apiId
           - diagnosticId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -20747,14 +20717,12 @@ Modules:
           - apiId
           - diagnosticId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - apiId
           - diagnosticId
           - parameters
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -20767,13 +20735,11 @@ Modules:
           - serviceName
           - apiId
           - diagnosticId
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - apiId
           - diagnosticId
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -23482,7 +23448,6 @@ Modules:
           - apiId
           - issueId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -23502,14 +23467,12 @@ Modules:
           - apiId
           - issueId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - apiId
           - issueId
           - parameters
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -23522,13 +23485,11 @@ Modules:
           - serviceName
           - apiId
           - issueId
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - apiId
           - issueId
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -25011,7 +24972,6 @@ Modules:
           - issueId
           - commentId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -25033,14 +24993,12 @@ Modules:
           - apiId
           - issueId
           - commentId
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - apiId
           - issueId
           - commentId
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -26288,7 +26246,6 @@ Modules:
           - issueId
           - attachmentId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -26310,14 +26267,12 @@ Modules:
           - apiId
           - issueId
           - attachmentId
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - apiId
           - issueId
           - attachmentId
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -27545,7 +27500,6 @@ Modules:
           - apiId
           - tagId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -27564,13 +27518,11 @@ Modules:
           - serviceName
           - apiId
           - tagId
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - apiId
           - tagId
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -30566,7 +30518,6 @@ Modules:
           - serviceName
           - versionSetId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -30584,13 +30535,11 @@ Modules:
           - serviceName
           - versionSetId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - versionSetId
           - parameters
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -30602,12 +30551,10 @@ Modules:
           - resourceGroupName
           - serviceName
           - versionSetId
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - versionSetId
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -32377,7 +32324,6 @@ Modules:
           - serviceName
           - authsid
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -32395,13 +32341,11 @@ Modules:
           - serviceName
           - authsid
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - authsid
           - parameters
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -32413,12 +32357,10 @@ Modules:
           - resourceGroupName
           - serviceName
           - authsid
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - authsid
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -35467,7 +35409,6 @@ Modules:
           - serviceName
           - backendId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -35485,13 +35426,11 @@ Modules:
           - serviceName
           - backendId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - backendId
           - parameters
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -35503,12 +35442,10 @@ Modules:
           - resourceGroupName
           - serviceName
           - backendId
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - backendId
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -38359,7 +38296,6 @@ Modules:
           - serviceName
           - cacheId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -38377,13 +38313,11 @@ Modules:
           - serviceName
           - cacheId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - cacheId
           - parameters
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -38395,12 +38329,10 @@ Modules:
           - resourceGroupName
           - serviceName
           - cacheId
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - cacheId
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -39551,7 +39483,6 @@ Modules:
           - serviceName
           - certificateId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -39568,12 +39499,10 @@ Modules:
           - resourceGroupName
           - serviceName
           - certificateId
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - certificateId
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -49530,7 +49459,6 @@ Modules:
           - serviceName
           - diagnosticId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -49548,13 +49476,11 @@ Modules:
           - serviceName
           - diagnosticId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - diagnosticId
           - parameters
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -49566,12 +49492,10 @@ Modules:
           - resourceGroupName
           - serviceName
           - diagnosticId
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - diagnosticId
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -52259,7 +52183,6 @@ Modules:
           - serviceName
           - templateName
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -52277,13 +52200,11 @@ Modules:
           - serviceName
           - templateName
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - templateName
           - parameters
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -52295,12 +52216,10 @@ Modules:
           - resourceGroupName
           - serviceName
           - templateName
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - templateName
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -53847,7 +53766,6 @@ Modules:
           - serviceName
           - groupId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -53865,13 +53783,11 @@ Modules:
           - serviceName
           - groupId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - groupId
           - parameters
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -53883,12 +53799,10 @@ Modules:
           - resourceGroupName
           - serviceName
           - groupId
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - groupId
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -57139,7 +57053,6 @@ Modules:
           - serviceName
           - identityProviderName
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -57157,13 +57070,11 @@ Modules:
           - serviceName
           - identityProviderName
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - identityProviderName
           - parameters
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -57175,12 +57086,10 @@ Modules:
           - resourceGroupName
           - serviceName
           - identityProviderName
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - identityProviderName
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -59334,7 +59243,6 @@ Modules:
           - serviceName
           - loggerId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -59352,13 +59260,11 @@ Modules:
           - serviceName
           - loggerId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - loggerId
           - parameters
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -59370,13 +59276,11 @@ Modules:
           - resourceGroupName
           - serviceName
           - loggerId
-          - If-Match
           - force
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - loggerId
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -61046,7 +60950,6 @@ Modules:
           - resourceGroupName
           - serviceName
           - notificationName
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -63838,7 +63741,6 @@ Modules:
           - serviceName
           - opid
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -63856,13 +63758,11 @@ Modules:
           - serviceName
           - opid
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - opid
           - parameters
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -63874,12 +63774,10 @@ Modules:
           - resourceGroupName
           - serviceName
           - opid
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - opid
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -65063,7 +64961,6 @@ Modules:
           - serviceName
           - policyId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -65080,12 +64977,10 @@ Modules:
           - resourceGroupName
           - serviceName
           - policyId
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - policyId
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -66370,7 +66265,6 @@ Modules:
           - resourceGroupName
           - serviceName
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -66386,12 +66280,10 @@ Modules:
           - resourceGroupName
           - serviceName
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - parameters
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -67217,7 +67109,6 @@ Modules:
           - resourceGroupName
           - serviceName
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -67233,12 +67124,10 @@ Modules:
           - resourceGroupName
           - serviceName
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - parameters
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -68352,7 +68241,6 @@ Modules:
           - resourceGroupName
           - serviceName
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -68368,12 +68256,10 @@ Modules:
           - resourceGroupName
           - serviceName
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - parameters
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -69658,7 +69544,6 @@ Modules:
           - serviceName
           - productId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -69676,13 +69561,11 @@ Modules:
           - serviceName
           - productId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - productId
           - parameters
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -69694,13 +69577,11 @@ Modules:
           - resourceGroupName
           - serviceName
           - productId
-          - If-Match
           - deleteSubscriptions
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - productId
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -76104,7 +75985,6 @@ Modules:
           - serviceName
           - productId
           - policyId
-          - If-Match
           - parameters
         RequiredOptions:
           - resourceGroupName
@@ -76124,13 +76004,11 @@ Modules:
           - serviceName
           - productId
           - policyId
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - productId
           - policyId
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -77258,7 +77136,6 @@ Modules:
           - serviceName
           - propId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -77276,13 +77153,11 @@ Modules:
           - serviceName
           - propId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - propId
           - parameters
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -77294,12 +77169,10 @@ Modules:
           - resourceGroupName
           - serviceName
           - propId
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - propId
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -81766,7 +81639,6 @@ Modules:
           - sid
           - parameters
           - notify
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -81785,13 +81657,11 @@ Modules:
           - sid
           - parameters
           - notify
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - sid
           - parameters
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -81803,12 +81673,10 @@ Modules:
           - resourceGroupName
           - serviceName
           - sid
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - sid
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -86660,7 +86528,6 @@ Modules:
           - serviceName
           - userId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
@@ -86678,13 +86545,11 @@ Modules:
           - serviceName
           - userId
           - parameters
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - userId
           - parameters
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -86698,12 +86563,10 @@ Modules:
           - userId
           - deleteSubscriptions
           - notify
-          - If-Match
         RequiredOptions:
           - resourceGroupName
           - serviceName
           - userId
-          - If-Match
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name

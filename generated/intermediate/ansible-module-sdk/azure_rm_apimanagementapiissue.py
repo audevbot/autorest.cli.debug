@@ -352,8 +352,7 @@ class AzureRMApiIssue(AzureRMModuleBaseExt):
             response = self.mgmt_client.api_issue.delete(resource_group_name=self.resource_group,
                                                          service_name=self.name,
                                                          api_id=self.api_id,
-                                                         issue_id=self.issue_id,
-                                                         if-match=self.If-Match)
+                                                         issue_id=self.issue_id)
         except CloudError as e:
             self.log('Error attempting to delete the ApiIssue instance.')
             self.fail('Error deleting the ApiIssue instance: {0}'.format(str(e)))

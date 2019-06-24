@@ -290,8 +290,7 @@ class AzureRMCache(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.cache.delete(resource_group_name=self.resource_group,
                                                      service_name=self.name,
-                                                     cache_id=self.cache_id,
-                                                     if-match=self.If-Match)
+                                                     cache_id=self.cache_id)
         except CloudError as e:
             self.log('Error attempting to delete the Cache instance.')
             self.fail('Error deleting the Cache instance: {0}'.format(str(e)))

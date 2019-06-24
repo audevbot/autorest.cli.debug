@@ -1202,8 +1202,7 @@ class AzureRMApiOperation(AzureRMModuleBaseExt):
             response = self.mgmt_client.api_operation.delete(resource_group_name=self.resource_group,
                                                              service_name=self.name,
                                                              api_id=self.api_id,
-                                                             operation_id=self.operation_id,
-                                                             if-match=self.If-Match)
+                                                             operation_id=self.operation_id)
         except CloudError as e:
             self.log('Error attempting to delete the ApiOperation instance.')
             self.fail('Error deleting the ApiOperation instance: {0}'.format(str(e)))
