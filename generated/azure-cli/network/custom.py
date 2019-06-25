@@ -67,9 +67,8 @@ def delete_network(cmd, client,
 
 # module equivalent: azure_rm_azurefirewall
 def list_network(cmd, client,
-                 resource_group,
-                 name):
-    return client.azure_firewalls.list_all(resource_group_name=resource_group, azure_firewall_name=name)
+                 resource_group):
+    return client.azure_firewalls.list_all()
 
 # module equivalent: azure_rm_azurefirewall
 def show_network(cmd, client,

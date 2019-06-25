@@ -51,7 +51,6 @@ def load_arguments(self, _):
 
     with self.argument_context('batch list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group that contains the Batch account.')
-        c.argument('name', id_part=None, help='A name for the Batch account which must be unique within the region. Batch account names must be between 3 and 24 characters in length and must use only numbers and lowercase letters. This name is used as part of the DNS name that is used to access the Batch service in the region in which the account is created. For example: http://accountname.region.batch.azure.com/.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
@@ -90,7 +89,6 @@ def load_arguments(self, _):
         c.argument('resource_group', id_part=None, help='The name of the resource group that contains the Batch account.')
         c.argument('account_name', id_part=None, help='The name of the Batch account.')
         c.argument('application_name', id_part=None, help='The name of the application. This must be unique within the account.')
-        c.argument('name', id_part=None, help='The version of the application.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
@@ -138,7 +136,6 @@ def load_arguments(self, _):
     with self.argument_context('batch application list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group that contains the Batch account.')
         c.argument('account_name', id_part=None, help='The name of the Batch account.')
-        c.argument('name', id_part=None, help='The name of the application. This must be unique within the account.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
@@ -199,7 +196,6 @@ def load_arguments(self, _):
     with self.argument_context('batch certificate list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group that contains the Batch account.')
         c.argument('account_name', id_part=None, help='The name of the Batch account.')
-        c.argument('name', id_part=None, help='The identifier for the certificate. This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request. For example SHA1-a3d1c5.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
@@ -286,7 +282,6 @@ def load_arguments(self, _):
     with self.argument_context('batch pool list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group that contains the Batch account.')
         c.argument('account_name', id_part=None, help='The name of the Batch account.')
-        c.argument('name', id_part=None, help='The pool name. This must be unique within the account.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 

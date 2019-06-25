@@ -87,9 +87,8 @@ def delete_frontdoor(cmd, client,
 
 # module equivalent: azure_rm_frontdoor
 def list_frontdoor(cmd, client,
-                   resource_group,
-                   name):
-    return client.front_doors.list(resource_group_name=resource_group, front_door_name=name)
+                   resource_group):
+    return client.front_doors.list()
 
 # module equivalent: azure_rm_frontdoor
 def show_frontdoor(cmd, client,
@@ -157,9 +156,8 @@ def delete_frontdoor_routingrule(cmd, client,
 # module equivalent: azure_rm_frontdoorroutingrule
 def list_frontdoor_routingrule(cmd, client,
                                resource_group,
-                               front_door_name,
-                               name):
-    return client.routing_rules.list_by_front_door(resource_group_name=resource_group, front_door_name=front_door_name, routing_rule_name=name)
+                               front_door_name):
+    return client.routing_rules.list_by_front_door(resource_group_name=resource_group, front_door_name=front_door_name)
 
 # module equivalent: azure_rm_frontdoorroutingrule
 def show_frontdoor_routingrule(cmd, client,
@@ -220,9 +218,8 @@ def delete_frontdoor_healthprobesetting(cmd, client,
 # module equivalent: azure_rm_frontdoorhealthprobesetting
 def list_frontdoor_healthprobesetting(cmd, client,
                                       resource_group,
-                                      front_door_name,
-                                      name):
-    return client.health_probe_settings.list_by_front_door(resource_group_name=resource_group, front_door_name=front_door_name, health_probe_settings_name=name)
+                                      front_door_name):
+    return client.health_probe_settings.list_by_front_door(resource_group_name=resource_group, front_door_name=front_door_name)
 
 # module equivalent: azure_rm_frontdoorhealthprobesetting
 def show_frontdoor_healthprobesetting(cmd, client,
@@ -283,9 +280,8 @@ def delete_frontdoor_loadbalancingsetting(cmd, client,
 # module equivalent: azure_rm_frontdoorloadbalancingsetting
 def list_frontdoor_loadbalancingsetting(cmd, client,
                                         resource_group,
-                                        front_door_name,
-                                        name):
-    return client.load_balancing_settings.list_by_front_door(resource_group_name=resource_group, front_door_name=front_door_name, load_balancing_settings_name=name)
+                                        front_door_name):
+    return client.load_balancing_settings.list_by_front_door(resource_group_name=resource_group, front_door_name=front_door_name)
 
 # module equivalent: azure_rm_frontdoorloadbalancingsetting
 def show_frontdoor_loadbalancingsetting(cmd, client,
@@ -346,9 +342,8 @@ def delete_frontdoor_backendpool(cmd, client,
 # module equivalent: azure_rm_frontdoorbackendpool
 def list_frontdoor_backendpool(cmd, client,
                                resource_group,
-                               front_door_name,
-                               name):
-    return client.backend_pools.list_by_front_door(resource_group_name=resource_group, front_door_name=front_door_name, backend_pool_name=name)
+                               front_door_name):
+    return client.backend_pools.list_by_front_door(resource_group_name=resource_group, front_door_name=front_door_name)
 
 # module equivalent: azure_rm_frontdoorbackendpool
 def show_frontdoor_backendpool(cmd, client,
@@ -425,9 +420,8 @@ def delete_frontdoor_frontendendpoint(cmd, client,
 # module equivalent: azure_rm_frontdoorfrontendendpoint
 def list_frontdoor_frontendendpoint(cmd, client,
                                     resource_group,
-                                    front_door_name,
-                                    name):
-    return client.frontend_endpoints.list_by_front_door(resource_group_name=resource_group, front_door_name=front_door_name, frontend_endpoint_name=name)
+                                    front_door_name):
+    return client.frontend_endpoints.list_by_front_door(resource_group_name=resource_group, front_door_name=front_door_name)
 
 # module equivalent: azure_rm_frontdoorfrontendendpoint
 def show_frontdoor_frontendendpoint(cmd, client,

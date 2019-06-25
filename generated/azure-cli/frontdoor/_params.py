@@ -65,7 +65,6 @@ def load_arguments(self, _):
 
     with self.argument_context('frontdoor list') as c:
         c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
-        c.argument('name', id_part=None, help='Name of the Front Door which is globally unique.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
@@ -117,7 +116,6 @@ def load_arguments(self, _):
     with self.argument_context('frontdoor routingrule list') as c:
         c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
         c.argument('front_door_name', id_part=None, help='Name of the Front Door which is globally unique.')
-        c.argument('name', id_part=None, help='Name of the Routing Rule which is unique within the Front Door.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
@@ -166,7 +164,6 @@ def load_arguments(self, _):
     with self.argument_context('frontdoor healthprobesetting list') as c:
         c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
         c.argument('front_door_name', id_part=None, help='Name of the Front Door which is globally unique.')
-        c.argument('name', id_part=None, help='Name of the health probe settings which is unique within the Front Door.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
@@ -215,7 +212,6 @@ def load_arguments(self, _):
     with self.argument_context('frontdoor loadbalancingsetting list') as c:
         c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
         c.argument('front_door_name', id_part=None, help='Name of the Front Door which is globally unique.')
-        c.argument('name', id_part=None, help='Name of the load balancing settings which is unique within the Front Door.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
@@ -264,7 +260,6 @@ def load_arguments(self, _):
     with self.argument_context('frontdoor backendpool list') as c:
         c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
         c.argument('front_door_name', id_part=None, help='Name of the Front Door which is globally unique.')
-        c.argument('name', id_part=None, help='Name of the Backend Pool which is unique within the Front Door.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
@@ -321,7 +316,6 @@ def load_arguments(self, _):
     with self.argument_context('frontdoor frontendendpoint list') as c:
         c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
         c.argument('front_door_name', id_part=None, help='Name of the Front Door which is globally unique.')
-        c.argument('name', id_part=None, help='Name of the Frontend endpoint which is unique within the Front Door.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 

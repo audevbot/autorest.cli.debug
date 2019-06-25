@@ -61,9 +61,8 @@ def delete_eventgrid(cmd, client,
     return client.event_subscriptions.delete(scope=scope, event_subscription_name=name)
 
 # module equivalent: azure_rm_eventgrideventsubscription
-def list_eventgrid(cmd, client,
-                   name):
-    return client.event_subscriptions.list_global_by_subscription(scope=scope, event_subscription_name=name)
+def list_eventgrid(cmd, client):
+    return client.event_subscriptions.list_global_by_subscription()
 
 # module equivalent: azure_rm_eventgrideventsubscription
 def show_eventgrid(cmd, client,
@@ -116,9 +115,8 @@ def delete_eventgrid(cmd, client,
 
 # module equivalent: azure_rm_eventgridtopic
 def list_eventgrid(cmd, client,
-                   resource_group,
-                   name):
-    return client.topics.list_by_subscription(resource_group_name=resource_group, topic_name=name)
+                   resource_group):
+    return client.topics.list_by_subscription()
 
 # module equivalent: azure_rm_eventgridtopic
 def show_eventgrid(cmd, client,

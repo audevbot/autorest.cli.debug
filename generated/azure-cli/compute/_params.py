@@ -49,7 +49,6 @@ def load_arguments(self, _):
 
     with self.argument_context('compute list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the Shared Image Gallery. The allowed characters are alphabets and numbers with dots and periods allowed in the middle. The maximum length is 80 characters.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
@@ -117,7 +116,6 @@ def load_arguments(self, _):
     with self.argument_context('compute image list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('gallery_name', id_part=None, help='The name of the Shared Image Gallery in which the Image Definition is to be created.')
-        c.argument('name', id_part=None, help='The name of the gallery Image Definition to be created or updated. The allowed characters are alphabets and numbers with dots, dashes, and periods allowed in the middle. The maximum length is 80 characters.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
@@ -174,7 +172,6 @@ def load_arguments(self, _):
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('gallery_name', id_part=None, help='The name of the Shared Image Gallery in which the Image Definition resides.')
         c.argument('gallery_image_name', id_part=None, help='The name of the gallery Image Definition in which the Image Version is to be created.')
-        c.argument('name', id_part=None, help='The name of the gallery Image Version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: <MajorVersion>.<MinorVersion>.<Patch>')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 

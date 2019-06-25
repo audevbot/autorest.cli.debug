@@ -340,7 +340,6 @@ def load_arguments(self, _):
         c.argument('resource_group', id_part=None, help='Name of the Resource group within the Azure subscription.')
         c.argument('namespace_name', id_part=None, help='The namespace name')
         c.argument('topic_name', id_part=None, help='The topic name.')
-        c.argument('name', id_part=None, help='The subscription name.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
@@ -398,7 +397,6 @@ def load_arguments(self, _):
         c.argument('namespace_name', id_part=None, help='The namespace name')
         c.argument('topic_name', id_part=None, help='The topic name.')
         c.argument('subscription_name', id_part=None, help='The subscription name.')
-        c.argument('name', id_part=None, help='The rule name.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 

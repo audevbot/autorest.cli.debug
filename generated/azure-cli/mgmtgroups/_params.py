@@ -45,7 +45,6 @@ def load_arguments(self, _):
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('mgmtgroups list') as c:
-        c.argument('group_id', id_part=None, help='Management Group ID.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
