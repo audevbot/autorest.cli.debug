@@ -47,5 +47,5 @@ def delete_automationcfg_softwareupdateconfiguration(cmd, client,
 def list_automationcfg_softwareupdateconfiguration(cmd, client,
                                                    resource_group,
                                                    automation_account_name,
-                                                   name):
-    return client.software_update_configurations.list()
+                                                   client_request_id=None):
+    return client.software_update_configurations.list(resource_group_name=resource_group, automation_account_name=automation_account_name)

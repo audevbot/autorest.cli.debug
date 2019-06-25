@@ -50,8 +50,8 @@ def create_automationjob_job(cmd, client,
 def list_automationjob_job(cmd, client,
                            resource_group,
                            automation_account_name,
-                           name):
-    return client.job.list_by_automation_account(resource_group_name=resource_group, automation_account_name=automation_account_name, job_name=name)
+                           client_request_id=None):
+    return client.job.list_by_automation_account(resource_group_name=resource_group, automation_account_name=automation_account_name)
 
 # module equivalent: azure_rm_automationjob
 def show_automationjob_job(cmd, client,

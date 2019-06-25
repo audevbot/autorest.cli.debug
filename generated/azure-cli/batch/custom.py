@@ -61,9 +61,8 @@ def delete_batch(cmd, client,
 
 # module equivalent: azure_rm_batchaccount
 def list_batch(cmd, client,
-               resource_group,
-               name):
-    return client.batch_account.list(resource_group_name=resource_group, account_name=name)
+               resource_group):
+    return client.batch_account.list()
 
 # module equivalent: azure_rm_batchaccount
 def show_batch(cmd, client,
@@ -106,9 +105,8 @@ def delete_batch_application_version(cmd, client,
 def list_batch_application_version(cmd, client,
                                    resource_group,
                                    account_name,
-                                   application_name,
-                                   name):
-    return client.application_package.list(resource_group_name=resource_group, account_name=account_name, application_name=application_name, version_name=name)
+                                   application_name):
+    return client.application_package.list(resource_group_name=resource_group, account_name=account_name, application_name=application_name)
 
 # module equivalent: azure_rm_batchapplicationpackage
 def show_batch_application_version(cmd, client,
@@ -164,9 +162,8 @@ def delete_batch_application(cmd, client,
 # module equivalent: azure_rm_batchapplication
 def list_batch_application(cmd, client,
                            resource_group,
-                           account_name,
-                           name):
-    return client.application.list(resource_group_name=resource_group, account_name=account_name, application_name=name)
+                           account_name):
+    return client.application.list(resource_group_name=resource_group, account_name=account_name)
 
 # module equivalent: azure_rm_batchapplication
 def show_batch_application(cmd, client,
@@ -249,9 +246,8 @@ def delete_batch_certificate(cmd, client,
 # module equivalent: azure_rm_batchcertificate
 def list_batch_certificate(cmd, client,
                            resource_group,
-                           account_name,
-                           name):
-    return client.certificate.list_by_batch_account(resource_group_name=resource_group, account_name=account_name, certificate_name=name)
+                           account_name):
+    return client.certificate.list_by_batch_account(resource_group_name=resource_group, account_name=account_name)
 
 # module equivalent: azure_rm_batchcertificate
 def show_batch_certificate(cmd, client,
@@ -386,9 +382,8 @@ def delete_batch_pool(cmd, client,
 # module equivalent: azure_rm_batchpool
 def list_batch_pool(cmd, client,
                     resource_group,
-                    account_name,
-                    name):
-    return client.pool.list_by_batch_account(resource_group_name=resource_group, account_name=account_name, pool_name=name)
+                    account_name):
+    return client.pool.list_by_batch_account(resource_group_name=resource_group, account_name=account_name)
 
 # module equivalent: azure_rm_batchpool
 def show_batch_pool(cmd, client,

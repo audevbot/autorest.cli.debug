@@ -51,7 +51,6 @@ def load_arguments(self, _):
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('eventgrid list') as c:
-        c.argument('name', id_part=None, help='Name of the event subscription. Event subscription names must be between 3 and 64 characters in length and should use alphanumeric letters only.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
@@ -94,7 +93,6 @@ def load_arguments(self, _):
 
     with self.argument_context('eventgrid list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group within the user\'s subscription.')
-        c.argument('name', id_part=None, help='Name of the topic')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 

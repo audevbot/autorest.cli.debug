@@ -44,7 +44,7 @@ def load_arguments(self, _):
     with self.argument_context('automationcfg softwareupdateconfiguration list') as c:
         c.argument('resource_group', id_part=None, help='Name of an Azure Resource group.')
         c.argument('automation_account_name', id_part=None, help='The name of the automation account.')
-        c.argument('name', id_part=None, help='The name of the software update configuration to be created.')
+        c.argument('client_request_id', id_part=None, help='Identifies this specific client request.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
     apimanagement_name_type = CLIArgumentType(options_list='--apimanagement-name-name', help='Name of the Apimanagement.', id_part='name')

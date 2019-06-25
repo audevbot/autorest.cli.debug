@@ -105,7 +105,7 @@ def delete_cosmos-db(cmd, client,
 def list_cosmos-db(cmd, client,
                    resource_group,
                    name):
-    return client.database_accounts.list(resource_group_name=resource_group, account_name=name)
+    return client.database_accounts.list()
 
 # module equivalent: azure_rm_cosmosdbdatabaseaccount
 def show_cosmos-db(cmd, client,

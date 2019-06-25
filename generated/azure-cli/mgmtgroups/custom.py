@@ -51,9 +51,8 @@ def delete_mgmtgroups(cmd, client,
     return client.management_groups.delete(group_id=group_id)
 
 # module equivalent: azure_rm_managementgroup
-def list_mgmtgroups(cmd, client,
-                    group_id):
-    return client.management_groups.list(group_id=group_id)
+def list_mgmtgroups(cmd, client):
+    return client.management_groups.list()
 
 # module equivalent: azure_rm_managementgroup
 def show_mgmtgroups(cmd, client,

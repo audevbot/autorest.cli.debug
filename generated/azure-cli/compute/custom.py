@@ -55,9 +55,8 @@ def delete_compute(cmd, client,
 
 # module equivalent: azure_rm_computegallery
 def list_compute(cmd, client,
-                 resource_group,
-                 name):
-    return client.galleries.list(resource_group_name=resource_group, gallery_name=name)
+                 resource_group):
+    return client.galleries.list()
 
 # module equivalent: azure_rm_computegallery
 def show_compute(cmd, client,
@@ -155,9 +154,8 @@ def delete_compute_image(cmd, client,
 # module equivalent: azure_rm_computegalleryimage
 def list_compute_image(cmd, client,
                        resource_group,
-                       gallery_name,
-                       name):
-    return client.gallery_images.list_by_gallery(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=name)
+                       gallery_name):
+    return client.gallery_images.list_by_gallery(resource_group_name=resource_group, gallery_name=gallery_name)
 
 # module equivalent: azure_rm_computegalleryimage
 def show_compute_image(cmd, client,
@@ -228,9 +226,8 @@ def delete_compute_image_version(cmd, client,
 def list_compute_image_version(cmd, client,
                                resource_group,
                                gallery_name,
-                               gallery_image_name,
-                               name):
-    return client.gallery_image_versions.list_by_gallery_image(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=gallery_image_name, gallery_image_version_name=name)
+                               gallery_image_name):
+    return client.gallery_image_versions.list_by_gallery_image(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=gallery_image_name)
 
 # module equivalent: azure_rm_computegalleryimageversion
 def show_compute_image_version(cmd, client,
