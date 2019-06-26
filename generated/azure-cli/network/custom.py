@@ -13,7 +13,6 @@ def create_network(cmd, client,
                    id=None,
                    location=None,
                    tags=None,
-                   properties=None,
                    application_rule_collections=None,
                    nat_rule_collections=None,
                    network_rule_collections=None,
@@ -22,7 +21,6 @@ def create_network(cmd, client,
     body['id'] = id
     body['location'] = location
     body['tags'] = tags
-    body['properties'] = properties
     body['application_rule_collections'] = application_rule_collections
     body['nat_rule_collections'] = nat_rule_collections
     body['network_rule_collections'] = network_rule_collections

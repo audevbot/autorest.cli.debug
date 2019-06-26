@@ -12,13 +12,11 @@ def create_automationcfg_softwareupdateconfiguration(cmd, client,
                                                      name,
                                                      client_request_id=None,
                                                      parameters=None,
-                                                     properties=None,
                                                      update_configuration=None,
                                                      schedule_info=None,
                                                      error=None,
                                                      tasks=None):
     body={}
-    body['properties'] = properties
     body['update_configuration'] = update_configuration
     body['schedule_info'] = schedule_info
     body['error'] = error

@@ -12,7 +12,6 @@ def create_cosmos-db(cmd, client,
                      location=None,
                      tags=None,
                      kind=None,
-                     properties=None,
                      consistency_policy=None,
                      locations=None,
                      database_account_offer_type=None,
@@ -26,7 +25,6 @@ def create_cosmos-db(cmd, client,
     body['location'] = location
     body['tags'] = tags
     body['kind'] = kind
-    body['properties'] = properties
     body['consistency_policy'] = consistency_policy
     body['locations'] = locations
     body['database_account_offer_type'] = database_account_offer_type

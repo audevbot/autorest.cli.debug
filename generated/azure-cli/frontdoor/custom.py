@@ -11,7 +11,6 @@ def create_frontdoor(cmd, client,
                      name,
                      location=None,
                      tags=None,
-                     properties=None,
                      friendly_name=None,
                      routing_rules=None,
                      load_balancing_settings=None,
@@ -24,7 +23,6 @@ def create_frontdoor(cmd, client,
     body={}
     body['location'] = location
     body['tags'] = tags
-    body['properties'] = properties
     body['friendly_name'] = friendly_name
     body['routing_rules'] = routing_rules
     body['load_balancing_settings'] = load_balancing_settings
@@ -69,22 +67,18 @@ def create_frontdoor_routingrule(cmd, client,
                                  front_door_name,
                                  name,
                                  id=None,
-                                 properties=None,
                                  frontend_endpoints=None,
                                  accepted_protocols=None,
                                  patterns_to_match=None,
                                  enabled_state=None,
-                                 route_configuration=None,
                                  resource_state=None,
                                  name=None):
     body={}
     body['id'] = id
-    body['properties'] = properties
     body['frontend_endpoints'] = frontend_endpoints
     body['accepted_protocols'] = accepted_protocols
     body['patterns_to_match'] = patterns_to_match
     body['enabled_state'] = enabled_state
-    body['route_configuration'] = route_configuration
     body['resource_state'] = resource_state
     body['name'] = name
     return client.routing_rules.create_or_update(resource_group_name=resource_group, front_door_name=front_door_name, routing_rule_name=name)
@@ -123,7 +117,6 @@ def create_frontdoor_healthprobesetting(cmd, client,
                                         front_door_name,
                                         name,
                                         id=None,
-                                        properties=None,
                                         path=None,
                                         protocol=None,
                                         interval_in_seconds=None,
@@ -131,7 +124,6 @@ def create_frontdoor_healthprobesetting(cmd, client,
                                         name=None):
     body={}
     body['id'] = id
-    body['properties'] = properties
     body['path'] = path
     body['protocol'] = protocol
     body['interval_in_seconds'] = interval_in_seconds
@@ -173,7 +165,6 @@ def create_frontdoor_loadbalancingsetting(cmd, client,
                                           front_door_name,
                                           name,
                                           id=None,
-                                          properties=None,
                                           sample_size=None,
                                           successful_samples_required=None,
                                           additional_latency_milliseconds=None,
@@ -181,7 +172,6 @@ def create_frontdoor_loadbalancingsetting(cmd, client,
                                           name=None):
     body={}
     body['id'] = id
-    body['properties'] = properties
     body['sample_size'] = sample_size
     body['successful_samples_required'] = successful_samples_required
     body['additional_latency_milliseconds'] = additional_latency_milliseconds
@@ -223,7 +213,6 @@ def create_frontdoor_backendpool(cmd, client,
                                  front_door_name,
                                  name,
                                  id=None,
-                                 properties=None,
                                  backends=None,
                                  load_balancing_settings=None,
                                  health_probe_settings=None,
@@ -231,7 +220,6 @@ def create_frontdoor_backendpool(cmd, client,
                                  name=None):
     body={}
     body['id'] = id
-    body['properties'] = properties
     body['backends'] = backends
     body['load_balancing_settings'] = load_balancing_settings
     body['health_probe_settings'] = health_probe_settings
@@ -273,7 +261,6 @@ def create_frontdoor_frontendendpoint(cmd, client,
                                       front_door_name,
                                       name,
                                       id=None,
-                                      properties=None,
                                       host_name=None,
                                       session_affinity_enabled_state=None,
                                       session_affinity_ttl_seconds=None,
@@ -282,7 +269,6 @@ def create_frontdoor_frontendendpoint(cmd, client,
                                       name=None):
     body={}
     body['id'] = id
-    body['properties'] = properties
     body['host_name'] = host_name
     body['session_affinity_enabled_state'] = session_affinity_enabled_state
     body['session_affinity_ttl_seconds'] = session_affinity_ttl_seconds

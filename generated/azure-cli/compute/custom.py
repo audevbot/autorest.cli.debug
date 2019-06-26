@@ -11,13 +11,11 @@ def create_compute(cmd, client,
                    name,
                    location=None,
                    tags=None,
-                   properties=None,
                    description=None,
                    identifier=None):
     body={}
     body['location'] = location
     body['tags'] = tags
-    body['properties'] = properties
     body['description'] = description
     body['identifier'] = identifier
     return client.galleries.create_or_update(resource_group_name=resource_group, gallery_name=name)
@@ -56,7 +54,6 @@ def create_compute_image(cmd, client,
                          name,
                          location=None,
                          tags=None,
-                         properties=None,
                          description=None,
                          eula=None,
                          privacy_statement_uri=None,
@@ -71,7 +68,6 @@ def create_compute_image(cmd, client,
     body={}
     body['location'] = location
     body['tags'] = tags
-    body['properties'] = properties
     body['description'] = description
     body['eula'] = eula
     body['privacy_statement_uri'] = privacy_statement_uri
@@ -121,12 +117,10 @@ def create_compute_image_version(cmd, client,
                                  name,
                                  location=None,
                                  tags=None,
-                                 properties=None,
                                  publishing_profile=None):
     body={}
     body['location'] = location
     body['tags'] = tags
-    body['properties'] = properties
     body['publishing_profile'] = publishing_profile
     return client.gallery_image_versions.create_or_update(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=gallery_image_name, gallery_image_version_name=name)
 
