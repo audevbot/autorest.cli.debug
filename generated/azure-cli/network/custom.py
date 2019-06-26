@@ -29,8 +29,22 @@ def create_network(cmd, client,
 # module equivalent: azure_rm_azurefirewall
 def update_network(cmd, client,
                    resource_group,
-                   name):
+                   name,
+                   id=None,
+                   location=None,
+                   tags=None,
+                   application_rule_collections=None,
+                   nat_rule_collections=None,
+                   network_rule_collections=None,
+                   ip_configurations=None):
     body={}
+    body['id'] = id
+    body['location'] = location
+    body['tags'] = tags
+    body['application_rule_collections'] = application_rule_collections
+    body['nat_rule_collections'] = nat_rule_collections
+    body['network_rule_collections'] = network_rule_collections
+    body['ip_configurations'] = ip_configurations
     return client.azure_firewalls.create_or_update(resource_group_name=resource_group, azure_firewall_name=name, parameters=body)
 
 # module equivalent: azure_rm_azurefirewall

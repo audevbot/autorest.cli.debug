@@ -23,8 +23,16 @@ def create_compute(cmd, client,
 # module equivalent: azure_rm_computegallery
 def update_compute(cmd, client,
                    resource_group,
-                   name):
+                   name,
+                   location=None,
+                   tags=None,
+                   description=None,
+                   identifier=None):
     body={}
+    body['location'] = location
+    body['tags'] = tags
+    body['description'] = description
+    body['identifier'] = identifier
     return client.galleries.create_or_update(resource_group_name=resource_group, gallery_name=name)
 
 # module equivalent: azure_rm_computegallery
@@ -85,8 +93,34 @@ def create_compute_image(cmd, client,
 def update_compute_image(cmd, client,
                          resource_group,
                          gallery_name,
-                         name):
+                         name,
+                         location=None,
+                         tags=None,
+                         description=None,
+                         eula=None,
+                         privacy_statement_uri=None,
+                         release_note_uri=None,
+                         os_type=None,
+                         os_state=None,
+                         end_of_life_date=None,
+                         identifier=None,
+                         recommended=None,
+                         disallowed=None,
+                         purchase_plan=None):
     body={}
+    body['location'] = location
+    body['tags'] = tags
+    body['description'] = description
+    body['eula'] = eula
+    body['privacy_statement_uri'] = privacy_statement_uri
+    body['release_note_uri'] = release_note_uri
+    body['os_type'] = os_type
+    body['os_state'] = os_state
+    body['end_of_life_date'] = end_of_life_date
+    body['identifier'] = identifier
+    body['recommended'] = recommended
+    body['disallowed'] = disallowed
+    body['purchase_plan'] = purchase_plan
     return client.gallery_images.create_or_update(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=name)
 
 # module equivalent: azure_rm_computegalleryimage
@@ -129,8 +163,14 @@ def update_compute_image_version(cmd, client,
                                  resource_group,
                                  gallery_name,
                                  gallery_image_name,
-                                 name):
+                                 name,
+                                 location=None,
+                                 tags=None,
+                                 publishing_profile=None):
     body={}
+    body['location'] = location
+    body['tags'] = tags
+    body['publishing_profile'] = publishing_profile
     return client.gallery_image_versions.create_or_update(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=gallery_image_name, gallery_image_version_name=name)
 
 # module equivalent: azure_rm_computegalleryimageversion

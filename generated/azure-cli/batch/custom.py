@@ -25,8 +25,18 @@ def create_batch(cmd, client,
 # module equivalent: azure_rm_batchaccount
 def update_batch(cmd, client,
                  resource_group,
-                 name):
+                 name,
+                 location=None,
+                 tags=None,
+                 auto_storage_account_id=None,
+                 pool_allocation_mode=None,
+                 key_vault_reference=None):
     body={}
+    body['location'] = location
+    body['tags'] = tags
+    body.get('auto_storage', {}).get('storage_account_id', {})['storage_account_id'] = storage_account_id
+    body['pool_allocation_mode'] = pool_allocation_mode
+    body['key_vault_reference'] = key_vault_reference
     return client.batch_account.update(resource_group_name=resource_group, account_name=name, parameters=body)
 
 # module equivalent: azure_rm_batchaccount
@@ -99,8 +109,14 @@ def create_batch_application(cmd, client,
 def update_batch_application(cmd, client,
                              resource_group,
                              account_name,
-                             name):
+                             name,
+                             display_name=None,
+                             allow_updates=None,
+                             default_version=None):
     body={}
+    body['display_name'] = display_name
+    body['allow_updates'] = allow_updates
+    body['default_version'] = default_version
     return client.application.update(resource_group_name=resource_group, account_name=account_name, application_name=name, parameters=body)
 
 # module equivalent: azure_rm_batchapplication
@@ -145,8 +161,18 @@ def create_batch_certificate(cmd, client,
 def update_batch_certificate(cmd, client,
                              resource_group,
                              account_name,
-                             name):
+                             name,
+                             thumbprint_algorithm=None,
+                             thumbprint=None,
+                             format=None,
+                             data=None,
+                             password=None):
     body={}
+    body['thumbprint_algorithm'] = thumbprint_algorithm
+    body['thumbprint'] = thumbprint
+    body['format'] = format
+    body['data'] = data
+    body['password'] = password
     return client.certificate.update(resource_group_name=resource_group, account_name=account_name, certificate_name=name, parameters=body)
 
 # module equivalent: azure_rm_batchcertificate
@@ -209,8 +235,36 @@ def create_batch_pool(cmd, client,
 def update_batch_pool(cmd, client,
                       resource_group,
                       account_name,
-                      name):
+                      name,
+                      display_name=None,
+                      vm_size=None,
+                      deployment_configuration=None,
+                      scale_settings=None,
+                      inter_node_communication=None,
+                      network_configuration=None,
+                      max_tasks_per_node=None,
+                      task_scheduling_policy=None,
+                      user_accounts=None,
+                      metadata=None,
+                      start_task=None,
+                      certificates=None,
+                      application_packages=None,
+                      application_licenses=None):
     body={}
+    body['display_name'] = display_name
+    body['vm_size'] = vm_size
+    body['deployment_configuration'] = deployment_configuration
+    body['scale_settings'] = scale_settings
+    body['inter_node_communication'] = inter_node_communication
+    body['network_configuration'] = network_configuration
+    body['max_tasks_per_node'] = max_tasks_per_node
+    body['task_scheduling_policy'] = task_scheduling_policy
+    body['user_accounts'] = user_accounts
+    body['metadata'] = metadata
+    body['start_task'] = start_task
+    body['certificates'] = certificates
+    body['application_packages'] = application_packages
+    body['application_licenses'] = application_licenses
     return client.pool.update(resource_group_name=resource_group, account_name=account_name, pool_name=name, parameters=body)
 
 # module equivalent: azure_rm_batchpool

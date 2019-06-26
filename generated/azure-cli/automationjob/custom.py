@@ -13,12 +13,10 @@ def create_automationjob_job(cmd, client,
                              parameters=None,
                              client_request_id=None,
                              runbook=None,
-                             parameters=None,
                              run_on=None):
     body={}
     body['parameters'] = parameters
     body['runbook'] = runbook
-    body['parameters'] = parameters
     body['run_on'] = run_on
     return client.job.create(resource_group_name=resource_group, automation_account_name=automation_account_name, job_name=name, parameters=body, client_request_id=client_request_id)
 
