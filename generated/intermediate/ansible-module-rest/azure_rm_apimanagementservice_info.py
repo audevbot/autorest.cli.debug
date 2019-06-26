@@ -305,17 +305,13 @@ options:
     description:
       - Publisher name.
     required: true
-  sku:
+  sku_name:
     description:
-      - SKU properties of the API Management service.
-    suboptions:
-      name:
-        description:
-          - Name of the Sku.
-        required: true
-      capacity:
-        description:
-          - Capacity of the SKU (number of deployed units of the SKU).
+      - Name of the Sku.
+    required: true
+  sku_capacity:
+    description:
+      - Capacity of the SKU (number of deployed units of the SKU).
   identity:
     description:
       - Managed service identity of the Api Management service.
@@ -418,19 +414,6 @@ api_management_service:
           returned: always
           type: dict
           sample: null
-          contains:
-            name:
-              description:
-                - Name of the Sku.
-              returned: always
-              type: str
-              sample: null
-            capacity:
-              description:
-                - Capacity of the SKU (number of deployed units of the SKU).
-              returned: always
-              type: number
-              sample: null
         identity:
           description:
             - Managed service identity of the Api Management service.

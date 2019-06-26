@@ -215,7 +215,7 @@ options:
           - >-
             The Firewall Internal Load Balancer IP to be used as the next hop in
             User Defined Routes.
-      '*':
+      id:
         description:
           - Resource ID.
       provisioning_state:

@@ -1831,11 +1831,11 @@ Modules:
             Hidden: true
             IncludeInResponse: true
             Flatten: false
-          - NameSwagger: '*'
-            NameAnsible: '*'
+          - NameSwagger: Id
+            NameAnsible: id
             NamePythonSdk: id
             NameGoSdk: ID
-            NameTerraform: '*'
+            NameTerraform: Id
             IdPortion: null
             Type: str
             TypeName: String
@@ -1893,11 +1893,11 @@ Modules:
             Hidden: true
             IncludeInResponse: true
             Flatten: false
-          - NameSwagger: '*'
-            NameAnsible: '*'
+          - NameSwagger: Id
+            NameAnsible: id
             NamePythonSdk: id
             NameGoSdk: ID
-            NameTerraform: '*'
+            NameTerraform: Id
             IdPortion: null
             Type: str
             TypeName: String
@@ -6301,11 +6301,11 @@ Modules:
             Hidden: true
             IncludeInResponse: false
             Flatten: false
-          - NameSwagger: '*'
-            NameAnsible: '*'
+          - NameSwagger: Id
+            NameAnsible: id
             NamePythonSdk: id
             NameGoSdk: ID
-            NameTerraform: '*'
+            NameTerraform: Id
             IdPortion: null
             Type: str
             TypeName: String
@@ -6363,11 +6363,11 @@ Modules:
             Hidden: true
             IncludeInResponse: false
             Flatten: false
-          - NameSwagger: '*'
-            NameAnsible: '*'
+          - NameSwagger: Id
+            NameAnsible: id
             NamePythonSdk: id
             NameGoSdk: ID
-            NameTerraform: '*'
+            NameTerraform: Id
             IdPortion: null
             Type: str
             TypeName: String

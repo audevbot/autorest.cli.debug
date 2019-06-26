@@ -15,8 +15,5 @@ task: !ruby/object:Provider::Ansible::Task
         store_name: CertificateAuthority
     publisher_email: apim@autorestsdk.com
     publisher_name: autorestsdk
-    sku:
-      name: Basic
-      capacity: '1'
     location: Central US
   

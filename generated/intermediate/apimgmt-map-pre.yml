@@ -42889,88 +42889,88 @@ Modules:
         IncludeInDocumentation: true
         IncludeInArgSpec: true
         NoLog: false
-        SubOptions:
-          - NameSwagger: name
-            NameAnsible: name
-            NamePythonSdk: name
-            NameGoSdk: Name
-            NameTerraform: Name
-            IdPortion: null
-            Type: str
-            TypeName: SkuType
-            TypeNameGo: SkuType
-            IsList: false
-            Required: true
-            Documentation: Name of the Sku.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues:
-              - Key: Developer
-                Value: Developer
-                Description: Developer SKU of Api Management.
-              - Key: Standard
-                Value: Standard
-                Description: Standard SKU of Api Management.
-              - Key: Premium
-                Value: Premium
-                Description: Premium SKU of Api Management.
-              - Key: Basic
-                Value: Basic
-                Description: Basic SKU of Api Management.
-              - Key: Consumption
-                Value: Consumption
-                Description: Consumption SKU of Api Management.
-            PathSwagger: /sku/name
-            PathPython: /sku/name
-            PathGo: /sku/name
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: true
-            Flatten: false
-          - NameSwagger: capacity
-            NameAnsible: capacity
-            NamePythonSdk: capacity
-            NameGoSdk: Capacity
-            NameTerraform: Capacity
-            IdPortion: null
-            Type: number
-            TypeName: Int
-            TypeNameGo: Int
-            IsList: false
-            Required: false
-            Documentation: Capacity of the SKU (number of deployed units of the SKU).
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /sku/capacity
-            PathPython: /sku/capacity
-            PathGo: /sku/capacity
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: true
-            Flatten: false
+        SubOptions: []
         EnumValues: []
         PathSwagger: /sku
         PathPython: /sku
         PathGo: /sku
         DispositionSdk: /
         DispositionRest: /
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: true
+        IncludeInResponse: true
+        Flatten: false
+      - NameSwagger: SkuName
+        NameAnsible: sku_name
+        NamePythonSdk: name
+        NameGoSdk: Name
+        NameTerraform: SkuName
+        IdPortion: null
+        Type: str
+        TypeName: SkuType
+        TypeNameGo: SkuType
+        IsList: false
+        Required: true
+        Documentation: Name of the Sku.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues:
+          - Key: Developer
+            Value: Developer
+            Description: Developer SKU of Api Management.
+          - Key: Standard
+            Value: Standard
+            Description: Standard SKU of Api Management.
+          - Key: Premium
+            Value: Premium
+            Description: Premium SKU of Api Management.
+          - Key: Basic
+            Value: Basic
+            Description: Basic SKU of Api Management.
+          - Key: Consumption
+            Value: Consumption
+            Description: Consumption SKU of Api Management.
+        PathSwagger: /sku/name
+        PathPython: /sku/name
+        PathGo: /sku/name
+        DispositionSdk: sku/name
+        DispositionRest: sku/name
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - NameSwagger: SkuCapacity
+        NameAnsible: sku_capacity
+        NamePythonSdk: capacity
+        NameGoSdk: Capacity
+        NameTerraform: SkuCapacity
+        IdPortion: null
+        Type: number
+        TypeName: Int
+        TypeNameGo: Int
+        IsList: false
+        Required: false
+        Documentation: Capacity of the SKU (number of deployed units of the SKU).
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /sku/capacity
+        PathPython: /sku/capacity
+        PathGo: /sku/capacity
+        DispositionSdk: sku/capacity
+        DispositionRest: sku/capacity
         Comparison: ''
         Updatable: true
         ExampleValue: null
@@ -47615,82 +47615,7 @@ Modules:
         IncludeInDocumentation: true
         IncludeInArgSpec: false
         NoLog: false
-        SubOptions:
-          - NameSwagger: name
-            NameAnsible: name
-            NamePythonSdk: name
-            NameGoSdk: Name
-            NameTerraform: Name
-            IdPortion: null
-            Type: str
-            TypeName: SkuType
-            TypeNameGo: SkuType
-            IsList: false
-            Required: true
-            Documentation: Name of the Sku.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues:
-              - Key: Developer
-                Value: Developer
-                Description: Developer SKU of Api Management.
-              - Key: Standard
-                Value: Standard
-                Description: Standard SKU of Api Management.
-              - Key: Premium
-                Value: Premium
-                Description: Premium SKU of Api Management.
-              - Key: Basic
-                Value: Basic
-                Description: Basic SKU of Api Management.
-              - Key: Consumption
-                Value: Consumption
-                Description: Consumption SKU of Api Management.
-            PathSwagger: /sku/name
-            PathPython: /sku/name
-            PathGo: /sku/name
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: capacity
-            NameAnsible: capacity
-            NamePythonSdk: capacity
-            NameGoSdk: Capacity
-            NameTerraform: Capacity
-            IdPortion: null
-            Type: number
-            TypeName: Int
-            TypeNameGo: Int
-            IsList: false
-            Required: false
-            Documentation: Capacity of the SKU (number of deployed units of the SKU).
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /sku/capacity
-            PathPython: /sku/capacity
-            PathGo: /sku/capacity
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
+        SubOptions: []
         EnumValues: []
         PathSwagger: /sku
         PathPython: /sku
@@ -47700,8 +47625,83 @@ Modules:
         Comparison: ''
         Updatable: true
         ExampleValue: null
-        Hidden: false
+        Hidden: true
         IncludeInResponse: true
+        Flatten: false
+      - NameSwagger: SkuName
+        NameAnsible: sku_name
+        NamePythonSdk: name
+        NameGoSdk: Name
+        NameTerraform: SkuName
+        IdPortion: null
+        Type: str
+        TypeName: SkuType
+        TypeNameGo: SkuType
+        IsList: false
+        Required: true
+        Documentation: Name of the Sku.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues:
+          - Key: Developer
+            Value: Developer
+            Description: Developer SKU of Api Management.
+          - Key: Standard
+            Value: Standard
+            Description: Standard SKU of Api Management.
+          - Key: Premium
+            Value: Premium
+            Description: Premium SKU of Api Management.
+          - Key: Basic
+            Value: Basic
+            Description: Basic SKU of Api Management.
+          - Key: Consumption
+            Value: Consumption
+            Description: Consumption SKU of Api Management.
+        PathSwagger: /sku/name
+        PathPython: /sku/name
+        PathGo: /sku/name
+        DispositionSdk: sku/name
+        DispositionRest: sku/name
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: false
+        Flatten: false
+      - NameSwagger: SkuCapacity
+        NameAnsible: sku_capacity
+        NamePythonSdk: capacity
+        NameGoSdk: Capacity
+        NameTerraform: SkuCapacity
+        IdPortion: null
+        Type: number
+        TypeName: Int
+        TypeNameGo: Int
+        IsList: false
+        Required: false
+        Documentation: Capacity of the SKU (number of deployed units of the SKU).
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /sku/capacity
+        PathPython: /sku/capacity
+        PathGo: /sku/capacity
+        DispositionSdk: sku/capacity
+        DispositionRest: sku/capacity
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: false
         Flatten: false
       - &ref_165
         NameSwagger: identity
