@@ -911,11 +911,11 @@ objects:
             go_type_name: ServiceSkuProperties
             python_field_name: sku
           '/sku/name': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
-            go_field_name: Skuname
+            go_field_name: SkuName
             go_enum_type_name: SkuType
             python_field_name: name
           '/sku/capacity': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
-            go_field_name: Skucapacity
+            go_field_name: SkuCapacity
             python_field_name: capacity
           '/identity': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             go_field_name: Identity
@@ -1208,7 +1208,7 @@ objects:
         sample_value: Contoso Vnext
         azure_sdk_references: ['/publisherName', '/properties/publisherName']
       - !ruby/object:Api::Type::Enum
-        name: 'skuname'
+        name: 'skuName'
         description: 'Name of the Sku.'
         required: true
         values:
@@ -1220,7 +1220,7 @@ objects:
         default_value: :Developer
         azure_sdk_references: ['/sku/name']
       - !ruby/object:Api::Azure::Type::Integer
-        name: 'skucapacity'
+        name: 'skuCapacity'
         description: 'Capacity of the SKU (number of deployed units of the SKU).'
         required: false
         azure_sdk_references: ['/sku/capacity']

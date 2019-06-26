@@ -305,11 +305,11 @@ options:
     description:
       - Publisher name.
     required: true
-  skuname:
+  sku_name:
     description:
       - Name of the Sku.
     required: true
-  skucapacity:
+  sku_capacity:
     description:
       - Capacity of the SKU (number of deployed units of the SKU).
   identity:
