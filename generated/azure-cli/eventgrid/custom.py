@@ -14,9 +14,7 @@ def create_eventgrid(cmd, client,
                      filter=None,
                      labels=None,
                      retry_policy=None,
-                     dead_letter_destination=None,
-                     topic=None,
-                     provisioning_state=None):
+                     dead_letter_destination=None):
     body={}
     body['properties'] = properties
     body['destination'] = destination
@@ -24,8 +22,6 @@ def create_eventgrid(cmd, client,
     body['labels'] = labels
     body['retry_policy'] = retry_policy
     body['dead_letter_destination'] = dead_letter_destination
-    body['topic'] = topic
-    body['provisioning_state'] = provisioning_state
     return client.event_subscriptions.create_or_update(scope=scope, event_subscription_name=name)
 
 # module equivalent: azure_rm_eventgrideventsubscription
@@ -74,15 +70,11 @@ def create_eventgrid(cmd, client,
                      name,
                      location=None,
                      tags=None,
-                     properties=None,
-                     provisioning_state=None,
-                     endpoint=None):
+                     properties=None):
     body={}
     body['location'] = location
     body['tags'] = tags
     body['properties'] = properties
-    body['provisioning_state'] = provisioning_state
-    body['endpoint'] = endpoint
     return client.topics.create_or_update(resource_group_name=resource_group, topic_name=name)
 
 # module equivalent: azure_rm_eventgridtopic

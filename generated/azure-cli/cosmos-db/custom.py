@@ -21,12 +21,7 @@ def create_cosmos-db(cmd, client,
                      enable_automatic_failover=None,
                      capabilities=None,
                      virtual_network_rules=None,
-                     enable_multiple_write_locations=None,
-                     provisioning_state=None,
-                     document_endpoint=None,
-                     write_locations=None,
-                     read_locations=None,
-                     failover_policies=None):
+                     enable_multiple_write_locations=None):
     body={}
     body['location'] = location
     body['tags'] = tags
@@ -41,11 +36,6 @@ def create_cosmos-db(cmd, client,
     body['capabilities'] = capabilities
     body['virtual_network_rules'] = virtual_network_rules
     body['enable_multiple_write_locations'] = enable_multiple_write_locations
-    body['provisioning_state'] = provisioning_state
-    body['document_endpoint'] = document_endpoint
-    body['write_locations'] = write_locations
-    body['read_locations'] = read_locations
-    body['failover_policies'] = failover_policies
     return client.database_accounts.create_or_update(resource_group_name=resource_group, account_name=name)
 
 # module equivalent: azure_rm_cosmosdbdatabaseaccount

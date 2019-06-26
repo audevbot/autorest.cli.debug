@@ -13,15 +13,13 @@ def create_compute(cmd, client,
                    tags=None,
                    properties=None,
                    description=None,
-                   identifier=None,
-                   provisioning_state=None):
+                   identifier=None):
     body={}
     body['location'] = location
     body['tags'] = tags
     body['properties'] = properties
     body['description'] = description
     body['identifier'] = identifier
-    body['provisioning_state'] = provisioning_state
     return client.galleries.create_or_update(resource_group_name=resource_group, gallery_name=name)
 
 # module equivalent: azure_rm_computegallery
@@ -69,8 +67,7 @@ def create_compute_image(cmd, client,
                          identifier=None,
                          recommended=None,
                          disallowed=None,
-                         purchase_plan=None,
-                         provisioning_state=None):
+                         purchase_plan=None):
     body={}
     body['location'] = location
     body['tags'] = tags
@@ -86,7 +83,6 @@ def create_compute_image(cmd, client,
     body['recommended'] = recommended
     body['disallowed'] = disallowed
     body['purchase_plan'] = purchase_plan
-    body['provisioning_state'] = provisioning_state
     return client.gallery_images.create_or_update(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=name)
 
 # module equivalent: azure_rm_computegalleryimage
@@ -126,18 +122,12 @@ def create_compute_image_version(cmd, client,
                                  location=None,
                                  tags=None,
                                  properties=None,
-                                 publishing_profile=None,
-                                 provisioning_state=None,
-                                 storage_profile=None,
-                                 replication_status=None):
+                                 publishing_profile=None):
     body={}
     body['location'] = location
     body['tags'] = tags
     body['properties'] = properties
     body['publishing_profile'] = publishing_profile
-    body['provisioning_state'] = provisioning_state
-    body['storage_profile'] = storage_profile
-    body['replication_status'] = replication_status
     return client.gallery_image_versions.create_or_update(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=gallery_image_name, gallery_image_version_name=name)
 
 # module equivalent: azure_rm_computegalleryimageversion

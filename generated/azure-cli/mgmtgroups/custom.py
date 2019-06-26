@@ -11,18 +11,12 @@ def create_mgmtgroups(cmd, client,
                       name=None,
                       properties=None,
                       display_name=None,
-                      details=None,
-                      tenant_id=None,
-                      roles=None,
-                      children=None):
+                      details=None):
     body={}
     body['name'] = name
     body['properties'] = properties
     body['display_name'] = display_name
     body['details'] = details
-    body['tenant_id'] = tenant_id
-    body['roles'] = roles
-    body['children'] = children
     return client.management_groups.create_or_update(group_id=group_id)
 
 # module equivalent: azure_rm_managementgroup

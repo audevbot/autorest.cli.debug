@@ -20,9 +20,7 @@ def create_frontdoor(cmd, client,
                      frontend_endpoints=None,
                      backend_pools_settings=None,
                      enabled_state=None,
-                     resource_state=None,
-                     provisioning_state=None,
-                     cname=None):
+                     resource_state=None):
     body={}
     body['location'] = location
     body['tags'] = tags
@@ -36,8 +34,6 @@ def create_frontdoor(cmd, client,
     body['backend_pools_settings'] = backend_pools_settings
     body['enabled_state'] = enabled_state
     body['resource_state'] = resource_state
-    body['provisioning_state'] = provisioning_state
-    body['cname'] = cname
     return client.front_doors.create_or_update(resource_group_name=resource_group, front_door_name=name)
 
 # module equivalent: azure_rm_frontdoor
@@ -283,9 +279,6 @@ def create_frontdoor_frontendendpoint(cmd, client,
                                       session_affinity_ttl_seconds=None,
                                       web_application_firewall_policy_link=None,
                                       resource_state=None,
-                                      custom_https_provisioning_state=None,
-                                      custom_https_provisioning_substate=None,
-                                      custom_https_configuration=None,
                                       name=None):
     body={}
     body['id'] = id
@@ -295,9 +288,6 @@ def create_frontdoor_frontendendpoint(cmd, client,
     body['session_affinity_ttl_seconds'] = session_affinity_ttl_seconds
     body['web_application_firewall_policy_link'] = web_application_firewall_policy_link
     body['resource_state'] = resource_state
-    body['custom_https_provisioning_state'] = custom_https_provisioning_state
-    body['custom_https_provisioning_substate'] = custom_https_provisioning_substate
-    body['custom_https_configuration'] = custom_https_configuration
     body['name'] = name
     return client.frontend_endpoints.create_or_update(resource_group_name=resource_group, front_door_name=front_door_name, frontend_endpoint_name=name)
 

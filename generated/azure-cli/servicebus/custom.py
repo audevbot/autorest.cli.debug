@@ -13,22 +13,12 @@ def create_servicebus(cmd, client,
                       location=None,
                       tags=None,
                       sku=None,
-                      properties=None,
-                      provisioning_state=None,
-                      created_at=None,
-                      updated_at=None,
-                      service_bus_endpoint=None,
-                      metric_id=None):
+                      properties=None):
     body={}
     body['location'] = location
     body['tags'] = tags
     body['sku'] = sku
     body['properties'] = properties
-    body['provisioning_state'] = provisioning_state
-    body['created_at'] = created_at
-    body['updated_at'] = updated_at
-    body['service_bus_endpoint'] = service_bus_endpoint
-    body['metric_id'] = metric_id
     return client.namespaces.create_or_update(resource_group_name=resource_group, namespace_name=name, parameters=body)
 
 # module equivalent: azure_rm_servicebusnamespace
@@ -70,17 +60,11 @@ def create_servicebus_disasterrecoveryconfig(cmd, client,
                                              parameters=None,
                                              properties=None,
                                              partner_namespace=None,
-                                             alternate_name=None,
-                                             provisioning_state=None,
-                                             pending_replication_operations_count=None,
-                                             role=None):
+                                             alternate_name=None):
     body={}
     body['properties'] = properties
     body['partner_namespace'] = partner_namespace
     body['alternate_name'] = alternate_name
-    body['provisioning_state'] = provisioning_state
-    body['pending_replication_operations_count'] = pending_replication_operations_count
-    body['role'] = role
     return client.disaster_recovery_configs.create_or_update(resource_group_name=resource_group, namespace_name=name, alias=alias, parameters=body)
 
 # module equivalent: azure_rm_servicebusdisasterrecoveryconfig
@@ -137,13 +121,7 @@ def create_servicebus_queue(cmd, client,
                             enable_partitioning=None,
                             enable_express=None,
                             forward_to=None,
-                            forward_dead_lettered_messages_to=None,
-                            count_details=None,
-                            created_at=None,
-                            updated_at=None,
-                            accessed_at=None,
-                            size_in_bytes=None,
-                            message_count=None):
+                            forward_dead_lettered_messages_to=None):
     body={}
     body['properties'] = properties
     body['lock_duration'] = lock_duration
@@ -161,12 +139,6 @@ def create_servicebus_queue(cmd, client,
     body['enable_express'] = enable_express
     body['forward_to'] = forward_to
     body['forward_dead_lettered_messages_to'] = forward_dead_lettered_messages_to
-    body['count_details'] = count_details
-    body['created_at'] = created_at
-    body['updated_at'] = updated_at
-    body['accessed_at'] = accessed_at
-    body['size_in_bytes'] = size_in_bytes
-    body['message_count'] = message_count
     return client.queues.create_or_update(resource_group_name=resource_group, namespace_name=namespace_name, queue_name=name, parameters=body)
 
 # module equivalent: azure_rm_servicebusqueue
@@ -218,13 +190,7 @@ def create_servicebus_topic(cmd, client,
                             support_ordering=None,
                             auto_delete_on_idle=None,
                             enable_partitioning=None,
-                            enable_express=None,
-                            size_in_bytes=None,
-                            created_at=None,
-                            updated_at=None,
-                            accessed_at=None,
-                            subscription_count=None,
-                            count_details=None):
+                            enable_express=None):
     body={}
     body['properties'] = properties
     body['default_message_time_to_live'] = default_message_time_to_live
@@ -237,12 +203,6 @@ def create_servicebus_topic(cmd, client,
     body['auto_delete_on_idle'] = auto_delete_on_idle
     body['enable_partitioning'] = enable_partitioning
     body['enable_express'] = enable_express
-    body['size_in_bytes'] = size_in_bytes
-    body['created_at'] = created_at
-    body['updated_at'] = updated_at
-    body['accessed_at'] = accessed_at
-    body['subscription_count'] = subscription_count
-    body['count_details'] = count_details
     return client.topics.create_or_update(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=name, parameters=body)
 
 # module equivalent: azure_rm_servicebustopic
@@ -297,12 +257,7 @@ def create_servicebus_topic_subscription(cmd, client,
                                          enable_batched_operations=None,
                                          auto_delete_on_idle=None,
                                          forward_to=None,
-                                         forward_dead_lettered_messages_to=None,
-                                         message_count=None,
-                                         created_at=None,
-                                         accessed_at=None,
-                                         updated_at=None,
-                                         count_details=None):
+                                         forward_dead_lettered_messages_to=None):
     body={}
     body['properties'] = properties
     body['lock_duration'] = lock_duration
@@ -317,11 +272,6 @@ def create_servicebus_topic_subscription(cmd, client,
     body['auto_delete_on_idle'] = auto_delete_on_idle
     body['forward_to'] = forward_to
     body['forward_dead_lettered_messages_to'] = forward_dead_lettered_messages_to
-    body['message_count'] = message_count
-    body['created_at'] = created_at
-    body['accessed_at'] = accessed_at
-    body['updated_at'] = updated_at
-    body['count_details'] = count_details
     return client.subscriptions.create_or_update(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=name, parameters=body)
 
 # module equivalent: azure_rm_servicebussubscription
