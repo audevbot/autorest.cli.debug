@@ -43,5 +43,7 @@ task: !ruby/object:Provider::Ansible::Task
     virtual_network_type: External
     publisher_email: admin@live.com
     publisher_name: contoso
+    sku_name: Premium
+    sku_capacity: '1'
     location: Central US
   

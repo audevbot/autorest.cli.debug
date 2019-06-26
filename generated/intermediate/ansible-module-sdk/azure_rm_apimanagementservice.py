@@ -365,6 +365,8 @@ EXAMPLES = '''
       tag3: value3
     publisher_email: apim@autorestsdk.com
     publisher_name: autorestsdk
+    sku_name: Developer
+    sku_capacity: '1'
     location: Central US
 - name: ApiManagementCreateMultiRegionServiceWithCustomHostname
   azure_rm_apimanagementservice:
@@ -408,6 +410,8 @@ EXAMPLES = '''
     virtual_network_type: External
     publisher_email: admin@live.com
     publisher_name: contoso
+    sku_name: Premium
+    sku_capacity: '1'
     location: Central US
 - name: ApiManagementCreateServiceHavingMsi
   azure_rm_apimanagementservice:
@@ -419,6 +423,7 @@ EXAMPLES = '''
       tag3: value3
     publisher_email: apim@autorestsdk.com
     publisher_name: autorestsdk
+    sku_name: Consumption
     identity:
       type: SystemAssigned
     location: West US
@@ -436,6 +441,8 @@ EXAMPLES = '''
         store_name: CertificateAuthority
     publisher_email: apim@autorestsdk.com
     publisher_name: autorestsdk
+    sku_name: Basic
+    sku_capacity: '1'
     location: Central US
 - name: ApiManagementUpdateServiceDisableTls10
   azure_rm_apimanagementservice:
@@ -1167,7 +1174,7 @@ class AzureRMApiManagementService(AzureRMModuleBaseExt):
             ),
             sku_name=dict(
                 type='str',
-                disposition='sku/name',
+                disposition='/sku/name',
                 choices=['Developer',
                          'Standard',
                          'Premium',
@@ -1177,7 +1184,7 @@ class AzureRMApiManagementService(AzureRMModuleBaseExt):
             ),
             sku_capacity=dict(
                 type='number',
-                disposition='sku/capacity'
+                disposition='/sku/capacity'
             ),
             identity=dict(
                 type='dict',

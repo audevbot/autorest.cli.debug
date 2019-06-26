@@ -11,6 +11,7 @@ task: !ruby/object:Provider::Ansible::Task
       tag3: value3
     publisher_email: apim@autorestsdk.com
     publisher_name: autorestsdk
+    sku_name: Consumption
     identity:
       type: SystemAssigned
     location: West US

@@ -42954,11 +42954,11 @@ Modules:
         Hidden: true
         IncludeInResponse: true
         Flatten: false
-      - NameSwagger: SkuName
+      - NameSwagger: skuName
         NameAnsible: sku_name
         NamePythonSdk: name
         NameGoSdk: Name
-        NameTerraform: SkuName
+        NameTerraform: skuName
         IdPortion: null
         Type: str
         TypeName: SkuType
@@ -42991,19 +42991,19 @@ Modules:
         PathSwagger: /sku/name
         PathPython: /sku/name
         PathGo: /sku/name
-        DispositionSdk: sku/name
-        DispositionRest: sku/name
+        DispositionSdk: /sku/name
+        DispositionRest: /sku/name
         Comparison: ''
         Updatable: true
-        ExampleValue: null
+        ExampleValue: Basic
         Hidden: false
         IncludeInResponse: true
         Flatten: false
-      - NameSwagger: SkuCapacity
+      - NameSwagger: skuCapacity
         NameAnsible: sku_capacity
         NamePythonSdk: capacity
         NameGoSdk: Capacity
-        NameTerraform: SkuCapacity
+        NameTerraform: skuCapacity
         IdPortion: null
         Type: number
         TypeName: Int
@@ -43021,11 +43021,11 @@ Modules:
         PathSwagger: /sku/capacity
         PathPython: /sku/capacity
         PathGo: /sku/capacity
-        DispositionSdk: sku/capacity
-        DispositionRest: sku/capacity
+        DispositionSdk: /sku/capacity
+        DispositionRest: /sku/capacity
         Comparison: ''
         Updatable: true
-        ExampleValue: null
+        ExampleValue: '1'
         Hidden: false
         IncludeInResponse: true
         Flatten: false
@@ -47680,11 +47680,11 @@ Modules:
         Hidden: true
         IncludeInResponse: true
         Flatten: false
-      - NameSwagger: SkuName
+      - NameSwagger: skuName
         NameAnsible: sku_name
         NamePythonSdk: name
         NameGoSdk: Name
-        NameTerraform: SkuName
+        NameTerraform: skuName
         IdPortion: null
         Type: str
         TypeName: SkuType
@@ -47725,11 +47725,11 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - NameSwagger: SkuCapacity
+      - NameSwagger: skuCapacity
         NameAnsible: sku_capacity
         NamePythonSdk: capacity
         NameGoSdk: Capacity
-        NameTerraform: SkuCapacity
+        NameTerraform: skuCapacity
         IdPortion: null
         Type: number
         TypeName: Int
