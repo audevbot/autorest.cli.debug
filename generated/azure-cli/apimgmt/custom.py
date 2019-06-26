@@ -10,7 +10,6 @@ def create_apimgmt_api(cmd, client,
                        resource_group,
                        name,
                        api_id,
-                       parameters=None,
                        description=None,
                        authentication_settings=None,
                        subscription_key_parameter_names=None,
@@ -60,8 +59,7 @@ def create_apimgmt_api(cmd, client,
 def update_apimgmt_api(cmd, client,
                        resource_group,
                        name,
-                       api_id,
-                       parameters=None):
+                       api_id):
     body={}
     return client.api.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, parameters=body)
 
@@ -94,7 +92,6 @@ def create_apimgmt_api_release(cmd, client,
                                name,
                                api_id,
                                release_id,
-                               parameters=None,
                                api_id=None,
                                notes=None):
     body={}
@@ -107,8 +104,7 @@ def update_apimgmt_api_release(cmd, client,
                                resource_group,
                                name,
                                api_id,
-                               release_id,
-                               parameters=None):
+                               release_id):
     body={}
     return client.api_release.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, release_id=release_id, parameters=body)
 
@@ -141,7 +137,6 @@ def create_apimgmt_api_operation(cmd, client,
                                  name,
                                  api_id,
                                  operation_id,
-                                 parameters=None,
                                  template_parameters=None,
                                  description=None,
                                  request=None,
@@ -166,8 +161,7 @@ def update_apimgmt_api_operation(cmd, client,
                                  resource_group,
                                  name,
                                  api_id,
-                                 operation_id,
-                                 parameters=None):
+                                 operation_id):
     body={}
     return client.api_operation.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, operation_id=operation_id, parameters=body)
 
@@ -201,7 +195,6 @@ def create_apimgmt_api_operation_policy(cmd, client,
                                         api_id,
                                         operation_id,
                                         policy_id,
-                                        parameters=None,
                                         value=None,
                                         format=None):
     body={}
@@ -215,8 +208,7 @@ def update_apimgmt_api_operation_policy(cmd, client,
                                         name,
                                         api_id,
                                         operation_id,
-                                        policy_id,
-                                        parameters=None):
+                                        policy_id):
     body={}
     return client.api_operation_policy.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, operation_id=operation_id, policy_id=policy_id, parameters=body)
 
@@ -252,7 +244,6 @@ def create_apimgmt_tag(cmd, client,
                        resource_group,
                        name,
                        tag_id,
-                       parameters=None,
                        display_name=None):
     body={}
     body['display_name'] = display_name
@@ -262,8 +253,7 @@ def create_apimgmt_tag(cmd, client,
 def update_apimgmt_tag(cmd, client,
                        resource_group,
                        name,
-                       tag_id,
-                       parameters=None):
+                       tag_id):
     body={}
     return client.tag.create_or_update(resource_group_name=resource_group, service_name=name, tag_id=tag_id, parameters=body)
 
@@ -300,7 +290,6 @@ def create_apimgmt_api_policy(cmd, client,
                               name,
                               api_id,
                               policy_id,
-                              parameters=None,
                               value=None,
                               format=None):
     body={}
@@ -313,8 +302,7 @@ def update_apimgmt_api_policy(cmd, client,
                               resource_group,
                               name,
                               api_id,
-                              policy_id,
-                              parameters=None):
+                              policy_id):
     body={}
     return client.api_policy.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, policy_id=policy_id, parameters=body)
 
@@ -348,7 +336,6 @@ def create_apimgmt_api_schema(cmd, client,
                               name,
                               api_id,
                               schema_id,
-                              parameters=None,
                               content_type=None,
                               document=None):
     body={}
@@ -361,8 +348,7 @@ def update_apimgmt_api_schema(cmd, client,
                               resource_group,
                               name,
                               api_id,
-                              schema_id,
-                              parameters=None):
+                              schema_id):
     body={}
     return client.api_schema.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, schema_id=schema_id, parameters=body)
 
@@ -395,7 +381,6 @@ def create_apimgmt_api_diagnostic(cmd, client,
                                   name,
                                   api_id,
                                   diagnostic_id,
-                                  parameters=None,
                                   always_log=None,
                                   logger_id=None,
                                   sampling=None,
@@ -416,8 +401,7 @@ def update_apimgmt_api_diagnostic(cmd, client,
                                   resource_group,
                                   name,
                                   api_id,
-                                  diagnostic_id,
-                                  parameters=None):
+                                  diagnostic_id):
     body={}
     return client.api_diagnostic.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, diagnostic_id=diagnostic_id, parameters=body)
 
@@ -450,7 +434,6 @@ def create_apimgmt_api_issue(cmd, client,
                              name,
                              api_id,
                              issue_id,
-                             parameters=None,
                              created_date=None,
                              state=None,
                              api_id=None,
@@ -471,8 +454,7 @@ def update_apimgmt_api_issue(cmd, client,
                              resource_group,
                              name,
                              api_id,
-                             issue_id,
-                             parameters=None):
+                             issue_id):
     body={}
     return client.api_issue.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, issue_id=issue_id, parameters=body)
 
@@ -506,7 +488,6 @@ def create_apimgmt_api_issue_comment(cmd, client,
                                      api_id,
                                      issue_id,
                                      comment_id,
-                                     parameters=None,
                                      text=None,
                                      created_date=None,
                                      user_id=None):
@@ -522,8 +503,7 @@ def update_apimgmt_api_issue_comment(cmd, client,
                                      name,
                                      api_id,
                                      issue_id,
-                                     comment_id,
-                                     parameters=None):
+                                     comment_id):
     body={}
     return client.api_issue_comment.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, issue_id=issue_id, comment_id=comment_id, parameters=body)
 
@@ -560,7 +540,6 @@ def create_apimgmt_api_issue_attachment(cmd, client,
                                         api_id,
                                         issue_id,
                                         attachment_id,
-                                        parameters=None,
                                         title=None,
                                         content_format=None,
                                         content=None):
@@ -576,8 +555,7 @@ def update_apimgmt_api_issue_attachment(cmd, client,
                                         name,
                                         api_id,
                                         issue_id,
-                                        attachment_id,
-                                        parameters=None):
+                                        attachment_id):
     body={}
     return client.api_issue_attachment.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, issue_id=issue_id, attachment_id=attachment_id, parameters=body)
 
@@ -613,7 +591,6 @@ def create_apimgmt_api_tagdescription(cmd, client,
                                       name,
                                       api_id,
                                       tag_id,
-                                      parameters=None,
                                       description=None,
                                       external_docs_url=None,
                                       external_docs_description=None):
@@ -628,8 +605,7 @@ def update_apimgmt_api_tagdescription(cmd, client,
                                       resource_group,
                                       name,
                                       api_id,
-                                      tag_id,
-                                      parameters=None):
+                                      tag_id):
     body={}
     return client.api_tag_description.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, tag_id=tag_id, parameters=body)
 
@@ -661,7 +637,6 @@ def create_apimgmt_apiversionset(cmd, client,
                                  resource_group,
                                  name,
                                  version_set_id,
-                                 parameters=None,
                                  description=None,
                                  version_query_name=None,
                                  version_header_name=None,
@@ -679,8 +654,7 @@ def create_apimgmt_apiversionset(cmd, client,
 def update_apimgmt_apiversionset(cmd, client,
                                  resource_group,
                                  name,
-                                 version_set_id,
-                                 parameters=None):
+                                 version_set_id):
     body={}
     return client.api_version_set.create_or_update(resource_group_name=resource_group, service_name=name, version_set_id=version_set_id, parameters=body)
 
@@ -709,7 +683,6 @@ def create_apimgmt_authorizationserver(cmd, client,
                                        resource_group,
                                        name,
                                        authsid,
-                                       parameters=None,
                                        description=None,
                                        authorization_methods=None,
                                        client_authentication_method=None,
@@ -749,8 +722,7 @@ def create_apimgmt_authorizationserver(cmd, client,
 def update_apimgmt_authorizationserver(cmd, client,
                                        resource_group,
                                        name,
-                                       authsid,
-                                       parameters=None):
+                                       authsid):
     body={}
     return client.authorization_server.create_or_update(resource_group_name=resource_group, service_name=name, authsid=authsid, parameters=body)
 
@@ -779,7 +751,6 @@ def create_apimgmt_backend(cmd, client,
                            resource_group,
                            name,
                            backend_id,
-                           parameters=None,
                            title=None,
                            description=None,
                            resource_id=None,
@@ -805,8 +776,7 @@ def create_apimgmt_backend(cmd, client,
 def update_apimgmt_backend(cmd, client,
                            resource_group,
                            name,
-                           backend_id,
-                           parameters=None):
+                           backend_id):
     body={}
     return client.backend.create_or_update(resource_group_name=resource_group, service_name=name, backend_id=backend_id, parameters=body)
 
@@ -835,7 +805,6 @@ def create_apimgmt_cache(cmd, client,
                          resource_group,
                          name,
                          cache_id,
-                         parameters=None,
                          description=None,
                          connection_string=None,
                          resource_id=None):
@@ -849,8 +818,7 @@ def create_apimgmt_cache(cmd, client,
 def update_apimgmt_cache(cmd, client,
                          resource_group,
                          name,
-                         cache_id,
-                         parameters=None):
+                         cache_id):
     body={}
     return client.cache.create_or_update(resource_group_name=resource_group, service_name=name, cache_id=cache_id, parameters=body)
 
@@ -879,7 +847,6 @@ def create_apimgmt_certificate(cmd, client,
                                resource_group,
                                name,
                                certificate_id,
-                               parameters=None,
                                data=None,
                                password=None):
     body={}
@@ -891,8 +858,7 @@ def create_apimgmt_certificate(cmd, client,
 def update_apimgmt_certificate(cmd, client,
                                resource_group,
                                name,
-                               certificate_id,
-                               parameters=None):
+                               certificate_id):
     body={}
     return client.certificate.create_or_update(resource_group_name=resource_group, service_name=name, certificate_id=certificate_id, parameters=body)
 
@@ -920,7 +886,6 @@ def show_apimgmt_certificate(cmd, client,
 def create_apimgmt(cmd, client,
                    resource_group,
                    name,
-                   parameters=None,
                    tags=None,
                    notification_sender_email=None,
                    hostname_configurations=None,
@@ -955,8 +920,7 @@ def create_apimgmt(cmd, client,
 # module equivalent: azure_rm_apimanagementservice
 def update_apimgmt(cmd, client,
                    resource_group,
-                   name,
-                   parameters=None):
+                   name):
     body={}
     return client.api_management_service.create_or_update(resource_group_name=resource_group, service_name=name, parameters=body)
 
@@ -985,7 +949,6 @@ def create_apimgmt_diagnostic(cmd, client,
                               resource_group,
                               name,
                               diagnostic_id,
-                              parameters=None,
                               always_log=None,
                               logger_id=None,
                               sampling=None,
@@ -1005,8 +968,7 @@ def create_apimgmt_diagnostic(cmd, client,
 def update_apimgmt_diagnostic(cmd, client,
                               resource_group,
                               name,
-                              diagnostic_id,
-                              parameters=None):
+                              diagnostic_id):
     body={}
     return client.diagnostic.create_or_update(resource_group_name=resource_group, service_name=name, diagnostic_id=diagnostic_id, parameters=body)
 
@@ -1035,7 +997,6 @@ def create_apimgmt_template(cmd, client,
                             resource_group,
                             service_name,
                             name,
-                            parameters=None,
                             subject=None,
                             title=None,
                             description=None,
@@ -1054,8 +1015,7 @@ def create_apimgmt_template(cmd, client,
 def update_apimgmt_template(cmd, client,
                             resource_group,
                             service_name,
-                            name,
-                            parameters=None):
+                            name):
     body={}
     body['parameters'] = parameters
     return client.email_template.create_or_update(resource_group_name=resource_group, service_name=service_name, template_name=name, parameters=body)
@@ -1085,7 +1045,6 @@ def create_apimgmt_group(cmd, client,
                          resource_group,
                          name,
                          group_id,
-                         parameters=None,
                          display_name=None,
                          description=None,
                          type=None,
@@ -1101,8 +1060,7 @@ def create_apimgmt_group(cmd, client,
 def update_apimgmt_group(cmd, client,
                          resource_group,
                          name,
-                         group_id,
-                         parameters=None):
+                         group_id):
     body={}
     return client.group.create_or_update(resource_group_name=resource_group, service_name=name, group_id=group_id, parameters=body)
 
@@ -1171,7 +1129,6 @@ def create_apimgmt_identityprovider(cmd, client,
                                     resource_group,
                                     service_name,
                                     name,
-                                    parameters=None,
                                     type=None,
                                     allowed_tenants=None,
                                     authority=None,
@@ -1197,8 +1154,7 @@ def create_apimgmt_identityprovider(cmd, client,
 def update_apimgmt_identityprovider(cmd, client,
                                     resource_group,
                                     service_name,
-                                    name,
-                                    parameters=None):
+                                    name):
     body={}
     return client.identity_provider.create_or_update(resource_group_name=resource_group, service_name=service_name, identity_provider_name=name, parameters=body)
 
@@ -1227,7 +1183,6 @@ def create_apimgmt_logger(cmd, client,
                           resource_group,
                           name,
                           logger_id,
-                          parameters=None,
                           logger_type=None,
                           description=None,
                           credentials=None,
@@ -1245,8 +1200,7 @@ def create_apimgmt_logger(cmd, client,
 def update_apimgmt_logger(cmd, client,
                           resource_group,
                           name,
-                          logger_id,
-                          parameters=None):
+                          logger_id):
     body={}
     return client.logger.create_or_update(resource_group_name=resource_group, service_name=name, logger_id=logger_id, parameters=body)
 
@@ -1380,7 +1334,6 @@ def create_apimgmt_openidconnectprovider(cmd, client,
                                          resource_group,
                                          name,
                                          opid,
-                                         parameters=None,
                                          display_name=None,
                                          description=None,
                                          metadata_endpoint=None,
@@ -1398,8 +1351,7 @@ def create_apimgmt_openidconnectprovider(cmd, client,
 def update_apimgmt_openidconnectprovider(cmd, client,
                                          resource_group,
                                          name,
-                                         opid,
-                                         parameters=None):
+                                         opid):
     body={}
     return client.open_id_connect_provider.create_or_update(resource_group_name=resource_group, service_name=name, opid=opid, parameters=body)
 
@@ -1428,7 +1380,6 @@ def create_apimgmt_policy(cmd, client,
                           resource_group,
                           name,
                           policy_id,
-                          parameters=None,
                           value=None,
                           format=None):
     body={}
@@ -1440,8 +1391,7 @@ def create_apimgmt_policy(cmd, client,
 def update_apimgmt_policy(cmd, client,
                           resource_group,
                           name,
-                          policy_id,
-                          parameters=None):
+                          policy_id):
     body={}
     return client.policy.create_or_update(resource_group_name=resource_group, service_name=name, policy_id=policy_id, parameters=body)
 
@@ -1470,7 +1420,6 @@ def show_apimgmt_policy(cmd, client,
 def create_apimgmt_portalsetting(cmd, client,
                                  resource_group,
                                  name,
-                                 parameters=None,
                                  enabled=None):
     body={}
     body['enabled'] = enabled
@@ -1479,8 +1428,7 @@ def create_apimgmt_portalsetting(cmd, client,
 # module equivalent: azure_rm_apimanagementsigninsetting
 def update_apimgmt_portalsetting(cmd, client,
                                  resource_group,
-                                 name,
-                                 parameters=None):
+                                 name):
     body={}
     return client.sign_in_settings.create_or_update(resource_group_name=resource_group, service_name=name, parameters=body)
 
@@ -1494,7 +1442,6 @@ def show_apimgmt_portalsetting(cmd, client,
 def create_apimgmt_portalsetting(cmd, client,
                                  resource_group,
                                  name,
-                                 parameters=None,
                                  enabled=None,
                                  terms_of_service=None):
     body={}
@@ -1505,8 +1452,7 @@ def create_apimgmt_portalsetting(cmd, client,
 # module equivalent: azure_rm_apimanagementsignupsetting
 def update_apimgmt_portalsetting(cmd, client,
                                  resource_group,
-                                 name,
-                                 parameters=None):
+                                 name):
     body={}
     return client.sign_up_settings.create_or_update(resource_group_name=resource_group, service_name=name, parameters=body)
 
@@ -1520,7 +1466,6 @@ def show_apimgmt_portalsetting(cmd, client,
 def create_apimgmt_portalsetting(cmd, client,
                                  resource_group,
                                  name,
-                                 parameters=None,
                                  url=None,
                                  validation_key=None,
                                  subscriptions=None,
@@ -1535,8 +1480,7 @@ def create_apimgmt_portalsetting(cmd, client,
 # module equivalent: azure_rm_apimanagementdelegationsetting
 def update_apimgmt_portalsetting(cmd, client,
                                  resource_group,
-                                 name,
-                                 parameters=None):
+                                 name):
     body={}
     return client.delegation_settings.create_or_update(resource_group_name=resource_group, service_name=name, parameters=body)
 
@@ -1551,7 +1495,6 @@ def create_apimgmt_product(cmd, client,
                            resource_group,
                            name,
                            product_id,
-                           parameters=None,
                            description=None,
                            terms=None,
                            subscription_required=None,
@@ -1573,8 +1516,7 @@ def create_apimgmt_product(cmd, client,
 def update_apimgmt_product(cmd, client,
                            resource_group,
                            name,
-                           product_id,
-                           parameters=None):
+                           product_id):
     body={}
     return client.product.create_or_update(resource_group_name=resource_group, service_name=name, product_id=product_id, parameters=body)
 
@@ -1719,7 +1661,6 @@ def create_apimgmt_product_policy(cmd, client,
                                   name,
                                   product_id,
                                   policy_id,
-                                  parameters=None,
                                   value=None,
                                   format=None):
     body={}
@@ -1732,8 +1673,7 @@ def update_apimgmt_product_policy(cmd, client,
                                   resource_group,
                                   name,
                                   product_id,
-                                  policy_id,
-                                  parameters=None):
+                                  policy_id):
     body={}
     return client.product_policy.create_or_update(resource_group_name=resource_group, service_name=name, product_id=product_id, policy_id=policy_id, parameters=body)
 
@@ -1766,7 +1706,6 @@ def create_apimgmt_property(cmd, client,
                             resource_group,
                             name,
                             prop_id,
-                            parameters=None,
                             tags=None,
                             secret=None,
                             display_name=None,
@@ -1782,8 +1721,7 @@ def create_apimgmt_property(cmd, client,
 def update_apimgmt_property(cmd, client,
                             resource_group,
                             name,
-                            prop_id,
-                            parameters=None):
+                            prop_id):
     body={}
     return client.property.create_or_update(resource_group_name=resource_group, service_name=name, prop_id=prop_id, parameters=body)
 
@@ -1812,7 +1750,6 @@ def create_apimgmt_subscription(cmd, client,
                                 resource_group,
                                 name,
                                 sid,
-                                parameters=None,
                                 notify=None,
                                 owner_id=None,
                                 scope=None,
@@ -1836,7 +1773,6 @@ def update_apimgmt_subscription(cmd, client,
                                 resource_group,
                                 name,
                                 sid,
-                                parameters=None,
                                 notify=None):
     body={}
     return client.subscription.create_or_update(resource_group_name=resource_group, service_name=name, sid=sid, parameters=body, notify=notify)
@@ -1866,7 +1802,6 @@ def create_apimgmt_user(cmd, client,
                         resource_group,
                         name,
                         user_id,
-                        parameters=None,
                         state=None,
                         note=None,
                         identities=None,
@@ -1890,8 +1825,7 @@ def create_apimgmt_user(cmd, client,
 def update_apimgmt_user(cmd, client,
                         resource_group,
                         name,
-                        user_id,
-                        parameters=None):
+                        user_id):
     body={}
     return client.user.create_or_update(resource_group_name=resource_group, service_name=name, user_id=user_id, parameters=body)
 
