@@ -8,8 +8,24 @@ from knack.util import CLIError
 # module equivalent: azure_rm_eventgrideventsubscription
 def create_eventgrid(cmd, client,
                      scope=None,
-                     name):
+                     name,
+                     properties=None,
+                     destination=None,
+                     filter=None,
+                     labels=None,
+                     retry_policy=None,
+                     dead_letter_destination=None,
+                     topic=None,
+                     provisioning_state=None):
     body={}
+    body['properties'] = properties
+    body['destination'] = destination
+    body['filter'] = filter
+    body['labels'] = labels
+    body['retry_policy'] = retry_policy
+    body['dead_letter_destination'] = dead_letter_destination
+    body['topic'] = topic
+    body['provisioning_state'] = provisioning_state
     return client.event_subscriptions.create_or_update(scope=scope, event_subscription_name=name)
 
 # module equivalent: azure_rm_eventgrideventsubscription
@@ -55,8 +71,18 @@ def show_eventgrid(cmd, client,
 # module equivalent: azure_rm_eventgridtopic
 def create_eventgrid(cmd, client,
                      resource_group,
-                     name):
+                     name,
+                     location=None,
+                     tags=None,
+                     properties=None,
+                     provisioning_state=None,
+                     endpoint=None):
     body={}
+    body['location'] = location
+    body['tags'] = tags
+    body['properties'] = properties
+    body['provisioning_state'] = provisioning_state
+    body['endpoint'] = endpoint
     return client.topics.create_or_update(resource_group_name=resource_group, topic_name=name)
 
 # module equivalent: azure_rm_eventgridtopic
