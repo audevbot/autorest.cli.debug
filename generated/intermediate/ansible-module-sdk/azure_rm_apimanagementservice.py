@@ -298,11 +298,11 @@ options:
         in Primary region which is deployed in an Internal Virtual Network.
         Available only for Basic, Standard and Premium SKU.
     type: list
-  skuname:
+  sku_name:
     description:
       - Name of the Sku.
     required: true
-  skucapacity:
+  sku_capacity:
     description:
       - Capacity of the SKU (number of deployed units of the SKU).
   identity:
@@ -1165,7 +1165,7 @@ class AzureRMApiManagementService(AzureRMModuleBaseExt):
                 disposition='/',
                 required=true
             ),
-            skuname=dict(
+            sku_name=dict(
                 type='str',
                 disposition='sku/name',
                 choices=['Developer',
@@ -1175,7 +1175,7 @@ class AzureRMApiManagementService(AzureRMModuleBaseExt):
                          'Consumption'],
                 required=true
             ),
-            skucapacity=dict(
+            sku_capacity=dict(
                 type='number',
                 disposition='sku/capacity'
             ),

@@ -330,14 +330,14 @@ objects:
             go_type_name: SubResource
           '/properties/ipConfigurations/properties/subnet/id': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
-            go_field_name: id
+            go_field_name: Id
           '/properties/ipConfigurations/properties/publicIPAddress': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
             go_field_name: PublicIpAddress
             go_type_name: SubResource
           '/properties/ipConfigurations/properties/publicIPAddress/id': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
-            go_field_name: id
+            go_field_name: Id
           '/properties/ipConfigurations/name': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Name
@@ -689,14 +689,14 @@ objects:
             go_type_name: SubResource
           '/properties/ipConfigurations/properties/subnet/id': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
-            go_field_name: id
+            go_field_name: Id
           '/properties/ipConfigurations/properties/publicIPAddress': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
             go_field_name: PublicIpAddress
             go_type_name: SubResource
           '/properties/ipConfigurations/properties/publicIPAddress/id': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
-            go_field_name: id
+            go_field_name: Id
           '/properties/ipConfigurations/properties/privateIPAddress': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: PrivateIpAddress

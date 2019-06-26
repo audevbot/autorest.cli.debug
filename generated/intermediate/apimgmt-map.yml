@@ -42954,11 +42954,11 @@ Modules:
         Hidden: true
         IncludeInResponse: true
         Flatten: false
-      - NameSwagger: Skuname
-        NameAnsible: skuname
+      - NameSwagger: SkuName
+        NameAnsible: sku_name
         NamePythonSdk: name
         NameGoSdk: Name
-        NameTerraform: Skuname
+        NameTerraform: SkuName
         IdPortion: null
         Type: str
         TypeName: SkuType
@@ -42999,11 +42999,11 @@ Modules:
         Hidden: false
         IncludeInResponse: true
         Flatten: false
-      - NameSwagger: Skucapacity
-        NameAnsible: skucapacity
+      - NameSwagger: SkuCapacity
+        NameAnsible: sku_capacity
         NamePythonSdk: capacity
         NameGoSdk: Capacity
-        NameTerraform: Skucapacity
+        NameTerraform: SkuCapacity
         IdPortion: null
         Type: number
         TypeName: Int
@@ -47680,11 +47680,11 @@ Modules:
         Hidden: true
         IncludeInResponse: true
         Flatten: false
-      - NameSwagger: Skuname
-        NameAnsible: skuname
+      - NameSwagger: SkuName
+        NameAnsible: sku_name
         NamePythonSdk: name
         NameGoSdk: Name
-        NameTerraform: Skuname
+        NameTerraform: SkuName
         IdPortion: null
         Type: str
         TypeName: SkuType
@@ -47725,11 +47725,11 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - NameSwagger: Skucapacity
-        NameAnsible: skucapacity
+      - NameSwagger: SkuCapacity
+        NameAnsible: sku_capacity
         NamePythonSdk: capacity
         NameGoSdk: Capacity
-        NameTerraform: Skucapacity
+        NameTerraform: SkuCapacity
         IdPortion: null
         Type: number
         TypeName: Int
