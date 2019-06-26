@@ -19,8 +19,14 @@ def create_mgmtgroups(cmd, client,
 
 # module equivalent: azure_rm_managementgroup
 def update_mgmtgroups(cmd, client,
-                      group_id):
+                      group_id,
+                      name=None,
+                      display_name=None,
+                      details=None):
     body={}
+    body['name'] = name
+    body['display_name'] = display_name
+    body['details'] = details
     return client.management_groups.create_or_update(group_id=group_id)
 
 # module equivalent: azure_rm_managementgroup
