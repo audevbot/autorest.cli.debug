@@ -21,8 +21,6 @@
           tag3: value3
         publisher_email: apim@autorestsdk.com
         publisher_name: autorestsdk
-        sku:
-          name: Consumption
         identity:
           type: SystemAssigned
         location: West US

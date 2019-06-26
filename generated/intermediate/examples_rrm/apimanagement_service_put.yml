@@ -21,8 +21,5 @@
           tag3: value3
         publisher_email: apim@autorestsdk.com
         publisher_name: autorestsdk
-        sku:
-          name: Developer
-          capacity: '1'
         location: Central US
     

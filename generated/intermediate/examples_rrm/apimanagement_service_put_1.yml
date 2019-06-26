@@ -57,8 +57,5 @@
         virtual_network_type: External
         publisher_email: admin@live.com
         publisher_name: contoso
-        sku:
-          name: Premium
-          capacity: '1'
         location: Central US
     

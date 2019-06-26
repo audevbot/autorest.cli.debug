@@ -73,7 +73,7 @@
                   - '8443'
             name: netrulecoll
         ip_configurations:
-          - '*': >-
+          - id: >-
               /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
               }}/providers/Microsoft.Network/publicIPAddresses/{{
               public_ip_address_name }}
