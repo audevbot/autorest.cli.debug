@@ -32,8 +32,7 @@ def create_apimgmt_api(cmd, client,
                        value=None,
                        format=None,
                        wsdl_selector=None,
-                       api_type=None,
-                       is_online=None):
+                       api_type=None):
     body={}
     body['properties'] = properties
     body['description'] = description
@@ -57,7 +56,6 @@ def create_apimgmt_api(cmd, client,
     body['format'] = format
     body['wsdl_selector'] = wsdl_selector
     body['api_type'] = api_type
-    body['is_online'] = is_online
     return client.api.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, parameters=body)
 
 # module equivalent: azure_rm_apimanagementapi
@@ -101,15 +99,11 @@ def create_apimgmt_api_release(cmd, client,
                                parameters=None,
                                properties=None,
                                api_id=None,
-                               notes=None,
-                               created_date_time=None,
-                               updated_date_time=None):
+                               notes=None):
     body={}
     body['properties'] = properties
     body['api_id'] = api_id
     body['notes'] = notes
-    body['created_date_time'] = created_date_time
-    body['updated_date_time'] = updated_date_time
     return client.api_release.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, release_id=release_id, parameters=body)
 
 # module equivalent: azure_rm_apimanagementapirelease
@@ -645,14 +639,12 @@ def create_apimgmt_api_tagdescription(cmd, client,
                                       properties=None,
                                       description=None,
                                       external_docs_url=None,
-                                      external_docs_description=None,
-                                      display_name=None):
+                                      external_docs_description=None):
     body={}
     body['properties'] = properties
     body['description'] = description
     body['external_docs_url'] = external_docs_url
     body['external_docs_description'] = external_docs_description
-    body['display_name'] = display_name
     return client.api_tag_description.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, tag_id=tag_id, parameters=body)
 
 # module equivalent: azure_rm_apimanagementapitagdescription
@@ -924,17 +916,11 @@ def create_apimgmt_certificate(cmd, client,
                                parameters=None,
                                properties=None,
                                data=None,
-                               password=None,
-                               subject=None,
-                               thumbprint=None,
-                               expiration_date=None):
+                               password=None):
     body={}
     body['properties'] = properties
     body['data'] = data
     body['password'] = password
-    body['subject'] = subject
-    body['thumbprint'] = thumbprint
-    body['expiration_date'] = expiration_date
     return client.certificate.create_or_update(resource_group_name=resource_group, service_name=name, certificate_id=certificate_id, parameters=body)
 
 # module equivalent: azure_rm_apimanagementcertificate
@@ -983,16 +969,6 @@ def create_apimgmt(cmd, client,
                    virtual_network_type=None,
                    publisher_email=None,
                    publisher_name=None,
-                   provisioning_state=None,
-                   target_provisioning_state=None,
-                   created_at_utc=None,
-                   gateway_url=None,
-                   gateway_regional_url=None,
-                   portal_url=None,
-                   management_api_url=None,
-                   scm_url=None,
-                   public_ip_addresses=None,
-                   private_ip_addresses=None,
                    sku=None,
                    identity=None,
                    location=None):
@@ -1009,16 +985,6 @@ def create_apimgmt(cmd, client,
     body['virtual_network_type'] = virtual_network_type
     body['publisher_email'] = publisher_email
     body['publisher_name'] = publisher_name
-    body['provisioning_state'] = provisioning_state
-    body['target_provisioning_state'] = target_provisioning_state
-    body['created_at_utc'] = created_at_utc
-    body['gateway_url'] = gateway_url
-    body['gateway_regional_url'] = gateway_regional_url
-    body['portal_url'] = portal_url
-    body['management_api_url'] = management_api_url
-    body['scm_url'] = scm_url
-    body['public_ip_addresses'] = public_ip_addresses
-    body['private_ip_addresses'] = private_ip_addresses
     body['sku'] = sku
     body['identity'] = identity
     body['location'] = location
@@ -1115,8 +1081,7 @@ def create_apimgmt_template(cmd, client,
                             title=None,
                             description=None,
                             body=None,
-                            parameters=None,
-                            is_default=None):
+                            parameters=None):
     body={}
     body['parameters'] = parameters
     body['properties'] = properties
@@ -1125,7 +1090,6 @@ def create_apimgmt_template(cmd, client,
     body['description'] = description
     body['body'] = body
     body['parameters'] = parameters
-    body['is_default'] = is_default
     return client.email_template.create_or_update(resource_group_name=resource_group, service_name=service_name, template_name=name, parameters=body)
 
 # module equivalent: azure_rm_apimanagementemailtemplate
@@ -1168,15 +1132,13 @@ def create_apimgmt_group(cmd, client,
                          display_name=None,
                          description=None,
                          type=None,
-                         external_id=None,
-                         built_in=None):
+                         external_id=None):
     body={}
     body['properties'] = properties
     body['display_name'] = display_name
     body['description'] = description
     body['type'] = type
     body['external_id'] = external_id
-    body['built_in'] = built_in
     return client.group.create_or_update(resource_group_name=resource_group, service_name=name, group_id=group_id, parameters=body)
 
 # module equivalent: azure_rm_apimanagementgroup
@@ -1923,13 +1885,7 @@ def create_apimgmt_subscription(cmd, client,
                                 primary_key=None,
                                 secondary_key=None,
                                 state=None,
-                                allow_tracing=None,
-                                created_date=None,
-                                start_date=None,
-                                expiration_date=None,
-                                end_date=None,
-                                notification_date=None,
-                                state_comment=None):
+                                allow_tracing=None):
     body={}
     body['properties'] = properties
     body['owner_id'] = owner_id
@@ -1939,12 +1895,6 @@ def create_apimgmt_subscription(cmd, client,
     body['secondary_key'] = secondary_key
     body['state'] = state
     body['allow_tracing'] = allow_tracing
-    body['created_date'] = created_date
-    body['start_date'] = start_date
-    body['expiration_date'] = expiration_date
-    body['end_date'] = end_date
-    body['notification_date'] = notification_date
-    body['state_comment'] = state_comment
     return client.subscription.create_or_update(resource_group_name=resource_group, service_name=name, sid=sid, parameters=body, notify=notify)
 
 # module equivalent: azure_rm_apimanagementsubscription
@@ -1991,9 +1941,7 @@ def create_apimgmt_user(cmd, client,
                         first_name=None,
                         last_name=None,
                         password=None,
-                        confirmation=None,
-                        registration_date=None,
-                        groups=None):
+                        confirmation=None):
     body={}
     body['properties'] = properties
     body['state'] = state
@@ -2004,8 +1952,6 @@ def create_apimgmt_user(cmd, client,
     body['last_name'] = last_name
     body['password'] = password
     body['confirmation'] = confirmation
-    body['registration_date'] = registration_date
-    body['groups'] = groups
     return client.user.create_or_update(resource_group_name=resource_group, service_name=name, user_id=user_id, parameters=body)
 
 # module equivalent: azure_rm_apimanagementuser
