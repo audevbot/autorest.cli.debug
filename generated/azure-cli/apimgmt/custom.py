@@ -11,7 +11,6 @@ def create_apimgmt_api(cmd, client,
                        name,
                        api_id,
                        parameters=None,
-                       properties=None,
                        description=None,
                        authentication_settings=None,
                        subscription_key_parameter_names=None,
@@ -34,7 +33,6 @@ def create_apimgmt_api(cmd, client,
                        wsdl_selector=None,
                        api_type=None):
     body={}
-    body['properties'] = properties
     body['description'] = description
     body['authentication_settings'] = authentication_settings
     body['subscription_key_parameter_names'] = subscription_key_parameter_names
@@ -97,11 +95,9 @@ def create_apimgmt_api_release(cmd, client,
                                api_id,
                                release_id,
                                parameters=None,
-                               properties=None,
                                api_id=None,
                                notes=None):
     body={}
-    body['properties'] = properties
     body['api_id'] = api_id
     body['notes'] = notes
     return client.api_release.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, release_id=release_id, parameters=body)
@@ -146,7 +142,6 @@ def create_apimgmt_api_operation(cmd, client,
                                  api_id,
                                  operation_id,
                                  parameters=None,
-                                 properties=None,
                                  template_parameters=None,
                                  description=None,
                                  request=None,
@@ -156,7 +151,6 @@ def create_apimgmt_api_operation(cmd, client,
                                  method=None,
                                  url_template=None):
     body={}
-    body['properties'] = properties
     body['template_parameters'] = template_parameters
     body['description'] = description
     body['request'] = request
@@ -208,11 +202,9 @@ def create_apimgmt_api_operation_policy(cmd, client,
                                         operation_id,
                                         policy_id,
                                         parameters=None,
-                                        properties=None,
                                         value=None,
                                         format=None):
     body={}
-    body['properties'] = properties
     body['value'] = value
     body['format'] = format
     return client.api_operation_policy.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, operation_id=operation_id, policy_id=policy_id, parameters=body)
@@ -261,10 +253,8 @@ def create_apimgmt_tag(cmd, client,
                        name,
                        tag_id,
                        parameters=None,
-                       properties=None,
                        display_name=None):
     body={}
-    body['properties'] = properties
     body['display_name'] = display_name
     return client.tag.create_or_update(resource_group_name=resource_group, service_name=name, tag_id=tag_id, parameters=body)
 
@@ -311,11 +301,9 @@ def create_apimgmt_api_policy(cmd, client,
                               api_id,
                               policy_id,
                               parameters=None,
-                              properties=None,
                               value=None,
                               format=None):
     body={}
-    body['properties'] = properties
     body['value'] = value
     body['format'] = format
     return client.api_policy.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, policy_id=policy_id, parameters=body)
@@ -361,11 +349,9 @@ def create_apimgmt_api_schema(cmd, client,
                               api_id,
                               schema_id,
                               parameters=None,
-                              properties=None,
                               content_type=None,
                               document=None):
     body={}
-    body['properties'] = properties
     body['content_type'] = content_type
     body['document'] = document
     return client.api_schema.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, schema_id=schema_id, parameters=body)
@@ -410,7 +396,6 @@ def create_apimgmt_api_diagnostic(cmd, client,
                                   api_id,
                                   diagnostic_id,
                                   parameters=None,
-                                  properties=None,
                                   always_log=None,
                                   logger_id=None,
                                   sampling=None,
@@ -418,7 +403,6 @@ def create_apimgmt_api_diagnostic(cmd, client,
                                   backend=None,
                                   enable_http_correlation_headers=None):
     body={}
-    body['properties'] = properties
     body['always_log'] = always_log
     body['logger_id'] = logger_id
     body['sampling'] = sampling
@@ -467,7 +451,6 @@ def create_apimgmt_api_issue(cmd, client,
                              api_id,
                              issue_id,
                              parameters=None,
-                             properties=None,
                              created_date=None,
                              state=None,
                              api_id=None,
@@ -475,7 +458,6 @@ def create_apimgmt_api_issue(cmd, client,
                              description=None,
                              user_id=None):
     body={}
-    body['properties'] = properties
     body['created_date'] = created_date
     body['state'] = state
     body['api_id'] = api_id
@@ -525,12 +507,10 @@ def create_apimgmt_api_issue_comment(cmd, client,
                                      issue_id,
                                      comment_id,
                                      parameters=None,
-                                     properties=None,
                                      text=None,
                                      created_date=None,
                                      user_id=None):
     body={}
-    body['properties'] = properties
     body['text'] = text
     body['created_date'] = created_date
     body['user_id'] = user_id
@@ -581,12 +561,10 @@ def create_apimgmt_api_issue_attachment(cmd, client,
                                         issue_id,
                                         attachment_id,
                                         parameters=None,
-                                        properties=None,
                                         title=None,
                                         content_format=None,
                                         content=None):
     body={}
-    body['properties'] = properties
     body['title'] = title
     body['content_format'] = content_format
     body['content'] = content
@@ -636,12 +614,10 @@ def create_apimgmt_api_tagdescription(cmd, client,
                                       api_id,
                                       tag_id,
                                       parameters=None,
-                                      properties=None,
                                       description=None,
                                       external_docs_url=None,
                                       external_docs_description=None):
     body={}
-    body['properties'] = properties
     body['description'] = description
     body['external_docs_url'] = external_docs_url
     body['external_docs_description'] = external_docs_description
@@ -686,14 +662,12 @@ def create_apimgmt_apiversionset(cmd, client,
                                  name,
                                  version_set_id,
                                  parameters=None,
-                                 properties=None,
                                  description=None,
                                  version_query_name=None,
                                  version_header_name=None,
                                  display_name=None,
                                  versioning_scheme=None):
     body={}
-    body['properties'] = properties
     body['description'] = description
     body['version_query_name'] = version_query_name
     body['version_header_name'] = version_header_name
@@ -736,7 +710,6 @@ def create_apimgmt_authorizationserver(cmd, client,
                                        name,
                                        authsid,
                                        parameters=None,
-                                       properties=None,
                                        description=None,
                                        authorization_methods=None,
                                        client_authentication_method=None,
@@ -754,7 +727,6 @@ def create_apimgmt_authorizationserver(cmd, client,
                                        grant_types=None,
                                        client_id=None):
     body={}
-    body['properties'] = properties
     body['description'] = description
     body['authorization_methods'] = authorization_methods
     body['client_authentication_method'] = client_authentication_method
@@ -808,11 +780,9 @@ def create_apimgmt_backend(cmd, client,
                            name,
                            backend_id,
                            parameters=None,
-                           properties=None,
                            title=None,
                            description=None,
                            resource_id=None,
-                           properties=None,
                            service_fabric_cluster=None,
                            credentials=None,
                            proxy=None,
@@ -820,11 +790,9 @@ def create_apimgmt_backend(cmd, client,
                            url=None,
                            protocol=None):
     body={}
-    body['properties'] = properties
     body['title'] = title
     body['description'] = description
     body['resource_id'] = resource_id
-    body['properties'] = properties
     body['service_fabric_cluster'] = service_fabric_cluster
     body['credentials'] = credentials
     body['proxy'] = proxy
@@ -868,12 +836,10 @@ def create_apimgmt_cache(cmd, client,
                          name,
                          cache_id,
                          parameters=None,
-                         properties=None,
                          description=None,
                          connection_string=None,
                          resource_id=None):
     body={}
-    body['properties'] = properties
     body['description'] = description
     body['connection_string'] = connection_string
     body['resource_id'] = resource_id
@@ -914,11 +880,9 @@ def create_apimgmt_certificate(cmd, client,
                                name,
                                certificate_id,
                                parameters=None,
-                               properties=None,
                                data=None,
                                password=None):
     body={}
-    body['properties'] = properties
     body['data'] = data
     body['password'] = password
     return client.certificate.create_or_update(resource_group_name=resource_group, service_name=name, certificate_id=certificate_id, parameters=body)
@@ -958,7 +922,6 @@ def create_apimgmt(cmd, client,
                    name,
                    parameters=None,
                    tags=None,
-                   properties=None,
                    notification_sender_email=None,
                    hostname_configurations=None,
                    virtual_network_configuration=None,
@@ -974,7 +937,6 @@ def create_apimgmt(cmd, client,
                    location=None):
     body={}
     body['tags'] = tags
-    body['properties'] = properties
     body['notification_sender_email'] = notification_sender_email
     body['hostname_configurations'] = hostname_configurations
     body['virtual_network_configuration'] = virtual_network_configuration
@@ -1024,7 +986,6 @@ def create_apimgmt_diagnostic(cmd, client,
                               name,
                               diagnostic_id,
                               parameters=None,
-                              properties=None,
                               always_log=None,
                               logger_id=None,
                               sampling=None,
@@ -1032,7 +993,6 @@ def create_apimgmt_diagnostic(cmd, client,
                               backend=None,
                               enable_http_correlation_headers=None):
     body={}
-    body['properties'] = properties
     body['always_log'] = always_log
     body['logger_id'] = logger_id
     body['sampling'] = sampling
@@ -1076,7 +1036,6 @@ def create_apimgmt_template(cmd, client,
                             service_name,
                             name,
                             parameters=None,
-                            properties=None,
                             subject=None,
                             title=None,
                             description=None,
@@ -1084,7 +1043,6 @@ def create_apimgmt_template(cmd, client,
                             parameters=None):
     body={}
     body['parameters'] = parameters
-    body['properties'] = properties
     body['subject'] = subject
     body['title'] = title
     body['description'] = description
@@ -1128,13 +1086,11 @@ def create_apimgmt_group(cmd, client,
                          name,
                          group_id,
                          parameters=None,
-                         properties=None,
                          display_name=None,
                          description=None,
                          type=None,
                          external_id=None):
     body={}
-    body['properties'] = properties
     body['display_name'] = display_name
     body['description'] = description
     body['type'] = type
@@ -1216,7 +1172,6 @@ def create_apimgmt_identityprovider(cmd, client,
                                     service_name,
                                     name,
                                     parameters=None,
-                                    properties=None,
                                     type=None,
                                     allowed_tenants=None,
                                     authority=None,
@@ -1227,7 +1182,6 @@ def create_apimgmt_identityprovider(cmd, client,
                                     client_id=None,
                                     client_secret=None):
     body={}
-    body['properties'] = properties
     body['type'] = type
     body['allowed_tenants'] = allowed_tenants
     body['authority'] = authority
@@ -1274,14 +1228,12 @@ def create_apimgmt_logger(cmd, client,
                           name,
                           logger_id,
                           parameters=None,
-                          properties=None,
                           logger_type=None,
                           description=None,
                           credentials=None,
                           is_buffered=None,
                           resource_id=None):
     body={}
-    body['properties'] = properties
     body['logger_type'] = logger_type
     body['description'] = description
     body['credentials'] = credentials
@@ -1429,14 +1381,12 @@ def create_apimgmt_openidconnectprovider(cmd, client,
                                          name,
                                          opid,
                                          parameters=None,
-                                         properties=None,
                                          display_name=None,
                                          description=None,
                                          metadata_endpoint=None,
                                          client_id=None,
                                          client_secret=None):
     body={}
-    body['properties'] = properties
     body['display_name'] = display_name
     body['description'] = description
     body['metadata_endpoint'] = metadata_endpoint
@@ -1479,11 +1429,9 @@ def create_apimgmt_policy(cmd, client,
                           name,
                           policy_id,
                           parameters=None,
-                          properties=None,
                           value=None,
                           format=None):
     body={}
-    body['properties'] = properties
     body['value'] = value
     body['format'] = format
     return client.policy.create_or_update(resource_group_name=resource_group, service_name=name, policy_id=policy_id, parameters=body)
@@ -1523,10 +1471,8 @@ def create_apimgmt_portalsetting(cmd, client,
                                  resource_group,
                                  name,
                                  parameters=None,
-                                 properties=None,
                                  enabled=None):
     body={}
-    body['properties'] = properties
     body['enabled'] = enabled
     return client.sign_in_settings.create_or_update(resource_group_name=resource_group, service_name=name, parameters=body)
 
@@ -1549,11 +1495,9 @@ def create_apimgmt_portalsetting(cmd, client,
                                  resource_group,
                                  name,
                                  parameters=None,
-                                 properties=None,
                                  enabled=None,
                                  terms_of_service=None):
     body={}
-    body['properties'] = properties
     body['enabled'] = enabled
     body['terms_of_service'] = terms_of_service
     return client.sign_up_settings.create_or_update(resource_group_name=resource_group, service_name=name, parameters=body)
@@ -1577,13 +1521,11 @@ def create_apimgmt_portalsetting(cmd, client,
                                  resource_group,
                                  name,
                                  parameters=None,
-                                 properties=None,
                                  url=None,
                                  validation_key=None,
                                  subscriptions=None,
                                  user_registration=None):
     body={}
-    body['properties'] = properties
     body['url'] = url
     body['validation_key'] = validation_key
     body['subscriptions'] = subscriptions
@@ -1610,7 +1552,6 @@ def create_apimgmt_product(cmd, client,
                            name,
                            product_id,
                            parameters=None,
-                           properties=None,
                            description=None,
                            terms=None,
                            subscription_required=None,
@@ -1619,7 +1560,6 @@ def create_apimgmt_product(cmd, client,
                            state=None,
                            display_name=None):
     body={}
-    body['properties'] = properties
     body['description'] = description
     body['terms'] = terms
     body['subscription_required'] = subscription_required
@@ -1780,11 +1720,9 @@ def create_apimgmt_product_policy(cmd, client,
                                   product_id,
                                   policy_id,
                                   parameters=None,
-                                  properties=None,
                                   value=None,
                                   format=None):
     body={}
-    body['properties'] = properties
     body['value'] = value
     body['format'] = format
     return client.product_policy.create_or_update(resource_group_name=resource_group, service_name=name, product_id=product_id, policy_id=policy_id, parameters=body)
@@ -1829,13 +1767,11 @@ def create_apimgmt_property(cmd, client,
                             name,
                             prop_id,
                             parameters=None,
-                            properties=None,
                             tags=None,
                             secret=None,
                             display_name=None,
                             value=None):
     body={}
-    body['properties'] = properties
     body['tags'] = tags
     body['secret'] = secret
     body['display_name'] = display_name
@@ -1878,7 +1814,6 @@ def create_apimgmt_subscription(cmd, client,
                                 sid,
                                 parameters=None,
                                 notify=None,
-                                properties=None,
                                 owner_id=None,
                                 scope=None,
                                 display_name=None,
@@ -1887,7 +1822,6 @@ def create_apimgmt_subscription(cmd, client,
                                 state=None,
                                 allow_tracing=None):
     body={}
-    body['properties'] = properties
     body['owner_id'] = owner_id
     body['scope'] = scope
     body['display_name'] = display_name
@@ -1933,7 +1867,6 @@ def create_apimgmt_user(cmd, client,
                         name,
                         user_id,
                         parameters=None,
-                        properties=None,
                         state=None,
                         note=None,
                         identities=None,
@@ -1943,7 +1876,6 @@ def create_apimgmt_user(cmd, client,
                         password=None,
                         confirmation=None):
     body={}
-    body['properties'] = properties
     body['state'] = state
     body['note'] = note
     body['identities'] = identities

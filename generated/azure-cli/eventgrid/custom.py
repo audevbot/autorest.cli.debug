@@ -9,19 +9,13 @@ from knack.util import CLIError
 def create_eventgrid(cmd, client,
                      scope=None,
                      name,
-                     properties=None,
-                     destination=None,
                      filter=None,
                      labels=None,
-                     retry_policy=None,
-                     dead_letter_destination=None):
+                     retry_policy=None):
     body={}
-    body['properties'] = properties
-    body['destination'] = destination
     body['filter'] = filter
     body['labels'] = labels
     body['retry_policy'] = retry_policy
-    body['dead_letter_destination'] = dead_letter_destination
     return client.event_subscriptions.create_or_update(scope=scope, event_subscription_name=name)
 
 # module equivalent: azure_rm_eventgrideventsubscription
@@ -69,12 +63,10 @@ def create_eventgrid(cmd, client,
                      resource_group,
                      name,
                      location=None,
-                     tags=None,
-                     properties=None):
+                     tags=None):
     body={}
     body['location'] = location
     body['tags'] = tags
-    body['properties'] = properties
     return client.topics.create_or_update(resource_group_name=resource_group, topic_name=name)
 
 # module equivalent: azure_rm_eventgridtopic

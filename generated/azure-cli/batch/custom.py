@@ -12,16 +12,12 @@ def create_batch(cmd, client,
                  parameters=None,
                  location=None,
                  tags=None,
-                 properties=None,
-                 auto_storage=None,
                  auto_storage_account_id=None,
                  pool_allocation_mode=None,
                  key_vault_reference=None):
     body={}
     body['location'] = location
     body['tags'] = tags
-    body['properties'] = properties
-    body['auto_storage'] = auto_storage
     body.get('auto_storage', {}).get('storage_account_id', {})['storage_account_id'] = storage_account_id
     body['pool_allocation_mode'] = pool_allocation_mode
     body['key_vault_reference'] = key_vault_reference
@@ -61,10 +57,8 @@ def create_batch_application_version(cmd, client,
                                      account_name,
                                      application_name,
                                      name,
-                                     parameters=None,
-                                     properties=None):
+                                     parameters=None):
     body={}
-    body['properties'] = properties
     return client.application_package.create(resource_group_name=resource_group, account_name=account_name, application_name=application_name, version_name=name, parameters=body)
 
 # module equivalent: azure_rm_batchapplicationpackage
@@ -96,12 +90,10 @@ def create_batch_application(cmd, client,
                              account_name,
                              name,
                              parameters=None,
-                             properties=None,
                              display_name=None,
                              allow_updates=None,
                              default_version=None):
     body={}
-    body['properties'] = properties
     body['display_name'] = display_name
     body['allow_updates'] = allow_updates
     body['default_version'] = default_version
@@ -142,14 +134,12 @@ def create_batch_certificate(cmd, client,
                              account_name,
                              name,
                              parameters=None,
-                             properties=None,
                              thumbprint_algorithm=None,
                              thumbprint=None,
                              format=None,
                              data=None,
                              password=None):
     body={}
-    body['properties'] = properties
     body['thumbprint_algorithm'] = thumbprint_algorithm
     body['thumbprint'] = thumbprint
     body['format'] = format
@@ -192,7 +182,6 @@ def create_batch_pool(cmd, client,
                       account_name,
                       name,
                       parameters=None,
-                      properties=None,
                       display_name=None,
                       vm_size=None,
                       deployment_configuration=None,
@@ -208,7 +197,6 @@ def create_batch_pool(cmd, client,
                       application_packages=None,
                       application_licenses=None):
     body={}
-    body['properties'] = properties
     body['display_name'] = display_name
     body['vm_size'] = vm_size
     body['deployment_configuration'] = deployment_configuration

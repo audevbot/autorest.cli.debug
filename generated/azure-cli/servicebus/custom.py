@@ -12,13 +12,11 @@ def create_servicebus(cmd, client,
                       parameters=None,
                       location=None,
                       tags=None,
-                      sku=None,
-                      properties=None):
+                      sku=None):
     body={}
     body['location'] = location
     body['tags'] = tags
     body['sku'] = sku
-    body['properties'] = properties
     return client.namespaces.create_or_update(resource_group_name=resource_group, namespace_name=name, parameters=body)
 
 # module equivalent: azure_rm_servicebusnamespace
@@ -58,11 +56,9 @@ def create_servicebus_disasterrecoveryconfig(cmd, client,
                                              name,
                                              alias,
                                              parameters=None,
-                                             properties=None,
                                              partner_namespace=None,
                                              alternate_name=None):
     body={}
-    body['properties'] = properties
     body['partner_namespace'] = partner_namespace
     body['alternate_name'] = alternate_name
     return client.disaster_recovery_configs.create_or_update(resource_group_name=resource_group, namespace_name=name, alias=alias, parameters=body)
@@ -106,7 +102,6 @@ def create_servicebus_queue(cmd, client,
                             namespace_name,
                             name,
                             parameters=None,
-                            properties=None,
                             lock_duration=None,
                             max_size_in_megabytes=None,
                             requires_duplicate_detection=None,
@@ -123,7 +118,6 @@ def create_servicebus_queue(cmd, client,
                             forward_to=None,
                             forward_dead_lettered_messages_to=None):
     body={}
-    body['properties'] = properties
     body['lock_duration'] = lock_duration
     body['max_size_in_megabytes'] = max_size_in_megabytes
     body['requires_duplicate_detection'] = requires_duplicate_detection
@@ -180,7 +174,6 @@ def create_servicebus_topic(cmd, client,
                             namespace_name,
                             name,
                             parameters=None,
-                            properties=None,
                             default_message_time_to_live=None,
                             max_size_in_megabytes=None,
                             requires_duplicate_detection=None,
@@ -192,7 +185,6 @@ def create_servicebus_topic(cmd, client,
                             enable_partitioning=None,
                             enable_express=None):
     body={}
-    body['properties'] = properties
     body['default_message_time_to_live'] = default_message_time_to_live
     body['max_size_in_megabytes'] = max_size_in_megabytes
     body['requires_duplicate_detection'] = requires_duplicate_detection
@@ -245,7 +237,6 @@ def create_servicebus_topic_subscription(cmd, client,
                                          topic_name,
                                          name,
                                          parameters=None,
-                                         properties=None,
                                          lock_duration=None,
                                          requires_session=None,
                                          default_message_time_to_live=None,
@@ -259,7 +250,6 @@ def create_servicebus_topic_subscription(cmd, client,
                                          forward_to=None,
                                          forward_dead_lettered_messages_to=None):
     body={}
-    body['properties'] = properties
     body['lock_duration'] = lock_duration
     body['requires_session'] = requires_session
     body['default_message_time_to_live'] = default_message_time_to_live
@@ -315,13 +305,11 @@ def create_servicebus_topic_subscription_rule(cmd, client,
                                               subscription_name,
                                               name,
                                               parameters=None,
-                                              properties=None,
                                               action=None,
                                               filter_type=None,
                                               sql_filter=None,
                                               correlation_filter=None):
     body={}
-    body['properties'] = properties
     body['action'] = action
     body['filter_type'] = filter_type
     body['sql_filter'] = sql_filter
