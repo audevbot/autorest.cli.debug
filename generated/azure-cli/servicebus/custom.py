@@ -9,7 +9,6 @@ from knack.util import CLIError
 def create_servicebus(cmd, client,
                       resource_group,
                       name,
-                      parameters=None,
                       location=None,
                       tags=None,
                       sku=None):
@@ -22,8 +21,7 @@ def create_servicebus(cmd, client,
 # module equivalent: azure_rm_servicebusnamespace
 def update_servicebus(cmd, client,
                       resource_group,
-                      name,
-                      parameters=None):
+                      name):
     body={}
     return client.namespaces.create_or_update(resource_group_name=resource_group, namespace_name=name, parameters=body)
 
@@ -55,7 +53,6 @@ def create_servicebus_disasterrecoveryconfig(cmd, client,
                                              resource_group,
                                              name,
                                              alias,
-                                             parameters=None,
                                              partner_namespace=None,
                                              alternate_name=None):
     body={}
@@ -67,8 +64,7 @@ def create_servicebus_disasterrecoveryconfig(cmd, client,
 def update_servicebus_disasterrecoveryconfig(cmd, client,
                                              resource_group,
                                              name,
-                                             alias,
-                                             parameters=None):
+                                             alias):
     body={}
     return client.disaster_recovery_configs.create_or_update(resource_group_name=resource_group, namespace_name=name, alias=alias, parameters=body)
 
@@ -101,7 +97,6 @@ def create_servicebus_queue(cmd, client,
                             resource_group,
                             namespace_name,
                             name,
-                            parameters=None,
                             lock_duration=None,
                             max_size_in_megabytes=None,
                             requires_duplicate_detection=None,
@@ -139,8 +134,7 @@ def create_servicebus_queue(cmd, client,
 def update_servicebus_queue(cmd, client,
                             resource_group,
                             namespace_name,
-                            name,
-                            parameters=None):
+                            name):
     body={}
     return client.queues.create_or_update(resource_group_name=resource_group, namespace_name=namespace_name, queue_name=name, parameters=body)
 
@@ -173,7 +167,6 @@ def create_servicebus_topic(cmd, client,
                             resource_group,
                             namespace_name,
                             name,
-                            parameters=None,
                             default_message_time_to_live=None,
                             max_size_in_megabytes=None,
                             requires_duplicate_detection=None,
@@ -201,8 +194,7 @@ def create_servicebus_topic(cmd, client,
 def update_servicebus_topic(cmd, client,
                             resource_group,
                             namespace_name,
-                            name,
-                            parameters=None):
+                            name):
     body={}
     return client.topics.create_or_update(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=name, parameters=body)
 
@@ -236,7 +228,6 @@ def create_servicebus_topic_subscription(cmd, client,
                                          namespace_name,
                                          topic_name,
                                          name,
-                                         parameters=None,
                                          lock_duration=None,
                                          requires_session=None,
                                          default_message_time_to_live=None,
@@ -269,8 +260,7 @@ def update_servicebus_topic_subscription(cmd, client,
                                          resource_group,
                                          namespace_name,
                                          topic_name,
-                                         name,
-                                         parameters=None):
+                                         name):
     body={}
     return client.subscriptions.create_or_update(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=name, parameters=body)
 
@@ -304,7 +294,6 @@ def create_servicebus_topic_subscription_rule(cmd, client,
                                               topic_name,
                                               subscription_name,
                                               name,
-                                              parameters=None,
                                               action=None,
                                               filter_type=None,
                                               sql_filter=None,
@@ -322,8 +311,7 @@ def update_servicebus_topic_subscription_rule(cmd, client,
                                               namespace_name,
                                               topic_name,
                                               subscription_name,
-                                              name,
-                                              parameters=None):
+                                              name):
     body={}
     return client.rules.create_or_update(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=subscription_name, rule_name=name, parameters=body)
 

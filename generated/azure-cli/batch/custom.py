@@ -9,7 +9,6 @@ from knack.util import CLIError
 def create_batch(cmd, client,
                  resource_group,
                  name,
-                 parameters=None,
                  location=None,
                  tags=None,
                  auto_storage_account_id=None,
@@ -26,8 +25,7 @@ def create_batch(cmd, client,
 # module equivalent: azure_rm_batchaccount
 def update_batch(cmd, client,
                  resource_group,
-                 name,
-                 parameters=None):
+                 name):
     body={}
     return client.batch_account.update(resource_group_name=resource_group, account_name=name, parameters=body)
 
@@ -56,8 +54,7 @@ def create_batch_application_version(cmd, client,
                                      resource_group,
                                      account_name,
                                      application_name,
-                                     name,
-                                     parameters=None):
+                                     name):
     body={}
     return client.application_package.create(resource_group_name=resource_group, account_name=account_name, application_name=application_name, version_name=name, parameters=body)
 
@@ -89,7 +86,6 @@ def create_batch_application(cmd, client,
                              resource_group,
                              account_name,
                              name,
-                             parameters=None,
                              display_name=None,
                              allow_updates=None,
                              default_version=None):
@@ -103,8 +99,7 @@ def create_batch_application(cmd, client,
 def update_batch_application(cmd, client,
                              resource_group,
                              account_name,
-                             name,
-                             parameters=None):
+                             name):
     body={}
     return client.application.update(resource_group_name=resource_group, account_name=account_name, application_name=name, parameters=body)
 
@@ -133,7 +128,6 @@ def create_batch_certificate(cmd, client,
                              resource_group,
                              account_name,
                              name,
-                             parameters=None,
                              thumbprint_algorithm=None,
                              thumbprint=None,
                              format=None,
@@ -151,8 +145,7 @@ def create_batch_certificate(cmd, client,
 def update_batch_certificate(cmd, client,
                              resource_group,
                              account_name,
-                             name,
-                             parameters=None):
+                             name):
     body={}
     return client.certificate.update(resource_group_name=resource_group, account_name=account_name, certificate_name=name, parameters=body)
 
@@ -181,7 +174,6 @@ def create_batch_pool(cmd, client,
                       resource_group,
                       account_name,
                       name,
-                      parameters=None,
                       display_name=None,
                       vm_size=None,
                       deployment_configuration=None,
@@ -217,8 +209,7 @@ def create_batch_pool(cmd, client,
 def update_batch_pool(cmd, client,
                       resource_group,
                       account_name,
-                      name,
-                      parameters=None):
+                      name):
     body={}
     return client.pool.update(resource_group_name=resource_group, account_name=account_name, pool_name=name, parameters=body)
 

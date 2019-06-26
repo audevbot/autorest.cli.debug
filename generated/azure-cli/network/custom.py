@@ -9,7 +9,6 @@ from knack.util import CLIError
 def create_network(cmd, client,
                    resource_group,
                    name,
-                   parameters=None,
                    id=None,
                    location=None,
                    tags=None,
@@ -30,8 +29,7 @@ def create_network(cmd, client,
 # module equivalent: azure_rm_azurefirewall
 def update_network(cmd, client,
                    resource_group,
-                   name,
-                   parameters=None):
+                   name):
     body={}
     return client.azure_firewalls.create_or_update(resource_group_name=resource_group, azure_firewall_name=name, parameters=body)
 
