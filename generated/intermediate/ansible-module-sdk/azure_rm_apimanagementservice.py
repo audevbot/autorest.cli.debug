@@ -298,18 +298,13 @@ options:
         in Primary region which is deployed in an Internal Virtual Network.
         Available only for Basic, Standard and Premium SKU.
     type: list
-  sku:
+  skuname:
     description:
-      - SKU properties of the API Management service.
+      - Name of the Sku.
     required: true
-    suboptions:
-      name:
-        description:
-          - Name of the Sku.
-        required: true
-      capacity:
-        description:
-          - Capacity of the SKU (number of deployed units of the SKU).
+  skucapacity:
+    description:
+      - Capacity of the SKU (number of deployed units of the SKU).
   identity:
     description:
       - Managed service identity of the Api Management service.
@@ -370,9 +365,6 @@ EXAMPLES = '''
       tag3: value3
     publisher_email: apim@autorestsdk.com
     publisher_name: autorestsdk
-    sku:
-      name: Developer
-      capacity: '1'
     location: Central US
 - name: ApiManagementCreateMultiRegionServiceWithCustomHostname
   azure_rm_apimanagementservice:
@@ -416,9 +408,6 @@ EXAMPLES = '''
     virtual_network_type: External
     publisher_email: admin@live.com
     publisher_name: contoso
-    sku:
-      name: Premium
-      capacity: '1'
     location: Central US
 - name: ApiManagementCreateServiceHavingMsi
   azure_rm_apimanagementservice:
@@ -430,8 +419,6 @@ EXAMPLES = '''
       tag3: value3
     publisher_email: apim@autorestsdk.com
     publisher_name: autorestsdk
-    sku:
-      name: Consumption
     identity:
       type: SystemAssigned
     location: West US
@@ -449,9 +436,6 @@ EXAMPLES = '''
         store_name: CertificateAuthority
     publisher_email: apim@autorestsdk.com
     publisher_name: autorestsdk
-    sku:
-      name: Basic
-      capacity: '1'
     location: Central US
 - name: ApiManagementUpdateServiceDisableTls10
   azure_rm_apimanagementservice:
@@ -1181,24 +1165,19 @@ class AzureRMApiManagementService(AzureRMModuleBaseExt):
                 disposition='/',
                 required=true
             ),
-            sku=dict(
-                type='dict',
-                disposition='/',
-                required=true,
-                options=dict(
-                    name=dict(
-                        type='str',
-                        choices=['Developer',
-                                 'Standard',
-                                 'Premium',
-                                 'Basic',
-                                 'Consumption'],
-                        required=true
-                    ),
-                    capacity=dict(
-                        type='number'
-                    )
-                )
+            skuname=dict(
+                type='str',
+                disposition='sku/name',
+                choices=['Developer',
+                         'Standard',
+                         'Premium',
+                         'Basic',
+                         'Consumption'],
+                required=true
+            ),
+            skucapacity=dict(
+                type='number',
+                disposition='sku/capacity'
             ),
             identity=dict(
                 type='dict',

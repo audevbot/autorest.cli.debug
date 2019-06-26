@@ -208,7 +208,7 @@ options:
       - IP configuration of the Azure Firewall resource.
     type: list
     suboptions:
-      '*':
+      id:
         description:
           - Resource ID.
       private_ip_address:
@@ -317,7 +317,7 @@ EXAMPLES = '''
               - '8443'
         name: netrulecoll
     ip_configurations:
-      - '*': >-
+      - id: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.Network/publicIPAddresses/{{
           public_ip_address_name }}
@@ -997,7 +997,7 @@ class AzureRMAzureFirewalls(AzureRMModuleBaseExt):
                 type='list',
                 disposition='/properties/ipConfigurations',
                 options=dict(
-                    *=dict(
+                    id=dict(
                         type='raw',
                         disposition='properties/subnet/id',
                         pattern=('//subscriptions/{{ subscription_id }}/resourceGroups'
@@ -1005,7 +1005,7 @@ class AzureRMAzureFirewalls(AzureRMModuleBaseExt):
                                  '/virtualNetworks/{{ virtual_network_name }}/subnets'
                                  '/{{ name }}')
                     ),
-                    *=dict(
+                    id=dict(
                         type='raw',
                         disposition='properties/publicIPAddress/id',
                         pattern=('//subscriptions/{{ subscription_id }}/resourceGroups'
