@@ -25,5 +25,7 @@
             store_name: CertificateAuthority
         publisher_email: apim@autorestsdk.com
         publisher_name: autorestsdk
+        sku_name: Basic
+        sku_capacity: '1'
         location: Central US
     
