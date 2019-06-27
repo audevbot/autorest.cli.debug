@@ -1,6 +1,5 @@
 --- !ruby/object:Api::Product
 name: Azure AzureFirewall Management
-prefix: azure_rm_azurefirewall
 versions:
   - !ruby/object:Api::Product::Version
     name: ga
