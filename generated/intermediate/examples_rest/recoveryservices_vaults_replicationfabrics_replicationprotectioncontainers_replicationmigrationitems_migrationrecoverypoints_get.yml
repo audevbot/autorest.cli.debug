@@ -1,0 +1,31 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    subscription_name: mySubscription
+    resource_group: myResourceGroup
+    vault_name: myVault
+    replication_fabric_name: myReplicationFabric
+    replication_protection_container_name: myReplicationProtectionContainer
+    replication_migration_item_name: myReplicationMigrationItem
+  tasks:
+    - name: Gets the recovery points for a migration item.
+      azure_rm_resource_facts:
+        api_version: '2018-07-10'
+        resource_group: '{{ resource_group }}'
+        provider: RecoveryServices
+        resource_type: vaults
+        resource_name: '{{ vault_name }}'
+        subresource:
+          - type: replicationFabrics
+            name: '{{ replication_fabric_name }}'
+          - type: replicationProtectionContainers
+            name: '{{ replication_protection_container_name }}'
+          - type: replicationMigrationItems
+            name: '{{ replication_migration_item_name }}'
+          - type: migrationRecoveryPoints
+      register: output
+    - debug:
+        var: output

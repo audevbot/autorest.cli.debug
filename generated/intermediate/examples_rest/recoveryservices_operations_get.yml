@@ -1,0 +1,18 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    subscription_name: mySubscription
+    resource_group: myResourceGroup
+  tasks:
+    - name: Returns the list of available operations.
+      azure_rm_resource_facts:
+        api_version: '2018-07-10'
+        resource_group: '{{ resource_group }}'
+        provider: RecoveryServices
+        resource_type: operations
+      register: output
+    - debug:
+        var: output

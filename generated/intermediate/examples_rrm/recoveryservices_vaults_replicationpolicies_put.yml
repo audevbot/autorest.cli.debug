@@ -1,0 +1,25 @@
+- import_playbook: recoveryservices_vaults_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    subscription_name: mySubscription
+    resource_group: myResourceGroup
+    vault_name: myVault
+    replication_policy_name: myReplicationPolicy
+  tasks:
+
+    - name: Creates the policy.
+      azure_rm_recoveryservicesreplicationpolicy:
+        resource_name: '{{vault_name}}'
+        resource_group: '{{resource_group}}'
+        name: '{{replication_policy_name}}'
+        input:
+          properties:
+            providerSpecificInput:
+              instanceType: HyperVReplicaAzure
+    

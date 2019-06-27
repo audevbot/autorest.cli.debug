@@ -1,0 +1,21 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    subscription_name: mySubscription
+    resource_group: myResourceGroup
+    vault_name: myVault
+    replication_recovery_plan_name: myReplicationRecoveryPlan
+  tasks:
+
+    - name: Gets the requested recovery plan.
+      azure_rm_recoveryservicesreplicationrecoveryplan_info:
+        resource_name: '{{vault_name}}'
+        resource_group: '{{resource_group}}'
+        name: '{{replication_recovery_plan_name}}'
+    
+      register: output
+    - debug:
+        var: output

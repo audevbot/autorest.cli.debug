@@ -1,0 +1,23 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    subscription_name: mySubscription
+    resource_group: myResourceGroup
+    vault_name: myVault
+    replication_fabric_name: myReplicationFabric
+    replication_storage_classification_name: myReplicationStorageClassification
+  tasks:
+
+    - name: Gets the details of a storage classification.
+      azure_rm_recoveryservicesreplicationstorageclassification_info:
+        resource_name: '{{vault_name}}'
+        resource_group: '{{resource_group}}'
+        fabric_name: '{{replication_fabric_name}}'
+        name: '{{replication_storage_classification_name}}'
+    
+      register: output
+    - debug:
+        var: output

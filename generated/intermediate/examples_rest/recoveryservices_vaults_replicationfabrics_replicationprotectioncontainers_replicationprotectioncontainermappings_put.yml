@@ -1,0 +1,36 @@
+- import_playbook: >-
+    recoveryservices_vaults_replicationfabrics_replicationprotectioncontainers_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    subscription_name: mySubscription
+    resource_group: myResourceGroup
+    vault_name: myVault
+    replication_fabric_name: myReplicationFabric
+    replication_protection_container_name: myReplicationProtectionContainer
+    replication_protection_container_mapping_name: myReplicationProtectionContainerMapping
+  tasks:
+    - name: Create protection container mapping.
+      azure_rm_resource:
+        idempotency: true
+        api_version: '2018-07-10'
+        resource_group: '{{ resource_group }}'
+        provider: RecoveryServices
+        resource_type: vaults
+        resource_name: '{{ vault_name }}'
+        subresource:
+          - type: replicationFabrics
+            name: '{{ replication_fabric_name }}'
+          - type: replicationProtectionContainers
+            name: '{{ replication_protection_container_name }}'
+          - type: replicationProtectionContainerMappings
+            name: '{{ replication_protection_container_mapping_name }}'
+        body:
+          properties:
+            targetProtectionContainerId: Microsoft Azure
+            policyId: >-
+              /Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1
+            providerSpecificInput: {}

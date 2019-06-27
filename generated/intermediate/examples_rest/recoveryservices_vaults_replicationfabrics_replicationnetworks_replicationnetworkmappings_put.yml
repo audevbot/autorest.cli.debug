@@ -1,0 +1,40 @@
+- import_playbook: network_virtualnetworks_put.yml
+- import_playbook: recoveryservices_vaults_replicationfabrics_replicationnetworks_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    subscription_name: mySubscription
+    resource_group: myResourceGroup
+    vault_name: myVault
+    replication_fabric_name: myReplicationFabric
+    replication_network_name: myReplicationNetwork
+    replication_network_mapping_name: myReplicationNetworkMapping
+    virtual_network_name: myVirtualNetwork
+  tasks:
+    - name: Creates network mapping.
+      azure_rm_resource:
+        idempotency: true
+        api_version: '2018-07-10'
+        resource_group: '{{ resource_group }}'
+        provider: RecoveryServices
+        resource_type: vaults
+        resource_name: '{{ vault_name }}'
+        subresource:
+          - type: replicationFabrics
+            name: '{{ replication_fabric_name }}'
+          - type: replicationNetworks
+            name: '{{ replication_network_name }}'
+          - type: replicationNetworkMappings
+            name: '{{ replication_network_mapping_name }}'
+        body:
+          properties:
+            recoveryFabricName: Microsoft Azure
+            recoveryNetworkId: >-
+              /subscriptions/{{ subscription_id }}/resourceGroups/{{
+              resource_group }}/providers/Microsoft.Network/virtualNetworks/{{
+              virtual_network_name }}
+            fabricSpecificDetails:
+              instanceType: VmmToAzure
