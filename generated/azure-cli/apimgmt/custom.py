@@ -47,7 +47,7 @@ def create_apimgmt_api(cmd, client,
     body['display_name'] = display_name
     body['service_url'] = service_url
     body['path'] = path
-    body['protocols'] = protocols
+    body['protocols'] = ['http'] # protocols
     body['api_version_set'] = api_version_set
     body['value'] = value
     body['format'] = format
@@ -297,8 +297,8 @@ def show_apimgmt_api_operation_policy(cmd, client,
                                       name,
                                       api_id,
                                       operation_id,
-                                      format=None,
-                                      policy_id):
+                                      policy_id,
+                                      format=None):
     return client.api_operation_policy.get(resource_group_name=resource_group, service_name=name, api_id=api_id, operation_id=operation_id, format=format, policy_id=policy_id)
 
 # module equivalent: azure_rm_apimanagementtag
@@ -1093,8 +1093,8 @@ def create_apimgmt(cmd, client,
     body['virtual_network_type'] = virtual_network_type
     body['publisher_email'] = publisher_email
     body['publisher_name'] = publisher_name
-    body.get('sku', {}).get('name', {})['name'] = name
-    body.get('sku', {}).get('capacity', {})['capacity'] = capacity
+    body.setdefault('sku', {})['name'] = sku_name
+    body.setdefault('sku', {})['capacity'] = sku_capacity
     body['identity'] = identity
     body['location'] = location
     return client.api_management_service.create_or_update(resource_group_name=resource_group, service_name=name, parameters=body)
