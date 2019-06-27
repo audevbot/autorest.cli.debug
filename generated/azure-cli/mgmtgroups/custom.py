@@ -15,7 +15,7 @@ def create_mgmtgroups(cmd, client,
     body={}
     body['name'] = name # str
     body['display_name'] = display_name # str
-    body['details'] = json.parse(details) if isinstance(details, str) else details
+    body['details'] = json.loads(details) if isinstance(details, str) else details
     return client.management_groups.create_or_update(group_id=group_id)
 
 # module equivalent: azure_rm_managementgroup
@@ -27,7 +27,7 @@ def update_mgmtgroups(cmd, client,
     body={}
     body['name'] = name # str
     body['display_name'] = display_name # str
-    body['details'] = json.parse(details) if isinstance(details, str) else details
+    body['details'] = json.loads(details) if isinstance(details, str) else details
     return client.management_groups.create_or_update(group_id=group_id)
 
 # module equivalent: azure_rm_managementgroup

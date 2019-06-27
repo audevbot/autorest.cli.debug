@@ -17,7 +17,7 @@ def create_automationjob_job(cmd, client,
                              run_on=None):
     body={}
     body['parameters'] = parameters # default
-    body['runbook'] = json.parse(runbook) if isinstance(runbook, str) else runbook
+    body['runbook'] = json.loads(runbook) if isinstance(runbook, str) else runbook
     body['run_on'] = run_on # str
     return client.job.create(resource_group_name=resource_group, automation_account_name=automation_account_name, job_name=name, parameters=body, client_request_id=client_request_id)
 

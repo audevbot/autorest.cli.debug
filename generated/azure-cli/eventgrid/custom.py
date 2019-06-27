@@ -14,9 +14,9 @@ def create_eventgrid(cmd, client,
                      labels=None,
                      retry_policy=None):
     body={}
-    body['filter'] = json.parse(filter) if isinstance(filter, str) else filter
-    body['labels'] = labels # str
-    body['retry_policy'] = json.parse(retry_policy) if isinstance(retry_policy, str) else retry_policy
+    body['filter'] = json.loads(filter) if isinstance(filter, str) else filter
+    body['labels'] = json.loads(labels) if isinstance(labels, str) else labels
+    body['retry_policy'] = json.loads(retry_policy) if isinstance(retry_policy, str) else retry_policy
     return client.event_subscriptions.create_or_update(scope=scope, event_subscription_name=name)
 
 # module equivalent: azure_rm_eventgrideventsubscription
@@ -27,9 +27,9 @@ def update_eventgrid(cmd, client,
                      labels=None,
                      retry_policy=None):
     body={}
-    body['filter'] = json.parse(filter) if isinstance(filter, str) else filter
-    body['labels'] = labels # str
-    body['retry_policy'] = json.parse(retry_policy) if isinstance(retry_policy, str) else retry_policy
+    body['filter'] = json.loads(filter) if isinstance(filter, str) else filter
+    body['labels'] = json.loads(labels) if isinstance(labels, str) else labels
+    body['retry_policy'] = json.loads(retry_policy) if isinstance(retry_policy, str) else retry_policy
     return client.event_subscriptions.create_or_update(scope=scope, event_subscription_name=name)
 
 # module equivalent: azure_rm_eventgrideventsubscription
