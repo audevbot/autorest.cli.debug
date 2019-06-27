@@ -1,0 +1,19 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    subscription_name: mySubscription
+    resource_group: myResourceGroup
+    vault_name: myVault
+  tasks:
+
+    - name: Gets the list of storage classification objects under a vault.
+      azure_rm_recoveryservicesreplicationstorageclassification_info:
+        resource_name: '{{vault_name}}'
+        resource_group: '{{resource_group}}'
+    
+      register: output
+    - debug:
+        var: output

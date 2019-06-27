@@ -1,0 +1,42 @@
+- import_playbook: automation_automationaccounts_put.yml
+- import_playbook: >-
+    recoveryservices_vaults_replicationfabrics_replicationprotectioncontainers_replicationprotectioncontainermappings_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    subscription_name: mySubscription
+    resource_group: myResourceGroup
+    vault_name: myVault
+    replication_fabric_name: myReplicationFabric
+    replication_protection_container_name: myReplicationProtectionContainer
+    replication_protection_container_mapping_name: myReplicationProtectionContainerMapping
+    automation_account_name: myAutomationAccount
+  tasks:
+    - name: Update protection container mapping.
+      azure_rm_resource:
+        method: PATCH
+        api_version: '2018-07-10'
+        resource_group: '{{ resource_group }}'
+        provider: RecoveryServices
+        resource_type: vaults
+        resource_name: '{{ vault_name }}'
+        subresource:
+          - type: replicationFabrics
+            name: '{{ replication_fabric_name }}'
+          - type: replicationProtectionContainers
+            name: '{{ replication_protection_container_name }}'
+          - type: replicationProtectionContainerMappings
+            name: '{{ replication_protection_container_mapping_name }}'
+        body:
+          properties:
+            providerSpecificInput:
+              instanceType: A2A
+              agentAutoUpdateStatus: Enabled
+              automationAccountArmId: >-
+                /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                resource_group
+                }}/providers/Microsoft.Automation/automationAccounts/{{
+                automation_account_name }}

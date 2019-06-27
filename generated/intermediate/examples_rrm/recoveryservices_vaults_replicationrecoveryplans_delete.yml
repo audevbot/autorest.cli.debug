@@ -1,0 +1,19 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    subscription_name: mySubscription
+    resource_group: myResourceGroup
+    vault_name: myVault
+    replication_recovery_plan_name: myReplicationRecoveryPlan
+  tasks:
+
+    - name: Deletes the specified recovery plan.
+      azure_rm_recoveryservicesreplicationrecoveryplan:
+        resource_name: '{{vault_name}}'
+        resource_group: '{{resource_group}}'
+        name: '{{replication_recovery_plan_name}}'
+        state: absent
+    

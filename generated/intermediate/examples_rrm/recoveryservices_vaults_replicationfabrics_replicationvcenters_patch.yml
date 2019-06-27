@@ -1,0 +1,23 @@
+- import_playbook: recoveryservices_vaults_replicationfabrics_replicationvcenters_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    subscription_name: mySubscription
+    resource_group: myResourceGroup
+    vault_name: myVault
+    replication_fabric_name: myReplicationFabric
+    replicationv_center_name: myReplicationvCenter
+  tasks:
+
+    - name: Update vCenter operation.
+      azure_rm_recoveryservicesreplicationvcenter:
+        resource_name: '{{vault_name}}'
+        resource_group: '{{resource_group}}'
+        fabric_name: '{{replication_fabric_name}}'
+        name: '{{replicationv_center_name}}'
+    

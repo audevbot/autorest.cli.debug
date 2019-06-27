@@ -1,0 +1,33 @@
+- import_playbook: recoveryservices_vaults_replicationfabrics_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    subscription_name: mySubscription
+    resource_group: myResourceGroup
+    vault_name: myVault
+    replication_fabric_name: myReplicationFabric
+    replicationv_center_name: myReplicationvCenter
+  tasks:
+    - name: Add vCenter.
+      azure_rm_resource:
+        idempotency: true
+        api_version: '2018-07-10'
+        resource_group: '{{ resource_group }}'
+        provider: RecoveryServices
+        resource_type: vaults
+        resource_name: '{{ vault_name }}'
+        subresource:
+          - type: replicationFabrics
+            name: '{{ replication_fabric_name }}'
+          - type: replicationvCenters
+            name: '{{ replicationv_center_name }}'
+        body:
+          properties:
+            friendlyName: esx-78
+            ipAddress: inmtest78
+            processServerId: 5A720CAB-39CB-F445-BD1662B0B33164B5
+            port: '443'
+            runAsAccountId: '2'

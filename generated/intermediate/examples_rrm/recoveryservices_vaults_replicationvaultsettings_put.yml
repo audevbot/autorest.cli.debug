@@ -1,0 +1,32 @@
+- import_playbook: migrate_migrateprojects_solutions_put.yml
+- import_playbook: recoveryservices_vaults_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    subscription_name: mySubscription
+    resource_group: myResourceGroup
+    vault_name: myVault
+    replication_vault_setting_name: myReplicationVaultSetting
+    migrate_project_name: myMigrateProject
+    solution_name: mySolution
+  tasks:
+
+    - name: >-
+        Updates vault setting. A vault setting object is a singleton per vault and
+        it is always present by default.
+      azure_rm_recoveryservicesreplicationvaultsetting:
+        resource_name: '{{vault_name}}'
+        resource_group: '{{resource_group}}'
+        name: '{{replication_vault_setting_name}}'
+        input:
+          properties:
+            migrationSolutionId: >-
+              /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
+              }}/providers/Microsoft.Migrate/MigrateProjects/{{ migrate_project_name
+              }}/Solutions/{{ solution_name }}
+    
