@@ -17,7 +17,7 @@ def create_batch(cmd, client,
     body={}
     body['location'] = location
     body['tags'] = tags
-    body.get('auto_storage', {}).get('storage_account_id', {})['storage_account_id'] = storage_account_id
+    body.setdefault('auto_storage', {})['storage_account_id'] = auto_storage_account_id
     body['pool_allocation_mode'] = pool_allocation_mode
     body['key_vault_reference'] = key_vault_reference
     return client.batch_account.create(resource_group_name=resource_group, account_name=name, parameters=body)
@@ -34,7 +34,7 @@ def update_batch(cmd, client,
     body={}
     body['location'] = location
     body['tags'] = tags
-    body.get('auto_storage', {}).get('storage_account_id', {})['storage_account_id'] = storage_account_id
+    body.setdefault('auto_storage', {})['storage_account_id'] = auto_storage_account_id
     body['pool_allocation_mode'] = pool_allocation_mode
     body['key_vault_reference'] = key_vault_reference
     return client.batch_account.update(resource_group_name=resource_group, account_name=name, parameters=body)
