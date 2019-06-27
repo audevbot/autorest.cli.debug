@@ -17,10 +17,10 @@ def create_automationcfg_softwareupdateconfiguration(cmd, client,
                                                      error=None,
                                                      tasks=None):
     body={}
-    body['update_configuration'] = update_configuration # body
-    body['schedule_info'] = schedule_info # body
-    body['error'] = error # body
-    body['tasks'] = tasks # body
+    body['update_configuration'] = json.parse(update_configuration) if isinstance(update_configuration, str) else update_configuration
+    body['schedule_info'] = json.parse(schedule_info) if isinstance(schedule_info, str) else schedule_info
+    body['error'] = json.parse(error) if isinstance(error, str) else error
+    body['tasks'] = json.parse(tasks) if isinstance(tasks, str) else tasks
     return client.software_update_configurations.create(resource_group_name=resource_group, automation_account_name=automation_account_name, software_update_configuration_name=name, client_request_id=client_request_id, parameters=body)
 
 # module equivalent: azure_rm_softwareupdateconfiguration

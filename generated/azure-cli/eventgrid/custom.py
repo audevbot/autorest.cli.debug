@@ -14,9 +14,9 @@ def create_eventgrid(cmd, client,
                      labels=None,
                      retry_policy=None):
     body={}
-    body['filter'] = filter # body
-    body['labels'] = labels # body
-    body['retry_policy'] = retry_policy # body
+    body['filter'] = json.parse(filter) if isinstance(filter, str) else filter
+    body['labels'] = labels # str
+    body['retry_policy'] = json.parse(retry_policy) if isinstance(retry_policy, str) else retry_policy
     return client.event_subscriptions.create_or_update(scope=scope, event_subscription_name=name)
 
 # module equivalent: azure_rm_eventgrideventsubscription
@@ -27,9 +27,9 @@ def update_eventgrid(cmd, client,
                      labels=None,
                      retry_policy=None):
     body={}
-    body['filter'] = filter # body
-    body['labels'] = labels # body
-    body['retry_policy'] = retry_policy # body
+    body['filter'] = json.parse(filter) if isinstance(filter, str) else filter
+    body['labels'] = labels # str
+    body['retry_policy'] = json.parse(retry_policy) if isinstance(retry_policy, str) else retry_policy
     return client.event_subscriptions.create_or_update(scope=scope, event_subscription_name=name)
 
 # module equivalent: azure_rm_eventgrideventsubscription
@@ -72,8 +72,8 @@ def create_eventgrid(cmd, client,
                      location=None,
                      tags=None):
     body={}
-    body['location'] = location # body
-    body['tags'] = tags # body
+    body['location'] = location # str
+    body['tags'] = tags # unknown[DictionaryType {"$id":"342","$type":"DictionaryType","valueType":{"$id":"343","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"344","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"345","fixed":false},"deprecated":false}]
     return client.topics.create_or_update(resource_group_name=resource_group, topic_name=name)
 
 # module equivalent: azure_rm_eventgridtopic
@@ -83,8 +83,8 @@ def update_eventgrid(cmd, client,
                      location=None,
                      tags=None):
     body={}
-    body['location'] = location # body
-    body['tags'] = tags # body
+    body['location'] = location # str
+    body['tags'] = tags # unknown[DictionaryType {"$id":"342","$type":"DictionaryType","valueType":{"$id":"343","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"344","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"345","fixed":false},"deprecated":false}]
     return client.topics.create_or_update(resource_group_name=resource_group, topic_name=name)
 
 # module equivalent: azure_rm_eventgridtopic

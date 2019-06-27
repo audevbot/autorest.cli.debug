@@ -23,18 +23,18 @@ def create_cosmos-db(cmd, client,
                      virtual_network_rules=None,
                      enable_multiple_write_locations=None):
     body={}
-    body['location'] = location # body
-    body['tags'] = tags # body
-    body['kind'] = kind # body
-    body['consistency_policy'] = consistency_policy # body
-    body['locations'] = locations # body
-    body['database_account_offer_type'] = database_account_offer_type # body
-    body['ip_range_filter'] = ip_range_filter # body
-    body['is_virtual_network_filter_enabled'] = is_virtual_network_filter_enabled # body
-    body['enable_automatic_failover'] = enable_automatic_failover # body
-    body['capabilities'] = capabilities # body
-    body['virtual_network_rules'] = virtual_network_rules # body
-    body['enable_multiple_write_locations'] = enable_multiple_write_locations # body
+    body['location'] = location # str
+    body['tags'] = tags # unknown[DictionaryType {"$id":"235","$type":"DictionaryType","valueType":{"$id":"236","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"237","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"238","fixed":false},"deprecated":false}]
+    body['kind'] = kind # str
+    body['consistency_policy'] = json.parse(consistency_policy) if isinstance(consistency_policy, str) else consistency_policy
+    body['locations'] = json.parse(locations) if isinstance(locations, str) else locations
+    body['database_account_offer_type'] = database_account_offer_type # str
+    body['ip_range_filter'] = ip_range_filter # str
+    body['is_virtual_network_filter_enabled'] = is_virtual_network_filter_enabled # boolean
+    body['enable_automatic_failover'] = enable_automatic_failover # boolean
+    body['capabilities'] = json.parse(capabilities) if isinstance(capabilities, str) else capabilities
+    body['virtual_network_rules'] = json.parse(virtual_network_rules) if isinstance(virtual_network_rules, str) else virtual_network_rules
+    body['enable_multiple_write_locations'] = enable_multiple_write_locations # boolean
     return client.database_accounts.create_or_update(resource_group_name=resource_group, account_name=name)
 
 # module equivalent: azure_rm_cosmosdbdatabaseaccount
@@ -54,18 +54,18 @@ def update_cosmos-db(cmd, client,
                      virtual_network_rules=None,
                      enable_multiple_write_locations=None):
     body={}
-    body['location'] = location # body
-    body['tags'] = tags # body
-    body['kind'] = kind # body
-    body['consistency_policy'] = consistency_policy # body
-    body['locations'] = locations # body
-    body['database_account_offer_type'] = database_account_offer_type # body
-    body['ip_range_filter'] = ip_range_filter # body
-    body['is_virtual_network_filter_enabled'] = is_virtual_network_filter_enabled # body
-    body['enable_automatic_failover'] = enable_automatic_failover # body
-    body['capabilities'] = capabilities # body
-    body['virtual_network_rules'] = virtual_network_rules # body
-    body['enable_multiple_write_locations'] = enable_multiple_write_locations # body
+    body['location'] = location # str
+    body['tags'] = tags # unknown[DictionaryType {"$id":"235","$type":"DictionaryType","valueType":{"$id":"236","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"237","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"238","fixed":false},"deprecated":false}]
+    body['kind'] = kind # str
+    body['consistency_policy'] = json.parse(consistency_policy) if isinstance(consistency_policy, str) else consistency_policy
+    body['locations'] = json.parse(locations) if isinstance(locations, str) else locations
+    body['database_account_offer_type'] = database_account_offer_type # str
+    body['ip_range_filter'] = ip_range_filter # str
+    body['is_virtual_network_filter_enabled'] = is_virtual_network_filter_enabled # boolean
+    body['enable_automatic_failover'] = enable_automatic_failover # boolean
+    body['capabilities'] = json.parse(capabilities) if isinstance(capabilities, str) else capabilities
+    body['virtual_network_rules'] = json.parse(virtual_network_rules) if isinstance(virtual_network_rules, str) else virtual_network_rules
+    body['enable_multiple_write_locations'] = enable_multiple_write_locations # boolean
     return client.database_accounts.create_or_update(resource_group_name=resource_group, account_name=name)
 
 # module equivalent: azure_rm_cosmosdbdatabaseaccount
