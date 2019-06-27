@@ -25,12 +25,12 @@ def create_frontdoor(cmd, client,
     body['location'] = location # str
     body['tags'] = tags # unknown[DictionaryType {"$id":"539","$type":"DictionaryType","valueType":{"$id":"540","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"541","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"542","fixed":false},"deprecated":false}]
     body['friendly_name'] = friendly_name # str
-    body['routing_rules'] = json.parse(routing_rules) if isinstance(routing_rules, str) else routing_rules
-    body['load_balancing_settings'] = json.parse(load_balancing_settings) if isinstance(load_balancing_settings, str) else load_balancing_settings
-    body['health_probe_settings'] = json.parse(health_probe_settings) if isinstance(health_probe_settings, str) else health_probe_settings
-    body['backend_pools'] = json.parse(backend_pools) if isinstance(backend_pools, str) else backend_pools
-    body['frontend_endpoints'] = json.parse(frontend_endpoints) if isinstance(frontend_endpoints, str) else frontend_endpoints
-    body['backend_pools_settings'] = json.parse(backend_pools_settings) if isinstance(backend_pools_settings, str) else backend_pools_settings
+    body['routing_rules'] = json.loads(routing_rules) if isinstance(routing_rules, str) else routing_rules
+    body['load_balancing_settings'] = json.loads(load_balancing_settings) if isinstance(load_balancing_settings, str) else load_balancing_settings
+    body['health_probe_settings'] = json.loads(health_probe_settings) if isinstance(health_probe_settings, str) else health_probe_settings
+    body['backend_pools'] = json.loads(backend_pools) if isinstance(backend_pools, str) else backend_pools
+    body['frontend_endpoints'] = json.loads(frontend_endpoints) if isinstance(frontend_endpoints, str) else frontend_endpoints
+    body['backend_pools_settings'] = json.loads(backend_pools_settings) if isinstance(backend_pools_settings, str) else backend_pools_settings
     body['enabled_state'] = enabled_state # str
     body['resource_state'] = resource_state # str
     return client.front_doors.create_or_update(resource_group_name=resource_group, front_door_name=name)
@@ -54,12 +54,12 @@ def update_frontdoor(cmd, client,
     body['location'] = location # str
     body['tags'] = tags # unknown[DictionaryType {"$id":"539","$type":"DictionaryType","valueType":{"$id":"540","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"541","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"542","fixed":false},"deprecated":false}]
     body['friendly_name'] = friendly_name # str
-    body['routing_rules'] = json.parse(routing_rules) if isinstance(routing_rules, str) else routing_rules
-    body['load_balancing_settings'] = json.parse(load_balancing_settings) if isinstance(load_balancing_settings, str) else load_balancing_settings
-    body['health_probe_settings'] = json.parse(health_probe_settings) if isinstance(health_probe_settings, str) else health_probe_settings
-    body['backend_pools'] = json.parse(backend_pools) if isinstance(backend_pools, str) else backend_pools
-    body['frontend_endpoints'] = json.parse(frontend_endpoints) if isinstance(frontend_endpoints, str) else frontend_endpoints
-    body['backend_pools_settings'] = json.parse(backend_pools_settings) if isinstance(backend_pools_settings, str) else backend_pools_settings
+    body['routing_rules'] = json.loads(routing_rules) if isinstance(routing_rules, str) else routing_rules
+    body['load_balancing_settings'] = json.loads(load_balancing_settings) if isinstance(load_balancing_settings, str) else load_balancing_settings
+    body['health_probe_settings'] = json.loads(health_probe_settings) if isinstance(health_probe_settings, str) else health_probe_settings
+    body['backend_pools'] = json.loads(backend_pools) if isinstance(backend_pools, str) else backend_pools
+    body['frontend_endpoints'] = json.loads(frontend_endpoints) if isinstance(frontend_endpoints, str) else frontend_endpoints
+    body['backend_pools_settings'] = json.loads(backend_pools_settings) if isinstance(backend_pools_settings, str) else backend_pools_settings
     body['enabled_state'] = enabled_state # str
     body['resource_state'] = resource_state # str
     return client.front_doors.create_or_update(resource_group_name=resource_group, front_door_name=name)
@@ -97,9 +97,9 @@ def create_frontdoor_routingrule(cmd, client,
                                  resource_state=None):
     body={}
     body['id'] = id # str
-    body['frontend_endpoints'] = json.parse(frontend_endpoints) if isinstance(frontend_endpoints, str) else frontend_endpoints
-    body['accepted_protocols'] = accepted_protocols # str
-    body['patterns_to_match'] = patterns_to_match # str
+    body['frontend_endpoints'] = json.loads(frontend_endpoints) if isinstance(frontend_endpoints, str) else frontend_endpoints
+    body['accepted_protocols'] = json.loads(accepted_protocols) if isinstance(accepted_protocols, str) else accepted_protocols
+    body['patterns_to_match'] = json.loads(patterns_to_match) if isinstance(patterns_to_match, str) else patterns_to_match
     body['enabled_state'] = enabled_state # str
     body['resource_state'] = resource_state # str
     return client.routing_rules.create_or_update(resource_group_name=resource_group, front_door_name=front_door_name, routing_rule_name=name)
@@ -117,9 +117,9 @@ def update_frontdoor_routingrule(cmd, client,
                                  resource_state=None):
     body={}
     body['id'] = id # str
-    body['frontend_endpoints'] = json.parse(frontend_endpoints) if isinstance(frontend_endpoints, str) else frontend_endpoints
-    body['accepted_protocols'] = accepted_protocols # str
-    body['patterns_to_match'] = patterns_to_match # str
+    body['frontend_endpoints'] = json.loads(frontend_endpoints) if isinstance(frontend_endpoints, str) else frontend_endpoints
+    body['accepted_protocols'] = json.loads(accepted_protocols) if isinstance(accepted_protocols, str) else accepted_protocols
+    body['patterns_to_match'] = json.loads(patterns_to_match) if isinstance(patterns_to_match, str) else patterns_to_match
     body['enabled_state'] = enabled_state # str
     body['resource_state'] = resource_state # str
     return client.routing_rules.create_or_update(resource_group_name=resource_group, front_door_name=front_door_name, routing_rule_name=name)
@@ -268,9 +268,9 @@ def create_frontdoor_backendpool(cmd, client,
                                  resource_state=None):
     body={}
     body['id'] = id # str
-    body['backends'] = json.parse(backends) if isinstance(backends, str) else backends
-    body['load_balancing_settings'] = json.parse(load_balancing_settings) if isinstance(load_balancing_settings, str) else load_balancing_settings
-    body['health_probe_settings'] = json.parse(health_probe_settings) if isinstance(health_probe_settings, str) else health_probe_settings
+    body['backends'] = json.loads(backends) if isinstance(backends, str) else backends
+    body['load_balancing_settings'] = json.loads(load_balancing_settings) if isinstance(load_balancing_settings, str) else load_balancing_settings
+    body['health_probe_settings'] = json.loads(health_probe_settings) if isinstance(health_probe_settings, str) else health_probe_settings
     body['resource_state'] = resource_state # str
     return client.backend_pools.create_or_update(resource_group_name=resource_group, front_door_name=front_door_name, backend_pool_name=name)
 
@@ -286,9 +286,9 @@ def update_frontdoor_backendpool(cmd, client,
                                  resource_state=None):
     body={}
     body['id'] = id # str
-    body['backends'] = json.parse(backends) if isinstance(backends, str) else backends
-    body['load_balancing_settings'] = json.parse(load_balancing_settings) if isinstance(load_balancing_settings, str) else load_balancing_settings
-    body['health_probe_settings'] = json.parse(health_probe_settings) if isinstance(health_probe_settings, str) else health_probe_settings
+    body['backends'] = json.loads(backends) if isinstance(backends, str) else backends
+    body['load_balancing_settings'] = json.loads(load_balancing_settings) if isinstance(load_balancing_settings, str) else load_balancing_settings
+    body['health_probe_settings'] = json.loads(health_probe_settings) if isinstance(health_probe_settings, str) else health_probe_settings
     body['resource_state'] = resource_state # str
     return client.backend_pools.create_or_update(resource_group_name=resource_group, front_door_name=front_door_name, backend_pool_name=name)
 
@@ -328,7 +328,7 @@ def create_frontdoor_frontendendpoint(cmd, client,
     body['host_name'] = host_name # str
     body['session_affinity_enabled_state'] = session_affinity_enabled_state # str
     body['session_affinity_ttl_seconds'] = session_affinity_ttl_seconds # number
-    body['web_application_firewall_policy_link'] = json.parse(web_application_firewall_policy_link) if isinstance(web_application_firewall_policy_link, str) else web_application_firewall_policy_link
+    body['web_application_firewall_policy_link'] = json.loads(web_application_firewall_policy_link) if isinstance(web_application_firewall_policy_link, str) else web_application_firewall_policy_link
     body['resource_state'] = resource_state # str
     return client.frontend_endpoints.create_or_update(resource_group_name=resource_group, front_door_name=front_door_name, frontend_endpoint_name=name)
 
@@ -348,7 +348,7 @@ def update_frontdoor_frontendendpoint(cmd, client,
     body['host_name'] = host_name # str
     body['session_affinity_enabled_state'] = session_affinity_enabled_state # str
     body['session_affinity_ttl_seconds'] = session_affinity_ttl_seconds # number
-    body['web_application_firewall_policy_link'] = json.parse(web_application_firewall_policy_link) if isinstance(web_application_firewall_policy_link, str) else web_application_firewall_policy_link
+    body['web_application_firewall_policy_link'] = json.loads(web_application_firewall_policy_link) if isinstance(web_application_firewall_policy_link, str) else web_application_firewall_policy_link
     body['resource_state'] = resource_state # str
     return client.frontend_endpoints.create_or_update(resource_group_name=resource_group, front_door_name=front_door_name, frontend_endpoint_name=name)
 

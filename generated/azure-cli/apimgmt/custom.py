@@ -34,8 +34,8 @@ def create_apimgmt_api(cmd, client,
                        api_type=None):
     body={}
     body['description'] = description # str
-    body['authentication_settings'] = json.parse(authentication_settings) if isinstance(authentication_settings, str) else authentication_settings
-    body['subscription_key_parameter_names'] = json.parse(subscription_key_parameter_names) if isinstance(subscription_key_parameter_names, str) else subscription_key_parameter_names
+    body['authentication_settings'] = json.loads(authentication_settings) if isinstance(authentication_settings, str) else authentication_settings
+    body['subscription_key_parameter_names'] = json.loads(subscription_key_parameter_names) if isinstance(subscription_key_parameter_names, str) else subscription_key_parameter_names
     body['type'] = type # str
     body['api_revision'] = api_revision # str
     body['api_version'] = api_version # str
@@ -48,11 +48,11 @@ def create_apimgmt_api(cmd, client,
     body['display_name'] = display_name # str
     body['service_url'] = service_url # str
     body['path'] = path # str
-    body['protocols'] = protocols # str
-    body['api_version_set'] = json.parse(api_version_set) if isinstance(api_version_set, str) else api_version_set
+    body['protocols'] = json.loads(protocols) if isinstance(protocols, str) else protocols
+    body['api_version_set'] = json.loads(api_version_set) if isinstance(api_version_set, str) else api_version_set
     body['value'] = value # str
     body['format'] = format # str
-    body['wsdl_selector'] = json.parse(wsdl_selector) if isinstance(wsdl_selector, str) else wsdl_selector
+    body['wsdl_selector'] = json.loads(wsdl_selector) if isinstance(wsdl_selector, str) else wsdl_selector
     body['api_type'] = api_type # str
     return client.api.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, parameters=body)
 
@@ -84,8 +84,8 @@ def update_apimgmt_api(cmd, client,
                        api_type=None):
     body={}
     body['description'] = description # str
-    body['authentication_settings'] = json.parse(authentication_settings) if isinstance(authentication_settings, str) else authentication_settings
-    body['subscription_key_parameter_names'] = json.parse(subscription_key_parameter_names) if isinstance(subscription_key_parameter_names, str) else subscription_key_parameter_names
+    body['authentication_settings'] = json.loads(authentication_settings) if isinstance(authentication_settings, str) else authentication_settings
+    body['subscription_key_parameter_names'] = json.loads(subscription_key_parameter_names) if isinstance(subscription_key_parameter_names, str) else subscription_key_parameter_names
     body['type'] = type # str
     body['api_revision'] = api_revision # str
     body['api_version'] = api_version # str
@@ -98,11 +98,11 @@ def update_apimgmt_api(cmd, client,
     body['display_name'] = display_name # str
     body['service_url'] = service_url # str
     body['path'] = path # str
-    body['protocols'] = protocols # str
-    body['api_version_set'] = json.parse(api_version_set) if isinstance(api_version_set, str) else api_version_set
+    body['protocols'] = json.loads(protocols) if isinstance(protocols, str) else protocols
+    body['api_version_set'] = json.loads(api_version_set) if isinstance(api_version_set, str) else api_version_set
     body['value'] = value # str
     body['format'] = format # str
-    body['wsdl_selector'] = json.parse(wsdl_selector) if isinstance(wsdl_selector, str) else wsdl_selector
+    body['wsdl_selector'] = json.loads(wsdl_selector) if isinstance(wsdl_selector, str) else wsdl_selector
     body['api_type'] = api_type # str
     return client.api.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, parameters=body)
 
@@ -189,10 +189,10 @@ def create_apimgmt_api_operation(cmd, client,
                                  method=None,
                                  url_template=None):
     body={}
-    body['template_parameters'] = json.parse(template_parameters) if isinstance(template_parameters, str) else template_parameters
+    body['template_parameters'] = json.loads(template_parameters) if isinstance(template_parameters, str) else template_parameters
     body['description'] = description # str
-    body['request'] = json.parse(request) if isinstance(request, str) else request
-    body['responses'] = json.parse(responses) if isinstance(responses, str) else responses
+    body['request'] = json.loads(request) if isinstance(request, str) else request
+    body['responses'] = json.loads(responses) if isinstance(responses, str) else responses
     body['policies'] = policies # str
     body['display_name'] = display_name # str
     body['method'] = method # str
@@ -214,10 +214,10 @@ def update_apimgmt_api_operation(cmd, client,
                                  method=None,
                                  url_template=None):
     body={}
-    body['template_parameters'] = json.parse(template_parameters) if isinstance(template_parameters, str) else template_parameters
+    body['template_parameters'] = json.loads(template_parameters) if isinstance(template_parameters, str) else template_parameters
     body['description'] = description # str
-    body['request'] = json.parse(request) if isinstance(request, str) else request
-    body['responses'] = json.parse(responses) if isinstance(responses, str) else responses
+    body['request'] = json.loads(request) if isinstance(request, str) else request
+    body['responses'] = json.loads(responses) if isinstance(responses, str) else responses
     body['policies'] = policies # str
     body['display_name'] = display_name # str
     body['method'] = method # str
@@ -409,7 +409,7 @@ def create_apimgmt_api_schema(cmd, client,
                               document=None):
     body={}
     body['content_type'] = content_type # str
-    body['document'] = json.parse(document) if isinstance(document, str) else document
+    body['document'] = json.loads(document) if isinstance(document, str) else document
     return client.api_schema.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, schema_id=schema_id, parameters=body)
 
 # module equivalent: azure_rm_apimanagementapischema
@@ -422,7 +422,7 @@ def update_apimgmt_api_schema(cmd, client,
                               document=None):
     body={}
     body['content_type'] = content_type # str
-    body['document'] = json.parse(document) if isinstance(document, str) else document
+    body['document'] = json.loads(document) if isinstance(document, str) else document
     return client.api_schema.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, schema_id=schema_id, parameters=body)
 
 # module equivalent: azure_rm_apimanagementapischema
@@ -463,9 +463,9 @@ def create_apimgmt_api_diagnostic(cmd, client,
     body={}
     body['always_log'] = always_log # str
     body['logger_id'] = logger_id # str
-    body['sampling'] = json.parse(sampling) if isinstance(sampling, str) else sampling
-    body['frontend'] = json.parse(frontend) if isinstance(frontend, str) else frontend
-    body['backend'] = json.parse(backend) if isinstance(backend, str) else backend
+    body['sampling'] = json.loads(sampling) if isinstance(sampling, str) else sampling
+    body['frontend'] = json.loads(frontend) if isinstance(frontend, str) else frontend
+    body['backend'] = json.loads(backend) if isinstance(backend, str) else backend
     body['enable_http_correlation_headers'] = enable_http_correlation_headers # boolean
     return client.api_diagnostic.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, diagnostic_id=diagnostic_id, parameters=body)
 
@@ -484,9 +484,9 @@ def update_apimgmt_api_diagnostic(cmd, client,
     body={}
     body['always_log'] = always_log # str
     body['logger_id'] = logger_id # str
-    body['sampling'] = json.parse(sampling) if isinstance(sampling, str) else sampling
-    body['frontend'] = json.parse(frontend) if isinstance(frontend, str) else frontend
-    body['backend'] = json.parse(backend) if isinstance(backend, str) else backend
+    body['sampling'] = json.loads(sampling) if isinstance(sampling, str) else sampling
+    body['frontend'] = json.loads(frontend) if isinstance(frontend, str) else frontend
+    body['backend'] = json.loads(backend) if isinstance(backend, str) else backend
     body['enable_http_correlation_headers'] = enable_http_correlation_headers # boolean
     return client.api_diagnostic.create_or_update(resource_group_name=resource_group, service_name=name, api_id=api_id, diagnostic_id=diagnostic_id, parameters=body)
 
@@ -822,20 +822,20 @@ def create_apimgmt_authorizationserver(cmd, client,
                                        client_id=None):
     body={}
     body['description'] = description # str
-    body['authorization_methods'] = authorization_methods # str
-    body['client_authentication_method'] = client_authentication_method # str
-    body['token_body_parameters'] = json.parse(token_body_parameters) if isinstance(token_body_parameters, str) else token_body_parameters
+    body['authorization_methods'] = json.loads(authorization_methods) if isinstance(authorization_methods, str) else authorization_methods
+    body['client_authentication_method'] = json.loads(client_authentication_method) if isinstance(client_authentication_method, str) else client_authentication_method
+    body['token_body_parameters'] = json.loads(token_body_parameters) if isinstance(token_body_parameters, str) else token_body_parameters
     body['token_endpoint'] = token_endpoint # str
     body['support_state'] = support_state # boolean
     body['default_scope'] = default_scope # str
-    body['bearer_token_sending_methods'] = bearer_token_sending_methods # str
+    body['bearer_token_sending_methods'] = json.loads(bearer_token_sending_methods) if isinstance(bearer_token_sending_methods, str) else bearer_token_sending_methods
     body['client_secret'] = client_secret # str
     body['resource_owner_username'] = resource_owner_username # str
     body['resource_owner_password'] = resource_owner_password # str
     body['display_name'] = display_name # str
     body['client_registration_endpoint'] = client_registration_endpoint # str
     body['authorization_endpoint'] = authorization_endpoint # str
-    body['grant_types'] = grant_types # str
+    body['grant_types'] = json.loads(grant_types) if isinstance(grant_types, str) else grant_types
     body['client_id'] = client_id # str
     return client.authorization_server.create_or_update(resource_group_name=resource_group, service_name=name, authsid=authsid, parameters=body)
 
@@ -862,20 +862,20 @@ def update_apimgmt_authorizationserver(cmd, client,
                                        client_id=None):
     body={}
     body['description'] = description # str
-    body['authorization_methods'] = authorization_methods # str
-    body['client_authentication_method'] = client_authentication_method # str
-    body['token_body_parameters'] = json.parse(token_body_parameters) if isinstance(token_body_parameters, str) else token_body_parameters
+    body['authorization_methods'] = json.loads(authorization_methods) if isinstance(authorization_methods, str) else authorization_methods
+    body['client_authentication_method'] = json.loads(client_authentication_method) if isinstance(client_authentication_method, str) else client_authentication_method
+    body['token_body_parameters'] = json.loads(token_body_parameters) if isinstance(token_body_parameters, str) else token_body_parameters
     body['token_endpoint'] = token_endpoint # str
     body['support_state'] = support_state # boolean
     body['default_scope'] = default_scope # str
-    body['bearer_token_sending_methods'] = bearer_token_sending_methods # str
+    body['bearer_token_sending_methods'] = json.loads(bearer_token_sending_methods) if isinstance(bearer_token_sending_methods, str) else bearer_token_sending_methods
     body['client_secret'] = client_secret # str
     body['resource_owner_username'] = resource_owner_username # str
     body['resource_owner_password'] = resource_owner_password # str
     body['display_name'] = display_name # str
     body['client_registration_endpoint'] = client_registration_endpoint # str
     body['authorization_endpoint'] = authorization_endpoint # str
-    body['grant_types'] = grant_types # str
+    body['grant_types'] = json.loads(grant_types) if isinstance(grant_types, str) else grant_types
     body['client_id'] = client_id # str
     return client.authorization_server.create_or_update(resource_group_name=resource_group, service_name=name, authsid=authsid, parameters=body)
 
@@ -917,10 +917,10 @@ def create_apimgmt_backend(cmd, client,
     body['title'] = title # str
     body['description'] = description # str
     body['resource_id'] = resource_id # str
-    body['service_fabric_cluster'] = json.parse(service_fabric_cluster) if isinstance(service_fabric_cluster, str) else service_fabric_cluster
-    body['credentials'] = json.parse(credentials) if isinstance(credentials, str) else credentials
-    body['proxy'] = json.parse(proxy) if isinstance(proxy, str) else proxy
-    body['tls'] = json.parse(tls) if isinstance(tls, str) else tls
+    body['service_fabric_cluster'] = json.loads(service_fabric_cluster) if isinstance(service_fabric_cluster, str) else service_fabric_cluster
+    body['credentials'] = json.loads(credentials) if isinstance(credentials, str) else credentials
+    body['proxy'] = json.loads(proxy) if isinstance(proxy, str) else proxy
+    body['tls'] = json.loads(tls) if isinstance(tls, str) else tls
     body['url'] = url # str
     body['protocol'] = protocol # str
     return client.backend.create_or_update(resource_group_name=resource_group, service_name=name, backend_id=backend_id, parameters=body)
@@ -943,10 +943,10 @@ def update_apimgmt_backend(cmd, client,
     body['title'] = title # str
     body['description'] = description # str
     body['resource_id'] = resource_id # str
-    body['service_fabric_cluster'] = json.parse(service_fabric_cluster) if isinstance(service_fabric_cluster, str) else service_fabric_cluster
-    body['credentials'] = json.parse(credentials) if isinstance(credentials, str) else credentials
-    body['proxy'] = json.parse(proxy) if isinstance(proxy, str) else proxy
-    body['tls'] = json.parse(tls) if isinstance(tls, str) else tls
+    body['service_fabric_cluster'] = json.loads(service_fabric_cluster) if isinstance(service_fabric_cluster, str) else service_fabric_cluster
+    body['credentials'] = json.loads(credentials) if isinstance(credentials, str) else credentials
+    body['proxy'] = json.loads(proxy) if isinstance(proxy, str) else proxy
+    body['tls'] = json.loads(tls) if isinstance(tls, str) else tls
     body['url'] = url # str
     body['protocol'] = protocol # str
     return client.backend.create_or_update(resource_group_name=resource_group, service_name=name, backend_id=backend_id, parameters=body)
@@ -1085,18 +1085,18 @@ def create_apimgmt(cmd, client,
     body={}
     body['tags'] = tags # unknown[DictionaryType {"$id":"2630","$type":"DictionaryType","valueType":{"$id":"2631","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2632","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2633","fixed":false},"deprecated":false}]
     body['notification_sender_email'] = notification_sender_email # str
-    body['hostname_configurations'] = json.parse(hostname_configurations) if isinstance(hostname_configurations, str) else hostname_configurations
-    body['virtual_network_configuration'] = json.parse(virtual_network_configuration) if isinstance(virtual_network_configuration, str) else virtual_network_configuration
-    body['additional_locations'] = json.parse(additional_locations) if isinstance(additional_locations, str) else additional_locations
+    body['hostname_configurations'] = json.loads(hostname_configurations) if isinstance(hostname_configurations, str) else hostname_configurations
+    body['virtual_network_configuration'] = json.loads(virtual_network_configuration) if isinstance(virtual_network_configuration, str) else virtual_network_configuration
+    body['additional_locations'] = json.loads(additional_locations) if isinstance(additional_locations, str) else additional_locations
     body['custom_properties'] = custom_properties # unknown[DictionaryType {"$id":"2519","$type":"DictionaryType","valueType":{"$id":"2520","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2521","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2522","fixed":false},"deprecated":false}]
-    body['certificates'] = json.parse(certificates) if isinstance(certificates, str) else certificates
+    body['certificates'] = json.loads(certificates) if isinstance(certificates, str) else certificates
     body['enable_client_certificate'] = enable_client_certificate # boolean
     body['virtual_network_type'] = virtual_network_type # str
     body['publisher_email'] = publisher_email # str
     body['publisher_name'] = publisher_name # str
     body.setdefault('sku', {})['name'] = sku_name # str
     body.setdefault('sku', {})['capacity'] = sku_capacity # number
-    body['identity'] = json.parse(identity) if isinstance(identity, str) else identity
+    body['identity'] = json.loads(identity) if isinstance(identity, str) else identity
     body['location'] = location # str
     return client.api_management_service.create_or_update(resource_group_name=resource_group, service_name=name, parameters=body)
 
@@ -1122,18 +1122,18 @@ def update_apimgmt(cmd, client,
     body={}
     body['tags'] = tags # unknown[DictionaryType {"$id":"2630","$type":"DictionaryType","valueType":{"$id":"2631","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2632","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2633","fixed":false},"deprecated":false}]
     body['notification_sender_email'] = notification_sender_email # str
-    body['hostname_configurations'] = json.parse(hostname_configurations) if isinstance(hostname_configurations, str) else hostname_configurations
-    body['virtual_network_configuration'] = json.parse(virtual_network_configuration) if isinstance(virtual_network_configuration, str) else virtual_network_configuration
-    body['additional_locations'] = json.parse(additional_locations) if isinstance(additional_locations, str) else additional_locations
+    body['hostname_configurations'] = json.loads(hostname_configurations) if isinstance(hostname_configurations, str) else hostname_configurations
+    body['virtual_network_configuration'] = json.loads(virtual_network_configuration) if isinstance(virtual_network_configuration, str) else virtual_network_configuration
+    body['additional_locations'] = json.loads(additional_locations) if isinstance(additional_locations, str) else additional_locations
     body['custom_properties'] = custom_properties # unknown[DictionaryType {"$id":"2519","$type":"DictionaryType","valueType":{"$id":"2520","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2521","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2522","fixed":false},"deprecated":false}]
-    body['certificates'] = json.parse(certificates) if isinstance(certificates, str) else certificates
+    body['certificates'] = json.loads(certificates) if isinstance(certificates, str) else certificates
     body['enable_client_certificate'] = enable_client_certificate # boolean
     body['virtual_network_type'] = virtual_network_type # str
     body['publisher_email'] = publisher_email # str
     body['publisher_name'] = publisher_name # str
     body.setdefault('sku', {})['name'] = sku_name # str
     body.setdefault('sku', {})['capacity'] = sku_capacity # number
-    body['identity'] = json.parse(identity) if isinstance(identity, str) else identity
+    body['identity'] = json.loads(identity) if isinstance(identity, str) else identity
     body['location'] = location # str
     return client.api_management_service.create_or_update(resource_group_name=resource_group, service_name=name, parameters=body)
 
@@ -1171,9 +1171,9 @@ def create_apimgmt_diagnostic(cmd, client,
     body={}
     body['always_log'] = always_log # str
     body['logger_id'] = logger_id # str
-    body['sampling'] = json.parse(sampling) if isinstance(sampling, str) else sampling
-    body['frontend'] = json.parse(frontend) if isinstance(frontend, str) else frontend
-    body['backend'] = json.parse(backend) if isinstance(backend, str) else backend
+    body['sampling'] = json.loads(sampling) if isinstance(sampling, str) else sampling
+    body['frontend'] = json.loads(frontend) if isinstance(frontend, str) else frontend
+    body['backend'] = json.loads(backend) if isinstance(backend, str) else backend
     body['enable_http_correlation_headers'] = enable_http_correlation_headers # boolean
     return client.diagnostic.create_or_update(resource_group_name=resource_group, service_name=name, diagnostic_id=diagnostic_id, parameters=body)
 
@@ -1191,9 +1191,9 @@ def update_apimgmt_diagnostic(cmd, client,
     body={}
     body['always_log'] = always_log # str
     body['logger_id'] = logger_id # str
-    body['sampling'] = json.parse(sampling) if isinstance(sampling, str) else sampling
-    body['frontend'] = json.parse(frontend) if isinstance(frontend, str) else frontend
-    body['backend'] = json.parse(backend) if isinstance(backend, str) else backend
+    body['sampling'] = json.loads(sampling) if isinstance(sampling, str) else sampling
+    body['frontend'] = json.loads(frontend) if isinstance(frontend, str) else frontend
+    body['backend'] = json.loads(backend) if isinstance(backend, str) else backend
     body['enable_http_correlation_headers'] = enable_http_correlation_headers # boolean
     return client.diagnostic.create_or_update(resource_group_name=resource_group, service_name=name, diagnostic_id=diagnostic_id, parameters=body)
 
@@ -1340,12 +1340,12 @@ def create_apimgmt_group_user(cmd, client,
     body={}
     body['state'] = state # str
     body['note'] = note # str
-    body['identities'] = json.parse(identities) if isinstance(identities, str) else identities
+    body['identities'] = json.loads(identities) if isinstance(identities, str) else identities
     body['first_name'] = first_name # str
     body['last_name'] = last_name # str
     body['email'] = email # str
     body['registration_date'] = registration_date # datetime
-    body['groups'] = json.parse(groups) if isinstance(groups, str) else groups
+    body['groups'] = json.loads(groups) if isinstance(groups, str) else groups
     return client.group_user.create(resource_group_name=resource_group, service_name=name, group_id=group_id, user_id=user_id)
 
 # module equivalent: azure_rm_apimanagementgroupuser
@@ -1379,7 +1379,7 @@ def create_apimgmt_identityprovider(cmd, client,
                                     client_secret=None):
     body={}
     body['type'] = type # str
-    body['allowed_tenants'] = allowed_tenants # str
+    body['allowed_tenants'] = json.loads(allowed_tenants) if isinstance(allowed_tenants, str) else allowed_tenants
     body['authority'] = authority # str
     body['signup_policy_name'] = signup_policy_name # str
     body['signin_policy_name'] = signin_policy_name # str
@@ -1405,7 +1405,7 @@ def update_apimgmt_identityprovider(cmd, client,
                                     client_secret=None):
     body={}
     body['type'] = type # str
-    body['allowed_tenants'] = allowed_tenants # str
+    body['allowed_tenants'] = json.loads(allowed_tenants) if isinstance(allowed_tenants, str) else allowed_tenants
     body['authority'] = authority # str
     body['signup_policy_name'] = signup_policy_name # str
     body['signin_policy_name'] = signin_policy_name # str
@@ -1502,7 +1502,7 @@ def create_apimgmt_notification(cmd, client,
     body={}
     body['title'] = title # str
     body['description'] = description # str
-    body['recipients'] = json.parse(recipients) if isinstance(recipients, str) else recipients
+    body['recipients'] = json.loads(recipients) if isinstance(recipients, str) else recipients
     return client.notification.create_or_update(resource_group_name=resource_group, service_name=service_name, notification_name=name)
 
 # module equivalent: azure_rm_apimanagementnotification
@@ -1516,7 +1516,7 @@ def update_apimgmt_notification(cmd, client,
     body={}
     body['title'] = title # str
     body['description'] = description # str
-    body['recipients'] = json.parse(recipients) if isinstance(recipients, str) else recipients
+    body['recipients'] = json.loads(recipients) if isinstance(recipients, str) else recipients
     return client.notification.create_or_update(resource_group_name=resource_group, service_name=service_name, notification_name=name)
 
 # module equivalent: azure_rm_apimanagementnotification
@@ -1731,7 +1731,7 @@ def create_apimgmt_portalsetting(cmd, client,
                                  terms_of_service=None):
     body={}
     body['enabled'] = enabled # boolean
-    body['terms_of_service'] = json.parse(terms_of_service) if isinstance(terms_of_service, str) else terms_of_service
+    body['terms_of_service'] = json.loads(terms_of_service) if isinstance(terms_of_service, str) else terms_of_service
     return client.sign_up_settings.create_or_update(resource_group_name=resource_group, service_name=name, parameters=body)
 
 # module equivalent: azure_rm_apimanagementsignupsetting
@@ -1742,7 +1742,7 @@ def update_apimgmt_portalsetting(cmd, client,
                                  terms_of_service=None):
     body={}
     body['enabled'] = enabled # boolean
-    body['terms_of_service'] = json.parse(terms_of_service) if isinstance(terms_of_service, str) else terms_of_service
+    body['terms_of_service'] = json.loads(terms_of_service) if isinstance(terms_of_service, str) else terms_of_service
     return client.sign_up_settings.create_or_update(resource_group_name=resource_group, service_name=name, parameters=body)
 
 # module equivalent: azure_rm_apimanagementsignupsetting
@@ -1762,8 +1762,8 @@ def create_apimgmt_portalsetting(cmd, client,
     body={}
     body['url'] = url # str
     body['validation_key'] = validation_key # str
-    body['subscriptions'] = json.parse(subscriptions) if isinstance(subscriptions, str) else subscriptions
-    body['user_registration'] = json.parse(user_registration) if isinstance(user_registration, str) else user_registration
+    body['subscriptions'] = json.loads(subscriptions) if isinstance(subscriptions, str) else subscriptions
+    body['user_registration'] = json.loads(user_registration) if isinstance(user_registration, str) else user_registration
     return client.delegation_settings.create_or_update(resource_group_name=resource_group, service_name=name, parameters=body)
 
 # module equivalent: azure_rm_apimanagementdelegationsetting
@@ -1777,8 +1777,8 @@ def update_apimgmt_portalsetting(cmd, client,
     body={}
     body['url'] = url # str
     body['validation_key'] = validation_key # str
-    body['subscriptions'] = json.parse(subscriptions) if isinstance(subscriptions, str) else subscriptions
-    body['user_registration'] = json.parse(user_registration) if isinstance(user_registration, str) else user_registration
+    body['subscriptions'] = json.loads(subscriptions) if isinstance(subscriptions, str) else subscriptions
+    body['user_registration'] = json.loads(user_registration) if isinstance(user_registration, str) else user_registration
     return client.delegation_settings.create_or_update(resource_group_name=resource_group, service_name=name, parameters=body)
 
 # module equivalent: azure_rm_apimanagementdelegationsetting
@@ -1880,8 +1880,8 @@ def create_apimgmt_product_api(cmd, client,
                                api_version_set=None):
     body={}
     body['description'] = description # str
-    body['authentication_settings'] = json.parse(authentication_settings) if isinstance(authentication_settings, str) else authentication_settings
-    body['subscription_key_parameter_names'] = json.parse(subscription_key_parameter_names) if isinstance(subscription_key_parameter_names, str) else subscription_key_parameter_names
+    body['authentication_settings'] = json.loads(authentication_settings) if isinstance(authentication_settings, str) else authentication_settings
+    body['subscription_key_parameter_names'] = json.loads(subscription_key_parameter_names) if isinstance(subscription_key_parameter_names, str) else subscription_key_parameter_names
     body['type'] = type # str
     body['api_revision'] = api_revision # str
     body['api_version'] = api_version # str
@@ -1895,8 +1895,8 @@ def create_apimgmt_product_api(cmd, client,
     body['display_name'] = display_name # str
     body['service_url'] = service_url # str
     body['path'] = path # str
-    body['protocols'] = protocols # str
-    body['api_version_set'] = json.parse(api_version_set) if isinstance(api_version_set, str) else api_version_set
+    body['protocols'] = json.loads(protocols) if isinstance(protocols, str) else protocols
+    body['api_version_set'] = json.loads(api_version_set) if isinstance(api_version_set, str) else api_version_set
     return client.product_api.create_or_update(resource_group_name=resource_group, service_name=name, product_id=product_id, api_id=api_id)
 
 # module equivalent: azure_rm_apimanagementproductapi
@@ -1925,8 +1925,8 @@ def update_apimgmt_product_api(cmd, client,
                                api_version_set=None):
     body={}
     body['description'] = description # str
-    body['authentication_settings'] = json.parse(authentication_settings) if isinstance(authentication_settings, str) else authentication_settings
-    body['subscription_key_parameter_names'] = json.parse(subscription_key_parameter_names) if isinstance(subscription_key_parameter_names, str) else subscription_key_parameter_names
+    body['authentication_settings'] = json.loads(authentication_settings) if isinstance(authentication_settings, str) else authentication_settings
+    body['subscription_key_parameter_names'] = json.loads(subscription_key_parameter_names) if isinstance(subscription_key_parameter_names, str) else subscription_key_parameter_names
     body['type'] = type # str
     body['api_revision'] = api_revision # str
     body['api_version'] = api_version # str
@@ -1940,8 +1940,8 @@ def update_apimgmt_product_api(cmd, client,
     body['display_name'] = display_name # str
     body['service_url'] = service_url # str
     body['path'] = path # str
-    body['protocols'] = protocols # str
-    body['api_version_set'] = json.parse(api_version_set) if isinstance(api_version_set, str) else api_version_set
+    body['protocols'] = json.loads(protocols) if isinstance(protocols, str) else protocols
+    body['api_version_set'] = json.loads(api_version_set) if isinstance(api_version_set, str) else api_version_set
     return client.product_api.create_or_update(resource_group_name=resource_group, service_name=name, product_id=product_id, api_id=api_id)
 
 # module equivalent: azure_rm_apimanagementproductapi
@@ -2072,7 +2072,7 @@ def create_apimgmt_property(cmd, client,
                             display_name=None,
                             value=None):
     body={}
-    body['tags'] = tags # str
+    body['tags'] = json.loads(tags) if isinstance(tags, str) else tags
     body['secret'] = secret # boolean
     body['display_name'] = display_name # str
     body['value'] = value # str
@@ -2088,7 +2088,7 @@ def update_apimgmt_property(cmd, client,
                             display_name=None,
                             value=None):
     body={}
-    body['tags'] = tags # str
+    body['tags'] = json.loads(tags) if isinstance(tags, str) else tags
     body['secret'] = secret # boolean
     body['display_name'] = display_name # str
     body['value'] = value # str
@@ -2196,7 +2196,7 @@ def create_apimgmt_user(cmd, client,
     body={}
     body['state'] = state # str
     body['note'] = note # str
-    body['identities'] = json.parse(identities) if isinstance(identities, str) else identities
+    body['identities'] = json.loads(identities) if isinstance(identities, str) else identities
     body['email'] = email # str
     body['first_name'] = first_name # str
     body['last_name'] = last_name # str
@@ -2220,7 +2220,7 @@ def update_apimgmt_user(cmd, client,
     body={}
     body['state'] = state # str
     body['note'] = note # str
-    body['identities'] = json.parse(identities) if isinstance(identities, str) else identities
+    body['identities'] = json.loads(identities) if isinstance(identities, str) else identities
     body['email'] = email # str
     body['first_name'] = first_name # str
     body['last_name'] = last_name # str

@@ -16,7 +16,7 @@ def create_servicebus(cmd, client,
     body={}
     body['location'] = location # str
     body['tags'] = tags # unknown[DictionaryType {"$id":"13","$type":"DictionaryType","valueType":{"$id":"14","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"15","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"16","fixed":false},"deprecated":false}]
-    body['sku'] = json.parse(sku) if isinstance(sku, str) else sku
+    body['sku'] = json.loads(sku) if isinstance(sku, str) else sku
     return client.namespaces.create_or_update(resource_group_name=resource_group, namespace_name=name, parameters=body)
 
 # module equivalent: azure_rm_servicebusnamespace
@@ -29,7 +29,7 @@ def update_servicebus(cmd, client,
     body={}
     body['location'] = location # str
     body['tags'] = tags # unknown[DictionaryType {"$id":"13","$type":"DictionaryType","valueType":{"$id":"14","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"15","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"16","fixed":false},"deprecated":false}]
-    body['sku'] = json.parse(sku) if isinstance(sku, str) else sku
+    body['sku'] = json.loads(sku) if isinstance(sku, str) else sku
     return client.namespaces.create_or_update(resource_group_name=resource_group, namespace_name=name, parameters=body)
 
 # module equivalent: azure_rm_servicebusnamespace
@@ -384,10 +384,10 @@ def create_servicebus_topic_subscription_rule(cmd, client,
                                               sql_filter=None,
                                               correlation_filter=None):
     body={}
-    body['action'] = json.parse(action) if isinstance(action, str) else action
+    body['action'] = json.loads(action) if isinstance(action, str) else action
     body['filter_type'] = filter_type # str
-    body['sql_filter'] = json.parse(sql_filter) if isinstance(sql_filter, str) else sql_filter
-    body['correlation_filter'] = json.parse(correlation_filter) if isinstance(correlation_filter, str) else correlation_filter
+    body['sql_filter'] = json.loads(sql_filter) if isinstance(sql_filter, str) else sql_filter
+    body['correlation_filter'] = json.loads(correlation_filter) if isinstance(correlation_filter, str) else correlation_filter
     return client.rules.create_or_update(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=subscription_name, rule_name=name, parameters=body)
 
 # module equivalent: azure_rm_servicebusrule
@@ -402,10 +402,10 @@ def update_servicebus_topic_subscription_rule(cmd, client,
                                               sql_filter=None,
                                               correlation_filter=None):
     body={}
-    body['action'] = json.parse(action) if isinstance(action, str) else action
+    body['action'] = json.loads(action) if isinstance(action, str) else action
     body['filter_type'] = filter_type # str
-    body['sql_filter'] = json.parse(sql_filter) if isinstance(sql_filter, str) else sql_filter
-    body['correlation_filter'] = json.parse(correlation_filter) if isinstance(correlation_filter, str) else correlation_filter
+    body['sql_filter'] = json.loads(sql_filter) if isinstance(sql_filter, str) else sql_filter
+    body['correlation_filter'] = json.loads(correlation_filter) if isinstance(correlation_filter, str) else correlation_filter
     return client.rules.create_or_update(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=subscription_name, rule_name=name, parameters=body)
 
 # module equivalent: azure_rm_servicebusrule
