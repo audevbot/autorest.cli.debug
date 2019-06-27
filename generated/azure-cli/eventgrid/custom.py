@@ -7,8 +7,8 @@ from knack.util import CLIError
 
 # module equivalent: azure_rm_eventgrideventsubscription
 def create_eventgrid(cmd, client,
-                     scope=None,
                      name,
+                     scope=None,
                      filter=None,
                      labels=None,
                      retry_policy=None):
@@ -20,8 +20,8 @@ def create_eventgrid(cmd, client,
 
 # module equivalent: azure_rm_eventgrideventsubscription
 def update_eventgrid(cmd, client,
-                     scope=None,
                      name,
+                     scope=None,
                      filter=None,
                      labels=None,
                      retry_policy=None):
@@ -33,8 +33,8 @@ def update_eventgrid(cmd, client,
 
 # module equivalent: azure_rm_eventgrideventsubscription
 def delete_eventgrid(cmd, client,
-                     scope=None,
-                     name):
+                     name,
+                     scope=None):
     return client.event_subscriptions.delete(scope=scope, event_subscription_name=name)
 
 # module equivalent: azure_rm_eventgrideventsubscription
@@ -60,8 +60,8 @@ def list_eventgrid(cmd, client):
 
 # module equivalent: azure_rm_eventgrideventsubscription
 def show_eventgrid(cmd, client,
-                   scope=None,
-                   name):
+                   name,
+                   scope=None):
     return client.event_subscriptions.get(scope=scope, event_subscription_name=name)
 
 # module equivalent: azure_rm_eventgridtopic

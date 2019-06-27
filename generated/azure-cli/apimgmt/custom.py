@@ -297,8 +297,8 @@ def show_apimgmt_api_operation_policy(cmd, client,
                                       name,
                                       api_id,
                                       operation_id,
-                                      format=None,
-                                      policy_id):
+                                      policy_id,
+                                      format=None):
     return client.api_operation_policy.get(resource_group_name=resource_group, service_name=name, api_id=api_id, operation_id=operation_id, format=format, policy_id=policy_id)
 
 # module equivalent: azure_rm_apimanagementtag
