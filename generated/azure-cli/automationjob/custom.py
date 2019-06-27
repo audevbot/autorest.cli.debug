@@ -4,6 +4,7 @@
 # --------------------------------------------------------------------------------------------
 
 from knack.util import CLIError
+import json
 
 # module equivalent: azure_rm_automationjob
 def create_automationjob_job(cmd, client,
@@ -15,9 +16,9 @@ def create_automationjob_job(cmd, client,
                              runbook=None,
                              run_on=None):
     body={}
-    body['parameters'] = parameters
-    body['runbook'] = runbook
-    body['run_on'] = run_on
+    body['parameters'] = parameters # default
+    body['runbook'] = runbook # body
+    body['run_on'] = run_on # body
     return client.job.create(resource_group_name=resource_group, automation_account_name=automation_account_name, job_name=name, parameters=body, client_request_id=client_request_id)
 
 # module equivalent: azure_rm_automationjob

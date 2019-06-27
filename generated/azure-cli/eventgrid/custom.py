@@ -4,6 +4,7 @@
 # --------------------------------------------------------------------------------------------
 
 from knack.util import CLIError
+import json
 
 # module equivalent: azure_rm_eventgrideventsubscription
 def create_eventgrid(cmd, client,
@@ -13,9 +14,9 @@ def create_eventgrid(cmd, client,
                      labels=None,
                      retry_policy=None):
     body={}
-    body['filter'] = filter
-    body['labels'] = labels
-    body['retry_policy'] = retry_policy
+    body['filter'] = filter # body
+    body['labels'] = labels # body
+    body['retry_policy'] = retry_policy # body
     return client.event_subscriptions.create_or_update(scope=scope, event_subscription_name=name)
 
 # module equivalent: azure_rm_eventgrideventsubscription
@@ -26,9 +27,9 @@ def update_eventgrid(cmd, client,
                      labels=None,
                      retry_policy=None):
     body={}
-    body['filter'] = filter
-    body['labels'] = labels
-    body['retry_policy'] = retry_policy
+    body['filter'] = filter # body
+    body['labels'] = labels # body
+    body['retry_policy'] = retry_policy # body
     return client.event_subscriptions.create_or_update(scope=scope, event_subscription_name=name)
 
 # module equivalent: azure_rm_eventgrideventsubscription
@@ -71,8 +72,8 @@ def create_eventgrid(cmd, client,
                      location=None,
                      tags=None):
     body={}
-    body['location'] = location
-    body['tags'] = tags
+    body['location'] = location # body
+    body['tags'] = tags # body
     return client.topics.create_or_update(resource_group_name=resource_group, topic_name=name)
 
 # module equivalent: azure_rm_eventgridtopic
@@ -82,8 +83,8 @@ def update_eventgrid(cmd, client,
                      location=None,
                      tags=None):
     body={}
-    body['location'] = location
-    body['tags'] = tags
+    body['location'] = location # body
+    body['tags'] = tags # body
     return client.topics.create_or_update(resource_group_name=resource_group, topic_name=name)
 
 # module equivalent: azure_rm_eventgridtopic

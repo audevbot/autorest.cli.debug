@@ -4,6 +4,7 @@
 # --------------------------------------------------------------------------------------------
 
 from knack.util import CLIError
+import json
 
 # module equivalent: azure_rm_cosmosdbdatabaseaccount
 def create_cosmos-db(cmd, client,
@@ -22,18 +23,18 @@ def create_cosmos-db(cmd, client,
                      virtual_network_rules=None,
                      enable_multiple_write_locations=None):
     body={}
-    body['location'] = location
-    body['tags'] = tags
-    body['kind'] = kind
-    body['consistency_policy'] = consistency_policy
-    body['locations'] = locations
-    body['database_account_offer_type'] = database_account_offer_type
-    body['ip_range_filter'] = ip_range_filter
-    body['is_virtual_network_filter_enabled'] = is_virtual_network_filter_enabled
-    body['enable_automatic_failover'] = enable_automatic_failover
-    body['capabilities'] = capabilities
-    body['virtual_network_rules'] = virtual_network_rules
-    body['enable_multiple_write_locations'] = enable_multiple_write_locations
+    body['location'] = location # body
+    body['tags'] = tags # body
+    body['kind'] = kind # body
+    body['consistency_policy'] = consistency_policy # body
+    body['locations'] = locations # body
+    body['database_account_offer_type'] = database_account_offer_type # body
+    body['ip_range_filter'] = ip_range_filter # body
+    body['is_virtual_network_filter_enabled'] = is_virtual_network_filter_enabled # body
+    body['enable_automatic_failover'] = enable_automatic_failover # body
+    body['capabilities'] = capabilities # body
+    body['virtual_network_rules'] = virtual_network_rules # body
+    body['enable_multiple_write_locations'] = enable_multiple_write_locations # body
     return client.database_accounts.create_or_update(resource_group_name=resource_group, account_name=name)
 
 # module equivalent: azure_rm_cosmosdbdatabaseaccount
@@ -53,18 +54,18 @@ def update_cosmos-db(cmd, client,
                      virtual_network_rules=None,
                      enable_multiple_write_locations=None):
     body={}
-    body['location'] = location
-    body['tags'] = tags
-    body['kind'] = kind
-    body['consistency_policy'] = consistency_policy
-    body['locations'] = locations
-    body['database_account_offer_type'] = database_account_offer_type
-    body['ip_range_filter'] = ip_range_filter
-    body['is_virtual_network_filter_enabled'] = is_virtual_network_filter_enabled
-    body['enable_automatic_failover'] = enable_automatic_failover
-    body['capabilities'] = capabilities
-    body['virtual_network_rules'] = virtual_network_rules
-    body['enable_multiple_write_locations'] = enable_multiple_write_locations
+    body['location'] = location # body
+    body['tags'] = tags # body
+    body['kind'] = kind # body
+    body['consistency_policy'] = consistency_policy # body
+    body['locations'] = locations # body
+    body['database_account_offer_type'] = database_account_offer_type # body
+    body['ip_range_filter'] = ip_range_filter # body
+    body['is_virtual_network_filter_enabled'] = is_virtual_network_filter_enabled # body
+    body['enable_automatic_failover'] = enable_automatic_failover # body
+    body['capabilities'] = capabilities # body
+    body['virtual_network_rules'] = virtual_network_rules # body
+    body['enable_multiple_write_locations'] = enable_multiple_write_locations # body
     return client.database_accounts.create_or_update(resource_group_name=resource_group, account_name=name)
 
 # module equivalent: azure_rm_cosmosdbdatabaseaccount

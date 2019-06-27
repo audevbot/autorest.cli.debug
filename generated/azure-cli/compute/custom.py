@@ -4,6 +4,7 @@
 # --------------------------------------------------------------------------------------------
 
 from knack.util import CLIError
+import json
 
 # module equivalent: azure_rm_computegallery
 def create_compute(cmd, client,
@@ -14,10 +15,10 @@ def create_compute(cmd, client,
                    description=None,
                    identifier=None):
     body={}
-    body['location'] = location
-    body['tags'] = tags
-    body['description'] = description
-    body['identifier'] = identifier
+    body['location'] = location # body
+    body['tags'] = tags # body
+    body['description'] = description # body
+    body['identifier'] = identifier # body
     return client.galleries.create_or_update(resource_group_name=resource_group, gallery_name=name)
 
 # module equivalent: azure_rm_computegallery
@@ -29,10 +30,10 @@ def update_compute(cmd, client,
                    description=None,
                    identifier=None):
     body={}
-    body['location'] = location
-    body['tags'] = tags
-    body['description'] = description
-    body['identifier'] = identifier
+    body['location'] = location # body
+    body['tags'] = tags # body
+    body['description'] = description # body
+    body['identifier'] = identifier # body
     return client.galleries.create_or_update(resource_group_name=resource_group, gallery_name=name)
 
 # module equivalent: azure_rm_computegallery
@@ -74,19 +75,19 @@ def create_compute_image(cmd, client,
                          disallowed=None,
                          purchase_plan=None):
     body={}
-    body['location'] = location
-    body['tags'] = tags
-    body['description'] = description
-    body['eula'] = eula
-    body['privacy_statement_uri'] = privacy_statement_uri
-    body['release_note_uri'] = release_note_uri
-    body['os_type'] = os_type
-    body['os_state'] = os_state
-    body['end_of_life_date'] = end_of_life_date
-    body['identifier'] = identifier
-    body['recommended'] = recommended
-    body['disallowed'] = disallowed
-    body['purchase_plan'] = purchase_plan
+    body['location'] = location # body
+    body['tags'] = tags # body
+    body['description'] = description # body
+    body['eula'] = eula # body
+    body['privacy_statement_uri'] = privacy_statement_uri # body
+    body['release_note_uri'] = release_note_uri # body
+    body['os_type'] = os_type # body
+    body['os_state'] = os_state # body
+    body['end_of_life_date'] = end_of_life_date # body
+    body['identifier'] = identifier # body
+    body['recommended'] = recommended # body
+    body['disallowed'] = disallowed # body
+    body['purchase_plan'] = purchase_plan # body
     return client.gallery_images.create_or_update(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=name)
 
 # module equivalent: azure_rm_computegalleryimage
@@ -108,19 +109,19 @@ def update_compute_image(cmd, client,
                          disallowed=None,
                          purchase_plan=None):
     body={}
-    body['location'] = location
-    body['tags'] = tags
-    body['description'] = description
-    body['eula'] = eula
-    body['privacy_statement_uri'] = privacy_statement_uri
-    body['release_note_uri'] = release_note_uri
-    body['os_type'] = os_type
-    body['os_state'] = os_state
-    body['end_of_life_date'] = end_of_life_date
-    body['identifier'] = identifier
-    body['recommended'] = recommended
-    body['disallowed'] = disallowed
-    body['purchase_plan'] = purchase_plan
+    body['location'] = location # body
+    body['tags'] = tags # body
+    body['description'] = description # body
+    body['eula'] = eula # body
+    body['privacy_statement_uri'] = privacy_statement_uri # body
+    body['release_note_uri'] = release_note_uri # body
+    body['os_type'] = os_type # body
+    body['os_state'] = os_state # body
+    body['end_of_life_date'] = end_of_life_date # body
+    body['identifier'] = identifier # body
+    body['recommended'] = recommended # body
+    body['disallowed'] = disallowed # body
+    body['purchase_plan'] = purchase_plan # body
     return client.gallery_images.create_or_update(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=name)
 
 # module equivalent: azure_rm_computegalleryimage
@@ -153,9 +154,9 @@ def create_compute_image_version(cmd, client,
                                  tags=None,
                                  publishing_profile=None):
     body={}
-    body['location'] = location
-    body['tags'] = tags
-    body['publishing_profile'] = publishing_profile
+    body['location'] = location # body
+    body['tags'] = tags # body
+    body['publishing_profile'] = publishing_profile # body
     return client.gallery_image_versions.create_or_update(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=gallery_image_name, gallery_image_version_name=name)
 
 # module equivalent: azure_rm_computegalleryimageversion
@@ -168,9 +169,9 @@ def update_compute_image_version(cmd, client,
                                  tags=None,
                                  publishing_profile=None):
     body={}
-    body['location'] = location
-    body['tags'] = tags
-    body['publishing_profile'] = publishing_profile
+    body['location'] = location # body
+    body['tags'] = tags # body
+    body['publishing_profile'] = publishing_profile # body
     return client.gallery_image_versions.create_or_update(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=gallery_image_name, gallery_image_version_name=name)
 
 # module equivalent: azure_rm_computegalleryimageversion
