@@ -22,17 +22,17 @@ def create_frontdoor(cmd, client,
                      enabled_state=None,
                      resource_state=None):
     body={}
-    body['location'] = location # body
-    body['tags'] = tags # body
-    body['friendly_name'] = friendly_name # body
-    body['routing_rules'] = routing_rules # body
-    body['load_balancing_settings'] = load_balancing_settings # body
-    body['health_probe_settings'] = health_probe_settings # body
-    body['backend_pools'] = backend_pools # body
-    body['frontend_endpoints'] = frontend_endpoints # body
-    body['backend_pools_settings'] = backend_pools_settings # body
-    body['enabled_state'] = enabled_state # body
-    body['resource_state'] = resource_state # body
+    body['location'] = location # str
+    body['tags'] = tags # unknown[DictionaryType {"$id":"539","$type":"DictionaryType","valueType":{"$id":"540","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"541","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"542","fixed":false},"deprecated":false}]
+    body['friendly_name'] = friendly_name # str
+    body['routing_rules'] = json.parse(routing_rules) if isinstance(routing_rules, str) else routing_rules
+    body['load_balancing_settings'] = json.parse(load_balancing_settings) if isinstance(load_balancing_settings, str) else load_balancing_settings
+    body['health_probe_settings'] = json.parse(health_probe_settings) if isinstance(health_probe_settings, str) else health_probe_settings
+    body['backend_pools'] = json.parse(backend_pools) if isinstance(backend_pools, str) else backend_pools
+    body['frontend_endpoints'] = json.parse(frontend_endpoints) if isinstance(frontend_endpoints, str) else frontend_endpoints
+    body['backend_pools_settings'] = json.parse(backend_pools_settings) if isinstance(backend_pools_settings, str) else backend_pools_settings
+    body['enabled_state'] = enabled_state # str
+    body['resource_state'] = resource_state # str
     return client.front_doors.create_or_update(resource_group_name=resource_group, front_door_name=name)
 
 # module equivalent: azure_rm_frontdoor
@@ -51,17 +51,17 @@ def update_frontdoor(cmd, client,
                      enabled_state=None,
                      resource_state=None):
     body={}
-    body['location'] = location # body
-    body['tags'] = tags # body
-    body['friendly_name'] = friendly_name # body
-    body['routing_rules'] = routing_rules # body
-    body['load_balancing_settings'] = load_balancing_settings # body
-    body['health_probe_settings'] = health_probe_settings # body
-    body['backend_pools'] = backend_pools # body
-    body['frontend_endpoints'] = frontend_endpoints # body
-    body['backend_pools_settings'] = backend_pools_settings # body
-    body['enabled_state'] = enabled_state # body
-    body['resource_state'] = resource_state # body
+    body['location'] = location # str
+    body['tags'] = tags # unknown[DictionaryType {"$id":"539","$type":"DictionaryType","valueType":{"$id":"540","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"541","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"542","fixed":false},"deprecated":false}]
+    body['friendly_name'] = friendly_name # str
+    body['routing_rules'] = json.parse(routing_rules) if isinstance(routing_rules, str) else routing_rules
+    body['load_balancing_settings'] = json.parse(load_balancing_settings) if isinstance(load_balancing_settings, str) else load_balancing_settings
+    body['health_probe_settings'] = json.parse(health_probe_settings) if isinstance(health_probe_settings, str) else health_probe_settings
+    body['backend_pools'] = json.parse(backend_pools) if isinstance(backend_pools, str) else backend_pools
+    body['frontend_endpoints'] = json.parse(frontend_endpoints) if isinstance(frontend_endpoints, str) else frontend_endpoints
+    body['backend_pools_settings'] = json.parse(backend_pools_settings) if isinstance(backend_pools_settings, str) else backend_pools_settings
+    body['enabled_state'] = enabled_state # str
+    body['resource_state'] = resource_state # str
     return client.front_doors.create_or_update(resource_group_name=resource_group, front_door_name=name)
 
 # module equivalent: azure_rm_frontdoor
@@ -96,12 +96,12 @@ def create_frontdoor_routingrule(cmd, client,
                                  enabled_state=None,
                                  resource_state=None):
     body={}
-    body['id'] = id # body
-    body['frontend_endpoints'] = frontend_endpoints # body
-    body['accepted_protocols'] = accepted_protocols # body
-    body['patterns_to_match'] = patterns_to_match # body
-    body['enabled_state'] = enabled_state # body
-    body['resource_state'] = resource_state # body
+    body['id'] = id # str
+    body['frontend_endpoints'] = json.parse(frontend_endpoints) if isinstance(frontend_endpoints, str) else frontend_endpoints
+    body['accepted_protocols'] = accepted_protocols # str
+    body['patterns_to_match'] = patterns_to_match # str
+    body['enabled_state'] = enabled_state # str
+    body['resource_state'] = resource_state # str
     return client.routing_rules.create_or_update(resource_group_name=resource_group, front_door_name=front_door_name, routing_rule_name=name)
 
 # module equivalent: azure_rm_frontdoorroutingrule
@@ -116,12 +116,12 @@ def update_frontdoor_routingrule(cmd, client,
                                  enabled_state=None,
                                  resource_state=None):
     body={}
-    body['id'] = id # body
-    body['frontend_endpoints'] = frontend_endpoints # body
-    body['accepted_protocols'] = accepted_protocols # body
-    body['patterns_to_match'] = patterns_to_match # body
-    body['enabled_state'] = enabled_state # body
-    body['resource_state'] = resource_state # body
+    body['id'] = id # str
+    body['frontend_endpoints'] = json.parse(frontend_endpoints) if isinstance(frontend_endpoints, str) else frontend_endpoints
+    body['accepted_protocols'] = accepted_protocols # str
+    body['patterns_to_match'] = patterns_to_match # str
+    body['enabled_state'] = enabled_state # str
+    body['resource_state'] = resource_state # str
     return client.routing_rules.create_or_update(resource_group_name=resource_group, front_door_name=front_door_name, routing_rule_name=name)
 
 # module equivalent: azure_rm_frontdoorroutingrule
@@ -155,11 +155,11 @@ def create_frontdoor_healthprobesetting(cmd, client,
                                         interval_in_seconds=None,
                                         resource_state=None):
     body={}
-    body['id'] = id # body
-    body['path'] = path # body
-    body['protocol'] = protocol # body
-    body['interval_in_seconds'] = interval_in_seconds # body
-    body['resource_state'] = resource_state # body
+    body['id'] = id # str
+    body['path'] = path # str
+    body['protocol'] = protocol # str
+    body['interval_in_seconds'] = interval_in_seconds # number
+    body['resource_state'] = resource_state # str
     return client.health_probe_settings.create_or_update(resource_group_name=resource_group, front_door_name=front_door_name, health_probe_settings_name=name)
 
 # module equivalent: azure_rm_frontdoorhealthprobesetting
@@ -173,11 +173,11 @@ def update_frontdoor_healthprobesetting(cmd, client,
                                         interval_in_seconds=None,
                                         resource_state=None):
     body={}
-    body['id'] = id # body
-    body['path'] = path # body
-    body['protocol'] = protocol # body
-    body['interval_in_seconds'] = interval_in_seconds # body
-    body['resource_state'] = resource_state # body
+    body['id'] = id # str
+    body['path'] = path # str
+    body['protocol'] = protocol # str
+    body['interval_in_seconds'] = interval_in_seconds # number
+    body['resource_state'] = resource_state # str
     return client.health_probe_settings.create_or_update(resource_group_name=resource_group, front_door_name=front_door_name, health_probe_settings_name=name)
 
 # module equivalent: azure_rm_frontdoorhealthprobesetting
@@ -211,11 +211,11 @@ def create_frontdoor_loadbalancingsetting(cmd, client,
                                           additional_latency_milliseconds=None,
                                           resource_state=None):
     body={}
-    body['id'] = id # body
-    body['sample_size'] = sample_size # body
-    body['successful_samples_required'] = successful_samples_required # body
-    body['additional_latency_milliseconds'] = additional_latency_milliseconds # body
-    body['resource_state'] = resource_state # body
+    body['id'] = id # str
+    body['sample_size'] = sample_size # number
+    body['successful_samples_required'] = successful_samples_required # number
+    body['additional_latency_milliseconds'] = additional_latency_milliseconds # number
+    body['resource_state'] = resource_state # str
     return client.load_balancing_settings.create_or_update(resource_group_name=resource_group, front_door_name=front_door_name, load_balancing_settings_name=name)
 
 # module equivalent: azure_rm_frontdoorloadbalancingsetting
@@ -229,11 +229,11 @@ def update_frontdoor_loadbalancingsetting(cmd, client,
                                           additional_latency_milliseconds=None,
                                           resource_state=None):
     body={}
-    body['id'] = id # body
-    body['sample_size'] = sample_size # body
-    body['successful_samples_required'] = successful_samples_required # body
-    body['additional_latency_milliseconds'] = additional_latency_milliseconds # body
-    body['resource_state'] = resource_state # body
+    body['id'] = id # str
+    body['sample_size'] = sample_size # number
+    body['successful_samples_required'] = successful_samples_required # number
+    body['additional_latency_milliseconds'] = additional_latency_milliseconds # number
+    body['resource_state'] = resource_state # str
     return client.load_balancing_settings.create_or_update(resource_group_name=resource_group, front_door_name=front_door_name, load_balancing_settings_name=name)
 
 # module equivalent: azure_rm_frontdoorloadbalancingsetting
@@ -267,11 +267,11 @@ def create_frontdoor_backendpool(cmd, client,
                                  health_probe_settings=None,
                                  resource_state=None):
     body={}
-    body['id'] = id # body
-    body['backends'] = backends # body
-    body['load_balancing_settings'] = load_balancing_settings # body
-    body['health_probe_settings'] = health_probe_settings # body
-    body['resource_state'] = resource_state # body
+    body['id'] = id # str
+    body['backends'] = json.parse(backends) if isinstance(backends, str) else backends
+    body['load_balancing_settings'] = json.parse(load_balancing_settings) if isinstance(load_balancing_settings, str) else load_balancing_settings
+    body['health_probe_settings'] = json.parse(health_probe_settings) if isinstance(health_probe_settings, str) else health_probe_settings
+    body['resource_state'] = resource_state # str
     return client.backend_pools.create_or_update(resource_group_name=resource_group, front_door_name=front_door_name, backend_pool_name=name)
 
 # module equivalent: azure_rm_frontdoorbackendpool
@@ -285,11 +285,11 @@ def update_frontdoor_backendpool(cmd, client,
                                  health_probe_settings=None,
                                  resource_state=None):
     body={}
-    body['id'] = id # body
-    body['backends'] = backends # body
-    body['load_balancing_settings'] = load_balancing_settings # body
-    body['health_probe_settings'] = health_probe_settings # body
-    body['resource_state'] = resource_state # body
+    body['id'] = id # str
+    body['backends'] = json.parse(backends) if isinstance(backends, str) else backends
+    body['load_balancing_settings'] = json.parse(load_balancing_settings) if isinstance(load_balancing_settings, str) else load_balancing_settings
+    body['health_probe_settings'] = json.parse(health_probe_settings) if isinstance(health_probe_settings, str) else health_probe_settings
+    body['resource_state'] = resource_state # str
     return client.backend_pools.create_or_update(resource_group_name=resource_group, front_door_name=front_door_name, backend_pool_name=name)
 
 # module equivalent: azure_rm_frontdoorbackendpool
@@ -324,12 +324,12 @@ def create_frontdoor_frontendendpoint(cmd, client,
                                       web_application_firewall_policy_link=None,
                                       resource_state=None):
     body={}
-    body['id'] = id # body
-    body['host_name'] = host_name # body
-    body['session_affinity_enabled_state'] = session_affinity_enabled_state # body
-    body['session_affinity_ttl_seconds'] = session_affinity_ttl_seconds # body
-    body['web_application_firewall_policy_link'] = web_application_firewall_policy_link # body
-    body['resource_state'] = resource_state # body
+    body['id'] = id # str
+    body['host_name'] = host_name # str
+    body['session_affinity_enabled_state'] = session_affinity_enabled_state # str
+    body['session_affinity_ttl_seconds'] = session_affinity_ttl_seconds # number
+    body['web_application_firewall_policy_link'] = json.parse(web_application_firewall_policy_link) if isinstance(web_application_firewall_policy_link, str) else web_application_firewall_policy_link
+    body['resource_state'] = resource_state # str
     return client.frontend_endpoints.create_or_update(resource_group_name=resource_group, front_door_name=front_door_name, frontend_endpoint_name=name)
 
 # module equivalent: azure_rm_frontdoorfrontendendpoint
@@ -344,12 +344,12 @@ def update_frontdoor_frontendendpoint(cmd, client,
                                       web_application_firewall_policy_link=None,
                                       resource_state=None):
     body={}
-    body['id'] = id # body
-    body['host_name'] = host_name # body
-    body['session_affinity_enabled_state'] = session_affinity_enabled_state # body
-    body['session_affinity_ttl_seconds'] = session_affinity_ttl_seconds # body
-    body['web_application_firewall_policy_link'] = web_application_firewall_policy_link # body
-    body['resource_state'] = resource_state # body
+    body['id'] = id # str
+    body['host_name'] = host_name # str
+    body['session_affinity_enabled_state'] = session_affinity_enabled_state # str
+    body['session_affinity_ttl_seconds'] = session_affinity_ttl_seconds # number
+    body['web_application_firewall_policy_link'] = json.parse(web_application_firewall_policy_link) if isinstance(web_application_firewall_policy_link, str) else web_application_firewall_policy_link
+    body['resource_state'] = resource_state # str
     return client.frontend_endpoints.create_or_update(resource_group_name=resource_group, front_door_name=front_door_name, frontend_endpoint_name=name)
 
 # module equivalent: azure_rm_frontdoorfrontendendpoint

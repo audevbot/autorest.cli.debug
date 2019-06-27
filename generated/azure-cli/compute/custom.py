@@ -15,10 +15,10 @@ def create_compute(cmd, client,
                    description=None,
                    identifier=None):
     body={}
-    body['location'] = location # body
-    body['tags'] = tags # body
-    body['description'] = description # body
-    body['identifier'] = identifier # body
+    body['location'] = location # str
+    body['tags'] = tags # unknown[DictionaryType {"$id":"70","$type":"DictionaryType","valueType":{"$id":"71","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"72","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"73","fixed":false},"deprecated":false}]
+    body['description'] = description # str
+    body['identifier'] = json.parse(identifier) if isinstance(identifier, str) else identifier
     return client.galleries.create_or_update(resource_group_name=resource_group, gallery_name=name)
 
 # module equivalent: azure_rm_computegallery
@@ -30,10 +30,10 @@ def update_compute(cmd, client,
                    description=None,
                    identifier=None):
     body={}
-    body['location'] = location # body
-    body['tags'] = tags # body
-    body['description'] = description # body
-    body['identifier'] = identifier # body
+    body['location'] = location # str
+    body['tags'] = tags # unknown[DictionaryType {"$id":"70","$type":"DictionaryType","valueType":{"$id":"71","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"72","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"73","fixed":false},"deprecated":false}]
+    body['description'] = description # str
+    body['identifier'] = json.parse(identifier) if isinstance(identifier, str) else identifier
     return client.galleries.create_or_update(resource_group_name=resource_group, gallery_name=name)
 
 # module equivalent: azure_rm_computegallery
@@ -75,19 +75,19 @@ def create_compute_image(cmd, client,
                          disallowed=None,
                          purchase_plan=None):
     body={}
-    body['location'] = location # body
-    body['tags'] = tags # body
-    body['description'] = description # body
-    body['eula'] = eula # body
-    body['privacy_statement_uri'] = privacy_statement_uri # body
-    body['release_note_uri'] = release_note_uri # body
-    body['os_type'] = os_type # body
-    body['os_state'] = os_state # body
-    body['end_of_life_date'] = end_of_life_date # body
-    body['identifier'] = identifier # body
-    body['recommended'] = recommended # body
-    body['disallowed'] = disallowed # body
-    body['purchase_plan'] = purchase_plan # body
+    body['location'] = location # str
+    body['tags'] = tags # unknown[DictionaryType {"$id":"70","$type":"DictionaryType","valueType":{"$id":"71","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"72","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"73","fixed":false},"deprecated":false}]
+    body['description'] = description # str
+    body['eula'] = eula # str
+    body['privacy_statement_uri'] = privacy_statement_uri # str
+    body['release_note_uri'] = release_note_uri # str
+    body['os_type'] = os_type # str
+    body['os_state'] = os_state # str
+    body['end_of_life_date'] = end_of_life_date # datetime
+    body['identifier'] = json.parse(identifier) if isinstance(identifier, str) else identifier
+    body['recommended'] = json.parse(recommended) if isinstance(recommended, str) else recommended
+    body['disallowed'] = json.parse(disallowed) if isinstance(disallowed, str) else disallowed
+    body['purchase_plan'] = json.parse(purchase_plan) if isinstance(purchase_plan, str) else purchase_plan
     return client.gallery_images.create_or_update(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=name)
 
 # module equivalent: azure_rm_computegalleryimage
@@ -109,19 +109,19 @@ def update_compute_image(cmd, client,
                          disallowed=None,
                          purchase_plan=None):
     body={}
-    body['location'] = location # body
-    body['tags'] = tags # body
-    body['description'] = description # body
-    body['eula'] = eula # body
-    body['privacy_statement_uri'] = privacy_statement_uri # body
-    body['release_note_uri'] = release_note_uri # body
-    body['os_type'] = os_type # body
-    body['os_state'] = os_state # body
-    body['end_of_life_date'] = end_of_life_date # body
-    body['identifier'] = identifier # body
-    body['recommended'] = recommended # body
-    body['disallowed'] = disallowed # body
-    body['purchase_plan'] = purchase_plan # body
+    body['location'] = location # str
+    body['tags'] = tags # unknown[DictionaryType {"$id":"70","$type":"DictionaryType","valueType":{"$id":"71","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"72","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"73","fixed":false},"deprecated":false}]
+    body['description'] = description # str
+    body['eula'] = eula # str
+    body['privacy_statement_uri'] = privacy_statement_uri # str
+    body['release_note_uri'] = release_note_uri # str
+    body['os_type'] = os_type # str
+    body['os_state'] = os_state # str
+    body['end_of_life_date'] = end_of_life_date # datetime
+    body['identifier'] = json.parse(identifier) if isinstance(identifier, str) else identifier
+    body['recommended'] = json.parse(recommended) if isinstance(recommended, str) else recommended
+    body['disallowed'] = json.parse(disallowed) if isinstance(disallowed, str) else disallowed
+    body['purchase_plan'] = json.parse(purchase_plan) if isinstance(purchase_plan, str) else purchase_plan
     return client.gallery_images.create_or_update(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=name)
 
 # module equivalent: azure_rm_computegalleryimage
@@ -154,9 +154,9 @@ def create_compute_image_version(cmd, client,
                                  tags=None,
                                  publishing_profile=None):
     body={}
-    body['location'] = location # body
-    body['tags'] = tags # body
-    body['publishing_profile'] = publishing_profile # body
+    body['location'] = location # str
+    body['tags'] = tags # unknown[DictionaryType {"$id":"70","$type":"DictionaryType","valueType":{"$id":"71","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"72","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"73","fixed":false},"deprecated":false}]
+    body['publishing_profile'] = json.parse(publishing_profile) if isinstance(publishing_profile, str) else publishing_profile
     return client.gallery_image_versions.create_or_update(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=gallery_image_name, gallery_image_version_name=name)
 
 # module equivalent: azure_rm_computegalleryimageversion
@@ -169,9 +169,9 @@ def update_compute_image_version(cmd, client,
                                  tags=None,
                                  publishing_profile=None):
     body={}
-    body['location'] = location # body
-    body['tags'] = tags # body
-    body['publishing_profile'] = publishing_profile # body
+    body['location'] = location # str
+    body['tags'] = tags # unknown[DictionaryType {"$id":"70","$type":"DictionaryType","valueType":{"$id":"71","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"72","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"73","fixed":false},"deprecated":false}]
+    body['publishing_profile'] = json.parse(publishing_profile) if isinstance(publishing_profile, str) else publishing_profile
     return client.gallery_image_versions.create_or_update(resource_group_name=resource_group, gallery_name=gallery_name, gallery_image_name=gallery_image_name, gallery_image_version_name=name)
 
 # module equivalent: azure_rm_computegalleryimageversion

@@ -18,13 +18,13 @@ def create_network(cmd, client,
                    network_rule_collections=None,
                    ip_configurations=None):
     body={}
-    body['id'] = id # body
-    body['location'] = location # body
-    body['tags'] = tags # body
-    body['application_rule_collections'] = application_rule_collections # body
-    body['nat_rule_collections'] = nat_rule_collections # body
-    body['network_rule_collections'] = network_rule_collections # body
-    body['ip_configurations'] = ip_configurations # body
+    body['id'] = id # str
+    body['location'] = location # str
+    body['tags'] = tags # unknown[DictionaryType {"$id":"440","$type":"DictionaryType","valueType":{"$id":"441","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"442","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"443","fixed":false},"deprecated":false}]
+    body['application_rule_collections'] = json.parse(application_rule_collections) if isinstance(application_rule_collections, str) else application_rule_collections
+    body['nat_rule_collections'] = json.parse(nat_rule_collections) if isinstance(nat_rule_collections, str) else nat_rule_collections
+    body['network_rule_collections'] = json.parse(network_rule_collections) if isinstance(network_rule_collections, str) else network_rule_collections
+    body['ip_configurations'] = json.parse(ip_configurations) if isinstance(ip_configurations, str) else ip_configurations
     return client.azure_firewalls.create_or_update(resource_group_name=resource_group, azure_firewall_name=name, parameters=body)
 
 # module equivalent: azure_rm_azurefirewall
@@ -39,13 +39,13 @@ def update_network(cmd, client,
                    network_rule_collections=None,
                    ip_configurations=None):
     body={}
-    body['id'] = id # body
-    body['location'] = location # body
-    body['tags'] = tags # body
-    body['application_rule_collections'] = application_rule_collections # body
-    body['nat_rule_collections'] = nat_rule_collections # body
-    body['network_rule_collections'] = network_rule_collections # body
-    body['ip_configurations'] = ip_configurations # body
+    body['id'] = id # str
+    body['location'] = location # str
+    body['tags'] = tags # unknown[DictionaryType {"$id":"440","$type":"DictionaryType","valueType":{"$id":"441","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"442","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"443","fixed":false},"deprecated":false}]
+    body['application_rule_collections'] = json.parse(application_rule_collections) if isinstance(application_rule_collections, str) else application_rule_collections
+    body['nat_rule_collections'] = json.parse(nat_rule_collections) if isinstance(nat_rule_collections, str) else nat_rule_collections
+    body['network_rule_collections'] = json.parse(network_rule_collections) if isinstance(network_rule_collections, str) else network_rule_collections
+    body['ip_configurations'] = json.parse(ip_configurations) if isinstance(ip_configurations, str) else ip_configurations
     return client.azure_firewalls.create_or_update(resource_group_name=resource_group, azure_firewall_name=name, parameters=body)
 
 # module equivalent: azure_rm_azurefirewall
