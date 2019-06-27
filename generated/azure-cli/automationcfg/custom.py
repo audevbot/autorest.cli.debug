@@ -4,6 +4,7 @@
 # --------------------------------------------------------------------------------------------
 
 from knack.util import CLIError
+import json
 
 # module equivalent: azure_rm_softwareupdateconfiguration
 def create_automationcfg_softwareupdateconfiguration(cmd, client,
@@ -16,10 +17,10 @@ def create_automationcfg_softwareupdateconfiguration(cmd, client,
                                                      error=None,
                                                      tasks=None):
     body={}
-    body['update_configuration'] = update_configuration
-    body['schedule_info'] = schedule_info
-    body['error'] = error
-    body['tasks'] = tasks
+    body['update_configuration'] = update_configuration # body
+    body['schedule_info'] = schedule_info # body
+    body['error'] = error # body
+    body['tasks'] = tasks # body
     return client.software_update_configurations.create(resource_group_name=resource_group, automation_account_name=automation_account_name, software_update_configuration_name=name, client_request_id=client_request_id, parameters=body)
 
 # module equivalent: azure_rm_softwareupdateconfiguration

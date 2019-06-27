@@ -4,6 +4,7 @@
 # --------------------------------------------------------------------------------------------
 
 from knack.util import CLIError
+import json
 
 # module equivalent: azure_rm_servicebusnamespace
 def create_servicebus(cmd, client,
@@ -13,9 +14,9 @@ def create_servicebus(cmd, client,
                       tags=None,
                       sku=None):
     body={}
-    body['location'] = location
-    body['tags'] = tags
-    body['sku'] = sku
+    body['location'] = location # body
+    body['tags'] = tags # body
+    body['sku'] = sku # body
     return client.namespaces.create_or_update(resource_group_name=resource_group, namespace_name=name, parameters=body)
 
 # module equivalent: azure_rm_servicebusnamespace
@@ -26,9 +27,9 @@ def update_servicebus(cmd, client,
                       tags=None,
                       sku=None):
     body={}
-    body['location'] = location
-    body['tags'] = tags
-    body['sku'] = sku
+    body['location'] = location # body
+    body['tags'] = tags # body
+    body['sku'] = sku # body
     return client.namespaces.create_or_update(resource_group_name=resource_group, namespace_name=name, parameters=body)
 
 # module equivalent: azure_rm_servicebusnamespace
@@ -62,8 +63,8 @@ def create_servicebus_disasterrecoveryconfig(cmd, client,
                                              partner_namespace=None,
                                              alternate_name=None):
     body={}
-    body['partner_namespace'] = partner_namespace
-    body['alternate_name'] = alternate_name
+    body['partner_namespace'] = partner_namespace # body
+    body['alternate_name'] = alternate_name # body
     return client.disaster_recovery_configs.create_or_update(resource_group_name=resource_group, namespace_name=name, alias=alias, parameters=body)
 
 # module equivalent: azure_rm_servicebusdisasterrecoveryconfig
@@ -74,8 +75,8 @@ def update_servicebus_disasterrecoveryconfig(cmd, client,
                                              partner_namespace=None,
                                              alternate_name=None):
     body={}
-    body['partner_namespace'] = partner_namespace
-    body['alternate_name'] = alternate_name
+    body['partner_namespace'] = partner_namespace # body
+    body['alternate_name'] = alternate_name # body
     return client.disaster_recovery_configs.create_or_update(resource_group_name=resource_group, namespace_name=name, alias=alias, parameters=body)
 
 # module equivalent: azure_rm_servicebusdisasterrecoveryconfig
@@ -123,21 +124,21 @@ def create_servicebus_queue(cmd, client,
                             forward_to=None,
                             forward_dead_lettered_messages_to=None):
     body={}
-    body['lock_duration'] = lock_duration
-    body['max_size_in_megabytes'] = max_size_in_megabytes
-    body['requires_duplicate_detection'] = requires_duplicate_detection
-    body['requires_session'] = requires_session
-    body['default_message_time_to_live'] = default_message_time_to_live
-    body['dead_lettering_on_message_expiration'] = dead_lettering_on_message_expiration
-    body['duplicate_detection_history_time_window'] = duplicate_detection_history_time_window
-    body['max_delivery_count'] = max_delivery_count
-    body['status'] = status
-    body['enable_batched_operations'] = enable_batched_operations
-    body['auto_delete_on_idle'] = auto_delete_on_idle
-    body['enable_partitioning'] = enable_partitioning
-    body['enable_express'] = enable_express
-    body['forward_to'] = forward_to
-    body['forward_dead_lettered_messages_to'] = forward_dead_lettered_messages_to
+    body['lock_duration'] = lock_duration # body
+    body['max_size_in_megabytes'] = max_size_in_megabytes # body
+    body['requires_duplicate_detection'] = requires_duplicate_detection # body
+    body['requires_session'] = requires_session # body
+    body['default_message_time_to_live'] = default_message_time_to_live # body
+    body['dead_lettering_on_message_expiration'] = dead_lettering_on_message_expiration # body
+    body['duplicate_detection_history_time_window'] = duplicate_detection_history_time_window # body
+    body['max_delivery_count'] = max_delivery_count # body
+    body['status'] = status # body
+    body['enable_batched_operations'] = enable_batched_operations # body
+    body['auto_delete_on_idle'] = auto_delete_on_idle # body
+    body['enable_partitioning'] = enable_partitioning # body
+    body['enable_express'] = enable_express # body
+    body['forward_to'] = forward_to # body
+    body['forward_dead_lettered_messages_to'] = forward_dead_lettered_messages_to # body
     return client.queues.create_or_update(resource_group_name=resource_group, namespace_name=namespace_name, queue_name=name, parameters=body)
 
 # module equivalent: azure_rm_servicebusqueue
@@ -161,21 +162,21 @@ def update_servicebus_queue(cmd, client,
                             forward_to=None,
                             forward_dead_lettered_messages_to=None):
     body={}
-    body['lock_duration'] = lock_duration
-    body['max_size_in_megabytes'] = max_size_in_megabytes
-    body['requires_duplicate_detection'] = requires_duplicate_detection
-    body['requires_session'] = requires_session
-    body['default_message_time_to_live'] = default_message_time_to_live
-    body['dead_lettering_on_message_expiration'] = dead_lettering_on_message_expiration
-    body['duplicate_detection_history_time_window'] = duplicate_detection_history_time_window
-    body['max_delivery_count'] = max_delivery_count
-    body['status'] = status
-    body['enable_batched_operations'] = enable_batched_operations
-    body['auto_delete_on_idle'] = auto_delete_on_idle
-    body['enable_partitioning'] = enable_partitioning
-    body['enable_express'] = enable_express
-    body['forward_to'] = forward_to
-    body['forward_dead_lettered_messages_to'] = forward_dead_lettered_messages_to
+    body['lock_duration'] = lock_duration # body
+    body['max_size_in_megabytes'] = max_size_in_megabytes # body
+    body['requires_duplicate_detection'] = requires_duplicate_detection # body
+    body['requires_session'] = requires_session # body
+    body['default_message_time_to_live'] = default_message_time_to_live # body
+    body['dead_lettering_on_message_expiration'] = dead_lettering_on_message_expiration # body
+    body['duplicate_detection_history_time_window'] = duplicate_detection_history_time_window # body
+    body['max_delivery_count'] = max_delivery_count # body
+    body['status'] = status # body
+    body['enable_batched_operations'] = enable_batched_operations # body
+    body['auto_delete_on_idle'] = auto_delete_on_idle # body
+    body['enable_partitioning'] = enable_partitioning # body
+    body['enable_express'] = enable_express # body
+    body['forward_to'] = forward_to # body
+    body['forward_dead_lettered_messages_to'] = forward_dead_lettered_messages_to # body
     return client.queues.create_or_update(resource_group_name=resource_group, namespace_name=namespace_name, queue_name=name, parameters=body)
 
 # module equivalent: azure_rm_servicebusqueue
@@ -218,16 +219,16 @@ def create_servicebus_topic(cmd, client,
                             enable_partitioning=None,
                             enable_express=None):
     body={}
-    body['default_message_time_to_live'] = default_message_time_to_live
-    body['max_size_in_megabytes'] = max_size_in_megabytes
-    body['requires_duplicate_detection'] = requires_duplicate_detection
-    body['duplicate_detection_history_time_window'] = duplicate_detection_history_time_window
-    body['enable_batched_operations'] = enable_batched_operations
-    body['status'] = status
-    body['support_ordering'] = support_ordering
-    body['auto_delete_on_idle'] = auto_delete_on_idle
-    body['enable_partitioning'] = enable_partitioning
-    body['enable_express'] = enable_express
+    body['default_message_time_to_live'] = default_message_time_to_live # body
+    body['max_size_in_megabytes'] = max_size_in_megabytes # body
+    body['requires_duplicate_detection'] = requires_duplicate_detection # body
+    body['duplicate_detection_history_time_window'] = duplicate_detection_history_time_window # body
+    body['enable_batched_operations'] = enable_batched_operations # body
+    body['status'] = status # body
+    body['support_ordering'] = support_ordering # body
+    body['auto_delete_on_idle'] = auto_delete_on_idle # body
+    body['enable_partitioning'] = enable_partitioning # body
+    body['enable_express'] = enable_express # body
     return client.topics.create_or_update(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=name, parameters=body)
 
 # module equivalent: azure_rm_servicebustopic
@@ -246,16 +247,16 @@ def update_servicebus_topic(cmd, client,
                             enable_partitioning=None,
                             enable_express=None):
     body={}
-    body['default_message_time_to_live'] = default_message_time_to_live
-    body['max_size_in_megabytes'] = max_size_in_megabytes
-    body['requires_duplicate_detection'] = requires_duplicate_detection
-    body['duplicate_detection_history_time_window'] = duplicate_detection_history_time_window
-    body['enable_batched_operations'] = enable_batched_operations
-    body['status'] = status
-    body['support_ordering'] = support_ordering
-    body['auto_delete_on_idle'] = auto_delete_on_idle
-    body['enable_partitioning'] = enable_partitioning
-    body['enable_express'] = enable_express
+    body['default_message_time_to_live'] = default_message_time_to_live # body
+    body['max_size_in_megabytes'] = max_size_in_megabytes # body
+    body['requires_duplicate_detection'] = requires_duplicate_detection # body
+    body['duplicate_detection_history_time_window'] = duplicate_detection_history_time_window # body
+    body['enable_batched_operations'] = enable_batched_operations # body
+    body['status'] = status # body
+    body['support_ordering'] = support_ordering # body
+    body['auto_delete_on_idle'] = auto_delete_on_idle # body
+    body['enable_partitioning'] = enable_partitioning # body
+    body['enable_express'] = enable_express # body
     return client.topics.create_or_update(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=name, parameters=body)
 
 # module equivalent: azure_rm_servicebustopic
@@ -301,18 +302,18 @@ def create_servicebus_topic_subscription(cmd, client,
                                          forward_to=None,
                                          forward_dead_lettered_messages_to=None):
     body={}
-    body['lock_duration'] = lock_duration
-    body['requires_session'] = requires_session
-    body['default_message_time_to_live'] = default_message_time_to_live
-    body['dead_lettering_on_filter_evaluation_exceptions'] = dead_lettering_on_filter_evaluation_exceptions
-    body['dead_lettering_on_message_expiration'] = dead_lettering_on_message_expiration
-    body['duplicate_detection_history_time_window'] = duplicate_detection_history_time_window
-    body['max_delivery_count'] = max_delivery_count
-    body['status'] = status
-    body['enable_batched_operations'] = enable_batched_operations
-    body['auto_delete_on_idle'] = auto_delete_on_idle
-    body['forward_to'] = forward_to
-    body['forward_dead_lettered_messages_to'] = forward_dead_lettered_messages_to
+    body['lock_duration'] = lock_duration # body
+    body['requires_session'] = requires_session # body
+    body['default_message_time_to_live'] = default_message_time_to_live # body
+    body['dead_lettering_on_filter_evaluation_exceptions'] = dead_lettering_on_filter_evaluation_exceptions # body
+    body['dead_lettering_on_message_expiration'] = dead_lettering_on_message_expiration # body
+    body['duplicate_detection_history_time_window'] = duplicate_detection_history_time_window # body
+    body['max_delivery_count'] = max_delivery_count # body
+    body['status'] = status # body
+    body['enable_batched_operations'] = enable_batched_operations # body
+    body['auto_delete_on_idle'] = auto_delete_on_idle # body
+    body['forward_to'] = forward_to # body
+    body['forward_dead_lettered_messages_to'] = forward_dead_lettered_messages_to # body
     return client.subscriptions.create_or_update(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=name, parameters=body)
 
 # module equivalent: azure_rm_servicebussubscription
@@ -334,18 +335,18 @@ def update_servicebus_topic_subscription(cmd, client,
                                          forward_to=None,
                                          forward_dead_lettered_messages_to=None):
     body={}
-    body['lock_duration'] = lock_duration
-    body['requires_session'] = requires_session
-    body['default_message_time_to_live'] = default_message_time_to_live
-    body['dead_lettering_on_filter_evaluation_exceptions'] = dead_lettering_on_filter_evaluation_exceptions
-    body['dead_lettering_on_message_expiration'] = dead_lettering_on_message_expiration
-    body['duplicate_detection_history_time_window'] = duplicate_detection_history_time_window
-    body['max_delivery_count'] = max_delivery_count
-    body['status'] = status
-    body['enable_batched_operations'] = enable_batched_operations
-    body['auto_delete_on_idle'] = auto_delete_on_idle
-    body['forward_to'] = forward_to
-    body['forward_dead_lettered_messages_to'] = forward_dead_lettered_messages_to
+    body['lock_duration'] = lock_duration # body
+    body['requires_session'] = requires_session # body
+    body['default_message_time_to_live'] = default_message_time_to_live # body
+    body['dead_lettering_on_filter_evaluation_exceptions'] = dead_lettering_on_filter_evaluation_exceptions # body
+    body['dead_lettering_on_message_expiration'] = dead_lettering_on_message_expiration # body
+    body['duplicate_detection_history_time_window'] = duplicate_detection_history_time_window # body
+    body['max_delivery_count'] = max_delivery_count # body
+    body['status'] = status # body
+    body['enable_batched_operations'] = enable_batched_operations # body
+    body['auto_delete_on_idle'] = auto_delete_on_idle # body
+    body['forward_to'] = forward_to # body
+    body['forward_dead_lettered_messages_to'] = forward_dead_lettered_messages_to # body
     return client.subscriptions.create_or_update(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=name, parameters=body)
 
 # module equivalent: azure_rm_servicebussubscription
@@ -383,10 +384,10 @@ def create_servicebus_topic_subscription_rule(cmd, client,
                                               sql_filter=None,
                                               correlation_filter=None):
     body={}
-    body['action'] = action
-    body['filter_type'] = filter_type
-    body['sql_filter'] = sql_filter
-    body['correlation_filter'] = correlation_filter
+    body['action'] = action # body
+    body['filter_type'] = filter_type # body
+    body['sql_filter'] = sql_filter # body
+    body['correlation_filter'] = correlation_filter # body
     return client.rules.create_or_update(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=subscription_name, rule_name=name, parameters=body)
 
 # module equivalent: azure_rm_servicebusrule
@@ -401,10 +402,10 @@ def update_servicebus_topic_subscription_rule(cmd, client,
                                               sql_filter=None,
                                               correlation_filter=None):
     body={}
-    body['action'] = action
-    body['filter_type'] = filter_type
-    body['sql_filter'] = sql_filter
-    body['correlation_filter'] = correlation_filter
+    body['action'] = action # body
+    body['filter_type'] = filter_type # body
+    body['sql_filter'] = sql_filter # body
+    body['correlation_filter'] = correlation_filter # body
     return client.rules.create_or_update(resource_group_name=resource_group, namespace_name=namespace_name, topic_name=topic_name, subscription_name=subscription_name, rule_name=name, parameters=body)
 
 # module equivalent: azure_rm_servicebusrule

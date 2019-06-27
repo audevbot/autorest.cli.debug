@@ -4,6 +4,7 @@
 # --------------------------------------------------------------------------------------------
 
 from knack.util import CLIError
+import json
 
 # module equivalent: azure_rm_azurefirewall
 def create_network(cmd, client,
@@ -17,13 +18,13 @@ def create_network(cmd, client,
                    network_rule_collections=None,
                    ip_configurations=None):
     body={}
-    body['id'] = id
-    body['location'] = location
-    body['tags'] = tags
-    body['application_rule_collections'] = application_rule_collections
-    body['nat_rule_collections'] = nat_rule_collections
-    body['network_rule_collections'] = network_rule_collections
-    body['ip_configurations'] = ip_configurations
+    body['id'] = id # body
+    body['location'] = location # body
+    body['tags'] = tags # body
+    body['application_rule_collections'] = application_rule_collections # body
+    body['nat_rule_collections'] = nat_rule_collections # body
+    body['network_rule_collections'] = network_rule_collections # body
+    body['ip_configurations'] = ip_configurations # body
     return client.azure_firewalls.create_or_update(resource_group_name=resource_group, azure_firewall_name=name, parameters=body)
 
 # module equivalent: azure_rm_azurefirewall
@@ -38,13 +39,13 @@ def update_network(cmd, client,
                    network_rule_collections=None,
                    ip_configurations=None):
     body={}
-    body['id'] = id
-    body['location'] = location
-    body['tags'] = tags
-    body['application_rule_collections'] = application_rule_collections
-    body['nat_rule_collections'] = nat_rule_collections
-    body['network_rule_collections'] = network_rule_collections
-    body['ip_configurations'] = ip_configurations
+    body['id'] = id # body
+    body['location'] = location # body
+    body['tags'] = tags # body
+    body['application_rule_collections'] = application_rule_collections # body
+    body['nat_rule_collections'] = nat_rule_collections # body
+    body['network_rule_collections'] = network_rule_collections # body
+    body['ip_configurations'] = ip_configurations # body
     return client.azure_firewalls.create_or_update(resource_group_name=resource_group, azure_firewall_name=name, parameters=body)
 
 # module equivalent: azure_rm_azurefirewall

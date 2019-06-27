@@ -4,6 +4,7 @@
 # --------------------------------------------------------------------------------------------
 
 from knack.util import CLIError
+import json
 
 # module equivalent: azure_rm_managementgroup
 def create_mgmtgroups(cmd, client,
@@ -12,9 +13,9 @@ def create_mgmtgroups(cmd, client,
                       display_name=None,
                       details=None):
     body={}
-    body['name'] = name
-    body['display_name'] = display_name
-    body['details'] = details
+    body['name'] = name # body
+    body['display_name'] = display_name # body
+    body['details'] = details # body
     return client.management_groups.create_or_update(group_id=group_id)
 
 # module equivalent: azure_rm_managementgroup
@@ -24,9 +25,9 @@ def update_mgmtgroups(cmd, client,
                       display_name=None,
                       details=None):
     body={}
-    body['name'] = name
-    body['display_name'] = display_name
-    body['details'] = details
+    body['name'] = name # body
+    body['display_name'] = display_name # body
+    body['details'] = details # body
     return client.management_groups.create_or_update(group_id=group_id)
 
 # module equivalent: azure_rm_managementgroup
