@@ -4371,7 +4371,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myResourceGroup
+        ExampleValue: '{{resource_group}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -4401,7 +4401,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myTopic
+        ExampleValue: '{{topic_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false

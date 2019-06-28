@@ -27,7 +27,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -63,7 +63,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{batch_account_name}}'
+        ExampleValue: myBatchAccount
         Hidden: false
         IncludeInResponse: false
         Flatten: false

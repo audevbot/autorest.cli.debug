@@ -27,7 +27,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myManagementGroup
+        ExampleValue: '{{management_group_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -2911,7 +2911,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myManagementGroup
+        ExampleValue: '{{management_group_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false

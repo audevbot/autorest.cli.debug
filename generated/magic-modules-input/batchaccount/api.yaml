@@ -240,7 +240,7 @@ objects:
           '/id': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             go_field_name: ID
             python_field_name: id
-      list: !ruby/object:Api::Azure::SDKOperationDefinition
+      list_by_subscription: !ruby/object:Api::Azure::SDKOperationDefinition
         go_func_name: List
         python_func_name: list
         request:

@@ -27,7 +27,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myResourceGroup
+        ExampleValue: '{{resource_group}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -57,7 +57,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myAzureFirewall
+        ExampleValue: '{{azure_firewall_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false

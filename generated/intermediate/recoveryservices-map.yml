@@ -1456,7 +1456,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myVault
+        ExampleValue: '{{vault_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -1488,7 +1488,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myResourceGroup
+        ExampleValue: '{{resource_group}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -1518,7 +1518,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myReplicationAlertSetting
+        ExampleValue: '{{replication_alert_setting_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -4088,7 +4088,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myVault
+        ExampleValue: '{{vault_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -4120,7 +4120,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myResourceGroup
+        ExampleValue: '{{resource_group}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -4150,7 +4150,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myReplicationFabric
+        ExampleValue: '{{replication_fabric_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -8793,7 +8793,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myVault
+        ExampleValue: '{{vault_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -8825,7 +8825,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myResourceGroup
+        ExampleValue: '{{resource_group}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -8855,7 +8855,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myReplicationFabric
+        ExampleValue: '{{replication_fabric_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -8885,7 +8885,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myReplicationNetwork
+        ExampleValue: '{{replication_network_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -8915,7 +8915,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myReplicationNetworkMapping
+        ExampleValue: '{{replication_network_mapping_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -10722,7 +10722,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myVault
+        ExampleValue: '{{vault_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -10754,7 +10754,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myResourceGroup
+        ExampleValue: '{{resource_group}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -10784,7 +10784,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myReplicationFabric
+        ExampleValue: '{{replication_fabric_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -10814,7 +10814,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myReplicationProtectionContainer
+        ExampleValue: '{{replication_protection_container_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -12277,7 +12277,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myVault
+        ExampleValue: '{{vault_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -12309,7 +12309,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myResourceGroup
+        ExampleValue: '{{resource_group}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -12339,7 +12339,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myReplicationFabric
+        ExampleValue: '{{replication_fabric_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -12369,7 +12369,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myReplicationProtectionContainer
+        ExampleValue: '{{replication_protection_container_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -12399,7 +12399,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myReplicationMigrationItem
+        ExampleValue: '{{replication_migration_item_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -17731,7 +17731,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myVault
+        ExampleValue: '{{vault_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -17763,7 +17763,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myResourceGroup
+        ExampleValue: '{{resource_group}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -17793,7 +17793,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myReplicationFabric
+        ExampleValue: '{{replication_fabric_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -17823,7 +17823,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myReplicationProtectionContainer
+        ExampleValue: '{{replication_protection_container_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -17853,7 +17853,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myReplicationProtectedItem
+        ExampleValue: '{{replication_protected_item_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -24126,7 +24126,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myVault
+        ExampleValue: '{{vault_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -24158,7 +24158,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myResourceGroup
+        ExampleValue: '{{resource_group}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -24188,7 +24188,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myReplicationFabric
+        ExampleValue: '{{replication_fabric_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -24218,7 +24218,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myReplicationProtectionContainer
+        ExampleValue: '{{replication_protection_container_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -24248,7 +24248,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myReplicationProtectionContainerMapping
+        ExampleValue: '{{replication_protection_container_mapping_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -27850,7 +27850,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myVault
+        ExampleValue: '{{vault_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -27882,7 +27882,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myResourceGroup
+        ExampleValue: '{{resource_group}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -27912,7 +27912,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myReplicationFabric
+        ExampleValue: '{{replication_fabric_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -27942,7 +27942,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myReplicationRecoveryServicesProvider
+        ExampleValue: '{{replication_recovery_services_provider_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -33376,7 +33376,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myVault
+        ExampleValue: '{{vault_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -33408,7 +33408,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myResourceGroup
+        ExampleValue: '{{resource_group}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -33438,7 +33438,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myReplicationFabric
+        ExampleValue: '{{replication_fabric_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -33468,7 +33468,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myReplicationStorageClassification
+        ExampleValue: '{{replication_storage_classification_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -33498,7 +33498,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myReplicationStorageClassificationMapping
+        ExampleValue: '{{replication_storage_classification_mapping_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -34597,7 +34597,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myVault
+        ExampleValue: '{{vault_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -34629,7 +34629,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myResourceGroup
+        ExampleValue: '{{resource_group}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -34659,7 +34659,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myReplicationFabric
+        ExampleValue: '{{replication_fabric_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -34689,7 +34689,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myReplicationvCenter
+        ExampleValue: '{{replicationv_center_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -40787,7 +40787,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myVault
+        ExampleValue: '{{vault_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -40819,7 +40819,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myResourceGroup
+        ExampleValue: '{{resource_group}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -40849,7 +40849,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myReplicationPolicy
+        ExampleValue: '{{replication_policy_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -41847,7 +41847,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myVault
+        ExampleValue: '{{vault_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -41879,7 +41879,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myResourceGroup
+        ExampleValue: '{{resource_group}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -41909,7 +41909,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myReplicationRecoveryPlan
+        ExampleValue: '{{replication_recovery_plan_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -48446,7 +48446,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myVault
+        ExampleValue: '{{vault_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -48478,7 +48478,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myResourceGroup
+        ExampleValue: '{{resource_group}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -48508,7 +48508,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myReplicationVaultSetting
+        ExampleValue: '{{replication_vault_setting_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false

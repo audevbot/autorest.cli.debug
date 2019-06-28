@@ -27,7 +27,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myResourceGroup
+        ExampleValue: '{{resource_group}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -57,7 +57,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myAutomationAccount
+        ExampleValue: '{{automation_account_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -87,7 +87,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: mySoftwareUpdateConfiguration
+        ExampleValue: '{{software_update_configuration_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
