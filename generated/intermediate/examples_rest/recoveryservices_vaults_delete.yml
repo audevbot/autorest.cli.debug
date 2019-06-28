@@ -1,0 +1,17 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    vault_name: myVault
+  tasks:
+    - name: Delete Recovery Services Vault
+      azure_rm_resource:
+        method: DELETE
+        api_version: '2016-06-01'
+        resource_group: '{{ resource_group }}'
+        provider: RecoveryServices
+        resource_type: vaults
+        resource_name: '{{ vault_name }}'

@@ -1,4 +1,4 @@
-# ListOperations
+# Availability status of Resource Name when no resource with same name, type and subscription exists, nor has been deleted within last 24 hours
 #
 # This script expects that the following environment vars are set:
 #
@@ -19,8 +19,13 @@ from msrest.pipeline import ClientRawResponse
 import uuid
 
 SUBSCRIPTION_ID = os.environ['AZURE_SUBSCRIPTION_ID']
+RESOURCE_GROUP = "myresourcegroup"
+LOCATION_NAME = "mylocation"
 
-BODY = {}
+BODY = {
+  "name": "swaggerExample",
+  "type": "Microsoft.RecoveryServices/Vaults"
+}
 
 API_VERSION = '2016-06-01'
 
@@ -43,9 +48,10 @@ def run_example():
     query_parameters['api-version'] = API_VERSION
 
     header_parameters = {}
+    header_parameters['Content-Type'] = 'application/json; charset=utf-8'
 
     operation_config = {}
-    request = service_client.get("/providers/Microsoft.RecoveryServices/operations", query_parameters)
+    request = service_client.post("/subscriptions/" + SUBSCRIPTION + "/resourceGroups/" + RESOURCE_GR + "/providers/Microsoft.RecoveryServices/locations/" + LOCATION_N + "/checkNameAvailability", query_parameters)
     response = service_client.send(request, header_parameters, BODY, **operation_config)
     print(response.text)
 
