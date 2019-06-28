@@ -27,7 +27,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myResourceGroup
+        ExampleValue: '{{resource_group}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -60,7 +60,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myGallery
+        ExampleValue: '{{gallery_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -1310,7 +1310,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myResourceGroup
+        ExampleValue: '{{resource_group}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -1342,7 +1342,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myGallery
+        ExampleValue: '{{gallery_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -1375,7 +1375,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myImage
+        ExampleValue: '{{image_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -4631,7 +4631,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myResourceGroup
+        ExampleValue: '{{resource_group}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -4663,7 +4663,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myGallery
+        ExampleValue: '{{gallery_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -4695,7 +4695,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myImage
+        ExampleValue: '{{image_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -4729,7 +4729,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: myVersion
+        ExampleValue: '{{version_name}}'
         Hidden: false
         IncludeInResponse: false
         Flatten: false
