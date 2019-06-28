@@ -6,8 +6,8 @@
   vars:
   tasks:
 
-    - name: ListOperations
-      azure_rm_recoveryservicesoperation_info: {}
+    - name: List of Recovery Services Resources in SubscriptionId
+      azure_rm_recoveryservicesvault_info: {}
     
       register: output
     - debug:

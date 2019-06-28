@@ -1,0 +1,18 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    vault_name: myVault
+  tasks:
+
+    - name: Get Recovery Services Resource
+      azure_rm_recoveryservicesvault_info:
+        resource_group: '{{resource_group}}'
+        name: '{{vault_name}}'
+    
+      register: output
+    - debug:
+        var: output

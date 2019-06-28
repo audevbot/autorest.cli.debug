@@ -3,13 +3,15 @@
     - ../modules
   vars_files:
     - _vars.yml
-  vars: {}
+  vars:
+    resource_group: myResourceGroup
   tasks:
-    - name: ListOperations
+    - name: List of Recovery Services Resources in ResourceGroup
       azure_rm_resource_facts:
         api_version: '2016-06-01'
+        resource_group: '{{ resource_group }}'
         provider: RecoveryServices
-        resource_type: operations
+        resource_type: vaults
       register: output
     - debug:
         var: output

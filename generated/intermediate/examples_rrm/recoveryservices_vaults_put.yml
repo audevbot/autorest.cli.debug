@@ -1,0 +1,23 @@
+- import_playbook: resourcegroups_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    vault_name: myVault
+  tasks:
+
+    - name: Create of Update Recovery Services vault
+      azure_rm_recoveryservicesvault:
+        resource_group: '{{resource_group}}'
+        name: '{{vault_name}}'
+        vault:
+          properties: {}
+          sku:
+            name: Standard
+          location: West US
+    

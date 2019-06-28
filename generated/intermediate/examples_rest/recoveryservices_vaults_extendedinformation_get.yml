@@ -1,0 +1,23 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    vault_name: myVault
+    extended_information_name: myExtendedInformation
+  tasks:
+    - name: Get ExtendedInfo of Resource
+      azure_rm_resource_facts:
+        api_version: '2016-06-01'
+        resource_group: '{{ resource_group }}'
+        provider: RecoveryServices
+        resource_type: vaults
+        resource_name: '{{ vault_name }}'
+        subresource:
+          - type: extendedInformation
+            name: '{{ extended_information_name }}'
+      register: output
+    - debug:
+        var: output

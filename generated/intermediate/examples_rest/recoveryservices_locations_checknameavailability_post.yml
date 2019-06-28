@@ -1,0 +1,24 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    location_name: myLocation
+  tasks:
+    - name: >-
+        Availability status of Resource Name when no resource with same name,
+        type and subscription exists, nor has been deleted within last 24 hours
+      azure_rm_resource:
+        method: POST
+        api_version: '2016-06-01'
+        resource_group: '{{ resource_group }}'
+        provider: RecoveryServices
+        resource_type: locations
+        resource_name: '{{ location_name }}'
+        subresource:
+          - type: checkNameAvailability
+        body:
+          name: swaggerExample
+          type: Microsoft.RecoveryServices/Vaults

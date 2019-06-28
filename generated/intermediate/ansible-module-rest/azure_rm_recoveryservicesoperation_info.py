@@ -21,93 +21,60 @@ short_description: Get Operation info.
 description:
   - Get info of Operation.
 options:
-  name:
-    description:
-      - >-
-        The name of the resource group where the recovery services vault is
-        present.
-    required: true
   value:
     description:
-      - The ClientDiscovery details.
+      - List of available operations.
     type: list
     suboptions:
       name:
         description:
-          - >-
-            Name of the API. The name of the operation being performed on this
-            particular object. It should match the action name that appears in
-            RBAC / the event service. Examples of operations include: *
-            Microsoft.Compute/virtualMachine/capture/action *
-            Microsoft.Compute/virtualMachine/restart/action *
-            Microsoft.Compute/virtualMachine/write *
-            Microsoft.Compute/virtualMachine/read *
-            Microsoft.Compute/virtualMachine/delete Each action should include,
-            in order: (1) Resource Provider Namespace (2) Type hierarchy for
-            which the action applies (e.g. server/databases for a SQL Azure
-            database) (3) Read, Write, Action or Delete indicating which type
-            applies. If it is a PUT/PATCH on a collection or named value, Write
-            should be used. If it is a GET, Read should be used. If it is a
-            DELETE, Delete should be used. If it is a POST, Action should be
-            used. As a note: all resource providers would need to include the
-            "{Resource Provider Namespace}/register/action" operation in their
-            response. This API is used to register for their service, and should
-            include details about the operation (e.g. a localized name for the
-            resource provider + any special considerations like PII release)
+          - Name of the Operation.
       display:
         description:
-          - Object type
+          - >-
+            Contains the localized display information for this particular
+            operation
         suboptions:
           provider:
             description:
-              - >-
-                The provider. The localized friendly form of the resource
-                provider name – it is expected to also include the
-                publisher/company responsible. It should use Title Casing and
-                begin with "Microsoft" for 1st party services. e.g. "Microsoft
-                Monitoring Insights" or "Microsoft Compute."
+              - Name of the provider for display purposes
           resource:
             description:
-              - >-
-                The resource. The localized friendly form of the resource
-                related to this action/operation – it should match the public
-                documentation for the resource provider. It should use Title
-                Casing. This value should be unique for a particular URL type
-                (e.g. nested types should *not* reuse their parent’s
-                display.resource field). e.g. "Virtual Machines" or "Scheduler
-                Job Collections", or "Virtual Machine VM Sizes" or "Scheduler
-                Jobs"
+              - ResourceType for which this Operation can be performed.
           operation:
             description:
-              - >-
-                The operation. The localized friendly name for the operation, as
-                it should be shown to the user. It should be concise (to fit in
-                drop downs) but clear (i.e. self-documenting). It should use
-                Title Casing. Prescriptive guidance: Read Create or Update
-                Delete 'ActionName'
+              - Operations Name itself.
           description:
             description:
               - >-
-                The description. The localized friendly description for the
-                operation, as it should be shown to the user. It should be
-                thorough, yet concise – it will be used in tool tips and
-                detailed views. Prescriptive guidance for namespaces: Read any
-                'display.provider' resource Create or Update any
-                'display.provider' resource Delete any 'display.provider'
-                resource Perform any other action on any 'display.provider'
-                resource Prescriptive guidance for namespaces: Read any
-                'display.resource' Create or Update any 'display.resource'
-                Delete any 'display.resource' 'ActionName' any
-                'display.resources'
+                Description of the operation having details of what operation is
+                about.
       origin:
         description:
           - >-
-            Origin. The intended executor of the operation; governs the display
-            of the operation in the RBAC UX and the audit logs UX. Default value
-            is "user,system"
+            The intended executor of the operation;governs the display of the
+            operation in the RBAC UX and the audit logs UX
+      service_specification:
+        description:
+          - Operation properties.
+        suboptions:
+          log_specifications:
+            description:
+              - List of log specifications of this operation.
+            type: list
+            suboptions:
+              name:
+                description:
+                  - Name of the log.
+              display_name:
+                description:
+                  - Localized display name
+              blob_duration:
+                description:
+                  - Blobs created in customer storage account per hour
   next_link:
     description:
-      - The value of next link.
+      - Link to the next chunk of the response
 extends_documentation_fragment:
   - azure
 author:
@@ -116,9 +83,8 @@ author:
 '''
 
 EXAMPLES = '''
-- name: Returns the list of available operations.
-  azure_rm_recoveryservicesoperation_info:
-    name: myResourceGroup
+- name: ListOperations
+  azure_rm_recoveryservicesoperation_info: {}
 
 '''
 
@@ -136,117 +102,101 @@ operations:
       contains:
         value:
           description:
-            - The ClientDiscovery details.
+            - List of available operations.
           returned: always
           type: dict
           sample: null
           contains:
             name:
               description:
-                - >-
-                  Name of the API. The name of the operation being performed on
-                  this particular object. It should match the action name that
-                  appears in RBAC / the event service. Examples of operations
-                  include: * Microsoft.Compute/virtualMachine/capture/action *
-                  Microsoft.Compute/virtualMachine/restart/action *
-                  Microsoft.Compute/virtualMachine/write *
-                  Microsoft.Compute/virtualMachine/read *
-                  Microsoft.Compute/virtualMachine/delete Each action should
-                  include, in order: (1) Resource Provider Namespace (2) Type
-                  hierarchy for which the action applies (e.g. server/databases
-                  for a SQL Azure database) (3) Read, Write, Action or Delete
-                  indicating which type applies. If it is a PUT/PATCH on a
-                  collection or named value, Write should be used. If it is a
-                  GET, Read should be used. If it is a DELETE, Delete should be
-                  used. If it is a POST, Action should be used. As a note: all
-                  resource providers would need to include the "{Resource
-                  Provider Namespace}/register/action" operation in their
-                  response. This API is used to register for their service, and
-                  should include details about the operation (e.g. a localized
-                  name for the resource provider + any special considerations
-                  like PII release)
+                - Name of the Operation.
               returned: always
               type: str
               sample: null
             display:
               description:
-                - Object type
+                - >-
+                  Contains the localized display information for this particular
+                  operation
               returned: always
               type: dict
               sample: null
               contains:
                 provider:
                   description:
-                    - >-
-                      The provider. The localized friendly form of the resource
-                      provider name – it is expected to also include the
-                      publisher/company responsible. It should use Title Casing
-                      and begin with "Microsoft" for 1st party services. e.g.
-                      "Microsoft Monitoring Insights" or "Microsoft Compute."
+                    - Name of the provider for display purposes
                   returned: always
                   type: str
                   sample: null
                 resource:
                   description:
-                    - >-
-                      The resource. The localized friendly form of the resource
-                      related to this action/operation – it should match the
-                      public documentation for the resource provider. It should
-                      use Title Casing. This value should be unique for a
-                      particular URL type (e.g. nested types should *not* reuse
-                      their parent’s display.resource field). e.g. "Virtual
-                      Machines" or "Scheduler Job Collections", or "Virtual
-                      Machine VM Sizes" or "Scheduler Jobs"
+                    - ResourceType for which this Operation can be performed.
                   returned: always
                   type: str
                   sample: null
                 operation:
                   description:
-                    - >-
-                      The operation. The localized friendly name for the
-                      operation, as it should be shown to the user. It should be
-                      concise (to fit in drop downs) but clear (i.e.
-                      self-documenting). It should use Title Casing.
-                      Prescriptive guidance: Read Create or Update Delete
-                      'ActionName'
+                    - Operations Name itself.
                   returned: always
                   type: str
                   sample: null
                 description:
                   description:
                     - >-
-                      The description. The localized friendly description for
-                      the operation, as it should be shown to the user. It
-                      should be thorough, yet concise – it will be used in tool
-                      tips and detailed views. Prescriptive guidance for
-                      namespaces: Read any 'display.provider' resource Create or
-                      Update any 'display.provider' resource Delete any
-                      'display.provider' resource Perform any other action on
-                      any 'display.provider' resource Prescriptive guidance for
-                      namespaces: Read any 'display.resource' Create or Update
-                      any 'display.resource' Delete any 'display.resource'
-                      'ActionName' any 'display.resources'
+                      Description of the operation having details of what
+                      operation is about.
                   returned: always
                   type: str
                   sample: null
             origin:
               description:
                 - >-
-                  Origin. The intended executor of the operation; governs the
-                  display of the operation in the RBAC UX and the audit logs UX.
-                  Default value is "user,system"
+                  The intended executor of the operation;governs the display of
+                  the operation in the RBAC UX and the audit logs UX
               returned: always
               type: str
               sample: null
             properties:
               description:
-                - Properties. Reserved for future use.
+                - ShoeBox properties for the given operation.
               returned: always
-              type: 'unknown-primary[object]'
+              type: dict
               sample: null
+            service_specification:
+              description:
+                - Operation properties.
+              returned: always
+              type: dict
+              sample: null
+              contains:
+                log_specifications:
+                  description:
+                    - List of log specifications of this operation.
+                  returned: always
+                  type: dict
+                  sample: null
+                  contains:
+                    name:
+                      description:
+                        - Name of the log.
+                      returned: always
+                      type: str
+                      sample: null
+                    display_name:
+                      description:
+                        - Localized display name
+                      returned: always
+                      type: str
+                      sample: null
+                    blob_duration:
+                      description:
+                        - Blobs created in customer storage account per hour
+                      returned: always
+                      type: str
+                      sample: null
         next_link:
           description:
-            - The value of next link.
+            - Link to the next chunk of the response
           returned: always
           type: str
           sample: null
@@ -264,13 +214,8 @@ from msrestazure.azure_exceptions import CloudError
 class AzureRMOperationsInfo(AzureRMModuleBase):
     def __init__(self):
         self.module_arg_spec = dict(
-            name=dict(
-                type='str',
-                required=true
-            )
         )
 
-        self.name = None
         self.value = None
         self.next_link = None
 
@@ -281,7 +226,7 @@ class AzureRMOperationsInfo(AzureRMModuleBase):
         self.status_code = [200]
 
         self.query_parameters = {}
-        self.query_parameters['api-version'] = '2018-07-10'
+        self.query_parameters['api-version'] = '2016-06-01'
         self.header_parameters = {}
         self.header_parameters['Content-Type'] = 'application/json; charset=utf-8'
 
@@ -296,23 +241,17 @@ class AzureRMOperationsInfo(AzureRMModuleBase):
         self.mgmt_client = self.get_mgmt_svc_client(GenericRestClient,
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
-        if (self.name is not None):
-            self.results['operations'] = self.format_item(self.list())
+        else:
+            self.results['operations'] = [self.format_item(self.list())]
         return self.results
 
     def list(self):
         response = None
         results = {}
         # prepare url
-        self.url = ('/Subscriptions' +
-                    '/{{ subscription_name }}' +
-                    '/resourceGroups' +
-                    '/{{ resource_group }}' +
-                    '/providers' +
+        self.url = ('/providers' +
                     '/Microsoft.RecoveryServices' +
                     '/operations')
-        self.url = self.url.replace('{{ subscription_name }}', self.subscription_name)
-        self.url = self.url.replace('{{ resource_group }}', self.resource_group)
 
         try:
             response = self.mgmt_client.query(self.url,

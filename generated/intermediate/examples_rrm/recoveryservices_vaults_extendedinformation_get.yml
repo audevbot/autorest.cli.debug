@@ -1,0 +1,19 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    vault_name: myVault
+    extended_information_name: myExtendedInformation
+  tasks:
+
+    - name: Get ExtendedInfo of Resource
+      azure_rm_recoveryservicesvaultextendedinfo_info:
+        resource_group: '{{resource_group}}'
+        name: '{{vault_name}}'
+    
+      register: output
+    - debug:
+        var: output

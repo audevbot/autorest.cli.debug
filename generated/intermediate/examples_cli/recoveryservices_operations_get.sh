@@ -1,5 +1,3 @@
-# Returns the list of available operations.
-SUBSCRIPTION_NAME="mysubscription"
-RESOURCE_GROUP="myresourcegroup"
+# ListOperations
 
-az resource show --id /Subscriptions/$SUBSCRIPTION_NAME/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.RecoveryServices/operations --api-version 2018-07-10
+az resource show --id /providers/Microsoft.RecoveryServices/operations --api-version 2016-06-01

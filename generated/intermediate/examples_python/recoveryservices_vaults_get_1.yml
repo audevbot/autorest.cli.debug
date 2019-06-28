@@ -1,4 +1,4 @@
-# ListOperations
+# List of Recovery Services Resources in ResourceGroup
 #
 # This script expects that the following environment vars are set:
 #
@@ -19,6 +19,7 @@ from msrest.pipeline import ClientRawResponse
 import uuid
 
 SUBSCRIPTION_ID = os.environ['AZURE_SUBSCRIPTION_ID']
+RESOURCE_GROUP = "myresourcegroup"
 
 BODY = {}
 
@@ -45,7 +46,7 @@ def run_example():
     header_parameters = {}
 
     operation_config = {}
-    request = service_client.get("/providers/Microsoft.RecoveryServices/operations", query_parameters)
+    request = service_client.get("/subscriptions/" + SUBSCRIPTION + "/resourceGroups/" + RESOURCE_GR + "/providers/Microsoft.RecoveryServices/vaults", query_parameters)
     response = service_client.send(request, header_parameters, BODY, **operation_config)
     print(response.text)
 
