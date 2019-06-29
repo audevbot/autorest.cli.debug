@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   api_id:
     description:
       - >-
@@ -43,6 +44,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -71,12 +75,12 @@ EXAMPLES = '''
 - name: ApiManagementListApiSchemas
   azure_rm_apimanagementapischema_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
 - name: ApiManagementGetApiSchema
   azure_rm_apimanagementapischema_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     schema_id: mySchema
 
@@ -142,7 +146,7 @@ class AzureRMApiSchemaInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 required=true
             ),
@@ -156,7 +160,7 @@ class AzureRMApiSchemaInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.api_id = None
         self.schema_id = None
         self.id = None
@@ -187,12 +191,12 @@ class AzureRMApiSchemaInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
+            self.service_name is not None and
             self.api_id is not None and
             self.schema_id is not None):
             self.results['api_schema'] = self.format_item(self.get())
         elif (self.resource_group is not None and
-              self.name is not None and
+              self.service_name is not None and
               self.api_id is not None):
             self.results['api_schema'] = self.format_item(self.listbyapi())
         return self.results
@@ -202,7 +206,7 @@ class AzureRMApiSchemaInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.api_schema.get(resource_group_name=self.resource_group,
-                                                       service_name=self.name,
+                                                       service_name=self.service_name,
                                                        api_id=self.api_id,
                                                        schema_id=self.schema_id)
         except CloudError as e:
@@ -215,7 +219,7 @@ class AzureRMApiSchemaInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.api_schema.list_by_api(resource_group_name=self.resource_group,
-                                                               service_name=self.name,
+                                                               service_name=self.service_name,
                                                                api_id=self.api_id)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')

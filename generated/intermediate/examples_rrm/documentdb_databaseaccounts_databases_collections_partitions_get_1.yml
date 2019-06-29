@@ -14,7 +14,7 @@
     - name: CosmosDBCollectionGetUsages
       azure_rm_cosmosdbcollectionpartition_info:
         resource_group: '{{resource_group}}'
-        name: '{{database_account_name}}'
+        account_name: '{{database_account_name}}'
         database_rid: '{{database_name}}'
         collection_rid: '{{collection_name}}'
     

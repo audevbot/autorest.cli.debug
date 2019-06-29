@@ -13,7 +13,7 @@
       azure_rm_automationjobstream_info:
         resource_group: '{{resource_group}}'
         automation_account_name: '{{automation_account_name}}'
-        name: '{{job_name}}'
+        job_name: '{{job_name}}'
     
       register: output
     - debug:

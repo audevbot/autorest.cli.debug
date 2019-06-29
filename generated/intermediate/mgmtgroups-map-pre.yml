@@ -104,7 +104,7 @@ Modules:
         TypeNameGo: CreateManagementGroupProperties
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -166,7 +166,7 @@ Modules:
         TypeNameGo: CreateManagementGroupDetails
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -184,7 +184,7 @@ Modules:
             TypeNameGo: CreateParentGroupInfo
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -1243,7 +1243,7 @@ Modules:
         TypeNameGo: ManagementGroupProperties
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -1293,7 +1293,7 @@ Modules:
             TypeNameGo: ManagementGroupDetails
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -1314,7 +1314,7 @@ Modules:
                 TypeNameGo: ParentGroupInfo
                 IsList: false
                 Required: false
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -1677,7 +1677,7 @@ Modules:
         TypeNameGo: ManagementGroupProperties
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -1799,7 +1799,7 @@ Modules:
         TypeNameGo: ManagementGroupDetails
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -1907,7 +1907,7 @@ Modules:
             TypeNameGo: ParentGroupInfo
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -3045,7 +3045,7 @@ Modules:
             TypeNameGo: OperationDisplayProperties
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true

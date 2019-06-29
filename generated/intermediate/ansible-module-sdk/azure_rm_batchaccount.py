@@ -183,13 +183,13 @@ properties:
       sample: null
     pool_allocation_mode:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: str
       sample: null
     key_vault_reference:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: dict
       sample: null
@@ -210,7 +210,7 @@ properties:
           sample: null
     auto_storage:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: dict
       sample: null
@@ -233,25 +233,25 @@ properties:
           sample: null
     dedicated_core_quota:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: number
       sample: null
     low_priority_core_quota:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: number
       sample: null
     pool_quota:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: number
       sample: null
     active_job_and_job_schedule_quota:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: number
       sample: null

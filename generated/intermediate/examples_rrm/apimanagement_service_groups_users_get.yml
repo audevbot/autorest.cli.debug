@@ -12,7 +12,7 @@
     - name: ApiManagementListGroupUsers
       azure_rm_apimanagementgroupuser_info:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         group_id: '{{group_name}}'
     
       register: output

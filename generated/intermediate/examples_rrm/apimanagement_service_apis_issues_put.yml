@@ -18,7 +18,7 @@
     - name: ApiManagementCreateApiIssue
       azure_rm_apimanagementapiissue:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         api_id: '{{api_name}}'
         issue_id: '{{issue_name}}'
         created_date: '2018-02-01T22:21:20.467Z'

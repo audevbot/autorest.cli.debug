@@ -17,6 +17,6 @@
       azure_rm_apimanagementnotificationrecipientuser:
         resource_group: '{{resource_group}}'
         service_name: '{{service_name}}'
-        name: '{{notification_name}}'
+        notification_name: '{{notification_name}}'
         user_id: '{{recipient_user_name}}'
     

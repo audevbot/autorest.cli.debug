@@ -267,14 +267,14 @@ tags:
   sample: null
 properties:
   description:
-    - !<tag:yaml.org,2002:js/undefined> ''
+    - ''
   returned: always
   type: dict
   sample: null
   contains:
     publishing_profile:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: dict
       sample: null
@@ -312,14 +312,14 @@ properties:
               sample: null
         source:
           description:
-            - !<tag:yaml.org,2002:js/undefined> ''
+            - ''
           returned: always
           type: dict
           sample: null
           contains:
             managed_image:
               description:
-                - !<tag:yaml.org,2002:js/undefined> ''
+                - ''
               returned: always
               type: dict
               sample: null
@@ -378,14 +378,14 @@ properties:
       sample: null
     storage_profile:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: dict
       sample: null
       contains:
         os_disk_image:
           description:
-            - !<tag:yaml.org,2002:js/undefined> ''
+            - ''
           returned: always
           type: dict
           sample: null
@@ -437,7 +437,7 @@ properties:
               sample: null
     replication_status:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: dict
       sample: null

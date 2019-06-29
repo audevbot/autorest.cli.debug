@@ -25,7 +25,7 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
       - The name of the API Management service.
     required: true
@@ -55,15 +55,13 @@ options:
       - >-
         The date of the start of Counter Period. The date conforms to the
         following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
-        standard.
-      - ''
+        standard.<br>
   period_end_time:
     description:
       - >-
         The date of the end of Counter Period. The date conforms to the
         following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
-        standard.
-      - ''
+        standard.<br>
   value:
     description:
       - Quota Value Properties
@@ -85,7 +83,7 @@ EXAMPLES = '''
 - name: ApiManagementGetQuotaCounterKeysByQuotaPeriod
   azure_rm_apimanagementquotabyperiodkey_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     quota_counter_key: myQuota
     quota_period_key: myPeriod
 
@@ -119,19 +117,19 @@ quota_by_period_keys:
           sample: null
         period_start_time:
           description:
-            - >
+            - >-
               The date of the start of Counter Period. The date conforms to the
               following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO
-              8601 standard.
+              8601 standard.<br>
           returned: always
           type: datetime
           sample: null
         period_end_time:
           description:
-            - >
+            - >-
               The date of the end of Counter Period. The date conforms to the
               following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO
-              8601 standard.
+              8601 standard.<br>
           returned: always
           type: datetime
           sample: null
@@ -178,7 +176,7 @@ class AzureRMQuotaByPeriodKeysInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 required=true
             ),
@@ -193,7 +191,7 @@ class AzureRMQuotaByPeriodKeysInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.quota_counter_key = None
         self.quota_period_key = None
         self.counter_key = None
@@ -225,7 +223,7 @@ class AzureRMQuotaByPeriodKeysInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
+            self.service_name is not None and
             self.quota_counter_key is not None and
             self.quota_period_key is not None):
             self.results['quota_by_period_keys'] = self.format_item(self.get())
@@ -236,7 +234,7 @@ class AzureRMQuotaByPeriodKeysInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.quota_by_period_keys.get(resource_group_name=self.resource_group,
-                                                                 service_name=self.name,
+                                                                 service_name=self.service_name,
                                                                  quota_counter_key=self.quota_counter_key,
                                                                  quota_period_key=self.quota_period_key)
         except CloudError as e:

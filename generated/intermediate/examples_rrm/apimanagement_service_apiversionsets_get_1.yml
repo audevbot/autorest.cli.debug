@@ -12,7 +12,7 @@
     - name: ApiManagementGetApiVersionSet
       azure_rm_apimanagementapiversionset_info:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         version_set_id: '{{api_version_set_name}}'
     
       register: output

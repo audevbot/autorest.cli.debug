@@ -17033,7 +17033,7 @@ Modules:
             TypeNameGo: PremiumMessagingRegions_properties
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -17659,7 +17659,7 @@ Modules:
             TypeNameGo: PremiumMessagingRegions_properties
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true

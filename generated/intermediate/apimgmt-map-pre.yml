@@ -32,10 +32,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -1373,10 +1373,9 @@ Modules:
         TypeNameGo: SoapApiType
         IsList: false
         Required: false
-        Documentation: |-
-          Type of Api to create. 
-           * `http` creates a SOAP to REST API 
-           * `soap` creates a SOAP pass-through API .
+        Documentation: >-
+          Type of Api to create. <br> * `http` creates a SOAP to REST API <br> *
+          `soap` creates a SOAP pass-through API .
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -3736,10 +3735,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -5387,10 +5386,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -5860,10 +5859,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -6612,10 +6611,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -7126,10 +7125,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -11570,10 +11569,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -14048,10 +14047,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -14749,10 +14748,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -15286,10 +15285,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -15933,10 +15932,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -16794,10 +16793,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -17388,10 +17387,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -18094,10 +18093,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -18584,10 +18583,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -19242,10 +19241,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -19695,10 +19694,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -21813,10 +21812,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -22981,10 +22980,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -23940,10 +23939,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -24575,10 +24574,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -25314,10 +25313,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -25845,10 +25844,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -26575,10 +26574,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -27100,10 +27099,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -27807,10 +27806,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -28314,10 +28313,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -30105,10 +30104,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -30929,10 +30928,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -31446,10 +31445,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -33249,10 +33248,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -34281,10 +34280,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -36686,10 +36685,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -37952,10 +37951,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -38636,10 +38635,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -39070,10 +39069,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -39327,9 +39326,10 @@ Modules:
         TypeNameGo: DateTime
         IsList: false
         Required: true
-        Documentation: >
+        Documentation: >-
           Expiration date of the certificate. The date conforms to the following
-          format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+          format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
+          standard.<br>
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -39672,10 +39672,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -39928,9 +39928,10 @@ Modules:
         TypeNameGo: DateTime
         IsList: false
         Required: true
-        Documentation: >
+        Documentation: >-
           Expiration date of the certificate. The date conforms to the following
-          format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+          format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
+          standard.<br>
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -48464,10 +48465,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -50526,10 +50527,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -53334,10 +53335,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -54188,10 +54189,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -54743,10 +54744,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -55232,9 +55233,9 @@ Modules:
         TypeNameGo: DateTime
         IsList: false
         Required: false
-        Documentation: >
+        Documentation: >-
           Date of user registration. The date conforms to the following format:
-          `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+          `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -55646,10 +55647,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -56118,10 +56119,10 @@ Modules:
             TypeNameGo: DateTime
             IsList: false
             Required: false
-            Documentation: >
+            Documentation: >-
               Date of user registration. The date conforms to the following
               format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
-              standard.
+              standard.<br>
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -58246,10 +58247,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -58802,10 +58803,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -59006,9 +59007,8 @@ Modules:
         Required: true
         Documentation: >-
           The name and SendRule connection string of the event hub for
-          azureEventHub logger.
-
-          Instrumentation key for applicationInsights logger.
+          azureEventHub logger.<br>Instrumentation key for applicationInsights
+          logger.
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -59368,9 +59368,8 @@ Modules:
             Required: true
             Documentation: >-
               The name and SendRule connection string of the event hub for
-              azureEventHub logger.
-
-              Instrumentation key for applicationInsights logger.
+              azureEventHub logger.<br>Instrumentation key for
+              applicationInsights logger.
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -59724,10 +59723,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -59992,9 +59991,8 @@ Modules:
         Required: true
         Documentation: >-
           The name and SendRule connection string of the event hub for
-          azureEventHub logger.
-
-          Instrumentation key for applicationInsights logger.
+          azureEventHub logger.<br>Instrumentation key for applicationInsights
+          logger.
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -61685,10 +61683,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: notificationName
-        NameAnsible: name
+        NameAnsible: notification_name
         NamePythonSdk: notification_name
         NameGoSdk: NotificationName
-        NameTerraform: name
+        NameTerraform: NotificationName
         IdPortion: notifications
         Type: str
         TypeName: xxx
@@ -62509,10 +62507,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: notificationName
-        NameAnsible: name
+        NameAnsible: notification_name
         NamePythonSdk: notification_name
         NameGoSdk: NotificationName
-        NameTerraform: name
+        NameTerraform: NotificationName
         IdPortion: notifications
         Type: str
         TypeName: xxx
@@ -63311,10 +63309,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -64106,10 +64104,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -64601,10 +64599,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -65192,10 +65190,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -69011,10 +69009,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -70002,10 +70000,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -70771,10 +70769,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -72242,10 +72240,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -73650,10 +73648,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -74224,10 +74222,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -74774,10 +74772,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -75137,10 +75135,10 @@ Modules:
             TypeNameGo: DateTime
             IsList: false
             Required: false
-            Documentation: >
+            Documentation: >-
               Subscription creation date. The date conforms to the following
               format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
-              standard.
+              standard.<br>
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -75170,12 +75168,12 @@ Modules:
             TypeNameGo: DateTime
             IsList: false
             Required: false
-            Documentation: >
+            Documentation: >-
               Subscription activation date. The setting is for audit purposes
               only and the subscription is not automatically activated. The
               subscription lifecycle can be managed by using the `state`
               property. The date conforms to the following format:
-              `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+              `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -75205,12 +75203,12 @@ Modules:
             TypeNameGo: DateTime
             IsList: false
             Required: false
-            Documentation: >
+            Documentation: >-
               Subscription expiration date. The setting is for audit purposes
               only and the subscription is not automatically expired. The
               subscription lifecycle can be managed by using the `state`
               property. The date conforms to the following format:
-              `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+              `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -75240,12 +75238,12 @@ Modules:
             TypeNameGo: DateTime
             IsList: false
             Required: false
-            Documentation: >
+            Documentation: >-
               Date when subscription was cancelled or expired. The setting is
               for audit purposes only and the subscription is not automatically
               cancelled. The subscription lifecycle can be managed by using the
               `state` property. The date conforms to the following format:
-              `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+              `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -75275,10 +75273,10 @@ Modules:
             TypeNameGo: DateTime
             IsList: false
             Required: false
-            Documentation: >
+            Documentation: >-
               Upcoming subscription expiration notification date. The date
               conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as
-              specified by the ISO 8601 standard.
+              specified by the ISO 8601 standard.<br>
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -75577,10 +75575,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -76218,10 +76216,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -76708,10 +76706,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -77465,10 +77463,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -77950,10 +77948,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -78106,10 +78104,10 @@ Modules:
             TypeNameGo: DateTime
             IsList: false
             Required: true
-            Documentation: >
+            Documentation: >-
               The date of the start of Counter Period. The date conforms to the
               following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO
-              8601 standard.
+              8601 standard.<br>
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -78139,10 +78137,10 @@ Modules:
             TypeNameGo: DateTime
             IsList: false
             Required: true
-            Documentation: >
+            Documentation: >-
               The date of the end of Counter Period. The date conforms to the
               following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO
-              8601 standard.
+              8601 standard.<br>
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -78427,10 +78425,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -78597,10 +78595,10 @@ Modules:
         TypeNameGo: DateTime
         IsList: false
         Required: false
-        Documentation: >
+        Documentation: >-
           The date of the start of Counter Period. The date conforms to the
           following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
-          standard.
+          standard.<br>
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -78631,10 +78629,10 @@ Modules:
         TypeNameGo: DateTime
         IsList: false
         Required: false
-        Documentation: >
+        Documentation: >-
           The date of the end of Counter Period. The date conforms to the
           following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
-          standard.
+          standard.<br>
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -79283,10 +79281,10 @@ Modules:
             TypeNameGo: DateTime
             IsList: false
             Required: false
-            Documentation: >
+            Documentation: >-
               Start of aggregation period. The date conforms to the following
               format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
-              standard.
+              standard.<br>
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -80848,10 +80846,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -81224,9 +81222,9 @@ Modules:
         TypeNameGo: DateTime
         IsList: false
         Required: false
-        Documentation: >
+        Documentation: >-
           Subscription creation date. The date conforms to the following format:
-          `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+          `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -81257,12 +81255,12 @@ Modules:
         TypeNameGo: DateTime
         IsList: false
         Required: false
-        Documentation: >
+        Documentation: >-
           Subscription activation date. The setting is for audit purposes only
           and the subscription is not automatically activated. The subscription
           lifecycle can be managed by using the `state` property. The date
           conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified
-          by the ISO 8601 standard.
+          by the ISO 8601 standard.<br>
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -81293,12 +81291,12 @@ Modules:
         TypeNameGo: DateTime
         IsList: false
         Required: false
-        Documentation: >
+        Documentation: >-
           Subscription expiration date. The setting is for audit purposes only
           and the subscription is not automatically expired. The subscription
           lifecycle can be managed by using the `state` property. The date
           conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified
-          by the ISO 8601 standard.
+          by the ISO 8601 standard.<br>
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -81329,12 +81327,12 @@ Modules:
         TypeNameGo: DateTime
         IsList: false
         Required: false
-        Documentation: >
+        Documentation: >-
           Date when subscription was cancelled or expired. The setting is for
           audit purposes only and the subscription is not automatically
           cancelled. The subscription lifecycle can be managed by using the
           `state` property. The date conforms to the following format:
-          `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+          `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -81365,10 +81363,10 @@ Modules:
         TypeNameGo: DateTime
         IsList: false
         Required: false
-        Documentation: >
+        Documentation: >-
           Upcoming subscription expiration notification date. The date conforms
           to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the
-          ISO 8601 standard.
+          ISO 8601 standard.<br>
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -81429,10 +81427,10 @@ Modules:
         TypeNameGo: null
         IsList: false
         Required: false
-        Documentation: |-
-          Notify change in Subscription State. 
-           - If false, do not send any email notification for change of state of subscription 
-           - If true, send email notification of change of state of subscription 
+        Documentation: >-
+          Notify change in Subscription State. <br> - If false, do not send any
+          email notification for change of state of subscription <br> - If true,
+          send email notification of change of state of subscription 
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -82098,10 +82096,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -82443,9 +82441,9 @@ Modules:
         TypeNameGo: DateTime
         IsList: false
         Required: false
-        Documentation: >
+        Documentation: >-
           Subscription creation date. The date conforms to the following format:
-          `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+          `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -82475,12 +82473,12 @@ Modules:
         TypeNameGo: DateTime
         IsList: false
         Required: false
-        Documentation: >
+        Documentation: >-
           Subscription activation date. The setting is for audit purposes only
           and the subscription is not automatically activated. The subscription
           lifecycle can be managed by using the `state` property. The date
           conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified
-          by the ISO 8601 standard.
+          by the ISO 8601 standard.<br>
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -82510,12 +82508,12 @@ Modules:
         TypeNameGo: DateTime
         IsList: false
         Required: false
-        Documentation: >
+        Documentation: >-
           Subscription expiration date. The setting is for audit purposes only
           and the subscription is not automatically expired. The subscription
           lifecycle can be managed by using the `state` property. The date
           conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified
-          by the ISO 8601 standard.
+          by the ISO 8601 standard.<br>
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -82545,12 +82543,12 @@ Modules:
         TypeNameGo: DateTime
         IsList: false
         Required: false
-        Documentation: >
+        Documentation: >-
           Date when subscription was cancelled or expired. The setting is for
           audit purposes only and the subscription is not automatically
           cancelled. The subscription lifecycle can be managed by using the
           `state` property. The date conforms to the following format:
-          `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+          `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -82580,10 +82578,10 @@ Modules:
         TypeNameGo: DateTime
         IsList: false
         Required: false
-        Documentation: >
+        Documentation: >-
           Upcoming subscription expiration notification date. The date conforms
           to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the
-          ISO 8601 standard.
+          ISO 8601 standard.<br>
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -85488,10 +85486,10 @@ Modules:
         TypeNameGo: DateTime
         IsList: false
         Required: false
-        Documentation: >
+        Documentation: >-
           The date of the latest synchronization. The date conforms to the
           following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
-          standard.
+          standard.<br>
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -85522,10 +85520,10 @@ Modules:
         TypeNameGo: DateTime
         IsList: false
         Required: false
-        Documentation: >
+        Documentation: >-
           The date of the latest configuration change. The date conforms to the
           following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
-          standard.
+          standard.<br>
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -85648,10 +85646,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -86118,9 +86116,9 @@ Modules:
         TypeNameGo: DateTime
         IsList: false
         Required: false
-        Documentation: >
+        Documentation: >-
           Date of user registration. The date conforms to the following format:
-          `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+          `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -86986,10 +86984,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -87473,9 +87471,9 @@ Modules:
         TypeNameGo: DateTime
         IsList: false
         Required: false
-        Documentation: >
+        Documentation: >-
           Date of user registration. The date conforms to the following format:
-          `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+          `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -87886,10 +87884,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -88404,10 +88402,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -88767,10 +88765,10 @@ Modules:
             TypeNameGo: DateTime
             IsList: false
             Required: false
-            Documentation: >
+            Documentation: >-
               Subscription creation date. The date conforms to the following
               format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
-              standard.
+              standard.<br>
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -88800,12 +88798,12 @@ Modules:
             TypeNameGo: DateTime
             IsList: false
             Required: false
-            Documentation: >
+            Documentation: >-
               Subscription activation date. The setting is for audit purposes
               only and the subscription is not automatically activated. The
               subscription lifecycle can be managed by using the `state`
               property. The date conforms to the following format:
-              `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+              `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -88835,12 +88833,12 @@ Modules:
             TypeNameGo: DateTime
             IsList: false
             Required: false
-            Documentation: >
+            Documentation: >-
               Subscription expiration date. The setting is for audit purposes
               only and the subscription is not automatically expired. The
               subscription lifecycle can be managed by using the `state`
               property. The date conforms to the following format:
-              `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+              `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -88870,12 +88868,12 @@ Modules:
             TypeNameGo: DateTime
             IsList: false
             Required: false
-            Documentation: >
+            Documentation: >-
               Date when subscription was cancelled or expired. The setting is
               for audit purposes only and the subscription is not automatically
               cancelled. The subscription lifecycle can be managed by using the
               `state` property. The date conforms to the following format:
-              `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+              `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -88905,10 +88903,10 @@ Modules:
             TypeNameGo: DateTime
             IsList: false
             Required: false
-            Documentation: >
+            Documentation: >-
               Upcoming subscription expiration notification date. The date
               conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as
-              specified by the ISO 8601 standard.
+              specified by the ISO 8601 standard.<br>
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -89234,10 +89232,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx
@@ -89545,10 +89543,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: serviceName
-        NameAnsible: name
+        NameAnsible: service_name
         NamePythonSdk: service_name
         NameGoSdk: ServiceName
-        NameTerraform: name
+        NameTerraform: ServiceName
         IdPortion: service
         Type: str
         TypeName: xxx

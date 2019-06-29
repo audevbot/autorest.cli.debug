@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   diagnostic_id:
     description:
       - >-
@@ -36,6 +37,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -140,11 +144,11 @@ EXAMPLES = '''
 - name: ApiManagementListDiagnostics
   azure_rm_apimanagementdiagnostic_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
 - name: ApiManagementGetDiagnostic
   azure_rm_apimanagementdiagnostic_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     diagnostic_id: myDiagnostic
 
 '''
@@ -203,7 +207,7 @@ class AzureRMDiagnosticInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 required=true
             ),
@@ -213,7 +217,7 @@ class AzureRMDiagnosticInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.diagnostic_id = None
         self.id = None
         self.name = None
@@ -243,11 +247,11 @@ class AzureRMDiagnosticInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
+            self.service_name is not None and
             self.diagnostic_id is not None):
             self.results['diagnostic'] = self.format_item(self.get())
         elif (self.resource_group is not None and
-              self.name is not None):
+              self.service_name is not None):
             self.results['diagnostic'] = self.format_item(self.listbyservice())
         return self.results
 

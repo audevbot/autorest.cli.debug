@@ -12,7 +12,7 @@
     - name: ApiManagementGetIssue
       azure_rm_apimanagementissue_info:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         issue_id: '{{issue_name}}'
     
       register: output

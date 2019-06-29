@@ -25,7 +25,7 @@ options:
     description:
       - Name of an Azure resource group.
     required: true
-  name:
+  account_name:
     description:
       - Cosmos DB database account name.
     required: true
@@ -71,17 +71,17 @@ EXAMPLES = '''
 - name: CosmosDBDatabaseGetUsages
   azure_rm_cosmosdbdatabase_info:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
+    account_name: myDatabaseAccount
     database_rid: myDatabase
 - name: CosmosDBDatabaseGetMetrics
   azure_rm_cosmosdbdatabase_info:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
+    account_name: myDatabaseAccount
     database_rid: myDatabase
 - name: CosmosDBDatabaseGetMetricDefinitions
   azure_rm_cosmosdbdatabase_info:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
+    account_name: myDatabaseAccount
     database_rid: myDatabase
 
 '''
@@ -174,7 +174,7 @@ class AzureRMDatabaseInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            account_name=dict(
                 type='str',
                 required=true
             ),
@@ -185,7 +185,7 @@ class AzureRMDatabaseInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.account_name = None
         self.database_rid = None
         self.value = None
 
@@ -212,15 +212,15 @@ class AzureRMDatabaseInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
+            self.account_name is not None and
             self.database_rid is not None):
             self.results['database'] = self.format_item(self.listmetricdefinitions())
         elif (self.resource_group is not None and
-              self.name is not None and
+              self.account_name is not None and
               self.database_rid is not None):
             self.results['database'] = self.format_item(self.listmetrics())
         elif (self.resource_group is not None and
-              self.name is not None and
+              self.account_name is not None and
               self.database_rid is not None):
             self.results['database'] = self.format_item(self.listusages())
         return self.results
@@ -230,7 +230,7 @@ class AzureRMDatabaseInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.database.list_metric_definitions(resource_group_name=self.resource_group,
-                                                                         account_name=self.name,
+                                                                         account_name=self.account_name,
                                                                          database_rid=self.database_rid)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
@@ -242,7 +242,7 @@ class AzureRMDatabaseInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.database.list_metrics(resource_group_name=self.resource_group,
-                                                              account_name=self.name,
+                                                              account_name=self.account_name,
                                                               database_rid=self.database_rid)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
@@ -254,7 +254,7 @@ class AzureRMDatabaseInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.database.list_usages(resource_group_name=self.resource_group,
-                                                             account_name=self.name,
+                                                             account_name=self.account_name,
                                                              database_rid=self.database_rid)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')

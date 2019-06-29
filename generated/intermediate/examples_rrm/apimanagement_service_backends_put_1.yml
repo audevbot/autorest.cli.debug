@@ -17,7 +17,7 @@
     - name: ApiManagementCreateBackendProxyBackend
       azure_rm_apimanagementbackend:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         backend_id: '{{backend_name}}'
         description: description5308
         credentials:

@@ -261,13 +261,13 @@ properties:
       sample: null
     provisioning_state:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: str
       sample: null
     provisioning_state_transition_time:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: datetime
       sample: null
@@ -279,7 +279,7 @@ properties:
       sample: null
     previous_provisioning_state_transition_time:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: datetime
       sample: null

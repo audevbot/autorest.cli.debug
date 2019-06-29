@@ -25,7 +25,7 @@ options:
     description:
       - Name of an Azure resource group.
     required: true
-  name:
+  account_name:
     description:
       - Cosmos DB database account name.
     required: true
@@ -125,7 +125,7 @@ EXAMPLES = '''
 - name: CosmosDBDatabaseAccountRegionGetMetrics
   azure_rm_cosmosdbpercentilesourcetarget_info:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
+    account_name: myDatabaseAccount
     source_region: mySourceRegion
     target_region: myTargetRegion
 
@@ -305,7 +305,7 @@ class AzureRMPercentileSourceTargetInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            account_name=dict(
                 type='str',
                 required=true
             ),
@@ -320,7 +320,7 @@ class AzureRMPercentileSourceTargetInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.account_name = None
         self.source_region = None
         self.target_region = None
         self.value = None
@@ -348,7 +348,7 @@ class AzureRMPercentileSourceTargetInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
+            self.account_name is not None and
             self.source_region is not None and
             self.target_region is not None):
             self.results['percentile_source_target'] = self.format_item(self.listmetrics())
@@ -359,7 +359,7 @@ class AzureRMPercentileSourceTargetInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.percentile_source_target.list_metrics(resource_group_name=self.resource_group,
-                                                                              account_name=self.name,
+                                                                              account_name=self.account_name,
                                                                               source_region=self.source_region,
                                                                               target_region=self.target_region)
         except CloudError as e:

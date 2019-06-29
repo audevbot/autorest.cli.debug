@@ -181,34 +181,34 @@ options:
                 required: true
               caching:
                 description:
-                  - 'Values are:'
-                  - ''
-                  - ' none - The caching mode for the disk is not enabled.'
-                  - ' readOnly - The caching mode for the disk is read only.'
-                  - ' readWrite - The caching mode for the disk is read and write.'
-                  - ''
-                  - ' The default value for caching is none. For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.'
+                  - >-
+                    Values are:<br> none - The caching mode for the disk is not
+                    enabled.<br> readOnly - The caching mode for the disk is
+                    read only.<br> readWrite - The caching mode for the disk is
+                    read and write.<br> The default value for caching is none.
+                    For information about the caching options see:
+                    https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
               disk_size_gb:
                 description:
                   - undefined
                 required: true
               storage_account_type:
                 description:
-                  - 'If omitted, the default is "Standard_LRS". Values are:'
-                  - ''
-                  - ' Standard_LRS - The data disk should use standard locally redundant storage.'
-                  - ' Premium_LRS - The data disk should use premium locally redundant storage.'
+                  - >-
+                    If omitted, the default is "Standard_LRS". Values are:<br>
+                    Standard_LRS - The data disk should use standard locally
+                    redundant storage.<br> Premium_LRS - The data disk should
+                    use premium locally redundant storage.
           license_type:
             description:
               - >-
                 This only applies to images that contain the Windows operating
                 system, and should only be used when you hold valid on-premises
                 licenses for the nodes which will be deployed. If omitted, no
-                on-premises licensing discount is applied. Values are:
-              - ''
-              - ' Windows_Server - The on-premises license is for Windows Server.'
-              - ' Windows_Client - The on-premises license is for Windows Client.'
-              - ''
+                on-premises licensing discount is applied. Values are:<br>
+                Windows_Server - The on-premises license is for Windows
+                Server.<br> Windows_Client - The on-premises license is for
+                Windows Client.<br>
           container_configuration:
             description:
               - >-

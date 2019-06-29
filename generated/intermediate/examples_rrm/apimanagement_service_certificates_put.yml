@@ -15,7 +15,7 @@
     - name: ApiManagementCreateCertificate
       azure_rm_apimanagementcertificate:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         certificate_id: '{{certificate_name}}'
         data: >-
           ****************Base 64 Encoded Certificate

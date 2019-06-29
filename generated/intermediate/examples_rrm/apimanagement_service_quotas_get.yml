@@ -12,7 +12,7 @@
     - name: ApiManagementGetQuotaCounterKeys
       azure_rm_apimanagementquotabycounterkey_info:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         quota_counter_key: '{{quota_name}}'
     
       register: output

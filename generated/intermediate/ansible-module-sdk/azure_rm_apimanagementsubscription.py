@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   sid:
     description:
       - >-
@@ -74,8 +75,7 @@ options:
     description:
       - >-
         Subscription creation date. The date conforms to the following format:
-        `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-      - ''
+        `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>
   start_date:
     description:
       - >-
@@ -83,8 +83,7 @@ options:
         the subscription is not automatically activated. The subscription
         lifecycle can be managed by using the `state` property. The date
         conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by
-        the ISO 8601 standard.
-      - ''
+        the ISO 8601 standard.<br>
   expiration_date:
     description:
       - >-
@@ -92,8 +91,7 @@ options:
         the subscription is not automatically expired. The subscription
         lifecycle can be managed by using the `state` property. The date
         conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by
-        the ISO 8601 standard.
-      - ''
+        the ISO 8601 standard.<br>
   end_date:
     description:
       - >-
@@ -101,26 +99,28 @@ options:
         audit purposes only and the subscription is not automatically cancelled.
         The subscription lifecycle can be managed by using the `state` property.
         The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as
-        specified by the ISO 8601 standard.
-      - ''
+        specified by the ISO 8601 standard.<br>
   notification_date:
     description:
       - >-
         Upcoming subscription expiration notification date. The date conforms to
         the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO
-        8601 standard.
-      - ''
+        8601 standard.<br>
   state_comment:
     description:
       - Optional subscription comment added by an administrator.
   notify:
     description:
-      - 'Notify change in Subscription State. '
-      - ' - If false, do not send any email notification for change of state of subscription '
-      - ' - If true, send email notification of change of state of subscription '
+      - >-
+        Notify change in Subscription State. <br> - If false, do not send any
+        email notification for change of state of subscription <br> - If true,
+        send email notification of change of state of subscription 
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -135,7 +135,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateSubscription
   azure_rm_apimanagementsubscription:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     sid: testsub
     owner_id: >-
       /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
@@ -149,13 +149,13 @@ EXAMPLES = '''
 - name: ApiManagementUpdateSubscription
   azure_rm_apimanagementsubscription:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     sid: testsub
     display_name: testsub
 - name: ApiManagementDeleteSubscription
   azure_rm_apimanagementsubscription:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     sid: testsub
     state: absent
 
@@ -224,51 +224,51 @@ properties:
       sample: null
     created_date:
       description:
-        - >
+        - >-
           Subscription creation date. The date conforms to the following format:
-          `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+          `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>
       returned: always
       type: datetime
       sample: null
     start_date:
       description:
-        - >
+        - >-
           Subscription activation date. The setting is for audit purposes only
           and the subscription is not automatically activated. The subscription
           lifecycle can be managed by using the `state` property. The date
           conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified
-          by the ISO 8601 standard.
+          by the ISO 8601 standard.<br>
       returned: always
       type: datetime
       sample: null
     expiration_date:
       description:
-        - >
+        - >-
           Subscription expiration date. The setting is for audit purposes only
           and the subscription is not automatically expired. The subscription
           lifecycle can be managed by using the `state` property. The date
           conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified
-          by the ISO 8601 standard.
+          by the ISO 8601 standard.<br>
       returned: always
       type: datetime
       sample: null
     end_date:
       description:
-        - >
+        - >-
           Date when subscription was cancelled or expired. The setting is for
           audit purposes only and the subscription is not automatically
           cancelled. The subscription lifecycle can be managed by using the
           `state` property. The date conforms to the following format:
-          `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+          `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>
       returned: always
       type: datetime
       sample: null
     notification_date:
       description:
-        - >
+        - >-
           Upcoming subscription expiration notification date. The date conforms
           to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the
-          ISO 8601 standard.
+          ISO 8601 standard.<br>
       returned: always
       type: datetime
       sample: null
@@ -327,10 +327,9 @@ class AzureRMSubscription(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
-                disposition='service_name',
                 required=true
             ),
             sid=dict(
@@ -392,7 +391,7 @@ class AzureRMSubscription(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.sid = None
         self.notify = None
         self.id = None
@@ -468,7 +467,7 @@ class AzureRMSubscription(AzureRMModuleBaseExt):
     def create_update_resource(self):
         try:
             response = self.mgmt_client.subscription.create_or_update(resource_group_name=self.resource_group,
-                                                                      service_name=self.name,
+                                                                      service_name=self.service_name,
                                                                       sid=self.sid,
                                                                       parameters=self.body)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
@@ -482,7 +481,7 @@ class AzureRMSubscription(AzureRMModuleBaseExt):
         # self.log('Deleting the Subscription instance {0}'.format(self.))
         try:
             response = self.mgmt_client.subscription.delete(resource_group_name=self.resource_group,
-                                                            service_name=self.name,
+                                                            service_name=self.service_name,
                                                             sid=self.sid)
         except CloudError as e:
             self.log('Error attempting to delete the Subscription instance.')
@@ -495,7 +494,7 @@ class AzureRMSubscription(AzureRMModuleBaseExt):
         found = False
         try:
             response = self.mgmt_client.subscription.get(resource_group_name=self.resource_group,
-                                                         service_name=self.name,
+                                                         service_name=self.service_name,
                                                          sid=self.sid)
         except CloudError as e:
             return False

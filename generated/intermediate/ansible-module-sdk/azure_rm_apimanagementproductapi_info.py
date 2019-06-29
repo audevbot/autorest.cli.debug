@@ -25,7 +25,7 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
       - The name of the API Management service.
     required: true
@@ -191,7 +191,7 @@ EXAMPLES = '''
 - name: ApiManagementListProductApis
   azure_rm_apimanagementproductapi_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     product_id: myProduct
 
 '''
@@ -492,7 +492,7 @@ class AzureRMProductApiInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 required=true
             ),
@@ -503,7 +503,7 @@ class AzureRMProductApiInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.product_id = None
         self.value = None
         self.next_link = None
@@ -531,7 +531,7 @@ class AzureRMProductApiInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
+            self.service_name is not None and
             self.product_id is not None):
             self.results['product_api'] = self.format_item(self.listbyproduct())
         return self.results
@@ -541,7 +541,7 @@ class AzureRMProductApiInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.product_api.list_by_product(resource_group_name=self.resource_group,
-                                                                    service_name=self.name,
+                                                                    service_name=self.service_name,
                                                                     product_id=self.product_id)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')

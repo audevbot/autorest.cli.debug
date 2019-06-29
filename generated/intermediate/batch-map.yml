@@ -764,7 +764,7 @@ Modules:
             TypeNameGo: PoolAllocationMode
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -802,7 +802,7 @@ Modules:
             TypeNameGo: KeyVaultReference
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -896,7 +896,7 @@ Modules:
             TypeNameGo: AutoStorageProperties
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -959,7 +959,7 @@ Modules:
             TypeNameGo: Int
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -989,7 +989,7 @@ Modules:
             TypeNameGo: Int
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -1019,7 +1019,7 @@ Modules:
             TypeNameGo: Int
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -1049,7 +1049,7 @@ Modules:
             TypeNameGo: Int
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -1548,7 +1548,7 @@ Modules:
         TypeNameGo: PoolAllocationMode
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -1586,7 +1586,7 @@ Modules:
         TypeNameGo: KeyVaultReference
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -1678,7 +1678,7 @@ Modules:
         TypeNameGo: AutoStorageProperties
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -4620,7 +4620,7 @@ Modules:
         TypeNameGo: Operation
         IsList: true
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -4668,7 +4668,7 @@ Modules:
             TypeNameGo: Operation_display
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -4686,7 +4686,7 @@ Modules:
                 TypeNameGo: String
                 IsList: false
                 Required: false
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -4746,7 +4746,7 @@ Modules:
                 TypeNameGo: String
                 IsList: false
                 Required: false
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -4776,7 +4776,7 @@ Modules:
                 TypeNameGo: String
                 IsList: false
                 Required: false
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -4818,7 +4818,7 @@ Modules:
             TypeNameGo: String
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -4848,7 +4848,7 @@ Modules:
             TypeNameGo: Object
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -4891,7 +4891,7 @@ Modules:
         TypeNameGo: String
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -5261,7 +5261,7 @@ Modules:
         TypeNameGo: DateTime
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -5343,7 +5343,7 @@ Modules:
         TypeNameGo: DateTime
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -6140,7 +6140,7 @@ Modules:
             TypeNameGo: CertificateProvisioningState
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -6779,7 +6779,7 @@ Modules:
         TypeNameGo: DateTime
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -6859,7 +6859,7 @@ Modules:
         TypeNameGo: DateTime
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -8012,7 +8012,7 @@ Modules:
                 TypeNameGo: ImageReference
                 IsList: false
                 Required: true
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -8387,14 +8387,13 @@ Modules:
                     TypeNameGo: CachingType
                     IsList: false
                     Required: false
-                    Documentation: |-
-                      Values are:
-
-                       none - The caching mode for the disk is not enabled.
-                       readOnly - The caching mode for the disk is read only.
-                       readWrite - The caching mode for the disk is read and write.
-
-                       The default value for caching is none. For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
+                    Documentation: >-
+                      Values are:<br> none - The caching mode for the disk is
+                      not enabled.<br> readOnly - The caching mode for the disk
+                      is read only.<br> readWrite - The caching mode for the
+                      disk is read and write.<br> The default value for caching
+                      is none. For information about the caching options see:
+                      https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
                     DocumentationMarkKeywords: true
                     DefaultValue: null
                     IncludeInDocumentation: true
@@ -8436,7 +8435,7 @@ Modules:
                     TypeNameGo: Int
                     IsList: false
                     Required: true
-                    Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                    Documentation: ''
                     DocumentationMarkKeywords: true
                     DefaultValue: null
                     IncludeInDocumentation: true
@@ -8469,11 +8468,11 @@ Modules:
                     TypeNameGo: StorageAccountType
                     IsList: false
                     Required: false
-                    Documentation: |-
-                      If omitted, the default is "Standard_LRS". Values are:
-
-                       Standard_LRS - The data disk should use standard locally redundant storage.
-                       Premium_LRS - The data disk should use premium locally redundant storage.
+                    Documentation: >-
+                      If omitted, the default is "Standard_LRS". Values are:<br>
+                      Standard_LRS - The data disk should use standard locally
+                      redundant storage.<br> Premium_LRS - The data disk should
+                      use premium locally redundant storage.
                     DocumentationMarkKeywords: true
                     DefaultValue: null
                     IncludeInDocumentation: true
@@ -8530,15 +8529,14 @@ Modules:
                 TypeNameGo: String
                 IsList: false
                 Required: false
-                Documentation: >
+                Documentation: >-
                   This only applies to images that contain the Windows operating
                   system, and should only be used when you hold valid
                   on-premises licenses for the nodes which will be deployed. If
                   omitted, no on-premises licensing discount is applied. Values
-                  are:
-
-                   Windows_Server - The on-premises license is for Windows Server.
-                   Windows_Client - The on-premises license is for Windows Client.
+                  are:<br> Windows_Server - The on-premises license is for
+                  Windows Server.<br> Windows_Client - The on-premises license
+                  is for Windows Client.<br>
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -8594,7 +8592,7 @@ Modules:
                     TypeNameGo: String
                     IsList: false
                     Required: true
-                    Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                    Documentation: ''
                     DocumentationMarkKeywords: true
                     DefaultValue: null
                     IncludeInDocumentation: true
@@ -8739,7 +8737,7 @@ Modules:
         TypeNameGo: ScaleSettings
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -8965,7 +8963,7 @@ Modules:
                 TypeNameGo: String
                 IsList: false
                 Required: true
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -9089,7 +9087,7 @@ Modules:
         TypeNameGo: NetworkConfiguration
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -9245,7 +9243,7 @@ Modules:
                     TypeNameGo: InboundEndpointProtocol
                     IsList: false
                     Required: true
-                    Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                    Documentation: ''
                     DocumentationMarkKeywords: true
                     DefaultValue: null
                     IncludeInDocumentation: true
@@ -9478,7 +9476,7 @@ Modules:
         TypeNameGo: Int
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -9508,7 +9506,7 @@ Modules:
         TypeNameGo: TaskSchedulingPolicy
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -9526,7 +9524,7 @@ Modules:
             TypeNameGo: ComputeNodeFillType
             IsList: false
             Required: true
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -9577,7 +9575,7 @@ Modules:
         TypeNameGo: UserAccount
         IsList: true
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -9595,7 +9593,7 @@ Modules:
             TypeNameGo: String
             IsList: false
             Required: true
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -9625,7 +9623,7 @@ Modules:
             TypeNameGo: String
             IsList: false
             Required: true
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -9944,7 +9942,7 @@ Modules:
             TypeNameGo: String
             IsList: false
             Required: true
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -9974,7 +9972,7 @@ Modules:
             TypeNameGo: String
             IsList: false
             Required: true
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -10072,7 +10070,7 @@ Modules:
             TypeNameGo: ResourceFile
             IsList: true
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -10323,7 +10321,7 @@ Modules:
             TypeNameGo: EnvironmentSetting
             IsList: true
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -10341,7 +10339,7 @@ Modules:
                 TypeNameGo: String
                 IsList: false
                 Required: true
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -10371,7 +10369,7 @@ Modules:
                 TypeNameGo: String
                 IsList: false
                 Required: false
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -10811,7 +10809,7 @@ Modules:
                     TypeNameGo: String
                     IsList: false
                     Required: true
-                    Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                    Documentation: ''
                     DocumentationMarkKeywords: true
                     DefaultValue: null
                     IncludeInDocumentation: true
@@ -10841,7 +10839,7 @@ Modules:
                     TypeNameGo: String
                     IsList: false
                     Required: true
-                    Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                    Documentation: ''
                     DocumentationMarkKeywords: true
                     DefaultValue: null
                     IncludeInDocumentation: true
@@ -10934,7 +10932,7 @@ Modules:
             TypeNameGo: String
             IsList: false
             Required: true
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -11054,7 +11052,7 @@ Modules:
             TypeNameGo: CertificateVisibility
             IsList: true
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -11132,7 +11130,7 @@ Modules:
             TypeNameGo: String
             IsList: false
             Required: true
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -11280,7 +11278,7 @@ Modules:
         TypeNameGo: DateTime
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -11311,7 +11309,7 @@ Modules:
         TypeNameGo: DateTime
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -11342,7 +11340,7 @@ Modules:
         TypeNameGo: AllocationState
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -11390,7 +11388,7 @@ Modules:
         TypeNameGo: DateTime
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -11421,7 +11419,7 @@ Modules:
         TypeNameGo: Int
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -11452,7 +11450,7 @@ Modules:
         TypeNameGo: Int
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -11503,7 +11501,7 @@ Modules:
             TypeNameGo: DateTime
             IsList: false
             Required: true
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -11565,7 +11563,7 @@ Modules:
             TypeNameGo: AutoScaleRunError
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -11647,7 +11645,7 @@ Modules:
                 TypeNameGo: AutoScaleRunError
                 IsList: true
                 Required: false
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -11729,7 +11727,7 @@ Modules:
                     TypeNameGo: AutoScaleRunError
                     IsList: true
                     Required: false
-                    Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                    Documentation: ''
                     DocumentationMarkKeywords: true
                     DefaultValue: null
                     IncludeInDocumentation: true
@@ -11796,7 +11794,7 @@ Modules:
         TypeNameGo: ResizeOperationStatus
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -11814,7 +11812,7 @@ Modules:
             TypeNameGo: Int
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -11844,7 +11842,7 @@ Modules:
             TypeNameGo: Int
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -11963,7 +11961,7 @@ Modules:
             TypeNameGo: DateTime
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -12077,7 +12075,7 @@ Modules:
                 TypeNameGo: ResizeError
                 IsList: true
                 Required: false
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -12159,7 +12157,7 @@ Modules:
                     TypeNameGo: ResizeError
                     IsList: true
                     Required: false
-                    Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                    Documentation: ''
                     DocumentationMarkKeywords: true
                     DefaultValue: null
                     IncludeInDocumentation: true
@@ -12482,7 +12480,7 @@ Modules:
             TypeNameGo: PoolProvisioningState
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -12721,7 +12719,7 @@ Modules:
                     TypeNameGo: ImageReference
                     IsList: false
                     Required: true
-                    Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                    Documentation: ''
                     DocumentationMarkKeywords: true
                     DefaultValue: null
                     IncludeInDocumentation: true
@@ -13096,14 +13094,14 @@ Modules:
                         TypeNameGo: CachingType
                         IsList: false
                         Required: false
-                        Documentation: |-
-                          Values are:
-
-                           none - The caching mode for the disk is not enabled.
-                           readOnly - The caching mode for the disk is read only.
-                           readWrite - The caching mode for the disk is read and write.
-
-                           The default value for caching is none. For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
+                        Documentation: >-
+                          Values are:<br> none - The caching mode for the disk
+                          is not enabled.<br> readOnly - The caching mode for
+                          the disk is read only.<br> readWrite - The caching
+                          mode for the disk is read and write.<br> The default
+                          value for caching is none. For information about the
+                          caching options see:
+                          https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
                         DocumentationMarkKeywords: true
                         DefaultValue: null
                         IncludeInDocumentation: true
@@ -13145,7 +13143,7 @@ Modules:
                         TypeNameGo: Int
                         IsList: false
                         Required: true
-                        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                        Documentation: ''
                         DocumentationMarkKeywords: true
                         DefaultValue: null
                         IncludeInDocumentation: true
@@ -13178,11 +13176,12 @@ Modules:
                         TypeNameGo: StorageAccountType
                         IsList: false
                         Required: false
-                        Documentation: |-
-                          If omitted, the default is "Standard_LRS". Values are:
-
-                           Standard_LRS - The data disk should use standard locally redundant storage.
-                           Premium_LRS - The data disk should use premium locally redundant storage.
+                        Documentation: >-
+                          If omitted, the default is "Standard_LRS". Values
+                          are:<br> Standard_LRS - The data disk should use
+                          standard locally redundant storage.<br> Premium_LRS -
+                          The data disk should use premium locally redundant
+                          storage.
                         DocumentationMarkKeywords: true
                         DefaultValue: null
                         IncludeInDocumentation: true
@@ -13240,15 +13239,14 @@ Modules:
                     TypeNameGo: String
                     IsList: false
                     Required: false
-                    Documentation: >
+                    Documentation: >-
                       This only applies to images that contain the Windows
                       operating system, and should only be used when you hold
                       valid on-premises licenses for the nodes which will be
                       deployed. If omitted, no on-premises licensing discount is
-                      applied. Values are:
-
-                       Windows_Server - The on-premises license is for Windows Server.
-                       Windows_Client - The on-premises license is for Windows Client.
+                      applied. Values are:<br> Windows_Server - The on-premises
+                      license is for Windows Server.<br> Windows_Client - The
+                      on-premises license is for Windows Client.<br>
                     DocumentationMarkKeywords: true
                     DefaultValue: null
                     IncludeInDocumentation: true
@@ -13304,7 +13302,7 @@ Modules:
                         TypeNameGo: String
                         IsList: false
                         Required: true
-                        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                        Documentation: ''
                         DocumentationMarkKeywords: true
                         DefaultValue: null
                         IncludeInDocumentation: true
@@ -13453,7 +13451,7 @@ Modules:
             TypeNameGo: ScaleSettings
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -13684,7 +13682,7 @@ Modules:
                     TypeNameGo: String
                     IsList: false
                     Required: true
-                    Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                    Documentation: ''
                     DocumentationMarkKeywords: true
                     DefaultValue: null
                     IncludeInDocumentation: true
@@ -13809,7 +13807,7 @@ Modules:
             TypeNameGo: NetworkConfiguration
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -13964,7 +13962,7 @@ Modules:
                         TypeNameGo: InboundEndpointProtocol
                         IsList: false
                         Required: true
-                        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                        Documentation: ''
                         DocumentationMarkKeywords: true
                         DefaultValue: null
                         IncludeInDocumentation: true
@@ -14197,7 +14195,7 @@ Modules:
             TypeNameGo: Int
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -14227,7 +14225,7 @@ Modules:
             TypeNameGo: TaskSchedulingPolicy
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -14245,7 +14243,7 @@ Modules:
                 TypeNameGo: ComputeNodeFillType
                 IsList: false
                 Required: true
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -14298,7 +14296,7 @@ Modules:
             TypeNameGo: UserAccount
             IsList: true
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -14316,7 +14314,7 @@ Modules:
                 TypeNameGo: String
                 IsList: false
                 Required: true
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -14346,7 +14344,7 @@ Modules:
                 TypeNameGo: String
                 IsList: false
                 Required: true
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -14672,7 +14670,7 @@ Modules:
                 TypeNameGo: String
                 IsList: false
                 Required: true
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -14702,7 +14700,7 @@ Modules:
                 TypeNameGo: String
                 IsList: false
                 Required: true
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -14801,7 +14799,7 @@ Modules:
                 TypeNameGo: ResourceFile
                 IsList: true
                 Required: false
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -15056,7 +15054,7 @@ Modules:
                 TypeNameGo: EnvironmentSetting
                 IsList: true
                 Required: false
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -15074,7 +15072,7 @@ Modules:
                     TypeNameGo: String
                     IsList: false
                     Required: true
-                    Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                    Documentation: ''
                     DocumentationMarkKeywords: true
                     DefaultValue: null
                     IncludeInDocumentation: true
@@ -15104,7 +15102,7 @@ Modules:
                     TypeNameGo: String
                     IsList: false
                     Required: false
-                    Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                    Documentation: ''
                     DocumentationMarkKeywords: true
                     DefaultValue: null
                     IncludeInDocumentation: true
@@ -15552,7 +15550,7 @@ Modules:
                         TypeNameGo: String
                         IsList: false
                         Required: true
-                        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                        Documentation: ''
                         DocumentationMarkKeywords: true
                         DefaultValue: null
                         IncludeInDocumentation: true
@@ -15584,7 +15582,7 @@ Modules:
                         TypeNameGo: String
                         IsList: false
                         Required: true
-                        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                        Documentation: ''
                         DocumentationMarkKeywords: true
                         DefaultValue: null
                         IncludeInDocumentation: true
@@ -15679,7 +15677,7 @@ Modules:
                 TypeNameGo: String
                 IsList: false
                 Required: true
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -15797,7 +15795,7 @@ Modules:
                 TypeNameGo: CertificateVisibility
                 IsList: true
                 Required: false
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -15875,7 +15873,7 @@ Modules:
                 TypeNameGo: String
                 IsList: false
                 Required: true
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -17304,7 +17302,7 @@ Modules:
         TypeNameGo: DateTime
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -17334,7 +17332,7 @@ Modules:
         TypeNameGo: DateTime
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -17364,7 +17362,7 @@ Modules:
         TypeNameGo: AllocationState
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -17411,7 +17409,7 @@ Modules:
         TypeNameGo: DateTime
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -17631,7 +17629,7 @@ Modules:
                 TypeNameGo: ImageReference
                 IsList: false
                 Required: true
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -18003,14 +18001,13 @@ Modules:
                     TypeNameGo: CachingType
                     IsList: false
                     Required: false
-                    Documentation: |-
-                      Values are:
-
-                       none - The caching mode for the disk is not enabled.
-                       readOnly - The caching mode for the disk is read only.
-                       readWrite - The caching mode for the disk is read and write.
-
-                       The default value for caching is none. For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
+                    Documentation: >-
+                      Values are:<br> none - The caching mode for the disk is
+                      not enabled.<br> readOnly - The caching mode for the disk
+                      is read only.<br> readWrite - The caching mode for the
+                      disk is read and write.<br> The default value for caching
+                      is none. For information about the caching options see:
+                      https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
                     DocumentationMarkKeywords: true
                     DefaultValue: null
                     IncludeInDocumentation: true
@@ -18052,7 +18049,7 @@ Modules:
                     TypeNameGo: Int
                     IsList: false
                     Required: true
-                    Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                    Documentation: ''
                     DocumentationMarkKeywords: true
                     DefaultValue: null
                     IncludeInDocumentation: true
@@ -18085,11 +18082,11 @@ Modules:
                     TypeNameGo: StorageAccountType
                     IsList: false
                     Required: false
-                    Documentation: |-
-                      If omitted, the default is "Standard_LRS". Values are:
-
-                       Standard_LRS - The data disk should use standard locally redundant storage.
-                       Premium_LRS - The data disk should use premium locally redundant storage.
+                    Documentation: >-
+                      If omitted, the default is "Standard_LRS". Values are:<br>
+                      Standard_LRS - The data disk should use standard locally
+                      redundant storage.<br> Premium_LRS - The data disk should
+                      use premium locally redundant storage.
                     DocumentationMarkKeywords: true
                     DefaultValue: null
                     IncludeInDocumentation: true
@@ -18146,15 +18143,14 @@ Modules:
                 TypeNameGo: String
                 IsList: false
                 Required: false
-                Documentation: >
+                Documentation: >-
                   This only applies to images that contain the Windows operating
                   system, and should only be used when you hold valid
                   on-premises licenses for the nodes which will be deployed. If
                   omitted, no on-premises licensing discount is applied. Values
-                  are:
-
-                   Windows_Server - The on-premises license is for Windows Server.
-                   Windows_Client - The on-premises license is for Windows Client.
+                  are:<br> Windows_Server - The on-premises license is for
+                  Windows Server.<br> Windows_Client - The on-premises license
+                  is for Windows Client.<br>
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -18210,7 +18206,7 @@ Modules:
                     TypeNameGo: String
                     IsList: false
                     Required: true
-                    Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                    Documentation: ''
                     DocumentationMarkKeywords: true
                     DefaultValue: null
                     IncludeInDocumentation: true
@@ -18355,7 +18351,7 @@ Modules:
         TypeNameGo: Int
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -18385,7 +18381,7 @@ Modules:
         TypeNameGo: Int
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -18415,7 +18411,7 @@ Modules:
         TypeNameGo: ScaleSettings
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -18641,7 +18637,7 @@ Modules:
                 TypeNameGo: String
                 IsList: false
                 Required: true
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -18745,7 +18741,7 @@ Modules:
             TypeNameGo: DateTime
             IsList: false
             Required: true
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -18807,7 +18803,7 @@ Modules:
             TypeNameGo: AutoScaleRunError
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -18889,7 +18885,7 @@ Modules:
                 TypeNameGo: AutoScaleRunError
                 IsList: true
                 Required: false
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -18971,7 +18967,7 @@ Modules:
                     TypeNameGo: AutoScaleRunError
                     IsList: true
                     Required: false
-                    Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                    Documentation: ''
                     DocumentationMarkKeywords: true
                     DefaultValue: null
                     IncludeInDocumentation: true
@@ -19077,7 +19073,7 @@ Modules:
         TypeNameGo: NetworkConfiguration
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -19230,7 +19226,7 @@ Modules:
                     TypeNameGo: InboundEndpointProtocol
                     IsList: false
                     Required: true
-                    Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                    Documentation: ''
                     DocumentationMarkKeywords: true
                     DefaultValue: null
                     IncludeInDocumentation: true
@@ -19460,7 +19456,7 @@ Modules:
         TypeNameGo: Int
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -19490,7 +19486,7 @@ Modules:
         TypeNameGo: TaskSchedulingPolicy
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -19508,7 +19504,7 @@ Modules:
             TypeNameGo: ComputeNodeFillType
             IsList: false
             Required: true
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -19559,7 +19555,7 @@ Modules:
         TypeNameGo: UserAccount
         IsList: true
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -19577,7 +19573,7 @@ Modules:
             TypeNameGo: String
             IsList: false
             Required: true
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -19607,7 +19603,7 @@ Modules:
             TypeNameGo: String
             IsList: false
             Required: true
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -19926,7 +19922,7 @@ Modules:
             TypeNameGo: String
             IsList: false
             Required: true
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -19956,7 +19952,7 @@ Modules:
             TypeNameGo: String
             IsList: false
             Required: true
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -20054,7 +20050,7 @@ Modules:
             TypeNameGo: ResourceFile
             IsList: true
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -20305,7 +20301,7 @@ Modules:
             TypeNameGo: EnvironmentSetting
             IsList: true
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -20323,7 +20319,7 @@ Modules:
                 TypeNameGo: String
                 IsList: false
                 Required: true
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -20353,7 +20349,7 @@ Modules:
                 TypeNameGo: String
                 IsList: false
                 Required: false
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -20793,7 +20789,7 @@ Modules:
                     TypeNameGo: String
                     IsList: false
                     Required: true
-                    Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                    Documentation: ''
                     DocumentationMarkKeywords: true
                     DefaultValue: null
                     IncludeInDocumentation: true
@@ -20823,7 +20819,7 @@ Modules:
                     TypeNameGo: String
                     IsList: false
                     Required: true
-                    Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                    Documentation: ''
                     DocumentationMarkKeywords: true
                     DefaultValue: null
                     IncludeInDocumentation: true
@@ -20916,7 +20912,7 @@ Modules:
             TypeNameGo: String
             IsList: false
             Required: true
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -21032,7 +21028,7 @@ Modules:
             TypeNameGo: CertificateVisibility
             IsList: true
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -21110,7 +21106,7 @@ Modules:
             TypeNameGo: String
             IsList: false
             Required: true
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -21219,7 +21215,7 @@ Modules:
         TypeNameGo: ResizeOperationStatus
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -21237,7 +21233,7 @@ Modules:
             TypeNameGo: Int
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -21267,7 +21263,7 @@ Modules:
             TypeNameGo: Int
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -21386,7 +21382,7 @@ Modules:
             TypeNameGo: DateTime
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -21500,7 +21496,7 @@ Modules:
                 TypeNameGo: ResizeError
                 IsList: true
                 Required: false
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -21582,7 +21578,7 @@ Modules:
                     TypeNameGo: ResizeError
                     IsList: true
                     Required: false
-                    Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                    Documentation: ''
                     DocumentationMarkKeywords: true
                     DefaultValue: null
                     IncludeInDocumentation: true

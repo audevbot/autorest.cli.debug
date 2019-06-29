@@ -11,7 +11,7 @@
     - name: ApiManagementListApisByTags
       azure_rm_apimanagementapi_info:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
     
       register: output
     - debug:

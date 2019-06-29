@@ -57,15 +57,13 @@ options:
       - >-
         The date of the latest synchronization. The date conforms to the
         following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
-        standard.
-      - ''
+        standard.<br>
   configuration_change_date:
     description:
       - >-
         The date of the latest configuration change. The date conforms to the
         following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
-        standard.
-      - ''
+        standard.<br>
 extends_documentation_fragment:
   - azure
 author:
@@ -130,19 +128,19 @@ tenant_configuration:
           sample: null
         sync_date:
           description:
-            - >
+            - >-
               The date of the latest synchronization. The date conforms to the
               following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO
-              8601 standard.
+              8601 standard.<br>
           returned: always
           type: datetime
           sample: null
         configuration_change_date:
           description:
-            - >
+            - >-
               The date of the latest configuration change. The date conforms to
               the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the
-              ISO 8601 standard.
+              ISO 8601 standard.<br>
           returned: always
           type: datetime
           sample: null

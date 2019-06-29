@@ -17,7 +17,7 @@
     - name: ApiManagementCreateCache
       azure_rm_apimanagementcache:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         cache_id: '{{cache_name}}'
         description: Redis cache instances in West India
         connection_string: 'contoso5.redis.cache.windows.net,ssl=true,password=...'

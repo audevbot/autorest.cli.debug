@@ -15,7 +15,7 @@
     - name: ApiManagementCreateGroup
       azure_rm_apimanagementgroup:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         group_id: '{{group_name}}'
         display_name: temp group
     

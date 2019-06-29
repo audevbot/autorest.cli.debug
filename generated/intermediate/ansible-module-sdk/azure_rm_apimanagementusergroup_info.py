@@ -25,7 +25,7 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
       - The name of the API Management service.
     required: true
@@ -82,7 +82,7 @@ EXAMPLES = '''
 - name: ApiManagementListUserGroups
   azure_rm_apimanagementusergroup_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     user_id: myUser
 
 '''
@@ -190,7 +190,7 @@ class AzureRMUserGroupInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 required=true
             ),
@@ -201,7 +201,7 @@ class AzureRMUserGroupInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.user_id = None
         self.value = None
         self.next_link = None
@@ -229,7 +229,7 @@ class AzureRMUserGroupInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
+            self.service_name is not None and
             self.user_id is not None):
             self.results['user_group'] = self.format_item(self.list())
         return self.results
@@ -239,7 +239,7 @@ class AzureRMUserGroupInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.user_group.list(resource_group_name=self.resource_group,
-                                                        service_name=self.name,
+                                                        service_name=self.service_name,
                                                         user_id=self.user_id)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')

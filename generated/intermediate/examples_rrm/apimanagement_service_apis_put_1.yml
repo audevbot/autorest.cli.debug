@@ -16,7 +16,7 @@
     - name: ApiManagementCreateApiUsingSwaggerImport
       azure_rm_apimanagementapi:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         api_id: '{{api_name}}'
         path: petstore
         value: 'http://petstore.swagger.io/v2/swagger.json'

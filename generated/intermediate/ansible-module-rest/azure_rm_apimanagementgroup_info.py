@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   group_id:
     description:
       - >-
@@ -36,6 +37,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Group type.
@@ -69,11 +73,11 @@ EXAMPLES = '''
 - name: ApiManagementListGroups
   azure_rm_apimanagementgroup_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
 - name: ApiManagementGetGroup
   azure_rm_apimanagementgroup_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     group_id: myGroup
 
 '''
@@ -132,7 +136,7 @@ class AzureRMGroupInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 required=true
             ),
@@ -142,7 +146,7 @@ class AzureRMGroupInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.group_id = None
         self.id = None
         self.name = None
@@ -172,11 +176,11 @@ class AzureRMGroupInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
+            self.service_name is not None and
             self.group_id is not None):
             self.results['group'] = self.format_item(self.get())
         elif (self.resource_group is not None and
-              self.name is not None):
+              self.service_name is not None):
             self.results['group'] = self.format_item(self.listbyservice())
         return self.results
 

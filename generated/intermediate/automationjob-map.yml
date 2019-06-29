@@ -2195,10 +2195,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: jobName
-        NameAnsible: name
+        NameAnsible: job_name
         NamePythonSdk: job_name
         NameGoSdk: JobName
-        NameTerraform: name
+        NameTerraform: JobName
         IdPortion: jobs
         Type: str
         TypeName: xxx

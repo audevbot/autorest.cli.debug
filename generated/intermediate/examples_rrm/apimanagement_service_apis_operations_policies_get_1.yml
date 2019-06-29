@@ -14,7 +14,7 @@
     - name: ApiManagementGetApiOperationPolicy
       azure_rm_apimanagementapioperationpolicy_info:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         api_id: '{{api_name}}'
         operation_id: '{{operation_name}}'
         policy_id: '{{policy_name}}'

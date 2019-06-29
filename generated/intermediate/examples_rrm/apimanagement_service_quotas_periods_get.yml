@@ -13,7 +13,7 @@
     - name: ApiManagementGetQuotaCounterKeysByQuotaPeriod
       azure_rm_apimanagementquotabyperiodkey_info:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         quota_counter_key: '{{quota_name}}'
         quota_period_key: '{{period_name}}'
     

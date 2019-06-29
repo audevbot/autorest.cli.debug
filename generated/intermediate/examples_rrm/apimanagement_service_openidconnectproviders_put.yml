@@ -16,7 +16,7 @@
     - name: ApiManagementCreateOpenIdConnectProvider
       azure_rm_apimanagementopenidconnectprovider:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         opid: '{{openid_connect_provider_name}}'
         display_name: templateoidprovider3
         metadata_endpoint: 'https://oidprovider-template3.net'

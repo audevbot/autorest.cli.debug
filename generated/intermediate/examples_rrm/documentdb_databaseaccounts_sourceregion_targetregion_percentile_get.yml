@@ -14,7 +14,7 @@
     - name: CosmosDBDatabaseAccountRegionGetMetrics
       azure_rm_cosmosdbpercentilesourcetarget_info:
         resource_group: '{{resource_group}}'
-        name: '{{database_account_name}}'
+        account_name: '{{database_account_name}}'
         source_region: '{{source_region_name}}'
         target_region: '{{target_region_name}}'
     

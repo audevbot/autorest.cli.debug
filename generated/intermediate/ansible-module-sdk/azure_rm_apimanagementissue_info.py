@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   issue_id:
     description:
       - >-
@@ -36,6 +37,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -71,11 +75,11 @@ EXAMPLES = '''
 - name: ApiManagementListIssues
   azure_rm_apimanagementissue_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
 - name: ApiManagementGetIssue
   azure_rm_apimanagementissue_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     issue_id: myIssue
 
 '''
@@ -140,7 +144,7 @@ class AzureRMIssueInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 required=true
             ),
@@ -150,7 +154,7 @@ class AzureRMIssueInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.issue_id = None
         self.id = None
         self.name = None
@@ -180,11 +184,11 @@ class AzureRMIssueInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
+            self.service_name is not None and
             self.issue_id is not None):
             self.results['issue'] = self.format_item(self.get())
         elif (self.resource_group is not None and
-              self.name is not None):
+              self.service_name is not None):
             self.results['issue'] = self.format_item(self.listbyservice())
         return self.results
 
@@ -193,7 +197,7 @@ class AzureRMIssueInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.issue.get(resource_group_name=self.resource_group,
-                                                  service_name=self.name,
+                                                  service_name=self.service_name,
                                                   issue_id=self.issue_id)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
@@ -205,7 +209,7 @@ class AzureRMIssueInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.issue.list_by_service(resource_group_name=self.resource_group,
-                                                              service_name=self.name)
+                                                              service_name=self.service_name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 

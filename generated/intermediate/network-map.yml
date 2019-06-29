@@ -197,7 +197,7 @@ Modules:
         TypeNameGo: AzureFirewallPropertiesFormat
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -245,7 +245,7 @@ Modules:
             TypeNameGo: AzureFirewallApplicationRuleCollectionPropertiesFormat
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -733,7 +733,7 @@ Modules:
             TypeNameGo: AzureFirewallNatRuleCollectionProperties
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -1289,7 +1289,7 @@ Modules:
             TypeNameGo: AzureFirewallNetworkRuleCollectionPropertiesFormat
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -1783,7 +1783,7 @@ Modules:
             TypeNameGo: AzureFirewallIPConfigurationPropertiesFormat
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -2391,7 +2391,7 @@ Modules:
         TypeNameGo: AzureFirewallPropertiesFormat
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -2457,7 +2457,7 @@ Modules:
                 TypeNameGo: AzureFirewallApplicationRuleCollectionPropertiesFormat
                 IsList: false
                 Required: false
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -2901,7 +2901,7 @@ Modules:
                 TypeNameGo: AzureFirewallNatRuleCollectionProperties
                 IsList: false
                 Required: false
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -3419,7 +3419,7 @@ Modules:
                 TypeNameGo: AzureFirewallNetworkRuleCollectionPropertiesFormat
                 IsList: false
                 Required: false
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -3875,7 +3875,7 @@ Modules:
                 TypeNameGo: AzureFirewallIPConfigurationPropertiesFormat
                 IsList: false
                 Required: false
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -4648,7 +4648,7 @@ Modules:
         TypeNameGo: AzureFirewallPropertiesFormat
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -4696,7 +4696,7 @@ Modules:
             TypeNameGo: AzureFirewallApplicationRuleCollectionPropertiesFormat
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -5180,7 +5180,7 @@ Modules:
             TypeNameGo: AzureFirewallNatRuleCollectionProperties
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -5734,7 +5734,7 @@ Modules:
             TypeNameGo: AzureFirewallNetworkRuleCollectionPropertiesFormat
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -6226,7 +6226,7 @@ Modules:
             TypeNameGo: AzureFirewallIPConfigurationPropertiesFormat
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true

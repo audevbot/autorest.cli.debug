@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   api_id:
     description:
       - Identifier of the API the release belongs to.
@@ -51,6 +52,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -75,7 +79,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateApiRelease
   azure_rm_apimanagementapirelease:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: >-
       /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
       }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{
@@ -85,7 +89,7 @@ EXAMPLES = '''
 - name: ApiManagementUpdateApiRelease
   azure_rm_apimanagementapirelease:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: >-
       /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
       }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{
@@ -95,7 +99,7 @@ EXAMPLES = '''
 - name: ApiManagementDeleteApiRelease
   azure_rm_apimanagementapirelease:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     release_id: myRelease
     state: absent
@@ -179,7 +183,7 @@ class AzureRMApiRelease(AzureRMModuleBaseExt):
                 disposition='resourceGroupName',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
                 disposition='serviceName',
@@ -216,7 +220,7 @@ class AzureRMApiRelease(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.api_id = None
         self.release_id = None
         self.id = None

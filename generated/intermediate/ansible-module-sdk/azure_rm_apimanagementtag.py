@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   tag_id:
     description:
       - >-
@@ -41,6 +42,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -63,19 +67,19 @@ EXAMPLES = '''
 - name: ApiManagementCreateTag
   azure_rm_apimanagementtag:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     tag_id: myTag
     display_name: tag1
 - name: ApiManagementUpdateTag
   azure_rm_apimanagementtag:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     tag_id: myTag
     display_name: temp tag
 - name: ApiManagementDeleteTag
   azure_rm_apimanagementtag:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     tag_id: myTag
     state: absent
 
@@ -144,10 +148,9 @@ class AzureRMTag(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
-                disposition='service_name',
                 required=true
             ),
             tag_id=dict(
@@ -168,7 +171,7 @@ class AzureRMTag(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.tag_id = None
         self.id = None
         self.name = None
@@ -243,7 +246,7 @@ class AzureRMTag(AzureRMModuleBaseExt):
     def create_update_resource(self):
         try:
             response = self.mgmt_client.tag.create_or_update(resource_group_name=self.resource_group,
-                                                             service_name=self.name,
+                                                             service_name=self.service_name,
                                                              tag_id=self.tag_id,
                                                              parameters=self.body)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
@@ -257,7 +260,7 @@ class AzureRMTag(AzureRMModuleBaseExt):
         # self.log('Deleting the Tag instance {0}'.format(self.))
         try:
             response = self.mgmt_client.tag.delete(resource_group_name=self.resource_group,
-                                                   service_name=self.name,
+                                                   service_name=self.service_name,
                                                    tag_id=self.tag_id)
         except CloudError as e:
             self.log('Error attempting to delete the Tag instance.')
@@ -270,7 +273,7 @@ class AzureRMTag(AzureRMModuleBaseExt):
         found = False
         try:
             response = self.mgmt_client.tag.get(resource_group_name=self.resource_group,
-                                                service_name=self.name,
+                                                service_name=self.service_name,
                                                 tag_id=self.tag_id)
         except CloudError as e:
             return False

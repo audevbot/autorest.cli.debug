@@ -216,7 +216,7 @@ tags:
   sample: null
 properties:
   description:
-    - !<tag:yaml.org,2002:js/undefined> ''
+    - ''
   returned: always
   type: dict
   sample: null
@@ -272,7 +272,7 @@ properties:
       sample: null
     identifier:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: dict
       sample: null
@@ -297,14 +297,14 @@ properties:
           sample: null
     recommended:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: dict
       sample: null
       contains:
         v_cpus:
           description:
-            - !<tag:yaml.org,2002:js/undefined> ''
+            - ''
           returned: always
           type: dict
           sample: null
@@ -323,7 +323,7 @@ properties:
               sample: null
         memory:
           description:
-            - !<tag:yaml.org,2002:js/undefined> ''
+            - ''
           returned: always
           type: dict
           sample: null
@@ -342,7 +342,7 @@ properties:
               sample: null
     disallowed:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: dict
       sample: null
@@ -355,7 +355,7 @@ properties:
           sample: null
     purchase_plan:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: dict
       sample: null

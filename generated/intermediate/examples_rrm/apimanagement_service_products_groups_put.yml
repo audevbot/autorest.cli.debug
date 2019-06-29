@@ -16,7 +16,7 @@
     - name: ApiManagementCreateProductGroup
       azure_rm_apimanagementproductgroup:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         product_id: '{{product_name}}'
         group_id: '{{group_name}}'
     

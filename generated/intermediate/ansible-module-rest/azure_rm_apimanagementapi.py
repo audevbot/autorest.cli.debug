@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   api_id:
     description:
       - >-
@@ -179,15 +180,18 @@ options:
           - Name of endpoint(port) to import from WSDL
   api_type:
     description:
-      - 'Type of Api to create. '
-      - ' * `http` creates a SOAP to REST API '
-      - ' * `soap` creates a SOAP pass-through API .'
+      - >-
+        Type of Api to create. <br> * `http` creates a SOAP to REST API <br> *
+        `soap` creates a SOAP pass-through API .
   is_online:
     description:
       - Indicates if API revision is accessible via the gateway.
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   state:
     description:
       - Assert the state of the Api.
@@ -207,7 +211,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateApiUsingOai3Import
   azure_rm_apimanagementapi:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     path: petstore
     value: >-
@@ -216,7 +220,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateApiUsingSwaggerImport
   azure_rm_apimanagementapi:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     path: petstore
     value: 'http://petstore.swagger.io/v2/swagger.json'
@@ -224,7 +228,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateApiUsingWadlImport
   azure_rm_apimanagementapi:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     path: collector
     value: >-
@@ -233,7 +237,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateSoapToRestApiUsingWsdlImport
   azure_rm_apimanagementapi:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     path: currency
     value: 'http://www.webservicex.net/CurrencyConvertor.asmx?WSDL'
@@ -244,7 +248,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateSoapPassThroughApiUsingWsdlImport
   azure_rm_apimanagementapi:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     path: currency
     value: 'http://www.webservicex.net/CurrencyConvertor.asmx?WSDL'
@@ -256,7 +260,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateApi
   azure_rm_apimanagementapi:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     description: apidescription5200
     authentication_settings:
@@ -275,7 +279,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateApiRevisionFromExistingApi
   azure_rm_apimanagementapi:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     api_revision_description: Creating a Revision of an existing API
     source_api_id: >-
@@ -287,7 +291,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateApiNewVersionUsingExistingApi
   azure_rm_apimanagementapi:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     description: >-
       Create Echo API into a new Version using Existing Version Set and Copy all
@@ -312,7 +316,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateApiClone
   azure_rm_apimanagementapi:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     description: Copy of Existing Echo Api including Operations.
     is_current: true
@@ -330,7 +334,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateApiWithOpenIdConnect
   azure_rm_apimanagementapi:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     description: >-
       This is a sample server Petstore server.  You can find out more about
@@ -353,7 +357,7 @@ EXAMPLES = '''
 - name: ApiManagementUpdateApi
   azure_rm_apimanagementapi:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     display_name: Echo API New
     service_url: 'http://echoapi.cloudapp.net/api2'
@@ -361,7 +365,7 @@ EXAMPLES = '''
 - name: ApiManagementDeleteApi
   azure_rm_apimanagementapi:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     state: absent
 
@@ -645,7 +649,7 @@ class AzureRMApi(AzureRMModuleBaseExt):
                 disposition='resourceGroupName',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
                 disposition='serviceName',
@@ -849,7 +853,7 @@ class AzureRMApi(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.api_id = None
         self.id = None
         self.name = None

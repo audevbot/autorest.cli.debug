@@ -15,7 +15,7 @@
     - name: ApiManagementUpdateProduct
       azure_rm_apimanagementproduct:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         product_id: '{{product_name}}'
         display_name: Test Template ProductName 4
     

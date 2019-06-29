@@ -12,7 +12,7 @@
     - name: ApiManagementGetBackend
       azure_rm_apimanagementbackend_info:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         backend_id: '{{backend_name}}'
     
       register: output

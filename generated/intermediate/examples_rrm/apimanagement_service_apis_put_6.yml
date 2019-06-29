@@ -17,7 +17,7 @@
     - name: ApiManagementCreateApiRevisionFromExistingApi
       azure_rm_apimanagementapi:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         api_id: '{{api_name}}'
         api_revision_description: Creating a Revision of an existing API
         source_api_id: >-

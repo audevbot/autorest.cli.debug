@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   product_id:
     description:
       - >-
@@ -44,6 +45,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Type of API.
@@ -194,13 +198,13 @@ EXAMPLES = '''
 - name: ApiManagementCreateProductApi
   azure_rm_apimanagementproductapi:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     product_id: myProduct
     api_id: myApi
 - name: ApiManagementDeleteProductApi
   azure_rm_apimanagementproductapi:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     product_id: myProduct
     api_id: myApi
     state: absent
@@ -257,7 +261,7 @@ class AzureRMProductApi(AzureRMModuleBaseExt):
                 disposition='resourceGroupName',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
                 disposition='serviceName',
@@ -428,7 +432,7 @@ class AzureRMProductApi(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.product_id = None
         self.api_id = None
         self.id = None

@@ -12,7 +12,7 @@
     - name: ApiManagementDeleteLogger
       azure_rm_apimanagementlogger:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         logger_id: '{{logger_name}}'
         state: absent
     

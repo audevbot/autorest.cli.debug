@@ -15,7 +15,7 @@
     - name: ApiManagementUpdateOpenIdConnectProvider
       azure_rm_apimanagementopenidconnectprovider:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         opid: '{{openid_connect_provider_name}}'
         client_secret: updatedsecret
     

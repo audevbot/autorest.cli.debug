@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   version_set_id:
     description:
       - >-
@@ -60,6 +61,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -84,7 +88,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateApiVersionSet
   azure_rm_apimanagementapiversionset:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     version_set_id: myApiVersionSet
     description: Version configuration
     display_name: api set 1
@@ -92,7 +96,7 @@ EXAMPLES = '''
 - name: ApiManagementUpdateApiVersionSet
   azure_rm_apimanagementapiversionset:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     version_set_id: myApiVersionSet
     description: Version configuration
     display_name: api set 1
@@ -100,7 +104,7 @@ EXAMPLES = '''
 - name: ApiManagementDeleteApiVersionSet
   azure_rm_apimanagementapiversionset:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     version_set_id: myApiVersionSet
     state: absent
 
@@ -199,10 +203,9 @@ class AzureRMApiVersionSet(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
-                disposition='service_name',
                 required=true
             ),
             version_set_id=dict(
@@ -243,7 +246,7 @@ class AzureRMApiVersionSet(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.version_set_id = None
         self.id = None
         self.name = None
@@ -318,7 +321,7 @@ class AzureRMApiVersionSet(AzureRMModuleBaseExt):
     def create_update_resource(self):
         try:
             response = self.mgmt_client.api_version_set.create_or_update(resource_group_name=self.resource_group,
-                                                                         service_name=self.name,
+                                                                         service_name=self.service_name,
                                                                          version_set_id=self.version_set_id,
                                                                          parameters=self.body)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
@@ -332,7 +335,7 @@ class AzureRMApiVersionSet(AzureRMModuleBaseExt):
         # self.log('Deleting the ApiVersionSet instance {0}'.format(self.))
         try:
             response = self.mgmt_client.api_version_set.delete(resource_group_name=self.resource_group,
-                                                               service_name=self.name,
+                                                               service_name=self.service_name,
                                                                version_set_id=self.version_set_id)
         except CloudError as e:
             self.log('Error attempting to delete the ApiVersionSet instance.')
@@ -345,7 +348,7 @@ class AzureRMApiVersionSet(AzureRMModuleBaseExt):
         found = False
         try:
             response = self.mgmt_client.api_version_set.get(resource_group_name=self.resource_group,
-                                                            service_name=self.name,
+                                                            service_name=self.service_name,
                                                             version_set_id=self.version_set_id)
         except CloudError as e:
             return False

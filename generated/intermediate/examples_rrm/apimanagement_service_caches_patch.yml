@@ -15,7 +15,7 @@
     - name: ApiManagementUpdateCache
       azure_rm_apimanagementcache:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         cache_id: '{{cache_name}}'
         description: Update Cache in west India
     

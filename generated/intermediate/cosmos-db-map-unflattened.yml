@@ -136,7 +136,7 @@ Modules:
           {"$id":"235","$type":"DictionaryType","valueType":{"$id":"236","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"237","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"238","fixed":false},"deprecated":false}
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -207,7 +207,7 @@ Modules:
         TypeNameGo: DatabaseAccountCreateUpdateProperties
         IsList: false
         Required: true
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -824,7 +824,7 @@ Modules:
             TypeNameGo: String
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -1000,7 +1000,7 @@ Modules:
                 TypeNameGo: String
                 IsList: false
                 Required: false
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -1224,7 +1224,7 @@ Modules:
                 TypeNameGo: String
                 IsList: false
                 Required: false
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -2153,7 +2153,7 @@ Modules:
           {"$id":"235","$type":"DictionaryType","valueType":{"$id":"236","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"237","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"238","fixed":false},"deprecated":false}
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -2224,7 +2224,7 @@ Modules:
         TypeNameGo: DatabaseAccountProperties
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -3318,7 +3318,7 @@ Modules:
           {"$id":"235","$type":"DictionaryType","valueType":{"$id":"236","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"237","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"238","fixed":false},"deprecated":false}
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -3391,7 +3391,7 @@ Modules:
         TypeNameGo: DatabaseAccountProperties
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -3409,7 +3409,7 @@ Modules:
             TypeNameGo: String
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -3929,7 +3929,7 @@ Modules:
                 TypeNameGo: String
                 IsList: false
                 Required: false
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -4152,7 +4152,7 @@ Modules:
                 TypeNameGo: String
                 IsList: false
                 Required: false
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true

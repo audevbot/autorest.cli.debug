@@ -77,7 +77,7 @@ operations:
       contains:
         value:
           description:
-            - !<tag:yaml.org,2002:js/undefined> ''
+            - ''
           returned: always
           type: dict
           sample: null
@@ -90,14 +90,14 @@ operations:
               sample: null
             display:
               description:
-                - !<tag:yaml.org,2002:js/undefined> ''
+                - ''
               returned: always
               type: dict
               sample: null
               contains:
                 provider:
                   description:
-                    - !<tag:yaml.org,2002:js/undefined> ''
+                    - ''
                   returned: always
                   type: str
                   sample: null
@@ -109,31 +109,31 @@ operations:
                   sample: null
                 resource:
                   description:
-                    - !<tag:yaml.org,2002:js/undefined> ''
+                    - ''
                   returned: always
                   type: str
                   sample: null
                 description:
                   description:
-                    - !<tag:yaml.org,2002:js/undefined> ''
+                    - ''
                   returned: always
                   type: str
                   sample: null
             origin:
               description:
-                - !<tag:yaml.org,2002:js/undefined> ''
+                - ''
               returned: always
               type: str
               sample: null
             properties:
               description:
-                - !<tag:yaml.org,2002:js/undefined> ''
+                - ''
               returned: always
               type: 'unknown-primary[object]'
               sample: null
         next_link:
           description:
-            - !<tag:yaml.org,2002:js/undefined> ''
+            - ''
           returned: always
           type: str
           sample: null

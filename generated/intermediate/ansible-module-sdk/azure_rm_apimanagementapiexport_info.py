@@ -25,7 +25,7 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
       - The name of the API Management service.
     required: true
@@ -69,14 +69,14 @@ EXAMPLES = '''
 - name: ApiManagementGetApiExportInOpenApi2dot0
   azure_rm_apimanagementapiexport_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     format: swagger-link
     export: 'true'
 - name: ApiManagementGetApiExportInOpenApi3dot0
   azure_rm_apimanagementapiexport_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     format: openapi-link
     export: 'true'
@@ -148,7 +148,7 @@ class AzureRMApiExportInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 required=true
             ),
@@ -167,7 +167,7 @@ class AzureRMApiExportInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.api_id = None
         self.format = None
         self.export = None
@@ -197,7 +197,7 @@ class AzureRMApiExportInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
+            self.service_name is not None and
             self.api_id is not None and
             self.format is not None and
             self.export is not None):
@@ -209,7 +209,7 @@ class AzureRMApiExportInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.api_export.get(resource_group_name=self.resource_group,
-                                                       service_name=self.name,
+                                                       service_name=self.service_name,
                                                        api_id=self.api_id,
                                                        format=self.format,
                                                        export=self.export)

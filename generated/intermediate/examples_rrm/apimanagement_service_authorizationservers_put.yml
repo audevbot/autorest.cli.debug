@@ -18,7 +18,7 @@
     - name: ApiManagementCreateAuthorizationServer
       azure_rm_apimanagementauthorizationserver:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         authsid: '{{authorization_server_name}}'
         description: test server
         authorization_methods:

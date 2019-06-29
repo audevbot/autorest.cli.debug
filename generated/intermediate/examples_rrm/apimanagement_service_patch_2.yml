@@ -14,7 +14,7 @@
     - name: ApiManagementUpdateSubscription
       azure_rm_apimanagementsubscription:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         sid: testsub
         display_name: testsub
     

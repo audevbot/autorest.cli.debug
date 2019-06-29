@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   api_id:
     description:
       - >-
@@ -48,6 +49,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -76,13 +80,13 @@ EXAMPLES = '''
 - name: ApiManagementListApiIssueAttachments
   azure_rm_apimanagementapiissueattachment_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     issue_id: myIssue
 - name: ApiManagementGetApiIssueAttachment
   azure_rm_apimanagementapiissueattachment_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     issue_id: myIssue
     attachment_id: myAttachment
@@ -149,7 +153,7 @@ class AzureRMApiIssueAttachmentInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 required=true
             ),
@@ -167,7 +171,7 @@ class AzureRMApiIssueAttachmentInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.api_id = None
         self.issue_id = None
         self.attachment_id = None
@@ -199,13 +203,13 @@ class AzureRMApiIssueAttachmentInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
+            self.service_name is not None and
             self.api_id is not None and
             self.issue_id is not None and
             self.attachment_id is not None):
             self.results['api_issue_attachment'] = self.format_item(self.get())
         elif (self.resource_group is not None and
-              self.name is not None and
+              self.service_name is not None and
               self.api_id is not None and
               self.issue_id is not None):
             self.results['api_issue_attachment'] = self.format_item(self.listbyservice())
@@ -216,7 +220,7 @@ class AzureRMApiIssueAttachmentInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.api_issue_attachment.get(resource_group_name=self.resource_group,
-                                                                 service_name=self.name,
+                                                                 service_name=self.service_name,
                                                                  api_id=self.api_id,
                                                                  issue_id=self.issue_id,
                                                                  attachment_id=self.attachment_id)
@@ -230,7 +234,7 @@ class AzureRMApiIssueAttachmentInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.api_issue_attachment.list_by_service(resource_group_name=self.resource_group,
-                                                                             service_name=self.name,
+                                                                             service_name=self.service_name,
                                                                              api_id=self.api_id,
                                                                              issue_id=self.issue_id)
         except CloudError as e:

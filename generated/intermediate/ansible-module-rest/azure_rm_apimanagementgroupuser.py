@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   group_id:
     description:
       - >-
@@ -43,6 +44,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -83,8 +87,7 @@ options:
     description:
       - >-
         Date of user registration. The date conforms to the following format:
-        `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-      - ''
+        `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>
   groups:
     description:
       - Collection of groups user is part of.
@@ -123,13 +126,13 @@ EXAMPLES = '''
 - name: ApiManagementCreateGroupUser
   azure_rm_apimanagementgroupuser:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     group_id: myGroup
     user_id: myUser
 - name: ApiManagementDeleteGroupUser
   azure_rm_apimanagementgroupuser:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     group_id: myGroup
     user_id: myUser
     state: absent
@@ -186,7 +189,7 @@ class AzureRMGroupUser(AzureRMModuleBaseExt):
                 disposition='resourceGroupName',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
                 disposition='serviceName',
@@ -280,7 +283,7 @@ class AzureRMGroupUser(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.group_id = None
         self.user_id = None
         self.id = None

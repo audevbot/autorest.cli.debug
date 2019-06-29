@@ -25,7 +25,7 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
       - The name of the API Management service.
     required: true
@@ -83,8 +83,7 @@ options:
           - >-
             Date of user registration. The date conforms to the following
             format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
-            standard.
-          - ''
+            standard.<br>
       groups:
         description:
           - Collection of groups user is part of.
@@ -126,7 +125,7 @@ EXAMPLES = '''
 - name: ApiManagementListGroupUsers
   azure_rm_apimanagementgroupuser_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     group_id: myGroup
 
 '''
@@ -228,10 +227,10 @@ group_user:
               sample: null
             registration_date:
               description:
-                - >
+                - >-
                   Date of user registration. The date conforms to the following
                   format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
-                  standard.
+                  standard.<br>
               returned: always
               type: datetime
               sample: null
@@ -303,7 +302,7 @@ class AzureRMGroupUserInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 required=true
             ),
@@ -314,7 +313,7 @@ class AzureRMGroupUserInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.group_id = None
         self.value = None
         self.next_link = None
@@ -342,7 +341,7 @@ class AzureRMGroupUserInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
+            self.service_name is not None and
             self.group_id is not None):
             self.results['group_user'] = self.format_item(self.list())
         return self.results

@@ -12,7 +12,7 @@
     - name: CosmosDBDatabaseAccountRegionGetMetrics
       azure_rm_cosmosdbdatabaseaccountregion_info:
         resource_group: '{{resource_group}}'
-        name: '{{database_account_name}}'
+        account_name: '{{database_account_name}}'
         region: '{{region_name}}'
     
       register: output

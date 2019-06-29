@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   prop_id:
     description:
       - Identifier of the property.
@@ -52,6 +53,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -77,7 +81,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateProperty
   azure_rm_apimanagementproperty:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     prop_id: myProperty
     tags:
       - foo
@@ -88,7 +92,7 @@ EXAMPLES = '''
 - name: ApiManagementUpdateProperty
   azure_rm_apimanagementproperty:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     prop_id: myProperty
     tags:
       - foo
@@ -97,7 +101,7 @@ EXAMPLES = '''
 - name: ApiManagementDeleteProperty
   azure_rm_apimanagementproperty:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     prop_id: myProperty
     state: absent
 
@@ -192,10 +196,9 @@ class AzureRMProperty(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
-                disposition='service_name',
                 required=true
             ),
             prop_id=dict(
@@ -225,7 +228,7 @@ class AzureRMProperty(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.prop_id = None
         self.id = None
         self.name = None
@@ -300,7 +303,7 @@ class AzureRMProperty(AzureRMModuleBaseExt):
     def create_update_resource(self):
         try:
             response = self.mgmt_client.property.create_or_update(resource_group_name=self.resource_group,
-                                                                  service_name=self.name,
+                                                                  service_name=self.service_name,
                                                                   prop_id=self.prop_id,
                                                                   parameters=self.body)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
@@ -314,7 +317,7 @@ class AzureRMProperty(AzureRMModuleBaseExt):
         # self.log('Deleting the Property instance {0}'.format(self.))
         try:
             response = self.mgmt_client.property.delete(resource_group_name=self.resource_group,
-                                                        service_name=self.name,
+                                                        service_name=self.service_name,
                                                         prop_id=self.prop_id)
         except CloudError as e:
             self.log('Error attempting to delete the Property instance.')
@@ -327,7 +330,7 @@ class AzureRMProperty(AzureRMModuleBaseExt):
         found = False
         try:
             response = self.mgmt_client.property.get(resource_group_name=self.resource_group,
-                                                     service_name=self.name,
+                                                     service_name=self.service_name,
                                                      prop_id=self.prop_id)
         except CloudError as e:
             return False

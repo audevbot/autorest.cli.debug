@@ -14,7 +14,7 @@
     - name: ApiManagementDeleteApiIssueAttachment
       azure_rm_apimanagementapiissueattachment:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         api_id: '{{api_name}}'
         issue_id: '{{issue_name}}'
         attachment_id: '{{attachment_name}}'

@@ -16,7 +16,7 @@
     - name: ApiManagementCreateApiUsingOai3Import
       azure_rm_apimanagementapi:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         api_id: '{{api_name}}'
         path: petstore
         value: >-

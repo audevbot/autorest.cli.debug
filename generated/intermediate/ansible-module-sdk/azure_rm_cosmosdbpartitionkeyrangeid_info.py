@@ -25,7 +25,7 @@ options:
     description:
       - Name of an Azure resource group.
     required: true
-  name:
+  account_name:
     description:
       - Cosmos DB database account name.
     required: true
@@ -110,7 +110,7 @@ EXAMPLES = '''
 - name: CosmosDBDatabaseAccountRegionGetMetrics
   azure_rm_cosmosdbpartitionkeyrangeid_info:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
+    account_name: myDatabaseAccount
     database_rid: myDatabase
     collection_rid: myCollection
     partition_key_range_id: myPartitionKeyRangeId
@@ -260,7 +260,7 @@ class AzureRMPartitionKeyRangeIdInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            account_name=dict(
                 type='str',
                 required=true
             ),
@@ -279,7 +279,7 @@ class AzureRMPartitionKeyRangeIdInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.account_name = None
         self.database_rid = None
         self.collection_rid = None
         self.partition_key_range_id = None
@@ -308,7 +308,7 @@ class AzureRMPartitionKeyRangeIdInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
+            self.account_name is not None and
             self.database_rid is not None and
             self.collection_rid is not None and
             self.partition_key_range_id is not None):
@@ -320,7 +320,7 @@ class AzureRMPartitionKeyRangeIdInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.partition_key_range_id.list_metrics(resource_group_name=self.resource_group,
-                                                                            account_name=self.name,
+                                                                            account_name=self.account_name,
                                                                             database_rid=self.database_rid,
                                                                             collection_rid=self.collection_rid,
                                                                             partition_key_range_id=self.partition_key_range_id)

@@ -13,7 +13,7 @@
     - name: ApiManagementDeleteApiTagDescription
       azure_rm_apimanagementapitagdescription:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         api_id: '{{api_name}}'
         tag_id: '{{tag_description_name}}'
         state: absent

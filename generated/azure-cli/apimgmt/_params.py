@@ -17,7 +17,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('properties', id_part=None, help='Api entity create of update properties.')
         c.argument('description', id_part=None, help='Description of the API. May include HTML formatting tags.')
@@ -40,14 +40,14 @@ def load_arguments(self, _):
         c.argument('value', id_part=None, help='Content value when Importing an API.')
         c.argument('format', id_part=None, help='Format of the Content in which the API is getting imported.')
         c.argument('wsdl_selector', id_part=None, help='Criteria to limit import of WSDL to a subset of the document.')
-        c.argument('api_type', id_part=None, help='Type of Api to create.   * `http` creates a SOAP to REST API   * `soap` creates a SOAP pass-through API .')
+        c.argument('api_type', id_part=None, help='Type of Api to create. <br> * `http` creates a SOAP to REST API <br> * `soap` creates a SOAP pass-through API .')
         c.argument('is_online', id_part=None, help='Indicates if API revision is accessible via the gateway.')
         c.argument('id', id_part=None, help='Resource ID.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt api update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('properties', id_part=None, help='Api entity create of update properties.')
         c.argument('description', id_part=None, help='Description of the API. May include HTML formatting tags.')
@@ -70,27 +70,27 @@ def load_arguments(self, _):
         c.argument('value', id_part=None, help='Content value when Importing an API.')
         c.argument('format', id_part=None, help='Format of the Content in which the API is getting imported.')
         c.argument('wsdl_selector', id_part=None, help='Criteria to limit import of WSDL to a subset of the document.')
-        c.argument('api_type', id_part=None, help='Type of Api to create.   * `http` creates a SOAP to REST API   * `soap` creates a SOAP pass-through API .')
+        c.argument('api_type', id_part=None, help='Type of Api to create. <br> * `http` creates a SOAP to REST API <br> * `soap` creates a SOAP pass-through API .')
         c.argument('is_online', id_part=None, help='Indicates if API revision is accessible via the gateway.')
         c.argument('id', id_part=None, help='Resource ID.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt api delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt api list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt api show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
@@ -99,7 +99,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api release create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API identifier. Must be unique in the current API Management service instance.')
         c.argument('release_id', id_part=None, help='Release identifier within an API. Must be unique in the current API Management service instance.')
         c.argument('properties', id_part=None, help='ApiRelease entity contract properties.')
@@ -112,7 +112,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api release update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API identifier. Must be unique in the current API Management service instance.')
         c.argument('release_id', id_part=None, help='Release identifier within an API. Must be unique in the current API Management service instance.')
         c.argument('properties', id_part=None, help='ApiRelease entity contract properties.')
@@ -125,7 +125,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api release delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API identifier. Must be unique in the current API Management service instance.')
         c.argument('release_id', id_part=None, help='Release identifier within an API. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
@@ -133,14 +133,14 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api release list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API identifier. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt api release show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API identifier. Must be unique in the current API Management service instance.')
         c.argument('release_id', id_part=None, help='Release identifier within an API. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
@@ -150,7 +150,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api operation create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('operation_id', id_part=None, help='Operation identifier within an API. Must be unique in the current API Management service instance.')
         c.argument('properties', id_part=None, help='Properties of the Operation Contract.')
@@ -168,7 +168,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api operation update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('operation_id', id_part=None, help='Operation identifier within an API. Must be unique in the current API Management service instance.')
         c.argument('properties', id_part=None, help='Properties of the Operation Contract.')
@@ -186,7 +186,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api operation delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('operation_id', id_part=None, help='Operation identifier within an API. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
@@ -194,14 +194,14 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api operation list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt api operation show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('operation_id', id_part=None, help='Operation identifier within an API. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
@@ -211,7 +211,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api operation policy create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('operation_id', id_part=None, help='Operation identifier within an API. Must be unique in the current API Management service instance.')
         c.argument('policy_id', id_part=None, help='The identifier of the Policy.')
@@ -224,7 +224,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api operation policy update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('operation_id', id_part=None, help='Operation identifier within an API. Must be unique in the current API Management service instance.')
         c.argument('policy_id', id_part=None, help='The identifier of the Policy.')
@@ -237,7 +237,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api operation policy delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('operation_id', id_part=None, help='Operation identifier within an API. Must be unique in the current API Management service instance.')
         c.argument('policy_id', id_part=None, help='The identifier of the Policy.')
@@ -246,7 +246,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api operation policy list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('operation_id', id_part=None, help='Operation identifier within an API. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
@@ -254,7 +254,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api operation policy show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('operation_id', id_part=None, help='Operation identifier within an API. Must be unique in the current API Management service instance.')
         c.argument('policy_id', id_part=None, help='The identifier of the Policy.')
@@ -265,7 +265,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt tag create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('tag_id', id_part=None, help='Tag identifier. Must be unique in the current API Management service instance.')
         c.argument('properties', id_part=None, help='Properties supplied to Create Tag operation.')
         c.argument('display_name', id_part=None, help='Tag name.')
@@ -275,7 +275,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt tag update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('tag_id', id_part=None, help='Tag identifier. Must be unique in the current API Management service instance.')
         c.argument('properties', id_part=None, help='Properties supplied to Create Tag operation.')
         c.argument('display_name', id_part=None, help='Tag name.')
@@ -285,20 +285,20 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt tag delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('tag_id', id_part=None, help='Tag identifier. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt tag list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt tag show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('tag_id', id_part=None, help='Tag identifier. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
@@ -307,7 +307,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api policy create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('policy_id', id_part=None, help='The identifier of the Policy.')
         c.argument('properties', id_part=None, help='Properties of the Policy.')
@@ -319,7 +319,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api policy update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('policy_id', id_part=None, help='The identifier of the Policy.')
         c.argument('properties', id_part=None, help='Properties of the Policy.')
@@ -331,7 +331,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api policy delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('policy_id', id_part=None, help='The identifier of the Policy.')
         c.argument('resource_id', name_arg_type, id_part=None)
@@ -339,14 +339,14 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api policy list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt api policy show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('policy_id', id_part=None, help='The identifier of the Policy.')
         c.argument('resource_id', name_arg_type, id_part=None)
@@ -356,7 +356,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api schema create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('schema_id', id_part=None, help='Schema identifier within an API. Must be unique in the current API Management service instance.')
         c.argument('properties', id_part=None, help='Properties of the Schema.')
@@ -368,7 +368,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api schema update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('schema_id', id_part=None, help='Schema identifier within an API. Must be unique in the current API Management service instance.')
         c.argument('properties', id_part=None, help='Properties of the Schema.')
@@ -380,7 +380,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api schema delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('schema_id', id_part=None, help='Schema identifier within an API. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
@@ -388,14 +388,14 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api schema list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt api schema show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('schema_id', id_part=None, help='Schema identifier within an API. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
@@ -405,7 +405,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api diagnostic create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API identifier. Must be unique in the current API Management service instance.')
         c.argument('diagnostic_id', id_part=None, help='Diagnostic identifier. Must be unique in the current API Management service instance.')
         c.argument('properties', id_part=None, help='Diagnostic entity contract properties.')
@@ -421,7 +421,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api diagnostic update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API identifier. Must be unique in the current API Management service instance.')
         c.argument('diagnostic_id', id_part=None, help='Diagnostic identifier. Must be unique in the current API Management service instance.')
         c.argument('properties', id_part=None, help='Diagnostic entity contract properties.')
@@ -437,7 +437,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api diagnostic delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API identifier. Must be unique in the current API Management service instance.')
         c.argument('diagnostic_id', id_part=None, help='Diagnostic identifier. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
@@ -445,14 +445,14 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api diagnostic list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API identifier. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt api diagnostic show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API identifier. Must be unique in the current API Management service instance.')
         c.argument('diagnostic_id', id_part=None, help='Diagnostic identifier. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
@@ -462,7 +462,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api issue create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API identifier. Must be unique in the current API Management service instance.')
         c.argument('issue_id', id_part=None, help='Issue identifier. Must be unique in the current API Management service instance.')
         c.argument('properties', id_part=None, help='Properties of the Issue.')
@@ -477,7 +477,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api issue update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API identifier. Must be unique in the current API Management service instance.')
         c.argument('issue_id', id_part=None, help='Issue identifier. Must be unique in the current API Management service instance.')
         c.argument('properties', id_part=None, help='Properties of the Issue.')
@@ -492,7 +492,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api issue delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API identifier. Must be unique in the current API Management service instance.')
         c.argument('issue_id', id_part=None, help='Issue identifier. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
@@ -500,14 +500,14 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api issue list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API identifier. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt api issue show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API identifier. Must be unique in the current API Management service instance.')
         c.argument('issue_id', id_part=None, help='Issue identifier. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
@@ -517,7 +517,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api issue comment create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API identifier. Must be unique in the current API Management service instance.')
         c.argument('issue_id', id_part=None, help='Issue identifier. Must be unique in the current API Management service instance.')
         c.argument('comment_id', id_part=None, help='Comment identifier within an Issue. Must be unique in the current Issue.')
@@ -531,7 +531,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api issue comment update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API identifier. Must be unique in the current API Management service instance.')
         c.argument('issue_id', id_part=None, help='Issue identifier. Must be unique in the current API Management service instance.')
         c.argument('comment_id', id_part=None, help='Comment identifier within an Issue. Must be unique in the current Issue.')
@@ -545,7 +545,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api issue comment delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API identifier. Must be unique in the current API Management service instance.')
         c.argument('issue_id', id_part=None, help='Issue identifier. Must be unique in the current API Management service instance.')
         c.argument('comment_id', id_part=None, help='Comment identifier within an Issue. Must be unique in the current Issue.')
@@ -554,7 +554,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api issue comment list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API identifier. Must be unique in the current API Management service instance.')
         c.argument('issue_id', id_part=None, help='Issue identifier. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
@@ -562,7 +562,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api issue comment show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API identifier. Must be unique in the current API Management service instance.')
         c.argument('issue_id', id_part=None, help='Issue identifier. Must be unique in the current API Management service instance.')
         c.argument('comment_id', id_part=None, help='Comment identifier within an Issue. Must be unique in the current Issue.')
@@ -573,7 +573,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api issue attachment create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API identifier. Must be unique in the current API Management service instance.')
         c.argument('issue_id', id_part=None, help='Issue identifier. Must be unique in the current API Management service instance.')
         c.argument('attachment_id', id_part=None, help='Attachment identifier within an Issue. Must be unique in the current Issue.')
@@ -587,7 +587,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api issue attachment update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API identifier. Must be unique in the current API Management service instance.')
         c.argument('issue_id', id_part=None, help='Issue identifier. Must be unique in the current API Management service instance.')
         c.argument('attachment_id', id_part=None, help='Attachment identifier within an Issue. Must be unique in the current Issue.')
@@ -601,7 +601,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api issue attachment delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API identifier. Must be unique in the current API Management service instance.')
         c.argument('issue_id', id_part=None, help='Issue identifier. Must be unique in the current API Management service instance.')
         c.argument('attachment_id', id_part=None, help='Attachment identifier within an Issue. Must be unique in the current Issue.')
@@ -610,7 +610,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api issue attachment list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API identifier. Must be unique in the current API Management service instance.')
         c.argument('issue_id', id_part=None, help='Issue identifier. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
@@ -618,7 +618,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api issue attachment show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API identifier. Must be unique in the current API Management service instance.')
         c.argument('issue_id', id_part=None, help='Issue identifier. Must be unique in the current API Management service instance.')
         c.argument('attachment_id', id_part=None, help='Attachment identifier within an Issue. Must be unique in the current Issue.')
@@ -629,7 +629,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api tagdescription create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('tag_id', id_part=None, help='Tag identifier. Must be unique in the current API Management service instance.')
         c.argument('properties', id_part=None, help='Properties supplied to Create TagDescription operation.')
@@ -643,7 +643,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api tagdescription update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('tag_id', id_part=None, help='Tag identifier. Must be unique in the current API Management service instance.')
         c.argument('properties', id_part=None, help='Properties supplied to Create TagDescription operation.')
@@ -657,7 +657,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api tagdescription delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('tag_id', id_part=None, help='Tag identifier. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
@@ -665,14 +665,14 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt api tagdescription list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt api tagdescription show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('tag_id', id_part=None, help='Tag identifier. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
@@ -682,7 +682,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt apiversionset create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('version_set_id', id_part=None, help='Api Version Set identifier. Must be unique in the current API Management service instance.')
         c.argument('properties', id_part=None, help='Api VersionSet contract properties.')
         c.argument('description', id_part=None, help='Description of API Version Set.')
@@ -696,7 +696,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt apiversionset update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('version_set_id', id_part=None, help='Api Version Set identifier. Must be unique in the current API Management service instance.')
         c.argument('properties', id_part=None, help='Api VersionSet contract properties.')
         c.argument('description', id_part=None, help='Description of API Version Set.')
@@ -710,20 +710,20 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt apiversionset delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('version_set_id', id_part=None, help='Api Version Set identifier. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt apiversionset list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt apiversionset show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('version_set_id', id_part=None, help='Api Version Set identifier. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
@@ -732,7 +732,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt authorizationserver create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('authsid', id_part=None, help='Identifier of the authorization server.')
         c.argument('properties', id_part=None, help='Properties of the External OAuth authorization server Contract.')
         c.argument('description', id_part=None, help='Description of the authorization server. Can contain HTML formatting tags.')
@@ -757,7 +757,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt authorizationserver update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('authsid', id_part=None, help='Identifier of the authorization server.')
         c.argument('properties', id_part=None, help='Properties of the External OAuth authorization server Contract.')
         c.argument('description', id_part=None, help='Description of the authorization server. Can contain HTML formatting tags.')
@@ -782,20 +782,20 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt authorizationserver delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('authsid', id_part=None, help='Identifier of the authorization server.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt authorizationserver list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt authorizationserver show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('authsid', id_part=None, help='Identifier of the authorization server.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
@@ -804,7 +804,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt backend create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('backend_id', id_part=None, help='Identifier of the Backend entity. Must be unique in the current API Management service instance.')
         c.argument('properties', id_part=None, help='Backend entity contract properties.')
         c.argument('title', id_part=None, help='Backend Title.')
@@ -822,7 +822,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt backend update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('backend_id', id_part=None, help='Identifier of the Backend entity. Must be unique in the current API Management service instance.')
         c.argument('properties', id_part=None, help='Backend entity contract properties.')
         c.argument('title', id_part=None, help='Backend Title.')
@@ -840,20 +840,20 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt backend delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('backend_id', id_part=None, help='Identifier of the Backend entity. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt backend list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt backend show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('backend_id', id_part=None, help='Identifier of the Backend entity. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
@@ -862,7 +862,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt cache create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('cache_id', id_part=None, help='Identifier of the Cache entity. Cache identifier (should be either \'default\' or valid Azure region identifier).')
         c.argument('properties', id_part=None, help='Cache properties details.')
         c.argument('description', id_part=None, help='Cache description')
@@ -874,7 +874,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt cache update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('cache_id', id_part=None, help='Identifier of the Cache entity. Cache identifier (should be either \'default\' or valid Azure region identifier).')
         c.argument('properties', id_part=None, help='Cache properties details.')
         c.argument('description', id_part=None, help='Cache description')
@@ -886,20 +886,20 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt cache delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('cache_id', id_part=None, help='Identifier of the Cache entity. Cache identifier (should be either \'default\' or valid Azure region identifier).')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt cache list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt cache show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('cache_id', id_part=None, help='Identifier of the Cache entity. Cache identifier (should be either \'default\' or valid Azure region identifier).')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
@@ -908,48 +908,48 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt certificate create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('certificate_id', id_part=None, help='Identifier of the certificate entity. Must be unique in the current API Management service instance.')
         c.argument('properties', id_part=None, help='Certificate create or update properties details.')
         c.argument('data', id_part=None, help='Base 64 encoded certificate using the application/x-pkcs12 representation.')
         c.argument('password', id_part=None, help='Password for the Certificate')
         c.argument('subject', id_part=None, help='Subject attribute of the certificate.')
         c.argument('thumbprint', id_part=None, help='Thumbprint of the certificate.')
-        c.argument('expiration_date', id_part=None, help='Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard. ')
+        c.argument('expiration_date', id_part=None, help='Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>')
         c.argument('id', id_part=None, help='Resource ID.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt certificate update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('certificate_id', id_part=None, help='Identifier of the certificate entity. Must be unique in the current API Management service instance.')
         c.argument('properties', id_part=None, help='Certificate create or update properties details.')
         c.argument('data', id_part=None, help='Base 64 encoded certificate using the application/x-pkcs12 representation.')
         c.argument('password', id_part=None, help='Password for the Certificate')
         c.argument('subject', id_part=None, help='Subject attribute of the certificate.')
         c.argument('thumbprint', id_part=None, help='Thumbprint of the certificate.')
-        c.argument('expiration_date', id_part=None, help='Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard. ')
+        c.argument('expiration_date', id_part=None, help='Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>')
         c.argument('id', id_part=None, help='Resource ID.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt certificate delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('certificate_id', id_part=None, help='Identifier of the certificate entity. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt certificate list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt certificate show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('certificate_id', id_part=None, help='Identifier of the certificate entity. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
@@ -1047,7 +1047,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt diagnostic create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('diagnostic_id', id_part=None, help='Diagnostic identifier. Must be unique in the current API Management service instance.')
         c.argument('properties', id_part=None, help='Diagnostic entity contract properties.')
         c.argument('always_log', id_part=None, help='Specifies for what type of messages sampling settings should not apply.')
@@ -1062,7 +1062,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt diagnostic update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('diagnostic_id', id_part=None, help='Diagnostic identifier. Must be unique in the current API Management service instance.')
         c.argument('properties', id_part=None, help='Diagnostic entity contract properties.')
         c.argument('always_log', id_part=None, help='Specifies for what type of messages sampling settings should not apply.')
@@ -1077,20 +1077,20 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt diagnostic delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('diagnostic_id', id_part=None, help='Diagnostic identifier. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt diagnostic list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt diagnostic show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('diagnostic_id', id_part=None, help='Diagnostic identifier. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
@@ -1151,7 +1151,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt group create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('group_id', id_part=None, help='Group identifier. Must be unique in the current API Management service instance.')
         c.argument('properties', id_part=None, help='Properties supplied to Create Group operation.')
         c.argument('display_name', id_part=None, help='Group name.')
@@ -1164,7 +1164,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt group update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('group_id', id_part=None, help='Group identifier. Must be unique in the current API Management service instance.')
         c.argument('properties', id_part=None, help='Properties supplied to Create Group operation.')
         c.argument('display_name', id_part=None, help='Group name.')
@@ -1177,20 +1177,20 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt group delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('group_id', id_part=None, help='Group identifier. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt group list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt group show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('group_id', id_part=None, help='Group identifier. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
@@ -1199,7 +1199,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt group user create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('group_id', id_part=None, help='Group identifier. Must be unique in the current API Management service instance.')
         c.argument('user_id', id_part=None, help='User identifier. Must be unique in the current API Management service instance.')
         c.argument('id', id_part=None, help='Resource ID.')
@@ -1211,13 +1211,13 @@ def load_arguments(self, _):
         c.argument('first_name', id_part=None, help='First name.')
         c.argument('last_name', id_part=None, help='Last name.')
         c.argument('email', id_part=None, help='Email address.')
-        c.argument('registration_date', id_part=None, help='Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard. ')
+        c.argument('registration_date', id_part=None, help='Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>')
         c.argument('groups', id_part=None, help='Collection of groups user is part of.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt group user delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('group_id', id_part=None, help='Group identifier. Must be unique in the current API Management service instance.')
         c.argument('user_id', id_part=None, help='User identifier. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
@@ -1225,7 +1225,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt group user list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('group_id', id_part=None, help='Group identifier. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
@@ -1290,12 +1290,12 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt logger create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('logger_id', id_part=None, help='Logger identifier. Must be unique in the API Management service instance.')
         c.argument('properties', id_part=None, help='Logger entity contract properties.')
         c.argument('logger_type', id_part=None, help='Logger type.')
         c.argument('description', id_part=None, help='Logger description.')
-        c.argument('credentials', id_part=None, help='The name and SendRule connection string of the event hub for azureEventHub logger. Instrumentation key for applicationInsights logger.')
+        c.argument('credentials', id_part=None, help='The name and SendRule connection string of the event hub for azureEventHub logger.<br>Instrumentation key for applicationInsights logger.')
         c.argument('is_buffered', id_part=None, help='Whether records are buffered in the logger before publishing. Default is assumed to be true.')
         c.argument('resource_id', id_part=None, help='Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).')
         c.argument('id', id_part=None, help='Resource ID.')
@@ -1304,12 +1304,12 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt logger update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('logger_id', id_part=None, help='Logger identifier. Must be unique in the API Management service instance.')
         c.argument('properties', id_part=None, help='Logger entity contract properties.')
         c.argument('logger_type', id_part=None, help='Logger type.')
         c.argument('description', id_part=None, help='Logger description.')
-        c.argument('credentials', id_part=None, help='The name and SendRule connection string of the event hub for azureEventHub logger. Instrumentation key for applicationInsights logger.')
+        c.argument('credentials', id_part=None, help='The name and SendRule connection string of the event hub for azureEventHub logger.<br>Instrumentation key for applicationInsights logger.')
         c.argument('is_buffered', id_part=None, help='Whether records are buffered in the logger before publishing. Default is assumed to be true.')
         c.argument('resource_id', id_part=None, help='Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).')
         c.argument('id', id_part=None, help='Resource ID.')
@@ -1318,20 +1318,20 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt logger delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('logger_id', id_part=None, help='Logger identifier. Must be unique in the API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt logger list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt logger show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('logger_id', id_part=None, help='Logger identifier. Must be unique in the API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
@@ -1380,7 +1380,7 @@ def load_arguments(self, _):
     with self.argument_context('apimgmt notification recipientuser create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('service_name', id_part=None, help='The name of the API Management service.')
-        c.argument('name', id_part=None, help='Notification Name Identifier.')
+        c.argument('notification_name', id_part=None, help='Notification Name Identifier.')
         c.argument('user_id', id_part=None, help='User identifier. Must be unique in the current API Management service instance.')
         c.argument('id', id_part=None, help='Resource ID.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
@@ -1390,7 +1390,7 @@ def load_arguments(self, _):
     with self.argument_context('apimgmt notification recipientuser update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('service_name', id_part=None, help='The name of the API Management service.')
-        c.argument('name', id_part=None, help='Notification Name Identifier.')
+        c.argument('notification_name', id_part=None, help='Notification Name Identifier.')
         c.argument('user_id', id_part=None, help='User identifier. Must be unique in the current API Management service instance.')
         c.argument('id', id_part=None, help='Resource ID.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
@@ -1400,7 +1400,7 @@ def load_arguments(self, _):
     with self.argument_context('apimgmt notification recipientuser delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('service_name', id_part=None, help='The name of the API Management service.')
-        c.argument('name', id_part=None, help='Notification Name Identifier.')
+        c.argument('notification_name', id_part=None, help='Notification Name Identifier.')
         c.argument('user_id', id_part=None, help='User identifier. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
@@ -1408,7 +1408,7 @@ def load_arguments(self, _):
     with self.argument_context('apimgmt notification recipientuser list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('service_name', id_part=None, help='The name of the API Management service.')
-        c.argument('name', id_part=None, help='Notification Name Identifier.')
+        c.argument('notification_name', id_part=None, help='Notification Name Identifier.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
     name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
@@ -1417,7 +1417,7 @@ def load_arguments(self, _):
     with self.argument_context('apimgmt notification recipientemail create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('service_name', id_part=None, help='The name of the API Management service.')
-        c.argument('name', id_part=None, help='Notification Name Identifier.')
+        c.argument('notification_name', id_part=None, help='Notification Name Identifier.')
         c.argument('email', id_part=None, help='Email identifier.')
         c.argument('id', id_part=None, help='Resource ID.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
@@ -1427,7 +1427,7 @@ def load_arguments(self, _):
     with self.argument_context('apimgmt notification recipientemail update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('service_name', id_part=None, help='The name of the API Management service.')
-        c.argument('name', id_part=None, help='Notification Name Identifier.')
+        c.argument('notification_name', id_part=None, help='Notification Name Identifier.')
         c.argument('email', id_part=None, help='Email identifier.')
         c.argument('id', id_part=None, help='Resource ID.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
@@ -1437,7 +1437,7 @@ def load_arguments(self, _):
     with self.argument_context('apimgmt notification recipientemail delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('service_name', id_part=None, help='The name of the API Management service.')
-        c.argument('name', id_part=None, help='Notification Name Identifier.')
+        c.argument('notification_name', id_part=None, help='Notification Name Identifier.')
         c.argument('email', id_part=None, help='Email identifier.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
@@ -1445,7 +1445,7 @@ def load_arguments(self, _):
     with self.argument_context('apimgmt notification recipientemail list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
         c.argument('service_name', id_part=None, help='The name of the API Management service.')
-        c.argument('name', id_part=None, help='Notification Name Identifier.')
+        c.argument('notification_name', id_part=None, help='Notification Name Identifier.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
     name_arg_type = CLIArgumentType(options_list=('--name', '-n'), metavar='NAME')
@@ -1453,7 +1453,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt openidconnectprovider create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('opid', id_part=None, help='Identifier of the OpenID Connect Provider.')
         c.argument('properties', id_part=None, help='OpenId Connect Provider contract properties.')
         c.argument('display_name', id_part=None, help='User-friendly OpenID Connect Provider name.')
@@ -1467,7 +1467,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt openidconnectprovider update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('opid', id_part=None, help='Identifier of the OpenID Connect Provider.')
         c.argument('properties', id_part=None, help='OpenId Connect Provider contract properties.')
         c.argument('display_name', id_part=None, help='User-friendly OpenID Connect Provider name.')
@@ -1481,20 +1481,20 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt openidconnectprovider delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('opid', id_part=None, help='Identifier of the OpenID Connect Provider.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt openidconnectprovider list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt openidconnectprovider show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('opid', id_part=None, help='Identifier of the OpenID Connect Provider.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
@@ -1503,7 +1503,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt policy create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('policy_id', id_part=None, help='The identifier of the Policy.')
         c.argument('properties', id_part=None, help='Properties of the Policy.')
         c.argument('value', id_part=None, help='Contents of the Policy as defined by the format.')
@@ -1514,7 +1514,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt policy update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('policy_id', id_part=None, help='The identifier of the Policy.')
         c.argument('properties', id_part=None, help='Properties of the Policy.')
         c.argument('value', id_part=None, help='Contents of the Policy as defined by the format.')
@@ -1525,20 +1525,20 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt policy delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('policy_id', id_part=None, help='The identifier of the Policy.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt policy list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt policy show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('policy_id', id_part=None, help='The identifier of the Policy.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
@@ -1633,7 +1633,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt product create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('product_id', id_part=None, help='Product identifier. Must be unique in the current API Management service instance.')
         c.argument('properties', id_part=None, help='Product entity contract properties.')
         c.argument('description', id_part=None, help='Product description. May include HTML formatting tags.')
@@ -1649,7 +1649,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt product update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('product_id', id_part=None, help='Product identifier. Must be unique in the current API Management service instance.')
         c.argument('properties', id_part=None, help='Product entity contract properties.')
         c.argument('description', id_part=None, help='Product description. May include HTML formatting tags.')
@@ -1665,20 +1665,20 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt product delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('product_id', id_part=None, help='Product identifier. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt product list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt product show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('product_id', id_part=None, help='Product identifier. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
@@ -1687,7 +1687,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt product api create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('product_id', id_part=None, help='Product identifier. Must be unique in the current API Management service instance.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('id', id_part=None, help='Resource ID.')
@@ -1714,7 +1714,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt product api update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('product_id', id_part=None, help='Product identifier. Must be unique in the current API Management service instance.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('id', id_part=None, help='Resource ID.')
@@ -1741,7 +1741,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt product api delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('product_id', id_part=None, help='Product identifier. Must be unique in the current API Management service instance.')
         c.argument('api_id', id_part=None, help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
         c.argument('resource_id', name_arg_type, id_part=None)
@@ -1749,7 +1749,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt product api list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('product_id', id_part=None, help='Product identifier. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
@@ -1758,7 +1758,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt product group create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('product_id', id_part=None, help='Product identifier. Must be unique in the current API Management service instance.')
         c.argument('group_id', id_part=None, help='Group identifier. Must be unique in the current API Management service instance.')
         c.argument('id', id_part=None, help='Resource ID.')
@@ -1772,7 +1772,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt product group update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('product_id', id_part=None, help='Product identifier. Must be unique in the current API Management service instance.')
         c.argument('group_id', id_part=None, help='Group identifier. Must be unique in the current API Management service instance.')
         c.argument('id', id_part=None, help='Resource ID.')
@@ -1786,7 +1786,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt product group delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('product_id', id_part=None, help='Product identifier. Must be unique in the current API Management service instance.')
         c.argument('group_id', id_part=None, help='Group identifier. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
@@ -1794,7 +1794,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt product group list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('product_id', id_part=None, help='Product identifier. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
@@ -1803,7 +1803,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt product policy create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('product_id', id_part=None, help='Product identifier. Must be unique in the current API Management service instance.')
         c.argument('policy_id', id_part=None, help='The identifier of the Policy.')
         c.argument('properties', id_part=None, help='Properties of the Policy.')
@@ -1815,7 +1815,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt product policy update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('product_id', id_part=None, help='Product identifier. Must be unique in the current API Management service instance.')
         c.argument('policy_id', id_part=None, help='The identifier of the Policy.')
         c.argument('properties', id_part=None, help='Properties of the Policy.')
@@ -1827,7 +1827,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt product policy delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('product_id', id_part=None, help='Product identifier. Must be unique in the current API Management service instance.')
         c.argument('policy_id', id_part=None, help='The identifier of the Policy.')
         c.argument('resource_id', name_arg_type, id_part=None)
@@ -1835,14 +1835,14 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt product policy list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('product_id', id_part=None, help='Product identifier. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt product policy show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('product_id', id_part=None, help='Product identifier. Must be unique in the current API Management service instance.')
         c.argument('policy_id', id_part=None, help='The identifier of the Policy.')
         c.argument('resource_id', name_arg_type, id_part=None)
@@ -1852,7 +1852,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt property create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('prop_id', id_part=None, help='Identifier of the property.')
         c.argument('properties', id_part=None, help='Property entity contract properties.')
         c.argument('tags', id_part=None, help='Optional tags that when provided can be used to filter the property list.')
@@ -1865,7 +1865,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt property update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('prop_id', id_part=None, help='Identifier of the property.')
         c.argument('properties', id_part=None, help='Property entity contract properties.')
         c.argument('tags', id_part=None, help='Optional tags that when provided can be used to filter the property list.')
@@ -1878,20 +1878,20 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt property delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('prop_id', id_part=None, help='Identifier of the property.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt property list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt property show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('prop_id', id_part=None, help='Identifier of the property.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
@@ -1900,7 +1900,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt subscription create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('sid', id_part=None, help='Subscription entity Identifier. The entity represents the association between a user and a product in API Management.')
         c.argument('properties', id_part=None, help='Subscription contract properties.')
         c.argument('owner_id', id_part=None, help='User (user id path) for whom subscription is being created in form /users/{userId}')
@@ -1910,20 +1910,20 @@ def load_arguments(self, _):
         c.argument('secondary_key', id_part=None, help='Secondary subscription key. If not specified during request key will be generated automatically.')
         c.argument('state', id_part=None, help='Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.')
         c.argument('allow_tracing', id_part=None, help='Determines whether tracing can be enabled')
-        c.argument('created_date', id_part=None, help='Subscription creation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard. ')
-        c.argument('start_date', id_part=None, help='Subscription activation date. The setting is for audit purposes only and the subscription is not automatically activated. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard. ')
-        c.argument('expiration_date', id_part=None, help='Subscription expiration date. The setting is for audit purposes only and the subscription is not automatically expired. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard. ')
-        c.argument('end_date', id_part=None, help='Date when subscription was cancelled or expired. The setting is for audit purposes only and the subscription is not automatically cancelled. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard. ')
-        c.argument('notification_date', id_part=None, help='Upcoming subscription expiration notification date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard. ')
+        c.argument('created_date', id_part=None, help='Subscription creation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>')
+        c.argument('start_date', id_part=None, help='Subscription activation date. The setting is for audit purposes only and the subscription is not automatically activated. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>')
+        c.argument('expiration_date', id_part=None, help='Subscription expiration date. The setting is for audit purposes only and the subscription is not automatically expired. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>')
+        c.argument('end_date', id_part=None, help='Date when subscription was cancelled or expired. The setting is for audit purposes only and the subscription is not automatically cancelled. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>')
+        c.argument('notification_date', id_part=None, help='Upcoming subscription expiration notification date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>')
         c.argument('state_comment', id_part=None, help='Optional subscription comment added by an administrator.')
-        c.argument('notify', id_part=None, help='Notify change in Subscription State.   - If false, do not send any email notification for change of state of subscription   - If true, send email notification of change of state of subscription ')
+        c.argument('notify', id_part=None, help='Notify change in Subscription State. <br> - If false, do not send any email notification for change of state of subscription <br> - If true, send email notification of change of state of subscription ')
         c.argument('id', id_part=None, help='Resource ID.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt subscription update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('sid', id_part=None, help='Subscription entity Identifier. The entity represents the association between a user and a product in API Management.')
         c.argument('properties', id_part=None, help='Subscription contract properties.')
         c.argument('owner_id', id_part=None, help='User (user id path) for whom subscription is being created in form /users/{userId}')
@@ -1933,33 +1933,33 @@ def load_arguments(self, _):
         c.argument('secondary_key', id_part=None, help='Secondary subscription key. If not specified during request key will be generated automatically.')
         c.argument('state', id_part=None, help='Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.')
         c.argument('allow_tracing', id_part=None, help='Determines whether tracing can be enabled')
-        c.argument('created_date', id_part=None, help='Subscription creation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard. ')
-        c.argument('start_date', id_part=None, help='Subscription activation date. The setting is for audit purposes only and the subscription is not automatically activated. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard. ')
-        c.argument('expiration_date', id_part=None, help='Subscription expiration date. The setting is for audit purposes only and the subscription is not automatically expired. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard. ')
-        c.argument('end_date', id_part=None, help='Date when subscription was cancelled or expired. The setting is for audit purposes only and the subscription is not automatically cancelled. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard. ')
-        c.argument('notification_date', id_part=None, help='Upcoming subscription expiration notification date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard. ')
+        c.argument('created_date', id_part=None, help='Subscription creation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>')
+        c.argument('start_date', id_part=None, help='Subscription activation date. The setting is for audit purposes only and the subscription is not automatically activated. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>')
+        c.argument('expiration_date', id_part=None, help='Subscription expiration date. The setting is for audit purposes only and the subscription is not automatically expired. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>')
+        c.argument('end_date', id_part=None, help='Date when subscription was cancelled or expired. The setting is for audit purposes only and the subscription is not automatically cancelled. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>')
+        c.argument('notification_date', id_part=None, help='Upcoming subscription expiration notification date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>')
         c.argument('state_comment', id_part=None, help='Optional subscription comment added by an administrator.')
-        c.argument('notify', id_part=None, help='Notify change in Subscription State.   - If false, do not send any email notification for change of state of subscription   - If true, send email notification of change of state of subscription ')
+        c.argument('notify', id_part=None, help='Notify change in Subscription State. <br> - If false, do not send any email notification for change of state of subscription <br> - If true, send email notification of change of state of subscription ')
         c.argument('id', id_part=None, help='Resource ID.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
         c.argument('resource_id', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt subscription delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('sid', id_part=None, help='Subscription entity Identifier. The entity represents the association between a user and a product in API Management.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt subscription list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt subscription show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('sid', id_part=None, help='Subscription entity Identifier. The entity represents the association between a user and a product in API Management.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
@@ -1968,7 +1968,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt user create') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('user_id', id_part=None, help='User identifier. Must be unique in the current API Management service instance.')
         c.argument('properties', id_part=None, help='User entity create contract properties.')
         c.argument('state', id_part=None, help='Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.')
@@ -1979,7 +1979,7 @@ def load_arguments(self, _):
         c.argument('last_name', id_part=None, help='Last name.')
         c.argument('password', id_part=None, help='User Password. If no value is provided, a default password is generated.')
         c.argument('confirmation', id_part=None, help='Determines the type of confirmation e-mail that will be sent to the newly created user.')
-        c.argument('registration_date', id_part=None, help='Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard. ')
+        c.argument('registration_date', id_part=None, help='Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>')
         c.argument('groups', id_part=None, help='Collection of groups user is part of.')
         c.argument('id', id_part=None, help='Resource ID.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
@@ -1987,7 +1987,7 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt user update') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('user_id', id_part=None, help='User identifier. Must be unique in the current API Management service instance.')
         c.argument('properties', id_part=None, help='User entity create contract properties.')
         c.argument('state', id_part=None, help='Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.')
@@ -1998,7 +1998,7 @@ def load_arguments(self, _):
         c.argument('last_name', id_part=None, help='Last name.')
         c.argument('password', id_part=None, help='User Password. If no value is provided, a default password is generated.')
         c.argument('confirmation', id_part=None, help='Determines the type of confirmation e-mail that will be sent to the newly created user.')
-        c.argument('registration_date', id_part=None, help='Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard. ')
+        c.argument('registration_date', id_part=None, help='Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>')
         c.argument('groups', id_part=None, help='Collection of groups user is part of.')
         c.argument('id', id_part=None, help='Resource ID.')
         c.argument('type', id_part=None, help='Resource type for API Management resource.')
@@ -2006,20 +2006,20 @@ def load_arguments(self, _):
 
     with self.argument_context('apimgmt user delete') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('user_id', id_part=None, help='User identifier. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt user list') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)
 
     with self.argument_context('apimgmt user show') as c:
         c.argument('resource_group', id_part=None, help='The name of the resource group.')
-        c.argument('name', id_part=None, help='The name of the API Management service.')
+        c.argument('service_name', id_part=None, help='The name of the API Management service.')
         c.argument('user_id', id_part=None, help='User identifier. Must be unique in the current API Management service instance.')
         c.argument('resource_id', name_arg_type, id_part=None)
         c.argument('rest_body', name_arg_type, id_part=None)

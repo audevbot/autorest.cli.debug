@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   backend_id:
     description:
       - >-
@@ -36,6 +37,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -159,11 +163,11 @@ EXAMPLES = '''
 - name: ApiManagementListBackends
   azure_rm_apimanagementbackend_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
 - name: ApiManagementGetBackend
   azure_rm_apimanagementbackend_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     backend_id: myBackend
 
 '''
@@ -222,7 +226,7 @@ class AzureRMBackendInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 required=true
             ),
@@ -232,7 +236,7 @@ class AzureRMBackendInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.backend_id = None
         self.id = None
         self.name = None
@@ -262,11 +266,11 @@ class AzureRMBackendInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
+            self.service_name is not None and
             self.backend_id is not None):
             self.results['backend'] = self.format_item(self.get())
         elif (self.resource_group is not None and
-              self.name is not None):
+              self.service_name is not None):
             self.results['backend'] = self.format_item(self.listbyservice())
         return self.results
 
