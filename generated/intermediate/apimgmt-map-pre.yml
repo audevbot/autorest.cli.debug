@@ -2676,7 +2676,6 @@ Modules:
     ModuleOperationNameUpper: Api
     ModuleOperationName: api
     ObjectName: Api
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -5112,8 +5111,7 @@ Modules:
     ModuleOperationNameUpper: Api
     ModuleOperationName: api
     ObjectName: Api
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -5780,7 +5778,6 @@ Modules:
     ModuleOperationNameUpper: ApiRevision
     ModuleOperationName: api_revision
     ObjectName: ApiRevision
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -6420,7 +6417,6 @@ Modules:
     ModuleOperationNameUpper: ApiRelease
     ModuleOperationName: api_release
     ObjectName: ApiRelease
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -6996,8 +6992,7 @@ Modules:
     ModuleOperationNameUpper: ApiRelease
     ModuleOperationName: api_release
     ObjectName: ApiRelease
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -11318,7 +11313,6 @@ Modules:
     ModuleOperationNameUpper: ApiOperation
     ModuleOperationName: api_operation
     ObjectName: ApiOperation
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -13767,8 +13761,7 @@ Modules:
     ModuleOperationNameUpper: ApiOperation
     ModuleOperationName: api_operation
     ObjectName: ApiOperation
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -14606,7 +14599,6 @@ Modules:
     ModuleOperationNameUpper: ApiOperationPolicy
     ModuleOperationName: api_operation_policy
     ObjectName: ApiOperationPolicy
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -15160,8 +15152,7 @@ Modules:
     ModuleOperationNameUpper: ApiOperationPolicy
     ModuleOperationName: api_operation_policy
     ObjectName: ApiOperationPolicy
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -15785,7 +15776,6 @@ Modules:
     ModuleOperationNameUpper: Tag
     ModuleOperationName: tag
     ObjectName: Tag
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -16423,8 +16413,7 @@ Modules:
     ModuleOperationNameUpper: Tag
     ModuleOperationName: tag
     ObjectName: Tag
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -17311,7 +17300,6 @@ Modules:
     ModuleOperationNameUpper: ApiProduct
     ModuleOperationName: api_product
     ObjectName: ApiProduct
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -17908,7 +17896,6 @@ Modules:
     ModuleOperationNameUpper: ApiPolicy
     ModuleOperationName: api_policy
     ObjectName: ApiPolicy
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -18473,8 +18460,7 @@ Modules:
     ModuleOperationNameUpper: ApiPolicy
     ModuleOperationName: api_policy
     ObjectName: ApiPolicy
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -19118,7 +19104,6 @@ Modules:
     ModuleOperationNameUpper: ApiSchema
     ModuleOperationName: api_schema
     ObjectName: ApiSchema
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -19584,8 +19569,7 @@ Modules:
     ModuleOperationNameUpper: ApiSchema
     ModuleOperationName: api_schema
     ObjectName: ApiSchema
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -21552,7 +21536,6 @@ Modules:
     ModuleOperationNameUpper: ApiDiagnostic
     ModuleOperationName: api_diagnostic
     ObjectName: ApiDiagnostic
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -22821,8 +22804,7 @@ Modules:
     ModuleOperationNameUpper: ApiDiagnostic
     ModuleOperationName: api_diagnostic
     ObjectName: ApiDiagnostic
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -23762,7 +23744,6 @@ Modules:
     ModuleOperationNameUpper: ApiIssue
     ModuleOperationName: api_issue
     ObjectName: ApiIssue
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -24444,8 +24425,7 @@ Modules:
     ModuleOperationNameUpper: ApiIssue
     ModuleOperationName: api_issue
     ObjectName: ApiIssue
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -25170,7 +25150,6 @@ Modules:
     ModuleOperationNameUpper: ApiIssueComment
     ModuleOperationName: api_issue_comment
     ObjectName: ApiIssueComment
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -25720,8 +25699,7 @@ Modules:
     ModuleOperationNameUpper: ApiIssueComment
     ModuleOperationName: api_issue_comment
     ObjectName: ApiIssueComment
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -26447,7 +26425,6 @@ Modules:
     ModuleOperationNameUpper: ApiIssueAttachment
     ModuleOperationName: api_issue_attachment
     ObjectName: ApiIssueAttachment
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -26985,8 +26962,7 @@ Modules:
     ModuleOperationNameUpper: ApiIssueAttachment
     ModuleOperationName: api_issue_attachment
     ObjectName: ApiIssueAttachment
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -27689,7 +27665,6 @@ Modules:
     ModuleOperationNameUpper: ApiTagDescription
     ModuleOperationName: api_tag_description
     ObjectName: ApiTagDescription
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -28211,8 +28186,7 @@ Modules:
     ModuleOperationNameUpper: ApiTagDescription
     ModuleOperationName: api_tag_description
     ObjectName: ApiTagDescription
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -30042,7 +30016,6 @@ Modules:
     ModuleOperationNameUpper: Operation
     ModuleOperationName: operation
     ObjectName: Operation
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -30791,7 +30764,6 @@ Modules:
     ModuleOperationNameUpper: ApiVersionSet
     ModuleOperationName: api_version_set
     ObjectName: ApiVersionSet
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -31344,8 +31316,7 @@ Modules:
     ModuleOperationNameUpper: ApiVersionSet
     ModuleOperationName: api_version_set
     ObjectName: ApiVersionSet
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -33064,7 +33035,6 @@ Modules:
     ModuleOperationNameUpper: AuthorizationServer
     ModuleOperationName: authorization_server
     ObjectName: AuthorizationServer
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -34129,8 +34099,7 @@ Modules:
     ModuleOperationNameUpper: AuthorizationServer
     ModuleOperationName: authorization_server
     ObjectName: AuthorizationServer
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -36403,7 +36372,6 @@ Modules:
     ModuleOperationNameUpper: Backend
     ModuleOperationName: backend
     ObjectName: Backend
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -37816,8 +37784,7 @@ Modules:
     ModuleOperationNameUpper: Backend
     ModuleOperationName: backend
     ObjectName: Backend
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -38493,7 +38460,6 @@ Modules:
     ModuleOperationNameUpper: Cache
     ModuleOperationName: cache
     ObjectName: Cache
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -38981,8 +38947,7 @@ Modules:
     ModuleOperationNameUpper: Cache
     ModuleOperationName: cache
     ObjectName: Cache
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -39577,7 +39542,6 @@ Modules:
     ModuleOperationNameUpper: Certificate
     ModuleOperationName: certificate
     ObjectName: Certificate
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -40022,8 +39986,7 @@ Modules:
     ModuleOperationNameUpper: Certificate
     ModuleOperationName: certificate
     ObjectName: Certificate
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -40426,7 +40389,6 @@ Modules:
     ModuleOperationNameUpper: ApiManagementOperations
     ModuleOperationName: api_management_operations
     ObjectName: ApiManagementOperation
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -40893,7 +40855,6 @@ Modules:
     ModuleOperationNameUpper: ApiManagementServiceSkus
     ModuleOperationName: api_management_service_skus
     ObjectName: ApiManagementServiceSku
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -44787,7 +44748,6 @@ Modules:
     ModuleOperationNameUpper: ApiManagementService
     ModuleOperationName: api_management_service
     ObjectName: ApiManagementService
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -47932,8 +47892,7 @@ Modules:
     ModuleOperationNameUpper: ApiManagementService
     ModuleOperationName: api_management_service
     ObjectName: ApiManagementService
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -50304,7 +50263,6 @@ Modules:
     ModuleOperationNameUpper: Diagnostic
     ModuleOperationName: diagnostic
     ObjectName: Diagnostic
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -51523,8 +51481,7 @@ Modules:
     ModuleOperationNameUpper: Diagnostic
     ModuleOperationName: diagnostic
     ObjectName: Diagnostic
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -52532,7 +52489,6 @@ Modules:
     ModuleOperationNameUpper: EmailTemplate
     ModuleOperationName: email_template
     ObjectName: EmailTemplate
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -53221,8 +53177,7 @@ Modules:
     ModuleOperationNameUpper: EmailTemplate
     ModuleOperationName: email_template
     ObjectName: EmailTemplate
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -54007,7 +53962,6 @@ Modules:
     ModuleOperationNameUpper: Group
     ModuleOperationName: group
     ObjectName: Group
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -54620,8 +54574,7 @@ Modules:
     ModuleOperationNameUpper: Group
     ModuleOperationName: group
     ObjectName: Group
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -55553,7 +55506,6 @@ Modules:
     ModuleOperationNameUpper: GroupUser
     ModuleOperationName: group_user
     ObjectName: GroupUser
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -56448,7 +56400,6 @@ Modules:
     ModuleOperationNameUpper: GroupUser
     ModuleOperationName: group_user
     ObjectName: GroupUser
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -57462,7 +57413,6 @@ Modules:
     ModuleOperationNameUpper: IdentityProvider
     ModuleOperationName: identity_provider
     ObjectName: IdentityProvider
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -58142,8 +58092,7 @@ Modules:
     ModuleOperationNameUpper: IdentityProvider
     ModuleOperationName: identity_provider
     ObjectName: IdentityProvider
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -58713,8 +58662,7 @@ Modules:
     ModuleOperationNameUpper: Issue
     ModuleOperationName: issue
     ObjectName: Issue
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -59520,7 +59468,6 @@ Modules:
     ModuleOperationNameUpper: Logger
     ModuleOperationName: logger
     ObjectName: Logger
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -60167,8 +60114,7 @@ Modules:
     ModuleOperationNameUpper: Logger
     ModuleOperationName: logger
     ObjectName: Logger
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -60416,7 +60362,6 @@ Modules:
     ModuleOperationNameUpper: NetworkStatus
     ModuleOperationName: network_status
     ObjectName: NetworkStatu
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -60996,7 +60941,6 @@ Modules:
     ModuleOperationNameUpper: Notification
     ModuleOperationName: notification
     ObjectName: Notification
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -61461,8 +61405,7 @@ Modules:
     ModuleOperationNameUpper: Notification
     ModuleOperationName: notification
     ObjectName: Notification
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -62017,7 +61960,6 @@ Modules:
     ModuleOperationNameUpper: NotificationRecipientUser
     ModuleOperationName: notification_recipient_user
     ObjectName: NotificationRecipientUser
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -62450,7 +62392,6 @@ Modules:
     ModuleOperationNameUpper: NotificationRecipientUser
     ModuleOperationName: notification_recipient_user
     ObjectName: NotificationRecipientUser
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -62841,7 +62782,6 @@ Modules:
     ModuleOperationNameUpper: NotificationRecipientEmail
     ModuleOperationName: notification_recipient_email
     ObjectName: NotificationRecipientEmail
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -63266,7 +63206,6 @@ Modules:
     ModuleOperationNameUpper: NotificationRecipientEmail
     ModuleOperationName: notification_recipient_email
     ObjectName: NotificationRecipientEmail
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -64001,7 +63940,6 @@ Modules:
     ModuleOperationNameUpper: OpenIdConnectProvider
     ModuleOperationName: open_id_connect_provider
     ObjectName: OpenIdConnectProvider
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -64538,8 +64476,7 @@ Modules:
     ModuleOperationNameUpper: OpenIdConnectProvider
     ModuleOperationName: open_id_connect_provider
     ObjectName: OpenIdConnectProvider
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -65131,7 +65068,6 @@ Modules:
     ModuleOperationNameUpper: Policy
     ModuleOperationName: policy
     ObjectName: Policy
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -65585,8 +65521,7 @@ Modules:
     ModuleOperationNameUpper: Policy
     ModuleOperationName: policy
     ObjectName: Policy
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -65971,7 +65906,6 @@ Modules:
     ModuleOperationNameUpper: PolicySnippet
     ModuleOperationName: policy_snippet
     ObjectName: PolicySnippet
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -66370,7 +66304,6 @@ Modules:
     ModuleOperationNameUpper: SignInSettings
     ModuleOperationName: sign_in_settings
     ObjectName: SignInSetting
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -66693,8 +66626,7 @@ Modules:
     ModuleOperationNameUpper: SignInSettings
     ModuleOperationName: sign_in_settings
     ObjectName: SignInSetting
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -67334,7 +67266,6 @@ Modules:
     ModuleOperationNameUpper: SignUpSettings
     ModuleOperationName: sign_up_settings
     ObjectName: SignUpSetting
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -67789,8 +67720,7 @@ Modules:
     ModuleOperationNameUpper: SignUpSettings
     ModuleOperationName: sign_up_settings
     ObjectName: SignUpSetting
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -68498,7 +68428,6 @@ Modules:
     ModuleOperationNameUpper: DelegationSettings
     ModuleOperationName: delegation_settings
     ObjectName: DelegationSetting
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -68999,8 +68928,7 @@ Modules:
     ModuleOperationNameUpper: DelegationSettings
     ModuleOperationName: delegation_settings
     ObjectName: DelegationSetting
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -69910,7 +69838,6 @@ Modules:
     ModuleOperationNameUpper: Product
     ModuleOperationName: product
     ObjectName: Product
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -70645,8 +70572,7 @@ Modules:
     ModuleOperationNameUpper: Product
     ModuleOperationName: product
     ObjectName: Product
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -72168,7 +72094,6 @@ Modules:
     ModuleOperationNameUpper: ProductApi
     ModuleOperationName: product_api
     ObjectName: ProductApi
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -73636,7 +73561,6 @@ Modules:
     ModuleOperationNameUpper: ProductApi
     ModuleOperationName: product_api
     ObjectName: ProductApi
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -74166,7 +74090,6 @@ Modules:
     ModuleOperationNameUpper: ProductGroup
     ModuleOperationName: product_group
     ObjectName: ProductGroup
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -74731,7 +74654,6 @@ Modules:
     ModuleOperationNameUpper: ProductGroup
     ModuleOperationName: product_group
     ObjectName: ProductGroup
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -75560,7 +75482,6 @@ Modules:
     ModuleOperationNameUpper: ProductSubscriptions
     ModuleOperationName: product_subscriptions
     ObjectName: ProductSubscription
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -76163,7 +76084,6 @@ Modules:
     ModuleOperationNameUpper: ProductPolicy
     ModuleOperationName: product_policy
     ObjectName: ProductPolicy
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -76663,8 +76583,7 @@ Modules:
     ModuleOperationNameUpper: ProductPolicy
     ModuleOperationName: product_policy
     ObjectName: ProductPolicy
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -77372,7 +77291,6 @@ Modules:
     ModuleOperationNameUpper: Property
     ModuleOperationName: property
     ObjectName: Property
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -77895,8 +77813,7 @@ Modules:
     ModuleOperationNameUpper: Property
     ModuleOperationName: property
     ObjectName: Property
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -78431,7 +78348,6 @@ Modules:
     ModuleOperationNameUpper: QuotaByCounterKeys
     ModuleOperationName: quota_by_counter_keys
     ObjectName: QuotaByCounterKey
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -78855,7 +78771,6 @@ Modules:
     ModuleOperationNameUpper: QuotaByPeriodKeys
     ModuleOperationName: quota_by_period_keys
     ObjectName: QuotaByPeriodKey
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -79170,7 +79085,6 @@ Modules:
     ModuleOperationNameUpper: Region
     ModuleOperationName: region
     ObjectName: Region
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -80311,7 +80225,6 @@ Modules:
     ModuleOperationNameUpper: Reports
     ModuleOperationName: reports
     ObjectName: Report
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -81996,7 +81909,6 @@ Modules:
     ModuleOperationNameUpper: Subscription
     ModuleOperationName: subscription
     ObjectName: Subscription
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -82847,8 +82759,7 @@ Modules:
     ModuleOperationNameUpper: Subscription
     ModuleOperationName: subscription
     ObjectName: Subscription
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -84672,7 +84583,6 @@ Modules:
     ModuleOperationNameUpper: TagResource
     ModuleOperationName: tag_resource
     ObjectName: TagResource
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -84989,7 +84899,6 @@ Modules:
     ModuleOperationNameUpper: TenantAccess
     ModuleOperationName: tenant_access
     ObjectName: TenantAcces
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -85273,7 +85182,6 @@ Modules:
     ModuleOperationNameUpper: TenantAccessGit
     ModuleOperationName: tenant_access_git
     ObjectName: TenantAccessGit
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -85663,7 +85571,6 @@ Modules:
     ModuleOperationNameUpper: TenantConfiguration
     ModuleOperationName: tenant_configuration
     ObjectName: TenantConfiguration
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -86901,7 +86808,6 @@ Modules:
     ModuleOperationNameUpper: User
     ModuleOperationName: user
     ObjectName: User
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -87820,8 +87726,7 @@ Modules:
     ModuleOperationNameUpper: User
     ModuleOperationName: user
     ObjectName: User
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -88411,7 +88316,6 @@ Modules:
     ModuleOperationNameUpper: UserGroup
     ModuleOperationName: user_group
     ObjectName: UserGroup
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -89208,7 +89112,6 @@ Modules:
     ModuleOperationNameUpper: UserSubscription
     ModuleOperationName: user_subscription
     ObjectName: UserSubscription
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -89568,7 +89471,6 @@ Modules:
     ModuleOperationNameUpper: UserIdentities
     ModuleOperationName: user_identities
     ObjectName: UserIdentity
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -89937,7 +89839,6 @@ Modules:
     ModuleOperationNameUpper: ApiExport
     ModuleOperationName: api_export
     ObjectName: ApiExport
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false

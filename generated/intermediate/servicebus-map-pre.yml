@@ -228,7 +228,6 @@ Modules:
     ModuleOperationNameUpper: Operations
     ModuleOperationName: operations
     ObjectName: Operation
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -1379,7 +1378,6 @@ Modules:
     ModuleOperationNameUpper: Namespaces
     ModuleOperationName: namespaces
     ObjectName: Namespace
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -2216,8 +2214,7 @@ Modules:
     ModuleOperationNameUpper: Namespaces
     ModuleOperationName: namespaces
     ObjectName: Namespace
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -3995,7 +3992,6 @@ Modules:
     ModuleOperationNameUpper: DisasterRecoveryConfigs
     ModuleOperationName: disaster_recovery_configs
     ObjectName: DisasterRecoveryConfig
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -4575,8 +4571,7 @@ Modules:
     ModuleOperationNameUpper: DisasterRecoveryConfigs
     ModuleOperationName: disaster_recovery_configs
     ObjectName: DisasterRecoveryConfig
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -5204,8 +5199,7 @@ Modules:
     ModuleOperationNameUpper: MigrationConfigs
     ModuleOperationName: migration_configs
     ObjectName: MigrationConfig
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -7034,7 +7028,6 @@ Modules:
     ModuleOperationNameUpper: Queues
     ModuleOperationName: queues
     ObjectName: Queue
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -8282,8 +8275,7 @@ Modules:
     ModuleOperationNameUpper: Queues
     ModuleOperationName: queues
     ObjectName: Queue
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -9895,7 +9887,6 @@ Modules:
     ModuleOperationNameUpper: Topics
     ModuleOperationName: topics
     ObjectName: Topic
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -10983,8 +10974,7 @@ Modules:
     ModuleOperationNameUpper: Topics
     ModuleOperationName: topics
     ObjectName: Topic
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -12685,7 +12675,6 @@ Modules:
     ModuleOperationNameUpper: Subscriptions
     ModuleOperationName: subscriptions
     ObjectName: Subscription
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -13780,8 +13769,7 @@ Modules:
     ModuleOperationNameUpper: Subscriptions
     ModuleOperationName: subscriptions
     ObjectName: Subscription
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -15546,7 +15534,6 @@ Modules:
     ModuleOperationNameUpper: Rules
     ModuleOperationName: rules
     ObjectName: Rule
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -16696,8 +16683,7 @@ Modules:
     ModuleOperationNameUpper: Rules
     ModuleOperationName: rules
     ObjectName: Rule
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -17156,7 +17142,6 @@ Modules:
     ModuleOperationNameUpper: Regions
     ModuleOperationName: regions
     ObjectName: Region
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -17781,7 +17766,6 @@ Modules:
     ModuleOperationNameUpper: PremiumMessagingRegions
     ModuleOperationName: premium_messaging_regions
     ObjectName: PremiumMessagingRegion
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -18771,7 +18755,6 @@ Modules:
     ModuleOperationNameUpper: EventHubs
     ModuleOperationName: event_hubs
     ObjectName: EventHub
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false

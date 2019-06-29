@@ -2716,7 +2716,6 @@ Modules:
     ModuleOperationNameUpper: DatabaseAccounts
     ModuleOperationName: database_accounts
     ObjectName: DatabaseAccount
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -5032,8 +5031,7 @@ Modules:
     ModuleOperationNameUpper: DatabaseAccounts
     ModuleOperationName: database_accounts
     ObjectName: DatabaseAccount
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -6876,7 +6874,6 @@ Modules:
     ModuleOperationNameUpper: Operations
     ModuleOperationName: operations
     ObjectName: Operation
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -7312,7 +7309,6 @@ Modules:
     ModuleOperationNameUpper: Database
     ModuleOperationName: database
     ObjectName: Database
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -7911,7 +7907,6 @@ Modules:
     ModuleOperationNameUpper: Collection
     ModuleOperationName: collection
     ObjectName: Collection
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -8731,7 +8726,6 @@ Modules:
     ModuleOperationNameUpper: CollectionRegion
     ModuleOperationName: collection_region
     ObjectName: CollectionRegion
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -9392,7 +9386,6 @@ Modules:
     ModuleOperationNameUpper: DatabaseAccountRegion
     ModuleOperationName: database_account_region
     ObjectName: DatabaseAccountRegion
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -10294,7 +10287,6 @@ Modules:
     ModuleOperationNameUpper: PercentileSourceTarget
     ModuleOperationName: percentile_source_target
     ObjectName: PercentileSourceTarget
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -11167,7 +11159,6 @@ Modules:
     ModuleOperationNameUpper: PercentileTarget
     ModuleOperationName: percentile_target
     ObjectName: PercentileTarget
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -12018,7 +12009,6 @@ Modules:
     ModuleOperationNameUpper: Percentile
     ModuleOperationName: percentile
     ObjectName: Percentile
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -12814,7 +12804,6 @@ Modules:
     ModuleOperationNameUpper: CollectionPartitionRegion
     ModuleOperationName: collection_partition_region
     ObjectName: CollectionPartitionRegion
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -13381,7 +13370,6 @@ Modules:
     ModuleOperationNameUpper: CollectionPartition
     ModuleOperationName: collection_partition
     ObjectName: CollectionPartition
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -14216,7 +14204,6 @@ Modules:
     ModuleOperationNameUpper: PartitionKeyRangeId
     ModuleOperationName: partition_key_range_id
     ObjectName: PartitionKeyRangeId
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -15037,7 +15024,6 @@ Modules:
     ModuleOperationNameUpper: PartitionKeyRangeIdRegion
     ModuleOperationName: partition_key_range_id_region
     ObjectName: PartitionKeyRangeIdRegion
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false

@@ -1405,7 +1405,6 @@ Modules:
     ModuleOperationNameUpper: ManagementGroups
     ModuleOperationName: management_groups
     ObjectName: ManagementGroup
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -2675,8 +2674,7 @@ Modules:
     ModuleOperationNameUpper: ManagementGroups
     ModuleOperationName: management_groups
     ObjectName: ManagementGroup
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -2942,7 +2940,6 @@ Modules:
     ModuleOperationNameUpper: ManagementGroupSubscriptions
     ModuleOperationName: management_group_subscriptions
     ObjectName: ManagementGroupSubscription
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -3252,7 +3249,6 @@ Modules:
     ModuleOperationNameUpper: Operations
     ModuleOperationName: operations
     ObjectName: Operation
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false

@@ -1048,7 +1048,6 @@ Modules:
     ModuleOperationNameUpper: Vaults
     ModuleOperationName: vaults
     ObjectName: Vault
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -1954,8 +1953,7 @@ Modules:
     ModuleOperationNameUpper: Vaults
     ModuleOperationName: vaults
     ObjectName: Vault
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -2613,7 +2611,6 @@ Modules:
     ModuleOperationNameUpper: Operations
     ModuleOperationName: operations
     ObjectName: Operation
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -3602,7 +3599,6 @@ Modules:
     ModuleOperationNameUpper: VaultExtendedInfo
     ModuleOperationName: vault_extended_info
     ObjectName: VaultExtendedInfo
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -4064,8 +4060,7 @@ Modules:
     ModuleOperationNameUpper: VaultExtendedInfo
     ModuleOperationName: vault_extended_info
     ObjectName: VaultExtendedInfo
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false

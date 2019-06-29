@@ -652,7 +652,6 @@ Modules:
     ModuleOperationNameUpper: Galleries
     ModuleOperationName: galleries
     ObjectName: Gallery
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -1176,8 +1175,7 @@ Modules:
     ModuleOperationNameUpper: Galleries
     ModuleOperationName: galleries
     ObjectName: Gallery
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -3295,7 +3293,6 @@ Modules:
     ModuleOperationNameUpper: GalleryImages
     ModuleOperationName: gallery_images
     ObjectName: GalleryImage
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -4517,8 +4514,7 @@ Modules:
     ModuleOperationNameUpper: GalleryImages
     ModuleOperationName: gallery_images
     ObjectName: GalleryImage
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -6510,7 +6506,6 @@ Modules:
     ModuleOperationNameUpper: GalleryImageVersions
     ModuleOperationName: gallery_image_versions
     ObjectName: GalleryImageVersion
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -8003,8 +7998,7 @@ Modules:
     ModuleOperationNameUpper: GalleryImageVersions
     ModuleOperationName: gallery_image_versions
     ObjectName: GalleryImageVersion
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false

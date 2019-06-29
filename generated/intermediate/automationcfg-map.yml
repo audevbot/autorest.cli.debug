@@ -3987,7 +3987,6 @@ Modules:
     ModuleOperationNameUpper: SoftwareUpdateConfigurations
     ModuleOperationName: software_update_configurations
     ObjectName: SoftwareUpdateConfiguration
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -4859,7 +4858,6 @@ Modules:
     ModuleOperationNameUpper: SoftwareUpdateConfigurations
     ModuleOperationName: software_update_configurations
     ObjectName: SoftwareUpdateConfiguration
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
