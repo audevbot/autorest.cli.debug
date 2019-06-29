@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   cache_id:
     description:
       - >-
@@ -47,6 +48,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -69,7 +73,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateCache
   azure_rm_apimanagementcache:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     cache_id: myCache
     description: Redis cache instances in West India
     connection_string: 'contoso5.redis.cache.windows.net,ssl=true,password=...'
@@ -79,13 +83,13 @@ EXAMPLES = '''
 - name: ApiManagementUpdateCache
   azure_rm_apimanagementcache:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     cache_id: myCache
     description: Update Cache in west India
 - name: ApiManagementDeleteCache
   azure_rm_apimanagementcache:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     cache_id: myCache
     state: absent
 
@@ -166,10 +170,9 @@ class AzureRMCache(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
-                disposition='service_name',
                 required=true
             ),
             cache_id=dict(
@@ -200,7 +203,7 @@ class AzureRMCache(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.cache_id = None
         self.id = None
         self.name = None
@@ -275,7 +278,7 @@ class AzureRMCache(AzureRMModuleBaseExt):
     def create_update_resource(self):
         try:
             response = self.mgmt_client.cache.create_or_update(resource_group_name=self.resource_group,
-                                                               service_name=self.name,
+                                                               service_name=self.service_name,
                                                                cache_id=self.cache_id,
                                                                parameters=self.body)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
@@ -289,7 +292,7 @@ class AzureRMCache(AzureRMModuleBaseExt):
         # self.log('Deleting the Cache instance {0}'.format(self.))
         try:
             response = self.mgmt_client.cache.delete(resource_group_name=self.resource_group,
-                                                     service_name=self.name,
+                                                     service_name=self.service_name,
                                                      cache_id=self.cache_id)
         except CloudError as e:
             self.log('Error attempting to delete the Cache instance.')
@@ -302,7 +305,7 @@ class AzureRMCache(AzureRMModuleBaseExt):
         found = False
         try:
             response = self.mgmt_client.cache.get(resource_group_name=self.resource_group,
-                                                  service_name=self.name,
+                                                  service_name=self.service_name,
                                                   cache_id=self.cache_id)
         except CloudError as e:
             return False

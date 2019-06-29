@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   expand_api_version_set:
     description:
       - Include full ApiVersionSet resource in response
@@ -43,6 +44,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Type of API.
@@ -183,20 +187,20 @@ EXAMPLES = '''
 - name: ApiManagementListApis
   azure_rm_apimanagementapi_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
 - name: ApiManagementListApisByTags
   azure_rm_apimanagementapi_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
 - name: ApiManagementGetApiContract
   azure_rm_apimanagementapi_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
 - name: ApiManagementGetApiRevisionContract
   azure_rm_apimanagementapi_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
 
 '''
@@ -255,7 +259,7 @@ class AzureRMApiInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 required=true
             ),
@@ -271,7 +275,7 @@ class AzureRMApiInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.tags = None
         self.expand_api_version_set = None
         self.include_not_tagged_apis = None
@@ -304,14 +308,14 @@ class AzureRMApiInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
+            self.service_name is not None and
             self.api_id is not None):
             self.results['api'] = self.format_item(self.get())
         elif (self.resource_group is not None and
-              self.name is not None):
+              self.service_name is not None):
             self.results['api'] = self.format_item(self.listbytags())
         elif (self.resource_group is not None and
-              self.name is not None):
+              self.service_name is not None):
             self.results['api'] = self.format_item(self.listbyservice())
         return self.results
 

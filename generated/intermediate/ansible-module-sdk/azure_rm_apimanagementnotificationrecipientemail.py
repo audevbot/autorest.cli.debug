@@ -29,15 +29,19 @@ options:
     description:
       - The name of the API Management service.
     required: true
-  name:
+  notification_name:
     description:
-      - Resource name.
+      - Notification Name Identifier.
+    required: true
   email:
     description:
       - User Email subscribed to notification.
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -63,13 +67,13 @@ EXAMPLES = '''
   azure_rm_apimanagementnotificationrecipientemail:
     resource_group: myResourceGroup
     service_name: myService
-    name: myNotification
+    notification_name: myNotification
     email: myRecipientEmail
 - name: ApiManagementDeleteNotificationRecipientEmail
   azure_rm_apimanagementnotificationrecipientemail:
     resource_group: myResourceGroup
     service_name: myService
-    name: myNotification
+    notification_name: myNotification
     email: myRecipientEmail
     state: absent
 
@@ -136,10 +140,9 @@ class AzureRMNotificationRecipientEmail(AzureRMModuleBaseExt):
                 updatable=False,
                 required=true
             ),
-            name=dict(
+            notification_name=dict(
                 type='str',
                 updatable=False,
-                disposition='notification_name',
                 required=true
             ),
             email=dict(
@@ -160,7 +163,7 @@ class AzureRMNotificationRecipientEmail(AzureRMModuleBaseExt):
 
         self.resource_group = None
         self.service_name = None
-        self.name = None
+        self.notification_name = None
         self.email = None
         self.id = None
         self.name = None
@@ -237,7 +240,7 @@ class AzureRMNotificationRecipientEmail(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.notification_recipient_email.create_or_update(resource_group_name=self.resource_group,
                                                                                       service_name=self.service_name,
-                                                                                      notification_name=self.name,
+                                                                                      notification_name=self.notification_name,
                                                                                       email=self.email)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
@@ -251,7 +254,7 @@ class AzureRMNotificationRecipientEmail(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.notification_recipient_email.delete(resource_group_name=self.resource_group,
                                                                             service_name=self.service_name,
-                                                                            notification_name=self.name,
+                                                                            notification_name=self.notification_name,
                                                                             email=self.email)
         except CloudError as e:
             self.log('Error attempting to delete the NotificationRecipientEmail instance.')

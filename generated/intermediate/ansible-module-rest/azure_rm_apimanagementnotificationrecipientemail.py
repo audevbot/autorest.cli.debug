@@ -29,15 +29,19 @@ options:
     description:
       - The name of the API Management service.
     required: true
-  name:
+  notification_name:
     description:
-      - Resource name.
+      - Notification Name Identifier.
+    required: true
   email:
     description:
       - User Email subscribed to notification.
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -63,13 +67,13 @@ EXAMPLES = '''
   azure_rm_apimanagementnotificationrecipientemail:
     resource_group: myResourceGroup
     service_name: myService
-    name: myNotification
+    notification_name: myNotification
     email: myRecipientEmail
 - name: ApiManagementDeleteNotificationRecipientEmail
   azure_rm_apimanagementnotificationrecipientemail:
     resource_group: myResourceGroup
     service_name: myService
-    name: myNotification
+    notification_name: myNotification
     email: myRecipientEmail
     state: absent
 
@@ -131,7 +135,7 @@ class AzureRMNotificationRecipientEmail(AzureRMModuleBaseExt):
                 disposition='serviceName',
                 required=true
             ),
-            name=dict(
+            notification_name=dict(
                 type='str',
                 updatable=False,
                 disposition='notificationName',
@@ -155,7 +159,7 @@ class AzureRMNotificationRecipientEmail(AzureRMModuleBaseExt):
 
         self.resource_group = None
         self.service_name = None
-        self.name = None
+        self.notification_name = None
         self.email = None
         self.id = None
         self.name = None

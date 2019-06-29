@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   api_id:
     description:
       - >-
@@ -49,6 +50,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -73,7 +77,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateApiPolicy
   azure_rm_apimanagementapipolicy:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     policy_id: myPolicy
     value: >-
@@ -83,7 +87,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateApiPolicyNonXmlEncoded
   azure_rm_apimanagementapipolicy:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     policy_id: myPolicy
     value: "<policies>\r\n     <inbound>\r\n     <base />\r\n  <set-header name=\"newvalue\" exists-action=\"override\">\r\n   <value>\"@(context.Request.Headers.FirstOrDefault(h => h.Ke==\"Via\"))\" </value>\r\n    </set-header>\r\n  </inbound>\r\n      </policies>"
@@ -91,7 +95,7 @@ EXAMPLES = '''
 - name: ApiManagementDeleteApiPolicy
   azure_rm_apimanagementapipolicy:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     policy_id: myPolicy
     state: absent
@@ -167,10 +171,9 @@ class AzureRMApiPolicy(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
-                disposition='service_name',
                 required=true
             ),
             api_id=dict(
@@ -204,7 +207,7 @@ class AzureRMApiPolicy(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.api_id = None
         self.policy_id = None
         self.id = None
@@ -280,7 +283,7 @@ class AzureRMApiPolicy(AzureRMModuleBaseExt):
     def create_update_resource(self):
         try:
             response = self.mgmt_client.api_policy.create_or_update(resource_group_name=self.resource_group,
-                                                                    service_name=self.name,
+                                                                    service_name=self.service_name,
                                                                     api_id=self.api_id,
                                                                     policy_id=self.policy_id,
                                                                     parameters=self.body)
@@ -295,7 +298,7 @@ class AzureRMApiPolicy(AzureRMModuleBaseExt):
         # self.log('Deleting the ApiPolicy instance {0}'.format(self.))
         try:
             response = self.mgmt_client.api_policy.delete(resource_group_name=self.resource_group,
-                                                          service_name=self.name,
+                                                          service_name=self.service_name,
                                                           api_id=self.api_id,
                                                           policy_id=self.policy_id)
         except CloudError as e:
@@ -309,7 +312,7 @@ class AzureRMApiPolicy(AzureRMModuleBaseExt):
         found = False
         try:
             response = self.mgmt_client.api_policy.get(resource_group_name=self.resource_group,
-                                                       service_name=self.name,
+                                                       service_name=self.service_name,
                                                        api_id=self.api_id,
                                                        policy_id=self.policy_id)
         except CloudError as e:

@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   api_id:
     description:
       - Identifier of the API the release belongs to.
@@ -39,6 +40,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -64,12 +68,12 @@ EXAMPLES = '''
 - name: ApiManagementListApiReleases
   azure_rm_apimanagementapirelease_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
 - name: ApiManagementGetApiRelease
   azure_rm_apimanagementapirelease_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     release_id: myRelease
 
@@ -129,7 +133,7 @@ class AzureRMApiReleaseInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 required=true
             ),
@@ -143,7 +147,7 @@ class AzureRMApiReleaseInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.api_id = None
         self.release_id = None
         self.id = None
@@ -174,12 +178,12 @@ class AzureRMApiReleaseInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
+            self.service_name is not None and
             self.api_id is not None and
             self.release_id is not None):
             self.results['api_release'] = self.format_item(self.get())
         elif (self.resource_group is not None and
-              self.name is not None and
+              self.service_name is not None and
               self.api_id is not None):
             self.results['api_release'] = self.format_item(self.listbyservice())
         return self.results

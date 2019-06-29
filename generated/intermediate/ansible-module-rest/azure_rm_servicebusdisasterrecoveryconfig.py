@@ -25,9 +25,10 @@ options:
     description:
       - Name of the Resource group within the Azure subscription.
     required: true
-  name:
+  namespace_name:
     description:
-      - Resource name
+      - The namespace name
+    required: true
   alias:
     description:
       - The Disaster Recovery configuration name
@@ -58,6 +59,9 @@ options:
   id:
     description:
       - Resource Id
+  name:
+    description:
+      - Resource name
   type:
     description:
       - Resource type
@@ -82,14 +86,14 @@ EXAMPLES = '''
 - name: SBAliasCreate
   azure_rm_servicebusdisasterrecoveryconfig:
     resource_group: myResourceGroup
-    name: my
+    namespace_name: my
     alias: myDisasterRecoveryConfig
     partner_namespace: sdk-Namespace-37
     alternate_name: alternameforAlias-Namespace-8860
 - name: SBAliasDelete
   azure_rm_servicebusdisasterrecoveryconfig:
     resource_group: myResourceGroup
-    name: my
+    namespace_name: my
     alias: myDisasterRecoveryConfig
     state: absent
 
@@ -186,7 +190,7 @@ class AzureRMDisasterRecoveryConfigs(AzureRMModuleBaseExt):
                 disposition='resourceGroupName',
                 required=true
             ),
-            name=dict(
+            namespace_name=dict(
                 type='str',
                 updatable=False,
                 disposition='namespaceName',
@@ -213,7 +217,7 @@ class AzureRMDisasterRecoveryConfigs(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.namespace_name = None
         self.alias = None
         self.id = None
         self.name = None

@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   api_id:
     description:
       - >-
@@ -46,6 +47,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -71,13 +75,13 @@ EXAMPLES = '''
 - name: ApiManagementListApiIssueComments
   azure_rm_apimanagementapiissuecomment_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     issue_id: myIssue
 - name: ApiManagementGetApiIssueComment
   azure_rm_apimanagementapiissuecomment_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     issue_id: myIssue
     comment_id: myComment
@@ -138,7 +142,7 @@ class AzureRMApiIssueCommentInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 required=true
             ),
@@ -156,7 +160,7 @@ class AzureRMApiIssueCommentInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.api_id = None
         self.issue_id = None
         self.comment_id = None
@@ -188,13 +192,13 @@ class AzureRMApiIssueCommentInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
+            self.service_name is not None and
             self.api_id is not None and
             self.issue_id is not None and
             self.comment_id is not None):
             self.results['api_issue_comment'] = self.format_item(self.get())
         elif (self.resource_group is not None and
-              self.name is not None and
+              self.service_name is not None and
               self.api_id is not None and
               self.issue_id is not None):
             self.results['api_issue_comment'] = self.format_item(self.listbyservice())

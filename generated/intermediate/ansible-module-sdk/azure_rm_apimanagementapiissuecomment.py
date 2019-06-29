@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   api_id:
     description:
       - >-
@@ -58,6 +59,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -82,7 +86,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateApiIssueComment
   azure_rm_apimanagementapiissuecomment:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     issue_id: myIssue
     comment_id: myComment
@@ -95,7 +99,7 @@ EXAMPLES = '''
 - name: ApiManagementDeleteApiIssueComment
   azure_rm_apimanagementapiissuecomment:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     issue_id: myIssue
     comment_id: myComment
@@ -178,10 +182,9 @@ class AzureRMApiIssueComment(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
-                disposition='service_name',
                 required=true
             ),
             api_id=dict(
@@ -224,7 +227,7 @@ class AzureRMApiIssueComment(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.api_id = None
         self.issue_id = None
         self.comment_id = None
@@ -301,7 +304,7 @@ class AzureRMApiIssueComment(AzureRMModuleBaseExt):
     def create_update_resource(self):
         try:
             response = self.mgmt_client.api_issue_comment.create_or_update(resource_group_name=self.resource_group,
-                                                                           service_name=self.name,
+                                                                           service_name=self.service_name,
                                                                            api_id=self.api_id,
                                                                            issue_id=self.issue_id,
                                                                            comment_id=self.comment_id,
@@ -317,7 +320,7 @@ class AzureRMApiIssueComment(AzureRMModuleBaseExt):
         # self.log('Deleting the ApiIssueComment instance {0}'.format(self.))
         try:
             response = self.mgmt_client.api_issue_comment.delete(resource_group_name=self.resource_group,
-                                                                 service_name=self.name,
+                                                                 service_name=self.service_name,
                                                                  api_id=self.api_id,
                                                                  issue_id=self.issue_id,
                                                                  comment_id=self.comment_id)
@@ -332,7 +335,7 @@ class AzureRMApiIssueComment(AzureRMModuleBaseExt):
         found = False
         try:
             response = self.mgmt_client.api_issue_comment.get(resource_group_name=self.resource_group,
-                                                              service_name=self.name,
+                                                              service_name=self.service_name,
                                                               api_id=self.api_id,
                                                               issue_id=self.issue_id,
                                                               comment_id=self.comment_id)

@@ -16,7 +16,7 @@
     - name: ApiManagementCreateBackendServiceFabric
       azure_rm_apimanagementbackend:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         backend_id: '{{backend_name}}'
         description: Service Fabric Test App 1
         service_fabric_cluster:

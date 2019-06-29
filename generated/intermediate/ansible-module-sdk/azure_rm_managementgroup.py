@@ -235,7 +235,7 @@ name:
   sample: null
 properties:
   description:
-    - !<tag:yaml.org,2002:js/undefined> ''
+    - ''
   returned: always
   type: dict
   sample: null
@@ -262,7 +262,7 @@ properties:
       sample: null
     details:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: dict
       sample: null
@@ -287,7 +287,7 @@ properties:
           sample: null
         parent:
           description:
-            - !<tag:yaml.org,2002:js/undefined> ''
+            - ''
           returned: always
           type: dict
           sample: null

@@ -12,7 +12,7 @@
     - name: ApiManagementGetProperty
       azure_rm_apimanagementproperty_info:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         prop_id: '{{property_name}}'
     
       register: output

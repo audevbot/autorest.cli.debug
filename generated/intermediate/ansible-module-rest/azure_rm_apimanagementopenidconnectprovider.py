@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   opid:
     description:
       - Identifier of the OpenID Connect Provider.
@@ -53,6 +54,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -77,7 +81,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateOpenIdConnectProvider
   azure_rm_apimanagementopenidconnectprovider:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     opid: myOpenidConnectProvider
     display_name: templateoidprovider3
     metadata_endpoint: 'https://oidprovider-template3.net'
@@ -85,13 +89,13 @@ EXAMPLES = '''
 - name: ApiManagementUpdateOpenIdConnectProvider
   azure_rm_apimanagementopenidconnectprovider:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     opid: myOpenidConnectProvider
     client_secret: updatedsecret
 - name: ApiManagementDeleteOpenIdConnectProvider
   azure_rm_apimanagementopenidconnectprovider:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     opid: myOpenidConnectProvider
     state: absent
 
@@ -178,7 +182,7 @@ class AzureRMOpenIdConnectProvider(AzureRMModuleBaseExt):
                 disposition='resourceGroupName',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
                 disposition='serviceName',
@@ -220,7 +224,7 @@ class AzureRMOpenIdConnectProvider(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.opid = None
         self.id = None
         self.name = None

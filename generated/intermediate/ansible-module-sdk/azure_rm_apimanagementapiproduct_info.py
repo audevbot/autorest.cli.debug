@@ -25,7 +25,7 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
       - The name of the API Management service.
     required: true
@@ -110,7 +110,7 @@ EXAMPLES = '''
 - name: ApiManagementListApiProducts
   azure_rm_apimanagementapiproduct_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
 
 '''
@@ -257,7 +257,7 @@ class AzureRMApiProductInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 required=true
             ),
@@ -268,7 +268,7 @@ class AzureRMApiProductInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.api_id = None
         self.value = None
         self.next_link = None
@@ -296,7 +296,7 @@ class AzureRMApiProductInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
+            self.service_name is not None and
             self.api_id is not None):
             self.results['api_product'] = self.format_item(self.listbyapis())
         return self.results
@@ -306,7 +306,7 @@ class AzureRMApiProductInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.api_product.list_by_apis(resource_group_name=self.resource_group,
-                                                                 service_name=self.name,
+                                                                 service_name=self.service_name,
                                                                  api_id=self.api_id)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')

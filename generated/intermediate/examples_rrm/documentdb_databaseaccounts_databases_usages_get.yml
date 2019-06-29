@@ -12,7 +12,7 @@
     - name: CosmosDBDatabaseGetUsages
       azure_rm_cosmosdbdatabase_info:
         resource_group: '{{resource_group}}'
-        name: '{{database_account_name}}'
+        account_name: '{{database_account_name}}'
         database_rid: '{{database_name}}'
     
       register: output

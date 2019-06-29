@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   prop_id:
     description:
       - Identifier of the property.
@@ -52,6 +53,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -77,7 +81,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateProperty
   azure_rm_apimanagementproperty:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     prop_id: myProperty
     tags:
       - foo
@@ -88,7 +92,7 @@ EXAMPLES = '''
 - name: ApiManagementUpdateProperty
   azure_rm_apimanagementproperty:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     prop_id: myProperty
     tags:
       - foo
@@ -97,7 +101,7 @@ EXAMPLES = '''
 - name: ApiManagementDeleteProperty
   azure_rm_apimanagementproperty:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     prop_id: myProperty
     state: absent
 
@@ -186,7 +190,7 @@ class AzureRMProperty(AzureRMModuleBaseExt):
                 disposition='resourceGroupName',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
                 disposition='serviceName',
@@ -220,7 +224,7 @@ class AzureRMProperty(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.prop_id = None
         self.id = None
         self.name = None

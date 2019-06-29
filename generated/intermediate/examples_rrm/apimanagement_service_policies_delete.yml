@@ -12,7 +12,7 @@
     - name: ApiManagementDeletePolicy
       azure_rm_apimanagementpolicy:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         policy_id: '{{policy_name}}'
         state: absent
     

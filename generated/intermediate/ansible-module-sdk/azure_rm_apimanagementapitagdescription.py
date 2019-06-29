@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   api_id:
     description:
       - >-
@@ -56,6 +57,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -80,7 +84,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateApiTagDescription
   azure_rm_apimanagementapitagdescription:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     tag_id: myTagDescription
     description: >-
@@ -91,7 +95,7 @@ EXAMPLES = '''
 - name: ApiManagementDeleteApiTagDescription
   azure_rm_apimanagementapitagdescription:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     tag_id: myTagDescription
     state: absent
@@ -179,10 +183,9 @@ class AzureRMApiTagDescription(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
-                disposition='service_name',
                 required=true
             ),
             api_id=dict(
@@ -215,7 +218,7 @@ class AzureRMApiTagDescription(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.api_id = None
         self.tag_id = None
         self.id = None
@@ -291,7 +294,7 @@ class AzureRMApiTagDescription(AzureRMModuleBaseExt):
     def create_update_resource(self):
         try:
             response = self.mgmt_client.api_tag_description.create_or_update(resource_group_name=self.resource_group,
-                                                                             service_name=self.name,
+                                                                             service_name=self.service_name,
                                                                              api_id=self.api_id,
                                                                              tag_id=self.tag_id,
                                                                              parameters=self.body)
@@ -306,7 +309,7 @@ class AzureRMApiTagDescription(AzureRMModuleBaseExt):
         # self.log('Deleting the ApiTagDescription instance {0}'.format(self.))
         try:
             response = self.mgmt_client.api_tag_description.delete(resource_group_name=self.resource_group,
-                                                                   service_name=self.name,
+                                                                   service_name=self.service_name,
                                                                    api_id=self.api_id,
                                                                    tag_id=self.tag_id)
         except CloudError as e:
@@ -320,7 +323,7 @@ class AzureRMApiTagDescription(AzureRMModuleBaseExt):
         found = False
         try:
             response = self.mgmt_client.api_tag_description.get(resource_group_name=self.resource_group,
-                                                                service_name=self.name,
+                                                                service_name=self.service_name,
                                                                 api_id=self.api_id,
                                                                 tag_id=self.tag_id)
         except CloudError as e:

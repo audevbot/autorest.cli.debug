@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   api_id:
     description:
       - >-
@@ -55,6 +56,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -79,7 +83,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateApiOperationPolicy
   azure_rm_apimanagementapioperationpolicy:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     operation_id: myOperation
     policy_id: myPolicy
@@ -90,7 +94,7 @@ EXAMPLES = '''
 - name: ApiManagementDeleteApiOperationPolicy
   azure_rm_apimanagementapioperationpolicy:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     operation_id: myOperation
     policy_id: myPolicy
@@ -167,10 +171,9 @@ class AzureRMApiOperationPolicy(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
-                disposition='service_name',
                 required=true
             ),
             api_id=dict(
@@ -209,7 +212,7 @@ class AzureRMApiOperationPolicy(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.api_id = None
         self.operation_id = None
         self.policy_id = None
@@ -286,7 +289,7 @@ class AzureRMApiOperationPolicy(AzureRMModuleBaseExt):
     def create_update_resource(self):
         try:
             response = self.mgmt_client.api_operation_policy.create_or_update(resource_group_name=self.resource_group,
-                                                                              service_name=self.name,
+                                                                              service_name=self.service_name,
                                                                               api_id=self.api_id,
                                                                               operation_id=self.operation_id,
                                                                               policy_id=self.policy_id,
@@ -302,7 +305,7 @@ class AzureRMApiOperationPolicy(AzureRMModuleBaseExt):
         # self.log('Deleting the ApiOperationPolicy instance {0}'.format(self.))
         try:
             response = self.mgmt_client.api_operation_policy.delete(resource_group_name=self.resource_group,
-                                                                    service_name=self.name,
+                                                                    service_name=self.service_name,
                                                                     api_id=self.api_id,
                                                                     operation_id=self.operation_id,
                                                                     policy_id=self.policy_id)
@@ -317,7 +320,7 @@ class AzureRMApiOperationPolicy(AzureRMModuleBaseExt):
         found = False
         try:
             response = self.mgmt_client.api_operation_policy.get(resource_group_name=self.resource_group,
-                                                                 service_name=self.name,
+                                                                 service_name=self.service_name,
                                                                  api_id=self.api_id,
                                                                  operation_id=self.operation_id,
                                                                  policy_id=self.policy_id)

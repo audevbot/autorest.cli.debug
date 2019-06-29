@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   api_id:
     description:
       - >-
@@ -300,6 +301,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -324,7 +328,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateApiOperation
   azure_rm_apimanagementapioperation:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     operation_id: myOperation
     template_parameters: []
@@ -350,7 +354,7 @@ EXAMPLES = '''
 - name: ApiManagementUpdateApiOperation
   azure_rm_apimanagementapioperation:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     operation_id: myOperation
     template_parameters: []
@@ -380,7 +384,7 @@ EXAMPLES = '''
 - name: ApiManagementDeleteApiOperation
   azure_rm_apimanagementapioperation:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     operation_id: myOperation
     state: absent
@@ -853,10 +857,9 @@ class AzureRMApiOperation(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
-                disposition='service_name',
                 required=true
             ),
             api_id=dict(
@@ -1109,7 +1112,7 @@ class AzureRMApiOperation(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.api_id = None
         self.operation_id = None
         self.id = None
@@ -1185,7 +1188,7 @@ class AzureRMApiOperation(AzureRMModuleBaseExt):
     def create_update_resource(self):
         try:
             response = self.mgmt_client.api_operation.create_or_update(resource_group_name=self.resource_group,
-                                                                       service_name=self.name,
+                                                                       service_name=self.service_name,
                                                                        api_id=self.api_id,
                                                                        operation_id=self.operation_id,
                                                                        parameters=self.body)
@@ -1200,7 +1203,7 @@ class AzureRMApiOperation(AzureRMModuleBaseExt):
         # self.log('Deleting the ApiOperation instance {0}'.format(self.))
         try:
             response = self.mgmt_client.api_operation.delete(resource_group_name=self.resource_group,
-                                                             service_name=self.name,
+                                                             service_name=self.service_name,
                                                              api_id=self.api_id,
                                                              operation_id=self.operation_id)
         except CloudError as e:
@@ -1214,7 +1217,7 @@ class AzureRMApiOperation(AzureRMModuleBaseExt):
         found = False
         try:
             response = self.mgmt_client.api_operation.get(resource_group_name=self.resource_group,
-                                                          service_name=self.name,
+                                                          service_name=self.service_name,
                                                           api_id=self.api_id,
                                                           operation_id=self.operation_id)
         except CloudError as e:

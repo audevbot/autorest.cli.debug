@@ -15,7 +15,7 @@
     - name: ApiManagementCreatePolicy
       azure_rm_apimanagementpolicy:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         policy_id: '{{policy_name}}'
         value: "<policies>\r\n  <inbound />\r\n  <backend>\r\n    <forward-request />\r\n  </backend>\r\n  <outbound />\r\n</policies>"
         format: xml

@@ -16,7 +16,7 @@
     - name: ApiManagementCreateEHLogger
       azure_rm_apimanagementlogger:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         logger_id: '{{logger_name}}'
         logger_type: azureEventHub
         description: adding a new logger

@@ -19,7 +19,7 @@
     - name: ApiManagementCreateApiNewVersionUsingExistingApi
       azure_rm_apimanagementapi:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         api_id: '{{api_name}}'
         description: >-
           Create Echo API into a new Version using Existing Version Set and Copy all

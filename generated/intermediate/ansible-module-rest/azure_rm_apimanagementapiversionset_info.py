@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   version_set_id:
     description:
       - >-
@@ -36,6 +37,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -73,11 +77,11 @@ EXAMPLES = '''
 - name: ApiManagementListApiVersionSets
   azure_rm_apimanagementapiversionset_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
 - name: ApiManagementGetApiVersionSet
   azure_rm_apimanagementapiversionset_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     version_set_id: myApiVersionSet
 
 '''
@@ -136,7 +140,7 @@ class AzureRMApiVersionSetInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 required=true
             ),
@@ -146,7 +150,7 @@ class AzureRMApiVersionSetInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.version_set_id = None
         self.id = None
         self.name = None
@@ -176,11 +180,11 @@ class AzureRMApiVersionSetInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
+            self.service_name is not None and
             self.version_set_id is not None):
             self.results['api_version_set'] = self.format_item(self.get())
         elif (self.resource_group is not None and
-              self.name is not None):
+              self.service_name is not None):
             self.results['api_version_set'] = self.format_item(self.listbyservice())
         return self.results
 

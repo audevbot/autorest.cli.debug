@@ -3398,10 +3398,10 @@ Modules:
         IncludeInResponse: false
         Flatten: false
       - NameSwagger: namespaceName
-        NameAnsible: name
+        NameAnsible: namespace_name
         NamePythonSdk: namespace_name
         NameGoSdk: NamespaceName
-        NameTerraform: name
+        NameTerraform: NamespaceName
         IdPortion: namespaces
         Type: str
         TypeName: xxx
@@ -17003,7 +17003,7 @@ Modules:
             TypeNameGo: PremiumMessagingRegions_properties
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -17629,7 +17629,7 @@ Modules:
             TypeNameGo: PremiumMessagingRegions_properties
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true

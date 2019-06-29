@@ -16,7 +16,7 @@
     - name: ApiManagementCreateGroupUser
       azure_rm_apimanagementgroupuser:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         group_id: '{{group_name}}'
         user_id: '{{user_name}}'
     

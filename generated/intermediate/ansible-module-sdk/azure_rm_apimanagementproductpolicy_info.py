@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   product_id:
     description:
       - >-
@@ -43,6 +44,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -61,12 +65,12 @@ EXAMPLES = '''
 - name: ApiManagementListProductPolicies
   azure_rm_apimanagementproductpolicy_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     product_id: myProduct
 - name: ApiManagementGetProductPolicy
   azure_rm_apimanagementproductpolicy_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     product_id: myProduct
     policy_id: myPolicy
 
@@ -132,7 +136,7 @@ class AzureRMProductPolicyInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 required=true
             ),
@@ -149,7 +153,7 @@ class AzureRMProductPolicyInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.product_id = None
         self.policy_id = None
         self.format = None
@@ -181,12 +185,12 @@ class AzureRMProductPolicyInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
+            self.service_name is not None and
             self.product_id is not None and
             self.policy_id is not None):
             self.results['product_policy'] = self.format_item(self.get())
         elif (self.resource_group is not None and
-              self.name is not None and
+              self.service_name is not None and
               self.product_id is not None):
             self.results['product_policy'] = self.format_item(self.listbyproduct())
         return self.results
@@ -196,7 +200,7 @@ class AzureRMProductPolicyInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.product_policy.get(resource_group_name=self.resource_group,
-                                                           service_name=self.name,
+                                                           service_name=self.service_name,
                                                            product_id=self.product_id,
                                                            policy_id=self.policy_id)
         except CloudError as e:
@@ -209,7 +213,7 @@ class AzureRMProductPolicyInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.product_policy.list_by_product(resource_group_name=self.resource_group,
-                                                                       service_name=self.name,
+                                                                       service_name=self.service_name,
                                                                        product_id=self.product_id)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')

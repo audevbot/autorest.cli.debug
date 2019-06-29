@@ -171,7 +171,7 @@ Modules:
         TypeNameGo: GalleryProperties
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -233,7 +233,7 @@ Modules:
         TypeNameGo: GalleryIdentifier
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -563,7 +563,7 @@ Modules:
         TypeNameGo: GalleryProperties
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -613,7 +613,7 @@ Modules:
             TypeNameGo: GalleryIdentifier
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -970,7 +970,7 @@ Modules:
         TypeNameGo: GalleryProperties
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -1032,7 +1032,7 @@ Modules:
         TypeNameGo: GalleryIdentifier
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -1479,7 +1479,7 @@ Modules:
         TypeNameGo: GalleryImageProperties
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -1738,7 +1738,7 @@ Modules:
         TypeNameGo: GalleryImageIdentifier
         IsList: false
         Required: true
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -1858,7 +1858,7 @@ Modules:
         TypeNameGo: RecommendedMachineConfiguration
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -1876,7 +1876,7 @@ Modules:
             TypeNameGo: ResourceRange
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -1966,7 +1966,7 @@ Modules:
             TypeNameGo: ResourceRange
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -2068,7 +2068,7 @@ Modules:
         TypeNameGo: Disallowed
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -2128,7 +2128,7 @@ Modules:
         TypeNameGo: ImagePurchasePlan
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -2518,7 +2518,7 @@ Modules:
         TypeNameGo: GalleryImageProperties
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -2767,7 +2767,7 @@ Modules:
             TypeNameGo: GalleryImageIdentifier
             IsList: false
             Required: true
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -2887,7 +2887,7 @@ Modules:
             TypeNameGo: RecommendedMachineConfiguration
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -2905,7 +2905,7 @@ Modules:
                 TypeNameGo: ResourceRange
                 IsList: false
                 Required: false
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -2995,7 +2995,7 @@ Modules:
                 TypeNameGo: ResourceRange
                 IsList: false
                 Required: false
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -3097,7 +3097,7 @@ Modules:
             TypeNameGo: Disallowed
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -3157,7 +3157,7 @@ Modules:
             TypeNameGo: ImagePurchasePlan
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -3659,7 +3659,7 @@ Modules:
         TypeNameGo: GalleryImageProperties
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -3918,7 +3918,7 @@ Modules:
         TypeNameGo: GalleryImageIdentifier
         IsList: false
         Required: true
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -4038,7 +4038,7 @@ Modules:
         TypeNameGo: RecommendedMachineConfiguration
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -4056,7 +4056,7 @@ Modules:
             TypeNameGo: ResourceRange
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -4146,7 +4146,7 @@ Modules:
             TypeNameGo: ResourceRange
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -4248,7 +4248,7 @@ Modules:
         TypeNameGo: Disallowed
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -4308,7 +4308,7 @@ Modules:
         TypeNameGo: ImagePurchasePlan
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -4825,7 +4825,7 @@ Modules:
         TypeNameGo: GalleryImageVersionProperties
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -4855,7 +4855,7 @@ Modules:
         TypeNameGo: GalleryImageVersionPublishingProfile
         IsList: false
         Required: true
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -5007,7 +5007,7 @@ Modules:
             TypeNameGo: GalleryArtifactSource
             IsList: false
             Required: true
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -5025,7 +5025,7 @@ Modules:
                 TypeNameGo: ManagedArtifact
                 IsList: false
                 Required: true
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -5326,7 +5326,7 @@ Modules:
         TypeNameGo: GalleryImageVersionStorageProfile
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -5344,7 +5344,7 @@ Modules:
             TypeNameGo: GalleryOSDiskImage
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -5593,7 +5593,7 @@ Modules:
         TypeNameGo: ReplicationStatus
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -6061,7 +6061,7 @@ Modules:
         TypeNameGo: GalleryImageVersionProperties
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -6079,7 +6079,7 @@ Modules:
             TypeNameGo: GalleryImageVersionPublishingProfile
             IsList: false
             Required: true
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -6233,7 +6233,7 @@ Modules:
                 TypeNameGo: GalleryArtifactSource
                 IsList: false
                 Required: true
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -6251,7 +6251,7 @@ Modules:
                     TypeNameGo: ManagedArtifact
                     IsList: false
                     Required: true
-                    Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                    Documentation: ''
                     DocumentationMarkKeywords: true
                     DefaultValue: null
                     IncludeInDocumentation: true
@@ -6938,7 +6938,7 @@ Modules:
         TypeNameGo: GalleryImageVersionProperties
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -6968,7 +6968,7 @@ Modules:
         TypeNameGo: GalleryImageVersionPublishingProfile
         IsList: false
         Required: true
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -7120,7 +7120,7 @@ Modules:
             TypeNameGo: GalleryArtifactSource
             IsList: false
             Required: true
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -7138,7 +7138,7 @@ Modules:
                 TypeNameGo: ManagedArtifact
                 IsList: false
                 Required: true
-                Documentation: !<tag:yaml.org,2002:js/undefined> ''
+                Documentation: ''
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -7436,7 +7436,7 @@ Modules:
         TypeNameGo: GalleryImageVersionStorageProfile
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -7454,7 +7454,7 @@ Modules:
             TypeNameGo: GalleryOSDiskImage
             IsList: false
             Required: false
-            Documentation: !<tag:yaml.org,2002:js/undefined> ''
+            Documentation: ''
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -7702,7 +7702,7 @@ Modules:
         TypeNameGo: ReplicationStatus
         IsList: false
         Required: false
-        Documentation: !<tag:yaml.org,2002:js/undefined> ''
+        Documentation: ''
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true

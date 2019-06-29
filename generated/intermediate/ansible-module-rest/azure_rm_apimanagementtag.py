@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   tag_id:
     description:
       - >-
@@ -41,6 +42,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -63,19 +67,19 @@ EXAMPLES = '''
 - name: ApiManagementCreateTag
   azure_rm_apimanagementtag:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     tag_id: myTag
     display_name: tag1
 - name: ApiManagementUpdateTag
   azure_rm_apimanagementtag:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     tag_id: myTag
     display_name: temp tag
 - name: ApiManagementDeleteTag
   azure_rm_apimanagementtag:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     tag_id: myTag
     state: absent
 
@@ -138,7 +142,7 @@ class AzureRMTag(AzureRMModuleBaseExt):
                 disposition='resourceGroupName',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
                 disposition='serviceName',
@@ -163,7 +167,7 @@ class AzureRMTag(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.tag_id = None
         self.id = None
         self.name = None

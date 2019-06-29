@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   scope:
     description:
       - 'Scope like ''apis'', ''products'' or ''apis/{apiId}'
@@ -55,6 +56,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -73,44 +77,44 @@ EXAMPLES = '''
 - name: ApiManagementListTags
   azure_rm_apimanagementtag_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
 - name: ApiManagementGetTag
   azure_rm_apimanagementtag_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     tag_id: myTag
 - name: ApiManagementListApiTags
   azure_rm_apimanagementtag_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
 - name: ApiManagementGetApiTag
   azure_rm_apimanagementtag_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     tag_id: myTag
     api_id: myApi
 - name: ApiManagementListProductTags
   azure_rm_apimanagementtag_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     product_id: myProduct
 - name: ApiManagementGetProductTag
   azure_rm_apimanagementtag_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     tag_id: myTag
     product_id: myProduct
 - name: ApiManagementListApiOperationTags
   azure_rm_apimanagementtag_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     operation_id: myOperation
 - name: ApiManagementGetApiOperationTag
   azure_rm_apimanagementtag_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     tag_id: myTag
     api_id: myApi
     operation_id: myOperation
@@ -177,7 +181,7 @@ class AzureRMTagInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 required=true
             ),
@@ -199,7 +203,7 @@ class AzureRMTagInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.scope = None
         self.tag_id = None
         self.api_id = None
@@ -233,40 +237,40 @@ class AzureRMTagInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
+            self.service_name is not None and
             self.api_id is not None and
             self.operation_id is not None and
             self.tag_id is not None):
             self.results['tag'] = self.format_item(self.getbyoperation())
         elif (self.resource_group is not None and
-              self.name is not None and
+              self.service_name is not None and
               self.api_id is not None and
               self.operation_id is not None):
             self.results['tag'] = self.format_item(self.listbyoperation())
         elif (self.resource_group is not None and
-              self.name is not None and
+              self.service_name is not None and
               self.product_id is not None and
               self.tag_id is not None):
             self.results['tag'] = self.format_item(self.getbyproduct())
         elif (self.resource_group is not None and
-              self.name is not None and
+              self.service_name is not None and
               self.api_id is not None and
               self.tag_id is not None):
             self.results['tag'] = self.format_item(self.getbyapi())
         elif (self.resource_group is not None and
-              self.name is not None and
+              self.service_name is not None and
               self.product_id is not None):
             self.results['tag'] = self.format_item(self.listbyproduct())
         elif (self.resource_group is not None and
-              self.name is not None and
+              self.service_name is not None and
               self.api_id is not None):
             self.results['tag'] = self.format_item(self.listbyapi())
         elif (self.resource_group is not None and
-              self.name is not None and
+              self.service_name is not None and
               self.tag_id is not None):
             self.results['tag'] = self.format_item(self.get())
         elif (self.resource_group is not None and
-              self.name is not None):
+              self.service_name is not None):
             self.results['tag'] = self.format_item(self.listbyservice())
         return self.results
 
@@ -275,7 +279,7 @@ class AzureRMTagInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.tag.get_by_operation(resource_group_name=self.resource_group,
-                                                             service_name=self.name,
+                                                             service_name=self.service_name,
                                                              api_id=self.api_id,
                                                              operation_id=self.operation_id,
                                                              tag_id=self.tag_id)
@@ -289,7 +293,7 @@ class AzureRMTagInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.tag.list_by_operation(resource_group_name=self.resource_group,
-                                                              service_name=self.name,
+                                                              service_name=self.service_name,
                                                               api_id=self.api_id,
                                                               operation_id=self.operation_id)
         except CloudError as e:
@@ -302,7 +306,7 @@ class AzureRMTagInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.tag.get_by_product(resource_group_name=self.resource_group,
-                                                           service_name=self.name,
+                                                           service_name=self.service_name,
                                                            product_id=self.product_id,
                                                            tag_id=self.tag_id)
         except CloudError as e:
@@ -315,7 +319,7 @@ class AzureRMTagInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.tag.get_by_api(resource_group_name=self.resource_group,
-                                                       service_name=self.name,
+                                                       service_name=self.service_name,
                                                        api_id=self.api_id,
                                                        tag_id=self.tag_id)
         except CloudError as e:
@@ -328,7 +332,7 @@ class AzureRMTagInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.tag.list_by_product(resource_group_name=self.resource_group,
-                                                            service_name=self.name,
+                                                            service_name=self.service_name,
                                                             product_id=self.product_id)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
@@ -340,7 +344,7 @@ class AzureRMTagInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.tag.list_by_api(resource_group_name=self.resource_group,
-                                                        service_name=self.name,
+                                                        service_name=self.service_name,
                                                         api_id=self.api_id)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
@@ -352,7 +356,7 @@ class AzureRMTagInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.tag.get(resource_group_name=self.resource_group,
-                                                service_name=self.name,
+                                                service_name=self.service_name,
                                                 tag_id=self.tag_id)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
@@ -364,7 +368,7 @@ class AzureRMTagInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.tag.list_by_service(resource_group_name=self.resource_group,
-                                                            service_name=self.name)
+                                                            service_name=self.service_name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 

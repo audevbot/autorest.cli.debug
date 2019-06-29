@@ -12,7 +12,7 @@
     - name: ApiManagementGetAuthorizationServer
       azure_rm_apimanagementauthorizationserver_info:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         authsid: '{{authorization_server_name}}'
     
       register: output

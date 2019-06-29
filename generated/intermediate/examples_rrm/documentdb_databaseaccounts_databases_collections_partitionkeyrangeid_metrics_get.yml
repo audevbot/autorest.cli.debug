@@ -14,7 +14,7 @@
     - name: CosmosDBDatabaseAccountRegionGetMetrics
       azure_rm_cosmosdbpartitionkeyrangeid_info:
         resource_group: '{{resource_group}}'
-        name: '{{database_account_name}}'
+        account_name: '{{database_account_name}}'
         database_rid: '{{database_name}}'
         collection_rid: '{{collection_name}}'
         partition_key_range_id: '{{partition_key_range_id_name}}'

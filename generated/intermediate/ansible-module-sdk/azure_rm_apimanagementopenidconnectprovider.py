@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   opid:
     description:
       - Identifier of the OpenID Connect Provider.
@@ -53,6 +54,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -77,7 +81,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateOpenIdConnectProvider
   azure_rm_apimanagementopenidconnectprovider:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     opid: myOpenidConnectProvider
     display_name: templateoidprovider3
     metadata_endpoint: 'https://oidprovider-template3.net'
@@ -85,13 +89,13 @@ EXAMPLES = '''
 - name: ApiManagementUpdateOpenIdConnectProvider
   azure_rm_apimanagementopenidconnectprovider:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     opid: myOpenidConnectProvider
     client_secret: updatedsecret
 - name: ApiManagementDeleteOpenIdConnectProvider
   azure_rm_apimanagementopenidconnectprovider:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     opid: myOpenidConnectProvider
     state: absent
 
@@ -184,10 +188,9 @@ class AzureRMOpenIdConnectProvider(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
-                disposition='service_name',
                 required=true
             ),
             opid=dict(
@@ -226,7 +229,7 @@ class AzureRMOpenIdConnectProvider(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.opid = None
         self.id = None
         self.name = None
@@ -301,7 +304,7 @@ class AzureRMOpenIdConnectProvider(AzureRMModuleBaseExt):
     def create_update_resource(self):
         try:
             response = self.mgmt_client.open_id_connect_provider.create_or_update(resource_group_name=self.resource_group,
-                                                                                  service_name=self.name,
+                                                                                  service_name=self.service_name,
                                                                                   opid=self.opid,
                                                                                   parameters=self.body)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
@@ -315,7 +318,7 @@ class AzureRMOpenIdConnectProvider(AzureRMModuleBaseExt):
         # self.log('Deleting the OpenIdConnectProvider instance {0}'.format(self.))
         try:
             response = self.mgmt_client.open_id_connect_provider.delete(resource_group_name=self.resource_group,
-                                                                        service_name=self.name,
+                                                                        service_name=self.service_name,
                                                                         opid=self.opid)
         except CloudError as e:
             self.log('Error attempting to delete the OpenIdConnectProvider instance.')
@@ -328,7 +331,7 @@ class AzureRMOpenIdConnectProvider(AzureRMModuleBaseExt):
         found = False
         try:
             response = self.mgmt_client.open_id_connect_provider.get(resource_group_name=self.resource_group,
-                                                                     service_name=self.name,
+                                                                     service_name=self.service_name,
                                                                      opid=self.opid)
         except CloudError as e:
             return False

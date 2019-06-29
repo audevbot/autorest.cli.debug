@@ -2134,7 +2134,7 @@ objects:
             properties:
               - !ruby/object:Api::Type::NestedObject
                 name: 'imageReference'
-                description: 'undefined'
+                description: ''
                 required: true
                 azure_sdk_references: ['/deploymentConfiguration/virtualMachineConfiguration/imageReference', '/properties/deploymentConfiguration/virtualMachineConfiguration/imageReference']
                 properties:
@@ -2199,13 +2199,7 @@ objects:
                     azure_sdk_references: ['/deploymentConfiguration/virtualMachineConfiguration/dataDisks/lun', '/properties/deploymentConfiguration/virtualMachineConfiguration/dataDisks/lun']
                   - !ruby/object:Api::Type::Enum
                     name: 'caching'
-                    description: 'Values are:
-
- none - The caching mode for the disk is not enabled.
- readOnly - The caching mode for the disk is read only.
- readWrite - The caching mode for the disk is read and write.
-
- The default value for caching is none. For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.'
+                    description: 'Values are:<br> none - The caching mode for the disk is not enabled.<br> readOnly - The caching mode for the disk is read only.<br> readWrite - The caching mode for the disk is read and write.<br> The default value for caching is none. For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.'
                     required: false
                     values:
                       - :None
@@ -2216,16 +2210,13 @@ objects:
                     azure_sdk_references: ['/deploymentConfiguration/virtualMachineConfiguration/dataDisks/caching', '/properties/deploymentConfiguration/virtualMachineConfiguration/dataDisks/caching']
                   - !ruby/object:Api::Azure::Type::Integer
                     name: 'diskSizeGb'
-                    description: 'undefined'
+                    description: ''
                     required: true
                     sample_value: 200
                     azure_sdk_references: ['/deploymentConfiguration/virtualMachineConfiguration/dataDisks/diskSizeGB', '/properties/deploymentConfiguration/virtualMachineConfiguration/dataDisks/diskSizeGB']
                   - !ruby/object:Api::Type::Enum
                     name: 'storageAccountType'
-                    description: 'If omitted, the default is "Standard_LRS". Values are:
-
- Standard_LRS - The data disk should use standard locally redundant storage.
- Premium_LRS - The data disk should use premium locally redundant storage.'
+                    description: 'If omitted, the default is "Standard_LRS". Values are:<br> Standard_LRS - The data disk should use standard locally redundant storage.<br> Premium_LRS - The data disk should use premium locally redundant storage.'
                     required: false
                     values:
                       - :Standard_LRS
@@ -2235,11 +2226,7 @@ objects:
                     azure_sdk_references: ['/deploymentConfiguration/virtualMachineConfiguration/dataDisks/storageAccountType', '/properties/deploymentConfiguration/virtualMachineConfiguration/dataDisks/storageAccountType']
               - !ruby/object:Api::Type::String
                 name: 'licenseType'
-                description: 'This only applies to images that contain the Windows operating system, and should only be used when you hold valid on-premises licenses for the nodes which will be deployed. If omitted, no on-premises licensing discount is applied. Values are:
-
- Windows_Server - The on-premises license is for Windows Server.
- Windows_Client - The on-premises license is for Windows Client.
-'
+                description: 'This only applies to images that contain the Windows operating system, and should only be used when you hold valid on-premises licenses for the nodes which will be deployed. If omitted, no on-premises licensing discount is applied. Values are:<br> Windows_Server - The on-premises license is for Windows Server.<br> Windows_Client - The on-premises license is for Windows Client.<br>'
                 required: false
                 sample_value: Windows_Server
                 azure_sdk_references: ['/deploymentConfiguration/virtualMachineConfiguration/licenseType', '/properties/deploymentConfiguration/virtualMachineConfiguration/licenseType']
@@ -2251,7 +2238,7 @@ objects:
                 properties:
                   - !ruby/object:Api::Type::String
                     name: 'type'
-                    description: 'undefined'
+                    description: ''
                     required: true
                     azure_sdk_references: ['/deploymentConfiguration/virtualMachineConfiguration/containerConfiguration/type', '/properties/deploymentConfiguration/virtualMachineConfiguration/containerConfiguration/type']
                   - !ruby/object:Api::Type::String
@@ -2266,7 +2253,7 @@ objects:
                     azure_sdk_references: ['/deploymentConfiguration/virtualMachineConfiguration/containerConfiguration/containerRegistries', '/properties/deploymentConfiguration/virtualMachineConfiguration/containerConfiguration/containerRegistries']
       - !ruby/object:Api::Type::NestedObject
         name: 'scaleSettings'
-        description: 'undefined'
+        description: ''
         required: false
         azure_sdk_references: ['/scaleSettings', '/properties/scaleSettings']
         properties:
@@ -2314,7 +2301,7 @@ objects:
             properties:
               - !ruby/object:Api::Type::String
                 name: 'formula'
-                description: 'undefined'
+                description: ''
                 required: true
                 sample_value: $TargetDedicatedNodes=34
                 azure_sdk_references: ['/scaleSettings/autoScale/formula', '/properties/scaleSettings/autoScale/formula']
@@ -2336,7 +2323,7 @@ objects:
         azure_sdk_references: ['/interNodeCommunication', '/properties/interNodeCommunication']
       - !ruby/object:Api::Type::NestedObject
         name: 'networkConfiguration'
-        description: 'undefined'
+        description: ''
         required: false
         azure_sdk_references: ['/networkConfiguration', '/properties/networkConfiguration']
         properties:
@@ -2366,7 +2353,7 @@ objects:
                     azure_sdk_references: ['/networkConfiguration/endpointConfiguration/inboundNatPools/name', '/properties/networkConfiguration/endpointConfiguration/inboundNatPools/name', '/name']
                   - !ruby/object:Api::Type::Enum
                     name: 'protocol'
-                    description: 'undefined'
+                    description: ''
                     required: true
                     values:
                       - :TCP
@@ -2400,19 +2387,19 @@ objects:
                     azure_sdk_references: ['/networkConfiguration/endpointConfiguration/inboundNatPools/networkSecurityGroupRules', '/properties/networkConfiguration/endpointConfiguration/inboundNatPools/networkSecurityGroupRules']
       - !ruby/object:Api::Azure::Type::Integer
         name: 'maxTasksPerNode'
-        description: 'undefined'
+        description: ''
         required: false
         sample_value: 13
         azure_sdk_references: ['/maxTasksPerNode', '/properties/maxTasksPerNode']
       - !ruby/object:Api::Type::NestedObject
         name: 'taskSchedulingPolicy'
-        description: 'undefined'
+        description: ''
         required: false
         azure_sdk_references: ['/taskSchedulingPolicy', '/properties/taskSchedulingPolicy']
         properties:
           - !ruby/object:Api::Type::Enum
             name: 'nodeFillType'
-            description: 'undefined'
+            description: ''
             required: true
             values:
               - :Spread
@@ -2422,19 +2409,19 @@ objects:
             azure_sdk_references: ['/taskSchedulingPolicy/nodeFillType', '/properties/taskSchedulingPolicy/nodeFillType']
       - !ruby/object:Api::Type::NestedObject
         name: 'userAccounts'
-        description: 'undefined'
+        description: ''
         required: false
         azure_sdk_references: ['/userAccounts', '/properties/userAccounts']
         properties:
           - !ruby/object:Api::Type::String
             name: 'name'
-            description: 'undefined'
+            description: ''
             required: true
             sample_value: username1
             azure_sdk_references: ['/userAccounts/name', '/properties/userAccounts/name', '/name']
           - !ruby/object:Api::Type::String
             name: 'password'
-            description: 'undefined'
+            description: ''
             required: true
             sample_value: examplepassword
             azure_sdk_references: ['/userAccounts/password', '/properties/userAccounts/password']
@@ -2495,13 +2482,13 @@ objects:
         properties:
           - !ruby/object:Api::Type::String
             name: 'name'
-            description: 'undefined'
+            description: ''
             required: true
             sample_value: key1
             azure_sdk_references: ['/metadata/name', '/properties/metadata/name', '/name']
           - !ruby/object:Api::Type::String
             name: 'value'
-            description: 'undefined'
+            description: ''
             required: true
             sample_value: value1
             azure_sdk_references: ['/metadata/value', '/properties/metadata/value']
@@ -2519,7 +2506,7 @@ objects:
             azure_sdk_references: ['/startTask/commandLine', '/properties/startTask/commandLine']
           - !ruby/object:Api::Type::NestedObject
             name: 'resourceFiles'
-            description: 'undefined'
+            description: ''
             required: false
             azure_sdk_references: ['/startTask/resourceFiles', '/properties/startTask/resourceFiles']
             properties:
@@ -2558,19 +2545,19 @@ objects:
                 azure_sdk_references: ['/startTask/resourceFiles/fileMode', '/properties/startTask/resourceFiles/fileMode']
           - !ruby/object:Api::Type::NestedObject
             name: 'environmentSettings'
-            description: 'undefined'
+            description: ''
             required: false
             azure_sdk_references: ['/startTask/environmentSettings', '/properties/startTask/environmentSettings']
             properties:
               - !ruby/object:Api::Type::String
                 name: 'name'
-                description: 'undefined'
+                description: ''
                 required: true
                 sample_value: MYSET
                 azure_sdk_references: ['/startTask/environmentSettings/name', '/properties/startTask/environmentSettings/name', '/name']
               - !ruby/object:Api::Type::String
                 name: 'value'
-                description: 'undefined'
+                description: ''
                 required: false
                 sample_value: 1234
                 azure_sdk_references: ['/startTask/environmentSettings/value', '/properties/startTask/environmentSettings/value']
@@ -2652,12 +2639,12 @@ objects:
                     azure_sdk_references: ['/startTask/containerSettings/registry/registryServer', '/properties/startTask/containerSettings/registry/registryServer']
                   - !ruby/object:Api::Type::String
                     name: 'username'
-                    description: 'undefined'
+                    description: ''
                     required: true
                     azure_sdk_references: ['/startTask/containerSettings/registry/username', '/properties/startTask/containerSettings/registry/username']
                   - !ruby/object:Api::Type::String
                     name: 'password'
-                    description: 'undefined'
+                    description: ''
                     required: true
                     azure_sdk_references: ['/startTask/containerSettings/registry/password', '/properties/startTask/containerSettings/registry/password']
       - !ruby/object:Api::Type::NestedObject
@@ -2668,7 +2655,7 @@ objects:
         properties:
           - !ruby/object:Api::Azure::Type::ResourceReference
             name: 'id'
-            description: 'undefined'
+            description: ''
             required: true
             sample_value: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.Batch/batchAccounts/{{ batch_account_name }}/pools/{{ pool_name }}/certificates/{{ name }}
             azure_sdk_references: ['/certificates/id', '/properties/certificates/id']
@@ -2690,7 +2677,7 @@ objects:
             azure_sdk_references: ['/certificates/storeName', '/properties/certificates/storeName']
           - !ruby/object:Api::Type::Enum
             name: 'visibility'
-            description: 'undefined'
+            description: ''
             required: false
             values:
               - :StartTask
@@ -2707,7 +2694,7 @@ objects:
         properties:
           - !ruby/object:Api::Azure::Type::ResourceReference
             name: 'id'
-            description: 'undefined'
+            description: ''
             required: true
             sample_value: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.Batch/batchAccounts/{{ batch_account_name }}/pools/{{ pool_name }}/applications/{{ name }}
             azure_sdk_references: ['/applicationPackages/id', '/properties/applicationPackages/id']
@@ -2731,17 +2718,17 @@ objects:
         azure_sdk_references: ['/lastModified', '/properties/lastModified']
       - !ruby/object:Api::Azure::Type::ISO8601DateTime
         name: 'creationTime'
-        description: 'undefined'
+        description: ''
         output: true
         azure_sdk_references: ['/creationTime', '/properties/creationTime']
       - !ruby/object:Api::Azure::Type::ISO8601DateTime
         name: 'provisioningStateTransitionTime'
-        description: 'undefined'
+        description: ''
         output: true
         azure_sdk_references: ['/provisioningStateTransitionTime', '/properties/provisioningStateTransitionTime']
       - !ruby/object:Api::Type::Enum
         name: 'allocationState'
-        description: 'undefined'
+        description: ''
         output: true
         values:
           - :Steady
@@ -2751,17 +2738,17 @@ objects:
         azure_sdk_references: ['/allocationState', '/properties/allocationState']
       - !ruby/object:Api::Azure::Type::ISO8601DateTime
         name: 'allocationStateTransitionTime'
-        description: 'undefined'
+        description: ''
         output: true
         azure_sdk_references: ['/allocationStateTransitionTime', '/properties/allocationStateTransitionTime']
       - !ruby/object:Api::Azure::Type::Integer
         name: 'currentDedicatedNodes'
-        description: 'undefined'
+        description: ''
         output: true
         azure_sdk_references: ['/currentDedicatedNodes', '/properties/currentDedicatedNodes']
       - !ruby/object:Api::Azure::Type::Integer
         name: 'currentLowPriorityNodes'
-        description: 'undefined'
+        description: ''
         output: true
         azure_sdk_references: ['/currentLowPriorityNodes', '/properties/currentLowPriorityNodes']
       - !ruby/object:Api::Type::NestedObject
@@ -2772,7 +2759,7 @@ objects:
         properties:
           - !ruby/object:Api::Azure::Type::ISO8601DateTime
             name: 'evaluationTime'
-            description: 'undefined'
+            description: ''
             required: true
             azure_sdk_references: ['/autoScaleRun/evaluationTime', '/properties/autoScaleRun/evaluationTime']
           - !ruby/object:Api::Type::String
@@ -2782,7 +2769,7 @@ objects:
             azure_sdk_references: ['/autoScaleRun/results', '/properties/autoScaleRun/results']
           - !ruby/object:Api::Type::NestedObject
             name: 'error'
-            description: 'undefined'
+            description: ''
             required: false
             azure_sdk_references: ['/autoScaleRun/error', '/properties/autoScaleRun/error']
             properties:
@@ -2798,7 +2785,7 @@ objects:
                 azure_sdk_references: ['/autoScaleRun/error/message', '/properties/autoScaleRun/error/message']
               - !ruby/object:Api::Type::NestedObject
                 name: 'details'
-                description: 'undefined'
+                description: ''
                 required: false
                 azure_sdk_references: ['/autoScaleRun/error/details', '/properties/autoScaleRun/error/details']
                 properties:
@@ -2814,23 +2801,23 @@ objects:
                     azure_sdk_references: ['/autoScaleRun/error/details/message', '/properties/autoScaleRun/error/details/message']
                   - !ruby/object:Api::Type::NestedObject
                     name: 'details'
-                    description: 'undefined'
+                    description: ''
                     required: false
                     azure_sdk_references: ['/autoScaleRun/error/details/details', '/properties/autoScaleRun/error/details/details']
       - !ruby/object:Api::Type::NestedObject
         name: 'resizeOperationStatus'
-        description: 'undefined'
+        description: ''
         output: true
         azure_sdk_references: ['/resizeOperationStatus', '/properties/resizeOperationStatus']
         properties:
           - !ruby/object:Api::Azure::Type::Integer
             name: 'targetDedicatedNodes'
-            description: 'undefined'
+            description: ''
             required: false
             azure_sdk_references: ['/resizeOperationStatus/targetDedicatedNodes', '/properties/resizeOperationStatus/targetDedicatedNodes']
           - !ruby/object:Api::Azure::Type::Integer
             name: 'targetLowPriorityNodes'
-            description: 'undefined'
+            description: ''
             required: false
             azure_sdk_references: ['/resizeOperationStatus/targetLowPriorityNodes', '/properties/resizeOperationStatus/targetLowPriorityNodes']
           - !ruby/object:Api::Azure::Type::ISO8601Duration
@@ -2851,7 +2838,7 @@ objects:
             azure_sdk_references: ['/resizeOperationStatus/nodeDeallocationOption', '/properties/resizeOperationStatus/nodeDeallocationOption']
           - !ruby/object:Api::Azure::Type::ISO8601DateTime
             name: 'startTime'
-            description: 'undefined'
+            description: ''
             required: false
             azure_sdk_references: ['/resizeOperationStatus/startTime', '/properties/resizeOperationStatus/startTime']
           - !ruby/object:Api::Type::NestedObject
@@ -2872,7 +2859,7 @@ objects:
                 azure_sdk_references: ['/resizeOperationStatus/errors/message', '/properties/resizeOperationStatus/errors/message']
               - !ruby/object:Api::Type::NestedObject
                 name: 'details'
-                description: 'undefined'
+                description: ''
                 required: false
                 azure_sdk_references: ['/resizeOperationStatus/errors/details', '/properties/resizeOperationStatus/errors/details']
                 properties:
@@ -2888,7 +2875,7 @@ objects:
                     azure_sdk_references: ['/resizeOperationStatus/errors/details/message', '/properties/resizeOperationStatus/errors/details/message']
                   - !ruby/object:Api::Type::NestedObject
                     name: 'details'
-                    description: 'undefined'
+                    description: ''
                     required: false
                     azure_sdk_references: ['/resizeOperationStatus/errors/details/details', '/properties/resizeOperationStatus/errors/details/details']
       - !ruby/object:Api::Type::String

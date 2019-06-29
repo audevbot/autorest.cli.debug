@@ -25,7 +25,7 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
       - The name of the API Management service.
     required: true
@@ -81,8 +81,7 @@ options:
           - >-
             Subscription creation date. The date conforms to the following
             format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
-            standard.
-          - ''
+            standard.<br>
       start_date:
         description:
           - >-
@@ -90,8 +89,7 @@ options:
             and the subscription is not automatically activated. The
             subscription lifecycle can be managed by using the `state` property.
             The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as
-            specified by the ISO 8601 standard.
-          - ''
+            specified by the ISO 8601 standard.<br>
       expiration_date:
         description:
           - >-
@@ -99,8 +97,7 @@ options:
             and the subscription is not automatically expired. The subscription
             lifecycle can be managed by using the `state` property. The date
             conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as
-            specified by the ISO 8601 standard.
-          - ''
+            specified by the ISO 8601 standard.<br>
       end_date:
         description:
           - >-
@@ -108,15 +105,13 @@ options:
             audit purposes only and the subscription is not automatically
             cancelled. The subscription lifecycle can be managed by using the
             `state` property. The date conforms to the following format:
-            `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-          - ''
+            `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>
       notification_date:
         description:
           - >-
             Upcoming subscription expiration notification date. The date
             conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as
-            specified by the ISO 8601 standard.
-          - ''
+            specified by the ISO 8601 standard.<br>
       primary_key:
         description:
           - Subscription primary key.
@@ -145,7 +140,7 @@ EXAMPLES = '''
 - name: ApiManagementListUserSubscriptions
   azure_rm_apimanagementusersubscription_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     user_id: myUser
 
 '''
@@ -233,55 +228,55 @@ user_subscription:
               sample: null
             created_date:
               description:
-                - >
+                - >-
                   Subscription creation date. The date conforms to the following
                   format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
-                  standard.
+                  standard.<br>
               returned: always
               type: datetime
               sample: null
             start_date:
               description:
-                - >
+                - >-
                   Subscription activation date. The setting is for audit
                   purposes only and the subscription is not automatically
                   activated. The subscription lifecycle can be managed by using
                   the `state` property. The date conforms to the following
                   format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
-                  standard.
+                  standard.<br>
               returned: always
               type: datetime
               sample: null
             expiration_date:
               description:
-                - >
+                - >-
                   Subscription expiration date. The setting is for audit
                   purposes only and the subscription is not automatically
                   expired. The subscription lifecycle can be managed by using
                   the `state` property. The date conforms to the following
                   format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
-                  standard.
+                  standard.<br>
               returned: always
               type: datetime
               sample: null
             end_date:
               description:
-                - >
+                - >-
                   Date when subscription was cancelled or expired. The setting
                   is for audit purposes only and the subscription is not
                   automatically cancelled. The subscription lifecycle can be
                   managed by using the `state` property. The date conforms to
                   the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by
-                  the ISO 8601 standard.
+                  the ISO 8601 standard.<br>
               returned: always
               type: datetime
               sample: null
             notification_date:
               description:
-                - >
+                - >-
                   Upcoming subscription expiration notification date. The date
                   conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as
-                  specified by the ISO 8601 standard.
+                  specified by the ISO 8601 standard.<br>
               returned: always
               type: datetime
               sample: null
@@ -333,7 +328,7 @@ class AzureRMUserSubscriptionInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 required=true
             ),
@@ -344,7 +339,7 @@ class AzureRMUserSubscriptionInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.user_id = None
         self.value = None
         self.next_link = None
@@ -372,7 +367,7 @@ class AzureRMUserSubscriptionInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
+            self.service_name is not None and
             self.user_id is not None):
             self.results['user_subscription'] = self.format_item(self.list())
         return self.results

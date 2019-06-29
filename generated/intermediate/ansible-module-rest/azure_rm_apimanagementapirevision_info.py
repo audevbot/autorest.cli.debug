@@ -25,7 +25,7 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
       - The name of the API Management service.
     required: true
@@ -84,7 +84,7 @@ EXAMPLES = '''
 - name: ApiManagementListApiRevisions
   azure_rm_apimanagementapirevision_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
 
 '''
@@ -186,7 +186,7 @@ class AzureRMApiRevisionInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 required=true
             ),
@@ -197,7 +197,7 @@ class AzureRMApiRevisionInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.api_id = None
         self.value = None
         self.next_link = None
@@ -225,7 +225,7 @@ class AzureRMApiRevisionInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
+            self.service_name is not None and
             self.api_id is not None):
             self.results['api_revision'] = self.format_item(self.listbyservice())
         return self.results

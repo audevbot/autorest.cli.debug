@@ -12,7 +12,7 @@
     - name: ApiManagementGetApiExportInOpenApi2dot0
       azure_rm_apimanagementapiexport_info:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         api_id: '{{api_name}}'
         format: swagger-link
         export: 'true'

@@ -15,7 +15,7 @@
     - name: ApiManagementCreateUser
       azure_rm_apimanagementuser:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         user_id: '{{user_name}}'
         email: foobar@outlook.com
         first_name: foo

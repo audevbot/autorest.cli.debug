@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   logger_id:
     description:
       - >-
@@ -45,8 +46,8 @@ options:
     description:
       - >-
         The name and SendRule connection string of the event hub for
-        azureEventHub logger.
-      - Instrumentation key for applicationInsights logger.
+        azureEventHub logger.<br>Instrumentation key for applicationInsights
+        logger.
     required: true
   is_buffered:
     description:
@@ -61,6 +62,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -83,7 +87,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateEHLogger
   azure_rm_apimanagementlogger:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     logger_id: myLogger
     logger_type: azureEventHub
     description: adding a new logger
@@ -94,7 +98,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateAILogger
   azure_rm_apimanagementlogger:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     logger_id: myLogger
     logger_type: applicationInsights
     description: adding a new logger
@@ -103,7 +107,7 @@ EXAMPLES = '''
 - name: ApiManagementUpdateLogger
   azure_rm_apimanagementlogger:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     logger_id: myLogger
     credentials:
       name: hydraeventhub
@@ -112,7 +116,7 @@ EXAMPLES = '''
 - name: ApiManagementDeleteLogger
   azure_rm_apimanagementlogger:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     logger_id: myLogger
     state: absent
 
@@ -160,9 +164,8 @@ properties:
       description:
         - >-
           The name and SendRule connection string of the event hub for
-          azureEventHub logger.
-
-          Instrumentation key for applicationInsights logger.
+          azureEventHub logger.<br>Instrumentation key for applicationInsights
+          logger.
       returned: always
       type: >-
         unknown[DictionaryType
@@ -209,7 +212,7 @@ class AzureRMLogger(AzureRMModuleBaseExt):
                 disposition='resourceGroupName',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
                 disposition='serviceName',
@@ -253,7 +256,7 @@ class AzureRMLogger(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.logger_id = None
         self.id = None
         self.name = None

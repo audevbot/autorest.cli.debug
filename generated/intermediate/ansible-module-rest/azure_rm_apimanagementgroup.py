@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   group_id:
     description:
       - >-
@@ -59,6 +60,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   state:
     description:
       - Assert the state of the Group.
@@ -78,13 +82,13 @@ EXAMPLES = '''
 - name: ApiManagementCreateGroup
   azure_rm_apimanagementgroup:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     group_id: myGroup
     display_name: temp group
 - name: ApiManagementCreateGroupExternal
   azure_rm_apimanagementgroup:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     group_id: myGroup
     display_name: NewGroup (samiraad.onmicrosoft.com)
     description: new group to test
@@ -93,13 +97,13 @@ EXAMPLES = '''
 - name: ApiManagementUpdateGroup
   azure_rm_apimanagementgroup:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     group_id: myGroup
     display_name: temp group
 - name: ApiManagementDeleteGroup
   azure_rm_apimanagementgroup:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     group_id: myGroup
     state: absent
 
@@ -192,7 +196,7 @@ class AzureRMGroup(AzureRMModuleBaseExt):
                 disposition='resourceGroupName',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
                 disposition='serviceName',
@@ -232,7 +236,7 @@ class AzureRMGroup(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.group_id = None
         self.id = None
         self.name = None

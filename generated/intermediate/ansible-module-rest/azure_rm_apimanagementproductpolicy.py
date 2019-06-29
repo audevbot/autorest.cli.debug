@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   product_id:
     description:
       - >-
@@ -48,6 +49,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -72,7 +76,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateProductPolicy
   azure_rm_apimanagementproductpolicy:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     product_id: myProduct
     policy_id: myPolicy
     value: "<policies>\r\n  <inbound>\r\n    <rate-limit calls=\"{{call-count}}\" renewal-period=\"15\"></rate-limit>\r\n    <log-to-eventhub logger-id=\"16\">\r\n                      @( string.Join(\",\", DateTime.UtcNow, context.Deployment.ServiceName, context.RequestId, context.Request.IpAddress, context.Operation.Name) ) \r\n                  </log-to-eventhub>\r\n    <quota-by-key calls=\"40\" counter-key=\"cc\" renewal-period=\"3600\" increment-count=\"@(context.Request.Method == &quot;POST&quot; ? 1:2)\" />\r\n    <base />\r\n  </inbound>\r\n  <backend>\r\n    <base />\r\n  </backend>\r\n  <outbound>\r\n    <base />\r\n  </outbound>\r\n</policies>"
@@ -80,7 +84,7 @@ EXAMPLES = '''
 - name: ApiManagementDeleteProductPolicy
   azure_rm_apimanagementproductpolicy:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     product_id: myProduct
     policy_id: myPolicy
     state: absent
@@ -150,7 +154,7 @@ class AzureRMProductPolicy(AzureRMModuleBaseExt):
                 disposition='resourceGroupName',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
                 disposition='serviceName',
@@ -189,7 +193,7 @@ class AzureRMProductPolicy(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.product_id = None
         self.policy_id = None
         self.id = None

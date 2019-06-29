@@ -25,7 +25,7 @@ options:
     description:
       - Name of an Azure resource group.
     required: true
-  name:
+  account_name:
     description:
       - Cosmos DB database account name.
     required: true
@@ -94,7 +94,7 @@ EXAMPLES = '''
 - name: CosmosDBDatabaseAccountRegionGetMetrics
   azure_rm_cosmosdbdatabaseaccountregion_info:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
+    account_name: myDatabaseAccount
     region: myRegion
 
 '''
@@ -223,7 +223,7 @@ class AzureRMDatabaseAccountRegionInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            account_name=dict(
                 type='str',
                 required=true
             ),
@@ -234,7 +234,7 @@ class AzureRMDatabaseAccountRegionInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.account_name = None
         self.region = None
         self.value = None
 
@@ -261,7 +261,7 @@ class AzureRMDatabaseAccountRegionInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
+            self.account_name is not None and
             self.region is not None):
             self.results['database_account_region'] = self.format_item(self.listmetrics())
         return self.results

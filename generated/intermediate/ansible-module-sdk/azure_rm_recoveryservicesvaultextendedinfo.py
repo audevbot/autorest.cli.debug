@@ -119,7 +119,7 @@ e_tag:
   sample: null
 properties:
   description:
-    - !<tag:yaml.org,2002:js/undefined> ''
+    - ''
   returned: always
   type: dict
   sample: null

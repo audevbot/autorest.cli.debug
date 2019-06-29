@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   expand_groups:
     description:
       - Detailed Group in response.
@@ -39,6 +40,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -75,8 +79,7 @@ options:
     description:
       - >-
         Date of user registration. The date conforms to the following format:
-        `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-      - ''
+        `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>
   groups:
     description:
       - Collection of groups user is part of.
@@ -115,11 +118,11 @@ EXAMPLES = '''
 - name: ApiManagementListUsers
   azure_rm_apimanagementuser_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
 - name: ApiManagementGetUser
   azure_rm_apimanagementuser_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     user_id: myUser
 
 '''
@@ -178,7 +181,7 @@ class AzureRMUserInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 required=true
             ),
@@ -191,7 +194,7 @@ class AzureRMUserInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.expand_groups = None
         self.user_id = None
         self.id = None
@@ -222,11 +225,11 @@ class AzureRMUserInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
+            self.service_name is not None and
             self.user_id is not None):
             self.results['user'] = self.format_item(self.get())
         elif (self.resource_group is not None and
-              self.name is not None):
+              self.service_name is not None):
             self.results['user'] = self.format_item(self.listbyservice())
         return self.results
 

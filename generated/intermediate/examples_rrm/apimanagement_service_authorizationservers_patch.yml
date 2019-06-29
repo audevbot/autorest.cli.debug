@@ -15,7 +15,7 @@
     - name: ApiManagementUpdateAuthorizationServer
       azure_rm_apimanagementauthorizationserver:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         authsid: '{{authorization_server_name}}'
         client_secret: updated
         client_id: update

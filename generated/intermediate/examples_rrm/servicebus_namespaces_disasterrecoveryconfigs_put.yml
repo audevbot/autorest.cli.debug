@@ -15,7 +15,7 @@
     - name: SBAliasCreate
       azure_rm_servicebusdisasterrecoveryconfig:
         resource_group: '{{resource_group}}'
-        name: '{{namespace_name}}'
+        namespace_name: '{{namespace_name}}'
         alias: '{{disaster_recovery_config_name}}'
         partner_namespace: sdk-Namespace-37
         alternate_name: alternameforAlias-Namespace-8860

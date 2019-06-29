@@ -155,34 +155,34 @@ options:
                 required: true
               caching:
                 description:
-                  - 'Values are:'
-                  - ''
-                  - ' none - The caching mode for the disk is not enabled.'
-                  - ' readOnly - The caching mode for the disk is read only.'
-                  - ' readWrite - The caching mode for the disk is read and write.'
-                  - ''
-                  - ' The default value for caching is none. For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.'
+                  - >-
+                    Values are:<br> none - The caching mode for the disk is not
+                    enabled.<br> readOnly - The caching mode for the disk is
+                    read only.<br> readWrite - The caching mode for the disk is
+                    read and write.<br> The default value for caching is none.
+                    For information about the caching options see:
+                    https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
               disk_size_gb:
                 description:
                   - undefined
                 required: true
               storage_account_type:
                 description:
-                  - 'If omitted, the default is "Standard_LRS". Values are:'
-                  - ''
-                  - ' Standard_LRS - The data disk should use standard locally redundant storage.'
-                  - ' Premium_LRS - The data disk should use premium locally redundant storage.'
+                  - >-
+                    If omitted, the default is "Standard_LRS". Values are:<br>
+                    Standard_LRS - The data disk should use standard locally
+                    redundant storage.<br> Premium_LRS - The data disk should
+                    use premium locally redundant storage.
           license_type:
             description:
               - >-
                 This only applies to images that contain the Windows operating
                 system, and should only be used when you hold valid on-premises
                 licenses for the nodes which will be deployed. If omitted, no
-                on-premises licensing discount is applied. Values are:
-              - ''
-              - ' Windows_Server - The on-premises license is for Windows Server.'
-              - ' Windows_Client - The on-premises license is for Windows Client.'
-              - ''
+                on-premises licensing discount is applied. Values are:<br>
+                Windows_Server - The on-premises license is for Windows
+                Server.<br> Windows_Client - The on-premises license is for
+                Windows Client.<br>
           container_configuration:
             description:
               - >-
@@ -1141,31 +1141,31 @@ properties:
       sample: null
     creation_time:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: datetime
       sample: null
     provisioning_state:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: str
       sample: null
     provisioning_state_transition_time:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: datetime
       sample: null
     allocation_state:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: str
       sample: null
     allocation_state_transition_time:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: datetime
       sample: null
@@ -1240,7 +1240,7 @@ properties:
           contains:
             image_reference:
               description:
-                - !<tag:yaml.org,2002:js/undefined> ''
+                - ''
               returned: always
               type: dict
               sample: null
@@ -1333,44 +1333,42 @@ properties:
                   sample: null
                 caching:
                   description:
-                    - |-
-                      Values are:
-
-                       none - The caching mode for the disk is not enabled.
-                       readOnly - The caching mode for the disk is read only.
-                       readWrite - The caching mode for the disk is read and write.
-
-                       The default value for caching is none. For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
+                    - >-
+                      Values are:<br> none - The caching mode for the disk is
+                      not enabled.<br> readOnly - The caching mode for the disk
+                      is read only.<br> readWrite - The caching mode for the
+                      disk is read and write.<br> The default value for caching
+                      is none. For information about the caching options see:
+                      https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
                   returned: always
                   type: str
                   sample: null
                 disk_size_gb:
                   description:
-                    - !<tag:yaml.org,2002:js/undefined> ''
+                    - ''
                   returned: always
                   type: number
                   sample: null
                 storage_account_type:
                   description:
-                    - |-
-                      If omitted, the default is "Standard_LRS". Values are:
-
-                       Standard_LRS - The data disk should use standard locally redundant storage.
-                       Premium_LRS - The data disk should use premium locally redundant storage.
+                    - >-
+                      If omitted, the default is "Standard_LRS". Values are:<br>
+                      Standard_LRS - The data disk should use standard locally
+                      redundant storage.<br> Premium_LRS - The data disk should
+                      use premium locally redundant storage.
                   returned: always
                   type: str
                   sample: null
             license_type:
               description:
-                - >
+                - >-
                   This only applies to images that contain the Windows operating
                   system, and should only be used when you hold valid
                   on-premises licenses for the nodes which will be deployed. If
                   omitted, no on-premises licensing discount is applied. Values
-                  are:
-
-                   Windows_Server - The on-premises license is for Windows Server.
-                   Windows_Client - The on-premises license is for Windows Client.
+                  are:<br> Windows_Server - The on-premises license is for
+                  Windows Server.<br> Windows_Client - The on-premises license
+                  is for Windows Client.<br>
               returned: always
               type: str
               sample: null
@@ -1388,7 +1386,7 @@ properties:
               contains:
                 type:
                   description:
-                    - !<tag:yaml.org,2002:js/undefined> ''
+                    - ''
                   returned: always
                   type: str
                   sample: null
@@ -1413,19 +1411,19 @@ properties:
                   sample: null
     current_dedicated_nodes:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: number
       sample: null
     current_low_priority_nodes:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: number
       sample: null
     scale_settings:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: dict
       sample: null
@@ -1484,7 +1482,7 @@ properties:
           contains:
             formula:
               description:
-                - !<tag:yaml.org,2002:js/undefined> ''
+                - ''
               returned: always
               type: str
               sample: null
@@ -1505,7 +1503,7 @@ properties:
       contains:
         evaluation_time:
           description:
-            - !<tag:yaml.org,2002:js/undefined> ''
+            - ''
           returned: always
           type: datetime
           sample: null
@@ -1519,7 +1517,7 @@ properties:
           sample: null
         error:
           description:
-            - !<tag:yaml.org,2002:js/undefined> ''
+            - ''
           returned: always
           type: dict
           sample: null
@@ -1542,7 +1540,7 @@ properties:
               sample: null
             details:
               description:
-                - !<tag:yaml.org,2002:js/undefined> ''
+                - ''
               returned: always
               type: dict
               sample: null
@@ -1565,7 +1563,7 @@ properties:
                   sample: null
                 details:
                   description:
-                    - !<tag:yaml.org,2002:js/undefined> ''
+                    - ''
                   returned: always
                   type: dict
                   sample: null
@@ -1581,7 +1579,7 @@ properties:
       sample: null
     network_configuration:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: dict
       sample: null
@@ -1650,7 +1648,7 @@ properties:
                   sample: null
                 protocol:
                   description:
-                    - !<tag:yaml.org,2002:js/undefined> ''
+                    - ''
                   returned: always
                   type: str
                   sample: null
@@ -1701,39 +1699,39 @@ properties:
                   sample: null
     max_tasks_per_node:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: number
       sample: null
     task_scheduling_policy:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: dict
       sample: null
       contains:
         node_fill_type:
           description:
-            - !<tag:yaml.org,2002:js/undefined> ''
+            - ''
           returned: always
           type: str
           sample: null
     user_accounts:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: dict
       sample: null
       contains:
         name:
           description:
-            - !<tag:yaml.org,2002:js/undefined> ''
+            - ''
           returned: always
           type: str
           sample: null
         password:
           description:
-            - !<tag:yaml.org,2002:js/undefined> ''
+            - ''
           returned: always
           type: str
           sample: null
@@ -1818,13 +1816,13 @@ properties:
       contains:
         name:
           description:
-            - !<tag:yaml.org,2002:js/undefined> ''
+            - ''
           returned: always
           type: str
           sample: null
         value:
           description:
-            - !<tag:yaml.org,2002:js/undefined> ''
+            - ''
           returned: always
           type: str
           sample: null
@@ -1851,7 +1849,7 @@ properties:
           sample: null
         resource_files:
           description:
-            - !<tag:yaml.org,2002:js/undefined> ''
+            - ''
           returned: always
           type: dict
           sample: null
@@ -1935,20 +1933,20 @@ properties:
               sample: null
         environment_settings:
           description:
-            - !<tag:yaml.org,2002:js/undefined> ''
+            - ''
           returned: always
           type: dict
           sample: null
           contains:
             name:
               description:
-                - !<tag:yaml.org,2002:js/undefined> ''
+                - ''
               returned: always
               type: str
               sample: null
             value:
               description:
-                - !<tag:yaml.org,2002:js/undefined> ''
+                - ''
               returned: always
               type: str
               sample: null
@@ -2072,13 +2070,13 @@ properties:
                   sample: null
                 username:
                   description:
-                    - !<tag:yaml.org,2002:js/undefined> ''
+                    - ''
                   returned: always
                   type: str
                   sample: null
                 password:
                   description:
-                    - !<tag:yaml.org,2002:js/undefined> ''
+                    - ''
                   returned: always
                   type: str
                   sample: null
@@ -2100,7 +2098,7 @@ properties:
       contains:
         id:
           description:
-            - !<tag:yaml.org,2002:js/undefined> ''
+            - ''
           returned: always
           type: str
           sample: null
@@ -2134,7 +2132,7 @@ properties:
           sample: null
         visibility:
           description:
-            - !<tag:yaml.org,2002:js/undefined> ''
+            - ''
           returned: always
           type: str
           sample: null
@@ -2150,7 +2148,7 @@ properties:
       contains:
         id:
           description:
-            - !<tag:yaml.org,2002:js/undefined> ''
+            - ''
           returned: always
           type: str
           sample: null
@@ -2175,20 +2173,20 @@ properties:
       sample: null
     resize_operation_status:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: dict
       sample: null
       contains:
         target_dedicated_nodes:
           description:
-            - !<tag:yaml.org,2002:js/undefined> ''
+            - ''
           returned: always
           type: number
           sample: null
         target_low_priority_nodes:
           description:
-            - !<tag:yaml.org,2002:js/undefined> ''
+            - ''
           returned: always
           type: number
           sample: null
@@ -2210,7 +2208,7 @@ properties:
           sample: null
         start_time:
           description:
-            - !<tag:yaml.org,2002:js/undefined> ''
+            - ''
           returned: always
           type: datetime
           sample: null
@@ -2241,7 +2239,7 @@ properties:
               sample: null
             details:
               description:
-                - !<tag:yaml.org,2002:js/undefined> ''
+                - ''
               returned: always
               type: dict
               sample: null
@@ -2264,7 +2262,7 @@ properties:
                   sample: null
                 details:
                   description:
-                    - !<tag:yaml.org,2002:js/undefined> ''
+                    - ''
                   returned: always
                   type: dict
                   sample: null

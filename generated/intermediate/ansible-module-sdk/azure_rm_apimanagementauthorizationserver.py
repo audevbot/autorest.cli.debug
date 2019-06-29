@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   authsid:
     description:
       - Identifier of the authorization server.
@@ -131,6 +132,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -155,7 +159,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateAuthorizationServer
   azure_rm_apimanagementauthorizationserver:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     authsid: myAuthorizationServer
     description: test server
     authorization_methods:
@@ -178,14 +182,14 @@ EXAMPLES = '''
 - name: ApiManagementUpdateAuthorizationServer
   azure_rm_apimanagementauthorizationserver:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     authsid: myAuthorizationServer
     client_secret: updated
     client_id: update
 - name: ApiManagementDeleteAuthorizationServer
   azure_rm_apimanagementauthorizationserver:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     authsid: myAuthorizationServer
     state: absent
 
@@ -391,10 +395,9 @@ class AzureRMAuthorizationServer(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
-                disposition='service_name',
                 required=true
             ),
             authsid=dict(
@@ -505,7 +508,7 @@ class AzureRMAuthorizationServer(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.authsid = None
         self.id = None
         self.name = None
@@ -580,7 +583,7 @@ class AzureRMAuthorizationServer(AzureRMModuleBaseExt):
     def create_update_resource(self):
         try:
             response = self.mgmt_client.authorization_server.create_or_update(resource_group_name=self.resource_group,
-                                                                              service_name=self.name,
+                                                                              service_name=self.service_name,
                                                                               authsid=self.authsid,
                                                                               parameters=self.body)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
@@ -594,7 +597,7 @@ class AzureRMAuthorizationServer(AzureRMModuleBaseExt):
         # self.log('Deleting the AuthorizationServer instance {0}'.format(self.))
         try:
             response = self.mgmt_client.authorization_server.delete(resource_group_name=self.resource_group,
-                                                                    service_name=self.name,
+                                                                    service_name=self.service_name,
                                                                     authsid=self.authsid)
         except CloudError as e:
             self.log('Error attempting to delete the AuthorizationServer instance.')
@@ -607,7 +610,7 @@ class AzureRMAuthorizationServer(AzureRMModuleBaseExt):
         found = False
         try:
             response = self.mgmt_client.authorization_server.get(resource_group_name=self.resource_group,
-                                                                 service_name=self.name,
+                                                                 service_name=self.service_name,
                                                                  authsid=self.authsid)
         except CloudError as e:
             return False

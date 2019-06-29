@@ -17,7 +17,7 @@
     - name: ApiManagementUpdateApiOperation
       azure_rm_apimanagementapioperation:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         api_id: '{{api_name}}'
         operation_id: '{{operation_name}}'
         template_parameters: []

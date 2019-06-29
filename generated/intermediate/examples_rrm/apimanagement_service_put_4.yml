@@ -18,7 +18,7 @@
     - name: ApiManagementCreateSubscription
       azure_rm_apimanagementsubscription:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         sid: testsub
         owner_id: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group

@@ -25,15 +25,19 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   opid:
     description:
       - Identifier of the OpenID Connect Provider.
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -66,11 +70,11 @@ EXAMPLES = '''
 - name: ApiManagementListOpenIdConnectProviders
   azure_rm_apimanagementopenidconnectprovider_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
 - name: ApiManagementGetOpenIdConnectProvider
   azure_rm_apimanagementopenidconnectprovider_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     opid: myOpenidConnectProvider
 
 '''
@@ -136,7 +140,7 @@ class AzureRMOpenIdConnectProviderInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 required=true
             ),
@@ -146,7 +150,7 @@ class AzureRMOpenIdConnectProviderInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.opid = None
         self.id = None
         self.name = None
@@ -176,11 +180,11 @@ class AzureRMOpenIdConnectProviderInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
+            self.service_name is not None and
             self.opid is not None):
             self.results['open_id_connect_provider'] = self.format_item(self.get())
         elif (self.resource_group is not None and
-              self.name is not None):
+              self.service_name is not None):
             self.results['open_id_connect_provider'] = self.format_item(self.listbyservice())
         return self.results
 
@@ -189,7 +193,7 @@ class AzureRMOpenIdConnectProviderInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.open_id_connect_provider.get(resource_group_name=self.resource_group,
-                                                                     service_name=self.name,
+                                                                     service_name=self.service_name,
                                                                      opid=self.opid)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
@@ -201,7 +205,7 @@ class AzureRMOpenIdConnectProviderInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.open_id_connect_provider.list_by_service(resource_group_name=self.resource_group,
-                                                                                 service_name=self.name)
+                                                                                 service_name=self.service_name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 

@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   certificate_id:
     description:
       - >-
@@ -36,6 +37,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -51,8 +55,8 @@ options:
     description:
       - >-
         Expiration date of the certificate. The date conforms to the following
-        format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-      - ''
+        format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
+        standard.<br>
     required: true
 extends_documentation_fragment:
   - azure
@@ -65,11 +69,11 @@ EXAMPLES = '''
 - name: ApiManagementListCertificates
   azure_rm_apimanagementcertificate_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
 - name: ApiManagementGetCertificate
   azure_rm_apimanagementcertificate_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     certificate_id: myCertificate
 
 '''
@@ -128,7 +132,7 @@ class AzureRMCertificateInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 required=true
             ),
@@ -138,7 +142,7 @@ class AzureRMCertificateInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.certificate_id = None
         self.id = None
         self.name = None
@@ -168,11 +172,11 @@ class AzureRMCertificateInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
+            self.service_name is not None and
             self.certificate_id is not None):
             self.results['certificate'] = self.format_item(self.get())
         elif (self.resource_group is not None and
-              self.name is not None):
+              self.service_name is not None):
             self.results['certificate'] = self.format_item(self.listbyservice())
         return self.results
 

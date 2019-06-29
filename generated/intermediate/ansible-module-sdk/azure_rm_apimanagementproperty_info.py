@@ -25,15 +25,19 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   prop_id:
     description:
       - Identifier of the property.
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -65,11 +69,11 @@ EXAMPLES = '''
 - name: ApiManagementListProperties
   azure_rm_apimanagementproperty_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
 - name: ApiManagementGetProperty
   azure_rm_apimanagementproperty_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     prop_id: myProperty
 
 '''
@@ -134,7 +138,7 @@ class AzureRMPropertyInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 required=true
             ),
@@ -144,7 +148,7 @@ class AzureRMPropertyInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.prop_id = None
         self.id = None
         self.name = None
@@ -174,11 +178,11 @@ class AzureRMPropertyInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
+            self.service_name is not None and
             self.prop_id is not None):
             self.results['property'] = self.format_item(self.get())
         elif (self.resource_group is not None and
-              self.name is not None):
+              self.service_name is not None):
             self.results['property'] = self.format_item(self.listbyservice())
         return self.results
 
@@ -187,7 +191,7 @@ class AzureRMPropertyInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.property.get(resource_group_name=self.resource_group,
-                                                     service_name=self.name,
+                                                     service_name=self.service_name,
                                                      prop_id=self.prop_id)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
@@ -199,7 +203,7 @@ class AzureRMPropertyInfo(AzureRMModuleBase):
 
         try:
             response = self.mgmt_client.property.list_by_service(resource_group_name=self.resource_group,
-                                                                 service_name=self.name)
+                                                                 service_name=self.service_name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 

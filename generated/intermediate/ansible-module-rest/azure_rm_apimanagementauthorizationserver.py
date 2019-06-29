@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   authsid:
     description:
       - Identifier of the authorization server.
@@ -131,6 +132,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -155,7 +159,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateAuthorizationServer
   azure_rm_apimanagementauthorizationserver:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     authsid: myAuthorizationServer
     description: test server
     authorization_methods:
@@ -178,14 +182,14 @@ EXAMPLES = '''
 - name: ApiManagementUpdateAuthorizationServer
   azure_rm_apimanagementauthorizationserver:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     authsid: myAuthorizationServer
     client_secret: updated
     client_id: update
 - name: ApiManagementDeleteAuthorizationServer
   azure_rm_apimanagementauthorizationserver:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     authsid: myAuthorizationServer
     state: absent
 
@@ -385,7 +389,7 @@ class AzureRMAuthorizationServer(AzureRMModuleBaseExt):
                 disposition='resourceGroupName',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
                 disposition='serviceName',
@@ -499,7 +503,7 @@ class AzureRMAuthorizationServer(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.authsid = None
         self.id = None
         self.name = None

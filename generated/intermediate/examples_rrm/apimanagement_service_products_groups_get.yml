@@ -12,7 +12,7 @@
     - name: ApiManagementListProductGroups
       azure_rm_apimanagementproductgroup_info:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         product_id: '{{product_name}}'
     
       register: output

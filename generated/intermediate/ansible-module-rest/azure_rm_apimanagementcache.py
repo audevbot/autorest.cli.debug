@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   cache_id:
     description:
       - >-
@@ -47,6 +48,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -69,7 +73,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateCache
   azure_rm_apimanagementcache:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     cache_id: myCache
     description: Redis cache instances in West India
     connection_string: 'contoso5.redis.cache.windows.net,ssl=true,password=...'
@@ -79,13 +83,13 @@ EXAMPLES = '''
 - name: ApiManagementUpdateCache
   azure_rm_apimanagementcache:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     cache_id: myCache
     description: Update Cache in west India
 - name: ApiManagementDeleteCache
   azure_rm_apimanagementcache:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     cache_id: myCache
     state: absent
 
@@ -160,7 +164,7 @@ class AzureRMCache(AzureRMModuleBaseExt):
                 disposition='resourceGroupName',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
                 disposition='serviceName',
@@ -195,7 +199,7 @@ class AzureRMCache(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.cache_id = None
         self.id = None
         self.name = None

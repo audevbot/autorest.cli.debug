@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   certificate_id:
     description:
       - >-
@@ -56,12 +57,15 @@ options:
     description:
       - >-
         Expiration date of the certificate. The date conforms to the following
-        format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-      - ''
+        format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
+        standard.<br>
     required: true
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -86,7 +90,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateCertificate
   azure_rm_apimanagementcertificate:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     certificate_id: myCertificate
     data: >-
       ****************Base 64 Encoded Certificate
@@ -95,7 +99,7 @@ EXAMPLES = '''
 - name: ApiManagementDeleteCertificate
   azure_rm_apimanagementcertificate:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     certificate_id: myCertificate
     state: absent
 
@@ -141,9 +145,10 @@ properties:
       sample: null
     expiration_date:
       description:
-        - >
+        - >-
           Expiration date of the certificate. The date conforms to the following
-          format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+          format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
+          standard.<br>
       returned: always
       type: datetime
       sample: null
@@ -172,7 +177,7 @@ class AzureRMCertificate(AzureRMModuleBaseExt):
                 disposition='resourceGroupName',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
                 disposition='serviceName',
@@ -203,7 +208,7 @@ class AzureRMCertificate(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.certificate_id = None
         self.id = None
         self.name = None

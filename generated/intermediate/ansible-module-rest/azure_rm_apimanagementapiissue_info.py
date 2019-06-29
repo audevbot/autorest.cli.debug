@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   api_id:
     description:
       - A resource identifier for the API the issue was created for.
@@ -43,6 +44,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -75,12 +79,12 @@ EXAMPLES = '''
 - name: ApiManagementListApiIssues
   azure_rm_apimanagementapiissue_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
 - name: ApiManagementGetApiIssue
   azure_rm_apimanagementapiissue_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     issue_id: myIssue
 
@@ -140,7 +144,7 @@ class AzureRMApiIssueInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 required=true
             ),
@@ -158,7 +162,7 @@ class AzureRMApiIssueInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.api_id = None
         self.expand_comments_attachments = None
         self.issue_id = None
@@ -190,12 +194,12 @@ class AzureRMApiIssueInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
+            self.service_name is not None and
             self.api_id is not None and
             self.issue_id is not None):
             self.results['api_issue'] = self.format_item(self.get())
         elif (self.resource_group is not None and
-              self.name is not None and
+              self.service_name is not None and
               self.api_id is not None):
             self.results['api_issue'] = self.format_item(self.listbyservice())
         return self.results

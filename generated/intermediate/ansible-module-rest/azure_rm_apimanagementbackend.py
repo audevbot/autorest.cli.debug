@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   backend_id:
     description:
       - >-
@@ -146,6 +147,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -170,7 +174,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateBackendServiceFabric
   azure_rm_apimanagementbackend:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     backend_id: myBackend
     description: Service Fabric Test App 1
     service_fabric_cluster:
@@ -186,7 +190,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateBackendProxyBackend
   azure_rm_apimanagementbackend:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     backend_id: myBackend
     description: description5308
     credentials:
@@ -214,7 +218,7 @@ EXAMPLES = '''
 - name: ApiManagementUpdateBackend
   azure_rm_apimanagementbackend:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     backend_id: myBackend
     description: description5308
     tls:
@@ -223,7 +227,7 @@ EXAMPLES = '''
 - name: ApiManagementDeleteBackend
   azure_rm_apimanagementbackend:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     backend_id: myBackend
     state: absent
 
@@ -472,7 +476,7 @@ class AzureRMBackend(AzureRMModuleBaseExt):
                 disposition='resourceGroupName',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
                 disposition='serviceName',
@@ -612,7 +616,7 @@ class AzureRMBackend(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.backend_id = None
         self.id = None
         self.name = None

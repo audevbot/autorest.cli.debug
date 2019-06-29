@@ -12,7 +12,7 @@
     - name: ApiManagementGetCache
       azure_rm_apimanagementcache_info:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         cache_id: '{{cache_name}}'
     
       register: output

@@ -12,7 +12,7 @@
     - name: ApiManagementListApiOperations
       azure_rm_apimanagementapioperation_info:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         api_id: '{{api_name}}'
         operation_id: 57d2ef278aa04f0ad01d6cdc
     

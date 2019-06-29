@@ -12,7 +12,7 @@
     - name: ApiManagementGetOpenIdConnectProvider
       azure_rm_apimanagementopenidconnectprovider_info:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         opid: '{{openid_connect_provider_name}}'
     
       register: output

@@ -15,7 +15,7 @@
     - name: ApiManagementCreateTag
       azure_rm_apimanagementtag:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         tag_id: '{{tag_name}}'
         display_name: tag1
     

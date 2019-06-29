@@ -12,7 +12,7 @@
     - name: SBAliasDelete
       azure_rm_servicebusdisasterrecoveryconfig:
         resource_group: '{{resource_group}}'
-        name: '{{namespace_name}}'
+        namespace_name: '{{namespace_name}}'
         alias: '{{disaster_recovery_config_name}}'
         state: absent
     

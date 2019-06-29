@@ -12,7 +12,7 @@
     - name: ApiManagementGetPolicyFormat
       azure_rm_apimanagementpolicy_info:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         policy_id: '{{policy_name}}'
         format: rawxml
     

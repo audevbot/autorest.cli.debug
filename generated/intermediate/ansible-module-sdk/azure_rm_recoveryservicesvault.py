@@ -169,7 +169,7 @@ tags:
   sample: null
 properties:
   description:
-    - !<tag:yaml.org,2002:js/undefined> ''
+    - ''
   returned: always
   type: dict
   sample: null
@@ -182,7 +182,7 @@ properties:
       sample: null
     upgrade_details:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: dict
       sample: null
@@ -245,7 +245,7 @@ properties:
           sample: null
 sku:
   description:
-    - !<tag:yaml.org,2002:js/undefined> ''
+    - ''
   returned: always
   type: dict
   sample: null

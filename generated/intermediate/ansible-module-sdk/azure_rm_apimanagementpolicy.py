@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   policy_id:
     description:
       - The identifier of the Policy.
@@ -42,6 +43,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -64,14 +68,14 @@ EXAMPLES = '''
 - name: ApiManagementCreatePolicy
   azure_rm_apimanagementpolicy:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     policy_id: myPolicy
     value: "<policies>\r\n  <inbound />\r\n  <backend>\r\n    <forward-request />\r\n  </backend>\r\n  <outbound />\r\n</policies>"
     format: xml
 - name: ApiManagementDeletePolicy
   azure_rm_apimanagementpolicy:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     policy_id: myPolicy
     state: absent
 
@@ -146,10 +150,9 @@ class AzureRMPolicy(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
-                disposition='service_name',
                 required=true
             ),
             policy_id=dict(
@@ -178,7 +181,7 @@ class AzureRMPolicy(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.policy_id = None
         self.id = None
         self.name = None
@@ -253,7 +256,7 @@ class AzureRMPolicy(AzureRMModuleBaseExt):
     def create_update_resource(self):
         try:
             response = self.mgmt_client.policy.create_or_update(resource_group_name=self.resource_group,
-                                                                service_name=self.name,
+                                                                service_name=self.service_name,
                                                                 policy_id=self.policy_id,
                                                                 parameters=self.body)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
@@ -267,7 +270,7 @@ class AzureRMPolicy(AzureRMModuleBaseExt):
         # self.log('Deleting the Policy instance {0}'.format(self.))
         try:
             response = self.mgmt_client.policy.delete(resource_group_name=self.resource_group,
-                                                      service_name=self.name,
+                                                      service_name=self.service_name,
                                                       policy_id=self.policy_id)
         except CloudError as e:
             self.log('Error attempting to delete the Policy instance.')
@@ -280,7 +283,7 @@ class AzureRMPolicy(AzureRMModuleBaseExt):
         found = False
         try:
             response = self.mgmt_client.policy.get(resource_group_name=self.resource_group,
-                                                   service_name=self.name,
+                                                   service_name=self.service_name,
                                                    policy_id=self.policy_id)
         except CloudError as e:
             return False

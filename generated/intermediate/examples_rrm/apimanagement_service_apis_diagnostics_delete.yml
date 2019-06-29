@@ -13,7 +13,7 @@
     - name: ApiManagementDeleteApiDiagnostic
       azure_rm_apimanagementapidiagnostic:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         api_id: '{{api_name}}'
         diagnostic_id: '{{diagnostic_name}}'
         state: absent

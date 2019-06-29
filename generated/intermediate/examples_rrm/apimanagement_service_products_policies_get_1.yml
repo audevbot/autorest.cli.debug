@@ -13,7 +13,7 @@
     - name: ApiManagementGetProductPolicy
       azure_rm_apimanagementproductpolicy_info:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         product_id: '{{product_name}}'
         policy_id: '{{policy_name}}'
     

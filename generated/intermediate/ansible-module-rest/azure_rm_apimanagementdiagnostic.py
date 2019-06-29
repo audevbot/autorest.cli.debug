@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   diagnostic_id:
     description:
       - >-
@@ -127,6 +128,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -151,7 +155,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateDiagnostic
   azure_rm_apimanagementdiagnostic:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     diagnostic_id: myDiagnostic
     always_log: allErrors
     logger_id: /loggers/azuremonitor
@@ -183,7 +187,7 @@ EXAMPLES = '''
 - name: ApiManagementUpdateDiagnostic
   azure_rm_apimanagementdiagnostic:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     diagnostic_id: myDiagnostic
     always_log: allErrors
     logger_id: /loggers/applicationinsights
@@ -215,7 +219,7 @@ EXAMPLES = '''
 - name: ApiManagementDeleteDiagnostic
   azure_rm_apimanagementdiagnostic:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     diagnostic_id: myDiagnostic
     state: absent
 
@@ -434,7 +438,7 @@ class AzureRMDiagnostic(AzureRMModuleBaseExt):
                 disposition='resourceGroupName',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
                 disposition='serviceName',
@@ -558,7 +562,7 @@ class AzureRMDiagnostic(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.diagnostic_id = None
         self.id = None
         self.name = None

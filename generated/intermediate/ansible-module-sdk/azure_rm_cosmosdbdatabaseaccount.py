@@ -328,7 +328,7 @@ location:
   sample: null
 tags:
   description:
-    - !<tag:yaml.org,2002:js/undefined> ''
+    - ''
   returned: always
   type: >-
     unknown[DictionaryType
@@ -344,14 +344,14 @@ kind:
   sample: null
 properties:
   description:
-    - !<tag:yaml.org,2002:js/undefined> ''
+    - ''
   returned: always
   type: dict
   sample: null
   contains:
     provisioning_state:
       description:
-        - !<tag:yaml.org,2002:js/undefined> ''
+        - ''
       returned: always
       type: str
       sample: null
@@ -478,7 +478,7 @@ properties:
           sample: null
         provisioning_state:
           description:
-            - !<tag:yaml.org,2002:js/undefined> ''
+            - ''
           returned: always
           type: str
           sample: null
@@ -534,7 +534,7 @@ properties:
           sample: null
         provisioning_state:
           description:
-            - !<tag:yaml.org,2002:js/undefined> ''
+            - ''
           returned: always
           type: str
           sample: null

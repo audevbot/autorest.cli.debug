@@ -13,7 +13,7 @@
     - name: ApiManagementDeleteProductPolicy
       azure_rm_apimanagementproductpolicy:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         product_id: '{{product_name}}'
         policy_id: '{{policy_name}}'
         state: absent

@@ -17,7 +17,7 @@
     - name: ApiManagementCreateApiClone
       azure_rm_apimanagementapi:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         api_id: '{{api_name}}'
         description: Copy of Existing Echo Api including Operations.
         is_current: true

@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   user_id:
     description:
       - >-
@@ -82,8 +83,7 @@ options:
     description:
       - >-
         Date of user registration. The date conforms to the following format:
-        `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-      - ''
+        `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>
   groups:
     description:
       - Collection of groups user is part of.
@@ -114,6 +114,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -128,7 +131,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateUser
   azure_rm_apimanagementuser:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     user_id: myUser
     email: foobar@outlook.com
     first_name: foo
@@ -137,7 +140,7 @@ EXAMPLES = '''
 - name: ApiManagementUpdateUser
   azure_rm_apimanagementuser:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     user_id: myUser
     email: foobar@outlook.com
     first_name: foo
@@ -145,7 +148,7 @@ EXAMPLES = '''
 - name: ApiManagementDeleteUser
   azure_rm_apimanagementuser:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     user_id: myUser
     state: absent
 
@@ -231,9 +234,9 @@ properties:
       sample: null
     registration_date:
       description:
-        - >
+        - >-
           Date of user registration. The date conforms to the following format:
-          `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+          `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>
       returned: always
       type: datetime
       sample: null
@@ -305,7 +308,7 @@ class AzureRMUser(AzureRMModuleBaseExt):
                 disposition='resourceGroupName',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
                 disposition='serviceName',
@@ -375,7 +378,7 @@ class AzureRMUser(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.user_id = None
         self.id = None
         self.name = None

@@ -50,24 +50,29 @@ options:
     suboptions:
       subject_begins_with:
         description:
-          - "An optional string to filter events for an event subscription based on a resource path prefix.\r"
-          - "The format of this depends on the publisher of the events. \r"
-          - Wildcard characters are not supported in this path.
+          - >-
+            An optional string to filter events for an event subscription based
+            on a resource path prefix.<br>The format of this depends on the
+            publisher of the events. <br>Wildcard characters are not supported
+            in this path.
       subject_ends_with:
         description:
-          - "An optional string to filter events for an event subscription based on a resource path suffix.\r"
-          - Wildcard characters are not supported in this path.
+          - >-
+            An optional string to filter events for an event subscription based
+            on a resource path suffix.<br>Wildcard characters are not supported
+            in this path.
       included_event_types:
         description:
-          - "A list of applicable event types that need to be part of the event subscription. \r"
           - >-
-            If it is desired to subscribe to all event types, the string "all"
-            needs to be specified as an element in this list.
+            A list of applicable event types that need to be part of the event
+            subscription. <br>If it is desired to subscribe to all event types,
+            the string "all" needs to be specified as an element in this list.
         type: list
       is_subject_case_sensitive:
         description:
-          - "Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter \r"
-          - should be compared in a case sensitive manner.
+          - >-
+            Specifies if the SubjectBeginsWith and SubjectEndsWith properties of
+            the filter <br>should be compared in a case sensitive manner.
   labels:
     description:
       - List of user defined labels.
@@ -362,25 +367,38 @@ properties:
       contains:
         subject_begins_with:
           description:
-            - "An optional string to filter events for an event subscription based on a resource path prefix.\r\nThe format of this depends on the publisher of the events. \r\nWildcard characters are not supported in this path."
+            - >-
+              An optional string to filter events for an event subscription
+              based on a resource path prefix.<br>The format of this depends on
+              the publisher of the events. <br>Wildcard characters are not
+              supported in this path.
           returned: always
           type: str
           sample: null
         subject_ends_with:
           description:
-            - "An optional string to filter events for an event subscription based on a resource path suffix.\r\nWildcard characters are not supported in this path."
+            - >-
+              An optional string to filter events for an event subscription
+              based on a resource path suffix.<br>Wildcard characters are not
+              supported in this path.
           returned: always
           type: str
           sample: null
         included_event_types:
           description:
-            - "A list of applicable event types that need to be part of the event subscription. \r\nIf it is desired to subscribe to all event types, the string \"all\" needs to be specified as an element in this list."
+            - >-
+              A list of applicable event types that need to be part of the event
+              subscription. <br>If it is desired to subscribe to all event
+              types, the string "all" needs to be specified as an element in
+              this list.
           returned: always
           type: str
           sample: null
         is_subject_case_sensitive:
           description:
-            - "Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter \r\nshould be compared in a case sensitive manner."
+            - >-
+              Specifies if the SubjectBeginsWith and SubjectEndsWith properties
+              of the filter <br>should be compared in a case sensitive manner.
           returned: always
           type: boolean
           sample: null

@@ -11,7 +11,7 @@
     - name: ApiManagementListBackends
       azure_rm_apimanagementbackend_info:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
     
       register: output
     - debug:

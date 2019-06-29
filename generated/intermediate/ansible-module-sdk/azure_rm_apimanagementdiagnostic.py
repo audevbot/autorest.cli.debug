@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   diagnostic_id:
     description:
       - >-
@@ -127,6 +128,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -151,7 +155,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateDiagnostic
   azure_rm_apimanagementdiagnostic:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     diagnostic_id: myDiagnostic
     always_log: allErrors
     logger_id: /loggers/azuremonitor
@@ -183,7 +187,7 @@ EXAMPLES = '''
 - name: ApiManagementUpdateDiagnostic
   azure_rm_apimanagementdiagnostic:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     diagnostic_id: myDiagnostic
     always_log: allErrors
     logger_id: /loggers/applicationinsights
@@ -215,7 +219,7 @@ EXAMPLES = '''
 - name: ApiManagementDeleteDiagnostic
   azure_rm_apimanagementdiagnostic:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     diagnostic_id: myDiagnostic
     state: absent
 
@@ -440,10 +444,9 @@ class AzureRMDiagnostic(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
-                disposition='service_name',
                 required=true
             ),
             diagnostic_id=dict(
@@ -562,7 +565,7 @@ class AzureRMDiagnostic(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.diagnostic_id = None
         self.id = None
         self.name = None
@@ -637,7 +640,7 @@ class AzureRMDiagnostic(AzureRMModuleBaseExt):
     def create_update_resource(self):
         try:
             response = self.mgmt_client.diagnostic.create_or_update(resource_group_name=self.resource_group,
-                                                                    service_name=self.name,
+                                                                    service_name=self.service_name,
                                                                     diagnostic_id=self.diagnostic_id,
                                                                     parameters=self.body)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
@@ -651,7 +654,7 @@ class AzureRMDiagnostic(AzureRMModuleBaseExt):
         # self.log('Deleting the Diagnostic instance {0}'.format(self.))
         try:
             response = self.mgmt_client.diagnostic.delete(resource_group_name=self.resource_group,
-                                                          service_name=self.name,
+                                                          service_name=self.service_name,
                                                           diagnostic_id=self.diagnostic_id)
         except CloudError as e:
             self.log('Error attempting to delete the Diagnostic instance.')
@@ -664,7 +667,7 @@ class AzureRMDiagnostic(AzureRMModuleBaseExt):
         found = False
         try:
             response = self.mgmt_client.diagnostic.get(resource_group_name=self.resource_group,
-                                                       service_name=self.name,
+                                                       service_name=self.service_name,
                                                        diagnostic_id=self.diagnostic_id)
         except CloudError as e:
             return False

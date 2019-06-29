@@ -222,7 +222,11 @@ Modules:
             TypeNameGo: String
             IsList: false
             Required: false
-            Documentation: "An optional string to filter events for an event subscription based on a resource path prefix.\r\nThe format of this depends on the publisher of the events. \r\nWildcard characters are not supported in this path."
+            Documentation: >-
+              An optional string to filter events for an event subscription
+              based on a resource path prefix.<br>The format of this depends on
+              the publisher of the events. <br>Wildcard characters are not
+              supported in this path.
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -252,7 +256,10 @@ Modules:
             TypeNameGo: String
             IsList: false
             Required: false
-            Documentation: "An optional string to filter events for an event subscription based on a resource path suffix.\r\nWildcard characters are not supported in this path."
+            Documentation: >-
+              An optional string to filter events for an event subscription
+              based on a resource path suffix.<br>Wildcard characters are not
+              supported in this path.
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -282,7 +289,11 @@ Modules:
             TypeNameGo: String
             IsList: true
             Required: false
-            Documentation: "A list of applicable event types that need to be part of the event subscription. \r\nIf it is desired to subscribe to all event types, the string \"all\" needs to be specified as an element in this list."
+            Documentation: >-
+              A list of applicable event types that need to be part of the event
+              subscription. <br>If it is desired to subscribe to all event
+              types, the string "all" needs to be specified as an element in
+              this list.
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -312,7 +323,9 @@ Modules:
             TypeNameGo: Boolean
             IsList: false
             Required: false
-            Documentation: "Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter \r\nshould be compared in a case sensitive manner."
+            Documentation: >-
+              Specifies if the SubjectBeginsWith and SubjectEndsWith properties
+              of the filter <br>should be compared in a case sensitive manner.
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -921,7 +934,11 @@ Modules:
                 TypeNameGo: String
                 IsList: false
                 Required: false
-                Documentation: "An optional string to filter events for an event subscription based on a resource path prefix.\r\nThe format of this depends on the publisher of the events. \r\nWildcard characters are not supported in this path."
+                Documentation: >-
+                  An optional string to filter events for an event subscription
+                  based on a resource path prefix.<br>The format of this depends
+                  on the publisher of the events. <br>Wildcard characters are
+                  not supported in this path.
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -951,7 +968,10 @@ Modules:
                 TypeNameGo: String
                 IsList: false
                 Required: false
-                Documentation: "An optional string to filter events for an event subscription based on a resource path suffix.\r\nWildcard characters are not supported in this path."
+                Documentation: >-
+                  An optional string to filter events for an event subscription
+                  based on a resource path suffix.<br>Wildcard characters are
+                  not supported in this path.
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -981,7 +1001,11 @@ Modules:
                 TypeNameGo: String
                 IsList: true
                 Required: false
-                Documentation: "A list of applicable event types that need to be part of the event subscription. \r\nIf it is desired to subscribe to all event types, the string \"all\" needs to be specified as an element in this list."
+                Documentation: >-
+                  A list of applicable event types that need to be part of the
+                  event subscription. <br>If it is desired to subscribe to all
+                  event types, the string "all" needs to be specified as an
+                  element in this list.
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -1011,7 +1035,10 @@ Modules:
                 TypeNameGo: Boolean
                 IsList: false
                 Required: false
-                Documentation: "Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter \r\nshould be compared in a case sensitive manner."
+                Documentation: >-
+                  Specifies if the SubjectBeginsWith and SubjectEndsWith
+                  properties of the filter <br>should be compared in a case
+                  sensitive manner.
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -2692,7 +2719,11 @@ Modules:
             TypeNameGo: String
             IsList: false
             Required: false
-            Documentation: "An optional string to filter events for an event subscription based on a resource path prefix.\r\nThe format of this depends on the publisher of the events. \r\nWildcard characters are not supported in this path."
+            Documentation: >-
+              An optional string to filter events for an event subscription
+              based on a resource path prefix.<br>The format of this depends on
+              the publisher of the events. <br>Wildcard characters are not
+              supported in this path.
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -2722,7 +2753,10 @@ Modules:
             TypeNameGo: String
             IsList: false
             Required: false
-            Documentation: "An optional string to filter events for an event subscription based on a resource path suffix.\r\nWildcard characters are not supported in this path."
+            Documentation: >-
+              An optional string to filter events for an event subscription
+              based on a resource path suffix.<br>Wildcard characters are not
+              supported in this path.
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -2752,7 +2786,11 @@ Modules:
             TypeNameGo: String
             IsList: true
             Required: false
-            Documentation: "A list of applicable event types that need to be part of the event subscription. \r\nIf it is desired to subscribe to all event types, the string \"all\" needs to be specified as an element in this list."
+            Documentation: >-
+              A list of applicable event types that need to be part of the event
+              subscription. <br>If it is desired to subscribe to all event
+              types, the string "all" needs to be specified as an element in
+              this list.
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true
@@ -2782,7 +2820,9 @@ Modules:
             TypeNameGo: Boolean
             IsList: false
             Required: false
-            Documentation: "Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter \r\nshould be compared in a case sensitive manner."
+            Documentation: >-
+              Specifies if the SubjectBeginsWith and SubjectEndsWith properties
+              of the filter <br>should be compared in a case sensitive manner.
             DocumentationMarkKeywords: true
             DefaultValue: null
             IncludeInDocumentation: true

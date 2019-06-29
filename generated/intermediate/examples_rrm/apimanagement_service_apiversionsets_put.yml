@@ -15,7 +15,7 @@
     - name: ApiManagementCreateApiVersionSet
       azure_rm_apimanagementapiversionset:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         version_set_id: '{{api_version_set_name}}'
         description: Version configuration
         display_name: api set 1

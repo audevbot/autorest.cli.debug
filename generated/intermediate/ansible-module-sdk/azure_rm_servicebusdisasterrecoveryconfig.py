@@ -25,9 +25,10 @@ options:
     description:
       - Name of the Resource group within the Azure subscription.
     required: true
-  name:
+  namespace_name:
     description:
-      - Resource name
+      - The namespace name
+    required: true
   alias:
     description:
       - The Disaster Recovery configuration name
@@ -58,6 +59,9 @@ options:
   id:
     description:
       - Resource Id
+  name:
+    description:
+      - Resource name
   type:
     description:
       - Resource type
@@ -82,14 +86,14 @@ EXAMPLES = '''
 - name: SBAliasCreate
   azure_rm_servicebusdisasterrecoveryconfig:
     resource_group: myResourceGroup
-    name: my
+    namespace_name: my
     alias: myDisasterRecoveryConfig
     partner_namespace: sdk-Namespace-37
     alternate_name: alternameforAlias-Namespace-8860
 - name: SBAliasDelete
   azure_rm_servicebusdisasterrecoveryconfig:
     resource_group: myResourceGroup
-    name: my
+    namespace_name: my
     alias: myDisasterRecoveryConfig
     state: absent
 
@@ -192,10 +196,9 @@ class AzureRMDisasterRecoveryConfigs(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            name=dict(
+            namespace_name=dict(
                 type='str',
                 updatable=False,
-                disposition='namespace_name',
                 required=true
             ),
             alias=dict(
@@ -219,7 +222,7 @@ class AzureRMDisasterRecoveryConfigs(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.namespace_name = None
         self.alias = None
         self.id = None
         self.name = None
@@ -294,7 +297,7 @@ class AzureRMDisasterRecoveryConfigs(AzureRMModuleBaseExt):
     def create_update_resource(self):
         try:
             response = self.mgmt_client.disaster_recovery_configs.create_or_update(resource_group_name=self.resource_group,
-                                                                                   namespace_name=self.name,
+                                                                                   namespace_name=self.namespace_name,
                                                                                    alias=self.alias,
                                                                                    parameters=self.body)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
@@ -308,7 +311,7 @@ class AzureRMDisasterRecoveryConfigs(AzureRMModuleBaseExt):
         # self.log('Deleting the DisasterRecoveryConfig instance {0}'.format(self.))
         try:
             response = self.mgmt_client.disaster_recovery_configs.delete(resource_group_name=self.resource_group,
-                                                                         namespace_name=self.name,
+                                                                         namespace_name=self.namespace_name,
                                                                          alias=self.alias)
         except CloudError as e:
             self.log('Error attempting to delete the DisasterRecoveryConfig instance.')
@@ -321,7 +324,7 @@ class AzureRMDisasterRecoveryConfigs(AzureRMModuleBaseExt):
         found = False
         try:
             response = self.mgmt_client.disaster_recovery_configs.get(resource_group_name=self.resource_group,
-                                                                      namespace_name=self.name,
+                                                                      namespace_name=self.namespace_name,
                                                                       alias=self.alias)
         except CloudError as e:
             return False

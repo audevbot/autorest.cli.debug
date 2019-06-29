@@ -29,7 +29,7 @@ options:
     description:
       - The name of the automation account.
     required: true
-  name:
+  job_name:
     description:
       - The job name.
     required: true
@@ -70,12 +70,12 @@ EXAMPLES = '''
   azure_rm_automationjobstream_info:
     resource_group: myResourceGroup
     automation_account_name: myAutomationAccount
-    name: myJob
+    job_name: myJob
 - name: Get job stream
   azure_rm_automationjobstream_info:
     resource_group: myResourceGroup
     automation_account_name: myAutomationAccount
-    name: myJob
+    job_name: myJob
     job_stream_id: myStream
 
 '''
@@ -132,7 +132,7 @@ class AzureRMJobStreamInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            job_name=dict(
                 type='str',
                 required=true
             ),
@@ -147,7 +147,7 @@ class AzureRMJobStreamInfo(AzureRMModuleBase):
 
         self.resource_group = None
         self.automation_account_name = None
-        self.name = None
+        self.job_name = None
         self.client_request_id = None
         self.job_stream_id = None
         self.id = None
@@ -177,12 +177,12 @@ class AzureRMJobStreamInfo(AzureRMModuleBase):
 
         if (self.resource_group is not None and
             self.automation_account_name is not None and
-            self.name is not None and
+            self.job_name is not None and
             self.job_stream_id is not None):
             self.results['job_stream'] = self.format_item(self.get())
         elif (self.resource_group is not None and
               self.automation_account_name is not None and
-              self.name is not None):
+              self.job_name is not None):
             self.results['job_stream'] = self.format_item(self.listbyjob())
         return self.results
 
@@ -192,7 +192,7 @@ class AzureRMJobStreamInfo(AzureRMModuleBase):
         try:
             response = self.mgmt_client.job_stream.get(resource_group_name=self.resource_group,
                                                        automation_account_name=self.automation_account_name,
-                                                       job_name=self.name,
+                                                       job_name=self.job_name,
                                                        job_stream_id=self.job_stream_id)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
@@ -205,7 +205,7 @@ class AzureRMJobStreamInfo(AzureRMModuleBase):
         try:
             response = self.mgmt_client.job_stream.list_by_job(resource_group_name=self.resource_group,
                                                                automation_account_name=self.automation_account_name,
-                                                               job_name=self.name)
+                                                               job_name=self.job_name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 

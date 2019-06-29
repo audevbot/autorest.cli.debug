@@ -12,7 +12,7 @@
     - name: ApiManagementDeleteOpenIdConnectProvider
       azure_rm_apimanagementopenidconnectprovider:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         opid: '{{openid_connect_provider_name}}'
         state: absent
     

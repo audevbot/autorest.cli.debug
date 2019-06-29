@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   expand_groups:
     description:
       - >-
@@ -44,6 +45,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -103,15 +107,15 @@ EXAMPLES = '''
 - name: ApiManagementListProducts
   azure_rm_apimanagementproduct_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
 - name: ApiManagementListProductsByTags
   azure_rm_apimanagementproduct_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
 - name: ApiManagementGetProduct
   azure_rm_apimanagementproduct_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     product_id: myProduct
 
 '''
@@ -170,7 +174,7 @@ class AzureRMProductInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 required=true
             ),
@@ -186,7 +190,7 @@ class AzureRMProductInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.expand_groups = None
         self.tags = None
         self.include_not_tagged_products = None
@@ -219,14 +223,14 @@ class AzureRMProductInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None and
+            self.service_name is not None and
             self.product_id is not None):
             self.results['product'] = self.format_item(self.get())
         elif (self.resource_group is not None and
-              self.name is not None):
+              self.service_name is not None):
             self.results['product'] = self.format_item(self.listbytags())
         elif (self.resource_group is not None and
-              self.name is not None):
+              self.service_name is not None):
             self.results['product'] = self.format_item(self.listbyservice())
         return self.results
 

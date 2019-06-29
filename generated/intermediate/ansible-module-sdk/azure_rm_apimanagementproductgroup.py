@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   product_id:
     description:
       - >-
@@ -43,6 +44,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Group type.
@@ -86,13 +90,13 @@ EXAMPLES = '''
 - name: ApiManagementCreateProductGroup
   azure_rm_apimanagementproductgroup:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     product_id: myProduct
     group_id: myGroup
 - name: ApiManagementDeleteProductGroup
   azure_rm_apimanagementproductgroup:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     product_id: myProduct
     group_id: myGroup
     state: absent
@@ -155,10 +159,9 @@ class AzureRMProductGroup(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
-                disposition='service_name',
                 required=true
             ),
             product_id=dict(
@@ -203,7 +206,7 @@ class AzureRMProductGroup(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.product_id = None
         self.group_id = None
         self.id = None
@@ -280,7 +283,7 @@ class AzureRMProductGroup(AzureRMModuleBaseExt):
     def create_update_resource(self):
         try:
             response = self.mgmt_client.product_group.create_or_update(resource_group_name=self.resource_group,
-                                                                       service_name=self.name,
+                                                                       service_name=self.service_name,
                                                                        product_id=self.product_id,
                                                                        group_id=self.group_id)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
@@ -294,7 +297,7 @@ class AzureRMProductGroup(AzureRMModuleBaseExt):
         # self.log('Deleting the ProductGroup instance {0}'.format(self.))
         try:
             response = self.mgmt_client.product_group.delete(resource_group_name=self.resource_group,
-                                                             service_name=self.name,
+                                                             service_name=self.service_name,
                                                              product_id=self.product_id,
                                                              group_id=self.group_id)
         except CloudError as e:

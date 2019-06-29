@@ -14,7 +14,7 @@
     - name: ApiManagementGetApiOperationTag
       azure_rm_apimanagementtag_info:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         tag_id: '{{tag_name}}'
         api_id: '{{api_name}}'
         operation_id: '{{operation_name}}'

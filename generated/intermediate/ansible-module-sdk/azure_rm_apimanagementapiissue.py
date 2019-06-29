@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   api_id:
     description:
       - A resource identifier for the API the issue was created for.
@@ -65,6 +66,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -79,7 +83,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateApiIssue
   azure_rm_apimanagementapiissue:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     issue_id: myIssue
     created_date: '2018-02-01T22:21:20.467Z'
@@ -93,14 +97,14 @@ EXAMPLES = '''
 - name: ApiManagementUpdateApiIssue
   azure_rm_apimanagementapiissue:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     issue_id: myIssue
     state: closed
 - name: ApiManagementDeleteApiIssue
   azure_rm_apimanagementapiissue:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     api_id: myApi
     issue_id: myIssue
     state: absent
@@ -200,10 +204,9 @@ class AzureRMApiIssue(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
-                disposition='service_name',
                 required=true
             ),
             api_id=dict(
@@ -259,7 +262,7 @@ class AzureRMApiIssue(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.api_id = None
         self.issue_id = None
         self.id = None
@@ -335,7 +338,7 @@ class AzureRMApiIssue(AzureRMModuleBaseExt):
     def create_update_resource(self):
         try:
             response = self.mgmt_client.api_issue.create_or_update(resource_group_name=self.resource_group,
-                                                                   service_name=self.name,
+                                                                   service_name=self.service_name,
                                                                    api_id=self.api_id,
                                                                    issue_id=self.issue_id,
                                                                    parameters=self.body)
@@ -350,7 +353,7 @@ class AzureRMApiIssue(AzureRMModuleBaseExt):
         # self.log('Deleting the ApiIssue instance {0}'.format(self.))
         try:
             response = self.mgmt_client.api_issue.delete(resource_group_name=self.resource_group,
-                                                         service_name=self.name,
+                                                         service_name=self.service_name,
                                                          api_id=self.api_id,
                                                          issue_id=self.issue_id)
         except CloudError as e:
@@ -364,7 +367,7 @@ class AzureRMApiIssue(AzureRMModuleBaseExt):
         found = False
         try:
             response = self.mgmt_client.api_issue.get(resource_group_name=self.resource_group,
-                                                      service_name=self.name,
+                                                      service_name=self.service_name,
                                                       api_id=self.api_id,
                                                       issue_id=self.issue_id)
         except CloudError as e:

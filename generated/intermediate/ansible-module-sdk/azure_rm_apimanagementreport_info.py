@@ -52,8 +52,7 @@ options:
           - >-
             Start of aggregation period. The date conforms to the following
             format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
-            standard.
-          - ''
+            standard.<br>
       interval:
         description:
           - >-
@@ -217,10 +216,10 @@ reports:
               sample: null
             timestamp:
               description:
-                - >
+                - >-
                   Start of aggregation period. The date conforms to the
                   following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the
-                  ISO 8601 standard.
+                  ISO 8601 standard.<br>
               returned: always
               type: datetime
               sample: null

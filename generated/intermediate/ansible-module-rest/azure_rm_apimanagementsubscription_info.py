@@ -25,9 +25,10 @@ options:
     description:
       - The name of the resource group.
     required: true
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
   sid:
     description:
       - >-
@@ -36,6 +37,9 @@ options:
   id:
     description:
       - Resource ID.
+  name:
+    description:
+      - Resource name.
   type:
     description:
       - Resource type for API Management resource.
@@ -68,8 +72,7 @@ options:
     description:
       - >-
         Subscription creation date. The date conforms to the following format:
-        `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-      - ''
+        `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>
   start_date:
     description:
       - >-
@@ -77,8 +80,7 @@ options:
         the subscription is not automatically activated. The subscription
         lifecycle can be managed by using the `state` property. The date
         conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by
-        the ISO 8601 standard.
-      - ''
+        the ISO 8601 standard.<br>
   expiration_date:
     description:
       - >-
@@ -86,8 +88,7 @@ options:
         the subscription is not automatically expired. The subscription
         lifecycle can be managed by using the `state` property. The date
         conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by
-        the ISO 8601 standard.
-      - ''
+        the ISO 8601 standard.<br>
   end_date:
     description:
       - >-
@@ -95,15 +96,13 @@ options:
         audit purposes only and the subscription is not automatically cancelled.
         The subscription lifecycle can be managed by using the `state` property.
         The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as
-        specified by the ISO 8601 standard.
-      - ''
+        specified by the ISO 8601 standard.<br>
   notification_date:
     description:
       - >-
         Upcoming subscription expiration notification date. The date conforms to
         the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO
-        8601 standard.
-      - ''
+        8601 standard.<br>
   primary_key:
     description:
       - Subscription primary key.
@@ -129,11 +128,11 @@ EXAMPLES = '''
 - name: ApiManagementListSubscriptions
   azure_rm_apimanagementsubscription_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
 - name: ApiManagementGetSubscription
   azure_rm_apimanagementsubscription_info:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     sid: 5931a769d8d14f0ad8ce13b8
 
 '''
@@ -192,7 +191,7 @@ class AzureRMSubscriptionInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 required=true
             ),
@@ -202,7 +201,7 @@ class AzureRMSubscriptionInfo(AzureRMModuleBase):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.sid = None
         self.id = None
         self.name = None
@@ -232,10 +231,10 @@ class AzureRMSubscriptionInfo(AzureRMModuleBase):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
-            self.name is not None):
+            self.service_name is not None):
             self.results['subscription'] = self.format_item(self.list())
         elif (self.resource_group is not None and
-              self.name is not None and
+              self.service_name is not None and
               self.sid is not None):
             self.results['subscription'] = self.format_item(self.get())
         return self.results

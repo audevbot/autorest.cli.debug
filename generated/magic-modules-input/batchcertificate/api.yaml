@@ -314,7 +314,7 @@ objects:
       # read only values included only in response
       - !ruby/object:Api::Azure::Type::ISO8601DateTime
         name: 'provisioningStateTransitionTime'
-        description: 'undefined'
+        description: ''
         output: true
         azure_sdk_references: ['/provisioningStateTransitionTime', '/properties/provisioningStateTransitionTime']
       - !ruby/object:Api::Type::Enum
@@ -329,7 +329,7 @@ objects:
         azure_sdk_references: ['/previousProvisioningState', '/properties/previousProvisioningState']
       - !ruby/object:Api::Azure::Type::ISO8601DateTime
         name: 'previousProvisioningStateTransitionTime'
-        description: 'undefined'
+        description: ''
         output: true
         azure_sdk_references: ['/previousProvisioningStateTransitionTime', '/properties/previousProvisioningStateTransitionTime']
       - !ruby/object:Api::Type::String

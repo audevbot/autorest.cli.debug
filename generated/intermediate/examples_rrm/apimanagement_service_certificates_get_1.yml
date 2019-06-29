@@ -12,7 +12,7 @@
     - name: ApiManagementGetCertificate
       azure_rm_apimanagementcertificate_info:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         certificate_id: '{{certificate_name}}'
     
       register: output
