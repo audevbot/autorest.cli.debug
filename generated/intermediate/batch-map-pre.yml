@@ -1077,7 +1077,6 @@ Modules:
     ModuleOperationNameUpper: BatchAccount
     ModuleOperationName: batch_account
     ObjectName: BatchAccount
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -1855,8 +1854,7 @@ Modules:
     ModuleOperationNameUpper: BatchAccount
     ModuleOperationName: batch_account
     ObjectName: BatchAccount
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -2575,7 +2573,6 @@ Modules:
     ModuleOperationNameUpper: ApplicationPackage
     ModuleOperationName: application_package
     ObjectName: ApplicationPackage
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -3172,8 +3169,7 @@ Modules:
     ModuleOperationNameUpper: ApplicationPackage
     ModuleOperationName: application_package
     ObjectName: ApplicationPackage
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -3858,7 +3854,6 @@ Modules:
     ModuleOperationNameUpper: Application
     ModuleOperationName: application
     ObjectName: Application
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -4399,8 +4394,7 @@ Modules:
     ModuleOperationNameUpper: Application
     ModuleOperationName: application
     ObjectName: Application
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -4577,7 +4571,6 @@ Modules:
     ModuleOperationNameUpper: Location
     ModuleOperationName: location
     ObjectName: Location
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -4924,7 +4917,6 @@ Modules:
     ModuleOperationNameUpper: Operations
     ModuleOperationName: operations
     ObjectName: Operation
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -6201,7 +6193,6 @@ Modules:
     ModuleOperationNameUpper: Certificate
     ModuleOperationName: certificate
     ObjectName: Certificate
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -7418,8 +7409,7 @@ Modules:
     ModuleOperationNameUpper: Certificate
     ModuleOperationName: certificate
     ObjectName: Certificate
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -15976,7 +15966,6 @@ Modules:
     ModuleOperationNameUpper: Pool
     ModuleOperationName: pool
     ObjectName: Pool
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -21722,8 +21711,7 @@ Modules:
     ModuleOperationNameUpper: Pool
     ModuleOperationName: pool
     ObjectName: Pool
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false

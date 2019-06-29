@@ -1209,7 +1209,6 @@ Modules:
     ModuleOperationNameUpper: EventSubscriptions
     ModuleOperationName: event_subscriptions
     ObjectName: EventSubscription
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -3099,8 +3098,7 @@ Modules:
     ModuleOperationNameUpper: EventSubscriptions
     ModuleOperationName: event_subscriptions
     ObjectName: EventSubscription
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -4268,7 +4266,6 @@ Modules:
     ModuleOperationNameUpper: Operations
     ModuleOperationName: operations
     ObjectName: Operation
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -4897,7 +4894,6 @@ Modules:
     ModuleOperationNameUpper: Topics
     ModuleOperationName: topics
     ObjectName: Topic
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -5497,8 +5493,7 @@ Modules:
     ModuleOperationNameUpper: Topics
     ModuleOperationName: topics
     ObjectName: Topic
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -6078,8 +6073,7 @@ Modules:
     ModuleOperationNameUpper: TopicTypes
     ModuleOperationName: topic_types
     ObjectName: TopicType
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false

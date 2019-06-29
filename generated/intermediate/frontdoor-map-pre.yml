@@ -4879,7 +4879,6 @@ Modules:
     ModuleOperationNameUpper: FrontDoors
     ModuleOperationName: front_doors
     ObjectName: FrontDoor
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -8209,8 +8208,7 @@ Modules:
     ModuleOperationNameUpper: FrontDoors
     ModuleOperationName: front_doors
     ObjectName: FrontDoor
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -9575,7 +9573,6 @@ Modules:
     ModuleOperationNameUpper: RoutingRules
     ModuleOperationName: routing_rules
     ObjectName: RoutingRule
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -10457,8 +10454,7 @@ Modules:
     ModuleOperationNameUpper: RoutingRules
     ModuleOperationName: routing_rules
     ObjectName: RoutingRule
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -11380,7 +11376,6 @@ Modules:
     ModuleOperationNameUpper: HealthProbeSettings
     ModuleOperationName: health_probe_settings
     ObjectName: HealthProbeSetting
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -11889,8 +11884,7 @@ Modules:
     ModuleOperationNameUpper: HealthProbeSettings
     ModuleOperationName: health_probe_settings
     ObjectName: HealthProbeSetting
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -12656,7 +12650,6 @@ Modules:
     ModuleOperationNameUpper: LoadBalancingSettings
     ModuleOperationName: load_balancing_settings
     ObjectName: LoadBalancingSetting
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -13156,8 +13149,7 @@ Modules:
     ModuleOperationNameUpper: LoadBalancingSettings
     ModuleOperationName: load_balancing_settings
     ObjectName: LoadBalancingSetting
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -14480,7 +14472,6 @@ Modules:
     ModuleOperationNameUpper: BackendPools
     ModuleOperationName: backend_pools
     ObjectName: BackendPool
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -15382,8 +15373,7 @@ Modules:
     ModuleOperationNameUpper: BackendPools
     ModuleOperationName: backend_pools
     ObjectName: BackendPool
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -16801,7 +16791,6 @@ Modules:
     ModuleOperationNameUpper: FrontendEndpoints
     ModuleOperationName: frontend_endpoints
     ObjectName: FrontendEndpoint
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -17851,8 +17840,7 @@ Modules:
     ModuleOperationNameUpper: FrontendEndpoints
     ModuleOperationName: frontend_endpoints
     ObjectName: FrontendEndpoint
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false

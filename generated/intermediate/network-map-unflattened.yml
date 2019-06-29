@@ -4217,7 +4217,6 @@ Modules:
     ModuleOperationNameUpper: AzureFirewalls
     ModuleOperationName: azure_firewalls
     ObjectName: AzureFirewall
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -6913,8 +6912,7 @@ Modules:
     ModuleOperationNameUpper: AzureFirewalls
     ModuleOperationName: azure_firewalls
     ObjectName: AzureFirewall
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false

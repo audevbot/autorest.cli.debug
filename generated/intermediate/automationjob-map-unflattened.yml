@@ -1047,7 +1047,6 @@ Modules:
     ModuleOperationNameUpper: Job
     ModuleOperationName: job
     ObjectName: Job
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
@@ -1943,8 +1942,7 @@ Modules:
     ModuleOperationNameUpper: Job
     ModuleOperationName: job
     ObjectName: Job
-    ResourceNameFieldInRequest: null
-    ResourceNameFieldInResponse: name
+    ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
     CannotTestUpdate: false
@@ -2595,7 +2593,6 @@ Modules:
     ModuleOperationNameUpper: JobStream
     ModuleOperationName: job_stream
     ObjectName: JobStream
-    ResourceNameFieldInRequest: null
     ResourceNameFieldInResponse: null
     NeedsDeleteBeforeUpdate: false
     NeedsForceUpdate: false
