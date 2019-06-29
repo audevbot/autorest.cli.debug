@@ -1,5 +1,76 @@
 # Azure CLI Module Creation Report
 
+## apimgmt
+
+### apimgmt create
+
+create a apimgmt.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--name|YES|default|The name of the API Management service.|*|
+|--tags|NO|unknown[DictionaryType {"$id":"2630","$type":"DictionaryType","valueType":{"$id":"2631","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2632","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2633","fixed":false},"deprecated":false}]|Resource tags.|/|
+|--notification_sender_email|NO|str|Email address from which the notification will be sent.|/*|
+|--hostname_configurations|NO|list|Custom hostname configuration of the API Management service.|/*|
+|--virtual_network_configuration|NO|dict|Virtual network configuration of the API Management service.|/*|
+|--additional_locations|NO|list|Additional datacenter locations of the API Management service.|/*|
+|--custom_properties|NO|unknown[DictionaryType {"$id":"2519","$type":"DictionaryType","valueType":{"$id":"2520","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2521","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2522","fixed":false},"deprecated":false}]|Custom properties of the API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168` will disable the cipher TLS_RSA_WITH_3DES_EDE_CBC_SHA for all TLS(1.0, 1.1 and 1.2).</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11` can be used to disable just TLS 1.1.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10` can be used to disable TLS 1.0 on an API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11` can be used to disable just TLS 1.1 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10` can be used to disable TLS 1.0 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2` can be used to enable HTTP2 protocol on an API Management service.</br>Not specifying any of these properties on PATCH operation will reset omitted properties' values to their defaults. For all the settings except Http2 the default value is `True` if the service was created on or before April 1st 2018 and `False` otherwise. Http2 setting's default value is `False`.|/*|
+|--certificates|NO|list|List of Certificates that need to be installed in the API Management service. Max supported certificates that can be installed is 10.|/*|
+|--enable_client_certificate|NO|boolean|Property only meant to be used for Consumption SKU Service. This enforces a client certificate to be presented on each request to the gateway. This also enables the ability to authenticate the certificate in the policy on the gateway.|/*|
+|--virtual_network_type|NO|str|The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.|/*|
+|--publisher_email|NO|str|Publisher email.|/*|
+|--publisher_name|NO|str|Publisher name.|/*|
+|--sku_name|NO|str|Name of the Sku.|/sku/name|
+|--sku_capacity|NO|number|Capacity of the SKU (number of deployed units of the SKU).|/sku/capacity|
+|--identity|NO|dict|Managed service identity of the Api Management service.|/|
+|--location|NO|str|Resource location.|/|
+### apimgmt update
+
+update a apimgmt.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--name|YES|default|The name of the API Management service.|*|
+|--tags|NO|unknown[DictionaryType {"$id":"2630","$type":"DictionaryType","valueType":{"$id":"2631","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2632","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2633","fixed":false},"deprecated":false}]|Resource tags.|/|
+|--notification_sender_email|NO|str|Email address from which the notification will be sent.|/*|
+|--hostname_configurations|NO|list|Custom hostname configuration of the API Management service.|/*|
+|--virtual_network_configuration|NO|dict|Virtual network configuration of the API Management service.|/*|
+|--additional_locations|NO|list|Additional datacenter locations of the API Management service.|/*|
+|--custom_properties|NO|unknown[DictionaryType {"$id":"2519","$type":"DictionaryType","valueType":{"$id":"2520","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2521","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2522","fixed":false},"deprecated":false}]|Custom properties of the API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168` will disable the cipher TLS_RSA_WITH_3DES_EDE_CBC_SHA for all TLS(1.0, 1.1 and 1.2).</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11` can be used to disable just TLS 1.1.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10` can be used to disable TLS 1.0 on an API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11` can be used to disable just TLS 1.1 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10` can be used to disable TLS 1.0 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2` can be used to enable HTTP2 protocol on an API Management service.</br>Not specifying any of these properties on PATCH operation will reset omitted properties' values to their defaults. For all the settings except Http2 the default value is `True` if the service was created on or before April 1st 2018 and `False` otherwise. Http2 setting's default value is `False`.|/*|
+|--certificates|NO|list|List of Certificates that need to be installed in the API Management service. Max supported certificates that can be installed is 10.|/*|
+|--enable_client_certificate|NO|boolean|Property only meant to be used for Consumption SKU Service. This enforces a client certificate to be presented on each request to the gateway. This also enables the ability to authenticate the certificate in the policy on the gateway.|/*|
+|--virtual_network_type|NO|str|The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.|/*|
+|--publisher_email|NO|str|Publisher email.|/*|
+|--publisher_name|NO|str|Publisher name.|/*|
+|--sku_name|NO|str|Name of the Sku.|/sku/name|
+|--sku_capacity|NO|number|Capacity of the SKU (number of deployed units of the SKU).|/sku/capacity|
+|--identity|NO|dict|Managed service identity of the Api Management service.|/|
+|--location|NO|str|Resource location.|/|
+### apimgmt delete
+
+delete a apimgmt.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--name|YES|default|The name of the API Management service.|*|
+### apimgmt list
+
+list a apimgmt.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+### apimgmt show
+
+show a apimgmt.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--name|YES|default|The name of the API Management service.|*|
 ## apimgmt api
 
 ### apimgmt api create
@@ -88,59 +159,254 @@ show a apimgmt api.
 |--resource_group|YES|default|The name of the resource group.|*|
 |--service_name|YES|default|The name of the API Management service.|*|
 |--api_id|YES|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|*|
-## apimgmt api release
+## apimgmt api diagnostic
 
-### apimgmt api release create
+### apimgmt api diagnostic create
 
-create a apimgmt api release.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
-|--release_id|YES|default|Release identifier within an API. Must be unique in the current API Management service instance.|*|
-|--notes|NO|str|Release Notes|/*|
-### apimgmt api release update
-
-update a apimgmt api release.
+create a apimgmt api diagnostic.
 
 |Option|Required|Type|Description|Target Path|
 |------|--------|----|-----------|-----------|
 |--resource_group|YES|default|The name of the resource group.|*|
 |--service_name|YES|default|The name of the API Management service.|*|
 |--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
-|--release_id|YES|default|Release identifier within an API. Must be unique in the current API Management service instance.|*|
-|--notes|NO|str|Release Notes|/*|
-### apimgmt api release delete
+|--diagnostic_id|YES|default|Diagnostic identifier. Must be unique in the current API Management service instance.|*|
+|--always_log|NO|str|Specifies for what type of messages sampling settings should not apply.|/*|
+|--logger_id|NO|str|Resource Id of a target logger.|/*|
+|--sampling|NO|dict|Sampling settings for Diagnostic.|/*|
+|--frontend|NO|dict|Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.|/*|
+|--backend|NO|dict|Diagnostic settings for incoming/outgoing HTTP messages to the Backend|/*|
+|--enable_http_correlation_headers|NO|boolean|Whether to process Correlation Headers coming to Api Management Service. Only applicable to Application Insights diagnostics. Default is true.|/*|
+### apimgmt api diagnostic update
 
-delete a apimgmt api release.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
-|--release_id|YES|default|Release identifier within an API. Must be unique in the current API Management service instance.|*|
-### apimgmt api release list
-
-list a apimgmt api release.
+update a apimgmt api diagnostic.
 
 |Option|Required|Type|Description|Target Path|
 |------|--------|----|-----------|-----------|
 |--resource_group|YES|default|The name of the resource group.|*|
 |--service_name|YES|default|The name of the API Management service.|*|
 |--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
-### apimgmt api release show
+|--diagnostic_id|YES|default|Diagnostic identifier. Must be unique in the current API Management service instance.|*|
+|--always_log|NO|str|Specifies for what type of messages sampling settings should not apply.|/*|
+|--logger_id|NO|str|Resource Id of a target logger.|/*|
+|--sampling|NO|dict|Sampling settings for Diagnostic.|/*|
+|--frontend|NO|dict|Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.|/*|
+|--backend|NO|dict|Diagnostic settings for incoming/outgoing HTTP messages to the Backend|/*|
+|--enable_http_correlation_headers|NO|boolean|Whether to process Correlation Headers coming to Api Management Service. Only applicable to Application Insights diagnostics. Default is true.|/*|
+### apimgmt api diagnostic delete
 
-show a apimgmt api release.
+delete a apimgmt api diagnostic.
 
 |Option|Required|Type|Description|Target Path|
 |------|--------|----|-----------|-----------|
 |--resource_group|YES|default|The name of the resource group.|*|
 |--service_name|YES|default|The name of the API Management service.|*|
 |--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
-|--release_id|YES|default|Release identifier within an API. Must be unique in the current API Management service instance.|*|
+|--diagnostic_id|YES|default|Diagnostic identifier. Must be unique in the current API Management service instance.|*|
+### apimgmt api diagnostic list
+
+list a apimgmt api diagnostic.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
+### apimgmt api diagnostic show
+
+show a apimgmt api diagnostic.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
+|--diagnostic_id|YES|default|Diagnostic identifier. Must be unique in the current API Management service instance.|*|
+## apimgmt api issue
+
+### apimgmt api issue create
+
+create a apimgmt api issue.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
+|--issue_id|YES|default|Issue identifier. Must be unique in the current API Management service instance.|*|
+|--created_date|NO|datetime|Date and time when the issue was created.|/*|
+|--state|NO|str|Status of the issue.|/*|
+|--title|NO|str|The issue title.|/*|
+|--description|NO|str|Text describing the issue.|/*|
+|--user_id|NO|str|A resource identifier for the user created the issue.|/*|
+### apimgmt api issue update
+
+update a apimgmt api issue.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
+|--issue_id|YES|default|Issue identifier. Must be unique in the current API Management service instance.|*|
+|--created_date|NO|datetime|Date and time when the issue was created.|/*|
+|--state|NO|str|Status of the issue.|/*|
+|--title|NO|str|The issue title.|/*|
+|--description|NO|str|Text describing the issue.|/*|
+|--user_id|NO|str|A resource identifier for the user created the issue.|/*|
+### apimgmt api issue delete
+
+delete a apimgmt api issue.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
+|--issue_id|YES|default|Issue identifier. Must be unique in the current API Management service instance.|*|
+### apimgmt api issue list
+
+list a apimgmt api issue.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
+### apimgmt api issue show
+
+show a apimgmt api issue.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
+|--issue_id|YES|default|Issue identifier. Must be unique in the current API Management service instance.|*|
+## apimgmt api issue attachment
+
+### apimgmt api issue attachment create
+
+create a apimgmt api issue attachment.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
+|--issue_id|YES|default|Issue identifier. Must be unique in the current API Management service instance.|*|
+|--attachment_id|YES|default|Attachment identifier within an Issue. Must be unique in the current Issue.|*|
+|--title|NO|str|Filename by which the binary data will be saved.|/*|
+|--content_format|NO|str|Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.|/*|
+|--content|NO|str|An HTTP link or Base64-encoded binary data.|/*|
+### apimgmt api issue attachment update
+
+update a apimgmt api issue attachment.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
+|--issue_id|YES|default|Issue identifier. Must be unique in the current API Management service instance.|*|
+|--attachment_id|YES|default|Attachment identifier within an Issue. Must be unique in the current Issue.|*|
+|--title|NO|str|Filename by which the binary data will be saved.|/*|
+|--content_format|NO|str|Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.|/*|
+|--content|NO|str|An HTTP link or Base64-encoded binary data.|/*|
+### apimgmt api issue attachment delete
+
+delete a apimgmt api issue attachment.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
+|--issue_id|YES|default|Issue identifier. Must be unique in the current API Management service instance.|*|
+|--attachment_id|YES|default|Attachment identifier within an Issue. Must be unique in the current Issue.|*|
+### apimgmt api issue attachment list
+
+list a apimgmt api issue attachment.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
+|--issue_id|YES|default|Issue identifier. Must be unique in the current API Management service instance.|*|
+### apimgmt api issue attachment show
+
+show a apimgmt api issue attachment.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
+|--issue_id|YES|default|Issue identifier. Must be unique in the current API Management service instance.|*|
+|--attachment_id|YES|default|Attachment identifier within an Issue. Must be unique in the current Issue.|*|
+## apimgmt api issue comment
+
+### apimgmt api issue comment create
+
+create a apimgmt api issue comment.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
+|--issue_id|YES|default|Issue identifier. Must be unique in the current API Management service instance.|*|
+|--comment_id|YES|default|Comment identifier within an Issue. Must be unique in the current Issue.|*|
+|--text|NO|str|Comment text.|/*|
+|--created_date|NO|datetime|Date and time when the comment was created.|/*|
+|--user_id|NO|str|A resource identifier for the user who left the comment.|/*|
+### apimgmt api issue comment update
+
+update a apimgmt api issue comment.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
+|--issue_id|YES|default|Issue identifier. Must be unique in the current API Management service instance.|*|
+|--comment_id|YES|default|Comment identifier within an Issue. Must be unique in the current Issue.|*|
+|--text|NO|str|Comment text.|/*|
+|--created_date|NO|datetime|Date and time when the comment was created.|/*|
+|--user_id|NO|str|A resource identifier for the user who left the comment.|/*|
+### apimgmt api issue comment delete
+
+delete a apimgmt api issue comment.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
+|--issue_id|YES|default|Issue identifier. Must be unique in the current API Management service instance.|*|
+|--comment_id|YES|default|Comment identifier within an Issue. Must be unique in the current Issue.|*|
+### apimgmt api issue comment list
+
+list a apimgmt api issue comment.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
+|--issue_id|YES|default|Issue identifier. Must be unique in the current API Management service instance.|*|
+### apimgmt api issue comment show
+
+show a apimgmt api issue comment.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
+|--issue_id|YES|default|Issue identifier. Must be unique in the current API Management service instance.|*|
+|--comment_id|YES|default|Comment identifier within an Issue. Must be unique in the current Issue.|*|
 ## apimgmt api operation
 
 ### apimgmt api operation create
@@ -269,54 +535,6 @@ show a apimgmt api operation policy.
 |--operation_id|YES|default|Operation identifier within an API. Must be unique in the current API Management service instance.|*|
 |--policy_id|YES|default|The identifier of the Policy.|*|
 |--format|NO|default|Format of the policyContent.|/*|
-## apimgmt tag
-
-### apimgmt tag create
-
-create a apimgmt tag.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--tag_id|YES|default|Tag identifier. Must be unique in the current API Management service instance.|*|
-|--display_name|NO|str|Tag name.|/*|
-### apimgmt tag update
-
-update a apimgmt tag.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--tag_id|YES|default|Tag identifier. Must be unique in the current API Management service instance.|*|
-|--display_name|NO|str|Tag name.|/*|
-### apimgmt tag delete
-
-delete a apimgmt tag.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--tag_id|YES|default|Tag identifier. Must be unique in the current API Management service instance.|*|
-### apimgmt tag list
-
-list a apimgmt tag.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-### apimgmt tag show
-
-show a apimgmt tag.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--tag_id|YES|default|Tag identifier. Must be unique in the current API Management service instance.|*|
 ## apimgmt api policy
 
 ### apimgmt api policy create
@@ -373,6 +591,59 @@ show a apimgmt api policy.
 |--api_id|YES|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|*|
 |--policy_id|YES|default|The identifier of the Policy.|*|
 |--format|NO|default|Format of the policyContent.|/*|
+## apimgmt api release
+
+### apimgmt api release create
+
+create a apimgmt api release.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
+|--release_id|YES|default|Release identifier within an API. Must be unique in the current API Management service instance.|*|
+|--notes|NO|str|Release Notes|/*|
+### apimgmt api release update
+
+update a apimgmt api release.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
+|--release_id|YES|default|Release identifier within an API. Must be unique in the current API Management service instance.|*|
+|--notes|NO|str|Release Notes|/*|
+### apimgmt api release delete
+
+delete a apimgmt api release.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
+|--release_id|YES|default|Release identifier within an API. Must be unique in the current API Management service instance.|*|
+### apimgmt api release list
+
+list a apimgmt api release.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
+### apimgmt api release show
+
+show a apimgmt api release.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
+|--release_id|YES|default|Release identifier within an API. Must be unique in the current API Management service instance.|*|
 ## apimgmt api schema
 
 ### apimgmt api schema create
@@ -428,254 +699,6 @@ show a apimgmt api schema.
 |--service_name|YES|default|The name of the API Management service.|*|
 |--api_id|YES|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|*|
 |--schema_id|YES|default|Schema identifier within an API. Must be unique in the current API Management service instance.|*|
-## apimgmt api diagnostic
-
-### apimgmt api diagnostic create
-
-create a apimgmt api diagnostic.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
-|--diagnostic_id|YES|default|Diagnostic identifier. Must be unique in the current API Management service instance.|*|
-|--always_log|NO|str|Specifies for what type of messages sampling settings should not apply.|/*|
-|--logger_id|NO|str|Resource Id of a target logger.|/*|
-|--sampling|NO|dict|Sampling settings for Diagnostic.|/*|
-|--frontend|NO|dict|Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.|/*|
-|--backend|NO|dict|Diagnostic settings for incoming/outgoing HTTP messages to the Backend|/*|
-|--enable_http_correlation_headers|NO|boolean|Whether to process Correlation Headers coming to Api Management Service. Only applicable to Application Insights diagnostics. Default is true.|/*|
-### apimgmt api diagnostic update
-
-update a apimgmt api diagnostic.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
-|--diagnostic_id|YES|default|Diagnostic identifier. Must be unique in the current API Management service instance.|*|
-|--always_log|NO|str|Specifies for what type of messages sampling settings should not apply.|/*|
-|--logger_id|NO|str|Resource Id of a target logger.|/*|
-|--sampling|NO|dict|Sampling settings for Diagnostic.|/*|
-|--frontend|NO|dict|Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.|/*|
-|--backend|NO|dict|Diagnostic settings for incoming/outgoing HTTP messages to the Backend|/*|
-|--enable_http_correlation_headers|NO|boolean|Whether to process Correlation Headers coming to Api Management Service. Only applicable to Application Insights diagnostics. Default is true.|/*|
-### apimgmt api diagnostic delete
-
-delete a apimgmt api diagnostic.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
-|--diagnostic_id|YES|default|Diagnostic identifier. Must be unique in the current API Management service instance.|*|
-### apimgmt api diagnostic list
-
-list a apimgmt api diagnostic.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
-### apimgmt api diagnostic show
-
-show a apimgmt api diagnostic.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
-|--diagnostic_id|YES|default|Diagnostic identifier. Must be unique in the current API Management service instance.|*|
-## apimgmt api issue
-
-### apimgmt api issue create
-
-create a apimgmt api issue.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
-|--issue_id|YES|default|Issue identifier. Must be unique in the current API Management service instance.|*|
-|--created_date|NO|datetime|Date and time when the issue was created.|/*|
-|--state|NO|str|Status of the issue.|/*|
-|--title|NO|str|The issue title.|/*|
-|--description|NO|str|Text describing the issue.|/*|
-|--user_id|NO|str|A resource identifier for the user created the issue.|/*|
-### apimgmt api issue update
-
-update a apimgmt api issue.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
-|--issue_id|YES|default|Issue identifier. Must be unique in the current API Management service instance.|*|
-|--created_date|NO|datetime|Date and time when the issue was created.|/*|
-|--state|NO|str|Status of the issue.|/*|
-|--title|NO|str|The issue title.|/*|
-|--description|NO|str|Text describing the issue.|/*|
-|--user_id|NO|str|A resource identifier for the user created the issue.|/*|
-### apimgmt api issue delete
-
-delete a apimgmt api issue.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
-|--issue_id|YES|default|Issue identifier. Must be unique in the current API Management service instance.|*|
-### apimgmt api issue list
-
-list a apimgmt api issue.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
-### apimgmt api issue show
-
-show a apimgmt api issue.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
-|--issue_id|YES|default|Issue identifier. Must be unique in the current API Management service instance.|*|
-## apimgmt api issue comment
-
-### apimgmt api issue comment create
-
-create a apimgmt api issue comment.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
-|--issue_id|YES|default|Issue identifier. Must be unique in the current API Management service instance.|*|
-|--comment_id|YES|default|Comment identifier within an Issue. Must be unique in the current Issue.|*|
-|--text|NO|str|Comment text.|/*|
-|--created_date|NO|datetime|Date and time when the comment was created.|/*|
-|--user_id|NO|str|A resource identifier for the user who left the comment.|/*|
-### apimgmt api issue comment update
-
-update a apimgmt api issue comment.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
-|--issue_id|YES|default|Issue identifier. Must be unique in the current API Management service instance.|*|
-|--comment_id|YES|default|Comment identifier within an Issue. Must be unique in the current Issue.|*|
-|--text|NO|str|Comment text.|/*|
-|--created_date|NO|datetime|Date and time when the comment was created.|/*|
-|--user_id|NO|str|A resource identifier for the user who left the comment.|/*|
-### apimgmt api issue comment delete
-
-delete a apimgmt api issue comment.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
-|--issue_id|YES|default|Issue identifier. Must be unique in the current API Management service instance.|*|
-|--comment_id|YES|default|Comment identifier within an Issue. Must be unique in the current Issue.|*|
-### apimgmt api issue comment list
-
-list a apimgmt api issue comment.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
-|--issue_id|YES|default|Issue identifier. Must be unique in the current API Management service instance.|*|
-### apimgmt api issue comment show
-
-show a apimgmt api issue comment.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
-|--issue_id|YES|default|Issue identifier. Must be unique in the current API Management service instance.|*|
-|--comment_id|YES|default|Comment identifier within an Issue. Must be unique in the current Issue.|*|
-## apimgmt api issue attachment
-
-### apimgmt api issue attachment create
-
-create a apimgmt api issue attachment.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
-|--issue_id|YES|default|Issue identifier. Must be unique in the current API Management service instance.|*|
-|--attachment_id|YES|default|Attachment identifier within an Issue. Must be unique in the current Issue.|*|
-|--title|NO|str|Filename by which the binary data will be saved.|/*|
-|--content_format|NO|str|Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.|/*|
-|--content|NO|str|An HTTP link or Base64-encoded binary data.|/*|
-### apimgmt api issue attachment update
-
-update a apimgmt api issue attachment.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
-|--issue_id|YES|default|Issue identifier. Must be unique in the current API Management service instance.|*|
-|--attachment_id|YES|default|Attachment identifier within an Issue. Must be unique in the current Issue.|*|
-|--title|NO|str|Filename by which the binary data will be saved.|/*|
-|--content_format|NO|str|Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.|/*|
-|--content|NO|str|An HTTP link or Base64-encoded binary data.|/*|
-### apimgmt api issue attachment delete
-
-delete a apimgmt api issue attachment.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
-|--issue_id|YES|default|Issue identifier. Must be unique in the current API Management service instance.|*|
-|--attachment_id|YES|default|Attachment identifier within an Issue. Must be unique in the current Issue.|*|
-### apimgmt api issue attachment list
-
-list a apimgmt api issue attachment.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
-|--issue_id|YES|default|Issue identifier. Must be unique in the current API Management service instance.|*|
-### apimgmt api issue attachment show
-
-show a apimgmt api issue attachment.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--api_id|YES|default|API identifier. Must be unique in the current API Management service instance.|*|
-|--issue_id|YES|default|Issue identifier. Must be unique in the current API Management service instance.|*|
-|--attachment_id|YES|default|Attachment identifier within an Issue. Must be unique in the current Issue.|*|
 ## apimgmt api tagdescription
 
 ### apimgmt api tagdescription create
@@ -1033,77 +1056,6 @@ show a apimgmt certificate.
 |--resource_group|YES|default|The name of the resource group.|*|
 |--service_name|YES|default|The name of the API Management service.|*|
 |--certificate_id|YES|default|Identifier of the certificate entity. Must be unique in the current API Management service instance.|*|
-## apimgmt
-
-### apimgmt create
-
-create a apimgmt.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--name|YES|default|The name of the API Management service.|*|
-|--tags|NO|unknown[DictionaryType {"$id":"2630","$type":"DictionaryType","valueType":{"$id":"2631","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2632","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2633","fixed":false},"deprecated":false}]|Resource tags.|/|
-|--notification_sender_email|NO|str|Email address from which the notification will be sent.|/*|
-|--hostname_configurations|NO|list|Custom hostname configuration of the API Management service.|/*|
-|--virtual_network_configuration|NO|dict|Virtual network configuration of the API Management service.|/*|
-|--additional_locations|NO|list|Additional datacenter locations of the API Management service.|/*|
-|--custom_properties|NO|unknown[DictionaryType {"$id":"2519","$type":"DictionaryType","valueType":{"$id":"2520","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2521","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2522","fixed":false},"deprecated":false}]|Custom properties of the API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168` will disable the cipher TLS_RSA_WITH_3DES_EDE_CBC_SHA for all TLS(1.0, 1.1 and 1.2).</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11` can be used to disable just TLS 1.1.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10` can be used to disable TLS 1.0 on an API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11` can be used to disable just TLS 1.1 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10` can be used to disable TLS 1.0 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2` can be used to enable HTTP2 protocol on an API Management service.</br>Not specifying any of these properties on PATCH operation will reset omitted properties' values to their defaults. For all the settings except Http2 the default value is `True` if the service was created on or before April 1st 2018 and `False` otherwise. Http2 setting's default value is `False`.|/*|
-|--certificates|NO|list|List of Certificates that need to be installed in the API Management service. Max supported certificates that can be installed is 10.|/*|
-|--enable_client_certificate|NO|boolean|Property only meant to be used for Consumption SKU Service. This enforces a client certificate to be presented on each request to the gateway. This also enables the ability to authenticate the certificate in the policy on the gateway.|/*|
-|--virtual_network_type|NO|str|The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.|/*|
-|--publisher_email|NO|str|Publisher email.|/*|
-|--publisher_name|NO|str|Publisher name.|/*|
-|--sku_name|NO|str|Name of the Sku.|/sku/name|
-|--sku_capacity|NO|number|Capacity of the SKU (number of deployed units of the SKU).|/sku/capacity|
-|--identity|NO|dict|Managed service identity of the Api Management service.|/|
-|--location|NO|str|Resource location.|/|
-### apimgmt update
-
-update a apimgmt.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--name|YES|default|The name of the API Management service.|*|
-|--tags|NO|unknown[DictionaryType {"$id":"2630","$type":"DictionaryType","valueType":{"$id":"2631","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2632","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2633","fixed":false},"deprecated":false}]|Resource tags.|/|
-|--notification_sender_email|NO|str|Email address from which the notification will be sent.|/*|
-|--hostname_configurations|NO|list|Custom hostname configuration of the API Management service.|/*|
-|--virtual_network_configuration|NO|dict|Virtual network configuration of the API Management service.|/*|
-|--additional_locations|NO|list|Additional datacenter locations of the API Management service.|/*|
-|--custom_properties|NO|unknown[DictionaryType {"$id":"2519","$type":"DictionaryType","valueType":{"$id":"2520","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2521","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2522","fixed":false},"deprecated":false}]|Custom properties of the API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168` will disable the cipher TLS_RSA_WITH_3DES_EDE_CBC_SHA for all TLS(1.0, 1.1 and 1.2).</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11` can be used to disable just TLS 1.1.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10` can be used to disable TLS 1.0 on an API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11` can be used to disable just TLS 1.1 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10` can be used to disable TLS 1.0 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2` can be used to enable HTTP2 protocol on an API Management service.</br>Not specifying any of these properties on PATCH operation will reset omitted properties' values to their defaults. For all the settings except Http2 the default value is `True` if the service was created on or before April 1st 2018 and `False` otherwise. Http2 setting's default value is `False`.|/*|
-|--certificates|NO|list|List of Certificates that need to be installed in the API Management service. Max supported certificates that can be installed is 10.|/*|
-|--enable_client_certificate|NO|boolean|Property only meant to be used for Consumption SKU Service. This enforces a client certificate to be presented on each request to the gateway. This also enables the ability to authenticate the certificate in the policy on the gateway.|/*|
-|--virtual_network_type|NO|str|The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.|/*|
-|--publisher_email|NO|str|Publisher email.|/*|
-|--publisher_name|NO|str|Publisher name.|/*|
-|--sku_name|NO|str|Name of the Sku.|/sku/name|
-|--sku_capacity|NO|number|Capacity of the SKU (number of deployed units of the SKU).|/sku/capacity|
-|--identity|NO|dict|Managed service identity of the Api Management service.|/|
-|--location|NO|str|Resource location.|/|
-### apimgmt delete
-
-delete a apimgmt.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--name|YES|default|The name of the API Management service.|*|
-### apimgmt list
-
-list a apimgmt.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-### apimgmt show
-
-show a apimgmt.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--name|YES|default|The name of the API Management service.|*|
 ## apimgmt diagnostic
 
 ### apimgmt diagnostic create
@@ -1162,60 +1114,6 @@ show a apimgmt diagnostic.
 |--resource_group|YES|default|The name of the resource group.|*|
 |--service_name|YES|default|The name of the API Management service.|*|
 |--diagnostic_id|YES|default|Diagnostic identifier. Must be unique in the current API Management service instance.|*|
-## apimgmt template
-
-### apimgmt template create
-
-create a apimgmt template.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--name|YES|default|Email Template Name Identifier.|*|
-|--subject|NO|str|Subject of the Template.|/*|
-|--title|NO|str|Title of the Template.|/*|
-|--description|NO|str|Description of the Email Template.|/*|
-|--body|NO|str|Email Template Body. This should be a valid XDocument|/*|
-### apimgmt template update
-
-update a apimgmt template.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--name|YES|default|Email Template Name Identifier.|*|
-|--subject|NO|str|Subject of the Template.|/*|
-|--title|NO|str|Title of the Template.|/*|
-|--description|NO|str|Description of the Email Template.|/*|
-|--body|NO|str|Email Template Body. This should be a valid XDocument|/*|
-### apimgmt template delete
-
-delete a apimgmt template.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--name|YES|default|Email Template Name Identifier.|*|
-### apimgmt template list
-
-list a apimgmt template.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-### apimgmt template show
-
-show a apimgmt template.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--name|YES|default|Email Template Name Identifier.|*|
 ## apimgmt group
 
 ### apimgmt group create
@@ -1472,47 +1370,6 @@ show a apimgmt notification.
 |--resource_group|YES|default|The name of the resource group.|*|
 |--service_name|YES|default|The name of the API Management service.|*|
 |--name|YES|default|Notification Name Identifier.|*|
-## apimgmt notification recipientuser
-
-### apimgmt notification recipientuser create
-
-create a apimgmt notification recipientuser.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--notification_name|YES|default|Notification Name Identifier.|*|
-|--user_id|YES|default|User identifier. Must be unique in the current API Management service instance.|*|
-### apimgmt notification recipientuser update
-
-update a apimgmt notification recipientuser.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--notification_name|YES|default|Notification Name Identifier.|*|
-|--user_id|YES|default|User identifier. Must be unique in the current API Management service instance.|*|
-### apimgmt notification recipientuser delete
-
-delete a apimgmt notification recipientuser.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--notification_name|YES|default|Notification Name Identifier.|*|
-|--user_id|YES|default|User identifier. Must be unique in the current API Management service instance.|*|
-### apimgmt notification recipientuser list
-
-list a apimgmt notification recipientuser.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--service_name|YES|default|The name of the API Management service.|*|
-|--notification_name|YES|default|Notification Name Identifier.|*|
 ## apimgmt notification recipientemail
 
 ### apimgmt notification recipientemail create
@@ -1548,6 +1405,47 @@ delete a apimgmt notification recipientemail.
 ### apimgmt notification recipientemail list
 
 list a apimgmt notification recipientemail.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--notification_name|YES|default|Notification Name Identifier.|*|
+## apimgmt notification recipientuser
+
+### apimgmt notification recipientuser create
+
+create a apimgmt notification recipientuser.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--notification_name|YES|default|Notification Name Identifier.|*|
+|--user_id|YES|default|User identifier. Must be unique in the current API Management service instance.|*|
+### apimgmt notification recipientuser update
+
+update a apimgmt notification recipientuser.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--notification_name|YES|default|Notification Name Identifier.|*|
+|--user_id|YES|default|User identifier. Must be unique in the current API Management service instance.|*|
+### apimgmt notification recipientuser delete
+
+delete a apimgmt notification recipientuser.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--notification_name|YES|default|Notification Name Identifier.|*|
+|--user_id|YES|default|User identifier. Must be unique in the current API Management service instance.|*|
+### apimgmt notification recipientuser list
+
+list a apimgmt notification recipientuser.
 
 |Option|Required|Type|Description|Target Path|
 |------|--------|----|-----------|-----------|
@@ -1661,64 +1559,6 @@ show a apimgmt policy.
 |--service_name|YES|default|The name of the API Management service.|*|
 |--policy_id|YES|default|The identifier of the Policy.|*|
 |--format|NO|default|Format of the policyContent.|/*|
-## apimgmt portalsetting
-
-### apimgmt portalsetting create
-
-create a apimgmt portalsetting.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--name|YES|default|The name of the API Management service.|*|
-|--enabled|NO|boolean|Redirect Anonymous users to the Sign-In page.|/*|
-### apimgmt portalsetting update
-
-update a apimgmt portalsetting.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--name|YES|default|The name of the API Management service.|*|
-|--enabled|NO|boolean|Redirect Anonymous users to the Sign-In page.|/*|
-### apimgmt portalsetting show
-
-show a apimgmt portalsetting.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--name|YES|default|The name of the API Management service.|*|
-## apimgmt portalsetting
-
-### apimgmt portalsetting create
-
-create a apimgmt portalsetting.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--name|YES|default|The name of the API Management service.|*|
-|--enabled|NO|boolean|Allow users to sign up on a developer portal.|/*|
-|--terms_of_service|NO|dict|Terms of service contract properties.|/*|
-### apimgmt portalsetting update
-
-update a apimgmt portalsetting.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--name|YES|default|The name of the API Management service.|*|
-|--enabled|NO|boolean|Allow users to sign up on a developer portal.|/*|
-|--terms_of_service|NO|dict|Terms of service contract properties.|/*|
-### apimgmt portalsetting show
-
-show a apimgmt portalsetting.
-
-|Option|Required|Type|Description|Target Path|
-|------|--------|----|-----------|-----------|
-|--resource_group|YES|default|The name of the resource group.|*|
-|--name|YES|default|The name of the API Management service.|*|
 ## apimgmt portalsetting
 
 ### apimgmt portalsetting create
@@ -2113,6 +1953,108 @@ show a apimgmt subscription.
 |--resource_group|YES|default|The name of the resource group.|*|
 |--service_name|YES|default|The name of the API Management service.|*|
 |--sid|YES|default|Subscription entity Identifier. The entity represents the association between a user and a product in API Management.|*|
+## apimgmt tag
+
+### apimgmt tag create
+
+create a apimgmt tag.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--tag_id|YES|default|Tag identifier. Must be unique in the current API Management service instance.|*|
+|--display_name|NO|str|Tag name.|/*|
+### apimgmt tag update
+
+update a apimgmt tag.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--tag_id|YES|default|Tag identifier. Must be unique in the current API Management service instance.|*|
+|--display_name|NO|str|Tag name.|/*|
+### apimgmt tag delete
+
+delete a apimgmt tag.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--tag_id|YES|default|Tag identifier. Must be unique in the current API Management service instance.|*|
+### apimgmt tag list
+
+list a apimgmt tag.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+### apimgmt tag show
+
+show a apimgmt tag.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--tag_id|YES|default|Tag identifier. Must be unique in the current API Management service instance.|*|
+## apimgmt template
+
+### apimgmt template create
+
+create a apimgmt template.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--name|YES|default|Email Template Name Identifier.|*|
+|--subject|NO|str|Subject of the Template.|/*|
+|--title|NO|str|Title of the Template.|/*|
+|--description|NO|str|Description of the Email Template.|/*|
+|--body|NO|str|Email Template Body. This should be a valid XDocument|/*|
+### apimgmt template update
+
+update a apimgmt template.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--name|YES|default|Email Template Name Identifier.|*|
+|--subject|NO|str|Subject of the Template.|/*|
+|--title|NO|str|Title of the Template.|/*|
+|--description|NO|str|Description of the Email Template.|/*|
+|--body|NO|str|Email Template Body. This should be a valid XDocument|/*|
+### apimgmt template delete
+
+delete a apimgmt template.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--name|YES|default|Email Template Name Identifier.|*|
+### apimgmt template list
+
+list a apimgmt template.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+### apimgmt template show
+
+show a apimgmt template.
+
+|Option|Required|Type|Description|Target Path|
+|------|--------|----|-----------|-----------|
+|--resource_group|YES|default|The name of the resource group.|*|
+|--service_name|YES|default|The name of the API Management service.|*|
+|--name|YES|default|Email Template Name Identifier.|*|
 ## apimgmt user
 
 ### apimgmt user create
