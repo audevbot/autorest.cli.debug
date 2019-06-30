@@ -16,26 +16,31 @@ helps['apimgmt api'] = """
 helps['apimgmt api create'] = """
     type: command
     short-summary: create a apimgmt api.
+    examples:
 """
 
 helps['apimgmt api update'] = """
     type: command
     short-summary: update a apimgmt api.
+    examples:
 """
 
 helps['apimgmt api delete'] = """
     type: command
     short-summary: delete a apimgmt api.
+    examples:
 """
 
 helps['apimgmt api list'] = """
     type: command
     short-summary: list a apimgmt api.
+    examples:
 """
 
 helps['apimgmt api show'] = """
     type: command
     short-summary: show a apimgmt api.
+    examples:
 """
 
 helps['apimgmt api release'] = """
@@ -46,26 +51,31 @@ helps['apimgmt api release'] = """
 helps['apimgmt api release create'] = """
     type: command
     short-summary: create a apimgmt api release.
+    examples:
 """
 
 helps['apimgmt api release update'] = """
     type: command
     short-summary: update a apimgmt api release.
+    examples:
 """
 
 helps['apimgmt api release delete'] = """
     type: command
     short-summary: delete a apimgmt api release.
+    examples:
 """
 
 helps['apimgmt api release list'] = """
     type: command
     short-summary: list a apimgmt api release.
+    examples:
 """
 
 helps['apimgmt api release show'] = """
     type: command
     short-summary: show a apimgmt api release.
+    examples:
 """
 
 helps['apimgmt api operation'] = """
@@ -76,26 +86,31 @@ helps['apimgmt api operation'] = """
 helps['apimgmt api operation create'] = """
     type: command
     short-summary: create a apimgmt api operation.
+    examples:
 """
 
 helps['apimgmt api operation update'] = """
     type: command
     short-summary: update a apimgmt api operation.
+    examples:
 """
 
 helps['apimgmt api operation delete'] = """
     type: command
     short-summary: delete a apimgmt api operation.
+    examples:
 """
 
 helps['apimgmt api operation list'] = """
     type: command
     short-summary: list a apimgmt api operation.
+    examples:
 """
 
 helps['apimgmt api operation show'] = """
     type: command
     short-summary: show a apimgmt api operation.
+    examples:
 """
 
 helps['apimgmt api operation policy'] = """
@@ -106,26 +121,31 @@ helps['apimgmt api operation policy'] = """
 helps['apimgmt api operation policy create'] = """
     type: command
     short-summary: create a apimgmt api operation policy.
+    examples:
 """
 
 helps['apimgmt api operation policy update'] = """
     type: command
     short-summary: update a apimgmt api operation policy.
+    examples:
 """
 
 helps['apimgmt api operation policy delete'] = """
     type: command
     short-summary: delete a apimgmt api operation policy.
+    examples:
 """
 
 helps['apimgmt api operation policy list'] = """
     type: command
     short-summary: list a apimgmt api operation policy.
+    examples:
 """
 
 helps['apimgmt api operation policy show'] = """
     type: command
     short-summary: show a apimgmt api operation policy.
+    examples:
 """
 
 helps['apimgmt tag'] = """
@@ -136,26 +156,31 @@ helps['apimgmt tag'] = """
 helps['apimgmt tag create'] = """
     type: command
     short-summary: create a apimgmt tag.
+    examples:
 """
 
 helps['apimgmt tag update'] = """
     type: command
     short-summary: update a apimgmt tag.
+    examples:
 """
 
 helps['apimgmt tag delete'] = """
     type: command
     short-summary: delete a apimgmt tag.
+    examples:
 """
 
 helps['apimgmt tag list'] = """
     type: command
     short-summary: list a apimgmt tag.
+    examples:
 """
 
 helps['apimgmt tag show'] = """
     type: command
     short-summary: show a apimgmt tag.
+    examples:
 """
 
 helps['apimgmt api policy'] = """
@@ -166,26 +191,31 @@ helps['apimgmt api policy'] = """
 helps['apimgmt api policy create'] = """
     type: command
     short-summary: create a apimgmt api policy.
+    examples:
 """
 
 helps['apimgmt api policy update'] = """
     type: command
     short-summary: update a apimgmt api policy.
+    examples:
 """
 
 helps['apimgmt api policy delete'] = """
     type: command
     short-summary: delete a apimgmt api policy.
+    examples:
 """
 
 helps['apimgmt api policy list'] = """
     type: command
     short-summary: list a apimgmt api policy.
+    examples:
 """
 
 helps['apimgmt api policy show'] = """
     type: command
     short-summary: show a apimgmt api policy.
+    examples:
 """
 
 helps['apimgmt api schema'] = """
@@ -196,26 +226,31 @@ helps['apimgmt api schema'] = """
 helps['apimgmt api schema create'] = """
     type: command
     short-summary: create a apimgmt api schema.
+    examples:
 """
 
 helps['apimgmt api schema update'] = """
     type: command
     short-summary: update a apimgmt api schema.
+    examples:
 """
 
 helps['apimgmt api schema delete'] = """
     type: command
     short-summary: delete a apimgmt api schema.
+    examples:
 """
 
 helps['apimgmt api schema list'] = """
     type: command
     short-summary: list a apimgmt api schema.
+    examples:
 """
 
 helps['apimgmt api schema show'] = """
     type: command
     short-summary: show a apimgmt api schema.
+    examples:
 """
 
 helps['apimgmt api diagnostic'] = """
@@ -226,26 +261,31 @@ helps['apimgmt api diagnostic'] = """
 helps['apimgmt api diagnostic create'] = """
     type: command
     short-summary: create a apimgmt api diagnostic.
+    examples:
 """
 
 helps['apimgmt api diagnostic update'] = """
     type: command
     short-summary: update a apimgmt api diagnostic.
+    examples:
 """
 
 helps['apimgmt api diagnostic delete'] = """
     type: command
     short-summary: delete a apimgmt api diagnostic.
+    examples:
 """
 
 helps['apimgmt api diagnostic list'] = """
     type: command
     short-summary: list a apimgmt api diagnostic.
+    examples:
 """
 
 helps['apimgmt api diagnostic show'] = """
     type: command
     short-summary: show a apimgmt api diagnostic.
+    examples:
 """
 
 helps['apimgmt api issue'] = """
@@ -256,26 +296,31 @@ helps['apimgmt api issue'] = """
 helps['apimgmt api issue create'] = """
     type: command
     short-summary: create a apimgmt api issue.
+    examples:
 """
 
 helps['apimgmt api issue update'] = """
     type: command
     short-summary: update a apimgmt api issue.
+    examples:
 """
 
 helps['apimgmt api issue delete'] = """
     type: command
     short-summary: delete a apimgmt api issue.
+    examples:
 """
 
 helps['apimgmt api issue list'] = """
     type: command
     short-summary: list a apimgmt api issue.
+    examples:
 """
 
 helps['apimgmt api issue show'] = """
     type: command
     short-summary: show a apimgmt api issue.
+    examples:
 """
 
 helps['apimgmt api issue comment'] = """
@@ -286,26 +331,31 @@ helps['apimgmt api issue comment'] = """
 helps['apimgmt api issue comment create'] = """
     type: command
     short-summary: create a apimgmt api issue comment.
+    examples:
 """
 
 helps['apimgmt api issue comment update'] = """
     type: command
     short-summary: update a apimgmt api issue comment.
+    examples:
 """
 
 helps['apimgmt api issue comment delete'] = """
     type: command
     short-summary: delete a apimgmt api issue comment.
+    examples:
 """
 
 helps['apimgmt api issue comment list'] = """
     type: command
     short-summary: list a apimgmt api issue comment.
+    examples:
 """
 
 helps['apimgmt api issue comment show'] = """
     type: command
     short-summary: show a apimgmt api issue comment.
+    examples:
 """
 
 helps['apimgmt api issue attachment'] = """
@@ -316,26 +366,31 @@ helps['apimgmt api issue attachment'] = """
 helps['apimgmt api issue attachment create'] = """
     type: command
     short-summary: create a apimgmt api issue attachment.
+    examples:
 """
 
 helps['apimgmt api issue attachment update'] = """
     type: command
     short-summary: update a apimgmt api issue attachment.
+    examples:
 """
 
 helps['apimgmt api issue attachment delete'] = """
     type: command
     short-summary: delete a apimgmt api issue attachment.
+    examples:
 """
 
 helps['apimgmt api issue attachment list'] = """
     type: command
     short-summary: list a apimgmt api issue attachment.
+    examples:
 """
 
 helps['apimgmt api issue attachment show'] = """
     type: command
     short-summary: show a apimgmt api issue attachment.
+    examples:
 """
 
 helps['apimgmt api tagdescription'] = """
@@ -346,26 +401,31 @@ helps['apimgmt api tagdescription'] = """
 helps['apimgmt api tagdescription create'] = """
     type: command
     short-summary: create a apimgmt api tagdescription.
+    examples:
 """
 
 helps['apimgmt api tagdescription update'] = """
     type: command
     short-summary: update a apimgmt api tagdescription.
+    examples:
 """
 
 helps['apimgmt api tagdescription delete'] = """
     type: command
     short-summary: delete a apimgmt api tagdescription.
+    examples:
 """
 
 helps['apimgmt api tagdescription list'] = """
     type: command
     short-summary: list a apimgmt api tagdescription.
+    examples:
 """
 
 helps['apimgmt api tagdescription show'] = """
     type: command
     short-summary: show a apimgmt api tagdescription.
+    examples:
 """
 
 helps['apimgmt apiversionset'] = """
@@ -376,26 +436,31 @@ helps['apimgmt apiversionset'] = """
 helps['apimgmt apiversionset create'] = """
     type: command
     short-summary: create a apimgmt apiversionset.
+    examples:
 """
 
 helps['apimgmt apiversionset update'] = """
     type: command
     short-summary: update a apimgmt apiversionset.
+    examples:
 """
 
 helps['apimgmt apiversionset delete'] = """
     type: command
     short-summary: delete a apimgmt apiversionset.
+    examples:
 """
 
 helps['apimgmt apiversionset list'] = """
     type: command
     short-summary: list a apimgmt apiversionset.
+    examples:
 """
 
 helps['apimgmt apiversionset show'] = """
     type: command
     short-summary: show a apimgmt apiversionset.
+    examples:
 """
 
 helps['apimgmt authorizationserver'] = """
@@ -406,26 +471,31 @@ helps['apimgmt authorizationserver'] = """
 helps['apimgmt authorizationserver create'] = """
     type: command
     short-summary: create a apimgmt authorizationserver.
+    examples:
 """
 
 helps['apimgmt authorizationserver update'] = """
     type: command
     short-summary: update a apimgmt authorizationserver.
+    examples:
 """
 
 helps['apimgmt authorizationserver delete'] = """
     type: command
     short-summary: delete a apimgmt authorizationserver.
+    examples:
 """
 
 helps['apimgmt authorizationserver list'] = """
     type: command
     short-summary: list a apimgmt authorizationserver.
+    examples:
 """
 
 helps['apimgmt authorizationserver show'] = """
     type: command
     short-summary: show a apimgmt authorizationserver.
+    examples:
 """
 
 helps['apimgmt backend'] = """
@@ -436,26 +506,31 @@ helps['apimgmt backend'] = """
 helps['apimgmt backend create'] = """
     type: command
     short-summary: create a apimgmt backend.
+    examples:
 """
 
 helps['apimgmt backend update'] = """
     type: command
     short-summary: update a apimgmt backend.
+    examples:
 """
 
 helps['apimgmt backend delete'] = """
     type: command
     short-summary: delete a apimgmt backend.
+    examples:
 """
 
 helps['apimgmt backend list'] = """
     type: command
     short-summary: list a apimgmt backend.
+    examples:
 """
 
 helps['apimgmt backend show'] = """
     type: command
     short-summary: show a apimgmt backend.
+    examples:
 """
 
 helps['apimgmt cache'] = """
@@ -466,26 +541,31 @@ helps['apimgmt cache'] = """
 helps['apimgmt cache create'] = """
     type: command
     short-summary: create a apimgmt cache.
+    examples:
 """
 
 helps['apimgmt cache update'] = """
     type: command
     short-summary: update a apimgmt cache.
+    examples:
 """
 
 helps['apimgmt cache delete'] = """
     type: command
     short-summary: delete a apimgmt cache.
+    examples:
 """
 
 helps['apimgmt cache list'] = """
     type: command
     short-summary: list a apimgmt cache.
+    examples:
 """
 
 helps['apimgmt cache show'] = """
     type: command
     short-summary: show a apimgmt cache.
+    examples:
 """
 
 helps['apimgmt certificate'] = """
@@ -496,26 +576,31 @@ helps['apimgmt certificate'] = """
 helps['apimgmt certificate create'] = """
     type: command
     short-summary: create a apimgmt certificate.
+    examples:
 """
 
 helps['apimgmt certificate update'] = """
     type: command
     short-summary: update a apimgmt certificate.
+    examples:
 """
 
 helps['apimgmt certificate delete'] = """
     type: command
     short-summary: delete a apimgmt certificate.
+    examples:
 """
 
 helps['apimgmt certificate list'] = """
     type: command
     short-summary: list a apimgmt certificate.
+    examples:
 """
 
 helps['apimgmt certificate show'] = """
     type: command
     short-summary: show a apimgmt certificate.
+    examples:
 """
 
 helps['apimgmt'] = """
@@ -526,26 +611,31 @@ helps['apimgmt'] = """
 helps['apimgmt create'] = """
     type: command
     short-summary: create a apimgmt.
+    examples:
 """
 
 helps['apimgmt update'] = """
     type: command
     short-summary: update a apimgmt.
+    examples:
 """
 
 helps['apimgmt delete'] = """
     type: command
     short-summary: delete a apimgmt.
+    examples:
 """
 
 helps['apimgmt list'] = """
     type: command
     short-summary: list a apimgmt.
+    examples:
 """
 
 helps['apimgmt show'] = """
     type: command
     short-summary: show a apimgmt.
+    examples:
 """
 
 helps['apimgmt diagnostic'] = """
@@ -556,26 +646,31 @@ helps['apimgmt diagnostic'] = """
 helps['apimgmt diagnostic create'] = """
     type: command
     short-summary: create a apimgmt diagnostic.
+    examples:
 """
 
 helps['apimgmt diagnostic update'] = """
     type: command
     short-summary: update a apimgmt diagnostic.
+    examples:
 """
 
 helps['apimgmt diagnostic delete'] = """
     type: command
     short-summary: delete a apimgmt diagnostic.
+    examples:
 """
 
 helps['apimgmt diagnostic list'] = """
     type: command
     short-summary: list a apimgmt diagnostic.
+    examples:
 """
 
 helps['apimgmt diagnostic show'] = """
     type: command
     short-summary: show a apimgmt diagnostic.
+    examples:
 """
 
 helps['apimgmt template'] = """
@@ -586,26 +681,31 @@ helps['apimgmt template'] = """
 helps['apimgmt template create'] = """
     type: command
     short-summary: create a apimgmt template.
+    examples:
 """
 
 helps['apimgmt template update'] = """
     type: command
     short-summary: update a apimgmt template.
+    examples:
 """
 
 helps['apimgmt template delete'] = """
     type: command
     short-summary: delete a apimgmt template.
+    examples:
 """
 
 helps['apimgmt template list'] = """
     type: command
     short-summary: list a apimgmt template.
+    examples:
 """
 
 helps['apimgmt template show'] = """
     type: command
     short-summary: show a apimgmt template.
+    examples:
 """
 
 helps['apimgmt group'] = """
@@ -616,26 +716,31 @@ helps['apimgmt group'] = """
 helps['apimgmt group create'] = """
     type: command
     short-summary: create a apimgmt group.
+    examples:
 """
 
 helps['apimgmt group update'] = """
     type: command
     short-summary: update a apimgmt group.
+    examples:
 """
 
 helps['apimgmt group delete'] = """
     type: command
     short-summary: delete a apimgmt group.
+    examples:
 """
 
 helps['apimgmt group list'] = """
     type: command
     short-summary: list a apimgmt group.
+    examples:
 """
 
 helps['apimgmt group show'] = """
     type: command
     short-summary: show a apimgmt group.
+    examples:
 """
 
 helps['apimgmt group user'] = """
@@ -646,16 +751,19 @@ helps['apimgmt group user'] = """
 helps['apimgmt group user create'] = """
     type: command
     short-summary: create a apimgmt group user.
+    examples:
 """
 
 helps['apimgmt group user delete'] = """
     type: command
     short-summary: delete a apimgmt group user.
+    examples:
 """
 
 helps['apimgmt group user list'] = """
     type: command
     short-summary: list a apimgmt group user.
+    examples:
 """
 
 helps['apimgmt identityprovider'] = """
@@ -666,26 +774,31 @@ helps['apimgmt identityprovider'] = """
 helps['apimgmt identityprovider create'] = """
     type: command
     short-summary: create a apimgmt identityprovider.
+    examples:
 """
 
 helps['apimgmt identityprovider update'] = """
     type: command
     short-summary: update a apimgmt identityprovider.
+    examples:
 """
 
 helps['apimgmt identityprovider delete'] = """
     type: command
     short-summary: delete a apimgmt identityprovider.
+    examples:
 """
 
 helps['apimgmt identityprovider list'] = """
     type: command
     short-summary: list a apimgmt identityprovider.
+    examples:
 """
 
 helps['apimgmt identityprovider show'] = """
     type: command
     short-summary: show a apimgmt identityprovider.
+    examples:
 """
 
 helps['apimgmt logger'] = """
@@ -696,26 +809,31 @@ helps['apimgmt logger'] = """
 helps['apimgmt logger create'] = """
     type: command
     short-summary: create a apimgmt logger.
+    examples:
 """
 
 helps['apimgmt logger update'] = """
     type: command
     short-summary: update a apimgmt logger.
+    examples:
 """
 
 helps['apimgmt logger delete'] = """
     type: command
     short-summary: delete a apimgmt logger.
+    examples:
 """
 
 helps['apimgmt logger list'] = """
     type: command
     short-summary: list a apimgmt logger.
+    examples:
 """
 
 helps['apimgmt logger show'] = """
     type: command
     short-summary: show a apimgmt logger.
+    examples:
 """
 
 helps['apimgmt notification'] = """
@@ -726,21 +844,25 @@ helps['apimgmt notification'] = """
 helps['apimgmt notification create'] = """
     type: command
     short-summary: create a apimgmt notification.
+    examples:
 """
 
 helps['apimgmt notification update'] = """
     type: command
     short-summary: update a apimgmt notification.
+    examples:
 """
 
 helps['apimgmt notification list'] = """
     type: command
     short-summary: list a apimgmt notification.
+    examples:
 """
 
 helps['apimgmt notification show'] = """
     type: command
     short-summary: show a apimgmt notification.
+    examples:
 """
 
 helps['apimgmt notification recipientuser'] = """
@@ -751,21 +873,25 @@ helps['apimgmt notification recipientuser'] = """
 helps['apimgmt notification recipientuser create'] = """
     type: command
     short-summary: create a apimgmt notification recipientuser.
+    examples:
 """
 
 helps['apimgmt notification recipientuser update'] = """
     type: command
     short-summary: update a apimgmt notification recipientuser.
+    examples:
 """
 
 helps['apimgmt notification recipientuser delete'] = """
     type: command
     short-summary: delete a apimgmt notification recipientuser.
+    examples:
 """
 
 helps['apimgmt notification recipientuser list'] = """
     type: command
     short-summary: list a apimgmt notification recipientuser.
+    examples:
 """
 
 helps['apimgmt notification recipientemail'] = """
@@ -776,21 +902,25 @@ helps['apimgmt notification recipientemail'] = """
 helps['apimgmt notification recipientemail create'] = """
     type: command
     short-summary: create a apimgmt notification recipientemail.
+    examples:
 """
 
 helps['apimgmt notification recipientemail update'] = """
     type: command
     short-summary: update a apimgmt notification recipientemail.
+    examples:
 """
 
 helps['apimgmt notification recipientemail delete'] = """
     type: command
     short-summary: delete a apimgmt notification recipientemail.
+    examples:
 """
 
 helps['apimgmt notification recipientemail list'] = """
     type: command
     short-summary: list a apimgmt notification recipientemail.
+    examples:
 """
 
 helps['apimgmt openidconnectprovider'] = """
@@ -801,26 +931,31 @@ helps['apimgmt openidconnectprovider'] = """
 helps['apimgmt openidconnectprovider create'] = """
     type: command
     short-summary: create a apimgmt openidconnectprovider.
+    examples:
 """
 
 helps['apimgmt openidconnectprovider update'] = """
     type: command
     short-summary: update a apimgmt openidconnectprovider.
+    examples:
 """
 
 helps['apimgmt openidconnectprovider delete'] = """
     type: command
     short-summary: delete a apimgmt openidconnectprovider.
+    examples:
 """
 
 helps['apimgmt openidconnectprovider list'] = """
     type: command
     short-summary: list a apimgmt openidconnectprovider.
+    examples:
 """
 
 helps['apimgmt openidconnectprovider show'] = """
     type: command
     short-summary: show a apimgmt openidconnectprovider.
+    examples:
 """
 
 helps['apimgmt policy'] = """
@@ -831,26 +966,31 @@ helps['apimgmt policy'] = """
 helps['apimgmt policy create'] = """
     type: command
     short-summary: create a apimgmt policy.
+    examples:
 """
 
 helps['apimgmt policy update'] = """
     type: command
     short-summary: update a apimgmt policy.
+    examples:
 """
 
 helps['apimgmt policy delete'] = """
     type: command
     short-summary: delete a apimgmt policy.
+    examples:
 """
 
 helps['apimgmt policy list'] = """
     type: command
     short-summary: list a apimgmt policy.
+    examples:
 """
 
 helps['apimgmt policy show'] = """
     type: command
     short-summary: show a apimgmt policy.
+    examples:
 """
 
 helps['apimgmt portalsetting'] = """
@@ -861,16 +1001,19 @@ helps['apimgmt portalsetting'] = """
 helps['apimgmt portalsetting create'] = """
     type: command
     short-summary: create a apimgmt portalsetting.
+    examples:
 """
 
 helps['apimgmt portalsetting update'] = """
     type: command
     short-summary: update a apimgmt portalsetting.
+    examples:
 """
 
 helps['apimgmt portalsetting show'] = """
     type: command
     short-summary: show a apimgmt portalsetting.
+    examples:
 """
 
 helps['apimgmt portalsetting'] = """
@@ -881,16 +1024,19 @@ helps['apimgmt portalsetting'] = """
 helps['apimgmt portalsetting create'] = """
     type: command
     short-summary: create a apimgmt portalsetting.
+    examples:
 """
 
 helps['apimgmt portalsetting update'] = """
     type: command
     short-summary: update a apimgmt portalsetting.
+    examples:
 """
 
 helps['apimgmt portalsetting show'] = """
     type: command
     short-summary: show a apimgmt portalsetting.
+    examples:
 """
 
 helps['apimgmt portalsetting'] = """
@@ -901,16 +1047,19 @@ helps['apimgmt portalsetting'] = """
 helps['apimgmt portalsetting create'] = """
     type: command
     short-summary: create a apimgmt portalsetting.
+    examples:
 """
 
 helps['apimgmt portalsetting update'] = """
     type: command
     short-summary: update a apimgmt portalsetting.
+    examples:
 """
 
 helps['apimgmt portalsetting show'] = """
     type: command
     short-summary: show a apimgmt portalsetting.
+    examples:
 """
 
 helps['apimgmt product'] = """
@@ -921,26 +1070,31 @@ helps['apimgmt product'] = """
 helps['apimgmt product create'] = """
     type: command
     short-summary: create a apimgmt product.
+    examples:
 """
 
 helps['apimgmt product update'] = """
     type: command
     short-summary: update a apimgmt product.
+    examples:
 """
 
 helps['apimgmt product delete'] = """
     type: command
     short-summary: delete a apimgmt product.
+    examples:
 """
 
 helps['apimgmt product list'] = """
     type: command
     short-summary: list a apimgmt product.
+    examples:
 """
 
 helps['apimgmt product show'] = """
     type: command
     short-summary: show a apimgmt product.
+    examples:
 """
 
 helps['apimgmt product api'] = """
@@ -951,21 +1105,25 @@ helps['apimgmt product api'] = """
 helps['apimgmt product api create'] = """
     type: command
     short-summary: create a apimgmt product api.
+    examples:
 """
 
 helps['apimgmt product api update'] = """
     type: command
     short-summary: update a apimgmt product api.
+    examples:
 """
 
 helps['apimgmt product api delete'] = """
     type: command
     short-summary: delete a apimgmt product api.
+    examples:
 """
 
 helps['apimgmt product api list'] = """
     type: command
     short-summary: list a apimgmt product api.
+    examples:
 """
 
 helps['apimgmt product group'] = """
@@ -976,21 +1134,25 @@ helps['apimgmt product group'] = """
 helps['apimgmt product group create'] = """
     type: command
     short-summary: create a apimgmt product group.
+    examples:
 """
 
 helps['apimgmt product group update'] = """
     type: command
     short-summary: update a apimgmt product group.
+    examples:
 """
 
 helps['apimgmt product group delete'] = """
     type: command
     short-summary: delete a apimgmt product group.
+    examples:
 """
 
 helps['apimgmt product group list'] = """
     type: command
     short-summary: list a apimgmt product group.
+    examples:
 """
 
 helps['apimgmt product policy'] = """
@@ -1001,26 +1163,31 @@ helps['apimgmt product policy'] = """
 helps['apimgmt product policy create'] = """
     type: command
     short-summary: create a apimgmt product policy.
+    examples:
 """
 
 helps['apimgmt product policy update'] = """
     type: command
     short-summary: update a apimgmt product policy.
+    examples:
 """
 
 helps['apimgmt product policy delete'] = """
     type: command
     short-summary: delete a apimgmt product policy.
+    examples:
 """
 
 helps['apimgmt product policy list'] = """
     type: command
     short-summary: list a apimgmt product policy.
+    examples:
 """
 
 helps['apimgmt product policy show'] = """
     type: command
     short-summary: show a apimgmt product policy.
+    examples:
 """
 
 helps['apimgmt property'] = """
@@ -1031,26 +1198,31 @@ helps['apimgmt property'] = """
 helps['apimgmt property create'] = """
     type: command
     short-summary: create a apimgmt property.
+    examples:
 """
 
 helps['apimgmt property update'] = """
     type: command
     short-summary: update a apimgmt property.
+    examples:
 """
 
 helps['apimgmt property delete'] = """
     type: command
     short-summary: delete a apimgmt property.
+    examples:
 """
 
 helps['apimgmt property list'] = """
     type: command
     short-summary: list a apimgmt property.
+    examples:
 """
 
 helps['apimgmt property show'] = """
     type: command
     short-summary: show a apimgmt property.
+    examples:
 """
 
 helps['apimgmt subscription'] = """
@@ -1061,26 +1233,31 @@ helps['apimgmt subscription'] = """
 helps['apimgmt subscription create'] = """
     type: command
     short-summary: create a apimgmt subscription.
+    examples:
 """
 
 helps['apimgmt subscription update'] = """
     type: command
     short-summary: update a apimgmt subscription.
+    examples:
 """
 
 helps['apimgmt subscription delete'] = """
     type: command
     short-summary: delete a apimgmt subscription.
+    examples:
 """
 
 helps['apimgmt subscription list'] = """
     type: command
     short-summary: list a apimgmt subscription.
+    examples:
 """
 
 helps['apimgmt subscription show'] = """
     type: command
     short-summary: show a apimgmt subscription.
+    examples:
 """
 
 helps['apimgmt user'] = """
@@ -1091,24 +1268,29 @@ helps['apimgmt user'] = """
 helps['apimgmt user create'] = """
     type: command
     short-summary: create a apimgmt user.
+    examples:
 """
 
 helps['apimgmt user update'] = """
     type: command
     short-summary: update a apimgmt user.
+    examples:
 """
 
 helps['apimgmt user delete'] = """
     type: command
     short-summary: delete a apimgmt user.
+    examples:
 """
 
 helps['apimgmt user list'] = """
     type: command
     short-summary: list a apimgmt user.
+    examples:
 """
 
 helps['apimgmt user show'] = """
     type: command
     short-summary: show a apimgmt user.
+    examples:
 """
