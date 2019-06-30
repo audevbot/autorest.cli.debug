@@ -1,1245 +1,586 @@
 # Azure CLI Module Creation Report
 
-# ApiManagementCreateApiUsingOai3Import
-apimgmt api create  --resource_group rg1 --service_name apimService1 --api_id petstore --path petstore --value https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/petstore.yaml --format openapi-link
-# ApiManagementCreateApiUsingSwaggerImport
-apimgmt api create  --resource_group rg1 --service_name apimService1 --api_id petstore --path petstore --value http://petstore.swagger.io/v2/swagger.json --format swagger-link-json
-# ApiManagementCreateApiUsingWadlImport
-apimgmt api create  --resource_group rg1 --service_name apimService1 --api_id petstore --path collector --value https://developer.cisco.com/media/wae-release-6-2-api-reference/wae-collector-rest-api/application.wadl --format wadl-link-json
-# ApiManagementCreateSoapToRestApiUsingWsdlImport
-apimgmt api create  --resource_group rg1 --service_name apimService1 --api_id soapApi --path currency --value http://www.webservicex.net/CurrencyConvertor.asmx?WSDL --format wsdl-link
-# ApiManagementCreateSoapPassThroughApiUsingWsdlImport
-apimgmt api create  --resource_group rg1 --service_name apimService1 --api_id soapApi --path currency --value http://www.webservicex.net/CurrencyConvertor.asmx?WSDL --format wsdl-link --api_type soap
-# ApiManagementCreateApi
-apimgmt api create  --resource_group rg1 --service_name apimService1 --api_id tempgroup --description apidescription5200 --display_name apiname1463 --service_url http://newechoapi.cloudapp.net/api --path newapiPath
-# ApiManagementCreateApiRevisionFromExistingApi
-apimgmt api create  --resource_group rg1 --service_name apimService1 --api_id echo-api;rev=3 --api_revision_description Creating a Revision of an existing API --source_api_id /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }} --service_url http://echoapi.cloudapp.net/apiv3 --path echo
-# ApiManagementCreateApiNewVersionUsingExistingApi
-apimgmt api create  --resource_group rg1 --service_name apimService1 --api_id echoapiv3 --description Create Echo API into a new Version using Existing Version Set and Copy all Operations. --api_version v4 --is_current true --api_version_set_id /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apiVersionSets/{{ api_version_set_name }} --subscription_required true --source_api_id /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }} --display_name Echo API2 --service_url http://echoapi.cloudapp.net/api --path echo2
-# ApiManagementCreateApiClone
-apimgmt api create  --resource_group rg1 --service_name apimService1 --api_id echo-api2 --description Copy of Existing Echo Api including Operations. --is_current true --subscription_required true --source_api_id /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }} --display_name Echo API2 --service_url http://echoapi.cloudapp.net/api --path echo2
-# ApiManagementCreateApiWithOpenIdConnect
-apimgmt api create  --resource_group rg1 --service_name apimService1 --api_id tempgroup --description This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters. --display_name Swagger Petstore --service_url http://petstore.swagger.io/v2 --path petstore
-# ApiManagementUpdateApi
-apimgmt api create  --resource_group rg1 --service_name apimService1 --api_id echo-api --display_name Echo API New --service_url http://echoapi.cloudapp.net/api2 --path newecho
-# ApiManagementDeleteApi
-apimgmt api create  --resource_group rg1 --service_name apimService1 --api_id echo-api
-# ApiManagementCreateApiUsingOai3Import
-apimgmt api update  --resource_group rg1 --service_name apimService1 --api_id petstore --path petstore --value https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/petstore.yaml --format openapi-link
-# ApiManagementCreateApiUsingSwaggerImport
-apimgmt api update  --resource_group rg1 --service_name apimService1 --api_id petstore --path petstore --value http://petstore.swagger.io/v2/swagger.json --format swagger-link-json
-# ApiManagementCreateApiUsingWadlImport
-apimgmt api update  --resource_group rg1 --service_name apimService1 --api_id petstore --path collector --value https://developer.cisco.com/media/wae-release-6-2-api-reference/wae-collector-rest-api/application.wadl --format wadl-link-json
-# ApiManagementCreateSoapToRestApiUsingWsdlImport
-apimgmt api update  --resource_group rg1 --service_name apimService1 --api_id soapApi --path currency --value http://www.webservicex.net/CurrencyConvertor.asmx?WSDL --format wsdl-link
-# ApiManagementCreateSoapPassThroughApiUsingWsdlImport
-apimgmt api update  --resource_group rg1 --service_name apimService1 --api_id soapApi --path currency --value http://www.webservicex.net/CurrencyConvertor.asmx?WSDL --format wsdl-link --api_type soap
-# ApiManagementCreateApi
-apimgmt api update  --resource_group rg1 --service_name apimService1 --api_id tempgroup --description apidescription5200 --display_name apiname1463 --service_url http://newechoapi.cloudapp.net/api --path newapiPath
-# ApiManagementCreateApiRevisionFromExistingApi
-apimgmt api update  --resource_group rg1 --service_name apimService1 --api_id echo-api;rev=3 --api_revision_description Creating a Revision of an existing API --source_api_id /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }} --service_url http://echoapi.cloudapp.net/apiv3 --path echo
-# ApiManagementCreateApiNewVersionUsingExistingApi
-apimgmt api update  --resource_group rg1 --service_name apimService1 --api_id echoapiv3 --description Create Echo API into a new Version using Existing Version Set and Copy all Operations. --api_version v4 --is_current true --api_version_set_id /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apiVersionSets/{{ api_version_set_name }} --subscription_required true --source_api_id /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }} --display_name Echo API2 --service_url http://echoapi.cloudapp.net/api --path echo2
-# ApiManagementCreateApiClone
-apimgmt api update  --resource_group rg1 --service_name apimService1 --api_id echo-api2 --description Copy of Existing Echo Api including Operations. --is_current true --subscription_required true --source_api_id /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }} --display_name Echo API2 --service_url http://echoapi.cloudapp.net/api --path echo2
-# ApiManagementCreateApiWithOpenIdConnect
-apimgmt api update  --resource_group rg1 --service_name apimService1 --api_id tempgroup --description This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters. --display_name Swagger Petstore --service_url http://petstore.swagger.io/v2 --path petstore
-# ApiManagementUpdateApi
-apimgmt api update  --resource_group rg1 --service_name apimService1 --api_id echo-api --display_name Echo API New --service_url http://echoapi.cloudapp.net/api2 --path newecho
-# ApiManagementDeleteApi
-apimgmt api update  --resource_group rg1 --service_name apimService1 --api_id echo-api
-# ApiManagementCreateApiUsingOai3Import
-apimgmt api delete  --resource_group rg1 --service_name apimService1 --api_id petstore
-# ApiManagementCreateApiUsingSwaggerImport
-apimgmt api delete  --resource_group rg1 --service_name apimService1 --api_id petstore
-# ApiManagementCreateApiUsingWadlImport
-apimgmt api delete  --resource_group rg1 --service_name apimService1 --api_id petstore
-# ApiManagementCreateSoapToRestApiUsingWsdlImport
-apimgmt api delete  --resource_group rg1 --service_name apimService1 --api_id soapApi
-# ApiManagementCreateSoapPassThroughApiUsingWsdlImport
-apimgmt api delete  --resource_group rg1 --service_name apimService1 --api_id soapApi
-# ApiManagementCreateApi
-apimgmt api delete  --resource_group rg1 --service_name apimService1 --api_id tempgroup
-# ApiManagementCreateApiRevisionFromExistingApi
-apimgmt api delete  --resource_group rg1 --service_name apimService1 --api_id echo-api;rev=3
-# ApiManagementCreateApiNewVersionUsingExistingApi
-apimgmt api delete  --resource_group rg1 --service_name apimService1 --api_id echoapiv3
-# ApiManagementCreateApiClone
-apimgmt api delete  --resource_group rg1 --service_name apimService1 --api_id echo-api2
-# ApiManagementCreateApiWithOpenIdConnect
-apimgmt api delete  --resource_group rg1 --service_name apimService1 --api_id tempgroup
-# ApiManagementUpdateApi
-apimgmt api delete  --resource_group rg1 --service_name apimService1 --api_id echo-api
-# ApiManagementDeleteApi
-apimgmt api delete  --resource_group rg1 --service_name apimService1 --api_id echo-api
-# ApiManagementCreateApiUsingOai3Import
-apimgmt api list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateApiUsingSwaggerImport
-apimgmt api list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateApiUsingWadlImport
-apimgmt api list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateSoapToRestApiUsingWsdlImport
-apimgmt api list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateSoapPassThroughApiUsingWsdlImport
-apimgmt api list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateApi
-apimgmt api list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateApiRevisionFromExistingApi
-apimgmt api list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateApiNewVersionUsingExistingApi
-apimgmt api list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateApiClone
-apimgmt api list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateApiWithOpenIdConnect
-apimgmt api list  --resource_group rg1 --service_name apimService1
-# ApiManagementUpdateApi
-apimgmt api list  --resource_group rg1 --service_name apimService1
-# ApiManagementDeleteApi
-apimgmt api list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateApiUsingOai3Import
-apimgmt api list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateApiUsingSwaggerImport
-apimgmt api list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateApiUsingWadlImport
-apimgmt api list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateSoapToRestApiUsingWsdlImport
-apimgmt api list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateSoapPassThroughApiUsingWsdlImport
-apimgmt api list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateApi
-apimgmt api list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateApiRevisionFromExistingApi
-apimgmt api list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateApiNewVersionUsingExistingApi
-apimgmt api list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateApiClone
-apimgmt api list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateApiWithOpenIdConnect
-apimgmt api list  --resource_group rg1 --service_name apimService1
-# ApiManagementUpdateApi
-apimgmt api list  --resource_group rg1 --service_name apimService1
-# ApiManagementDeleteApi
-apimgmt api list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateApiUsingOai3Import
-apimgmt api show  --resource_group rg1 --service_name apimService1 --api_id petstore
-# ApiManagementCreateApiUsingSwaggerImport
-apimgmt api show  --resource_group rg1 --service_name apimService1 --api_id petstore
-# ApiManagementCreateApiUsingWadlImport
-apimgmt api show  --resource_group rg1 --service_name apimService1 --api_id petstore
-# ApiManagementCreateSoapToRestApiUsingWsdlImport
-apimgmt api show  --resource_group rg1 --service_name apimService1 --api_id soapApi
-# ApiManagementCreateSoapPassThroughApiUsingWsdlImport
-apimgmt api show  --resource_group rg1 --service_name apimService1 --api_id soapApi
-# ApiManagementCreateApi
-apimgmt api show  --resource_group rg1 --service_name apimService1 --api_id tempgroup
-# ApiManagementCreateApiRevisionFromExistingApi
-apimgmt api show  --resource_group rg1 --service_name apimService1 --api_id echo-api;rev=3
-# ApiManagementCreateApiNewVersionUsingExistingApi
-apimgmt api show  --resource_group rg1 --service_name apimService1 --api_id echoapiv3
-# ApiManagementCreateApiClone
-apimgmt api show  --resource_group rg1 --service_name apimService1 --api_id echo-api2
-# ApiManagementCreateApiWithOpenIdConnect
-apimgmt api show  --resource_group rg1 --service_name apimService1 --api_id tempgroup
-# ApiManagementUpdateApi
-apimgmt api show  --resource_group rg1 --service_name apimService1 --api_id echo-api
-# ApiManagementDeleteApi
-apimgmt api show  --resource_group rg1 --service_name apimService1 --api_id echo-api
-# ApiManagementCreateApiRelease
-apimgmt api release create  --resource_group rg1 --service_name apimService1 --api_id a1 --release_id testrev --notes yahooagain
-# ApiManagementUpdateApiRelease
-apimgmt api release create  --resource_group rg1 --service_name apimService1 --api_id a1 --release_id testrev --notes yahooagain
-# ApiManagementDeleteApiRelease
-apimgmt api release create  --resource_group rg1 --service_name apimService1 --api_id 5a5fcc09124a7fa9b89f2f1d --release_id testrev
-# ApiManagementCreateApiRelease
-apimgmt api release update  --resource_group rg1 --service_name apimService1 --api_id a1 --release_id testrev --notes yahooagain
-# ApiManagementUpdateApiRelease
-apimgmt api release update  --resource_group rg1 --service_name apimService1 --api_id a1 --release_id testrev --notes yahooagain
-# ApiManagementDeleteApiRelease
-apimgmt api release update  --resource_group rg1 --service_name apimService1 --api_id 5a5fcc09124a7fa9b89f2f1d --release_id testrev
-# ApiManagementCreateApiRelease
-apimgmt api release delete  --resource_group rg1 --service_name apimService1 --api_id a1 --release_id testrev
-# ApiManagementUpdateApiRelease
-apimgmt api release delete  --resource_group rg1 --service_name apimService1 --api_id a1 --release_id testrev
-# ApiManagementDeleteApiRelease
-apimgmt api release delete  --resource_group rg1 --service_name apimService1 --api_id 5a5fcc09124a7fa9b89f2f1d --release_id testrev
-# ApiManagementCreateApiRelease
-apimgmt api release list  --resource_group rg1 --service_name apimService1 --api_id a1
-# ApiManagementUpdateApiRelease
-apimgmt api release list  --resource_group rg1 --service_name apimService1 --api_id a1
-# ApiManagementDeleteApiRelease
-apimgmt api release list  --resource_group rg1 --service_name apimService1 --api_id 5a5fcc09124a7fa9b89f2f1d
-# ApiManagementCreateApiRelease
-apimgmt api release show  --resource_group rg1 --service_name apimService1 --api_id a1 --release_id testrev
-# ApiManagementUpdateApiRelease
-apimgmt api release show  --resource_group rg1 --service_name apimService1 --api_id a1 --release_id testrev
-# ApiManagementDeleteApiRelease
-apimgmt api release show  --resource_group rg1 --service_name apimService1 --api_id 5a5fcc09124a7fa9b89f2f1d --release_id testrev
-# ApiManagementCreateApiOperation
-apimgmt api operation create  --resource_group rg1 --service_name apimService1 --api_id PetStoreTemplate2 --operation_id newoperations --description This can only be done by the logged in user. --display_name createUser2 --method POST --url_template /user1
-# ApiManagementUpdateApiOperation
-apimgmt api operation create  --resource_group rg1 --service_name apimService1 --api_id echo-api --operation_id operationId --display_name Retrieve resource --method GET --url_template /resource
-# ApiManagementDeleteApiOperation
-apimgmt api operation create  --resource_group rg1 --service_name apimService1 --api_id 57d2ef278aa04f0888cba3f3 --operation_id 57d2ef278aa04f0ad01d6cdc
-# ApiManagementCreateApiOperation
-apimgmt api operation update  --resource_group rg1 --service_name apimService1 --api_id PetStoreTemplate2 --operation_id newoperations --description This can only be done by the logged in user. --display_name createUser2 --method POST --url_template /user1
-# ApiManagementUpdateApiOperation
-apimgmt api operation update  --resource_group rg1 --service_name apimService1 --api_id echo-api --operation_id operationId --display_name Retrieve resource --method GET --url_template /resource
-# ApiManagementDeleteApiOperation
-apimgmt api operation update  --resource_group rg1 --service_name apimService1 --api_id 57d2ef278aa04f0888cba3f3 --operation_id 57d2ef278aa04f0ad01d6cdc
-# ApiManagementCreateApiOperation
-apimgmt api operation delete  --resource_group rg1 --service_name apimService1 --api_id PetStoreTemplate2 --operation_id newoperations
-# ApiManagementUpdateApiOperation
-apimgmt api operation delete  --resource_group rg1 --service_name apimService1 --api_id echo-api --operation_id operationId
-# ApiManagementDeleteApiOperation
-apimgmt api operation delete  --resource_group rg1 --service_name apimService1 --api_id 57d2ef278aa04f0888cba3f3 --operation_id 57d2ef278aa04f0ad01d6cdc
-# ApiManagementCreateApiOperation
-apimgmt api operation list  --resource_group rg1 --service_name apimService1 --api_id PetStoreTemplate2
-# ApiManagementUpdateApiOperation
-apimgmt api operation list  --resource_group rg1 --service_name apimService1 --api_id echo-api
-# ApiManagementDeleteApiOperation
-apimgmt api operation list  --resource_group rg1 --service_name apimService1 --api_id 57d2ef278aa04f0888cba3f3
-# ApiManagementCreateApiOperation
-apimgmt api operation show  --resource_group rg1 --service_name apimService1 --api_id PetStoreTemplate2 --operation_id newoperations
-# ApiManagementUpdateApiOperation
-apimgmt api operation show  --resource_group rg1 --service_name apimService1 --api_id echo-api --operation_id operationId
-# ApiManagementDeleteApiOperation
-apimgmt api operation show  --resource_group rg1 --service_name apimService1 --api_id 57d2ef278aa04f0888cba3f3 --operation_id 57d2ef278aa04f0ad01d6cdc
-# ApiManagementCreateApiOperationPolicy
-apimgmt api operation policy create  --resource_group rg1 --service_name apimService1 --api_id 5600b57e7e8880006a040001 --operation_id 5600b57e7e8880006a080001 --policy_id policy --value <policies> <inbound /> <backend>    <forward-request />  </backend>  <outbound /></policies> --format xml
-# ApiManagementDeleteApiOperationPolicy
-apimgmt api operation policy create  --resource_group rg1 --service_name apimService1 --api_id testapi --operation_id testoperation --policy_id policy
-# ApiManagementCreateApiOperationPolicy
-apimgmt api operation policy update  --resource_group rg1 --service_name apimService1 --api_id 5600b57e7e8880006a040001 --operation_id 5600b57e7e8880006a080001 --policy_id policy --value <policies> <inbound /> <backend>    <forward-request />  </backend>  <outbound /></policies> --format xml
-# ApiManagementDeleteApiOperationPolicy
-apimgmt api operation policy update  --resource_group rg1 --service_name apimService1 --api_id testapi --operation_id testoperation --policy_id policy
-# ApiManagementCreateApiOperationPolicy
-apimgmt api operation policy delete  --resource_group rg1 --service_name apimService1 --api_id 5600b57e7e8880006a040001 --operation_id 5600b57e7e8880006a080001 --policy_id policy
-# ApiManagementDeleteApiOperationPolicy
-apimgmt api operation policy delete  --resource_group rg1 --service_name apimService1 --api_id testapi --operation_id testoperation --policy_id policy
-# ApiManagementCreateApiOperationPolicy
-apimgmt api operation policy list  --resource_group rg1 --service_name apimService1 --api_id 5600b57e7e8880006a040001 --operation_id 5600b57e7e8880006a080001
-# ApiManagementDeleteApiOperationPolicy
-apimgmt api operation policy list  --resource_group rg1 --service_name apimService1 --api_id testapi --operation_id testoperation
-# ApiManagementCreateApiOperationPolicy
-apimgmt api operation policy show  --resource_group rg1 --service_name apimService1 --api_id 5600b57e7e8880006a040001 --operation_id 5600b57e7e8880006a080001 --format xml --policy_id policy
-# ApiManagementDeleteApiOperationPolicy
-apimgmt api operation policy show  --resource_group rg1 --service_name apimService1 --api_id testapi --operation_id testoperation --policy_id policy
-# ApiManagementCreateTag
-apimgmt tag create  --resource_group rg1 --service_name apimService1 --tag_id tagId1 --display_name tag1
-# ApiManagementUpdateTag
-apimgmt tag create  --resource_group rg1 --service_name apimService1 --tag_id temptag --display_name temp tag
-# ApiManagementDeleteTag
-apimgmt tag create  --resource_group rg1 --service_name apimService1 --tag_id tagId1
-# ApiManagementCreateTag
-apimgmt tag update  --resource_group rg1 --service_name apimService1 --tag_id tagId1 --display_name tag1
-# ApiManagementUpdateTag
-apimgmt tag update  --resource_group rg1 --service_name apimService1 --tag_id temptag --display_name temp tag
-# ApiManagementDeleteTag
-apimgmt tag update  --resource_group rg1 --service_name apimService1 --tag_id tagId1
-# ApiManagementCreateTag
-apimgmt tag delete  --resource_group rg1 --service_name apimService1 --tag_id tagId1
-# ApiManagementUpdateTag
-apimgmt tag delete  --resource_group rg1 --service_name apimService1 --tag_id temptag
-# ApiManagementDeleteTag
-apimgmt tag delete  --resource_group rg1 --service_name apimService1 --tag_id tagId1
-# ApiManagementCreateTag
-apimgmt tag list  --resource_group rg1 --service_name apimService1
-# ApiManagementUpdateTag
-apimgmt tag list  --resource_group rg1 --service_name apimService1
-# ApiManagementDeleteTag
-apimgmt tag list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateTag
-apimgmt tag list  --resource_group rg1 --service_name apimService1
-# ApiManagementUpdateTag
-apimgmt tag list  --resource_group rg1 --service_name apimService1
-# ApiManagementDeleteTag
-apimgmt tag list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateTag
-apimgmt tag list  --resource_group rg1 --service_name apimService1
-# ApiManagementUpdateTag
-apimgmt tag list  --resource_group rg1 --service_name apimService1
-# ApiManagementDeleteTag
-apimgmt tag list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateTag
-apimgmt tag list  --resource_group rg1 --service_name apimService1
-# ApiManagementUpdateTag
-apimgmt tag list  --resource_group rg1 --service_name apimService1
-# ApiManagementDeleteTag
-apimgmt tag list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateTag
-apimgmt tag show  --resource_group rg1 --service_name apimService1 --tag_id tagId1
-# ApiManagementUpdateTag
-apimgmt tag show  --resource_group rg1 --service_name apimService1 --tag_id temptag
-# ApiManagementDeleteTag
-apimgmt tag show  --resource_group rg1 --service_name apimService1 --tag_id tagId1
-# ApiManagementCreateApiPolicy
-apimgmt api policy create  --resource_group rg1 --service_name apimService1 --api_id 5600b57e7e8880006a040001 --policy_id policy --value <policies> <inbound /> <backend>    <forward-request />  </backend>  <outbound /></policies> --format xml
-# ApiManagementCreateApiPolicyNonXmlEncoded
-apimgmt api policy create  --resource_group rg1 --service_name apimService1 --api_id 5600b57e7e8880006a040001 --policy_id policy --value <policies>
-     <inbound>
-     <base />
-  <set-header name="newvalue" exists-action="override">
-   <value>"@(context.Request.Headers.FirstOrDefault(h => h.Ke=="Via"))" </value>
-    </set-header>
-  </inbound>
-      </policies> --format rawxml
-# ApiManagementDeleteApiPolicy
-apimgmt api policy create  --resource_group rg1 --service_name apimService1 --api_id loggerId --policy_id policy
-# ApiManagementCreateApiPolicy
-apimgmt api policy update  --resource_group rg1 --service_name apimService1 --api_id 5600b57e7e8880006a040001 --policy_id policy --value <policies> <inbound /> <backend>    <forward-request />  </backend>  <outbound /></policies> --format xml
-# ApiManagementCreateApiPolicyNonXmlEncoded
-apimgmt api policy update  --resource_group rg1 --service_name apimService1 --api_id 5600b57e7e8880006a040001 --policy_id policy --value <policies>
-     <inbound>
-     <base />
-  <set-header name="newvalue" exists-action="override">
-   <value>"@(context.Request.Headers.FirstOrDefault(h => h.Ke=="Via"))" </value>
-    </set-header>
-  </inbound>
-      </policies> --format rawxml
-# ApiManagementDeleteApiPolicy
-apimgmt api policy update  --resource_group rg1 --service_name apimService1 --api_id loggerId --policy_id policy
-# ApiManagementCreateApiPolicy
-apimgmt api policy delete  --resource_group rg1 --service_name apimService1 --api_id 5600b57e7e8880006a040001 --policy_id policy
-# ApiManagementCreateApiPolicyNonXmlEncoded
-apimgmt api policy delete  --resource_group rg1 --service_name apimService1 --api_id 5600b57e7e8880006a040001 --policy_id policy
-# ApiManagementDeleteApiPolicy
-apimgmt api policy delete  --resource_group rg1 --service_name apimService1 --api_id loggerId --policy_id policy
-# ApiManagementCreateApiPolicy
-apimgmt api policy list  --resource_group rg1 --service_name apimService1 --api_id 5600b57e7e8880006a040001
-# ApiManagementCreateApiPolicyNonXmlEncoded
-apimgmt api policy list  --resource_group rg1 --service_name apimService1 --api_id 5600b57e7e8880006a040001
-# ApiManagementDeleteApiPolicy
-apimgmt api policy list  --resource_group rg1 --service_name apimService1 --api_id loggerId
-# ApiManagementCreateApiPolicy
-apimgmt api policy show  --resource_group rg1 --service_name apimService1 --api_id 5600b57e7e8880006a040001 --policy_id policy --format xml
-# ApiManagementCreateApiPolicyNonXmlEncoded
-apimgmt api policy show  --resource_group rg1 --service_name apimService1 --api_id 5600b57e7e8880006a040001 --policy_id policy --format rawxml
-# ApiManagementDeleteApiPolicy
-apimgmt api policy show  --resource_group rg1 --service_name apimService1 --api_id loggerId --policy_id policy
-# ApiManagementCreateApiSchema
-apimgmt api schema create  --resource_group rg1 --service_name apimService1 --api_id 59d6bb8f1f7fab13dc67ec9b --schema_id ec12520d-9d48-4e7b-8f39-698ca2ac63f1 --content_type application/vnd.ms-azure-apim.xsd+xml
-# ApiManagementDeleteApiSchema
-apimgmt api schema create  --resource_group rg1 --service_name apimService1 --api_id 59d5b28d1f7fab116c282650 --schema_id 59d5b28e1f7fab116402044e
-# ApiManagementCreateApiSchema
-apimgmt api schema update  --resource_group rg1 --service_name apimService1 --api_id 59d6bb8f1f7fab13dc67ec9b --schema_id ec12520d-9d48-4e7b-8f39-698ca2ac63f1 --content_type application/vnd.ms-azure-apim.xsd+xml
-# ApiManagementDeleteApiSchema
-apimgmt api schema update  --resource_group rg1 --service_name apimService1 --api_id 59d5b28d1f7fab116c282650 --schema_id 59d5b28e1f7fab116402044e
-# ApiManagementCreateApiSchema
-apimgmt api schema delete  --resource_group rg1 --service_name apimService1 --api_id 59d6bb8f1f7fab13dc67ec9b --schema_id ec12520d-9d48-4e7b-8f39-698ca2ac63f1
-# ApiManagementDeleteApiSchema
-apimgmt api schema delete  --resource_group rg1 --service_name apimService1 --api_id 59d5b28d1f7fab116c282650 --schema_id 59d5b28e1f7fab116402044e
-# ApiManagementCreateApiSchema
-apimgmt api schema list  --resource_group rg1 --service_name apimService1 --api_id 59d6bb8f1f7fab13dc67ec9b
-# ApiManagementDeleteApiSchema
-apimgmt api schema list  --resource_group rg1 --service_name apimService1 --api_id 59d5b28d1f7fab116c282650
-# ApiManagementCreateApiSchema
-apimgmt api schema show  --resource_group rg1 --service_name apimService1 --api_id 59d6bb8f1f7fab13dc67ec9b --schema_id ec12520d-9d48-4e7b-8f39-698ca2ac63f1
-# ApiManagementDeleteApiSchema
-apimgmt api schema show  --resource_group rg1 --service_name apimService1 --api_id 59d5b28d1f7fab116c282650 --schema_id 59d5b28e1f7fab116402044e
-# ApiManagementCreateApiDiagnostic
-apimgmt api diagnostic create  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --diagnostic_id applicationinsights --always_log allErrors --logger_id /loggers/applicationinsights
-# ApiManagementUpdateApiDiagnostic
-apimgmt api diagnostic create  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --diagnostic_id applicationinsights --always_log allErrors --logger_id /loggers/applicationinsights
-# ApiManagementDeleteApiDiagnostic
-apimgmt api diagnostic create  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --diagnostic_id applicationinsights
-# ApiManagementCreateApiDiagnostic
-apimgmt api diagnostic update  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --diagnostic_id applicationinsights --always_log allErrors --logger_id /loggers/applicationinsights
-# ApiManagementUpdateApiDiagnostic
-apimgmt api diagnostic update  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --diagnostic_id applicationinsights --always_log allErrors --logger_id /loggers/applicationinsights
-# ApiManagementDeleteApiDiagnostic
-apimgmt api diagnostic update  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --diagnostic_id applicationinsights
-# ApiManagementCreateApiDiagnostic
-apimgmt api diagnostic delete  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --diagnostic_id applicationinsights
-# ApiManagementUpdateApiDiagnostic
-apimgmt api diagnostic delete  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --diagnostic_id applicationinsights
-# ApiManagementDeleteApiDiagnostic
-apimgmt api diagnostic delete  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --diagnostic_id applicationinsights
-# ApiManagementCreateApiDiagnostic
-apimgmt api diagnostic list  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a
-# ApiManagementUpdateApiDiagnostic
-apimgmt api diagnostic list  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a
-# ApiManagementDeleteApiDiagnostic
-apimgmt api diagnostic list  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a
-# ApiManagementCreateApiDiagnostic
-apimgmt api diagnostic show  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --diagnostic_id applicationinsights
-# ApiManagementUpdateApiDiagnostic
-apimgmt api diagnostic show  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --diagnostic_id applicationinsights
-# ApiManagementDeleteApiDiagnostic
-apimgmt api diagnostic show  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --diagnostic_id applicationinsights
-# ApiManagementCreateApiIssue
-apimgmt api issue create  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc --created_date 2018-02-01T22:21:20.467Z --state open --title New API issue --description New API issue description --user_id /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/users/{{ user_name }}
-# ApiManagementUpdateApiIssue
-apimgmt api issue create  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc --state closed
-# ApiManagementDeleteApiIssue
-apimgmt api issue create  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc
-# ApiManagementCreateApiIssue
-apimgmt api issue update  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc --created_date 2018-02-01T22:21:20.467Z --state open --title New API issue --description New API issue description --user_id /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/users/{{ user_name }}
-# ApiManagementUpdateApiIssue
-apimgmt api issue update  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc --state closed
-# ApiManagementDeleteApiIssue
-apimgmt api issue update  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc
-# ApiManagementCreateApiIssue
-apimgmt api issue delete  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc
-# ApiManagementUpdateApiIssue
-apimgmt api issue delete  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc
-# ApiManagementDeleteApiIssue
-apimgmt api issue delete  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc
-# ApiManagementCreateApiIssue
-apimgmt api issue list  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a
-# ApiManagementUpdateApiIssue
-apimgmt api issue list  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a
-# ApiManagementDeleteApiIssue
-apimgmt api issue list  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a
-# ApiManagementCreateApiIssue
-apimgmt api issue show  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc
-# ApiManagementUpdateApiIssue
-apimgmt api issue show  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc
-# ApiManagementDeleteApiIssue
-apimgmt api issue show  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc
-# ApiManagementCreateApiIssueComment
-apimgmt api issue comment create  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc --comment_id 599e29ab193c3c0bd0b3e2fb --text Issue comment. --created_date 2018-02-01T22:21:20.467Z --user_id /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/users/{{ user_name }}
-# ApiManagementDeleteApiIssueComment
-apimgmt api issue comment create  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc --comment_id 599e29ab193c3c0bd0b3e2fb
-# ApiManagementCreateApiIssueComment
-apimgmt api issue comment update  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc --comment_id 599e29ab193c3c0bd0b3e2fb --text Issue comment. --created_date 2018-02-01T22:21:20.467Z --user_id /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/users/{{ user_name }}
-# ApiManagementDeleteApiIssueComment
-apimgmt api issue comment update  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc --comment_id 599e29ab193c3c0bd0b3e2fb
-# ApiManagementCreateApiIssueComment
-apimgmt api issue comment delete  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc --comment_id 599e29ab193c3c0bd0b3e2fb
-# ApiManagementDeleteApiIssueComment
-apimgmt api issue comment delete  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc --comment_id 599e29ab193c3c0bd0b3e2fb
-# ApiManagementCreateApiIssueComment
-apimgmt api issue comment list  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc
-# ApiManagementDeleteApiIssueComment
-apimgmt api issue comment list  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc
-# ApiManagementCreateApiIssueComment
-apimgmt api issue comment show  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc --comment_id 599e29ab193c3c0bd0b3e2fb
-# ApiManagementDeleteApiIssueComment
-apimgmt api issue comment show  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc --comment_id 599e29ab193c3c0bd0b3e2fb
-# ApiManagementCreateApiIssueAttachment
-apimgmt api issue attachment create  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc --attachment_id 57d2ef278aa04f0888cba3f3 --title Issue attachment. --content_format image/jpeg --content IEJhc2U2NA==
-# ApiManagementDeleteApiIssueAttachment
-apimgmt api issue attachment create  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc --attachment_id 57d2ef278aa04f0888cba3f3
-# ApiManagementCreateApiIssueAttachment
-apimgmt api issue attachment update  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc --attachment_id 57d2ef278aa04f0888cba3f3 --title Issue attachment. --content_format image/jpeg --content IEJhc2U2NA==
-# ApiManagementDeleteApiIssueAttachment
-apimgmt api issue attachment update  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc --attachment_id 57d2ef278aa04f0888cba3f3
-# ApiManagementCreateApiIssueAttachment
-apimgmt api issue attachment delete  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc --attachment_id 57d2ef278aa04f0888cba3f3
-# ApiManagementDeleteApiIssueAttachment
-apimgmt api issue attachment delete  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc --attachment_id 57d2ef278aa04f0888cba3f3
-# ApiManagementCreateApiIssueAttachment
-apimgmt api issue attachment list  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc
-# ApiManagementDeleteApiIssueAttachment
-apimgmt api issue attachment list  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc
-# ApiManagementCreateApiIssueAttachment
-apimgmt api issue attachment show  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc --attachment_id 57d2ef278aa04f0888cba3f3
-# ApiManagementDeleteApiIssueAttachment
-apimgmt api issue attachment show  --resource_group rg1 --service_name apimService1 --api_id 57d1f7558aa04f15146d9d8a --issue_id 57d2ef278aa04f0ad01d6cdc --attachment_id 57d2ef278aa04f0888cba3f3
-# ApiManagementCreateApiTagDescription
-apimgmt api tagdescription create  --resource_group rg1 --service_name apimService1 --api_id 5931a75ae4bbd512a88c680b --tag_id tagId1 --description Some description that will be displayed for operation's tag if the tag is assigned to operation of the API --external_docs_url http://some.url/additionaldoc --external_docs_description Description of the external docs resource
-# ApiManagementDeleteApiTagDescription
-apimgmt api tagdescription create  --resource_group rg1 --service_name apimService1 --api_id 59d5b28d1f7fab116c282650 --tag_id 59d5b28e1f7fab116402044e
-# ApiManagementCreateApiTagDescription
-apimgmt api tagdescription update  --resource_group rg1 --service_name apimService1 --api_id 5931a75ae4bbd512a88c680b --tag_id tagId1 --description Some description that will be displayed for operation's tag if the tag is assigned to operation of the API --external_docs_url http://some.url/additionaldoc --external_docs_description Description of the external docs resource
-# ApiManagementDeleteApiTagDescription
-apimgmt api tagdescription update  --resource_group rg1 --service_name apimService1 --api_id 59d5b28d1f7fab116c282650 --tag_id 59d5b28e1f7fab116402044e
-# ApiManagementCreateApiTagDescription
-apimgmt api tagdescription delete  --resource_group rg1 --service_name apimService1 --api_id 5931a75ae4bbd512a88c680b --tag_id tagId1
-# ApiManagementDeleteApiTagDescription
-apimgmt api tagdescription delete  --resource_group rg1 --service_name apimService1 --api_id 59d5b28d1f7fab116c282650 --tag_id 59d5b28e1f7fab116402044e
-# ApiManagementCreateApiTagDescription
-apimgmt api tagdescription list  --resource_group rg1 --service_name apimService1 --api_id 5931a75ae4bbd512a88c680b
-# ApiManagementDeleteApiTagDescription
-apimgmt api tagdescription list  --resource_group rg1 --service_name apimService1 --api_id 59d5b28d1f7fab116c282650
-# ApiManagementCreateApiTagDescription
-apimgmt api tagdescription show  --resource_group rg1 --service_name apimService1 --api_id 5931a75ae4bbd512a88c680b --tag_id tagId1
-# ApiManagementDeleteApiTagDescription
-apimgmt api tagdescription show  --resource_group rg1 --service_name apimService1 --api_id 59d5b28d1f7fab116c282650 --tag_id 59d5b28e1f7fab116402044e
-# ApiManagementCreateApiVersionSet
-apimgmt apiversionset create  --resource_group rg1 --service_name apimService1 --version_set_id api1 --description Version configuration --display_name api set 1 --versioning_scheme Segment
-# ApiManagementUpdateApiVersionSet
-apimgmt apiversionset create  --resource_group rg1 --service_name apimService1 --version_set_id api1 --description Version configuration --display_name api set 1 --versioning_scheme Segment
-# ApiManagementDeleteApiVersionSet
-apimgmt apiversionset create  --resource_group rg1 --service_name apimService1 --version_set_id a1
-# ApiManagementCreateApiVersionSet
-apimgmt apiversionset update  --resource_group rg1 --service_name apimService1 --version_set_id api1 --description Version configuration --display_name api set 1 --versioning_scheme Segment
-# ApiManagementUpdateApiVersionSet
-apimgmt apiversionset update  --resource_group rg1 --service_name apimService1 --version_set_id api1 --description Version configuration --display_name api set 1 --versioning_scheme Segment
-# ApiManagementDeleteApiVersionSet
-apimgmt apiversionset update  --resource_group rg1 --service_name apimService1 --version_set_id a1
-# ApiManagementCreateApiVersionSet
-apimgmt apiversionset delete  --resource_group rg1 --service_name apimService1 --version_set_id api1
-# ApiManagementUpdateApiVersionSet
-apimgmt apiversionset delete  --resource_group rg1 --service_name apimService1 --version_set_id api1
-# ApiManagementDeleteApiVersionSet
-apimgmt apiversionset delete  --resource_group rg1 --service_name apimService1 --version_set_id a1
-# ApiManagementCreateApiVersionSet
-apimgmt apiversionset list  --resource_group rg1 --service_name apimService1
-# ApiManagementUpdateApiVersionSet
-apimgmt apiversionset list  --resource_group rg1 --service_name apimService1
-# ApiManagementDeleteApiVersionSet
-apimgmt apiversionset list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateApiVersionSet
-apimgmt apiversionset show  --resource_group rg1 --service_name apimService1 --version_set_id api1
-# ApiManagementUpdateApiVersionSet
-apimgmt apiversionset show  --resource_group rg1 --service_name apimService1 --version_set_id api1
-# ApiManagementDeleteApiVersionSet
-apimgmt apiversionset show  --resource_group rg1 --service_name apimService1 --version_set_id a1
-# ApiManagementCreateAuthorizationServer
-apimgmt authorizationserver create  --resource_group rg1 --service_name apimService1 --authsid newauthServer --description test server --token_endpoint https://www.contoso.com/oauth2/token --support_state true --default_scope read write --client_secret 2 --resource_owner_username un --resource_owner_password pwd --display_name test2 --client_registration_endpoint https://www.contoso.com/apps --authorization_endpoint https://www.contoso.com/oauth2/auth --client_id 1
-# ApiManagementUpdateAuthorizationServer
-apimgmt authorizationserver create  --resource_group rg1 --service_name apimService1 --authsid newauthServer --client_secret updated --client_id update
-# ApiManagementDeleteAuthorizationServer
-apimgmt authorizationserver create  --resource_group rg1 --service_name apimService1 --authsid newauthServer2
-# ApiManagementCreateAuthorizationServer
-apimgmt authorizationserver update  --resource_group rg1 --service_name apimService1 --authsid newauthServer --description test server --token_endpoint https://www.contoso.com/oauth2/token --support_state true --default_scope read write --client_secret 2 --resource_owner_username un --resource_owner_password pwd --display_name test2 --client_registration_endpoint https://www.contoso.com/apps --authorization_endpoint https://www.contoso.com/oauth2/auth --client_id 1
-# ApiManagementUpdateAuthorizationServer
-apimgmt authorizationserver update  --resource_group rg1 --service_name apimService1 --authsid newauthServer --client_secret updated --client_id update
-# ApiManagementDeleteAuthorizationServer
-apimgmt authorizationserver update  --resource_group rg1 --service_name apimService1 --authsid newauthServer2
-# ApiManagementCreateAuthorizationServer
-apimgmt authorizationserver delete  --resource_group rg1 --service_name apimService1 --authsid newauthServer
-# ApiManagementUpdateAuthorizationServer
-apimgmt authorizationserver delete  --resource_group rg1 --service_name apimService1 --authsid newauthServer
-# ApiManagementDeleteAuthorizationServer
-apimgmt authorizationserver delete  --resource_group rg1 --service_name apimService1 --authsid newauthServer2
-# ApiManagementCreateAuthorizationServer
-apimgmt authorizationserver list  --resource_group rg1 --service_name apimService1
-# ApiManagementUpdateAuthorizationServer
-apimgmt authorizationserver list  --resource_group rg1 --service_name apimService1
-# ApiManagementDeleteAuthorizationServer
-apimgmt authorizationserver list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateAuthorizationServer
-apimgmt authorizationserver show  --resource_group rg1 --service_name apimService1 --authsid newauthServer
-# ApiManagementUpdateAuthorizationServer
-apimgmt authorizationserver show  --resource_group rg1 --service_name apimService1 --authsid newauthServer
-# ApiManagementDeleteAuthorizationServer
-apimgmt authorizationserver show  --resource_group rg1 --service_name apimService1 --authsid newauthServer2
-# ApiManagementCreateBackendServiceFabric
-apimgmt backend create  --resource_group rg1 --service_name apimService1 --backend_id sfbackend --description Service Fabric Test App 1 --url fabric:/mytestapp/mytestservice --protocol http
-# ApiManagementCreateBackendProxyBackend
-apimgmt backend create  --resource_group rg1 --service_name apimService1 --backend_id proxybackend --description description5308 --url https://backendname2644/ --protocol http
-# ApiManagementUpdateBackend
-apimgmt backend create  --resource_group rg1 --service_name apimService1 --backend_id proxybackend --description description5308
-# ApiManagementDeleteBackend
-apimgmt backend create  --resource_group rg1 --service_name apimService1 --backend_id sfbackend
-# ApiManagementCreateBackendServiceFabric
-apimgmt backend update  --resource_group rg1 --service_name apimService1 --backend_id sfbackend --description Service Fabric Test App 1 --url fabric:/mytestapp/mytestservice --protocol http
-# ApiManagementCreateBackendProxyBackend
-apimgmt backend update  --resource_group rg1 --service_name apimService1 --backend_id proxybackend --description description5308 --url https://backendname2644/ --protocol http
-# ApiManagementUpdateBackend
-apimgmt backend update  --resource_group rg1 --service_name apimService1 --backend_id proxybackend --description description5308
-# ApiManagementDeleteBackend
-apimgmt backend update  --resource_group rg1 --service_name apimService1 --backend_id sfbackend
-# ApiManagementCreateBackendServiceFabric
-apimgmt backend delete  --resource_group rg1 --service_name apimService1 --backend_id sfbackend
-# ApiManagementCreateBackendProxyBackend
-apimgmt backend delete  --resource_group rg1 --service_name apimService1 --backend_id proxybackend
-# ApiManagementUpdateBackend
-apimgmt backend delete  --resource_group rg1 --service_name apimService1 --backend_id proxybackend
-# ApiManagementDeleteBackend
-apimgmt backend delete  --resource_group rg1 --service_name apimService1 --backend_id sfbackend
-# ApiManagementCreateBackendServiceFabric
-apimgmt backend list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateBackendProxyBackend
-apimgmt backend list  --resource_group rg1 --service_name apimService1
-# ApiManagementUpdateBackend
-apimgmt backend list  --resource_group rg1 --service_name apimService1
-# ApiManagementDeleteBackend
-apimgmt backend list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateBackendServiceFabric
-apimgmt backend show  --resource_group rg1 --service_name apimService1 --backend_id sfbackend
-# ApiManagementCreateBackendProxyBackend
-apimgmt backend show  --resource_group rg1 --service_name apimService1 --backend_id proxybackend
-# ApiManagementUpdateBackend
-apimgmt backend show  --resource_group rg1 --service_name apimService1 --backend_id proxybackend
-# ApiManagementDeleteBackend
-apimgmt backend show  --resource_group rg1 --service_name apimService1 --backend_id sfbackend
-# ApiManagementCreateCache
-apimgmt cache create  --resource_group rg1 --service_name apimService1 --cache_id westindia --description Redis cache instances in West India --connection_string contoso5.redis.cache.windows.net,ssl=true,password=... --resource_id /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.Cache/Redis/{{ redis_name }}
-# ApiManagementUpdateCache
-apimgmt cache create  --resource_group rg1 --service_name apimService1 --cache_id westindia --description Update Cache in west India
-# ApiManagementDeleteCache
-apimgmt cache create  --resource_group rg1 --service_name apimService1 --cache_id southindia
-# ApiManagementCreateCache
-apimgmt cache update  --resource_group rg1 --service_name apimService1 --cache_id westindia --description Redis cache instances in West India --connection_string contoso5.redis.cache.windows.net,ssl=true,password=... --resource_id /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.Cache/Redis/{{ redis_name }}
-# ApiManagementUpdateCache
-apimgmt cache update  --resource_group rg1 --service_name apimService1 --cache_id westindia --description Update Cache in west India
-# ApiManagementDeleteCache
-apimgmt cache update  --resource_group rg1 --service_name apimService1 --cache_id southindia
-# ApiManagementCreateCache
-apimgmt cache delete  --resource_group rg1 --service_name apimService1 --cache_id westindia
-# ApiManagementUpdateCache
-apimgmt cache delete  --resource_group rg1 --service_name apimService1 --cache_id westindia
-# ApiManagementDeleteCache
-apimgmt cache delete  --resource_group rg1 --service_name apimService1 --cache_id southindia
-# ApiManagementCreateCache
-apimgmt cache list  --resource_group rg1 --service_name apimService1
-# ApiManagementUpdateCache
-apimgmt cache list  --resource_group rg1 --service_name apimService1
-# ApiManagementDeleteCache
-apimgmt cache list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateCache
-apimgmt cache show  --resource_group rg1 --service_name apimService1 --cache_id westindia
-# ApiManagementUpdateCache
-apimgmt cache show  --resource_group rg1 --service_name apimService1 --cache_id westindia
-# ApiManagementDeleteCache
-apimgmt cache show  --resource_group rg1 --service_name apimService1 --cache_id southindia
-# ApiManagementCreateCertificate
-apimgmt certificate create  --resource_group rg1 --service_name apimService1 --certificate_id tempcert --data ****************Base 64 Encoded Certificate ******************************* --password ****Certificate Password******
-# ApiManagementDeleteCertificate
-apimgmt certificate create  --resource_group rg1 --service_name apimService1 --certificate_id tempcert
-# ApiManagementCreateCertificate
-apimgmt certificate update  --resource_group rg1 --service_name apimService1 --certificate_id tempcert --data ****************Base 64 Encoded Certificate ******************************* --password ****Certificate Password******
-# ApiManagementDeleteCertificate
-apimgmt certificate update  --resource_group rg1 --service_name apimService1 --certificate_id tempcert
-# ApiManagementCreateCertificate
-apimgmt certificate delete  --resource_group rg1 --service_name apimService1 --certificate_id tempcert
-# ApiManagementDeleteCertificate
-apimgmt certificate delete  --resource_group rg1 --service_name apimService1 --certificate_id tempcert
-# ApiManagementCreateCertificate
-apimgmt certificate list  --resource_group rg1 --service_name apimService1
-# ApiManagementDeleteCertificate
-apimgmt certificate list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateCertificate
-apimgmt certificate show  --resource_group rg1 --service_name apimService1 --certificate_id tempcert
-# ApiManagementDeleteCertificate
-apimgmt certificate show  --resource_group rg1 --service_name apimService1 --certificate_id tempcert
-# ApiManagementCreateService
-apimgmt create  --resource_group rg1 --name apimService1 --publisher_email apim@autorestsdk.com --publisher_name autorestsdk --sku_name Developer --sku_capacity 1 --location Central US
-# ApiManagementCreateMultiRegionServiceWithCustomHostname
-apimgmt create  --resource_group rg1 --name apimService1 --virtual_network_type External --publisher_email admin@live.com --publisher_name contoso --sku_name Premium --sku_capacity 1 --location Central US
-# ApiManagementCreateServiceHavingMsi
-apimgmt create  --resource_group rg1 --name apimService1 --publisher_email apim@autorestsdk.com --publisher_name autorestsdk --sku_name Consumption --location West US
-# ApiManagementCreateServiceWithSystemCertificates
-apimgmt create  --resource_group rg1 --name apimService1 --publisher_email apim@autorestsdk.com --publisher_name autorestsdk --sku_name Basic --sku_capacity 1 --location Central US
-# ApiManagementUpdateServiceDisableTls10
-apimgmt create  --resource_group rg1 --name apimService1
-# ApiManagementUpdateServicePublisherDetails
-apimgmt create  --resource_group rg1 --name apimService1 --publisher_email foobar@live.com --publisher_name Contoso Vnext
-# ApiManagementServiceDeleteService
-apimgmt create  --resource_group rg1 --name apimService1
-# ApiManagementCreateService
-apimgmt update  --resource_group rg1 --name apimService1 --publisher_email apim@autorestsdk.com --publisher_name autorestsdk --sku_name Developer --sku_capacity 1 --location Central US
-# ApiManagementCreateMultiRegionServiceWithCustomHostname
-apimgmt update  --resource_group rg1 --name apimService1 --virtual_network_type External --publisher_email admin@live.com --publisher_name contoso --sku_name Premium --sku_capacity 1 --location Central US
-# ApiManagementCreateServiceHavingMsi
-apimgmt update  --resource_group rg1 --name apimService1 --publisher_email apim@autorestsdk.com --publisher_name autorestsdk --sku_name Consumption --location West US
-# ApiManagementCreateServiceWithSystemCertificates
-apimgmt update  --resource_group rg1 --name apimService1 --publisher_email apim@autorestsdk.com --publisher_name autorestsdk --sku_name Basic --sku_capacity 1 --location Central US
-# ApiManagementUpdateServiceDisableTls10
-apimgmt update  --resource_group rg1 --name apimService1
-# ApiManagementUpdateServicePublisherDetails
-apimgmt update  --resource_group rg1 --name apimService1 --publisher_email foobar@live.com --publisher_name Contoso Vnext
-# ApiManagementServiceDeleteService
-apimgmt update  --resource_group rg1 --name apimService1
-# ApiManagementCreateService
-apimgmt delete  --resource_group rg1 --name apimService1
-# ApiManagementCreateMultiRegionServiceWithCustomHostname
-apimgmt delete  --resource_group rg1 --name apimService1
-# ApiManagementCreateServiceHavingMsi
-apimgmt delete  --resource_group rg1 --name apimService1
-# ApiManagementCreateServiceWithSystemCertificates
-apimgmt delete  --resource_group rg1 --name apimService1
-# ApiManagementUpdateServiceDisableTls10
-apimgmt delete  --resource_group rg1 --name apimService1
-# ApiManagementUpdateServicePublisherDetails
-apimgmt delete  --resource_group rg1 --name apimService1
-# ApiManagementServiceDeleteService
-apimgmt delete  --resource_group rg1 --name apimService1
-# ApiManagementCreateService
-apimgmt list  --resource_group rg1
-# ApiManagementCreateMultiRegionServiceWithCustomHostname
-apimgmt list  --resource_group rg1
-# ApiManagementCreateServiceHavingMsi
-apimgmt list  --resource_group rg1
-# ApiManagementCreateServiceWithSystemCertificates
-apimgmt list  --resource_group rg1
-# ApiManagementUpdateServiceDisableTls10
-apimgmt list  --resource_group rg1
-# ApiManagementUpdateServicePublisherDetails
-apimgmt list  --resource_group rg1
-# ApiManagementServiceDeleteService
-apimgmt list  --resource_group rg1
-# ApiManagementCreateService
-apimgmt list  --resource_group rg1
-# ApiManagementCreateMultiRegionServiceWithCustomHostname
-apimgmt list  --resource_group rg1
-# ApiManagementCreateServiceHavingMsi
-apimgmt list  --resource_group rg1
-# ApiManagementCreateServiceWithSystemCertificates
-apimgmt list  --resource_group rg1
-# ApiManagementUpdateServiceDisableTls10
-apimgmt list  --resource_group rg1
-# ApiManagementUpdateServicePublisherDetails
-apimgmt list  --resource_group rg1
-# ApiManagementServiceDeleteService
-apimgmt list  --resource_group rg1
-# ApiManagementCreateService
-apimgmt show  --resource_group rg1 --name apimService1
-# ApiManagementCreateMultiRegionServiceWithCustomHostname
-apimgmt show  --resource_group rg1 --name apimService1
-# ApiManagementCreateServiceHavingMsi
-apimgmt show  --resource_group rg1 --name apimService1
-# ApiManagementCreateServiceWithSystemCertificates
-apimgmt show  --resource_group rg1 --name apimService1
-# ApiManagementUpdateServiceDisableTls10
-apimgmt show  --resource_group rg1 --name apimService1
-# ApiManagementUpdateServicePublisherDetails
-apimgmt show  --resource_group rg1 --name apimService1
-# ApiManagementServiceDeleteService
-apimgmt show  --resource_group rg1 --name apimService1
-# ApiManagementCreateDiagnostic
-apimgmt diagnostic create  --resource_group rg1 --service_name apimService1 --diagnostic_id applicationinsights --always_log allErrors --logger_id /loggers/azuremonitor
-# ApiManagementUpdateDiagnostic
-apimgmt diagnostic create  --resource_group rg1 --service_name apimService1 --diagnostic_id applicationinsights --always_log allErrors --logger_id /loggers/applicationinsights
-# ApiManagementDeleteDiagnostic
-apimgmt diagnostic create  --resource_group rg1 --service_name apimService1 --diagnostic_id applicationinsights
-# ApiManagementCreateDiagnostic
-apimgmt diagnostic update  --resource_group rg1 --service_name apimService1 --diagnostic_id applicationinsights --always_log allErrors --logger_id /loggers/azuremonitor
-# ApiManagementUpdateDiagnostic
-apimgmt diagnostic update  --resource_group rg1 --service_name apimService1 --diagnostic_id applicationinsights --always_log allErrors --logger_id /loggers/applicationinsights
-# ApiManagementDeleteDiagnostic
-apimgmt diagnostic update  --resource_group rg1 --service_name apimService1 --diagnostic_id applicationinsights
-# ApiManagementCreateDiagnostic
-apimgmt diagnostic delete  --resource_group rg1 --service_name apimService1 --diagnostic_id applicationinsights
-# ApiManagementUpdateDiagnostic
-apimgmt diagnostic delete  --resource_group rg1 --service_name apimService1 --diagnostic_id applicationinsights
-# ApiManagementDeleteDiagnostic
-apimgmt diagnostic delete  --resource_group rg1 --service_name apimService1 --diagnostic_id applicationinsights
-# ApiManagementCreateDiagnostic
-apimgmt diagnostic list  --resource_group rg1 --service_name apimService1
-# ApiManagementUpdateDiagnostic
-apimgmt diagnostic list  --resource_group rg1 --service_name apimService1
-# ApiManagementDeleteDiagnostic
-apimgmt diagnostic list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateDiagnostic
-apimgmt diagnostic show  --resource_group rg1 --service_name apimService1 --diagnostic_id applicationinsights
-# ApiManagementUpdateDiagnostic
-apimgmt diagnostic show  --resource_group rg1 --service_name apimService1 --diagnostic_id applicationinsights
-# ApiManagementDeleteDiagnostic
-apimgmt diagnostic show  --resource_group rg1 --service_name apimService1 --diagnostic_id applicationinsights
-# ApiManagementCreateEmailTemplate
-apimgmt template create  --resource_group rg1 --service_name apimService1 --name newIssueNotificationMessage --subject Your request for $IssueName was successfully received.
-# ApiManagementUpdateEmailTemplate
-apimgmt template create  --resource_group rg1 --service_name apimService1 --name applicationApprovedNotificationMessage --subject Your application $AppName is published in the gallery --body <!DOCTYPE html >
-<html>
-  <head />
-  <body>
-    <p style="font-size:12pt;font-family:'Segoe UI'">Dear $DevFirstName $DevLastName,</p>
-    <p style="font-size:12pt;font-family:'Segoe UI'">
-          We are happy to let you know that your request to publish the $AppName application in the gallery has been approved. Your application has been published and can be viewed <a href="http://$DevPortalUrl/Applications/Details/$AppId">here</a>.
-        </p>
-    <p style="font-size:12pt;font-family:'Segoe UI'">Best,</p>
-    <p style="font-size:12pt;font-family:'Segoe UI'">The $OrganizationName API Team</p>
-  </body>
-</html>
-# ApiManagementDeleteEmailTemplate
-apimgmt template create  --resource_group rg1 --service_name apimService1 --name newIssueNotificationMessage
-# ApiManagementCreateEmailTemplate
-apimgmt template update  --resource_group rg1 --service_name apimService1 --name newIssueNotificationMessage --subject Your request for $IssueName was successfully received.
-# ApiManagementUpdateEmailTemplate
-apimgmt template update  --resource_group rg1 --service_name apimService1 --name applicationApprovedNotificationMessage --subject Your application $AppName is published in the gallery --body <!DOCTYPE html >
-<html>
-  <head />
-  <body>
-    <p style="font-size:12pt;font-family:'Segoe UI'">Dear $DevFirstName $DevLastName,</p>
-    <p style="font-size:12pt;font-family:'Segoe UI'">
-          We are happy to let you know that your request to publish the $AppName application in the gallery has been approved. Your application has been published and can be viewed <a href="http://$DevPortalUrl/Applications/Details/$AppId">here</a>.
-        </p>
-    <p style="font-size:12pt;font-family:'Segoe UI'">Best,</p>
-    <p style="font-size:12pt;font-family:'Segoe UI'">The $OrganizationName API Team</p>
-  </body>
-</html>
-# ApiManagementDeleteEmailTemplate
-apimgmt template update  --resource_group rg1 --service_name apimService1 --name newIssueNotificationMessage
-# ApiManagementCreateEmailTemplate
-apimgmt template delete  --resource_group rg1 --service_name apimService1 --name newIssueNotificationMessage
-# ApiManagementUpdateEmailTemplate
-apimgmt template delete  --resource_group rg1 --service_name apimService1 --name applicationApprovedNotificationMessage
-# ApiManagementDeleteEmailTemplate
-apimgmt template delete  --resource_group rg1 --service_name apimService1 --name newIssueNotificationMessage
-# ApiManagementCreateEmailTemplate
-apimgmt template list  --resource_group rg1 --service_name apimService1
-# ApiManagementUpdateEmailTemplate
-apimgmt template list  --resource_group rg1 --service_name apimService1
-# ApiManagementDeleteEmailTemplate
-apimgmt template list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateEmailTemplate
-apimgmt template show  --resource_group rg1 --service_name apimService1 --name newIssueNotificationMessage
-# ApiManagementUpdateEmailTemplate
-apimgmt template show  --resource_group rg1 --service_name apimService1 --name applicationApprovedNotificationMessage
-# ApiManagementDeleteEmailTemplate
-apimgmt template show  --resource_group rg1 --service_name apimService1 --name newIssueNotificationMessage
-# ApiManagementCreateGroup
-apimgmt group create  --resource_group rg1 --service_name apimService1 --group_id tempgroup --display_name temp group
-# ApiManagementCreateGroupExternal
-apimgmt group create  --resource_group rg1 --service_name apimService1 --group_id aadGroup --display_name NewGroup (samiraad.onmicrosoft.com) --description new group to test --type external --external_id aad://samiraad.onmicrosoft.com/groups/83cf2753-5831-4675-bc0e-2f8dc067c58d
-# ApiManagementUpdateGroup
-apimgmt group create  --resource_group rg1 --service_name apimService1 --group_id tempgroup --display_name temp group
-# ApiManagementDeleteGroup
-apimgmt group create  --resource_group rg1 --service_name apimService1 --group_id aadGroup
-# ApiManagementCreateGroup
-apimgmt group update  --resource_group rg1 --service_name apimService1 --group_id tempgroup --display_name temp group
-# ApiManagementCreateGroupExternal
-apimgmt group update  --resource_group rg1 --service_name apimService1 --group_id aadGroup --display_name NewGroup (samiraad.onmicrosoft.com) --description new group to test --type external --external_id aad://samiraad.onmicrosoft.com/groups/83cf2753-5831-4675-bc0e-2f8dc067c58d
-# ApiManagementUpdateGroup
-apimgmt group update  --resource_group rg1 --service_name apimService1 --group_id tempgroup --display_name temp group
-# ApiManagementDeleteGroup
-apimgmt group update  --resource_group rg1 --service_name apimService1 --group_id aadGroup
-# ApiManagementCreateGroup
-apimgmt group delete  --resource_group rg1 --service_name apimService1 --group_id tempgroup
-# ApiManagementCreateGroupExternal
-apimgmt group delete  --resource_group rg1 --service_name apimService1 --group_id aadGroup
-# ApiManagementUpdateGroup
-apimgmt group delete  --resource_group rg1 --service_name apimService1 --group_id tempgroup
-# ApiManagementDeleteGroup
-apimgmt group delete  --resource_group rg1 --service_name apimService1 --group_id aadGroup
-# ApiManagementCreateGroup
-apimgmt group list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateGroupExternal
-apimgmt group list  --resource_group rg1 --service_name apimService1
-# ApiManagementUpdateGroup
-apimgmt group list  --resource_group rg1 --service_name apimService1
-# ApiManagementDeleteGroup
-apimgmt group list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateGroup
-apimgmt group show  --resource_group rg1 --service_name apimService1 --group_id tempgroup
-# ApiManagementCreateGroupExternal
-apimgmt group show  --resource_group rg1 --service_name apimService1 --group_id aadGroup
-# ApiManagementUpdateGroup
-apimgmt group show  --resource_group rg1 --service_name apimService1 --group_id tempgroup
-# ApiManagementDeleteGroup
-apimgmt group show  --resource_group rg1 --service_name apimService1 --group_id aadGroup
-# ApiManagementCreateGroupUser
-apimgmt group user create  --resource_group rg1 --service_name apimService1 --group_id tempgroup --user_id 59307d350af58404d8a26300
-# ApiManagementDeleteGroupUser
-apimgmt group user create  --resource_group rg1 --service_name apimService1 --group_id templategroup --user_id 59307d350af58404d8a26300
-# ApiManagementCreateGroupUser
-apimgmt group user delete  --resource_group rg1 --service_name apimService1 --group_id tempgroup --user_id 59307d350af58404d8a26300
-# ApiManagementDeleteGroupUser
-apimgmt group user delete  --resource_group rg1 --service_name apimService1 --group_id templategroup --user_id 59307d350af58404d8a26300
-# ApiManagementCreateGroupUser
-apimgmt group user list  --resource_group rg1 --service_name apimService1 --group_id tempgroup
-# ApiManagementDeleteGroupUser
-apimgmt group user list  --resource_group rg1 --service_name apimService1 --group_id templategroup
-# ApiManagementCreateIdentityProvider
-apimgmt identityprovider create  --resource_group rg1 --service_name apimService1 --name facebook --client_id facebookid --client_secret facebookapplicationsecret
-# ApiManagementUpdateIdentityProvider
-apimgmt identityprovider create  --resource_group rg1 --service_name apimService1 --name facebook --client_id updatedfacebookid --client_secret updatedfacebooksecret
-# ApiManagementDeleteIdentityProvider
-apimgmt identityprovider create  --resource_group rg1 --service_name apimService1 --name aad
-# ApiManagementCreateIdentityProvider
-apimgmt identityprovider update  --resource_group rg1 --service_name apimService1 --name facebook --client_id facebookid --client_secret facebookapplicationsecret
-# ApiManagementUpdateIdentityProvider
-apimgmt identityprovider update  --resource_group rg1 --service_name apimService1 --name facebook --client_id updatedfacebookid --client_secret updatedfacebooksecret
-# ApiManagementDeleteIdentityProvider
-apimgmt identityprovider update  --resource_group rg1 --service_name apimService1 --name aad
-# ApiManagementCreateIdentityProvider
-apimgmt identityprovider delete  --resource_group rg1 --service_name apimService1 --name facebook
-# ApiManagementUpdateIdentityProvider
-apimgmt identityprovider delete  --resource_group rg1 --service_name apimService1 --name facebook
-# ApiManagementDeleteIdentityProvider
-apimgmt identityprovider delete  --resource_group rg1 --service_name apimService1 --name aad
-# ApiManagementCreateIdentityProvider
-apimgmt identityprovider list  --resource_group rg1 --service_name apimService1
-# ApiManagementUpdateIdentityProvider
-apimgmt identityprovider list  --resource_group rg1 --service_name apimService1
-# ApiManagementDeleteIdentityProvider
-apimgmt identityprovider list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateIdentityProvider
-apimgmt identityprovider show  --resource_group rg1 --service_name apimService1 --name facebook
-# ApiManagementUpdateIdentityProvider
-apimgmt identityprovider show  --resource_group rg1 --service_name apimService1 --name facebook
-# ApiManagementDeleteIdentityProvider
-apimgmt identityprovider show  --resource_group rg1 --service_name apimService1 --name aad
-# ApiManagementCreateEHLogger
-apimgmt logger create  --resource_group rg1 --service_name apimService1 --logger_id loggerId --logger_type azureEventHub --description adding a new logger
-# ApiManagementCreateAILogger
-apimgmt logger create  --resource_group rg1 --service_name apimService1 --logger_id loggerId --logger_type applicationInsights --description adding a new logger
-# ApiManagementUpdateLogger
-apimgmt logger create  --resource_group rg1 --service_name apimService1 --logger_id loggerId
-# ApiManagementDeleteLogger
-apimgmt logger create  --resource_group rg1 --service_name apimService1 --logger_id loggerId
-# ApiManagementCreateEHLogger
-apimgmt logger update  --resource_group rg1 --service_name apimService1 --logger_id loggerId --logger_type azureEventHub --description adding a new logger
-# ApiManagementCreateAILogger
-apimgmt logger update  --resource_group rg1 --service_name apimService1 --logger_id loggerId --logger_type applicationInsights --description adding a new logger
-# ApiManagementUpdateLogger
-apimgmt logger update  --resource_group rg1 --service_name apimService1 --logger_id loggerId
-# ApiManagementDeleteLogger
-apimgmt logger update  --resource_group rg1 --service_name apimService1 --logger_id loggerId
-# ApiManagementCreateEHLogger
-apimgmt logger delete  --resource_group rg1 --service_name apimService1 --logger_id loggerId
-# ApiManagementCreateAILogger
-apimgmt logger delete  --resource_group rg1 --service_name apimService1 --logger_id loggerId
-# ApiManagementUpdateLogger
-apimgmt logger delete  --resource_group rg1 --service_name apimService1 --logger_id loggerId
-# ApiManagementDeleteLogger
-apimgmt logger delete  --resource_group rg1 --service_name apimService1 --logger_id loggerId
-# ApiManagementCreateEHLogger
-apimgmt logger list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateAILogger
-apimgmt logger list  --resource_group rg1 --service_name apimService1
-# ApiManagementUpdateLogger
-apimgmt logger list  --resource_group rg1 --service_name apimService1
-# ApiManagementDeleteLogger
-apimgmt logger list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateEHLogger
-apimgmt logger show  --resource_group rg1 --service_name apimService1 --logger_id loggerId
-# ApiManagementCreateAILogger
-apimgmt logger show  --resource_group rg1 --service_name apimService1 --logger_id loggerId
-# ApiManagementUpdateLogger
-apimgmt logger show  --resource_group rg1 --service_name apimService1 --logger_id loggerId
-# ApiManagementDeleteLogger
-apimgmt logger show  --resource_group rg1 --service_name apimService1 --logger_id loggerId
-# ApiManagementCreateNotification
-apimgmt notification create  --resource_group rg1 --service_name apimService1 --name RequestPublisherNotificationMessage
-# ApiManagementCreateNotification
-apimgmt notification update  --resource_group rg1 --service_name apimService1 --name RequestPublisherNotificationMessage
-# ApiManagementCreateNotification
-apimgmt notification list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateNotification
-apimgmt notification show  --resource_group rg1 --service_name apimService1 --name RequestPublisherNotificationMessage
-# ApiManagementCreateNotificationRecipientUser
-apimgmt notification recipientuser create  --resource_group rg1 --service_name apimService1 --notification_name RequestPublisherNotificationMessage --user_id 576823d0a40f7e74ec07d642
-# ApiManagementDeleteNotificationRecipientUser
-apimgmt notification recipientuser create  --resource_group rg1 --service_name apimService1 --notification_name RequestPublisherNotificationMessage --user_id 576823d0a40f7e74ec07d642
-# ApiManagementCreateNotificationRecipientUser
-apimgmt notification recipientuser update  --resource_group rg1 --service_name apimService1 --notification_name RequestPublisherNotificationMessage --user_id 576823d0a40f7e74ec07d642
-# ApiManagementDeleteNotificationRecipientUser
-apimgmt notification recipientuser update  --resource_group rg1 --service_name apimService1 --notification_name RequestPublisherNotificationMessage --user_id 576823d0a40f7e74ec07d642
-# ApiManagementCreateNotificationRecipientUser
-apimgmt notification recipientuser delete  --resource_group rg1 --service_name apimService1 --notification_name RequestPublisherNotificationMessage --user_id 576823d0a40f7e74ec07d642
-# ApiManagementDeleteNotificationRecipientUser
-apimgmt notification recipientuser delete  --resource_group rg1 --service_name apimService1 --notification_name RequestPublisherNotificationMessage --user_id 576823d0a40f7e74ec07d642
-# ApiManagementCreateNotificationRecipientUser
-apimgmt notification recipientuser list  --resource_group rg1 --service_name apimService1 --notification_name RequestPublisherNotificationMessage
-# ApiManagementDeleteNotificationRecipientUser
-apimgmt notification recipientuser list  --resource_group rg1 --service_name apimService1 --notification_name RequestPublisherNotificationMessage
-# ApiManagementCreateNotificationRecipientEmail
-apimgmt notification recipientemail create  --resource_group rg1 --service_name apimService1 --notification_name RequestPublisherNotificationMessage --email foobar@live.com
-# ApiManagementDeleteNotificationRecipientEmail
-apimgmt notification recipientemail create  --resource_group rg1 --service_name apimService1 --notification_name RequestPublisherNotificationMessage --email contoso@live.com
-# ApiManagementCreateNotificationRecipientEmail
-apimgmt notification recipientemail update  --resource_group rg1 --service_name apimService1 --notification_name RequestPublisherNotificationMessage --email foobar@live.com
-# ApiManagementDeleteNotificationRecipientEmail
-apimgmt notification recipientemail update  --resource_group rg1 --service_name apimService1 --notification_name RequestPublisherNotificationMessage --email contoso@live.com
-# ApiManagementCreateNotificationRecipientEmail
-apimgmt notification recipientemail delete  --resource_group rg1 --service_name apimService1 --notification_name RequestPublisherNotificationMessage --email foobar@live.com
-# ApiManagementDeleteNotificationRecipientEmail
-apimgmt notification recipientemail delete  --resource_group rg1 --service_name apimService1 --notification_name RequestPublisherNotificationMessage --email contoso@live.com
-# ApiManagementCreateNotificationRecipientEmail
-apimgmt notification recipientemail list  --resource_group rg1 --service_name apimService1 --notification_name RequestPublisherNotificationMessage
-# ApiManagementDeleteNotificationRecipientEmail
-apimgmt notification recipientemail list  --resource_group rg1 --service_name apimService1 --notification_name RequestPublisherNotificationMessage
-# ApiManagementCreateOpenIdConnectProvider
-apimgmt openidconnectprovider create  --resource_group rg1 --service_name apimService1 --opid templateOpenIdConnect3 --display_name templateoidprovider3 --metadata_endpoint https://oidprovider-template3.net --client_id oidprovidertemplate3
-# ApiManagementUpdateOpenIdConnectProvider
-apimgmt openidconnectprovider create  --resource_group rg1 --service_name apimService1 --opid templateOpenIdConnect2 --client_secret updatedsecret
-# ApiManagementDeleteOpenIdConnectProvider
-apimgmt openidconnectprovider create  --resource_group rg1 --service_name apimService1 --opid templateOpenIdConnect3
-# ApiManagementCreateOpenIdConnectProvider
-apimgmt openidconnectprovider update  --resource_group rg1 --service_name apimService1 --opid templateOpenIdConnect3 --display_name templateoidprovider3 --metadata_endpoint https://oidprovider-template3.net --client_id oidprovidertemplate3
-# ApiManagementUpdateOpenIdConnectProvider
-apimgmt openidconnectprovider update  --resource_group rg1 --service_name apimService1 --opid templateOpenIdConnect2 --client_secret updatedsecret
-# ApiManagementDeleteOpenIdConnectProvider
-apimgmt openidconnectprovider update  --resource_group rg1 --service_name apimService1 --opid templateOpenIdConnect3
-# ApiManagementCreateOpenIdConnectProvider
-apimgmt openidconnectprovider delete  --resource_group rg1 --service_name apimService1 --opid templateOpenIdConnect3
-# ApiManagementUpdateOpenIdConnectProvider
-apimgmt openidconnectprovider delete  --resource_group rg1 --service_name apimService1 --opid templateOpenIdConnect2
-# ApiManagementDeleteOpenIdConnectProvider
-apimgmt openidconnectprovider delete  --resource_group rg1 --service_name apimService1 --opid templateOpenIdConnect3
-# ApiManagementCreateOpenIdConnectProvider
-apimgmt openidconnectprovider list  --resource_group rg1 --service_name apimService1
-# ApiManagementUpdateOpenIdConnectProvider
-apimgmt openidconnectprovider list  --resource_group rg1 --service_name apimService1
-# ApiManagementDeleteOpenIdConnectProvider
-apimgmt openidconnectprovider list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateOpenIdConnectProvider
-apimgmt openidconnectprovider show  --resource_group rg1 --service_name apimService1 --opid templateOpenIdConnect3
-# ApiManagementUpdateOpenIdConnectProvider
-apimgmt openidconnectprovider show  --resource_group rg1 --service_name apimService1 --opid templateOpenIdConnect2
-# ApiManagementDeleteOpenIdConnectProvider
-apimgmt openidconnectprovider show  --resource_group rg1 --service_name apimService1 --opid templateOpenIdConnect3
-# ApiManagementCreatePolicy
-apimgmt policy create  --resource_group rg1 --service_name apimService1 --policy_id policy --value <policies>
-  <inbound />
-  <backend>
-    <forward-request />
-  </backend>
-  <outbound />
-</policies> --format xml
-# ApiManagementDeletePolicy
-apimgmt policy create  --resource_group rg1 --service_name apimService1 --policy_id policy
-# ApiManagementCreatePolicy
-apimgmt policy update  --resource_group rg1 --service_name apimService1 --policy_id policy --value <policies>
-  <inbound />
-  <backend>
-    <forward-request />
-  </backend>
-  <outbound />
-</policies> --format xml
-# ApiManagementDeletePolicy
-apimgmt policy update  --resource_group rg1 --service_name apimService1 --policy_id policy
-# ApiManagementCreatePolicy
-apimgmt policy delete  --resource_group rg1 --service_name apimService1 --policy_id policy
-# ApiManagementDeletePolicy
-apimgmt policy delete  --resource_group rg1 --service_name apimService1 --policy_id policy
-# ApiManagementCreatePolicy
-apimgmt policy list  --resource_group rg1 --service_name apimService1
-# ApiManagementDeletePolicy
-apimgmt policy list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreatePolicy
-apimgmt policy show  --resource_group rg1 --service_name apimService1 --policy_id policy --format xml
-# ApiManagementDeletePolicy
-apimgmt policy show  --resource_group rg1 --service_name apimService1 --policy_id policy
-# ApiManagementPortalSettingsUpdateSignIn
-apimgmt portalsetting create  --resource_group rg1 --name apimService1 --enabled true
-# ApiManagementPortalSettingsUpdateSignIn
-apimgmt portalsetting create  --resource_group rg1 --name apimService1 --enabled true
-# ApiManagementPortalSettingsUpdateSignIn
-apimgmt portalsetting update  --resource_group rg1 --name apimService1 --enabled true
-# ApiManagementPortalSettingsUpdateSignIn
-apimgmt portalsetting update  --resource_group rg1 --name apimService1 --enabled true
-# ApiManagementPortalSettingsUpdateSignIn
-apimgmt portalsetting show  --resource_group rg1 --name apimService1
-# ApiManagementPortalSettingsUpdateSignIn
-apimgmt portalsetting show  --resource_group rg1 --name apimService1
-# ApiManagementPortalSettingsUpdateSignUp
-apimgmt portalsetting create  --resource_group rg1 --name apimService1 --enabled true
-# ApiManagementPortalSettingsUpdateSignUp
-apimgmt portalsetting create  --resource_group rg1 --name apimService1 --enabled true
-# ApiManagementPortalSettingsUpdateSignUp
-apimgmt portalsetting update  --resource_group rg1 --name apimService1 --enabled true
-# ApiManagementPortalSettingsUpdateSignUp
-apimgmt portalsetting update  --resource_group rg1 --name apimService1 --enabled true
-# ApiManagementPortalSettingsUpdateSignUp
-apimgmt portalsetting show  --resource_group rg1 --name apimService1
-# ApiManagementPortalSettingsUpdateSignUp
-apimgmt portalsetting show  --resource_group rg1 --name apimService1
-# ApiManagementPortalSettingsUpdateDelegation
-apimgmt portalsetting create  --resource_group rg1 --name apimService1 --url http://contoso.com/delegation --validation_key nVF7aKIvr9mV/RM5lOD0sYoi8ThXTRHQP7o66hvUmjCDkPKR3qxPu/otJcNciz2aQdqPuzJH3ECG4TU2yZjQ7Q==
-# ApiManagementPortalSettingsUpdateDelegation
-apimgmt portalsetting create  --resource_group rg1 --name apimService1 --url http://contoso.com/delegation --validation_key nVF7aKIvr9mV/RM5lOD0sYoi8ThXTRHQP7o66hvUmjCDkPKR3qxPu/otJcNciz2aQdqPuzJH3ECG4TU2yZjQ7Q==
-# ApiManagementPortalSettingsUpdateDelegation
-apimgmt portalsetting update  --resource_group rg1 --name apimService1 --url http://contoso.com/delegation --validation_key nVF7aKIvr9mV/RM5lOD0sYoi8ThXTRHQP7o66hvUmjCDkPKR3qxPu/otJcNciz2aQdqPuzJH3ECG4TU2yZjQ7Q==
-# ApiManagementPortalSettingsUpdateDelegation
-apimgmt portalsetting update  --resource_group rg1 --name apimService1 --url http://contoso.com/delegation --validation_key nVF7aKIvr9mV/RM5lOD0sYoi8ThXTRHQP7o66hvUmjCDkPKR3qxPu/otJcNciz2aQdqPuzJH3ECG4TU2yZjQ7Q==
-# ApiManagementPortalSettingsUpdateDelegation
-apimgmt portalsetting show  --resource_group rg1 --name apimService1
-# ApiManagementPortalSettingsUpdateDelegation
-apimgmt portalsetting show  --resource_group rg1 --name apimService1
-# ApiManagementCreateProduct
-apimgmt product create  --resource_group rg1 --service_name apimService1 --product_id testproduct --display_name Test Template ProductName 4
-# ApiManagementUpdateProduct
-apimgmt product create  --resource_group rg1 --service_name apimService1 --product_id testproduct --display_name Test Template ProductName 4
-# ApiManagementDeleteProduct
-apimgmt product create  --resource_group rg1 --service_name apimService1 --product_id testproduct
-# ApiManagementCreateProduct
-apimgmt product update  --resource_group rg1 --service_name apimService1 --product_id testproduct --display_name Test Template ProductName 4
-# ApiManagementUpdateProduct
-apimgmt product update  --resource_group rg1 --service_name apimService1 --product_id testproduct --display_name Test Template ProductName 4
-# ApiManagementDeleteProduct
-apimgmt product update  --resource_group rg1 --service_name apimService1 --product_id testproduct
-# ApiManagementCreateProduct
-apimgmt product delete  --resource_group rg1 --service_name apimService1 --product_id testproduct
-# ApiManagementUpdateProduct
-apimgmt product delete  --resource_group rg1 --service_name apimService1 --product_id testproduct
-# ApiManagementDeleteProduct
-apimgmt product delete  --resource_group rg1 --service_name apimService1 --product_id testproduct
-# ApiManagementCreateProduct
-apimgmt product list  --resource_group rg1 --service_name apimService1
-# ApiManagementUpdateProduct
-apimgmt product list  --resource_group rg1 --service_name apimService1
-# ApiManagementDeleteProduct
-apimgmt product list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateProduct
-apimgmt product list  --resource_group rg1 --service_name apimService1
-# ApiManagementUpdateProduct
-apimgmt product list  --resource_group rg1 --service_name apimService1
-# ApiManagementDeleteProduct
-apimgmt product list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateProduct
-apimgmt product show  --resource_group rg1 --service_name apimService1 --product_id testproduct
-# ApiManagementUpdateProduct
-apimgmt product show  --resource_group rg1 --service_name apimService1 --product_id testproduct
-# ApiManagementDeleteProduct
-apimgmt product show  --resource_group rg1 --service_name apimService1 --product_id testproduct
-# ApiManagementCreateProductApi
-apimgmt product api create  --resource_group rg1 --service_name apimService1 --product_id testproduct --api_id echo-api
-# ApiManagementDeleteProductApi
-apimgmt product api create  --resource_group rg1 --service_name apimService1 --product_id testproduct --api_id echo-api
-# ApiManagementCreateProductApi
-apimgmt product api update  --resource_group rg1 --service_name apimService1 --product_id testproduct --api_id echo-api
-# ApiManagementDeleteProductApi
-apimgmt product api update  --resource_group rg1 --service_name apimService1 --product_id testproduct --api_id echo-api
-# ApiManagementCreateProductApi
-apimgmt product api delete  --resource_group rg1 --service_name apimService1 --product_id testproduct --api_id echo-api
-# ApiManagementDeleteProductApi
-apimgmt product api delete  --resource_group rg1 --service_name apimService1 --product_id testproduct --api_id echo-api
-# ApiManagementCreateProductApi
-apimgmt product api list  --resource_group rg1 --service_name apimService1 --product_id testproduct
-# ApiManagementDeleteProductApi
-apimgmt product api list  --resource_group rg1 --service_name apimService1 --product_id testproduct
-# ApiManagementCreateProductGroup
-apimgmt product group create  --resource_group rg1 --service_name apimService1 --product_id testproduct --group_id templateGroup
-# ApiManagementDeleteProductGroup
-apimgmt product group create  --resource_group rg1 --service_name apimService1 --product_id testproduct --group_id templateGroup
-# ApiManagementCreateProductGroup
-apimgmt product group update  --resource_group rg1 --service_name apimService1 --product_id testproduct --group_id templateGroup
-# ApiManagementDeleteProductGroup
-apimgmt product group update  --resource_group rg1 --service_name apimService1 --product_id testproduct --group_id templateGroup
-# ApiManagementCreateProductGroup
-apimgmt product group delete  --resource_group rg1 --service_name apimService1 --product_id testproduct --group_id templateGroup
-# ApiManagementDeleteProductGroup
-apimgmt product group delete  --resource_group rg1 --service_name apimService1 --product_id testproduct --group_id templateGroup
-# ApiManagementCreateProductGroup
-apimgmt product group list  --resource_group rg1 --service_name apimService1 --product_id testproduct
-# ApiManagementDeleteProductGroup
-apimgmt product group list  --resource_group rg1 --service_name apimService1 --product_id testproduct
-# ApiManagementCreateProductPolicy
-apimgmt product policy create  --resource_group rg1 --service_name apimService1 --product_id 5702e97e5157a50f48dce801 --policy_id policy --value <policies>
-  <inbound>
-    <rate-limit calls="{{call-count}}" renewal-period="15"></rate-limit>
-    <log-to-eventhub logger-id="16">
-                      @( string.Join(",", DateTime.UtcNow, context.Deployment.ServiceName, context.RequestId, context.Request.IpAddress, context.Operation.Name) ) 
-                  </log-to-eventhub>
-    <quota-by-key calls="40" counter-key="cc" renewal-period="3600" increment-count="@(context.Request.Method == &quot;POST&quot; ? 1:2)" />
-    <base />
-  </inbound>
-  <backend>
-    <base />
-  </backend>
-  <outbound>
-    <base />
-  </outbound>
-</policies> --format xml
-# ApiManagementDeleteProductPolicy
-apimgmt product policy create  --resource_group rg1 --service_name apimService1 --product_id testproduct --policy_id policy
-# ApiManagementCreateProductPolicy
-apimgmt product policy update  --resource_group rg1 --service_name apimService1 --product_id 5702e97e5157a50f48dce801 --policy_id policy --value <policies>
-  <inbound>
-    <rate-limit calls="{{call-count}}" renewal-period="15"></rate-limit>
-    <log-to-eventhub logger-id="16">
-                      @( string.Join(",", DateTime.UtcNow, context.Deployment.ServiceName, context.RequestId, context.Request.IpAddress, context.Operation.Name) ) 
-                  </log-to-eventhub>
-    <quota-by-key calls="40" counter-key="cc" renewal-period="3600" increment-count="@(context.Request.Method == &quot;POST&quot; ? 1:2)" />
-    <base />
-  </inbound>
-  <backend>
-    <base />
-  </backend>
-  <outbound>
-    <base />
-  </outbound>
-</policies> --format xml
-# ApiManagementDeleteProductPolicy
-apimgmt product policy update  --resource_group rg1 --service_name apimService1 --product_id testproduct --policy_id policy
-# ApiManagementCreateProductPolicy
-apimgmt product policy delete  --resource_group rg1 --service_name apimService1 --product_id 5702e97e5157a50f48dce801 --policy_id policy
-# ApiManagementDeleteProductPolicy
-apimgmt product policy delete  --resource_group rg1 --service_name apimService1 --product_id testproduct --policy_id policy
-# ApiManagementCreateProductPolicy
-apimgmt product policy list  --resource_group rg1 --service_name apimService1 --product_id 5702e97e5157a50f48dce801
-# ApiManagementDeleteProductPolicy
-apimgmt product policy list  --resource_group rg1 --service_name apimService1 --product_id testproduct
-# ApiManagementCreateProductPolicy
-apimgmt product policy show  --resource_group rg1 --service_name apimService1 --product_id 5702e97e5157a50f48dce801 --policy_id policy --format xml
-# ApiManagementDeleteProductPolicy
-apimgmt product policy show  --resource_group rg1 --service_name apimService1 --product_id testproduct --policy_id policy
-# ApiManagementCreateProperty
-apimgmt property create  --resource_group rg1 --service_name apimService1 --prop_id testprop2 --secret true --display_name prop3name --value propValue
-# ApiManagementUpdateProperty
-apimgmt property create  --resource_group rg1 --service_name apimService1 --prop_id testprop2 --secret true
-# ApiManagementDeleteProperty
-apimgmt property create  --resource_group rg1 --service_name apimService1 --prop_id testprop2
-# ApiManagementCreateProperty
-apimgmt property update  --resource_group rg1 --service_name apimService1 --prop_id testprop2 --secret true --display_name prop3name --value propValue
-# ApiManagementUpdateProperty
-apimgmt property update  --resource_group rg1 --service_name apimService1 --prop_id testprop2 --secret true
-# ApiManagementDeleteProperty
-apimgmt property update  --resource_group rg1 --service_name apimService1 --prop_id testprop2
-# ApiManagementCreateProperty
-apimgmt property delete  --resource_group rg1 --service_name apimService1 --prop_id testprop2
-# ApiManagementUpdateProperty
-apimgmt property delete  --resource_group rg1 --service_name apimService1 --prop_id testprop2
-# ApiManagementDeleteProperty
-apimgmt property delete  --resource_group rg1 --service_name apimService1 --prop_id testprop2
-# ApiManagementCreateProperty
-apimgmt property list  --resource_group rg1 --service_name apimService1
-# ApiManagementUpdateProperty
-apimgmt property list  --resource_group rg1 --service_name apimService1
-# ApiManagementDeleteProperty
-apimgmt property list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateProperty
-apimgmt property show  --resource_group rg1 --service_name apimService1 --prop_id testprop2
-# ApiManagementUpdateProperty
-apimgmt property show  --resource_group rg1 --service_name apimService1 --prop_id testprop2
-# ApiManagementDeleteProperty
-apimgmt property show  --resource_group rg1 --service_name apimService1 --prop_id testprop2
-# ApiManagementCreateSubscription
-apimgmt subscription create  --resource_group rg1 --service_name apimService1 --sid testsub --owner_id /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/users/{{ user_name }} --scope /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/products/{{ product_name }} --display_name testsub
-# ApiManagementUpdateSubscription
-apimgmt subscription create  --resource_group rg1 --service_name apimService1 --sid testsub --display_name testsub
-# ApiManagementDeleteSubscription
-apimgmt subscription create  --resource_group rg1 --service_name apimService1 --sid testsub
-# ApiManagementCreateSubscription
-apimgmt subscription update  --resource_group rg1 --service_name apimService1 --sid testsub --owner_id /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/users/{{ user_name }} --scope /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/products/{{ product_name }} --display_name testsub
-# ApiManagementUpdateSubscription
-apimgmt subscription update  --resource_group rg1 --service_name apimService1 --sid testsub --display_name testsub
-# ApiManagementDeleteSubscription
-apimgmt subscription update  --resource_group rg1 --service_name apimService1 --sid testsub
-# ApiManagementCreateSubscription
-apimgmt subscription delete  --resource_group rg1 --service_name apimService1 --sid testsub
-# ApiManagementUpdateSubscription
-apimgmt subscription delete  --resource_group rg1 --service_name apimService1 --sid testsub
-# ApiManagementDeleteSubscription
-apimgmt subscription delete  --resource_group rg1 --service_name apimService1 --sid testsub
-# ApiManagementCreateSubscription
-apimgmt subscription list  --resource_group rg1 --service_name apimService1
-# ApiManagementUpdateSubscription
-apimgmt subscription list  --resource_group rg1 --service_name apimService1
-# ApiManagementDeleteSubscription
-apimgmt subscription list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateSubscription
-apimgmt subscription show  --resource_group rg1 --service_name apimService1 --sid testsub
-# ApiManagementUpdateSubscription
-apimgmt subscription show  --resource_group rg1 --service_name apimService1 --sid testsub
-# ApiManagementDeleteSubscription
-apimgmt subscription show  --resource_group rg1 --service_name apimService1 --sid testsub
-# ApiManagementCreateUser
-apimgmt user create  --resource_group rg1 --service_name apimService1 --user_id 5931a75ae4bbd512288c680b --email foobar@outlook.com --first_name foo --last_name bar --confirmation signup
-# ApiManagementUpdateUser
-apimgmt user create  --resource_group rg1 --service_name apimService1 --user_id 5931a75ae4bbd512288c680b --email foobar@outlook.com --first_name foo --last_name bar
-# ApiManagementDeleteUser
-apimgmt user create  --resource_group rg1 --service_name apimService1 --user_id 5931a75ae4bbd512288c680b
-# ApiManagementCreateUser
-apimgmt user update  --resource_group rg1 --service_name apimService1 --user_id 5931a75ae4bbd512288c680b --email foobar@outlook.com --first_name foo --last_name bar --confirmation signup
-# ApiManagementUpdateUser
-apimgmt user update  --resource_group rg1 --service_name apimService1 --user_id 5931a75ae4bbd512288c680b --email foobar@outlook.com --first_name foo --last_name bar
-# ApiManagementDeleteUser
-apimgmt user update  --resource_group rg1 --service_name apimService1 --user_id 5931a75ae4bbd512288c680b
-# ApiManagementCreateUser
-apimgmt user delete  --resource_group rg1 --service_name apimService1 --user_id 5931a75ae4bbd512288c680b
-# ApiManagementUpdateUser
-apimgmt user delete  --resource_group rg1 --service_name apimService1 --user_id 5931a75ae4bbd512288c680b
-# ApiManagementDeleteUser
-apimgmt user delete  --resource_group rg1 --service_name apimService1 --user_id 5931a75ae4bbd512288c680b
-# ApiManagementCreateUser
-apimgmt user list  --resource_group rg1 --service_name apimService1
-# ApiManagementUpdateUser
-apimgmt user list  --resource_group rg1 --service_name apimService1
-# ApiManagementDeleteUser
-apimgmt user list  --resource_group rg1 --service_name apimService1
-# ApiManagementCreateUser
-apimgmt user show  --resource_group rg1 --service_name apimService1 --user_id 5931a75ae4bbd512288c680b
-# ApiManagementUpdateUser
-apimgmt user show  --resource_group rg1 --service_name apimService1 --user_id 5931a75ae4bbd512288c680b
-# ApiManagementDeleteUser
-apimgmt user show  --resource_group rg1 --service_name apimService1 --user_id 5931a75ae4bbd512288c680b
+**Example: ApiManagementCreateApiUsingOai3Import**
+**Example: ApiManagementCreateApiUsingSwaggerImport**
+**Example: ApiManagementCreateApiUsingWadlImport**
+**Example: ApiManagementCreateSoapToRestApiUsingWsdlImport**
+**Example: ApiManagementCreateSoapPassThroughApiUsingWsdlImport**
+**Example: ApiManagementCreateApi**
+**Example: ApiManagementCreateApiRevisionFromExistingApi**
+**Example: ApiManagementCreateApiNewVersionUsingExistingApi**
+**Example: ApiManagementCreateApiClone**
+**Example: ApiManagementCreateApiWithOpenIdConnect**
+**Example: ApiManagementUpdateApi**
+**Example: ApiManagementDeleteApi**
+**Example: ApiManagementCreateApiUsingOai3Import**
+**Example: ApiManagementCreateApiUsingSwaggerImport**
+**Example: ApiManagementCreateApiUsingWadlImport**
+**Example: ApiManagementCreateSoapToRestApiUsingWsdlImport**
+**Example: ApiManagementCreateSoapPassThroughApiUsingWsdlImport**
+**Example: ApiManagementCreateApi**
+**Example: ApiManagementCreateApiRevisionFromExistingApi**
+**Example: ApiManagementCreateApiNewVersionUsingExistingApi**
+**Example: ApiManagementCreateApiClone**
+**Example: ApiManagementCreateApiWithOpenIdConnect**
+**Example: ApiManagementUpdateApi**
+**Example: ApiManagementDeleteApi**
+**Example: ApiManagementCreateApiUsingOai3Import**
+**Example: ApiManagementCreateApiUsingSwaggerImport**
+**Example: ApiManagementCreateApiUsingWadlImport**
+**Example: ApiManagementCreateSoapToRestApiUsingWsdlImport**
+**Example: ApiManagementCreateSoapPassThroughApiUsingWsdlImport**
+**Example: ApiManagementCreateApi**
+**Example: ApiManagementCreateApiRevisionFromExistingApi**
+**Example: ApiManagementCreateApiNewVersionUsingExistingApi**
+**Example: ApiManagementCreateApiClone**
+**Example: ApiManagementCreateApiWithOpenIdConnect**
+**Example: ApiManagementUpdateApi**
+**Example: ApiManagementDeleteApi**
+**Example: ApiManagementCreateApiUsingOai3Import**
+**Example: ApiManagementCreateApiUsingSwaggerImport**
+**Example: ApiManagementCreateApiUsingWadlImport**
+**Example: ApiManagementCreateSoapToRestApiUsingWsdlImport**
+**Example: ApiManagementCreateSoapPassThroughApiUsingWsdlImport**
+**Example: ApiManagementCreateApi**
+**Example: ApiManagementCreateApiRevisionFromExistingApi**
+**Example: ApiManagementCreateApiNewVersionUsingExistingApi**
+**Example: ApiManagementCreateApiClone**
+**Example: ApiManagementCreateApiWithOpenIdConnect**
+**Example: ApiManagementUpdateApi**
+**Example: ApiManagementDeleteApi**
+**Example: ApiManagementCreateApiUsingOai3Import**
+**Example: ApiManagementCreateApiUsingSwaggerImport**
+**Example: ApiManagementCreateApiUsingWadlImport**
+**Example: ApiManagementCreateSoapToRestApiUsingWsdlImport**
+**Example: ApiManagementCreateSoapPassThroughApiUsingWsdlImport**
+**Example: ApiManagementCreateApi**
+**Example: ApiManagementCreateApiRevisionFromExistingApi**
+**Example: ApiManagementCreateApiNewVersionUsingExistingApi**
+**Example: ApiManagementCreateApiClone**
+**Example: ApiManagementCreateApiWithOpenIdConnect**
+**Example: ApiManagementUpdateApi**
+**Example: ApiManagementDeleteApi**
+**Example: ApiManagementCreateApiUsingOai3Import**
+**Example: ApiManagementCreateApiUsingSwaggerImport**
+**Example: ApiManagementCreateApiUsingWadlImport**
+**Example: ApiManagementCreateSoapToRestApiUsingWsdlImport**
+**Example: ApiManagementCreateSoapPassThroughApiUsingWsdlImport**
+**Example: ApiManagementCreateApi**
+**Example: ApiManagementCreateApiRevisionFromExistingApi**
+**Example: ApiManagementCreateApiNewVersionUsingExistingApi**
+**Example: ApiManagementCreateApiClone**
+**Example: ApiManagementCreateApiWithOpenIdConnect**
+**Example: ApiManagementUpdateApi**
+**Example: ApiManagementDeleteApi**
+**Example: ApiManagementCreateApiRelease**
+**Example: ApiManagementUpdateApiRelease**
+**Example: ApiManagementDeleteApiRelease**
+**Example: ApiManagementCreateApiRelease**
+**Example: ApiManagementUpdateApiRelease**
+**Example: ApiManagementDeleteApiRelease**
+**Example: ApiManagementCreateApiRelease**
+**Example: ApiManagementUpdateApiRelease**
+**Example: ApiManagementDeleteApiRelease**
+**Example: ApiManagementCreateApiRelease**
+**Example: ApiManagementUpdateApiRelease**
+**Example: ApiManagementDeleteApiRelease**
+**Example: ApiManagementCreateApiRelease**
+**Example: ApiManagementUpdateApiRelease**
+**Example: ApiManagementDeleteApiRelease**
+**Example: ApiManagementCreateApiOperation**
+**Example: ApiManagementUpdateApiOperation**
+**Example: ApiManagementDeleteApiOperation**
+**Example: ApiManagementCreateApiOperation**
+**Example: ApiManagementUpdateApiOperation**
+**Example: ApiManagementDeleteApiOperation**
+**Example: ApiManagementCreateApiOperation**
+**Example: ApiManagementUpdateApiOperation**
+**Example: ApiManagementDeleteApiOperation**
+**Example: ApiManagementCreateApiOperation**
+**Example: ApiManagementUpdateApiOperation**
+**Example: ApiManagementDeleteApiOperation**
+**Example: ApiManagementCreateApiOperation**
+**Example: ApiManagementUpdateApiOperation**
+**Example: ApiManagementDeleteApiOperation**
+**Example: ApiManagementCreateApiOperationPolicy**
+**Example: ApiManagementDeleteApiOperationPolicy**
+**Example: ApiManagementCreateApiOperationPolicy**
+**Example: ApiManagementDeleteApiOperationPolicy**
+**Example: ApiManagementCreateApiOperationPolicy**
+**Example: ApiManagementDeleteApiOperationPolicy**
+**Example: ApiManagementCreateApiOperationPolicy**
+**Example: ApiManagementDeleteApiOperationPolicy**
+**Example: ApiManagementCreateApiOperationPolicy**
+**Example: ApiManagementDeleteApiOperationPolicy**
+**Example: ApiManagementCreateTag**
+**Example: ApiManagementUpdateTag**
+**Example: ApiManagementDeleteTag**
+**Example: ApiManagementCreateTag**
+**Example: ApiManagementUpdateTag**
+**Example: ApiManagementDeleteTag**
+**Example: ApiManagementCreateTag**
+**Example: ApiManagementUpdateTag**
+**Example: ApiManagementDeleteTag**
+**Example: ApiManagementCreateTag**
+**Example: ApiManagementUpdateTag**
+**Example: ApiManagementDeleteTag**
+**Example: ApiManagementCreateTag**
+**Example: ApiManagementUpdateTag**
+**Example: ApiManagementDeleteTag**
+**Example: ApiManagementCreateTag**
+**Example: ApiManagementUpdateTag**
+**Example: ApiManagementDeleteTag**
+**Example: ApiManagementCreateTag**
+**Example: ApiManagementUpdateTag**
+**Example: ApiManagementDeleteTag**
+**Example: ApiManagementCreateTag**
+**Example: ApiManagementUpdateTag**
+**Example: ApiManagementDeleteTag**
+**Example: ApiManagementCreateApiPolicy**
+**Example: ApiManagementCreateApiPolicyNonXmlEncoded**
+**Example: ApiManagementDeleteApiPolicy**
+**Example: ApiManagementCreateApiPolicy**
+**Example: ApiManagementCreateApiPolicyNonXmlEncoded**
+**Example: ApiManagementDeleteApiPolicy**
+**Example: ApiManagementCreateApiPolicy**
+**Example: ApiManagementCreateApiPolicyNonXmlEncoded**
+**Example: ApiManagementDeleteApiPolicy**
+**Example: ApiManagementCreateApiPolicy**
+**Example: ApiManagementCreateApiPolicyNonXmlEncoded**
+**Example: ApiManagementDeleteApiPolicy**
+**Example: ApiManagementCreateApiPolicy**
+**Example: ApiManagementCreateApiPolicyNonXmlEncoded**
+**Example: ApiManagementDeleteApiPolicy**
+**Example: ApiManagementCreateApiSchema**
+**Example: ApiManagementDeleteApiSchema**
+**Example: ApiManagementCreateApiSchema**
+**Example: ApiManagementDeleteApiSchema**
+**Example: ApiManagementCreateApiSchema**
+**Example: ApiManagementDeleteApiSchema**
+**Example: ApiManagementCreateApiSchema**
+**Example: ApiManagementDeleteApiSchema**
+**Example: ApiManagementCreateApiSchema**
+**Example: ApiManagementDeleteApiSchema**
+**Example: ApiManagementCreateApiDiagnostic**
+**Example: ApiManagementUpdateApiDiagnostic**
+**Example: ApiManagementDeleteApiDiagnostic**
+**Example: ApiManagementCreateApiDiagnostic**
+**Example: ApiManagementUpdateApiDiagnostic**
+**Example: ApiManagementDeleteApiDiagnostic**
+**Example: ApiManagementCreateApiDiagnostic**
+**Example: ApiManagementUpdateApiDiagnostic**
+**Example: ApiManagementDeleteApiDiagnostic**
+**Example: ApiManagementCreateApiDiagnostic**
+**Example: ApiManagementUpdateApiDiagnostic**
+**Example: ApiManagementDeleteApiDiagnostic**
+**Example: ApiManagementCreateApiDiagnostic**
+**Example: ApiManagementUpdateApiDiagnostic**
+**Example: ApiManagementDeleteApiDiagnostic**
+**Example: ApiManagementCreateApiIssue**
+**Example: ApiManagementUpdateApiIssue**
+**Example: ApiManagementDeleteApiIssue**
+**Example: ApiManagementCreateApiIssue**
+**Example: ApiManagementUpdateApiIssue**
+**Example: ApiManagementDeleteApiIssue**
+**Example: ApiManagementCreateApiIssue**
+**Example: ApiManagementUpdateApiIssue**
+**Example: ApiManagementDeleteApiIssue**
+**Example: ApiManagementCreateApiIssue**
+**Example: ApiManagementUpdateApiIssue**
+**Example: ApiManagementDeleteApiIssue**
+**Example: ApiManagementCreateApiIssue**
+**Example: ApiManagementUpdateApiIssue**
+**Example: ApiManagementDeleteApiIssue**
+**Example: ApiManagementCreateApiIssueComment**
+**Example: ApiManagementDeleteApiIssueComment**
+**Example: ApiManagementCreateApiIssueComment**
+**Example: ApiManagementDeleteApiIssueComment**
+**Example: ApiManagementCreateApiIssueComment**
+**Example: ApiManagementDeleteApiIssueComment**
+**Example: ApiManagementCreateApiIssueComment**
+**Example: ApiManagementDeleteApiIssueComment**
+**Example: ApiManagementCreateApiIssueComment**
+**Example: ApiManagementDeleteApiIssueComment**
+**Example: ApiManagementCreateApiIssueAttachment**
+**Example: ApiManagementDeleteApiIssueAttachment**
+**Example: ApiManagementCreateApiIssueAttachment**
+**Example: ApiManagementDeleteApiIssueAttachment**
+**Example: ApiManagementCreateApiIssueAttachment**
+**Example: ApiManagementDeleteApiIssueAttachment**
+**Example: ApiManagementCreateApiIssueAttachment**
+**Example: ApiManagementDeleteApiIssueAttachment**
+**Example: ApiManagementCreateApiIssueAttachment**
+**Example: ApiManagementDeleteApiIssueAttachment**
+**Example: ApiManagementCreateApiTagDescription**
+**Example: ApiManagementDeleteApiTagDescription**
+**Example: ApiManagementCreateApiTagDescription**
+**Example: ApiManagementDeleteApiTagDescription**
+**Example: ApiManagementCreateApiTagDescription**
+**Example: ApiManagementDeleteApiTagDescription**
+**Example: ApiManagementCreateApiTagDescription**
+**Example: ApiManagementDeleteApiTagDescription**
+**Example: ApiManagementCreateApiTagDescription**
+**Example: ApiManagementDeleteApiTagDescription**
+**Example: ApiManagementCreateApiVersionSet**
+**Example: ApiManagementUpdateApiVersionSet**
+**Example: ApiManagementDeleteApiVersionSet**
+**Example: ApiManagementCreateApiVersionSet**
+**Example: ApiManagementUpdateApiVersionSet**
+**Example: ApiManagementDeleteApiVersionSet**
+**Example: ApiManagementCreateApiVersionSet**
+**Example: ApiManagementUpdateApiVersionSet**
+**Example: ApiManagementDeleteApiVersionSet**
+**Example: ApiManagementCreateApiVersionSet**
+**Example: ApiManagementUpdateApiVersionSet**
+**Example: ApiManagementDeleteApiVersionSet**
+**Example: ApiManagementCreateApiVersionSet**
+**Example: ApiManagementUpdateApiVersionSet**
+**Example: ApiManagementDeleteApiVersionSet**
+**Example: ApiManagementCreateAuthorizationServer**
+**Example: ApiManagementUpdateAuthorizationServer**
+**Example: ApiManagementDeleteAuthorizationServer**
+**Example: ApiManagementCreateAuthorizationServer**
+**Example: ApiManagementUpdateAuthorizationServer**
+**Example: ApiManagementDeleteAuthorizationServer**
+**Example: ApiManagementCreateAuthorizationServer**
+**Example: ApiManagementUpdateAuthorizationServer**
+**Example: ApiManagementDeleteAuthorizationServer**
+**Example: ApiManagementCreateAuthorizationServer**
+**Example: ApiManagementUpdateAuthorizationServer**
+**Example: ApiManagementDeleteAuthorizationServer**
+**Example: ApiManagementCreateAuthorizationServer**
+**Example: ApiManagementUpdateAuthorizationServer**
+**Example: ApiManagementDeleteAuthorizationServer**
+**Example: ApiManagementCreateBackendServiceFabric**
+**Example: ApiManagementCreateBackendProxyBackend**
+**Example: ApiManagementUpdateBackend**
+**Example: ApiManagementDeleteBackend**
+**Example: ApiManagementCreateBackendServiceFabric**
+**Example: ApiManagementCreateBackendProxyBackend**
+**Example: ApiManagementUpdateBackend**
+**Example: ApiManagementDeleteBackend**
+**Example: ApiManagementCreateBackendServiceFabric**
+**Example: ApiManagementCreateBackendProxyBackend**
+**Example: ApiManagementUpdateBackend**
+**Example: ApiManagementDeleteBackend**
+**Example: ApiManagementCreateBackendServiceFabric**
+**Example: ApiManagementCreateBackendProxyBackend**
+**Example: ApiManagementUpdateBackend**
+**Example: ApiManagementDeleteBackend**
+**Example: ApiManagementCreateBackendServiceFabric**
+**Example: ApiManagementCreateBackendProxyBackend**
+**Example: ApiManagementUpdateBackend**
+**Example: ApiManagementDeleteBackend**
+**Example: ApiManagementCreateCache**
+**Example: ApiManagementUpdateCache**
+**Example: ApiManagementDeleteCache**
+**Example: ApiManagementCreateCache**
+**Example: ApiManagementUpdateCache**
+**Example: ApiManagementDeleteCache**
+**Example: ApiManagementCreateCache**
+**Example: ApiManagementUpdateCache**
+**Example: ApiManagementDeleteCache**
+**Example: ApiManagementCreateCache**
+**Example: ApiManagementUpdateCache**
+**Example: ApiManagementDeleteCache**
+**Example: ApiManagementCreateCache**
+**Example: ApiManagementUpdateCache**
+**Example: ApiManagementDeleteCache**
+**Example: ApiManagementCreateCertificate**
+**Example: ApiManagementDeleteCertificate**
+**Example: ApiManagementCreateCertificate**
+**Example: ApiManagementDeleteCertificate**
+**Example: ApiManagementCreateCertificate**
+**Example: ApiManagementDeleteCertificate**
+**Example: ApiManagementCreateCertificate**
+**Example: ApiManagementDeleteCertificate**
+**Example: ApiManagementCreateCertificate**
+**Example: ApiManagementDeleteCertificate**
+**Example: ApiManagementCreateService**
+**Example: ApiManagementCreateMultiRegionServiceWithCustomHostname**
+**Example: ApiManagementCreateServiceHavingMsi**
+**Example: ApiManagementCreateServiceWithSystemCertificates**
+**Example: ApiManagementUpdateServiceDisableTls10**
+**Example: ApiManagementUpdateServicePublisherDetails**
+**Example: ApiManagementServiceDeleteService**
+**Example: ApiManagementCreateService**
+**Example: ApiManagementCreateMultiRegionServiceWithCustomHostname**
+**Example: ApiManagementCreateServiceHavingMsi**
+**Example: ApiManagementCreateServiceWithSystemCertificates**
+**Example: ApiManagementUpdateServiceDisableTls10**
+**Example: ApiManagementUpdateServicePublisherDetails**
+**Example: ApiManagementServiceDeleteService**
+**Example: ApiManagementCreateService**
+**Example: ApiManagementCreateMultiRegionServiceWithCustomHostname**
+**Example: ApiManagementCreateServiceHavingMsi**
+**Example: ApiManagementCreateServiceWithSystemCertificates**
+**Example: ApiManagementUpdateServiceDisableTls10**
+**Example: ApiManagementUpdateServicePublisherDetails**
+**Example: ApiManagementServiceDeleteService**
+**Example: ApiManagementCreateService**
+**Example: ApiManagementCreateMultiRegionServiceWithCustomHostname**
+**Example: ApiManagementCreateServiceHavingMsi**
+**Example: ApiManagementCreateServiceWithSystemCertificates**
+**Example: ApiManagementUpdateServiceDisableTls10**
+**Example: ApiManagementUpdateServicePublisherDetails**
+**Example: ApiManagementServiceDeleteService**
+**Example: ApiManagementCreateService**
+**Example: ApiManagementCreateMultiRegionServiceWithCustomHostname**
+**Example: ApiManagementCreateServiceHavingMsi**
+**Example: ApiManagementCreateServiceWithSystemCertificates**
+**Example: ApiManagementUpdateServiceDisableTls10**
+**Example: ApiManagementUpdateServicePublisherDetails**
+**Example: ApiManagementServiceDeleteService**
+**Example: ApiManagementCreateService**
+**Example: ApiManagementCreateMultiRegionServiceWithCustomHostname**
+**Example: ApiManagementCreateServiceHavingMsi**
+**Example: ApiManagementCreateServiceWithSystemCertificates**
+**Example: ApiManagementUpdateServiceDisableTls10**
+**Example: ApiManagementUpdateServicePublisherDetails**
+**Example: ApiManagementServiceDeleteService**
+**Example: ApiManagementCreateDiagnostic**
+**Example: ApiManagementUpdateDiagnostic**
+**Example: ApiManagementDeleteDiagnostic**
+**Example: ApiManagementCreateDiagnostic**
+**Example: ApiManagementUpdateDiagnostic**
+**Example: ApiManagementDeleteDiagnostic**
+**Example: ApiManagementCreateDiagnostic**
+**Example: ApiManagementUpdateDiagnostic**
+**Example: ApiManagementDeleteDiagnostic**
+**Example: ApiManagementCreateDiagnostic**
+**Example: ApiManagementUpdateDiagnostic**
+**Example: ApiManagementDeleteDiagnostic**
+**Example: ApiManagementCreateDiagnostic**
+**Example: ApiManagementUpdateDiagnostic**
+**Example: ApiManagementDeleteDiagnostic**
+**Example: ApiManagementCreateEmailTemplate**
+**Example: ApiManagementUpdateEmailTemplate**
+**Example: ApiManagementDeleteEmailTemplate**
+**Example: ApiManagementCreateEmailTemplate**
+**Example: ApiManagementUpdateEmailTemplate**
+**Example: ApiManagementDeleteEmailTemplate**
+**Example: ApiManagementCreateEmailTemplate**
+**Example: ApiManagementUpdateEmailTemplate**
+**Example: ApiManagementDeleteEmailTemplate**
+**Example: ApiManagementCreateEmailTemplate**
+**Example: ApiManagementUpdateEmailTemplate**
+**Example: ApiManagementDeleteEmailTemplate**
+**Example: ApiManagementCreateEmailTemplate**
+**Example: ApiManagementUpdateEmailTemplate**
+**Example: ApiManagementDeleteEmailTemplate**
+**Example: ApiManagementCreateGroup**
+**Example: ApiManagementCreateGroupExternal**
+**Example: ApiManagementUpdateGroup**
+**Example: ApiManagementDeleteGroup**
+**Example: ApiManagementCreateGroup**
+**Example: ApiManagementCreateGroupExternal**
+**Example: ApiManagementUpdateGroup**
+**Example: ApiManagementDeleteGroup**
+**Example: ApiManagementCreateGroup**
+**Example: ApiManagementCreateGroupExternal**
+**Example: ApiManagementUpdateGroup**
+**Example: ApiManagementDeleteGroup**
+**Example: ApiManagementCreateGroup**
+**Example: ApiManagementCreateGroupExternal**
+**Example: ApiManagementUpdateGroup**
+**Example: ApiManagementDeleteGroup**
+**Example: ApiManagementCreateGroup**
+**Example: ApiManagementCreateGroupExternal**
+**Example: ApiManagementUpdateGroup**
+**Example: ApiManagementDeleteGroup**
+**Example: ApiManagementCreateGroupUser**
+**Example: ApiManagementDeleteGroupUser**
+**Example: ApiManagementCreateGroupUser**
+**Example: ApiManagementDeleteGroupUser**
+**Example: ApiManagementCreateGroupUser**
+**Example: ApiManagementDeleteGroupUser**
+**Example: ApiManagementCreateIdentityProvider**
+**Example: ApiManagementUpdateIdentityProvider**
+**Example: ApiManagementDeleteIdentityProvider**
+**Example: ApiManagementCreateIdentityProvider**
+**Example: ApiManagementUpdateIdentityProvider**
+**Example: ApiManagementDeleteIdentityProvider**
+**Example: ApiManagementCreateIdentityProvider**
+**Example: ApiManagementUpdateIdentityProvider**
+**Example: ApiManagementDeleteIdentityProvider**
+**Example: ApiManagementCreateIdentityProvider**
+**Example: ApiManagementUpdateIdentityProvider**
+**Example: ApiManagementDeleteIdentityProvider**
+**Example: ApiManagementCreateIdentityProvider**
+**Example: ApiManagementUpdateIdentityProvider**
+**Example: ApiManagementDeleteIdentityProvider**
+**Example: ApiManagementCreateEHLogger**
+**Example: ApiManagementCreateAILogger**
+**Example: ApiManagementUpdateLogger**
+**Example: ApiManagementDeleteLogger**
+**Example: ApiManagementCreateEHLogger**
+**Example: ApiManagementCreateAILogger**
+**Example: ApiManagementUpdateLogger**
+**Example: ApiManagementDeleteLogger**
+**Example: ApiManagementCreateEHLogger**
+**Example: ApiManagementCreateAILogger**
+**Example: ApiManagementUpdateLogger**
+**Example: ApiManagementDeleteLogger**
+**Example: ApiManagementCreateEHLogger**
+**Example: ApiManagementCreateAILogger**
+**Example: ApiManagementUpdateLogger**
+**Example: ApiManagementDeleteLogger**
+**Example: ApiManagementCreateEHLogger**
+**Example: ApiManagementCreateAILogger**
+**Example: ApiManagementUpdateLogger**
+**Example: ApiManagementDeleteLogger**
+**Example: ApiManagementCreateNotification**
+**Example: ApiManagementCreateNotification**
+**Example: ApiManagementCreateNotification**
+**Example: ApiManagementCreateNotification**
+**Example: ApiManagementCreateNotificationRecipientUser**
+**Example: ApiManagementDeleteNotificationRecipientUser**
+**Example: ApiManagementCreateNotificationRecipientUser**
+**Example: ApiManagementDeleteNotificationRecipientUser**
+**Example: ApiManagementCreateNotificationRecipientUser**
+**Example: ApiManagementDeleteNotificationRecipientUser**
+**Example: ApiManagementCreateNotificationRecipientUser**
+**Example: ApiManagementDeleteNotificationRecipientUser**
+**Example: ApiManagementCreateNotificationRecipientEmail**
+**Example: ApiManagementDeleteNotificationRecipientEmail**
+**Example: ApiManagementCreateNotificationRecipientEmail**
+**Example: ApiManagementDeleteNotificationRecipientEmail**
+**Example: ApiManagementCreateNotificationRecipientEmail**
+**Example: ApiManagementDeleteNotificationRecipientEmail**
+**Example: ApiManagementCreateNotificationRecipientEmail**
+**Example: ApiManagementDeleteNotificationRecipientEmail**
+**Example: ApiManagementCreateOpenIdConnectProvider**
+**Example: ApiManagementUpdateOpenIdConnectProvider**
+**Example: ApiManagementDeleteOpenIdConnectProvider**
+**Example: ApiManagementCreateOpenIdConnectProvider**
+**Example: ApiManagementUpdateOpenIdConnectProvider**
+**Example: ApiManagementDeleteOpenIdConnectProvider**
+**Example: ApiManagementCreateOpenIdConnectProvider**
+**Example: ApiManagementUpdateOpenIdConnectProvider**
+**Example: ApiManagementDeleteOpenIdConnectProvider**
+**Example: ApiManagementCreateOpenIdConnectProvider**
+**Example: ApiManagementUpdateOpenIdConnectProvider**
+**Example: ApiManagementDeleteOpenIdConnectProvider**
+**Example: ApiManagementCreateOpenIdConnectProvider**
+**Example: ApiManagementUpdateOpenIdConnectProvider**
+**Example: ApiManagementDeleteOpenIdConnectProvider**
+**Example: ApiManagementCreatePolicy**
+**Example: ApiManagementDeletePolicy**
+**Example: ApiManagementCreatePolicy**
+**Example: ApiManagementDeletePolicy**
+**Example: ApiManagementCreatePolicy**
+**Example: ApiManagementDeletePolicy**
+**Example: ApiManagementCreatePolicy**
+**Example: ApiManagementDeletePolicy**
+**Example: ApiManagementCreatePolicy**
+**Example: ApiManagementDeletePolicy**
+**Example: ApiManagementPortalSettingsUpdateSignIn**
+**Example: ApiManagementPortalSettingsUpdateSignIn**
+**Example: ApiManagementPortalSettingsUpdateSignIn**
+**Example: ApiManagementPortalSettingsUpdateSignIn**
+**Example: ApiManagementPortalSettingsUpdateSignIn**
+**Example: ApiManagementPortalSettingsUpdateSignIn**
+**Example: ApiManagementPortalSettingsUpdateSignUp**
+**Example: ApiManagementPortalSettingsUpdateSignUp**
+**Example: ApiManagementPortalSettingsUpdateSignUp**
+**Example: ApiManagementPortalSettingsUpdateSignUp**
+**Example: ApiManagementPortalSettingsUpdateSignUp**
+**Example: ApiManagementPortalSettingsUpdateSignUp**
+**Example: ApiManagementPortalSettingsUpdateDelegation**
+**Example: ApiManagementPortalSettingsUpdateDelegation**
+**Example: ApiManagementPortalSettingsUpdateDelegation**
+**Example: ApiManagementPortalSettingsUpdateDelegation**
+**Example: ApiManagementPortalSettingsUpdateDelegation**
+**Example: ApiManagementPortalSettingsUpdateDelegation**
+**Example: ApiManagementCreateProduct**
+**Example: ApiManagementUpdateProduct**
+**Example: ApiManagementDeleteProduct**
+**Example: ApiManagementCreateProduct**
+**Example: ApiManagementUpdateProduct**
+**Example: ApiManagementDeleteProduct**
+**Example: ApiManagementCreateProduct**
+**Example: ApiManagementUpdateProduct**
+**Example: ApiManagementDeleteProduct**
+**Example: ApiManagementCreateProduct**
+**Example: ApiManagementUpdateProduct**
+**Example: ApiManagementDeleteProduct**
+**Example: ApiManagementCreateProduct**
+**Example: ApiManagementUpdateProduct**
+**Example: ApiManagementDeleteProduct**
+**Example: ApiManagementCreateProduct**
+**Example: ApiManagementUpdateProduct**
+**Example: ApiManagementDeleteProduct**
+**Example: ApiManagementCreateProductApi**
+**Example: ApiManagementDeleteProductApi**
+**Example: ApiManagementCreateProductApi**
+**Example: ApiManagementDeleteProductApi**
+**Example: ApiManagementCreateProductApi**
+**Example: ApiManagementDeleteProductApi**
+**Example: ApiManagementCreateProductApi**
+**Example: ApiManagementDeleteProductApi**
+**Example: ApiManagementCreateProductGroup**
+**Example: ApiManagementDeleteProductGroup**
+**Example: ApiManagementCreateProductGroup**
+**Example: ApiManagementDeleteProductGroup**
+**Example: ApiManagementCreateProductGroup**
+**Example: ApiManagementDeleteProductGroup**
+**Example: ApiManagementCreateProductGroup**
+**Example: ApiManagementDeleteProductGroup**
+**Example: ApiManagementCreateProductPolicy**
+**Example: ApiManagementDeleteProductPolicy**
+**Example: ApiManagementCreateProductPolicy**
+**Example: ApiManagementDeleteProductPolicy**
+**Example: ApiManagementCreateProductPolicy**
+**Example: ApiManagementDeleteProductPolicy**
+**Example: ApiManagementCreateProductPolicy**
+**Example: ApiManagementDeleteProductPolicy**
+**Example: ApiManagementCreateProductPolicy**
+**Example: ApiManagementDeleteProductPolicy**
+**Example: ApiManagementCreateProperty**
+**Example: ApiManagementUpdateProperty**
+**Example: ApiManagementDeleteProperty**
+**Example: ApiManagementCreateProperty**
+**Example: ApiManagementUpdateProperty**
+**Example: ApiManagementDeleteProperty**
+**Example: ApiManagementCreateProperty**
+**Example: ApiManagementUpdateProperty**
+**Example: ApiManagementDeleteProperty**
+**Example: ApiManagementCreateProperty**
+**Example: ApiManagementUpdateProperty**
+**Example: ApiManagementDeleteProperty**
+**Example: ApiManagementCreateProperty**
+**Example: ApiManagementUpdateProperty**
+**Example: ApiManagementDeleteProperty**
+**Example: ApiManagementCreateSubscription**
+**Example: ApiManagementUpdateSubscription**
+**Example: ApiManagementDeleteSubscription**
+**Example: ApiManagementCreateSubscription**
+**Example: ApiManagementUpdateSubscription**
+**Example: ApiManagementDeleteSubscription**
+**Example: ApiManagementCreateSubscription**
+**Example: ApiManagementUpdateSubscription**
+**Example: ApiManagementDeleteSubscription**
+**Example: ApiManagementCreateSubscription**
+**Example: ApiManagementUpdateSubscription**
+**Example: ApiManagementDeleteSubscription**
+**Example: ApiManagementCreateSubscription**
+**Example: ApiManagementUpdateSubscription**
+**Example: ApiManagementDeleteSubscription**
+**Example: ApiManagementCreateUser**
+**Example: ApiManagementUpdateUser**
+**Example: ApiManagementDeleteUser**
+**Example: ApiManagementCreateUser**
+**Example: ApiManagementUpdateUser**
+**Example: ApiManagementDeleteUser**
+**Example: ApiManagementCreateUser**
+**Example: ApiManagementUpdateUser**
+**Example: ApiManagementDeleteUser**
+**Example: ApiManagementCreateUser**
+**Example: ApiManagementUpdateUser**
+**Example: ApiManagementDeleteUser**
+**Example: ApiManagementCreateUser**
+**Example: ApiManagementUpdateUser**
+**Example: ApiManagementDeleteUser**
 ## apimgmt
 
 ### apimgmt create
@@ -1266,25 +607,68 @@ create a apimgmt.
 |--sku_capacity|number|Capacity of the SKU (number of deployed units of the SKU).|/sku/capacity|/sku/capacity|
 |--identity|dict|Managed service identity of the Api Management service.|/identity|/identity|
 
-```
-```
 
 ```
+apimgmt create    --resource_group rg1
+    --name apimService1
+    --publisher_email apim@autorestsdk.com
+    --publisher_name autorestsdk
+    --sku_name Developer
+    --sku_capacity 1
+    --location "Central US"
 ```
 
-```
-```
 
 ```
+apimgmt create    --resource_group rg1
+    --name apimService1
+    --virtual_network_type External
+    --publisher_email admin@live.com
+    --publisher_name contoso
+    --sku_name Premium
+    --sku_capacity 1
+    --location "Central US"
 ```
 
-```
-```
 
 ```
+apimgmt create    --resource_group rg1
+    --name apimService1
+    --publisher_email apim@autorestsdk.com
+    --publisher_name autorestsdk
+    --sku_name Consumption
+    --location "West US"
 ```
 
+
 ```
+apimgmt create    --resource_group rg1
+    --name apimService1
+    --publisher_email apim@autorestsdk.com
+    --publisher_name autorestsdk
+    --sku_name Basic
+    --sku_capacity 1
+    --location "Central US"
+```
+
+
+```
+apimgmt create    --resource_group rg1
+    --name apimService1
+```
+
+
+```
+apimgmt create    --resource_group rg1
+    --name apimService1
+    --publisher_email foobar@live.com
+    --publisher_name "Contoso Vnext"
+```
+
+
+```
+apimgmt create    --resource_group rg1
+    --name apimService1
 ```
 ### apimgmt update
 
@@ -1310,25 +694,68 @@ update a apimgmt.
 |--sku_capacity|number|Capacity of the SKU (number of deployed units of the SKU).|/sku/capacity|/sku/capacity|
 |--identity|dict|Managed service identity of the Api Management service.|/identity|/identity|
 
-```
-```
 
 ```
+apimgmt update    --resource_group rg1
+    --name apimService1
+    --publisher_email apim@autorestsdk.com
+    --publisher_name autorestsdk
+    --sku_name Developer
+    --sku_capacity 1
+    --location "Central US"
 ```
 
-```
-```
 
 ```
+apimgmt update    --resource_group rg1
+    --name apimService1
+    --virtual_network_type External
+    --publisher_email admin@live.com
+    --publisher_name contoso
+    --sku_name Premium
+    --sku_capacity 1
+    --location "Central US"
 ```
 
-```
-```
 
 ```
+apimgmt update    --resource_group rg1
+    --name apimService1
+    --publisher_email apim@autorestsdk.com
+    --publisher_name autorestsdk
+    --sku_name Consumption
+    --location "West US"
 ```
 
+
 ```
+apimgmt update    --resource_group rg1
+    --name apimService1
+    --publisher_email apim@autorestsdk.com
+    --publisher_name autorestsdk
+    --sku_name Basic
+    --sku_capacity 1
+    --location "Central US"
+```
+
+
+```
+apimgmt update    --resource_group rg1
+    --name apimService1
+```
+
+
+```
+apimgmt update    --resource_group rg1
+    --name apimService1
+    --publisher_email foobar@live.com
+    --publisher_name "Contoso Vnext"
+```
+
+
+```
+apimgmt update    --resource_group rg1
+    --name apimService1
 ```
 ### apimgmt delete
 
@@ -1339,25 +766,46 @@ delete a apimgmt.
 |**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--name**|default|The name of the API Management service.|service_name|serviceName|
 
-```
-```
 
 ```
+apimgmt delete    --resource_group rg1
+    --name apimService1
 ```
 
-```
-```
 
 ```
+apimgmt delete    --resource_group rg1
+    --name apimService1
 ```
 
-```
-```
 
 ```
+apimgmt delete    --resource_group rg1
+    --name apimService1
 ```
 
+
 ```
+apimgmt delete    --resource_group rg1
+    --name apimService1
+```
+
+
+```
+apimgmt delete    --resource_group rg1
+    --name apimService1
+```
+
+
+```
+apimgmt delete    --resource_group rg1
+    --name apimService1
+```
+
+
+```
+apimgmt delete    --resource_group rg1
+    --name apimService1
 ```
 ### apimgmt list
 
@@ -1367,46 +815,74 @@ list a apimgmt.
 |------|----|-----------|----------|--------------|
 |**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
 
-```
-```
 
 ```
+apimgmt list    --resource_group rg1
 ```
 
-```
-```
 
 ```
+apimgmt list    --resource_group rg1
 ```
 
-```
-```
 
 ```
+apimgmt list    --resource_group rg1
 ```
 
-```
-```
 
 ```
+apimgmt list    --resource_group rg1
 ```
 
-```
-```
 
 ```
+apimgmt list    --resource_group rg1
 ```
 
-```
-```
 
 ```
+apimgmt list    --resource_group rg1
 ```
 
-```
-```
 
 ```
+apimgmt list    --resource_group rg1
+```
+
+
+```
+apimgmt list    --resource_group rg1
+```
+
+
+```
+apimgmt list    --resource_group rg1
+```
+
+
+```
+apimgmt list    --resource_group rg1
+```
+
+
+```
+apimgmt list    --resource_group rg1
+```
+
+
+```
+apimgmt list    --resource_group rg1
+```
+
+
+```
+apimgmt list    --resource_group rg1
+```
+
+
+```
+apimgmt list    --resource_group rg1
 ```
 ### apimgmt show
 
@@ -1417,25 +893,46 @@ show a apimgmt.
 |**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--name**|default|The name of the API Management service.|service_name|serviceName|
 
-```
-```
 
 ```
+apimgmt show    --resource_group rg1
+    --name apimService1
 ```
 
-```
-```
 
 ```
+apimgmt show    --resource_group rg1
+    --name apimService1
 ```
 
-```
-```
 
 ```
+apimgmt show    --resource_group rg1
+    --name apimService1
 ```
 
+
 ```
+apimgmt show    --resource_group rg1
+    --name apimService1
+```
+
+
+```
+apimgmt show    --resource_group rg1
+    --name apimService1
+```
+
+
+```
+apimgmt show    --resource_group rg1
+    --name apimService1
+```
+
+
+```
+apimgmt show    --resource_group rg1
+    --name apimService1
 ```
 ## apimgmt api
 
@@ -1470,40 +967,135 @@ create a apimgmt api.
 |--wsdl_selector|dict|Criteria to limit import of WSDL to a subset of the document.|/wsdl_selector|/properties/wsdlSelector|
 |--api_type|str|Type of Api to create. <br> * `http` creates a SOAP to REST API <br> * `soap` creates a SOAP pass-through API .|/api_type|/properties/apiType|
 
-```
-```
 
 ```
+apimgmt api create    --resource_group rg1
+    --service_name apimService1
+    --api_id petstore
+    --path petstore
+    --value https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/petstore.yaml
+    --format openapi-link
 ```
 
-```
-```
 
 ```
+apimgmt api create    --resource_group rg1
+    --service_name apimService1
+    --api_id petstore
+    --path petstore
+    --value http://petstore.swagger.io/v2/swagger.json
+    --format swagger-link-json
 ```
 
-```
-```
 
 ```
+apimgmt api create    --resource_group rg1
+    --service_name apimService1
+    --api_id petstore
+    --path collector
+    --value https://developer.cisco.com/media/wae-release-6-2-api-reference/wae-collector-rest-api/application.wadl
+    --format wadl-link-json
 ```
 
-```
-```
 
 ```
+apimgmt api create    --resource_group rg1
+    --service_name apimService1
+    --api_id soapApi
+    --path currency
+    --value http://www.webservicex.net/CurrencyConvertor.asmx?WSDL
+    --format wsdl-link
 ```
 
-```
-```
 
 ```
+apimgmt api create    --resource_group rg1
+    --service_name apimService1
+    --api_id soapApi
+    --path currency
+    --value http://www.webservicex.net/CurrencyConvertor.asmx?WSDL
+    --format wsdl-link
+    --api_type soap
 ```
 
-```
-```
 
 ```
+apimgmt api create    --resource_group rg1
+    --service_name apimService1
+    --api_id tempgroup
+    --description apidescription5200
+    --display_name apiname1463
+    --service_url http://newechoapi.cloudapp.net/api
+    --path newapiPath
+```
+
+
+```
+apimgmt api create    --resource_group rg1
+    --service_name apimService1
+    --api_id echo-api;rev=3
+    --api_revision_description "Creating a Revision of an existing API"
+    --source_api_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}"
+    --service_url http://echoapi.cloudapp.net/apiv3
+    --path echo
+```
+
+
+```
+apimgmt api create    --resource_group rg1
+    --service_name apimService1
+    --api_id echoapiv3
+    --description "Create Echo API into a new Version using Existing Version Set and Copy all Operations."
+    --api_version v4
+    --is_current true
+    --api_version_set_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apiVersionSets/{{ api_version_set_name }}"
+    --subscription_required true
+    --source_api_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}"
+    --display_name "Echo API2"
+    --service_url http://echoapi.cloudapp.net/api
+    --path echo2
+```
+
+
+```
+apimgmt api create    --resource_group rg1
+    --service_name apimService1
+    --api_id echo-api2
+    --description "Copy of Existing Echo Api including Operations."
+    --is_current true
+    --subscription_required true
+    --source_api_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}"
+    --display_name "Echo API2"
+    --service_url http://echoapi.cloudapp.net/api
+    --path echo2
+```
+
+
+```
+apimgmt api create    --resource_group rg1
+    --service_name apimService1
+    --api_id tempgroup
+    --description "This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters."
+    --display_name "Swagger Petstore"
+    --service_url http://petstore.swagger.io/v2
+    --path petstore
+```
+
+
+```
+apimgmt api create    --resource_group rg1
+    --service_name apimService1
+    --api_id echo-api
+    --display_name "Echo API New"
+    --service_url http://echoapi.cloudapp.net/api2
+    --path newecho
+```
+
+
+```
+apimgmt api create    --resource_group rg1
+    --service_name apimService1
+    --api_id echo-api
 ```
 ### apimgmt api update
 
@@ -1536,40 +1128,135 @@ update a apimgmt api.
 |--wsdl_selector|dict|Criteria to limit import of WSDL to a subset of the document.|/wsdl_selector|/properties/wsdlSelector|
 |--api_type|str|Type of Api to create. <br> * `http` creates a SOAP to REST API <br> * `soap` creates a SOAP pass-through API .|/api_type|/properties/apiType|
 
-```
-```
 
 ```
+apimgmt api update    --resource_group rg1
+    --service_name apimService1
+    --api_id petstore
+    --path petstore
+    --value https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/petstore.yaml
+    --format openapi-link
 ```
 
-```
-```
 
 ```
+apimgmt api update    --resource_group rg1
+    --service_name apimService1
+    --api_id petstore
+    --path petstore
+    --value http://petstore.swagger.io/v2/swagger.json
+    --format swagger-link-json
 ```
 
-```
-```
 
 ```
+apimgmt api update    --resource_group rg1
+    --service_name apimService1
+    --api_id petstore
+    --path collector
+    --value https://developer.cisco.com/media/wae-release-6-2-api-reference/wae-collector-rest-api/application.wadl
+    --format wadl-link-json
 ```
 
-```
-```
 
 ```
+apimgmt api update    --resource_group rg1
+    --service_name apimService1
+    --api_id soapApi
+    --path currency
+    --value http://www.webservicex.net/CurrencyConvertor.asmx?WSDL
+    --format wsdl-link
 ```
 
-```
-```
 
 ```
+apimgmt api update    --resource_group rg1
+    --service_name apimService1
+    --api_id soapApi
+    --path currency
+    --value http://www.webservicex.net/CurrencyConvertor.asmx?WSDL
+    --format wsdl-link
+    --api_type soap
 ```
 
-```
-```
 
 ```
+apimgmt api update    --resource_group rg1
+    --service_name apimService1
+    --api_id tempgroup
+    --description apidescription5200
+    --display_name apiname1463
+    --service_url http://newechoapi.cloudapp.net/api
+    --path newapiPath
+```
+
+
+```
+apimgmt api update    --resource_group rg1
+    --service_name apimService1
+    --api_id echo-api;rev=3
+    --api_revision_description "Creating a Revision of an existing API"
+    --source_api_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}"
+    --service_url http://echoapi.cloudapp.net/apiv3
+    --path echo
+```
+
+
+```
+apimgmt api update    --resource_group rg1
+    --service_name apimService1
+    --api_id echoapiv3
+    --description "Create Echo API into a new Version using Existing Version Set and Copy all Operations."
+    --api_version v4
+    --is_current true
+    --api_version_set_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apiVersionSets/{{ api_version_set_name }}"
+    --subscription_required true
+    --source_api_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}"
+    --display_name "Echo API2"
+    --service_url http://echoapi.cloudapp.net/api
+    --path echo2
+```
+
+
+```
+apimgmt api update    --resource_group rg1
+    --service_name apimService1
+    --api_id echo-api2
+    --description "Copy of Existing Echo Api including Operations."
+    --is_current true
+    --subscription_required true
+    --source_api_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}"
+    --display_name "Echo API2"
+    --service_url http://echoapi.cloudapp.net/api
+    --path echo2
+```
+
+
+```
+apimgmt api update    --resource_group rg1
+    --service_name apimService1
+    --api_id tempgroup
+    --description "This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters."
+    --display_name "Swagger Petstore"
+    --service_url http://petstore.swagger.io/v2
+    --path petstore
+```
+
+
+```
+apimgmt api update    --resource_group rg1
+    --service_name apimService1
+    --api_id echo-api
+    --display_name "Echo API New"
+    --service_url http://echoapi.cloudapp.net/api2
+    --path newecho
+```
+
+
+```
+apimgmt api update    --resource_group rg1
+    --service_name apimService1
+    --api_id echo-api
 ```
 ### apimgmt api delete
 
@@ -1581,40 +1268,88 @@ delete a apimgmt api.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 
-```
-```
 
 ```
+apimgmt api delete    --resource_group rg1
+    --service_name apimService1
+    --api_id petstore
 ```
 
-```
-```
 
 ```
+apimgmt api delete    --resource_group rg1
+    --service_name apimService1
+    --api_id petstore
 ```
 
-```
-```
 
 ```
+apimgmt api delete    --resource_group rg1
+    --service_name apimService1
+    --api_id petstore
 ```
 
-```
-```
 
 ```
+apimgmt api delete    --resource_group rg1
+    --service_name apimService1
+    --api_id soapApi
 ```
 
-```
-```
 
 ```
+apimgmt api delete    --resource_group rg1
+    --service_name apimService1
+    --api_id soapApi
 ```
 
-```
-```
 
 ```
+apimgmt api delete    --resource_group rg1
+    --service_name apimService1
+    --api_id tempgroup
+```
+
+
+```
+apimgmt api delete    --resource_group rg1
+    --service_name apimService1
+    --api_id echo-api;rev=3
+```
+
+
+```
+apimgmt api delete    --resource_group rg1
+    --service_name apimService1
+    --api_id echoapiv3
+```
+
+
+```
+apimgmt api delete    --resource_group rg1
+    --service_name apimService1
+    --api_id echo-api2
+```
+
+
+```
+apimgmt api delete    --resource_group rg1
+    --service_name apimService1
+    --api_id tempgroup
+```
+
+
+```
+apimgmt api delete    --resource_group rg1
+    --service_name apimService1
+    --api_id echo-api
+```
+
+
+```
+apimgmt api delete    --resource_group rg1
+    --service_name apimService1
+    --api_id echo-api
 ```
 ### apimgmt api list
 
@@ -1625,76 +1360,148 @@ list a apimgmt api.
 |**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 
-```
-```
 
 ```
+apimgmt api list    --resource_group rg1
+    --service_name apimService1
 ```
 
-```
-```
 
 ```
+apimgmt api list    --resource_group rg1
+    --service_name apimService1
 ```
 
-```
-```
 
 ```
+apimgmt api list    --resource_group rg1
+    --service_name apimService1
 ```
 
-```
-```
 
 ```
+apimgmt api list    --resource_group rg1
+    --service_name apimService1
 ```
 
-```
-```
 
 ```
+apimgmt api list    --resource_group rg1
+    --service_name apimService1
 ```
 
-```
-```
 
 ```
+apimgmt api list    --resource_group rg1
+    --service_name apimService1
 ```
 
-```
-```
 
 ```
+apimgmt api list    --resource_group rg1
+    --service_name apimService1
 ```
 
-```
-```
 
 ```
+apimgmt api list    --resource_group rg1
+    --service_name apimService1
 ```
 
-```
-```
 
 ```
+apimgmt api list    --resource_group rg1
+    --service_name apimService1
 ```
 
-```
-```
 
 ```
+apimgmt api list    --resource_group rg1
+    --service_name apimService1
 ```
 
-```
-```
 
 ```
+apimgmt api list    --resource_group rg1
+    --service_name apimService1
 ```
 
-```
-```
 
 ```
+apimgmt api list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt api list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt api list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt api list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt api list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt api list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt api list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt api list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt api list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt api list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt api list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt api list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt api list    --resource_group rg1
+    --service_name apimService1
 ```
 ### apimgmt api show
 
@@ -1706,40 +1513,88 @@ show a apimgmt api.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 
-```
-```
 
 ```
+apimgmt api show    --resource_group rg1
+    --service_name apimService1
+    --api_id petstore
 ```
 
-```
-```
 
 ```
+apimgmt api show    --resource_group rg1
+    --service_name apimService1
+    --api_id petstore
 ```
 
-```
-```
 
 ```
+apimgmt api show    --resource_group rg1
+    --service_name apimService1
+    --api_id petstore
 ```
 
-```
-```
 
 ```
+apimgmt api show    --resource_group rg1
+    --service_name apimService1
+    --api_id soapApi
 ```
 
-```
-```
 
 ```
+apimgmt api show    --resource_group rg1
+    --service_name apimService1
+    --api_id soapApi
 ```
 
-```
-```
 
 ```
+apimgmt api show    --resource_group rg1
+    --service_name apimService1
+    --api_id tempgroup
+```
+
+
+```
+apimgmt api show    --resource_group rg1
+    --service_name apimService1
+    --api_id echo-api;rev=3
+```
+
+
+```
+apimgmt api show    --resource_group rg1
+    --service_name apimService1
+    --api_id echoapiv3
+```
+
+
+```
+apimgmt api show    --resource_group rg1
+    --service_name apimService1
+    --api_id echo-api2
+```
+
+
+```
+apimgmt api show    --resource_group rg1
+    --service_name apimService1
+    --api_id tempgroup
+```
+
+
+```
+apimgmt api show    --resource_group rg1
+    --service_name apimService1
+    --api_id echo-api
+```
+
+
+```
+apimgmt api show    --resource_group rg1
+    --service_name apimService1
+    --api_id echo-api
 ```
 ## apimgmt api diagnostic
 
@@ -1760,13 +1615,32 @@ create a apimgmt api diagnostic.
 |--backend|dict|Diagnostic settings for incoming/outgoing HTTP messages to the Backend|/backend|/properties/backend|
 |--enable_http_correlation_headers|boolean|Whether to process Correlation Headers coming to Api Management Service. Only applicable to Application Insights diagnostics. Default is true.|/enable_http_correlation_headers|/properties/enableHttpCorrelationHeaders|
 
-```
-```
 
 ```
+apimgmt api diagnostic create    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --diagnostic_id applicationinsights
+    --always_log allErrors
+    --logger_id /loggers/applicationinsights
 ```
 
+
 ```
+apimgmt api diagnostic create    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --diagnostic_id applicationinsights
+    --always_log allErrors
+    --logger_id /loggers/applicationinsights
+```
+
+
+```
+apimgmt api diagnostic create    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --diagnostic_id applicationinsights
 ```
 ### apimgmt api diagnostic update
 
@@ -1785,13 +1659,32 @@ update a apimgmt api diagnostic.
 |--backend|dict|Diagnostic settings for incoming/outgoing HTTP messages to the Backend|/backend|/properties/backend|
 |--enable_http_correlation_headers|boolean|Whether to process Correlation Headers coming to Api Management Service. Only applicable to Application Insights diagnostics. Default is true.|/enable_http_correlation_headers|/properties/enableHttpCorrelationHeaders|
 
-```
-```
 
 ```
+apimgmt api diagnostic update    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --diagnostic_id applicationinsights
+    --always_log allErrors
+    --logger_id /loggers/applicationinsights
 ```
 
+
 ```
+apimgmt api diagnostic update    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --diagnostic_id applicationinsights
+    --always_log allErrors
+    --logger_id /loggers/applicationinsights
+```
+
+
+```
+apimgmt api diagnostic update    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --diagnostic_id applicationinsights
 ```
 ### apimgmt api diagnostic delete
 
@@ -1804,13 +1697,28 @@ delete a apimgmt api diagnostic.
 |**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
 |**--diagnostic_id**|default|Diagnostic identifier. Must be unique in the current API Management service instance.|diagnostic_id|diagnosticId|
 
-```
-```
 
 ```
+apimgmt api diagnostic delete    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --diagnostic_id applicationinsights
 ```
 
+
 ```
+apimgmt api diagnostic delete    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --diagnostic_id applicationinsights
+```
+
+
+```
+apimgmt api diagnostic delete    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --diagnostic_id applicationinsights
 ```
 ### apimgmt api diagnostic list
 
@@ -1822,13 +1730,25 @@ list a apimgmt api diagnostic.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
 
-```
-```
 
 ```
+apimgmt api diagnostic list    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
 ```
 
+
 ```
+apimgmt api diagnostic list    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+```
+
+
+```
+apimgmt api diagnostic list    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
 ```
 ### apimgmt api diagnostic show
 
@@ -1841,13 +1761,28 @@ show a apimgmt api diagnostic.
 |**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
 |**--diagnostic_id**|default|Diagnostic identifier. Must be unique in the current API Management service instance.|diagnostic_id|diagnosticId|
 
-```
-```
 
 ```
+apimgmt api diagnostic show    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --diagnostic_id applicationinsights
 ```
 
+
 ```
+apimgmt api diagnostic show    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --diagnostic_id applicationinsights
+```
+
+
+```
+apimgmt api diagnostic show    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --diagnostic_id applicationinsights
 ```
 ## apimgmt api issue
 
@@ -1867,13 +1802,34 @@ create a apimgmt api issue.
 |--created_date|datetime|Date and time when the issue was created.|/created_date|/properties/createdDate|
 |--state|str|Status of the issue.|/state|/properties/state|
 
-```
-```
 
 ```
+apimgmt api issue create    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
+    --created_date 2018-02-01T22:21:20.467Z
+    --state open
+    --title "New API issue"
+    --description "New API issue description"
+    --user_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/users/{{ user_name }}"
 ```
 
+
 ```
+apimgmt api issue create    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
+    --state closed
+```
+
+
+```
+apimgmt api issue create    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
 ```
 ### apimgmt api issue update
 
@@ -1891,13 +1847,34 @@ update a apimgmt api issue.
 |--created_date|datetime|Date and time when the issue was created.|/created_date|/properties/createdDate|
 |--state|str|Status of the issue.|/state|/properties/state|
 
-```
-```
 
 ```
+apimgmt api issue update    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
+    --created_date 2018-02-01T22:21:20.467Z
+    --state open
+    --title "New API issue"
+    --description "New API issue description"
+    --user_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/users/{{ user_name }}"
 ```
 
+
 ```
+apimgmt api issue update    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
+    --state closed
+```
+
+
+```
+apimgmt api issue update    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
 ```
 ### apimgmt api issue delete
 
@@ -1910,13 +1887,28 @@ delete a apimgmt api issue.
 |**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
 |**--issue_id**|default|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
 
-```
-```
 
 ```
+apimgmt api issue delete    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
 ```
 
+
 ```
+apimgmt api issue delete    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
+```
+
+
+```
+apimgmt api issue delete    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
 ```
 ### apimgmt api issue list
 
@@ -1928,13 +1920,25 @@ list a apimgmt api issue.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
 
-```
-```
 
 ```
+apimgmt api issue list    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
 ```
 
+
 ```
+apimgmt api issue list    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+```
+
+
+```
+apimgmt api issue list    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
 ```
 ### apimgmt api issue show
 
@@ -1947,13 +1951,28 @@ show a apimgmt api issue.
 |**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
 |**--issue_id**|default|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
 
-```
-```
 
 ```
+apimgmt api issue show    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
 ```
 
+
 ```
+apimgmt api issue show    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
+```
+
+
+```
+apimgmt api issue show    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
 ```
 ## apimgmt api issue attachment
 
@@ -1972,10 +1991,25 @@ create a apimgmt api issue attachment.
 |**--content_format**|str|Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.|/content_format|/properties/contentFormat|
 |**--content**|str|An HTTP link or Base64-encoded binary data.|/content|/properties/content|
 
-```
-```
 
 ```
+apimgmt api issue attachment create    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
+    --attachment_id 57d2ef278aa04f0888cba3f3
+    --title "Issue attachment."
+    --content_format image/jpeg
+    --content IEJhc2U2NA==
+```
+
+
+```
+apimgmt api issue attachment create    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
+    --attachment_id 57d2ef278aa04f0888cba3f3
 ```
 ### apimgmt api issue attachment update
 
@@ -1992,10 +2026,25 @@ update a apimgmt api issue attachment.
 |**--content_format**|str|Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.|/content_format|/properties/contentFormat|
 |**--content**|str|An HTTP link or Base64-encoded binary data.|/content|/properties/content|
 
-```
-```
 
 ```
+apimgmt api issue attachment update    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
+    --attachment_id 57d2ef278aa04f0888cba3f3
+    --title "Issue attachment."
+    --content_format image/jpeg
+    --content IEJhc2U2NA==
+```
+
+
+```
+apimgmt api issue attachment update    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
+    --attachment_id 57d2ef278aa04f0888cba3f3
 ```
 ### apimgmt api issue attachment delete
 
@@ -2009,10 +2058,22 @@ delete a apimgmt api issue attachment.
 |**--issue_id**|default|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
 |**--attachment_id**|default|Attachment identifier within an Issue. Must be unique in the current Issue.|attachment_id|attachmentId|
 
-```
-```
 
 ```
+apimgmt api issue attachment delete    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
+    --attachment_id 57d2ef278aa04f0888cba3f3
+```
+
+
+```
+apimgmt api issue attachment delete    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
+    --attachment_id 57d2ef278aa04f0888cba3f3
 ```
 ### apimgmt api issue attachment list
 
@@ -2025,10 +2086,20 @@ list a apimgmt api issue attachment.
 |**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
 |**--issue_id**|default|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
 
-```
-```
 
 ```
+apimgmt api issue attachment list    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
+```
+
+
+```
+apimgmt api issue attachment list    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
 ```
 ### apimgmt api issue attachment show
 
@@ -2042,10 +2113,22 @@ show a apimgmt api issue attachment.
 |**--issue_id**|default|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
 |**--attachment_id**|default|Attachment identifier within an Issue. Must be unique in the current Issue.|attachment_id|attachmentId|
 
-```
-```
 
 ```
+apimgmt api issue attachment show    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
+    --attachment_id 57d2ef278aa04f0888cba3f3
+```
+
+
+```
+apimgmt api issue attachment show    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
+    --attachment_id 57d2ef278aa04f0888cba3f3
 ```
 ## apimgmt api issue comment
 
@@ -2064,10 +2147,25 @@ create a apimgmt api issue comment.
 |**--user_id**|str|A resource identifier for the user who left the comment.|/user_id|/properties/userId|
 |--created_date|datetime|Date and time when the comment was created.|/created_date|/properties/createdDate|
 
-```
-```
 
 ```
+apimgmt api issue comment create    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
+    --comment_id 599e29ab193c3c0bd0b3e2fb
+    --text "Issue comment."
+    --created_date 2018-02-01T22:21:20.467Z
+    --user_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/users/{{ user_name }}"
+```
+
+
+```
+apimgmt api issue comment create    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
+    --comment_id 599e29ab193c3c0bd0b3e2fb
 ```
 ### apimgmt api issue comment update
 
@@ -2084,10 +2182,25 @@ update a apimgmt api issue comment.
 |**--user_id**|str|A resource identifier for the user who left the comment.|/user_id|/properties/userId|
 |--created_date|datetime|Date and time when the comment was created.|/created_date|/properties/createdDate|
 
-```
-```
 
 ```
+apimgmt api issue comment update    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
+    --comment_id 599e29ab193c3c0bd0b3e2fb
+    --text "Issue comment."
+    --created_date 2018-02-01T22:21:20.467Z
+    --user_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/users/{{ user_name }}"
+```
+
+
+```
+apimgmt api issue comment update    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
+    --comment_id 599e29ab193c3c0bd0b3e2fb
 ```
 ### apimgmt api issue comment delete
 
@@ -2101,10 +2214,22 @@ delete a apimgmt api issue comment.
 |**--issue_id**|default|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
 |**--comment_id**|default|Comment identifier within an Issue. Must be unique in the current Issue.|comment_id|commentId|
 
-```
-```
 
 ```
+apimgmt api issue comment delete    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
+    --comment_id 599e29ab193c3c0bd0b3e2fb
+```
+
+
+```
+apimgmt api issue comment delete    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
+    --comment_id 599e29ab193c3c0bd0b3e2fb
 ```
 ### apimgmt api issue comment list
 
@@ -2117,10 +2242,20 @@ list a apimgmt api issue comment.
 |**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
 |**--issue_id**|default|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
 
-```
-```
 
 ```
+apimgmt api issue comment list    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
+```
+
+
+```
+apimgmt api issue comment list    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
 ```
 ### apimgmt api issue comment show
 
@@ -2134,10 +2269,22 @@ show a apimgmt api issue comment.
 |**--issue_id**|default|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
 |**--comment_id**|default|Comment identifier within an Issue. Must be unique in the current Issue.|comment_id|commentId|
 
-```
-```
 
 ```
+apimgmt api issue comment show    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
+    --comment_id 599e29ab193c3c0bd0b3e2fb
+```
+
+
+```
+apimgmt api issue comment show    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d1f7558aa04f15146d9d8a
+    --issue_id 57d2ef278aa04f0ad01d6cdc
+    --comment_id 599e29ab193c3c0bd0b3e2fb
 ```
 ## apimgmt api operation
 
@@ -2160,13 +2307,35 @@ create a apimgmt api operation.
 |--responses|list|Array of Operation responses.|/responses|/properties/responses|
 |--policies|str|Operation Policies|/policies|/properties/policies|
 
-```
-```
 
 ```
+apimgmt api operation create    --resource_group rg1
+    --service_name apimService1
+    --api_id PetStoreTemplate2
+    --operation_id newoperations
+    --description "This can only be done by the logged in user."
+    --display_name createUser2
+    --method POST
+    --url_template /user1
 ```
 
+
 ```
+apimgmt api operation create    --resource_group rg1
+    --service_name apimService1
+    --api_id echo-api
+    --operation_id operationId
+    --display_name "Retrieve resource"
+    --method GET
+    --url_template /resource
+```
+
+
+```
+apimgmt api operation create    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d2ef278aa04f0888cba3f3
+    --operation_id 57d2ef278aa04f0ad01d6cdc
 ```
 ### apimgmt api operation update
 
@@ -2187,13 +2356,35 @@ update a apimgmt api operation.
 |--responses|list|Array of Operation responses.|/responses|/properties/responses|
 |--policies|str|Operation Policies|/policies|/properties/policies|
 
-```
-```
 
 ```
+apimgmt api operation update    --resource_group rg1
+    --service_name apimService1
+    --api_id PetStoreTemplate2
+    --operation_id newoperations
+    --description "This can only be done by the logged in user."
+    --display_name createUser2
+    --method POST
+    --url_template /user1
 ```
 
+
 ```
+apimgmt api operation update    --resource_group rg1
+    --service_name apimService1
+    --api_id echo-api
+    --operation_id operationId
+    --display_name "Retrieve resource"
+    --method GET
+    --url_template /resource
+```
+
+
+```
+apimgmt api operation update    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d2ef278aa04f0888cba3f3
+    --operation_id 57d2ef278aa04f0ad01d6cdc
 ```
 ### apimgmt api operation delete
 
@@ -2206,13 +2397,28 @@ delete a apimgmt api operation.
 |**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 |**--operation_id**|default|Operation identifier within an API. Must be unique in the current API Management service instance.|operation_id|operationId|
 
-```
-```
 
 ```
+apimgmt api operation delete    --resource_group rg1
+    --service_name apimService1
+    --api_id PetStoreTemplate2
+    --operation_id newoperations
 ```
 
+
 ```
+apimgmt api operation delete    --resource_group rg1
+    --service_name apimService1
+    --api_id echo-api
+    --operation_id operationId
+```
+
+
+```
+apimgmt api operation delete    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d2ef278aa04f0888cba3f3
+    --operation_id 57d2ef278aa04f0ad01d6cdc
 ```
 ### apimgmt api operation list
 
@@ -2224,13 +2430,25 @@ list a apimgmt api operation.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 
-```
-```
 
 ```
+apimgmt api operation list    --resource_group rg1
+    --service_name apimService1
+    --api_id PetStoreTemplate2
 ```
 
+
 ```
+apimgmt api operation list    --resource_group rg1
+    --service_name apimService1
+    --api_id echo-api
+```
+
+
+```
+apimgmt api operation list    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d2ef278aa04f0888cba3f3
 ```
 ### apimgmt api operation show
 
@@ -2243,13 +2461,28 @@ show a apimgmt api operation.
 |**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 |**--operation_id**|default|Operation identifier within an API. Must be unique in the current API Management service instance.|operation_id|operationId|
 
-```
-```
 
 ```
+apimgmt api operation show    --resource_group rg1
+    --service_name apimService1
+    --api_id PetStoreTemplate2
+    --operation_id newoperations
 ```
 
+
 ```
+apimgmt api operation show    --resource_group rg1
+    --service_name apimService1
+    --api_id echo-api
+    --operation_id operationId
+```
+
+
+```
+apimgmt api operation show    --resource_group rg1
+    --service_name apimService1
+    --api_id 57d2ef278aa04f0888cba3f3
+    --operation_id 57d2ef278aa04f0ad01d6cdc
 ```
 ## apimgmt api operation policy
 
@@ -2267,10 +2500,24 @@ create a apimgmt api operation policy.
 |**--value**|str|Contents of the Policy as defined by the format.|/value|/properties/value|
 |--format|str|Format of the policyContent.|/format|/properties/format|
 
-```
-```
 
 ```
+apimgmt api operation policy create    --resource_group rg1
+    --service_name apimService1
+    --api_id 5600b57e7e8880006a040001
+    --operation_id 5600b57e7e8880006a080001
+    --policy_id policy
+    --value "<policies> <inbound /> <backend>    <forward-request />  </backend>  <outbound /></policies>"
+    --format xml
+```
+
+
+```
+apimgmt api operation policy create    --resource_group rg1
+    --service_name apimService1
+    --api_id testapi
+    --operation_id testoperation
+    --policy_id policy
 ```
 ### apimgmt api operation policy update
 
@@ -2286,10 +2533,24 @@ update a apimgmt api operation policy.
 |**--value**|str|Contents of the Policy as defined by the format.|/value|/properties/value|
 |--format|str|Format of the policyContent.|/format|/properties/format|
 
-```
-```
 
 ```
+apimgmt api operation policy update    --resource_group rg1
+    --service_name apimService1
+    --api_id 5600b57e7e8880006a040001
+    --operation_id 5600b57e7e8880006a080001
+    --policy_id policy
+    --value "<policies> <inbound /> <backend>    <forward-request />  </backend>  <outbound /></policies>"
+    --format xml
+```
+
+
+```
+apimgmt api operation policy update    --resource_group rg1
+    --service_name apimService1
+    --api_id testapi
+    --operation_id testoperation
+    --policy_id policy
 ```
 ### apimgmt api operation policy delete
 
@@ -2303,10 +2564,22 @@ delete a apimgmt api operation policy.
 |**--operation_id**|default|Operation identifier within an API. Must be unique in the current API Management service instance.|operation_id|operationId|
 |**--policy_id**|default|The identifier of the Policy.|policy_id|policyId|
 
-```
-```
 
 ```
+apimgmt api operation policy delete    --resource_group rg1
+    --service_name apimService1
+    --api_id 5600b57e7e8880006a040001
+    --operation_id 5600b57e7e8880006a080001
+    --policy_id policy
+```
+
+
+```
+apimgmt api operation policy delete    --resource_group rg1
+    --service_name apimService1
+    --api_id testapi
+    --operation_id testoperation
+    --policy_id policy
 ```
 ### apimgmt api operation policy list
 
@@ -2319,10 +2592,20 @@ list a apimgmt api operation policy.
 |**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 |**--operation_id**|default|Operation identifier within an API. Must be unique in the current API Management service instance.|operation_id|operationId|
 
-```
-```
 
 ```
+apimgmt api operation policy list    --resource_group rg1
+    --service_name apimService1
+    --api_id 5600b57e7e8880006a040001
+    --operation_id 5600b57e7e8880006a080001
+```
+
+
+```
+apimgmt api operation policy list    --resource_group rg1
+    --service_name apimService1
+    --api_id testapi
+    --operation_id testoperation
 ```
 ### apimgmt api operation policy show
 
@@ -2337,10 +2620,23 @@ show a apimgmt api operation policy.
 |**--policy_id**|default|The identifier of the Policy.|policy_id|policyId|
 |--format|default|Format of the policyContent.|/format|/properties/format|
 
-```
-```
 
 ```
+apimgmt api operation policy show    --resource_group rg1
+    --service_name apimService1
+    --api_id 5600b57e7e8880006a040001
+    --operation_id 5600b57e7e8880006a080001
+    --format xml
+    --policy_id policy
+```
+
+
+```
+apimgmt api operation policy show    --resource_group rg1
+    --service_name apimService1
+    --api_id testapi
+    --operation_id testoperation
+    --policy_id policy
 ```
 ## apimgmt api policy
 
@@ -2357,13 +2653,39 @@ create a apimgmt api policy.
 |**--value**|str|Contents of the Policy as defined by the format.|/value|/properties/value|
 |--format|str|Format of the policyContent.|/format|/properties/format|
 
-```
-```
 
 ```
+apimgmt api policy create    --resource_group rg1
+    --service_name apimService1
+    --api_id 5600b57e7e8880006a040001
+    --policy_id policy
+    --value "<policies> <inbound /> <backend>    <forward-request />  </backend>  <outbound /></policies>"
+    --format xml
 ```
 
+
 ```
+apimgmt api policy create    --resource_group rg1
+    --service_name apimService1
+    --api_id 5600b57e7e8880006a040001
+    --policy_id policy
+    --value "<policies>
+     <inbound>
+     <base />
+  <set-header name=\"newvalue" exists-action="override">
+   <value>"@(context.Request.Headers.FirstOrDefault(h => h.Ke=="Via"))" </value>
+    </set-header>
+  </inbound>
+      </policies>"
+    --format rawxml
+```
+
+
+```
+apimgmt api policy create    --resource_group rg1
+    --service_name apimService1
+    --api_id loggerId
+    --policy_id policy
 ```
 ### apimgmt api policy update
 
@@ -2378,13 +2700,39 @@ update a apimgmt api policy.
 |**--value**|str|Contents of the Policy as defined by the format.|/value|/properties/value|
 |--format|str|Format of the policyContent.|/format|/properties/format|
 
-```
-```
 
 ```
+apimgmt api policy update    --resource_group rg1
+    --service_name apimService1
+    --api_id 5600b57e7e8880006a040001
+    --policy_id policy
+    --value "<policies> <inbound /> <backend>    <forward-request />  </backend>  <outbound /></policies>"
+    --format xml
 ```
 
+
 ```
+apimgmt api policy update    --resource_group rg1
+    --service_name apimService1
+    --api_id 5600b57e7e8880006a040001
+    --policy_id policy
+    --value "<policies>
+     <inbound>
+     <base />
+  <set-header name=\"newvalue" exists-action="override">
+   <value>"@(context.Request.Headers.FirstOrDefault(h => h.Ke=="Via"))" </value>
+    </set-header>
+  </inbound>
+      </policies>"
+    --format rawxml
+```
+
+
+```
+apimgmt api policy update    --resource_group rg1
+    --service_name apimService1
+    --api_id loggerId
+    --policy_id policy
 ```
 ### apimgmt api policy delete
 
@@ -2397,13 +2745,28 @@ delete a apimgmt api policy.
 |**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 |**--policy_id**|default|The identifier of the Policy.|policy_id|policyId|
 
-```
-```
 
 ```
+apimgmt api policy delete    --resource_group rg1
+    --service_name apimService1
+    --api_id 5600b57e7e8880006a040001
+    --policy_id policy
 ```
 
+
 ```
+apimgmt api policy delete    --resource_group rg1
+    --service_name apimService1
+    --api_id 5600b57e7e8880006a040001
+    --policy_id policy
+```
+
+
+```
+apimgmt api policy delete    --resource_group rg1
+    --service_name apimService1
+    --api_id loggerId
+    --policy_id policy
 ```
 ### apimgmt api policy list
 
@@ -2415,13 +2778,25 @@ list a apimgmt api policy.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 
-```
-```
 
 ```
+apimgmt api policy list    --resource_group rg1
+    --service_name apimService1
+    --api_id 5600b57e7e8880006a040001
 ```
 
+
 ```
+apimgmt api policy list    --resource_group rg1
+    --service_name apimService1
+    --api_id 5600b57e7e8880006a040001
+```
+
+
+```
+apimgmt api policy list    --resource_group rg1
+    --service_name apimService1
+    --api_id loggerId
 ```
 ### apimgmt api policy show
 
@@ -2435,13 +2810,30 @@ show a apimgmt api policy.
 |**--policy_id**|default|The identifier of the Policy.|policy_id|policyId|
 |--format|default|Format of the policyContent.|/format|/properties/format|
 
-```
-```
 
 ```
+apimgmt api policy show    --resource_group rg1
+    --service_name apimService1
+    --api_id 5600b57e7e8880006a040001
+    --policy_id policy
+    --format xml
 ```
 
+
 ```
+apimgmt api policy show    --resource_group rg1
+    --service_name apimService1
+    --api_id 5600b57e7e8880006a040001
+    --policy_id policy
+    --format rawxml
+```
+
+
+```
+apimgmt api policy show    --resource_group rg1
+    --service_name apimService1
+    --api_id loggerId
+    --policy_id policy
 ```
 ## apimgmt api release
 
@@ -2457,13 +2849,30 @@ create a apimgmt api release.
 |**--release_id**|default|Release identifier within an API. Must be unique in the current API Management service instance.|release_id|releaseId|
 |--notes|str|Release Notes|/notes|/properties/notes|
 
-```
-```
 
 ```
+apimgmt api release create    --resource_group rg1
+    --service_name apimService1
+    --api_id a1
+    --release_id testrev
+    --notes yahooagain
 ```
 
+
 ```
+apimgmt api release create    --resource_group rg1
+    --service_name apimService1
+    --api_id a1
+    --release_id testrev
+    --notes yahooagain
+```
+
+
+```
+apimgmt api release create    --resource_group rg1
+    --service_name apimService1
+    --api_id 5a5fcc09124a7fa9b89f2f1d
+    --release_id testrev
 ```
 ### apimgmt api release update
 
@@ -2477,13 +2886,30 @@ update a apimgmt api release.
 |**--release_id**|default|Release identifier within an API. Must be unique in the current API Management service instance.|release_id|releaseId|
 |--notes|str|Release Notes|/notes|/properties/notes|
 
-```
-```
 
 ```
+apimgmt api release update    --resource_group rg1
+    --service_name apimService1
+    --api_id a1
+    --release_id testrev
+    --notes yahooagain
 ```
 
+
 ```
+apimgmt api release update    --resource_group rg1
+    --service_name apimService1
+    --api_id a1
+    --release_id testrev
+    --notes yahooagain
+```
+
+
+```
+apimgmt api release update    --resource_group rg1
+    --service_name apimService1
+    --api_id 5a5fcc09124a7fa9b89f2f1d
+    --release_id testrev
 ```
 ### apimgmt api release delete
 
@@ -2496,13 +2922,28 @@ delete a apimgmt api release.
 |**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
 |**--release_id**|default|Release identifier within an API. Must be unique in the current API Management service instance.|release_id|releaseId|
 
-```
-```
 
 ```
+apimgmt api release delete    --resource_group rg1
+    --service_name apimService1
+    --api_id a1
+    --release_id testrev
 ```
 
+
 ```
+apimgmt api release delete    --resource_group rg1
+    --service_name apimService1
+    --api_id a1
+    --release_id testrev
+```
+
+
+```
+apimgmt api release delete    --resource_group rg1
+    --service_name apimService1
+    --api_id 5a5fcc09124a7fa9b89f2f1d
+    --release_id testrev
 ```
 ### apimgmt api release list
 
@@ -2514,13 +2955,25 @@ list a apimgmt api release.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
 
-```
-```
 
 ```
+apimgmt api release list    --resource_group rg1
+    --service_name apimService1
+    --api_id a1
 ```
 
+
 ```
+apimgmt api release list    --resource_group rg1
+    --service_name apimService1
+    --api_id a1
+```
+
+
+```
+apimgmt api release list    --resource_group rg1
+    --service_name apimService1
+    --api_id 5a5fcc09124a7fa9b89f2f1d
 ```
 ### apimgmt api release show
 
@@ -2533,13 +2986,28 @@ show a apimgmt api release.
 |**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
 |**--release_id**|default|Release identifier within an API. Must be unique in the current API Management service instance.|release_id|releaseId|
 
-```
-```
 
 ```
+apimgmt api release show    --resource_group rg1
+    --service_name apimService1
+    --api_id a1
+    --release_id testrev
 ```
 
+
 ```
+apimgmt api release show    --resource_group rg1
+    --service_name apimService1
+    --api_id a1
+    --release_id testrev
+```
+
+
+```
+apimgmt api release show    --resource_group rg1
+    --service_name apimService1
+    --api_id 5a5fcc09124a7fa9b89f2f1d
+    --release_id testrev
 ```
 ## apimgmt api schema
 
@@ -2556,10 +3024,21 @@ create a apimgmt api schema.
 |**--content_type**|str|Must be a valid a media type used in a Content-Type header as defined in the RFC 2616. Media type of the schema document (e.g. application/json, application/xml). </br> - `Swagger` Schema use `application/vnd.ms-azure-apim.swagger.definitions+json` </br> - `WSDL` Schema use `application/vnd.ms-azure-apim.xsd+xml` </br> - `OpenApi` Schema use `application/vnd.oai.openapi.components+json` </br> - `WADL Schema` use `application/vnd.ms-azure-apim.wadl.grammars+xml`.|/content_type|/properties/contentType|
 |--document|dict|Create or update Properties of the Schema Document.|/document|/properties/document|
 
-```
-```
 
 ```
+apimgmt api schema create    --resource_group rg1
+    --service_name apimService1
+    --api_id 59d6bb8f1f7fab13dc67ec9b
+    --schema_id ec12520d-9d48-4e7b-8f39-698ca2ac63f1
+    --content_type application/vnd.ms-azure-apim.xsd+xml
+```
+
+
+```
+apimgmt api schema create    --resource_group rg1
+    --service_name apimService1
+    --api_id 59d5b28d1f7fab116c282650
+    --schema_id 59d5b28e1f7fab116402044e
 ```
 ### apimgmt api schema update
 
@@ -2574,10 +3053,21 @@ update a apimgmt api schema.
 |**--content_type**|str|Must be a valid a media type used in a Content-Type header as defined in the RFC 2616. Media type of the schema document (e.g. application/json, application/xml). </br> - `Swagger` Schema use `application/vnd.ms-azure-apim.swagger.definitions+json` </br> - `WSDL` Schema use `application/vnd.ms-azure-apim.xsd+xml` </br> - `OpenApi` Schema use `application/vnd.oai.openapi.components+json` </br> - `WADL Schema` use `application/vnd.ms-azure-apim.wadl.grammars+xml`.|/content_type|/properties/contentType|
 |--document|dict|Create or update Properties of the Schema Document.|/document|/properties/document|
 
-```
-```
 
 ```
+apimgmt api schema update    --resource_group rg1
+    --service_name apimService1
+    --api_id 59d6bb8f1f7fab13dc67ec9b
+    --schema_id ec12520d-9d48-4e7b-8f39-698ca2ac63f1
+    --content_type application/vnd.ms-azure-apim.xsd+xml
+```
+
+
+```
+apimgmt api schema update    --resource_group rg1
+    --service_name apimService1
+    --api_id 59d5b28d1f7fab116c282650
+    --schema_id 59d5b28e1f7fab116402044e
 ```
 ### apimgmt api schema delete
 
@@ -2590,10 +3080,20 @@ delete a apimgmt api schema.
 |**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 |**--schema_id**|default|Schema identifier within an API. Must be unique in the current API Management service instance.|schema_id|schemaId|
 
-```
-```
 
 ```
+apimgmt api schema delete    --resource_group rg1
+    --service_name apimService1
+    --api_id 59d6bb8f1f7fab13dc67ec9b
+    --schema_id ec12520d-9d48-4e7b-8f39-698ca2ac63f1
+```
+
+
+```
+apimgmt api schema delete    --resource_group rg1
+    --service_name apimService1
+    --api_id 59d5b28d1f7fab116c282650
+    --schema_id 59d5b28e1f7fab116402044e
 ```
 ### apimgmt api schema list
 
@@ -2605,10 +3105,18 @@ list a apimgmt api schema.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 
-```
-```
 
 ```
+apimgmt api schema list    --resource_group rg1
+    --service_name apimService1
+    --api_id 59d6bb8f1f7fab13dc67ec9b
+```
+
+
+```
+apimgmt api schema list    --resource_group rg1
+    --service_name apimService1
+    --api_id 59d5b28d1f7fab116c282650
 ```
 ### apimgmt api schema show
 
@@ -2621,10 +3129,20 @@ show a apimgmt api schema.
 |**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 |**--schema_id**|default|Schema identifier within an API. Must be unique in the current API Management service instance.|schema_id|schemaId|
 
-```
-```
 
 ```
+apimgmt api schema show    --resource_group rg1
+    --service_name apimService1
+    --api_id 59d6bb8f1f7fab13dc67ec9b
+    --schema_id ec12520d-9d48-4e7b-8f39-698ca2ac63f1
+```
+
+
+```
+apimgmt api schema show    --resource_group rg1
+    --service_name apimService1
+    --api_id 59d5b28d1f7fab116c282650
+    --schema_id 59d5b28e1f7fab116402044e
 ```
 ## apimgmt api tagdescription
 
@@ -2642,10 +3160,23 @@ create a apimgmt api tagdescription.
 |--external_docs_url|str|Absolute URL of external resources describing the tag.|/external_docs_url|/properties/externalDocsUrl|
 |--external_docs_description|str|Description of the external resources describing the tag.|/external_docs_description|/properties/externalDocsDescription|
 
-```
-```
 
 ```
+apimgmt api tagdescription create    --resource_group rg1
+    --service_name apimService1
+    --api_id 5931a75ae4bbd512a88c680b
+    --tag_id tagId1
+    --description "Some description that will be displayed for operation's tag if the tag is assigned to operation of the API"
+    --external_docs_url http://some.url/additionaldoc
+    --external_docs_description "Description of the external docs resource"
+```
+
+
+```
+apimgmt api tagdescription create    --resource_group rg1
+    --service_name apimService1
+    --api_id 59d5b28d1f7fab116c282650
+    --tag_id 59d5b28e1f7fab116402044e
 ```
 ### apimgmt api tagdescription update
 
@@ -2661,10 +3192,23 @@ update a apimgmt api tagdescription.
 |--external_docs_url|str|Absolute URL of external resources describing the tag.|/external_docs_url|/properties/externalDocsUrl|
 |--external_docs_description|str|Description of the external resources describing the tag.|/external_docs_description|/properties/externalDocsDescription|
 
-```
-```
 
 ```
+apimgmt api tagdescription update    --resource_group rg1
+    --service_name apimService1
+    --api_id 5931a75ae4bbd512a88c680b
+    --tag_id tagId1
+    --description "Some description that will be displayed for operation's tag if the tag is assigned to operation of the API"
+    --external_docs_url http://some.url/additionaldoc
+    --external_docs_description "Description of the external docs resource"
+```
+
+
+```
+apimgmt api tagdescription update    --resource_group rg1
+    --service_name apimService1
+    --api_id 59d5b28d1f7fab116c282650
+    --tag_id 59d5b28e1f7fab116402044e
 ```
 ### apimgmt api tagdescription delete
 
@@ -2677,10 +3221,20 @@ delete a apimgmt api tagdescription.
 |**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 |**--tag_id**|default|Tag identifier. Must be unique in the current API Management service instance.|tag_id|tagId|
 
-```
-```
 
 ```
+apimgmt api tagdescription delete    --resource_group rg1
+    --service_name apimService1
+    --api_id 5931a75ae4bbd512a88c680b
+    --tag_id tagId1
+```
+
+
+```
+apimgmt api tagdescription delete    --resource_group rg1
+    --service_name apimService1
+    --api_id 59d5b28d1f7fab116c282650
+    --tag_id 59d5b28e1f7fab116402044e
 ```
 ### apimgmt api tagdescription list
 
@@ -2692,10 +3246,18 @@ list a apimgmt api tagdescription.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 
-```
-```
 
 ```
+apimgmt api tagdescription list    --resource_group rg1
+    --service_name apimService1
+    --api_id 5931a75ae4bbd512a88c680b
+```
+
+
+```
+apimgmt api tagdescription list    --resource_group rg1
+    --service_name apimService1
+    --api_id 59d5b28d1f7fab116c282650
 ```
 ### apimgmt api tagdescription show
 
@@ -2708,10 +3270,20 @@ show a apimgmt api tagdescription.
 |**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 |**--tag_id**|default|Tag identifier. Must be unique in the current API Management service instance.|tag_id|tagId|
 
-```
-```
 
 ```
+apimgmt api tagdescription show    --resource_group rg1
+    --service_name apimService1
+    --api_id 5931a75ae4bbd512a88c680b
+    --tag_id tagId1
+```
+
+
+```
+apimgmt api tagdescription show    --resource_group rg1
+    --service_name apimService1
+    --api_id 59d5b28d1f7fab116c282650
+    --tag_id 59d5b28e1f7fab116402044e
 ```
 ## apimgmt apiversionset
 
@@ -2730,13 +3302,31 @@ create a apimgmt apiversionset.
 |--version_query_name|str|Name of query parameter that indicates the API Version if versioningScheme is set to `query`.|/version_query_name|/properties/versionQueryName|
 |--version_header_name|str|Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.|/version_header_name|/properties/versionHeaderName|
 
-```
-```
 
 ```
+apimgmt apiversionset create    --resource_group rg1
+    --service_name apimService1
+    --version_set_id api1
+    --description "Version configuration"
+    --display_name "api set 1"
+    --versioning_scheme Segment
 ```
 
+
 ```
+apimgmt apiversionset create    --resource_group rg1
+    --service_name apimService1
+    --version_set_id api1
+    --description "Version configuration"
+    --display_name "api set 1"
+    --versioning_scheme Segment
+```
+
+
+```
+apimgmt apiversionset create    --resource_group rg1
+    --service_name apimService1
+    --version_set_id a1
 ```
 ### apimgmt apiversionset update
 
@@ -2753,13 +3343,31 @@ update a apimgmt apiversionset.
 |--version_query_name|str|Name of query parameter that indicates the API Version if versioningScheme is set to `query`.|/version_query_name|/properties/versionQueryName|
 |--version_header_name|str|Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.|/version_header_name|/properties/versionHeaderName|
 
-```
-```
 
 ```
+apimgmt apiversionset update    --resource_group rg1
+    --service_name apimService1
+    --version_set_id api1
+    --description "Version configuration"
+    --display_name "api set 1"
+    --versioning_scheme Segment
 ```
 
+
 ```
+apimgmt apiversionset update    --resource_group rg1
+    --service_name apimService1
+    --version_set_id api1
+    --description "Version configuration"
+    --display_name "api set 1"
+    --versioning_scheme Segment
+```
+
+
+```
+apimgmt apiversionset update    --resource_group rg1
+    --service_name apimService1
+    --version_set_id a1
 ```
 ### apimgmt apiversionset delete
 
@@ -2771,13 +3379,25 @@ delete a apimgmt apiversionset.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--version_set_id**|default|Api Version Set identifier. Must be unique in the current API Management service instance.|version_set_id|versionSetId|
 
-```
-```
 
 ```
+apimgmt apiversionset delete    --resource_group rg1
+    --service_name apimService1
+    --version_set_id api1
 ```
 
+
 ```
+apimgmt apiversionset delete    --resource_group rg1
+    --service_name apimService1
+    --version_set_id api1
+```
+
+
+```
+apimgmt apiversionset delete    --resource_group rg1
+    --service_name apimService1
+    --version_set_id a1
 ```
 ### apimgmt apiversionset list
 
@@ -2788,13 +3408,22 @@ list a apimgmt apiversionset.
 |**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 
-```
-```
 
 ```
+apimgmt apiversionset list    --resource_group rg1
+    --service_name apimService1
 ```
 
+
 ```
+apimgmt apiversionset list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt apiversionset list    --resource_group rg1
+    --service_name apimService1
 ```
 ### apimgmt apiversionset show
 
@@ -2806,13 +3435,25 @@ show a apimgmt apiversionset.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--version_set_id**|default|Api Version Set identifier. Must be unique in the current API Management service instance.|version_set_id|versionSetId|
 
-```
-```
 
 ```
+apimgmt apiversionset show    --resource_group rg1
+    --service_name apimService1
+    --version_set_id api1
 ```
 
+
 ```
+apimgmt apiversionset show    --resource_group rg1
+    --service_name apimService1
+    --version_set_id api1
+```
+
+
+```
+apimgmt apiversionset show    --resource_group rg1
+    --service_name apimService1
+    --version_set_id a1
 ```
 ## apimgmt authorizationserver
 
@@ -2842,13 +3483,38 @@ create a apimgmt authorizationserver.
 |--resource_owner_username|str|Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.|/resource_owner_username|/properties/resourceOwnerUsername|
 |--resource_owner_password|str|Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.|/resource_owner_password|/properties/resourceOwnerPassword|
 
-```
-```
 
 ```
+apimgmt authorizationserver create    --resource_group rg1
+    --service_name apimService1
+    --authsid newauthServer
+    --description "test server"
+    --token_endpoint https://www.contoso.com/oauth2/token
+    --support_state true
+    --default_scope "read write"
+    --client_secret 2
+    --resource_owner_username un
+    --resource_owner_password pwd
+    --display_name test2
+    --client_registration_endpoint https://www.contoso.com/apps
+    --authorization_endpoint https://www.contoso.com/oauth2/auth
+    --client_id 1
 ```
 
+
 ```
+apimgmt authorizationserver create    --resource_group rg1
+    --service_name apimService1
+    --authsid newauthServer
+    --client_secret updated
+    --client_id update
+```
+
+
+```
+apimgmt authorizationserver create    --resource_group rg1
+    --service_name apimService1
+    --authsid newauthServer2
 ```
 ### apimgmt authorizationserver update
 
@@ -2876,13 +3542,38 @@ update a apimgmt authorizationserver.
 |--resource_owner_username|str|Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.|/resource_owner_username|/properties/resourceOwnerUsername|
 |--resource_owner_password|str|Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.|/resource_owner_password|/properties/resourceOwnerPassword|
 
-```
-```
 
 ```
+apimgmt authorizationserver update    --resource_group rg1
+    --service_name apimService1
+    --authsid newauthServer
+    --description "test server"
+    --token_endpoint https://www.contoso.com/oauth2/token
+    --support_state true
+    --default_scope "read write"
+    --client_secret 2
+    --resource_owner_username un
+    --resource_owner_password pwd
+    --display_name test2
+    --client_registration_endpoint https://www.contoso.com/apps
+    --authorization_endpoint https://www.contoso.com/oauth2/auth
+    --client_id 1
 ```
 
+
 ```
+apimgmt authorizationserver update    --resource_group rg1
+    --service_name apimService1
+    --authsid newauthServer
+    --client_secret updated
+    --client_id update
+```
+
+
+```
+apimgmt authorizationserver update    --resource_group rg1
+    --service_name apimService1
+    --authsid newauthServer2
 ```
 ### apimgmt authorizationserver delete
 
@@ -2894,13 +3585,25 @@ delete a apimgmt authorizationserver.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--authsid**|default|Identifier of the authorization server.|authsid|authsid|
 
-```
-```
 
 ```
+apimgmt authorizationserver delete    --resource_group rg1
+    --service_name apimService1
+    --authsid newauthServer
 ```
 
+
 ```
+apimgmt authorizationserver delete    --resource_group rg1
+    --service_name apimService1
+    --authsid newauthServer
+```
+
+
+```
+apimgmt authorizationserver delete    --resource_group rg1
+    --service_name apimService1
+    --authsid newauthServer2
 ```
 ### apimgmt authorizationserver list
 
@@ -2911,13 +3614,22 @@ list a apimgmt authorizationserver.
 |**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 
-```
-```
 
 ```
+apimgmt authorizationserver list    --resource_group rg1
+    --service_name apimService1
 ```
 
+
 ```
+apimgmt authorizationserver list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt authorizationserver list    --resource_group rg1
+    --service_name apimService1
 ```
 ### apimgmt authorizationserver show
 
@@ -2929,13 +3641,25 @@ show a apimgmt authorizationserver.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--authsid**|default|Identifier of the authorization server.|authsid|authsid|
 
-```
-```
 
 ```
+apimgmt authorizationserver show    --resource_group rg1
+    --service_name apimService1
+    --authsid newauthServer
 ```
 
+
 ```
+apimgmt authorizationserver show    --resource_group rg1
+    --service_name apimService1
+    --authsid newauthServer
+```
+
+
+```
+apimgmt authorizationserver show    --resource_group rg1
+    --service_name apimService1
+    --authsid newauthServer2
 ```
 ## apimgmt backend
 
@@ -2958,16 +3682,39 @@ create a apimgmt backend.
 |--proxy|dict|Backend Proxy Contract Properties|/proxy|/properties/proxy|
 |--tls|dict|Backend TLS Properties|/tls|/properties/tls|
 
-```
-```
 
 ```
+apimgmt backend create    --resource_group rg1
+    --service_name apimService1
+    --backend_id sfbackend
+    --description "Service Fabric Test App 1"
+    --url fabric:/mytestapp/mytestservice
+    --protocol http
 ```
 
-```
-```
 
 ```
+apimgmt backend create    --resource_group rg1
+    --service_name apimService1
+    --backend_id proxybackend
+    --description description5308
+    --url https://backendname2644/
+    --protocol http
+```
+
+
+```
+apimgmt backend create    --resource_group rg1
+    --service_name apimService1
+    --backend_id proxybackend
+    --description description5308
+```
+
+
+```
+apimgmt backend create    --resource_group rg1
+    --service_name apimService1
+    --backend_id sfbackend
 ```
 ### apimgmt backend update
 
@@ -2988,16 +3735,39 @@ update a apimgmt backend.
 |--proxy|dict|Backend Proxy Contract Properties|/proxy|/properties/proxy|
 |--tls|dict|Backend TLS Properties|/tls|/properties/tls|
 
-```
-```
 
 ```
+apimgmt backend update    --resource_group rg1
+    --service_name apimService1
+    --backend_id sfbackend
+    --description "Service Fabric Test App 1"
+    --url fabric:/mytestapp/mytestservice
+    --protocol http
 ```
 
-```
-```
 
 ```
+apimgmt backend update    --resource_group rg1
+    --service_name apimService1
+    --backend_id proxybackend
+    --description description5308
+    --url https://backendname2644/
+    --protocol http
+```
+
+
+```
+apimgmt backend update    --resource_group rg1
+    --service_name apimService1
+    --backend_id proxybackend
+    --description description5308
+```
+
+
+```
+apimgmt backend update    --resource_group rg1
+    --service_name apimService1
+    --backend_id sfbackend
 ```
 ### apimgmt backend delete
 
@@ -3009,16 +3779,32 @@ delete a apimgmt backend.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--backend_id**|default|Identifier of the Backend entity. Must be unique in the current API Management service instance.|backend_id|backendId|
 
-```
-```
 
 ```
+apimgmt backend delete    --resource_group rg1
+    --service_name apimService1
+    --backend_id sfbackend
 ```
 
-```
-```
 
 ```
+apimgmt backend delete    --resource_group rg1
+    --service_name apimService1
+    --backend_id proxybackend
+```
+
+
+```
+apimgmt backend delete    --resource_group rg1
+    --service_name apimService1
+    --backend_id proxybackend
+```
+
+
+```
+apimgmt backend delete    --resource_group rg1
+    --service_name apimService1
+    --backend_id sfbackend
 ```
 ### apimgmt backend list
 
@@ -3029,16 +3815,28 @@ list a apimgmt backend.
 |**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 
-```
-```
 
 ```
+apimgmt backend list    --resource_group rg1
+    --service_name apimService1
 ```
 
-```
-```
 
 ```
+apimgmt backend list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt backend list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt backend list    --resource_group rg1
+    --service_name apimService1
 ```
 ### apimgmt backend show
 
@@ -3050,16 +3848,32 @@ show a apimgmt backend.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--backend_id**|default|Identifier of the Backend entity. Must be unique in the current API Management service instance.|backend_id|backendId|
 
-```
-```
 
 ```
+apimgmt backend show    --resource_group rg1
+    --service_name apimService1
+    --backend_id sfbackend
 ```
 
-```
-```
 
 ```
+apimgmt backend show    --resource_group rg1
+    --service_name apimService1
+    --backend_id proxybackend
+```
+
+
+```
+apimgmt backend show    --resource_group rg1
+    --service_name apimService1
+    --backend_id proxybackend
+```
+
+
+```
+apimgmt backend show    --resource_group rg1
+    --service_name apimService1
+    --backend_id sfbackend
 ```
 ## apimgmt cache
 
@@ -3076,13 +3890,29 @@ create a apimgmt cache.
 |--description|str|Cache description|/description|/properties/description|
 |--resource_id|str|Original uri of entity in external system cache points to|/resource_id|/properties/resourceId|
 
-```
-```
 
 ```
+apimgmt cache create    --resource_group rg1
+    --service_name apimService1
+    --cache_id westindia
+    --description "Redis cache instances in West India"
+    --connection_string contoso5.redis.cache.windows.net,ssl=true,password=...
+    --resource_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.Cache/Redis/{{ redis_name }}"
 ```
 
+
 ```
+apimgmt cache create    --resource_group rg1
+    --service_name apimService1
+    --cache_id westindia
+    --description "Update Cache in west India"
+```
+
+
+```
+apimgmt cache create    --resource_group rg1
+    --service_name apimService1
+    --cache_id southindia
 ```
 ### apimgmt cache update
 
@@ -3097,13 +3927,29 @@ update a apimgmt cache.
 |--description|str|Cache description|/description|/properties/description|
 |--resource_id|str|Original uri of entity in external system cache points to|/resource_id|/properties/resourceId|
 
-```
-```
 
 ```
+apimgmt cache update    --resource_group rg1
+    --service_name apimService1
+    --cache_id westindia
+    --description "Redis cache instances in West India"
+    --connection_string contoso5.redis.cache.windows.net,ssl=true,password=...
+    --resource_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.Cache/Redis/{{ redis_name }}"
 ```
 
+
 ```
+apimgmt cache update    --resource_group rg1
+    --service_name apimService1
+    --cache_id westindia
+    --description "Update Cache in west India"
+```
+
+
+```
+apimgmt cache update    --resource_group rg1
+    --service_name apimService1
+    --cache_id southindia
 ```
 ### apimgmt cache delete
 
@@ -3115,13 +3961,25 @@ delete a apimgmt cache.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--cache_id**|default|Identifier of the Cache entity. Cache identifier (should be either 'default' or valid Azure region identifier).|cache_id|cacheId|
 
-```
-```
 
 ```
+apimgmt cache delete    --resource_group rg1
+    --service_name apimService1
+    --cache_id westindia
 ```
 
+
 ```
+apimgmt cache delete    --resource_group rg1
+    --service_name apimService1
+    --cache_id westindia
+```
+
+
+```
+apimgmt cache delete    --resource_group rg1
+    --service_name apimService1
+    --cache_id southindia
 ```
 ### apimgmt cache list
 
@@ -3132,13 +3990,22 @@ list a apimgmt cache.
 |**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 
-```
-```
 
 ```
+apimgmt cache list    --resource_group rg1
+    --service_name apimService1
 ```
 
+
 ```
+apimgmt cache list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt cache list    --resource_group rg1
+    --service_name apimService1
 ```
 ### apimgmt cache show
 
@@ -3150,13 +4017,25 @@ show a apimgmt cache.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--cache_id**|default|Identifier of the Cache entity. Cache identifier (should be either 'default' or valid Azure region identifier).|cache_id|cacheId|
 
-```
-```
 
 ```
+apimgmt cache show    --resource_group rg1
+    --service_name apimService1
+    --cache_id westindia
 ```
 
+
 ```
+apimgmt cache show    --resource_group rg1
+    --service_name apimService1
+    --cache_id westindia
+```
+
+
+```
+apimgmt cache show    --resource_group rg1
+    --service_name apimService1
+    --cache_id southindia
 ```
 ## apimgmt certificate
 
@@ -3172,10 +4051,20 @@ create a apimgmt certificate.
 |**--data**|str|Base 64 encoded certificate using the application/x-pkcs12 representation.|/data|/properties/data|
 |**--password**|str|Password for the Certificate|/password|/properties/password|
 
-```
-```
 
 ```
+apimgmt certificate create    --resource_group rg1
+    --service_name apimService1
+    --certificate_id tempcert
+    --data "****************Base 64 Encoded Certificate *******************************"
+    --password "****Certificate Password******"
+```
+
+
+```
+apimgmt certificate create    --resource_group rg1
+    --service_name apimService1
+    --certificate_id tempcert
 ```
 ### apimgmt certificate update
 
@@ -3189,10 +4078,20 @@ update a apimgmt certificate.
 |**--data**|str|Base 64 encoded certificate using the application/x-pkcs12 representation.|/data|/properties/data|
 |**--password**|str|Password for the Certificate|/password|/properties/password|
 
-```
-```
 
 ```
+apimgmt certificate update    --resource_group rg1
+    --service_name apimService1
+    --certificate_id tempcert
+    --data "****************Base 64 Encoded Certificate *******************************"
+    --password "****Certificate Password******"
+```
+
+
+```
+apimgmt certificate update    --resource_group rg1
+    --service_name apimService1
+    --certificate_id tempcert
 ```
 ### apimgmt certificate delete
 
@@ -3204,10 +4103,18 @@ delete a apimgmt certificate.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--certificate_id**|default|Identifier of the certificate entity. Must be unique in the current API Management service instance.|certificate_id|certificateId|
 
-```
-```
 
 ```
+apimgmt certificate delete    --resource_group rg1
+    --service_name apimService1
+    --certificate_id tempcert
+```
+
+
+```
+apimgmt certificate delete    --resource_group rg1
+    --service_name apimService1
+    --certificate_id tempcert
 ```
 ### apimgmt certificate list
 
@@ -3218,10 +4125,16 @@ list a apimgmt certificate.
 |**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 
-```
-```
 
 ```
+apimgmt certificate list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt certificate list    --resource_group rg1
+    --service_name apimService1
 ```
 ### apimgmt certificate show
 
@@ -3233,10 +4146,18 @@ show a apimgmt certificate.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--certificate_id**|default|Identifier of the certificate entity. Must be unique in the current API Management service instance.|certificate_id|certificateId|
 
-```
-```
 
 ```
+apimgmt certificate show    --resource_group rg1
+    --service_name apimService1
+    --certificate_id tempcert
+```
+
+
+```
+apimgmt certificate show    --resource_group rg1
+    --service_name apimService1
+    --certificate_id tempcert
 ```
 ## apimgmt diagnostic
 
@@ -3256,13 +4177,29 @@ create a apimgmt diagnostic.
 |--backend|dict|Diagnostic settings for incoming/outgoing HTTP messages to the Backend|/backend|/properties/backend|
 |--enable_http_correlation_headers|boolean|Whether to process Correlation Headers coming to Api Management Service. Only applicable to Application Insights diagnostics. Default is true.|/enable_http_correlation_headers|/properties/enableHttpCorrelationHeaders|
 
-```
-```
 
 ```
+apimgmt diagnostic create    --resource_group rg1
+    --service_name apimService1
+    --diagnostic_id applicationinsights
+    --always_log allErrors
+    --logger_id /loggers/azuremonitor
 ```
 
+
 ```
+apimgmt diagnostic create    --resource_group rg1
+    --service_name apimService1
+    --diagnostic_id applicationinsights
+    --always_log allErrors
+    --logger_id /loggers/applicationinsights
+```
+
+
+```
+apimgmt diagnostic create    --resource_group rg1
+    --service_name apimService1
+    --diagnostic_id applicationinsights
 ```
 ### apimgmt diagnostic update
 
@@ -3280,13 +4217,29 @@ update a apimgmt diagnostic.
 |--backend|dict|Diagnostic settings for incoming/outgoing HTTP messages to the Backend|/backend|/properties/backend|
 |--enable_http_correlation_headers|boolean|Whether to process Correlation Headers coming to Api Management Service. Only applicable to Application Insights diagnostics. Default is true.|/enable_http_correlation_headers|/properties/enableHttpCorrelationHeaders|
 
-```
-```
 
 ```
+apimgmt diagnostic update    --resource_group rg1
+    --service_name apimService1
+    --diagnostic_id applicationinsights
+    --always_log allErrors
+    --logger_id /loggers/azuremonitor
 ```
 
+
 ```
+apimgmt diagnostic update    --resource_group rg1
+    --service_name apimService1
+    --diagnostic_id applicationinsights
+    --always_log allErrors
+    --logger_id /loggers/applicationinsights
+```
+
+
+```
+apimgmt diagnostic update    --resource_group rg1
+    --service_name apimService1
+    --diagnostic_id applicationinsights
 ```
 ### apimgmt diagnostic delete
 
@@ -3298,13 +4251,25 @@ delete a apimgmt diagnostic.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--diagnostic_id**|default|Diagnostic identifier. Must be unique in the current API Management service instance.|diagnostic_id|diagnosticId|
 
-```
-```
 
 ```
+apimgmt diagnostic delete    --resource_group rg1
+    --service_name apimService1
+    --diagnostic_id applicationinsights
 ```
 
+
 ```
+apimgmt diagnostic delete    --resource_group rg1
+    --service_name apimService1
+    --diagnostic_id applicationinsights
+```
+
+
+```
+apimgmt diagnostic delete    --resource_group rg1
+    --service_name apimService1
+    --diagnostic_id applicationinsights
 ```
 ### apimgmt diagnostic list
 
@@ -3315,13 +4280,22 @@ list a apimgmt diagnostic.
 |**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 
-```
-```
 
 ```
+apimgmt diagnostic list    --resource_group rg1
+    --service_name apimService1
 ```
 
+
 ```
+apimgmt diagnostic list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt diagnostic list    --resource_group rg1
+    --service_name apimService1
 ```
 ### apimgmt diagnostic show
 
@@ -3333,13 +4307,25 @@ show a apimgmt diagnostic.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--diagnostic_id**|default|Diagnostic identifier. Must be unique in the current API Management service instance.|diagnostic_id|diagnosticId|
 
-```
-```
 
 ```
+apimgmt diagnostic show    --resource_group rg1
+    --service_name apimService1
+    --diagnostic_id applicationinsights
 ```
 
+
 ```
+apimgmt diagnostic show    --resource_group rg1
+    --service_name apimService1
+    --diagnostic_id applicationinsights
+```
+
+
+```
+apimgmt diagnostic show    --resource_group rg1
+    --service_name apimService1
+    --diagnostic_id applicationinsights
 ```
 ## apimgmt group
 
@@ -3357,16 +4343,38 @@ create a apimgmt group.
 |--type|str|Group type.|/type|/properties/type|
 |--external_id|str|Identifier of the external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.|/external_id|/properties/externalId|
 
-```
-```
 
 ```
+apimgmt group create    --resource_group rg1
+    --service_name apimService1
+    --group_id tempgroup
+    --display_name "temp group"
 ```
 
-```
-```
 
 ```
+apimgmt group create    --resource_group rg1
+    --service_name apimService1
+    --group_id aadGroup
+    --display_name "NewGroup (samiraad.onmicrosoft.com)"
+    --description "new group to test"
+    --type external
+    --external_id aad://samiraad.onmicrosoft.com/groups/83cf2753-5831-4675-bc0e-2f8dc067c58d
+```
+
+
+```
+apimgmt group create    --resource_group rg1
+    --service_name apimService1
+    --group_id tempgroup
+    --display_name "temp group"
+```
+
+
+```
+apimgmt group create    --resource_group rg1
+    --service_name apimService1
+    --group_id aadGroup
 ```
 ### apimgmt group update
 
@@ -3382,16 +4390,38 @@ update a apimgmt group.
 |--type|str|Group type.|/type|/properties/type|
 |--external_id|str|Identifier of the external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.|/external_id|/properties/externalId|
 
-```
-```
 
 ```
+apimgmt group update    --resource_group rg1
+    --service_name apimService1
+    --group_id tempgroup
+    --display_name "temp group"
 ```
 
-```
-```
 
 ```
+apimgmt group update    --resource_group rg1
+    --service_name apimService1
+    --group_id aadGroup
+    --display_name "NewGroup (samiraad.onmicrosoft.com)"
+    --description "new group to test"
+    --type external
+    --external_id aad://samiraad.onmicrosoft.com/groups/83cf2753-5831-4675-bc0e-2f8dc067c58d
+```
+
+
+```
+apimgmt group update    --resource_group rg1
+    --service_name apimService1
+    --group_id tempgroup
+    --display_name "temp group"
+```
+
+
+```
+apimgmt group update    --resource_group rg1
+    --service_name apimService1
+    --group_id aadGroup
 ```
 ### apimgmt group delete
 
@@ -3403,16 +4433,32 @@ delete a apimgmt group.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--group_id**|default|Group identifier. Must be unique in the current API Management service instance.|group_id|groupId|
 
-```
-```
 
 ```
+apimgmt group delete    --resource_group rg1
+    --service_name apimService1
+    --group_id tempgroup
 ```
 
-```
-```
 
 ```
+apimgmt group delete    --resource_group rg1
+    --service_name apimService1
+    --group_id aadGroup
+```
+
+
+```
+apimgmt group delete    --resource_group rg1
+    --service_name apimService1
+    --group_id tempgroup
+```
+
+
+```
+apimgmt group delete    --resource_group rg1
+    --service_name apimService1
+    --group_id aadGroup
 ```
 ### apimgmt group list
 
@@ -3423,16 +4469,28 @@ list a apimgmt group.
 |**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 
-```
-```
 
 ```
+apimgmt group list    --resource_group rg1
+    --service_name apimService1
 ```
 
-```
-```
 
 ```
+apimgmt group list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt group list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt group list    --resource_group rg1
+    --service_name apimService1
 ```
 ### apimgmt group show
 
@@ -3444,16 +4502,32 @@ show a apimgmt group.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--group_id**|default|Group identifier. Must be unique in the current API Management service instance.|group_id|groupId|
 
-```
-```
 
 ```
+apimgmt group show    --resource_group rg1
+    --service_name apimService1
+    --group_id tempgroup
 ```
 
-```
-```
 
 ```
+apimgmt group show    --resource_group rg1
+    --service_name apimService1
+    --group_id aadGroup
+```
+
+
+```
+apimgmt group show    --resource_group rg1
+    --service_name apimService1
+    --group_id tempgroup
+```
+
+
+```
+apimgmt group show    --resource_group rg1
+    --service_name apimService1
+    --group_id aadGroup
 ```
 ## apimgmt group user
 
@@ -3476,10 +4550,20 @@ create a apimgmt group user.
 |--registration_date|datetime|Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>|/registration_date|/properties/registrationDate|
 |--groups|list|Collection of groups user is part of.|/groups|/properties/groups|
 
-```
-```
 
 ```
+apimgmt group user create    --resource_group rg1
+    --service_name apimService1
+    --group_id tempgroup
+    --user_id 59307d350af58404d8a26300
+```
+
+
+```
+apimgmt group user create    --resource_group rg1
+    --service_name apimService1
+    --group_id templategroup
+    --user_id 59307d350af58404d8a26300
 ```
 ### apimgmt group user delete
 
@@ -3492,10 +4576,20 @@ delete a apimgmt group user.
 |**--group_id**|default|Group identifier. Must be unique in the current API Management service instance.|group_id|groupId|
 |**--user_id**|default|User identifier. Must be unique in the current API Management service instance.|user_id|userId|
 
-```
-```
 
 ```
+apimgmt group user delete    --resource_group rg1
+    --service_name apimService1
+    --group_id tempgroup
+    --user_id 59307d350af58404d8a26300
+```
+
+
+```
+apimgmt group user delete    --resource_group rg1
+    --service_name apimService1
+    --group_id templategroup
+    --user_id 59307d350af58404d8a26300
 ```
 ### apimgmt group user list
 
@@ -3507,10 +4601,18 @@ list a apimgmt group user.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--group_id**|default|Group identifier. Must be unique in the current API Management service instance.|group_id|groupId|
 
-```
-```
 
 ```
+apimgmt group user list    --resource_group rg1
+    --service_name apimService1
+    --group_id tempgroup
+```
+
+
+```
+apimgmt group user list    --resource_group rg1
+    --service_name apimService1
+    --group_id templategroup
 ```
 ## apimgmt identityprovider
 
@@ -3533,13 +4635,29 @@ create a apimgmt identityprovider.
 |--profile_editing_policy_name|str|Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.|/profile_editing_policy_name|/properties/profileEditingPolicyName|
 |--password_reset_policy_name|str|Password Reset Policy Name. Only applies to AAD B2C Identity Provider.|/password_reset_policy_name|/properties/passwordResetPolicyName|
 
-```
-```
 
 ```
+apimgmt identityprovider create    --resource_group rg1
+    --service_name apimService1
+    --name facebook
+    --client_id facebookid
+    --client_secret facebookapplicationsecret
 ```
 
+
 ```
+apimgmt identityprovider create    --resource_group rg1
+    --service_name apimService1
+    --name facebook
+    --client_id updatedfacebookid
+    --client_secret updatedfacebooksecret
+```
+
+
+```
+apimgmt identityprovider create    --resource_group rg1
+    --service_name apimService1
+    --name aad
 ```
 ### apimgmt identityprovider update
 
@@ -3560,13 +4678,29 @@ update a apimgmt identityprovider.
 |--profile_editing_policy_name|str|Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.|/profile_editing_policy_name|/properties/profileEditingPolicyName|
 |--password_reset_policy_name|str|Password Reset Policy Name. Only applies to AAD B2C Identity Provider.|/password_reset_policy_name|/properties/passwordResetPolicyName|
 
-```
-```
 
 ```
+apimgmt identityprovider update    --resource_group rg1
+    --service_name apimService1
+    --name facebook
+    --client_id facebookid
+    --client_secret facebookapplicationsecret
 ```
 
+
 ```
+apimgmt identityprovider update    --resource_group rg1
+    --service_name apimService1
+    --name facebook
+    --client_id updatedfacebookid
+    --client_secret updatedfacebooksecret
+```
+
+
+```
+apimgmt identityprovider update    --resource_group rg1
+    --service_name apimService1
+    --name aad
 ```
 ### apimgmt identityprovider delete
 
@@ -3578,13 +4712,25 @@ delete a apimgmt identityprovider.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--name**|default|Identity Provider Type identifier.|identity_provider_name|identityProviderName|
 
-```
-```
 
 ```
+apimgmt identityprovider delete    --resource_group rg1
+    --service_name apimService1
+    --name facebook
 ```
 
+
 ```
+apimgmt identityprovider delete    --resource_group rg1
+    --service_name apimService1
+    --name facebook
+```
+
+
+```
+apimgmt identityprovider delete    --resource_group rg1
+    --service_name apimService1
+    --name aad
 ```
 ### apimgmt identityprovider list
 
@@ -3595,13 +4741,22 @@ list a apimgmt identityprovider.
 |**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 
-```
-```
 
 ```
+apimgmt identityprovider list    --resource_group rg1
+    --service_name apimService1
 ```
 
+
 ```
+apimgmt identityprovider list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt identityprovider list    --resource_group rg1
+    --service_name apimService1
 ```
 ### apimgmt identityprovider show
 
@@ -3613,13 +4768,25 @@ show a apimgmt identityprovider.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--name**|default|Identity Provider Type identifier.|identity_provider_name|identityProviderName|
 
-```
-```
 
 ```
+apimgmt identityprovider show    --resource_group rg1
+    --service_name apimService1
+    --name facebook
 ```
 
+
 ```
+apimgmt identityprovider show    --resource_group rg1
+    --service_name apimService1
+    --name facebook
+```
+
+
+```
+apimgmt identityprovider show    --resource_group rg1
+    --service_name apimService1
+    --name aad
 ```
 ## apimgmt logger
 
@@ -3638,16 +4805,36 @@ create a apimgmt logger.
 |--is_buffered|boolean|Whether records are buffered in the logger before publishing. Default is assumed to be true.|/is_buffered|/properties/isBuffered|
 |--resource_id|str|Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).|/resource_id|/properties/resourceId|
 
-```
-```
 
 ```
+apimgmt logger create    --resource_group rg1
+    --service_name apimService1
+    --logger_id loggerId
+    --logger_type azureEventHub
+    --description "adding a new logger"
 ```
 
-```
-```
 
 ```
+apimgmt logger create    --resource_group rg1
+    --service_name apimService1
+    --logger_id loggerId
+    --logger_type applicationInsights
+    --description "adding a new logger"
+```
+
+
+```
+apimgmt logger create    --resource_group rg1
+    --service_name apimService1
+    --logger_id loggerId
+```
+
+
+```
+apimgmt logger create    --resource_group rg1
+    --service_name apimService1
+    --logger_id loggerId
 ```
 ### apimgmt logger update
 
@@ -3664,16 +4851,36 @@ update a apimgmt logger.
 |--is_buffered|boolean|Whether records are buffered in the logger before publishing. Default is assumed to be true.|/is_buffered|/properties/isBuffered|
 |--resource_id|str|Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).|/resource_id|/properties/resourceId|
 
-```
-```
 
 ```
+apimgmt logger update    --resource_group rg1
+    --service_name apimService1
+    --logger_id loggerId
+    --logger_type azureEventHub
+    --description "adding a new logger"
 ```
 
-```
-```
 
 ```
+apimgmt logger update    --resource_group rg1
+    --service_name apimService1
+    --logger_id loggerId
+    --logger_type applicationInsights
+    --description "adding a new logger"
+```
+
+
+```
+apimgmt logger update    --resource_group rg1
+    --service_name apimService1
+    --logger_id loggerId
+```
+
+
+```
+apimgmt logger update    --resource_group rg1
+    --service_name apimService1
+    --logger_id loggerId
 ```
 ### apimgmt logger delete
 
@@ -3685,16 +4892,32 @@ delete a apimgmt logger.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--logger_id**|default|Logger identifier. Must be unique in the API Management service instance.|logger_id|loggerId|
 
-```
-```
 
 ```
+apimgmt logger delete    --resource_group rg1
+    --service_name apimService1
+    --logger_id loggerId
 ```
 
-```
-```
 
 ```
+apimgmt logger delete    --resource_group rg1
+    --service_name apimService1
+    --logger_id loggerId
+```
+
+
+```
+apimgmt logger delete    --resource_group rg1
+    --service_name apimService1
+    --logger_id loggerId
+```
+
+
+```
+apimgmt logger delete    --resource_group rg1
+    --service_name apimService1
+    --logger_id loggerId
 ```
 ### apimgmt logger list
 
@@ -3705,16 +4928,28 @@ list a apimgmt logger.
 |**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 
-```
-```
 
 ```
+apimgmt logger list    --resource_group rg1
+    --service_name apimService1
 ```
 
-```
-```
 
 ```
+apimgmt logger list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt logger list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt logger list    --resource_group rg1
+    --service_name apimService1
 ```
 ### apimgmt logger show
 
@@ -3726,16 +4961,32 @@ show a apimgmt logger.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--logger_id**|default|Logger identifier. Must be unique in the API Management service instance.|logger_id|loggerId|
 
-```
-```
 
 ```
+apimgmt logger show    --resource_group rg1
+    --service_name apimService1
+    --logger_id loggerId
 ```
 
-```
-```
 
 ```
+apimgmt logger show    --resource_group rg1
+    --service_name apimService1
+    --logger_id loggerId
+```
+
+
+```
+apimgmt logger show    --resource_group rg1
+    --service_name apimService1
+    --logger_id loggerId
+```
+
+
+```
+apimgmt logger show    --resource_group rg1
+    --service_name apimService1
+    --logger_id loggerId
 ```
 ## apimgmt notification
 
@@ -3752,7 +5003,11 @@ create a apimgmt notification.
 |--description|str|Description of the Notification.|/description|/properties/description|
 |--recipients|dict|Recipient Parameter values.|/recipients|/properties/recipients|
 
+
 ```
+apimgmt notification create    --resource_group rg1
+    --service_name apimService1
+    --name RequestPublisherNotificationMessage
 ```
 ### apimgmt notification update
 
@@ -3767,7 +5022,11 @@ update a apimgmt notification.
 |--description|str|Description of the Notification.|/description|/properties/description|
 |--recipients|dict|Recipient Parameter values.|/recipients|/properties/recipients|
 
+
 ```
+apimgmt notification update    --resource_group rg1
+    --service_name apimService1
+    --name RequestPublisherNotificationMessage
 ```
 ### apimgmt notification list
 
@@ -3778,7 +5037,10 @@ list a apimgmt notification.
 |**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 
+
 ```
+apimgmt notification list    --resource_group rg1
+    --service_name apimService1
 ```
 ### apimgmt notification show
 
@@ -3790,7 +5052,11 @@ show a apimgmt notification.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--name**|default|Notification Name Identifier.|notification_name|notificationName|
 
+
 ```
+apimgmt notification show    --resource_group rg1
+    --service_name apimService1
+    --name RequestPublisherNotificationMessage
 ```
 ## apimgmt notification recipientemail
 
@@ -3805,10 +5071,20 @@ create a apimgmt notification recipientemail.
 |**--notification_name**|default|Notification Name Identifier.|notification_name|notificationName|
 |**--email**|default|Email identifier.|email|email|
 
-```
-```
 
 ```
+apimgmt notification recipientemail create    --resource_group rg1
+    --service_name apimService1
+    --notification_name RequestPublisherNotificationMessage
+    --email foobar@live.com
+```
+
+
+```
+apimgmt notification recipientemail create    --resource_group rg1
+    --service_name apimService1
+    --notification_name RequestPublisherNotificationMessage
+    --email contoso@live.com
 ```
 ### apimgmt notification recipientemail update
 
@@ -3821,10 +5097,20 @@ update a apimgmt notification recipientemail.
 |**--notification_name**|default|Notification Name Identifier.|notification_name|notificationName|
 |**--email**|default|Email identifier.|email|email|
 
-```
-```
 
 ```
+apimgmt notification recipientemail update    --resource_group rg1
+    --service_name apimService1
+    --notification_name RequestPublisherNotificationMessage
+    --email foobar@live.com
+```
+
+
+```
+apimgmt notification recipientemail update    --resource_group rg1
+    --service_name apimService1
+    --notification_name RequestPublisherNotificationMessage
+    --email contoso@live.com
 ```
 ### apimgmt notification recipientemail delete
 
@@ -3837,10 +5123,20 @@ delete a apimgmt notification recipientemail.
 |**--notification_name**|default|Notification Name Identifier.|notification_name|notificationName|
 |**--email**|default|Email identifier.|email|email|
 
-```
-```
 
 ```
+apimgmt notification recipientemail delete    --resource_group rg1
+    --service_name apimService1
+    --notification_name RequestPublisherNotificationMessage
+    --email foobar@live.com
+```
+
+
+```
+apimgmt notification recipientemail delete    --resource_group rg1
+    --service_name apimService1
+    --notification_name RequestPublisherNotificationMessage
+    --email contoso@live.com
 ```
 ### apimgmt notification recipientemail list
 
@@ -3852,10 +5148,18 @@ list a apimgmt notification recipientemail.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--notification_name**|default|Notification Name Identifier.|notification_name|notificationName|
 
-```
-```
 
 ```
+apimgmt notification recipientemail list    --resource_group rg1
+    --service_name apimService1
+    --notification_name RequestPublisherNotificationMessage
+```
+
+
+```
+apimgmt notification recipientemail list    --resource_group rg1
+    --service_name apimService1
+    --notification_name RequestPublisherNotificationMessage
 ```
 ## apimgmt notification recipientuser
 
@@ -3870,10 +5174,20 @@ create a apimgmt notification recipientuser.
 |**--notification_name**|default|Notification Name Identifier.|notification_name|notificationName|
 |**--user_id**|default|User identifier. Must be unique in the current API Management service instance.|user_id|userId|
 
-```
-```
 
 ```
+apimgmt notification recipientuser create    --resource_group rg1
+    --service_name apimService1
+    --notification_name RequestPublisherNotificationMessage
+    --user_id 576823d0a40f7e74ec07d642
+```
+
+
+```
+apimgmt notification recipientuser create    --resource_group rg1
+    --service_name apimService1
+    --notification_name RequestPublisherNotificationMessage
+    --user_id 576823d0a40f7e74ec07d642
 ```
 ### apimgmt notification recipientuser update
 
@@ -3886,10 +5200,20 @@ update a apimgmt notification recipientuser.
 |**--notification_name**|default|Notification Name Identifier.|notification_name|notificationName|
 |**--user_id**|default|User identifier. Must be unique in the current API Management service instance.|user_id|userId|
 
-```
-```
 
 ```
+apimgmt notification recipientuser update    --resource_group rg1
+    --service_name apimService1
+    --notification_name RequestPublisherNotificationMessage
+    --user_id 576823d0a40f7e74ec07d642
+```
+
+
+```
+apimgmt notification recipientuser update    --resource_group rg1
+    --service_name apimService1
+    --notification_name RequestPublisherNotificationMessage
+    --user_id 576823d0a40f7e74ec07d642
 ```
 ### apimgmt notification recipientuser delete
 
@@ -3902,10 +5226,20 @@ delete a apimgmt notification recipientuser.
 |**--notification_name**|default|Notification Name Identifier.|notification_name|notificationName|
 |**--user_id**|default|User identifier. Must be unique in the current API Management service instance.|user_id|userId|
 
-```
-```
 
 ```
+apimgmt notification recipientuser delete    --resource_group rg1
+    --service_name apimService1
+    --notification_name RequestPublisherNotificationMessage
+    --user_id 576823d0a40f7e74ec07d642
+```
+
+
+```
+apimgmt notification recipientuser delete    --resource_group rg1
+    --service_name apimService1
+    --notification_name RequestPublisherNotificationMessage
+    --user_id 576823d0a40f7e74ec07d642
 ```
 ### apimgmt notification recipientuser list
 
@@ -3917,10 +5251,18 @@ list a apimgmt notification recipientuser.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--notification_name**|default|Notification Name Identifier.|notification_name|notificationName|
 
-```
-```
 
 ```
+apimgmt notification recipientuser list    --resource_group rg1
+    --service_name apimService1
+    --notification_name RequestPublisherNotificationMessage
+```
+
+
+```
+apimgmt notification recipientuser list    --resource_group rg1
+    --service_name apimService1
+    --notification_name RequestPublisherNotificationMessage
 ```
 ## apimgmt openidconnectprovider
 
@@ -3939,13 +5281,29 @@ create a apimgmt openidconnectprovider.
 |--description|str|User-friendly description of OpenID Connect Provider.|/description|/properties/description|
 |--client_secret|str|Client Secret of developer console which is the client application.|/client_secret|/properties/clientSecret|
 
-```
-```
 
 ```
+apimgmt openidconnectprovider create    --resource_group rg1
+    --service_name apimService1
+    --opid templateOpenIdConnect3
+    --display_name templateoidprovider3
+    --metadata_endpoint https://oidprovider-template3.net
+    --client_id oidprovidertemplate3
 ```
 
+
 ```
+apimgmt openidconnectprovider create    --resource_group rg1
+    --service_name apimService1
+    --opid templateOpenIdConnect2
+    --client_secret updatedsecret
+```
+
+
+```
+apimgmt openidconnectprovider create    --resource_group rg1
+    --service_name apimService1
+    --opid templateOpenIdConnect3
 ```
 ### apimgmt openidconnectprovider update
 
@@ -3962,13 +5320,29 @@ update a apimgmt openidconnectprovider.
 |--description|str|User-friendly description of OpenID Connect Provider.|/description|/properties/description|
 |--client_secret|str|Client Secret of developer console which is the client application.|/client_secret|/properties/clientSecret|
 
-```
-```
 
 ```
+apimgmt openidconnectprovider update    --resource_group rg1
+    --service_name apimService1
+    --opid templateOpenIdConnect3
+    --display_name templateoidprovider3
+    --metadata_endpoint https://oidprovider-template3.net
+    --client_id oidprovidertemplate3
 ```
 
+
 ```
+apimgmt openidconnectprovider update    --resource_group rg1
+    --service_name apimService1
+    --opid templateOpenIdConnect2
+    --client_secret updatedsecret
+```
+
+
+```
+apimgmt openidconnectprovider update    --resource_group rg1
+    --service_name apimService1
+    --opid templateOpenIdConnect3
 ```
 ### apimgmt openidconnectprovider delete
 
@@ -3980,13 +5354,25 @@ delete a apimgmt openidconnectprovider.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--opid**|default|Identifier of the OpenID Connect Provider.|opid|opid|
 
-```
-```
 
 ```
+apimgmt openidconnectprovider delete    --resource_group rg1
+    --service_name apimService1
+    --opid templateOpenIdConnect3
 ```
 
+
 ```
+apimgmt openidconnectprovider delete    --resource_group rg1
+    --service_name apimService1
+    --opid templateOpenIdConnect2
+```
+
+
+```
+apimgmt openidconnectprovider delete    --resource_group rg1
+    --service_name apimService1
+    --opid templateOpenIdConnect3
 ```
 ### apimgmt openidconnectprovider list
 
@@ -3997,13 +5383,22 @@ list a apimgmt openidconnectprovider.
 |**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 
-```
-```
 
 ```
+apimgmt openidconnectprovider list    --resource_group rg1
+    --service_name apimService1
 ```
 
+
 ```
+apimgmt openidconnectprovider list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt openidconnectprovider list    --resource_group rg1
+    --service_name apimService1
 ```
 ### apimgmt openidconnectprovider show
 
@@ -4015,13 +5410,25 @@ show a apimgmt openidconnectprovider.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--opid**|default|Identifier of the OpenID Connect Provider.|opid|opid|
 
-```
-```
 
 ```
+apimgmt openidconnectprovider show    --resource_group rg1
+    --service_name apimService1
+    --opid templateOpenIdConnect3
 ```
 
+
 ```
+apimgmt openidconnectprovider show    --resource_group rg1
+    --service_name apimService1
+    --opid templateOpenIdConnect2
+```
+
+
+```
+apimgmt openidconnectprovider show    --resource_group rg1
+    --service_name apimService1
+    --opid templateOpenIdConnect3
 ```
 ## apimgmt policy
 
@@ -4037,10 +5444,26 @@ create a apimgmt policy.
 |**--value**|str|Contents of the Policy as defined by the format.|/value|/properties/value|
 |--format|str|Format of the policyContent.|/format|/properties/format|
 
-```
-```
 
 ```
+apimgmt policy create    --resource_group rg1
+    --service_name apimService1
+    --policy_id policy
+    --value "<policies>
+  <inbound />
+  <backend>
+    <forward-request />
+  </backend>
+  <outbound />
+</policies>"
+    --format xml
+```
+
+
+```
+apimgmt policy create    --resource_group rg1
+    --service_name apimService1
+    --policy_id policy
 ```
 ### apimgmt policy update
 
@@ -4054,10 +5477,26 @@ update a apimgmt policy.
 |**--value**|str|Contents of the Policy as defined by the format.|/value|/properties/value|
 |--format|str|Format of the policyContent.|/format|/properties/format|
 
-```
-```
 
 ```
+apimgmt policy update    --resource_group rg1
+    --service_name apimService1
+    --policy_id policy
+    --value "<policies>
+  <inbound />
+  <backend>
+    <forward-request />
+  </backend>
+  <outbound />
+</policies>"
+    --format xml
+```
+
+
+```
+apimgmt policy update    --resource_group rg1
+    --service_name apimService1
+    --policy_id policy
 ```
 ### apimgmt policy delete
 
@@ -4069,10 +5508,18 @@ delete a apimgmt policy.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--policy_id**|default|The identifier of the Policy.|policy_id|policyId|
 
-```
-```
 
 ```
+apimgmt policy delete    --resource_group rg1
+    --service_name apimService1
+    --policy_id policy
+```
+
+
+```
+apimgmt policy delete    --resource_group rg1
+    --service_name apimService1
+    --policy_id policy
 ```
 ### apimgmt policy list
 
@@ -4083,10 +5530,16 @@ list a apimgmt policy.
 |**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 
-```
-```
 
 ```
+apimgmt policy list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt policy list    --resource_group rg1
+    --service_name apimService1
 ```
 ### apimgmt policy show
 
@@ -4099,10 +5552,19 @@ show a apimgmt policy.
 |**--policy_id**|default|The identifier of the Policy.|policy_id|policyId|
 |--format|default|Format of the policyContent.|/format|/properties/format|
 
-```
-```
 
 ```
+apimgmt policy show    --resource_group rg1
+    --service_name apimService1
+    --policy_id policy
+    --format xml
+```
+
+
+```
+apimgmt policy show    --resource_group rg1
+    --service_name apimService1
+    --policy_id policy
 ```
 ## apimgmt portalsetting
 
@@ -4119,10 +5581,20 @@ create a apimgmt portalsetting.
 |--subscriptions|dict|Subscriptions delegation settings.|/subscriptions|/properties/subscriptions|
 |--user_registration|dict|User registration delegation settings.|/user_registration|/properties/userRegistration|
 
-```
-```
 
 ```
+apimgmt portalsetting create    --resource_group rg1
+    --name apimService1
+    --url http://contoso.com/delegation
+    --validation_key nVF7aKIvr9mV/RM5lOD0sYoi8ThXTRHQP7o66hvUmjCDkPKR3qxPu/otJcNciz2aQdqPuzJH3ECG4TU2yZjQ7Q==
+```
+
+
+```
+apimgmt portalsetting create    --resource_group rg1
+    --name apimService1
+    --url http://contoso.com/delegation
+    --validation_key nVF7aKIvr9mV/RM5lOD0sYoi8ThXTRHQP7o66hvUmjCDkPKR3qxPu/otJcNciz2aQdqPuzJH3ECG4TU2yZjQ7Q==
 ```
 ### apimgmt portalsetting update
 
@@ -4137,10 +5609,20 @@ update a apimgmt portalsetting.
 |--subscriptions|dict|Subscriptions delegation settings.|/subscriptions|/properties/subscriptions|
 |--user_registration|dict|User registration delegation settings.|/user_registration|/properties/userRegistration|
 
-```
-```
 
 ```
+apimgmt portalsetting update    --resource_group rg1
+    --name apimService1
+    --url http://contoso.com/delegation
+    --validation_key nVF7aKIvr9mV/RM5lOD0sYoi8ThXTRHQP7o66hvUmjCDkPKR3qxPu/otJcNciz2aQdqPuzJH3ECG4TU2yZjQ7Q==
+```
+
+
+```
+apimgmt portalsetting update    --resource_group rg1
+    --name apimService1
+    --url http://contoso.com/delegation
+    --validation_key nVF7aKIvr9mV/RM5lOD0sYoi8ThXTRHQP7o66hvUmjCDkPKR3qxPu/otJcNciz2aQdqPuzJH3ECG4TU2yZjQ7Q==
 ```
 ### apimgmt portalsetting show
 
@@ -4151,10 +5633,16 @@ show a apimgmt portalsetting.
 |**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--name**|default|The name of the API Management service.|service_name|serviceName|
 
-```
-```
 
 ```
+apimgmt portalsetting show    --resource_group rg1
+    --name apimService1
+```
+
+
+```
+apimgmt portalsetting show    --resource_group rg1
+    --name apimService1
 ```
 ## apimgmt product
 
@@ -4175,13 +5663,27 @@ create a apimgmt product.
 |--subscriptions_limit|number|Whether the number of subscriptions a user can have to this product at the same time. Set to null or omit to allow unlimited per user subscriptions. Can be present only if subscriptionRequired property is present and has a value of false.|/subscriptions_limit|/properties/subscriptionsLimit|
 |--state|str|whether product is published or not. Published products are discoverable by users of developer portal. Non published products are visible only to administrators. Default state of Product is notPublished.|/state|/properties/state|
 
-```
-```
 
 ```
+apimgmt product create    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
+    --display_name "Test Template ProductName 4"
 ```
 
+
 ```
+apimgmt product create    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
+    --display_name "Test Template ProductName 4"
+```
+
+
+```
+apimgmt product create    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
 ```
 ### apimgmt product update
 
@@ -4200,13 +5702,27 @@ update a apimgmt product.
 |--subscriptions_limit|number|Whether the number of subscriptions a user can have to this product at the same time. Set to null or omit to allow unlimited per user subscriptions. Can be present only if subscriptionRequired property is present and has a value of false.|/subscriptions_limit|/properties/subscriptionsLimit|
 |--state|str|whether product is published or not. Published products are discoverable by users of developer portal. Non published products are visible only to administrators. Default state of Product is notPublished.|/state|/properties/state|
 
-```
-```
 
 ```
+apimgmt product update    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
+    --display_name "Test Template ProductName 4"
 ```
 
+
 ```
+apimgmt product update    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
+    --display_name "Test Template ProductName 4"
+```
+
+
+```
+apimgmt product update    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
 ```
 ### apimgmt product delete
 
@@ -4218,13 +5734,25 @@ delete a apimgmt product.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--product_id**|default|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
 
-```
-```
 
 ```
+apimgmt product delete    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
 ```
 
+
 ```
+apimgmt product delete    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
+```
+
+
+```
+apimgmt product delete    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
 ```
 ### apimgmt product list
 
@@ -4235,22 +5763,40 @@ list a apimgmt product.
 |**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 
-```
-```
 
 ```
+apimgmt product list    --resource_group rg1
+    --service_name apimService1
 ```
 
-```
-```
 
 ```
+apimgmt product list    --resource_group rg1
+    --service_name apimService1
 ```
 
-```
-```
 
 ```
+apimgmt product list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt product list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt product list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt product list    --resource_group rg1
+    --service_name apimService1
 ```
 ### apimgmt product show
 
@@ -4262,13 +5808,25 @@ show a apimgmt product.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--product_id**|default|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
 
-```
-```
 
 ```
+apimgmt product show    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
 ```
 
+
 ```
+apimgmt product show    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
+```
+
+
+```
+apimgmt product show    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
 ```
 ## apimgmt product api
 
@@ -4301,10 +5859,20 @@ create a apimgmt product api.
 |--protocols|list|Describes on which protocols the operations in this API can be invoked.|/protocols|/properties/protocols|
 |--api_version_set|dict|Version set details|/api_version_set|/properties/apiVersionSet|
 
-```
-```
 
 ```
+apimgmt product api create    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
+    --api_id echo-api
+```
+
+
+```
+apimgmt product api create    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
+    --api_id echo-api
 ```
 ### apimgmt product api update
 
@@ -4335,10 +5903,20 @@ update a apimgmt product api.
 |--protocols|list|Describes on which protocols the operations in this API can be invoked.|/protocols|/properties/protocols|
 |--api_version_set|dict|Version set details|/api_version_set|/properties/apiVersionSet|
 
-```
-```
 
 ```
+apimgmt product api update    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
+    --api_id echo-api
+```
+
+
+```
+apimgmt product api update    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
+    --api_id echo-api
 ```
 ### apimgmt product api delete
 
@@ -4351,10 +5929,20 @@ delete a apimgmt product api.
 |**--product_id**|default|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
 |**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 
-```
-```
 
 ```
+apimgmt product api delete    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
+    --api_id echo-api
+```
+
+
+```
+apimgmt product api delete    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
+    --api_id echo-api
 ```
 ### apimgmt product api list
 
@@ -4366,10 +5954,18 @@ list a apimgmt product api.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--product_id**|default|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
 
-```
-```
 
 ```
+apimgmt product api list    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
+```
+
+
+```
+apimgmt product api list    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
 ```
 ## apimgmt product group
 
@@ -4389,10 +5985,20 @@ create a apimgmt product group.
 |--type|str|Group type.|/type|/properties/type|
 |--external_id|str|For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.|/external_id|/properties/externalId|
 
-```
-```
 
 ```
+apimgmt product group create    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
+    --group_id templateGroup
+```
+
+
+```
+apimgmt product group create    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
+    --group_id templateGroup
 ```
 ### apimgmt product group update
 
@@ -4410,10 +6016,20 @@ update a apimgmt product group.
 |--type|str|Group type.|/type|/properties/type|
 |--external_id|str|For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.|/external_id|/properties/externalId|
 
-```
-```
 
 ```
+apimgmt product group update    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
+    --group_id templateGroup
+```
+
+
+```
+apimgmt product group update    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
+    --group_id templateGroup
 ```
 ### apimgmt product group delete
 
@@ -4426,10 +6042,20 @@ delete a apimgmt product group.
 |**--product_id**|default|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
 |**--group_id**|default|Group identifier. Must be unique in the current API Management service instance.|group_id|groupId|
 
-```
-```
 
 ```
+apimgmt product group delete    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
+    --group_id templateGroup
+```
+
+
+```
+apimgmt product group delete    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
+    --group_id templateGroup
 ```
 ### apimgmt product group list
 
@@ -4441,10 +6067,18 @@ list a apimgmt product group.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--product_id**|default|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
 
-```
-```
 
 ```
+apimgmt product group list    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
+```
+
+
+```
+apimgmt product group list    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
 ```
 ## apimgmt product policy
 
@@ -4461,10 +6095,37 @@ create a apimgmt product policy.
 |**--value**|str|Contents of the Policy as defined by the format.|/value|/properties/value|
 |--format|str|Format of the policyContent.|/format|/properties/format|
 
-```
-```
 
 ```
+apimgmt product policy create    --resource_group rg1
+    --service_name apimService1
+    --product_id 5702e97e5157a50f48dce801
+    --policy_id policy
+    --value "<policies>
+  <inbound>
+    <rate-limit calls=\"{{call-count}}" renewal-period="15"></rate-limit>
+    <log-to-eventhub logger-id="16">
+                      @( string.Join(",", DateTime.UtcNow, context.Deployment.ServiceName, context.RequestId, context.Request.IpAddress, context.Operation.Name) ) 
+                  </log-to-eventhub>
+    <quota-by-key calls="40" counter-key="cc" renewal-period="3600" increment-count="@(context.Request.Method == &quot;POST&quot; ? 1:2)" />
+    <base />
+  </inbound>
+  <backend>
+    <base />
+  </backend>
+  <outbound>
+    <base />
+  </outbound>
+</policies>"
+    --format xml
+```
+
+
+```
+apimgmt product policy create    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
+    --policy_id policy
 ```
 ### apimgmt product policy update
 
@@ -4479,10 +6140,37 @@ update a apimgmt product policy.
 |**--value**|str|Contents of the Policy as defined by the format.|/value|/properties/value|
 |--format|str|Format of the policyContent.|/format|/properties/format|
 
-```
-```
 
 ```
+apimgmt product policy update    --resource_group rg1
+    --service_name apimService1
+    --product_id 5702e97e5157a50f48dce801
+    --policy_id policy
+    --value "<policies>
+  <inbound>
+    <rate-limit calls=\"{{call-count}}" renewal-period="15"></rate-limit>
+    <log-to-eventhub logger-id="16">
+                      @( string.Join(",", DateTime.UtcNow, context.Deployment.ServiceName, context.RequestId, context.Request.IpAddress, context.Operation.Name) ) 
+                  </log-to-eventhub>
+    <quota-by-key calls="40" counter-key="cc" renewal-period="3600" increment-count="@(context.Request.Method == &quot;POST&quot; ? 1:2)" />
+    <base />
+  </inbound>
+  <backend>
+    <base />
+  </backend>
+  <outbound>
+    <base />
+  </outbound>
+</policies>"
+    --format xml
+```
+
+
+```
+apimgmt product policy update    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
+    --policy_id policy
 ```
 ### apimgmt product policy delete
 
@@ -4495,10 +6183,20 @@ delete a apimgmt product policy.
 |**--product_id**|default|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
 |**--policy_id**|default|The identifier of the Policy.|policy_id|policyId|
 
-```
-```
 
 ```
+apimgmt product policy delete    --resource_group rg1
+    --service_name apimService1
+    --product_id 5702e97e5157a50f48dce801
+    --policy_id policy
+```
+
+
+```
+apimgmt product policy delete    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
+    --policy_id policy
 ```
 ### apimgmt product policy list
 
@@ -4510,10 +6208,18 @@ list a apimgmt product policy.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--product_id**|default|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
 
-```
-```
 
 ```
+apimgmt product policy list    --resource_group rg1
+    --service_name apimService1
+    --product_id 5702e97e5157a50f48dce801
+```
+
+
+```
+apimgmt product policy list    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
 ```
 ### apimgmt product policy show
 
@@ -4527,10 +6233,21 @@ show a apimgmt product policy.
 |**--policy_id**|default|The identifier of the Policy.|policy_id|policyId|
 |--format|default|Format of the policyContent.|/format|/properties/format|
 
-```
-```
 
 ```
+apimgmt product policy show    --resource_group rg1
+    --service_name apimService1
+    --product_id 5702e97e5157a50f48dce801
+    --policy_id policy
+    --format xml
+```
+
+
+```
+apimgmt product policy show    --resource_group rg1
+    --service_name apimService1
+    --product_id testproduct
+    --policy_id policy
 ```
 ## apimgmt property
 
@@ -4548,13 +6265,29 @@ create a apimgmt property.
 |--tags|list|Optional tags that when provided can be used to filter the property list.|/tags|/properties/tags|
 |--secret|boolean|Determines whether the value is a secret and should be encrypted or not. Default value is false.|/secret|/properties/secret|
 
-```
-```
 
 ```
+apimgmt property create    --resource_group rg1
+    --service_name apimService1
+    --prop_id testprop2
+    --secret true
+    --display_name prop3name
+    --value propValue
 ```
 
+
 ```
+apimgmt property create    --resource_group rg1
+    --service_name apimService1
+    --prop_id testprop2
+    --secret true
+```
+
+
+```
+apimgmt property create    --resource_group rg1
+    --service_name apimService1
+    --prop_id testprop2
 ```
 ### apimgmt property update
 
@@ -4570,13 +6303,29 @@ update a apimgmt property.
 |--tags|list|Optional tags that when provided can be used to filter the property list.|/tags|/properties/tags|
 |--secret|boolean|Determines whether the value is a secret and should be encrypted or not. Default value is false.|/secret|/properties/secret|
 
-```
-```
 
 ```
+apimgmt property update    --resource_group rg1
+    --service_name apimService1
+    --prop_id testprop2
+    --secret true
+    --display_name prop3name
+    --value propValue
 ```
 
+
 ```
+apimgmt property update    --resource_group rg1
+    --service_name apimService1
+    --prop_id testprop2
+    --secret true
+```
+
+
+```
+apimgmt property update    --resource_group rg1
+    --service_name apimService1
+    --prop_id testprop2
 ```
 ### apimgmt property delete
 
@@ -4588,13 +6337,25 @@ delete a apimgmt property.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--prop_id**|default|Identifier of the property.|prop_id|propId|
 
-```
-```
 
 ```
+apimgmt property delete    --resource_group rg1
+    --service_name apimService1
+    --prop_id testprop2
 ```
 
+
 ```
+apimgmt property delete    --resource_group rg1
+    --service_name apimService1
+    --prop_id testprop2
+```
+
+
+```
+apimgmt property delete    --resource_group rg1
+    --service_name apimService1
+    --prop_id testprop2
 ```
 ### apimgmt property list
 
@@ -4605,13 +6366,22 @@ list a apimgmt property.
 |**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 
-```
-```
 
 ```
+apimgmt property list    --resource_group rg1
+    --service_name apimService1
 ```
 
+
 ```
+apimgmt property list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt property list    --resource_group rg1
+    --service_name apimService1
 ```
 ### apimgmt property show
 
@@ -4623,13 +6393,25 @@ show a apimgmt property.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--prop_id**|default|Identifier of the property.|prop_id|propId|
 
-```
-```
 
 ```
+apimgmt property show    --resource_group rg1
+    --service_name apimService1
+    --prop_id testprop2
 ```
 
+
 ```
+apimgmt property show    --resource_group rg1
+    --service_name apimService1
+    --prop_id testprop2
+```
+
+
+```
+apimgmt property show    --resource_group rg1
+    --service_name apimService1
+    --prop_id testprop2
 ```
 ## apimgmt subscription
 
@@ -4651,13 +6433,29 @@ create a apimgmt subscription.
 |--state|str|Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.|/state|/properties/state|
 |--allow_tracing|boolean|Determines whether tracing can be enabled|/allow_tracing|/properties/allowTracing|
 
-```
-```
 
 ```
+apimgmt subscription create    --resource_group rg1
+    --service_name apimService1
+    --sid testsub
+    --owner_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/users/{{ user_name }}"
+    --scope "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/products/{{ product_name }}"
+    --display_name testsub
 ```
 
+
 ```
+apimgmt subscription create    --resource_group rg1
+    --service_name apimService1
+    --sid testsub
+    --display_name testsub
+```
+
+
+```
+apimgmt subscription create    --resource_group rg1
+    --service_name apimService1
+    --sid testsub
 ```
 ### apimgmt subscription update
 
@@ -4677,13 +6475,29 @@ update a apimgmt subscription.
 |--state|str|Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.|/state|/properties/state|
 |--allow_tracing|boolean|Determines whether tracing can be enabled|/allow_tracing|/properties/allowTracing|
 
-```
-```
 
 ```
+apimgmt subscription update    --resource_group rg1
+    --service_name apimService1
+    --sid testsub
+    --owner_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/users/{{ user_name }}"
+    --scope "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/products/{{ product_name }}"
+    --display_name testsub
 ```
 
+
 ```
+apimgmt subscription update    --resource_group rg1
+    --service_name apimService1
+    --sid testsub
+    --display_name testsub
+```
+
+
+```
+apimgmt subscription update    --resource_group rg1
+    --service_name apimService1
+    --sid testsub
 ```
 ### apimgmt subscription delete
 
@@ -4695,13 +6509,25 @@ delete a apimgmt subscription.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--sid**|default|Subscription entity Identifier. The entity represents the association between a user and a product in API Management.|sid|sid|
 
-```
-```
 
 ```
+apimgmt subscription delete    --resource_group rg1
+    --service_name apimService1
+    --sid testsub
 ```
 
+
 ```
+apimgmt subscription delete    --resource_group rg1
+    --service_name apimService1
+    --sid testsub
+```
+
+
+```
+apimgmt subscription delete    --resource_group rg1
+    --service_name apimService1
+    --sid testsub
 ```
 ### apimgmt subscription list
 
@@ -4712,13 +6538,22 @@ list a apimgmt subscription.
 |**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 
-```
-```
 
 ```
+apimgmt subscription list    --resource_group rg1
+    --service_name apimService1
 ```
 
+
 ```
+apimgmt subscription list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt subscription list    --resource_group rg1
+    --service_name apimService1
 ```
 ### apimgmt subscription show
 
@@ -4730,13 +6565,25 @@ show a apimgmt subscription.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--sid**|default|Subscription entity Identifier. The entity represents the association between a user and a product in API Management.|sid|sid|
 
-```
-```
 
 ```
+apimgmt subscription show    --resource_group rg1
+    --service_name apimService1
+    --sid testsub
 ```
 
+
 ```
+apimgmt subscription show    --resource_group rg1
+    --service_name apimService1
+    --sid testsub
+```
+
+
+```
+apimgmt subscription show    --resource_group rg1
+    --service_name apimService1
+    --sid testsub
 ```
 ## apimgmt tag
 
@@ -4751,13 +6598,27 @@ create a apimgmt tag.
 |**--tag_id**|default|Tag identifier. Must be unique in the current API Management service instance.|tag_id|tagId|
 |**--display_name**|str|Tag name.|/display_name|/properties/displayName|
 
-```
-```
 
 ```
+apimgmt tag create    --resource_group rg1
+    --service_name apimService1
+    --tag_id tagId1
+    --display_name tag1
 ```
 
+
 ```
+apimgmt tag create    --resource_group rg1
+    --service_name apimService1
+    --tag_id temptag
+    --display_name "temp tag"
+```
+
+
+```
+apimgmt tag create    --resource_group rg1
+    --service_name apimService1
+    --tag_id tagId1
 ```
 ### apimgmt tag update
 
@@ -4770,13 +6631,27 @@ update a apimgmt tag.
 |**--tag_id**|default|Tag identifier. Must be unique in the current API Management service instance.|tag_id|tagId|
 |**--display_name**|str|Tag name.|/display_name|/properties/displayName|
 
-```
-```
 
 ```
+apimgmt tag update    --resource_group rg1
+    --service_name apimService1
+    --tag_id tagId1
+    --display_name tag1
 ```
 
+
 ```
+apimgmt tag update    --resource_group rg1
+    --service_name apimService1
+    --tag_id temptag
+    --display_name "temp tag"
+```
+
+
+```
+apimgmt tag update    --resource_group rg1
+    --service_name apimService1
+    --tag_id tagId1
 ```
 ### apimgmt tag delete
 
@@ -4788,13 +6663,25 @@ delete a apimgmt tag.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--tag_id**|default|Tag identifier. Must be unique in the current API Management service instance.|tag_id|tagId|
 
-```
-```
 
 ```
+apimgmt tag delete    --resource_group rg1
+    --service_name apimService1
+    --tag_id tagId1
 ```
 
+
 ```
+apimgmt tag delete    --resource_group rg1
+    --service_name apimService1
+    --tag_id temptag
+```
+
+
+```
+apimgmt tag delete    --resource_group rg1
+    --service_name apimService1
+    --tag_id tagId1
 ```
 ### apimgmt tag list
 
@@ -4805,40 +6692,76 @@ list a apimgmt tag.
 |**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 
-```
-```
 
 ```
+apimgmt tag list    --resource_group rg1
+    --service_name apimService1
 ```
 
-```
-```
 
 ```
+apimgmt tag list    --resource_group rg1
+    --service_name apimService1
 ```
 
-```
-```
 
 ```
+apimgmt tag list    --resource_group rg1
+    --service_name apimService1
 ```
 
-```
-```
 
 ```
+apimgmt tag list    --resource_group rg1
+    --service_name apimService1
 ```
 
-```
-```
 
 ```
+apimgmt tag list    --resource_group rg1
+    --service_name apimService1
 ```
 
-```
-```
 
 ```
+apimgmt tag list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt tag list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt tag list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt tag list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt tag list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt tag list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt tag list    --resource_group rg1
+    --service_name apimService1
 ```
 ### apimgmt tag show
 
@@ -4850,13 +6773,25 @@ show a apimgmt tag.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--tag_id**|default|Tag identifier. Must be unique in the current API Management service instance.|tag_id|tagId|
 
-```
-```
 
 ```
+apimgmt tag show    --resource_group rg1
+    --service_name apimService1
+    --tag_id tagId1
 ```
 
+
 ```
+apimgmt tag show    --resource_group rg1
+    --service_name apimService1
+    --tag_id temptag
+```
+
+
+```
+apimgmt tag show    --resource_group rg1
+    --service_name apimService1
+    --tag_id tagId1
 ```
 ## apimgmt template
 
@@ -4874,13 +6809,39 @@ create a apimgmt template.
 |--description|str|Description of the Email Template.|/description|/properties/description|
 |--body|str|Email Template Body. This should be a valid XDocument|/body|/properties/body|
 
-```
-```
 
 ```
+apimgmt template create    --resource_group rg1
+    --service_name apimService1
+    --name newIssueNotificationMessage
+    --subject "Your request for $IssueName was successfully received."
 ```
 
+
 ```
+apimgmt template create    --resource_group rg1
+    --service_name apimService1
+    --name applicationApprovedNotificationMessage
+    --subject "Your application $AppName is published in the gallery"
+    --body "<!DOCTYPE html >
+<html>
+  <head />
+  <body>
+    <p style=\"font-size:12pt;font-family:'Segoe UI'">Dear $DevFirstName $DevLastName,</p>
+    <p style="font-size:12pt;font-family:'Segoe UI'">
+          We are happy to let you know that your request to publish the $AppName application in the gallery has been approved. Your application has been published and can be viewed <a href="http://$DevPortalUrl/Applications/Details/$AppId">here</a>.
+        </p>
+    <p style="font-size:12pt;font-family:'Segoe UI'">Best,</p>
+    <p style="font-size:12pt;font-family:'Segoe UI'">The $OrganizationName API Team</p>
+  </body>
+</html>"
+```
+
+
+```
+apimgmt template create    --resource_group rg1
+    --service_name apimService1
+    --name newIssueNotificationMessage
 ```
 ### apimgmt template update
 
@@ -4896,13 +6857,39 @@ update a apimgmt template.
 |--description|str|Description of the Email Template.|/description|/properties/description|
 |--body|str|Email Template Body. This should be a valid XDocument|/body|/properties/body|
 
-```
-```
 
 ```
+apimgmt template update    --resource_group rg1
+    --service_name apimService1
+    --name newIssueNotificationMessage
+    --subject "Your request for $IssueName was successfully received."
 ```
 
+
 ```
+apimgmt template update    --resource_group rg1
+    --service_name apimService1
+    --name applicationApprovedNotificationMessage
+    --subject "Your application $AppName is published in the gallery"
+    --body "<!DOCTYPE html >
+<html>
+  <head />
+  <body>
+    <p style=\"font-size:12pt;font-family:'Segoe UI'">Dear $DevFirstName $DevLastName,</p>
+    <p style="font-size:12pt;font-family:'Segoe UI'">
+          We are happy to let you know that your request to publish the $AppName application in the gallery has been approved. Your application has been published and can be viewed <a href="http://$DevPortalUrl/Applications/Details/$AppId">here</a>.
+        </p>
+    <p style="font-size:12pt;font-family:'Segoe UI'">Best,</p>
+    <p style="font-size:12pt;font-family:'Segoe UI'">The $OrganizationName API Team</p>
+  </body>
+</html>"
+```
+
+
+```
+apimgmt template update    --resource_group rg1
+    --service_name apimService1
+    --name newIssueNotificationMessage
 ```
 ### apimgmt template delete
 
@@ -4914,13 +6901,25 @@ delete a apimgmt template.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--name**|default|Email Template Name Identifier.|template_name|templateName|
 
-```
-```
 
 ```
+apimgmt template delete    --resource_group rg1
+    --service_name apimService1
+    --name newIssueNotificationMessage
 ```
 
+
 ```
+apimgmt template delete    --resource_group rg1
+    --service_name apimService1
+    --name applicationApprovedNotificationMessage
+```
+
+
+```
+apimgmt template delete    --resource_group rg1
+    --service_name apimService1
+    --name newIssueNotificationMessage
 ```
 ### apimgmt template list
 
@@ -4931,13 +6930,22 @@ list a apimgmt template.
 |**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 
-```
-```
 
 ```
+apimgmt template list    --resource_group rg1
+    --service_name apimService1
 ```
 
+
 ```
+apimgmt template list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt template list    --resource_group rg1
+    --service_name apimService1
 ```
 ### apimgmt template show
 
@@ -4949,13 +6957,25 @@ show a apimgmt template.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--name**|default|Email Template Name Identifier.|template_name|templateName|
 
-```
-```
 
 ```
+apimgmt template show    --resource_group rg1
+    --service_name apimService1
+    --name newIssueNotificationMessage
 ```
 
+
 ```
+apimgmt template show    --resource_group rg1
+    --service_name apimService1
+    --name applicationApprovedNotificationMessage
+```
+
+
+```
+apimgmt template show    --resource_group rg1
+    --service_name apimService1
+    --name newIssueNotificationMessage
 ```
 ## apimgmt user
 
@@ -4977,13 +6997,32 @@ create a apimgmt user.
 |--password|str|User Password. If no value is provided, a default password is generated.|/password|/properties/password|
 |--confirmation|str|Determines the type of confirmation e-mail that will be sent to the newly created user.|/confirmation|/properties/confirmation|
 
-```
-```
 
 ```
+apimgmt user create    --resource_group rg1
+    --service_name apimService1
+    --user_id 5931a75ae4bbd512288c680b
+    --email foobar@outlook.com
+    --first_name foo
+    --last_name bar
+    --confirmation signup
 ```
 
+
 ```
+apimgmt user create    --resource_group rg1
+    --service_name apimService1
+    --user_id 5931a75ae4bbd512288c680b
+    --email foobar@outlook.com
+    --first_name foo
+    --last_name bar
+```
+
+
+```
+apimgmt user create    --resource_group rg1
+    --service_name apimService1
+    --user_id 5931a75ae4bbd512288c680b
 ```
 ### apimgmt user update
 
@@ -5003,13 +7042,32 @@ update a apimgmt user.
 |--password|str|User Password. If no value is provided, a default password is generated.|/password|/properties/password|
 |--confirmation|str|Determines the type of confirmation e-mail that will be sent to the newly created user.|/confirmation|/properties/confirmation|
 
-```
-```
 
 ```
+apimgmt user update    --resource_group rg1
+    --service_name apimService1
+    --user_id 5931a75ae4bbd512288c680b
+    --email foobar@outlook.com
+    --first_name foo
+    --last_name bar
+    --confirmation signup
 ```
 
+
 ```
+apimgmt user update    --resource_group rg1
+    --service_name apimService1
+    --user_id 5931a75ae4bbd512288c680b
+    --email foobar@outlook.com
+    --first_name foo
+    --last_name bar
+```
+
+
+```
+apimgmt user update    --resource_group rg1
+    --service_name apimService1
+    --user_id 5931a75ae4bbd512288c680b
 ```
 ### apimgmt user delete
 
@@ -5021,13 +7079,25 @@ delete a apimgmt user.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--user_id**|default|User identifier. Must be unique in the current API Management service instance.|user_id|userId|
 
-```
-```
 
 ```
+apimgmt user delete    --resource_group rg1
+    --service_name apimService1
+    --user_id 5931a75ae4bbd512288c680b
 ```
 
+
 ```
+apimgmt user delete    --resource_group rg1
+    --service_name apimService1
+    --user_id 5931a75ae4bbd512288c680b
+```
+
+
+```
+apimgmt user delete    --resource_group rg1
+    --service_name apimService1
+    --user_id 5931a75ae4bbd512288c680b
 ```
 ### apimgmt user list
 
@@ -5038,13 +7108,22 @@ list a apimgmt user.
 |**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 
-```
-```
 
 ```
+apimgmt user list    --resource_group rg1
+    --service_name apimService1
 ```
 
+
 ```
+apimgmt user list    --resource_group rg1
+    --service_name apimService1
+```
+
+
+```
+apimgmt user list    --resource_group rg1
+    --service_name apimService1
 ```
 ### apimgmt user show
 
@@ -5056,11 +7135,23 @@ show a apimgmt user.
 |**--service_name**|default|The name of the API Management service.|service_name|serviceName|
 |**--user_id**|default|User identifier. Must be unique in the current API Management service instance.|user_id|userId|
 
-```
-```
 
 ```
+apimgmt user show    --resource_group rg1
+    --service_name apimService1
+    --user_id 5931a75ae4bbd512288c680b
 ```
 
+
 ```
+apimgmt user show    --resource_group rg1
+    --service_name apimService1
+    --user_id 5931a75ae4bbd512288c680b
+```
+
+
+```
+apimgmt user show    --resource_group rg1
+    --service_name apimService1
+    --user_id 5931a75ae4bbd512288c680b
 ```
