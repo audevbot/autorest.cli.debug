@@ -8,8 +8,8 @@ create a apimgmt.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--name**|default|The name of the API Management service.|service_name|serviceName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--name**|str|The name of the API Management service.|service_name|serviceName|
 |**--publisher_email**|str|Publisher email.|/publisher_email|/properties/publisherEmail|
 |**--publisher_name**|str|Publisher name.|/publisher_name|/properties/publisherName|
 |**--sku_name**|str|Name of the Sku.|/sku/name|/sku/name|
@@ -31,8 +31,8 @@ update a apimgmt.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--name**|default|The name of the API Management service.|service_name|serviceName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--name**|str|The name of the API Management service.|service_name|serviceName|
 |**--publisher_email**|str|Publisher email.|/publisher_email|/properties/publisherEmail|
 |**--publisher_name**|str|Publisher name.|/publisher_name|/properties/publisherName|
 |**--sku_name**|str|Name of the Sku.|/sku/name|/sku/name|
@@ -54,8 +54,8 @@ delete a apimgmt.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--name**|default|The name of the API Management service.|service_name|serviceName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--name**|str|The name of the API Management service.|service_name|serviceName|
 
 **Example: ApiManagementServiceDeleteService**
 
@@ -69,15 +69,15 @@ list a apimgmt.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 ### apimgmt show
 
 show a apimgmt.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--name**|default|The name of the API Management service.|service_name|serviceName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--name**|str|The name of the API Management service.|service_name|serviceName|
 ## apimgmt api
 
 ### apimgmt api create
@@ -86,9 +86,9 @@ create a apimgmt api.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 |**--path**|str|Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.|/path|/properties/path|
 |--description|str|Description of the API. May include HTML formatting tags.|/description|/properties/description|
 |--authentication_settings|dict|Collection of authentication settings included into this API.|/authentication_settings|/properties/authenticationSettings|
@@ -116,9 +116,9 @@ update a apimgmt api.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 |**--path**|str|Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.|/path|/properties/path|
 |--description|str|Description of the API. May include HTML formatting tags.|/description|/properties/description|
 |--authentication_settings|dict|Collection of authentication settings included into this API.|/authentication_settings|/properties/authenticationSettings|
@@ -146,9 +146,9 @@ delete a apimgmt api.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 
 **Example: ApiManagementDeleteApi**
 
@@ -163,17 +163,17 @@ list a apimgmt api.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
 ### apimgmt api show
 
 show a apimgmt api.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 ## apimgmt api diagnostic
 
 ### apimgmt api diagnostic create
@@ -182,10 +182,10 @@ create a apimgmt api diagnostic.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
-|**--diagnostic_id**|default|Diagnostic identifier. Must be unique in the current API Management service instance.|diagnostic_id|diagnosticId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
+|**--diagnostic_id**|str|Diagnostic identifier. Must be unique in the current API Management service instance.|diagnostic_id|diagnosticId|
 |**--logger_id**|str|Resource Id of a target logger.|/logger_id|/properties/loggerId|
 |--always_log|str|Specifies for what type of messages sampling settings should not apply.|/always_log|/properties/alwaysLog|
 |--sampling|dict|Sampling settings for Diagnostic.|/sampling|/properties/sampling|
@@ -198,10 +198,10 @@ update a apimgmt api diagnostic.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
-|**--diagnostic_id**|default|Diagnostic identifier. Must be unique in the current API Management service instance.|diagnostic_id|diagnosticId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
+|**--diagnostic_id**|str|Diagnostic identifier. Must be unique in the current API Management service instance.|diagnostic_id|diagnosticId|
 |**--logger_id**|str|Resource Id of a target logger.|/logger_id|/properties/loggerId|
 |--always_log|str|Specifies for what type of messages sampling settings should not apply.|/always_log|/properties/alwaysLog|
 |--sampling|dict|Sampling settings for Diagnostic.|/sampling|/properties/sampling|
@@ -214,10 +214,10 @@ delete a apimgmt api diagnostic.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
-|**--diagnostic_id**|default|Diagnostic identifier. Must be unique in the current API Management service instance.|diagnostic_id|diagnosticId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
+|**--diagnostic_id**|str|Diagnostic identifier. Must be unique in the current API Management service instance.|diagnostic_id|diagnosticId|
 
 **Example: ApiManagementDeleteApiDiagnostic**
 
@@ -233,19 +233,19 @@ list a apimgmt api diagnostic.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
 ### apimgmt api diagnostic show
 
 show a apimgmt api diagnostic.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
-|**--diagnostic_id**|default|Diagnostic identifier. Must be unique in the current API Management service instance.|diagnostic_id|diagnosticId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
+|**--diagnostic_id**|str|Diagnostic identifier. Must be unique in the current API Management service instance.|diagnostic_id|diagnosticId|
 ## apimgmt api issue
 
 ### apimgmt api issue create
@@ -254,10 +254,10 @@ create a apimgmt api issue.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
-|**--issue_id**|default|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
+|**--issue_id**|str|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
 |**--title**|str|The issue title.|/title|/properties/title|
 |**--description**|str|Text describing the issue.|/description|/properties/description|
 |**--user_id**|str|A resource identifier for the user created the issue.|/user_id|/properties/userId|
@@ -269,10 +269,10 @@ update a apimgmt api issue.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
-|**--issue_id**|default|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
+|**--issue_id**|str|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
 |**--title**|str|The issue title.|/title|/properties/title|
 |**--description**|str|Text describing the issue.|/description|/properties/description|
 |**--user_id**|str|A resource identifier for the user created the issue.|/user_id|/properties/userId|
@@ -284,10 +284,10 @@ delete a apimgmt api issue.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
-|**--issue_id**|default|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
+|**--issue_id**|str|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
 
 **Example: ApiManagementDeleteApiIssue**
 
@@ -303,19 +303,19 @@ list a apimgmt api issue.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
 ### apimgmt api issue show
 
 show a apimgmt api issue.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
-|**--issue_id**|default|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
+|**--issue_id**|str|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
 ## apimgmt api issue attachment
 
 ### apimgmt api issue attachment create
@@ -324,11 +324,11 @@ create a apimgmt api issue attachment.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
-|**--issue_id**|default|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
-|**--attachment_id**|default|Attachment identifier within an Issue. Must be unique in the current Issue.|attachment_id|attachmentId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
+|**--issue_id**|str|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
+|**--attachment_id**|str|Attachment identifier within an Issue. Must be unique in the current Issue.|attachment_id|attachmentId|
 |**--title**|str|Filename by which the binary data will be saved.|/title|/properties/title|
 |**--content_format**|str|Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.|/content_format|/properties/contentFormat|
 |**--content**|str|An HTTP link or Base64-encoded binary data.|/content|/properties/content|
@@ -338,11 +338,11 @@ update a apimgmt api issue attachment.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
-|**--issue_id**|default|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
-|**--attachment_id**|default|Attachment identifier within an Issue. Must be unique in the current Issue.|attachment_id|attachmentId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
+|**--issue_id**|str|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
+|**--attachment_id**|str|Attachment identifier within an Issue. Must be unique in the current Issue.|attachment_id|attachmentId|
 |**--title**|str|Filename by which the binary data will be saved.|/title|/properties/title|
 |**--content_format**|str|Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.|/content_format|/properties/contentFormat|
 |**--content**|str|An HTTP link or Base64-encoded binary data.|/content|/properties/content|
@@ -352,11 +352,11 @@ delete a apimgmt api issue attachment.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
-|**--issue_id**|default|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
-|**--attachment_id**|default|Attachment identifier within an Issue. Must be unique in the current Issue.|attachment_id|attachmentId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
+|**--issue_id**|str|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
+|**--attachment_id**|str|Attachment identifier within an Issue. Must be unique in the current Issue.|attachment_id|attachmentId|
 
 **Example: ApiManagementDeleteApiIssueAttachment**
 
@@ -373,21 +373,21 @@ list a apimgmt api issue attachment.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
-|**--issue_id**|default|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
+|**--issue_id**|str|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
 ### apimgmt api issue attachment show
 
 show a apimgmt api issue attachment.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
-|**--issue_id**|default|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
-|**--attachment_id**|default|Attachment identifier within an Issue. Must be unique in the current Issue.|attachment_id|attachmentId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
+|**--issue_id**|str|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
+|**--attachment_id**|str|Attachment identifier within an Issue. Must be unique in the current Issue.|attachment_id|attachmentId|
 ## apimgmt api issue comment
 
 ### apimgmt api issue comment create
@@ -396,11 +396,11 @@ create a apimgmt api issue comment.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
-|**--issue_id**|default|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
-|**--comment_id**|default|Comment identifier within an Issue. Must be unique in the current Issue.|comment_id|commentId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
+|**--issue_id**|str|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
+|**--comment_id**|str|Comment identifier within an Issue. Must be unique in the current Issue.|comment_id|commentId|
 |**--text**|str|Comment text.|/text|/properties/text|
 |**--user_id**|str|A resource identifier for the user who left the comment.|/user_id|/properties/userId|
 |--created_date|datetime|Date and time when the comment was created.|/created_date|/properties/createdDate|
@@ -410,11 +410,11 @@ update a apimgmt api issue comment.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
-|**--issue_id**|default|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
-|**--comment_id**|default|Comment identifier within an Issue. Must be unique in the current Issue.|comment_id|commentId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
+|**--issue_id**|str|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
+|**--comment_id**|str|Comment identifier within an Issue. Must be unique in the current Issue.|comment_id|commentId|
 |**--text**|str|Comment text.|/text|/properties/text|
 |**--user_id**|str|A resource identifier for the user who left the comment.|/user_id|/properties/userId|
 |--created_date|datetime|Date and time when the comment was created.|/created_date|/properties/createdDate|
@@ -424,11 +424,11 @@ delete a apimgmt api issue comment.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
-|**--issue_id**|default|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
-|**--comment_id**|default|Comment identifier within an Issue. Must be unique in the current Issue.|comment_id|commentId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
+|**--issue_id**|str|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
+|**--comment_id**|str|Comment identifier within an Issue. Must be unique in the current Issue.|comment_id|commentId|
 
 **Example: ApiManagementDeleteApiIssueComment**
 
@@ -445,21 +445,21 @@ list a apimgmt api issue comment.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
-|**--issue_id**|default|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
+|**--issue_id**|str|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
 ### apimgmt api issue comment show
 
 show a apimgmt api issue comment.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
-|**--issue_id**|default|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
-|**--comment_id**|default|Comment identifier within an Issue. Must be unique in the current Issue.|comment_id|commentId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
+|**--issue_id**|str|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
+|**--comment_id**|str|Comment identifier within an Issue. Must be unique in the current Issue.|comment_id|commentId|
 ## apimgmt api operation
 
 ### apimgmt api operation create
@@ -468,10 +468,10 @@ create a apimgmt api operation.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
-|**--operation_id**|default|Operation identifier within an API. Must be unique in the current API Management service instance.|operation_id|operationId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--operation_id**|str|Operation identifier within an API. Must be unique in the current API Management service instance.|operation_id|operationId|
 |**--display_name**|str|Operation Name.|/display_name|/properties/displayName|
 |**--method**|str|A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.|/method|/properties/method|
 |**--url_template**|str|Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}|/url_template|/properties/urlTemplate|
@@ -486,10 +486,10 @@ update a apimgmt api operation.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
-|**--operation_id**|default|Operation identifier within an API. Must be unique in the current API Management service instance.|operation_id|operationId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--operation_id**|str|Operation identifier within an API. Must be unique in the current API Management service instance.|operation_id|operationId|
 |**--display_name**|str|Operation Name.|/display_name|/properties/displayName|
 |**--method**|str|A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.|/method|/properties/method|
 |**--url_template**|str|Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}|/url_template|/properties/urlTemplate|
@@ -504,10 +504,10 @@ delete a apimgmt api operation.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
-|**--operation_id**|default|Operation identifier within an API. Must be unique in the current API Management service instance.|operation_id|operationId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--operation_id**|str|Operation identifier within an API. Must be unique in the current API Management service instance.|operation_id|operationId|
 
 **Example: ApiManagementDeleteApiOperation**
 
@@ -523,19 +523,19 @@ list a apimgmt api operation.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 ### apimgmt api operation show
 
 show a apimgmt api operation.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
-|**--operation_id**|default|Operation identifier within an API. Must be unique in the current API Management service instance.|operation_id|operationId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--operation_id**|str|Operation identifier within an API. Must be unique in the current API Management service instance.|operation_id|operationId|
 ## apimgmt api operation policy
 
 ### apimgmt api operation policy create
@@ -544,11 +544,11 @@ create a apimgmt api operation policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
-|**--operation_id**|default|Operation identifier within an API. Must be unique in the current API Management service instance.|operation_id|operationId|
-|**--policy_id**|default|The identifier of the Policy.|policy_id|policyId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--operation_id**|str|Operation identifier within an API. Must be unique in the current API Management service instance.|operation_id|operationId|
+|**--policy_id**|str|The identifier of the Policy.|policy_id|policyId|
 |**--value**|str|Contents of the Policy as defined by the format.|/value|/properties/value|
 |--format|str|Format of the policyContent.|/format|/properties/format|
 ### apimgmt api operation policy update
@@ -557,11 +557,11 @@ update a apimgmt api operation policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
-|**--operation_id**|default|Operation identifier within an API. Must be unique in the current API Management service instance.|operation_id|operationId|
-|**--policy_id**|default|The identifier of the Policy.|policy_id|policyId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--operation_id**|str|Operation identifier within an API. Must be unique in the current API Management service instance.|operation_id|operationId|
+|**--policy_id**|str|The identifier of the Policy.|policy_id|policyId|
 |**--value**|str|Contents of the Policy as defined by the format.|/value|/properties/value|
 |--format|str|Format of the policyContent.|/format|/properties/format|
 ### apimgmt api operation policy delete
@@ -570,11 +570,11 @@ delete a apimgmt api operation policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
-|**--operation_id**|default|Operation identifier within an API. Must be unique in the current API Management service instance.|operation_id|operationId|
-|**--policy_id**|default|The identifier of the Policy.|policy_id|policyId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--operation_id**|str|Operation identifier within an API. Must be unique in the current API Management service instance.|operation_id|operationId|
+|**--policy_id**|str|The identifier of the Policy.|policy_id|policyId|
 
 **Example: ApiManagementDeleteApiOperationPolicy**
 
@@ -591,22 +591,22 @@ list a apimgmt api operation policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
-|**--operation_id**|default|Operation identifier within an API. Must be unique in the current API Management service instance.|operation_id|operationId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--operation_id**|str|Operation identifier within an API. Must be unique in the current API Management service instance.|operation_id|operationId|
 ### apimgmt api operation policy show
 
 show a apimgmt api operation policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
-|**--operation_id**|default|Operation identifier within an API. Must be unique in the current API Management service instance.|operation_id|operationId|
-|**--policy_id**|default|The identifier of the Policy.|policy_id|policyId|
-|--format|default|Format of the policyContent.|/format|/properties/format|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--operation_id**|str|Operation identifier within an API. Must be unique in the current API Management service instance.|operation_id|operationId|
+|**--policy_id**|str|The identifier of the Policy.|policy_id|policyId|
+|--format|str|Format of the policyContent.|/format|/properties/format|
 ## apimgmt api policy
 
 ### apimgmt api policy create
@@ -615,10 +615,10 @@ create a apimgmt api policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
-|**--policy_id**|default|The identifier of the Policy.|policy_id|policyId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--policy_id**|str|The identifier of the Policy.|policy_id|policyId|
 |**--value**|str|Contents of the Policy as defined by the format.|/value|/properties/value|
 |--format|str|Format of the policyContent.|/format|/properties/format|
 ### apimgmt api policy update
@@ -627,10 +627,10 @@ update a apimgmt api policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
-|**--policy_id**|default|The identifier of the Policy.|policy_id|policyId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--policy_id**|str|The identifier of the Policy.|policy_id|policyId|
 |**--value**|str|Contents of the Policy as defined by the format.|/value|/properties/value|
 |--format|str|Format of the policyContent.|/format|/properties/format|
 ### apimgmt api policy delete
@@ -639,10 +639,10 @@ delete a apimgmt api policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
-|**--policy_id**|default|The identifier of the Policy.|policy_id|policyId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--policy_id**|str|The identifier of the Policy.|policy_id|policyId|
 
 **Example: ApiManagementDeleteApiPolicy**
 
@@ -658,20 +658,20 @@ list a apimgmt api policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 ### apimgmt api policy show
 
 show a apimgmt api policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
-|**--policy_id**|default|The identifier of the Policy.|policy_id|policyId|
-|--format|default|Format of the policyContent.|/format|/properties/format|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--policy_id**|str|The identifier of the Policy.|policy_id|policyId|
+|--format|str|Format of the policyContent.|/format|/properties/format|
 ## apimgmt api release
 
 ### apimgmt api release create
@@ -680,10 +680,10 @@ create a apimgmt api release.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
-|**--release_id**|default|Release identifier within an API. Must be unique in the current API Management service instance.|release_id|releaseId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
+|**--release_id**|str|Release identifier within an API. Must be unique in the current API Management service instance.|release_id|releaseId|
 |--notes|str|Release Notes|/notes|/properties/notes|
 ### apimgmt api release update
 
@@ -691,10 +691,10 @@ update a apimgmt api release.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
-|**--release_id**|default|Release identifier within an API. Must be unique in the current API Management service instance.|release_id|releaseId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
+|**--release_id**|str|Release identifier within an API. Must be unique in the current API Management service instance.|release_id|releaseId|
 |--notes|str|Release Notes|/notes|/properties/notes|
 ### apimgmt api release delete
 
@@ -702,10 +702,10 @@ delete a apimgmt api release.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
-|**--release_id**|default|Release identifier within an API. Must be unique in the current API Management service instance.|release_id|releaseId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
+|**--release_id**|str|Release identifier within an API. Must be unique in the current API Management service instance.|release_id|releaseId|
 
 **Example: ApiManagementDeleteApiRelease**
 
@@ -721,19 +721,19 @@ list a apimgmt api release.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
 ### apimgmt api release show
 
 show a apimgmt api release.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
-|**--release_id**|default|Release identifier within an API. Must be unique in the current API Management service instance.|release_id|releaseId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
+|**--release_id**|str|Release identifier within an API. Must be unique in the current API Management service instance.|release_id|releaseId|
 ## apimgmt api schema
 
 ### apimgmt api schema create
@@ -742,10 +742,10 @@ create a apimgmt api schema.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
-|**--schema_id**|default|Schema identifier within an API. Must be unique in the current API Management service instance.|schema_id|schemaId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--schema_id**|str|Schema identifier within an API. Must be unique in the current API Management service instance.|schema_id|schemaId|
 |**--content_type**|str|Must be a valid a media type used in a Content-Type header as defined in the RFC 2616. Media type of the schema document (e.g. application/json, application/xml). </br> - `Swagger` Schema use `application/vnd.ms-azure-apim.swagger.definitions+json` </br> - `WSDL` Schema use `application/vnd.ms-azure-apim.xsd+xml` </br> - `OpenApi` Schema use `application/vnd.oai.openapi.components+json` </br> - `WADL Schema` use `application/vnd.ms-azure-apim.wadl.grammars+xml`.|/content_type|/properties/contentType|
 |--document|dict|Create or update Properties of the Schema Document.|/document|/properties/document|
 ### apimgmt api schema update
@@ -754,10 +754,10 @@ update a apimgmt api schema.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
-|**--schema_id**|default|Schema identifier within an API. Must be unique in the current API Management service instance.|schema_id|schemaId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--schema_id**|str|Schema identifier within an API. Must be unique in the current API Management service instance.|schema_id|schemaId|
 |**--content_type**|str|Must be a valid a media type used in a Content-Type header as defined in the RFC 2616. Media type of the schema document (e.g. application/json, application/xml). </br> - `Swagger` Schema use `application/vnd.ms-azure-apim.swagger.definitions+json` </br> - `WSDL` Schema use `application/vnd.ms-azure-apim.xsd+xml` </br> - `OpenApi` Schema use `application/vnd.oai.openapi.components+json` </br> - `WADL Schema` use `application/vnd.ms-azure-apim.wadl.grammars+xml`.|/content_type|/properties/contentType|
 |--document|dict|Create or update Properties of the Schema Document.|/document|/properties/document|
 ### apimgmt api schema delete
@@ -766,10 +766,10 @@ delete a apimgmt api schema.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
-|**--schema_id**|default|Schema identifier within an API. Must be unique in the current API Management service instance.|schema_id|schemaId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--schema_id**|str|Schema identifier within an API. Must be unique in the current API Management service instance.|schema_id|schemaId|
 
 **Example: ApiManagementDeleteApiSchema**
 
@@ -785,19 +785,19 @@ list a apimgmt api schema.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 ### apimgmt api schema show
 
 show a apimgmt api schema.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
-|**--schema_id**|default|Schema identifier within an API. Must be unique in the current API Management service instance.|schema_id|schemaId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--schema_id**|str|Schema identifier within an API. Must be unique in the current API Management service instance.|schema_id|schemaId|
 ## apimgmt api tagdescription
 
 ### apimgmt api tagdescription create
@@ -806,10 +806,10 @@ create a apimgmt api tagdescription.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
-|**--tag_id**|default|Tag identifier. Must be unique in the current API Management service instance.|tag_id|tagId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--tag_id**|str|Tag identifier. Must be unique in the current API Management service instance.|tag_id|tagId|
 |--description|str|Description of the Tag.|/description|/properties/description|
 |--external_docs_url|str|Absolute URL of external resources describing the tag.|/external_docs_url|/properties/externalDocsUrl|
 |--external_docs_description|str|Description of the external resources describing the tag.|/external_docs_description|/properties/externalDocsDescription|
@@ -819,10 +819,10 @@ update a apimgmt api tagdescription.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
-|**--tag_id**|default|Tag identifier. Must be unique in the current API Management service instance.|tag_id|tagId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--tag_id**|str|Tag identifier. Must be unique in the current API Management service instance.|tag_id|tagId|
 |--description|str|Description of the Tag.|/description|/properties/description|
 |--external_docs_url|str|Absolute URL of external resources describing the tag.|/external_docs_url|/properties/externalDocsUrl|
 |--external_docs_description|str|Description of the external resources describing the tag.|/external_docs_description|/properties/externalDocsDescription|
@@ -832,10 +832,10 @@ delete a apimgmt api tagdescription.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
-|**--tag_id**|default|Tag identifier. Must be unique in the current API Management service instance.|tag_id|tagId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--tag_id**|str|Tag identifier. Must be unique in the current API Management service instance.|tag_id|tagId|
 
 **Example: ApiManagementDeleteApiTagDescription**
 
@@ -851,19 +851,19 @@ list a apimgmt api tagdescription.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 ### apimgmt api tagdescription show
 
 show a apimgmt api tagdescription.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
-|**--tag_id**|default|Tag identifier. Must be unique in the current API Management service instance.|tag_id|tagId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--tag_id**|str|Tag identifier. Must be unique in the current API Management service instance.|tag_id|tagId|
 ## apimgmt apiversionset
 
 ### apimgmt apiversionset create
@@ -872,9 +872,9 @@ create a apimgmt apiversionset.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--version_set_id**|default|Api Version Set identifier. Must be unique in the current API Management service instance.|version_set_id|versionSetId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--version_set_id**|str|Api Version Set identifier. Must be unique in the current API Management service instance.|version_set_id|versionSetId|
 |**--display_name**|str|Name of API Version Set|/display_name|/properties/displayName|
 |**--versioning_scheme**|str|An value that determines where the API Version identifer will be located in a HTTP request.|/versioning_scheme|/properties/versioningScheme|
 |--description|str|Description of API Version Set.|/description|/properties/description|
@@ -886,9 +886,9 @@ update a apimgmt apiversionset.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--version_set_id**|default|Api Version Set identifier. Must be unique in the current API Management service instance.|version_set_id|versionSetId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--version_set_id**|str|Api Version Set identifier. Must be unique in the current API Management service instance.|version_set_id|versionSetId|
 |**--display_name**|str|Name of API Version Set|/display_name|/properties/displayName|
 |**--versioning_scheme**|str|An value that determines where the API Version identifer will be located in a HTTP request.|/versioning_scheme|/properties/versioningScheme|
 |--description|str|Description of API Version Set.|/description|/properties/description|
@@ -900,9 +900,9 @@ delete a apimgmt apiversionset.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--version_set_id**|default|Api Version Set identifier. Must be unique in the current API Management service instance.|version_set_id|versionSetId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--version_set_id**|str|Api Version Set identifier. Must be unique in the current API Management service instance.|version_set_id|versionSetId|
 
 **Example: ApiManagementDeleteApiVersionSet**
 
@@ -917,17 +917,17 @@ list a apimgmt apiversionset.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
 ### apimgmt apiversionset show
 
 show a apimgmt apiversionset.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--version_set_id**|default|Api Version Set identifier. Must be unique in the current API Management service instance.|version_set_id|versionSetId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--version_set_id**|str|Api Version Set identifier. Must be unique in the current API Management service instance.|version_set_id|versionSetId|
 ## apimgmt authorizationserver
 
 ### apimgmt authorizationserver create
@@ -936,9 +936,9 @@ create a apimgmt authorizationserver.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--authsid**|default|Identifier of the authorization server.|authsid|authsid|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--authsid**|str|Identifier of the authorization server.|authsid|authsid|
 |**--display_name**|str|User-friendly authorization server name.|/display_name|/properties/displayName|
 |**--client_registration_endpoint**|str|Optional reference to a page where client or app registration for this authorization server is performed. Contains absolute URL to entity being referenced.|/client_registration_endpoint|/properties/clientRegistrationEndpoint|
 |**--authorization_endpoint**|str|OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2.|/authorization_endpoint|/properties/authorizationEndpoint|
@@ -961,9 +961,9 @@ update a apimgmt authorizationserver.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--authsid**|default|Identifier of the authorization server.|authsid|authsid|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--authsid**|str|Identifier of the authorization server.|authsid|authsid|
 |**--display_name**|str|User-friendly authorization server name.|/display_name|/properties/displayName|
 |**--client_registration_endpoint**|str|Optional reference to a page where client or app registration for this authorization server is performed. Contains absolute URL to entity being referenced.|/client_registration_endpoint|/properties/clientRegistrationEndpoint|
 |**--authorization_endpoint**|str|OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2.|/authorization_endpoint|/properties/authorizationEndpoint|
@@ -986,9 +986,9 @@ delete a apimgmt authorizationserver.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--authsid**|default|Identifier of the authorization server.|authsid|authsid|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--authsid**|str|Identifier of the authorization server.|authsid|authsid|
 
 **Example: ApiManagementDeleteAuthorizationServer**
 
@@ -1003,17 +1003,17 @@ list a apimgmt authorizationserver.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
 ### apimgmt authorizationserver show
 
 show a apimgmt authorizationserver.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--authsid**|default|Identifier of the authorization server.|authsid|authsid|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--authsid**|str|Identifier of the authorization server.|authsid|authsid|
 ## apimgmt backend
 
 ### apimgmt backend create
@@ -1022,9 +1022,9 @@ create a apimgmt backend.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--backend_id**|default|Identifier of the Backend entity. Must be unique in the current API Management service instance.|backend_id|backendId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--backend_id**|str|Identifier of the Backend entity. Must be unique in the current API Management service instance.|backend_id|backendId|
 |**--url**|str|Runtime Url of the Backend.|/url|/properties/url|
 |**--protocol**|str|Backend communication protocol.|/protocol|/properties/protocol|
 |--title|str|Backend Title.|/title|/properties/title|
@@ -1040,9 +1040,9 @@ update a apimgmt backend.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--backend_id**|default|Identifier of the Backend entity. Must be unique in the current API Management service instance.|backend_id|backendId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--backend_id**|str|Identifier of the Backend entity. Must be unique in the current API Management service instance.|backend_id|backendId|
 |**--url**|str|Runtime Url of the Backend.|/url|/properties/url|
 |**--protocol**|str|Backend communication protocol.|/protocol|/properties/protocol|
 |--title|str|Backend Title.|/title|/properties/title|
@@ -1058,9 +1058,9 @@ delete a apimgmt backend.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--backend_id**|default|Identifier of the Backend entity. Must be unique in the current API Management service instance.|backend_id|backendId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--backend_id**|str|Identifier of the Backend entity. Must be unique in the current API Management service instance.|backend_id|backendId|
 
 **Example: ApiManagementDeleteBackend**
 
@@ -1075,17 +1075,17 @@ list a apimgmt backend.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
 ### apimgmt backend show
 
 show a apimgmt backend.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--backend_id**|default|Identifier of the Backend entity. Must be unique in the current API Management service instance.|backend_id|backendId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--backend_id**|str|Identifier of the Backend entity. Must be unique in the current API Management service instance.|backend_id|backendId|
 ## apimgmt cache
 
 ### apimgmt cache create
@@ -1094,9 +1094,9 @@ create a apimgmt cache.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--cache_id**|default|Identifier of the Cache entity. Cache identifier (should be either 'default' or valid Azure region identifier).|cache_id|cacheId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--cache_id**|str|Identifier of the Cache entity. Cache identifier (should be either 'default' or valid Azure region identifier).|cache_id|cacheId|
 |**--connection_string**|str|Runtime connection string to cache|/connection_string|/properties/connectionString|
 |--description|str|Cache description|/description|/properties/description|
 |--resource_id|str|Original uri of entity in external system cache points to|/resource_id|/properties/resourceId|
@@ -1106,9 +1106,9 @@ update a apimgmt cache.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--cache_id**|default|Identifier of the Cache entity. Cache identifier (should be either 'default' or valid Azure region identifier).|cache_id|cacheId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--cache_id**|str|Identifier of the Cache entity. Cache identifier (should be either 'default' or valid Azure region identifier).|cache_id|cacheId|
 |**--connection_string**|str|Runtime connection string to cache|/connection_string|/properties/connectionString|
 |--description|str|Cache description|/description|/properties/description|
 |--resource_id|str|Original uri of entity in external system cache points to|/resource_id|/properties/resourceId|
@@ -1118,9 +1118,9 @@ delete a apimgmt cache.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--cache_id**|default|Identifier of the Cache entity. Cache identifier (should be either 'default' or valid Azure region identifier).|cache_id|cacheId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--cache_id**|str|Identifier of the Cache entity. Cache identifier (should be either 'default' or valid Azure region identifier).|cache_id|cacheId|
 
 **Example: ApiManagementDeleteCache**
 
@@ -1135,17 +1135,17 @@ list a apimgmt cache.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
 ### apimgmt cache show
 
 show a apimgmt cache.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--cache_id**|default|Identifier of the Cache entity. Cache identifier (should be either 'default' or valid Azure region identifier).|cache_id|cacheId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--cache_id**|str|Identifier of the Cache entity. Cache identifier (should be either 'default' or valid Azure region identifier).|cache_id|cacheId|
 ## apimgmt certificate
 
 ### apimgmt certificate create
@@ -1154,9 +1154,9 @@ create a apimgmt certificate.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--certificate_id**|default|Identifier of the certificate entity. Must be unique in the current API Management service instance.|certificate_id|certificateId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--certificate_id**|str|Identifier of the certificate entity. Must be unique in the current API Management service instance.|certificate_id|certificateId|
 |**--data**|str|Base 64 encoded certificate using the application/x-pkcs12 representation.|/data|/properties/data|
 |**--password**|str|Password for the Certificate|/password|/properties/password|
 ### apimgmt certificate update
@@ -1165,9 +1165,9 @@ update a apimgmt certificate.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--certificate_id**|default|Identifier of the certificate entity. Must be unique in the current API Management service instance.|certificate_id|certificateId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--certificate_id**|str|Identifier of the certificate entity. Must be unique in the current API Management service instance.|certificate_id|certificateId|
 |**--data**|str|Base 64 encoded certificate using the application/x-pkcs12 representation.|/data|/properties/data|
 |**--password**|str|Password for the Certificate|/password|/properties/password|
 ### apimgmt certificate delete
@@ -1176,9 +1176,9 @@ delete a apimgmt certificate.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--certificate_id**|default|Identifier of the certificate entity. Must be unique in the current API Management service instance.|certificate_id|certificateId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--certificate_id**|str|Identifier of the certificate entity. Must be unique in the current API Management service instance.|certificate_id|certificateId|
 
 **Example: ApiManagementDeleteCertificate**
 
@@ -1193,17 +1193,17 @@ list a apimgmt certificate.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
 ### apimgmt certificate show
 
 show a apimgmt certificate.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--certificate_id**|default|Identifier of the certificate entity. Must be unique in the current API Management service instance.|certificate_id|certificateId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--certificate_id**|str|Identifier of the certificate entity. Must be unique in the current API Management service instance.|certificate_id|certificateId|
 ## apimgmt diagnostic
 
 ### apimgmt diagnostic create
@@ -1212,9 +1212,9 @@ create a apimgmt diagnostic.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--diagnostic_id**|default|Diagnostic identifier. Must be unique in the current API Management service instance.|diagnostic_id|diagnosticId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--diagnostic_id**|str|Diagnostic identifier. Must be unique in the current API Management service instance.|diagnostic_id|diagnosticId|
 |**--logger_id**|str|Resource Id of a target logger.|/logger_id|/properties/loggerId|
 |--always_log|str|Specifies for what type of messages sampling settings should not apply.|/always_log|/properties/alwaysLog|
 |--sampling|dict|Sampling settings for Diagnostic.|/sampling|/properties/sampling|
@@ -1227,9 +1227,9 @@ update a apimgmt diagnostic.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--diagnostic_id**|default|Diagnostic identifier. Must be unique in the current API Management service instance.|diagnostic_id|diagnosticId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--diagnostic_id**|str|Diagnostic identifier. Must be unique in the current API Management service instance.|diagnostic_id|diagnosticId|
 |**--logger_id**|str|Resource Id of a target logger.|/logger_id|/properties/loggerId|
 |--always_log|str|Specifies for what type of messages sampling settings should not apply.|/always_log|/properties/alwaysLog|
 |--sampling|dict|Sampling settings for Diagnostic.|/sampling|/properties/sampling|
@@ -1242,9 +1242,9 @@ delete a apimgmt diagnostic.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--diagnostic_id**|default|Diagnostic identifier. Must be unique in the current API Management service instance.|diagnostic_id|diagnosticId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--diagnostic_id**|str|Diagnostic identifier. Must be unique in the current API Management service instance.|diagnostic_id|diagnosticId|
 
 **Example: ApiManagementDeleteDiagnostic**
 
@@ -1259,17 +1259,17 @@ list a apimgmt diagnostic.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
 ### apimgmt diagnostic show
 
 show a apimgmt diagnostic.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--diagnostic_id**|default|Diagnostic identifier. Must be unique in the current API Management service instance.|diagnostic_id|diagnosticId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--diagnostic_id**|str|Diagnostic identifier. Must be unique in the current API Management service instance.|diagnostic_id|diagnosticId|
 ## apimgmt group
 
 ### apimgmt group create
@@ -1278,9 +1278,9 @@ create a apimgmt group.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--group_id**|default|Group identifier. Must be unique in the current API Management service instance.|group_id|groupId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--group_id**|str|Group identifier. Must be unique in the current API Management service instance.|group_id|groupId|
 |**--display_name**|str|Group name.|/display_name|/properties/displayName|
 |--description|str|Group description.|/description|/properties/description|
 |--type|str|Group type.|/type|/properties/type|
@@ -1291,9 +1291,9 @@ update a apimgmt group.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--group_id**|default|Group identifier. Must be unique in the current API Management service instance.|group_id|groupId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--group_id**|str|Group identifier. Must be unique in the current API Management service instance.|group_id|groupId|
 |**--display_name**|str|Group name.|/display_name|/properties/displayName|
 |--description|str|Group description.|/description|/properties/description|
 |--type|str|Group type.|/type|/properties/type|
@@ -1304,9 +1304,9 @@ delete a apimgmt group.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--group_id**|default|Group identifier. Must be unique in the current API Management service instance.|group_id|groupId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--group_id**|str|Group identifier. Must be unique in the current API Management service instance.|group_id|groupId|
 
 **Example: ApiManagementDeleteGroup**
 
@@ -1321,17 +1321,17 @@ list a apimgmt group.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
 ### apimgmt group show
 
 show a apimgmt group.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--group_id**|default|Group identifier. Must be unique in the current API Management service instance.|group_id|groupId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--group_id**|str|Group identifier. Must be unique in the current API Management service instance.|group_id|groupId|
 ## apimgmt group user
 
 ### apimgmt group user create
@@ -1340,10 +1340,10 @@ create a apimgmt group user.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--group_id**|default|Group identifier. Must be unique in the current API Management service instance.|group_id|groupId|
-|**--user_id**|default|User identifier. Must be unique in the current API Management service instance.|user_id|userId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--group_id**|str|Group identifier. Must be unique in the current API Management service instance.|group_id|groupId|
+|**--user_id**|str|User identifier. Must be unique in the current API Management service instance.|user_id|userId|
 |--state|str|Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.|/state|/properties/state|
 |--note|str|Optional note about a user set by the administrator.|/note|/properties/note|
 |--identities|list|Collection of user identities.|/identities|/properties/identities|
@@ -1367,10 +1367,10 @@ delete a apimgmt group user.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--group_id**|default|Group identifier. Must be unique in the current API Management service instance.|group_id|groupId|
-|**--user_id**|default|User identifier. Must be unique in the current API Management service instance.|user_id|userId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--group_id**|str|Group identifier. Must be unique in the current API Management service instance.|group_id|groupId|
+|**--user_id**|str|User identifier. Must be unique in the current API Management service instance.|user_id|userId|
 
 **Example: ApiManagementDeleteGroupUser**
 
@@ -1386,9 +1386,9 @@ list a apimgmt group user.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--group_id**|default|Group identifier. Must be unique in the current API Management service instance.|group_id|groupId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--group_id**|str|Group identifier. Must be unique in the current API Management service instance.|group_id|groupId|
 ## apimgmt identityprovider
 
 ### apimgmt identityprovider create
@@ -1397,9 +1397,9 @@ create a apimgmt identityprovider.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--name**|default|Identity Provider Type identifier.|identity_provider_name|identityProviderName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--name**|str|Identity Provider Type identifier.|identity_provider_name|identityProviderName|
 |**--client_id**|str|Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.|/client_id|/properties/clientId|
 |**--client_secret**|str|Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft.|/client_secret|/properties/clientSecret|
 |--type|str|Identity Provider Type identifier.|/type|/properties/type|
@@ -1415,9 +1415,9 @@ update a apimgmt identityprovider.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--name**|default|Identity Provider Type identifier.|identity_provider_name|identityProviderName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--name**|str|Identity Provider Type identifier.|identity_provider_name|identityProviderName|
 |**--client_id**|str|Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.|/client_id|/properties/clientId|
 |**--client_secret**|str|Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft.|/client_secret|/properties/clientSecret|
 |--type|str|Identity Provider Type identifier.|/type|/properties/type|
@@ -1433,9 +1433,9 @@ delete a apimgmt identityprovider.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--name**|default|Identity Provider Type identifier.|identity_provider_name|identityProviderName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--name**|str|Identity Provider Type identifier.|identity_provider_name|identityProviderName|
 
 **Example: ApiManagementDeleteIdentityProvider**
 
@@ -1450,17 +1450,17 @@ list a apimgmt identityprovider.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
 ### apimgmt identityprovider show
 
 show a apimgmt identityprovider.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--name**|default|Identity Provider Type identifier.|identity_provider_name|identityProviderName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--name**|str|Identity Provider Type identifier.|identity_provider_name|identityProviderName|
 ## apimgmt logger
 
 ### apimgmt logger create
@@ -1469,9 +1469,9 @@ create a apimgmt logger.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--logger_id**|default|Logger identifier. Must be unique in the API Management service instance.|logger_id|loggerId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--logger_id**|str|Logger identifier. Must be unique in the API Management service instance.|logger_id|loggerId|
 |**--logger_type**|str|Logger type.|/logger_type|/properties/loggerType|
 |**--credentials**|unknown[DictionaryType {"$id":"3331","$type":"DictionaryType","valueType":{"$id":"3332","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"3333","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"3334","fixed":false},"deprecated":false}]|The name and SendRule connection string of the event hub for azureEventHub logger.<br>Instrumentation key for applicationInsights logger.|/credentials|/properties/credentials|
 |--description|str|Logger description.|/description|/properties/description|
@@ -1483,9 +1483,9 @@ update a apimgmt logger.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--logger_id**|default|Logger identifier. Must be unique in the API Management service instance.|logger_id|loggerId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--logger_id**|str|Logger identifier. Must be unique in the API Management service instance.|logger_id|loggerId|
 |**--logger_type**|str|Logger type.|/logger_type|/properties/loggerType|
 |**--credentials**|unknown[DictionaryType {"$id":"3331","$type":"DictionaryType","valueType":{"$id":"3332","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"3333","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"3334","fixed":false},"deprecated":false}]|The name and SendRule connection string of the event hub for azureEventHub logger.<br>Instrumentation key for applicationInsights logger.|/credentials|/properties/credentials|
 |--description|str|Logger description.|/description|/properties/description|
@@ -1497,9 +1497,9 @@ delete a apimgmt logger.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--logger_id**|default|Logger identifier. Must be unique in the API Management service instance.|logger_id|loggerId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--logger_id**|str|Logger identifier. Must be unique in the API Management service instance.|logger_id|loggerId|
 
 **Example: ApiManagementDeleteLogger**
 
@@ -1514,17 +1514,17 @@ list a apimgmt logger.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
 ### apimgmt logger show
 
 show a apimgmt logger.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--logger_id**|default|Logger identifier. Must be unique in the API Management service instance.|logger_id|loggerId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--logger_id**|str|Logger identifier. Must be unique in the API Management service instance.|logger_id|loggerId|
 ## apimgmt notification
 
 ### apimgmt notification create
@@ -1533,9 +1533,9 @@ create a apimgmt notification.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--name**|default|Notification Name Identifier.|notification_name|notificationName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--name**|str|Notification Name Identifier.|notification_name|notificationName|
 |**--title**|str|Title of the Notification.|/title|/properties/title|
 |--description|str|Description of the Notification.|/description|/properties/description|
 |--recipients|dict|Recipient Parameter values.|/recipients|/properties/recipients|
@@ -1545,9 +1545,9 @@ update a apimgmt notification.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--name**|default|Notification Name Identifier.|notification_name|notificationName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--name**|str|Notification Name Identifier.|notification_name|notificationName|
 |**--title**|str|Title of the Notification.|/title|/properties/title|
 |--description|str|Description of the Notification.|/description|/properties/description|
 |--recipients|dict|Recipient Parameter values.|/recipients|/properties/recipients|
@@ -1557,17 +1557,17 @@ list a apimgmt notification.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
 ### apimgmt notification show
 
 show a apimgmt notification.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--name**|default|Notification Name Identifier.|notification_name|notificationName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--name**|str|Notification Name Identifier.|notification_name|notificationName|
 ## apimgmt notification recipientemail
 
 ### apimgmt notification recipientemail create
@@ -1576,30 +1576,30 @@ create a apimgmt notification recipientemail.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--notification_name**|default|Notification Name Identifier.|notification_name|notificationName|
-|**--email**|default|Email identifier.|email|email|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--notification_name**|str|Notification Name Identifier.|notification_name|notificationName|
+|**--email**|str|Email identifier.|email|email|
 ### apimgmt notification recipientemail update
 
 update a apimgmt notification recipientemail.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--notification_name**|default|Notification Name Identifier.|notification_name|notificationName|
-|**--email**|default|Email identifier.|email|email|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--notification_name**|str|Notification Name Identifier.|notification_name|notificationName|
+|**--email**|str|Email identifier.|email|email|
 ### apimgmt notification recipientemail delete
 
 delete a apimgmt notification recipientemail.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--notification_name**|default|Notification Name Identifier.|notification_name|notificationName|
-|**--email**|default|Email identifier.|email|email|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--notification_name**|str|Notification Name Identifier.|notification_name|notificationName|
+|**--email**|str|Email identifier.|email|email|
 
 **Example: ApiManagementDeleteNotificationRecipientEmail**
 
@@ -1615,9 +1615,9 @@ list a apimgmt notification recipientemail.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--notification_name**|default|Notification Name Identifier.|notification_name|notificationName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--notification_name**|str|Notification Name Identifier.|notification_name|notificationName|
 ## apimgmt notification recipientuser
 
 ### apimgmt notification recipientuser create
@@ -1626,30 +1626,30 @@ create a apimgmt notification recipientuser.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--notification_name**|default|Notification Name Identifier.|notification_name|notificationName|
-|**--user_id**|default|User identifier. Must be unique in the current API Management service instance.|user_id|userId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--notification_name**|str|Notification Name Identifier.|notification_name|notificationName|
+|**--user_id**|str|User identifier. Must be unique in the current API Management service instance.|user_id|userId|
 ### apimgmt notification recipientuser update
 
 update a apimgmt notification recipientuser.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--notification_name**|default|Notification Name Identifier.|notification_name|notificationName|
-|**--user_id**|default|User identifier. Must be unique in the current API Management service instance.|user_id|userId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--notification_name**|str|Notification Name Identifier.|notification_name|notificationName|
+|**--user_id**|str|User identifier. Must be unique in the current API Management service instance.|user_id|userId|
 ### apimgmt notification recipientuser delete
 
 delete a apimgmt notification recipientuser.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--notification_name**|default|Notification Name Identifier.|notification_name|notificationName|
-|**--user_id**|default|User identifier. Must be unique in the current API Management service instance.|user_id|userId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--notification_name**|str|Notification Name Identifier.|notification_name|notificationName|
+|**--user_id**|str|User identifier. Must be unique in the current API Management service instance.|user_id|userId|
 
 **Example: ApiManagementDeleteNotificationRecipientUser**
 
@@ -1665,9 +1665,9 @@ list a apimgmt notification recipientuser.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--notification_name**|default|Notification Name Identifier.|notification_name|notificationName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--notification_name**|str|Notification Name Identifier.|notification_name|notificationName|
 ## apimgmt openidconnectprovider
 
 ### apimgmt openidconnectprovider create
@@ -1676,9 +1676,9 @@ create a apimgmt openidconnectprovider.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--opid**|default|Identifier of the OpenID Connect Provider.|opid|opid|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--opid**|str|Identifier of the OpenID Connect Provider.|opid|opid|
 |**--display_name**|str|User-friendly OpenID Connect Provider name.|/display_name|/properties/displayName|
 |**--metadata_endpoint**|str|Metadata endpoint URI.|/metadata_endpoint|/properties/metadataEndpoint|
 |**--client_id**|str|Client ID of developer console which is the client application.|/client_id|/properties/clientId|
@@ -1690,9 +1690,9 @@ update a apimgmt openidconnectprovider.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--opid**|default|Identifier of the OpenID Connect Provider.|opid|opid|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--opid**|str|Identifier of the OpenID Connect Provider.|opid|opid|
 |**--display_name**|str|User-friendly OpenID Connect Provider name.|/display_name|/properties/displayName|
 |**--metadata_endpoint**|str|Metadata endpoint URI.|/metadata_endpoint|/properties/metadataEndpoint|
 |**--client_id**|str|Client ID of developer console which is the client application.|/client_id|/properties/clientId|
@@ -1704,9 +1704,9 @@ delete a apimgmt openidconnectprovider.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--opid**|default|Identifier of the OpenID Connect Provider.|opid|opid|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--opid**|str|Identifier of the OpenID Connect Provider.|opid|opid|
 
 **Example: ApiManagementDeleteOpenIdConnectProvider**
 
@@ -1721,17 +1721,17 @@ list a apimgmt openidconnectprovider.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
 ### apimgmt openidconnectprovider show
 
 show a apimgmt openidconnectprovider.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--opid**|default|Identifier of the OpenID Connect Provider.|opid|opid|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--opid**|str|Identifier of the OpenID Connect Provider.|opid|opid|
 ## apimgmt policy
 
 ### apimgmt policy create
@@ -1740,9 +1740,9 @@ create a apimgmt policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--policy_id**|default|The identifier of the Policy.|policy_id|policyId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--policy_id**|str|The identifier of the Policy.|policy_id|policyId|
 |**--value**|str|Contents of the Policy as defined by the format.|/value|/properties/value|
 |--format|str|Format of the policyContent.|/format|/properties/format|
 ### apimgmt policy update
@@ -1751,9 +1751,9 @@ update a apimgmt policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--policy_id**|default|The identifier of the Policy.|policy_id|policyId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--policy_id**|str|The identifier of the Policy.|policy_id|policyId|
 |**--value**|str|Contents of the Policy as defined by the format.|/value|/properties/value|
 |--format|str|Format of the policyContent.|/format|/properties/format|
 ### apimgmt policy delete
@@ -1762,9 +1762,9 @@ delete a apimgmt policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--policy_id**|default|The identifier of the Policy.|policy_id|policyId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--policy_id**|str|The identifier of the Policy.|policy_id|policyId|
 
 **Example: ApiManagementDeletePolicy**
 
@@ -1779,18 +1779,18 @@ list a apimgmt policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
 ### apimgmt policy show
 
 show a apimgmt policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--policy_id**|default|The identifier of the Policy.|policy_id|policyId|
-|--format|default|Format of the policyContent.|/format|/properties/format|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--policy_id**|str|The identifier of the Policy.|policy_id|policyId|
+|--format|str|Format of the policyContent.|/format|/properties/format|
 ## apimgmt portalsetting
 
 ### apimgmt portalsetting create
@@ -1799,8 +1799,8 @@ create a apimgmt portalsetting.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--name**|default|The name of the API Management service.|service_name|serviceName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--name**|str|The name of the API Management service.|service_name|serviceName|
 |--url|str|A delegation Url.|/url|/properties/url|
 |--validation_key|str|A base64-encoded validation key to validate, that a request is coming from Azure API Management.|/validation_key|/properties/validationKey|
 |--subscriptions|dict|Subscriptions delegation settings.|/subscriptions|/properties/subscriptions|
@@ -1811,8 +1811,8 @@ update a apimgmt portalsetting.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--name**|default|The name of the API Management service.|service_name|serviceName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--name**|str|The name of the API Management service.|service_name|serviceName|
 |--url|str|A delegation Url.|/url|/properties/url|
 |--validation_key|str|A base64-encoded validation key to validate, that a request is coming from Azure API Management.|/validation_key|/properties/validationKey|
 |--subscriptions|dict|Subscriptions delegation settings.|/subscriptions|/properties/subscriptions|
@@ -1823,8 +1823,8 @@ show a apimgmt portalsetting.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--name**|default|The name of the API Management service.|service_name|serviceName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--name**|str|The name of the API Management service.|service_name|serviceName|
 ## apimgmt product
 
 ### apimgmt product create
@@ -1833,9 +1833,9 @@ create a apimgmt product.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--product_id**|default|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--product_id**|str|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
 |**--display_name**|str|Product name.|/display_name|/properties/displayName|
 |--description|str|Product description. May include HTML formatting tags.|/description|/properties/description|
 |--terms|str|Product terms of use. Developers trying to subscribe to the product will be presented and required to accept these terms before they can complete the subscription process.|/terms|/properties/terms|
@@ -1849,9 +1849,9 @@ update a apimgmt product.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--product_id**|default|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--product_id**|str|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
 |**--display_name**|str|Product name.|/display_name|/properties/displayName|
 |--description|str|Product description. May include HTML formatting tags.|/description|/properties/description|
 |--terms|str|Product terms of use. Developers trying to subscribe to the product will be presented and required to accept these terms before they can complete the subscription process.|/terms|/properties/terms|
@@ -1865,9 +1865,9 @@ delete a apimgmt product.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--product_id**|default|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--product_id**|str|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
 
 **Example: ApiManagementDeleteProduct**
 
@@ -1882,17 +1882,17 @@ list a apimgmt product.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
 ### apimgmt product show
 
 show a apimgmt product.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--product_id**|default|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--product_id**|str|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
 ## apimgmt product api
 
 ### apimgmt product api create
@@ -1901,10 +1901,10 @@ create a apimgmt product api.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--product_id**|default|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--product_id**|str|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 |**--path**|str|Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.|/path|/properties/path|
 |--description|str|Description of the API. May include HTML formatting tags.|/description|/properties/description|
 |--authentication_settings|dict|Collection of authentication settings included into this API.|/authentication_settings|/properties/authenticationSettings|
@@ -1929,10 +1929,10 @@ update a apimgmt product api.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--product_id**|default|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--product_id**|str|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 |**--path**|str|Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.|/path|/properties/path|
 |--description|str|Description of the API. May include HTML formatting tags.|/description|/properties/description|
 |--authentication_settings|dict|Collection of authentication settings included into this API.|/authentication_settings|/properties/authenticationSettings|
@@ -1957,10 +1957,10 @@ delete a apimgmt product api.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--product_id**|default|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
-|**--api_id**|default|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--product_id**|str|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
+|**--api_id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 
 **Example: ApiManagementDeleteProductApi**
 
@@ -1976,9 +1976,9 @@ list a apimgmt product api.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--product_id**|default|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--product_id**|str|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
 ## apimgmt product group
 
 ### apimgmt product group create
@@ -1987,10 +1987,10 @@ create a apimgmt product group.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--product_id**|default|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
-|**--group_id**|default|Group identifier. Must be unique in the current API Management service instance.|group_id|groupId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--product_id**|str|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
+|**--group_id**|str|Group identifier. Must be unique in the current API Management service instance.|group_id|groupId|
 |**--display_name**|str|Group name.|/display_name|/properties/displayName|
 |--description|str|Group description. Can contain HTML formatting tags.|/description|/properties/description|
 |--built_in|boolean|true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.|/built_in|/properties/builtIn|
@@ -2002,10 +2002,10 @@ update a apimgmt product group.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--product_id**|default|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
-|**--group_id**|default|Group identifier. Must be unique in the current API Management service instance.|group_id|groupId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--product_id**|str|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
+|**--group_id**|str|Group identifier. Must be unique in the current API Management service instance.|group_id|groupId|
 |**--display_name**|str|Group name.|/display_name|/properties/displayName|
 |--description|str|Group description. Can contain HTML formatting tags.|/description|/properties/description|
 |--built_in|boolean|true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.|/built_in|/properties/builtIn|
@@ -2017,10 +2017,10 @@ delete a apimgmt product group.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--product_id**|default|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
-|**--group_id**|default|Group identifier. Must be unique in the current API Management service instance.|group_id|groupId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--product_id**|str|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
+|**--group_id**|str|Group identifier. Must be unique in the current API Management service instance.|group_id|groupId|
 
 **Example: ApiManagementDeleteProductGroup**
 
@@ -2036,9 +2036,9 @@ list a apimgmt product group.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--product_id**|default|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--product_id**|str|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
 ## apimgmt product policy
 
 ### apimgmt product policy create
@@ -2047,10 +2047,10 @@ create a apimgmt product policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--product_id**|default|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
-|**--policy_id**|default|The identifier of the Policy.|policy_id|policyId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--product_id**|str|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
+|**--policy_id**|str|The identifier of the Policy.|policy_id|policyId|
 |**--value**|str|Contents of the Policy as defined by the format.|/value|/properties/value|
 |--format|str|Format of the policyContent.|/format|/properties/format|
 ### apimgmt product policy update
@@ -2059,10 +2059,10 @@ update a apimgmt product policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--product_id**|default|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
-|**--policy_id**|default|The identifier of the Policy.|policy_id|policyId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--product_id**|str|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
+|**--policy_id**|str|The identifier of the Policy.|policy_id|policyId|
 |**--value**|str|Contents of the Policy as defined by the format.|/value|/properties/value|
 |--format|str|Format of the policyContent.|/format|/properties/format|
 ### apimgmt product policy delete
@@ -2071,10 +2071,10 @@ delete a apimgmt product policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--product_id**|default|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
-|**--policy_id**|default|The identifier of the Policy.|policy_id|policyId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--product_id**|str|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
+|**--policy_id**|str|The identifier of the Policy.|policy_id|policyId|
 
 **Example: ApiManagementDeleteProductPolicy**
 
@@ -2090,20 +2090,20 @@ list a apimgmt product policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--product_id**|default|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--product_id**|str|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
 ### apimgmt product policy show
 
 show a apimgmt product policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--product_id**|default|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
-|**--policy_id**|default|The identifier of the Policy.|policy_id|policyId|
-|--format|default|Format of the policyContent.|/format|/properties/format|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--product_id**|str|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
+|**--policy_id**|str|The identifier of the Policy.|policy_id|policyId|
+|--format|str|Format of the policyContent.|/format|/properties/format|
 ## apimgmt property
 
 ### apimgmt property create
@@ -2112,9 +2112,9 @@ create a apimgmt property.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--prop_id**|default|Identifier of the property.|prop_id|propId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--prop_id**|str|Identifier of the property.|prop_id|propId|
 |**--display_name**|str|Unique name of Property. It may contain only letters, digits, period, dash, and underscore characters.|/display_name|/properties/displayName|
 |**--value**|str|Value of the property. Can contain policy expressions. It may not be empty or consist only of whitespace.|/value|/properties/value|
 |--tags|list|Optional tags that when provided can be used to filter the property list.|/tags|/properties/tags|
@@ -2125,9 +2125,9 @@ update a apimgmt property.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--prop_id**|default|Identifier of the property.|prop_id|propId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--prop_id**|str|Identifier of the property.|prop_id|propId|
 |**--display_name**|str|Unique name of Property. It may contain only letters, digits, period, dash, and underscore characters.|/display_name|/properties/displayName|
 |**--value**|str|Value of the property. Can contain policy expressions. It may not be empty or consist only of whitespace.|/value|/properties/value|
 |--tags|list|Optional tags that when provided can be used to filter the property list.|/tags|/properties/tags|
@@ -2138,9 +2138,9 @@ delete a apimgmt property.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--prop_id**|default|Identifier of the property.|prop_id|propId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--prop_id**|str|Identifier of the property.|prop_id|propId|
 
 **Example: ApiManagementDeleteProperty**
 
@@ -2155,17 +2155,17 @@ list a apimgmt property.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
 ### apimgmt property show
 
 show a apimgmt property.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--prop_id**|default|Identifier of the property.|prop_id|propId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--prop_id**|str|Identifier of the property.|prop_id|propId|
 ## apimgmt subscription
 
 ### apimgmt subscription create
@@ -2174,12 +2174,12 @@ create a apimgmt subscription.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--sid**|default|Subscription entity Identifier. The entity represents the association between a user and a product in API Management.|sid|sid|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--sid**|str|Subscription entity Identifier. The entity represents the association between a user and a product in API Management.|sid|sid|
 |**--scope**|str|Scope like /products/{productId} or /apis or /apis/{apiId}.|/scope|/properties/scope|
 |**--display_name**|str|Subscription name.|/display_name|/properties/displayName|
-|--notify|default|Notify change in Subscription State. <br> - If false, do not send any email notification for change of state of subscription <br> - If true, send email notification of change of state of subscription |notify|notify|
+|--notify|boolean|Notify change in Subscription State. <br> - If false, do not send any email notification for change of state of subscription <br> - If true, send email notification of change of state of subscription |notify|notify|
 |--owner_id|str|User (user id path) for whom subscription is being created in form /users/{userId}|/owner_id|/properties/ownerId|
 |--primary_key|str|Primary subscription key. If not specified during request key will be generated automatically.|/primary_key|/properties/primaryKey|
 |--secondary_key|str|Secondary subscription key. If not specified during request key will be generated automatically.|/secondary_key|/properties/secondaryKey|
@@ -2191,12 +2191,12 @@ update a apimgmt subscription.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--sid**|default|Subscription entity Identifier. The entity represents the association between a user and a product in API Management.|sid|sid|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--sid**|str|Subscription entity Identifier. The entity represents the association between a user and a product in API Management.|sid|sid|
 |**--scope**|str|Scope like /products/{productId} or /apis or /apis/{apiId}.|/scope|/properties/scope|
 |**--display_name**|str|Subscription name.|/display_name|/properties/displayName|
-|--notify|default|Notify change in Subscription State. <br> - If false, do not send any email notification for change of state of subscription <br> - If true, send email notification of change of state of subscription |notify|notify|
+|--notify|boolean|Notify change in Subscription State. <br> - If false, do not send any email notification for change of state of subscription <br> - If true, send email notification of change of state of subscription |notify|notify|
 |--owner_id|str|User (user id path) for whom subscription is being created in form /users/{userId}|/owner_id|/properties/ownerId|
 |--primary_key|str|Primary subscription key. If not specified during request key will be generated automatically.|/primary_key|/properties/primaryKey|
 |--secondary_key|str|Secondary subscription key. If not specified during request key will be generated automatically.|/secondary_key|/properties/secondaryKey|
@@ -2208,9 +2208,9 @@ delete a apimgmt subscription.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--sid**|default|Subscription entity Identifier. The entity represents the association between a user and a product in API Management.|sid|sid|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--sid**|str|Subscription entity Identifier. The entity represents the association between a user and a product in API Management.|sid|sid|
 
 **Example: ApiManagementDeleteSubscription**
 
@@ -2225,17 +2225,17 @@ list a apimgmt subscription.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
 ### apimgmt subscription show
 
 show a apimgmt subscription.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--sid**|default|Subscription entity Identifier. The entity represents the association between a user and a product in API Management.|sid|sid|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--sid**|str|Subscription entity Identifier. The entity represents the association between a user and a product in API Management.|sid|sid|
 ## apimgmt tag
 
 ### apimgmt tag create
@@ -2244,9 +2244,9 @@ create a apimgmt tag.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--tag_id**|default|Tag identifier. Must be unique in the current API Management service instance.|tag_id|tagId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--tag_id**|str|Tag identifier. Must be unique in the current API Management service instance.|tag_id|tagId|
 |**--display_name**|str|Tag name.|/display_name|/properties/displayName|
 ### apimgmt tag update
 
@@ -2254,9 +2254,9 @@ update a apimgmt tag.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--tag_id**|default|Tag identifier. Must be unique in the current API Management service instance.|tag_id|tagId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--tag_id**|str|Tag identifier. Must be unique in the current API Management service instance.|tag_id|tagId|
 |**--display_name**|str|Tag name.|/display_name|/properties/displayName|
 ### apimgmt tag delete
 
@@ -2264,9 +2264,9 @@ delete a apimgmt tag.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--tag_id**|default|Tag identifier. Must be unique in the current API Management service instance.|tag_id|tagId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--tag_id**|str|Tag identifier. Must be unique in the current API Management service instance.|tag_id|tagId|
 
 **Example: ApiManagementDeleteTag**
 
@@ -2281,17 +2281,17 @@ list a apimgmt tag.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
 ### apimgmt tag show
 
 show a apimgmt tag.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--tag_id**|default|Tag identifier. Must be unique in the current API Management service instance.|tag_id|tagId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--tag_id**|str|Tag identifier. Must be unique in the current API Management service instance.|tag_id|tagId|
 ## apimgmt template
 
 ### apimgmt template create
@@ -2300,9 +2300,9 @@ create a apimgmt template.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--name**|default|Email Template Name Identifier.|template_name|templateName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--name**|str|Email Template Name Identifier.|template_name|templateName|
 |--subject|str|Subject of the Template.|/subject|/properties/subject|
 |--title|str|Title of the Template.|/title|/properties/title|
 |--description|str|Description of the Email Template.|/description|/properties/description|
@@ -2313,9 +2313,9 @@ update a apimgmt template.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--name**|default|Email Template Name Identifier.|template_name|templateName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--name**|str|Email Template Name Identifier.|template_name|templateName|
 |--subject|str|Subject of the Template.|/subject|/properties/subject|
 |--title|str|Title of the Template.|/title|/properties/title|
 |--description|str|Description of the Email Template.|/description|/properties/description|
@@ -2326,9 +2326,9 @@ delete a apimgmt template.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--name**|default|Email Template Name Identifier.|template_name|templateName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--name**|str|Email Template Name Identifier.|template_name|templateName|
 
 **Example: ApiManagementDeleteEmailTemplate**
 
@@ -2343,17 +2343,17 @@ list a apimgmt template.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
 ### apimgmt template show
 
 show a apimgmt template.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--name**|default|Email Template Name Identifier.|template_name|templateName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--name**|str|Email Template Name Identifier.|template_name|templateName|
 ## apimgmt user
 
 ### apimgmt user create
@@ -2362,9 +2362,9 @@ create a apimgmt user.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--user_id**|default|User identifier. Must be unique in the current API Management service instance.|user_id|userId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--user_id**|str|User identifier. Must be unique in the current API Management service instance.|user_id|userId|
 |**--email**|str|Email address. Must not be empty and must be unique within the service instance.|/email|/properties/email|
 |**--first_name**|str|First name.|/first_name|/properties/firstName|
 |**--last_name**|str|Last name.|/last_name|/properties/lastName|
@@ -2379,9 +2379,9 @@ update a apimgmt user.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--user_id**|default|User identifier. Must be unique in the current API Management service instance.|user_id|userId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--user_id**|str|User identifier. Must be unique in the current API Management service instance.|user_id|userId|
 |**--email**|str|Email address. Must not be empty and must be unique within the service instance.|/email|/properties/email|
 |**--first_name**|str|First name.|/first_name|/properties/firstName|
 |**--last_name**|str|Last name.|/last_name|/properties/lastName|
@@ -2396,9 +2396,9 @@ delete a apimgmt user.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--user_id**|default|User identifier. Must be unique in the current API Management service instance.|user_id|userId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--user_id**|str|User identifier. Must be unique in the current API Management service instance.|user_id|userId|
 
 **Example: ApiManagementDeleteUser**
 
@@ -2413,14 +2413,14 @@ list a apimgmt user.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
 ### apimgmt user show
 
 show a apimgmt user.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
-|**--resource_group**|default|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--service_name**|default|The name of the API Management service.|service_name|serviceName|
-|**--user_id**|default|User identifier. Must be unique in the current API Management service instance.|user_id|userId|
+|**--resource_group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--service_name**|str|The name of the API Management service.|service_name|serviceName|
+|**--user_id**|str|User identifier. Must be unique in the current API Management service instance.|user_id|userId|
