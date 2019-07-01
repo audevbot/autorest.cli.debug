@@ -1083,12 +1083,12 @@ def create_apimgmt(cmd, client,
                    sku_capacity=None,
                    identity=None):
     body={}
-    body['tags'] = tags # unknown[DictionaryType {"$id":"2630","$type":"DictionaryType","valueType":{"$id":"2631","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2632","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2633","fixed":false},"deprecated":false}]
+    body['tags'] = tags # dictionary
     body['notification_sender_email'] = notification_sender_email # str
     body['hostname_configurations'] = json.loads(hostname_configurations) if isinstance(hostname_configurations, str) else hostname_configurations
     body['virtual_network_configuration'] = json.loads(virtual_network_configuration) if isinstance(virtual_network_configuration, str) else virtual_network_configuration
     body['additional_locations'] = json.loads(additional_locations) if isinstance(additional_locations, str) else additional_locations
-    body['custom_properties'] = custom_properties # unknown[DictionaryType {"$id":"2519","$type":"DictionaryType","valueType":{"$id":"2520","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2521","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2522","fixed":false},"deprecated":false}]
+    body['custom_properties'] = custom_properties # dictionary
     body['certificates'] = json.loads(certificates) if isinstance(certificates, str) else certificates
     body['enable_client_certificate'] = enable_client_certificate # boolean
     body['virtual_network_type'] = virtual_network_type # str
@@ -1120,12 +1120,12 @@ def update_apimgmt(cmd, client,
                    sku_capacity=None,
                    identity=None):
     body={}
-    body['tags'] = tags # unknown[DictionaryType {"$id":"2630","$type":"DictionaryType","valueType":{"$id":"2631","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2632","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2633","fixed":false},"deprecated":false}]
+    body['tags'] = tags # dictionary
     body['notification_sender_email'] = notification_sender_email # str
     body['hostname_configurations'] = json.loads(hostname_configurations) if isinstance(hostname_configurations, str) else hostname_configurations
     body['virtual_network_configuration'] = json.loads(virtual_network_configuration) if isinstance(virtual_network_configuration, str) else virtual_network_configuration
     body['additional_locations'] = json.loads(additional_locations) if isinstance(additional_locations, str) else additional_locations
-    body['custom_properties'] = custom_properties # unknown[DictionaryType {"$id":"2519","$type":"DictionaryType","valueType":{"$id":"2520","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2521","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2522","fixed":false},"deprecated":false}]
+    body['custom_properties'] = custom_properties # dictionary
     body['certificates'] = json.loads(certificates) if isinstance(certificates, str) else certificates
     body['enable_client_certificate'] = enable_client_certificate # boolean
     body['virtual_network_type'] = virtual_network_type # str
@@ -1448,7 +1448,7 @@ def create_apimgmt_logger(cmd, client,
     body={}
     body['logger_type'] = logger_type # str
     body['description'] = description # str
-    body['credentials'] = credentials # unknown[DictionaryType {"$id":"3331","$type":"DictionaryType","valueType":{"$id":"3332","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"3333","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"3334","fixed":false},"deprecated":false}]
+    body['credentials'] = credentials # dictionary
     body['is_buffered'] = is_buffered # boolean
     body['resource_id'] = resource_id # str
     return client.logger.create_or_update(resource_group_name=resource_group, service_name=service_name, logger_id=logger_id, parameters=body)
@@ -1466,7 +1466,7 @@ def update_apimgmt_logger(cmd, client,
     body={}
     body['logger_type'] = logger_type # str
     body['description'] = description # str
-    body['credentials'] = credentials # unknown[DictionaryType {"$id":"3331","$type":"DictionaryType","valueType":{"$id":"3332","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"3333","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"3334","fixed":false},"deprecated":false}]
+    body['credentials'] = credentials # dictionary
     body['is_buffered'] = is_buffered # boolean
     body['resource_id'] = resource_id # str
     return client.logger.create_or_update(resource_group_name=resource_group, service_name=service_name, logger_id=logger_id, parameters=body)
