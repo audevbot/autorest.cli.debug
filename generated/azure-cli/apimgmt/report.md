@@ -25,6 +25,54 @@ create a apimgmt.
 |--virtual_network_type|str|The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.|/virtual_network_type|/properties/virtualNetworkType|
 |--sku_capacity|number|Capacity of the SKU (number of deployed units of the SKU).|/sku/capacity|/sku/capacity|
 |--identity|dict|Managed service identity of the Api Management service.|/identity|/identity|
+
+**Example: ApiManagementCreateService**
+
+```
+apimgmt create --resource_group rg1
+        --name apimService1
+        --publisher_email apim@autorestsdk.com
+        --publisher_name autorestsdk
+        --sku_name Developer
+        --sku_capacity 1
+        --location "Central US"
+```
+
+**Example: ApiManagementCreateMultiRegionServiceWithCustomHostname**
+
+```
+apimgmt create --resource_group rg1
+        --name apimService1
+        --virtual_network_type External
+        --publisher_email admin@live.com
+        --publisher_name contoso
+        --sku_name Premium
+        --sku_capacity 1
+        --location "Central US"
+```
+
+**Example: ApiManagementCreateServiceHavingMsi**
+
+```
+apimgmt create --resource_group rg1
+        --name apimService1
+        --publisher_email apim@autorestsdk.com
+        --publisher_name autorestsdk
+        --sku_name Consumption
+        --location "West US"
+```
+
+**Example: ApiManagementCreateServiceWithSystemCertificates**
+
+```
+apimgmt create --resource_group rg1
+        --name apimService1
+        --publisher_email apim@autorestsdk.com
+        --publisher_name autorestsdk
+        --sku_name Basic
+        --sku_capacity 1
+        --location "Central US"
+```
 ### apimgmt update
 
 update a apimgmt.
@@ -48,6 +96,22 @@ update a apimgmt.
 |--virtual_network_type|str|The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.|/virtual_network_type|/properties/virtualNetworkType|
 |--sku_capacity|number|Capacity of the SKU (number of deployed units of the SKU).|/sku/capacity|/sku/capacity|
 |--identity|dict|Managed service identity of the Api Management service.|/identity|/identity|
+
+**Example: ApiManagementUpdateServiceDisableTls10**
+
+```
+apimgmt update --resource_group rg1
+        --name apimService1
+```
+
+**Example: ApiManagementUpdateServicePublisherDetails**
+
+```
+apimgmt update --resource_group rg1
+        --name apimService1
+        --publisher_email foobar@live.com
+        --publisher_name "Contoso Vnext"
+```
 ### apimgmt delete
 
 delete a apimgmt.
@@ -110,6 +174,130 @@ create a apimgmt api.
 |--format|str|Format of the Content in which the API is getting imported.|/format|/properties/format|
 |--wsdl_selector|dict|Criteria to limit import of WSDL to a subset of the document.|/wsdl_selector|/properties/wsdlSelector|
 |--api_type|str|Type of Api to create. <br> * `http` creates a SOAP to REST API <br> * `soap` creates a SOAP pass-through API .|/api_type|/properties/apiType|
+
+**Example: ApiManagementCreateApiUsingOai3Import**
+
+```
+apimgmt api create --resource_group rg1
+        --service_name apimService1
+        --api_id petstore
+        --path petstore
+        --value https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/petstore.yaml
+        --format openapi-link
+```
+
+**Example: ApiManagementCreateApiUsingSwaggerImport**
+
+```
+apimgmt api create --resource_group rg1
+        --service_name apimService1
+        --api_id petstore
+        --path petstore
+        --value http://petstore.swagger.io/v2/swagger.json
+        --format swagger-link-json
+```
+
+**Example: ApiManagementCreateApiUsingWadlImport**
+
+```
+apimgmt api create --resource_group rg1
+        --service_name apimService1
+        --api_id petstore
+        --path collector
+        --value https://developer.cisco.com/media/wae-release-6-2-api-reference/wae-collector-rest-api/application.wadl
+        --format wadl-link-json
+```
+
+**Example: ApiManagementCreateSoapToRestApiUsingWsdlImport**
+
+```
+apimgmt api create --resource_group rg1
+        --service_name apimService1
+        --api_id soapApi
+        --path currency
+        --value http://www.webservicex.net/CurrencyConvertor.asmx?WSDL
+        --format wsdl-link
+```
+
+**Example: ApiManagementCreateSoapPassThroughApiUsingWsdlImport**
+
+```
+apimgmt api create --resource_group rg1
+        --service_name apimService1
+        --api_id soapApi
+        --path currency
+        --value http://www.webservicex.net/CurrencyConvertor.asmx?WSDL
+        --format wsdl-link
+        --api_type soap
+```
+
+**Example: ApiManagementCreateApi**
+
+```
+apimgmt api create --resource_group rg1
+        --service_name apimService1
+        --api_id tempgroup
+        --description apidescription5200
+        --display_name apiname1463
+        --service_url http://newechoapi.cloudapp.net/api
+        --path newapiPath
+```
+
+**Example: ApiManagementCreateApiRevisionFromExistingApi**
+
+```
+apimgmt api create --resource_group rg1
+        --service_name apimService1
+        --api_id echo-api;rev=3
+        --api_revision_description "Creating a Revision of an existing API"
+        --source_api_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}"
+        --service_url http://echoapi.cloudapp.net/apiv3
+        --path echo
+```
+
+**Example: ApiManagementCreateApiNewVersionUsingExistingApi**
+
+```
+apimgmt api create --resource_group rg1
+        --service_name apimService1
+        --api_id echoapiv3
+        --description "Create Echo API into a new Version using Existing Version Set and Copy all Operations."
+        --api_version v4
+        --is_current true
+        --api_version_set_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apiVersionSets/{{ api_version_set_name }}"
+        --subscription_required true
+        --source_api_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}"
+        --display_name "Echo API2"
+        --service_url http://echoapi.cloudapp.net/api
+        --path echo2
+```
+
+**Example: ApiManagementCreateApiClone**
+
+```
+apimgmt api create --resource_group rg1
+        --service_name apimService1
+        --api_id echo-api2
+        --description "Copy of Existing Echo Api including Operations."
+        --is_current true
+        --subscription_required true
+        --source_api_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}"
+        --display_name "Echo API2"
+        --service_url http://echoapi.cloudapp.net/api
+        --path echo2
+```
+
+**Example: ApiManagementCreateApiWithOpenIdConnect**
+
+```
+apimgmt api create --resource_group rg1
+        --service_name apimService1
+        --api_id tempgroup
+        --description "This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters."
+        --display_name "Swagger Petstore"
+        --service_url http://petstore.swagger.io/v2
+        --path petstore
+```
 ### apimgmt api update
 
 update a apimgmt api.
@@ -140,6 +328,17 @@ update a apimgmt api.
 |--format|str|Format of the Content in which the API is getting imported.|/format|/properties/format|
 |--wsdl_selector|dict|Criteria to limit import of WSDL to a subset of the document.|/wsdl_selector|/properties/wsdlSelector|
 |--api_type|str|Type of Api to create. <br> * `http` creates a SOAP to REST API <br> * `soap` creates a SOAP pass-through API .|/api_type|/properties/apiType|
+
+**Example: ApiManagementUpdateApi**
+
+```
+apimgmt api update --resource_group rg1
+        --service_name apimService1
+        --api_id echo-api
+        --display_name "Echo API New"
+        --service_url http://echoapi.cloudapp.net/api2
+        --path newecho
+```
 ### apimgmt api delete
 
 delete a apimgmt api.
@@ -192,6 +391,17 @@ create a apimgmt api diagnostic.
 |--frontend|dict|Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.|/frontend|/properties/frontend|
 |--backend|dict|Diagnostic settings for incoming/outgoing HTTP messages to the Backend|/backend|/properties/backend|
 |--enable_http_correlation_headers|boolean|Whether to process Correlation Headers coming to Api Management Service. Only applicable to Application Insights diagnostics. Default is true.|/enable_http_correlation_headers|/properties/enableHttpCorrelationHeaders|
+
+**Example: ApiManagementCreateApiDiagnostic**
+
+```
+apimgmt api diagnostic create --resource_group rg1
+        --service_name apimService1
+        --api_id 57d1f7558aa04f15146d9d8a
+        --diagnostic_id applicationinsights
+        --always_log allErrors
+        --logger_id /loggers/applicationinsights
+```
 ### apimgmt api diagnostic update
 
 update a apimgmt api diagnostic.
@@ -208,6 +418,17 @@ update a apimgmt api diagnostic.
 |--frontend|dict|Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.|/frontend|/properties/frontend|
 |--backend|dict|Diagnostic settings for incoming/outgoing HTTP messages to the Backend|/backend|/properties/backend|
 |--enable_http_correlation_headers|boolean|Whether to process Correlation Headers coming to Api Management Service. Only applicable to Application Insights diagnostics. Default is true.|/enable_http_correlation_headers|/properties/enableHttpCorrelationHeaders|
+
+**Example: ApiManagementUpdateApiDiagnostic**
+
+```
+apimgmt api diagnostic update --resource_group rg1
+        --service_name apimService1
+        --api_id 57d1f7558aa04f15146d9d8a
+        --diagnostic_id applicationinsights
+        --always_log allErrors
+        --logger_id /loggers/applicationinsights
+```
 ### apimgmt api diagnostic delete
 
 delete a apimgmt api diagnostic.
@@ -263,6 +484,20 @@ create a apimgmt api issue.
 |**--user_id**|str|A resource identifier for the user created the issue.|/user_id|/properties/userId|
 |--created_date|datetime|Date and time when the issue was created.|/created_date|/properties/createdDate|
 |--state|str|Status of the issue.|/state|/properties/state|
+
+**Example: ApiManagementCreateApiIssue**
+
+```
+apimgmt api issue create --resource_group rg1
+        --service_name apimService1
+        --api_id 57d1f7558aa04f15146d9d8a
+        --issue_id 57d2ef278aa04f0ad01d6cdc
+        --created_date 2018-02-01T22:21:20.467Z
+        --state open
+        --title "New API issue"
+        --description "New API issue description"
+        --user_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/users/{{ user_name }}"
+```
 ### apimgmt api issue update
 
 update a apimgmt api issue.
@@ -278,6 +513,16 @@ update a apimgmt api issue.
 |**--user_id**|str|A resource identifier for the user created the issue.|/user_id|/properties/userId|
 |--created_date|datetime|Date and time when the issue was created.|/created_date|/properties/createdDate|
 |--state|str|Status of the issue.|/state|/properties/state|
+
+**Example: ApiManagementUpdateApiIssue**
+
+```
+apimgmt api issue update --resource_group rg1
+        --service_name apimService1
+        --api_id 57d1f7558aa04f15146d9d8a
+        --issue_id 57d2ef278aa04f0ad01d6cdc
+        --state closed
+```
 ### apimgmt api issue delete
 
 delete a apimgmt api issue.
@@ -332,6 +577,19 @@ create a apimgmt api issue attachment.
 |**--title**|str|Filename by which the binary data will be saved.|/title|/properties/title|
 |**--content_format**|str|Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.|/content_format|/properties/contentFormat|
 |**--content**|str|An HTTP link or Base64-encoded binary data.|/content|/properties/content|
+
+**Example: ApiManagementCreateApiIssueAttachment**
+
+```
+apimgmt api issue attachment create --resource_group rg1
+        --service_name apimService1
+        --api_id 57d1f7558aa04f15146d9d8a
+        --issue_id 57d2ef278aa04f0ad01d6cdc
+        --attachment_id 57d2ef278aa04f0888cba3f3
+        --title "Issue attachment."
+        --content_format image/jpeg
+        --content IEJhc2U2NA==
+```
 ### apimgmt api issue attachment update
 
 update a apimgmt api issue attachment.
@@ -404,6 +662,19 @@ create a apimgmt api issue comment.
 |**--text**|str|Comment text.|/text|/properties/text|
 |**--user_id**|str|A resource identifier for the user who left the comment.|/user_id|/properties/userId|
 |--created_date|datetime|Date and time when the comment was created.|/created_date|/properties/createdDate|
+
+**Example: ApiManagementCreateApiIssueComment**
+
+```
+apimgmt api issue comment create --resource_group rg1
+        --service_name apimService1
+        --api_id 57d1f7558aa04f15146d9d8a
+        --issue_id 57d2ef278aa04f0ad01d6cdc
+        --comment_id 599e29ab193c3c0bd0b3e2fb
+        --text "Issue comment."
+        --created_date 2018-02-01T22:21:20.467Z
+        --user_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/users/{{ user_name }}"
+```
 ### apimgmt api issue comment update
 
 update a apimgmt api issue comment.
@@ -480,6 +751,19 @@ create a apimgmt api operation.
 |--request|dict|An entity containing request details.|/request|/properties/request|
 |--responses|list|Array of Operation responses.|/responses|/properties/responses|
 |--policies|str|Operation Policies|/policies|/properties/policies|
+
+**Example: ApiManagementCreateApiOperation**
+
+```
+apimgmt api operation create --resource_group rg1
+        --service_name apimService1
+        --api_id PetStoreTemplate2
+        --operation_id newoperations
+        --description "This can only be done by the logged in user."
+        --display_name createUser2
+        --method POST
+        --url_template /user1
+```
 ### apimgmt api operation update
 
 update a apimgmt api operation.
@@ -498,6 +782,18 @@ update a apimgmt api operation.
 |--request|dict|An entity containing request details.|/request|/properties/request|
 |--responses|list|Array of Operation responses.|/responses|/properties/responses|
 |--policies|str|Operation Policies|/policies|/properties/policies|
+
+**Example: ApiManagementUpdateApiOperation**
+
+```
+apimgmt api operation update --resource_group rg1
+        --service_name apimService1
+        --api_id echo-api
+        --operation_id operationId
+        --display_name "Retrieve resource"
+        --method GET
+        --url_template /resource
+```
 ### apimgmt api operation delete
 
 delete a apimgmt api operation.
@@ -551,6 +847,18 @@ create a apimgmt api operation policy.
 |**--policy_id**|str|The identifier of the Policy.|policy_id|policyId|
 |**--value**|str|Contents of the Policy as defined by the format.|/value|/properties/value|
 |--format|str|Format of the policyContent.|/format|/properties/format|
+
+**Example: ApiManagementCreateApiOperationPolicy**
+
+```
+apimgmt api operation policy create --resource_group rg1
+        --service_name apimService1
+        --api_id 5600b57e7e8880006a040001
+        --operation_id 5600b57e7e8880006a080001
+        --policy_id policy
+        --value "<policies> <inbound /> <backend>    <forward-request />  </backend>  <outbound /></policies>"
+        --format xml
+```
 ### apimgmt api operation policy update
 
 update a apimgmt api operation policy.
@@ -621,6 +929,35 @@ create a apimgmt api policy.
 |**--policy_id**|str|The identifier of the Policy.|policy_id|policyId|
 |**--value**|str|Contents of the Policy as defined by the format.|/value|/properties/value|
 |--format|str|Format of the policyContent.|/format|/properties/format|
+
+**Example: ApiManagementCreateApiPolicy**
+
+```
+apimgmt api policy create --resource_group rg1
+        --service_name apimService1
+        --api_id 5600b57e7e8880006a040001
+        --policy_id policy
+        --value "<policies> <inbound /> <backend>    <forward-request />  </backend>  <outbound /></policies>"
+        --format xml
+```
+
+**Example: ApiManagementCreateApiPolicyNonXmlEncoded**
+
+```
+apimgmt api policy create --resource_group rg1
+        --service_name apimService1
+        --api_id 5600b57e7e8880006a040001
+        --policy_id policy
+        --value "<policies>
+     <inbound>
+     <base />
+  <set-header name=\"newvalue" exists-action="override">
+   <value>"@(context.Request.Headers.FirstOrDefault(h => h.Ke=="Via"))" </value>
+    </set-header>
+  </inbound>
+      </policies>"
+        --format rawxml
+```
 ### apimgmt api policy update
 
 update a apimgmt api policy.
@@ -685,6 +1022,16 @@ create a apimgmt api release.
 |**--api_id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
 |**--release_id**|str|Release identifier within an API. Must be unique in the current API Management service instance.|release_id|releaseId|
 |--notes|str|Release Notes|/notes|/properties/notes|
+
+**Example: ApiManagementCreateApiRelease**
+
+```
+apimgmt api release create --resource_group rg1
+        --service_name apimService1
+        --api_id a1
+        --release_id testrev
+        --notes yahooagain
+```
 ### apimgmt api release update
 
 update a apimgmt api release.
@@ -696,6 +1043,16 @@ update a apimgmt api release.
 |**--api_id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
 |**--release_id**|str|Release identifier within an API. Must be unique in the current API Management service instance.|release_id|releaseId|
 |--notes|str|Release Notes|/notes|/properties/notes|
+
+**Example: ApiManagementUpdateApiRelease**
+
+```
+apimgmt api release update --resource_group rg1
+        --service_name apimService1
+        --api_id a1
+        --release_id testrev
+        --notes yahooagain
+```
 ### apimgmt api release delete
 
 delete a apimgmt api release.
@@ -748,6 +1105,16 @@ create a apimgmt api schema.
 |**--schema_id**|str|Schema identifier within an API. Must be unique in the current API Management service instance.|schema_id|schemaId|
 |**--content_type**|str|Must be a valid a media type used in a Content-Type header as defined in the RFC 2616. Media type of the schema document (e.g. application/json, application/xml). </br> - `Swagger` Schema use `application/vnd.ms-azure-apim.swagger.definitions+json` </br> - `WSDL` Schema use `application/vnd.ms-azure-apim.xsd+xml` </br> - `OpenApi` Schema use `application/vnd.oai.openapi.components+json` </br> - `WADL Schema` use `application/vnd.ms-azure-apim.wadl.grammars+xml`.|/content_type|/properties/contentType|
 |--document|dict|Create or update Properties of the Schema Document.|/document|/properties/document|
+
+**Example: ApiManagementCreateApiSchema**
+
+```
+apimgmt api schema create --resource_group rg1
+        --service_name apimService1
+        --api_id 59d6bb8f1f7fab13dc67ec9b
+        --schema_id ec12520d-9d48-4e7b-8f39-698ca2ac63f1
+        --content_type application/vnd.ms-azure-apim.xsd+xml
+```
 ### apimgmt api schema update
 
 update a apimgmt api schema.
@@ -813,6 +1180,18 @@ create a apimgmt api tagdescription.
 |--description|str|Description of the Tag.|/description|/properties/description|
 |--external_docs_url|str|Absolute URL of external resources describing the tag.|/external_docs_url|/properties/externalDocsUrl|
 |--external_docs_description|str|Description of the external resources describing the tag.|/external_docs_description|/properties/externalDocsDescription|
+
+**Example: ApiManagementCreateApiTagDescription**
+
+```
+apimgmt api tagdescription create --resource_group rg1
+        --service_name apimService1
+        --api_id 5931a75ae4bbd512a88c680b
+        --tag_id tagId1
+        --description "Some description that will be displayed for operation's tag if the tag is assigned to operation of the API"
+        --external_docs_url http://some.url/additionaldoc
+        --external_docs_description "Description of the external docs resource"
+```
 ### apimgmt api tagdescription update
 
 update a apimgmt api tagdescription.
@@ -880,6 +1259,17 @@ create a apimgmt apiversionset.
 |--description|str|Description of API Version Set.|/description|/properties/description|
 |--version_query_name|str|Name of query parameter that indicates the API Version if versioningScheme is set to `query`.|/version_query_name|/properties/versionQueryName|
 |--version_header_name|str|Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.|/version_header_name|/properties/versionHeaderName|
+
+**Example: ApiManagementCreateApiVersionSet**
+
+```
+apimgmt apiversionset create --resource_group rg1
+        --service_name apimService1
+        --version_set_id api1
+        --description "Version configuration"
+        --display_name "api set 1"
+        --versioning_scheme Segment
+```
 ### apimgmt apiversionset update
 
 update a apimgmt apiversionset.
@@ -894,6 +1284,17 @@ update a apimgmt apiversionset.
 |--description|str|Description of API Version Set.|/description|/properties/description|
 |--version_query_name|str|Name of query parameter that indicates the API Version if versioningScheme is set to `query`.|/version_query_name|/properties/versionQueryName|
 |--version_header_name|str|Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.|/version_header_name|/properties/versionHeaderName|
+
+**Example: ApiManagementUpdateApiVersionSet**
+
+```
+apimgmt apiversionset update --resource_group rg1
+        --service_name apimService1
+        --version_set_id api1
+        --description "Version configuration"
+        --display_name "api set 1"
+        --versioning_scheme Segment
+```
 ### apimgmt apiversionset delete
 
 delete a apimgmt apiversionset.
@@ -955,6 +1356,25 @@ create a apimgmt authorizationserver.
 |--client_secret|str|Client or app secret registered with this authorization server.|/client_secret|/properties/clientSecret|
 |--resource_owner_username|str|Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.|/resource_owner_username|/properties/resourceOwnerUsername|
 |--resource_owner_password|str|Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.|/resource_owner_password|/properties/resourceOwnerPassword|
+
+**Example: ApiManagementCreateAuthorizationServer**
+
+```
+apimgmt authorizationserver create --resource_group rg1
+        --service_name apimService1
+        --authsid newauthServer
+        --description "test server"
+        --token_endpoint https://www.contoso.com/oauth2/token
+        --support_state true
+        --default_scope "read write"
+        --client_secret 2
+        --resource_owner_username un
+        --resource_owner_password pwd
+        --display_name test2
+        --client_registration_endpoint https://www.contoso.com/apps
+        --authorization_endpoint https://www.contoso.com/oauth2/auth
+        --client_id 1
+```
 ### apimgmt authorizationserver update
 
 update a apimgmt authorizationserver.
@@ -980,6 +1400,16 @@ update a apimgmt authorizationserver.
 |--client_secret|str|Client or app secret registered with this authorization server.|/client_secret|/properties/clientSecret|
 |--resource_owner_username|str|Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.|/resource_owner_username|/properties/resourceOwnerUsername|
 |--resource_owner_password|str|Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.|/resource_owner_password|/properties/resourceOwnerPassword|
+
+**Example: ApiManagementUpdateAuthorizationServer**
+
+```
+apimgmt authorizationserver update --resource_group rg1
+        --service_name apimService1
+        --authsid newauthServer
+        --client_secret updated
+        --client_id update
+```
 ### apimgmt authorizationserver delete
 
 delete a apimgmt authorizationserver.
@@ -1034,6 +1464,28 @@ create a apimgmt backend.
 |--credentials|dict|Backend Credentials Contract Properties|/credentials|/properties/credentials|
 |--proxy|dict|Backend Proxy Contract Properties|/proxy|/properties/proxy|
 |--tls|dict|Backend TLS Properties|/tls|/properties/tls|
+
+**Example: ApiManagementCreateBackendServiceFabric**
+
+```
+apimgmt backend create --resource_group rg1
+        --service_name apimService1
+        --backend_id sfbackend
+        --description "Service Fabric Test App 1"
+        --url fabric:/mytestapp/mytestservice
+        --protocol http
+```
+
+**Example: ApiManagementCreateBackendProxyBackend**
+
+```
+apimgmt backend create --resource_group rg1
+        --service_name apimService1
+        --backend_id proxybackend
+        --description description5308
+        --url https://backendname2644/
+        --protocol http
+```
 ### apimgmt backend update
 
 update a apimgmt backend.
@@ -1052,6 +1504,15 @@ update a apimgmt backend.
 |--credentials|dict|Backend Credentials Contract Properties|/credentials|/properties/credentials|
 |--proxy|dict|Backend Proxy Contract Properties|/proxy|/properties/proxy|
 |--tls|dict|Backend TLS Properties|/tls|/properties/tls|
+
+**Example: ApiManagementUpdateBackend**
+
+```
+apimgmt backend update --resource_group rg1
+        --service_name apimService1
+        --backend_id proxybackend
+        --description description5308
+```
 ### apimgmt backend delete
 
 delete a apimgmt backend.
@@ -1100,6 +1561,17 @@ create a apimgmt cache.
 |**--connection_string**|str|Runtime connection string to cache|/connection_string|/properties/connectionString|
 |--description|str|Cache description|/description|/properties/description|
 |--resource_id|str|Original uri of entity in external system cache points to|/resource_id|/properties/resourceId|
+
+**Example: ApiManagementCreateCache**
+
+```
+apimgmt cache create --resource_group rg1
+        --service_name apimService1
+        --cache_id westindia
+        --description "Redis cache instances in West India"
+        --connection_string contoso5.redis.cache.windows.net,ssl=true,password=...
+        --resource_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.Cache/Redis/{{ redis_name }}"
+```
 ### apimgmt cache update
 
 update a apimgmt cache.
@@ -1112,6 +1584,15 @@ update a apimgmt cache.
 |**--connection_string**|str|Runtime connection string to cache|/connection_string|/properties/connectionString|
 |--description|str|Cache description|/description|/properties/description|
 |--resource_id|str|Original uri of entity in external system cache points to|/resource_id|/properties/resourceId|
+
+**Example: ApiManagementUpdateCache**
+
+```
+apimgmt cache update --resource_group rg1
+        --service_name apimService1
+        --cache_id westindia
+        --description "Update Cache in west India"
+```
 ### apimgmt cache delete
 
 delete a apimgmt cache.
@@ -1159,6 +1640,16 @@ create a apimgmt certificate.
 |**--certificate_id**|str|Identifier of the certificate entity. Must be unique in the current API Management service instance.|certificate_id|certificateId|
 |**--data**|str|Base 64 encoded certificate using the application/x-pkcs12 representation.|/data|/properties/data|
 |**--password**|str|Password for the Certificate|/password|/properties/password|
+
+**Example: ApiManagementCreateCertificate**
+
+```
+apimgmt certificate create --resource_group rg1
+        --service_name apimService1
+        --certificate_id tempcert
+        --data "****************Base 64 Encoded Certificate *******************************"
+        --password "****Certificate Password******"
+```
 ### apimgmt certificate update
 
 update a apimgmt certificate.
@@ -1221,6 +1712,16 @@ create a apimgmt diagnostic.
 |--frontend|dict|Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.|/frontend|/properties/frontend|
 |--backend|dict|Diagnostic settings for incoming/outgoing HTTP messages to the Backend|/backend|/properties/backend|
 |--enable_http_correlation_headers|boolean|Whether to process Correlation Headers coming to Api Management Service. Only applicable to Application Insights diagnostics. Default is true.|/enable_http_correlation_headers|/properties/enableHttpCorrelationHeaders|
+
+**Example: ApiManagementCreateDiagnostic**
+
+```
+apimgmt diagnostic create --resource_group rg1
+        --service_name apimService1
+        --diagnostic_id applicationinsights
+        --always_log allErrors
+        --logger_id /loggers/azuremonitor
+```
 ### apimgmt diagnostic update
 
 update a apimgmt diagnostic.
@@ -1236,6 +1737,16 @@ update a apimgmt diagnostic.
 |--frontend|dict|Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.|/frontend|/properties/frontend|
 |--backend|dict|Diagnostic settings for incoming/outgoing HTTP messages to the Backend|/backend|/properties/backend|
 |--enable_http_correlation_headers|boolean|Whether to process Correlation Headers coming to Api Management Service. Only applicable to Application Insights diagnostics. Default is true.|/enable_http_correlation_headers|/properties/enableHttpCorrelationHeaders|
+
+**Example: ApiManagementUpdateDiagnostic**
+
+```
+apimgmt diagnostic update --resource_group rg1
+        --service_name apimService1
+        --diagnostic_id applicationinsights
+        --always_log allErrors
+        --logger_id /loggers/applicationinsights
+```
 ### apimgmt diagnostic delete
 
 delete a apimgmt diagnostic.
@@ -1285,6 +1796,27 @@ create a apimgmt group.
 |--description|str|Group description.|/description|/properties/description|
 |--type|str|Group type.|/type|/properties/type|
 |--external_id|str|Identifier of the external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.|/external_id|/properties/externalId|
+
+**Example: ApiManagementCreateGroup**
+
+```
+apimgmt group create --resource_group rg1
+        --service_name apimService1
+        --group_id tempgroup
+        --display_name "temp group"
+```
+
+**Example: ApiManagementCreateGroupExternal**
+
+```
+apimgmt group create --resource_group rg1
+        --service_name apimService1
+        --group_id aadGroup
+        --display_name "NewGroup (samiraad.onmicrosoft.com)"
+        --description "new group to test"
+        --type external
+        --external_id aad://samiraad.onmicrosoft.com/groups/83cf2753-5831-4675-bc0e-2f8dc067c58d
+```
 ### apimgmt group update
 
 update a apimgmt group.
@@ -1298,6 +1830,15 @@ update a apimgmt group.
 |--description|str|Group description.|/description|/properties/description|
 |--type|str|Group type.|/type|/properties/type|
 |--external_id|str|Identifier of the external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.|/external_id|/properties/externalId|
+
+**Example: ApiManagementUpdateGroup**
+
+```
+apimgmt group update --resource_group rg1
+        --service_name apimService1
+        --group_id tempgroup
+        --display_name "temp group"
+```
 ### apimgmt group delete
 
 delete a apimgmt group.
@@ -1409,6 +1950,16 @@ create a apimgmt identityprovider.
 |--signin_policy_name|str|Signin Policy Name. Only applies to AAD B2C Identity Provider.|/signin_policy_name|/properties/signinPolicyName|
 |--profile_editing_policy_name|str|Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.|/profile_editing_policy_name|/properties/profileEditingPolicyName|
 |--password_reset_policy_name|str|Password Reset Policy Name. Only applies to AAD B2C Identity Provider.|/password_reset_policy_name|/properties/passwordResetPolicyName|
+
+**Example: ApiManagementCreateIdentityProvider**
+
+```
+apimgmt identityprovider create --resource_group rg1
+        --service_name apimService1
+        --name facebook
+        --client_id facebookid
+        --client_secret facebookapplicationsecret
+```
 ### apimgmt identityprovider update
 
 update a apimgmt identityprovider.
@@ -1427,6 +1978,16 @@ update a apimgmt identityprovider.
 |--signin_policy_name|str|Signin Policy Name. Only applies to AAD B2C Identity Provider.|/signin_policy_name|/properties/signinPolicyName|
 |--profile_editing_policy_name|str|Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.|/profile_editing_policy_name|/properties/profileEditingPolicyName|
 |--password_reset_policy_name|str|Password Reset Policy Name. Only applies to AAD B2C Identity Provider.|/password_reset_policy_name|/properties/passwordResetPolicyName|
+
+**Example: ApiManagementUpdateIdentityProvider**
+
+```
+apimgmt identityprovider update --resource_group rg1
+        --service_name apimService1
+        --name facebook
+        --client_id updatedfacebookid
+        --client_secret updatedfacebooksecret
+```
 ### apimgmt identityprovider delete
 
 delete a apimgmt identityprovider.
@@ -1477,6 +2038,26 @@ create a apimgmt logger.
 |--description|str|Logger description.|/description|/properties/description|
 |--is_buffered|boolean|Whether records are buffered in the logger before publishing. Default is assumed to be true.|/is_buffered|/properties/isBuffered|
 |--resource_id|str|Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).|/resource_id|/properties/resourceId|
+
+**Example: ApiManagementCreateEHLogger**
+
+```
+apimgmt logger create --resource_group rg1
+        --service_name apimService1
+        --logger_id loggerId
+        --logger_type azureEventHub
+        --description "adding a new logger"
+```
+
+**Example: ApiManagementCreateAILogger**
+
+```
+apimgmt logger create --resource_group rg1
+        --service_name apimService1
+        --logger_id loggerId
+        --logger_type applicationInsights
+        --description "adding a new logger"
+```
 ### apimgmt logger update
 
 update a apimgmt logger.
@@ -1491,6 +2072,14 @@ update a apimgmt logger.
 |--description|str|Logger description.|/description|/properties/description|
 |--is_buffered|boolean|Whether records are buffered in the logger before publishing. Default is assumed to be true.|/is_buffered|/properties/isBuffered|
 |--resource_id|str|Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).|/resource_id|/properties/resourceId|
+
+**Example: ApiManagementUpdateLogger**
+
+```
+apimgmt logger update --resource_group rg1
+        --service_name apimService1
+        --logger_id loggerId
+```
 ### apimgmt logger delete
 
 delete a apimgmt logger.
@@ -1539,6 +2128,14 @@ create a apimgmt notification.
 |**--title**|str|Title of the Notification.|/title|/properties/title|
 |--description|str|Description of the Notification.|/description|/properties/description|
 |--recipients|dict|Recipient Parameter values.|/recipients|/properties/recipients|
+
+**Example: ApiManagementCreateNotification**
+
+```
+apimgmt notification create --resource_group rg1
+        --service_name apimService1
+        --name RequestPublisherNotificationMessage
+```
 ### apimgmt notification update
 
 update a apimgmt notification.
@@ -1580,6 +2177,15 @@ create a apimgmt notification recipientemail.
 |**--service_name**|str|The name of the API Management service.|service_name|serviceName|
 |**--notification_name**|str|Notification Name Identifier.|notification_name|notificationName|
 |**--email**|str|Email identifier.|email|email|
+
+**Example: ApiManagementCreateNotificationRecipientEmail**
+
+```
+apimgmt notification recipientemail create --resource_group rg1
+        --service_name apimService1
+        --notification_name RequestPublisherNotificationMessage
+        --email foobar@live.com
+```
 ### apimgmt notification recipientemail update
 
 update a apimgmt notification recipientemail.
@@ -1630,6 +2236,15 @@ create a apimgmt notification recipientuser.
 |**--service_name**|str|The name of the API Management service.|service_name|serviceName|
 |**--notification_name**|str|Notification Name Identifier.|notification_name|notificationName|
 |**--user_id**|str|User identifier. Must be unique in the current API Management service instance.|user_id|userId|
+
+**Example: ApiManagementCreateNotificationRecipientUser**
+
+```
+apimgmt notification recipientuser create --resource_group rg1
+        --service_name apimService1
+        --notification_name RequestPublisherNotificationMessage
+        --user_id 576823d0a40f7e74ec07d642
+```
 ### apimgmt notification recipientuser update
 
 update a apimgmt notification recipientuser.
@@ -1684,6 +2299,17 @@ create a apimgmt openidconnectprovider.
 |**--client_id**|str|Client ID of developer console which is the client application.|/client_id|/properties/clientId|
 |--description|str|User-friendly description of OpenID Connect Provider.|/description|/properties/description|
 |--client_secret|str|Client Secret of developer console which is the client application.|/client_secret|/properties/clientSecret|
+
+**Example: ApiManagementCreateOpenIdConnectProvider**
+
+```
+apimgmt openidconnectprovider create --resource_group rg1
+        --service_name apimService1
+        --opid templateOpenIdConnect3
+        --display_name templateoidprovider3
+        --metadata_endpoint https://oidprovider-template3.net
+        --client_id oidprovidertemplate3
+```
 ### apimgmt openidconnectprovider update
 
 update a apimgmt openidconnectprovider.
@@ -1698,6 +2324,15 @@ update a apimgmt openidconnectprovider.
 |**--client_id**|str|Client ID of developer console which is the client application.|/client_id|/properties/clientId|
 |--description|str|User-friendly description of OpenID Connect Provider.|/description|/properties/description|
 |--client_secret|str|Client Secret of developer console which is the client application.|/client_secret|/properties/clientSecret|
+
+**Example: ApiManagementUpdateOpenIdConnectProvider**
+
+```
+apimgmt openidconnectprovider update --resource_group rg1
+        --service_name apimService1
+        --opid templateOpenIdConnect2
+        --client_secret updatedsecret
+```
 ### apimgmt openidconnectprovider delete
 
 delete a apimgmt openidconnectprovider.
@@ -1745,6 +2380,22 @@ create a apimgmt policy.
 |**--policy_id**|str|The identifier of the Policy.|policy_id|policyId|
 |**--value**|str|Contents of the Policy as defined by the format.|/value|/properties/value|
 |--format|str|Format of the policyContent.|/format|/properties/format|
+
+**Example: ApiManagementCreatePolicy**
+
+```
+apimgmt policy create --resource_group rg1
+        --service_name apimService1
+        --policy_id policy
+        --value "<policies>
+  <inbound />
+  <backend>
+    <forward-request />
+  </backend>
+  <outbound />
+</policies>"
+        --format xml
+```
 ### apimgmt policy update
 
 update a apimgmt policy.
@@ -1805,6 +2456,15 @@ create a apimgmt portalsetting.
 |--validation_key|str|A base64-encoded validation key to validate, that a request is coming from Azure API Management.|/validation_key|/properties/validationKey|
 |--subscriptions|dict|Subscriptions delegation settings.|/subscriptions|/properties/subscriptions|
 |--user_registration|dict|User registration delegation settings.|/user_registration|/properties/userRegistration|
+
+**Example: ApiManagementPortalSettingsUpdateDelegation**
+
+```
+apimgmt portalsetting create --resource_group rg1
+        --name apimService1
+        --url http://contoso.com/delegation
+        --validation_key nVF7aKIvr9mV/RM5lOD0sYoi8ThXTRHQP7o66hvUmjCDkPKR3qxPu/otJcNciz2aQdqPuzJH3ECG4TU2yZjQ7Q==
+```
 ### apimgmt portalsetting update
 
 update a apimgmt portalsetting.
@@ -1817,6 +2477,15 @@ update a apimgmt portalsetting.
 |--validation_key|str|A base64-encoded validation key to validate, that a request is coming from Azure API Management.|/validation_key|/properties/validationKey|
 |--subscriptions|dict|Subscriptions delegation settings.|/subscriptions|/properties/subscriptions|
 |--user_registration|dict|User registration delegation settings.|/user_registration|/properties/userRegistration|
+
+**Example: ApiManagementPortalSettingsUpdateDelegation**
+
+```
+apimgmt portalsetting update --resource_group rg1
+        --name apimService1
+        --url http://contoso.com/delegation
+        --validation_key nVF7aKIvr9mV/RM5lOD0sYoi8ThXTRHQP7o66hvUmjCDkPKR3qxPu/otJcNciz2aQdqPuzJH3ECG4TU2yZjQ7Q==
+```
 ### apimgmt portalsetting show
 
 show a apimgmt portalsetting.
@@ -1843,6 +2512,15 @@ create a apimgmt product.
 |--approval_required|boolean|whether subscription approval is required. If false, new subscriptions will be approved automatically enabling developers to call the product’s APIs immediately after subscribing. If true, administrators must manually approve the subscription before the developer can any of the product’s APIs. Can be present only if subscriptionRequired property is present and has a value of false.|/approval_required|/properties/approvalRequired|
 |--subscriptions_limit|number|Whether the number of subscriptions a user can have to this product at the same time. Set to null or omit to allow unlimited per user subscriptions. Can be present only if subscriptionRequired property is present and has a value of false.|/subscriptions_limit|/properties/subscriptionsLimit|
 |--state|str|whether product is published or not. Published products are discoverable by users of developer portal. Non published products are visible only to administrators. Default state of Product is notPublished.|/state|/properties/state|
+
+**Example: ApiManagementCreateProduct**
+
+```
+apimgmt product create --resource_group rg1
+        --service_name apimService1
+        --product_id testproduct
+        --display_name "Test Template ProductName 4"
+```
 ### apimgmt product update
 
 update a apimgmt product.
@@ -1859,6 +2537,15 @@ update a apimgmt product.
 |--approval_required|boolean|whether subscription approval is required. If false, new subscriptions will be approved automatically enabling developers to call the product’s APIs immediately after subscribing. If true, administrators must manually approve the subscription before the developer can any of the product’s APIs. Can be present only if subscriptionRequired property is present and has a value of false.|/approval_required|/properties/approvalRequired|
 |--subscriptions_limit|number|Whether the number of subscriptions a user can have to this product at the same time. Set to null or omit to allow unlimited per user subscriptions. Can be present only if subscriptionRequired property is present and has a value of false.|/subscriptions_limit|/properties/subscriptionsLimit|
 |--state|str|whether product is published or not. Published products are discoverable by users of developer portal. Non published products are visible only to administrators. Default state of Product is notPublished.|/state|/properties/state|
+
+**Example: ApiManagementUpdateProduct**
+
+```
+apimgmt product update --resource_group rg1
+        --service_name apimService1
+        --product_id testproduct
+        --display_name "Test Template ProductName 4"
+```
 ### apimgmt product delete
 
 delete a apimgmt product.
@@ -1923,6 +2610,15 @@ create a apimgmt product api.
 |--service_url|str|Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.|/service_url|/properties/serviceUrl|
 |--protocols|list|Describes on which protocols the operations in this API can be invoked.|/protocols|/properties/protocols|
 |--api_version_set|dict|Version set details|/api_version_set|/properties/apiVersionSet|
+
+**Example: ApiManagementCreateProductApi**
+
+```
+apimgmt product api create --resource_group rg1
+        --service_name apimService1
+        --product_id testproduct
+        --api_id echo-api
+```
 ### apimgmt product api update
 
 update a apimgmt product api.
@@ -1996,6 +2692,15 @@ create a apimgmt product group.
 |--built_in|boolean|true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.|/built_in|/properties/builtIn|
 |--type|str|Group type.|/type|/properties/type|
 |--external_id|str|For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.|/external_id|/properties/externalId|
+
+**Example: ApiManagementCreateProductGroup**
+
+```
+apimgmt product group create --resource_group rg1
+        --service_name apimService1
+        --product_id testproduct
+        --group_id templateGroup
+```
 ### apimgmt product group update
 
 update a apimgmt product group.
@@ -2053,6 +2758,32 @@ create a apimgmt product policy.
 |**--policy_id**|str|The identifier of the Policy.|policy_id|policyId|
 |**--value**|str|Contents of the Policy as defined by the format.|/value|/properties/value|
 |--format|str|Format of the policyContent.|/format|/properties/format|
+
+**Example: ApiManagementCreateProductPolicy**
+
+```
+apimgmt product policy create --resource_group rg1
+        --service_name apimService1
+        --product_id 5702e97e5157a50f48dce801
+        --policy_id policy
+        --value "<policies>
+  <inbound>
+    <rate-limit calls=\"{{call-count}}" renewal-period="15"></rate-limit>
+    <log-to-eventhub logger-id="16">
+                      @( string.Join(",", DateTime.UtcNow, context.Deployment.ServiceName, context.RequestId, context.Request.IpAddress, context.Operation.Name) ) 
+                  </log-to-eventhub>
+    <quota-by-key calls="40" counter-key="cc" renewal-period="3600" increment-count="@(context.Request.Method == &quot;POST&quot; ? 1:2)" />
+    <base />
+  </inbound>
+  <backend>
+    <base />
+  </backend>
+  <outbound>
+    <base />
+  </outbound>
+</policies>"
+        --format xml
+```
 ### apimgmt product policy update
 
 update a apimgmt product policy.
@@ -2119,6 +2850,17 @@ create a apimgmt property.
 |**--value**|str|Value of the property. Can contain policy expressions. It may not be empty or consist only of whitespace.|/value|/properties/value|
 |--tags|list|Optional tags that when provided can be used to filter the property list.|/tags|/properties/tags|
 |--secret|boolean|Determines whether the value is a secret and should be encrypted or not. Default value is false.|/secret|/properties/secret|
+
+**Example: ApiManagementCreateProperty**
+
+```
+apimgmt property create --resource_group rg1
+        --service_name apimService1
+        --prop_id testprop2
+        --secret true
+        --display_name prop3name
+        --value propValue
+```
 ### apimgmt property update
 
 update a apimgmt property.
@@ -2132,6 +2874,15 @@ update a apimgmt property.
 |**--value**|str|Value of the property. Can contain policy expressions. It may not be empty or consist only of whitespace.|/value|/properties/value|
 |--tags|list|Optional tags that when provided can be used to filter the property list.|/tags|/properties/tags|
 |--secret|boolean|Determines whether the value is a secret and should be encrypted or not. Default value is false.|/secret|/properties/secret|
+
+**Example: ApiManagementUpdateProperty**
+
+```
+apimgmt property update --resource_group rg1
+        --service_name apimService1
+        --prop_id testprop2
+        --secret true
+```
 ### apimgmt property delete
 
 delete a apimgmt property.
@@ -2185,6 +2936,17 @@ create a apimgmt subscription.
 |--secondary_key|str|Secondary subscription key. If not specified during request key will be generated automatically.|/secondary_key|/properties/secondaryKey|
 |--state|str|Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.|/state|/properties/state|
 |--allow_tracing|boolean|Determines whether tracing can be enabled|/allow_tracing|/properties/allowTracing|
+
+**Example: ApiManagementCreateSubscription**
+
+```
+apimgmt subscription create --resource_group rg1
+        --service_name apimService1
+        --sid testsub
+        --owner_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/users/{{ user_name }}"
+        --scope "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/products/{{ product_name }}"
+        --display_name testsub
+```
 ### apimgmt subscription update
 
 update a apimgmt subscription.
@@ -2202,6 +2964,15 @@ update a apimgmt subscription.
 |--secondary_key|str|Secondary subscription key. If not specified during request key will be generated automatically.|/secondary_key|/properties/secondaryKey|
 |--state|str|Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.|/state|/properties/state|
 |--allow_tracing|boolean|Determines whether tracing can be enabled|/allow_tracing|/properties/allowTracing|
+
+**Example: ApiManagementUpdateSubscription**
+
+```
+apimgmt subscription update --resource_group rg1
+        --service_name apimService1
+        --sid testsub
+        --display_name testsub
+```
 ### apimgmt subscription delete
 
 delete a apimgmt subscription.
@@ -2248,6 +3019,15 @@ create a apimgmt tag.
 |**--service_name**|str|The name of the API Management service.|service_name|serviceName|
 |**--tag_id**|str|Tag identifier. Must be unique in the current API Management service instance.|tag_id|tagId|
 |**--display_name**|str|Tag name.|/display_name|/properties/displayName|
+
+**Example: ApiManagementCreateTag**
+
+```
+apimgmt tag create --resource_group rg1
+        --service_name apimService1
+        --tag_id tagId1
+        --display_name tag1
+```
 ### apimgmt tag update
 
 update a apimgmt tag.
@@ -2258,6 +3038,15 @@ update a apimgmt tag.
 |**--service_name**|str|The name of the API Management service.|service_name|serviceName|
 |**--tag_id**|str|Tag identifier. Must be unique in the current API Management service instance.|tag_id|tagId|
 |**--display_name**|str|Tag name.|/display_name|/properties/displayName|
+
+**Example: ApiManagementUpdateTag**
+
+```
+apimgmt tag update --resource_group rg1
+        --service_name apimService1
+        --tag_id temptag
+        --display_name "temp tag"
+```
 ### apimgmt tag delete
 
 delete a apimgmt tag.
@@ -2307,6 +3096,15 @@ create a apimgmt template.
 |--title|str|Title of the Template.|/title|/properties/title|
 |--description|str|Description of the Email Template.|/description|/properties/description|
 |--body|str|Email Template Body. This should be a valid XDocument|/body|/properties/body|
+
+**Example: ApiManagementCreateEmailTemplate**
+
+```
+apimgmt template create --resource_group rg1
+        --service_name apimService1
+        --name newIssueNotificationMessage
+        --subject "Your request for $IssueName was successfully received."
+```
 ### apimgmt template update
 
 update a apimgmt template.
@@ -2320,6 +3118,27 @@ update a apimgmt template.
 |--title|str|Title of the Template.|/title|/properties/title|
 |--description|str|Description of the Email Template.|/description|/properties/description|
 |--body|str|Email Template Body. This should be a valid XDocument|/body|/properties/body|
+
+**Example: ApiManagementUpdateEmailTemplate**
+
+```
+apimgmt template update --resource_group rg1
+        --service_name apimService1
+        --name applicationApprovedNotificationMessage
+        --subject "Your application $AppName is published in the gallery"
+        --body "<!DOCTYPE html >
+<html>
+  <head />
+  <body>
+    <p style=\"font-size:12pt;font-family:'Segoe UI'">Dear $DevFirstName $DevLastName,</p>
+    <p style="font-size:12pt;font-family:'Segoe UI'">
+          We are happy to let you know that your request to publish the $AppName application in the gallery has been approved. Your application has been published and can be viewed <a href="http://$DevPortalUrl/Applications/Details/$AppId">here</a>.
+        </p>
+    <p style="font-size:12pt;font-family:'Segoe UI'">Best,</p>
+    <p style="font-size:12pt;font-family:'Segoe UI'">The $OrganizationName API Team</p>
+  </body>
+</html>"
+```
 ### apimgmt template delete
 
 delete a apimgmt template.
@@ -2373,6 +3192,18 @@ create a apimgmt user.
 |--identities|list|Collection of user identities.|/identities|/properties/identities|
 |--password|str|User Password. If no value is provided, a default password is generated.|/password|/properties/password|
 |--confirmation|str|Determines the type of confirmation e-mail that will be sent to the newly created user.|/confirmation|/properties/confirmation|
+
+**Example: ApiManagementCreateUser**
+
+```
+apimgmt user create --resource_group rg1
+        --service_name apimService1
+        --user_id 5931a75ae4bbd512288c680b
+        --email foobar@outlook.com
+        --first_name foo
+        --last_name bar
+        --confirmation signup
+```
 ### apimgmt user update
 
 update a apimgmt user.
@@ -2390,6 +3221,17 @@ update a apimgmt user.
 |--identities|list|Collection of user identities.|/identities|/properties/identities|
 |--password|str|User Password. If no value is provided, a default password is generated.|/password|/properties/password|
 |--confirmation|str|Determines the type of confirmation e-mail that will be sent to the newly created user.|/confirmation|/properties/confirmation|
+
+**Example: ApiManagementUpdateUser**
+
+```
+apimgmt user update --resource_group rg1
+        --service_name apimService1
+        --user_id 5931a75ae4bbd512288c680b
+        --email foobar@outlook.com
+        --first_name foo
+        --last_name bar
+```
 ### apimgmt user delete
 
 delete a apimgmt user.
