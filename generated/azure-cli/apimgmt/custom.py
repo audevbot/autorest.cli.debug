@@ -119,9 +119,9 @@ def delete_apimgmt_api(cmd, client,
     return client.api.delete(resource_group_name=resource_group, service_name=service_name, api_id=api_id)
 
 # module equivalent: azure_rm_apimanagementapi
-def list_apimgmt_apisbytag(cmd, client,
-                           resource_group,
-                           service_name):
+def list_apimgmt_api(cmd, client,
+                     resource_group,
+                     service_name):
     if resource_group is not None and service_name is not None:
         return client.api.list_by_tags(resource_group_name=resource_group, service_name=service_name)
     else:
@@ -335,9 +335,9 @@ def delete_apimgmt_tag(cmd, client,
     return client.tag.delete(resource_group_name=resource_group, service_name=service_name, tag_id=tag_id)
 
 # module equivalent: azure_rm_apimanagementtag
-def list_apimgmt_api_operation_tag(cmd, client,
-                                   resource_group,
-                                   service_name):
+def list_apimgmt_tag(cmd, client,
+                     resource_group,
+                     service_name):
     if resource_group is not None and service_name is not None:
         return client.tag.list_by_operation(resource_group_name=resource_group, service_name=service_name)
     elif resource_group is not None and service_name is not None:
@@ -1823,9 +1823,9 @@ def delete_apimgmt_product(cmd, client,
     return client.product.delete(resource_group_name=resource_group, service_name=service_name, product_id=product_id)
 
 # module equivalent: azure_rm_apimanagementproduct
-def list_apimgmt_productsbytag(cmd, client,
-                               resource_group,
-                               service_name):
+def list_apimgmt_product(cmd, client,
+                         resource_group,
+                         service_name):
     if resource_group is not None and service_name is not None:
         return client.product.list_by_tags(resource_group_name=resource_group, service_name=service_name)
     else:
