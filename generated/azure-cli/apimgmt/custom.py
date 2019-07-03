@@ -4,6 +4,8 @@
 # --------------------------------------------------------------------------------------------
 # pylint: disable=line-too-long
 # pylint: disable=too-many-statements
+# pylint: disable=too-many-lines
+# pylint: disable=too-many-locals
 
 from knack.util import CLIError
 import json
