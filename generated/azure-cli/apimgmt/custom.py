@@ -1824,72 +1824,72 @@ def show_apimgmt_policy(cmd, client,
     return client.policy.get(resource_group_name=resource_group, service_name=service_name, policy_id=policy_id, format=format)
 
 # module equivalent: azure_rm_apimanagementsigninsetting
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/portalsettings/{{ portalsetting_name }}
-def create_apimgmt_portalsetting(cmd, client,
-                                 resource_group,
-                                 name,
-                                 enabled=None):
+# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/portalsettings/signin
+def create_apimgmt_portalsetting_signin(cmd, client,
+                                        resource_group,
+                                        name,
+                                        enabled=None):
     body = {}
     body['enabled'] = enabled # boolean
     return client.sign_in_settings.create_or_update(resource_group_name=resource_group, service_name=name, parameters=body)
 
 # module equivalent: azure_rm_apimanagementsigninsetting
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/portalsettings/{{ portalsetting_name }}
-def update_apimgmt_portalsetting(cmd, client,
-                                 resource_group,
-                                 name,
-                                 enabled=None):
+# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/portalsettings/signin
+def update_apimgmt_portalsetting_signin(cmd, client,
+                                        resource_group,
+                                        name,
+                                        enabled=None):
     body = {}
     body['enabled'] = enabled # boolean
     return client.sign_in_settings.create_or_update(resource_group_name=resource_group, service_name=name, parameters=body)
 
 # module equivalent: azure_rm_apimanagementsigninsetting
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/portalsettings/{{ portalsetting_name }}
-def show_apimgmt_portalsetting(cmd, client,
-                               resource_group,
-                               name):
+# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/portalsettings/signin
+def show_apimgmt_portalsetting_signin(cmd, client,
+                                      resource_group,
+                                      name):
     return client.sign_in_settings.get(resource_group_name=resource_group, service_name=name)
 
 # module equivalent: azure_rm_apimanagementsignupsetting
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/portalsettings/{{ portalsetting_name }}
-def create_apimgmt_portalsetting(cmd, client,
-                                 resource_group,
-                                 name,
-                                 enabled=None,
-                                 terms_of_service=None):
+# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/portalsettings/signup
+def create_apimgmt_portalsetting_signup(cmd, client,
+                                        resource_group,
+                                        name,
+                                        enabled=None,
+                                        terms_of_service=None):
     body = {}
     body['enabled'] = enabled # boolean
     body['terms_of_service'] = json.loads(terms_of_service) if isinstance(terms_of_service, str) else terms_of_service
     return client.sign_up_settings.create_or_update(resource_group_name=resource_group, service_name=name, parameters=body)
 
 # module equivalent: azure_rm_apimanagementsignupsetting
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/portalsettings/{{ portalsetting_name }}
-def update_apimgmt_portalsetting(cmd, client,
-                                 resource_group,
-                                 name,
-                                 enabled=None,
-                                 terms_of_service=None):
+# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/portalsettings/signup
+def update_apimgmt_portalsetting_signup(cmd, client,
+                                        resource_group,
+                                        name,
+                                        enabled=None,
+                                        terms_of_service=None):
     body = {}
     body['enabled'] = enabled # boolean
     body['terms_of_service'] = json.loads(terms_of_service) if isinstance(terms_of_service, str) else terms_of_service
     return client.sign_up_settings.create_or_update(resource_group_name=resource_group, service_name=name, parameters=body)
 
 # module equivalent: azure_rm_apimanagementsignupsetting
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/portalsettings/{{ portalsetting_name }}
-def show_apimgmt_portalsetting(cmd, client,
-                               resource_group,
-                               name):
+# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/portalsettings/signup
+def show_apimgmt_portalsetting_signup(cmd, client,
+                                      resource_group,
+                                      name):
     return client.sign_up_settings.get(resource_group_name=resource_group, service_name=name)
 
 # module equivalent: azure_rm_apimanagementdelegationsetting
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/portalsettings/{{ portalsetting_name }}
-def create_apimgmt_portalsetting(cmd, client,
-                                 resource_group,
-                                 name,
-                                 url=None,
-                                 validation_key=None,
-                                 subscriptions=None,
-                                 user_registration=None):
+# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/portalsettings/delegation
+def create_apimgmt_portalsetting_delegation(cmd, client,
+                                            resource_group,
+                                            name,
+                                            url=None,
+                                            validation_key=None,
+                                            subscriptions=None,
+                                            user_registration=None):
     body = {}
     body['url'] = url # str
     body['validation_key'] = validation_key # str
@@ -1898,14 +1898,14 @@ def create_apimgmt_portalsetting(cmd, client,
     return client.delegation_settings.create_or_update(resource_group_name=resource_group, service_name=name, parameters=body)
 
 # module equivalent: azure_rm_apimanagementdelegationsetting
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/portalsettings/{{ portalsetting_name }}
-def update_apimgmt_portalsetting(cmd, client,
-                                 resource_group,
-                                 name,
-                                 url=None,
-                                 validation_key=None,
-                                 subscriptions=None,
-                                 user_registration=None):
+# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/portalsettings/delegation
+def update_apimgmt_portalsetting_delegation(cmd, client,
+                                            resource_group,
+                                            name,
+                                            url=None,
+                                            validation_key=None,
+                                            subscriptions=None,
+                                            user_registration=None):
     body = {}
     body['url'] = url # str
     body['validation_key'] = validation_key # str
@@ -1914,10 +1914,10 @@ def update_apimgmt_portalsetting(cmd, client,
     return client.delegation_settings.create_or_update(resource_group_name=resource_group, service_name=name, parameters=body)
 
 # module equivalent: azure_rm_apimanagementdelegationsetting
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/portalsettings/{{ portalsetting_name }}
-def show_apimgmt_portalsetting(cmd, client,
-                               resource_group,
-                               name):
+# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/portalsettings/delegation
+def show_apimgmt_portalsetting_delegation(cmd, client,
+                                          resource_group,
+                                          name):
     return client.delegation_settings.get(resource_group_name=resource_group, service_name=name)
 
 # module equivalent: azure_rm_apimanagementproduct

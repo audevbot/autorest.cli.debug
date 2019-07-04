@@ -191,11 +191,10 @@ class AzureRMSignInSettings(AzureRMModuleBaseExt):
                     '/service' +
                     '/{{ service_name }}' +
                     '/portalsettings' +
-                    '/{{ portalsetting_name }}')
+                    '/signin')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
-        self.url = self.url.replace('{{ service_name }}', self.service_name)
-        self.url = self.url.replace('{{ portalsetting_name }}', self.name)
+        self.url = self.url.replace('{{ service_name }}', self.name)
 
         old_response = self.get_resource()
 

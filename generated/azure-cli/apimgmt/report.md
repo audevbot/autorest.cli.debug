@@ -2442,32 +2442,11 @@ show a apimgmt policy.
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--policy-id**|str|The identifier of the Policy.|policy_id|policyId|
 |--format|str|Format of the policyContent.|/format|/properties/format|
-## apimgmt portalsetting
+## apimgmt portalsetting delegation
 
-### apimgmt portalsetting create
+### apimgmt portalsetting delegation create
 
-create a apimgmt portalsetting.
-
-|Option|Type|Description|Path (SDK)|Path (swagger)|
-|------|----|-----------|----------|--------------|
-|**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--name**|str|The name of the API Management service.|service_name|serviceName|
-|--url|str|A delegation Url.|/url|/properties/url|
-|--validation-key|str|A base64-encoded validation key to validate, that a request is coming from Azure API Management.|/validation_key|/properties/validationKey|
-|--subscriptions|dict|Subscriptions delegation settings.|/subscriptions|/properties/subscriptions|
-|--user-registration|dict|User registration delegation settings.|/user_registration|/properties/userRegistration|
-
-**Example: ApiManagementPortalSettingsUpdateDelegation**
-
-```
-apimgmt portalsetting create --resource-group rg1
-        --name apimService1
-        --url http://contoso.com/delegation
-        --validation-key nVF7aKIvr9mV/RM5lOD0sYoi8ThXTRHQP7o66hvUmjCDkPKR3qxPu/otJcNciz2aQdqPuzJH3ECG4TU2yZjQ7Q==
-```
-### apimgmt portalsetting update
-
-update a apimgmt portalsetting.
+create a apimgmt portalsetting delegation.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2481,14 +2460,125 @@ update a apimgmt portalsetting.
 **Example: ApiManagementPortalSettingsUpdateDelegation**
 
 ```
-apimgmt portalsetting update --resource-group rg1
+apimgmt portalsetting delegation create --resource-group rg1
         --name apimService1
         --url http://contoso.com/delegation
         --validation-key nVF7aKIvr9mV/RM5lOD0sYoi8ThXTRHQP7o66hvUmjCDkPKR3qxPu/otJcNciz2aQdqPuzJH3ECG4TU2yZjQ7Q==
 ```
-### apimgmt portalsetting show
+### apimgmt portalsetting delegation update
 
-show a apimgmt portalsetting.
+update a apimgmt portalsetting delegation.
+
+|Option|Type|Description|Path (SDK)|Path (swagger)|
+|------|----|-----------|----------|--------------|
+|**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--name**|str|The name of the API Management service.|service_name|serviceName|
+|--url|str|A delegation Url.|/url|/properties/url|
+|--validation-key|str|A base64-encoded validation key to validate, that a request is coming from Azure API Management.|/validation_key|/properties/validationKey|
+|--subscriptions|dict|Subscriptions delegation settings.|/subscriptions|/properties/subscriptions|
+|--user-registration|dict|User registration delegation settings.|/user_registration|/properties/userRegistration|
+
+**Example: ApiManagementPortalSettingsUpdateDelegation**
+
+```
+apimgmt portalsetting delegation update --resource-group rg1
+        --name apimService1
+        --url http://contoso.com/delegation
+        --validation-key nVF7aKIvr9mV/RM5lOD0sYoi8ThXTRHQP7o66hvUmjCDkPKR3qxPu/otJcNciz2aQdqPuzJH3ECG4TU2yZjQ7Q==
+```
+### apimgmt portalsetting delegation show
+
+show a apimgmt portalsetting delegation.
+
+|Option|Type|Description|Path (SDK)|Path (swagger)|
+|------|----|-----------|----------|--------------|
+|**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--name**|str|The name of the API Management service.|service_name|serviceName|
+## apimgmt portalsetting signin
+
+### apimgmt portalsetting signin create
+
+create a apimgmt portalsetting signin.
+
+|Option|Type|Description|Path (SDK)|Path (swagger)|
+|------|----|-----------|----------|--------------|
+|**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--name**|str|The name of the API Management service.|service_name|serviceName|
+|--enabled|boolean|Redirect Anonymous users to the Sign-In page.|/enabled|/properties/enabled|
+
+**Example: ApiManagementPortalSettingsUpdateSignIn**
+
+```
+apimgmt portalsetting signin create --resource-group rg1
+        --name apimService1
+        --enabled true
+```
+### apimgmt portalsetting signin update
+
+update a apimgmt portalsetting signin.
+
+|Option|Type|Description|Path (SDK)|Path (swagger)|
+|------|----|-----------|----------|--------------|
+|**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--name**|str|The name of the API Management service.|service_name|serviceName|
+|--enabled|boolean|Redirect Anonymous users to the Sign-In page.|/enabled|/properties/enabled|
+
+**Example: ApiManagementPortalSettingsUpdateSignIn**
+
+```
+apimgmt portalsetting signin update --resource-group rg1
+        --name apimService1
+        --enabled true
+```
+### apimgmt portalsetting signin show
+
+show a apimgmt portalsetting signin.
+
+|Option|Type|Description|Path (SDK)|Path (swagger)|
+|------|----|-----------|----------|--------------|
+|**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--name**|str|The name of the API Management service.|service_name|serviceName|
+## apimgmt portalsetting signup
+
+### apimgmt portalsetting signup create
+
+create a apimgmt portalsetting signup.
+
+|Option|Type|Description|Path (SDK)|Path (swagger)|
+|------|----|-----------|----------|--------------|
+|**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--name**|str|The name of the API Management service.|service_name|serviceName|
+|--enabled|boolean|Allow users to sign up on a developer portal.|/enabled|/properties/enabled|
+|--terms-of_service|dict|Terms of service contract properties.|/terms_of_service|/properties/termsOfService|
+
+**Example: ApiManagementPortalSettingsUpdateSignUp**
+
+```
+apimgmt portalsetting signup create --resource-group rg1
+        --name apimService1
+        --enabled true
+```
+### apimgmt portalsetting signup update
+
+update a apimgmt portalsetting signup.
+
+|Option|Type|Description|Path (SDK)|Path (swagger)|
+|------|----|-----------|----------|--------------|
+|**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--name**|str|The name of the API Management service.|service_name|serviceName|
+|--enabled|boolean|Allow users to sign up on a developer portal.|/enabled|/properties/enabled|
+|--terms-of_service|dict|Terms of service contract properties.|/terms_of_service|/properties/termsOfService|
+
+**Example: ApiManagementPortalSettingsUpdateSignUp**
+
+```
+apimgmt portalsetting signup update --resource-group rg1
+        --name apimService1
+        --enabled true
+```
+### apimgmt portalsetting signup show
+
+show a apimgmt portalsetting signup.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
