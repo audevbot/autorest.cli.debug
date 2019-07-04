@@ -66260,7 +66260,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/portalsettings/{{ portalsetting_name }}
+          }}/portalsettings/signin
         HttpMethod: put
         IsAsync: false
       - Name: Update
@@ -66275,7 +66275,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/portalsettings/{{ portalsetting_name }}
+          }}/portalsettings/signin
         HttpMethod: patch
         IsAsync: false
       - Name: Get
@@ -66288,7 +66288,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/portalsettings/{{ portalsetting_name }}
+          }}/portalsettings/signin
         HttpMethod: get
         IsAsync: false
     ResponseFields:
@@ -66382,7 +66382,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/portalsettings/{{ portalsetting_name }}
+                  service_name }}/portalsettings/signin
                 type: Microsoft.ApiManagement/service/portalsettings
                 name: signin
                 properties:
@@ -66390,10 +66390,10 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/portalsettings/{{ portalsetting_name }}
+          }}/portalsettings/signin
         Method: put
         Name: ApiManagementPortalSettingsUpdateSignIn
-        Filename: apimanagement_service_portalsettings_put
+        Filename: apimanagement_service_portalsettings_signin_put
         Variables:
           - name: resource_group
             value: myResourceGroup
@@ -66401,11 +66401,8 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: portalsetting_name
-            value: myPortalsetting
-            swaggerName: igni
         References:
-          - apimanagement_service_put
+          - apimanagement_service_portalsettings_put
         OperationId: '14256'
         MethodId: '14357'
       - Example:
@@ -66424,10 +66421,10 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/portalsettings/{{ portalsetting_name }}
+          }}/portalsettings/signin
         Method: patch
         Name: ApiManagementPortalSettingsUpdateSignIn
-        Filename: apimanagement_service_portalsettings_patch
+        Filename: apimanagement_service_portalsettings_signin_patch
         Variables:
           - name: resource_group
             value: myResourceGroup
@@ -66435,9 +66432,6 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: portalsetting_name
-            value: myPortalsetting
-            swaggerName: igni
         References:
           - apimanagement_service_portalsettings_put
         OperationId: '14256'
@@ -66669,7 +66663,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/portalsettings/{{ portalsetting_name }}
+          }}/portalsettings/signin
         HttpMethod: get
         IsAsync: false
     ResponseFields:
@@ -66699,7 +66693,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/portalsettings/{{ portalsetting_name }}
+                  service_name }}/portalsettings/signin
                 type: Microsoft.ApiManagement/service/portalsettings
                 name: signin
                 properties:
@@ -66707,10 +66701,10 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/portalsettings/{{ portalsetting_name }}
+          }}/portalsettings/signin
         Method: get
         Name: ApiManagementPortalSettingsGetSignIn
-        Filename: apimanagement_service_portalsettings_get
+        Filename: apimanagement_service_portalsettings_signin_get
         Variables:
           - name: resource_group
             value: myResourceGroup
@@ -66718,9 +66712,6 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: portalsetting_name
-            value: myPortalsetting
-            swaggerName: igni
         References: []
         OperationId: '14256'
         MethodId: '14287'
@@ -67102,7 +67093,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/portalsettings/{{ portalsetting_name }}
+          }}/portalsettings/signup
         HttpMethod: put
         IsAsync: false
       - Name: Update
@@ -67117,7 +67108,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/portalsettings/{{ portalsetting_name }}
+          }}/portalsettings/signup
         HttpMethod: patch
         IsAsync: false
       - Name: Get
@@ -67130,7 +67121,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/portalsettings/{{ portalsetting_name }}
+          }}/portalsettings/signup
         HttpMethod: get
         IsAsync: false
     ResponseFields:
@@ -67348,7 +67339,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/portalsettings/{{ portalsetting_name }}
+                  service_name }}/portalsettings/signup
                 type: Microsoft.ApiManagement/service/portalsettings
                 name: signup
                 properties:
@@ -67360,10 +67351,10 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/portalsettings/{{ portalsetting_name }}
+          }}/portalsettings/signup
         Method: put
         Name: ApiManagementPortalSettingsUpdateSignUp
-        Filename: apimanagement_service_portalsettings_put_1
+        Filename: apimanagement_service_portalsettings_signup_put
         Variables:
           - name: resource_group
             value: myResourceGroup
@@ -67371,9 +67362,6 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: portalsetting_name
-            value: myPortalsetting
-            swaggerName: ignu
         References:
           - apimanagement_service_portalsettings_put
         OperationId: '14399'
@@ -67398,10 +67386,10 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/portalsettings/{{ portalsetting_name }}
+          }}/portalsettings/signup
         Method: patch
         Name: ApiManagementPortalSettingsUpdateSignUp
-        Filename: apimanagement_service_portalsettings_patch_1
+        Filename: apimanagement_service_portalsettings_signup_patch
         Variables:
           - name: resource_group
             value: myResourceGroup
@@ -67409,9 +67397,6 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: portalsetting_name
-            value: myPortalsetting
-            swaggerName: ignu
         References:
           - apimanagement_service_portalsettings_put
         OperationId: '14399'
@@ -67763,7 +67748,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/portalsettings/{{ portalsetting_name }}
+          }}/portalsettings/signup
         HttpMethod: get
         IsAsync: false
     ResponseFields:
@@ -67793,7 +67778,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/portalsettings/{{ portalsetting_name }}
+                  service_name }}/portalsettings/signup
                 type: Microsoft.ApiManagement/service/portalsettings
                 name: signup
                 properties:
@@ -67805,10 +67790,10 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/portalsettings/{{ portalsetting_name }}
+          }}/portalsettings/signup
         Method: get
         Name: ApiManagementPortalSettingsGetSignUp
-        Filename: apimanagement_service_portalsettings_get_1
+        Filename: apimanagement_service_portalsettings_signup_get
         Variables:
           - name: resource_group
             value: myResourceGroup
@@ -67816,9 +67801,6 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: portalsetting_name
-            value: myPortalsetting
-            swaggerName: ignu
         References: []
         OperationId: '14399'
         MethodId: '14430'
@@ -68233,7 +68215,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/portalsettings/{{ portalsetting_name }}
+          }}/portalsettings/delegation
         HttpMethod: put
         IsAsync: false
       - Name: Update
@@ -68248,7 +68230,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/portalsettings/{{ portalsetting_name }}
+          }}/portalsettings/delegation
         HttpMethod: patch
         IsAsync: false
       - Name: Get
@@ -68261,7 +68243,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/portalsettings/{{ portalsetting_name }}
+          }}/portalsettings/delegation
         HttpMethod: get
         IsAsync: false
     ResponseFields:
@@ -68513,7 +68495,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/portalsettings/{{ portalsetting_name }}
+                  service_name }}/portalsettings/delegation
                 type: Microsoft.ApiManagement/service/portalsettings
                 name: delegation
                 properties:
@@ -68527,10 +68509,10 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/portalsettings/{{ portalsetting_name }}
+          }}/portalsettings/delegation
         Method: put
         Name: ApiManagementPortalSettingsUpdateDelegation
-        Filename: apimanagement_service_portalsettings_put_2
+        Filename: apimanagement_service_portalsettings_delegation_put
         Variables:
           - name: resource_group
             value: myResourceGroup
@@ -68538,9 +68520,6 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: portalsetting_name
-            value: myPortalsetting
-            swaggerName: elegatio
         References:
           - '# ref##url##http://contoso.com/delegation'
           - >-
@@ -68571,10 +68550,10 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/portalsettings/{{ portalsetting_name }}
+          }}/portalsettings/delegation
         Method: patch
         Name: ApiManagementPortalSettingsUpdateDelegation
-        Filename: apimanagement_service_portalsettings_patch_2
+        Filename: apimanagement_service_portalsettings_delegation_patch
         Variables:
           - name: resource_group
             value: myResourceGroup
@@ -68582,9 +68561,6 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: portalsetting_name
-            value: myPortalsetting
-            swaggerName: elegatio
         References:
           - '# ref##url##http://contoso.com/delegation'
           - >-
@@ -68972,7 +68948,7 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/portalsettings/{{ portalsetting_name }}
+          }}/portalsettings/delegation
         HttpMethod: get
         IsAsync: false
     ResponseFields:
@@ -69002,7 +68978,7 @@ Modules:
                 id: >-
                   /subscriptions/{{ subscription_id }}/resourceGroups/{{
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
-                  service_name }}/portalsettings/{{ portalsetting_name }}
+                  service_name }}/portalsettings/delegation
                 type: Microsoft.ApiManagement/service/portalsettings
                 name: delegation
                 properties:
@@ -69016,10 +68992,10 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/portalsettings/{{ portalsetting_name }}
+          }}/portalsettings/delegation
         Method: get
         Name: ApiManagementPortalSettingsGetDelegation
-        Filename: apimanagement_service_portalsettings_get_2
+        Filename: apimanagement_service_portalsettings_delegation_get
         Variables:
           - name: resource_group
             value: myResourceGroup
@@ -69027,9 +69003,6 @@ Modules:
           - name: service_name
             value: myService
             swaggerName: serviceName
-          - name: portalsetting_name
-            value: myPortalsetting
-            swaggerName: elegatio
         References: []
         OperationId: '14542'
         MethodId: '14573'
