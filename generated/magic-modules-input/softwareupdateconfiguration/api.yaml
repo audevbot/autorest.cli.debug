@@ -1037,7 +1037,7 @@ objects:
             azure_sdk_references: ['/scheduleInfo/expiryTime', '/properties/scheduleInfo/expiryTime']
           - !ruby/object:Api::Type::Integer
             name: 'expiryTimeOffsetMinutes'
-            description: 'Gets or sets the expiry time's offset in minutes.'
+            description: 'Gets or sets the expiry time\'s offset in minutes.'
             required: false
             azure_sdk_references: ['/scheduleInfo/expiryTimeOffsetMinutes', '/properties/scheduleInfo/expiryTimeOffsetMinutes']
           - !ruby/object:Api::Type::Boolean
@@ -1052,7 +1052,7 @@ objects:
             azure_sdk_references: ['/scheduleInfo/nextRun', '/properties/scheduleInfo/nextRun']
           - !ruby/object:Api::Type::Integer
             name: 'nextRunOffsetMinutes'
-            description: 'Gets or sets the next run time's offset in minutes.'
+            description: 'Gets or sets the next run time\'s offset in minutes.'
             required: false
             azure_sdk_references: ['/scheduleInfo/nextRunOffsetMinutes', '/properties/scheduleInfo/nextRunOffsetMinutes']
           - !ruby/object:Api::Type::Integer

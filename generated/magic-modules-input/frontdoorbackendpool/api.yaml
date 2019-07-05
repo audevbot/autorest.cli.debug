@@ -340,7 +340,7 @@ objects:
             azure_sdk_references: ['/backends/httpsPort', '/properties/backends/httpsPort']
           - !ruby/object:Api::Type::Enum
             name: 'enabledState'
-            description: 'Whether to enable use of this backend. Permitted values are 'Enabled' or 'Disabled''
+            description: 'Whether to enable use of this backend. Permitted values are \'Enabled\' or \'Disabled\''
             required: false
             values:
               - :Enabled

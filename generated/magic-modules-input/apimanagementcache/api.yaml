@@ -214,7 +214,7 @@ objects:
         azure_sdk_references: ['serviceName']
       - !ruby/object:Api::Type::String
         name: 'cacheId'
-        description: 'Identifier of the Cache entity. Cache identifier (should be either 'default' or valid Azure region identifier).'
+        description: 'Identifier of the Cache entity. Cache identifier (should be either \'default\' or valid Azure region identifier).'
         required: true
         input: true
         sample_value: myCache
