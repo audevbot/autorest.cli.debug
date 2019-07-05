@@ -289,6 +289,7 @@ objects:
         description: 'The resource ID of the storage account to be used for auto-storage account.'
         required: true
         sample_value: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.Storage/storageAccounts/{{ name }}
+        resource_type_name: TBD
         azure_sdk_references: ['/autoStorage/storageAccountId', '/properties/autoStorage/storageAccountId']
       - !ruby/object:Api::Type::Enum
         name: 'poolAllocationMode'
@@ -311,6 +312,7 @@ objects:
             description: 'The resource ID of the Azure key vault associated with the Batch account.'
             required: true
             sample_value: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.KeyVault/vaults/{{ name }}
+            resource_type_name: TBD
             azure_sdk_references: ['/keyVaultReference/id', '/properties/keyVaultReference/id']
           - !ruby/object:Api::Type::String
             name: 'url'
