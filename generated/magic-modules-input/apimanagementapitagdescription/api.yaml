@@ -210,7 +210,7 @@ objects:
         name: 'description'
         description: 'Description of the Tag.'
         required: false
-        sample_value: Some description that will be displayed for operation's tag if the tag is assigned to operation of the API
+        sample_value: Some description that will be displayed for operation''s tag if the tag is assigned to operation of the API
         azure_sdk_references: ['/description', '/properties/description']
       - !ruby/object:Api::Type::String
         name: 'externalDocsUrl'

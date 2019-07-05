@@ -762,13 +762,13 @@ objects:
             name: 'query'
             description: 'Query Parameter description.'
             required: false
-            sample_value: [object Object]
+            sample_value: {"sv":["xx","bb","cc"]}
             azure_sdk_references: ['/credentials/query', '/properties/credentials/query']
           - !ruby/object:Api::Type::KeyValuePairs
             name: 'header'
             description: 'Header Parameter description.'
             required: false
-            sample_value: [object Object]
+            sample_value: {"x-my-1":["val1","val2"]}
             azure_sdk_references: ['/credentials/header', '/properties/credentials/header']
           - !ruby/object:Api::Type::NestedObject
             name: 'authorization'

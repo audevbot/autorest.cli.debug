@@ -201,14 +201,7 @@ objects:
         name: 'value'
         description: 'Contents of the Policy as defined by the format.'
         required: true
-        sample_value: <policies>
-     <inbound>
-     <base />
-  <set-header name="newvalue" exists-action="override">
-   <value>"@(context.Request.Headers.FirstOrDefault(h => h.Ke=="Via"))" </value>
-    </set-header>
-  </inbound>
-      </policies>
+        sample_value: <policies>\n     <inbound>\n     <base />\n  <set-header name="newvalue" exists-action="override">\n   <value>"@(context.Request.Headers.FirstOrDefault(h => h.Ke=="Via"))" </value>\n    </set-header>\n  </inbound>\n      </policies>
         azure_sdk_references: ['/value', '/properties/value']
       - !ruby/object:Api::Type::Enum
         name: 'format'

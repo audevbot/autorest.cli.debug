@@ -174,13 +174,7 @@ objects:
         name: 'value'
         description: 'Contents of the Policy as defined by the format.'
         required: true
-        sample_value: <policies>
-  <inbound />
-  <backend>
-    <forward-request />
-  </backend>
-  <outbound />
-</policies>
+        sample_value: <policies>\n  <inbound />\n  <backend>\n    <forward-request />\n  </backend>\n  <outbound />\n</policies>
         azure_sdk_references: ['/value', '/properties/value']
       - !ruby/object:Api::Type::Enum
         name: 'format'

@@ -278,7 +278,7 @@ objects:
         name: 'credentials'
         description: 'The name and SendRule connection string of the event hub for azureEventHub logger.<br>Instrumentation key for applicationInsights logger.'
         required: true
-        sample_value: [object Object]
+        sample_value: {"name":"hydraeventhub","connectionString":"Endpoint=sb://hydraeventhub-ns.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=********="}
         azure_sdk_references: ['/credentials', '/properties/credentials']
       - !ruby/object:Api::Type::Boolean
         name: 'isBuffered'

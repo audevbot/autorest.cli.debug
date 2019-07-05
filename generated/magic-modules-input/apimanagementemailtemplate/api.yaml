@@ -272,18 +272,7 @@ objects:
         name: 'body'
         description: 'Email Template Body. This should be a valid XDocument'
         required: false
-        sample_value: <!DOCTYPE html >
-<html>
-  <head />
-  <body>
-    <p style="font-size:12pt;font-family:'Segoe UI'">Dear $DevFirstName $DevLastName,</p>
-    <p style="font-size:12pt;font-family:'Segoe UI'">
-          We are happy to let you know that your request to publish the $AppName application in the gallery has been approved. Your application has been published and can be viewed <a href="http://$DevPortalUrl/Applications/Details/$AppId">here</a>.
-        </p>
-    <p style="font-size:12pt;font-family:'Segoe UI'">Best,</p>
-    <p style="font-size:12pt;font-family:'Segoe UI'">The $OrganizationName API Team</p>
-  </body>
-</html>
+        sample_value: <!DOCTYPE html >\n<html>\n  <head />\n  <body>\n    <p style="font-size:12pt;font-family:''Segoe UI''">Dear $DevFirstName $DevLastName,</p>\n    <p style="font-size:12pt;font-family:''Segoe UI''">\n          We are happy to let you know that your request to publish the $AppName application in the gallery has been approved. Your application has been published and can be viewed <a href="http://$DevPortalUrl/Applications/Details/$AppId">here</a>.\n        </p>\n    <p style="font-size:12pt;font-family:''Segoe UI''">Best,</p>\n    <p style="font-size:12pt;font-family:''Segoe UI''">The $OrganizationName API Team</p>\n  </body>\n</html>
         azure_sdk_references: ['/body', '/properties/body']
       - !ruby/object:Api::Type::NestedObject
         name: 'parameters'
