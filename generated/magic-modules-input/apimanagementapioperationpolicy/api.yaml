@@ -201,34 +201,34 @@ objects:
         description: 'The name of the API Management service.'
         required: true
         input: true
-        sample_value: myService
+        sample_value: 'myService'
         azure_sdk_references: ['serviceName']
       - !ruby/object:Api::Type::String
         name: 'apiId'
         description: 'API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.'
         required: true
         input: true
-        sample_value: myApi
+        sample_value: 'myApi'
         azure_sdk_references: ['apiId']
       - !ruby/object:Api::Type::String
         name: 'operationId'
         description: 'Operation identifier within an API. Must be unique in the current API Management service instance.'
         required: true
         input: true
-        sample_value: myOperation
+        sample_value: 'myOperation'
         azure_sdk_references: ['operationId']
       - !ruby/object:Api::Type::String
         name: 'policyId'
         description: 'The identifier of the Policy.'
         required: true
         input: true
-        sample_value: myPolicy
+        sample_value: 'myPolicy'
         azure_sdk_references: ['policyId']
       - !ruby/object:Api::Type::String
         name: 'value'
         description: 'Contents of the Policy as defined by the format.'
         required: true
-        sample_value: <policies> <inbound /> <backend>    <forward-request />  </backend>  <outbound /></policies>
+        sample_value: '<policies> <inbound /> <backend>    <forward-request />  </backend>  <outbound /></policies>'
         azure_sdk_references: ['/value', '/properties/value']
       - !ruby/object:Api::Type::Enum
         name: 'format'

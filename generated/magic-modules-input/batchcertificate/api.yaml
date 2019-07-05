@@ -268,26 +268,26 @@ objects:
         description: 'The name of the Batch account.'
         required: true
         input: true
-        sample_value: myBatchAccount
+        sample_value: 'myBatchAccount'
         azure_sdk_references: ['accountName']
       - !ruby/object:Api::Type::String
         name: 'name'
         description: 'The identifier for the certificate. This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request. For example SHA1-a3d1c5.'
         required: true
         input: true
-        sample_value: myCertificate
+        sample_value: 'myCertificate'
         azure_sdk_references: ['certificateName', '/name']
       - !ruby/object:Api::Type::String
         name: 'thumbprintAlgorithm'
         description: 'This must match the first portion of the certificate name. Currently required to be ''SHA1''.'
         required: false
-        sample_value: SHA1
+        sample_value: 'SHA1'
         azure_sdk_references: ['/thumbprintAlgorithm', '/properties/thumbprintAlgorithm']
       - !ruby/object:Api::Type::String
         name: 'thumbprint'
         description: 'This must match the thumbprint from the name.'
         required: false
-        sample_value: 0A0E4F50D51BEADEAC1D35AFC5116098E7902E6E
+        sample_value: '0A0E4F50D51BEADEAC1D35AFC5116098E7902E6E'
         azure_sdk_references: ['/thumbprint', '/properties/thumbprint']
       - !ruby/object:Api::Type::Enum
         name: 'format'
@@ -303,13 +303,13 @@ objects:
         name: 'data'
         description: 'The maximum size is 10KB.'
         required: true
-        sample_value: MIIJsgIBAzCCCW4GCSqGSIb3DQE...
+        sample_value: 'MIIJsgIBAzCCCW4GCSqGSIb3DQE...'
         azure_sdk_references: ['/data', '/properties/data']
       - !ruby/object:Api::Type::String
         name: 'password'
         description: 'This is required if the certificate format is pfx and must be omitted if the certificate format is cer.'
         required: false
-        sample_value: KG0UY40e...
+        sample_value: 'KG0UY40e...'
         azure_sdk_references: ['/password', '/properties/password']
       # read only values included only in response
       - !ruby/object:Api::Azure::Type::ISO8601DateTime

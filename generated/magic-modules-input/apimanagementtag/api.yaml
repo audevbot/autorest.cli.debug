@@ -216,20 +216,20 @@ objects:
         description: 'The name of the API Management service.'
         required: true
         input: true
-        sample_value: myService
+        sample_value: 'myService'
         azure_sdk_references: ['serviceName']
       - !ruby/object:Api::Type::String
         name: 'tagId'
         description: 'Tag identifier. Must be unique in the current API Management service instance.'
         required: true
         input: true
-        sample_value: myTag
+        sample_value: 'myTag'
         azure_sdk_references: ['tagId']
       - !ruby/object:Api::Type::String
         name: 'displayName'
         description: 'Tag name.'
         required: true
-        sample_value: temp tag
+        sample_value: 'temp tag'
         azure_sdk_references: ['/displayName', '/properties/displayName']
       # read only values included only in response
       - !ruby/object:Api::Type::String

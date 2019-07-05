@@ -299,14 +299,14 @@ objects:
         description: 'The name of the API Management service.'
         required: true
         input: true
-        sample_value: myService
+        sample_value: 'myService'
         azure_sdk_references: ['serviceName']
       - !ruby/object:Api::Type::String
         name: 'productId'
         description: 'Product identifier. Must be unique in the current API Management service instance.'
         required: true
         input: true
-        sample_value: myProduct
+        sample_value: 'myProduct'
         azure_sdk_references: ['productId']
       - !ruby/object:Api::Type::String
         name: 'description'
@@ -346,7 +346,7 @@ objects:
         name: 'displayName'
         description: 'Product name.'
         required: true
-        sample_value: Test Template ProductName 4
+        sample_value: 'Test Template ProductName 4'
         azure_sdk_references: ['/displayName', '/properties/displayName']
       # read only values included only in response
       - !ruby/object:Api::Type::String

@@ -345,14 +345,14 @@ objects:
         description: 'The name of the API Management service.'
         required: true
         input: true
-        sample_value: myService
+        sample_value: 'myService'
         azure_sdk_references: ['serviceName']
       - !ruby/object:Api::Type::String
         name: 'userId'
         description: 'User identifier. Must be unique in the current API Management service instance.'
         required: true
         input: true
-        sample_value: myUser
+        sample_value: 'myUser'
         azure_sdk_references: ['userId']
       - !ruby/object:Api::Type::Enum
         name: 'state'
@@ -390,19 +390,19 @@ objects:
         name: 'email'
         description: 'Email address. Must not be empty and must be unique within the service instance.'
         required: true
-        sample_value: foobar@outlook.com
+        sample_value: 'foobar@outlook.com'
         azure_sdk_references: ['/email', '/properties/email']
       - !ruby/object:Api::Type::String
         name: 'firstName'
         description: 'First name.'
         required: true
-        sample_value: foo
+        sample_value: 'foo'
         azure_sdk_references: ['/firstName', '/properties/firstName']
       - !ruby/object:Api::Type::String
         name: 'lastName'
         description: 'Last name.'
         required: true
-        sample_value: bar
+        sample_value: 'bar'
         azure_sdk_references: ['/lastName', '/properties/lastName']
       - !ruby/object:Api::Type::String
         name: 'password'

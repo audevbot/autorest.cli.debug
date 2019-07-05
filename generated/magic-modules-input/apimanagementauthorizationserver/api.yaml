@@ -495,20 +495,20 @@ objects:
         description: 'The name of the API Management service.'
         required: true
         input: true
-        sample_value: myService
+        sample_value: 'myService'
         azure_sdk_references: ['serviceName']
       - !ruby/object:Api::Type::String
         name: 'authsid'
         description: 'Identifier of the authorization server.'
         required: true
         input: true
-        sample_value: myAuthorizationServer
+        sample_value: 'myAuthorizationServer'
         azure_sdk_references: ['authsid']
       - !ruby/object:Api::Type::String
         name: 'description'
         description: 'Description of the authorization server. Can contain HTML formatting tags.'
         required: false
-        sample_value: test server
+        sample_value: 'test server'
         azure_sdk_references: ['/description', '/properties/description']
       - !ruby/object:Api::Type::Enum
         name: 'authorizationMethods'
@@ -555,7 +555,7 @@ objects:
         name: 'tokenEndpoint'
         description: 'OAuth token endpoint. Contains absolute URI to entity being referenced.'
         required: false
-        sample_value: https://www.contoso.com/oauth2/token
+        sample_value: 'https://www.contoso.com/oauth2/token'
         azure_sdk_references: ['/tokenEndpoint', '/properties/tokenEndpoint']
       - !ruby/object:Api::Type::Boolean
         name: 'supportState'
@@ -567,7 +567,7 @@ objects:
         name: 'defaultScope'
         description: 'Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values.'
         required: false
-        sample_value: read write
+        sample_value: 'read write'
         azure_sdk_references: ['/defaultScope', '/properties/defaultScope']
       - !ruby/object:Api::Type::Enum
         name: 'bearerTokenSendingMethods'
@@ -583,37 +583,37 @@ objects:
         name: 'clientSecret'
         description: 'Client or app secret registered with this authorization server.'
         required: false
-        sample_value: updated
+        sample_value: 'updated'
         azure_sdk_references: ['/clientSecret', '/properties/clientSecret']
       - !ruby/object:Api::Type::String
         name: 'resourceOwnerUsername'
         description: 'Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.'
         required: false
-        sample_value: un
+        sample_value: 'un'
         azure_sdk_references: ['/resourceOwnerUsername', '/properties/resourceOwnerUsername']
       - !ruby/object:Api::Type::String
         name: 'resourceOwnerPassword'
         description: 'Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.'
         required: false
-        sample_value: pwd
+        sample_value: 'pwd'
         azure_sdk_references: ['/resourceOwnerPassword', '/properties/resourceOwnerPassword']
       - !ruby/object:Api::Type::String
         name: 'displayName'
         description: 'User-friendly authorization server name.'
         required: true
-        sample_value: test2
+        sample_value: 'test2'
         azure_sdk_references: ['/displayName', '/properties/displayName']
       - !ruby/object:Api::Type::String
         name: 'clientRegistrationEndpoint'
         description: 'Optional reference to a page where client or app registration for this authorization server is performed. Contains absolute URL to entity being referenced.'
         required: true
-        sample_value: https://www.contoso.com/apps
+        sample_value: 'https://www.contoso.com/apps'
         azure_sdk_references: ['/clientRegistrationEndpoint', '/properties/clientRegistrationEndpoint']
       - !ruby/object:Api::Type::String
         name: 'authorizationEndpoint'
         description: 'OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2.'
         required: true
-        sample_value: https://www.contoso.com/oauth2/auth
+        sample_value: 'https://www.contoso.com/oauth2/auth'
         azure_sdk_references: ['/authorizationEndpoint', '/properties/authorizationEndpoint']
       - !ruby/object:Api::Type::Enum
         name: 'grantTypes'
@@ -631,7 +631,7 @@ objects:
         name: 'clientId'
         description: 'Client or app id registered with this authorization server.'
         required: true
-        sample_value: update
+        sample_value: 'update'
         azure_sdk_references: ['/clientId', '/properties/clientId']
       # read only values included only in response
       - !ruby/object:Api::Type::String

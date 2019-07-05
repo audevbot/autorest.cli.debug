@@ -228,20 +228,20 @@ objects:
         description: 'The name of the API Management service.'
         required: true
         input: true
-        sample_value: myService
+        sample_value: 'myService'
         azure_sdk_references: ['serviceName']
       - !ruby/object:Api::Type::String
         name: 'propId'
         description: 'Identifier of the property.'
         required: true
         input: true
-        sample_value: myProperty
+        sample_value: 'myProperty'
         azure_sdk_references: ['propId']
       - !ruby/object:Api::Type::String
         name: 'tags'
         description: 'Optional tags that when provided can be used to filter the property list.'
         required: false
-        sample_value: bar2
+        sample_value: 'bar2'
         azure_sdk_references: ['/tags', '/properties/tags']
       - !ruby/object:Api::Type::Boolean
         name: 'secret'
@@ -253,13 +253,13 @@ objects:
         name: 'displayName'
         description: 'Unique name of Property. It may contain only letters, digits, period, dash, and underscore characters.'
         required: true
-        sample_value: prop3name
+        sample_value: 'prop3name'
         azure_sdk_references: ['/displayName', '/properties/displayName']
       - !ruby/object:Api::Type::String
         name: 'value'
         description: 'Value of the property. Can contain policy expressions. It may not be empty or consist only of whitespace.'
         required: true
-        sample_value: propValue
+        sample_value: 'propValue'
         azure_sdk_references: ['/value', '/properties/value']
       # read only values included only in response
       - !ruby/object:Api::Type::String

@@ -237,26 +237,26 @@ objects:
         description: 'The name of the API Management service.'
         required: true
         input: true
-        sample_value: myService
+        sample_value: 'myService'
         azure_sdk_references: ['serviceName']
       - !ruby/object:Api::Type::String
         name: 'groupId'
         description: 'Group identifier. Must be unique in the current API Management service instance.'
         required: true
         input: true
-        sample_value: myGroup
+        sample_value: 'myGroup'
         azure_sdk_references: ['groupId']
       - !ruby/object:Api::Type::String
         name: 'displayName'
         description: 'Group name.'
         required: true
-        sample_value: temp group
+        sample_value: 'temp group'
         azure_sdk_references: ['/displayName', '/properties/displayName']
       - !ruby/object:Api::Type::String
         name: 'description'
         description: 'Group description.'
         required: false
-        sample_value: new group to test
+        sample_value: 'new group to test'
         azure_sdk_references: ['/description', '/properties/description']
       - !ruby/object:Api::Type::Enum
         name: 'type'
@@ -273,7 +273,7 @@ objects:
         name: 'externalId'
         description: 'Identifier of the external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.'
         required: false
-        sample_value: aad://samiraad.onmicrosoft.com/groups/83cf2753-5831-4675-bc0e-2f8dc067c58d
+        sample_value: 'aad://samiraad.onmicrosoft.com/groups/83cf2753-5831-4675-bc0e-2f8dc067c58d'
         azure_sdk_references: ['/externalId', '/properties/externalId']
       # read only values included only in response
       - !ruby/object:Api::Type::Boolean

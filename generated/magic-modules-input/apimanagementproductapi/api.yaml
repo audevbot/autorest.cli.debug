@@ -101,21 +101,21 @@ objects:
         description: 'The name of the API Management service.'
         required: true
         input: true
-        sample_value: myService
+        sample_value: 'myService'
         azure_sdk_references: ['serviceName']
       - !ruby/object:Api::Type::String
         name: 'productId'
         description: 'Product identifier. Must be unique in the current API Management service instance.'
         required: true
         input: true
-        sample_value: myProduct
+        sample_value: 'myProduct'
         azure_sdk_references: ['productId']
       - !ruby/object:Api::Type::String
         name: 'apiId'
         description: 'API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.'
         required: true
         input: true
-        sample_value: myApi
+        sample_value: 'myApi'
         azure_sdk_references: ['apiId']
       - !ruby/object:Api::Type::String
         name: 'description'

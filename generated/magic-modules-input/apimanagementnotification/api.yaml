@@ -100,14 +100,14 @@ objects:
         description: 'The name of the API Management service.'
         required: true
         input: true
-        sample_value: myService
+        sample_value: 'myService'
         azure_sdk_references: ['serviceName']
       - !ruby/object:Api::Type::String
         name: 'name'
         description: 'Notification Name Identifier.'
         required: true
         input: true
-        sample_value: myNotification
+        sample_value: 'myNotification'
         azure_sdk_references: ['notificationName', '/name']
       - !ruby/object:Api::Type::String
         name: 'title'

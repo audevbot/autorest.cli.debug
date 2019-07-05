@@ -846,14 +846,14 @@ objects:
         description: 'The name of the automation account.'
         required: true
         input: true
-        sample_value: myAutomationAccount
+        sample_value: 'myAutomationAccount'
         azure_sdk_references: ['automationAccountName']
       - !ruby/object:Api::Type::String
         name: 'name'
         description: 'The name of the software update configuration to be created.'
         required: true
         input: true
-        sample_value: mySoftwareUpdateConfiguration
+        sample_value: 'mySoftwareUpdateConfiguration'
         azure_sdk_references: ['softwareUpdateConfigurationName', '/name']
       - !ruby/object:Api::Type::String
         name: 'clientRequestId'
@@ -904,7 +904,7 @@ objects:
                 name: 'excludedKbNumbers'
                 description: 'KB numbers excluded from the software update configuration.'
                 required: false
-                sample_value: 168973
+                sample_value: '168973'
                 azure_sdk_references: ['/updateConfiguration/windows/excludedKbNumbers', '/properties/updateConfiguration/windows/excludedKbNumbers']
               - !ruby/object:Api::Type::String
                 name: 'includedKbNumbers'
@@ -915,7 +915,7 @@ objects:
                 name: 'rebootSetting'
                 description: 'Reboot setting for the software update configuration.'
                 required: false
-                sample_value: IfRequired
+                sample_value: 'IfRequired'
                 azure_sdk_references: ['/updateConfiguration/windows/rebootSetting', '/properties/updateConfiguration/windows/rebootSetting']
           - !ruby/object:Api::Type::NestedObject
             name: 'linux'
@@ -966,7 +966,7 @@ objects:
             name: 'nonAzureComputerNames'
             description: 'List of names of non-azure machines targeted by the software update configuration.'
             required: false
-            sample_value: box2.contoso.com
+            sample_value: 'box2.contoso.com'
             azure_sdk_references: ['/updateConfiguration/nonAzureComputerNames', '/properties/updateConfiguration/nonAzureComputerNames']
           - !ruby/object:Api::Type::NestedObject
             name: 'targets'
@@ -991,13 +991,13 @@ objects:
                     name: 'locations'
                     description: 'List of locations to scope the query to.'
                     required: false
-                    sample_value: UK South
+                    sample_value: 'UK South'
                     azure_sdk_references: ['/updateConfiguration/targets/azureQueries/locations', '/properties/updateConfiguration/targets/azureQueries/locations']
                   - !ruby/object:Api::Type::NestedObject
                     name: 'tagSettings'
                     description: 'Tag settings for the VM.'
                     required: false
-                    sample_value: {"tags":[{"tag1":["tag1Value1","tag1Value2","tag1Value3"]},{"tag2":["tag2Value1","tag2Value2","tag2Value3"]}],"filterOperator":"All"}
+                    sample_value: [object Object]
                     azure_sdk_references: ['/updateConfiguration/targets/azureQueries/tagSettings', '/properties/updateConfiguration/targets/azureQueries/tagSettings']
               - !ruby/object:Api::Type::NestedObject
                 name: 'nonAzureQueries'
@@ -1009,13 +1009,13 @@ objects:
                     name: 'functionAlias'
                     description: 'Log Analytics Saved Search name.'
                     required: false
-                    sample_value: SavedSearch2
+                    sample_value: 'SavedSearch2'
                     azure_sdk_references: ['/updateConfiguration/targets/nonAzureQueries/functionAlias', '/properties/updateConfiguration/targets/nonAzureQueries/functionAlias']
                   - !ruby/object:Api::Type::String
                     name: 'workspaceId'
                     description: 'Workspace Id for Log Analytics in which the saved Search is resided.'
                     required: false
-                    sample_value: WorkspaceId2
+                    sample_value: 'WorkspaceId2'
                     azure_sdk_references: ['/updateConfiguration/targets/nonAzureQueries/workspaceId', '/properties/updateConfiguration/targets/nonAzureQueries/workspaceId']
       - !ruby/object:Api::Type::NestedObject
         name: 'scheduleInfo'
@@ -1079,7 +1079,7 @@ objects:
             name: 'timeZone'
             description: 'Gets or sets the time zone of the schedule.'
             required: false
-            sample_value: America/Los_Angeles
+            sample_value: 'America/Los_Angeles'
             azure_sdk_references: ['/scheduleInfo/timeZone', '/properties/scheduleInfo/timeZone']
           - !ruby/object:Api::Type::NestedObject
             name: 'advancedSchedule'
@@ -1091,7 +1091,7 @@ objects:
                 name: 'weekDays'
                 description: 'Days of the week that the job should execute on.'
                 required: false
-                sample_value: Thursday
+                sample_value: 'Thursday'
                 azure_sdk_references: ['/scheduleInfo/advancedSchedule/weekDays', '/properties/scheduleInfo/advancedSchedule/weekDays']
               - !ruby/object:Api::Type::Integer
                 name: 'monthDays'
@@ -1175,7 +1175,7 @@ objects:
                 name: 'source'
                 description: 'Gets or sets the name of the runbook.'
                 required: false
-                sample_value: HelloWorld
+                sample_value: 'HelloWorld'
                 azure_sdk_references: ['/tasks/preTask/source', '/properties/tasks/preTask/source']
           - !ruby/object:Api::Type::NestedObject
             name: 'postTask'
@@ -1192,7 +1192,7 @@ objects:
                 name: 'source'
                 description: 'Gets or sets the name of the runbook.'
                 required: false
-                sample_value: GetCache
+                sample_value: 'GetCache'
                 azure_sdk_references: ['/tasks/postTask/source', '/properties/tasks/postTask/source']
       # read only values included only in response
       - !ruby/object:Api::Type::String

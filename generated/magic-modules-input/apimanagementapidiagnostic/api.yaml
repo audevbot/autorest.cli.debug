@@ -652,21 +652,21 @@ objects:
         description: 'The name of the API Management service.'
         required: true
         input: true
-        sample_value: myService
+        sample_value: 'myService'
         azure_sdk_references: ['serviceName']
       - !ruby/object:Api::Type::String
         name: 'apiId'
         description: 'API identifier. Must be unique in the current API Management service instance.'
         required: true
         input: true
-        sample_value: myApi
+        sample_value: 'myApi'
         azure_sdk_references: ['apiId']
       - !ruby/object:Api::Type::String
         name: 'diagnosticId'
         description: 'Diagnostic identifier. Must be unique in the current API Management service instance.'
         required: true
         input: true
-        sample_value: myDiagnostic
+        sample_value: 'myDiagnostic'
         azure_sdk_references: ['diagnosticId']
       - !ruby/object:Api::Type::Enum
         name: 'alwaysLog'
@@ -681,7 +681,7 @@ objects:
         name: 'loggerId'
         description: 'Resource Id of a target logger.'
         required: true
-        sample_value: /loggers/applicationinsights
+        sample_value: '/loggers/applicationinsights'
         azure_sdk_references: ['/loggerId', '/properties/loggerId']
       - !ruby/object:Api::Type::NestedObject
         name: 'sampling'
@@ -720,7 +720,7 @@ objects:
                 name: 'headers'
                 description: 'Array of HTTP Headers to log.'
                 required: false
-                sample_value: Content-type
+                sample_value: 'Content-type'
                 azure_sdk_references: ['/frontend/request/headers', '/properties/frontend/request/headers']
               - !ruby/object:Api::Type::NestedObject
                 name: 'body'
@@ -744,7 +744,7 @@ objects:
                 name: 'headers'
                 description: 'Array of HTTP Headers to log.'
                 required: false
-                sample_value: Content-type
+                sample_value: 'Content-type'
                 azure_sdk_references: ['/frontend/response/headers', '/properties/frontend/response/headers']
               - !ruby/object:Api::Type::NestedObject
                 name: 'body'
@@ -774,7 +774,7 @@ objects:
                 name: 'headers'
                 description: 'Array of HTTP Headers to log.'
                 required: false
-                sample_value: Content-type
+                sample_value: 'Content-type'
                 azure_sdk_references: ['/backend/request/headers', '/properties/backend/request/headers']
               - !ruby/object:Api::Type::NestedObject
                 name: 'body'
@@ -798,7 +798,7 @@ objects:
                 name: 'headers'
                 description: 'Array of HTTP Headers to log.'
                 required: false
-                sample_value: Content-type
+                sample_value: 'Content-type'
                 azure_sdk_references: ['/backend/response/headers', '/properties/backend/response/headers']
               - !ruby/object:Api::Type::NestedObject
                 name: 'body'

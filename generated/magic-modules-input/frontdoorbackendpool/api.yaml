@@ -302,14 +302,14 @@ objects:
         description: 'Name of the Front Door which is globally unique.'
         required: true
         input: true
-        sample_value: myFrontDoor
+        sample_value: 'myFrontDoor'
         azure_sdk_references: ['frontDoorName']
       - !ruby/object:Api::Type::String
         name: 'name'
         description: 'Name of the Backend Pool which is unique within the Front Door.'
         required: true
         input: true
-        sample_value: myBackendPool
+        sample_value: 'myBackendPool'
         azure_sdk_references: ['backendPoolName', '/name']
       - !ruby/object:Api::Type::String
         name: 'id'

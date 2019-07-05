@@ -987,14 +987,14 @@ objects:
         description: 'The name of the API Management service.'
         required: true
         input: true
-        sample_value: myService
+        sample_value: 'myService'
         azure_sdk_references: ['serviceName', '/name']
       - !ruby/object:Api::Azure::Type::Tags
         name: 'tags'
         description: 'Resource tags.'
         required: false
         input: true
-        sample_value: {"tag1":"value1","tag2":"value2","tag3":"value3"}
+        sample_value: [object Object]
         azure_sdk_references: ['tags', '/tags']
       - !ruby/object:Api::Type::String
         name: 'notificationSenderEmail'
@@ -1024,7 +1024,7 @@ objects:
             name: 'hostName'
             description: 'Hostname to configure on the Api Management service.'
             required: true
-            sample_value: portalhostname1.contoso.com
+            sample_value: 'portalhostname1.contoso.com'
             azure_sdk_references: ['/hostnameConfigurations/hostName', '/properties/hostnameConfigurations/hostName']
           - !ruby/object:Api::Type::String
             name: 'keyVaultId'
@@ -1035,13 +1035,13 @@ objects:
             name: 'encodedCertificate'
             description: 'Base64 Encoded certificate.'
             required: false
-            sample_value: ************Base 64 Encoded Pfx Certificate************************
+            sample_value: '************Base 64 Encoded Pfx Certificate************************'
             azure_sdk_references: ['/hostnameConfigurations/encodedCertificate', '/properties/hostnameConfigurations/encodedCertificate']
           - !ruby/object:Api::Type::String
             name: 'certificatePassword'
             description: 'Certificate Password.'
             required: false
-            sample_value: **************Password of the Certificate************************************************
+            sample_value: '**************Password of the Certificate************************************************'
             azure_sdk_references: ['/hostnameConfigurations/certificatePassword', '/properties/hostnameConfigurations/certificatePassword']
           - !ruby/object:Api::Type::Boolean
             name: 'defaultSslBinding'
@@ -1143,7 +1143,7 @@ objects:
         name: 'customProperties'
         description: 'Custom properties of the API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168` will disable the cipher TLS_RSA_WITH_3DES_EDE_CBC_SHA for all TLS(1.0, 1.1 and 1.2).</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11` can be used to disable just TLS 1.1.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10` can be used to disable TLS 1.0 on an API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11` can be used to disable just TLS 1.1 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10` can be used to disable TLS 1.0 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2` can be used to enable HTTP2 protocol on an API Management service.</br>Not specifying any of these properties on PATCH operation will reset omitted properties'' values to their defaults. For all the settings except Http2 the default value is `True` if the service was created on or before April 1st 2018 and `False` otherwise. Http2 setting''s default value is `False`.'
         required: false
-        sample_value: {"Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10":"false"}
+        sample_value: [object Object]
         azure_sdk_references: ['/customProperties', '/properties/customProperties']
       - !ruby/object:Api::Type::NestedObject
         name: 'certificates'
@@ -1155,13 +1155,13 @@ objects:
             name: 'encodedCertificate'
             description: 'Base64 Encoded certificate.'
             required: false
-            sample_value: *******Base64 encoded Certificate******************
+            sample_value: '*******Base64 encoded Certificate******************'
             azure_sdk_references: ['/certificates/encodedCertificate', '/properties/certificates/encodedCertificate']
           - !ruby/object:Api::Type::String
             name: 'certificatePassword'
             description: 'Certificate Password.'
             required: false
-            sample_value: Password
+            sample_value: 'Password'
             azure_sdk_references: ['/certificates/certificatePassword', '/properties/certificates/certificatePassword']
           - !ruby/object:Api::Type::Enum
             name: 'storeName'
@@ -1214,13 +1214,13 @@ objects:
         name: 'publisherEmail'
         description: 'Publisher email.'
         required: true
-        sample_value: foobar@live.com
+        sample_value: 'foobar@live.com'
         azure_sdk_references: ['/publisherEmail', '/properties/publisherEmail']
       - !ruby/object:Api::Type::String
         name: 'publisherName'
         description: 'Publisher name.'
         required: true
-        sample_value: Contoso Vnext
+        sample_value: 'Contoso Vnext'
         azure_sdk_references: ['/publisherName', '/properties/publisherName']
       - !ruby/object:Api::Type::Enum
         name: 'skuName'
@@ -1251,7 +1251,7 @@ objects:
             name: 'type'
             description: 'The identity type. Currently the only supported type is ''SystemAssigned''.'
             required: true
-            sample_value: SystemAssigned
+            sample_value: 'SystemAssigned'
             azure_sdk_references: ['/identity/type']
       - !ruby/object:Api::Azure::Type::Location
         name: 'location'

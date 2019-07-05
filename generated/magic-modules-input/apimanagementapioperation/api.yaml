@@ -1327,21 +1327,21 @@ objects:
         description: 'The name of the API Management service.'
         required: true
         input: true
-        sample_value: myService
+        sample_value: 'myService'
         azure_sdk_references: ['serviceName']
       - !ruby/object:Api::Type::String
         name: 'apiId'
         description: 'API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.'
         required: true
         input: true
-        sample_value: myApi
+        sample_value: 'myApi'
         azure_sdk_references: ['apiId']
       - !ruby/object:Api::Type::String
         name: 'operationId'
         description: 'Operation identifier within an API. Must be unique in the current API Management service instance.'
         required: true
         input: true
-        sample_value: myOperation
+        sample_value: 'myOperation'
         azure_sdk_references: ['operationId']
       - !ruby/object:Api::Type::NestedObject
         name: 'templateParameters'
@@ -1383,7 +1383,7 @@ objects:
         name: 'description'
         description: 'Description of the operation. May include HTML formatting tags.'
         required: false
-        sample_value: This can only be done by the logged in user.
+        sample_value: 'This can only be done by the logged in user.'
         azure_sdk_references: ['/description', '/properties/description']
       - !ruby/object:Api::Type::NestedObject
         name: 'request'
@@ -1395,7 +1395,7 @@ objects:
             name: 'description'
             description: 'Operation request description.'
             required: false
-            sample_value: Created user object
+            sample_value: 'Created user object'
             azure_sdk_references: ['/request/description', '/properties/request/description']
           - !ruby/object:Api::Type::NestedObject
             name: 'queryParameters'
@@ -1407,25 +1407,25 @@ objects:
                 name: 'name'
                 description: 'Parameter name.'
                 required: true
-                sample_value: param1
+                sample_value: 'param1'
                 azure_sdk_references: ['/request/queryParameters/name', '/properties/request/queryParameters/name', '/name']
               - !ruby/object:Api::Type::String
                 name: 'description'
                 description: 'Parameter description.'
                 required: false
-                sample_value: A sample parameter that is required and has a default value of "sample".
+                sample_value: 'A sample parameter that is required and has a default value of "sample".'
                 azure_sdk_references: ['/request/queryParameters/description', '/properties/request/queryParameters/description']
               - !ruby/object:Api::Type::String
                 name: 'type'
                 description: 'Parameter type.'
                 required: true
-                sample_value: string
+                sample_value: 'string'
                 azure_sdk_references: ['/request/queryParameters/type', '/properties/request/queryParameters/type']
               - !ruby/object:Api::Type::String
                 name: 'defaultValue'
                 description: 'Default parameter value.'
                 required: false
-                sample_value: sample
+                sample_value: 'sample'
                 azure_sdk_references: ['/request/queryParameters/defaultValue', '/properties/request/queryParameters/defaultValue']
               - !ruby/object:Api::Type::Boolean
                 name: 'required'
@@ -1437,7 +1437,7 @@ objects:
                 name: 'values'
                 description: 'Parameter values.'
                 required: false
-                sample_value: sample
+                sample_value: 'sample'
                 azure_sdk_references: ['/request/queryParameters/values', '/properties/request/queryParameters/values']
           - !ruby/object:Api::Type::NestedObject
             name: 'headers'
@@ -1485,7 +1485,7 @@ objects:
                 name: 'contentType'
                 description: 'Specifies a registered or custom content type for this representation, e.g. application/xml.'
                 required: true
-                sample_value: application/json
+                sample_value: 'application/json'
                 azure_sdk_references: ['/request/representations/contentType', '/properties/request/representations/contentType']
               - !ruby/object:Api::Type::String
                 name: 'sample'
@@ -1496,13 +1496,13 @@ objects:
                 name: 'schemaId'
                 description: 'Schema identifier. Applicable only if ''contentType'' value is neither ''application/x-www-form-urlencoded'' nor ''multipart/form-data''.'
                 required: false
-                sample_value: 592f6c1d0af5840ca8897f0c
+                sample_value: '592f6c1d0af5840ca8897f0c'
                 azure_sdk_references: ['/request/representations/schemaId', '/properties/request/representations/schemaId']
               - !ruby/object:Api::Type::String
                 name: 'typeName'
                 description: 'Type name defined by the schema. Applicable only if ''contentType'' value is neither ''application/x-www-form-urlencoded'' nor ''multipart/form-data''.'
                 required: false
-                sample_value: User
+                sample_value: 'User'
                 azure_sdk_references: ['/request/representations/typeName', '/properties/request/representations/typeName']
               - !ruby/object:Api::Type::NestedObject
                 name: 'formParameters'
@@ -1556,7 +1556,7 @@ objects:
             name: 'description'
             description: 'Operation response description.'
             required: false
-            sample_value: Server Error.
+            sample_value: 'Server Error.'
             azure_sdk_references: ['/responses/description', '/properties/responses/description']
           - !ruby/object:Api::Type::NestedObject
             name: 'representations'
@@ -1568,7 +1568,7 @@ objects:
                 name: 'contentType'
                 description: 'Specifies a registered or custom content type for this representation, e.g. application/xml.'
                 required: true
-                sample_value: application/json
+                sample_value: 'application/json'
                 azure_sdk_references: ['/responses/representations/contentType', '/properties/responses/representations/contentType']
               - !ruby/object:Api::Type::String
                 name: 'sample'
@@ -1666,19 +1666,19 @@ objects:
         name: 'displayName'
         description: 'Operation Name.'
         required: true
-        sample_value: Retrieve resource
+        sample_value: 'Retrieve resource'
         azure_sdk_references: ['/displayName', '/properties/displayName']
       - !ruby/object:Api::Type::String
         name: 'method'
         description: 'A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.'
         required: true
-        sample_value: GET
+        sample_value: 'GET'
         azure_sdk_references: ['/method', '/properties/method']
       - !ruby/object:Api::Type::String
         name: 'urlTemplate'
         description: 'Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}'
         required: true
-        sample_value: /resource
+        sample_value: '/resource'
         azure_sdk_references: ['/urlTemplate', '/properties/urlTemplate']
       # read only values included only in response
       - !ruby/object:Api::Type::String

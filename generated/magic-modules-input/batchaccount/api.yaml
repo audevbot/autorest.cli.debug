@@ -269,7 +269,7 @@ objects:
         description: 'A name for the Batch account which must be unique within the region. Batch account names must be between 3 and 24 characters in length and must use only numbers and lowercase letters. This name is used as part of the DNS name that is used to access the Batch service in the region in which the account is created. For example: http://accountname.region.batch.azure.com/.'
         required: true
         input: true
-        sample_value: myBatchAccount
+        sample_value: 'myBatchAccount'
         azure_sdk_references: ['accountName', '/name']
       - !ruby/object:Api::Azure::Type::Location
         name: 'location'
@@ -318,7 +318,7 @@ objects:
             name: 'url'
             description: 'The URL of the Azure key vault associated with the Batch account.'
             required: true
-            sample_value: http://sample.vault.azure.net/
+            sample_value: 'http://sample.vault.azure.net/'
             azure_sdk_references: ['/keyVaultReference/url', '/properties/keyVaultReference/url']
       # read only values included only in response
       - !ruby/object:Api::Azure::Type::ISO8601DateTime

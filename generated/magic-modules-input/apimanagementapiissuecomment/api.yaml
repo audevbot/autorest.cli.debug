@@ -204,34 +204,34 @@ objects:
         description: 'The name of the API Management service.'
         required: true
         input: true
-        sample_value: myService
+        sample_value: 'myService'
         azure_sdk_references: ['serviceName']
       - !ruby/object:Api::Type::String
         name: 'apiId'
         description: 'API identifier. Must be unique in the current API Management service instance.'
         required: true
         input: true
-        sample_value: myApi
+        sample_value: 'myApi'
         azure_sdk_references: ['apiId']
       - !ruby/object:Api::Type::String
         name: 'issueId'
         description: 'Issue identifier. Must be unique in the current API Management service instance.'
         required: true
         input: true
-        sample_value: myIssue
+        sample_value: 'myIssue'
         azure_sdk_references: ['issueId']
       - !ruby/object:Api::Type::String
         name: 'commentId'
         description: 'Comment identifier within an Issue. Must be unique in the current Issue.'
         required: true
         input: true
-        sample_value: myComment
+        sample_value: 'myComment'
         azure_sdk_references: ['commentId']
       - !ruby/object:Api::Type::String
         name: 'text'
         description: 'Comment text.'
         required: true
-        sample_value: Issue comment.
+        sample_value: 'Issue comment.'
         azure_sdk_references: ['/text', '/properties/text']
       - !ruby/object:Api::Azure::Type::ISO8601DateTime
         name: 'createdDate'

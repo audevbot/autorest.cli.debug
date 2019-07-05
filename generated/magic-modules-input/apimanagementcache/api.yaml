@@ -210,26 +210,26 @@ objects:
         description: 'The name of the API Management service.'
         required: true
         input: true
-        sample_value: myService
+        sample_value: 'myService'
         azure_sdk_references: ['serviceName']
       - !ruby/object:Api::Type::String
         name: 'cacheId'
         description: 'Identifier of the Cache entity. Cache identifier (should be either ''default'' or valid Azure region identifier).'
         required: true
         input: true
-        sample_value: myCache
+        sample_value: 'myCache'
         azure_sdk_references: ['cacheId']
       - !ruby/object:Api::Type::String
         name: 'description'
         description: 'Cache description'
         required: false
-        sample_value: Update Cache in west India
+        sample_value: 'Update Cache in west India'
         azure_sdk_references: ['/description', '/properties/description']
       - !ruby/object:Api::Type::String
         name: 'connectionString'
         description: 'Runtime connection string to cache'
         required: true
-        sample_value: contoso5.redis.cache.windows.net,ssl=true,password=...
+        sample_value: 'contoso5.redis.cache.windows.net,ssl=true,password=...'
         azure_sdk_references: ['/connectionString', '/properties/connectionString']
       - !ruby/object:Api::Azure::Type::ResourceReference
         name: 'resourceId'

@@ -161,20 +161,20 @@ objects:
         description: 'The name of the API Management service.'
         required: true
         input: true
-        sample_value: myService
+        sample_value: 'myService'
         azure_sdk_references: ['serviceName']
       - !ruby/object:Api::Type::String
         name: 'policyId'
         description: 'The identifier of the Policy.'
         required: true
         input: true
-        sample_value: myPolicy
+        sample_value: 'myPolicy'
         azure_sdk_references: ['policyId']
       - !ruby/object:Api::Type::String
         name: 'value'
         description: 'Contents of the Policy as defined by the format.'
         required: true
-        sample_value: <policies>\n  <inbound />\n  <backend>\n    <forward-request />\n  </backend>\n  <outbound />\n</policies>
+        sample_value: '<policies>\n  <inbound />\n  <backend>\n    <forward-request />\n  </backend>\n  <outbound />\n</policies>'
         azure_sdk_references: ['/value', '/properties/value']
       - !ruby/object:Api::Type::Enum
         name: 'format'

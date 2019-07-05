@@ -246,20 +246,20 @@ objects:
         description: 'The name of the API Management service.'
         required: true
         input: true
-        sample_value: myService
+        sample_value: 'myService'
         azure_sdk_references: ['serviceName']
       - !ruby/object:Api::Type::String
         name: 'opid'
         description: 'Identifier of the OpenID Connect Provider.'
         required: true
         input: true
-        sample_value: myOpenidConnectProvider
+        sample_value: 'myOpenidConnectProvider'
         azure_sdk_references: ['opid']
       - !ruby/object:Api::Type::String
         name: 'displayName'
         description: 'User-friendly OpenID Connect Provider name.'
         required: true
-        sample_value: templateoidprovider3
+        sample_value: 'templateoidprovider3'
         azure_sdk_references: ['/displayName', '/properties/displayName']
       - !ruby/object:Api::Type::String
         name: 'description'
@@ -270,19 +270,19 @@ objects:
         name: 'metadataEndpoint'
         description: 'Metadata endpoint URI.'
         required: true
-        sample_value: https://oidprovider-template3.net
+        sample_value: 'https://oidprovider-template3.net'
         azure_sdk_references: ['/metadataEndpoint', '/properties/metadataEndpoint']
       - !ruby/object:Api::Type::String
         name: 'clientId'
         description: 'Client ID of developer console which is the client application.'
         required: true
-        sample_value: oidprovidertemplate3
+        sample_value: 'oidprovidertemplate3'
         azure_sdk_references: ['/clientId', '/properties/clientId']
       - !ruby/object:Api::Type::String
         name: 'clientSecret'
         description: 'Client Secret of developer console which is the client application.'
         required: false
-        sample_value: updatedsecret
+        sample_value: 'updatedsecret'
         azure_sdk_references: ['/clientSecret', '/properties/clientSecret']
       # read only values included only in response
       - !ruby/object:Api::Type::String

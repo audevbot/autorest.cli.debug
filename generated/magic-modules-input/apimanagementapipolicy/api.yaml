@@ -181,27 +181,27 @@ objects:
         description: 'The name of the API Management service.'
         required: true
         input: true
-        sample_value: myService
+        sample_value: 'myService'
         azure_sdk_references: ['serviceName']
       - !ruby/object:Api::Type::String
         name: 'apiId'
         description: 'API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.'
         required: true
         input: true
-        sample_value: myApi
+        sample_value: 'myApi'
         azure_sdk_references: ['apiId']
       - !ruby/object:Api::Type::String
         name: 'policyId'
         description: 'The identifier of the Policy.'
         required: true
         input: true
-        sample_value: myPolicy
+        sample_value: 'myPolicy'
         azure_sdk_references: ['policyId']
       - !ruby/object:Api::Type::String
         name: 'value'
         description: 'Contents of the Policy as defined by the format.'
         required: true
-        sample_value: <policies>\n     <inbound>\n     <base />\n  <set-header name="newvalue" exists-action="override">\n   <value>"@(context.Request.Headers.FirstOrDefault(h => h.Ke=="Via"))" </value>\n    </set-header>\n  </inbound>\n      </policies>
+        sample_value: '<policies>\n     <inbound>\n     <base />\n  <set-header name="newvalue" exists-action="override">\n   <value>"@(context.Request.Headers.FirstOrDefault(h => h.Ke=="Via"))" </value>\n    </set-header>\n  </inbound>\n      </policies>'
         azure_sdk_references: ['/value', '/properties/value']
       - !ruby/object:Api::Type::Enum
         name: 'format'

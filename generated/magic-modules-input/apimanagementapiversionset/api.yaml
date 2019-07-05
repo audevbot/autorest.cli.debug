@@ -249,20 +249,20 @@ objects:
         description: 'The name of the API Management service.'
         required: true
         input: true
-        sample_value: myService
+        sample_value: 'myService'
         azure_sdk_references: ['serviceName']
       - !ruby/object:Api::Type::String
         name: 'versionSetId'
         description: 'Api Version Set identifier. Must be unique in the current API Management service instance.'
         required: true
         input: true
-        sample_value: myApiVersionSet
+        sample_value: 'myApiVersionSet'
         azure_sdk_references: ['versionSetId']
       - !ruby/object:Api::Type::String
         name: 'description'
         description: 'Description of API Version Set.'
         required: false
-        sample_value: Version configuration
+        sample_value: 'Version configuration'
         azure_sdk_references: ['/description', '/properties/description']
       - !ruby/object:Api::Type::String
         name: 'versionQueryName'
@@ -278,7 +278,7 @@ objects:
         name: 'displayName'
         description: 'Name of API Version Set'
         required: true
-        sample_value: api set 1
+        sample_value: 'api set 1'
         azure_sdk_references: ['/displayName', '/properties/displayName']
       - !ruby/object:Api::Type::Enum
         name: 'versioningScheme'
