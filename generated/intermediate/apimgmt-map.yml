@@ -27,7 +27,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -57,7 +57,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -90,7 +90,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{api_name}}'
+        ExampleValue: myApi
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -5865,7 +5865,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -5895,7 +5895,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -5927,7 +5927,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{api_name}}'
+        ExampleValue: myApi
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -5959,7 +5959,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{release_name}}'
+        ExampleValue: myRelease
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -7134,7 +7134,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -7164,7 +7164,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -7197,7 +7197,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{api_name}}'
+        ExampleValue: myApi
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -7229,7 +7229,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{operation_name}}'
+        ExampleValue: myOperation
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -14058,7 +14058,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -14088,7 +14088,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -14121,7 +14121,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{api_name}}'
+        ExampleValue: myApi
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -14153,7 +14153,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{operation_name}}'
+        ExampleValue: myOperation
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -14183,7 +14183,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{policy_name}}'
+        ExampleValue: myPolicy
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -15298,7 +15298,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -15328,7 +15328,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -15360,7 +15360,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{tag_name}}'
+        ExampleValue: myTag
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -17400,7 +17400,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -17430,7 +17430,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -17463,7 +17463,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{api_name}}'
+        ExampleValue: myApi
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -17493,7 +17493,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{policy_name}}'
+        ExampleValue: myPolicy
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -18596,7 +18596,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -18626,7 +18626,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -18659,7 +18659,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{api_name}}'
+        ExampleValue: myApi
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -18691,7 +18691,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{schema_name}}'
+        ExampleValue: mySchema
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -19707,7 +19707,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -19737,7 +19737,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -19769,7 +19769,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{api_name}}'
+        ExampleValue: myApi
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -19801,7 +19801,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{diagnostic_name}}'
+        ExampleValue: myDiagnostic
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -22993,7 +22993,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -23023,7 +23023,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -23055,7 +23055,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{api_name}}'
+        ExampleValue: myApi
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -23087,7 +23087,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{issue_name}}'
+        ExampleValue: myIssue
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -24590,7 +24590,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -24620,7 +24620,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -24652,7 +24652,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{api_name}}'
+        ExampleValue: myApi
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -24684,7 +24684,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{issue_name}}'
+        ExampleValue: myIssue
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -24716,7 +24716,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{comment_name}}'
+        ExampleValue: myComment
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -25863,7 +25863,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -25893,7 +25893,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -25925,7 +25925,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{api_name}}'
+        ExampleValue: myApi
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -25957,7 +25957,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{issue_name}}'
+        ExampleValue: myIssue
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -25989,7 +25989,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{attachment_name}}'
+        ExampleValue: myAttachment
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -27118,7 +27118,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -27148,7 +27148,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -27181,7 +27181,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{api_name}}'
+        ExampleValue: myApi
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -27213,7 +27213,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{tag_description_name}}'
+        ExampleValue: myTagDescription
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -30125,7 +30125,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -30155,7 +30155,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -30187,7 +30187,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{api_version_set_name}}'
+        ExampleValue: myApiVersionSet
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -31466,7 +31466,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -31496,7 +31496,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -31526,7 +31526,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{authorization_server_name}}'
+        ExampleValue: myAuthorizationServer
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -34301,7 +34301,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -34331,7 +34331,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -34363,7 +34363,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{backend_name}}'
+        ExampleValue: myBackend
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -37979,7 +37979,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -38009,7 +38009,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -38041,7 +38041,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{cache_name}}'
+        ExampleValue: myCache
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -39099,7 +39099,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -39129,7 +39129,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -39161,7 +39161,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{certificate_name}}'
+        ExampleValue: myCertificate
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -41018,7 +41018,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -41048,7 +41048,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -48512,7 +48512,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -48542,7 +48542,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -48574,7 +48574,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{diagnostic_name}}'
+        ExampleValue: myDiagnostic
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -51696,7 +51696,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -51726,7 +51726,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -51756,7 +51756,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{template_name}}'
+        ExampleValue: myTemplate
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -53382,7 +53382,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -53412,7 +53412,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -53444,7 +53444,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{group_name}}'
+        ExampleValue: myGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -54792,7 +54792,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -54822,7 +54822,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -54854,7 +54854,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{group_name}}'
+        ExampleValue: myGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -54886,7 +54886,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{user_name}}'
+        ExampleValue: myUser
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -56538,7 +56538,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -56568,7 +56568,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -56598,7 +56598,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{identity_provider_name}}'
+        ExampleValue: myIdentityProvider
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -58851,7 +58851,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -58881,7 +58881,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -58913,7 +58913,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{logger_name}}'
+        ExampleValue: myLogger
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -60605,7 +60605,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -60635,7 +60635,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -60665,7 +60665,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{notification_name}}'
+        ExampleValue: myNotification
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -61704,7 +61704,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -61734,7 +61734,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -61764,7 +61764,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{notification_name}}'
+        ExampleValue: myNotification
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -61796,7 +61796,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{recipient_user_name}}'
+        ExampleValue: myRecipientUser
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -62528,7 +62528,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -62558,7 +62558,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -62588,7 +62588,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{notification_name}}'
+        ExampleValue: myNotification
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -62618,7 +62618,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{recipient_email_name}}'
+        ExampleValue: myRecipientEmail
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -63360,7 +63360,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -63390,7 +63390,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -63420,7 +63420,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{openid_connect_provider_name}}'
+        ExampleValue: myOpenidConnectProvider
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -64650,7 +64650,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -64680,7 +64680,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -64710,7 +64710,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{policy_name}}'
+        ExampleValue: myPolicy
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -66030,7 +66030,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -66060,7 +66060,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -66743,7 +66743,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -66773,7 +66773,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -67832,7 +67832,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -67862,7 +67862,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -69034,7 +69034,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -69064,7 +69064,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -69096,7 +69096,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{product_name}}'
+        ExampleValue: myProduct
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -70794,7 +70794,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -70824,7 +70824,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -70856,7 +70856,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{product_name}}'
+        ExampleValue: myProduct
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -70889,7 +70889,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{api_name}}'
+        ExampleValue: myApi
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -73673,7 +73673,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -73703,7 +73703,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -73735,7 +73735,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{product_name}}'
+        ExampleValue: myProduct
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -73767,7 +73767,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{group_name}}'
+        ExampleValue: myGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -75600,7 +75600,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -75630,7 +75630,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -75662,7 +75662,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{product_name}}'
+        ExampleValue: myProduct
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -75692,7 +75692,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{policy_name}}'
+        ExampleValue: myPolicy
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -76731,7 +76731,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -76761,7 +76761,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -76791,7 +76791,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{property_name}}'
+        ExampleValue: myProperty
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -80871,7 +80871,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -80901,7 +80901,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -85677,7 +85677,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -85707,7 +85707,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{service_name}}'
+        ExampleValue: myService
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -85739,7 +85739,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{user_name}}'
+        ExampleValue: myUser
         Hidden: false
         IncludeInResponse: false
         Flatten: false
