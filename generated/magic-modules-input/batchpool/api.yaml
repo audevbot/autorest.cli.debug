@@ -2110,7 +2110,7 @@ objects:
         properties:
           - !ruby/object:Api::Type::NestedObject
             name: 'cloudServiceConfiguration'
-            description: 'This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to 'UserSubscription'.'
+            description: 'This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to \'UserSubscription\'.'
             required: false
             azure_sdk_references: ['/deploymentConfiguration/cloudServiceConfiguration', '/properties/deploymentConfiguration/cloudServiceConfiguration']
             properties:
@@ -2158,7 +2158,7 @@ objects:
                     azure_sdk_references: ['/deploymentConfiguration/virtualMachineConfiguration/imageReference/sku', '/properties/deploymentConfiguration/virtualMachineConfiguration/imageReference/sku']
                   - !ruby/object:Api::Type::String
                     name: 'version'
-                    description: 'A value of 'latest' can be specified to select the latest version of an image. If omitted, the default is 'latest'.'
+                    description: 'A value of \'latest\' can be specified to select the latest version of an image. If omitted, the default is \'latest\'.'
                     required: false
                     sample_value: latest
                     azure_sdk_references: ['/deploymentConfiguration/virtualMachineConfiguration/imageReference/version', '/properties/deploymentConfiguration/virtualMachineConfiguration/imageReference/version']
@@ -2171,7 +2171,7 @@ objects:
                     azure_sdk_references: ['/deploymentConfiguration/virtualMachineConfiguration/imageReference/id', '/properties/deploymentConfiguration/virtualMachineConfiguration/imageReference/id']
               - !ruby/object:Api::Type::String
                 name: 'nodeAgentSkuId'
-                description: 'The Batch node agent is a program that runs on each node in the pool, and provides the command-and-control interface between the node and the Batch service. There are different implementations of the node agent, known as SKUs, for different operating systems. You must specify a node agent SKU which matches the selected image reference. To get the list of supported node agent SKUs along with their list of verified image references, see the 'List supported node agent SKUs' operation.'
+                description: 'The Batch node agent is a program that runs on each node in the pool, and provides the command-and-control interface between the node and the Batch service. There are different implementations of the node agent, known as SKUs, for different operating systems. You must specify a node agent SKU which matches the selected image reference. To get the list of supported node agent SKUs along with their list of verified image references, see the \'List supported node agent SKUs\' operation.'
                 required: true
                 sample_value: batch.node.windows amd64
                 azure_sdk_references: ['/deploymentConfiguration/virtualMachineConfiguration/nodeAgentSkuId', '/properties/deploymentConfiguration/virtualMachineConfiguration/nodeAgentSkuId']
@@ -2314,7 +2314,7 @@ objects:
                 azure_sdk_references: ['/scaleSettings/autoScale/evaluationInterval', '/properties/scaleSettings/autoScale/evaluationInterval']
       - !ruby/object:Api::Type::Enum
         name: 'interNodeCommunication'
-        description: 'This imposes restrictions on which nodes can be assigned to the pool. Enabling this value can reduce the chance of the requested number of nodes to be allocated in the pool. If not specified, this value defaults to 'Disabled'.'
+        description: 'This imposes restrictions on which nodes can be assigned to the pool. Enabling this value can reduce the chance of the requested number of nodes to be allocated in the pool. If not specified, this value defaults to \'Disabled\'.'
         required: false
         values:
           - :Enabled
@@ -2330,7 +2330,7 @@ objects:
         properties:
           - !ruby/object:Api::Azure::Type::ResourceReference
             name: 'subnetId'
-            description: 'The virtual network must be in the same region and subscription as the Azure Batch account. The specified subnet should have enough free IP addresses to accommodate the number of nodes in the pool. If the subnet doesn't have enough free IP addresses, the pool will partially allocate compute nodes, and a resize error will occur. The 'MicrosoftAzureBatch' service principal must have the 'Classic Virtual Machine Contributor' Role-Based Access Control (RBAC) role for the specified VNet. The specified subnet must allow communication from the Azure Batch service to be able to schedule tasks on the compute nodes. This can be verified by checking if the specified VNet has any associated Network Security Groups (NSG). If communication to the compute nodes in the specified subnet is denied by an NSG, then the Batch service will set the state of the compute nodes to unusable. For pools created via virtualMachineConfiguration the Batch account must have poolAllocationMode userSubscription in order to use a VNet. If the specified VNet has any associated Network Security Groups (NSG), then a few reserved system ports must be enabled for inbound communication. For pools created with a virtual machine configuration, enable ports 29876 and 29877, as well as port 22 for Linux and port 3389 for Windows. For pools created with a cloud service configuration, enable ports 10100, 20100, and 30100. Also enable outbound connections to Azure Storage on port 443. For more details see: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration'
+            description: 'The virtual network must be in the same region and subscription as the Azure Batch account. The specified subnet should have enough free IP addresses to accommodate the number of nodes in the pool. If the subnet doesn\'t have enough free IP addresses, the pool will partially allocate compute nodes, and a resize error will occur. The \'MicrosoftAzureBatch\' service principal must have the \'Classic Virtual Machine Contributor\' Role-Based Access Control (RBAC) role for the specified VNet. The specified subnet must allow communication from the Azure Batch service to be able to schedule tasks on the compute nodes. This can be verified by checking if the specified VNet has any associated Network Security Groups (NSG). If communication to the compute nodes in the specified subnet is denied by an NSG, then the Batch service will set the state of the compute nodes to unusable. For pools created via virtualMachineConfiguration the Batch account must have poolAllocationMode userSubscription in order to use a VNet. If the specified VNet has any associated Network Security Groups (NSG), then a few reserved system ports must be enabled for inbound communication. For pools created with a virtual machine configuration, enable ports 29876 and 29877, as well as port 22 for Linux and port 3389 for Windows. For pools created with a cloud service configuration, enable ports 10100, 20100, and 30100. Also enable outbound connections to Azure Storage on port 443. For more details see: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration'
             required: false
             sample_value: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.Network/virtualNetworks/{{ virtual_network_name }}/subnets/{{ name }}
             resource_type_name: TBD
@@ -2457,7 +2457,7 @@ objects:
                 azure_sdk_references: ['/userAccounts/linuxUserConfiguration/gid', '/properties/userAccounts/linuxUserConfiguration/gid']
               - !ruby/object:Api::Type::String
                 name: 'sshPrivateKey'
-                description: 'The private key must not be password protected. The private key is used to automatically configure asymmetric-key based authentication for SSH between nodes in a Linux pool when the pool's enableInterNodeCommunication property is true (it is ignored if enableInterNodeCommunication is false). It does this by placing the key pair into the user's .ssh directory. If not specified, password-less SSH is not configured between nodes (no modification of the user's .ssh directory is done).'
+                description: 'The private key must not be password protected. The private key is used to automatically configure asymmetric-key based authentication for SSH between nodes in a Linux pool when the pool\'s enableInterNodeCommunication property is true (it is ignored if enableInterNodeCommunication is false). It does this by placing the key pair into the user\'s .ssh directory. If not specified, password-less SSH is not configured between nodes (no modification of the user\'s .ssh directory is done).'
                 required: false
                 sample_value: sshprivatekeyvalue
                 azure_sdk_references: ['/userAccounts/linuxUserConfiguration/sshPrivateKey', '/properties/userAccounts/linuxUserConfiguration/sshPrivateKey']
@@ -2535,7 +2535,7 @@ objects:
                 azure_sdk_references: ['/startTask/resourceFiles/blobPrefix', '/properties/startTask/resourceFiles/blobPrefix']
               - !ruby/object:Api::Type::String
                 name: 'filePath'
-                description: 'If the httpUrl property is specified, the filePath is required and describes the path which the file will be downloaded to, including the filename. Otherwise, if the autoStorageContainerName or storageContainerUrl property is specified, filePath is optional and is the directory to download the files to. In the case where filePath is used as a directory, any directory structure already associated with the input data will be retained in full and appended to the specified filePath directory. The specified relative path cannot break out of the task's working directory (for example by using '..').'
+                description: 'If the httpUrl property is specified, the filePath is required and describes the path which the file will be downloaded to, including the filename. Otherwise, if the autoStorageContainerName or storageContainerUrl property is specified, filePath is optional and is the directory to download the files to. In the case where filePath is used as a directory, any directory structure already associated with the input data will be retained in full and appended to the specified filePath directory. The specified relative path cannot break out of the task\'s working directory (for example by using \'..\').'
                 required: false
                 sample_value: c:\temp\gohere
                 azure_sdk_references: ['/startTask/resourceFiles/filePath', '/properties/startTask/resourceFiles/filePath']
@@ -2651,7 +2651,7 @@ objects:
                     azure_sdk_references: ['/startTask/containerSettings/registry/password', '/properties/startTask/containerSettings/registry/password']
       - !ruby/object:Api::Type::NestedObject
         name: 'certificates'
-        description: 'For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.'
+        description: 'For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of \'remoteUser\', a \'certs\' directory is created in the user\'s home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.'
         required: false
         azure_sdk_references: ['/certificates', '/properties/certificates']
         properties:
@@ -2664,7 +2664,7 @@ objects:
             azure_sdk_references: ['/certificates/id', '/properties/certificates/id']
           - !ruby/object:Api::Type::Enum
             name: 'storeLocation'
-            description: 'The default value is currentUser. This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.'
+            description: 'The default value is currentUser. This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of \'remoteUser\', a \'certs\' directory is created in the user\'s home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.'
             required: false
             values:
               - :CurrentUser

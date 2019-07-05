@@ -1494,19 +1494,19 @@ objects:
                 azure_sdk_references: ['/request/representations/sample', '/properties/request/representations/sample']
               - !ruby/object:Api::Type::String
                 name: 'schemaId'
-                description: 'Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.'
+                description: 'Schema identifier. Applicable only if \'contentType\' value is neither \'application/x-www-form-urlencoded\' nor \'multipart/form-data\'.'
                 required: false
                 sample_value: 592f6c1d0af5840ca8897f0c
                 azure_sdk_references: ['/request/representations/schemaId', '/properties/request/representations/schemaId']
               - !ruby/object:Api::Type::String
                 name: 'typeName'
-                description: 'Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.'
+                description: 'Type name defined by the schema. Applicable only if \'contentType\' value is neither \'application/x-www-form-urlencoded\' nor \'multipart/form-data\'.'
                 required: false
                 sample_value: User
                 azure_sdk_references: ['/request/representations/typeName', '/properties/request/representations/typeName']
               - !ruby/object:Api::Type::NestedObject
                 name: 'formParameters'
-                description: 'Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..'
+                description: 'Collection of form parameters. Required if \'contentType\' value is either \'application/x-www-form-urlencoded\' or \'multipart/form-data\'..'
                 required: false
                 azure_sdk_references: ['/request/representations/formParameters', '/properties/request/representations/formParameters']
                 properties:
@@ -1577,17 +1577,17 @@ objects:
                 azure_sdk_references: ['/responses/representations/sample', '/properties/responses/representations/sample']
               - !ruby/object:Api::Type::String
                 name: 'schemaId'
-                description: 'Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.'
+                description: 'Schema identifier. Applicable only if \'contentType\' value is neither \'application/x-www-form-urlencoded\' nor \'multipart/form-data\'.'
                 required: false
                 azure_sdk_references: ['/responses/representations/schemaId', '/properties/responses/representations/schemaId']
               - !ruby/object:Api::Type::String
                 name: 'typeName'
-                description: 'Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.'
+                description: 'Type name defined by the schema. Applicable only if \'contentType\' value is neither \'application/x-www-form-urlencoded\' nor \'multipart/form-data\'.'
                 required: false
                 azure_sdk_references: ['/responses/representations/typeName', '/properties/responses/representations/typeName']
               - !ruby/object:Api::Type::NestedObject
                 name: 'formParameters'
-                description: 'Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..'
+                description: 'Collection of form parameters. Required if \'contentType\' value is either \'application/x-www-form-urlencoded\' or \'multipart/form-data\'..'
                 required: false
                 azure_sdk_references: ['/responses/representations/formParameters', '/properties/responses/representations/formParameters']
                 properties:

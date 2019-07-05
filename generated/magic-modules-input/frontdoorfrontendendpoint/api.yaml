@@ -257,7 +257,7 @@ objects:
         azure_sdk_references: ['/hostName', '/properties/hostName']
       - !ruby/object:Api::Type::Enum
         name: 'sessionAffinityEnabledState'
-        description: 'Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled''
+        description: 'Whether to allow session affinity on this host. Valid options are \'Enabled\' or \'Disabled\''
         required: false
         values:
           - :Enabled
