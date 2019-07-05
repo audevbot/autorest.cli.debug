@@ -1035,7 +1035,7 @@ objects:
             required: false
             sample_value: 2018-11-09T11:22:57+00:00
             azure_sdk_references: ['/scheduleInfo/expiryTime', '/properties/scheduleInfo/expiryTime']
-          - !ruby/object:Api::Azure::Type::Integer
+          - !ruby/object:Api::Type::Integer
             name: 'expiryTimeOffsetMinutes'
             description: 'Gets or sets the expiry time's offset in minutes.'
             required: false
@@ -1050,12 +1050,12 @@ objects:
             description: 'Gets or sets the next run time of the schedule.'
             required: false
             azure_sdk_references: ['/scheduleInfo/nextRun', '/properties/scheduleInfo/nextRun']
-          - !ruby/object:Api::Azure::Type::Integer
+          - !ruby/object:Api::Type::Integer
             name: 'nextRunOffsetMinutes'
             description: 'Gets or sets the next run time's offset in minutes.'
             required: false
             azure_sdk_references: ['/scheduleInfo/nextRunOffsetMinutes', '/properties/scheduleInfo/nextRunOffsetMinutes']
-          - !ruby/object:Api::Azure::Type::Integer
+          - !ruby/object:Api::Type::Integer
             name: 'interval'
             description: 'Gets or sets the interval of the schedule.'
             required: false
@@ -1093,7 +1093,7 @@ objects:
                 required: false
                 sample_value: Thursday
                 azure_sdk_references: ['/scheduleInfo/advancedSchedule/weekDays', '/properties/scheduleInfo/advancedSchedule/weekDays']
-              - !ruby/object:Api::Azure::Type::Integer
+              - !ruby/object:Api::Type::Integer
                 name: 'monthDays'
                 description: 'Days of the month that the job should execute on. Must be between 1 and 31.'
                 required: false
@@ -1104,7 +1104,7 @@ objects:
                 required: false
                 azure_sdk_references: ['/scheduleInfo/advancedSchedule/monthlyOccurrences', '/properties/scheduleInfo/advancedSchedule/monthlyOccurrences']
                 properties:
-                  - !ruby/object:Api::Azure::Type::Integer
+                  - !ruby/object:Api::Type::Integer
                     name: 'occurrence'
                     description: 'Occurrence of the week within the month. Must be between 1 and 5'
                     required: false
