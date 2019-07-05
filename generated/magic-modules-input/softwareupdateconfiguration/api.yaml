@@ -997,7 +997,7 @@ objects:
                     name: 'tagSettings'
                     description: 'Tag settings for the VM.'
                     required: false
-                    sample_value: [object Object]
+                    sample_value: {"tags":[{"tag1":["tag1Value1","tag1Value2","tag1Value3"]},{"tag2":["tag2Value1","tag2Value2","tag2Value3"]}],"filterOperator":"All"}
                     azure_sdk_references: ['/updateConfiguration/targets/azureQueries/tagSettings', '/properties/updateConfiguration/targets/azureQueries/tagSettings']
               - !ruby/object:Api::Type::NestedObject
                 name: 'nonAzureQueries'
