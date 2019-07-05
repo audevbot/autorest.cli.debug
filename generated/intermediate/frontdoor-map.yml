@@ -27,7 +27,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -57,7 +57,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{front_door_name}}'
+        ExampleValue: myFrontDoor
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -8819,7 +8819,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -8849,7 +8849,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{front_door_name}}'
+        ExampleValue: myFrontDoor
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -8879,7 +8879,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{routing_rule_name}}'
+        ExampleValue: myRoutingRule
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -10842,7 +10842,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -10872,7 +10872,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{front_door_name}}'
+        ExampleValue: myFrontDoor
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -10904,7 +10904,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{health_probe_setting_name}}'
+        ExampleValue: myHealthProbeSetting
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -12129,7 +12129,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -12159,7 +12159,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{front_door_name}}'
+        ExampleValue: myFrontDoor
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -12191,7 +12191,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{load_balancing_setting_name}}'
+        ExampleValue: myLoadBalancingSetting
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -13396,7 +13396,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -13426,7 +13426,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{front_door_name}}'
+        ExampleValue: myFrontDoor
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -13456,7 +13456,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{backend_pool_name}}'
+        ExampleValue: myBackendPool
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -15710,7 +15710,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -15740,7 +15740,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{front_door_name}}'
+        ExampleValue: myFrontDoor
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -15770,7 +15770,7 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{frontend_endpoint_name}}'
+        ExampleValue: myFrontendEndpoint
         Hidden: false
         IncludeInResponse: false
         Flatten: false
