@@ -235,7 +235,7 @@ objects:
         azure_sdk_references: ['/title', '/properties/title']
       - !ruby/object:Api::Type::String
         name: 'contentFormat'
-        description: 'Either \'link\' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the \'content\' property.'
+        description: 'Either ''link'' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the ''content'' property.'
         required: true
         sample_value: image/jpeg
         azure_sdk_references: ['/contentFormat', '/properties/contentFormat']
