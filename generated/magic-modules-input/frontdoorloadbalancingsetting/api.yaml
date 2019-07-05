@@ -201,17 +201,17 @@ objects:
         required: false
         input: true
         azure_sdk_references: ['/id']
-      - !ruby/object:Api::Azure::Type::Integer
+      - !ruby/object:Api::Type::Integer
         name: 'sampleSize'
         description: 'The number of samples to consider for load balancing decisions'
         required: false
         azure_sdk_references: ['/sampleSize', '/properties/sampleSize']
-      - !ruby/object:Api::Azure::Type::Integer
+      - !ruby/object:Api::Type::Integer
         name: 'successfulSamplesRequired'
         description: 'The number of samples within the sample period that must succeed'
         required: false
         azure_sdk_references: ['/successfulSamplesRequired', '/properties/successfulSamplesRequired']
-      - !ruby/object:Api::Azure::Type::Integer
+      - !ruby/object:Api::Type::Integer
         name: 'additionalLatencyMilliseconds'
         description: 'The additional latency in milliseconds for probes to fall into the lowest latency bucket'
         required: false

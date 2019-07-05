@@ -698,7 +698,7 @@ objects:
             default_value: :fixed
             sample_value: fixed
             azure_sdk_references: ['/sampling/samplingType', '/properties/sampling/samplingType']
-          - !ruby/object:Api::Azure::Type::Integer
+          - !ruby/object:Api::Type::Integer
             name: 'percentage'
             description: 'Rate of sampling for fixed-rate sampling.'
             required: false
@@ -728,7 +728,7 @@ objects:
                 required: false
                 azure_sdk_references: ['/frontend/request/body', '/properties/frontend/request/body']
                 properties:
-                  - !ruby/object:Api::Azure::Type::Integer
+                  - !ruby/object:Api::Type::Integer
                     name: 'bytes'
                     description: 'Number of request body bytes to log.'
                     required: false
@@ -752,7 +752,7 @@ objects:
                 required: false
                 azure_sdk_references: ['/frontend/response/body', '/properties/frontend/response/body']
                 properties:
-                  - !ruby/object:Api::Azure::Type::Integer
+                  - !ruby/object:Api::Type::Integer
                     name: 'bytes'
                     description: 'Number of request body bytes to log.'
                     required: false
@@ -782,7 +782,7 @@ objects:
                 required: false
                 azure_sdk_references: ['/backend/request/body', '/properties/backend/request/body']
                 properties:
-                  - !ruby/object:Api::Azure::Type::Integer
+                  - !ruby/object:Api::Type::Integer
                     name: 'bytes'
                     description: 'Number of request body bytes to log.'
                     required: false
@@ -806,7 +806,7 @@ objects:
                 required: false
                 azure_sdk_references: ['/backend/response/body', '/properties/backend/response/body']
                 properties:
-                  - !ruby/object:Api::Azure::Type::Integer
+                  - !ruby/object:Api::Type::Integer
                     name: 'bytes'
                     description: 'Number of request body bytes to log.'
                     required: false
