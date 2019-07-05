@@ -279,7 +279,7 @@ objects:
         azure_sdk_references: ['certificateName', '/name']
       - !ruby/object:Api::Type::String
         name: 'thumbprintAlgorithm'
-        description: 'This must match the first portion of the certificate name. Currently required to be \'SHA1\'.'
+        description: 'This must match the first portion of the certificate name. Currently required to be ''SHA1''.'
         required: false
         sample_value: SHA1
         azure_sdk_references: ['/thumbprintAlgorithm', '/properties/thumbprintAlgorithm']
@@ -339,7 +339,7 @@ objects:
         azure_sdk_references: ['/publicData', '/properties/publicData']
       - !ruby/object:Api::Type::NestedObject
         name: 'deleteCertificateError'
-        description: 'This is only returned when the certificate provisioningState is \'Failed\'.'
+        description: 'This is only returned when the certificate provisioningState is ''Failed''.'
         output: true
         azure_sdk_references: ['/deleteCertificateError', '/properties/deleteCertificateError']
         properties:
