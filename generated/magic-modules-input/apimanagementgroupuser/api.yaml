@@ -101,21 +101,21 @@ objects:
         description: 'The name of the API Management service.'
         required: true
         input: true
-        sample_value: myService
+        sample_value: 'myService'
         azure_sdk_references: ['serviceName']
       - !ruby/object:Api::Type::String
         name: 'groupId'
         description: 'Group identifier. Must be unique in the current API Management service instance.'
         required: true
         input: true
-        sample_value: myGroup
+        sample_value: 'myGroup'
         azure_sdk_references: ['groupId']
       - !ruby/object:Api::Type::String
         name: 'userId'
         description: 'User identifier. Must be unique in the current API Management service instance.'
         required: true
         input: true
-        sample_value: myUser
+        sample_value: 'myUser'
         azure_sdk_references: ['userId']
       - !ruby/object:Api::Type::Enum
         name: 'state'

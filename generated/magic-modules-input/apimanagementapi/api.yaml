@@ -858,20 +858,20 @@ objects:
         description: 'The name of the API Management service.'
         required: true
         input: true
-        sample_value: myService
+        sample_value: 'myService'
         azure_sdk_references: ['serviceName']
       - !ruby/object:Api::Type::String
         name: 'apiId'
         description: 'API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.'
         required: true
         input: true
-        sample_value: myApi
+        sample_value: 'myApi'
         azure_sdk_references: ['apiId']
       - !ruby/object:Api::Type::String
         name: 'description'
         description: 'Description of the API. May include HTML formatting tags.'
         required: false
-        sample_value: This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.
+        sample_value: 'This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.'
         azure_sdk_references: ['/description', '/properties/description']
       - !ruby/object:Api::Type::NestedObject
         name: 'authenticationSettings'
@@ -889,13 +889,13 @@ objects:
                 name: 'authorizationServerId'
                 description: 'OAuth authorization server identifier.'
                 required: false
-                sample_value: authorizationServerId2283
+                sample_value: 'authorizationServerId2283'
                 azure_sdk_references: ['/authenticationSettings/oAuth2/authorizationServerId', '/properties/authenticationSettings/oAuth2/authorizationServerId']
               - !ruby/object:Api::Type::String
                 name: 'scope'
                 description: 'operations scope.'
                 required: false
-                sample_value: oauth2scope2580
+                sample_value: 'oauth2scope2580'
                 azure_sdk_references: ['/authenticationSettings/oAuth2/scope', '/properties/authenticationSettings/oAuth2/scope']
           - !ruby/object:Api::Type::NestedObject
             name: 'openid'
@@ -907,7 +907,7 @@ objects:
                 name: 'openidProviderId'
                 description: 'OAuth authorization server identifier.'
                 required: false
-                sample_value: testopenid
+                sample_value: 'testopenid'
                 azure_sdk_references: ['/authenticationSettings/openid/openidProviderId', '/properties/authenticationSettings/openid/openidProviderId']
               - !ruby/object:Api::Type::Enum
                 name: 'bearerTokenSendingMethods'
@@ -934,13 +934,13 @@ objects:
             name: 'header'
             description: 'Subscription key header name.'
             required: false
-            sample_value: Ocp-Apim-Subscription-Key
+            sample_value: 'Ocp-Apim-Subscription-Key'
             azure_sdk_references: ['/subscriptionKeyParameterNames/header', '/properties/subscriptionKeyParameterNames/header']
           - !ruby/object:Api::Type::String
             name: 'query'
             description: 'Subscription key query string parameter name.'
             required: false
-            sample_value: subscription-key
+            sample_value: 'subscription-key'
             azure_sdk_references: ['/subscriptionKeyParameterNames/query', '/properties/subscriptionKeyParameterNames/query']
       - !ruby/object:Api::Type::Enum
         name: 'type'
@@ -960,7 +960,7 @@ objects:
         name: 'apiVersion'
         description: 'Indicates the Version identifier of the API if the API is versioned'
         required: false
-        sample_value: v4
+        sample_value: 'v4'
         azure_sdk_references: ['/apiVersion', '/properties/apiVersion']
       - !ruby/object:Api::Type::Boolean
         name: 'isCurrent'
@@ -972,7 +972,7 @@ objects:
         name: 'apiRevisionDescription'
         description: 'Description of the Api Revision.'
         required: false
-        sample_value: Creating a Revision of an existing API
+        sample_value: 'Creating a Revision of an existing API'
         azure_sdk_references: ['/apiRevisionDescription', '/properties/apiRevisionDescription']
       - !ruby/object:Api::Type::String
         name: 'apiVersionDescription'
@@ -1003,19 +1003,19 @@ objects:
         name: 'displayName'
         description: 'API name. Must be 1 to 300 characters long.'
         required: false
-        sample_value: Echo API New
+        sample_value: 'Echo API New'
         azure_sdk_references: ['/displayName', '/properties/displayName']
       - !ruby/object:Api::Type::String
         name: 'serviceUrl'
         description: 'Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.'
         required: false
-        sample_value: http://echoapi.cloudapp.net/api2
+        sample_value: 'http://echoapi.cloudapp.net/api2'
         azure_sdk_references: ['/serviceUrl', '/properties/serviceUrl']
       - !ruby/object:Api::Type::String
         name: 'path'
         description: 'Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.'
         required: true
-        sample_value: newecho
+        sample_value: 'newecho'
         azure_sdk_references: ['/path', '/properties/path']
       - !ruby/object:Api::Type::Enum
         name: 'protocols'
@@ -1072,7 +1072,7 @@ objects:
         name: 'value'
         description: 'Content value when Importing an API.'
         required: false
-        sample_value: http://www.webservicex.net/CurrencyConvertor.asmx?WSDL
+        sample_value: 'http://www.webservicex.net/CurrencyConvertor.asmx?WSDL'
         azure_sdk_references: ['/value', '/properties/value']
       - !ruby/object:Api::Type::Enum
         name: 'format'
@@ -1101,13 +1101,13 @@ objects:
             name: 'wsdlServiceName'
             description: 'Name of service to import from WSDL'
             required: false
-            sample_value: CurrencyConvertor
+            sample_value: 'CurrencyConvertor'
             azure_sdk_references: ['/wsdlSelector/wsdlServiceName', '/properties/wsdlSelector/wsdlServiceName']
           - !ruby/object:Api::Type::String
             name: 'wsdlEndpointName'
             description: 'Name of endpoint(port) to import from WSDL'
             required: false
-            sample_value: CurrencyConvertorSoap
+            sample_value: 'CurrencyConvertorSoap'
             azure_sdk_references: ['/wsdlSelector/wsdlEndpointName', '/properties/wsdlSelector/wsdlEndpointName']
       - !ruby/object:Api::Type::Enum
         name: 'apiType'

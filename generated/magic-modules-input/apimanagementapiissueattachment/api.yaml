@@ -204,46 +204,46 @@ objects:
         description: 'The name of the API Management service.'
         required: true
         input: true
-        sample_value: myService
+        sample_value: 'myService'
         azure_sdk_references: ['serviceName']
       - !ruby/object:Api::Type::String
         name: 'apiId'
         description: 'API identifier. Must be unique in the current API Management service instance.'
         required: true
         input: true
-        sample_value: myApi
+        sample_value: 'myApi'
         azure_sdk_references: ['apiId']
       - !ruby/object:Api::Type::String
         name: 'issueId'
         description: 'Issue identifier. Must be unique in the current API Management service instance.'
         required: true
         input: true
-        sample_value: myIssue
+        sample_value: 'myIssue'
         azure_sdk_references: ['issueId']
       - !ruby/object:Api::Type::String
         name: 'attachmentId'
         description: 'Attachment identifier within an Issue. Must be unique in the current Issue.'
         required: true
         input: true
-        sample_value: myAttachment
+        sample_value: 'myAttachment'
         azure_sdk_references: ['attachmentId']
       - !ruby/object:Api::Type::String
         name: 'title'
         description: 'Filename by which the binary data will be saved.'
         required: true
-        sample_value: Issue attachment.
+        sample_value: 'Issue attachment.'
         azure_sdk_references: ['/title', '/properties/title']
       - !ruby/object:Api::Type::String
         name: 'contentFormat'
         description: 'Either ''link'' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the ''content'' property.'
         required: true
-        sample_value: image/jpeg
+        sample_value: 'image/jpeg'
         azure_sdk_references: ['/contentFormat', '/properties/contentFormat']
       - !ruby/object:Api::Type::String
         name: 'content'
         description: 'An HTTP link or Base64-encoded binary data.'
         required: true
-        sample_value: IEJhc2U2NA==
+        sample_value: 'IEJhc2U2NA=='
         azure_sdk_references: ['/content', '/properties/content']
       # read only values included only in response
       - !ruby/object:Api::Type::String

@@ -222,19 +222,19 @@ objects:
         description: 'The name of the API Management service.'
         required: true
         input: true
-        sample_value: myService
+        sample_value: 'myService'
         azure_sdk_references: ['serviceName', '/name']
       - !ruby/object:Api::Type::String
         name: 'url'
         description: 'A delegation Url.'
         required: false
-        sample_value: http://contoso.com/delegation
+        sample_value: 'http://contoso.com/delegation'
         azure_sdk_references: ['/url', '/properties/url']
       - !ruby/object:Api::Type::String
         name: 'validationKey'
         description: 'A base64-encoded validation key to validate, that a request is coming from Azure API Management.'
         required: false
-        sample_value: nVF7aKIvr9mV/RM5lOD0sYoi8ThXTRHQP7o66hvUmjCDkPKR3qxPu/otJcNciz2aQdqPuzJH3ECG4TU2yZjQ7Q==
+        sample_value: 'nVF7aKIvr9mV/RM5lOD0sYoi8ThXTRHQP7o66hvUmjCDkPKR3qxPu/otJcNciz2aQdqPuzJH3ECG4TU2yZjQ7Q=='
         azure_sdk_references: ['/validationKey', '/properties/validationKey']
       - !ruby/object:Api::Type::NestedObject
         name: 'subscriptions'

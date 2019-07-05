@@ -331,14 +331,14 @@ objects:
         description: 'The name of the API Management service.'
         required: true
         input: true
-        sample_value: myService
+        sample_value: 'myService'
         azure_sdk_references: ['serviceName']
       - !ruby/object:Api::Type::String
         name: 'sid'
         description: 'Subscription entity Identifier. The entity represents the association between a user and a product in API Management.'
         required: true
         input: true
-        sample_value: testsub
+        sample_value: 'testsub'
         azure_sdk_references: ['sid']
       - !ruby/object:Api::Azure::Type::ResourceReference
         name: 'ownerId'
@@ -358,7 +358,7 @@ objects:
         name: 'displayName'
         description: 'Subscription name.'
         required: true
-        sample_value: testsub
+        sample_value: 'testsub'
         azure_sdk_references: ['/displayName', '/properties/displayName']
       - !ruby/object:Api::Type::String
         name: 'primaryKey'

@@ -158,26 +158,26 @@ objects:
         description: 'The name of the API Management service.'
         required: true
         input: true
-        sample_value: myService
+        sample_value: 'myService'
         azure_sdk_references: ['serviceName']
       - !ruby/object:Api::Type::String
         name: 'certificateId'
         description: 'Identifier of the certificate entity. Must be unique in the current API Management service instance.'
         required: true
         input: true
-        sample_value: myCertificate
+        sample_value: 'myCertificate'
         azure_sdk_references: ['certificateId']
       - !ruby/object:Api::Type::String
         name: 'data'
         description: 'Base 64 encoded certificate using the application/x-pkcs12 representation.'
         required: true
-        sample_value: ****************Base 64 Encoded Certificate *******************************
+        sample_value: '****************Base 64 Encoded Certificate *******************************'
         azure_sdk_references: ['/data', '/properties/data']
       - !ruby/object:Api::Type::String
         name: 'password'
         description: 'Password for the Certificate'
         required: true
-        sample_value: ****Certificate Password******
+        sample_value: '****Certificate Password******'
         azure_sdk_references: ['/password', '/properties/password']
       # read only values included only in response
       - !ruby/object:Api::Type::String

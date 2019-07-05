@@ -927,7 +927,7 @@ objects:
         description: 'Name of the Front Door which is globally unique.'
         required: true
         input: true
-        sample_value: myFrontDoor
+        sample_value: 'myFrontDoor'
         azure_sdk_references: ['frontDoorName', '/name']
       - !ruby/object:Api::Azure::Type::Location
         name: 'location'

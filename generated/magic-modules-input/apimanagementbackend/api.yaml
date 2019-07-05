@@ -675,14 +675,14 @@ objects:
         description: 'The name of the API Management service.'
         required: true
         input: true
-        sample_value: myService
+        sample_value: 'myService'
         azure_sdk_references: ['serviceName']
       - !ruby/object:Api::Type::String
         name: 'backendId'
         description: 'Identifier of the Backend entity. Must be unique in the current API Management service instance.'
         required: true
         input: true
-        sample_value: myBackend
+        sample_value: 'myBackend'
         azure_sdk_references: ['backendId']
       - !ruby/object:Api::Type::String
         name: 'title'
@@ -693,7 +693,7 @@ objects:
         name: 'description'
         description: 'Backend Description.'
         required: false
-        sample_value: description5308
+        sample_value: 'description5308'
         azure_sdk_references: ['/description', '/properties/description']
       - !ruby/object:Api::Type::String
         name: 'resourceId'
@@ -710,7 +710,7 @@ objects:
             name: 'clientCertificatethumbprint'
             description: 'The client certificate thumbprint for the management endpoint.'
             required: true
-            sample_value: EBA029198AA3E76EF0D70482626E5BCF148594A6
+            sample_value: 'EBA029198AA3E76EF0D70482626E5BCF148594A6'
             azure_sdk_references: ['/serviceFabricCluster/clientCertificatethumbprint', '/properties/properties/serviceFabricCluster/clientCertificatethumbprint']
           - !ruby/object:Api::Type::Integer
             name: 'maxPartitionResolutionRetries'
@@ -722,7 +722,7 @@ objects:
             name: 'managementEndpoints'
             description: 'The cluster management endpoint.'
             required: true
-            sample_value: https://somecluster.com
+            sample_value: 'https://somecluster.com'
             azure_sdk_references: ['/serviceFabricCluster/managementEndpoints', '/properties/properties/serviceFabricCluster/managementEndpoints']
           - !ruby/object:Api::Type::String
             name: 'serverCertificateThumbprints'
@@ -739,13 +739,13 @@ objects:
                 name: 'name'
                 description: 'Common Name of the Certificate.'
                 required: false
-                sample_value: ServerCommonName1
+                sample_value: 'ServerCommonName1'
                 azure_sdk_references: ['/serviceFabricCluster/serverX509Names/name', '/properties/properties/serviceFabricCluster/serverX509Names/name', '/name']
               - !ruby/object:Api::Type::String
                 name: 'issuerCertificateThumbprint'
                 description: 'Thumbprint for the Issuer of the Certificate.'
                 required: false
-                sample_value: IssuerCertificateThumbprint1
+                sample_value: 'IssuerCertificateThumbprint1'
                 azure_sdk_references: ['/serviceFabricCluster/serverX509Names/issuerCertificateThumbprint', '/properties/properties/serviceFabricCluster/serverX509Names/issuerCertificateThumbprint']
       - !ruby/object:Api::Type::NestedObject
         name: 'credentials'
@@ -762,13 +762,13 @@ objects:
             name: 'query'
             description: 'Query Parameter description.'
             required: false
-            sample_value: {"sv":["xx","bb","cc"]}
+            sample_value: [object Object]
             azure_sdk_references: ['/credentials/query', '/properties/credentials/query']
           - !ruby/object:Api::Type::KeyValuePairs
             name: 'header'
             description: 'Header Parameter description.'
             required: false
-            sample_value: {"x-my-1":["val1","val2"]}
+            sample_value: [object Object]
             azure_sdk_references: ['/credentials/header', '/properties/credentials/header']
           - !ruby/object:Api::Type::NestedObject
             name: 'authorization'
@@ -780,13 +780,13 @@ objects:
                 name: 'scheme'
                 description: 'Authentication Scheme name.'
                 required: true
-                sample_value: Basic
+                sample_value: 'Basic'
                 azure_sdk_references: ['/credentials/authorization/scheme', '/properties/credentials/authorization/scheme']
               - !ruby/object:Api::Type::String
                 name: 'parameter'
                 description: 'Authentication Parameter value.'
                 required: true
-                sample_value: opensesma
+                sample_value: 'opensesma'
                 azure_sdk_references: ['/credentials/authorization/parameter', '/properties/credentials/authorization/parameter']
       - !ruby/object:Api::Type::NestedObject
         name: 'proxy'
@@ -798,19 +798,19 @@ objects:
             name: 'url'
             description: 'WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.'
             required: true
-            sample_value: http://192.168.1.1:8080
+            sample_value: 'http://192.168.1.1:8080'
             azure_sdk_references: ['/proxy/url', '/properties/proxy/url']
           - !ruby/object:Api::Type::String
             name: 'username'
             description: 'Username to connect to the WebProxy server'
             required: false
-            sample_value: Contoso\admin
+            sample_value: 'Contoso\admin'
             azure_sdk_references: ['/proxy/username', '/properties/proxy/username']
           - !ruby/object:Api::Type::String
             name: 'password'
             description: 'Password to connect to the WebProxy Server'
             required: false
-            sample_value: opensesame
+            sample_value: 'opensesame'
             azure_sdk_references: ['/proxy/password', '/properties/proxy/password']
       - !ruby/object:Api::Type::NestedObject
         name: 'tls'
@@ -833,7 +833,7 @@ objects:
         name: 'url'
         description: 'Runtime Url of the Backend.'
         required: true
-        sample_value: https://backendname2644/
+        sample_value: 'https://backendname2644/'
         azure_sdk_references: ['/url', '/properties/url']
       - !ruby/object:Api::Type::Enum
         name: 'protocol'

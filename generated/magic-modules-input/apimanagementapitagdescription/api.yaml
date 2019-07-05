@@ -190,39 +190,39 @@ objects:
         description: 'The name of the API Management service.'
         required: true
         input: true
-        sample_value: myService
+        sample_value: 'myService'
         azure_sdk_references: ['serviceName']
       - !ruby/object:Api::Type::String
         name: 'apiId'
         description: 'API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.'
         required: true
         input: true
-        sample_value: myApi
+        sample_value: 'myApi'
         azure_sdk_references: ['apiId']
       - !ruby/object:Api::Type::String
         name: 'tagId'
         description: 'Tag identifier. Must be unique in the current API Management service instance.'
         required: true
         input: true
-        sample_value: myTagDescription
+        sample_value: 'myTagDescription'
         azure_sdk_references: ['tagId']
       - !ruby/object:Api::Type::String
         name: 'description'
         description: 'Description of the Tag.'
         required: false
-        sample_value: Some description that will be displayed for operation''s tag if the tag is assigned to operation of the API
+        sample_value: 'Some description that will be displayed for operation''s tag if the tag is assigned to operation of the API'
         azure_sdk_references: ['/description', '/properties/description']
       - !ruby/object:Api::Type::String
         name: 'externalDocsUrl'
         description: 'Absolute URL of external resources describing the tag.'
         required: false
-        sample_value: http://some.url/additionaldoc
+        sample_value: 'http://some.url/additionaldoc'
         azure_sdk_references: ['/externalDocsUrl', '/properties/externalDocsUrl']
       - !ruby/object:Api::Type::String
         name: 'externalDocsDescription'
         description: 'Description of the external resources describing the tag.'
         required: false
-        sample_value: Description of the external docs resource
+        sample_value: 'Description of the external docs resource'
         azure_sdk_references: ['/externalDocsDescription', '/properties/externalDocsDescription']
       # read only values included only in response
       - !ruby/object:Api::Type::String

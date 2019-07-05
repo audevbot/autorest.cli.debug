@@ -243,20 +243,20 @@ objects:
         description: 'The name of the API Management service.'
         required: true
         input: true
-        sample_value: myService
+        sample_value: 'myService'
         azure_sdk_references: ['serviceName']
       - !ruby/object:Api::Type::String
         name: 'name'
         description: 'Email Template Name Identifier.'
         required: true
         input: true
-        sample_value: myTemplate
+        sample_value: 'myTemplate'
         azure_sdk_references: ['templateName', '/name']
       - !ruby/object:Api::Type::String
         name: 'subject'
         description: 'Subject of the Template.'
         required: false
-        sample_value: Your application $AppName is published in the gallery
+        sample_value: 'Your application $AppName is published in the gallery'
         azure_sdk_references: ['/subject', '/properties/subject']
       - !ruby/object:Api::Type::String
         name: 'title'
@@ -272,7 +272,7 @@ objects:
         name: 'body'
         description: 'Email Template Body. This should be a valid XDocument'
         required: false
-        sample_value: <!DOCTYPE html >\n<html>\n  <head />\n  <body>\n    <p style="font-size:12pt;font-family:''Segoe UI''">Dear $DevFirstName $DevLastName,</p>\n    <p style="font-size:12pt;font-family:''Segoe UI''">\n          We are happy to let you know that your request to publish the $AppName application in the gallery has been approved. Your application has been published and can be viewed <a href="http://$DevPortalUrl/Applications/Details/$AppId">here</a>.\n        </p>\n    <p style="font-size:12pt;font-family:''Segoe UI''">Best,</p>\n    <p style="font-size:12pt;font-family:''Segoe UI''">The $OrganizationName API Team</p>\n  </body>\n</html>
+        sample_value: '<!DOCTYPE html >\n<html>\n  <head />\n  <body>\n    <p style="font-size:12pt;font-family:''Segoe UI''">Dear $DevFirstName $DevLastName,</p>\n    <p style="font-size:12pt;font-family:''Segoe UI''">\n          We are happy to let you know that your request to publish the $AppName application in the gallery has been approved. Your application has been published and can be viewed <a href="http://$DevPortalUrl/Applications/Details/$AppId">here</a>.\n        </p>\n    <p style="font-size:12pt;font-family:''Segoe UI''">Best,</p>\n    <p style="font-size:12pt;font-family:''Segoe UI''">The $OrganizationName API Team</p>\n  </body>\n</html>'
         azure_sdk_references: ['/body', '/properties/body']
       - !ruby/object:Api::Type::NestedObject
         name: 'parameters'

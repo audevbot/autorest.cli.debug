@@ -229,21 +229,21 @@ objects:
         description: 'The name of the API Management service.'
         required: true
         input: true
-        sample_value: myService
+        sample_value: 'myService'
         azure_sdk_references: ['serviceName']
       - !ruby/object:Api::Type::String
         name: 'apiId'
         description: 'API identifier. Must be unique in the current API Management service instance.'
         required: true
         input: true
-        sample_value: myApi
+        sample_value: 'myApi'
         azure_sdk_references: ['apiId']
       - !ruby/object:Api::Type::String
         name: 'releaseId'
         description: 'Release identifier within an API. Must be unique in the current API Management service instance.'
         required: true
         input: true
-        sample_value: myRelease
+        sample_value: 'myRelease'
         azure_sdk_references: ['releaseId']
       - !ruby/object:Api::Azure::Type::ResourceReference
         name: 'apiId'
@@ -256,7 +256,7 @@ objects:
         name: 'notes'
         description: 'Release Notes'
         required: false
-        sample_value: yahooagain
+        sample_value: 'yahooagain'
         azure_sdk_references: ['/notes', '/properties/notes']
       # read only values included only in response
       - !ruby/object:Api::Azure::Type::ISO8601DateTime

@@ -207,20 +207,20 @@ objects:
         description: 'The name of the Batch account.'
         required: true
         input: true
-        sample_value: myBatchAccount
+        sample_value: 'myBatchAccount'
         azure_sdk_references: ['accountName']
       - !ruby/object:Api::Type::String
         name: 'name'
         description: 'The name of the application. This must be unique within the account.'
         required: true
         input: true
-        sample_value: myApplication
+        sample_value: 'myApplication'
         azure_sdk_references: ['applicationName', '/name']
       - !ruby/object:Api::Type::String
         name: 'displayName'
         description: 'The display name for the application.'
         required: false
-        sample_value: myAppName
+        sample_value: 'myAppName'
         azure_sdk_references: ['/displayName', '/properties/displayName']
       - !ruby/object:Api::Type::Boolean
         name: 'allowUpdates'
@@ -232,7 +232,7 @@ objects:
         name: 'defaultVersion'
         description: 'The package to use if a client requests the application but does not specify a version. This property can only be set to the name of an existing package.'
         required: false
-        sample_value: 2
+        sample_value: '2'
         azure_sdk_references: ['/defaultVersion', '/properties/defaultVersion']
       # read only values included only in response
       - !ruby/object:Api::Type::String
