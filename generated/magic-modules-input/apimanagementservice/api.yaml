@@ -937,10 +937,10 @@ objects:
           '/identity/type': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             go_field_name: Type
             python_field_name: type
-          '/identity/principalId': !ruby/object:Api::Azure::SDKTypeDefinition::[unknown-primary[uuid]]
+          '/identity/principalId': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             go_field_name: PrincipalID
             python_field_name: principal_id
-          '/identity/tenantId': !ruby/object:Api::Azure::SDKTypeDefinition::[unknown-primary[uuid]]
+          '/identity/tenantId': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             go_field_name: TenantID
             python_field_name: tenant_id
           '/location': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
