@@ -15,11 +15,11 @@ ANSIBLE_METADATA = {'metadata_version': '1.1',
 
 DOCUMENTATION = '''
 ---
-module: azure_rm_computegalleryimageversion_info
+module: azure_rm_computegalleryapplication_info
 version_added: '2.9'
-short_description: Get GalleryImageVersion info.
+short_description: Get GalleryApplication info.
 description:
-  - Get info of GalleryImageVersion.
+  - Get info of GalleryApplication.
 options:
   resource_group:
     description:
@@ -28,14 +28,8 @@ options:
   gallery_name:
     description:
       - >-
-        The name of the Shared Image Gallery in which the Image Definition
-        resides.
-    required: true
-  gallery_image_name:
-    description:
-      - >-
-        The name of the gallery Image Definition in which the Image Version
-        resides.
+        The name of the Shared Application Gallery from which the Application
+        Definitions are to be retrieved.
     required: true
   name:
     description:
@@ -49,137 +43,33 @@ options:
   location:
     description:
       - Resource location
-  publishing_profile:
+  description:
     description:
-      - undefined
+      - >-
+        The description of this gallery Application Definition resource. This
+        property is updatable.
+  eula:
+    description:
+      - The Eula agreement for the gallery Application Definition.
+  privacy_statement_uri:
+    description:
+      - The privacy statement uri.
+  release_note_uri:
+    description:
+      - The release note uri.
+  end_of_life_date:
+    description:
+      - >-
+        The end of life date of the gallery Application Definition. This
+        property can be used for decommissioning purposes. This property is
+        updatable.
+  supported_ostype:
+    description:
+      - >-
+        This property allows you to specify the supported type of the OS that
+        application is built for. <br><br> Possible values are: <br><br>
+        **Windows** <br><br> **Linux**
     required: true
-    suboptions:
-      target_regions:
-        description:
-          - >-
-            The target regions where the Image Version is going to be replicated
-            to. This property is updatable.
-        type: list
-        suboptions:
-          name:
-            description:
-              - The name of the region.
-            required: true
-          regional_replica_count:
-            description:
-              - >-
-                The number of replicas of the Image Version to be created per
-                region. This property is updatable.
-          storage_account_type:
-            description:
-              - >-
-                Specifies the storage account type to be used to store the
-                image. This property is not updatable.
-      replica_count:
-        description:
-          - >-
-            The number of replicas of the Image Version to be created per
-            region. This property would take effect for a region when
-            regionalReplicaCount is not specified. This property is updatable.
-      exclude_from_latest:
-        description:
-          - >-
-            If set to true, Virtual Machines deployed from the latest version of
-            the Image Definition won't use this Image Version.
-      published_date:
-        description:
-          - The timestamp for when the gallery Image Version is published.
-      end_of_life_date:
-        description:
-          - >-
-            The end of life date of the gallery Image Version. This property can
-            be used for decommissioning purposes. This property is updatable.
-      storage_account_type:
-        description:
-          - >-
-            Specifies the storage account type to be used to store the image.
-            This property is not updatable.
-      source:
-        description:
-          - undefined
-        required: true
-        suboptions:
-          managed_image:
-            description:
-              - undefined
-            required: true
-            suboptions:
-              id:
-                description:
-                  - The managed artifact id.
-                required: true
-  provisioning_state:
-    description:
-      - 'The provisioning state, which only appears in the response.'
-  storage_profile:
-    description:
-      - undefined
-    suboptions:
-      os_disk_image:
-        description:
-          - undefined
-        suboptions:
-          size_in_gb:
-            description:
-              - This property indicates the size of the VHD to be created.
-          host_caching:
-            description:
-              - >-
-                The host caching of the disk. Valid values are 'None',
-                'ReadOnly', and 'ReadWrite'
-      data_disk_images:
-        description:
-          - A list of data disk images.
-        type: list
-        suboptions:
-          size_in_gb:
-            description:
-              - This property indicates the size of the VHD to be created.
-          host_caching:
-            description:
-              - >-
-                The host caching of the disk. Valid values are 'None',
-                'ReadOnly', and 'ReadWrite'
-          lun:
-            description:
-              - >-
-                This property specifies the logical unit number of the data
-                disk. This value is used to identify data disks within the
-                Virtual Machine and therefore must be unique for each data disk
-                attached to the Virtual Machine.
-  replication_status:
-    description:
-      - undefined
-    suboptions:
-      aggregated_state:
-        description:
-          - >-
-            This is the aggregated replication status based on all the regional
-            replication status flags.
-      summary:
-        description:
-          - This is a summary of replication status for each region.
-        type: list
-        suboptions:
-          region:
-            description:
-              - >-
-                The region to which the gallery Image Version is being
-                replicated to.
-          state:
-            description:
-              - This is the regional replication state.
-          details:
-            description:
-              - The details of the replication status.
-          progress:
-            description:
-              - It indicates progress of the replication job.
 extends_documentation_fragment:
   - azure
 author:
@@ -188,35 +78,27 @@ author:
 '''
 
 EXAMPLES = '''
-- name: List gallery Image Versions in a gallery Image Definition.
-  azure_rm_computegalleryimageversion_info:
+- name: List gallery Applications in a gallery.
+  azure_rm_computegalleryapplication_info:
     resource_group: myResourceGroup
     gallery_name: myGallery
-    gallery_image_name: myImage
-- name: Get a gallery Image Version.
-  azure_rm_computegalleryimageversion_info:
+- name: Get a gallery Application.
+  azure_rm_computegalleryapplication_info:
     resource_group: myResourceGroup
     gallery_name: myGallery
-    gallery_image_name: myImage
-    name: myVersion
-- name: Get a gallery Image Version with replication status.
-  azure_rm_computegalleryimageversion_info:
-    resource_group: myResourceGroup
-    gallery_name: myGallery
-    gallery_image_name: myImage
-    name: myVersion
+    name: myApplication
 
 '''
 
 RETURN = '''
-gallery_image_versions:
+gallery_applications:
   description: >-
-    A list of dict results where the key is the name of the GalleryImageVersion
-    and the values are the facts for that GalleryImageVersion.
+    A list of dict results where the key is the name of the GalleryApplication
+    and the values are the facts for that GalleryApplication.
   returned: always
   type: complex
   contains:
-    galleryimageversion_name:
+    galleryapplication_name:
       description: The key is the name of the server that the values relate to.
       type: complex
       contains:
@@ -269,7 +151,7 @@ from copy import deepcopy
 from msrestazure.azure_exceptions import CloudError
 
 
-class AzureRMGalleryImageVersionsInfo(AzureRMModuleBase):
+class AzureRMGalleryApplicationsInfo(AzureRMModuleBase):
     def __init__(self):
         self.module_arg_spec = dict(
             resource_group=dict(
@@ -280,10 +162,6 @@ class AzureRMGalleryImageVersionsInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            gallery_image_name=dict(
-                type='str',
-                required=true
-            ),
             name=dict(
                 type='str'
             )
@@ -291,7 +169,6 @@ class AzureRMGalleryImageVersionsInfo(AzureRMModuleBase):
 
         self.resource_group = None
         self.gallery_name = None
-        self.gallery_image_name = None
         self.name = None
         self.id = None
         self.name = None
@@ -312,7 +189,7 @@ class AzureRMGalleryImageVersionsInfo(AzureRMModuleBase):
         self.header_parameters['Content-Type'] = 'application/json; charset=utf-8'
 
         self.mgmt_client = None
-        super(AzureRMGalleryImageVersionsInfo, self).__init__(self.module_arg_spec, supports_tags=True)
+        super(AzureRMGalleryApplicationsInfo, self).__init__(self.module_arg_spec, supports_tags=True)
 
     def exec_module(self, **kwargs):
 
@@ -324,13 +201,11 @@ class AzureRMGalleryImageVersionsInfo(AzureRMModuleBase):
 
         if (self.resource_group is not None and
             self.gallery_name is not None and
-            self.gallery_image_name is not None and
             self.name is not None):
-            self.results['gallery_image_versions'] = self.format_item(self.get())
+            self.results['gallery_applications'] = self.format_item(self.get())
         elif (self.resource_group is not None and
-              self.gallery_name is not None and
-              self.gallery_image_name is not None):
-            self.results['gallery_image_versions'] = self.format_item(self.listbygalleryimage())
+              self.gallery_name is not None):
+            self.results['gallery_applications'] = self.format_item(self.listbygallery())
         return self.results
 
     def get(self):
@@ -345,15 +220,12 @@ class AzureRMGalleryImageVersionsInfo(AzureRMModuleBase):
                     '/Microsoft.Compute' +
                     '/galleries' +
                     '/{{ gallery_name }}' +
-                    '/images' +
-                    '/{{ image_name }}' +
-                    '/versions' +
-                    '/{{ version_name }}')
+                    '/applications' +
+                    '/{{ application_name }}')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ gallery_name }}', self.gallery_name)
-        self.url = self.url.replace('{{ image_name }}', self.image_name)
-        self.url = self.url.replace('{{ version_name }}', self.name)
+        self.url = self.url.replace('{{ application_name }}', self.name)
 
         try:
             response = self.mgmt_client.query(self.url,
@@ -371,7 +243,7 @@ class AzureRMGalleryImageVersionsInfo(AzureRMModuleBase):
 
         return results
 
-    def listbygalleryimage(self):
+    def listbygallery(self):
         response = None
         results = {}
         # prepare url
@@ -383,14 +255,11 @@ class AzureRMGalleryImageVersionsInfo(AzureRMModuleBase):
                     '/Microsoft.Compute' +
                     '/galleries' +
                     '/{{ gallery_name }}' +
-                    '/images' +
-                    '/{{ image_name }}' +
-                    '/versions')
+                    '/applications')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ gallery_name }}', self.gallery_name)
-        self.url = self.url.replace('{{ image_name }}', self.image_name)
-        self.url = self.url.replace('{{ version_name }}', self.name)
+        self.url = self.url.replace('{{ application_name }}', self.name)
 
         try:
             response = self.mgmt_client.query(self.url,
@@ -413,7 +282,7 @@ class AzureRMGalleryImageVersionsInfo(AzureRMModuleBase):
 
 
 def main():
-    AzureRMGalleryImageVersionsInfo()
+    AzureRMGalleryApplicationsInfo()
 
 
 if __name__ == '__main__':

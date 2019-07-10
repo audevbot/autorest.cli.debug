@@ -1,0 +1,18 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    gallery_name: myGallery
+  tasks:
+
+    - name: List gallery Applications in a gallery.
+      azure_rm_computegalleryapplication_info:
+        resource_group: '{{resource_group}}'
+        gallery_name: '{{gallery_name}}'
+    
+      register: output
+    - debug:
+        var: output

@@ -70,20 +70,6 @@ options:
               - >-
                 Specifies the storage account type to be used to store the
                 image. This property is not updatable.
-      source:
-        description:
-          - undefined
-        required: true
-        suboptions:
-          managed_image:
-            description:
-              - undefined
-            required: true
-            suboptions:
-              id:
-                description:
-                  - The managed artifact id.
-                required: true
       replica_count:
         description:
           - >-
@@ -105,6 +91,20 @@ options:
           - >-
             Specifies the storage account type to be used to store the image.
             This property is not updatable.
+      source:
+        description:
+          - undefined
+        required: true
+        suboptions:
+          managed_image:
+            description:
+              - undefined
+            required: true
+            suboptions:
+              id:
+                description:
+                  - The managed artifact id.
+                required: true
       published_date:
         description:
           - The timestamp for when the gallery Image Version is published.
@@ -310,26 +310,6 @@ properties:
               returned: always
               type: str
               sample: null
-        source:
-          description:
-            - ''
-          returned: always
-          type: dict
-          sample: null
-          contains:
-            managed_image:
-              description:
-                - ''
-              returned: always
-              type: dict
-              sample: null
-              contains:
-                id:
-                  description:
-                    - The managed artifact id.
-                  returned: always
-                  type: str
-                  sample: null
         replica_count:
           description:
             - >-
@@ -370,6 +350,26 @@ properties:
           returned: always
           type: str
           sample: null
+        source:
+          description:
+            - ''
+          returned: always
+          type: dict
+          sample: null
+          contains:
+            managed_image:
+              description:
+                - ''
+              returned: always
+              type: dict
+              sample: null
+              contains:
+                id:
+                  description:
+                    - The managed artifact id.
+                  returned: always
+                  type: str
+                  sample: null
     provisioning_state:
       description:
         - 'The provisioning state, which only appears in the response.'
@@ -557,23 +557,6 @@ class AzureRMGalleryImageVersions(AzureRMModuleBaseExt):
                             )
                         )
                     ),
-                    source=dict(
-                        type='dict',
-                        required=true,
-                        options=dict(
-                            managed_image=dict(
-                                type='dict',
-                                disposition='managedImage',
-                                required=true,
-                                options=dict(
-                                    id=dict(
-                                        type='str',
-                                        required=true
-                                    )
-                                )
-                            )
-                        )
-                    ),
                     replica_count=dict(
                         type='number',
                         disposition='replicaCount'
@@ -591,6 +574,23 @@ class AzureRMGalleryImageVersions(AzureRMModuleBaseExt):
                         disposition='storageAccountType',
                         choices=['Standard_LRS',
                                  'Standard_ZRS']
+                    ),
+                    source=dict(
+                        type='dict',
+                        required=true,
+                        options=dict(
+                            managed_image=dict(
+                                type='dict',
+                                disposition='managedImage',
+                                required=true,
+                                options=dict(
+                                    id=dict(
+                                        type='str',
+                                        required=true
+                                    )
+                                )
+                            )
+                        )
                     )
                 )
             ),

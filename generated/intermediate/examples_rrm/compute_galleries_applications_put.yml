@@ -1,0 +1,28 @@
+- import_playbook: compute_galleries_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    gallery_name: myGallery
+    application_name: myApplication
+  tasks:
+
+    - name: Create or update a simple gallery Application.
+      azure_rm_computegalleryapplication:
+        resource_group: '{{resource_group}}'
+        gallery_name: '{{gallery_name}}'
+        name: '{{application_name}}'
+        gallery_application:
+          location: West US
+          properties:
+            description: This is the gallery application description.
+            eula: This is the gallery application EULA.
+            privacyStatementUri: 'myPrivacyStatementUri}'
+            releaseNoteUri: myReleaseNoteUri
+            supportedOSType: Windows
+    

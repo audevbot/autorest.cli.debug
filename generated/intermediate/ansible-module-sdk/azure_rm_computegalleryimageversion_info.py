@@ -75,20 +75,6 @@ options:
               - >-
                 Specifies the storage account type to be used to store the
                 image. This property is not updatable.
-      source:
-        description:
-          - undefined
-        required: true
-        suboptions:
-          managed_image:
-            description:
-              - undefined
-            required: true
-            suboptions:
-              id:
-                description:
-                  - The managed artifact id.
-                required: true
       replica_count:
         description:
           - >-
@@ -113,6 +99,20 @@ options:
           - >-
             Specifies the storage account type to be used to store the image.
             This property is not updatable.
+      source:
+        description:
+          - undefined
+        required: true
+        suboptions:
+          managed_image:
+            description:
+              - undefined
+            required: true
+            suboptions:
+              id:
+                description:
+                  - The managed artifact id.
+                required: true
   provisioning_state:
     description:
       - 'The provisioning state, which only appears in the response.'
