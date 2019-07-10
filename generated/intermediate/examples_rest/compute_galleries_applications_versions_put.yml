@@ -1,0 +1,40 @@
+- import_playbook: compute_galleries_applications_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    gallery_name: myGallery
+    application_name: myApplication
+    version_name: myVersion
+  tasks:
+    - name: Create or update a simple gallery Application Version.
+      azure_rm_resource:
+        idempotency: true
+        api_version: '2019-03-01'
+        resource_group: '{{ resource_group }}'
+        provider: Compute
+        resource_type: galleries
+        resource_name: '{{ gallery_name }}'
+        subresource:
+          - type: applications
+            name: '{{ application_name }}'
+          - type: versions
+            name: '{{ version_name }}'
+        body:
+          location: West US
+          properties:
+            publishingProfile:
+              source:
+                fileName: package.zip
+                mediaLink: >-
+                  https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}
+              targetRegions:
+                - name: West US
+                  regionalReplicaCount: '1'
+                  storageAccountType: Standard_LRS
+              replicaCount: '1'
+              endOfLifeDate: '2019-07-01T07:00:00Z'
+              storageAccountType: Standard_LRS

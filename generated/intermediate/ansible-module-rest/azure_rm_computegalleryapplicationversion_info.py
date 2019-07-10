@@ -15,11 +15,11 @@ ANSIBLE_METADATA = {'metadata_version': '1.1',
 
 DOCUMENTATION = '''
 ---
-module: azure_rm_computegalleryimageversion_info
+module: azure_rm_computegalleryapplicationversion_info
 version_added: '2.9'
-short_description: Get GalleryImageVersion info.
+short_description: Get GalleryApplicationVersion info.
 description:
-  - Get info of GalleryImageVersion.
+  - Get info of GalleryApplicationVersion.
 options:
   resource_group:
     description:
@@ -28,14 +28,14 @@ options:
   gallery_name:
     description:
       - >-
-        The name of the Shared Image Gallery in which the Image Definition
-        resides.
+        The name of the Shared Application Gallery in which the Application
+        Definition resides.
     required: true
-  gallery_image_name:
+  gallery_application_name:
     description:
       - >-
-        The name of the gallery Image Definition in which the Image Version
-        resides.
+        The name of the gallery Application Definition in which the Application
+        Version resides.
     required: true
   name:
     description:
@@ -104,54 +104,27 @@ options:
           - undefined
         required: true
         suboptions:
-          managed_image:
+          file_name:
             description:
-              - undefined
+              - Required. The fileName of the artifact.
             required: true
-            suboptions:
-              id:
-                description:
-                  - The managed artifact id.
-                required: true
+          media_link:
+            description:
+              - >-
+                Required. The mediaLink of the artifact, must be a readable
+                storage blob.
+            required: true
+      content_type:
+        description:
+          - >-
+            Optional. May be used to help process this file. The type of file
+            contained in the source, e.g. zip, json, etc.
+      enable_health_check:
+        description:
+          - Optional. Whether or not this application reports health.
   provisioning_state:
     description:
       - 'The provisioning state, which only appears in the response.'
-  storage_profile:
-    description:
-      - undefined
-    suboptions:
-      os_disk_image:
-        description:
-          - undefined
-        suboptions:
-          size_in_gb:
-            description:
-              - This property indicates the size of the VHD to be created.
-          host_caching:
-            description:
-              - >-
-                The host caching of the disk. Valid values are 'None',
-                'ReadOnly', and 'ReadWrite'
-      data_disk_images:
-        description:
-          - A list of data disk images.
-        type: list
-        suboptions:
-          size_in_gb:
-            description:
-              - This property indicates the size of the VHD to be created.
-          host_caching:
-            description:
-              - >-
-                The host caching of the disk. Valid values are 'None',
-                'ReadOnly', and 'ReadWrite'
-          lun:
-            description:
-              - >-
-                This property specifies the logical unit number of the data
-                disk. This value is used to identify data disks within the
-                Virtual Machine and therefore must be unique for each data disk
-                attached to the Virtual Machine.
   replication_status:
     description:
       - undefined
@@ -188,35 +161,36 @@ author:
 '''
 
 EXAMPLES = '''
-- name: List gallery Image Versions in a gallery Image Definition.
-  azure_rm_computegalleryimageversion_info:
+- name: List gallery Application Versions in a gallery Application Definition.
+  azure_rm_computegalleryapplicationversion_info:
     resource_group: myResourceGroup
     gallery_name: myGallery
-    gallery_image_name: myImage
-- name: Get a gallery Image Version.
-  azure_rm_computegalleryimageversion_info:
+    gallery_application_name: myApplication
+- name: Get a gallery Application Version.
+  azure_rm_computegalleryapplicationversion_info:
     resource_group: myResourceGroup
     gallery_name: myGallery
-    gallery_image_name: myImage
+    gallery_application_name: myApplication
     name: myVersion
-- name: Get a gallery Image Version with replication status.
-  azure_rm_computegalleryimageversion_info:
+- name: Get a gallery Application Version with replication status.
+  azure_rm_computegalleryapplicationversion_info:
     resource_group: myResourceGroup
     gallery_name: myGallery
-    gallery_image_name: myImage
+    gallery_application_name: myApplication
     name: myVersion
 
 '''
 
 RETURN = '''
-gallery_image_versions:
+gallery_application_versions:
   description: >-
-    A list of dict results where the key is the name of the GalleryImageVersion
-    and the values are the facts for that GalleryImageVersion.
+    A list of dict results where the key is the name of the
+    GalleryApplicationVersion and the values are the facts for that
+    GalleryApplicationVersion.
   returned: always
   type: complex
   contains:
-    galleryimageversion_name:
+    galleryapplicationversion_name:
       description: The key is the name of the server that the values relate to.
       type: complex
       contains:
@@ -269,7 +243,7 @@ from copy import deepcopy
 from msrestazure.azure_exceptions import CloudError
 
 
-class AzureRMGalleryImageVersionsInfo(AzureRMModuleBase):
+class AzureRMGalleryApplicationVersionsInfo(AzureRMModuleBase):
     def __init__(self):
         self.module_arg_spec = dict(
             resource_group=dict(
@@ -280,7 +254,7 @@ class AzureRMGalleryImageVersionsInfo(AzureRMModuleBase):
                 type='str',
                 required=true
             ),
-            gallery_image_name=dict(
+            gallery_application_name=dict(
                 type='str',
                 required=true
             ),
@@ -291,7 +265,7 @@ class AzureRMGalleryImageVersionsInfo(AzureRMModuleBase):
 
         self.resource_group = None
         self.gallery_name = None
-        self.gallery_image_name = None
+        self.gallery_application_name = None
         self.name = None
         self.id = None
         self.name = None
@@ -312,7 +286,7 @@ class AzureRMGalleryImageVersionsInfo(AzureRMModuleBase):
         self.header_parameters['Content-Type'] = 'application/json; charset=utf-8'
 
         self.mgmt_client = None
-        super(AzureRMGalleryImageVersionsInfo, self).__init__(self.module_arg_spec, supports_tags=True)
+        super(AzureRMGalleryApplicationVersionsInfo, self).__init__(self.module_arg_spec, supports_tags=True)
 
     def exec_module(self, **kwargs):
 
@@ -324,13 +298,13 @@ class AzureRMGalleryImageVersionsInfo(AzureRMModuleBase):
 
         if (self.resource_group is not None and
             self.gallery_name is not None and
-            self.gallery_image_name is not None and
+            self.gallery_application_name is not None and
             self.name is not None):
-            self.results['gallery_image_versions'] = self.format_item(self.get())
+            self.results['gallery_application_versions'] = self.format_item(self.get())
         elif (self.resource_group is not None and
               self.gallery_name is not None and
-              self.gallery_image_name is not None):
-            self.results['gallery_image_versions'] = self.format_item(self.listbygalleryimage())
+              self.gallery_application_name is not None):
+            self.results['gallery_application_versions'] = self.format_item(self.listbygalleryapplication())
         return self.results
 
     def get(self):
@@ -345,14 +319,14 @@ class AzureRMGalleryImageVersionsInfo(AzureRMModuleBase):
                     '/Microsoft.Compute' +
                     '/galleries' +
                     '/{{ gallery_name }}' +
-                    '/images' +
-                    '/{{ image_name }}' +
+                    '/applications' +
+                    '/{{ application_name }}' +
                     '/versions' +
                     '/{{ version_name }}')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ gallery_name }}', self.gallery_name)
-        self.url = self.url.replace('{{ image_name }}', self.image_name)
+        self.url = self.url.replace('{{ application_name }}', self.application_name)
         self.url = self.url.replace('{{ version_name }}', self.name)
 
         try:
@@ -371,7 +345,7 @@ class AzureRMGalleryImageVersionsInfo(AzureRMModuleBase):
 
         return results
 
-    def listbygalleryimage(self):
+    def listbygalleryapplication(self):
         response = None
         results = {}
         # prepare url
@@ -383,13 +357,13 @@ class AzureRMGalleryImageVersionsInfo(AzureRMModuleBase):
                     '/Microsoft.Compute' +
                     '/galleries' +
                     '/{{ gallery_name }}' +
-                    '/images' +
-                    '/{{ image_name }}' +
+                    '/applications' +
+                    '/{{ application_name }}' +
                     '/versions')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ gallery_name }}', self.gallery_name)
-        self.url = self.url.replace('{{ image_name }}', self.image_name)
+        self.url = self.url.replace('{{ application_name }}', self.application_name)
         self.url = self.url.replace('{{ version_name }}', self.name)
 
         try:
@@ -413,7 +387,7 @@ class AzureRMGalleryImageVersionsInfo(AzureRMModuleBase):
 
 
 def main():
-    AzureRMGalleryImageVersionsInfo()
+    AzureRMGalleryApplicationVersionsInfo()
 
 
 if __name__ == '__main__':

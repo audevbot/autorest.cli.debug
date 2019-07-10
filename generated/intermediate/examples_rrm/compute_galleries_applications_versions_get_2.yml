@@ -1,0 +1,20 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    gallery_name: myGallery
+    application_name: myApplication
+  tasks:
+
+    - name: List gallery Application Versions in a gallery Application Definition.
+      azure_rm_computegalleryapplicationversion_info:
+        resource_group: '{{resource_group}}'
+        gallery_name: '{{gallery_name}}'
+        gallery_application_name: '{{application_name}}'
+    
+      register: output
+    - debug:
+        var: output

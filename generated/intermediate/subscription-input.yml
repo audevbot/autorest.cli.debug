@@ -1,0 +1,1168 @@
+$id: '1'
+modelTypes:
+  - $id: '2'
+    $type: CompositeType
+    properties:
+      - $id: '3'
+        isReadOnly: false
+        realPath:
+          - subscriptionLink
+        collectionFormat: none
+        defaultValue:
+          $id: '4'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '5'
+          fixed: false
+          raw: The link to the new subscription.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '6'
+          fixed: false
+          raw: subscriptionLink
+        serializedName: subscriptionLink
+        modelType:
+          $id: '7'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '8'
+            fixed: false
+            raw: String
+          deprecated: false
+    serializedName: SubscriptionCreationResult
+    documentation: The created subscription object.
+    containsConstantProperties: false
+    name:
+      $id: '9'
+      fixed: false
+      raw: SubscriptionCreationResult
+    deprecated: false
+  - $id: '10'
+    $type: CompositeType
+    properties:
+      - $id: '11'
+        isReadOnly: false
+        realPath:
+          - objectId
+        collectionFormat: none
+        defaultValue:
+          $id: '12'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '13'
+          fixed: false
+          raw: Object id of the Principal
+        isRequired: true
+        isConstant: false
+        name:
+          $id: '14'
+          fixed: false
+          raw: objectId
+        serializedName: objectId
+        modelType:
+          $id: '15'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '16'
+            fixed: false
+            raw: String
+          deprecated: false
+    serializedName: AdPrincipal
+    documentation: Active Directory Principal for subscription creation delegated permission
+    containsConstantProperties: false
+    name:
+      $id: '17'
+      fixed: false
+      raw: AdPrincipal
+    deprecated: false
+  - $id: '18'
+    $type: CompositeType
+    properties:
+      - $id: '19'
+        isReadOnly: false
+        realPath:
+          - displayName
+        collectionFormat: none
+        defaultValue:
+          $id: '20'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '21'
+          fixed: false
+          raw: The display name of the subscription.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '22'
+          fixed: false
+          raw: displayName
+        serializedName: displayName
+        modelType:
+          $id: '23'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '24'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '25'
+        isReadOnly: false
+        realPath:
+          - owners
+        collectionFormat: none
+        defaultValue:
+          $id: '26'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '27'
+          fixed: false
+          raw: >-
+            The list of principals that should be granted Owner access on the
+            subscription. Principals should be of type User, Service Principal
+            or Security Group.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '28'
+          fixed: false
+          raw: owners
+        serializedName: owners
+        modelType:
+          $id: '29'
+          $type: SequenceType
+          elementType:
+            $ref: '10'
+          name:
+            $id: '30'
+            fixed: false
+          deprecated: false
+      - $id: '31'
+        isReadOnly: false
+        realPath:
+          - offerType
+        collectionFormat: none
+        defaultValue:
+          $id: '32'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '33'
+          fixed: false
+          raw: >-
+            The offer type of the subscription. For example, MS-AZR-0017P
+            (EnterpriseAgreement) and MS-AZR-0148P (EnterpriseAgreement devTest)
+            are available. Only valid when creating a subscription in a
+            enrollment account scope.
+        extensions:
+          x-ms-enum:
+            name: offerType
+            modelAsString: true
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '34'
+          fixed: false
+          raw: offerType
+        serializedName: offerType
+        modelType:
+          $id: '35'
+          $type: EnumType
+          modelAsExtensible: false
+          values:
+            - $id: '36'
+              name: MS-AZR-0017P
+              serializedName: MS-AZR-0017P
+            - $id: '37'
+              name: MS-AZR-0148P
+              serializedName: MS-AZR-0148P
+          modelAsString: true
+          underlyingType:
+            $id: '38'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              $id: '39'
+              fixed: false
+              raw: String
+            deprecated: false
+          name:
+            $id: '40'
+            fixed: false
+            raw: offerType
+          deprecated: false
+      - $id: '41'
+        isReadOnly: false
+        realPath:
+          - additionalParameters
+        collectionFormat: none
+        defaultValue:
+          $id: '42'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '43'
+          fixed: false
+          raw: >-
+            Additional, untyped parameters to support custom subscription
+            creation scenarios.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '44'
+          fixed: false
+          raw: additionalParameters
+        serializedName: additionalParameters
+        modelType:
+          $id: '45'
+          $type: DictionaryType
+          valueType:
+            $id: '46'
+            $type: PrimaryType
+            knownPrimaryType: object
+            name:
+              $id: '47'
+              fixed: false
+              raw: Object
+            deprecated: false
+          supportsAdditionalProperties: false
+          name:
+            $id: '48'
+            fixed: false
+          deprecated: false
+    serializedName: SubscriptionCreationParameters
+    documentation: >-
+      Subscription Creation Parameters required to create a new Azure
+      subscription.
+    containsConstantProperties: false
+    name:
+      $id: '49'
+      fixed: false
+      raw: SubscriptionCreationParameters
+    deprecated: false
+  - $id: '50'
+    $type: CompositeType
+    properties:
+      - $id: '51'
+        isReadOnly: false
+        realPath:
+          - code
+        collectionFormat: none
+        defaultValue:
+          $id: '52'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '53'
+          fixed: false
+          raw: Error code
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '54'
+          fixed: false
+          raw: code
+        serializedName: code
+        modelType:
+          $id: '55'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '56'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '57'
+        isReadOnly: false
+        realPath:
+          - message
+        collectionFormat: none
+        defaultValue:
+          $id: '58'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '59'
+          fixed: false
+          raw: Error message indicating why the operation failed.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '60'
+          fixed: false
+          raw: message
+        serializedName: message
+        modelType:
+          $id: '61'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '62'
+            fixed: false
+            raw: String
+          deprecated: false
+    serializedName: ErrorResponse
+    documentation: Describes the format of Error response.
+    containsConstantProperties: false
+    name:
+      $id: '63'
+      fixed: false
+      raw: ErrorResponse
+    deprecated: false
+  - $id: '64'
+    $type: CompositeType
+    properties:
+      - $id: '65'
+        isReadOnly: true
+        realPath:
+          - id
+        collectionFormat: none
+        defaultValue:
+          $id: '66'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '67'
+          fixed: false
+          raw: The operation Id.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '68'
+          fixed: false
+          raw: id
+        serializedName: id
+        modelType:
+          $id: '69'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '70'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '71'
+        isReadOnly: false
+        realPath:
+          - status
+        collectionFormat: none
+        defaultValue:
+          $id: '72'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '73'
+          fixed: false
+          raw: Status of the pending subscription
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '74'
+          fixed: false
+          raw: status
+        serializedName: status
+        modelType:
+          $id: '75'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '76'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '77'
+        isReadOnly: false
+        realPath:
+          - statusDetail
+        collectionFormat: none
+        defaultValue:
+          $id: '78'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '79'
+          fixed: false
+          raw: Status Detail of the pending subscription
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '80'
+          fixed: false
+          raw: statusDetail
+        serializedName: statusDetail
+        modelType:
+          $id: '81'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '82'
+            fixed: false
+            raw: String
+          deprecated: false
+    serializedName: SubscriptionOperation
+    documentation: status of the subscription POST operation.
+    containsConstantProperties: false
+    name:
+      $id: '83'
+      fixed: false
+      raw: SubscriptionOperation
+    deprecated: false
+  - $id: '84'
+    $type: CompositeType
+    properties:
+      - $id: '85'
+        isReadOnly: false
+        realPath:
+          - value
+        collectionFormat: none
+        defaultValue:
+          $id: '86'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '87'
+          fixed: false
+          raw: A list of pending SubscriptionOperations
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '88'
+          fixed: false
+          raw: value
+        serializedName: value
+        modelType:
+          $id: '89'
+          $type: SequenceType
+          elementType:
+            $ref: '64'
+          name:
+            $id: '90'
+            fixed: false
+          deprecated: false
+    serializedName: SubscriptionOperationListResult
+    documentation: A list of pending subscription operations.
+    containsConstantProperties: false
+    name:
+      $id: '91'
+      fixed: false
+      raw: SubscriptionOperationListResult
+    deprecated: false
+  - $id: '92'
+    $type: CompositeType
+    properties:
+      - $id: '93'
+        isReadOnly: false
+        realPath:
+          - provider
+        collectionFormat: none
+        defaultValue:
+          $id: '94'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '95'
+          fixed: false
+          raw: 'Service provider: Microsoft.Subscription'
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '96'
+          fixed: false
+          raw: provider
+        serializedName: provider
+        modelType:
+          $id: '97'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '98'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '99'
+        isReadOnly: false
+        realPath:
+          - resource
+        collectionFormat: none
+        defaultValue:
+          $id: '100'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '101'
+          fixed: false
+          raw: >-
+            Resource on which the operation is performed: Profile, endpoint,
+            etc.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '102'
+          fixed: false
+          raw: resource
+        serializedName: resource
+        modelType:
+          $id: '103'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '104'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '105'
+        isReadOnly: false
+        realPath:
+          - operation
+        collectionFormat: none
+        defaultValue:
+          $id: '106'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '107'
+          fixed: false
+          raw: 'Operation type: Read, write, delete, etc.'
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '108'
+          fixed: false
+          raw: operation
+        serializedName: operation
+        modelType:
+          $id: '109'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '110'
+            fixed: false
+            raw: String
+          deprecated: false
+    serializedName: Operation_display
+    documentation: The object that represents the operation.
+    containsConstantProperties: false
+    name:
+      $id: '111'
+      fixed: false
+      raw: Operation_display
+    deprecated: false
+  - $id: '112'
+    $type: CompositeType
+    properties:
+      - $id: '113'
+        isReadOnly: false
+        realPath:
+          - name
+        collectionFormat: none
+        defaultValue:
+          $id: '114'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '115'
+          fixed: false
+          raw: 'Operation name: {provider}/{resource}/{operation}'
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '116'
+          fixed: false
+          raw: name
+        serializedName: name
+        modelType:
+          $id: '117'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '118'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '119'
+        isReadOnly: false
+        realPath:
+          - display
+        collectionFormat: none
+        defaultValue:
+          $id: '120'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '121'
+          fixed: false
+          raw: The object that represents the operation.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '122'
+          fixed: false
+          raw: display
+        serializedName: display
+        modelType:
+          $ref: '92'
+    serializedName: Operation
+    documentation: REST API operation
+    containsConstantProperties: false
+    name:
+      $id: '123'
+      fixed: false
+      raw: Operation
+    deprecated: false
+  - $id: '124'
+    $type: CompositeType
+    properties:
+      - $id: '125'
+        isReadOnly: false
+        realPath:
+          - value
+        collectionFormat: none
+        defaultValue:
+          $id: '126'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '127'
+          fixed: false
+          raw: List of operations.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '128'
+          fixed: false
+          raw: value
+        serializedName: value
+        modelType:
+          $id: '129'
+          $type: SequenceType
+          elementType:
+            $ref: '112'
+          name:
+            $id: '130'
+            fixed: false
+          deprecated: false
+      - $id: '131'
+        isReadOnly: false
+        realPath:
+          - nextLink
+        collectionFormat: none
+        defaultValue:
+          $id: '132'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '133'
+          fixed: false
+          raw: URL to get the next set of operation list results if there are any.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '134'
+          fixed: false
+          raw: nextLink
+        serializedName: nextLink
+        modelType:
+          $id: '135'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '136'
+            fixed: false
+            raw: String
+          deprecated: false
+    serializedName: OperationListResult
+    documentation: >-
+      Result of the request to list operations. It contains a list of operations
+      and a URL link to get the next set of results.
+    containsConstantProperties: false
+    name:
+      $id: '137'
+      fixed: false
+      raw: OperationListResult
+    deprecated: false
+errorTypes:
+  - $ref: '50'
+headerTypes:
+  - $id: '138'
+    $type: CompositeType
+    properties:
+      - $id: '139'
+        isReadOnly: false
+        realPath:
+          - Location
+        collectionFormat: none
+        defaultValue:
+          $id: '140'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '141'
+          fixed: false
+          raw: GET this URL to retrieve the status of the asynchronous operation.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '142'
+          fixed: false
+          raw: Location
+        serializedName: Location
+        modelType:
+          $id: '143'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '144'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '145'
+        isReadOnly: false
+        realPath:
+          - Retry-After
+        collectionFormat: none
+        defaultValue:
+          $id: '146'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '147'
+          fixed: false
+          raw: >-
+            The amount of delay to use while the status of the operation is
+            checked. The value is expressed in seconds.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '148'
+          fixed: false
+          raw: Retry-After
+        serializedName: Retry-After
+        modelType:
+          $id: '149'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '150'
+            fixed: false
+            raw: String
+          deprecated: false
+    serializedName: SubscriptionFactory-CreateSubscriptionInEnrollmentAccount-Headers
+    documentation: Defines headers for CreateSubscriptionInEnrollmentAccount operation.
+    containsConstantProperties: false
+    name:
+      $id: '151'
+      fixed: false
+      raw: SubscriptionFactory-CreateSubscriptionInEnrollmentAccount-Headers
+    deprecated: false
+enumTypes:
+  - $ref: '35'
+name: Subscription
+namespace: Azure.mgmt.subscriptions
+modelsName: Models
+apiVersion: 2018-03-01-preview
+baseUrl: 'https://management.azure.com'
+documentation: >-
+  Subscription client provides an interface to create and manage Azure
+  subscriptions programmatically.
+extensions:
+  security:
+    - azure_auth:
+        - user_impersonation
+properties:
+  - $id: '152'
+    isReadOnly: false
+    realPath:
+      - api-version
+    collectionFormat: none
+    defaultValue:
+      $id: '153'
+      fixed: false
+    deprecated: false
+    documentation:
+      $id: '154'
+      fixed: false
+      raw: >-
+        Version of the API to be used with the client request. Current version
+        is 2015-06-01
+    isRequired: true
+    isConstant: false
+    name:
+      $id: '155'
+      fixed: false
+      raw: api-version
+    serializedName: api-version
+    modelType:
+      $id: '156'
+      $type: PrimaryType
+      knownPrimaryType: string
+      name:
+        $id: '157'
+        fixed: false
+        raw: String
+      deprecated: false
+operations:
+  - $id: '158'
+    methods:
+      - $id: '159'
+        parameters:
+          - $id: '160'
+            clientProperty:
+              $ref: '152'
+            location: query
+            collectionFormat: none
+            defaultValue:
+              $id: '161'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '162'
+              fixed: false
+              raw: >-
+                Version of the API to be used with the client request. Current
+                version is 2015-06-01
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '163'
+              fixed: false
+              raw: api-version
+            serializedName: api-version
+            modelType:
+              $id: '164'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '165'
+                fixed: false
+                raw: String
+              deprecated: false
+        name:
+          $id: '166'
+          fixed: false
+          raw: List
+        group:
+          $id: '167'
+          fixed: false
+          raw: Operations
+        serializedName: Operations_List
+        url: /providers/Microsoft.Subscription/operations
+        isAbsoluteUrl: false
+        httpMethod: get
+        responses:
+          OK:
+            $id: '168'
+            body:
+              $ref: '124'
+            isNullable: true
+        defaultResponse:
+          $id: '169'
+          body:
+            $ref: '50'
+          isNullable: true
+        returnType:
+          $id: '170'
+          body:
+            $ref: '124'
+          isNullable: true
+        description: Lists all of the available Microsoft.Subscription API operations.
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        extensions:
+          x-ms-examples:
+            getOperations:
+              parameters:
+                api-version: 2018-03-01-preview
+              responses:
+                '200':
+                  body:
+                    value:
+                      - name: Microsoft.Subscription/createOperation/action
+                        display:
+                          provider: Microsoft Subscription
+                          resource: Resources
+                          operation: Create a subscription
+        deprecated: false
+        hidden: false
+    name:
+      $id: '171'
+      fixed: false
+      raw: Operations
+    typeName:
+      $id: '172'
+      fixed: false
+    nameForProperty: Operations
+  - $id: '173'
+    methods:
+      - $id: '174'
+        parameters:
+          - $id: '175'
+            clientProperty:
+              $ref: '152'
+            location: query
+            collectionFormat: none
+            defaultValue:
+              $id: '176'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '177'
+              fixed: false
+              raw: >-
+                Version of the API to be used with the client request. Current
+                version is 2015-06-01
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '178'
+              fixed: false
+              raw: api-version
+            serializedName: api-version
+            modelType:
+              $id: '179'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '180'
+                fixed: false
+                raw: String
+              deprecated: false
+        name:
+          $id: '181'
+          fixed: false
+          raw: List
+        group:
+          $id: '182'
+          fixed: false
+          raw: SubscriptionOperations
+        serializedName: SubscriptionOperations_List
+        url: /providers/Microsoft.Subscription/subscriptionOperations
+        isAbsoluteUrl: false
+        httpMethod: get
+        responses:
+          OK:
+            $id: '183'
+            body:
+              $ref: '84'
+            isNullable: true
+        defaultResponse:
+          $id: '184'
+          body:
+            $ref: '50'
+          isNullable: true
+        returnType:
+          $id: '185'
+          body:
+            $ref: '84'
+          isNullable: true
+        description: >-
+          Lists all of the available pending Microsoft.Subscription API
+          operations.
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        extensions:
+          x-ms-examples:
+            getPendingSubscriptionOperations:
+              parameters:
+                api-version: 2018-03-01-preview
+              responses:
+                '200':
+                  body:
+                    value:
+                      - id: >-
+                          /providers/Microsoft.Subscription/subscriptionOperations/c03acf6e-5295-44c2-92d3-cb1daa4c701c
+                        status: Pending
+                        statusDetail: Subscription Creation in Progress
+                      - id: >-
+                          /providers/Microsoft.Subscription/subscriptionOperations/d46dcd37-f8b3-43a4-aed6-41de9131412d
+                        status: Pending
+                        statusDetail: Subscription Creation in Progress
+                      - id: >-
+                          /providers/Microsoft.Subscription/subscriptionOperations/54e3cde0-2420-451c-969d-f538d5349834
+                        status: Completed
+                        statusDetail: Subscription Created Successfully
+        deprecated: false
+        hidden: false
+    name:
+      $id: '186'
+      fixed: false
+      raw: SubscriptionOperations
+    typeName:
+      $id: '187'
+      fixed: false
+    nameForProperty: SubscriptionOperations
+  - $id: '188'
+    methods:
+      - $id: '189'
+        parameters:
+          - $id: '190'
+            location: path
+            collectionFormat: none
+            defaultValue:
+              $id: '191'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '192'
+              fixed: false
+              raw: >-
+                The name of the enrollment account to which the subscription
+                will be billed.
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '193'
+              fixed: false
+              raw: enrollmentAccountName
+            serializedName: enrollmentAccountName
+            modelType:
+              $id: '194'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '195'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '196'
+            clientProperty:
+              $ref: '152'
+            location: query
+            collectionFormat: none
+            defaultValue:
+              $id: '197'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '198'
+              fixed: false
+              raw: >-
+                Version of the API to be used with the client request. Current
+                version is 2015-06-01
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '199'
+              fixed: false
+              raw: api-version
+            serializedName: api-version
+            modelType:
+              $id: '200'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '201'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '202'
+            location: body
+            collectionFormat: none
+            defaultValue:
+              $id: '203'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '204'
+              fixed: false
+              raw: The subscription creation parameters.
+            extensions:
+              x-ms-requestBody-name: body
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '205'
+              fixed: false
+              raw: body
+            serializedName: body
+            modelType:
+              $ref: '18'
+        name:
+          $id: '206'
+          fixed: false
+          raw: CreateSubscriptionInEnrollmentAccount
+        group:
+          $id: '207'
+          fixed: false
+          raw: SubscriptionFactory
+        serializedName: SubscriptionFactory_CreateSubscriptionInEnrollmentAccount
+        url: >-
+          /providers/Microsoft.Billing/enrollmentAccounts/{enrollmentAccountName}/providers/Microsoft.Subscription/createSubscription
+        isAbsoluteUrl: false
+        httpMethod: post
+        responses:
+          OK:
+            $id: '208'
+            body:
+              $ref: '2'
+            headers:
+              $ref: '138'
+            isNullable: true
+          Accepted:
+            $id: '209'
+            headers:
+              $ref: '138'
+            isNullable: true
+        defaultResponse:
+          $id: '210'
+          body:
+            $ref: '50'
+          headers:
+            $ref: '138'
+          isNullable: true
+        returnType:
+          $id: '211'
+          body:
+            $ref: '2'
+          headers:
+            $ref: '138'
+          isNullable: true
+        description: Creates an Azure subscription
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        extensions:
+          x-ms-examples:
+            createSubscription:
+              parameters:
+                enrollmentAccountName: 73f8ab6e-cfa0-42be-b886-be6e77c2980c
+                api-version: 2018-03-01-preview
+                body:
+                  offerType: MS-AZR-0017P
+                  displayName: Test Ea Azure Sub
+                  owners:
+                    - objectId: 973034ff-acb7-409c-b731-e789672c7b31
+                    - objectId: 67439a9e-8519-4016-a630-f5f805eba567
+                  additionalParameters:
+                    customData:
+                      key1: value1
+                      key2: true
+              responses:
+                '200':
+                  body:
+                    subscriptionLink: '/subscriptions/{{ subscription_id }}'
+                '202':
+                  headers:
+                    Location: >-
+                      /providers/Microsoft.Subscription/subscriptionOperations/aeb76128-ebde-4f5a-a9ed-e7bbf2dbc994?api-version=2018-03-01-preview
+                    Retry-After: '60'
+          x-ms-long-running-operation: true
+          x-ms-requestBody-index: '2'
+        deprecated: false
+        hidden: false
+    name:
+      $id: '212'
+      fixed: false
+      raw: SubscriptionFactory
+    typeName:
+      $id: '213'
+      fixed: false
+    nameForProperty: SubscriptionFactory
