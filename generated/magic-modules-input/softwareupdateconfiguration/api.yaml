@@ -993,12 +993,6 @@ objects:
                     required: false
                     sample_value: 'UK South'
                     azure_sdk_references: ['/updateConfiguration/targets/azureQueries/locations', '/properties/updateConfiguration/targets/azureQueries/locations']
-                  - !ruby/object:Api::Type::NestedObject
-                    name: 'tagSettings'
-                    description: 'Tag settings for the VM.'
-                    required: false
-                    sample_value: [object Object]
-                    azure_sdk_references: ['/updateConfiguration/targets/azureQueries/tagSettings', '/properties/updateConfiguration/targets/azureQueries/tagSettings']
               - !ruby/object:Api::Type::NestedObject
                 name: 'nonAzureQueries'
                 description: 'List of non Azure queries in the software update configuration.'
