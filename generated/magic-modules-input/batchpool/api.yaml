@@ -2247,11 +2247,6 @@ objects:
                     description: 'This is the full image reference, as would be specified to "docker pull". An image will be sourced from the default Docker registry unless the image is fully qualified with an alternative registry.'
                     required: false
                     azure_sdk_references: ['/deploymentConfiguration/virtualMachineConfiguration/containerConfiguration/containerImageNames', '/properties/deploymentConfiguration/virtualMachineConfiguration/containerConfiguration/containerImageNames']
-                  - !ruby/object:Api::Type::NestedObject
-                    name: 'containerRegistries'
-                    description: 'If any images must be downloaded from a private registry which requires credentials, then those credentials must be provided here.'
-                    required: false
-                    azure_sdk_references: ['/deploymentConfiguration/virtualMachineConfiguration/containerConfiguration/containerRegistries', '/properties/deploymentConfiguration/virtualMachineConfiguration/containerConfiguration/containerRegistries']
       - !ruby/object:Api::Type::NestedObject
         name: 'scaleSettings'
         description: ''
@@ -2381,12 +2376,6 @@ objects:
                     required: true
                     sample_value: 15100
                     azure_sdk_references: ['/networkConfiguration/endpointConfiguration/inboundNatPools/frontendPortRangeEnd', '/properties/networkConfiguration/endpointConfiguration/inboundNatPools/frontendPortRangeEnd']
-                  - !ruby/object:Api::Type::NestedObject
-                    name: 'networkSecurityGroupRules'
-                    description: 'The maximum number of rules that can be specified across all the endpoints on a Batch pool is 25. If no network security group rules are specified, a default rule will be created to allow inbound access to the specified backendPort. If the maximum number of network security group rules is exceeded the request fails with HTTP status code 400.'
-                    required: false
-                    sample_value: [object Object]
-                    azure_sdk_references: ['/networkConfiguration/endpointConfiguration/inboundNatPools/networkSecurityGroupRules', '/properties/networkConfiguration/endpointConfiguration/inboundNatPools/networkSecurityGroupRules']
       - !ruby/object:Api::Type::Integer
         name: 'maxTasksPerNode'
         description: ''
@@ -2803,11 +2792,6 @@ objects:
                     description: 'A message describing the error, intended to be suitable for display in a user interface.'
                     required: true
                     azure_sdk_references: ['/autoScaleRun/error/details/message', '/properties/autoScaleRun/error/details/message']
-                  - !ruby/object:Api::Type::NestedObject
-                    name: 'details'
-                    description: ''
-                    required: false
-                    azure_sdk_references: ['/autoScaleRun/error/details/details', '/properties/autoScaleRun/error/details/details']
       - !ruby/object:Api::Type::NestedObject
         name: 'resizeOperationStatus'
         description: ''
@@ -2877,11 +2861,6 @@ objects:
                     description: 'A message describing the error, intended to be suitable for display in a user interface.'
                     required: true
                     azure_sdk_references: ['/resizeOperationStatus/errors/details/message', '/properties/resizeOperationStatus/errors/details/message']
-                  - !ruby/object:Api::Type::NestedObject
-                    name: 'details'
-                    description: ''
-                    required: false
-                    azure_sdk_references: ['/resizeOperationStatus/errors/details/details', '/properties/resizeOperationStatus/errors/details/details']
       - !ruby/object:Api::Type::String
         name: 'id'
         description: 'The ID of the resource.'

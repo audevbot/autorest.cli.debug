@@ -400,11 +400,6 @@ objects:
                     description: 'The target of the particular error. For example, the name of the property in error.'
                     required: false
                     azure_sdk_references: ['/deleteCertificateError/details/details/target', '/properties/deleteCertificateError/details/details/target']
-                  - !ruby/object:Api::Type::NestedObject
-                    name: 'details'
-                    description: 'A list of additional details about the error.'
-                    required: false
-                    azure_sdk_references: ['/deleteCertificateError/details/details/details', '/properties/deleteCertificateError/details/details/details']
       - !ruby/object:Api::Type::String
         name: 'id'
         description: 'The ID of the resource.'

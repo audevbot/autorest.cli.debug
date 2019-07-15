@@ -991,11 +991,6 @@ objects:
               - :Disabled
             default_value: :Enabled
             azure_sdk_references: ['/routingRules/enabledState', '/properties/routingRules/properties/enabledState']
-          - !ruby/object:Api::Type::NestedObject
-            name: 'routeConfiguration'
-            description: 'A reference to the routing configuration.'
-            required: false
-            azure_sdk_references: ['/routingRules/routeConfiguration', '/properties/routingRules/properties/routeConfiguration']
           - !ruby/object:Api::Type::Enum
             name: 'resourceState'
             description: 'Resource status.'
