@@ -41,13 +41,13 @@ class ApimgmtScenarioTest(ScenarioTest):
         self.cmd('apimgmt api create  --resource-group "rg1" --service-name "apimService1" --api-id "tempgroup" --description "apidescription5200" --display-name "apiname1463" --service-url "http://newechoapi.cloudapp.net/api" --path "newapiPath"', checks=[
         ])
 
-        self.cmd('apimgmt api create  --resource-group "rg1" --service-name "apimService1" --api-id "echo-api;rev=3" --api-revision_description "Creating a Revision of an existing API" --source-api_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}" --service-url "http://echoapi.cloudapp.net/apiv3" --path "echo"', checks=[
+        self.cmd('apimgmt api create  --resource-group "rg1" --service-name "apimService1" --api-id "echo-api;rev=3" --api-revision-description "Creating a Revision of an existing API" --source-api-id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}" --service-url "http://echoapi.cloudapp.net/apiv3" --path "echo"', checks=[
         ])
 
-        self.cmd('apimgmt api create  --resource-group "rg1" --service-name "apimService1" --api-id "echoapiv3" --description "Create Echo API into a new Version using Existing Version Set and Copy all Operations." --api-version "v4" --is-current true --api-version_set_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apiVersionSets/{{ api_version_set_name }}" --subscription-required true --source-api_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}" --display-name "Echo API2" --service-url "http://echoapi.cloudapp.net/api" --path "echo2"', checks=[
+        self.cmd('apimgmt api create  --resource-group "rg1" --service-name "apimService1" --api-id "echoapiv3" --description "Create Echo API into a new Version using Existing Version Set and Copy all Operations." --api-version "v4" --is-current true --api-version-set-id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apiVersionSets/{{ api_version_set_name }}" --subscription-required true --source-api-id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}" --display-name "Echo API2" --service-url "http://echoapi.cloudapp.net/api" --path "echo2"', checks=[
         ])
 
-        self.cmd('apimgmt api create  --resource-group "rg1" --service-name "apimService1" --api-id "echo-api2" --description "Copy of Existing Echo Api including Operations." --is-current true --subscription-required true --source-api_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}" --display-name "Echo API2" --service-url "http://echoapi.cloudapp.net/api" --path "echo2"', checks=[
+        self.cmd('apimgmt api create  --resource-group "rg1" --service-name "apimService1" --api-id "echo-api2" --description "Copy of Existing Echo Api including Operations." --is-current true --subscription-required true --source-api-id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}" --display-name "Echo API2" --service-url "http://echoapi.cloudapp.net/api" --path "echo2"', checks=[
         ])
 
         self.cmd('apimgmt api create  --resource-group "rg1" --service-name "apimService1" --api-id "tempgroup" --description "This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters." --display-name "Swagger Petstore" --service-url "http://petstore.swagger.io/v2" --path "petstore"', checks=[
@@ -78,13 +78,13 @@ class ApimgmtScenarioTest(ScenarioTest):
         self.cmd('apimgmt api update  --resource-group "rg1" --service-name "apimService1" --api-id "tempgroup" --description "apidescription5200" --display-name "apiname1463" --service-url "http://newechoapi.cloudapp.net/api" --path "newapiPath"', checks=[
         ])
 
-        self.cmd('apimgmt api update  --resource-group "rg1" --service-name "apimService1" --api-id "echo-api;rev=3" --api-revision_description "Creating a Revision of an existing API" --source-api_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}" --service-url "http://echoapi.cloudapp.net/apiv3" --path "echo"', checks=[
+        self.cmd('apimgmt api update  --resource-group "rg1" --service-name "apimService1" --api-id "echo-api;rev=3" --api-revision-description "Creating a Revision of an existing API" --source-api-id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}" --service-url "http://echoapi.cloudapp.net/apiv3" --path "echo"', checks=[
         ])
 
-        self.cmd('apimgmt api update  --resource-group "rg1" --service-name "apimService1" --api-id "echoapiv3" --description "Create Echo API into a new Version using Existing Version Set and Copy all Operations." --api-version "v4" --is-current true --api-version_set_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apiVersionSets/{{ api_version_set_name }}" --subscription-required true --source-api_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}" --display-name "Echo API2" --service-url "http://echoapi.cloudapp.net/api" --path "echo2"', checks=[
+        self.cmd('apimgmt api update  --resource-group "rg1" --service-name "apimService1" --api-id "echoapiv3" --description "Create Echo API into a new Version using Existing Version Set and Copy all Operations." --api-version "v4" --is-current true --api-version-set-id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apiVersionSets/{{ api_version_set_name }}" --subscription-required true --source-api-id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}" --display-name "Echo API2" --service-url "http://echoapi.cloudapp.net/api" --path "echo2"', checks=[
         ])
 
-        self.cmd('apimgmt api update  --resource-group "rg1" --service-name "apimService1" --api-id "echo-api2" --description "Copy of Existing Echo Api including Operations." --is-current true --subscription-required true --source-api_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}" --display-name "Echo API2" --service-url "http://echoapi.cloudapp.net/api" --path "echo2"', checks=[
+        self.cmd('apimgmt api update  --resource-group "rg1" --service-name "apimService1" --api-id "echo-api2" --description "Copy of Existing Echo Api including Operations." --is-current true --subscription-required true --source-api-id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}" --display-name "Echo API2" --service-url "http://echoapi.cloudapp.net/api" --path "echo2"', checks=[
         ])
 
         self.cmd('apimgmt api update  --resource-group "rg1" --service-name "apimService1" --api-id "tempgroup" --description "This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters." --display-name "Swagger Petstore" --service-url "http://petstore.swagger.io/v2" --path "petstore"', checks=[
@@ -715,14 +715,14 @@ class ApimgmtScenarioTest(ScenarioTest):
         ])
 
 # create_or_update -- create
-        self.cmd('apimgmt api tagdescription create  --resource-group "rg1" --service-name "apimService1" --api-id "5931a75ae4bbd512a88c680b" --tag-id "tagId1" --description "Some description that will be displayed for operation's tag if the tag is assigned to operation of the API" --external-docs_url "http://some.url/additionaldoc" --external-docs_description "Description of the external docs resource"', checks=[
+        self.cmd('apimgmt api tagdescription create  --resource-group "rg1" --service-name "apimService1" --api-id "5931a75ae4bbd512a88c680b" --tag-id "tagId1" --description "Some description that will be displayed for operation's tag if the tag is assigned to operation of the API" --external-docs-url "http://some.url/additionaldoc" --external-docs-description "Description of the external docs resource"', checks=[
         ])
 
         self.cmd('apimgmt api tagdescription create  --resource-group "rg1" --service-name "apimService1" --api-id "59d5b28d1f7fab116c282650" --tag-id "59d5b28e1f7fab116402044e"', checks=[
         ])
 
 # create_or_update -- update
-        self.cmd('apimgmt api tagdescription update  --resource-group "rg1" --service-name "apimService1" --api-id "5931a75ae4bbd512a88c680b" --tag-id "tagId1" --description "Some description that will be displayed for operation's tag if the tag is assigned to operation of the API" --external-docs_url "http://some.url/additionaldoc" --external-docs_description "Description of the external docs resource"', checks=[
+        self.cmd('apimgmt api tagdescription update  --resource-group "rg1" --service-name "apimService1" --api-id "5931a75ae4bbd512a88c680b" --tag-id "tagId1" --description "Some description that will be displayed for operation's tag if the tag is assigned to operation of the API" --external-docs-url "http://some.url/additionaldoc" --external-docs-description "Description of the external docs resource"', checks=[
         ])
 
         self.cmd('apimgmt api tagdescription update  --resource-group "rg1" --service-name "apimService1" --api-id "59d5b28d1f7fab116c282650" --tag-id "59d5b28e1f7fab116402044e"', checks=[
@@ -750,33 +750,33 @@ class ApimgmtScenarioTest(ScenarioTest):
         ])
 
 # create_or_update -- create
-        self.cmd('apimgmt apiversionset create  --resource-group "rg1" --service-name "apimService1" --version-set_id "api1" --description "Version configuration" --display-name "api set 1" --versioning-scheme "Segment"', checks=[
+        self.cmd('apimgmt apiversionset create  --resource-group "rg1" --service-name "apimService1" --version-set-id "api1" --description "Version configuration" --display-name "api set 1" --versioning-scheme "Segment"', checks=[
         ])
 
-        self.cmd('apimgmt apiversionset create  --resource-group "rg1" --service-name "apimService1" --version-set_id "api1" --description "Version configuration" --display-name "api set 1" --versioning-scheme "Segment"', checks=[
+        self.cmd('apimgmt apiversionset create  --resource-group "rg1" --service-name "apimService1" --version-set-id "api1" --description "Version configuration" --display-name "api set 1" --versioning-scheme "Segment"', checks=[
         ])
 
-        self.cmd('apimgmt apiversionset create  --resource-group "rg1" --service-name "apimService1" --version-set_id "a1"', checks=[
+        self.cmd('apimgmt apiversionset create  --resource-group "rg1" --service-name "apimService1" --version-set-id "a1"', checks=[
         ])
 
 # create_or_update -- update
-        self.cmd('apimgmt apiversionset update  --resource-group "rg1" --service-name "apimService1" --version-set_id "api1" --description "Version configuration" --display-name "api set 1" --versioning-scheme "Segment"', checks=[
+        self.cmd('apimgmt apiversionset update  --resource-group "rg1" --service-name "apimService1" --version-set-id "api1" --description "Version configuration" --display-name "api set 1" --versioning-scheme "Segment"', checks=[
         ])
 
-        self.cmd('apimgmt apiversionset update  --resource-group "rg1" --service-name "apimService1" --version-set_id "api1" --description "Version configuration" --display-name "api set 1" --versioning-scheme "Segment"', checks=[
+        self.cmd('apimgmt apiversionset update  --resource-group "rg1" --service-name "apimService1" --version-set-id "api1" --description "Version configuration" --display-name "api set 1" --versioning-scheme "Segment"', checks=[
         ])
 
-        self.cmd('apimgmt apiversionset update  --resource-group "rg1" --service-name "apimService1" --version-set_id "a1"', checks=[
+        self.cmd('apimgmt apiversionset update  --resource-group "rg1" --service-name "apimService1" --version-set-id "a1"', checks=[
         ])
 
 # delete -- delete
-        self.cmd('apimgmt apiversionset delete  --resource-group "rg1" --service-name "apimService1" --version-set_id "api1"', checks=[
+        self.cmd('apimgmt apiversionset delete  --resource-group "rg1" --service-name "apimService1" --version-set-id "api1"', checks=[
         ])
 
-        self.cmd('apimgmt apiversionset delete  --resource-group "rg1" --service-name "apimService1" --version-set_id "api1"', checks=[
+        self.cmd('apimgmt apiversionset delete  --resource-group "rg1" --service-name "apimService1" --version-set-id "api1"', checks=[
         ])
 
-        self.cmd('apimgmt apiversionset delete  --resource-group "rg1" --service-name "apimService1" --version-set_id "a1"', checks=[
+        self.cmd('apimgmt apiversionset delete  --resource-group "rg1" --service-name "apimService1" --version-set-id "a1"', checks=[
         ])
 
 # list_by_service -- list
@@ -790,17 +790,17 @@ class ApimgmtScenarioTest(ScenarioTest):
         ])
 
 # get -- show
-        self.cmd('apimgmt apiversionset show  --resource-group "rg1" --service-name "apimService1" --version-set_id "api1"', checks=[
+        self.cmd('apimgmt apiversionset show  --resource-group "rg1" --service-name "apimService1" --version-set-id "api1"', checks=[
         ])
 
-        self.cmd('apimgmt apiversionset show  --resource-group "rg1" --service-name "apimService1" --version-set_id "api1"', checks=[
+        self.cmd('apimgmt apiversionset show  --resource-group "rg1" --service-name "apimService1" --version-set-id "api1"', checks=[
         ])
 
-        self.cmd('apimgmt apiversionset show  --resource-group "rg1" --service-name "apimService1" --version-set_id "a1"', checks=[
+        self.cmd('apimgmt apiversionset show  --resource-group "rg1" --service-name "apimService1" --version-set-id "a1"', checks=[
         ])
 
 # create_or_update -- create
-        self.cmd('apimgmt authorizationserver create  --resource-group "rg1" --service-name "apimService1" --authsid "newauthServer" --description "test server" --token-endpoint "https://www.contoso.com/oauth2/token" --support-state true --default-scope "read write" --client-secret "2" --resource-owner_username "un" --resource-owner_password "pwd" --display-name "test2" --client-registration_endpoint "https://www.contoso.com/apps" --authorization-endpoint "https://www.contoso.com/oauth2/auth" --client-id "1"', checks=[
+        self.cmd('apimgmt authorizationserver create  --resource-group "rg1" --service-name "apimService1" --authsid "newauthServer" --description "test server" --token-endpoint "https://www.contoso.com/oauth2/token" --support-state true --default-scope "read write" --client-secret "2" --resource-owner-username "un" --resource-owner-password "pwd" --display-name "test2" --client-registration-endpoint "https://www.contoso.com/apps" --authorization-endpoint "https://www.contoso.com/oauth2/auth" --client-id "1"', checks=[
         ])
 
         self.cmd('apimgmt authorizationserver create  --resource-group "rg1" --service-name "apimService1" --authsid "newauthServer" --client-secret "updated" --client-id "update"', checks=[
@@ -810,7 +810,7 @@ class ApimgmtScenarioTest(ScenarioTest):
         ])
 
 # create_or_update -- update
-        self.cmd('apimgmt authorizationserver update  --resource-group "rg1" --service-name "apimService1" --authsid "newauthServer" --description "test server" --token-endpoint "https://www.contoso.com/oauth2/token" --support-state true --default-scope "read write" --client-secret "2" --resource-owner_username "un" --resource-owner_password "pwd" --display-name "test2" --client-registration_endpoint "https://www.contoso.com/apps" --authorization-endpoint "https://www.contoso.com/oauth2/auth" --client-id "1"', checks=[
+        self.cmd('apimgmt authorizationserver update  --resource-group "rg1" --service-name "apimService1" --authsid "newauthServer" --description "test server" --token-endpoint "https://www.contoso.com/oauth2/token" --support-state true --default-scope "read write" --client-secret "2" --resource-owner-username "un" --resource-owner-password "pwd" --display-name "test2" --client-registration-endpoint "https://www.contoso.com/apps" --authorization-endpoint "https://www.contoso.com/oauth2/auth" --client-id "1"', checks=[
         ])
 
         self.cmd('apimgmt authorizationserver update  --resource-group "rg1" --service-name "apimService1" --authsid "newauthServer" --client-secret "updated" --client-id "update"', checks=[
@@ -1003,7 +1003,7 @@ class ApimgmtScenarioTest(ScenarioTest):
         self.cmd('apimgmt create  --resource-group "rg1" --name "apimService1" --publisher-email "apim@autorestsdk.com" --publisher-name "autorestsdk" --sku-name "Developer" --sku-capacity "1" --location "Central US"', checks=[
         ])
 
-        self.cmd('apimgmt create  --resource-group "rg1" --name "apimService1" --virtual-network_type "External" --publisher-email "admin@live.com" --publisher-name "contoso" --sku-name "Premium" --sku-capacity "1" --location "Central US"', checks=[
+        self.cmd('apimgmt create  --resource-group "rg1" --name "apimService1" --virtual-network-type "External" --publisher-email "admin@live.com" --publisher-name "contoso" --sku-name "Premium" --sku-capacity "1" --location "Central US"', checks=[
         ])
 
         self.cmd('apimgmt create  --resource-group "rg1" --name "apimService1" --publisher-email "apim@autorestsdk.com" --publisher-name "autorestsdk" --sku-name "Consumption" --location "West US"', checks=[
@@ -1025,7 +1025,7 @@ class ApimgmtScenarioTest(ScenarioTest):
         self.cmd('apimgmt update  --resource-group "rg1" --name "apimService1" --publisher-email "apim@autorestsdk.com" --publisher-name "autorestsdk" --sku-name "Developer" --sku-capacity "1" --location "Central US"', checks=[
         ])
 
-        self.cmd('apimgmt update  --resource-group "rg1" --name "apimService1" --virtual-network_type "External" --publisher-email "admin@live.com" --publisher-name "contoso" --sku-name "Premium" --sku-capacity "1" --location "Central US"', checks=[
+        self.cmd('apimgmt update  --resource-group "rg1" --name "apimService1" --virtual-network-type "External" --publisher-email "admin@live.com" --publisher-name "contoso" --sku-name "Premium" --sku-capacity "1" --location "Central US"', checks=[
         ])
 
         self.cmd('apimgmt update  --resource-group "rg1" --name "apimService1" --publisher-email "apim@autorestsdk.com" --publisher-name "autorestsdk" --sku-name "Consumption" --location "West US"', checks=[

@@ -15,14 +15,14 @@ create a apimgmt.
 |**--sku-name**|str|Name of the Sku.|/sku/name|/sku/name|
 |**--location**|str|Resource location.|/location|/location|
 |--tags|dictionary|Resource tags.|/tags|/tags|
-|--notification-sender_email|str|Email address from which the notification will be sent.|/notification_sender_email|/properties/notificationSenderEmail|
+|--notification-sender-email|str|Email address from which the notification will be sent.|/notification_sender_email|/properties/notificationSenderEmail|
 |--hostname-configurations|list|Custom hostname configuration of the API Management service.|/hostname_configurations|/properties/hostnameConfigurations|
-|--virtual-network_configuration|dict|Virtual network configuration of the API Management service.|/virtual_network_configuration|/properties/virtualNetworkConfiguration|
+|--virtual-network-configuration|dict|Virtual network configuration of the API Management service.|/virtual_network_configuration|/properties/virtualNetworkConfiguration|
 |--additional-locations|list|Additional datacenter locations of the API Management service.|/additional_locations|/properties/additionalLocations|
 |--custom-properties|dictionary|Custom properties of the API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168` will disable the cipher TLS_RSA_WITH_3DES_EDE_CBC_SHA for all TLS(1.0, 1.1 and 1.2).</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11` can be used to disable just TLS 1.1.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10` can be used to disable TLS 1.0 on an API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11` can be used to disable just TLS 1.1 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10` can be used to disable TLS 1.0 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2` can be used to enable HTTP2 protocol on an API Management service.</br>Not specifying any of these properties on PATCH operation will reset omitted properties' values to their defaults. For all the settings except Http2 the default value is `True` if the service was created on or before April 1st 2018 and `False` otherwise. Http2 setting's default value is `False`.</br></br>You can disable any of next ciphers by using settings `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.[cipher_name]`: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA. For example, `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_CBC_SHA256`:`false`. The default value is `true` for them.|/custom_properties|/properties/customProperties|
 |--certificates|list|List of Certificates that need to be installed in the API Management service. Max supported certificates that can be installed is 10.|/certificates|/properties/certificates|
-|--enable-client_certificate|boolean|Property only meant to be used for Consumption SKU Service. This enforces a client certificate to be presented on each request to the gateway. This also enables the ability to authenticate the certificate in the policy on the gateway.|/enable_client_certificate|/properties/enableClientCertificate|
-|--virtual-network_type|str|The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.|/virtual_network_type|/properties/virtualNetworkType|
+|--enable-client-certificate|boolean|Property only meant to be used for Consumption SKU Service. This enforces a client certificate to be presented on each request to the gateway. This also enables the ability to authenticate the certificate in the policy on the gateway.|/enable_client_certificate|/properties/enableClientCertificate|
+|--virtual-network-type|str|The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.|/virtual_network_type|/properties/virtualNetworkType|
 |--sku-capacity|number|Capacity of the SKU (number of deployed units of the SKU).|/sku/capacity|/sku/capacity|
 |--identity|dict|Managed service identity of the Api Management service.|/identity|/identity|
 
@@ -43,7 +43,7 @@ apimgmt create --resource-group rg1
 ```
 apimgmt create --resource-group rg1
         --name apimService1
-        --virtual-network_type External
+        --virtual-network-type External
         --publisher-email admin@live.com
         --publisher-name contoso
         --sku-name Premium
@@ -86,14 +86,14 @@ update a apimgmt.
 |**--sku-name**|str|Name of the Sku.|/sku/name|/sku/name|
 |**--location**|str|Resource location.|/location|/location|
 |--tags|dictionary|Resource tags.|/tags|/tags|
-|--notification-sender_email|str|Email address from which the notification will be sent.|/notification_sender_email|/properties/notificationSenderEmail|
+|--notification-sender-email|str|Email address from which the notification will be sent.|/notification_sender_email|/properties/notificationSenderEmail|
 |--hostname-configurations|list|Custom hostname configuration of the API Management service.|/hostname_configurations|/properties/hostnameConfigurations|
-|--virtual-network_configuration|dict|Virtual network configuration of the API Management service.|/virtual_network_configuration|/properties/virtualNetworkConfiguration|
+|--virtual-network-configuration|dict|Virtual network configuration of the API Management service.|/virtual_network_configuration|/properties/virtualNetworkConfiguration|
 |--additional-locations|list|Additional datacenter locations of the API Management service.|/additional_locations|/properties/additionalLocations|
 |--custom-properties|dictionary|Custom properties of the API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168` will disable the cipher TLS_RSA_WITH_3DES_EDE_CBC_SHA for all TLS(1.0, 1.1 and 1.2).</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11` can be used to disable just TLS 1.1.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10` can be used to disable TLS 1.0 on an API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11` can be used to disable just TLS 1.1 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10` can be used to disable TLS 1.0 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2` can be used to enable HTTP2 protocol on an API Management service.</br>Not specifying any of these properties on PATCH operation will reset omitted properties' values to their defaults. For all the settings except Http2 the default value is `True` if the service was created on or before April 1st 2018 and `False` otherwise. Http2 setting's default value is `False`.</br></br>You can disable any of next ciphers by using settings `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.[cipher_name]`: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA. For example, `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_CBC_SHA256`:`false`. The default value is `true` for them.|/custom_properties|/properties/customProperties|
 |--certificates|list|List of Certificates that need to be installed in the API Management service. Max supported certificates that can be installed is 10.|/certificates|/properties/certificates|
-|--enable-client_certificate|boolean|Property only meant to be used for Consumption SKU Service. This enforces a client certificate to be presented on each request to the gateway. This also enables the ability to authenticate the certificate in the policy on the gateway.|/enable_client_certificate|/properties/enableClientCertificate|
-|--virtual-network_type|str|The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.|/virtual_network_type|/properties/virtualNetworkType|
+|--enable-client-certificate|boolean|Property only meant to be used for Consumption SKU Service. This enforces a client certificate to be presented on each request to the gateway. This also enables the ability to authenticate the certificate in the policy on the gateway.|/enable_client_certificate|/properties/enableClientCertificate|
+|--virtual-network-type|str|The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.|/virtual_network_type|/properties/virtualNetworkType|
 |--sku-capacity|number|Capacity of the SKU (number of deployed units of the SKU).|/sku/capacity|/sku/capacity|
 |--identity|dict|Managed service identity of the Api Management service.|/identity|/identity|
 
@@ -156,20 +156,20 @@ create a apimgmt api.
 |**--path**|str|Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.|/path|/properties/path|
 |--description|str|Description of the API. May include HTML formatting tags.|/description|/properties/description|
 |--authentication-settings|dict|Collection of authentication settings included into this API.|/authentication_settings|/properties/authenticationSettings|
-|--subscription-key_parameter_names|dict|Protocols over which API is made available.|/subscription_key_parameter_names|/properties/subscriptionKeyParameterNames|
+|--subscription-key-parameter-names|dict|Protocols over which API is made available.|/subscription_key_parameter_names|/properties/subscriptionKeyParameterNames|
 |--type|str|Type of API.|/type|/properties/type|
 |--api-revision|str|Describes the Revision of the Api. If no value is provided, default revision 1 is created|/api_revision|/properties/apiRevision|
 |--api-version|str|Indicates the Version identifier of the API if the API is versioned|/api_version|/properties/apiVersion|
 |--is-current|boolean|Indicates if API revision is current api revision.|/is_current|/properties/isCurrent|
-|--api-revision_description|str|Description of the Api Revision.|/api_revision_description|/properties/apiRevisionDescription|
-|--api-version_description|str|Description of the Api Version.|/api_version_description|/properties/apiVersionDescription|
-|--api-version_set_id|str|A resource identifier for the related ApiVersionSet.|/api_version_set_id|/properties/apiVersionSetId|
+|--api-revision-description|str|Description of the Api Revision.|/api_revision_description|/properties/apiRevisionDescription|
+|--api-version-description|str|Description of the Api Version.|/api_version_description|/properties/apiVersionDescription|
+|--api-version-set-id|str|A resource identifier for the related ApiVersionSet.|/api_version_set_id|/properties/apiVersionSetId|
 |--subscription-required|boolean|Specifies whether an API or Product subscription is required for accessing the API.|/subscription_required|/properties/subscriptionRequired|
-|--source-api_id|str|API identifier of the source API.|/source_api_id|/properties/sourceApiId|
+|--source-api-id|str|API identifier of the source API.|/source_api_id|/properties/sourceApiId|
 |--display-name|str|API name. Must be 1 to 300 characters long.|/display_name|/properties/displayName|
 |--service-url|str|Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.|/service_url|/properties/serviceUrl|
 |--protocols|list|Describes on which protocols the operations in this API can be invoked.|/protocols|/properties/protocols|
-|--api-version_set|dict|Version set details|/api_version_set|/properties/apiVersionSet|
+|--api-version-set|dict|Version set details|/api_version_set|/properties/apiVersionSet|
 |--value|str|Content value when Importing an API.|/value|/properties/value|
 |--format|str|Format of the Content in which the API is getting imported.|/format|/properties/format|
 |--wsdl-selector|dict|Criteria to limit import of WSDL to a subset of the document.|/wsdl_selector|/properties/wsdlSelector|
@@ -249,8 +249,8 @@ apimgmt api create --resource-group rg1
 apimgmt api create --resource-group rg1
         --service-name apimService1
         --api-id echo-api;rev=3
-        --api-revision_description "Creating a Revision of an existing API"
-        --source-api_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}"
+        --api-revision-description "Creating a Revision of an existing API"
+        --source-api-id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}"
         --service-url http://echoapi.cloudapp.net/apiv3
         --path echo
 ```
@@ -264,9 +264,9 @@ apimgmt api create --resource-group rg1
         --description "Create Echo API into a new Version using Existing Version Set and Copy all Operations."
         --api-version v4
         --is-current true
-        --api-version_set_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apiVersionSets/{{ api_version_set_name }}"
+        --api-version-set-id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apiVersionSets/{{ api_version_set_name }}"
         --subscription-required true
-        --source-api_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}"
+        --source-api-id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}"
         --display-name "Echo API2"
         --service-url http://echoapi.cloudapp.net/api
         --path echo2
@@ -281,7 +281,7 @@ apimgmt api create --resource-group rg1
         --description "Copy of Existing Echo Api including Operations."
         --is-current true
         --subscription-required true
-        --source-api_id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}"
+        --source-api-id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}"
         --display-name "Echo API2"
         --service-url http://echoapi.cloudapp.net/api
         --path echo2
@@ -310,20 +310,20 @@ update a apimgmt api.
 |**--path**|str|Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.|/path|/properties/path|
 |--description|str|Description of the API. May include HTML formatting tags.|/description|/properties/description|
 |--authentication-settings|dict|Collection of authentication settings included into this API.|/authentication_settings|/properties/authenticationSettings|
-|--subscription-key_parameter_names|dict|Protocols over which API is made available.|/subscription_key_parameter_names|/properties/subscriptionKeyParameterNames|
+|--subscription-key-parameter-names|dict|Protocols over which API is made available.|/subscription_key_parameter_names|/properties/subscriptionKeyParameterNames|
 |--type|str|Type of API.|/type|/properties/type|
 |--api-revision|str|Describes the Revision of the Api. If no value is provided, default revision 1 is created|/api_revision|/properties/apiRevision|
 |--api-version|str|Indicates the Version identifier of the API if the API is versioned|/api_version|/properties/apiVersion|
 |--is-current|boolean|Indicates if API revision is current api revision.|/is_current|/properties/isCurrent|
-|--api-revision_description|str|Description of the Api Revision.|/api_revision_description|/properties/apiRevisionDescription|
-|--api-version_description|str|Description of the Api Version.|/api_version_description|/properties/apiVersionDescription|
-|--api-version_set_id|str|A resource identifier for the related ApiVersionSet.|/api_version_set_id|/properties/apiVersionSetId|
+|--api-revision-description|str|Description of the Api Revision.|/api_revision_description|/properties/apiRevisionDescription|
+|--api-version-description|str|Description of the Api Version.|/api_version_description|/properties/apiVersionDescription|
+|--api-version-set-id|str|A resource identifier for the related ApiVersionSet.|/api_version_set_id|/properties/apiVersionSetId|
 |--subscription-required|boolean|Specifies whether an API or Product subscription is required for accessing the API.|/subscription_required|/properties/subscriptionRequired|
-|--source-api_id|str|API identifier of the source API.|/source_api_id|/properties/sourceApiId|
+|--source-api-id|str|API identifier of the source API.|/source_api_id|/properties/sourceApiId|
 |--display-name|str|API name. Must be 1 to 300 characters long.|/display_name|/properties/displayName|
 |--service-url|str|Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.|/service_url|/properties/serviceUrl|
 |--protocols|list|Describes on which protocols the operations in this API can be invoked.|/protocols|/properties/protocols|
-|--api-version_set|dict|Version set details|/api_version_set|/properties/apiVersionSet|
+|--api-version-set|dict|Version set details|/api_version_set|/properties/apiVersionSet|
 |--value|str|Content value when Importing an API.|/value|/properties/value|
 |--format|str|Format of the Content in which the API is getting imported.|/format|/properties/format|
 |--wsdl-selector|dict|Criteria to limit import of WSDL to a subset of the document.|/wsdl_selector|/properties/wsdlSelector|
@@ -390,7 +390,7 @@ create a apimgmt api diagnostic.
 |--sampling|dict|Sampling settings for Diagnostic.|/sampling|/properties/sampling|
 |--frontend|dict|Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.|/frontend|/properties/frontend|
 |--backend|dict|Diagnostic settings for incoming/outgoing HTTP messages to the Backend|/backend|/properties/backend|
-|--enable-http_correlation_headers|boolean|Whether to process Correlation Headers coming to Api Management Service. Only applicable to Application Insights diagnostics. Default is true.|/enable_http_correlation_headers|/properties/enableHttpCorrelationHeaders|
+|--enable-http-correlation-headers|boolean|Whether to process Correlation Headers coming to Api Management Service. Only applicable to Application Insights diagnostics. Default is true.|/enable_http_correlation_headers|/properties/enableHttpCorrelationHeaders|
 
 **Example: ApiManagementCreateApiDiagnostic**
 
@@ -417,7 +417,7 @@ update a apimgmt api diagnostic.
 |--sampling|dict|Sampling settings for Diagnostic.|/sampling|/properties/sampling|
 |--frontend|dict|Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.|/frontend|/properties/frontend|
 |--backend|dict|Diagnostic settings for incoming/outgoing HTTP messages to the Backend|/backend|/properties/backend|
-|--enable-http_correlation_headers|boolean|Whether to process Correlation Headers coming to Api Management Service. Only applicable to Application Insights diagnostics. Default is true.|/enable_http_correlation_headers|/properties/enableHttpCorrelationHeaders|
+|--enable-http-correlation-headers|boolean|Whether to process Correlation Headers coming to Api Management Service. Only applicable to Application Insights diagnostics. Default is true.|/enable_http_correlation_headers|/properties/enableHttpCorrelationHeaders|
 
 **Example: ApiManagementUpdateApiDiagnostic**
 
@@ -1178,8 +1178,8 @@ create a apimgmt api tagdescription.
 |**--api-id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 |**--tag-id**|str|Tag identifier. Must be unique in the current API Management service instance.|tag_id|tagId|
 |--description|str|Description of the Tag.|/description|/properties/description|
-|--external-docs_url|str|Absolute URL of external resources describing the tag.|/external_docs_url|/properties/externalDocsUrl|
-|--external-docs_description|str|Description of the external resources describing the tag.|/external_docs_description|/properties/externalDocsDescription|
+|--external-docs-url|str|Absolute URL of external resources describing the tag.|/external_docs_url|/properties/externalDocsUrl|
+|--external-docs-description|str|Description of the external resources describing the tag.|/external_docs_description|/properties/externalDocsDescription|
 
 **Example: ApiManagementCreateApiTagDescription**
 
@@ -1189,8 +1189,8 @@ apimgmt api tagdescription create --resource-group rg1
         --api-id 5931a75ae4bbd512a88c680b
         --tag-id tagId1
         --description "Some description that will be displayed for operation's tag if the tag is assigned to operation of the API"
-        --external-docs_url http://some.url/additionaldoc
-        --external-docs_description "Description of the external docs resource"
+        --external-docs-url http://some.url/additionaldoc
+        --external-docs-description "Description of the external docs resource"
 ```
 ### apimgmt api tagdescription update
 
@@ -1203,8 +1203,8 @@ update a apimgmt api tagdescription.
 |**--api-id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 |**--tag-id**|str|Tag identifier. Must be unique in the current API Management service instance.|tag_id|tagId|
 |--description|str|Description of the Tag.|/description|/properties/description|
-|--external-docs_url|str|Absolute URL of external resources describing the tag.|/external_docs_url|/properties/externalDocsUrl|
-|--external-docs_description|str|Description of the external resources describing the tag.|/external_docs_description|/properties/externalDocsDescription|
+|--external-docs-url|str|Absolute URL of external resources describing the tag.|/external_docs_url|/properties/externalDocsUrl|
+|--external-docs-description|str|Description of the external resources describing the tag.|/external_docs_description|/properties/externalDocsDescription|
 ### apimgmt api tagdescription delete
 
 delete a apimgmt api tagdescription.
@@ -1253,19 +1253,19 @@ create a apimgmt apiversionset.
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
-|**--version-set_id**|str|Api Version Set identifier. Must be unique in the current API Management service instance.|version_set_id|versionSetId|
+|**--version-set-id**|str|Api Version Set identifier. Must be unique in the current API Management service instance.|version_set_id|versionSetId|
 |**--display-name**|str|Name of API Version Set|/display_name|/properties/displayName|
 |**--versioning-scheme**|str|An value that determines where the API Version identifer will be located in a HTTP request.|/versioning_scheme|/properties/versioningScheme|
 |--description|str|Description of API Version Set.|/description|/properties/description|
-|--version-query_name|str|Name of query parameter that indicates the API Version if versioningScheme is set to `query`.|/version_query_name|/properties/versionQueryName|
-|--version-header_name|str|Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.|/version_header_name|/properties/versionHeaderName|
+|--version-query-name|str|Name of query parameter that indicates the API Version if versioningScheme is set to `query`.|/version_query_name|/properties/versionQueryName|
+|--version-header-name|str|Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.|/version_header_name|/properties/versionHeaderName|
 
 **Example: ApiManagementCreateApiVersionSet**
 
 ```
 apimgmt apiversionset create --resource-group rg1
         --service-name apimService1
-        --version-set_id api1
+        --version-set-id api1
         --description "Version configuration"
         --display-name "api set 1"
         --versioning-scheme Segment
@@ -1278,19 +1278,19 @@ update a apimgmt apiversionset.
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
-|**--version-set_id**|str|Api Version Set identifier. Must be unique in the current API Management service instance.|version_set_id|versionSetId|
+|**--version-set-id**|str|Api Version Set identifier. Must be unique in the current API Management service instance.|version_set_id|versionSetId|
 |**--display-name**|str|Name of API Version Set|/display_name|/properties/displayName|
 |**--versioning-scheme**|str|An value that determines where the API Version identifer will be located in a HTTP request.|/versioning_scheme|/properties/versioningScheme|
 |--description|str|Description of API Version Set.|/description|/properties/description|
-|--version-query_name|str|Name of query parameter that indicates the API Version if versioningScheme is set to `query`.|/version_query_name|/properties/versionQueryName|
-|--version-header_name|str|Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.|/version_header_name|/properties/versionHeaderName|
+|--version-query-name|str|Name of query parameter that indicates the API Version if versioningScheme is set to `query`.|/version_query_name|/properties/versionQueryName|
+|--version-header-name|str|Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.|/version_header_name|/properties/versionHeaderName|
 
 **Example: ApiManagementUpdateApiVersionSet**
 
 ```
 apimgmt apiversionset update --resource-group rg1
         --service-name apimService1
-        --version-set_id api1
+        --version-set-id api1
         --description "Version configuration"
         --display-name "api set 1"
         --versioning-scheme Segment
@@ -1303,14 +1303,14 @@ delete a apimgmt apiversionset.
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
-|**--version-set_id**|str|Api Version Set identifier. Must be unique in the current API Management service instance.|version_set_id|versionSetId|
+|**--version-set-id**|str|Api Version Set identifier. Must be unique in the current API Management service instance.|version_set_id|versionSetId|
 
 **Example: ApiManagementDeleteApiVersionSet**
 
 ```
 apimgmt apiversionset delete --resource-group rg1
         --service-name apimService1
-        --version-set_id a1
+        --version-set-id a1
 ```
 ### apimgmt apiversionset list
 
@@ -1328,7 +1328,7 @@ show a apimgmt apiversionset.
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
-|**--version-set_id**|str|Api Version Set identifier. Must be unique in the current API Management service instance.|version_set_id|versionSetId|
+|**--version-set-id**|str|Api Version Set identifier. Must be unique in the current API Management service instance.|version_set_id|versionSetId|
 ## apimgmt authorizationserver
 
 ### apimgmt authorizationserver create
@@ -1341,21 +1341,21 @@ create a apimgmt authorizationserver.
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--authsid**|str|Identifier of the authorization server.|authsid|authsid|
 |**--display-name**|str|User-friendly authorization server name.|/display_name|/properties/displayName|
-|**--client-registration_endpoint**|str|Optional reference to a page where client or app registration for this authorization server is performed. Contains absolute URL to entity being referenced.|/client_registration_endpoint|/properties/clientRegistrationEndpoint|
+|**--client-registration-endpoint**|str|Optional reference to a page where client or app registration for this authorization server is performed. Contains absolute URL to entity being referenced.|/client_registration_endpoint|/properties/clientRegistrationEndpoint|
 |**--authorization-endpoint**|str|OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2.|/authorization_endpoint|/properties/authorizationEndpoint|
 |**--grant-types**|list|Form of an authorization grant, which the client uses to request the access token.|/grant_types|/properties/grantTypes|
 |**--client-id**|str|Client or app id registered with this authorization server.|/client_id|/properties/clientId|
 |--description|str|Description of the authorization server. Can contain HTML formatting tags.|/description|/properties/description|
 |--authorization-methods|list|HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.|/authorization_methods|/properties/authorizationMethods|
-|--client-authentication_method|list|Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.|/client_authentication_method|/properties/clientAuthenticationMethod|
-|--token-body_parameters|list|Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.|/token_body_parameters|/properties/tokenBodyParameters|
+|--client-authentication-method|list|Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.|/client_authentication_method|/properties/clientAuthenticationMethod|
+|--token-body-parameters|list|Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.|/token_body_parameters|/properties/tokenBodyParameters|
 |--token-endpoint|str|OAuth token endpoint. Contains absolute URI to entity being referenced.|/token_endpoint|/properties/tokenEndpoint|
 |--support-state|boolean|If true, authorization server will include state parameter from the authorization request to its response. Client may use state parameter to raise protocol security.|/support_state|/properties/supportState|
 |--default-scope|str|Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values.|/default_scope|/properties/defaultScope|
-|--bearer-token_sending_methods|list|Specifies the mechanism by which access token is passed to the API. |/bearer_token_sending_methods|/properties/bearerTokenSendingMethods|
+|--bearer-token-sending-methods|list|Specifies the mechanism by which access token is passed to the API. |/bearer_token_sending_methods|/properties/bearerTokenSendingMethods|
 |--client-secret|str|Client or app secret registered with this authorization server.|/client_secret|/properties/clientSecret|
-|--resource-owner_username|str|Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.|/resource_owner_username|/properties/resourceOwnerUsername|
-|--resource-owner_password|str|Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.|/resource_owner_password|/properties/resourceOwnerPassword|
+|--resource-owner-username|str|Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.|/resource_owner_username|/properties/resourceOwnerUsername|
+|--resource-owner-password|str|Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.|/resource_owner_password|/properties/resourceOwnerPassword|
 
 **Example: ApiManagementCreateAuthorizationServer**
 
@@ -1368,10 +1368,10 @@ apimgmt authorizationserver create --resource-group rg1
         --support-state true
         --default-scope "read write"
         --client-secret 2
-        --resource-owner_username un
-        --resource-owner_password pwd
+        --resource-owner-username un
+        --resource-owner-password pwd
         --display-name test2
-        --client-registration_endpoint https://www.contoso.com/apps
+        --client-registration-endpoint https://www.contoso.com/apps
         --authorization-endpoint https://www.contoso.com/oauth2/auth
         --client-id 1
 ```
@@ -1385,21 +1385,21 @@ update a apimgmt authorizationserver.
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--authsid**|str|Identifier of the authorization server.|authsid|authsid|
 |**--display-name**|str|User-friendly authorization server name.|/display_name|/properties/displayName|
-|**--client-registration_endpoint**|str|Optional reference to a page where client or app registration for this authorization server is performed. Contains absolute URL to entity being referenced.|/client_registration_endpoint|/properties/clientRegistrationEndpoint|
+|**--client-registration-endpoint**|str|Optional reference to a page where client or app registration for this authorization server is performed. Contains absolute URL to entity being referenced.|/client_registration_endpoint|/properties/clientRegistrationEndpoint|
 |**--authorization-endpoint**|str|OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2.|/authorization_endpoint|/properties/authorizationEndpoint|
 |**--grant-types**|list|Form of an authorization grant, which the client uses to request the access token.|/grant_types|/properties/grantTypes|
 |**--client-id**|str|Client or app id registered with this authorization server.|/client_id|/properties/clientId|
 |--description|str|Description of the authorization server. Can contain HTML formatting tags.|/description|/properties/description|
 |--authorization-methods|list|HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.|/authorization_methods|/properties/authorizationMethods|
-|--client-authentication_method|list|Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.|/client_authentication_method|/properties/clientAuthenticationMethod|
-|--token-body_parameters|list|Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.|/token_body_parameters|/properties/tokenBodyParameters|
+|--client-authentication-method|list|Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.|/client_authentication_method|/properties/clientAuthenticationMethod|
+|--token-body-parameters|list|Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.|/token_body_parameters|/properties/tokenBodyParameters|
 |--token-endpoint|str|OAuth token endpoint. Contains absolute URI to entity being referenced.|/token_endpoint|/properties/tokenEndpoint|
 |--support-state|boolean|If true, authorization server will include state parameter from the authorization request to its response. Client may use state parameter to raise protocol security.|/support_state|/properties/supportState|
 |--default-scope|str|Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values.|/default_scope|/properties/defaultScope|
-|--bearer-token_sending_methods|list|Specifies the mechanism by which access token is passed to the API. |/bearer_token_sending_methods|/properties/bearerTokenSendingMethods|
+|--bearer-token-sending-methods|list|Specifies the mechanism by which access token is passed to the API. |/bearer_token_sending_methods|/properties/bearerTokenSendingMethods|
 |--client-secret|str|Client or app secret registered with this authorization server.|/client_secret|/properties/clientSecret|
-|--resource-owner_username|str|Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.|/resource_owner_username|/properties/resourceOwnerUsername|
-|--resource-owner_password|str|Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.|/resource_owner_password|/properties/resourceOwnerPassword|
+|--resource-owner-username|str|Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.|/resource_owner_username|/properties/resourceOwnerUsername|
+|--resource-owner-password|str|Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.|/resource_owner_password|/properties/resourceOwnerPassword|
 
 **Example: ApiManagementUpdateAuthorizationServer**
 
@@ -1460,7 +1460,7 @@ create a apimgmt backend.
 |--title|str|Backend Title.|/title|/properties/title|
 |--description|str|Backend Description.|/description|/properties/description|
 |--resource-id|str|Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.|/resource_id|/properties/resourceId|
-|--service-fabric_cluster|dict|Backend Service Fabric Cluster Properties|/service_fabric_cluster|/properties/properties/serviceFabricCluster|
+|--service-fabric-cluster|dict|Backend Service Fabric Cluster Properties|/service_fabric_cluster|/properties/properties/serviceFabricCluster|
 |--credentials|dict|Backend Credentials Contract Properties|/credentials|/properties/credentials|
 |--proxy|dict|Backend Proxy Contract Properties|/proxy|/properties/proxy|
 |--tls|dict|Backend TLS Properties|/tls|/properties/tls|
@@ -1500,7 +1500,7 @@ update a apimgmt backend.
 |--title|str|Backend Title.|/title|/properties/title|
 |--description|str|Backend Description.|/description|/properties/description|
 |--resource-id|str|Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.|/resource_id|/properties/resourceId|
-|--service-fabric_cluster|dict|Backend Service Fabric Cluster Properties|/service_fabric_cluster|/properties/properties/serviceFabricCluster|
+|--service-fabric-cluster|dict|Backend Service Fabric Cluster Properties|/service_fabric_cluster|/properties/properties/serviceFabricCluster|
 |--credentials|dict|Backend Credentials Contract Properties|/credentials|/properties/credentials|
 |--proxy|dict|Backend Proxy Contract Properties|/proxy|/properties/proxy|
 |--tls|dict|Backend TLS Properties|/tls|/properties/tls|
@@ -1711,7 +1711,7 @@ create a apimgmt diagnostic.
 |--sampling|dict|Sampling settings for Diagnostic.|/sampling|/properties/sampling|
 |--frontend|dict|Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.|/frontend|/properties/frontend|
 |--backend|dict|Diagnostic settings for incoming/outgoing HTTP messages to the Backend|/backend|/properties/backend|
-|--enable-http_correlation_headers|boolean|Whether to process Correlation Headers coming to Api Management Service. Only applicable to Application Insights diagnostics. Default is true.|/enable_http_correlation_headers|/properties/enableHttpCorrelationHeaders|
+|--enable-http-correlation-headers|boolean|Whether to process Correlation Headers coming to Api Management Service. Only applicable to Application Insights diagnostics. Default is true.|/enable_http_correlation_headers|/properties/enableHttpCorrelationHeaders|
 
 **Example: ApiManagementCreateDiagnostic**
 
@@ -1736,7 +1736,7 @@ update a apimgmt diagnostic.
 |--sampling|dict|Sampling settings for Diagnostic.|/sampling|/properties/sampling|
 |--frontend|dict|Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.|/frontend|/properties/frontend|
 |--backend|dict|Diagnostic settings for incoming/outgoing HTTP messages to the Backend|/backend|/properties/backend|
-|--enable-http_correlation_headers|boolean|Whether to process Correlation Headers coming to Api Management Service. Only applicable to Application Insights diagnostics. Default is true.|/enable_http_correlation_headers|/properties/enableHttpCorrelationHeaders|
+|--enable-http-correlation-headers|boolean|Whether to process Correlation Headers coming to Api Management Service. Only applicable to Application Insights diagnostics. Default is true.|/enable_http_correlation_headers|/properties/enableHttpCorrelationHeaders|
 
 **Example: ApiManagementUpdateDiagnostic**
 
@@ -1946,10 +1946,10 @@ create a apimgmt identityprovider.
 |--type|str|Identity Provider Type identifier.|/type|/properties/type|
 |--allowed-tenants|list|List of Allowed Tenants when configuring Azure Active Directory login.|/allowed_tenants|/properties/allowedTenants|
 |--authority|str|OpenID Connect discovery endpoint hostname for AAD or AAD B2C.|/authority|/properties/authority|
-|--signup-policy_name|str|Signup Policy Name. Only applies to AAD B2C Identity Provider.|/signup_policy_name|/properties/signupPolicyName|
-|--signin-policy_name|str|Signin Policy Name. Only applies to AAD B2C Identity Provider.|/signin_policy_name|/properties/signinPolicyName|
-|--profile-editing_policy_name|str|Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.|/profile_editing_policy_name|/properties/profileEditingPolicyName|
-|--password-reset_policy_name|str|Password Reset Policy Name. Only applies to AAD B2C Identity Provider.|/password_reset_policy_name|/properties/passwordResetPolicyName|
+|--signup-policy-name|str|Signup Policy Name. Only applies to AAD B2C Identity Provider.|/signup_policy_name|/properties/signupPolicyName|
+|--signin-policy-name|str|Signin Policy Name. Only applies to AAD B2C Identity Provider.|/signin_policy_name|/properties/signinPolicyName|
+|--profile-editing-policy-name|str|Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.|/profile_editing_policy_name|/properties/profileEditingPolicyName|
+|--password-reset-policy-name|str|Password Reset Policy Name. Only applies to AAD B2C Identity Provider.|/password_reset_policy_name|/properties/passwordResetPolicyName|
 
 **Example: ApiManagementCreateIdentityProvider**
 
@@ -1974,10 +1974,10 @@ update a apimgmt identityprovider.
 |--type|str|Identity Provider Type identifier.|/type|/properties/type|
 |--allowed-tenants|list|List of Allowed Tenants when configuring Azure Active Directory login.|/allowed_tenants|/properties/allowedTenants|
 |--authority|str|OpenID Connect discovery endpoint hostname for AAD or AAD B2C.|/authority|/properties/authority|
-|--signup-policy_name|str|Signup Policy Name. Only applies to AAD B2C Identity Provider.|/signup_policy_name|/properties/signupPolicyName|
-|--signin-policy_name|str|Signin Policy Name. Only applies to AAD B2C Identity Provider.|/signin_policy_name|/properties/signinPolicyName|
-|--profile-editing_policy_name|str|Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.|/profile_editing_policy_name|/properties/profileEditingPolicyName|
-|--password-reset_policy_name|str|Password Reset Policy Name. Only applies to AAD B2C Identity Provider.|/password_reset_policy_name|/properties/passwordResetPolicyName|
+|--signup-policy-name|str|Signup Policy Name. Only applies to AAD B2C Identity Provider.|/signup_policy_name|/properties/signupPolicyName|
+|--signin-policy-name|str|Signin Policy Name. Only applies to AAD B2C Identity Provider.|/signin_policy_name|/properties/signinPolicyName|
+|--profile-editing-policy-name|str|Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.|/profile_editing_policy_name|/properties/profileEditingPolicyName|
+|--password-reset-policy-name|str|Password Reset Policy Name. Only applies to AAD B2C Identity Provider.|/password_reset_policy_name|/properties/passwordResetPolicyName|
 
 **Example: ApiManagementUpdateIdentityProvider**
 
@@ -2549,7 +2549,7 @@ create a apimgmt portalsetting signup.
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--name**|str|The name of the API Management service.|service_name|serviceName|
 |--enabled|boolean|Allow users to sign up on a developer portal.|/enabled|/properties/enabled|
-|--terms-of_service|dict|Terms of service contract properties.|/terms_of_service|/properties/termsOfService|
+|--terms-of-service|dict|Terms of service contract properties.|/terms_of_service|/properties/termsOfService|
 
 **Example: ApiManagementPortalSettingsUpdateSignUp**
 
@@ -2567,7 +2567,7 @@ update a apimgmt portalsetting signup.
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--name**|str|The name of the API Management service.|service_name|serviceName|
 |--enabled|boolean|Allow users to sign up on a developer portal.|/enabled|/properties/enabled|
-|--terms-of_service|dict|Terms of service contract properties.|/terms_of_service|/properties/termsOfService|
+|--terms-of-service|dict|Terms of service contract properties.|/terms_of_service|/properties/termsOfService|
 
 **Example: ApiManagementPortalSettingsUpdateSignUp**
 
@@ -2685,21 +2685,21 @@ create a apimgmt product api.
 |**--path**|str|Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.|/path|/properties/path|
 |--description|str|Description of the API. May include HTML formatting tags.|/description|/properties/description|
 |--authentication-settings|dict|Collection of authentication settings included into this API.|/authentication_settings|/properties/authenticationSettings|
-|--subscription-key_parameter_names|dict|Protocols over which API is made available.|/subscription_key_parameter_names|/properties/subscriptionKeyParameterNames|
+|--subscription-key-parameter-names|dict|Protocols over which API is made available.|/subscription_key_parameter_names|/properties/subscriptionKeyParameterNames|
 |--type|str|Type of API.|/type|/properties/type|
 |--api-revision|str|Describes the Revision of the Api. If no value is provided, default revision 1 is created|/api_revision|/properties/apiRevision|
 |--api-version|str|Indicates the Version identifier of the API if the API is versioned|/api_version|/properties/apiVersion|
 |--is-current|boolean|Indicates if API revision is current api revision.|/is_current|/properties/isCurrent|
 |--is-online|boolean|Indicates if API revision is accessible via the gateway.|/is_online|/properties/isOnline|
-|--api-revision_description|str|Description of the Api Revision.|/api_revision_description|/properties/apiRevisionDescription|
-|--api-version_description|str|Description of the Api Version.|/api_version_description|/properties/apiVersionDescription|
-|--api-version_set_id|str|A resource identifier for the related ApiVersionSet.|/api_version_set_id|/properties/apiVersionSetId|
+|--api-revision-description|str|Description of the Api Revision.|/api_revision_description|/properties/apiRevisionDescription|
+|--api-version-description|str|Description of the Api Version.|/api_version_description|/properties/apiVersionDescription|
+|--api-version-set-id|str|A resource identifier for the related ApiVersionSet.|/api_version_set_id|/properties/apiVersionSetId|
 |--subscription-required|boolean|Specifies whether an API or Product subscription is required for accessing the API.|/subscription_required|/properties/subscriptionRequired|
-|--source-api_id|str|API identifier of the source API.|/source_api_id|/properties/sourceApiId|
+|--source-api-id|str|API identifier of the source API.|/source_api_id|/properties/sourceApiId|
 |--display-name|str|API name. Must be 1 to 300 characters long.|/display_name|/properties/displayName|
 |--service-url|str|Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.|/service_url|/properties/serviceUrl|
 |--protocols|list|Describes on which protocols the operations in this API can be invoked.|/protocols|/properties/protocols|
-|--api-version_set|dict|Version set details|/api_version_set|/properties/apiVersionSet|
+|--api-version-set|dict|Version set details|/api_version_set|/properties/apiVersionSet|
 
 **Example: ApiManagementCreateProductApi**
 
@@ -2722,21 +2722,21 @@ update a apimgmt product api.
 |**--path**|str|Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.|/path|/properties/path|
 |--description|str|Description of the API. May include HTML formatting tags.|/description|/properties/description|
 |--authentication-settings|dict|Collection of authentication settings included into this API.|/authentication_settings|/properties/authenticationSettings|
-|--subscription-key_parameter_names|dict|Protocols over which API is made available.|/subscription_key_parameter_names|/properties/subscriptionKeyParameterNames|
+|--subscription-key-parameter-names|dict|Protocols over which API is made available.|/subscription_key_parameter_names|/properties/subscriptionKeyParameterNames|
 |--type|str|Type of API.|/type|/properties/type|
 |--api-revision|str|Describes the Revision of the Api. If no value is provided, default revision 1 is created|/api_revision|/properties/apiRevision|
 |--api-version|str|Indicates the Version identifier of the API if the API is versioned|/api_version|/properties/apiVersion|
 |--is-current|boolean|Indicates if API revision is current api revision.|/is_current|/properties/isCurrent|
 |--is-online|boolean|Indicates if API revision is accessible via the gateway.|/is_online|/properties/isOnline|
-|--api-revision_description|str|Description of the Api Revision.|/api_revision_description|/properties/apiRevisionDescription|
-|--api-version_description|str|Description of the Api Version.|/api_version_description|/properties/apiVersionDescription|
-|--api-version_set_id|str|A resource identifier for the related ApiVersionSet.|/api_version_set_id|/properties/apiVersionSetId|
+|--api-revision-description|str|Description of the Api Revision.|/api_revision_description|/properties/apiRevisionDescription|
+|--api-version-description|str|Description of the Api Version.|/api_version_description|/properties/apiVersionDescription|
+|--api-version-set-id|str|A resource identifier for the related ApiVersionSet.|/api_version_set_id|/properties/apiVersionSetId|
 |--subscription-required|boolean|Specifies whether an API or Product subscription is required for accessing the API.|/subscription_required|/properties/subscriptionRequired|
-|--source-api_id|str|API identifier of the source API.|/source_api_id|/properties/sourceApiId|
+|--source-api-id|str|API identifier of the source API.|/source_api_id|/properties/sourceApiId|
 |--display-name|str|API name. Must be 1 to 300 characters long.|/display_name|/properties/displayName|
 |--service-url|str|Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.|/service_url|/properties/serviceUrl|
 |--protocols|list|Describes on which protocols the operations in this API can be invoked.|/protocols|/properties/protocols|
-|--api-version_set|dict|Version set details|/api_version_set|/properties/apiVersionSet|
+|--api-version-set|dict|Version set details|/api_version_set|/properties/apiVersionSet|
 ### apimgmt product api delete
 
 delete a apimgmt product api.
