@@ -129,11 +129,11 @@ Modules:
         IdPortion: null
         Type: >-
           unknown[DictionaryType
-          {"$id":"235","$type":"DictionaryType","valueType":{"$id":"236","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"237","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"238","fixed":false},"deprecated":false}]
+          {"$id":"250","$type":"DictionaryType","valueType":{"$id":"251","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"252","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"253","fixed":false},"deprecated":false}]
         TypeName: >-
-          {"$id":"235","$type":"DictionaryType","valueType":{"$id":"236","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"237","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"238","fixed":false},"deprecated":false}
+          {"$id":"250","$type":"DictionaryType","valueType":{"$id":"251","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"252","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"253","fixed":false},"deprecated":false}
         TypeNameGo: >-
-          {"$id":"235","$type":"DictionaryType","valueType":{"$id":"236","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"237","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"238","fixed":false},"deprecated":false}
+          {"$id":"250","$type":"DictionaryType","valueType":{"$id":"251","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"252","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"253","fixed":false},"deprecated":false}
         IsList: false
         Required: false
         Documentation: ''
@@ -810,6 +810,71 @@ Modules:
         PathSwagger: /properties/enableMultipleWriteLocations
         PathPython: /enableMultipleWriteLocations
         PathGo: /properties/enableMultipleWriteLocations
+        DispositionSdk: /*
+        DispositionRest: /properties/*
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - NameSwagger: enableCassandraConnector
+        NameAnsible: enable_cassandra_connector
+        NamePythonSdk: enable_cassandra_connector
+        NameGoSdk: EnableCassandraConnector
+        NameTerraform: EnableCassandraConnector
+        IdPortion: null
+        Type: boolean
+        TypeName: Boolean
+        TypeNameGo: Boolean
+        IsList: false
+        Required: false
+        Documentation: Enables the cassandra connector on the Cosmos DB C* account
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties/enableCassandraConnector
+        PathPython: /enableCassandraConnector
+        PathGo: /properties/enableCassandraConnector
+        DispositionSdk: /*
+        DispositionRest: /properties/*
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - NameSwagger: connectorOffer
+        NameAnsible: connector_offer
+        NamePythonSdk: connector_offer
+        NameGoSdk: ConnectorOffer
+        NameTerraform: ConnectorOffer
+        IdPortion: null
+        Type: str
+        TypeName: ConnectorOffer
+        TypeNameGo: ConnectorOffer
+        IsList: false
+        Required: false
+        Documentation: >-
+          The cassandra connector offer type for the Cosmos DB database C*
+          account.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues:
+          - Key: Small
+            Value: Small
+            Description: !<tag:yaml.org,2002:js/undefined> ''
+        PathSwagger: /properties/connectorOffer
+        PathPython: /connectorOffer
+        PathGo: /properties/connectorOffer
         DispositionSdk: /*
         DispositionRest: /properties/*
         Comparison: ''
@@ -2137,11 +2202,11 @@ Modules:
         IdPortion: null
         Type: >-
           unknown[DictionaryType
-          {"$id":"235","$type":"DictionaryType","valueType":{"$id":"236","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"237","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"238","fixed":false},"deprecated":false}]
+          {"$id":"250","$type":"DictionaryType","valueType":{"$id":"251","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"252","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"253","fixed":false},"deprecated":false}]
         TypeName: >-
-          {"$id":"235","$type":"DictionaryType","valueType":{"$id":"236","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"237","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"238","fixed":false},"deprecated":false}
+          {"$id":"250","$type":"DictionaryType","valueType":{"$id":"251","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"252","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"253","fixed":false},"deprecated":false}
         TypeNameGo: >-
-          {"$id":"235","$type":"DictionaryType","valueType":{"$id":"236","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"237","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"238","fixed":false},"deprecated":false}
+          {"$id":"250","$type":"DictionaryType","valueType":{"$id":"251","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"252","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"253","fixed":false},"deprecated":false}
         IsList: false
         Required: false
         Documentation: ''
@@ -2701,6 +2766,71 @@ Modules:
             Hidden: false
             IncludeInResponse: false
             Flatten: false
+          - NameSwagger: enableCassandraConnector
+            NameAnsible: enable_cassandra_connector
+            NamePythonSdk: enable_cassandra_connector
+            NameGoSdk: EnableCassandraConnector
+            NameTerraform: EnableCassandraConnector
+            IdPortion: null
+            Type: boolean
+            TypeName: Boolean
+            TypeNameGo: Boolean
+            IsList: false
+            Required: false
+            Documentation: Enables the cassandra connector on the Cosmos DB C* account
+            DocumentationMarkKeywords: true
+            DefaultValue: null
+            IncludeInDocumentation: true
+            IncludeInArgSpec: true
+            NoLog: false
+            SubOptions: []
+            EnumValues: []
+            PathSwagger: /properties/enableCassandraConnector
+            PathPython: /enableCassandraConnector
+            PathGo: /properties/enableCassandraConnector
+            DispositionSdk: '*'
+            DispositionRest: '*'
+            Comparison: ''
+            Updatable: true
+            ExampleValue: null
+            Hidden: false
+            IncludeInResponse: false
+            Flatten: false
+          - NameSwagger: connectorOffer
+            NameAnsible: connector_offer
+            NamePythonSdk: connector_offer
+            NameGoSdk: ConnectorOffer
+            NameTerraform: ConnectorOffer
+            IdPortion: null
+            Type: str
+            TypeName: ConnectorOffer
+            TypeNameGo: ConnectorOffer
+            IsList: false
+            Required: false
+            Documentation: >-
+              The cassandra connector offer type for the Cosmos DB database C*
+              account.
+            DocumentationMarkKeywords: true
+            DefaultValue: null
+            IncludeInDocumentation: true
+            IncludeInArgSpec: true
+            NoLog: false
+            SubOptions: []
+            EnumValues:
+              - Key: Small
+                Value: Small
+                Description: !<tag:yaml.org,2002:js/undefined> ''
+            PathSwagger: /properties/connectorOffer
+            PathPython: /connectorOffer
+            PathGo: /properties/connectorOffer
+            DispositionSdk: '*'
+            DispositionRest: '*'
+            Comparison: ''
+            Updatable: true
+            ExampleValue: null
+            Hidden: false
+            IncludeInResponse: false
+            Flatten: false
         EnumValues: []
         PathSwagger: /properties
         PathPython: ''
@@ -2790,8 +2920,8 @@ Modules:
             swaggerName: accountName
         References:
           - resourcegroups_put
-        OperationId: '1818'
-        MethodId: '1883'
+        OperationId: '1839'
+        MethodId: '1904'
       - Example:
           parameters:
             accountName: ddb1
@@ -2899,8 +3029,8 @@ Modules:
         References:
           - network_virtualnetworks_subnets_put
           - documentdb_databaseaccounts_put
-        OperationId: '1818'
-        MethodId: '1883'
+        OperationId: '1839'
+        MethodId: '1904'
       - Example:
           parameters:
             accountName: ddb1
@@ -2925,8 +3055,8 @@ Modules:
             value: myDatabaseAccount
             swaggerName: accountName
         References: []
-        OperationId: '1818'
-        MethodId: '1917'
+        OperationId: '1839'
+        MethodId: '1938'
   - ModuleName: azure_rm_cosmosdbdatabaseaccount_info
     Options:
       - NameSwagger: resourceGroupName
@@ -3302,11 +3432,11 @@ Modules:
         IdPortion: null
         Type: >-
           unknown[DictionaryType
-          {"$id":"235","$type":"DictionaryType","valueType":{"$id":"236","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"237","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"238","fixed":false},"deprecated":false}]
+          {"$id":"250","$type":"DictionaryType","valueType":{"$id":"251","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"252","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"253","fixed":false},"deprecated":false}]
         TypeName: >-
-          {"$id":"235","$type":"DictionaryType","valueType":{"$id":"236","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"237","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"238","fixed":false},"deprecated":false}
+          {"$id":"250","$type":"DictionaryType","valueType":{"$id":"251","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"252","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"253","fixed":false},"deprecated":false}
         TypeNameGo: >-
-          {"$id":"235","$type":"DictionaryType","valueType":{"$id":"236","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"237","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"238","fixed":false},"deprecated":false}
+          {"$id":"250","$type":"DictionaryType","valueType":{"$id":"251","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"252","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"253","fixed":false},"deprecated":false}
         IsList: false
         Required: false
         Documentation: ''
@@ -4502,6 +4632,71 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
+      - NameSwagger: enableCassandraConnector
+        NameAnsible: enable_cassandra_connector
+        NamePythonSdk: enable_cassandra_connector
+        NameGoSdk: EnableCassandraConnector
+        NameTerraform: EnableCassandraConnector
+        IdPortion: null
+        Type: boolean
+        TypeName: Boolean
+        TypeNameGo: Boolean
+        IsList: false
+        Required: false
+        Documentation: Enables the cassandra connector on the Cosmos DB C* account
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties/enableCassandraConnector
+        PathPython: /enableCassandraConnector
+        PathGo: /properties/enableCassandraConnector
+        DispositionSdk: /*
+        DispositionRest: /properties/*
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: false
+        Flatten: false
+      - NameSwagger: connectorOffer
+        NameAnsible: connector_offer
+        NamePythonSdk: connector_offer
+        NameGoSdk: ConnectorOffer
+        NameTerraform: ConnectorOffer
+        IdPortion: null
+        Type: str
+        TypeName: ConnectorOffer
+        TypeNameGo: ConnectorOffer
+        IsList: false
+        Required: false
+        Documentation: >-
+          The cassandra connector offer type for the Cosmos DB database C*
+          account.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues:
+          - Key: Small
+            Value: Small
+            Description: !<tag:yaml.org,2002:js/undefined> ''
+        PathSwagger: /properties/connectorOffer
+        PathPython: /connectorOffer
+        PathGo: /properties/connectorOffer
+        DispositionSdk: /*
+        DispositionRest: /properties/*
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: false
+        Flatten: false
     Methods:
       - Name: List
         Options: []
@@ -5089,8 +5284,8 @@ Modules:
         Filename: documentdb_databaseaccounts_get_1
         Variables: []
         References: []
-        OperationId: '1818'
-        MethodId: '1983'
+        OperationId: '1839'
+        MethodId: '2004'
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -5146,8 +5341,8 @@ Modules:
             value: myResourceGroup
             swaggerName: resourceGroupName
         References: []
-        OperationId: '1818'
-        MethodId: '2001'
+        OperationId: '1839'
+        MethodId: '2022'
       - Example:
           parameters:
             accountName: ddb1
@@ -5209,8 +5404,8 @@ Modules:
             value: myDatabaseAccount
             swaggerName: accountName
         References: []
-        OperationId: '1818'
-        MethodId: '1819'
+        OperationId: '1839'
+        MethodId: '1840'
       - Example:
           parameters:
             accountName: ddb1
@@ -5244,8 +5439,8 @@ Modules:
             value: myDatabaseAccount
             swaggerName: accountName
         References: []
-        OperationId: '1818'
-        MethodId: '2305'
+        OperationId: '1839'
+        MethodId: '2326'
       - Example:
           parameters:
             accountName: ddb1
@@ -5299,8 +5494,8 @@ Modules:
             value: myDatabaseAccount
             swaggerName: accountName
         References: []
-        OperationId: '1818'
-        MethodId: '2269'
+        OperationId: '1839'
+        MethodId: '2290'
       - Example:
           parameters:
             accountName: ddb1
@@ -5327,8 +5522,8 @@ Modules:
             value: myDatabaseAccount
             swaggerName: accountName
         References: []
-        OperationId: '1818'
-        MethodId: '2155'
+        OperationId: '1839'
+        MethodId: '2176'
       - Example:
           parameters:
             accountName: ddb1
@@ -5371,8 +5566,8 @@ Modules:
             value: myDatabaseAccount
             swaggerName: accountName
         References: []
-        OperationId: '1818'
-        MethodId: '2341'
+        OperationId: '1839'
+        MethodId: '2362'
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -5406,8 +5601,8 @@ Modules:
             value: myApi
             swaggerName: abl
         References: []
-        OperationId: '1818'
-        MethodId: '3327'
+        OperationId: '1839'
+        MethodId: '3348'
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -5446,8 +5641,8 @@ Modules:
             value: myApi
             swaggerName: q
         References: []
-        OperationId: '1818'
-        MethodId: '2371'
+        OperationId: '1839'
+        MethodId: '2392'
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -5481,8 +5676,8 @@ Modules:
             value: myApi
             swaggerName: ongod
         References: []
-        OperationId: '1818'
-        MethodId: '2849'
+        OperationId: '1839'
+        MethodId: '2870'
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -5519,8 +5714,8 @@ Modules:
             value: myApi
             swaggerName: remli
         References: []
-        OperationId: '1818'
-        MethodId: '4026'
+        OperationId: '1839'
+        MethodId: '4047'
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -5554,8 +5749,8 @@ Modules:
             value: myApi
             swaggerName: assandr
         References: []
-        OperationId: '1818'
-        MethodId: '3548'
+        OperationId: '1839'
+        MethodId: '3569'
       - Example:
           parameters:
             accountName: ddb1
@@ -5592,8 +5787,8 @@ Modules:
             value: myTable
             swaggerName: tableName
         References: []
-        OperationId: '1818'
-        MethodId: '3357'
+        OperationId: '1839'
+        MethodId: '3378'
       - Example:
           parameters:
             accountName: ddb1
@@ -5636,8 +5831,8 @@ Modules:
             value: myDatabase
             swaggerName: databaseName
         References: []
-        OperationId: '1818'
-        MethodId: '2401'
+        OperationId: '1839'
+        MethodId: '2422'
       - Example:
           parameters:
             accountName: ddb1
@@ -5675,8 +5870,8 @@ Modules:
             value: myDatabase
             swaggerName: databaseName
         References: []
-        OperationId: '1818'
-        MethodId: '2879'
+        OperationId: '1839'
+        MethodId: '2900'
       - Example:
           parameters:
             accountName: ddb1
@@ -5717,8 +5912,8 @@ Modules:
             value: myDatabase
             swaggerName: databaseName
         References: []
-        OperationId: '1818'
-        MethodId: '4056'
+        OperationId: '1839'
+        MethodId: '4077'
       - Example:
           parameters:
             accountName: ddb1
@@ -5756,8 +5951,8 @@ Modules:
             value: myKeyspace
             swaggerName: keyspaceName
         References: []
-        OperationId: '1818'
-        MethodId: '3578'
+        OperationId: '1839'
+        MethodId: '3599'
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -5825,8 +6020,8 @@ Modules:
             value: myDatabase
             swaggerName: databaseName
         References: []
-        OperationId: '1818'
-        MethodId: '4247'
+        OperationId: '1839'
+        MethodId: '4268'
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -5894,8 +6089,8 @@ Modules:
             value: myDatabase
             swaggerName: databaseName
         References: []
-        OperationId: '1818'
-        MethodId: '2592'
+        OperationId: '1839'
+        MethodId: '2613'
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -5945,8 +6140,8 @@ Modules:
             value: myKeyspace
             swaggerName: keyspaceName
         References: []
-        OperationId: '1818'
-        MethodId: '3769'
+        OperationId: '1839'
+        MethodId: '3790'
       - Example:
           parameters:
             accountName: ddb1
@@ -5984,8 +6179,8 @@ Modules:
             value: mySetting
             swaggerName: hroughpu
         References: []
-        OperationId: '1818'
-        MethodId: '3471'
+        OperationId: '1839'
+        MethodId: '3492'
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -6034,8 +6229,8 @@ Modules:
             value: myDatabase
             swaggerName: databaseName
         References: []
-        OperationId: '1818'
-        MethodId: '3070'
+        OperationId: '1839'
+        MethodId: '3091'
       - Example:
           parameters:
             accountName: ddb1
@@ -6073,8 +6268,8 @@ Modules:
             value: mySetting
             swaggerName: hroughpu
         References: []
-        OperationId: '1818'
-        MethodId: '2515'
+        OperationId: '1839'
+        MethodId: '2536'
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -6144,8 +6339,8 @@ Modules:
             value: myGraph
             swaggerName: graphName
         References: []
-        OperationId: '1818'
-        MethodId: '4283'
+        OperationId: '1839'
+        MethodId: '4304'
       - Example:
           parameters:
             accountName: ddb1
@@ -6183,8 +6378,8 @@ Modules:
             value: mySetting
             swaggerName: hroughpu
         References: []
-        OperationId: '1818'
-        MethodId: '4170'
+        OperationId: '1839'
+        MethodId: '4191'
       - Example:
           parameters:
             accountName: ddb1
@@ -6222,8 +6417,8 @@ Modules:
             value: mySetting
             swaggerName: hroughpu
         References: []
-        OperationId: '1818'
-        MethodId: '2993'
+        OperationId: '1839'
+        MethodId: '3014'
       - Example:
           parameters:
             accountName: ddb1
@@ -6275,8 +6470,8 @@ Modules:
             value: myTable
             swaggerName: tableName
         References: []
-        OperationId: '1818'
-        MethodId: '3805'
+        OperationId: '1839'
+        MethodId: '3826'
       - Example:
           parameters:
             accountName: ddb1
@@ -6314,8 +6509,8 @@ Modules:
             value: mySetting
             swaggerName: hroughpu
         References: []
-        OperationId: '1818'
-        MethodId: '3692'
+        OperationId: '1839'
+        MethodId: '3713'
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -6386,8 +6581,8 @@ Modules:
             value: myContainer
             swaggerName: containerName
         References: []
-        OperationId: '1818'
-        MethodId: '2628'
+        OperationId: '1839'
+        MethodId: '2649'
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -6439,8 +6634,8 @@ Modules:
             value: myCollection
             swaggerName: collectionName
         References: []
-        OperationId: '1818'
-        MethodId: '3106'
+        OperationId: '1839'
+        MethodId: '3127'
       - Example:
           parameters:
             accountName: ddb1
@@ -6482,8 +6677,8 @@ Modules:
             value: mySetting
             swaggerName: hroughpu
         References: []
-        OperationId: '1818'
-        MethodId: '4415'
+        OperationId: '1839'
+        MethodId: '4436'
       - Example:
           parameters:
             accountName: ddb1
@@ -6525,8 +6720,8 @@ Modules:
             value: mySetting
             swaggerName: hroughpu
         References: []
-        OperationId: '1818'
-        MethodId: '3937'
+        OperationId: '1839'
+        MethodId: '3958'
       - Example:
           parameters:
             accountName: ddb1
@@ -6569,8 +6764,8 @@ Modules:
             value: mySetting
             swaggerName: hroughpu
         References: []
-        OperationId: '1818'
-        MethodId: '2760'
+        OperationId: '1839'
+        MethodId: '2781'
       - Example:
           parameters:
             accountName: ddb1
@@ -6613,8 +6808,8 @@ Modules:
             value: mySetting
             swaggerName: hroughpu
         References: []
-        OperationId: '1818'
-        MethodId: '3238'
+        OperationId: '1839'
+        MethodId: '3259'
   - ModuleName: azure_rm_cosmosdboperation_info
     Options:
       - &ref_15
@@ -6901,8 +7096,8 @@ Modules:
         Filename: documentdb_operations_get
         Variables: []
         References: []
-        OperationId: '4506'
-        MethodId: '4507'
+        OperationId: '4527'
+        MethodId: '4528'
   - ModuleName: azure_rm_cosmosdbdatabase_info
     Options:
       - NameSwagger: resourceGroupName
@@ -7353,8 +7548,8 @@ Modules:
             value: myDatabase
             swaggerName: databaseRid
         References: []
-        OperationId: '4521'
-        MethodId: '4564'
+        OperationId: '4542'
+        MethodId: '4585'
       - Example:
           parameters:
             accountName: ddb1
@@ -7412,8 +7607,8 @@ Modules:
             value: myDatabase
             swaggerName: databaseRid
         References: []
-        OperationId: '4521'
-        MethodId: '4522'
+        OperationId: '4542'
+        MethodId: '4543'
       - Example:
           parameters:
             accountName: ddb1
@@ -7461,8 +7656,8 @@ Modules:
             value: myDatabase
             swaggerName: databaseRid
         References: []
-        OperationId: '4521'
-        MethodId: '4606'
+        OperationId: '4542'
+        MethodId: '4627'
   - ModuleName: azure_rm_cosmosdbcollection_info
     Options:
       - NameSwagger: resourceGroupName
@@ -7956,8 +8151,8 @@ Modules:
             value: myCollection
             swaggerName: collectionRid
         References: []
-        OperationId: '4644'
-        MethodId: '4693'
+        OperationId: '4665'
+        MethodId: '4714'
       - Example:
           parameters:
             accountName: ddb1
@@ -8020,8 +8215,8 @@ Modules:
             value: myCollection
             swaggerName: collectionRid
         References: []
-        OperationId: '4644'
-        MethodId: '4645'
+        OperationId: '4665'
+        MethodId: '4666'
       - Example:
           parameters:
             accountName: ddb1
@@ -8074,8 +8269,8 @@ Modules:
             value: myCollection
             swaggerName: collectionRid
         References: []
-        OperationId: '4644'
-        MethodId: '4741'
+        OperationId: '4665'
+        MethodId: '4762'
   - ModuleName: azure_rm_cosmosdbcollectionregion_info
     Options:
       - NameSwagger: resourceGroupName
@@ -8799,8 +8994,8 @@ Modules:
             value: myCollection
             swaggerName: collectionRid
         References: []
-        OperationId: '4785'
-        MethodId: '4786'
+        OperationId: '4806'
+        MethodId: '4807'
   - ModuleName: azure_rm_cosmosdbdatabaseaccountregion_info
     Options:
       - NameSwagger: resourceGroupName
@@ -9450,8 +9645,8 @@ Modules:
             value: myRegion
             swaggerName: region
         References: []
-        OperationId: '4842'
-        MethodId: '4843'
+        OperationId: '4863'
+        MethodId: '4864'
   - ModuleName: azure_rm_cosmosdbpercentilesourcetarget_info
     Options:
       - NameSwagger: resourceGroupName
@@ -10357,8 +10552,8 @@ Modules:
             value: myPercentile
             swaggerName: etric
         References: []
-        OperationId: '4887'
-        MethodId: '4888'
+        OperationId: '4908'
+        MethodId: '4909'
   - ModuleName: azure_rm_cosmosdbpercentiletarget_info
     Options:
       - NameSwagger: resourceGroupName
@@ -11242,8 +11437,8 @@ Modules:
             value: myPercentile
             swaggerName: etric
         References: []
-        OperationId: '4938'
-        MethodId: '4939'
+        OperationId: '4959'
+        MethodId: '4960'
   - ModuleName: azure_rm_cosmosdbpercentile_info
     Options:
       - NameSwagger: resourceGroupName
@@ -12089,8 +12284,8 @@ Modules:
             value: myPercentile
             swaggerName: etric
         References: []
-        OperationId: '4983'
-        MethodId: '4984'
+        OperationId: '5004'
+        MethodId: '5005'
   - ModuleName: azure_rm_cosmosdbcollectionpartitionregion_info
     Options:
       - NameSwagger: resourceGroupName
@@ -12880,8 +13075,8 @@ Modules:
             value: myPartition
             swaggerName: etric
         References: []
-        OperationId: '5022'
-        MethodId: '5023'
+        OperationId: '5043'
+        MethodId: '5044'
   - ModuleName: azure_rm_cosmosdbcollectionpartition_info
     Options:
       - NameSwagger: resourceGroupName
@@ -13424,8 +13619,8 @@ Modules:
             value: myPartition
             swaggerName: sage
         References: []
-        OperationId: '5079'
-        MethodId: '5128'
+        OperationId: '5100'
+        MethodId: '5149'
       - Example:
           parameters:
             accountName: ddb1
@@ -13489,8 +13684,8 @@ Modules:
             value: myPartition
             swaggerName: etric
         References: []
-        OperationId: '5079'
-        MethodId: '5080'
+        OperationId: '5100'
+        MethodId: '5101'
   - ModuleName: azure_rm_cosmosdbpartitionkeyrangeid_info
     Options:
       - NameSwagger: resourceGroupName
@@ -14277,8 +14472,8 @@ Modules:
             value: myPartitionKeyRangeId
             swaggerName: partitionKeyRangeId
         References: []
-        OperationId: '5178'
-        MethodId: '5179'
+        OperationId: '5199'
+        MethodId: '5200'
   - ModuleName: azure_rm_cosmosdbpartitionkeyrangeidregion_info
     Options:
       - NameSwagger: resourceGroupName
@@ -15101,8 +15296,8 @@ Modules:
             value: myPartitionKeyRangeId
             swaggerName: partitionKeyRangeId
         References: []
-        OperationId: '5235'
-        MethodId: '5236'
+        OperationId: '5256'
+        MethodId: '5257'
 ServiceName: CosmosDB
 MgmtClientName: CosmosDB
 CliName: cosmos-db
