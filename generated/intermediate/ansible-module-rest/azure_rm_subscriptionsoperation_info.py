@@ -29,24 +29,30 @@ options:
       name:
         description:
           - 'Operation name: {provider}/{resource}/{operation}'
+        type: str
       display:
         description:
           - The object that represents the operation.
+        type: dict
         suboptions:
           provider:
             description:
               - 'Service provider: Microsoft.Subscription'
+            type: str
           resource:
             description:
               - >-
                 Resource on which the operation is performed: Profile, endpoint,
                 etc.
+            type: str
           operation:
             description:
               - 'Operation type: Read, write, delete, etc.'
+            type: str
   next_link:
     description:
       - URL to get the next set of operation list results if there are any.
+    type: str
 extends_documentation_fragment:
   - azure
 author:

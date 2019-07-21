@@ -25,34 +25,41 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   certificate_id:
     description:
       - >-
         Identifier of the certificate entity. Must be unique in the current API
         Management service instance.
     required: true
+    type: str
   data:
     description:
       - >-
         Base 64 encoded certificate using the application/x-pkcs12
         representation.
     required: true
+    type: str
   password:
     description:
       - Password for the Certificate
     required: true
+    type: str
   subject:
     description:
       - Subject attribute of the certificate.
     required: true
+    type: str
   thumbprint:
     description:
       - Thumbprint of the certificate.
     required: true
+    type: str
   expiration_date:
     description:
       - >-
@@ -60,15 +67,19 @@ options:
         format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
         standard.<br>
     required: true
+    type: datetime
   id:
     description:
       - Resource ID.
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
   state:
     description:
       - Assert the state of the Certificate.

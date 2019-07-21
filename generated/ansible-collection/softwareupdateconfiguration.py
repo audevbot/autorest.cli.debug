@@ -25,34 +25,42 @@ options:
     description:
       - Name of an Azure Resource group.
     required: true
+    type: str
   automation_account_name:
     description:
       - The name of the automation account.
     required: true
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   client_request_id:
     description:
       - Identifies this specific client request.
+    type: str
   update_configuration:
     description:
       - update specific properties for the Software update configuration
     required: true
+    type: dict
     suboptions:
       operating_system:
         description:
           - operating system of target machines
         required: true
+        type: str
       windows:
         description:
           - Windows specific update configuration.
+        type: dict
         suboptions:
           included_update_classifications:
             description:
               - >-
                 Update classification included in the software update
                 configuration. A comma separated string with required values
+            type: str
           excluded_kb_numbers:
             description:
               - KB numbers excluded from the software update configuration.
@@ -64,15 +72,18 @@ options:
           reboot_setting:
             description:
               - Reboot setting for the software update configuration.
+            type: str
       linux:
         description:
           - Linux specific update configuration.
+        type: dict
         suboptions:
           included_package_classifications:
             description:
               - >-
                 Update classifications included in the software update
                 configuration.
+            type: str
           excluded_package_name_masks:
             description:
               - packages excluded from the software update configuration.
@@ -84,12 +95,14 @@ options:
           reboot_setting:
             description:
               - Reboot setting for the software update configuration.
+            type: str
       duration:
         description:
           - >-
             Maximum time allowed for the software update configuration run.
             Duration needs to be specified using the format PT[n]H[n]M[n]S as
             per ISO8601
+        type: 'unknown-primary[timeSpan]'
       azure_virtual_machines:
         description:
           - >-
@@ -105,6 +118,7 @@ options:
       targets:
         description:
           - Group targets for the software update configuration.
+        type: dict
         suboptions:
           azure_queries:
             description:
@@ -122,6 +136,7 @@ options:
               tag_settings:
                 description:
                   - Tag settings for the VM.
+                type: dict
           non_azure_queries:
             description:
               - List of non Azure queries in the software update configuration.
@@ -130,46 +145,59 @@ options:
               function_alias:
                 description:
                   - Log Analytics Saved Search name.
+                type: str
               workspace_id:
                 description:
                   - >-
                     Workspace Id for Log Analytics in which the saved Search is
                     resided.
+                type: str
   schedule_info:
     description:
       - Schedule information for the Software update configuration
     required: true
+    type: dict
     suboptions:
       start_time:
         description:
           - Gets or sets the start time of the schedule.
+        type: datetime
       expiry_time:
         description:
           - Gets or sets the end time of the schedule.
+        type: datetime
       expiry_time_offset_minutes:
         description:
           - Gets or sets the expiry time's offset in minutes.
+        type: number
       is_enabled:
         description:
           - Gets or sets a value indicating whether this schedule is enabled.
+        type: boolean
       next_run:
         description:
           - Gets or sets the next run time of the schedule.
+        type: datetime
       next_run_offset_minutes:
         description:
           - Gets or sets the next run time's offset in minutes.
+        type: number
       interval:
         description:
           - Gets or sets the interval of the schedule.
+        type: number
       frequency:
         description:
           - Gets or sets the frequency of the schedule.
+        type: str
       time_zone:
         description:
           - Gets or sets the time zone of the schedule.
+        type: str
       advanced_schedule:
         description:
           - Gets or sets the advanced schedule.
+        type: dict
         suboptions:
           week_days:
             description:
@@ -191,80 +219,107 @@ options:
                   - >-
                     Occurrence of the week within the month. Must be between 1
                     and 5
+                type: number
               day:
                 description:
                   - >-
                     Day of the occurrence. Must be one of monday, tuesday,
                     wednesday, thursday, friday, saturday, sunday.
+                type: str
       creation_time:
         description:
           - Gets or sets the creation time.
+        type: datetime
       last_modified_time:
         description:
           - Gets or sets the last modified time.
+        type: datetime
       description:
         description:
           - Gets or sets the description.
+        type: str
       start_time_offset_minutes:
         description:
           - Gets the start time's offset in minutes.
+        type: number
   error:
     description:
       - Details of provisioning error
+    type: dict
     suboptions:
       code:
         description:
           - Error code
+        type: str
       message:
         description:
           - Error message indicating why the operation failed.
+        type: str
   tasks:
     description:
       - Tasks information for the Software update configuration.
+    type: dict
     suboptions:
       pre_task:
         description:
           - Pre task properties.
+        type: dict
         suboptions:
           parameters:
             description:
               - Gets or sets the parameters of the task.
+            type: >-
+              unknown[DictionaryType
+              {"$id":"355","$type":"DictionaryType","valueType":{"$id":"356","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"357","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"358","fixed":false},"deprecated":false}]
           source:
             description:
               - Gets or sets the name of the runbook.
+            type: str
       post_task:
         description:
           - Post task properties.
+        type: dict
         suboptions:
           parameters:
             description:
               - Gets or sets the parameters of the task.
+            type: >-
+              unknown[DictionaryType
+              {"$id":"355","$type":"DictionaryType","valueType":{"$id":"356","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"357","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"358","fixed":false},"deprecated":false}]
           source:
             description:
               - Gets or sets the name of the runbook.
+            type: str
   provisioning_state:
     description:
       - >-
         Provisioning state for the software update configuration, which only
         appears in the response.
+    type: str
   creation_time:
     description:
       - 'Creation time of the resource, which only appears in the response.'
+    type: datetime
   created_by:
     description:
       - 'CreatedBy property, which only appears in the response.'
+    type: str
   last_modified_time:
     description:
       - 'Last time resource was modified, which only appears in the response.'
+    type: datetime
   last_modified_by:
     description:
       - 'LastModifiedBy property, which only appears in the response.'
+    type: str
   id:
     description:
       - Resource Id.
+    type: str
   type:
     description:
       - Resource type
+    type: str
   state:
     description:
       - Assert the state of the SoftwareUpdateConfiguration.

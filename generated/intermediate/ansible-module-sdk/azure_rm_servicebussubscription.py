@@ -25,25 +25,31 @@ options:
     description:
       - Name of the Resource group within the Azure subscription.
     required: true
+    type: str
   namespace_name:
     description:
       - The namespace name
     required: true
+    type: str
   topic_name:
     description:
       - The topic name.
     required: true
+    type: str
   name:
     description:
       - Resource name
+    type: str
   lock_duration:
     description:
       - >-
         ISO 8061 lock duration timespan for the subscription. The default value
         is 1 minute.
+    type: 'unknown-primary[timeSpan]'
   requires_session:
     description:
       - Value indicating if a subscription supports the concept of sessions.
+    type: boolean
   default_message_time_to_live:
     description:
       - >-
@@ -51,80 +57,102 @@ options:
         after which the message expires, starting from when the message is sent
         to Service Bus. This is the default value used when TimeToLive is not
         set on a message itself.
+    type: 'unknown-primary[timeSpan]'
   dead_lettering_on_filter_evaluation_exceptions:
     description:
       - >-
         Value that indicates whether a subscription has dead letter support on
         filter evaluation exceptions.
+    type: boolean
   dead_lettering_on_message_expiration:
     description:
       - >-
         Value that indicates whether a subscription has dead letter support when
         a message expires.
+    type: boolean
   duplicate_detection_history_time_window:
     description:
       - >-
         ISO 8601 timeSpan structure that defines the duration of the duplicate
         detection history. The default value is 10 minutes.
+    type: 'unknown-primary[timeSpan]'
   max_delivery_count:
     description:
       - Number of maximum deliveries.
+    type: number
   status:
     description:
       - Enumerates the possible values for the status of a messaging entity.
+    type: str
   enable_batched_operations:
     description:
       - Value that indicates whether server-side batched operations are enabled.
+    type: boolean
   auto_delete_on_idle:
     description:
       - >-
         ISO 8061 timeSpan idle interval after which the topic is automatically
         deleted. The minimum duration is 5 minutes.
+    type: 'unknown-primary[timeSpan]'
   forward_to:
     description:
       - Queue/Topic name to forward the messages
+    type: str
   forward_dead_lettered_messages_to:
     description:
       - Queue/Topic name to forward the Dead Letter message
+    type: str
   message_count:
     description:
       - Number of messages.
+    type: number
   created_at:
     description:
       - Exact time the message was created.
+    type: datetime
   accessed_at:
     description:
       - Last time there was a receive request to this subscription.
+    type: datetime
   updated_at:
     description:
       - The exact time the message was updated.
+    type: datetime
   count_details:
     description:
       - Message count details
+    type: dict
     suboptions:
       active_message_count:
         description:
           - 'Number of active messages in the queue, topic, or subscription.'
+        type: number
       dead_letter_message_count:
         description:
           - Number of messages that are dead lettered.
+        type: number
       scheduled_message_count:
         description:
           - Number of scheduled messages.
+        type: number
       transfer_message_count:
         description:
           - >-
             Number of messages transferred to another queue, topic, or
             subscription.
+        type: number
       transfer_dead_letter_message_count:
         description:
           - Number of messages transferred into dead letters.
+        type: number
   id:
     description:
       - Resource Id
+    type: str
   type:
     description:
       - Resource type
+    type: str
   state:
     description:
       - Assert the state of the Subscription.

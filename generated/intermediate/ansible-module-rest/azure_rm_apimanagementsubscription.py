@@ -25,39 +25,47 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   sid:
     description:
       - >-
         Subscription entity Identifier. The entity represents the association
         between a user and a product in API Management.
     required: true
+    type: str
   owner_id:
     description:
       - >-
         User (user id path) for whom subscription is being created in form
         /users/{userId}
+    type: str
   scope:
     description:
       - 'Scope like /products/{productId} or /apis or /apis/{apiId}.'
     required: true
+    type: str
   display_name:
     description:
       - Subscription name.
     required: true
+    type: str
   primary_key:
     description:
       - >-
         Primary subscription key. If not specified during request key will be
         generated automatically.
+    type: str
   secondary_key:
     description:
       - >-
         Secondary subscription key. If not specified during request key will be
         generated automatically.
+    type: str
   state:
     description:
       - Assert the state of the Subscription.
@@ -71,11 +79,13 @@ options:
   allow_tracing:
     description:
       - Determines whether tracing can be enabled
+    type: boolean
   created_date:
     description:
       - >-
         Subscription creation date. The date conforms to the following format:
         `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.<br>
+    type: datetime
   start_date:
     description:
       - >-
@@ -84,6 +94,7 @@ options:
         lifecycle can be managed by using the `state` property. The date
         conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by
         the ISO 8601 standard.<br>
+    type: datetime
   expiration_date:
     description:
       - >-
@@ -92,6 +103,7 @@ options:
         lifecycle can be managed by using the `state` property. The date
         conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by
         the ISO 8601 standard.<br>
+    type: datetime
   end_date:
     description:
       - >-
@@ -100,30 +112,37 @@ options:
         The subscription lifecycle can be managed by using the `state` property.
         The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as
         specified by the ISO 8601 standard.<br>
+    type: datetime
   notification_date:
     description:
       - >-
         Upcoming subscription expiration notification date. The date conforms to
         the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO
         8601 standard.<br>
+    type: datetime
   state_comment:
     description:
       - Optional subscription comment added by an administrator.
+    type: str
   notify:
     description:
       - >-
         Notify change in Subscription State. <br> - If false, do not send any
         email notification for change of state of subscription <br> - If true,
         send email notification of change of state of subscription 
+    type: boolean
   id:
     description:
       - Resource ID.
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
 extends_documentation_fragment:
   - azure
 author:

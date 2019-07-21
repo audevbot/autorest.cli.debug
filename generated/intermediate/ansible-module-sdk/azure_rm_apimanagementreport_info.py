@@ -25,10 +25,12 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   interval:
     description:
       - >-
@@ -37,6 +39,7 @@ options:
         (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used
         to convert TimeSpan to a valid interval string: XmlConvert.ToString(new
         TimeSpan(hours, minutes, seconds)).
+    type: 'unknown-primary[timeSpan]'
   value:
     description:
       - Page values.
@@ -47,102 +50,130 @@ options:
           - >-
             Name depending on report endpoint specifies product, API, operation
             or developer name.
+        type: str
       timestamp:
         description:
           - >-
             Start of aggregation period. The date conforms to the following
             format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
             standard.<br>
+        type: datetime
       interval:
         description:
           - >-
             Length of aggregation period.  Interval must be multiple of 15
             minutes and may not be zero. The value should be in ISO 8601 format
             (http://en.wikipedia.org/wiki/ISO_8601#Durations).
+        type: str
       country:
         description:
           - Country to which this record data is related.
+        type: str
       region:
         description:
           - Country region to which this record data is related.
+        type: str
       zip:
         description:
           - Zip code to which this record data is related.
+        type: str
       user_id:
         description:
           - 'User identifier path. /users/{userId}'
+        type: str
       product_id:
         description:
           - 'Product identifier path. /products/{productId}'
+        type: str
       api_id:
         description:
           - 'API identifier path. /apis/{apiId}'
+        type: str
       operation_id:
         description:
           - 'Operation identifier path. /apis/{apiId}/operations/{operationId}'
+        type: str
       api_region:
         description:
           - API region identifier.
+        type: str
       subscription_id:
         description:
           - 'Subscription identifier path. /subscriptions/{subscriptionId}'
+        type: str
       call_count_success:
         description:
           - >-
             Number of successful calls. This includes calls returning
             HttpStatusCode <= 301 and HttpStatusCode.NotModified and
             HttpStatusCode.TemporaryRedirect
+        type: number
       call_count_blocked:
         description:
           - >-
             Number of calls blocked due to invalid credentials. This includes
             calls returning HttpStatusCode.Unauthorized and
             HttpStatusCode.Forbidden and HttpStatusCode.TooManyRequests
+        type: number
       call_count_failed:
         description:
           - >-
             Number of calls failed due to proxy or backend errors. This includes
             calls returning HttpStatusCode.BadRequest(400) and any Code between
             HttpStatusCode.InternalServerError (500) and 600
+        type: number
       call_count_other:
         description:
           - Number of other calls.
+        type: number
       call_count_total:
         description:
           - Total number of calls.
+        type: number
       bandwidth:
         description:
           - Bandwidth consumed.
+        type: number
       cache_hit_count:
         description:
           - Number of times when content was served from cache policy.
+        type: number
       cache_miss_count:
         description:
           - Number of times content was fetched from backend.
+        type: number
       api_time_avg:
         description:
           - Average time it took to process request.
+        type: number
       api_time_min:
         description:
           - Minimum time it took to process request.
+        type: number
       api_time_max:
         description:
           - Maximum time it took to process request.
+        type: number
       service_time_avg:
         description:
           - Average time it took to process request on backend.
+        type: number
       service_time_min:
         description:
           - Minimum time it took to process request on backend.
+        type: number
       service_time_max:
         description:
           - Maximum time it took to process request on backend.
+        type: number
   count:
     description:
       - Total record count number across all pages.
+    type: number
   next_link:
     description:
       - Next page link if any.
+    type: str
 extends_documentation_fragment:
   - azure
 author:

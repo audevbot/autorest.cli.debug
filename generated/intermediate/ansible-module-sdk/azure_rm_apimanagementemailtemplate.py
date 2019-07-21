@@ -25,25 +25,32 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   subject:
     description:
       - Subject of the Template.
+    type: str
   title:
     description:
       - Title of the Template.
+    type: str
   description:
     description:
       - Description of the Email Template.
+    type: str
   body:
     description:
       - Email Template Body. This should be a valid XDocument
+    type: str
   parameters:
     description:
       - Email Template Parameter values.
@@ -52,23 +59,29 @@ options:
       name:
         description:
           - Template parameter name.
+        type: str
       title:
         description:
           - Template parameter title.
+        type: str
       description:
         description:
           - Template parameter description.
+        type: str
   is_default:
     description:
       - >-
         Whether the template is the default template provided by Api Management
         or has been edited.
+    type: boolean
   id:
     description:
       - Resource ID.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
   state:
     description:
       - Assert the state of the EmailTemplate.

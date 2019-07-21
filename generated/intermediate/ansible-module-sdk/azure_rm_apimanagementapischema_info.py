@@ -25,10 +25,12 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   api_id:
     description:
       - >-
@@ -36,20 +38,25 @@ options:
         service instance. Non-current revision has ;rev=n as a suffix where n is
         the revision number.
     required: true
+    type: str
   schema_id:
     description:
       - >-
         Schema identifier within an API. Must be unique in the current API
         Management service instance.
+    type: str
   id:
     description:
       - Resource ID.
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
   content_type:
     description:
       - >-
@@ -61,9 +68,11 @@ options:
         Schema use `application/vnd.oai.openapi.components+json` </br> - `WADL
         Schema` use `application/vnd.ms-azure-apim.wadl.grammars+xml`. 
     required: true
+    type: str
   document:
     description:
       - Properties of the Schema Document.
+    type: 'unknown-primary[object]'
 extends_documentation_fragment:
   - azure
 author:

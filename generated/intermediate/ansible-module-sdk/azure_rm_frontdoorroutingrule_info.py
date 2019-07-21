@@ -25,16 +25,20 @@ options:
     description:
       - Name of the Resource group within the Azure subscription.
     required: true
+    type: str
   front_door_name:
     description:
       - Name of the Front Door which is globally unique.
     required: true
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   id:
     description:
       - Resource ID.
+    type: str
   frontend_endpoints:
     description:
       - Frontend endpoints associated with this rule
@@ -43,6 +47,7 @@ options:
       id:
         description:
           - Resource ID.
+        type: str
   accepted_protocols:
     description:
       - Protocol schemes to match for this rule
@@ -56,15 +61,19 @@ options:
       - >-
         Whether to enable use of this rule. Permitted values are 'Enabled' or
         'Disabled'
+    type: str
   route_configuration:
     description:
       - A reference to the routing configuration.
+    type: dict
   resource_state:
     description:
       - Resource status.
+    type: str
   type:
     description:
       - Resource type.
+    type: str
 extends_documentation_fragment:
   - azure
 author:

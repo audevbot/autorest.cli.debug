@@ -25,29 +25,35 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   gallery_name:
     description:
       - >-
         The name of the Shared Application Gallery in which the Application
         Definition resides.
     required: true
+    type: str
   gallery_application_name:
     description:
       - >-
         The name of the gallery Application Definition in which the Application
         Version is to be created.
     required: true
+    type: str
   name:
     description:
       - Resource name
+    type: str
   location:
     description:
       - Resource location
     required: true
+    type: str
   publishing_profile:
     description:
       - undefined
     required: true
+    type: dict
     suboptions:
       target_regions:
         description:
@@ -60,75 +66,91 @@ options:
             description:
               - The name of the region.
             required: true
+            type: str
           regional_replica_count:
             description:
               - >-
                 The number of replicas of the Image Version to be created per
                 region. This property is updatable.
+            type: number
           storage_account_type:
             description:
               - >-
                 Specifies the storage account type to be used to store the
                 image. This property is not updatable.
+            type: str
       replica_count:
         description:
           - >-
             The number of replicas of the Image Version to be created per
             region. This property would take effect for a region when
             regionalReplicaCount is not specified. This property is updatable.
+        type: number
       exclude_from_latest:
         description:
           - >-
             If set to true, Virtual Machines deployed from the latest version of
             the Image Definition won't use this Image Version.
+        type: boolean
       end_of_life_date:
         description:
           - >-
             The end of life date of the gallery Image Version. This property can
             be used for decommissioning purposes. This property is updatable.
+        type: datetime
       storage_account_type:
         description:
           - >-
             Specifies the storage account type to be used to store the image.
             This property is not updatable.
+        type: str
       source:
         description:
           - undefined
         required: true
+        type: dict
         suboptions:
           file_name:
             description:
               - Required. The fileName of the artifact.
             required: true
+            type: str
           media_link:
             description:
               - >-
                 Required. The mediaLink of the artifact, must be a readable
                 storage blob.
             required: true
+            type: str
       content_type:
         description:
           - >-
             Optional. May be used to help process this file. The type of file
             contained in the source, e.g. zip, json, etc.
+        type: str
       enable_health_check:
         description:
           - Optional. Whether or not this application reports health.
+        type: boolean
       published_date:
         description:
           - The timestamp for when the gallery Image Version is published.
+        type: datetime
   provisioning_state:
     description:
       - 'The provisioning state, which only appears in the response.'
+    type: str
   replication_status:
     description:
       - undefined
+    type: dict
     suboptions:
       aggregated_state:
         description:
           - >-
             This is the aggregated replication status based on all the regional
             replication status flags.
+        type: str
       summary:
         description:
           - This is a summary of replication status for each region.
@@ -139,21 +161,27 @@ options:
               - >-
                 The region to which the gallery Image Version is being
                 replicated to.
+            type: str
           state:
             description:
               - This is the regional replication state.
+            type: str
           details:
             description:
               - The details of the replication status.
+            type: str
           progress:
             description:
               - It indicates progress of the replication job.
+            type: number
   id:
     description:
       - Resource Id
+    type: str
   type:
     description:
       - Resource type
+    type: str
   state:
     description:
       - Assert the state of the GalleryApplicationVersion.

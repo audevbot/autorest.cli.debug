@@ -25,60 +25,77 @@ options:
     description:
       - Name of the Resource group within the Azure subscription.
     required: true
+    type: str
   namespace_name:
     description:
       - The namespace name
     required: true
+    type: str
   topic_name:
     description:
       - The topic name.
+    type: str
   name:
     description:
       - Resource name
+    type: str
   id:
     description:
       - Resource Id
+    type: str
   type:
     description:
       - Resource type
+    type: str
   size_in_bytes:
     description:
       - 'Size of the topic, in bytes.'
+    type: number
   created_at:
     description:
       - Exact time the message was created.
+    type: datetime
   updated_at:
     description:
       - The exact time the message was updated.
+    type: datetime
   accessed_at:
     description:
       - >-
         Last time the message was sent, or a request was received, for this
         topic.
+    type: datetime
   subscription_count:
     description:
       - Number of subscriptions.
+    type: number
   count_details:
     description:
       - Message count details
+    type: dict
     suboptions:
       active_message_count:
         description:
           - 'Number of active messages in the queue, topic, or subscription.'
+        type: number
       dead_letter_message_count:
         description:
           - Number of messages that are dead lettered.
+        type: number
       scheduled_message_count:
         description:
           - Number of scheduled messages.
+        type: number
       transfer_message_count:
         description:
           - >-
             Number of messages transferred to another queue, topic, or
             subscription.
+        type: number
       transfer_dead_letter_message_count:
         description:
           - Number of messages transferred into dead letters.
+        type: number
   default_message_time_to_live:
     description:
       - >-
@@ -86,44 +103,54 @@ options:
         after which the message expires, starting from when the message is sent
         to Service Bus. This is the default value used when TimeToLive is not
         set on a message itself.
+    type: 'unknown-primary[timeSpan]'
   max_size_in_megabytes:
     description:
       - >-
         Maximum size of the topic in megabytes, which is the size of the memory
         allocated for the topic. Default is 1024.
+    type: number
   requires_duplicate_detection:
     description:
       - Value indicating if this topic requires duplicate detection.
+    type: boolean
   duplicate_detection_history_time_window:
     description:
       - >-
         ISO8601 timespan structure that defines the duration of the duplicate
         detection history. The default value is 10 minutes.
+    type: 'unknown-primary[timeSpan]'
   enable_batched_operations:
     description:
       - Value that indicates whether server-side batched operations are enabled.
+    type: boolean
   status:
     description:
       - Enumerates the possible values for the status of a messaging entity.
+    type: str
   support_ordering:
     description:
       - Value that indicates whether the topic supports ordering.
+    type: boolean
   auto_delete_on_idle:
     description:
       - >-
         ISO 8601 timespan idle interval after which the topic is automatically
         deleted. The minimum duration is 5 minutes.
+    type: 'unknown-primary[timeSpan]'
   enable_partitioning:
     description:
       - >-
         Value that indicates whether the topic to be partitioned across multiple
         message brokers is enabled.
+    type: boolean
   enable_express:
     description:
       - >-
         Value that indicates whether Express Entities are enabled. An express
         topic holds a message in memory temporarily before writing it to
         persistent storage.
+    type: boolean
 extends_documentation_fragment:
   - azure
 author:

@@ -24,33 +24,43 @@ options:
   resource_group:
     description:
       - The name of the resource group within the user's subscription.
+    type: str
   topic_name:
     description:
       - Name of the topic
+    type: str
   provider_namespace:
     description:
       - Namespace of the provider of the topic
+    type: str
   resource_type_name:
     description:
       - Name of the topic type
+    type: str
   name:
     description:
       - Name of the resource
+    type: str
   id:
     description:
       - Fully qualified identifier of the resource
+    type: str
   type:
     description:
       - Type of the resource
+    type: str
   location:
     description:
       - Location of the resource
+    type: str
   provisioning_state:
     description:
       - Provisioning state of the topic.
+    type: str
   endpoint:
     description:
       - Endpoint for the topic.
+    type: str
 extends_documentation_fragment:
   - azure
 author:

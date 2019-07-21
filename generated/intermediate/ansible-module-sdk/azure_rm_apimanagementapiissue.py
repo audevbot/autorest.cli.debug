@@ -25,22 +25,27 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   api_id:
     description:
       - A resource identifier for the API the issue was created for.
+    type: str
   issue_id:
     description:
       - >-
         Issue identifier. Must be unique in the current API Management service
         instance.
     required: true
+    type: str
   created_date:
     description:
       - Date and time when the issue was created.
+    type: datetime
   state:
     description:
       - Assert the state of the ApiIssue.
@@ -55,23 +60,29 @@ options:
     description:
       - The issue title.
     required: true
+    type: str
   description:
     description:
       - Text describing the issue.
     required: true
+    type: str
   user_id:
     description:
       - A resource identifier for the user created the issue.
     required: true
+    type: str
   id:
     description:
       - Resource ID.
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
 extends_documentation_fragment:
   - azure
 author:

@@ -25,33 +25,42 @@ options:
     description:
       - Name of the Resource group within the Azure subscription.
     required: true
+    type: str
   front_door_name:
     description:
       - Name of the Front Door which is globally unique.
     required: true
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   id:
     description:
       - Resource ID.
+    type: str
   sample_size:
     description:
       - The number of samples to consider for load balancing decisions
+    type: number
   successful_samples_required:
     description:
       - The number of samples within the sample period that must succeed
+    type: number
   additional_latency_milliseconds:
     description:
       - >-
         The additional latency in milliseconds for probes to fall into the
         lowest latency bucket
+    type: number
   resource_state:
     description:
       - Resource status.
+    type: str
   type:
     description:
       - Resource type.
+    type: str
   state:
     description:
       - Assert the state of the LoadBalancingSetting.

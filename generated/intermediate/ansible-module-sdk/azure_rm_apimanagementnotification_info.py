@@ -25,29 +25,37 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   id:
     description:
       - Resource ID.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
   title:
     description:
       - Title of the Notification.
     required: true
+    type: str
   description:
     description:
       - Description of the Notification.
+    type: str
   recipients:
     description:
       - Recipient Parameter values.
+    type: dict
     suboptions:
       emails:
         description:

@@ -29,28 +29,36 @@ options:
       name:
         description:
           - 'This is of the format {provider}/{resource}/{operation}'
+        type: str
       display:
         description:
           - undefined
+        type: dict
         suboptions:
           provider:
             description:
               - undefined
+            type: str
           operation:
             description:
               - 'For example: read, write, delete, or listKeys/action'
+            type: str
           resource:
             description:
               - undefined
+            type: str
           description:
             description:
               - undefined
+            type: str
       origin:
         description:
           - undefined
+        type: str
   next_link:
     description:
       - undefined
+    type: str
 extends_documentation_fragment:
   - azure
 author:

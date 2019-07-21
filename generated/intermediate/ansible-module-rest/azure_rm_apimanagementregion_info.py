@@ -25,10 +25,12 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   value:
     description:
       - Lists of Regions.
@@ -37,18 +39,23 @@ options:
       name:
         description:
           - Region name.
+        type: str
       is_master_region:
         description:
           - whether Region is the master region.
+        type: boolean
       is_deleted:
         description:
           - whether Region is deleted.
+        type: boolean
   count:
     description:
       - Total record count number across all pages.
+    type: number
   next_link:
     description:
       - Next page link if any.
+    type: str
 extends_documentation_fragment:
   - azure
 author:

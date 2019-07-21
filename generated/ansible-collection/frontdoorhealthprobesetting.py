@@ -25,31 +25,40 @@ options:
     description:
       - Name of the Resource group within the Azure subscription.
     required: true
+    type: str
   front_door_name:
     description:
       - Name of the Front Door which is globally unique.
     required: true
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   id:
     description:
       - Resource ID.
+    type: str
   path:
     description:
       - The path to use for the health probe. Default is /
+    type: str
   protocol:
     description:
       - Protocol scheme to use for this probe
+    type: str
   interval_in_seconds:
     description:
       - The number of seconds between health probes.
+    type: number
   resource_state:
     description:
       - Resource status.
+    type: str
   type:
     description:
       - Resource type.
+    type: str
   state:
     description:
       - Assert the state of the HealthProbeSetting.

@@ -25,43 +25,55 @@ options:
     description:
       - The name of the resource group that contains the Batch account.
     required: true
+    type: str
   account_name:
     description:
       - The name of the Batch account.
     required: true
+    type: str
   application_name:
     description:
       - The name of the application. This must be unique within the account.
     required: true
+    type: str
   maxresults:
     description:
       - The maximum number of items to return in the response.
+    type: number
   name:
     description:
       - The version of the application.
+    type: str
   id:
     description:
       - The ID of the resource.
+    type: str
   etag:
     description:
       - 'The ETag of the resource, used for concurrency statements.'
+    type: str
   state:
     description:
       - The current state of the application package.
+    type: str
   format:
     description:
       - 'The format of the application package, if the package is active.'
+    type: str
   storage_url:
     description:
       - The URL for the application package in Azure Storage.
+    type: str
   storage_url_expiry:
     description:
       - The UTC time at which the Azure Storage URL will expire.
+    type: datetime
   last_activation_time:
     description:
       - >-
         The time at which the package was last activated, if the package is
         active.
+    type: datetime
 extends_documentation_fragment:
   - azure
 author:

@@ -25,37 +25,47 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   url:
     description:
       - A delegation Url.
+    type: str
   validation_key:
     description:
       - >-
         A base64-encoded validation key to validate, that a request is coming
         from Azure API Management.
+    type: str
   subscriptions:
     description:
       - Subscriptions delegation settings.
+    type: dict
     suboptions:
       enabled:
         description:
           - Enable or disable delegation for subscriptions.
+        type: boolean
   user_registration:
     description:
       - User registration delegation settings.
+    type: dict
     suboptions:
       enabled:
         description:
           - Enable or disable delegation for user registration.
+        type: boolean
   id:
     description:
       - Resource ID.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
   state:
     description:
       - Assert the state of the DelegationSetting.

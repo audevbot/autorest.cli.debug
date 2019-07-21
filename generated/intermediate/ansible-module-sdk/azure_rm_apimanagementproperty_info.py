@@ -25,39 +25,48 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   prop_id:
     description:
       - Identifier of the property.
+    type: str
   id:
     description:
       - Resource ID.
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
   secret:
     description:
       - >-
         Determines whether the value is a secret and should be encrypted or not.
         Default value is false.
+    type: boolean
   display_name:
     description:
       - >-
         Unique name of Property. It may contain only letters, digits, period,
         dash, and underscore characters.
     required: true
+    type: str
   value:
     description:
       - >-
         Value of the property. Can contain policy expressions. It may not be
         empty or consist only of whitespace.
     required: true
+    type: str
 extends_documentation_fragment:
   - azure
 author:

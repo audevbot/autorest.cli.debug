@@ -25,10 +25,12 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   api_id:
     description:
       - >-
@@ -36,28 +38,34 @@ options:
         service instance. Non-current revision has ;rev=n as a suffix where n is
         the revision number.
     required: true
+    type: str
   format:
     description:
       - >-
         Format in which to export the Api Details to the Storage Blob with Sas
         Key valid for 5 minutes.
     required: true
+    type: str
   export:
     description:
       - Query parameter required to export the API details.
     required: true
+    type: str
   id:
     description:
       - ResourceId of the API which was exported.
+    type: str
   value:
     description:
       - The object defining the schema of the exported Api Detail
+    type: dict
     suboptions:
       link:
         description:
           - >-
             Link to the Storage Blob containing the result of the export
             operation. The Blob Uri is only valid for 5 minutes.
+        type: str
 extends_documentation_fragment:
   - azure
 author:

@@ -25,36 +25,45 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   name:
     description:
       - Resource name
+    type: str
   location:
     description:
       - Resource location
     required: true
+    type: str
   description:
     description:
       - >-
         The description of this Shared Image Gallery resource. This property is
         updatable.
+    type: str
   identifier:
     description:
       - undefined
+    type: dict
     suboptions:
       unique_name:
         description:
           - >-
             The unique name of the Shared Image Gallery. This name is generated
             automatically by Azure.
+        type: str
   provisioning_state:
     description:
       - 'The provisioning state, which only appears in the response.'
+    type: str
   id:
     description:
       - Resource Id
+    type: str
   type:
     description:
       - Resource type
+    type: str
   state:
     description:
       - Assert the state of the Gallery.

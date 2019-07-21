@@ -25,96 +25,119 @@ options:
     description:
       - Name of the Resource group within the Azure subscription.
     required: true
+    type: str
   front_door_name:
     description:
       - Name of the Front Door which is globally unique.
     required: true
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   id:
     description:
       - Resource ID.
+    type: str
   host_name:
     description:
       - The host name of the frontendEndpoint. Must be a domain name.
+    type: str
   session_affinity_enabled_state:
     description:
       - >-
         Whether to allow session affinity on this host. Valid options are
         'Enabled' or 'Disabled'
+    type: str
   session_affinity_ttl_seconds:
     description:
       - >-
         UNUSED. This field will be ignored. The TTL to use in seconds for
         session affinity, if applicable.
+    type: number
   web_application_firewall_policy_link:
     description:
       - >-
         Defines the Web Application Firewall policy for each host (if
         applicable)
+    type: dict
     suboptions:
       id:
         description:
           - Resource ID.
+        type: str
   resource_state:
     description:
       - Resource status.
+    type: str
   custom_https_provisioning_state:
     description:
       - Provisioning status of Custom Https of the frontendEndpoint.
+    type: str
   custom_https_provisioning_substate:
     description:
       - >-
         Provisioning substate shows the progress of custom HTTPS
         enabling/disabling process step by step.
+    type: str
   custom_https_configuration:
     description:
       - The configuration specifying how to enable HTTPS
+    type: dict
     suboptions:
       certificate_source:
         description:
           - Defines the source of the SSL certificate
+        type: str
       protocol_type:
         description:
           - Defines the TLS extension protocol that is used for secure delivery
+        type: str
       key_vault_certificate_source_parameters:
         description:
           - >-
             KeyVault certificate source parameters (if
             certificateSource=AzureKeyVault)
+        type: dict
         suboptions:
           vault:
             description:
               - The Key Vault containing the SSL certificate
+            type: dict
             suboptions:
               id:
                 description:
                   - Resource ID.
+                type: str
           secret_name:
             description:
               - >-
                 The name of the Key Vault secret representing the full
                 certificate PFX
+            type: str
           secret_version:
             description:
               - >-
                 The version of the Key Vault secret representing the full
                 certificate PFX
+            type: str
       front_door_certificate_source_parameters:
         description:
           - >-
             Parameters required for enabling SSL with Front Door-managed
             certificates (if certificateSource=FrontDoor)
+        type: dict
         suboptions:
           certificate_type:
             description:
               - >-
                 Defines the type of the certificate used for secure connections
                 to a frontendEndpoint
+            type: str
   type:
     description:
       - Resource type.
+    type: str
   state:
     description:
       - Assert the state of the FrontendEndpoint.

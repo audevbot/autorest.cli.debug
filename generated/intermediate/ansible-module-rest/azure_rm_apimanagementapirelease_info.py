@@ -25,38 +25,48 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   api_id:
     description:
       - Identifier of the API the release belongs to.
+    type: str
   release_id:
     description:
       - >-
         Release identifier within an API. Must be unique in the current API
         Management service instance.
+    type: str
   id:
     description:
       - Resource ID.
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
   created_date_time:
     description:
       - >-
         The time the API was released. The date conforms to the following
         format: yyyy-MM-ddTHH:mm:ssZ as specified by the ISO 8601 standard.
+    type: datetime
   updated_date_time:
     description:
       - The time the API release was updated.
+    type: datetime
   notes:
     description:
       - Release Notes
+    type: str
 extends_documentation_fragment:
   - azure
 author:

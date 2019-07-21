@@ -25,70 +25,93 @@ options:
     description:
       - Name of an Azure Resource group.
     required: true
+    type: str
   automation_account_name:
     description:
       - The name of the automation account.
     required: true
+    type: str
   name:
     description:
       - The name of the resource
+    type: str
   runbook:
     description:
       - Gets or sets the runbook.
+    type: dict
     suboptions:
       name:
         description:
           - Gets or sets the name of the runbook.
+        type: str
   parameters:
     description:
       - Gets or sets the parameters of the job.
+    type: >-
+      unknown[DictionaryType
+      {"$id":"301","$type":"DictionaryType","valueType":{"$id":"302","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"303","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"304","fixed":false},"deprecated":false}]
   run_on:
     description:
       - >-
         Gets or sets the runOn which specifies the group name where the job is
         to be executed.
+    type: str
   started_by:
     description:
       - Gets or sets the job started by.
+    type: str
   job_id:
     description:
       - Gets or sets the id of the job.
+    type: 'unknown-primary[uuid]'
   creation_time:
     description:
       - Gets or sets the creation time of the job.
+    type: datetime
   status:
     description:
       - Gets or sets the status of the job.
+    type: str
   status_details:
     description:
       - Gets or sets the status details of the job.
+    type: str
   start_time:
     description:
       - Gets or sets the start time of the job.
+    type: datetime
   end_time:
     description:
       - Gets or sets the end time of the job.
+    type: datetime
   exception:
     description:
       - Gets or sets the exception of the job.
+    type: str
   last_modified_time:
     description:
       - Gets or sets the last modified time of the job.
+    type: datetime
   last_status_modified_time:
     description:
       - Gets or sets the last status modified time of the job.
+    type: datetime
   provisioning_state:
     description:
       - The current provisioning state of the job.
+    type: str
   client_request_id:
     description:
       - Identifies this specific client request.
+    type: str
   id:
     description:
       - Fully qualified resource Id for the resource
+    type: str
   type:
     description:
       - The type of the resource.
+    type: str
   state:
     description:
       - Assert the state of the Job.

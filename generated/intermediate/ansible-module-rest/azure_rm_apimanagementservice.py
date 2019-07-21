@@ -25,12 +25,15 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   notification_sender_email:
     description:
       - Email address from which the notification will be sent.
+    type: str
   hostname_configurations:
     description:
       - Custom hostname configuration of the API Management service.
@@ -40,10 +43,12 @@ options:
         description:
           - Hostname type.
         required: true
+        type: str
       host_name:
         description:
           - Hostname to configure on the Api Management service.
         required: true
+        type: str
       key_vault_id:
         description:
           - >-
@@ -52,12 +57,15 @@ options:
             certificate will not work. This requires Api Management service to
             be configured with MSI. The secret should be of type
             *application/x-pkcs12*
+        type: str
       encoded_certificate:
         description:
           - Base64 Encoded certificate.
+        type: str
       certificate_password:
         description:
           - Certificate Password.
+        type: str
       default_ssl_binding:
         description:
           - >-
@@ -67,14 +75,17 @@ options:
             The property is useful if a service has multiple custom hostname
             enabled and it needs to decide on the default ssl certificate. The
             setting only applied to Proxy Hostname Type.
+        type: boolean
       negotiate_client_certificate:
         description:
           - >-
             Specify true to always negotiate client certificate on the hostname.
             Default Value is false.
+        type: boolean
       certificate:
         description:
           - Certificate information.
+        type: dict
         suboptions:
           expiry:
             description:
@@ -83,31 +94,38 @@ options:
                 following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO
                 8601 standard.
             required: true
+            type: datetime
           thumbprint:
             description:
               - Thumbprint of the certificate.
             required: true
+            type: str
           subject:
             description:
               - Subject of the certificate.
             required: true
+            type: str
   virtual_network_configuration:
     description:
       - Virtual network configuration of the API Management service.
+    type: dict
     suboptions:
       subnet_resource_id:
         description:
           - >-
             The full resource ID of a subnet in a virtual network to deploy the
             API Management service in.
+        type: str
       vnetid:
         description:
           - >-
             The virtual network ID. This is typically a GUID. Expect a null GUID
             by default.
+        type: str
       subnetname:
         description:
           - The name of the subnet.
+        type: str
   additional_locations:
     description:
       - Additional datacenter locations of the API Management service.
@@ -119,35 +137,43 @@ options:
             The location name of the additional region among Azure Data center
             regions.
         required: true
+        type: str
       sku:
         description:
           - SKU properties of the API Management service.
         required: true
+        type: dict
         suboptions:
           name:
             description:
               - Name of the Sku.
             required: true
+            type: str
           capacity:
             description:
               - Capacity of the SKU (number of deployed units of the SKU).
+            type: number
       virtual_network_configuration:
         description:
           - Virtual network configuration for the location.
+        type: dict
         suboptions:
           subnet_resource_id:
             description:
               - >-
                 The full resource ID of a subnet in a virtual network to deploy
                 the API Management service in.
+            type: str
           vnetid:
             description:
               - >-
                 The virtual network ID. This is typically a GUID. Expect a null
                 GUID by default.
+            type: str
           subnetname:
             description:
               - The name of the subnet.
+            type: str
       public_ip_addresses:
         description:
           - >-
@@ -166,6 +192,7 @@ options:
       gateway_regional_url:
         description:
           - Gateway URL of the API Management service in the Region.
+        type: str
   custom_properties:
     description:
       - >-
@@ -200,6 +227,9 @@ options:
         TLS_RSA_WITH_AES_128_CBC_SHA. For example,
         `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_CBC_SHA256`:`false`.
         The default value is `true` for them.
+    type: >-
+      unknown[DictionaryType
+      {"$id":"2519","$type":"DictionaryType","valueType":{"$id":"2520","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2521","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2522","fixed":false},"deprecated":false}]
   certificates:
     description:
       - >-
@@ -210,9 +240,11 @@ options:
       encoded_certificate:
         description:
           - Base64 Encoded certificate.
+        type: str
       certificate_password:
         description:
           - Certificate Password.
+        type: str
       store_name:
         description:
           - >-
@@ -220,9 +252,11 @@ options:
             certificate store location. Only Root and CertificateAuthority are
             valid locations.
         required: true
+        type: str
       certificate:
         description:
           - Certificate information.
+        type: dict
         suboptions:
           expiry:
             description:
@@ -231,14 +265,17 @@ options:
                 following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO
                 8601 standard.
             required: true
+            type: datetime
           thumbprint:
             description:
               - Thumbprint of the certificate.
             required: true
+            type: str
           subject:
             description:
               - Subject of the certificate.
             required: true
+            type: str
   enable_client_certificate:
     description:
       - >-
@@ -246,6 +283,7 @@ options:
         enforces a client certificate to be presented on each request to the
         gateway. This also enables the ability to authenticate the certificate
         in the policy on the gateway.
+    type: boolean
   virtual_network_type:
     description:
       - >-
@@ -255,46 +293,57 @@ options:
         up inside a Virtual Network having an Internet Facing Endpoint, and
         Internal means that API Management deployment is setup inside a Virtual
         Network having an Intranet Facing Endpoint only.
+    type: str
   publisher_email:
     description:
       - Publisher email.
     required: true
+    type: str
   publisher_name:
     description:
       - Publisher name.
     required: true
+    type: str
   provisioning_state:
     description:
       - >-
         The current provisioning state of the API Management service which can
         be one of the following:
         Created/Activating/Succeeded/Updating/Failed/Stopped/Terminating/TerminationFailed/Deleted.
+    type: str
   target_provisioning_state:
     description:
       - >-
         The provisioning state of the API Management service, which is targeted
         by the long running operation started on the service.
+    type: str
   created_at_utc:
     description:
       - >-
         Creation UTC date of the API Management service.The date conforms to the
         following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
         standard.
+    type: datetime
   gateway_url:
     description:
       - Gateway URL of the API Management service.
+    type: str
   gateway_regional_url:
     description:
       - Gateway URL of the API Management service in the Default Region.
+    type: str
   portal_url:
     description:
       - Publisher portal endpoint Url of the API Management service.
+    type: str
   management_api_url:
     description:
       - Management API endpoint URL of the API Management service.
+    type: str
   scm_url:
     description:
       - SCM endpoint URL of the API Management service.
+    type: str
   public_ip_addresses:
     description:
       - >-
@@ -312,12 +361,15 @@ options:
     description:
       - Name of the Sku.
     required: true
+    type: str
   sku_capacity:
     description:
       - Capacity of the SKU (number of deployed units of the SKU).
+    type: number
   identity:
     description:
       - Managed service identity of the Api Management service.
+    type: dict
     suboptions:
       type:
         description:
@@ -325,27 +377,34 @@ options:
             The identity type. Currently the only supported type is
             'SystemAssigned'.
         required: true
+        type: str
       principal_id:
         description:
           - The principal id of the identity.
+        type: 'unknown-primary[uuid]'
       tenant_id:
         description:
           - The client tenant id of the identity.
+        type: 'unknown-primary[uuid]'
   location:
     description:
       - Resource location.
     required: true
+    type: str
   id:
     description:
       - Resource ID.
+    type: str
   type:
     description:
       - >-
         Resource type for API Management resource is set to
         Microsoft.ApiManagement.
+    type: str
   etag:
     description:
       - ETag of the resource.
+    type: str
   state:
     description:
       - Assert the state of the ApiManagementService.

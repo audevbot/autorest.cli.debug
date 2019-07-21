@@ -25,93 +25,119 @@ options:
     description:
       - Name of the Resource group within the Azure subscription.
     required: true
+    type: str
   namespace_name:
     description:
       - The namespace name
     required: true
+    type: str
   topic_name:
     description:
       - The topic name.
     required: true
+    type: str
   subscription_name:
     description:
       - The subscription name.
     required: true
+    type: str
   name:
     description:
       - Resource name
+    type: str
   action:
     description:
       - >-
         Represents the filter actions which are allowed for the transformation
         of a message that have been matched by a filter expression.
+    type: dict
     suboptions:
       sql_expression:
         description:
           - SQL expression. e.g. MyProperty='ABC'
+        type: str
       compatibility_level:
         description:
           - >-
             This property is reserved for future use. An integer value showing
             the compatibility level, currently hard-coded to 20.
+        type: number
       requires_preprocessing:
         description:
           - Value that indicates whether the rule action requires preprocessing.
+        type: boolean
   filter_type:
     description:
       - Filter type that is evaluated against a BrokeredMessage.
+    type: str
   sql_filter:
     description:
       - Properties of sqlFilter
+    type: dict
     suboptions:
       sql_expression:
         description:
           - The SQL expression. e.g. MyProperty='ABC'
+        type: str
       requires_preprocessing:
         description:
           - Value that indicates whether the rule action requires preprocessing.
+        type: boolean
       compatibility_level:
         description:
           - >-
             This property is reserved for future use. An integer value showing
             the compatibility level, currently hard-coded to 20.
+        type: number
   correlation_filter:
     description:
       - Properties of correlationFilter
+    type: dict
     suboptions:
       correlation_id:
         description:
           - Identifier of the correlation.
+        type: str
       message_id:
         description:
           - Identifier of the message.
+        type: str
       to:
         description:
           - Address to send to.
+        type: str
       reply_to:
         description:
           - Address of the queue to reply to.
+        type: str
       label:
         description:
           - Application specific label.
+        type: str
       session_id:
         description:
           - Session identifier.
+        type: str
       reply_to_session_id:
         description:
           - Session identifier to reply to.
+        type: str
       content_type:
         description:
           - Content type of the message.
+        type: str
       requires_preprocessing:
         description:
           - Value that indicates whether the rule action requires preprocessing.
+        type: boolean
   id:
     description:
       - Resource Id
+    type: str
   type:
     description:
       - Resource type
+    type: str
   state:
     description:
       - Assert the state of the Rule.

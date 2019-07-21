@@ -29,26 +29,33 @@ options:
       id:
         description:
           - Resource Id
+        type: str
       name:
         description:
           - Resource name
+        type: str
       type:
         description:
           - Resource type
+        type: str
       location:
         description:
           - Resource location
+        type: str
       code:
         description:
           - Region code
+        type: str
       full_name:
         description:
           - Full name of the region
+        type: str
   next_link:
     description:
       - >-
         Link to the next set of results. Not empty if Value contains incomplete
         list of PremiumMessagingRegions.
+    type: str
 extends_documentation_fragment:
   - azure
 author:

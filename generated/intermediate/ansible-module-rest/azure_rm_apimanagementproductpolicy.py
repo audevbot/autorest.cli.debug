@@ -25,36 +25,45 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   product_id:
     description:
       - >-
         Product identifier. Must be unique in the current API Management service
         instance.
     required: true
+    type: str
   policy_id:
     description:
       - The identifier of the Policy.
     required: true
+    type: str
   value:
     description:
       - Contents of the Policy as defined by the format.
     required: true
+    type: str
   format:
     description:
       - Format of the policyContent.
+    type: str
   id:
     description:
       - Resource ID.
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
   state:
     description:
       - Assert the state of the ProductPolicy.

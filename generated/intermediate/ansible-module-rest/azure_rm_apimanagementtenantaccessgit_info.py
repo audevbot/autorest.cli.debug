@@ -25,26 +25,33 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   name:
     description:
       - The identifier of the Access configuration.
     required: true
+    type: str
   id:
     description:
       - Identifier.
+    type: str
   primary_key:
     description:
       - Primary access key.
+    type: str
   secondary_key:
     description:
       - Secondary access key.
+    type: str
   enabled:
     description:
       - Determines whether direct access is enabled.
+    type: boolean
 extends_documentation_fragment:
   - azure
 author:

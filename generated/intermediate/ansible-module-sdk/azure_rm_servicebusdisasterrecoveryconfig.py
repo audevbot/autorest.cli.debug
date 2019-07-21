@@ -25,46 +25,57 @@ options:
     description:
       - Name of the Resource group within the Azure subscription.
     required: true
+    type: str
   namespace_name:
     description:
       - The namespace name
     required: true
+    type: str
   alias:
     description:
       - The Disaster Recovery configuration name
     required: true
+    type: str
   partner_namespace:
     description:
       - >-
         ARM Id of the Primary/Secondary eventhub namespace name, which is part
         of GEO DR pairing
+    type: str
   alternate_name:
     description:
       - >-
         Primary/Secondary eventhub namespace name, which is part of GEO DR
         pairing
+    type: str
   provisioning_state:
     description:
       - >-
         Provisioning state of the Alias(Disaster Recovery configuration) -
         possible values 'Accepted' or 'Succeeded' or 'Failed'
+    type: str
   pending_replication_operations_count:
     description:
       - Number of entities pending to be replicated.
+    type: number
   role:
     description:
       - >-
         role of namespace in GEO DR - possible values 'Primary' or
         'PrimaryNotReplicating' or 'Secondary'
+    type: str
   id:
     description:
       - Resource Id
+    type: str
   name:
     description:
       - Resource name
+    type: str
   type:
     description:
       - Resource type
+    type: str
   state:
     description:
       - Assert the state of the DisasterRecoveryConfig.

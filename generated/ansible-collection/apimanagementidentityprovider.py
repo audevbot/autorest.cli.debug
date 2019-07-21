@@ -25,16 +25,20 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
   allowed_tenants:
     description:
       - List of Allowed Tenants when configuring Azure Active Directory login.
@@ -42,18 +46,23 @@ options:
   authority:
     description:
       - OpenID Connect discovery endpoint hostname for AAD or AAD B2C.
+    type: str
   signup_policy_name:
     description:
       - Signup Policy Name. Only applies to AAD B2C Identity Provider.
+    type: str
   signin_policy_name:
     description:
       - Signin Policy Name. Only applies to AAD B2C Identity Provider.
+    type: str
   profile_editing_policy_name:
     description:
       - Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.
+    type: str
   password_reset_policy_name:
     description:
       - Password Reset Policy Name. Only applies to AAD B2C Identity Provider.
+    type: str
   client_id:
     description:
       - >-
@@ -61,6 +70,7 @@ options:
         App ID for Facebook login, Client ID for Google login, App ID for
         Microsoft.
     required: true
+    type: str
   client_secret:
     description:
       - >-
@@ -68,9 +78,11 @@ options:
         authenticate login request. For example, it is App Secret for Facebook
         login, API Key for Google login, Public Key for Microsoft.
     required: true
+    type: str
   id:
     description:
       - Resource ID.
+    type: str
   state:
     description:
       - Assert the state of the IdentityProvider.

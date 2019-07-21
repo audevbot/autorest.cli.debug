@@ -27,9 +27,11 @@ options:
         The name of the enrollment account to which the subscription will be
         billed.
     required: true
+    type: str
   name:
     description:
       - The display name of the subscription.
+    type: str
   owners:
     description:
       - >-
@@ -42,6 +44,7 @@ options:
         description:
           - Object id of the Principal
         required: true
+        type: str
   offer_type:
     description:
       - >-
@@ -49,14 +52,19 @@ options:
         (EnterpriseAgreement) and MS-AZR-0148P (EnterpriseAgreement devTest) are
         available. Only valid when creating a subscription in a enrollment
         account scope.
+    type: str
   additional_parameters:
     description:
       - >-
         Additional, untyped parameters to support custom subscription creation
         scenarios.
+    type: >-
+      unknown[DictionaryType
+      {"$id":"45","$type":"DictionaryType","valueType":{"$id":"46","$type":"PrimaryType","knownPrimaryType":"object","name":{"$id":"47","fixed":false,"raw":"Object"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"48","fixed":false},"deprecated":false}]
   subscription_link:
     description:
       - The link to the new subscription.
+    type: str
   state:
     description:
       - Assert the state of the SubscriptionFactory.

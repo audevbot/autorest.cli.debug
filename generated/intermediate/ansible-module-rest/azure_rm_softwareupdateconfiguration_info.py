@@ -25,17 +25,21 @@ options:
     description:
       - Name of an Azure Resource group.
     required: true
+    type: str
   automation_account_name:
     description:
       - The name of the automation account.
     required: true
+    type: str
   client_request_id:
     description:
       - Identifies this specific client request.
     required: true
+    type: str
   name:
     description:
       - The name of the software update configuration to be created.
+    type: str
   value:
     description:
       - outer object returned when listing all software update configurations
@@ -44,12 +48,15 @@ options:
       name:
         description:
           - Name of the software update configuration.
+        type: str
       id:
         description:
           - Resource Id of the software update configuration
+        type: str
       update_configuration:
         description:
           - Update specific properties of the software update configuration.
+        type: dict
         suboptions:
           azure_virtual_machines:
             description:
@@ -63,32 +70,39 @@ options:
                 Maximum time allowed for the software update configuration run.
                 Duration needs to be specified using the format PT[n]H[n]M[n]S
                 as per ISO8601
+            type: 'unknown-primary[timeSpan]'
       frequency:
         description:
           - >-
             execution frequency of the schedule associated with the software
             update configuration
+        type: str
       start_time:
         description:
           - the start time of the update.
+        type: datetime
       creation_time:
         description:
           - >-
             Creation time of the software update configuration, which only
             appears in the response.
+        type: datetime
       last_modified_time:
         description:
           - >-
             Last time software update configuration was modified, which only
             appears in the response.
+        type: datetime
       provisioning_state:
         description:
           - >-
             Provisioning state for the software update configuration, which only
             appears in the response.
+        type: str
       next_run:
         description:
           - ext run time of the update.
+        type: datetime
 extends_documentation_fragment:
   - azure
 author:

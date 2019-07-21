@@ -25,20 +25,25 @@ options:
     description:
       - Name of an Azure resource group.
     required: true
+    type: str
   name:
     description:
       - The name of the database account.
+    type: str
   location:
     description:
       - The location of the resource group to which the resource belongs.
+    type: str
   kind:
     description:
       - >-
         Indicates the type of database account. This can only be set at database
         account creation.
+    type: str
   consistency_policy:
     description:
       - The consistency policy for the Cosmos DB account.
+    type: dict
     suboptions:
       default_consistency_level:
         description:
@@ -46,6 +51,7 @@ options:
             The default consistency level and configuration settings of the
             Cosmos DB account.
         required: true
+        type: str
       max_staleness_prefix:
         description:
           - >-
@@ -53,6 +59,7 @@ options:
             represents the number of stale requests tolerated. Accepted range
             for this value is 1 – 2,147,483,647. Required when
             defaultConsistencyPolicy is set to 'BoundedStaleness'.
+        type: number
       max_interval_in_seconds:
         description:
           - >-
@@ -60,6 +67,7 @@ options:
             represents the time amount of staleness (in seconds) tolerated.
             Accepted range for this value is 5 - 86400. Required when
             defaultConsistencyPolicy is set to 'BoundedStaleness'.
+        type: number
   locations:
     description:
       - >-
@@ -71,6 +79,7 @@ options:
       location_name:
         description:
           - The name of the region.
+        type: str
       failover_priority:
         description:
           - >-
@@ -78,15 +87,18 @@ options:
             indicates a write region. The maximum value for a failover priority
             = (total number of regions - 1). Failover priority values must be
             unique for each of the regions in which the database account exists.
+        type: number
       is_zone_redundant:
         description:
           - >-
             Flag to indicate whether or not this region is an AvailabilityZone
             region
+        type: boolean
   database_account_offer_type:
     description:
       - The offer type for the database
     required: true
+    type: str
   ip_range_filter:
     description:
       - >-
@@ -94,9 +106,11 @@ options:
         or IP address ranges in CIDR form to be included as the allowed list of
         client IPs for a given database account. IP addresses/ranges must be
         comma separated and must not contain any spaces.
+    type: str
   is_virtual_network_filter_enabled:
     description:
       - Flag to indicate whether to enable/disable Virtual Network ACL rules.
+    type: boolean
   enable_automatic_failover:
     description:
       - >-
@@ -104,6 +118,7 @@ options:
         the region is unavailable due to an outage. Automatic failover will
         result in a new write region for the account and is chosen based on the
         failover priorities configured for the account.
+    type: boolean
   capabilities:
     description:
       - List of Cosmos DB capabilities for the account
@@ -115,6 +130,7 @@ options:
             Name of the Cosmos DB capability. For example, "name":
             "EnableCassandra". Current values also include "EnableTable" and
             "EnableGremlin".
+        type: str
   virtual_network_rules:
     description:
       - List of Virtual Network ACL rules configured for the Cosmos DB account.
@@ -125,28 +141,35 @@ options:
           - >-
             Resource ID of a subnet, for example:
             /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.
+        type: str
       ignore_missing_vnet_service_endpoint:
         description:
           - >-
             Create firewall rule before the virtual network has vnet service
             endpoint enabled.
+        type: boolean
   enable_multiple_write_locations:
     description:
       - Enables the account to write in multiple locations
+    type: boolean
   enable_cassandra_connector:
     description:
       - Enables the cassandra connector on the Cosmos DB C* account
+    type: boolean
   connector_offer:
     description:
       - >-
         The cassandra connector offer type for the Cosmos DB database C*
         account.
+    type: str
   provisioning_state:
     description:
       - undefined
+    type: str
   document_endpoint:
     description:
       - The connection endpoint for the Cosmos DB database account.
+    type: str
   write_locations:
     description:
       - An array that contains the write location for the Cosmos DB account.
@@ -157,17 +180,21 @@ options:
           - >-
             The unique identifier of the region within the database account.
             Example: &lt;accountName&gt;-&lt;locationName&gt;.
+        type: str
       location_name:
         description:
           - The name of the region.
+        type: str
       document_endpoint:
         description:
           - >-
             The connection endpoint for the specific region. Example:
             https://&lt;accountName&gt;-&lt;locationName&gt;.documents.azure.com:443/
+        type: str
       provisioning_state:
         description:
           - undefined
+        type: str
       failover_priority:
         description:
           - >-
@@ -175,11 +202,13 @@ options:
             indicates a write region. The maximum value for a failover priority
             = (total number of regions - 1). Failover priority values must be
             unique for each of the regions in which the database account exists.
+        type: number
       is_zone_redundant:
         description:
           - >-
             Flag to indicate whether or not this region is an AvailabilityZone
             region
+        type: boolean
   read_locations:
     description:
       - >-
@@ -192,17 +221,21 @@ options:
           - >-
             The unique identifier of the region within the database account.
             Example: &lt;accountName&gt;-&lt;locationName&gt;.
+        type: str
       location_name:
         description:
           - The name of the region.
+        type: str
       document_endpoint:
         description:
           - >-
             The connection endpoint for the specific region. Example:
             https://&lt;accountName&gt;-&lt;locationName&gt;.documents.azure.com:443/
+        type: str
       provisioning_state:
         description:
           - undefined
+        type: str
       failover_priority:
         description:
           - >-
@@ -210,11 +243,13 @@ options:
             indicates a write region. The maximum value for a failover priority
             = (total number of regions - 1). Failover priority values must be
             unique for each of the regions in which the database account exists.
+        type: number
       is_zone_redundant:
         description:
           - >-
             Flag to indicate whether or not this region is an AvailabilityZone
             region
+        type: boolean
   failover_policies:
     description:
       - An array that contains the regions ordered by their failover priorities.
@@ -225,9 +260,11 @@ options:
           - >-
             The unique identifier of the region in which the database account
             replicates to. Example: &lt;accountName&gt;-&lt;locationName&gt;.
+        type: str
       location_name:
         description:
           - The name of the region in which the database account exists.
+        type: str
       failover_priority:
         description:
           - >-
@@ -235,12 +272,15 @@ options:
             indicates a write region. The maximum value for a failover priority
             = (total number of regions - 1). Failover priority values must be
             unique for each of the regions in which the database account exists.
+        type: number
   id:
     description:
       - The unique resource identifier of the database account.
+    type: str
   type:
     description:
       - The type of Azure resource.
+    type: str
   state:
     description:
       - Assert the state of the DatabaseAccount.

@@ -25,79 +25,100 @@ options:
     description:
       - Name of the Resource group within the Azure subscription.
     required: true
+    type: str
   namespace_name:
     description:
       - The namespace name
     required: true
+    type: str
   queue_name:
     description:
       - The queue name.
+    type: str
   name:
     description:
       - Resource name
+    type: str
   id:
     description:
       - Resource Id
+    type: str
   type:
     description:
       - Resource type
+    type: str
   count_details:
     description:
       - Message Count Details.
+    type: dict
     suboptions:
       active_message_count:
         description:
           - 'Number of active messages in the queue, topic, or subscription.'
+        type: number
       dead_letter_message_count:
         description:
           - Number of messages that are dead lettered.
+        type: number
       scheduled_message_count:
         description:
           - Number of scheduled messages.
+        type: number
       transfer_message_count:
         description:
           - >-
             Number of messages transferred to another queue, topic, or
             subscription.
+        type: number
       transfer_dead_letter_message_count:
         description:
           - Number of messages transferred into dead letters.
+        type: number
   created_at:
     description:
       - The exact time the message was created.
+    type: datetime
   updated_at:
     description:
       - The exact time the message was updated.
+    type: datetime
   accessed_at:
     description:
       - >-
         Last time a message was sent, or the last time there was a receive
         request to this queue.
+    type: datetime
   size_in_bytes:
     description:
       - 'The size of the queue, in bytes.'
+    type: number
   message_count:
     description:
       - The number of messages in the queue.
+    type: number
   lock_duration:
     description:
       - >-
         ISO 8601 timespan duration of a peek-lock; that is, the amount of time
         that the message is locked for other receivers. The maximum value for
         LockDuration is 5 minutes; the default value is 1 minute.
+    type: 'unknown-primary[timeSpan]'
   max_size_in_megabytes:
     description:
       - >-
         The maximum size of the queue in megabytes, which is the size of memory
         allocated for the queue. Default is 1024.
+    type: number
   requires_duplicate_detection:
     description:
       - A value indicating if this queue requires duplicate detection.
+    type: boolean
   requires_session:
     description:
       - >-
         A value that indicates whether the queue supports the concept of
         sessions.
+    type: boolean
   default_message_time_to_live:
     description:
       - >-
@@ -105,49 +126,60 @@ options:
         after which the message expires, starting from when the message is sent
         to Service Bus. This is the default value used when TimeToLive is not
         set on a message itself.
+    type: 'unknown-primary[timeSpan]'
   dead_lettering_on_message_expiration:
     description:
       - >-
         A value that indicates whether this queue has dead letter support when a
         message expires.
+    type: boolean
   duplicate_detection_history_time_window:
     description:
       - >-
         ISO 8601 timeSpan structure that defines the duration of the duplicate
         detection history. The default value is 10 minutes.
+    type: 'unknown-primary[timeSpan]'
   max_delivery_count:
     description:
       - >-
         The maximum delivery count. A message is automatically deadlettered
         after this number of deliveries. default value is 10.
+    type: number
   status:
     description:
       - Enumerates the possible values for the status of a messaging entity.
+    type: str
   enable_batched_operations:
     description:
       - Value that indicates whether server-side batched operations are enabled.
+    type: boolean
   auto_delete_on_idle:
     description:
       - >-
         ISO 8061 timeSpan idle interval after which the queue is automatically
         deleted. The minimum duration is 5 minutes.
+    type: 'unknown-primary[timeSpan]'
   enable_partitioning:
     description:
       - >-
         A value that indicates whether the queue is to be partitioned across
         multiple message brokers.
+    type: boolean
   enable_express:
     description:
       - >-
         A value that indicates whether Express Entities are enabled. An express
         queue holds a message in memory temporarily before writing it to
         persistent storage.
+    type: boolean
   forward_to:
     description:
       - Queue/Topic name to forward the messages
+    type: str
   forward_dead_lettered_messages_to:
     description:
       - Queue/Topic name to forward the Dead Letter message
+    type: str
 extends_documentation_fragment:
   - azure
 author:

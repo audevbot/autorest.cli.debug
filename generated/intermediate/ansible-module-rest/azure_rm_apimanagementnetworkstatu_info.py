@@ -25,15 +25,18 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   name:
     description:
       - >-
         Location in which the API Management service is deployed. This is one of
         the Azure Regions like West US, East US, South Central US.
+    type: str
 extends_documentation_fragment:
   - azure
 author:

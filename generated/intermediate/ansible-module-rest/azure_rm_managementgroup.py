@@ -25,23 +25,28 @@ options:
     description:
       - Management Group ID.
     required: true
+    type: str
   name:
     description:
       - >-
         The name of the management group. For example,
         00000000-0000-0000-0000-000000000000
+    type: str
   display_name:
     description:
       - >-
         The friendly name of the management group. If no value is passed then
         this  field will be set to the groupId.
+    type: str
   details:
     description:
       - undefined
+    type: dict
     suboptions:
       parent:
         description:
           - undefined
+        type: dict
         suboptions:
           id:
             description:
@@ -49,26 +54,33 @@ options:
                 The fully qualified ID for the parent management group.  For
                 example,
                 /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+            type: str
           name:
             description:
               - The name of the parent management group
+            type: str
           display_name:
             description:
               - The friendly name of the parent management group.
+            type: str
       version:
         description:
           - The version number of the object.
+        type: number
       updated_time:
         description:
           - The date and time when this object was last updated.
+        type: datetime
       updated_by:
         description:
           - The identity of the principal or process that updated the object.
+        type: str
   tenant_id:
     description:
       - >-
         The AAD Tenant ID associated with the management group. For example,
         00000000-0000-0000-0000-000000000000
+    type: str
   roles:
     description:
       - The role definitions associated with the management group.
@@ -83,18 +95,22 @@ options:
           - >-
             The fully qualified resource type which includes provider namespace
             (e.g. /providers/Microsoft.Management/managementGroups)
+        type: str
       id:
         description:
           - >-
             The fully qualified ID for the child resource (management group or
             subscription).  For example,
             /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+        type: str
       name:
         description:
           - The name of the child entity.
+        type: str
       display_name:
         description:
           - The friendly name of the child resource.
+        type: str
       roles:
         description:
           - The roles definitions associated with the management group.
@@ -110,18 +126,22 @@ options:
                 The fully qualified resource type which includes provider
                 namespace (e.g.
                 /providers/Microsoft.Management/managementGroups)
+            type: str
           id:
             description:
               - >-
                 The fully qualified ID for the child resource (management group
                 or subscription).  For example,
                 /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+            type: str
           name:
             description:
               - The name of the child entity.
+            type: str
           display_name:
             description:
               - The friendly name of the child resource.
+            type: str
           roles:
             description:
               - The roles definitions associated with the management group.
@@ -137,18 +157,22 @@ options:
                     The fully qualified resource type which includes provider
                     namespace (e.g.
                     /providers/Microsoft.Management/managementGroups)
+                type: str
               id:
                 description:
                   - >-
                     The fully qualified ID for the child resource (management
                     group or subscription).  For example,
                     /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+                type: str
               name:
                 description:
                   - The name of the child entity.
+                type: str
               display_name:
                 description:
                   - The friendly name of the child resource.
+                type: str
               roles:
                 description:
                   - The roles definitions associated with the management group.
@@ -162,11 +186,13 @@ options:
       - >-
         The fully qualified ID for the management group.  For example,
         /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+    type: str
   type:
     description:
       - >-
         The type of the resource.  For example,
         /providers/Microsoft.Management/managementGroups
+    type: str
   state:
     description:
       - Assert the state of the ManagementGroup.

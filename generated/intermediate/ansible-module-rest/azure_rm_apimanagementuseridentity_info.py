@@ -25,16 +25,19 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   user_id:
     description:
       - >-
         User identifier. Must be unique in the current API Management service
         instance.
     required: true
+    type: str
   value:
     description:
       - User Identity values.
@@ -43,15 +46,19 @@ options:
       provider:
         description:
           - Identity provider name.
+        type: str
       id:
         description:
           - Identifier value within provider.
+        type: str
   count:
     description:
       - Total record count number across all pages.
+    type: number
   next_link:
     description:
       - Next page link if any.
+    type: str
 extends_documentation_fragment:
   - azure
 author:

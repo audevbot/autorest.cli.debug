@@ -29,12 +29,15 @@ options:
       id:
         description:
           - The operation Id.
+        type: str
       status:
         description:
           - Status of the pending subscription
+        type: str
       status_detail:
         description:
           - Status Detail of the pending subscription
+        type: str
 extends_documentation_fragment:
   - azure
 author:
