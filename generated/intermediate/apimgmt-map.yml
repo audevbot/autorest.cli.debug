@@ -80173,7 +80173,7 @@ Modules:
         IncludeInResponse: true
         Flatten: false
     Methods:
-      - Name: ListByApi
+      - Name: ListBySubscription
         Options:
           - resourceGroupName
           - serviceName
@@ -80186,7 +80186,7 @@ Modules:
           }}/reports/{{ report_name }}
         HttpMethod: get
         IsAsync: false
-      - Name: ListByGeo
+      - Name: ListByOperation
         Options:
           - resourceGroupName
           - serviceName
@@ -80199,7 +80199,20 @@ Modules:
           }}/reports/{{ report_name }}
         HttpMethod: get
         IsAsync: false
-      - Name: ListByUser
+      - Name: ListByRequest
+        Options:
+          - resourceGroupName
+          - serviceName
+        RequiredOptions:
+          - resourceGroupName
+          - serviceName
+        Url: >-
+          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
+          }}/providers/Microsoft.ApiManagement/service/{{ service_name
+          }}/reports/{{ report_name }}
+        HttpMethod: get
+        IsAsync: false
+      - Name: ListByProduct
         Options:
           - resourceGroupName
           - serviceName
@@ -80227,7 +80240,7 @@ Modules:
           }}/reports/{{ report_name }}
         HttpMethod: get
         IsAsync: false
-      - Name: ListByProduct
+      - Name: ListByUser
         Options:
           - resourceGroupName
           - serviceName
@@ -80240,7 +80253,7 @@ Modules:
           }}/reports/{{ report_name }}
         HttpMethod: get
         IsAsync: false
-      - Name: ListByRequest
+      - Name: ListByGeo
         Options:
           - resourceGroupName
           - serviceName
@@ -80253,20 +80266,7 @@ Modules:
           }}/reports/{{ report_name }}
         HttpMethod: get
         IsAsync: false
-      - Name: ListByOperation
-        Options:
-          - resourceGroupName
-          - serviceName
-        RequiredOptions:
-          - resourceGroupName
-          - serviceName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/reports/{{ report_name }}
-        HttpMethod: get
-        IsAsync: false
-      - Name: ListBySubscription
+      - Name: ListByApi
         Options:
           - resourceGroupName
           - serviceName
@@ -82790,19 +82790,6 @@ Modules:
         IncludeInResponse: false
         Flatten: false
     Methods:
-      - Name: List
-        Options:
-          - resourceGroupName
-          - serviceName
-        RequiredOptions:
-          - resourceGroupName
-          - serviceName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.ApiManagement/service/{{ service_name
-          }}/subscriptions/{{ subscription_id }}
-        HttpMethod: get
-        IsAsync: false
       - Name: Get
         Options:
           - resourceGroupName
@@ -82812,6 +82799,19 @@ Modules:
           - resourceGroupName
           - serviceName
           - sid
+        Url: >-
+          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
+          }}/providers/Microsoft.ApiManagement/service/{{ service_name
+          }}/subscriptions/{{ subscription_id }}
+        HttpMethod: get
+        IsAsync: false
+      - Name: List
+        Options:
+          - resourceGroupName
+          - serviceName
+        RequiredOptions:
+          - resourceGroupName
+          - serviceName
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name

@@ -15,7 +15,7 @@ ANSIBLE_METADATA = {'metadata_version': '1.1',
 
 DOCUMENTATION = '''
 ---
-module: azure_rm_cosmosdbdatabaseaccount
+module: cosmosdbdatabaseaccount
 version_added: '2.9'
 short_description: Manage Azure DatabaseAccount instance.
 description:
@@ -261,7 +261,7 @@ author:
 
 EXAMPLES = '''
 - name: CosmosDBDatabaseAccountCreateMin
-  azure_rm_cosmosdbdatabaseaccount:
+  azure.rm.cosmosdbdatabaseaccount:
     resource_group: myResourceGroup
     name: myDatabaseAccount
     create_update_parameters:
@@ -273,7 +273,7 @@ EXAMPLES = '''
             locationName: southcentralus
             isZoneRedundant: false
 - name: CosmosDBDatabaseAccountCreateMax
-  azure_rm_cosmosdbdatabaseaccount:
+  azure.rm.cosmosdbdatabaseaccount:
     resource_group: myResourceGroup
     name: myDatabaseAccount
     create_update_parameters:
@@ -302,7 +302,7 @@ EXAMPLES = '''
           maxIntervalInSeconds: '10'
           maxStalenessPrefix: '200'
 - name: CosmosDBDatabaseAccountDelete
-  azure_rm_cosmosdbdatabaseaccount:
+  azure.rm.cosmosdbdatabaseaccount:
     resource_group: myResourceGroup
     name: myDatabaseAccount
     state: absent

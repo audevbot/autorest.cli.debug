@@ -228,6 +228,14 @@ options:
   enable_multiple_write_locations:
     description:
       - Enables the account to write in multiple locations
+  enable_cassandra_connector:
+    description:
+      - Enables the cassandra connector on the Cosmos DB C* account
+  connector_offer:
+    description:
+      - >-
+        The cassandra connector offer type for the Cosmos DB database C*
+        account.
 extends_documentation_fragment:
   - azure
 author:
@@ -444,7 +452,7 @@ database_accounts:
           returned: always
           type: >-
             unknown[DictionaryType
-            {"$id":"235","$type":"DictionaryType","valueType":{"$id":"236","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"237","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"238","fixed":false},"deprecated":false}]
+            {"$id":"250","$type":"DictionaryType","valueType":{"$id":"251","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"252","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"253","fixed":false},"deprecated":false}]
           sample: null
         kind:
           description:
