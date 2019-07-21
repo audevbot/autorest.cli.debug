@@ -25,18 +25,22 @@ options:
     description:
       - Name of an Azure resource group.
     required: true
+    type: str
   account_name:
     description:
       - Cosmos DB database account name.
     required: true
+    type: str
   database_rid:
     description:
       - Cosmos DB database rid.
     required: true
+    type: str
   collection_rid:
     description:
       - Cosmos DB collection rid.
     required: true
+    type: str
   value:
     description:
       - >-
@@ -47,31 +51,40 @@ options:
       unit:
         description:
           - The unit of the metric.
+        type: str
       name:
         description:
           - The name information for the metric.
+        type: dict
         suboptions:
           value:
             description:
               - The name of the metric.
+            type: str
           localized_value:
             description:
               - The friendly name of the metric.
+            type: str
       quota_period:
         description:
           - The quota period used to summarize the usage values.
+        type: str
       limit:
         description:
           - Maximum value for this metric
+        type: number
       current_value:
         description:
           - Current value for this metric
+        type: number
       partition_id:
         description:
           - The partition id (GUID identifier) of the usages.
+        type: str
       partition_key_range_id:
         description:
           - The partition key range id (integer identifier) of the usages.
+        type: str
 extends_documentation_fragment:
   - azure
 author:

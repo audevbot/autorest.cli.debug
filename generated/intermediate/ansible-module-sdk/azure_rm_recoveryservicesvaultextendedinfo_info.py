@@ -27,32 +27,41 @@ options:
         The name of the resource group where the recovery services vault is
         present.
     required: true
+    type: str
   name:
     description:
       - Resource name associated with the resource.
+    type: str
   id:
     description:
       - Resource Id represents the complete path to the resource.
+    type: str
   type:
     description:
       - >-
         Resource type represents the complete path of the form
         Namespace/ResourceType/ResourceType/...
+    type: str
   e_tag:
     description:
       - Optional ETag.
+    type: str
   integrity_key:
     description:
       - Integrity key.
+    type: str
   encryption_key:
     description:
       - Encryption key.
+    type: str
   encryption_key_thumbprint:
     description:
       - Encryption key thumbprint.
+    type: str
   algorithm:
     description:
       - Algorithm for Vault ExtendedInfo
+    type: str
 extends_documentation_fragment:
   - azure
 author:

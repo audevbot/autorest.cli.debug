@@ -24,52 +24,67 @@ options:
   resource_group:
     description:
       - Name of the Resource group within the Azure subscription.
+    type: str
   namespace_name:
     description:
       - The namespace name
+    type: str
   name:
     description:
       - Resource name
+    type: str
   id:
     description:
       - Resource Id
+    type: str
   type:
     description:
       - Resource type
+    type: str
   location:
     description:
       - The Geo-location where the resource lives
+    type: str
   sku:
     description:
       - Properties of Sku
+    type: dict
     suboptions:
       name:
         description:
           - Name of this SKU.
         required: true
+        type: str
       tier:
         description:
           - The billing tier of this particular SKU.
+        type: str
       capacity:
         description:
           - >-
             The specified messaging units for the tier. For Premium tier,
             capacity are 1,2 and 4.
+        type: number
   provisioning_state:
     description:
       - Provisioning state of the namespace.
+    type: str
   created_at:
     description:
       - The time the namespace was created.
+    type: datetime
   updated_at:
     description:
       - The time the namespace was updated.
+    type: datetime
   service_bus_endpoint:
     description:
       - Endpoint you can use to perform Service Bus operations.
+    type: str
   metric_id:
     description:
       - Identifier for Azure Insights metrics
+    type: str
 extends_documentation_fragment:
   - azure
 author:

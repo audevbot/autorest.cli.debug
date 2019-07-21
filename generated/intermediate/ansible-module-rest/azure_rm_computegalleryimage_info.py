@@ -25,38 +25,48 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   gallery_name:
     description:
       - >-
         The name of the Shared Image Gallery from which the Image Definitions
         are to be retrieved.
     required: true
+    type: str
   name:
     description:
       - Resource name
+    type: str
   id:
     description:
       - Resource Id
+    type: str
   type:
     description:
       - Resource type
+    type: str
   location:
     description:
       - Resource location
+    type: str
   description:
     description:
       - >-
         The description of this gallery Image Definition resource. This property
         is updatable.
+    type: str
   eula:
     description:
       - The Eula agreement for the gallery Image Definition.
+    type: str
   privacy_statement_uri:
     description:
       - The privacy statement uri.
+    type: str
   release_note_uri:
     description:
       - The release note uri.
+    type: str
   os_type:
     description:
       - >-
@@ -64,59 +74,74 @@ options:
         in the disk when creating a VM from a managed image. <br><br> Possible
         values are: <br><br> **Windows** <br><br> **Linux**
     required: true
+    type: str
   os_state:
     description:
       - The allowed values for OS State are 'Generalized'.
     required: true
+    type: str
   end_of_life_date:
     description:
       - >-
         The end of life date of the gallery Image Definition. This property can
         be used for decommissioning purposes. This property is updatable.
+    type: datetime
   identifier:
     description:
       - undefined
     required: true
+    type: dict
     suboptions:
       publisher:
         description:
           - The name of the gallery Image Definition publisher.
         required: true
+        type: str
       offer:
         description:
           - The name of the gallery Image Definition offer.
         required: true
+        type: str
       sku:
         description:
           - The name of the gallery Image Definition SKU.
         required: true
+        type: str
   recommended:
     description:
       - undefined
+    type: dict
     suboptions:
       v_cpus:
         description:
           - undefined
+        type: dict
         suboptions:
           min:
             description:
               - The minimum number of the resource.
+            type: number
           max:
             description:
               - The maximum number of the resource.
+            type: number
       memory:
         description:
           - undefined
+        type: dict
         suboptions:
           min:
             description:
               - The minimum number of the resource.
+            type: number
           max:
             description:
               - The maximum number of the resource.
+            type: number
   disallowed:
     description:
       - undefined
+    type: dict
     suboptions:
       disk_types:
         description:
@@ -125,19 +150,24 @@ options:
   purchase_plan:
     description:
       - undefined
+    type: dict
     suboptions:
       name:
         description:
           - The plan ID.
+        type: str
       publisher:
         description:
           - The publisher ID.
+        type: str
       product:
         description:
           - The product ID.
+        type: str
   provisioning_state:
     description:
       - 'The provisioning state, which only appears in the response.'
+    type: str
 extends_documentation_fragment:
   - azure
 author:

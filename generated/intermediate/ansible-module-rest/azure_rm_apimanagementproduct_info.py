@@ -25,41 +25,51 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   expand_groups:
     description:
       - >-
         When set to true, the response contains an array of groups that have
         visibility to the product. The default is false.
+    type: boolean
   include_not_tagged_products:
     description:
       - Include not tagged Products.
+    type: boolean
   product_id:
     description:
       - >-
         Product identifier. Must be unique in the current API Management service
         instance.
+    type: str
   id:
     description:
       - Resource ID.
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
   description:
     description:
       - Product description. May include HTML formatting tags.
+    type: str
   terms:
     description:
       - >-
         Product terms of use. Developers trying to subscribe to the product will
         be presented and required to accept these terms before they can complete
         the subscription process.
+    type: str
   subscription_required:
     description:
       - >-
@@ -70,6 +80,7 @@ options:
         and requests to an API included in the product can be made without a
         subscription key. If property is omitted when creating a new product
         it's value is assumed to be true.
+    type: boolean
   approval_required:
     description:
       - >-
@@ -79,6 +90,7 @@ options:
         manually approve the subscription before the developer can any of the
         product’s APIs. Can be present only if subscriptionRequired property is
         present and has a value of false.
+    type: boolean
   subscriptions_limit:
     description:
       - >-
@@ -86,16 +98,19 @@ options:
         the same time. Set to null or omit to allow unlimited per user
         subscriptions. Can be present only if subscriptionRequired property is
         present and has a value of false.
+    type: number
   state:
     description:
       - >-
         whether product is published or not. Published products are discoverable
         by users of developer portal. Non published products are visible only to
         administrators. Default state of Product is notPublished.
+    type: str
   display_name:
     description:
       - Product name.
     required: true
+    type: str
 extends_documentation_fragment:
   - azure
 author:

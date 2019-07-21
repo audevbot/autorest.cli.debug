@@ -25,14 +25,17 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   scope:
     description:
       - Policy scope.
     required: true
+    type: str
   value:
     description:
       - Policy snippet value.
@@ -41,15 +44,19 @@ options:
       name:
         description:
           - Snippet name.
+        type: str
       content:
         description:
           - Snippet content.
+        type: str
       tool_tip:
         description:
           - Snippet toolTip.
+        type: str
       scope:
         description:
           - Binary OR value of the Snippet scope.
+        type: number
 extends_documentation_fragment:
   - azure
 author:

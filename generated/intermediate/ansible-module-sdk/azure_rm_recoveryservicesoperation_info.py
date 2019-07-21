@@ -29,34 +29,42 @@ options:
       name:
         description:
           - Name of the Operation.
+        type: str
       display:
         description:
           - >-
             Contains the localized display information for this particular
             operation
+        type: dict
         suboptions:
           provider:
             description:
               - Name of the provider for display purposes
+            type: str
           resource:
             description:
               - ResourceType for which this Operation can be performed.
+            type: str
           operation:
             description:
               - Operations Name itself.
+            type: str
           description:
             description:
               - >-
                 Description of the operation having details of what operation is
                 about.
+            type: str
       origin:
         description:
           - >-
             The intended executor of the operation;governs the display of the
             operation in the RBAC UX and the audit logs UX
+        type: str
       service_specification:
         description:
           - Operation properties.
+        type: dict
         suboptions:
           log_specifications:
             description:
@@ -66,15 +74,19 @@ options:
               name:
                 description:
                   - Name of the log.
+                type: str
               display_name:
                 description:
                   - Localized display name
+                type: str
               blob_duration:
                 description:
                   - Blobs created in customer storage account per hour
+                type: str
   next_link:
     description:
       - Link to the next chunk of the response
+    type: str
 extends_documentation_fragment:
   - azure
 author:

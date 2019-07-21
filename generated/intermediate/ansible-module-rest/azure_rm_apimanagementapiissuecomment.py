@@ -25,46 +25,57 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   api_id:
     description:
       - >-
         API identifier. Must be unique in the current API Management service
         instance.
     required: true
+    type: str
   issue_id:
     description:
       - >-
         Issue identifier. Must be unique in the current API Management service
         instance.
     required: true
+    type: str
   comment_id:
     description:
       - Comment identifier within an Issue. Must be unique in the current Issue.
     required: true
+    type: str
   text:
     description:
       - Comment text.
     required: true
+    type: str
   created_date:
     description:
       - Date and time when the comment was created.
+    type: datetime
   user_id:
     description:
       - A resource identifier for the user who left the comment.
     required: true
+    type: str
   id:
     description:
       - Resource ID.
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
   state:
     description:
       - Assert the state of the ApiIssueComment.

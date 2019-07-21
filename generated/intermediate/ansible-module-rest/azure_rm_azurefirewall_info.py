@@ -24,18 +24,23 @@ options:
   resource_group:
     description:
       - The name of the resource group.
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   id:
     description:
       - Resource ID.
+    type: str
   type:
     description:
       - Resource type.
+    type: str
   location:
     description:
       - Resource location.
+    type: str
   application_rule_collections:
     description:
       - Collection of application rule collections used by Azure Firewall.
@@ -44,9 +49,11 @@ options:
       priority:
         description:
           - Priority of the application rule collection resource.
+        type: number
       action:
         description:
           - The action type of a rule collection
+        type: dict
       rules:
         description:
           - Collection of rules used by a application rule collection.
@@ -55,9 +62,11 @@ options:
           name:
             description:
               - Name of the application rule.
+            type: str
           description:
             description:
               - Description of the rule.
+            type: str
           source_addresses:
             description:
               - List of source IP addresses for this rule.
@@ -77,16 +86,19 @@ options:
       provisioning_state:
         description:
           - The provisioning state of the resource.
+        type: str
       name:
         description:
           - >-
             Gets name of the resource that is unique within a resource group.
             This name can be used to access the resource.
+        type: str
       etag:
         description:
           - >-
             Gets a unique read-only string that changes whenever the resource is
             updated.
+        type: str
   nat_rule_collections:
     description:
       - Collection of NAT rule collections used by Azure Firewall.
@@ -95,13 +107,16 @@ options:
       priority:
         description:
           - Priority of the NAT rule collection resource.
+        type: number
       action:
         description:
           - The action type of a NAT rule collection
+        type: dict
         suboptions:
           type:
             description:
               - The type of action.
+            type: str
       rules:
         description:
           - Collection of rules used by a NAT rule collection.
@@ -110,9 +125,11 @@ options:
           name:
             description:
               - Name of the NAT rule.
+            type: str
           description:
             description:
               - Description of the rule.
+            type: str
           source_addresses:
             description:
               - List of source IP addresses for this rule.
@@ -134,22 +151,27 @@ options:
           translated_address:
             description:
               - The translated address for this NAT rule.
+            type: str
           translated_port:
             description:
               - The translated port for this NAT rule.
+            type: str
       provisioning_state:
         description:
           - The provisioning state of the resource.
+        type: str
       name:
         description:
           - >-
             Gets name of the resource that is unique within a resource group.
             This name can be used to access the resource.
+        type: str
       etag:
         description:
           - >-
             Gets a unique read-only string that changes whenever the resource is
             updated.
+        type: str
   network_rule_collections:
     description:
       - Collection of network rule collections used by Azure Firewall.
@@ -158,13 +180,16 @@ options:
       priority:
         description:
           - Priority of the network rule collection resource.
+        type: number
       action:
         description:
           - The action type of a rule collection
+        type: dict
         suboptions:
           type:
             description:
               - The type of action.
+            type: str
       rules:
         description:
           - Collection of rules used by a network rule collection.
@@ -173,9 +198,11 @@ options:
           name:
             description:
               - Name of the network rule.
+            type: str
           description:
             description:
               - Description of the rule.
+            type: str
           protocols:
             description:
               - Array of AzureFirewallNetworkRuleProtocols.
@@ -195,16 +222,19 @@ options:
       provisioning_state:
         description:
           - The provisioning state of the resource.
+        type: str
       name:
         description:
           - >-
             Gets name of the resource that is unique within a resource group.
             This name can be used to access the resource.
+        type: str
       etag:
         description:
           - >-
             Gets a unique read-only string that changes whenever the resource is
             updated.
+        type: str
   ip_configurations:
     description:
       - IP configuration of the Azure Firewall resource.
@@ -215,30 +245,37 @@ options:
           - >-
             The Firewall Internal Load Balancer IP to be used as the next hop in
             User Defined Routes.
+        type: str
       id:
         description:
           - Resource ID.
+        type: str
       provisioning_state:
         description:
           - The provisioning state of the resource.
+        type: str
       name:
         description:
           - >-
             Name of the resource that is unique within a resource group. This
             name can be used to access the resource.
+        type: str
       etag:
         description:
           - >-
             A unique read-only string that changes whenever the resource is
             updated.
+        type: str
   provisioning_state:
     description:
       - The provisioning state of the resource.
+    type: str
   etag:
     description:
       - >-
         Gets a unique read-only string that changes whenever the resource is
         updated.
+    type: str
 extends_documentation_fragment:
   - azure
 author:

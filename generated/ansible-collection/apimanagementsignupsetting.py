@@ -25,31 +25,40 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   enabled:
     description:
       - Allow users to sign up on a developer portal.
+    type: boolean
   terms_of_service:
     description:
       - Terms of service contract properties.
+    type: dict
     suboptions:
       text:
         description:
           - A terms of service text.
+        type: str
       enabled:
         description:
           - Display terms of service during a sign-up process.
+        type: boolean
       consent_required:
         description:
           - Ask user for consent to the terms of service.
+        type: boolean
   id:
     description:
       - Resource ID.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
   state:
     description:
       - Assert the state of the SignUpSetting.

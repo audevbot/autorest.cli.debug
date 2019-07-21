@@ -25,10 +25,12 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   value:
     description:
       - Page values.
@@ -38,41 +40,52 @@ options:
         description:
           - Tag associated with the resource.
         required: true
+        type: dict
         suboptions:
           id:
             description:
               - Tag identifier
+            type: str
           name:
             description:
               - Tag Name
+            type: str
       api:
         description:
           - Api associated with the tag.
+        type: dict
         suboptions:
           description:
             description:
               - Description of the API. May include HTML formatting tags.
+            type: str
           authentication_settings:
             description:
               - Collection of authentication settings included into this API.
+            type: dict
             suboptions:
               o_auth2:
                 description:
                   - OAuth2 Authentication settings
+                type: dict
                 suboptions:
                   authorization_server_id:
                     description:
                       - OAuth authorization server identifier.
+                    type: str
                   scope:
                     description:
                       - operations scope.
+                    type: str
               openid:
                 description:
                   - OpenID Connect Authentication Settings
+                type: dict
                 suboptions:
                   openid_provider_id:
                     description:
                       - OAuth authorization server identifier.
+                    type: str
                   bearer_token_sending_methods:
                     description:
                       - How to send token to the server.
@@ -84,58 +97,74 @@ options:
                     to this API, true - API is included into closed products
                     only, false - API is included into open products alone, null
                     - there is a mix of products.
+                type: boolean
           subscription_key_parameter_names:
             description:
               - Protocols over which API is made available.
+            type: dict
             suboptions:
               header:
                 description:
                   - Subscription key header name.
+                type: str
               query:
                 description:
                   - Subscription key query string parameter name.
+                type: str
           type:
             description:
               - Type of API.
+            type: str
           api_revision:
             description:
               - >-
                 Describes the Revision of the Api. If no value is provided,
                 default revision 1 is created
+            type: str
           api_version:
             description:
               - >-
                 Indicates the Version identifier of the API if the API is
                 versioned
+            type: str
           is_current:
             description:
               - Indicates if API revision is current api revision.
+            type: boolean
           is_online:
             description:
               - Indicates if API revision is accessible via the gateway.
+            type: boolean
           api_revision_description:
             description:
               - Description of the Api Revision.
+            type: str
           api_version_description:
             description:
               - Description of the Api Version.
+            type: str
           api_version_set_id:
             description:
               - A resource identifier for the related ApiVersionSet.
+            type: str
           subscription_required:
             description:
               - >-
                 Specifies whether an API or Product subscription is required for
                 accessing the API.
+            type: boolean
           id:
             description:
               - 'API identifier in the form /apis/{apiId}.'
+            type: str
           name:
             description:
               - API name.
+            type: str
           service_url:
             description:
               - Absolute URL of the backend service implementing this API.
+            type: str
           path:
             description:
               - >-
@@ -143,6 +172,7 @@ options:
                 resource paths within the API Management service instance. It is
                 appended to the API endpoint base URL specified during the
                 service instance creation to form a public URL for this API.
+            type: str
           protocols:
             description:
               - >-
@@ -152,49 +182,61 @@ options:
       operation:
         description:
           - Operation associated with the tag.
+        type: dict
         suboptions:
           id:
             description:
               - 'Identifier of the operation in form /operations/{operationId}.'
+            type: str
           name:
             description:
               - Operation name.
+            type: str
           api_name:
             description:
               - Api Name.
+            type: str
           api_revision:
             description:
               - Api Revision.
+            type: str
           api_version:
             description:
               - Api Version.
+            type: str
           description:
             description:
               - Operation Description.
+            type: str
           method:
             description:
               - >-
                 A Valid HTTP Operation Method. Typical Http Methods like GET,
                 PUT, POST but not limited by only them.
+            type: str
           url_template:
             description:
               - >-
                 Relative URL template identifying the target resource for this
                 operation. May include parameters. Example:
                 /customers/{cid}/orders/{oid}/?date={date}
+            type: str
       product:
         description:
           - Product associated with the tag.
+        type: dict
         suboptions:
           description:
             description:
               - Product description. May include HTML formatting tags.
+            type: str
           terms:
             description:
               - >-
                 Product terms of use. Developers trying to subscribe to the
                 product will be presented and required to accept these terms
                 before they can complete the subscription process.
+            type: str
           subscription_required:
             description:
               - >-
@@ -206,6 +248,7 @@ options:
                 included in the product can be made without a subscription key.
                 If property is omitted when creating a new product it's value is
                 assumed to be true.
+            type: boolean
           approval_required:
             description:
               - >-
@@ -216,6 +259,7 @@ options:
                 before the developer can any of the product’s APIs. Can be
                 present only if subscriptionRequired property is present and has
                 a value of false.
+            type: boolean
           subscriptions_limit:
             description:
               - >-
@@ -224,6 +268,7 @@ options:
                 per user subscriptions. Can be present only if
                 subscriptionRequired property is present and has a value of
                 false.
+            type: number
           state:
             description:
               - >-
@@ -231,16 +276,20 @@ options:
                 discoverable by users of developer portal. Non published
                 products are visible only to administrators. Default state of
                 Product is notPublished.
+            type: str
           id:
             description:
               - 'Identifier of the product in the form of /products/{productId}'
+            type: str
           name:
             description:
               - Product name.
             required: true
+            type: str
   next_link:
     description:
       - Next page link if any.
+    type: str
 extends_documentation_fragment:
   - azure
 author:

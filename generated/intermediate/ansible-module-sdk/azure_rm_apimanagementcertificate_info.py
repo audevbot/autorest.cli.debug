@@ -25,32 +25,40 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   certificate_id:
     description:
       - >-
         Identifier of the certificate entity. Must be unique in the current API
         Management service instance.
+    type: str
   id:
     description:
       - Resource ID.
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
   subject:
     description:
       - Subject attribute of the certificate.
     required: true
+    type: str
   thumbprint:
     description:
       - Thumbprint of the certificate.
     required: true
+    type: str
   expiration_date:
     description:
       - >-
@@ -58,6 +66,7 @@ options:
         format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
         standard.<br>
     required: true
+    type: datetime
 extends_documentation_fragment:
   - azure
 author:

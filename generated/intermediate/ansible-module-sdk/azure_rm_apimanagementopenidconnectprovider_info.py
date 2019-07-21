@@ -25,40 +25,51 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   opid:
     description:
       - Identifier of the OpenID Connect Provider.
+    type: str
   id:
     description:
       - Resource ID.
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
   display_name:
     description:
       - User-friendly OpenID Connect Provider name.
     required: true
+    type: str
   description:
     description:
       - User-friendly description of OpenID Connect Provider.
+    type: str
   metadata_endpoint:
     description:
       - Metadata endpoint URI.
     required: true
+    type: str
   client_id:
     description:
       - Client ID of developer console which is the client application.
     required: true
+    type: str
   client_secret:
     description:
       - Client Secret of developer console which is the client application.
+    type: str
 extends_documentation_fragment:
   - azure
 author:

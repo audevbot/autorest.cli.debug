@@ -34,47 +34,61 @@ options:
         for a resource, and
         '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}'
         for an EventGrid topic.
+    type: str
   event_subscription_name:
     description:
       - Name of the event subscription
+    type: str
   location:
     description:
       - Name of the location
+    type: str
   topic_type_name:
     description:
       - Name of the topic type
+    type: str
   resource_group:
     description:
       - The name of the resource group within the user's subscription.
+    type: str
   provider_namespace:
     description:
       - Namespace of the provider of the topic
+    type: str
   resource_type_name:
     description:
       - Name of the resource type
+    type: str
   name:
     description:
       - Name of the resource
+    type: str
   id:
     description:
       - Fully qualified identifier of the resource
+    type: str
   type:
     description:
       - Type of the resource
+    type: str
   topic:
     description:
       - Name of the topic of the event subscription.
+    type: str
   provisioning_state:
     description:
       - Provisioning state of the event subscription.
+    type: str
   destination:
     description:
       - >-
         Information about the destination where events have to be delivered for
         the event subscription.
+    type: dict
   filter:
     description:
       - Information about the filter for the event subscription.
+    type: dict
     suboptions:
       subject_begins_with:
         description:
@@ -83,12 +97,14 @@ options:
             on a resource path prefix.<br>The format of this depends on the
             publisher of the events. <br>Wildcard characters are not supported
             in this path.
+        type: str
       subject_ends_with:
         description:
           - >-
             An optional string to filter events for an event subscription based
             on a resource path suffix.<br>Wildcard characters are not supported
             in this path.
+        type: str
       included_event_types:
         description:
           - >-
@@ -101,6 +117,7 @@ options:
           - >-
             Specifies if the SubjectBeginsWith and SubjectEndsWith properties of
             the filter <br>should be compared in a case sensitive manner.
+        type: boolean
   labels:
     description:
       - List of user defined labels.
@@ -110,16 +127,20 @@ options:
       - >-
         The retry policy for events. This can be used to configure maximum
         number of delivery attempts and time to live for events.
+    type: dict
     suboptions:
       max_delivery_attempts:
         description:
           - Maximum number of delivery retry attempts for events.
+        type: number
       event_time_to_live_in_minutes:
         description:
           - Time To Live (in minutes) for events.
+        type: number
   dead_letter_destination:
     description:
       - The DeadLetter destination of the event subscription.
+    type: dict
 extends_documentation_fragment:
   - azure
 author:

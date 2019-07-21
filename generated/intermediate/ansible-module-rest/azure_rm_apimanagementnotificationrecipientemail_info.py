@@ -25,14 +25,17 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   name:
     description:
       - Notification Name Identifier.
     required: true
+    type: str
   value:
     description:
       - Page values.
@@ -41,18 +44,23 @@ options:
       id:
         description:
           - Resource ID.
+        type: str
       name:
         description:
           - Resource name.
+        type: str
       type:
         description:
           - Resource type for API Management resource.
+        type: str
       email:
         description:
           - User Email subscribed to notification.
+        type: str
   next_link:
     description:
       - Next page link if any.
+    type: str
 extends_documentation_fragment:
   - azure
 author:

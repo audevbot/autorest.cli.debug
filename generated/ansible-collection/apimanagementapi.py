@@ -25,10 +25,12 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   api_id:
     description:
       - >-
@@ -36,30 +38,38 @@ options:
         service instance. Non-current revision has ;rev=n as a suffix where n is
         the revision number.
     required: true
+    type: str
   description:
     description:
       - Description of the API. May include HTML formatting tags.
+    type: str
   authentication_settings:
     description:
       - Collection of authentication settings included into this API.
+    type: dict
     suboptions:
       o_auth2:
         description:
           - OAuth2 Authentication settings
+        type: dict
         suboptions:
           authorization_server_id:
             description:
               - OAuth authorization server identifier.
+            type: str
           scope:
             description:
               - operations scope.
+            type: str
       openid:
         description:
           - OpenID Connect Authentication Settings
+        type: dict
         suboptions:
           openid_provider_id:
             description:
               - OAuth authorization server identifier.
+            type: str
           bearer_token_sending_methods:
             description:
               - How to send token to the server.
@@ -71,55 +81,70 @@ options:
             API, true - API is included into closed products only, false - API
             is included into open products alone, null - there is a mix of
             products.
+        type: boolean
   subscription_key_parameter_names:
     description:
       - Protocols over which API is made available.
+    type: dict
     suboptions:
       header:
         description:
           - Subscription key header name.
+        type: str
       query:
         description:
           - Subscription key query string parameter name.
+        type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
   api_revision:
     description:
       - >-
         Describes the Revision of the Api. If no value is provided, default
         revision 1 is created
+    type: str
   api_version:
     description:
       - Indicates the Version identifier of the API if the API is versioned
+    type: str
   is_current:
     description:
       - Indicates if API revision is current api revision.
+    type: boolean
   api_revision_description:
     description:
       - Description of the Api Revision.
+    type: str
   api_version_description:
     description:
       - Description of the Api Version.
+    type: str
   api_version_set_id:
     description:
       - A resource identifier for the related ApiVersionSet.
+    type: str
   subscription_required:
     description:
       - >-
         Specifies whether an API or Product subscription is required for
         accessing the API.
+    type: boolean
   source_api_id:
     description:
       - API identifier of the source API.
+    type: str
   display_name:
     description:
       - API name. Must be 1 to 300 characters long.
+    type: str
   service_url:
     description:
       - >-
         Absolute URL of the backend service implementing this API. Cannot be
         more than 2000 characters long.
+    type: str
   path:
     description:
       - >-
@@ -128,6 +153,7 @@ options:
         endpoint base URL specified during the service instance creation to form
         a public URL for this API.
     required: true
+    type: str
   protocols:
     description:
       - Describes on which protocols the operations in this API can be invoked.
@@ -135,63 +161,79 @@ options:
   api_version_set:
     description:
       - Version set details
+    type: dict
     suboptions:
       id:
         description:
           - >-
             Identifier for existing API Version Set. Omit this value to create a
             new Version Set.
+        type: str
       name:
         description:
           - The display Name of the API Version Set.
+        type: str
       description:
         description:
           - Description of API Version Set.
+        type: str
       versioning_scheme:
         description:
           - >-
             An value that determines where the API Version identifer will be
             located in a HTTP request.
+        type: str
       version_query_name:
         description:
           - >-
             Name of query parameter that indicates the API Version if
             versioningScheme is set to `query`.
+        type: str
       version_header_name:
         description:
           - >-
             Name of HTTP header parameter that indicates the API Version if
             versioningScheme is set to `header`.
+        type: str
   value:
     description:
       - Content value when Importing an API.
+    type: str
   format:
     description:
       - Format of the Content in which the API is getting imported.
+    type: str
   wsdl_selector:
     description:
       - Criteria to limit import of WSDL to a subset of the document.
+    type: dict
     suboptions:
       wsdl_service_name:
         description:
           - Name of service to import from WSDL
+        type: str
       wsdl_endpoint_name:
         description:
           - Name of endpoint(port) to import from WSDL
+        type: str
   api_type:
     description:
       - >-
         Type of Api to create. <br> * `http` creates a SOAP to REST API <br> *
         `soap` creates a SOAP pass-through API .
+    type: str
   is_online:
     description:
       - Indicates if API revision is accessible via the gateway.
+    type: boolean
   id:
     description:
       - Resource ID.
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   state:
     description:
       - Assert the state of the Api.

@@ -29,25 +29,32 @@ options:
       name:
         description:
           - Name of the operation
+        type: str
       display:
         description:
           - Display name of the operation
+        type: dict
         suboptions:
           provider:
             description:
               - Name of the provider
+            type: str
           resource:
             description:
               - Name of the resource type
+            type: str
           operation:
             description:
               - Name of the operation
+            type: str
           description:
             description:
               - Description of the operation
+            type: str
       origin:
         description:
           - Origin of the operation
+        type: str
 extends_documentation_fragment:
   - azure
 author:

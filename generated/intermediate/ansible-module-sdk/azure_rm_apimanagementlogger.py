@@ -25,23 +25,28 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   logger_id:
     description:
       - >-
         Logger identifier. Must be unique in the API Management service
         instance.
     required: true
+    type: str
   logger_type:
     description:
       - Logger type.
     required: true
+    type: str
   description:
     description:
       - Logger description.
+    type: str
   credentials:
     description:
       - >-
@@ -49,25 +54,33 @@ options:
         azureEventHub logger.<br>Instrumentation key for applicationInsights
         logger.
     required: true
+    type: >-
+      unknown[DictionaryType
+      {"$id":"3331","$type":"DictionaryType","valueType":{"$id":"3332","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"3333","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"3334","fixed":false},"deprecated":false}]
   is_buffered:
     description:
       - >-
         Whether records are buffered in the logger before publishing. Default is
         assumed to be true.
+    type: boolean
   resource_id:
     description:
       - >-
         Azure Resource Id of a log target (either Azure Event Hub resource or
         Azure Application Insights resource).
+    type: str
   id:
     description:
       - Resource ID.
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
   state:
     description:
       - Assert the state of the Logger.

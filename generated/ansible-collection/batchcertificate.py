@@ -25,10 +25,12 @@ options:
     description:
       - The name of the resource group that contains the Batch account.
     required: true
+    type: str
   account_name:
     description:
       - The name of the Batch account.
     required: true
+    type: str
   name:
     description:
       - >-
@@ -36,45 +38,56 @@ options:
         and thumbprint separated by a dash, and must match the certificate data
         in the request. For example SHA1-a3d1c5.
     required: true
+    type: str
   thumbprint_algorithm:
     description:
       - >-
         This must match the first portion of the certificate name. Currently
         required to be 'SHA1'.
+    type: str
   thumbprint:
     description:
       - This must match the thumbprint from the name.
+    type: str
   format:
     description:
       - >-
         The format of the certificate - either Pfx or Cer. If omitted, the
         default is Pfx.
+    type: str
   data:
     description:
       - The maximum size is 10KB.
     required: true
+    type: str
   password:
     description:
       - >-
         This is required if the certificate format is pfx and must be omitted if
         the certificate format is cer.
+    type: str
   provisioning_state_transition_time:
     description:
       - undefined
+    type: datetime
   previous_provisioning_state:
     description:
       - The previous provisioned state of the resource
+    type: str
   previous_provisioning_state_transition_time:
     description:
       - undefined
+    type: datetime
   public_data:
     description:
       - The public key of the certificate.
+    type: str
   delete_certificate_error:
     description:
       - >-
         This is only returned when the certificate provisioningState is
         'Failed'.
+    type: dict
     suboptions:
       code:
         description:
@@ -82,17 +95,20 @@ options:
             An identifier for the error. Codes are invariant and are intended to
             be consumed programmatically.
         required: true
+        type: str
       message:
         description:
           - >-
             A message describing the error, intended to be suitable for display
             in a user interface.
         required: true
+        type: str
       target:
         description:
           - >-
             The target of the particular error. For example, the name of the
             property in error.
+        type: str
       details:
         description:
           - A list of additional details about the error.
@@ -104,17 +120,20 @@ options:
                 An identifier for the error. Codes are invariant and are
                 intended to be consumed programmatically.
             required: true
+            type: str
           message:
             description:
               - >-
                 A message describing the error, intended to be suitable for
                 display in a user interface.
             required: true
+            type: str
           target:
             description:
               - >-
                 The target of the particular error. For example, the name of the
                 property in error.
+            type: str
           details:
             description:
               - A list of additional details about the error.
@@ -126,17 +145,20 @@ options:
                     An identifier for the error. Codes are invariant and are
                     intended to be consumed programmatically.
                 required: true
+                type: str
               message:
                 description:
                   - >-
                     A message describing the error, intended to be suitable for
                     display in a user interface.
                 required: true
+                type: str
               target:
                 description:
                   - >-
                     The target of the particular error. For example, the name of
                     the property in error.
+                type: str
               details:
                 description:
                   - A list of additional details about the error.
@@ -144,9 +166,11 @@ options:
   id:
     description:
       - The ID of the resource.
+    type: str
   etag:
     description:
       - 'The ETag of the resource, used for concurrency statements.'
+    type: str
   state:
     description:
       - Assert the state of the Certificate.

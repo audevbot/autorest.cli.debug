@@ -25,16 +25,19 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   group_id:
     description:
       - >-
         Group identifier. Must be unique in the current API Management service
         instance.
     required: true
+    type: str
   value:
     description:
       - Page values.
@@ -43,21 +46,26 @@ options:
       id:
         description:
           - Resource ID.
+        type: str
       name:
         description:
           - Resource name.
+        type: str
       type:
         description:
           - Resource type for API Management resource.
+        type: str
       state:
         description:
           - >-
             Account state. Specifies whether the user is active or not. Blocked
             users are unable to sign into the developer portal or call any APIs
             of subscribed products. Default state is Active.
+        type: str
       note:
         description:
           - Optional note about a user set by the administrator.
+        type: str
       identities:
         description:
           - Collection of user identities.
@@ -66,24 +74,30 @@ options:
           provider:
             description:
               - Identity provider name.
+            type: str
           id:
             description:
               - Identifier value within provider.
+            type: str
       first_name:
         description:
           - First name.
+        type: str
       last_name:
         description:
           - Last name.
+        type: str
       email:
         description:
           - Email address.
+        type: str
       registration_date:
         description:
           - >-
             Date of user registration. The date conforms to the following
             format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
             standard.<br>
+        type: datetime
       groups:
         description:
           - Collection of groups user is part of.
@@ -93,17 +107,21 @@ options:
             description:
               - Group name.
             required: true
+            type: str
           description:
             description:
               - Group description. Can contain HTML formatting tags.
+            type: str
           built_in:
             description:
               - >-
                 true if the group is one of the three system groups
                 (Administrators, Developers, or Guests); otherwise false.
+            type: boolean
           type:
             description:
               - Group type.
+            type: str
           external_id:
             description:
               - >-
@@ -111,9 +129,11 @@ options:
                 from the external identity provider, e.g. for Azure Active
                 Directory `aad://<tenant>.onmicrosoft.com/groups/<group object
                 id>`; otherwise the value is null.
+            type: str
   next_link:
     description:
       - Next page link if any.
+    type: str
 extends_documentation_fragment:
   - azure
 author:

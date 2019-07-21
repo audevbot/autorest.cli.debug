@@ -25,39 +25,52 @@ options:
     description:
       - Name of an Azure Resource group.
     required: true
+    type: str
   automation_account_name:
     description:
       - The name of the automation account.
     required: true
+    type: str
   job_name:
     description:
       - The job name.
     required: true
+    type: str
   client_request_id:
     description:
       - Identifies this specific client request.
     required: true
+    type: str
   job_stream_id:
     description:
       - Gets or sets the id of the job stream.
+    type: str
   id:
     description:
       - Gets or sets the id of the resource.
+    type: str
   time:
     description:
       - Gets or sets the creation time of the job.
+    type: datetime
   stream_type:
     description:
       - Gets or sets the stream type.
+    type: str
   stream_text:
     description:
       - Gets or sets the stream text.
+    type: str
   summary:
     description:
       - Gets or sets the summary.
+    type: str
   value:
     description:
       - Gets or sets the values of the job stream.
+    type: >-
+      unknown[DictionaryType
+      {"$id":"46","$type":"DictionaryType","valueType":{"$id":"47","$type":"PrimaryType","knownPrimaryType":"object","name":{"$id":"48","fixed":false,"raw":"Object"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"49","fixed":false},"deprecated":false}]
 extends_documentation_fragment:
   - azure
 author:

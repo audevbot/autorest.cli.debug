@@ -24,27 +24,35 @@ options:
   name:
     description:
       - Name of the resource
+    type: str
   id:
     description:
       - Fully qualified identifier of the resource
+    type: str
   type:
     description:
       - Type of the resource
+    type: str
   provider:
     description:
       - Namespace of the provider of the topic type.
+    type: str
   display_name:
     description:
       - Display Name for the topic type.
+    type: str
   description:
     description:
       - Description of the topic type.
+    type: str
   resource_region_type:
     description:
       - Region type of the resource.
+    type: str
   provisioning_state:
     description:
       - Provisioning state of the topic type
+    type: str
   supported_locations:
     description:
       - List of locations supported by this topic type.

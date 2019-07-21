@@ -31,25 +31,32 @@ options:
       name:
         description:
           - 'Operation name: {provider}/{resource}/{operation}.'
+        type: str
       display:
         description:
           - undefined
+        type: dict
         suboptions:
           provider:
             description:
               - The name of the provider.
+            type: str
           resource:
             description:
               - The resource on which the operation is performed.
+            type: str
           operation:
             description:
               - The operation that can be performed.
+            type: str
           description:
             description:
               - Operation description.
+            type: str
   next_link:
     description:
       - URL to get the next set of operation list results if there are any.
+    type: str
 extends_documentation_fragment:
   - azure
 author:

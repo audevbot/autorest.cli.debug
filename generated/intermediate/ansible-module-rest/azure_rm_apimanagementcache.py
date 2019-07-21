@@ -25,35 +25,44 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   cache_id:
     description:
       - >-
         Identifier of the Cache entity. Cache identifier (should be either
         'default' or valid Azure region identifier).
     required: true
+    type: str
   description:
     description:
       - Cache description
+    type: str
   connection_string:
     description:
       - Runtime connection string to cache
     required: true
+    type: str
   resource_id:
     description:
       - Original uri of entity in external system cache points to
+    type: str
   id:
     description:
       - Resource ID.
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
   state:
     description:
       - Assert the state of the Cache.

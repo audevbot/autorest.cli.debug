@@ -25,25 +25,32 @@ options:
     description:
       - The name of the resource group within the user's subscription.
     required: true
+    type: str
   name:
     description:
       - Name of the resource
+    type: str
   location:
     description:
       - Location of the resource
     required: true
+    type: str
   provisioning_state:
     description:
       - Provisioning state of the topic.
+    type: str
   endpoint:
     description:
       - Endpoint for the topic.
+    type: str
   id:
     description:
       - Fully qualified identifier of the resource
+    type: str
   type:
     description:
       - Type of the resource
+    type: str
   state:
     description:
       - Assert the state of the Topic.

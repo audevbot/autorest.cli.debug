@@ -25,10 +25,12 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   api_id:
     description:
       - >-
@@ -36,33 +38,42 @@ options:
         service instance. Non-current revision has ;rev=n as a suffix where n is
         the revision number.
     required: true
+    type: str
   tag_id:
     description:
       - >-
         Tag identifier. Must be unique in the current API Management service
         instance.
     required: true
+    type: str
   description:
     description:
       - Description of the Tag.
+    type: str
   external_docs_url:
     description:
       - Absolute URL of external resources describing the tag.
+    type: str
   external_docs_description:
     description:
       - Description of the external resources describing the tag.
+    type: str
   display_name:
     description:
       - Tag name.
+    type: str
   id:
     description:
       - Resource ID.
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
   state:
     description:
       - Assert the state of the ApiTagDescription.

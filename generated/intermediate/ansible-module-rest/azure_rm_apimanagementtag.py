@@ -25,29 +25,36 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   tag_id:
     description:
       - >-
         Tag identifier. Must be unique in the current API Management service
         instance.
     required: true
+    type: str
   display_name:
     description:
       - Tag name.
     required: true
+    type: str
   id:
     description:
       - Resource ID.
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
   state:
     description:
       - Assert the state of the Tag.

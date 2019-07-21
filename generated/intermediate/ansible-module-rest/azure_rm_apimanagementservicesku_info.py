@@ -25,10 +25,12 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   value:
     description:
       - The list of skus available for the service.
@@ -37,32 +39,41 @@ options:
       resource_type:
         description:
           - The type of resource the SKU applies to.
+        type: str
       sku:
         description:
           - Specifies API Management SKU.
+        type: dict
         suboptions:
           name:
             description:
               - Name of the Sku.
+            type: str
       capacity:
         description:
           - Specifies the number of API Management units.
+        type: dict
         suboptions:
           minimum:
             description:
               - The minimum capacity.
+            type: number
           maximum:
             description:
               - The maximum capacity that can be set.
+            type: number
           default:
             description:
               - The default capacity.
+            type: number
           scale_type:
             description:
               - The scale type applicable to the sku.
+            type: str
   next_link:
     description:
       - The uri to fetch the next page of API Management service Skus.
+    type: str
 extends_documentation_fragment:
   - azure
 author:

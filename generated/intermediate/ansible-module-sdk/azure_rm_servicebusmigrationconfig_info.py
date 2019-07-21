@@ -25,40 +25,50 @@ options:
     description:
       - Name of the Resource group within the Azure subscription.
     required: true
+    type: str
   namespace_name:
     description:
       - The namespace name
     required: true
+    type: str
   name:
     description:
       - Resource name
+    type: str
   id:
     description:
       - Resource Id
+    type: str
   type:
     description:
       - Resource type
+    type: str
   provisioning_state:
     description:
       - 'Provisioning state of Migration Configuration '
+    type: str
   pending_replication_operations_count:
     description:
       - Number of entities pending to be replicated.
+    type: number
   target_namespace:
     description:
       - >-
         Existing premium Namespace ARM Id name which has no entities, will be
         used for migration
     required: true
+    type: str
   post_migration_name:
     description:
       - Name to access Standard Namespace after migration
     required: true
+    type: str
   migration_state:
     description:
       - >-
         State in which Standard to Premium Migration is, possible values :
         Unknown, Reverting, Completing, Initiating, Syncing, Active
+    type: str
 extends_documentation_fragment:
   - azure
 author:

@@ -25,48 +25,59 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   version_set_id:
     description:
       - >-
         Api Version Set identifier. Must be unique in the current API Management
         service instance.
     required: true
+    type: str
   description:
     description:
       - Description of API Version Set.
+    type: str
   version_query_name:
     description:
       - >-
         Name of query parameter that indicates the API Version if
         versioningScheme is set to `query`.
+    type: str
   version_header_name:
     description:
       - >-
         Name of HTTP header parameter that indicates the API Version if
         versioningScheme is set to `header`.
+    type: str
   display_name:
     description:
       - Name of API Version Set
     required: true
+    type: str
   versioning_scheme:
     description:
       - >-
         An value that determines where the API Version identifer will be located
         in a HTTP request.
     required: true
+    type: str
   id:
     description:
       - Resource ID.
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
   state:
     description:
       - Assert the state of the ApiVersionSet.

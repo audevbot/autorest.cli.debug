@@ -25,18 +25,23 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   id:
     description:
       - Resource ID.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
   enabled:
     description:
       - Redirect Anonymous users to the Sign-In page.
+    type: boolean
 extends_documentation_fragment:
   - azure
 author:

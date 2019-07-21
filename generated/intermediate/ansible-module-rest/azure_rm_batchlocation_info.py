@@ -25,11 +25,13 @@ options:
     description:
       - The region for which to retrieve Batch service quotas.
     required: true
+    type: str
   account_quota:
     description:
       - >-
         The number of Batch accounts that may be created under the subscription
         in the specified region.
+    type: number
 extends_documentation_fragment:
   - azure
 author:

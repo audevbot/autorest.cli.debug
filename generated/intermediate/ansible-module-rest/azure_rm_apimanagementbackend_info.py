@@ -25,46 +25,58 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   backend_id:
     description:
       - >-
         Identifier of the Backend entity. Must be unique in the current API
         Management service instance.
+    type: str
   id:
     description:
       - Resource ID.
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
   title:
     description:
       - Backend Title.
+    type: str
   description:
     description:
       - Backend Description.
+    type: str
   resource_id:
     description:
       - >-
         Management Uri of the Resource in External System. This url can be the
         Arm Resource Id of Logic Apps, Function Apps or Api Apps.
+    type: str
   service_fabric_cluster:
     description:
       - Backend Service Fabric Cluster Properties
+    type: dict
     suboptions:
       client_certificatethumbprint:
         description:
           - The client certificate thumbprint for the management endpoint.
         required: true
+        type: str
       max_partition_resolution_retries:
         description:
           - Maximum number of retries while attempting resolve the partition.
+        type: number
       management_endpoints:
         description:
           - The cluster management endpoint.
@@ -84,12 +96,15 @@ options:
           name:
             description:
               - Common Name of the Certificate.
+            type: str
           issuer_certificate_thumbprint:
             description:
               - Thumbprint for the Issuer of the Certificate.
+            type: str
   credentials:
     description:
       - Backend Credentials Contract Properties
+    type: dict
     suboptions:
       certificate:
         description:
@@ -98,24 +113,34 @@ options:
       query:
         description:
           - Query Parameter description.
+        type: >-
+          unknown[DictionaryType
+          {"$id":"1845","$type":"DictionaryType","valueType":{"$id":"1846","$type":"SequenceType","elementType":{"$id":"1847","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1848","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1849","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1850","fixed":false},"deprecated":false}]
       header:
         description:
           - Header Parameter description.
+        type: >-
+          unknown[DictionaryType
+          {"$id":"1855","$type":"DictionaryType","valueType":{"$id":"1856","$type":"SequenceType","elementType":{"$id":"1857","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1858","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1859","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1860","fixed":false},"deprecated":false}]
       authorization:
         description:
           - Authorization header authentication
+        type: dict
         suboptions:
           scheme:
             description:
               - Authentication Scheme name.
             required: true
+            type: str
           parameter:
             description:
               - Authentication Parameter value.
             required: true
+            type: str
   proxy:
     description:
       - Backend Proxy Contract Properties
+    type: dict
     suboptions:
       url:
         description:
@@ -124,34 +149,42 @@ options:
             stored in the Uri instance, including all fragments and query
             strings.
         required: true
+        type: str
       username:
         description:
           - Username to connect to the WebProxy server
+        type: str
       password:
         description:
           - Password to connect to the WebProxy Server
+        type: str
   tls:
     description:
       - Backend TLS Properties
+    type: dict
     suboptions:
       validate_certificate_chain:
         description:
           - >-
             Flag indicating whether SSL certificate chain validation should be
             done when using self-signed certificates for this backend host.
+        type: boolean
       validate_certificate_name:
         description:
           - >-
             Flag indicating whether SSL certificate name validation should be
             done when using self-signed certificates for this backend host.
+        type: boolean
   url:
     description:
       - Runtime Url of the Backend.
     required: true
+    type: str
   protocol:
     description:
       - Backend communication protocol.
     required: true
+    type: str
 extends_documentation_fragment:
   - azure
 author:

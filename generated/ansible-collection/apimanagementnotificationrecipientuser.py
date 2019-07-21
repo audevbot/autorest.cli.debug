@@ -25,26 +25,33 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   notification_name:
     description:
       - Notification Name Identifier.
     required: true
+    type: str
   user_id:
     description:
       - API Management UserId subscribed to notification.
+    type: str
   id:
     description:
       - Resource ID.
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
   state:
     description:
       - Assert the state of the NotificationRecipientUser.

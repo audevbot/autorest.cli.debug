@@ -29,28 +29,36 @@ options:
       name:
         description:
           - 'Operation name: {provider}/{resource}/{operation}'
+        type: str
       display:
         description:
           - The object that describes the operation.
+        type: dict
         suboptions:
           provider:
             description:
               - Friendly name of the resource provider
+            type: str
           operation:
             description:
               - 'Operation type: read, write, delete, listKeys/action, etc.'
+            type: str
           resource:
             description:
               - Resource type on which the operation is performed.
+            type: str
           description:
             description:
               - Friendly name of the operation
+            type: str
       origin:
         description:
           - The operation origin.
+        type: str
   next_link:
     description:
       - URL to get the next set of operation list results if there are any.
+    type: str
 extends_documentation_fragment:
   - azure
 author:

@@ -25,40 +25,50 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   diagnostic_id:
     description:
       - >-
         Diagnostic identifier. Must be unique in the current API Management
         service instance.
     required: true
+    type: str
   always_log:
     description:
       - Specifies for what type of messages sampling settings should not apply.
+    type: str
   logger_id:
     description:
       - Resource Id of a target logger.
     required: true
+    type: str
   sampling:
     description:
       - Sampling settings for Diagnostic.
+    type: dict
     suboptions:
       sampling_type:
         description:
           - Sampling type.
+        type: str
       percentage:
         description:
           - Rate of sampling for fixed-rate sampling.
+        type: number
   frontend:
     description:
       - Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.
+    type: dict
     suboptions:
       request:
         description:
           - Diagnostic settings for request.
+        type: dict
         suboptions:
           headers:
             description:
@@ -67,13 +77,16 @@ options:
           body:
             description:
               - Body logging settings.
+            type: dict
             suboptions:
               bytes:
                 description:
                   - Number of request body bytes to log.
+                type: number
       response:
         description:
           - Diagnostic settings for response.
+        type: dict
         suboptions:
           headers:
             description:
@@ -82,17 +95,21 @@ options:
           body:
             description:
               - Body logging settings.
+            type: dict
             suboptions:
               bytes:
                 description:
                   - Number of request body bytes to log.
+                type: number
   backend:
     description:
       - Diagnostic settings for incoming/outgoing HTTP messages to the Backend
+    type: dict
     suboptions:
       request:
         description:
           - Diagnostic settings for request.
+        type: dict
         suboptions:
           headers:
             description:
@@ -101,13 +118,16 @@ options:
           body:
             description:
               - Body logging settings.
+            type: dict
             suboptions:
               bytes:
                 description:
                   - Number of request body bytes to log.
+                type: number
       response:
         description:
           - Diagnostic settings for response.
+        type: dict
         suboptions:
           headers:
             description:
@@ -116,24 +136,30 @@ options:
           body:
             description:
               - Body logging settings.
+            type: dict
             suboptions:
               bytes:
                 description:
                   - Number of request body bytes to log.
+                type: number
   enable_http_correlation_headers:
     description:
       - >-
         Whether to process Correlation Headers coming to Api Management Service.
         Only applicable to Application Insights diagnostics. Default is true.
+    type: boolean
   id:
     description:
       - Resource ID.
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
   state:
     description:
       - Assert the state of the Diagnostic.

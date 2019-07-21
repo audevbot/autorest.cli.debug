@@ -26,63 +26,81 @@ options:
       - >-
         The name of the resource group where the recovery services vault is
         present.
+    type: str
   name:
     description:
       - Resource name associated with the resource.
+    type: str
   id:
     description:
       - Resource Id represents the complete path to the resource.
+    type: str
   type:
     description:
       - >-
         Resource type represents the complete path of the form
         Namespace/ResourceType/ResourceType/...
+    type: str
   e_tag:
     description:
       - Optional ETag.
+    type: str
   location:
     description:
       - Resource location.
+    type: str
   provisioning_state:
     description:
       - Provisioning State.
+    type: str
   upgrade_details:
     description:
       - undefined
+    type: dict
     suboptions:
       operation_id:
         description:
           - ID of the vault upgrade operation.
+        type: str
       start_time_utc:
         description:
           - UTC time at which the upgrade operation has started.
+        type: datetime
       last_updated_time_utc:
         description:
           - UTC time at which the upgrade operation status was last updated.
+        type: datetime
       end_time_utc:
         description:
           - UTC time at which the upgrade operation has ended.
+        type: datetime
       status:
         description:
           - Status of the vault upgrade operation.
+        type: str
       message:
         description:
           - >-
             Message to the user containing information about the upgrade
             operation.
+        type: str
       trigger_type:
         description:
           - The way the vault upgrade was triggered.
+        type: str
       upgraded_resource_id:
         description:
           - Resource ID of the upgraded vault.
+        type: str
       previous_resource_id:
         description:
           - Resource ID of the vault before the upgrade.
+        type: str
   sku_name:
     description:
       - The Sku name.
     required: true
+    type: str
 extends_documentation_fragment:
   - azure
 author:

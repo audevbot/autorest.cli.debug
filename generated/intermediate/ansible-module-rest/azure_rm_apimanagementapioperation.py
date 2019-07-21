@@ -25,10 +25,12 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   api_id:
     description:
       - >-
@@ -36,12 +38,14 @@ options:
         service instance. Non-current revision has ;rev=n as a suffix where n is
         the revision number.
     required: true
+    type: str
   operation_id:
     description:
       - >-
         Operation identifier within an API. Must be unique in the current API
         Management service instance.
     required: true
+    type: str
   template_parameters:
     description:
       - Collection of URL template parameters.
@@ -51,19 +55,24 @@ options:
         description:
           - Parameter name.
         required: true
+        type: str
       description:
         description:
           - Parameter description.
+        type: str
       type:
         description:
           - Parameter type.
         required: true
+        type: str
       default_value:
         description:
           - Default parameter value.
+        type: str
       required:
         description:
           - Specifies whether parameter is required or not.
+        type: boolean
       values:
         description:
           - Parameter values.
@@ -71,13 +80,16 @@ options:
   description:
     description:
       - Description of the operation. May include HTML formatting tags.
+    type: str
   request:
     description:
       - An entity containing request details.
+    type: dict
     suboptions:
       description:
         description:
           - Operation request description.
+        type: str
       query_parameters:
         description:
           - Collection of operation request query parameters.
@@ -87,19 +99,24 @@ options:
             description:
               - Parameter name.
             required: true
+            type: str
           description:
             description:
               - Parameter description.
+            type: str
           type:
             description:
               - Parameter type.
             required: true
+            type: str
           default_value:
             description:
               - Default parameter value.
+            type: str
           required:
             description:
               - Specifies whether parameter is required or not.
+            type: boolean
           values:
             description:
               - Parameter values.
@@ -113,19 +130,24 @@ options:
             description:
               - Parameter name.
             required: true
+            type: str
           description:
             description:
               - Parameter description.
+            type: str
           type:
             description:
               - Parameter type.
             required: true
+            type: str
           default_value:
             description:
               - Default parameter value.
+            type: str
           required:
             description:
               - Specifies whether parameter is required or not.
+            type: boolean
           values:
             description:
               - Parameter values.
@@ -141,21 +163,25 @@ options:
                 Specifies a registered or custom content type for this
                 representation, e.g. application/xml.
             required: true
+            type: str
           sample:
             description:
               - An example of the representation.
+            type: str
           schema_id:
             description:
               - >-
                 Schema identifier. Applicable only if 'contentType' value is
                 neither 'application/x-www-form-urlencoded' nor
                 'multipart/form-data'.
+            type: str
           type_name:
             description:
               - >-
                 Type name defined by the schema. Applicable only if
                 'contentType' value is neither
                 'application/x-www-form-urlencoded' nor 'multipart/form-data'.
+            type: str
           form_parameters:
             description:
               - >-
@@ -168,19 +194,24 @@ options:
                 description:
                   - Parameter name.
                 required: true
+                type: str
               description:
                 description:
                   - Parameter description.
+                type: str
               type:
                 description:
                   - Parameter type.
                 required: true
+                type: str
               default_value:
                 description:
                   - Default parameter value.
+                type: str
               required:
                 description:
                   - Specifies whether parameter is required or not.
+                type: boolean
               values:
                 description:
                   - Parameter values.
@@ -194,9 +225,11 @@ options:
         description:
           - Operation response HTTP status code.
         required: true
+        type: number
       description:
         description:
           - Operation response description.
+        type: str
       representations:
         description:
           - Collection of operation response representations.
@@ -208,21 +241,25 @@ options:
                 Specifies a registered or custom content type for this
                 representation, e.g. application/xml.
             required: true
+            type: str
           sample:
             description:
               - An example of the representation.
+            type: str
           schema_id:
             description:
               - >-
                 Schema identifier. Applicable only if 'contentType' value is
                 neither 'application/x-www-form-urlencoded' nor
                 'multipart/form-data'.
+            type: str
           type_name:
             description:
               - >-
                 Type name defined by the schema. Applicable only if
                 'contentType' value is neither
                 'application/x-www-form-urlencoded' nor 'multipart/form-data'.
+            type: str
           form_parameters:
             description:
               - >-
@@ -235,19 +272,24 @@ options:
                 description:
                   - Parameter name.
                 required: true
+                type: str
               description:
                 description:
                   - Parameter description.
+                type: str
               type:
                 description:
                   - Parameter type.
                 required: true
+                type: str
               default_value:
                 description:
                   - Default parameter value.
+                type: str
               required:
                 description:
                   - Specifies whether parameter is required or not.
+                type: boolean
               values:
                 description:
                   - Parameter values.
@@ -261,19 +303,24 @@ options:
             description:
               - Parameter name.
             required: true
+            type: str
           description:
             description:
               - Parameter description.
+            type: str
           type:
             description:
               - Parameter type.
             required: true
+            type: str
           default_value:
             description:
               - Default parameter value.
+            type: str
           required:
             description:
               - Specifies whether parameter is required or not.
+            type: boolean
           values:
             description:
               - Parameter values.
@@ -281,16 +328,19 @@ options:
   policies:
     description:
       - Operation Policies
+    type: str
   display_name:
     description:
       - Operation Name.
     required: true
+    type: str
   method:
     description:
       - >-
         A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST
         but not limited by only them.
     required: true
+    type: str
   url_template:
     description:
       - >-
@@ -298,15 +348,19 @@ options:
         operation. May include parameters. Example:
         /customers/{cid}/orders/{oid}/?date={date}
     required: true
+    type: str
   id:
     description:
       - Resource ID.
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
   state:
     description:
       - Assert the state of the ApiOperation.

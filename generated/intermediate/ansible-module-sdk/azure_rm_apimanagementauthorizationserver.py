@@ -25,19 +25,23 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   authsid:
     description:
       - Identifier of the authorization server.
     required: true
+    type: str
   description:
     description:
       - >-
         Description of the authorization server. Can contain HTML formatting
         tags.
+    type: str
   authorization_methods:
     description:
       - >-
@@ -65,25 +69,30 @@ options:
         description:
           - body parameter name.
         required: true
+        type: str
       value:
         description:
           - body parameter value.
         required: true
+        type: str
   token_endpoint:
     description:
       - OAuth token endpoint. Contains absolute URI to entity being referenced.
+    type: str
   support_state:
     description:
       - >-
         If true, authorization server will include state parameter from the
         authorization request to its response. Client may use state parameter to
         raise protocol security.
+    type: boolean
   default_scope:
     description:
       - >-
         Access token scope that is going to be requested by default. Can be
         overridden at the API level. Should be provided in the form of a string
         containing space-delimited values.
+    type: str
   bearer_token_sending_methods:
     description:
       - 'Specifies the mechanism by which access token is passed to the API. '
@@ -91,20 +100,24 @@ options:
   client_secret:
     description:
       - Client or app secret registered with this authorization server.
+    type: str
   resource_owner_username:
     description:
       - >-
         Can be optionally specified when resource owner password grant type is
         supported by this authorization server. Default resource owner username.
+    type: str
   resource_owner_password:
     description:
       - >-
         Can be optionally specified when resource owner password grant type is
         supported by this authorization server. Default resource owner password.
+    type: str
   display_name:
     description:
       - User-friendly authorization server name.
     required: true
+    type: str
   client_registration_endpoint:
     description:
       - >-
@@ -112,12 +125,14 @@ options:
         authorization server is performed. Contains absolute URL to entity being
         referenced.
     required: true
+    type: str
   authorization_endpoint:
     description:
       - >-
         OAuth authorization endpoint. See
         http://tools.ietf.org/html/rfc6749#section-3.2.
     required: true
+    type: str
   grant_types:
     description:
       - >-
@@ -129,15 +144,19 @@ options:
     description:
       - Client or app id registered with this authorization server.
     required: true
+    type: str
   id:
     description:
       - Resource ID.
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
   state:
     description:
       - Assert the state of the AuthorizationServer.

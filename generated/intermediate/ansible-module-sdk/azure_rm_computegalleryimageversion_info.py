@@ -25,34 +25,42 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   gallery_name:
     description:
       - >-
         The name of the Shared Image Gallery in which the Image Definition
         resides.
     required: true
+    type: str
   gallery_image_name:
     description:
       - >-
         The name of the gallery Image Definition in which the Image Version
         resides.
     required: true
+    type: str
   name:
     description:
       - Resource name
+    type: str
   id:
     description:
       - Resource Id
+    type: str
   type:
     description:
       - Resource type
+    type: str
   location:
     description:
       - Resource location
+    type: str
   publishing_profile:
     description:
       - undefined
     required: true
+    type: dict
     suboptions:
       target_regions:
         description:
@@ -65,73 +73,89 @@ options:
             description:
               - The name of the region.
             required: true
+            type: str
           regional_replica_count:
             description:
               - >-
                 The number of replicas of the Image Version to be created per
                 region. This property is updatable.
+            type: number
           storage_account_type:
             description:
               - >-
                 Specifies the storage account type to be used to store the
                 image. This property is not updatable.
+            type: str
       replica_count:
         description:
           - >-
             The number of replicas of the Image Version to be created per
             region. This property would take effect for a region when
             regionalReplicaCount is not specified. This property is updatable.
+        type: number
       exclude_from_latest:
         description:
           - >-
             If set to true, Virtual Machines deployed from the latest version of
             the Image Definition won't use this Image Version.
+        type: boolean
       published_date:
         description:
           - The timestamp for when the gallery Image Version is published.
+        type: datetime
       end_of_life_date:
         description:
           - >-
             The end of life date of the gallery Image Version. This property can
             be used for decommissioning purposes. This property is updatable.
+        type: datetime
       storage_account_type:
         description:
           - >-
             Specifies the storage account type to be used to store the image.
             This property is not updatable.
+        type: str
       source:
         description:
           - undefined
         required: true
+        type: dict
         suboptions:
           managed_image:
             description:
               - undefined
             required: true
+            type: dict
             suboptions:
               id:
                 description:
                   - The managed artifact id.
                 required: true
+                type: str
   provisioning_state:
     description:
       - 'The provisioning state, which only appears in the response.'
+    type: str
   storage_profile:
     description:
       - undefined
+    type: dict
     suboptions:
       os_disk_image:
         description:
           - undefined
+        type: dict
         suboptions:
           size_in_gb:
             description:
               - This property indicates the size of the VHD to be created.
+            type: number
           host_caching:
             description:
               - >-
                 The host caching of the disk. Valid values are 'None',
                 'ReadOnly', and 'ReadWrite'
+            type: str
       data_disk_images:
         description:
           - A list of data disk images.
@@ -140,11 +164,13 @@ options:
           size_in_gb:
             description:
               - This property indicates the size of the VHD to be created.
+            type: number
           host_caching:
             description:
               - >-
                 The host caching of the disk. Valid values are 'None',
                 'ReadOnly', and 'ReadWrite'
+            type: str
           lun:
             description:
               - >-
@@ -152,15 +178,18 @@ options:
                 disk. This value is used to identify data disks within the
                 Virtual Machine and therefore must be unique for each data disk
                 attached to the Virtual Machine.
+            type: number
   replication_status:
     description:
       - undefined
+    type: dict
     suboptions:
       aggregated_state:
         description:
           - >-
             This is the aggregated replication status based on all the regional
             replication status flags.
+        type: str
       summary:
         description:
           - This is a summary of replication status for each region.
@@ -171,15 +200,19 @@ options:
               - >-
                 The region to which the gallery Image Version is being
                 replicated to.
+            type: str
           state:
             description:
               - This is the regional replication state.
+            type: str
           details:
             description:
               - The details of the replication status.
+            type: str
           progress:
             description:
               - It indicates progress of the replication job.
+            type: number
 extends_documentation_fragment:
   - azure
 author:

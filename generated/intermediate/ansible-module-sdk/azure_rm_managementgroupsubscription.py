@@ -25,6 +25,7 @@ options:
     description:
       - Management Group ID.
     required: true
+    type: str
   state:
     description:
       - Assert the state of the ManagementGroupSubscription.

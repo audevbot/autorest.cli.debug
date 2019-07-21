@@ -25,34 +25,42 @@ options:
     description:
       - The name of the resource group that contains the Batch account.
     required: true
+    type: str
   account_name:
     description:
       - The name of the Batch account.
     required: true
+    type: str
   name:
     description:
       - The name of the application. This must be unique within the account.
     required: true
+    type: str
   display_name:
     description:
       - The display name for the application.
+    type: str
   allow_updates:
     description:
       - >-
         A value indicating whether packages within the application may be
         overwritten using the same version string.
+    type: boolean
   default_version:
     description:
       - >-
         The package to use if a client requests the application but does not
         specify a version. This property can only be set to the name of an
         existing package.
+    type: str
   id:
     description:
       - The ID of the resource.
+    type: str
   etag:
     description:
       - 'The ETag of the resource, used for concurrency statements.'
+    type: str
   state:
     description:
       - Assert the state of the Application.

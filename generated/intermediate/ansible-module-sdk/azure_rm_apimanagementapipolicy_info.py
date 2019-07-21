@@ -25,10 +25,12 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   api_id:
     description:
       - >-
@@ -36,25 +38,32 @@ options:
         service instance. Non-current revision has ;rev=n as a suffix where n is
         the revision number.
     required: true
+    type: str
   policy_id:
     description:
       - The identifier of the Policy.
+    type: str
   format:
     description:
       - Format of the policyContent.
+    type: str
   id:
     description:
       - Resource ID.
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
   value:
     description:
       - Contents of the Policy as defined by the format.
     required: true
+    type: str
 extends_documentation_fragment:
   - azure
 author:

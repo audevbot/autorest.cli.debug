@@ -25,10 +25,12 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   quota_counter_key:
     description:
       - >-
@@ -38,40 +40,49 @@ options:
         counter key. But if it’s defined as counter-key="@("b"+"a")" then it
         will be accessible by "ba" key
     required: true
+    type: str
   quota_period_key:
     description:
       - Quota period key identifier.
     required: true
+    type: str
   counter_key:
     description:
       - The Key value of the Counter. Must not be empty.
+    type: str
   period_key:
     description:
       - >-
         Identifier of the Period for which the counter was collected. Must not
         be empty.
+    type: str
   period_start_time:
     description:
       - >-
         The date of the start of Counter Period. The date conforms to the
         following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
         standard.<br>
+    type: datetime
   period_end_time:
     description:
       - >-
         The date of the end of Counter Period. The date conforms to the
         following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
         standard.<br>
+    type: datetime
   value:
     description:
       - Quota Value Properties
+    type: dict
     suboptions:
       calls_count:
         description:
           - Number of times Counter was called.
+        type: number
       kb_transferred:
         description:
           - Data Transferred in KiloBytes.
+        type: number
 extends_documentation_fragment:
   - azure
 author:

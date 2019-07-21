@@ -25,16 +25,19 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   user_id:
     description:
       - >-
         User identifier. Must be unique in the current API Management service
         instance.
     required: true
+    type: str
   value:
     description:
       - Page values.
@@ -43,24 +46,30 @@ options:
       id:
         description:
           - Resource ID.
+        type: str
       name:
         description:
           - Resource name.
+        type: str
       type:
         description:
           - Group type.
+        type: str
       display_name:
         description:
           - Group name.
         required: true
+        type: str
       description:
         description:
           - Group description. Can contain HTML formatting tags.
+        type: str
       built_in:
         description:
           - >-
             true if the group is one of the three system groups (Administrators,
             Developers, or Guests); otherwise false.
+        type: boolean
       external_id:
         description:
           - >-
@@ -68,9 +77,11 @@ options:
             the external identity provider, e.g. for Azure Active Directory
             `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise
             the value is null.
+        type: str
   next_link:
     description:
       - Next page link if any.
+    type: str
 extends_documentation_fragment:
   - azure
 author:

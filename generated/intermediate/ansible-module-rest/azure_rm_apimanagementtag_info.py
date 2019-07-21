@@ -25,47 +25,58 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   scope:
     description:
       - 'Scope like ''apis'', ''products'' or ''apis/{apiId}'
+    type: str
   tag_id:
     description:
       - >-
         Tag identifier. Must be unique in the current API Management service
         instance.
+    type: str
   api_id:
     description:
       - >-
         API revision identifier. Must be unique in the current API Management
         service instance. Non-current revision has ;rev=n as a suffix where n is
         the revision number.
+    type: str
   product_id:
     description:
       - >-
         Product identifier. Must be unique in the current API Management service
         instance.
+    type: str
   operation_id:
     description:
       - >-
         Operation identifier within an API. Must be unique in the current API
         Management service instance.
+    type: str
   id:
     description:
       - Resource ID.
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
   display_name:
     description:
       - Tag name.
     required: true
+    type: str
 extends_documentation_fragment:
   - azure
 author:

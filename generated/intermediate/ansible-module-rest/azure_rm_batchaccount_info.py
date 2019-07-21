@@ -24,24 +24,31 @@ options:
   resource_group:
     description:
       - The name of the resource group that contains the Batch account.
+    type: str
   name:
     description:
       - The name of the Batch account.
+    type: str
   id:
     description:
       - The ID of the resource.
+    type: str
   location:
     description:
       - The location of the resource.
+    type: str
   account_endpoint:
     description:
       - The account endpoint used to interact with the Batch service.
+    type: str
   pool_allocation_mode:
     description:
       - undefined
+    type: str
   key_vault_reference:
     description:
       - undefined
+    type: dict
     suboptions:
       id:
         description:
@@ -49,16 +56,19 @@ options:
             The resource ID of the Azure key vault associated with the Batch
             account.
         required: true
+        type: str
       url:
         description:
           - The URL of the Azure key vault associated with the Batch account.
         required: true
+        type: str
   auto_storage_account_id:
     description:
       - >-
         The UTC time at which storage keys were last synchronized with the Batch
         account.
     required: true
+    type: datetime
 extends_documentation_fragment:
   - azure
 author:

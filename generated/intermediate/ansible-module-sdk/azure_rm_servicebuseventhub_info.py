@@ -25,10 +25,12 @@ options:
     description:
       - Name of the Resource group within the Azure subscription.
     required: true
+    type: str
   name:
     description:
       - The namespace name
     required: true
+    type: str
   value:
     description:
       - Result of the List EventHubs operation.
@@ -37,12 +39,15 @@ options:
       id:
         description:
           - Resource Id
+        type: str
       name:
         description:
           - Resource name
+        type: str
       type:
         description:
           - Resource type
+        type: str
       partition_ids:
         description:
           - Current number of shards on the Event Hub.
@@ -50,60 +55,73 @@ options:
       created_at:
         description:
           - Exact time the Event Hub was created.
+        type: datetime
       updated_at:
         description:
           - The exact time the message was updated.
+        type: datetime
       message_retention_in_days:
         description:
           - >-
             Number of days to retain the events for this Event Hub, value should
             be 1 to 7 days
+        type: number
       partition_count:
         description:
           - >-
             Number of partitions created for the Event Hub, allowed values are
             from 1 to 32 partitions.
+        type: number
       status:
         description:
           - Enumerates the possible values for the status of the Event Hub.
+        type: str
       capture_description:
         description:
           - Properties of capture description
+        type: dict
         suboptions:
           enabled:
             description:
               - 'A value that indicates whether capture description is enabled. '
+            type: boolean
           encoding:
             description:
               - >-
                 Enumerates the possible values for the encoding format of
                 capture description.
+            type: str
           interval_in_seconds:
             description:
               - >-
                 The time window allows you to set the frequency with which the
                 capture to Azure Blobs will happen, value should between 60 to
                 900 seconds
+            type: number
           size_limit_in_bytes:
             description:
               - >-
                 The size window defines the amount of data built up in your
                 Event Hub before an capture operation, value should be between
                 10485760 and 524288000 bytes
+            type: number
           destination:
             description:
               - >-
                 Properties of Destination where capture will be stored. (Storage
                 Account, Blob Names)
+            type: dict
             suboptions:
               name:
                 description:
                   - Name for capture destination
+                type: str
   next_link:
     description:
       - >-
         Link to the next set of results. Not empty if Value contains incomplete
         list of EventHubs.
+    type: str
 extends_documentation_fragment:
   - azure
 author:

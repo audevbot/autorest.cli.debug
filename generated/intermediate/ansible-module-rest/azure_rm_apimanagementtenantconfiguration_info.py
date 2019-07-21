@@ -25,45 +25,55 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   name:
     description:
       - The identifier of the Git Configuration Operation.
     required: true
+    type: str
   branch:
     description:
       - The name of Git branch.
+    type: str
   commit_id:
     description:
       - The latest commit Id.
+    type: str
   is_export:
     description:
       - >-
         value indicating if last sync was save (true) or deploy (false)
         operation.
+    type: boolean
   is_synced:
     description:
       - >-
         value indicating if last synchronization was later than the
         configuration change.
+    type: boolean
   is_git_enabled:
     description:
       - value indicating whether Git configuration access is enabled.
+    type: boolean
   sync_date:
     description:
       - >-
         The date of the latest synchronization. The date conforms to the
         following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
         standard.<br>
+    type: datetime
   configuration_change_date:
     description:
       - >-
         The date of the latest configuration change. The date conforms to the
         following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601
         standard.<br>
+    type: datetime
 extends_documentation_fragment:
   - azure
 author:

@@ -25,45 +25,57 @@ options:
     description:
       - The name of the resource group that contains the Batch account.
     required: true
+    type: str
   account_name:
     description:
       - The name of the Batch account.
     required: true
+    type: str
   maxresults:
     description:
       - The maximum number of items to return in the response.
+    type: number
   name:
     description:
       - The pool name. This must be unique within the account.
+    type: str
   id:
     description:
       - The ID of the resource.
+    type: str
   etag:
     description:
       - 'The ETag of the resource, used for concurrency statements.'
+    type: str
   display_name:
     description:
       - >-
         The display name need not be unique and can contain any Unicode
         characters up to a maximum length of 1024.
+    type: str
   last_modified:
     description:
       - >-
         This is the last time at which the pool level data, such as the
         targetDedicatedNodes or autoScaleSettings, changed. It does not factor
         in node-level changes such as a compute node changing state.
+    type: datetime
   creation_time:
     description:
       - undefined
+    type: datetime
   provisioning_state_transition_time:
     description:
       - undefined
+    type: datetime
   allocation_state:
     description:
       - undefined
+    type: str
   allocation_state_transition_time:
     description:
       - undefined
+    type: datetime
   vm_size:
     description:
       - >-
@@ -80,12 +92,14 @@ options:
         (https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/).
         Batch supports all Azure VM sizes except STANDARD_A0 and those with
         premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).
+    type: str
   deployment_configuration:
     description:
       - >-
         Using CloudServiceConfiguration specifies that the nodes should be
         creating using Azure Cloud Services (PaaS), while
         VirtualMachineConfiguration uses Azure Virtual Machines (IaaS).
+    type: dict
     suboptions:
       cloud_service_configuration:
         description:
@@ -94,6 +108,7 @@ options:
             and one of the properties must be specified. This property cannot be
             specified if the Batch account was created with its
             poolAllocationMode property set to 'UserSubscription'.
+        type: dict
         suboptions:
           os_family:
             description:
@@ -105,36 +120,44 @@ options:
                 information, see Azure Guest OS Releases
                 (https://azure.microsoft.com/documentation/articles/cloud-services-guestos-update-matrix/#releases).
             required: true
+            type: str
           os_version:
             description:
               - >-
                 The default value is * which specifies the latest operating
                 system version for the specified OS family.
+            type: str
       virtual_machine_configuration:
         description:
           - >-
             This property and cloudServiceConfiguration are mutually exclusive
             and one of the properties must be specified.
+        type: dict
         suboptions:
           image_reference:
             description:
               - undefined
             required: true
+            type: dict
             suboptions:
               publisher:
                 description:
                   - 'For example, Canonical or MicrosoftWindowsServer.'
+                type: str
               offer:
                 description:
                   - 'For example, UbuntuServer or WindowsServer.'
+                type: str
               sku:
                 description:
                   - 'For example, 14.04.0-LTS or 2012-R2-Datacenter.'
+                type: str
               version:
                 description:
                   - >-
                     A value of 'latest' can be specified to select the latest
                     version of an image. If omitted, the default is 'latest'.
+                type: str
               id:
                 description:
                   - >-
@@ -145,6 +168,7 @@ options:
                     communicate with Batch service see
                     https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration
                     .
+                type: str
           node_agent_sku_id:
             description:
               - >-
@@ -157,15 +181,18 @@ options:
                 agent SKUs along with their list of verified image references,
                 see the 'List supported node agent SKUs' operation.
             required: true
+            type: str
           windows_configuration:
             description:
               - >-
                 This property must not be specified if the imageReference
                 specifies a Linux OS image.
+            type: dict
             suboptions:
               enable_automatic_updates:
                 description:
                   - 'If omitted, the default value is true.'
+                type: boolean
           data_disks:
             description:
               - >-
@@ -179,6 +206,7 @@ options:
                     The lun is used to uniquely identify each data disk. If
                     attaching multiple disks, each should have a distinct lun.
                 required: true
+                type: number
               caching:
                 description:
                   - >-
@@ -188,10 +216,12 @@ options:
                     read and write.<br> The default value for caching is none.
                     For information about the caching options see:
                     https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
+                type: str
               disk_size_gb:
                 description:
                   - undefined
                 required: true
+                type: number
               storage_account_type:
                 description:
                   - >-
@@ -199,6 +229,7 @@ options:
                     Standard_LRS - The data disk should use standard locally
                     redundant storage.<br> Premium_LRS - The data disk should
                     use premium locally redundant storage.
+                type: str
           license_type:
             description:
               - >-
@@ -209,6 +240,7 @@ options:
                 Windows_Server - The on-premises license is for Windows
                 Server.<br> Windows_Client - The on-premises license is for
                 Windows Client.<br>
+            type: str
           container_configuration:
             description:
               - >-
@@ -216,11 +248,13 @@ options:
                 allow tasks to run in containers. All regular tasks and job
                 manager tasks run on this pool must specify the
                 containerSettings property, and all other tasks may specify it.
+            type: dict
             suboptions:
               type:
                 description:
                   - undefined
                 required: true
+                type: str
               container_image_names:
                 description:
                   - >-
@@ -239,18 +273,22 @@ options:
   current_dedicated_nodes:
     description:
       - undefined
+    type: number
   current_low_priority_nodes:
     description:
       - undefined
+    type: number
   scale_settings:
     description:
       - undefined
+    type: dict
     suboptions:
       fixed_scale:
         description:
           - >-
             This property and autoScale are mutually exclusive and one of the
             properties must be specified.
+        type: dict
         suboptions:
           resize_timeout:
             description:
@@ -261,50 +299,61 @@ options:
                 Batch service rejects the request with an error; if you are
                 calling the REST API directly, the HTTP status code is 400 (Bad
                 Request).
+            type: 'unknown-primary[timeSpan]'
           target_dedicated_nodes:
             description:
               - >-
                 At least one of targetDedicatedNodes, targetLowPriority nodes
                 must be set.
+            type: number
           target_low_priority_nodes:
             description:
               - >-
                 At least one of targetDedicatedNodes, targetLowPriority nodes
                 must be set.
+            type: number
           node_deallocation_option:
             description:
               - 'If omitted, the default value is Requeue.'
+            type: str
       auto_scale:
         description:
           - >-
             This property and fixedScale are mutually exclusive and one of the
             properties must be specified.
+        type: dict
         suboptions:
           formula:
             description:
               - undefined
             required: true
+            type: str
           evaluation_interval:
             description:
               - 'If omitted, the default value is 15 minutes (PT15M).'
+            type: 'unknown-primary[timeSpan]'
   auto_scale_run:
     description:
       - >-
         This property is set only if the pool automatically scales, i.e.
         autoScaleSettings are used.
+    type: dict
     suboptions:
       evaluation_time:
         description:
           - undefined
         required: true
+        type: datetime
       results:
         description:
           - >-
             Each variable value is returned in the form $variable=value, and
             variables are separated by semicolons.
+        type: str
       error:
         description:
           - undefined
+        type: dict
         suboptions:
           code:
             description:
@@ -312,12 +361,14 @@ options:
                 An identifier for the error. Codes are invariant and are
                 intended to be consumed programmatically.
             required: true
+            type: str
           message:
             description:
               - >-
                 A message describing the error, intended to be suitable for
                 display in a user interface.
             required: true
+            type: str
           details:
             description:
               - undefined
@@ -329,12 +380,14 @@ options:
                     An identifier for the error. Codes are invariant and are
                     intended to be consumed programmatically.
                 required: true
+                type: str
               message:
                 description:
                   - >-
                     A message describing the error, intended to be suitable for
                     display in a user interface.
                 required: true
+                type: str
               details:
                 description:
                   - undefined
@@ -346,9 +399,11 @@ options:
         Enabling this value can reduce the chance of the requested number of
         nodes to be allocated in the pool. If not specified, this value defaults
         to 'Disabled'.
+    type: str
   network_configuration:
     description:
       - undefined
+    type: dict
     suboptions:
       subnet_id:
         description:
@@ -377,11 +432,13 @@ options:
             30100. Also enable outbound connections to Azure Storage on port
             443. For more details see:
             https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration
+        type: str
       endpoint_configuration:
         description:
           - >-
             Pool endpoint configuration is only supported on pools with the
             virtualMachineConfiguration property.
+        type: dict
         suboptions:
           inbound_nat_pools:
             description:
@@ -402,10 +459,12 @@ options:
                     any invalid values are provided the request fails with HTTP
                     status code 400.
                 required: true
+                type: str
               protocol:
                 description:
                   - undefined
                 required: true
+                type: str
               backend_port:
                 description:
                   - >-
@@ -414,6 +473,7 @@ options:
                     as these are reserved. If any reserved values are provided
                     the request fails with HTTP status code 400.
                 required: true
+                type: number
               frontend_port_range_start:
                 description:
                   - >-
@@ -423,6 +483,7 @@ options:
                     overlapping values are provided the request fails with HTTP
                     status code 400.
                 required: true
+                type: number
               frontend_port_range_end:
                 description:
                   - >-
@@ -432,6 +493,7 @@ options:
                     overlap. If any reserved or overlapping values are provided
                     the request fails with HTTP status code 400.
                 required: true
+                type: number
               network_security_group_rules:
                 description:
                   - >-
@@ -445,14 +507,17 @@ options:
   max_tasks_per_node:
     description:
       - undefined
+    type: number
   task_scheduling_policy:
     description:
       - undefined
+    type: dict
     suboptions:
       node_fill_type:
         description:
           - undefined
         required: true
+        type: str
   user_accounts:
     description:
       - undefined
@@ -462,21 +527,25 @@ options:
         description:
           - undefined
         required: true
+        type: str
       password:
         description:
           - undefined
         required: true
+        type: str
       elevation_level:
         description:
           - >-
             nonAdmin - The auto user is a standard user without elevated access.
             admin - The auto user is a user with elevated access and operates
             with full Administrator permissions. The default value is nonAdmin.
+        type: str
       linux_user_configuration:
         description:
           - >-
             This property is ignored if specified on a Windows pool. If not
             specified, the user is created with the default options.
+        type: dict
         suboptions:
           uid:
             description:
@@ -484,12 +553,14 @@ options:
                 The uid and gid properties must be specified together or not at
                 all. If not specified the underlying operating system picks the
                 uid.
+            type: number
           gid:
             description:
               - >-
                 The uid and gid properties must be specified together or not at
                 all. If not specified the underlying operating system picks the
                 gid.
+            type: number
           ssh_private_key:
             description:
               - >-
@@ -501,12 +572,14 @@ options:
                 by placing the key pair into the user's .ssh directory. If not
                 specified, password-less SSH is not configured between nodes (no
                 modification of the user's .ssh directory is done).
+            type: str
       windows_user_configuration:
         description:
           - >-
             This property can only be specified if the user is on a Windows
             pool. If not specified and on a Windows pool, the user is created
             with the default options.
+        type: dict
         suboptions:
           login_mode:
             description:
@@ -514,6 +587,7 @@ options:
                 Specifies login mode for the user. The default value for
                 VirtualMachineConfiguration pools is interactive mode and for
                 CloudServiceConfiguration pools is batch mode.
+            type: str
   metadata:
     description:
       - >-
@@ -525,15 +599,18 @@ options:
         description:
           - undefined
         required: true
+        type: str
       value:
         description:
           - undefined
         required: true
+        type: str
   start_task:
     description:
       - >-
         In an PATCH (update) operation, this property can be set to an empty
         object to remove the start task from the pool.
+    type: dict
     suboptions:
       command_line:
         description:
@@ -544,6 +621,7 @@ options:
             should invoke the shell in the command line, for example using "cmd
             /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.
             Required if any other properties of the startTask are specified.
+        type: str
       resource_files:
         description:
           - undefined
@@ -555,6 +633,7 @@ options:
                 The autoStorageContainerName, storageContainerUrl and httpUrl
                 properties are mutually exclusive and one of them must be
                 specified.
+            type: str
           storage_container_url:
             description:
               - >-
@@ -567,6 +646,7 @@ options:
                 Access Signature (SAS) granting read and list permissions on the
                 blob, or set the ACL for the blob or its container to allow
                 public access.
+            type: str
           http_url:
             description:
               - >-
@@ -579,6 +659,7 @@ options:
                 Shared Access Signature (SAS) granting read permissions on the
                 blob, or set the ACL for the blob or its container to allow
                 public access.
+            type: str
           blob_prefix:
             description:
               - >-
@@ -586,6 +667,7 @@ options:
                 storageContainerUrl is used. This prefix can be a partial
                 filename or a subdirectory. If a prefix is not specified, all
                 the files in the container will be downloaded.
+            type: str
           file_path:
             description:
               - >-
@@ -599,6 +681,7 @@ options:
                 will be retained in full and appended to the specified filePath
                 directory. The specified relative path cannot break out of the
                 task's working directory (for example by using '..').
+            type: str
           file_mode:
             description:
               - >-
@@ -607,6 +690,7 @@ options:
                 resourceFile which will be downloaded to a Windows node. If this
                 property is not specified for a Linux node, then a default value
                 of 0770 is applied to the file.
+            type: str
       environment_settings:
         description:
           - undefined
@@ -616,29 +700,35 @@ options:
             description:
               - undefined
             required: true
+            type: str
           value:
             description:
               - undefined
+            type: str
       user_identity:
         description:
           - >-
             If omitted, the task runs as a non-administrative user unique to the
             task.
+        type: dict
         suboptions:
           user_name:
             description:
               - >-
                 The userName and autoUser properties are mutually exclusive; you
                 must specify one but not both.
+            type: str
           auto_user:
             description:
               - >-
                 The userName and autoUser properties are mutually exclusive; you
                 must specify one but not both.
+            type: dict
             suboptions:
               scope:
                 description:
                   - The default value is task.
+                type: str
               elevation_level:
                 description:
                   - >-
@@ -646,6 +736,7 @@ options:
                     access. admin - The auto user is a user with elevated access
                     and operates with full Administrator permissions. The
                     default value is nonAdmin.
+                type: str
       max_task_retry_count:
         description:
           - >-
@@ -657,6 +748,7 @@ options:
             retry count is 0, the Batch service does not retry the task. If the
             maximum retry count is -1, the Batch service retries the task
             without limit.
+        type: number
       wait_for_success:
         description:
           - >-
@@ -671,6 +763,7 @@ options:
             compute node while the start task is still running; and even if the
             start task fails, new tasks will continue to be scheduled on the
             node. The default is false.
+        type: boolean
       container_settings:
         description:
           - >-
@@ -679,6 +772,7 @@ options:
             node) are mapped into the container, all task environment variables
             are mapped into the container, and the task command line is executed
             in the container.
+        type: dict
         suboptions:
           container_run_options:
             description:
@@ -686,6 +780,7 @@ options:
                 These additional options are supplied as arguments to the
                 "docker create" command, in addition to those controlled by the
                 Batch Service.
+            type: str
           image_name:
             description:
               - >-
@@ -693,23 +788,28 @@ options:
                 "docker pull". If no tag is provided as part of the image name,
                 the tag ":latest" is used as a default.
             required: true
+            type: str
           registry:
             description:
               - >-
                 This setting can be omitted if was already provided at pool
                 creation.
+            type: dict
             suboptions:
               registry_server:
                 description:
                   - 'If omitted, the default is "docker.io".'
+                type: str
               username:
                 description:
                   - undefined
                 required: true
+                type: str
               password:
                 description:
                   - undefined
                 required: true
+                type: str
   certificates:
     description:
       - >-
@@ -727,6 +827,7 @@ options:
         description:
           - undefined
         required: true
+        type: str
       store_location:
         description:
           - >-
@@ -740,6 +841,7 @@ options:
             with visibility of 'remoteUser', a 'certs' directory is created in
             the user's home directory (e.g., /home/{user-name}/certs) and
             certificates are placed in that directory.
+        type: str
       store_name:
         description:
           - >-
@@ -749,6 +851,7 @@ options:
             store names include: My, Root, CA, Trust, Disallowed, TrustedPeople,
             TrustedPublisher, AuthRoot, AddressBook, but any custom store name
             can also be used. The default value is My.
+        type: str
       visibility:
         description:
           - undefined
@@ -765,6 +868,7 @@ options:
         description:
           - undefined
         required: true
+        type: str
       version:
         description:
           - >-
@@ -772,6 +876,7 @@ options:
             application, the request fails with the error code
             InvalidApplicationPackageReferences. If you are calling the REST API
             directly, the HTTP status code is 409.
+        type: str
   application_licenses:
     description:
       - >-
@@ -782,13 +887,16 @@ options:
   resize_operation_status:
     description:
       - undefined
+    type: dict
     suboptions:
       target_dedicated_nodes:
         description:
           - undefined
+        type: number
       target_low_priority_nodes:
         description:
           - undefined
+        type: number
       resize_timeout:
         description:
           - >-
@@ -796,12 +904,15 @@ options:
             you specify a value less than 5 minutes, the Batch service returns
             an error; if you are calling the REST API directly, the HTTP status
             code is 400 (Bad Request).
+        type: 'unknown-primary[timeSpan]'
       node_deallocation_option:
         description:
           - The default value is requeue.
+        type: str
       start_time:
         description:
           - undefined
+        type: datetime
       errors:
         description:
           - >-
@@ -815,12 +926,14 @@ options:
                 An identifier for the error. Codes are invariant and are
                 intended to be consumed programmatically.
             required: true
+            type: str
           message:
             description:
               - >-
                 A message describing the error, intended to be suitable for
                 display in a user interface.
             required: true
+            type: str
           details:
             description:
               - undefined
@@ -832,12 +945,14 @@ options:
                     An identifier for the error. Codes are invariant and are
                     intended to be consumed programmatically.
                 required: true
+                type: str
               message:
                 description:
                   - >-
                     A message describing the error, intended to be suitable for
                     display in a user interface.
                 required: true
+                type: str
               details:
                 description:
                   - undefined

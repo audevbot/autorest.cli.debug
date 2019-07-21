@@ -25,26 +25,32 @@ options:
     description:
       - Name of an Azure resource group.
     required: true
+    type: str
   account_name:
     description:
       - Cosmos DB database account name.
     required: true
+    type: str
   region:
     description:
       - 'Cosmos DB region, with spaces between words and each word capitalized.'
     required: true
+    type: str
   database_rid:
     description:
       - Cosmos DB database rid.
     required: true
+    type: str
   collection_rid:
     description:
       - Cosmos DB collection rid.
     required: true
+    type: str
   partition_key_range_id:
     description:
       - Partition Key Range Id for which to get data.
     required: true
+    type: str
   value:
     description:
       - The list of partition-level metrics for the account.
@@ -53,25 +59,32 @@ options:
       start_time:
         description:
           - The start time for the metric (ISO-8601 format).
+        type: datetime
       end_time:
         description:
           - The end time for the metric (ISO-8601 format).
+        type: datetime
       time_grain:
         description:
           - The time grain to be used to summarize the metric values.
+        type: str
       unit:
         description:
           - The unit of the metric.
+        type: str
       name:
         description:
           - The name information for the metric.
+        type: dict
         suboptions:
           value:
             description:
               - The name of the metric.
+            type: str
           localized_value:
             description:
               - The friendly name of the metric.
+            type: str
       metric_values:
         description:
           - The metric values for the specified time window and timestep.
@@ -80,29 +93,37 @@ options:
           _count:
             description:
               - The number of values for the metric.
+            type: number
           average:
             description:
               - The average value of the metric.
+            type: number
           maximum:
             description:
               - The max value of the metric.
+            type: number
           minimum:
             description:
               - The min value of the metric.
+            type: number
           timestamp:
             description:
               - The metric timestamp (ISO-8601 format).
+            type: datetime
           total:
             description:
               - The total value of the metric.
+            type: number
       partition_id:
         description:
           - The partition id (GUID identifier) of the metric values.
+        type: str
       partition_key_range_id:
         description:
           - >-
             The partition key range id (integer identifier) of the metric
             values.
+        type: str
 extends_documentation_fragment:
   - azure
 author:

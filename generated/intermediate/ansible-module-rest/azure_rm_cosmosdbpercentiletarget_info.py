@@ -25,16 +25,19 @@ options:
     description:
       - Name of an Azure resource group.
     required: true
+    type: str
   account_name:
     description:
       - Cosmos DB database account name.
     required: true
+    type: str
   target_region:
     description:
       - >-
         Target region to which data is written. Cosmos DB region, with spaces
         between words and each word capitalized.
     required: true
+    type: str
   value:
     description:
       - The list of percentile metrics for the account.
@@ -43,25 +46,32 @@ options:
       start_time:
         description:
           - The start time for the metric (ISO-8601 format).
+        type: datetime
       end_time:
         description:
           - The end time for the metric (ISO-8601 format).
+        type: datetime
       time_grain:
         description:
           - The time grain to be used to summarize the metric values.
+        type: str
       unit:
         description:
           - The unit of the metric.
+        type: str
       name:
         description:
           - The name information for the metric.
+        type: dict
         suboptions:
           value:
             description:
               - The name of the metric.
+            type: str
           localized_value:
             description:
               - The friendly name of the metric.
+            type: str
       metric_values:
         description:
           - >-
@@ -72,42 +82,55 @@ options:
           _count:
             description:
               - The number of values for the metric.
+            type: number
           average:
             description:
               - The average value of the metric.
+            type: number
           maximum:
             description:
               - The max value of the metric.
+            type: number
           minimum:
             description:
               - The min value of the metric.
+            type: number
           timestamp:
             description:
               - The metric timestamp (ISO-8601 format).
+            type: datetime
           total:
             description:
               - The total value of the metric.
+            type: number
           p10:
             description:
               - The 10th percentile value for the metric.
+            type: number
           p25:
             description:
               - The 25th percentile value for the metric.
+            type: number
           p50:
             description:
               - The 50th percentile value for the metric.
+            type: number
           p75:
             description:
               - The 75th percentile value for the metric.
+            type: number
           p90:
             description:
               - The 90th percentile value for the metric.
+            type: number
           p95:
             description:
               - The 95th percentile value for the metric.
+            type: number
           p99:
             description:
               - The 99th percentile value for the metric.
+            type: number
 extends_documentation_fragment:
   - azure
 author:

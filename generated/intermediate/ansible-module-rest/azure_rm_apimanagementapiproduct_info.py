@@ -25,16 +25,19 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   api_id:
     description:
       - >-
         API identifier. Must be unique in the current API Management service
         instance.
     required: true
+    type: str
   value:
     description:
       - Page values.
@@ -43,21 +46,26 @@ options:
       id:
         description:
           - Resource ID.
+        type: str
       name:
         description:
           - Resource name.
+        type: str
       type:
         description:
           - Resource type for API Management resource.
+        type: str
       description:
         description:
           - Product description. May include HTML formatting tags.
+        type: str
       terms:
         description:
           - >-
             Product terms of use. Developers trying to subscribe to the product
             will be presented and required to accept these terms before they can
             complete the subscription process.
+        type: str
       subscription_required:
         description:
           - >-
@@ -69,6 +77,7 @@ options:
             product can be made without a subscription key. If property is
             omitted when creating a new product it's value is assumed to be
             true.
+        type: boolean
       approval_required:
         description:
           - >-
@@ -78,6 +87,7 @@ options:
             administrators must manually approve the subscription before the
             developer can any of the product’s APIs. Can be present only if
             subscriptionRequired property is present and has a value of false.
+        type: boolean
       subscriptions_limit:
         description:
           - >-
@@ -85,6 +95,7 @@ options:
             at the same time. Set to null or omit to allow unlimited per user
             subscriptions. Can be present only if subscriptionRequired property
             is present and has a value of false.
+        type: number
       state:
         description:
           - >-
@@ -92,13 +103,16 @@ options:
             discoverable by users of developer portal. Non published products
             are visible only to administrators. Default state of Product is
             notPublished.
+        type: str
       display_name:
         description:
           - Product name.
         required: true
+        type: str
   next_link:
     description:
       - Next page link if any.
+    type: str
 extends_documentation_fragment:
   - azure
 author:

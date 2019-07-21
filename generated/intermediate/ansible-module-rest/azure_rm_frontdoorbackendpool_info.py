@@ -25,16 +25,20 @@ options:
     description:
       - Name of the Resource group within the Azure subscription.
     required: true
+    type: str
   front_door_name:
     description:
       - Name of the Front Door which is globally unique.
     required: true
+    type: str
   name:
     description:
       - Resource name.
+    type: str
   id:
     description:
       - Resource ID.
+    type: str
   backends:
     description:
       - The set of backends for this pool
@@ -43,50 +47,63 @@ options:
       address:
         description:
           - Location of the backend (IP address or FQDN)
+        type: str
       http_port:
         description:
           - The HTTP TCP port number. Must be between 1 and 65535.
+        type: number
       https_port:
         description:
           - The HTTPS TCP port number. Must be between 1 and 65535.
+        type: number
       enabled_state:
         description:
           - >-
             Whether to enable use of this backend. Permitted values are
             'Enabled' or 'Disabled'
+        type: str
       priority:
         description:
           - >-
             Priority to use for load balancing. Higher priorities will not be
             used for load balancing if any lower priority backend is healthy.
+        type: number
       weight:
         description:
           - Weight of this endpoint for load balancing purposes.
+        type: number
       backend_host_header:
         description:
           - >-
             The value to use as the host header sent to the backend. If blank or
             unspecified, this defaults to the incoming host.
+        type: str
   load_balancing_settings:
     description:
       - Load balancing settings for a backend pool
+    type: dict
     suboptions:
       id:
         description:
           - Resource ID.
+        type: str
   health_probe_settings:
     description:
       - L7 health probe settings for a backend pool
+    type: dict
     suboptions:
       id:
         description:
           - Resource ID.
+        type: str
   resource_state:
     description:
       - Resource status.
+    type: str
   type:
     description:
       - Resource type.
+    type: str
 extends_documentation_fragment:
   - azure
 author:

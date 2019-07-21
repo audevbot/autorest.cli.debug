@@ -25,44 +25,55 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   gallery_name:
     description:
       - >-
         The name of the Shared Application Gallery from which the Application
         Definitions are to be retrieved.
     required: true
+    type: str
   name:
     description:
       - Resource name
+    type: str
   id:
     description:
       - Resource Id
+    type: str
   type:
     description:
       - Resource type
+    type: str
   location:
     description:
       - Resource location
+    type: str
   description:
     description:
       - >-
         The description of this gallery Application Definition resource. This
         property is updatable.
+    type: str
   eula:
     description:
       - The Eula agreement for the gallery Application Definition.
+    type: str
   privacy_statement_uri:
     description:
       - The privacy statement uri.
+    type: str
   release_note_uri:
     description:
       - The release note uri.
+    type: str
   end_of_life_date:
     description:
       - >-
         The end of life date of the gallery Application Definition. This
         property can be used for decommissioning purposes. This property is
         updatable.
+    type: datetime
   supported_ostype:
     description:
       - >-
@@ -70,6 +81,7 @@ options:
         application is built for. <br><br> Possible values are: <br><br>
         **Windows** <br><br> **Linux**
     required: true
+    type: str
 extends_documentation_fragment:
   - azure
 author:

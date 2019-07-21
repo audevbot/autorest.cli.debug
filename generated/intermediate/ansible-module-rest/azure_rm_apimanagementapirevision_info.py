@@ -25,16 +25,19 @@ options:
     description:
       - The name of the resource group.
     required: true
+    type: str
   service_name:
     description:
       - The name of the API Management service.
     required: true
+    type: str
   api_id:
     description:
       - >-
         API identifier. Must be unique in the current API Management service
         instance.
     required: true
+    type: str
   value:
     description:
       - Page values.
@@ -43,36 +46,45 @@ options:
       api_id:
         description:
           - Identifier of the API Revision.
+        type: str
       api_revision:
         description:
           - Revision number of API.
+        type: str
       created_date_time:
         description:
           - >-
             The time the API Revision was created. The date conforms to the
             following format: yyyy-MM-ddTHH:mm:ssZ as specified by the ISO 8601
             standard.
+        type: datetime
       updated_date_time:
         description:
           - >-
             The time the API Revision were updated. The date conforms to the
             following format: yyyy-MM-ddTHH:mm:ssZ as specified by the ISO 8601
             standard.
+        type: datetime
       description:
         description:
           - Description of the API Revision.
+        type: str
       private_url:
         description:
           - Gateway URL for accessing the non-current API Revision.
+        type: str
       is_online:
         description:
           - Indicates if API revision is the current api revision.
+        type: boolean
       is_current:
         description:
           - Indicates if API revision is accessible via the gateway.
+        type: boolean
   next_link:
     description:
       - Next page link if any.
+    type: str
 extends_documentation_fragment:
   - azure
 author:
