@@ -15,29 +15,47 @@ ANSIBLE_METADATA = {'metadata_version': '1.1',
 
 DOCUMENTATION = '''
 ---
-module: info
+module: apimanagementregion_info
 version_added: '2.9'
-short_description: Get SubscriptionOperation info.
+short_description: Get Region info.
 description:
-  - Get info of SubscriptionOperation.
+  - Get info of Region.
 options:
+  resource_group:
+    description:
+      - The name of the resource group.
+    required: true
+    type: str
+  name:
+    description:
+      - The name of the API Management service.
+    required: true
+    type: str
   value:
     description:
-      - A list of pending SubscriptionOperations
+      - Lists of Regions.
     type: list
     suboptions:
-      id:
+      name:
         description:
-          - The operation Id.
+          - Region name.
         type: str
-      status:
+      is_master_region:
         description:
-          - Status of the pending subscription
-        type: str
-      status_detail:
+          - whether Region is the master region.
+        type: boolean
+      is_deleted:
         description:
-          - Status Detail of the pending subscription
-        type: str
+          - whether Region is deleted.
+        type: boolean
+  count:
+    description:
+      - Total record count number across all pages.
+    type: number
+  next_link:
+    description:
+      - Next page link if any.
+    type: str
 extends_documentation_fragment:
   - azure
 author:
@@ -46,49 +64,62 @@ author:
 '''
 
 EXAMPLES = '''
-- name: getPendingSubscriptionOperations
-  azure.rm.subscriptionssubscriptionoperation.info: {}
+- name: ApiManagementListRegions
+  azure.rm.apimanagementregion.info:
+    resource_group: myResourceGroup
+    name: myService
 
 '''
 
 RETURN = '''
-subscription_operations:
+region:
   description: >-
-    A list of dict results where the key is the name of the
-    SubscriptionOperation and the values are the facts for that
-    SubscriptionOperation.
+    A list of dict results where the key is the name of the Region and the
+    values are the facts for that Region.
   returned: always
   type: complex
   contains:
-    subscriptionoperation_name:
+    region_name:
       description: The key is the name of the server that the values relate to.
       type: complex
       contains:
         value:
           description:
-            - A list of pending SubscriptionOperations
+            - Lists of Regions.
           returned: always
           type: dict
           sample: null
           contains:
-            id:
+            name:
               description:
-                - The operation Id.
+                - Region name.
               returned: always
               type: str
               sample: null
-            status:
+            is_master_region:
               description:
-                - Status of the pending subscription
+                - whether Region is the master region.
               returned: always
-              type: str
+              type: boolean
               sample: null
-            status_detail:
+            is_deleted:
               description:
-                - Status Detail of the pending subscription
+                - whether Region is deleted.
               returned: always
-              type: str
+              type: boolean
               sample: null
+        count:
+          description:
+            - Total record count number across all pages.
+          returned: always
+          type: number
+          sample: null
+        next_link:
+          description:
+            - Next page link if any.
+          returned: always
+          type: str
+          sample: null
 
 '''
 
@@ -100,12 +131,24 @@ from copy import deepcopy
 from msrestazure.azure_exceptions import CloudError
 
 
-class AzureRMSubscriptionOperationsInfo(AzureRMModuleBase):
+class AzureRMRegionInfo(AzureRMModuleBase):
     def __init__(self):
         self.module_arg_spec = dict(
+            resource_group=dict(
+                type='str',
+                required=true
+            ),
+            name=dict(
+                type='str',
+                required=true
+            )
         )
 
+        self.resource_group = None
+        self.name = None
         self.value = None
+        self.count = None
+        self.next_link = None
 
         self.results = dict(changed=False)
         self.mgmt_client = None
@@ -114,12 +157,12 @@ class AzureRMSubscriptionOperationsInfo(AzureRMModuleBase):
         self.status_code = [200]
 
         self.query_parameters = {}
-        self.query_parameters['api-version'] = '2018-03-01-preview'
+        self.query_parameters['api-version'] = '2019-01-01'
         self.header_parameters = {}
         self.header_parameters['Content-Type'] = 'application/json; charset=utf-8'
 
         self.mgmt_client = None
-        super(AzureRMSubscriptionOperationsInfo, self).__init__(self.module_arg_spec, supports_tags=True)
+        super(AzureRMRegionInfo, self).__init__(self.module_arg_spec, supports_tags=True)
 
     def exec_module(self, **kwargs):
 
@@ -129,17 +172,27 @@ class AzureRMSubscriptionOperationsInfo(AzureRMModuleBase):
         self.mgmt_client = self.get_mgmt_svc_client(GenericRestClient,
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
-        else:
-            self.results['subscription_operations'] = [self.format_item(self.list())]
+        if (self.resource_group is not None and
+            self.name is not None):
+            self.results['region'] = self.format_item(self.listbyservice())
         return self.results
 
-    def list(self):
+    def listbyservice(self):
         response = None
         results = {}
         # prepare url
-        self.url = ('/providers' +
-                    '/Microsoft.Subscription' +
-                    '/subscriptionOperations')
+        self.url = ('/subscriptions' +
+                    '/{{ subscription_id }}' +
+                    '/resourceGroups' +
+                    '/{{ resource_group }}' +
+                    '/providers' +
+                    '/Microsoft.ApiManagement' +
+                    '/service' +
+                    '/{{ service_name }}' +
+                    '/regions')
+        self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
+        self.url = self.url.replace('{{ resource_group }}', self.resource_group)
+        self.url = self.url.replace('{{ service_name }}', self.name)
 
         try:
             response = self.mgmt_client.query(self.url,
@@ -162,7 +215,7 @@ class AzureRMSubscriptionOperationsInfo(AzureRMModuleBase):
 
 
 def main():
-    AzureRMSubscriptionOperationsInfo()
+    AzureRMRegionInfo()
 
 
 if __name__ == '__main__':
