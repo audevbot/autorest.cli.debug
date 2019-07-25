@@ -29630,7 +29630,6 @@ properties:
     constraints:
       MaxLength: '80'
       MinLength: '1'
-      Pattern: '^[^*#&+:<>?]+$'
     defaultValue:
       $id: '5612'
       fixed: false
@@ -29843,7 +29842,6 @@ properties:
     constraints:
       MaxLength: '80'
       MinLength: '1'
-      Pattern: '^[^*#&+:<>?]+$'
     defaultValue:
       $id: '5648'
       fixed: false
@@ -30416,7 +30414,6 @@ properties:
     constraints:
       MaxLength: '80'
       MinLength: '1'
-      Pattern: '^[^*#&+:<>?]+$'
     defaultValue:
       $id: '5746'
       fixed: false
@@ -30510,7 +30507,6 @@ properties:
     constraints:
       MaxLength: '256'
       MinLength: '1'
-      Pattern: '^[^*#&+:<>?]+$'
     defaultValue:
       $id: '5762'
       fixed: false
@@ -30985,7 +30981,6 @@ properties:
     constraints:
       MaxLength: '80'
       MinLength: '1'
-      Pattern: '^[^*#&+:<>?]+$'
     defaultValue:
       $id: '5844'
       fixed: false
@@ -33901,7 +33896,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '6196'
               fixed: false
@@ -34239,7 +34233,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '6253'
               fixed: false
@@ -34573,7 +34566,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '6307'
               fixed: false
@@ -34827,7 +34819,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '6349'
               fixed: false
@@ -35101,7 +35092,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '6391'
               fixed: false
@@ -35465,7 +35455,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '6444'
               fixed: false
@@ -35779,7 +35768,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '6496'
               fixed: false
@@ -36530,7 +36518,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '6614'
               fixed: false
@@ -36787,7 +36774,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '6656'
               fixed: false
@@ -37141,7 +37127,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '6698'
               fixed: false
@@ -37545,7 +37530,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '6751'
               fixed: false
@@ -37878,7 +37862,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '6803'
               fixed: false
@@ -38174,7 +38157,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '6855'
               fixed: false
@@ -38439,7 +38421,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '6897'
               fixed: false
@@ -38729,7 +38710,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '6945'
               fixed: false
@@ -39055,7 +39035,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '6997'
               fixed: false
@@ -39438,7 +39417,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '7056'
               fixed: false
@@ -39767,7 +39745,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '7114'
               fixed: false
@@ -40135,7 +40112,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '7174'
               fixed: false
@@ -40428,7 +40404,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '7222'
               fixed: false
@@ -40733,7 +40708,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '7270'
               fixed: false
@@ -41048,7 +41022,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '7319'
               fixed: false
@@ -42689,7 +42662,6 @@ operations:
             constraints:
               MaxLength: '256'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '7586'
               fixed: false
@@ -43018,7 +42990,6 @@ operations:
             constraints:
               MaxLength: '256'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '7640'
               fixed: false
@@ -43272,7 +43243,6 @@ operations:
             constraints:
               MaxLength: '256'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '7682'
               fixed: false
@@ -43538,7 +43508,6 @@ operations:
             constraints:
               MaxLength: '256'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '7724'
               fixed: false
@@ -43814,7 +43783,6 @@ operations:
             constraints:
               MaxLength: '256'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '7767'
               fixed: false
@@ -45666,7 +45634,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '8075'
               fixed: false
@@ -48983,7 +48950,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '8610'
               fixed: false
@@ -49337,7 +49303,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '8664'
               fixed: false
@@ -49593,7 +49558,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '8706'
               fixed: false
@@ -49888,7 +49852,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '8748'
               fixed: false
@@ -50311,7 +50274,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '8801'
               fixed: false
@@ -50646,7 +50608,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '8853'
               fixed: false
@@ -50941,7 +50902,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '8905'
               fixed: false
@@ -51311,7 +51271,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '8965'
               fixed: false
@@ -51567,7 +51526,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '9007'
               fixed: false
@@ -51874,7 +51832,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '9055'
               fixed: false
@@ -52243,7 +52200,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '9108'
               fixed: false
@@ -52550,7 +52506,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '9160'
               fixed: false
@@ -52845,7 +52800,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '9212'
               fixed: false
@@ -53218,7 +53172,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '9272'
               fixed: false
@@ -53512,7 +53465,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '9320'
               fixed: false
@@ -53825,7 +53777,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '9368'
               fixed: false
@@ -54228,7 +54179,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '9427'
               fixed: false
@@ -54561,7 +54511,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '9485'
               fixed: false
@@ -54931,7 +54880,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '9545'
               fixed: false
@@ -55225,7 +55173,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '9593'
               fixed: false
@@ -55534,7 +55481,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '9641'
               fixed: false
@@ -55925,7 +55871,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '9700'
               fixed: false
@@ -61758,7 +61703,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '10630'
               fixed: false
@@ -61976,7 +61920,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '10666'
               fixed: false
@@ -62215,7 +62158,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '10702'
               fixed: false
@@ -62652,7 +62594,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '10749'
               fixed: false
@@ -62924,7 +62865,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '10795'
               fixed: false
@@ -63171,7 +63111,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '10838'
               fixed: false
@@ -75244,7 +75183,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '12557'
               fixed: false
@@ -75495,7 +75433,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '12600'
               fixed: false
@@ -75782,7 +75719,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '12643'
               fixed: false
@@ -81353,7 +81289,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '13494'
               fixed: false
@@ -81592,7 +81527,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '13535'
               fixed: false
@@ -81869,7 +81803,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '13576'
               fixed: false
@@ -89065,7 +88998,6 @@ operations:
             constraints:
               MaxLength: '256'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '14760'
               fixed: false
@@ -89283,7 +89215,6 @@ operations:
             constraints:
               MaxLength: '256'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '14796'
               fixed: false
@@ -89518,7 +89449,6 @@ operations:
             constraints:
               MaxLength: '256'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '14832'
               fixed: false
@@ -89829,7 +89759,6 @@ operations:
             constraints:
               MaxLength: '256'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '14879'
               fixed: false
@@ -90098,7 +90027,6 @@ operations:
             constraints:
               MaxLength: '256'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '14925'
               fixed: false
@@ -90711,7 +90639,6 @@ operations:
             constraints:
               MaxLength: '256'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '15031'
               fixed: false
@@ -91052,7 +90979,6 @@ operations:
             constraints:
               MaxLength: '256'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '15085'
               fixed: false
@@ -91301,7 +91227,6 @@ operations:
             constraints:
               MaxLength: '256'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '15127'
               fixed: false
@@ -91598,7 +91523,6 @@ operations:
             constraints:
               MaxLength: '256'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '15170'
               fixed: false
@@ -91860,7 +91784,6 @@ operations:
             constraints:
               MaxLength: '256'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '15216'
               fixed: false
@@ -92229,7 +92152,6 @@ operations:
             constraints:
               MaxLength: '256'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '15270'
               fixed: false
@@ -92476,7 +92398,6 @@ operations:
             constraints:
               MaxLength: '256'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '15312'
               fixed: false
@@ -92759,7 +92680,6 @@ operations:
             constraints:
               MaxLength: '256'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '15355'
               fixed: false
@@ -93019,7 +92939,6 @@ operations:
             constraints:
               MaxLength: '256'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '15401'
               fixed: false
@@ -93381,7 +93300,6 @@ operations:
             constraints:
               MaxLength: '256'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '15458'
               fixed: false
@@ -93606,7 +93524,6 @@ operations:
             constraints:
               MaxLength: '256'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '15494'
               fixed: false
@@ -93855,7 +93772,6 @@ operations:
             constraints:
               MaxLength: '256'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '15536'
               fixed: false
@@ -94142,7 +94058,6 @@ operations:
             constraints:
               MaxLength: '256'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '15582'
               fixed: false
@@ -94483,7 +94398,6 @@ operations:
             constraints:
               MaxLength: '256'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '15635'
               fixed: false
@@ -106121,7 +106035,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '17492'
               fixed: false
@@ -106339,7 +106252,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '17528'
               fixed: false
@@ -106574,7 +106486,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '17564'
               fixed: false
@@ -106898,7 +106809,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '17611'
               fixed: false
@@ -107169,7 +107079,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '17657'
               fixed: false
@@ -107470,7 +107379,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '17712'
               fixed: false
@@ -107687,7 +107595,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '17748'
               fixed: false
@@ -107939,7 +107846,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '17791'
               fixed: false
@@ -108286,7 +108192,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '17848'
               fixed: false
@@ -108674,7 +108579,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '17905'
               fixed: false
@@ -108903,7 +108807,6 @@ operations:
             constraints:
               MaxLength: '80'
               MinLength: '1'
-              Pattern: '^[^*#&+:<>?]+$'
             defaultValue:
               $id: '17944'
               fixed: false
