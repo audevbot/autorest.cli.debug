@@ -6408,9 +6408,10 @@ operations:
                 Cache-Control: no-cache
               responses:
                 '200':
-                  nameAvailable: true|false
-                  reason: Invalid|AlreadyExists
-                  message: <error message>
+                  body:
+                    nameAvailable: false
+                    reason: AlreadyExists
+                    message: <error message>
         deprecated: false
         hidden: false
       - $id: '1165'
@@ -6486,8 +6487,9 @@ operations:
                 startTenantBackfillRequest: {}
               responses:
                 '200':
-                  tenantId: 20000000-0000-0000-0000-000000000000
-                  status: Started
+                  body:
+                    tenantId: 20000000-0000-0000-0000-000000000000
+                    status: Started
         deprecated: false
         hidden: false
       - $id: '1177'
@@ -6563,8 +6565,9 @@ operations:
                 tenantBackfillStatusRequest: {}
               responses:
                 '200':
-                  tenantId: 20000000-0000-0000-0000-000000000000
-                  status: Started
+                  body:
+                    tenantId: 20000000-0000-0000-0000-000000000000
+                    status: Started
         deprecated: false
         hidden: false
     name:
