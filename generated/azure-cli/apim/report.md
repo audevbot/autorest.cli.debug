@@ -1,10 +1,10 @@
 # Azure CLI Module Creation Report
 
-## apimgmt
+## apim
 
-### apimgmt create
+### apim create
 
-create a apimgmt.
+create a apim.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -29,7 +29,7 @@ create a apimgmt.
 **Example: ApiManagementCreateService**
 
 ```
-apimgmt create --resource-group rg1
+apim create --resource-group rg1
         --name apimService1
         --publisher-email apim@autorestsdk.com
         --publisher-name autorestsdk
@@ -41,7 +41,7 @@ apimgmt create --resource-group rg1
 **Example: ApiManagementCreateMultiRegionServiceWithCustomHostname**
 
 ```
-apimgmt create --resource-group rg1
+apim create --resource-group rg1
         --name apimService1
         --virtual-network-type External
         --publisher-email admin@live.com
@@ -54,7 +54,7 @@ apimgmt create --resource-group rg1
 **Example: ApiManagementCreateServiceHavingMsi**
 
 ```
-apimgmt create --resource-group rg1
+apim create --resource-group rg1
         --name apimService1
         --publisher-email apim@autorestsdk.com
         --publisher-name autorestsdk
@@ -65,7 +65,7 @@ apimgmt create --resource-group rg1
 **Example: ApiManagementCreateServiceWithSystemCertificates**
 
 ```
-apimgmt create --resource-group rg1
+apim create --resource-group rg1
         --name apimService1
         --publisher-email apim@autorestsdk.com
         --publisher-name autorestsdk
@@ -73,9 +73,9 @@ apimgmt create --resource-group rg1
         --sku-capacity 1
         --location "Central US"
 ```
-### apimgmt update
+### apim update
 
-update a apimgmt.
+update a apim.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -100,21 +100,21 @@ update a apimgmt.
 **Example: ApiManagementUpdateServiceDisableTls10**
 
 ```
-apimgmt update --resource-group rg1
+apim update --resource-group rg1
         --name apimService1
 ```
 
 **Example: ApiManagementUpdateServicePublisherDetails**
 
 ```
-apimgmt update --resource-group rg1
+apim update --resource-group rg1
         --name apimService1
         --publisher-email foobar@live.com
         --publisher-name "Contoso Vnext"
 ```
-### apimgmt delete
+### apim delete
 
-delete a apimgmt.
+delete a apim.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -124,29 +124,29 @@ delete a apimgmt.
 **Example: ApiManagementServiceDeleteService**
 
 ```
-apimgmt delete --resource-group rg1
+apim delete --resource-group rg1
         --name apimService1
 ```
-### apimgmt list
+### apim list
 
-list a apimgmt.
+list a apim.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
-### apimgmt show
+### apim show
 
-show a apimgmt.
+show a apim.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--name**|str|The name of the API Management service.|service_name|serviceName|
-## apimgmt api
+## apim api
 
-### apimgmt api create
+### apim api create
 
-create a apimgmt api.
+create a apim api.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -178,7 +178,7 @@ create a apimgmt api.
 **Example: ApiManagementCreateApiUsingOai3Import**
 
 ```
-apimgmt api create --resource-group rg1
+apim api create --resource-group rg1
         --service-name apimService1
         --api-id petstore
         --path petstore
@@ -189,7 +189,7 @@ apimgmt api create --resource-group rg1
 **Example: ApiManagementCreateApiUsingSwaggerImport**
 
 ```
-apimgmt api create --resource-group rg1
+apim api create --resource-group rg1
         --service-name apimService1
         --api-id petstore
         --path petstore
@@ -200,7 +200,7 @@ apimgmt api create --resource-group rg1
 **Example: ApiManagementCreateApiUsingWadlImport**
 
 ```
-apimgmt api create --resource-group rg1
+apim api create --resource-group rg1
         --service-name apimService1
         --api-id petstore
         --path collector
@@ -211,7 +211,7 @@ apimgmt api create --resource-group rg1
 **Example: ApiManagementCreateSoapToRestApiUsingWsdlImport**
 
 ```
-apimgmt api create --resource-group rg1
+apim api create --resource-group rg1
         --service-name apimService1
         --api-id soapApi
         --path currency
@@ -222,7 +222,7 @@ apimgmt api create --resource-group rg1
 **Example: ApiManagementCreateSoapPassThroughApiUsingWsdlImport**
 
 ```
-apimgmt api create --resource-group rg1
+apim api create --resource-group rg1
         --service-name apimService1
         --api-id soapApi
         --path currency
@@ -234,7 +234,7 @@ apimgmt api create --resource-group rg1
 **Example: ApiManagementCreateApi**
 
 ```
-apimgmt api create --resource-group rg1
+apim api create --resource-group rg1
         --service-name apimService1
         --api-id tempgroup
         --description apidescription5200
@@ -246,7 +246,7 @@ apimgmt api create --resource-group rg1
 **Example: ApiManagementCreateApiRevisionFromExistingApi**
 
 ```
-apimgmt api create --resource-group rg1
+apim api create --resource-group rg1
         --service-name apimService1
         --api-id echo-api;rev=3
         --api-revision-description "Creating a Revision of an existing API"
@@ -258,7 +258,7 @@ apimgmt api create --resource-group rg1
 **Example: ApiManagementCreateApiNewVersionUsingExistingApi**
 
 ```
-apimgmt api create --resource-group rg1
+apim api create --resource-group rg1
         --service-name apimService1
         --api-id echoapiv3
         --description "Create Echo API into a new Version using Existing Version Set and Copy all Operations."
@@ -275,7 +275,7 @@ apimgmt api create --resource-group rg1
 **Example: ApiManagementCreateApiClone**
 
 ```
-apimgmt api create --resource-group rg1
+apim api create --resource-group rg1
         --service-name apimService1
         --api-id echo-api2
         --description "Copy of Existing Echo Api including Operations."
@@ -290,7 +290,7 @@ apimgmt api create --resource-group rg1
 **Example: ApiManagementCreateApiWithOpenIdConnect**
 
 ```
-apimgmt api create --resource-group rg1
+apim api create --resource-group rg1
         --service-name apimService1
         --api-id tempgroup
         --description "This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters."
@@ -298,9 +298,9 @@ apimgmt api create --resource-group rg1
         --service-url http://petstore.swagger.io/v2
         --path petstore
 ```
-### apimgmt api update
+### apim api update
 
-update a apimgmt api.
+update a apim api.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -332,16 +332,16 @@ update a apimgmt api.
 **Example: ApiManagementUpdateApi**
 
 ```
-apimgmt api update --resource-group rg1
+apim api update --resource-group rg1
         --service-name apimService1
         --api-id echo-api
         --display-name "Echo API New"
         --service-url http://echoapi.cloudapp.net/api2
         --path newecho
 ```
-### apimgmt api delete
+### apim api delete
 
-delete a apimgmt api.
+delete a apim api.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -352,32 +352,32 @@ delete a apimgmt api.
 **Example: ApiManagementDeleteApi**
 
 ```
-apimgmt api delete --resource-group rg1
+apim api delete --resource-group rg1
         --service-name apimService1
         --api-id echo-api
 ```
-### apimgmt api list
+### apim api list
 
-list a apimgmt api.
+list a apim api.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
-### apimgmt api show
+### apim api show
 
-show a apimgmt api.
+show a apim api.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--api-id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
-## apimgmt api diagnostic
+## apim api diagnostic
 
-### apimgmt api diagnostic create
+### apim api diagnostic create
 
-create a apimgmt api diagnostic.
+create a apim api diagnostic.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -395,16 +395,16 @@ create a apimgmt api diagnostic.
 **Example: ApiManagementCreateApiDiagnostic**
 
 ```
-apimgmt api diagnostic create --resource-group rg1
+apim api diagnostic create --resource-group rg1
         --service-name apimService1
         --api-id 57d1f7558aa04f15146d9d8a
         --diagnostic-id applicationinsights
         --always-log allErrors
         --logger-id /loggers/applicationinsights
 ```
-### apimgmt api diagnostic update
+### apim api diagnostic update
 
-update a apimgmt api diagnostic.
+update a apim api diagnostic.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -422,16 +422,16 @@ update a apimgmt api diagnostic.
 **Example: ApiManagementUpdateApiDiagnostic**
 
 ```
-apimgmt api diagnostic update --resource-group rg1
+apim api diagnostic update --resource-group rg1
         --service-name apimService1
         --api-id 57d1f7558aa04f15146d9d8a
         --diagnostic-id applicationinsights
         --always-log allErrors
         --logger-id /loggers/applicationinsights
 ```
-### apimgmt api diagnostic delete
+### apim api diagnostic delete
 
-delete a apimgmt api diagnostic.
+delete a apim api diagnostic.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -443,23 +443,23 @@ delete a apimgmt api diagnostic.
 **Example: ApiManagementDeleteApiDiagnostic**
 
 ```
-apimgmt api diagnostic delete --resource-group rg1
+apim api diagnostic delete --resource-group rg1
         --service-name apimService1
         --api-id 57d1f7558aa04f15146d9d8a
         --diagnostic-id applicationinsights
 ```
-### apimgmt api diagnostic list
+### apim api diagnostic list
 
-list a apimgmt api diagnostic.
+list a apim api diagnostic.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--api-id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
-### apimgmt api diagnostic show
+### apim api diagnostic show
 
-show a apimgmt api diagnostic.
+show a apim api diagnostic.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -467,11 +467,11 @@ show a apimgmt api diagnostic.
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--api-id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
 |**--diagnostic-id**|str|Diagnostic identifier. Must be unique in the current API Management service instance.|diagnostic_id|diagnosticId|
-## apimgmt api issue
+## apim api issue
 
-### apimgmt api issue create
+### apim api issue create
 
-create a apimgmt api issue.
+create a apim api issue.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -488,7 +488,7 @@ create a apimgmt api issue.
 **Example: ApiManagementCreateApiIssue**
 
 ```
-apimgmt api issue create --resource-group rg1
+apim api issue create --resource-group rg1
         --service-name apimService1
         --api-id 57d1f7558aa04f15146d9d8a
         --issue-id 57d2ef278aa04f0ad01d6cdc
@@ -498,9 +498,9 @@ apimgmt api issue create --resource-group rg1
         --description "New API issue description"
         --user-id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/users/{{ user_name }}"
 ```
-### apimgmt api issue update
+### apim api issue update
 
-update a apimgmt api issue.
+update a apim api issue.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -517,15 +517,15 @@ update a apimgmt api issue.
 **Example: ApiManagementUpdateApiIssue**
 
 ```
-apimgmt api issue update --resource-group rg1
+apim api issue update --resource-group rg1
         --service-name apimService1
         --api-id 57d1f7558aa04f15146d9d8a
         --issue-id 57d2ef278aa04f0ad01d6cdc
         --state closed
 ```
-### apimgmt api issue delete
+### apim api issue delete
 
-delete a apimgmt api issue.
+delete a apim api issue.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -537,23 +537,23 @@ delete a apimgmt api issue.
 **Example: ApiManagementDeleteApiIssue**
 
 ```
-apimgmt api issue delete --resource-group rg1
+apim api issue delete --resource-group rg1
         --service-name apimService1
         --api-id 57d1f7558aa04f15146d9d8a
         --issue-id 57d2ef278aa04f0ad01d6cdc
 ```
-### apimgmt api issue list
+### apim api issue list
 
-list a apimgmt api issue.
+list a apim api issue.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--api-id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
-### apimgmt api issue show
+### apim api issue show
 
-show a apimgmt api issue.
+show a apim api issue.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -561,11 +561,11 @@ show a apimgmt api issue.
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--api-id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
 |**--issue-id**|str|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
-## apimgmt api issue attachment
+## apim api issue attachment
 
-### apimgmt api issue attachment create
+### apim api issue attachment create
 
-create a apimgmt api issue attachment.
+create a apim api issue attachment.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -581,7 +581,7 @@ create a apimgmt api issue attachment.
 **Example: ApiManagementCreateApiIssueAttachment**
 
 ```
-apimgmt api issue attachment create --resource-group rg1
+apim api issue attachment create --resource-group rg1
         --service-name apimService1
         --api-id 57d1f7558aa04f15146d9d8a
         --issue-id 57d2ef278aa04f0ad01d6cdc
@@ -590,9 +590,9 @@ apimgmt api issue attachment create --resource-group rg1
         --content-format image/jpeg
         --content IEJhc2U2NA==
 ```
-### apimgmt api issue attachment update
+### apim api issue attachment update
 
-update a apimgmt api issue attachment.
+update a apim api issue attachment.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -604,9 +604,9 @@ update a apimgmt api issue attachment.
 |**--title**|str|Filename by which the binary data will be saved.|/title|/properties/title|
 |**--content-format**|str|Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.|/content_format|/properties/contentFormat|
 |**--content**|str|An HTTP link or Base64-encoded binary data.|/content|/properties/content|
-### apimgmt api issue attachment delete
+### apim api issue attachment delete
 
-delete a apimgmt api issue attachment.
+delete a apim api issue attachment.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -619,15 +619,15 @@ delete a apimgmt api issue attachment.
 **Example: ApiManagementDeleteApiIssueAttachment**
 
 ```
-apimgmt api issue attachment delete --resource-group rg1
+apim api issue attachment delete --resource-group rg1
         --service-name apimService1
         --api-id 57d1f7558aa04f15146d9d8a
         --issue-id 57d2ef278aa04f0ad01d6cdc
         --attachment-id 57d2ef278aa04f0888cba3f3
 ```
-### apimgmt api issue attachment list
+### apim api issue attachment list
 
-list a apimgmt api issue attachment.
+list a apim api issue attachment.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -635,9 +635,9 @@ list a apimgmt api issue attachment.
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--api-id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
 |**--issue-id**|str|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
-### apimgmt api issue attachment show
+### apim api issue attachment show
 
-show a apimgmt api issue attachment.
+show a apim api issue attachment.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -646,11 +646,11 @@ show a apimgmt api issue attachment.
 |**--api-id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
 |**--issue-id**|str|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
 |**--attachment-id**|str|Attachment identifier within an Issue. Must be unique in the current Issue.|attachment_id|attachmentId|
-## apimgmt api issue comment
+## apim api issue comment
 
-### apimgmt api issue comment create
+### apim api issue comment create
 
-create a apimgmt api issue comment.
+create a apim api issue comment.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -666,7 +666,7 @@ create a apimgmt api issue comment.
 **Example: ApiManagementCreateApiIssueComment**
 
 ```
-apimgmt api issue comment create --resource-group rg1
+apim api issue comment create --resource-group rg1
         --service-name apimService1
         --api-id 57d1f7558aa04f15146d9d8a
         --issue-id 57d2ef278aa04f0ad01d6cdc
@@ -675,9 +675,9 @@ apimgmt api issue comment create --resource-group rg1
         --created-date 2018-02-01T22:21:20.467Z
         --user-id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/users/{{ user_name }}"
 ```
-### apimgmt api issue comment update
+### apim api issue comment update
 
-update a apimgmt api issue comment.
+update a apim api issue comment.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -689,9 +689,9 @@ update a apimgmt api issue comment.
 |**--text**|str|Comment text.|/text|/properties/text|
 |**--user-id**|str|A resource identifier for the user who left the comment.|/user_id|/properties/userId|
 |--created-date|datetime|Date and time when the comment was created.|/created_date|/properties/createdDate|
-### apimgmt api issue comment delete
+### apim api issue comment delete
 
-delete a apimgmt api issue comment.
+delete a apim api issue comment.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -704,15 +704,15 @@ delete a apimgmt api issue comment.
 **Example: ApiManagementDeleteApiIssueComment**
 
 ```
-apimgmt api issue comment delete --resource-group rg1
+apim api issue comment delete --resource-group rg1
         --service-name apimService1
         --api-id 57d1f7558aa04f15146d9d8a
         --issue-id 57d2ef278aa04f0ad01d6cdc
         --comment-id 599e29ab193c3c0bd0b3e2fb
 ```
-### apimgmt api issue comment list
+### apim api issue comment list
 
-list a apimgmt api issue comment.
+list a apim api issue comment.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -720,9 +720,9 @@ list a apimgmt api issue comment.
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--api-id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
 |**--issue-id**|str|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
-### apimgmt api issue comment show
+### apim api issue comment show
 
-show a apimgmt api issue comment.
+show a apim api issue comment.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -731,11 +731,11 @@ show a apimgmt api issue comment.
 |**--api-id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
 |**--issue-id**|str|Issue identifier. Must be unique in the current API Management service instance.|issue_id|issueId|
 |**--comment-id**|str|Comment identifier within an Issue. Must be unique in the current Issue.|comment_id|commentId|
-## apimgmt api operation
+## apim api operation
 
-### apimgmt api operation create
+### apim api operation create
 
-create a apimgmt api operation.
+create a apim api operation.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -755,7 +755,7 @@ create a apimgmt api operation.
 **Example: ApiManagementCreateApiOperation**
 
 ```
-apimgmt api operation create --resource-group rg1
+apim api operation create --resource-group rg1
         --service-name apimService1
         --api-id PetStoreTemplate2
         --operation-id newoperations
@@ -764,9 +764,9 @@ apimgmt api operation create --resource-group rg1
         --method POST
         --url-template /user1
 ```
-### apimgmt api operation update
+### apim api operation update
 
-update a apimgmt api operation.
+update a apim api operation.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -786,7 +786,7 @@ update a apimgmt api operation.
 **Example: ApiManagementUpdateApiOperation**
 
 ```
-apimgmt api operation update --resource-group rg1
+apim api operation update --resource-group rg1
         --service-name apimService1
         --api-id echo-api
         --operation-id operationId
@@ -794,9 +794,9 @@ apimgmt api operation update --resource-group rg1
         --method GET
         --url-template /resource
 ```
-### apimgmt api operation delete
+### apim api operation delete
 
-delete a apimgmt api operation.
+delete a apim api operation.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -808,23 +808,23 @@ delete a apimgmt api operation.
 **Example: ApiManagementDeleteApiOperation**
 
 ```
-apimgmt api operation delete --resource-group rg1
+apim api operation delete --resource-group rg1
         --service-name apimService1
         --api-id 57d2ef278aa04f0888cba3f3
         --operation-id 57d2ef278aa04f0ad01d6cdc
 ```
-### apimgmt api operation list
+### apim api operation list
 
-list a apimgmt api operation.
+list a apim api operation.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--api-id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
-### apimgmt api operation show
+### apim api operation show
 
-show a apimgmt api operation.
+show a apim api operation.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -832,11 +832,11 @@ show a apimgmt api operation.
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--api-id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 |**--operation-id**|str|Operation identifier within an API. Must be unique in the current API Management service instance.|operation_id|operationId|
-## apimgmt api operation policy
+## apim api operation policy
 
-### apimgmt api operation policy create
+### apim api operation policy create
 
-create a apimgmt api operation policy.
+create a apim api operation policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -851,7 +851,7 @@ create a apimgmt api operation policy.
 **Example: ApiManagementCreateApiOperationPolicy**
 
 ```
-apimgmt api operation policy create --resource-group rg1
+apim api operation policy create --resource-group rg1
         --service-name apimService1
         --api-id 5600b57e7e8880006a040001
         --operation-id 5600b57e7e8880006a080001
@@ -859,9 +859,9 @@ apimgmt api operation policy create --resource-group rg1
         --value "<policies> <inbound /> <backend>    <forward-request />  </backend>  <outbound /></policies>"
         --format xml
 ```
-### apimgmt api operation policy update
+### apim api operation policy update
 
-update a apimgmt api operation policy.
+update a apim api operation policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -872,9 +872,9 @@ update a apimgmt api operation policy.
 |**--policy-id**|str|The identifier of the Policy.|policy_id|policyId|
 |**--value**|str|Contents of the Policy as defined by the format.|/value|/properties/value|
 |--format|str|Format of the policyContent.|/format|/properties/format|
-### apimgmt api operation policy delete
+### apim api operation policy delete
 
-delete a apimgmt api operation policy.
+delete a apim api operation policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -887,15 +887,15 @@ delete a apimgmt api operation policy.
 **Example: ApiManagementDeleteApiOperationPolicy**
 
 ```
-apimgmt api operation policy delete --resource-group rg1
+apim api operation policy delete --resource-group rg1
         --service-name apimService1
         --api-id testapi
         --operation-id testoperation
         --policy-id policy
 ```
-### apimgmt api operation policy list
+### apim api operation policy list
 
-list a apimgmt api operation policy.
+list a apim api operation policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -903,9 +903,9 @@ list a apimgmt api operation policy.
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--api-id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 |**--operation-id**|str|Operation identifier within an API. Must be unique in the current API Management service instance.|operation_id|operationId|
-### apimgmt api operation policy show
+### apim api operation policy show
 
-show a apimgmt api operation policy.
+show a apim api operation policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -915,11 +915,11 @@ show a apimgmt api operation policy.
 |**--operation-id**|str|Operation identifier within an API. Must be unique in the current API Management service instance.|operation_id|operationId|
 |**--policy-id**|str|The identifier of the Policy.|policy_id|policyId|
 |--format|str|Format of the policyContent.|/format|/properties/format|
-## apimgmt api policy
+## apim api policy
 
-### apimgmt api policy create
+### apim api policy create
 
-create a apimgmt api policy.
+create a apim api policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -933,7 +933,7 @@ create a apimgmt api policy.
 **Example: ApiManagementCreateApiPolicy**
 
 ```
-apimgmt api policy create --resource-group rg1
+apim api policy create --resource-group rg1
         --service-name apimService1
         --api-id 5600b57e7e8880006a040001
         --policy-id policy
@@ -944,7 +944,7 @@ apimgmt api policy create --resource-group rg1
 **Example: ApiManagementCreateApiPolicyNonXmlEncoded**
 
 ```
-apimgmt api policy create --resource-group rg1
+apim api policy create --resource-group rg1
         --service-name apimService1
         --api-id 5600b57e7e8880006a040001
         --policy-id policy
@@ -958,9 +958,9 @@ apimgmt api policy create --resource-group rg1
       </policies>"
         --format rawxml
 ```
-### apimgmt api policy update
+### apim api policy update
 
-update a apimgmt api policy.
+update a apim api policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -970,9 +970,9 @@ update a apimgmt api policy.
 |**--policy-id**|str|The identifier of the Policy.|policy_id|policyId|
 |**--value**|str|Contents of the Policy as defined by the format.|/value|/properties/value|
 |--format|str|Format of the policyContent.|/format|/properties/format|
-### apimgmt api policy delete
+### apim api policy delete
 
-delete a apimgmt api policy.
+delete a apim api policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -984,23 +984,23 @@ delete a apimgmt api policy.
 **Example: ApiManagementDeleteApiPolicy**
 
 ```
-apimgmt api policy delete --resource-group rg1
+apim api policy delete --resource-group rg1
         --service-name apimService1
         --api-id loggerId
         --policy-id policy
 ```
-### apimgmt api policy list
+### apim api policy list
 
-list a apimgmt api policy.
+list a apim api policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--api-id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
-### apimgmt api policy show
+### apim api policy show
 
-show a apimgmt api policy.
+show a apim api policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1009,11 +1009,11 @@ show a apimgmt api policy.
 |**--api-id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 |**--policy-id**|str|The identifier of the Policy.|policy_id|policyId|
 |--format|str|Format of the policyContent.|/format|/properties/format|
-## apimgmt api release
+## apim api release
 
-### apimgmt api release create
+### apim api release create
 
-create a apimgmt api release.
+create a apim api release.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1026,15 +1026,15 @@ create a apimgmt api release.
 **Example: ApiManagementCreateApiRelease**
 
 ```
-apimgmt api release create --resource-group rg1
+apim api release create --resource-group rg1
         --service-name apimService1
         --api-id a1
         --release-id testrev
         --notes yahooagain
 ```
-### apimgmt api release update
+### apim api release update
 
-update a apimgmt api release.
+update a apim api release.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1047,15 +1047,15 @@ update a apimgmt api release.
 **Example: ApiManagementUpdateApiRelease**
 
 ```
-apimgmt api release update --resource-group rg1
+apim api release update --resource-group rg1
         --service-name apimService1
         --api-id a1
         --release-id testrev
         --notes yahooagain
 ```
-### apimgmt api release delete
+### apim api release delete
 
-delete a apimgmt api release.
+delete a apim api release.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1067,23 +1067,23 @@ delete a apimgmt api release.
 **Example: ApiManagementDeleteApiRelease**
 
 ```
-apimgmt api release delete --resource-group rg1
+apim api release delete --resource-group rg1
         --service-name apimService1
         --api-id 5a5fcc09124a7fa9b89f2f1d
         --release-id testrev
 ```
-### apimgmt api release list
+### apim api release list
 
-list a apimgmt api release.
+list a apim api release.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--api-id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
-### apimgmt api release show
+### apim api release show
 
-show a apimgmt api release.
+show a apim api release.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1091,11 +1091,11 @@ show a apimgmt api release.
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--api-id**|str|API identifier. Must be unique in the current API Management service instance.|api_id|apiId|
 |**--release-id**|str|Release identifier within an API. Must be unique in the current API Management service instance.|release_id|releaseId|
-## apimgmt api schema
+## apim api schema
 
-### apimgmt api schema create
+### apim api schema create
 
-create a apimgmt api schema.
+create a apim api schema.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1109,15 +1109,15 @@ create a apimgmt api schema.
 **Example: ApiManagementCreateApiSchema**
 
 ```
-apimgmt api schema create --resource-group rg1
+apim api schema create --resource-group rg1
         --service-name apimService1
         --api-id 59d6bb8f1f7fab13dc67ec9b
         --schema-id ec12520d-9d48-4e7b-8f39-698ca2ac63f1
         --content-type application/vnd.ms-azure-apim.xsd+xml
 ```
-### apimgmt api schema update
+### apim api schema update
 
-update a apimgmt api schema.
+update a apim api schema.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1127,9 +1127,9 @@ update a apimgmt api schema.
 |**--schema-id**|str|Schema identifier within an API. Must be unique in the current API Management service instance.|schema_id|schemaId|
 |**--content-type**|str|Must be a valid a media type used in a Content-Type header as defined in the RFC 2616. Media type of the schema document (e.g. application/json, application/xml). </br> - `Swagger` Schema use `application/vnd.ms-azure-apim.swagger.definitions+json` </br> - `WSDL` Schema use `application/vnd.ms-azure-apim.xsd+xml` </br> - `OpenApi` Schema use `application/vnd.oai.openapi.components+json` </br> - `WADL Schema` use `application/vnd.ms-azure-apim.wadl.grammars+xml`.|/content_type|/properties/contentType|
 |--document|dict|Create or update Properties of the Schema Document.|/document|/properties/document|
-### apimgmt api schema delete
+### apim api schema delete
 
-delete a apimgmt api schema.
+delete a apim api schema.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1141,23 +1141,23 @@ delete a apimgmt api schema.
 **Example: ApiManagementDeleteApiSchema**
 
 ```
-apimgmt api schema delete --resource-group rg1
+apim api schema delete --resource-group rg1
         --service-name apimService1
         --api-id 59d5b28d1f7fab116c282650
         --schema-id 59d5b28e1f7fab116402044e
 ```
-### apimgmt api schema list
+### apim api schema list
 
-list a apimgmt api schema.
+list a apim api schema.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--api-id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
-### apimgmt api schema show
+### apim api schema show
 
-show a apimgmt api schema.
+show a apim api schema.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1165,11 +1165,11 @@ show a apimgmt api schema.
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--api-id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 |**--schema-id**|str|Schema identifier within an API. Must be unique in the current API Management service instance.|schema_id|schemaId|
-## apimgmt api tagdescription
+## apim api tagdescription
 
-### apimgmt api tagdescription create
+### apim api tagdescription create
 
-create a apimgmt api tagdescription.
+create a apim api tagdescription.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1184,7 +1184,7 @@ create a apimgmt api tagdescription.
 **Example: ApiManagementCreateApiTagDescription**
 
 ```
-apimgmt api tagdescription create --resource-group rg1
+apim api tagdescription create --resource-group rg1
         --service-name apimService1
         --api-id 5931a75ae4bbd512a88c680b
         --tag-id tagId1
@@ -1192,9 +1192,9 @@ apimgmt api tagdescription create --resource-group rg1
         --external-docs-url http://some.url/additionaldoc
         --external-docs-description "Description of the external docs resource"
 ```
-### apimgmt api tagdescription update
+### apim api tagdescription update
 
-update a apimgmt api tagdescription.
+update a apim api tagdescription.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1205,9 +1205,9 @@ update a apimgmt api tagdescription.
 |--description|str|Description of the Tag.|/description|/properties/description|
 |--external-docs-url|str|Absolute URL of external resources describing the tag.|/external_docs_url|/properties/externalDocsUrl|
 |--external-docs-description|str|Description of the external resources describing the tag.|/external_docs_description|/properties/externalDocsDescription|
-### apimgmt api tagdescription delete
+### apim api tagdescription delete
 
-delete a apimgmt api tagdescription.
+delete a apim api tagdescription.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1219,23 +1219,23 @@ delete a apimgmt api tagdescription.
 **Example: ApiManagementDeleteApiTagDescription**
 
 ```
-apimgmt api tagdescription delete --resource-group rg1
+apim api tagdescription delete --resource-group rg1
         --service-name apimService1
         --api-id 59d5b28d1f7fab116c282650
         --tag-id 59d5b28e1f7fab116402044e
 ```
-### apimgmt api tagdescription list
+### apim api tagdescription list
 
-list a apimgmt api tagdescription.
+list a apim api tagdescription.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--api-id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
-### apimgmt api tagdescription show
+### apim api tagdescription show
 
-show a apimgmt api tagdescription.
+show a apim api tagdescription.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1243,11 +1243,11 @@ show a apimgmt api tagdescription.
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--api-id**|str|API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.|api_id|apiId|
 |**--tag-id**|str|Tag identifier. Must be unique in the current API Management service instance.|tag_id|tagId|
-## apimgmt apiversionset
+## apim apiversionset
 
-### apimgmt apiversionset create
+### apim apiversionset create
 
-create a apimgmt apiversionset.
+create a apim apiversionset.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1263,16 +1263,16 @@ create a apimgmt apiversionset.
 **Example: ApiManagementCreateApiVersionSet**
 
 ```
-apimgmt apiversionset create --resource-group rg1
+apim apiversionset create --resource-group rg1
         --service-name apimService1
         --version-set-id api1
         --description "Version configuration"
         --display-name "api set 1"
         --versioning-scheme Segment
 ```
-### apimgmt apiversionset update
+### apim apiversionset update
 
-update a apimgmt apiversionset.
+update a apim apiversionset.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1288,16 +1288,16 @@ update a apimgmt apiversionset.
 **Example: ApiManagementUpdateApiVersionSet**
 
 ```
-apimgmt apiversionset update --resource-group rg1
+apim apiversionset update --resource-group rg1
         --service-name apimService1
         --version-set-id api1
         --description "Version configuration"
         --display-name "api set 1"
         --versioning-scheme Segment
 ```
-### apimgmt apiversionset delete
+### apim apiversionset delete
 
-delete a apimgmt apiversionset.
+delete a apim apiversionset.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1308,32 +1308,32 @@ delete a apimgmt apiversionset.
 **Example: ApiManagementDeleteApiVersionSet**
 
 ```
-apimgmt apiversionset delete --resource-group rg1
+apim apiversionset delete --resource-group rg1
         --service-name apimService1
         --version-set-id a1
 ```
-### apimgmt apiversionset list
+### apim apiversionset list
 
-list a apimgmt apiversionset.
+list a apim apiversionset.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
-### apimgmt apiversionset show
+### apim apiversionset show
 
-show a apimgmt apiversionset.
+show a apim apiversionset.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--version-set-id**|str|Api Version Set identifier. Must be unique in the current API Management service instance.|version_set_id|versionSetId|
-## apimgmt authorizationserver
+## apim authorizationserver
 
-### apimgmt authorizationserver create
+### apim authorizationserver create
 
-create a apimgmt authorizationserver.
+create a apim authorizationserver.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1360,7 +1360,7 @@ create a apimgmt authorizationserver.
 **Example: ApiManagementCreateAuthorizationServer**
 
 ```
-apimgmt authorizationserver create --resource-group rg1
+apim authorizationserver create --resource-group rg1
         --service-name apimService1
         --authsid newauthServer
         --description "test server"
@@ -1375,9 +1375,9 @@ apimgmt authorizationserver create --resource-group rg1
         --authorization-endpoint https://www.contoso.com/oauth2/auth
         --client-id 1
 ```
-### apimgmt authorizationserver update
+### apim authorizationserver update
 
-update a apimgmt authorizationserver.
+update a apim authorizationserver.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1404,15 +1404,15 @@ update a apimgmt authorizationserver.
 **Example: ApiManagementUpdateAuthorizationServer**
 
 ```
-apimgmt authorizationserver update --resource-group rg1
+apim authorizationserver update --resource-group rg1
         --service-name apimService1
         --authsid newauthServer
         --client-secret updated
         --client-id update
 ```
-### apimgmt authorizationserver delete
+### apim authorizationserver delete
 
-delete a apimgmt authorizationserver.
+delete a apim authorizationserver.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1423,32 +1423,32 @@ delete a apimgmt authorizationserver.
 **Example: ApiManagementDeleteAuthorizationServer**
 
 ```
-apimgmt authorizationserver delete --resource-group rg1
+apim authorizationserver delete --resource-group rg1
         --service-name apimService1
         --authsid newauthServer2
 ```
-### apimgmt authorizationserver list
+### apim authorizationserver list
 
-list a apimgmt authorizationserver.
+list a apim authorizationserver.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
-### apimgmt authorizationserver show
+### apim authorizationserver show
 
-show a apimgmt authorizationserver.
+show a apim authorizationserver.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--authsid**|str|Identifier of the authorization server.|authsid|authsid|
-## apimgmt backend
+## apim backend
 
-### apimgmt backend create
+### apim backend create
 
-create a apimgmt backend.
+create a apim backend.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1468,7 +1468,7 @@ create a apimgmt backend.
 **Example: ApiManagementCreateBackendServiceFabric**
 
 ```
-apimgmt backend create --resource-group rg1
+apim backend create --resource-group rg1
         --service-name apimService1
         --backend-id sfbackend
         --description "Service Fabric Test App 1"
@@ -1479,16 +1479,16 @@ apimgmt backend create --resource-group rg1
 **Example: ApiManagementCreateBackendProxyBackend**
 
 ```
-apimgmt backend create --resource-group rg1
+apim backend create --resource-group rg1
         --service-name apimService1
         --backend-id proxybackend
         --description description5308
         --url https://backendname2644/
         --protocol http
 ```
-### apimgmt backend update
+### apim backend update
 
-update a apimgmt backend.
+update a apim backend.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1508,14 +1508,14 @@ update a apimgmt backend.
 **Example: ApiManagementUpdateBackend**
 
 ```
-apimgmt backend update --resource-group rg1
+apim backend update --resource-group rg1
         --service-name apimService1
         --backend-id proxybackend
         --description description5308
 ```
-### apimgmt backend delete
+### apim backend delete
 
-delete a apimgmt backend.
+delete a apim backend.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1526,32 +1526,32 @@ delete a apimgmt backend.
 **Example: ApiManagementDeleteBackend**
 
 ```
-apimgmt backend delete --resource-group rg1
+apim backend delete --resource-group rg1
         --service-name apimService1
         --backend-id sfbackend
 ```
-### apimgmt backend list
+### apim backend list
 
-list a apimgmt backend.
+list a apim backend.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
-### apimgmt backend show
+### apim backend show
 
-show a apimgmt backend.
+show a apim backend.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--backend-id**|str|Identifier of the Backend entity. Must be unique in the current API Management service instance.|backend_id|backendId|
-## apimgmt cache
+## apim cache
 
-### apimgmt cache create
+### apim cache create
 
-create a apimgmt cache.
+create a apim cache.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1565,16 +1565,16 @@ create a apimgmt cache.
 **Example: ApiManagementCreateCache**
 
 ```
-apimgmt cache create --resource-group rg1
+apim cache create --resource-group rg1
         --service-name apimService1
         --cache-id westindia
         --description "Redis cache instances in West India"
         --connection-string contoso5.redis.cache.windows.net,ssl=true,password=...
         --resource-id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.Cache/Redis/{{ redis_name }}"
 ```
-### apimgmt cache update
+### apim cache update
 
-update a apimgmt cache.
+update a apim cache.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1588,14 +1588,14 @@ update a apimgmt cache.
 **Example: ApiManagementUpdateCache**
 
 ```
-apimgmt cache update --resource-group rg1
+apim cache update --resource-group rg1
         --service-name apimService1
         --cache-id westindia
         --description "Update Cache in west India"
 ```
-### apimgmt cache delete
+### apim cache delete
 
-delete a apimgmt cache.
+delete a apim cache.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1606,32 +1606,32 @@ delete a apimgmt cache.
 **Example: ApiManagementDeleteCache**
 
 ```
-apimgmt cache delete --resource-group rg1
+apim cache delete --resource-group rg1
         --service-name apimService1
         --cache-id southindia
 ```
-### apimgmt cache list
+### apim cache list
 
-list a apimgmt cache.
+list a apim cache.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
-### apimgmt cache show
+### apim cache show
 
-show a apimgmt cache.
+show a apim cache.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--cache-id**|str|Identifier of the Cache entity. Cache identifier (should be either 'default' or valid Azure region identifier).|cache_id|cacheId|
-## apimgmt certificate
+## apim certificate
 
-### apimgmt certificate create
+### apim certificate create
 
-create a apimgmt certificate.
+create a apim certificate.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1644,15 +1644,15 @@ create a apimgmt certificate.
 **Example: ApiManagementCreateCertificate**
 
 ```
-apimgmt certificate create --resource-group rg1
+apim certificate create --resource-group rg1
         --service-name apimService1
         --certificate-id tempcert
         --data "****************Base 64 Encoded Certificate *******************************"
         --password "****Certificate Password******"
 ```
-### apimgmt certificate update
+### apim certificate update
 
-update a apimgmt certificate.
+update a apim certificate.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1661,9 +1661,9 @@ update a apimgmt certificate.
 |**--certificate-id**|str|Identifier of the certificate entity. Must be unique in the current API Management service instance.|certificate_id|certificateId|
 |**--data**|str|Base 64 encoded certificate using the application/x-pkcs12 representation.|/data|/properties/data|
 |**--password**|str|Password for the Certificate|/password|/properties/password|
-### apimgmt certificate delete
+### apim certificate delete
 
-delete a apimgmt certificate.
+delete a apim certificate.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1674,32 +1674,32 @@ delete a apimgmt certificate.
 **Example: ApiManagementDeleteCertificate**
 
 ```
-apimgmt certificate delete --resource-group rg1
+apim certificate delete --resource-group rg1
         --service-name apimService1
         --certificate-id tempcert
 ```
-### apimgmt certificate list
+### apim certificate list
 
-list a apimgmt certificate.
+list a apim certificate.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
-### apimgmt certificate show
+### apim certificate show
 
-show a apimgmt certificate.
+show a apim certificate.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--certificate-id**|str|Identifier of the certificate entity. Must be unique in the current API Management service instance.|certificate_id|certificateId|
-## apimgmt diagnostic
+## apim diagnostic
 
-### apimgmt diagnostic create
+### apim diagnostic create
 
-create a apimgmt diagnostic.
+create a apim diagnostic.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1716,15 +1716,15 @@ create a apimgmt diagnostic.
 **Example: ApiManagementCreateDiagnostic**
 
 ```
-apimgmt diagnostic create --resource-group rg1
+apim diagnostic create --resource-group rg1
         --service-name apimService1
         --diagnostic-id applicationinsights
         --always-log allErrors
         --logger-id /loggers/azuremonitor
 ```
-### apimgmt diagnostic update
+### apim diagnostic update
 
-update a apimgmt diagnostic.
+update a apim diagnostic.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1741,15 +1741,15 @@ update a apimgmt diagnostic.
 **Example: ApiManagementUpdateDiagnostic**
 
 ```
-apimgmt diagnostic update --resource-group rg1
+apim diagnostic update --resource-group rg1
         --service-name apimService1
         --diagnostic-id applicationinsights
         --always-log allErrors
         --logger-id /loggers/applicationinsights
 ```
-### apimgmt diagnostic delete
+### apim diagnostic delete
 
-delete a apimgmt diagnostic.
+delete a apim diagnostic.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1760,32 +1760,32 @@ delete a apimgmt diagnostic.
 **Example: ApiManagementDeleteDiagnostic**
 
 ```
-apimgmt diagnostic delete --resource-group rg1
+apim diagnostic delete --resource-group rg1
         --service-name apimService1
         --diagnostic-id applicationinsights
 ```
-### apimgmt diagnostic list
+### apim diagnostic list
 
-list a apimgmt diagnostic.
+list a apim diagnostic.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
-### apimgmt diagnostic show
+### apim diagnostic show
 
-show a apimgmt diagnostic.
+show a apim diagnostic.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--diagnostic-id**|str|Diagnostic identifier. Must be unique in the current API Management service instance.|diagnostic_id|diagnosticId|
-## apimgmt group
+## apim group
 
-### apimgmt group create
+### apim group create
 
-create a apimgmt group.
+create a apim group.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1800,7 +1800,7 @@ create a apimgmt group.
 **Example: ApiManagementCreateGroup**
 
 ```
-apimgmt group create --resource-group rg1
+apim group create --resource-group rg1
         --service-name apimService1
         --group-id tempgroup
         --display-name "temp group"
@@ -1809,7 +1809,7 @@ apimgmt group create --resource-group rg1
 **Example: ApiManagementCreateGroupExternal**
 
 ```
-apimgmt group create --resource-group rg1
+apim group create --resource-group rg1
         --service-name apimService1
         --group-id aadGroup
         --display-name "NewGroup (samiraad.onmicrosoft.com)"
@@ -1817,9 +1817,9 @@ apimgmt group create --resource-group rg1
         --type external
         --external-id aad://samiraad.onmicrosoft.com/groups/83cf2753-5831-4675-bc0e-2f8dc067c58d
 ```
-### apimgmt group update
+### apim group update
 
-update a apimgmt group.
+update a apim group.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1834,14 +1834,14 @@ update a apimgmt group.
 **Example: ApiManagementUpdateGroup**
 
 ```
-apimgmt group update --resource-group rg1
+apim group update --resource-group rg1
         --service-name apimService1
         --group-id tempgroup
         --display-name "temp group"
 ```
-### apimgmt group delete
+### apim group delete
 
-delete a apimgmt group.
+delete a apim group.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1852,32 +1852,32 @@ delete a apimgmt group.
 **Example: ApiManagementDeleteGroup**
 
 ```
-apimgmt group delete --resource-group rg1
+apim group delete --resource-group rg1
         --service-name apimService1
         --group-id aadGroup
 ```
-### apimgmt group list
+### apim group list
 
-list a apimgmt group.
+list a apim group.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
-### apimgmt group show
+### apim group show
 
-show a apimgmt group.
+show a apim group.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--group-id**|str|Group identifier. Must be unique in the current API Management service instance.|group_id|groupId|
-## apimgmt group user
+## apim group user
 
-### apimgmt group user create
+### apim group user create
 
-create a apimgmt group user.
+create a apim group user.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1897,14 +1897,14 @@ create a apimgmt group user.
 **Example: ApiManagementCreateGroupUser**
 
 ```
-apimgmt group user create --resource-group rg1
+apim group user create --resource-group rg1
         --service-name apimService1
         --group-id tempgroup
         --user-id 59307d350af58404d8a26300
 ```
-### apimgmt group user delete
+### apim group user delete
 
-delete a apimgmt group user.
+delete a apim group user.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1916,25 +1916,25 @@ delete a apimgmt group user.
 **Example: ApiManagementDeleteGroupUser**
 
 ```
-apimgmt group user delete --resource-group rg1
+apim group user delete --resource-group rg1
         --service-name apimService1
         --group-id templategroup
         --user-id 59307d350af58404d8a26300
 ```
-### apimgmt group user list
+### apim group user list
 
-list a apimgmt group user.
+list a apim group user.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--group-id**|str|Group identifier. Must be unique in the current API Management service instance.|group_id|groupId|
-## apimgmt identityprovider
+## apim identityprovider
 
-### apimgmt identityprovider create
+### apim identityprovider create
 
-create a apimgmt identityprovider.
+create a apim identityprovider.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1954,15 +1954,15 @@ create a apimgmt identityprovider.
 **Example: ApiManagementCreateIdentityProvider**
 
 ```
-apimgmt identityprovider create --resource-group rg1
+apim identityprovider create --resource-group rg1
         --service-name apimService1
         --name facebook
         --client-id facebookid
         --client-secret facebookapplicationsecret
 ```
-### apimgmt identityprovider update
+### apim identityprovider update
 
-update a apimgmt identityprovider.
+update a apim identityprovider.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -1982,15 +1982,15 @@ update a apimgmt identityprovider.
 **Example: ApiManagementUpdateIdentityProvider**
 
 ```
-apimgmt identityprovider update --resource-group rg1
+apim identityprovider update --resource-group rg1
         --service-name apimService1
         --name facebook
         --client-id updatedfacebookid
         --client-secret updatedfacebooksecret
 ```
-### apimgmt identityprovider delete
+### apim identityprovider delete
 
-delete a apimgmt identityprovider.
+delete a apim identityprovider.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2001,32 +2001,32 @@ delete a apimgmt identityprovider.
 **Example: ApiManagementDeleteIdentityProvider**
 
 ```
-apimgmt identityprovider delete --resource-group rg1
+apim identityprovider delete --resource-group rg1
         --service-name apimService1
         --name aad
 ```
-### apimgmt identityprovider list
+### apim identityprovider list
 
-list a apimgmt identityprovider.
+list a apim identityprovider.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
-### apimgmt identityprovider show
+### apim identityprovider show
 
-show a apimgmt identityprovider.
+show a apim identityprovider.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--name**|str|Identity Provider Type identifier.|identity_provider_name|identityProviderName|
-## apimgmt logger
+## apim logger
 
-### apimgmt logger create
+### apim logger create
 
-create a apimgmt logger.
+create a apim logger.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2042,7 +2042,7 @@ create a apimgmt logger.
 **Example: ApiManagementCreateEHLogger**
 
 ```
-apimgmt logger create --resource-group rg1
+apim logger create --resource-group rg1
         --service-name apimService1
         --logger-id loggerId
         --logger-type azureEventHub
@@ -2052,15 +2052,15 @@ apimgmt logger create --resource-group rg1
 **Example: ApiManagementCreateAILogger**
 
 ```
-apimgmt logger create --resource-group rg1
+apim logger create --resource-group rg1
         --service-name apimService1
         --logger-id loggerId
         --logger-type applicationInsights
         --description "adding a new logger"
 ```
-### apimgmt logger update
+### apim logger update
 
-update a apimgmt logger.
+update a apim logger.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2076,13 +2076,13 @@ update a apimgmt logger.
 **Example: ApiManagementUpdateLogger**
 
 ```
-apimgmt logger update --resource-group rg1
+apim logger update --resource-group rg1
         --service-name apimService1
         --logger-id loggerId
 ```
-### apimgmt logger delete
+### apim logger delete
 
-delete a apimgmt logger.
+delete a apim logger.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2093,32 +2093,32 @@ delete a apimgmt logger.
 **Example: ApiManagementDeleteLogger**
 
 ```
-apimgmt logger delete --resource-group rg1
+apim logger delete --resource-group rg1
         --service-name apimService1
         --logger-id loggerId
 ```
-### apimgmt logger list
+### apim logger list
 
-list a apimgmt logger.
+list a apim logger.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
-### apimgmt logger show
+### apim logger show
 
-show a apimgmt logger.
+show a apim logger.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--logger-id**|str|Logger identifier. Must be unique in the API Management service instance.|logger_id|loggerId|
-## apimgmt notification
+## apim notification
 
-### apimgmt notification create
+### apim notification create
 
-create a apimgmt notification.
+create a apim notification.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2132,13 +2132,13 @@ create a apimgmt notification.
 **Example: ApiManagementCreateNotification**
 
 ```
-apimgmt notification create --resource-group rg1
+apim notification create --resource-group rg1
         --service-name apimService1
         --name RequestPublisherNotificationMessage
 ```
-### apimgmt notification update
+### apim notification update
 
-update a apimgmt notification.
+update a apim notification.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2148,28 +2148,28 @@ update a apimgmt notification.
 |**--title**|str|Title of the Notification.|/title|/properties/title|
 |--description|str|Description of the Notification.|/description|/properties/description|
 |--recipients|dict|Recipient Parameter values.|/recipients|/properties/recipients|
-### apimgmt notification list
+### apim notification list
 
-list a apimgmt notification.
+list a apim notification.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
-### apimgmt notification show
+### apim notification show
 
-show a apimgmt notification.
+show a apim notification.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--name**|str|Notification Name Identifier.|notification_name|notificationName|
-## apimgmt notification recipientemail
+## apim notification recipientemail
 
-### apimgmt notification recipientemail create
+### apim notification recipientemail create
 
-create a apimgmt notification recipientemail.
+create a apim notification recipientemail.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2181,14 +2181,14 @@ create a apimgmt notification recipientemail.
 **Example: ApiManagementCreateNotificationRecipientEmail**
 
 ```
-apimgmt notification recipientemail create --resource-group rg1
+apim notification recipientemail create --resource-group rg1
         --service-name apimService1
         --notification-name RequestPublisherNotificationMessage
         --email foobar@live.com
 ```
-### apimgmt notification recipientemail update
+### apim notification recipientemail update
 
-update a apimgmt notification recipientemail.
+update a apim notification recipientemail.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2196,9 +2196,9 @@ update a apimgmt notification recipientemail.
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--notification-name**|str|Notification Name Identifier.|notification_name|notificationName|
 |**--email**|str|Email identifier.|email|email|
-### apimgmt notification recipientemail delete
+### apim notification recipientemail delete
 
-delete a apimgmt notification recipientemail.
+delete a apim notification recipientemail.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2210,25 +2210,25 @@ delete a apimgmt notification recipientemail.
 **Example: ApiManagementDeleteNotificationRecipientEmail**
 
 ```
-apimgmt notification recipientemail delete --resource-group rg1
+apim notification recipientemail delete --resource-group rg1
         --service-name apimService1
         --notification-name RequestPublisherNotificationMessage
         --email contoso@live.com
 ```
-### apimgmt notification recipientemail list
+### apim notification recipientemail list
 
-list a apimgmt notification recipientemail.
+list a apim notification recipientemail.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--notification-name**|str|Notification Name Identifier.|notification_name|notificationName|
-## apimgmt notification recipientuser
+## apim notification recipientuser
 
-### apimgmt notification recipientuser create
+### apim notification recipientuser create
 
-create a apimgmt notification recipientuser.
+create a apim notification recipientuser.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2240,14 +2240,14 @@ create a apimgmt notification recipientuser.
 **Example: ApiManagementCreateNotificationRecipientUser**
 
 ```
-apimgmt notification recipientuser create --resource-group rg1
+apim notification recipientuser create --resource-group rg1
         --service-name apimService1
         --notification-name RequestPublisherNotificationMessage
         --user-id 576823d0a40f7e74ec07d642
 ```
-### apimgmt notification recipientuser update
+### apim notification recipientuser update
 
-update a apimgmt notification recipientuser.
+update a apim notification recipientuser.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2255,9 +2255,9 @@ update a apimgmt notification recipientuser.
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--notification-name**|str|Notification Name Identifier.|notification_name|notificationName|
 |**--user-id**|str|User identifier. Must be unique in the current API Management service instance.|user_id|userId|
-### apimgmt notification recipientuser delete
+### apim notification recipientuser delete
 
-delete a apimgmt notification recipientuser.
+delete a apim notification recipientuser.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2269,25 +2269,25 @@ delete a apimgmt notification recipientuser.
 **Example: ApiManagementDeleteNotificationRecipientUser**
 
 ```
-apimgmt notification recipientuser delete --resource-group rg1
+apim notification recipientuser delete --resource-group rg1
         --service-name apimService1
         --notification-name RequestPublisherNotificationMessage
         --user-id 576823d0a40f7e74ec07d642
 ```
-### apimgmt notification recipientuser list
+### apim notification recipientuser list
 
-list a apimgmt notification recipientuser.
+list a apim notification recipientuser.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--notification-name**|str|Notification Name Identifier.|notification_name|notificationName|
-## apimgmt openidconnectprovider
+## apim openidconnectprovider
 
-### apimgmt openidconnectprovider create
+### apim openidconnectprovider create
 
-create a apimgmt openidconnectprovider.
+create a apim openidconnectprovider.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2303,16 +2303,16 @@ create a apimgmt openidconnectprovider.
 **Example: ApiManagementCreateOpenIdConnectProvider**
 
 ```
-apimgmt openidconnectprovider create --resource-group rg1
+apim openidconnectprovider create --resource-group rg1
         --service-name apimService1
         --opid templateOpenIdConnect3
         --display-name templateoidprovider3
         --metadata-endpoint https://oidprovider-template3.net
         --client-id oidprovidertemplate3
 ```
-### apimgmt openidconnectprovider update
+### apim openidconnectprovider update
 
-update a apimgmt openidconnectprovider.
+update a apim openidconnectprovider.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2328,14 +2328,14 @@ update a apimgmt openidconnectprovider.
 **Example: ApiManagementUpdateOpenIdConnectProvider**
 
 ```
-apimgmt openidconnectprovider update --resource-group rg1
+apim openidconnectprovider update --resource-group rg1
         --service-name apimService1
         --opid templateOpenIdConnect2
         --client-secret updatedsecret
 ```
-### apimgmt openidconnectprovider delete
+### apim openidconnectprovider delete
 
-delete a apimgmt openidconnectprovider.
+delete a apim openidconnectprovider.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2346,32 +2346,32 @@ delete a apimgmt openidconnectprovider.
 **Example: ApiManagementDeleteOpenIdConnectProvider**
 
 ```
-apimgmt openidconnectprovider delete --resource-group rg1
+apim openidconnectprovider delete --resource-group rg1
         --service-name apimService1
         --opid templateOpenIdConnect3
 ```
-### apimgmt openidconnectprovider list
+### apim openidconnectprovider list
 
-list a apimgmt openidconnectprovider.
+list a apim openidconnectprovider.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
-### apimgmt openidconnectprovider show
+### apim openidconnectprovider show
 
-show a apimgmt openidconnectprovider.
+show a apim openidconnectprovider.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--opid**|str|Identifier of the OpenID Connect Provider.|opid|opid|
-## apimgmt policy
+## apim policy
 
-### apimgmt policy create
+### apim policy create
 
-create a apimgmt policy.
+create a apim policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2384,7 +2384,7 @@ create a apimgmt policy.
 **Example: ApiManagementCreatePolicy**
 
 ```
-apimgmt policy create --resource-group rg1
+apim policy create --resource-group rg1
         --service-name apimService1
         --policy-id policy
         --value "<policies>
@@ -2396,9 +2396,9 @@ apimgmt policy create --resource-group rg1
 </policies>"
         --format xml
 ```
-### apimgmt policy update
+### apim policy update
 
-update a apimgmt policy.
+update a apim policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2407,9 +2407,9 @@ update a apimgmt policy.
 |**--policy-id**|str|The identifier of the Policy.|policy_id|policyId|
 |**--value**|str|Contents of the Policy as defined by the format.|/value|/properties/value|
 |--format|str|Format of the policyContent.|/format|/properties/format|
-### apimgmt policy delete
+### apim policy delete
 
-delete a apimgmt policy.
+delete a apim policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2420,21 +2420,21 @@ delete a apimgmt policy.
 **Example: ApiManagementDeletePolicy**
 
 ```
-apimgmt policy delete --resource-group rg1
+apim policy delete --resource-group rg1
         --service-name apimService1
         --policy-id policy
 ```
-### apimgmt policy list
+### apim policy list
 
-list a apimgmt policy.
+list a apim policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
-### apimgmt policy show
+### apim policy show
 
-show a apimgmt policy.
+show a apim policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2442,32 +2442,11 @@ show a apimgmt policy.
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--policy-id**|str|The identifier of the Policy.|policy_id|policyId|
 |--format|str|Format of the policyContent.|/format|/properties/format|
-## apimgmt portalsetting delegation
+## apim portalsetting delegation
 
-### apimgmt portalsetting delegation create
+### apim portalsetting delegation create
 
-create a apimgmt portalsetting delegation.
-
-|Option|Type|Description|Path (SDK)|Path (swagger)|
-|------|----|-----------|----------|--------------|
-|**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
-|**--name**|str|The name of the API Management service.|service_name|serviceName|
-|--url|str|A delegation Url.|/url|/properties/url|
-|--validation-key|str|A base64-encoded validation key to validate, that a request is coming from Azure API Management.|/validation_key|/properties/validationKey|
-|--subscriptions|dict|Subscriptions delegation settings.|/subscriptions|/properties/subscriptions|
-|--user-registration|dict|User registration delegation settings.|/user_registration|/properties/userRegistration|
-
-**Example: ApiManagementPortalSettingsUpdateDelegation**
-
-```
-apimgmt portalsetting delegation create --resource-group rg1
-        --name apimService1
-        --url http://contoso.com/delegation
-        --validation-key nVF7aKIvr9mV/RM5lOD0sYoi8ThXTRHQP7o66hvUmjCDkPKR3qxPu/otJcNciz2aQdqPuzJH3ECG4TU2yZjQ7Q==
-```
-### apimgmt portalsetting delegation update
-
-update a apimgmt portalsetting delegation.
+create a apim portalsetting delegation.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2481,24 +2460,45 @@ update a apimgmt portalsetting delegation.
 **Example: ApiManagementPortalSettingsUpdateDelegation**
 
 ```
-apimgmt portalsetting delegation update --resource-group rg1
+apim portalsetting delegation create --resource-group rg1
         --name apimService1
         --url http://contoso.com/delegation
         --validation-key nVF7aKIvr9mV/RM5lOD0sYoi8ThXTRHQP7o66hvUmjCDkPKR3qxPu/otJcNciz2aQdqPuzJH3ECG4TU2yZjQ7Q==
 ```
-### apimgmt portalsetting delegation show
+### apim portalsetting delegation update
 
-show a apimgmt portalsetting delegation.
+update a apim portalsetting delegation.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--name**|str|The name of the API Management service.|service_name|serviceName|
-## apimgmt portalsetting signin
+|--url|str|A delegation Url.|/url|/properties/url|
+|--validation-key|str|A base64-encoded validation key to validate, that a request is coming from Azure API Management.|/validation_key|/properties/validationKey|
+|--subscriptions|dict|Subscriptions delegation settings.|/subscriptions|/properties/subscriptions|
+|--user-registration|dict|User registration delegation settings.|/user_registration|/properties/userRegistration|
 
-### apimgmt portalsetting signin create
+**Example: ApiManagementPortalSettingsUpdateDelegation**
 
-create a apimgmt portalsetting signin.
+```
+apim portalsetting delegation update --resource-group rg1
+        --name apimService1
+        --url http://contoso.com/delegation
+        --validation-key nVF7aKIvr9mV/RM5lOD0sYoi8ThXTRHQP7o66hvUmjCDkPKR3qxPu/otJcNciz2aQdqPuzJH3ECG4TU2yZjQ7Q==
+```
+### apim portalsetting delegation show
+
+show a apim portalsetting delegation.
+
+|Option|Type|Description|Path (SDK)|Path (swagger)|
+|------|----|-----------|----------|--------------|
+|**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
+|**--name**|str|The name of the API Management service.|service_name|serviceName|
+## apim portalsetting signin
+
+### apim portalsetting signin create
+
+create a apim portalsetting signin.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2509,13 +2509,13 @@ create a apimgmt portalsetting signin.
 **Example: ApiManagementPortalSettingsUpdateSignIn**
 
 ```
-apimgmt portalsetting signin create --resource-group rg1
+apim portalsetting signin create --resource-group rg1
         --name apimService1
         --enabled true
 ```
-### apimgmt portalsetting signin update
+### apim portalsetting signin update
 
-update a apimgmt portalsetting signin.
+update a apim portalsetting signin.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2526,23 +2526,23 @@ update a apimgmt portalsetting signin.
 **Example: ApiManagementPortalSettingsUpdateSignIn**
 
 ```
-apimgmt portalsetting signin update --resource-group rg1
+apim portalsetting signin update --resource-group rg1
         --name apimService1
         --enabled true
 ```
-### apimgmt portalsetting signin show
+### apim portalsetting signin show
 
-show a apimgmt portalsetting signin.
+show a apim portalsetting signin.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--name**|str|The name of the API Management service.|service_name|serviceName|
-## apimgmt portalsetting signup
+## apim portalsetting signup
 
-### apimgmt portalsetting signup create
+### apim portalsetting signup create
 
-create a apimgmt portalsetting signup.
+create a apim portalsetting signup.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2554,13 +2554,13 @@ create a apimgmt portalsetting signup.
 **Example: ApiManagementPortalSettingsUpdateSignUp**
 
 ```
-apimgmt portalsetting signup create --resource-group rg1
+apim portalsetting signup create --resource-group rg1
         --name apimService1
         --enabled true
 ```
-### apimgmt portalsetting signup update
+### apim portalsetting signup update
 
-update a apimgmt portalsetting signup.
+update a apim portalsetting signup.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2572,23 +2572,23 @@ update a apimgmt portalsetting signup.
 **Example: ApiManagementPortalSettingsUpdateSignUp**
 
 ```
-apimgmt portalsetting signup update --resource-group rg1
+apim portalsetting signup update --resource-group rg1
         --name apimService1
         --enabled true
 ```
-### apimgmt portalsetting signup show
+### apim portalsetting signup show
 
-show a apimgmt portalsetting signup.
+show a apim portalsetting signup.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--name**|str|The name of the API Management service.|service_name|serviceName|
-## apimgmt product
+## apim product
 
-### apimgmt product create
+### apim product create
 
-create a apimgmt product.
+create a apim product.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2606,14 +2606,14 @@ create a apimgmt product.
 **Example: ApiManagementCreateProduct**
 
 ```
-apimgmt product create --resource-group rg1
+apim product create --resource-group rg1
         --service-name apimService1
         --product-id testproduct
         --display-name "Test Template ProductName 4"
 ```
-### apimgmt product update
+### apim product update
 
-update a apimgmt product.
+update a apim product.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2631,14 +2631,14 @@ update a apimgmt product.
 **Example: ApiManagementUpdateProduct**
 
 ```
-apimgmt product update --resource-group rg1
+apim product update --resource-group rg1
         --service-name apimService1
         --product-id testproduct
         --display-name "Test Template ProductName 4"
 ```
-### apimgmt product delete
+### apim product delete
 
-delete a apimgmt product.
+delete a apim product.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2649,32 +2649,32 @@ delete a apimgmt product.
 **Example: ApiManagementDeleteProduct**
 
 ```
-apimgmt product delete --resource-group rg1
+apim product delete --resource-group rg1
         --service-name apimService1
         --product-id testproduct
 ```
-### apimgmt product list
+### apim product list
 
-list a apimgmt product.
+list a apim product.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
-### apimgmt product show
+### apim product show
 
-show a apimgmt product.
+show a apim product.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--product-id**|str|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
-## apimgmt product api
+## apim product api
 
-### apimgmt product api create
+### apim product api create
 
-create a apimgmt product api.
+create a apim product api.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2704,14 +2704,14 @@ create a apimgmt product api.
 **Example: ApiManagementCreateProductApi**
 
 ```
-apimgmt product api create --resource-group rg1
+apim product api create --resource-group rg1
         --service-name apimService1
         --product-id testproduct
         --api-id echo-api
 ```
-### apimgmt product api update
+### apim product api update
 
-update a apimgmt product api.
+update a apim product api.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2737,9 +2737,9 @@ update a apimgmt product api.
 |--service-url|str|Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.|/service_url|/properties/serviceUrl|
 |--protocols|list|Describes on which protocols the operations in this API can be invoked.|/protocols|/properties/protocols|
 |--api-version-set|dict|Version set details|/api_version_set|/properties/apiVersionSet|
-### apimgmt product api delete
+### apim product api delete
 
-delete a apimgmt product api.
+delete a apim product api.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2751,25 +2751,25 @@ delete a apimgmt product api.
 **Example: ApiManagementDeleteProductApi**
 
 ```
-apimgmt product api delete --resource-group rg1
+apim product api delete --resource-group rg1
         --service-name apimService1
         --product-id testproduct
         --api-id echo-api
 ```
-### apimgmt product api list
+### apim product api list
 
-list a apimgmt product api.
+list a apim product api.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--product-id**|str|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
-## apimgmt product group
+## apim product group
 
-### apimgmt product group create
+### apim product group create
 
-create a apimgmt product group.
+create a apim product group.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2786,14 +2786,14 @@ create a apimgmt product group.
 **Example: ApiManagementCreateProductGroup**
 
 ```
-apimgmt product group create --resource-group rg1
+apim product group create --resource-group rg1
         --service-name apimService1
         --product-id testproduct
         --group-id templateGroup
 ```
-### apimgmt product group update
+### apim product group update
 
-update a apimgmt product group.
+update a apim product group.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2806,9 +2806,9 @@ update a apimgmt product group.
 |--built-in|boolean|true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.|/built_in|/properties/builtIn|
 |--type|str|Group type.|/type|/properties/type|
 |--external-id|str|For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.|/external_id|/properties/externalId|
-### apimgmt product group delete
+### apim product group delete
 
-delete a apimgmt product group.
+delete a apim product group.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2820,25 +2820,25 @@ delete a apimgmt product group.
 **Example: ApiManagementDeleteProductGroup**
 
 ```
-apimgmt product group delete --resource-group rg1
+apim product group delete --resource-group rg1
         --service-name apimService1
         --product-id testproduct
         --group-id templateGroup
 ```
-### apimgmt product group list
+### apim product group list
 
-list a apimgmt product group.
+list a apim product group.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--product-id**|str|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
-## apimgmt product policy
+## apim product policy
 
-### apimgmt product policy create
+### apim product policy create
 
-create a apimgmt product policy.
+create a apim product policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2852,7 +2852,7 @@ create a apimgmt product policy.
 **Example: ApiManagementCreateProductPolicy**
 
 ```
-apimgmt product policy create --resource-group rg1
+apim product policy create --resource-group rg1
         --service-name apimService1
         --product-id 5702e97e5157a50f48dce801
         --policy-id policy
@@ -2874,9 +2874,9 @@ apimgmt product policy create --resource-group rg1
 </policies>"
         --format xml
 ```
-### apimgmt product policy update
+### apim product policy update
 
-update a apimgmt product policy.
+update a apim product policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2886,9 +2886,9 @@ update a apimgmt product policy.
 |**--policy-id**|str|The identifier of the Policy.|policy_id|policyId|
 |**--value**|str|Contents of the Policy as defined by the format.|/value|/properties/value|
 |--format|str|Format of the policyContent.|/format|/properties/format|
-### apimgmt product policy delete
+### apim product policy delete
 
-delete a apimgmt product policy.
+delete a apim product policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2900,23 +2900,23 @@ delete a apimgmt product policy.
 **Example: ApiManagementDeleteProductPolicy**
 
 ```
-apimgmt product policy delete --resource-group rg1
+apim product policy delete --resource-group rg1
         --service-name apimService1
         --product-id testproduct
         --policy-id policy
 ```
-### apimgmt product policy list
+### apim product policy list
 
-list a apimgmt product policy.
+list a apim product policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--product-id**|str|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
-### apimgmt product policy show
+### apim product policy show
 
-show a apimgmt product policy.
+show a apim product policy.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2925,11 +2925,11 @@ show a apimgmt product policy.
 |**--product-id**|str|Product identifier. Must be unique in the current API Management service instance.|product_id|productId|
 |**--policy-id**|str|The identifier of the Policy.|policy_id|policyId|
 |--format|str|Format of the policyContent.|/format|/properties/format|
-## apimgmt property
+## apim property
 
-### apimgmt property create
+### apim property create
 
-create a apimgmt property.
+create a apim property.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2944,16 +2944,16 @@ create a apimgmt property.
 **Example: ApiManagementCreateProperty**
 
 ```
-apimgmt property create --resource-group rg1
+apim property create --resource-group rg1
         --service-name apimService1
         --prop-id testprop2
         --secret true
         --display-name prop3name
         --value propValue
 ```
-### apimgmt property update
+### apim property update
 
-update a apimgmt property.
+update a apim property.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2968,14 +2968,14 @@ update a apimgmt property.
 **Example: ApiManagementUpdateProperty**
 
 ```
-apimgmt property update --resource-group rg1
+apim property update --resource-group rg1
         --service-name apimService1
         --prop-id testprop2
         --secret true
 ```
-### apimgmt property delete
+### apim property delete
 
-delete a apimgmt property.
+delete a apim property.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -2986,32 +2986,32 @@ delete a apimgmt property.
 **Example: ApiManagementDeleteProperty**
 
 ```
-apimgmt property delete --resource-group rg1
+apim property delete --resource-group rg1
         --service-name apimService1
         --prop-id testprop2
 ```
-### apimgmt property list
+### apim property list
 
-list a apimgmt property.
+list a apim property.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
-### apimgmt property show
+### apim property show
 
-show a apimgmt property.
+show a apim property.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--prop-id**|str|Identifier of the property.|prop_id|propId|
-## apimgmt subscription
+## apim subscription
 
-### apimgmt subscription create
+### apim subscription create
 
-create a apimgmt subscription.
+create a apim subscription.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -3030,16 +3030,16 @@ create a apimgmt subscription.
 **Example: ApiManagementCreateSubscription**
 
 ```
-apimgmt subscription create --resource-group rg1
+apim subscription create --resource-group rg1
         --service-name apimService1
         --sid testsub
         --owner-id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/users/{{ user_name }}"
         --scope "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/products/{{ product_name }}"
         --display-name testsub
 ```
-### apimgmt subscription update
+### apim subscription update
 
-update a apimgmt subscription.
+update a apim subscription.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -3058,14 +3058,14 @@ update a apimgmt subscription.
 **Example: ApiManagementUpdateSubscription**
 
 ```
-apimgmt subscription update --resource-group rg1
+apim subscription update --resource-group rg1
         --service-name apimService1
         --sid testsub
         --display-name testsub
 ```
-### apimgmt subscription delete
+### apim subscription delete
 
-delete a apimgmt subscription.
+delete a apim subscription.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -3076,32 +3076,32 @@ delete a apimgmt subscription.
 **Example: ApiManagementDeleteSubscription**
 
 ```
-apimgmt subscription delete --resource-group rg1
+apim subscription delete --resource-group rg1
         --service-name apimService1
         --sid testsub
 ```
-### apimgmt subscription list
+### apim subscription list
 
-list a apimgmt subscription.
+list a apim subscription.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
-### apimgmt subscription show
+### apim subscription show
 
-show a apimgmt subscription.
+show a apim subscription.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--sid**|str|Subscription entity Identifier. The entity represents the association between a user and a product in API Management.|sid|sid|
-## apimgmt tag
+## apim tag
 
-### apimgmt tag create
+### apim tag create
 
-create a apimgmt tag.
+create a apim tag.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -3113,14 +3113,14 @@ create a apimgmt tag.
 **Example: ApiManagementCreateTag**
 
 ```
-apimgmt tag create --resource-group rg1
+apim tag create --resource-group rg1
         --service-name apimService1
         --tag-id tagId1
         --display-name tag1
 ```
-### apimgmt tag update
+### apim tag update
 
-update a apimgmt tag.
+update a apim tag.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -3132,14 +3132,14 @@ update a apimgmt tag.
 **Example: ApiManagementUpdateTag**
 
 ```
-apimgmt tag update --resource-group rg1
+apim tag update --resource-group rg1
         --service-name apimService1
         --tag-id temptag
         --display-name "temp tag"
 ```
-### apimgmt tag delete
+### apim tag delete
 
-delete a apimgmt tag.
+delete a apim tag.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -3150,32 +3150,32 @@ delete a apimgmt tag.
 **Example: ApiManagementDeleteTag**
 
 ```
-apimgmt tag delete --resource-group rg1
+apim tag delete --resource-group rg1
         --service-name apimService1
         --tag-id tagId1
 ```
-### apimgmt tag list
+### apim tag list
 
-list a apimgmt tag.
+list a apim tag.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
-### apimgmt tag show
+### apim tag show
 
-show a apimgmt tag.
+show a apim tag.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--tag-id**|str|Tag identifier. Must be unique in the current API Management service instance.|tag_id|tagId|
-## apimgmt template
+## apim template
 
-### apimgmt template create
+### apim template create
 
-create a apimgmt template.
+create a apim template.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -3190,14 +3190,14 @@ create a apimgmt template.
 **Example: ApiManagementCreateEmailTemplate**
 
 ```
-apimgmt template create --resource-group rg1
+apim template create --resource-group rg1
         --service-name apimService1
         --name newIssueNotificationMessage
         --subject "Your request for $IssueName was successfully received."
 ```
-### apimgmt template update
+### apim template update
 
-update a apimgmt template.
+update a apim template.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -3212,7 +3212,7 @@ update a apimgmt template.
 **Example: ApiManagementUpdateEmailTemplate**
 
 ```
-apimgmt template update --resource-group rg1
+apim template update --resource-group rg1
         --service-name apimService1
         --name applicationApprovedNotificationMessage
         --subject "Your application $AppName is published in the gallery"
@@ -3229,9 +3229,9 @@ apimgmt template update --resource-group rg1
   </body>
 </html>"
 ```
-### apimgmt template delete
+### apim template delete
 
-delete a apimgmt template.
+delete a apim template.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -3242,32 +3242,32 @@ delete a apimgmt template.
 **Example: ApiManagementDeleteEmailTemplate**
 
 ```
-apimgmt template delete --resource-group rg1
+apim template delete --resource-group rg1
         --service-name apimService1
         --name newIssueNotificationMessage
 ```
-### apimgmt template list
+### apim template list
 
-list a apimgmt template.
+list a apim template.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
-### apimgmt template show
+### apim template show
 
-show a apimgmt template.
+show a apim template.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
 |**--name**|str|Email Template Name Identifier.|template_name|templateName|
-## apimgmt user
+## apim user
 
-### apimgmt user create
+### apim user create
 
-create a apimgmt user.
+create a apim user.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -3286,7 +3286,7 @@ create a apimgmt user.
 **Example: ApiManagementCreateUser**
 
 ```
-apimgmt user create --resource-group rg1
+apim user create --resource-group rg1
         --service-name apimService1
         --user-id 5931a75ae4bbd512288c680b
         --email foobar@outlook.com
@@ -3294,9 +3294,9 @@ apimgmt user create --resource-group rg1
         --last-name bar
         --confirmation signup
 ```
-### apimgmt user update
+### apim user update
 
-update a apimgmt user.
+update a apim user.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -3315,16 +3315,16 @@ update a apimgmt user.
 **Example: ApiManagementUpdateUser**
 
 ```
-apimgmt user update --resource-group rg1
+apim user update --resource-group rg1
         --service-name apimService1
         --user-id 5931a75ae4bbd512288c680b
         --email foobar@outlook.com
         --first-name foo
         --last-name bar
 ```
-### apimgmt user delete
+### apim user delete
 
-delete a apimgmt user.
+delete a apim user.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
@@ -3335,21 +3335,21 @@ delete a apimgmt user.
 **Example: ApiManagementDeleteUser**
 
 ```
-apimgmt user delete --resource-group rg1
+apim user delete --resource-group rg1
         --service-name apimService1
         --user-id 5931a75ae4bbd512288c680b
 ```
-### apimgmt user list
+### apim user list
 
-list a apimgmt user.
+list a apim user.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|
 |**--resource-group**|str|The name of the resource group.|resource_group_name|resourceGroupName|
 |**--service-name**|str|The name of the API Management service.|service_name|serviceName|
-### apimgmt user show
+### apim user show
 
-show a apimgmt user.
+show a apim user.
 
 |Option|Type|Description|Path (SDK)|Path (swagger)|
 |------|----|-----------|----------|--------------|

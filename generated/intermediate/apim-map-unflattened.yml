@@ -90061,7 +90061,7 @@ Modules:
         MethodId: '17969'
 ServiceName: ApiManagementClient
 MgmtClientName: ApiManagementClient
-CliName: apimgmt
+CliName: apim
 Namespace: azure.mgmt.apimanagement
 Info:
   - '  ** FOUND OPTION resourceGroupName'
