@@ -18,44 +18,37 @@ helps['apim api create'] = """
     type: command
     short-summary: create a apim api.
     examples:
-# create
       - name: ApiManagementCreateApiUsingOai3Import
         text: |-
                az apim api create --resource-group "rg1" --service-name "apimService1" --api-id \\
                "petstore" --path "petstore" --value "https://raw.githubusercontent.com/OAI/OpenAPI-Specif
                ication/master/examples/v3.0/petstore.yaml" --format "openapi-link"
-# create
       - name: ApiManagementCreateApiUsingSwaggerImport
         text: |-
                az apim api create --resource-group "rg1" --service-name "apimService1" --api-id \\
                "petstore" --path "petstore" --value "http://petstore.swagger.io/v2/swagger.json" \\
                --format "swagger-link-json"
-# create
       - name: ApiManagementCreateApiUsingWadlImport
         text: |-
                az apim api create --resource-group "rg1" --service-name "apimService1" --api-id \\
                "petstore" --path "collector" --value "https://developer.cisco.com/media/wae-release-6-2-a
                pi-reference/wae-collector-rest-api/application.wadl" --format "wadl-link-json"
-# create
       - name: ApiManagementCreateSoapToRestApiUsingWsdlImport
         text: |-
                az apim api create --resource-group "rg1" --service-name "apimService1" --api-id \\
                "soapApi" --path "currency" --value \\
                "http://www.webservicex.net/CurrencyConvertor.asmx?WSDL" --format "wsdl-link"
-# create
       - name: ApiManagementCreateSoapPassThroughApiUsingWsdlImport
         text: |-
                az apim api create --resource-group "rg1" --service-name "apimService1" --api-id \\
                "soapApi" --path "currency" --value \\
                "http://www.webservicex.net/CurrencyConvertor.asmx?WSDL" --format "wsdl-link" --api-type \\
                "soap"
-# create
       - name: ApiManagementCreateApi
         text: |-
                az apim api create --resource-group "rg1" --service-name "apimService1" --api-id \\
                "tempgroup" --description "apidescription5200" --display-name "apiname1463" --service-url \\
                "http://newechoapi.cloudapp.net/api" --path "newapiPath"
-# create
       - name: ApiManagementCreateApiRevisionFromExistingApi
         text: |-
                az apim api create --resource-group "rg1" --service-name "apimService1" --api-id \\
@@ -63,7 +56,6 @@ helps['apim api create'] = """
                --source-api-id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/
                providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}" \\
                --service-url "http://echoapi.cloudapp.net/apiv3" --path "echo"
-# create
       - name: ApiManagementCreateApiNewVersionUsingExistingApi
         text: |-
                az apim api create --resource-group "rg1" --service-name "apimService1" --api-id \\
@@ -75,7 +67,6 @@ helps['apim api create'] = """
                --source-api-id "/subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/
                providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}" \\
                --display-name "Echo API2" --service-url "http://echoapi.cloudapp.net/api" --path "echo2"
-# create
       - name: ApiManagementCreateApiClone
         text: |-
                az apim api create --resource-group "rg1" --service-name "apimService1" --api-id \\
@@ -84,7 +75,6 @@ helps['apim api create'] = """
                sourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_nam
                e }}/apis/{{ api_name }}" --display-name "Echo API2" --service-url \\
                "http://echoapi.cloudapp.net/api" --path "echo2"
-# create
       - name: ApiManagementCreateApiWithOpenIdConnect
         text: |-
                az apim api create --resource-group "rg1" --service-name "apimService1" --api-id \\
@@ -99,7 +89,6 @@ helps['apim api update'] = """
     type: command
     short-summary: update a apim api.
     examples:
-# update
       - name: ApiManagementUpdateApi
         text: |-
                az apim api update --resource-group "rg1" --service-name "apimService1" --api-id \\
@@ -111,7 +100,6 @@ helps['apim api delete'] = """
     type: command
     short-summary: delete a apim api.
     examples:
-# delete
       - name: ApiManagementDeleteApi
         text: |-
                az apim api delete --resource-group "rg1" --service-name "apimService1" --api-id \\
@@ -137,7 +125,6 @@ helps['apim api release create'] = """
     type: command
     short-summary: create a apim api release.
     examples:
-# create
       - name: ApiManagementCreateApiRelease
         text: |-
                az apim api release create --resource-group "rg1" --service-name "apimService1" --api-id \\
@@ -148,7 +135,6 @@ helps['apim api release update'] = """
     type: command
     short-summary: update a apim api release.
     examples:
-# update
       - name: ApiManagementUpdateApiRelease
         text: |-
                az apim api release update --resource-group "rg1" --service-name "apimService1" --api-id \\
@@ -159,7 +145,6 @@ helps['apim api release delete'] = """
     type: command
     short-summary: delete a apim api release.
     examples:
-# delete
       - name: ApiManagementDeleteApiRelease
         text: |-
                az apim api release delete --resource-group "rg1" --service-name "apimService1" --api-id \\
@@ -185,7 +170,6 @@ helps['apim api operation create'] = """
     type: command
     short-summary: create a apim api operation.
     examples:
-# create
       - name: ApiManagementCreateApiOperation
         text: |-
                az apim api operation create --resource-group "rg1" --service-name "apimService1" \\
@@ -198,7 +182,6 @@ helps['apim api operation update'] = """
     type: command
     short-summary: update a apim api operation.
     examples:
-# update
       - name: ApiManagementUpdateApiOperation
         text: |-
                az apim api operation update --resource-group "rg1" --service-name "apimService1" \\
@@ -210,7 +193,6 @@ helps['apim api operation delete'] = """
     type: command
     short-summary: delete a apim api operation.
     examples:
-# delete
       - name: ApiManagementDeleteApiOperation
         text: |-
                az apim api operation delete --resource-group "rg1" --service-name "apimService1" \\
@@ -236,7 +218,6 @@ helps['apim api operation policy create'] = """
     type: command
     short-summary: create a apim api operation policy.
     examples:
-# create
       - name: ApiManagementCreateApiOperationPolicy
         text: |-
                az apim api operation policy create --resource-group "rg1" --service-name "apimService1" \\
@@ -254,7 +235,6 @@ helps['apim api operation policy delete'] = """
     type: command
     short-summary: delete a apim api operation policy.
     examples:
-# delete
       - name: ApiManagementDeleteApiOperationPolicy
         text: |-
                az apim api operation policy delete --resource-group "rg1" --service-name "apimService1" \\
@@ -280,7 +260,6 @@ helps['apim tag create'] = """
     type: command
     short-summary: create a apim tag.
     examples:
-# create
       - name: ApiManagementCreateTag
         text: |-
                az apim tag create --resource-group "rg1" --service-name "apimService1" --tag-id "tagId1" \\
@@ -291,7 +270,6 @@ helps['apim tag update'] = """
     type: command
     short-summary: update a apim tag.
     examples:
-# update
       - name: ApiManagementUpdateTag
         text: |-
                az apim tag update --resource-group "rg1" --service-name "apimService1" --tag-id \\
@@ -302,7 +280,6 @@ helps['apim tag delete'] = """
     type: command
     short-summary: delete a apim tag.
     examples:
-# delete
       - name: ApiManagementDeleteTag
         text: |-
                az apim tag delete --resource-group "rg1" --service-name "apimService1" --tag-id "tagId1"
@@ -327,13 +304,11 @@ helps['apim api policy create'] = """
     type: command
     short-summary: create a apim api policy.
     examples:
-# create
       - name: ApiManagementCreateApiPolicy
         text: |-
                az apim api policy create --resource-group "rg1" --service-name "apimService1" --api-id \\
                "5600b57e7e8880006a040001" --policy-id "policy" --value "<policies> <inbound /> <backend> 
                   <forward-request />  </backend>  <outbound /></policies>" --format "xml"
-# create
       - name: ApiManagementCreateApiPolicyNonXmlEncoded
         text: |-
                az apim api policy create --resource-group "rg1" --service-name "apimService1" --api-id \\
@@ -352,7 +327,6 @@ helps['apim api policy delete'] = """
     type: command
     short-summary: delete a apim api policy.
     examples:
-# delete
       - name: ApiManagementDeleteApiPolicy
         text: |-
                az apim api policy delete --resource-group "rg1" --service-name "apimService1" --api-id \\
@@ -378,7 +352,6 @@ helps['apim api schema create'] = """
     type: command
     short-summary: create a apim api schema.
     examples:
-# create
       - name: ApiManagementCreateApiSchema
         text: |-
                az apim api schema create --resource-group "rg1" --service-name "apimService1" --api-id \\
@@ -395,7 +368,6 @@ helps['apim api schema delete'] = """
     type: command
     short-summary: delete a apim api schema.
     examples:
-# delete
       - name: ApiManagementDeleteApiSchema
         text: |-
                az apim api schema delete --resource-group "rg1" --service-name "apimService1" --api-id \\
@@ -421,7 +393,6 @@ helps['apim api diagnostic create'] = """
     type: command
     short-summary: create a apim api diagnostic.
     examples:
-# create
       - name: ApiManagementCreateApiDiagnostic
         text: |-
                az apim api diagnostic create --resource-group "rg1" --service-name "apimService1" \\
@@ -433,7 +404,6 @@ helps['apim api diagnostic update'] = """
     type: command
     short-summary: update a apim api diagnostic.
     examples:
-# update
       - name: ApiManagementUpdateApiDiagnostic
         text: |-
                az apim api diagnostic update --resource-group "rg1" --service-name "apimService1" \\
@@ -445,7 +415,6 @@ helps['apim api diagnostic delete'] = """
     type: command
     short-summary: delete a apim api diagnostic.
     examples:
-# delete
       - name: ApiManagementDeleteApiDiagnostic
         text: |-
                az apim api diagnostic delete --resource-group "rg1" --service-name "apimService1" \\
@@ -471,7 +440,6 @@ helps['apim api issue create'] = """
     type: command
     short-summary: create a apim api issue.
     examples:
-# create
       - name: ApiManagementCreateApiIssue
         text: |-
                az apim api issue create --resource-group "rg1" --service-name "apimService1" --api-id \\
@@ -486,7 +454,6 @@ helps['apim api issue update'] = """
     type: command
     short-summary: update a apim api issue.
     examples:
-# update
       - name: ApiManagementUpdateApiIssue
         text: |-
                az apim api issue update --resource-group "rg1" --service-name "apimService1" --api-id \\
@@ -497,7 +464,6 @@ helps['apim api issue delete'] = """
     type: command
     short-summary: delete a apim api issue.
     examples:
-# delete
       - name: ApiManagementDeleteApiIssue
         text: |-
                az apim api issue delete --resource-group "rg1" --service-name "apimService1" --api-id \\
@@ -523,7 +489,6 @@ helps['apim api issue comment create'] = """
     type: command
     short-summary: create a apim api issue comment.
     examples:
-# create
       - name: ApiManagementCreateApiIssueComment
         text: |-
                az apim api issue comment create --resource-group "rg1" --service-name "apimService1" \\
@@ -543,7 +508,6 @@ helps['apim api issue comment delete'] = """
     type: command
     short-summary: delete a apim api issue comment.
     examples:
-# delete
       - name: ApiManagementDeleteApiIssueComment
         text: |-
                az apim api issue comment delete --resource-group "rg1" --service-name "apimService1" \\
@@ -570,7 +534,6 @@ helps['apim api issue attachment create'] = """
     type: command
     short-summary: create a apim api issue attachment.
     examples:
-# create
       - name: ApiManagementCreateApiIssueAttachment
         text: |-
                az apim api issue attachment create --resource-group "rg1" --service-name "apimService1" \\
@@ -588,7 +551,6 @@ helps['apim api issue attachment delete'] = """
     type: command
     short-summary: delete a apim api issue attachment.
     examples:
-# delete
       - name: ApiManagementDeleteApiIssueAttachment
         text: |-
                az apim api issue attachment delete --resource-group "rg1" --service-name "apimService1" \\
@@ -615,7 +577,6 @@ helps['apim api tagdescription create'] = """
     type: command
     short-summary: create a apim api tagdescription.
     examples:
-# create
       - name: ApiManagementCreateApiTagDescription
         text: |-
                az apim api tagdescription create --resource-group "rg1" --service-name "apimService1" \\
@@ -634,7 +595,6 @@ helps['apim api tagdescription delete'] = """
     type: command
     short-summary: delete a apim api tagdescription.
     examples:
-# delete
       - name: ApiManagementDeleteApiTagDescription
         text: |-
                az apim api tagdescription delete --resource-group "rg1" --service-name "apimService1" \\
@@ -660,7 +620,6 @@ helps['apim apiversionset create'] = """
     type: command
     short-summary: create a apim apiversionset.
     examples:
-# create
       - name: ApiManagementCreateApiVersionSet
         text: |-
                az apim apiversionset create --resource-group "rg1" --service-name "apimService1" \\
@@ -672,7 +631,6 @@ helps['apim apiversionset update'] = """
     type: command
     short-summary: update a apim apiversionset.
     examples:
-# update
       - name: ApiManagementUpdateApiVersionSet
         text: |-
                az apim apiversionset update --resource-group "rg1" --service-name "apimService1" \\
@@ -684,7 +642,6 @@ helps['apim apiversionset delete'] = """
     type: command
     short-summary: delete a apim apiversionset.
     examples:
-# delete
       - name: ApiManagementDeleteApiVersionSet
         text: |-
                az apim apiversionset delete --resource-group "rg1" --service-name "apimService1" \\
@@ -710,7 +667,6 @@ helps['apim authorizationserver create'] = """
     type: command
     short-summary: create a apim authorizationserver.
     examples:
-# create
       - name: ApiManagementCreateAuthorizationServer
         text: |-
                az apim authorizationserver create --resource-group "rg1" --service-name "apimService1" \\
@@ -725,7 +681,6 @@ helps['apim authorizationserver update'] = """
     type: command
     short-summary: update a apim authorizationserver.
     examples:
-# update
       - name: ApiManagementUpdateAuthorizationServer
         text: |-
                az apim authorizationserver update --resource-group "rg1" --service-name "apimService1" \\
@@ -736,7 +691,6 @@ helps['apim authorizationserver delete'] = """
     type: command
     short-summary: delete a apim authorizationserver.
     examples:
-# delete
       - name: ApiManagementDeleteAuthorizationServer
         text: |-
                az apim authorizationserver delete --resource-group "rg1" --service-name "apimService1" \\
@@ -762,13 +716,11 @@ helps['apim backend create'] = """
     type: command
     short-summary: create a apim backend.
     examples:
-# create
       - name: ApiManagementCreateBackendServiceFabric
         text: |-
                az apim backend create --resource-group "rg1" --service-name "apimService1" --backend-id \\
                "sfbackend" --description "Service Fabric Test App 1" --url \\
                "fabric:/mytestapp/mytestservice" --protocol "http"
-# create
       - name: ApiManagementCreateBackendProxyBackend
         text: |-
                az apim backend create --resource-group "rg1" --service-name "apimService1" --backend-id \\
@@ -780,7 +732,6 @@ helps['apim backend update'] = """
     type: command
     short-summary: update a apim backend.
     examples:
-# update
       - name: ApiManagementUpdateBackend
         text: |-
                az apim backend update --resource-group "rg1" --service-name "apimService1" --backend-id \\
@@ -791,7 +742,6 @@ helps['apim backend delete'] = """
     type: command
     short-summary: delete a apim backend.
     examples:
-# delete
       - name: ApiManagementDeleteBackend
         text: |-
                az apim backend delete --resource-group "rg1" --service-name "apimService1" --backend-id \\
@@ -817,7 +767,6 @@ helps['apim cache create'] = """
     type: command
     short-summary: create a apim cache.
     examples:
-# create
       - name: ApiManagementCreateCache
         text: |-
                az apim cache create --resource-group "rg1" --service-name "apimService1" --cache-id \\
@@ -831,7 +780,6 @@ helps['apim cache update'] = """
     type: command
     short-summary: update a apim cache.
     examples:
-# update
       - name: ApiManagementUpdateCache
         text: |-
                az apim cache update --resource-group "rg1" --service-name "apimService1" --cache-id \\
@@ -842,7 +790,6 @@ helps['apim cache delete'] = """
     type: command
     short-summary: delete a apim cache.
     examples:
-# delete
       - name: ApiManagementDeleteCache
         text: |-
                az apim cache delete --resource-group "rg1" --service-name "apimService1" --cache-id \\
@@ -868,7 +815,6 @@ helps['apim certificate create'] = """
     type: command
     short-summary: create a apim certificate.
     examples:
-# create
       - name: ApiManagementCreateCertificate
         text: |-
                az apim certificate create --resource-group "rg1" --service-name "apimService1" \\
@@ -886,7 +832,6 @@ helps['apim certificate delete'] = """
     type: command
     short-summary: delete a apim certificate.
     examples:
-# delete
       - name: ApiManagementDeleteCertificate
         text: |-
                az apim certificate delete --resource-group "rg1" --service-name "apimService1" \\
@@ -912,25 +857,21 @@ helps['apim create'] = """
     type: command
     short-summary: create a apim.
     examples:
-# create
       - name: ApiManagementCreateService
         text: |-
                az apim create --resource-group "rg1" --name "apimService1" --publisher-email \\
                "apim@autorestsdk.com" --publisher-name "autorestsdk" --sku-name "Developer" \\
                --sku-capacity "1" --location "Central US"
-# create
       - name: ApiManagementCreateMultiRegionServiceWithCustomHostname
         text: |-
                az apim create --resource-group "rg1" --name "apimService1" --virtual-network-type \\
                "External" --publisher-email "admin@live.com" --publisher-name "contoso" --sku-name \\
                "Premium" --sku-capacity "1" --location "Central US"
-# create
       - name: ApiManagementCreateServiceHavingMsi
         text: |-
                az apim create --resource-group "rg1" --name "apimService1" --publisher-email \\
                "apim@autorestsdk.com" --publisher-name "autorestsdk" --sku-name "Consumption" --location \\
                "West US"
-# create
       - name: ApiManagementCreateServiceWithSystemCertificates
         text: |-
                az apim create --resource-group "rg1" --name "apimService1" --publisher-email \\
@@ -942,11 +883,9 @@ helps['apim update'] = """
     type: command
     short-summary: update a apim.
     examples:
-# update
       - name: ApiManagementUpdateServiceDisableTls10
         text: |-
                az apim update --resource-group "rg1" --name "apimService1"
-# update
       - name: ApiManagementUpdateServicePublisherDetails
         text: |-
                az apim update --resource-group "rg1" --name "apimService1" --publisher-email \\
@@ -957,7 +896,6 @@ helps['apim delete'] = """
     type: command
     short-summary: delete a apim.
     examples:
-# delete
       - name: ApiManagementServiceDeleteService
         text: |-
                az apim delete --resource-group "rg1" --name "apimService1"
@@ -982,7 +920,6 @@ helps['apim diagnostic create'] = """
     type: command
     short-summary: create a apim diagnostic.
     examples:
-# create
       - name: ApiManagementCreateDiagnostic
         text: |-
                az apim diagnostic create --resource-group "rg1" --service-name "apimService1" \\
@@ -994,7 +931,6 @@ helps['apim diagnostic update'] = """
     type: command
     short-summary: update a apim diagnostic.
     examples:
-# update
       - name: ApiManagementUpdateDiagnostic
         text: |-
                az apim diagnostic update --resource-group "rg1" --service-name "apimService1" \\
@@ -1006,7 +942,6 @@ helps['apim diagnostic delete'] = """
     type: command
     short-summary: delete a apim diagnostic.
     examples:
-# delete
       - name: ApiManagementDeleteDiagnostic
         text: |-
                az apim diagnostic delete --resource-group "rg1" --service-name "apimService1" \\
@@ -1032,7 +967,6 @@ helps['apim template create'] = """
     type: command
     short-summary: create a apim template.
     examples:
-# create
       - name: ApiManagementCreateEmailTemplate
         text: |-
                az apim template create --resource-group "rg1" --service-name "apimService1" --name \\
@@ -1044,7 +978,6 @@ helps['apim template update'] = """
     type: command
     short-summary: update a apim template.
     examples:
-# update
       - name: ApiManagementUpdateEmailTemplate
         text: |-
                az apim template update --resource-group "rg1" --service-name "apimService1" --name \\
@@ -1064,7 +997,6 @@ helps['apim template delete'] = """
     type: command
     short-summary: delete a apim template.
     examples:
-# delete
       - name: ApiManagementDeleteEmailTemplate
         text: |-
                az apim template delete --resource-group "rg1" --service-name "apimService1" --name \\
@@ -1090,12 +1022,10 @@ helps['apim group create'] = """
     type: command
     short-summary: create a apim group.
     examples:
-# create
       - name: ApiManagementCreateGroup
         text: |-
                az apim group create --resource-group "rg1" --service-name "apimService1" --group-id \\
                "tempgroup" --display-name "temp group"
-# create
       - name: ApiManagementCreateGroupExternal
         text: |-
                az apim group create --resource-group "rg1" --service-name "apimService1" --group-id \\
@@ -1108,7 +1038,6 @@ helps['apim group update'] = """
     type: command
     short-summary: update a apim group.
     examples:
-# update
       - name: ApiManagementUpdateGroup
         text: |-
                az apim group update --resource-group "rg1" --service-name "apimService1" --group-id \\
@@ -1119,7 +1048,6 @@ helps['apim group delete'] = """
     type: command
     short-summary: delete a apim group.
     examples:
-# delete
       - name: ApiManagementDeleteGroup
         text: |-
                az apim group delete --resource-group "rg1" --service-name "apimService1" --group-id \\
@@ -1145,7 +1073,6 @@ helps['apim group user create'] = """
     type: command
     short-summary: create a apim group user.
     examples:
-# create
       - name: ApiManagementCreateGroupUser
         text: |-
                az apim group user create --resource-group "rg1" --service-name "apimService1" --group-id \\
@@ -1156,7 +1083,6 @@ helps['apim group user delete'] = """
     type: command
     short-summary: delete a apim group user.
     examples:
-# delete
       - name: ApiManagementDeleteGroupUser
         text: |-
                az apim group user delete --resource-group "rg1" --service-name "apimService1" --group-id \\
@@ -1177,7 +1103,6 @@ helps['apim identityprovider create'] = """
     type: command
     short-summary: create a apim identityprovider.
     examples:
-# create
       - name: ApiManagementCreateIdentityProvider
         text: |-
                az apim identityprovider create --resource-group "rg1" --service-name "apimService1" \\
@@ -1188,7 +1113,6 @@ helps['apim identityprovider update'] = """
     type: command
     short-summary: update a apim identityprovider.
     examples:
-# update
       - name: ApiManagementUpdateIdentityProvider
         text: |-
                az apim identityprovider update --resource-group "rg1" --service-name "apimService1" \\
@@ -1199,7 +1123,6 @@ helps['apim identityprovider delete'] = """
     type: command
     short-summary: delete a apim identityprovider.
     examples:
-# delete
       - name: ApiManagementDeleteIdentityProvider
         text: |-
                az apim identityprovider delete --resource-group "rg1" --service-name "apimService1" \\
@@ -1225,12 +1148,10 @@ helps['apim logger create'] = """
     type: command
     short-summary: create a apim logger.
     examples:
-# create
       - name: ApiManagementCreateEHLogger
         text: |-
                az apim logger create --resource-group "rg1" --service-name "apimService1" --logger-id \\
                "loggerId" --logger-type "azureEventHub" --description "adding a new logger"
-# create
       - name: ApiManagementCreateAILogger
         text: |-
                az apim logger create --resource-group "rg1" --service-name "apimService1" --logger-id \\
@@ -1241,7 +1162,6 @@ helps['apim logger update'] = """
     type: command
     short-summary: update a apim logger.
     examples:
-# update
       - name: ApiManagementUpdateLogger
         text: |-
                az apim logger update --resource-group "rg1" --service-name "apimService1" --logger-id \\
@@ -1252,7 +1172,6 @@ helps['apim logger delete'] = """
     type: command
     short-summary: delete a apim logger.
     examples:
-# delete
       - name: ApiManagementDeleteLogger
         text: |-
                az apim logger delete --resource-group "rg1" --service-name "apimService1" --logger-id \\
@@ -1278,7 +1197,6 @@ helps['apim notification create'] = """
     type: command
     short-summary: create a apim notification.
     examples:
-# create
       - name: ApiManagementCreateNotification
         text: |-
                az apim notification create --resource-group "rg1" --service-name "apimService1" --name \\
@@ -1309,7 +1227,6 @@ helps['apim notification recipientuser create'] = """
     type: command
     short-summary: create a apim notification recipientuser.
     examples:
-# create
       - name: ApiManagementCreateNotificationRecipientUser
         text: |-
                az apim notification recipientuser create --resource-group "rg1" --service-name \\
@@ -1326,7 +1243,6 @@ helps['apim notification recipientuser delete'] = """
     type: command
     short-summary: delete a apim notification recipientuser.
     examples:
-# delete
       - name: ApiManagementDeleteNotificationRecipientUser
         text: |-
                az apim notification recipientuser delete --resource-group "rg1" --service-name \\
@@ -1348,7 +1264,6 @@ helps['apim notification recipientemail create'] = """
     type: command
     short-summary: create a apim notification recipientemail.
     examples:
-# create
       - name: ApiManagementCreateNotificationRecipientEmail
         text: |-
                az apim notification recipientemail create --resource-group "rg1" --service-name \\
@@ -1365,7 +1280,6 @@ helps['apim notification recipientemail delete'] = """
     type: command
     short-summary: delete a apim notification recipientemail.
     examples:
-# delete
       - name: ApiManagementDeleteNotificationRecipientEmail
         text: |-
                az apim notification recipientemail delete --resource-group "rg1" --service-name \\
@@ -1387,7 +1301,6 @@ helps['apim openidconnectprovider create'] = """
     type: command
     short-summary: create a apim openidconnectprovider.
     examples:
-# create
       - name: ApiManagementCreateOpenIdConnectProvider
         text: |-
                az apim openidconnectprovider create --resource-group "rg1" --service-name "apimService1" \\
@@ -1399,7 +1312,6 @@ helps['apim openidconnectprovider update'] = """
     type: command
     short-summary: update a apim openidconnectprovider.
     examples:
-# update
       - name: ApiManagementUpdateOpenIdConnectProvider
         text: |-
                az apim openidconnectprovider update --resource-group "rg1" --service-name "apimService1" \\
@@ -1410,7 +1322,6 @@ helps['apim openidconnectprovider delete'] = """
     type: command
     short-summary: delete a apim openidconnectprovider.
     examples:
-# delete
       - name: ApiManagementDeleteOpenIdConnectProvider
         text: |-
                az apim openidconnectprovider delete --resource-group "rg1" --service-name "apimService1" \\
@@ -1436,7 +1347,6 @@ helps['apim policy create'] = """
     type: command
     short-summary: create a apim policy.
     examples:
-# create
       - name: ApiManagementCreatePolicy
         text: |-
                az apim policy create --resource-group "rg1" --service-name "apimService1" --policy-id \\
@@ -1453,7 +1363,6 @@ helps['apim policy delete'] = """
     type: command
     short-summary: delete a apim policy.
     examples:
-# delete
       - name: ApiManagementDeletePolicy
         text: |-
                az apim policy delete --resource-group "rg1" --service-name "apimService1" --policy-id \\
@@ -1479,7 +1388,6 @@ helps['apim portalsetting signin create'] = """
     type: command
     short-summary: create a apim portalsetting signin.
     examples:
-# create
       - name: ApiManagementPortalSettingsUpdateSignIn
         text: |-
                az apim portalsetting signin create --resource-group "rg1" --name "apimService1" \\
@@ -1490,7 +1398,6 @@ helps['apim portalsetting signin update'] = """
     type: command
     short-summary: update a apim portalsetting signin.
     examples:
-# update
       - name: ApiManagementPortalSettingsUpdateSignIn
         text: |-
                az apim portalsetting signin update --resource-group "rg1" --name "apimService1" \\
@@ -1511,7 +1418,6 @@ helps['apim portalsetting signup create'] = """
     type: command
     short-summary: create a apim portalsetting signup.
     examples:
-# create
       - name: ApiManagementPortalSettingsUpdateSignUp
         text: |-
                az apim portalsetting signup create --resource-group "rg1" --name "apimService1" \\
@@ -1522,7 +1428,6 @@ helps['apim portalsetting signup update'] = """
     type: command
     short-summary: update a apim portalsetting signup.
     examples:
-# update
       - name: ApiManagementPortalSettingsUpdateSignUp
         text: |-
                az apim portalsetting signup update --resource-group "rg1" --name "apimService1" \\
@@ -1543,7 +1448,6 @@ helps['apim portalsetting delegation create'] = """
     type: command
     short-summary: create a apim portalsetting delegation.
     examples:
-# create
       - name: ApiManagementPortalSettingsUpdateDelegation
         text: |-
                az apim portalsetting delegation create --resource-group "rg1" --name "apimService1" \\
@@ -1555,7 +1459,6 @@ helps['apim portalsetting delegation update'] = """
     type: command
     short-summary: update a apim portalsetting delegation.
     examples:
-# update
       - name: ApiManagementPortalSettingsUpdateDelegation
         text: |-
                az apim portalsetting delegation update --resource-group "rg1" --name "apimService1" \\
@@ -1577,7 +1480,6 @@ helps['apim product create'] = """
     type: command
     short-summary: create a apim product.
     examples:
-# create
       - name: ApiManagementCreateProduct
         text: |-
                az apim product create --resource-group "rg1" --service-name "apimService1" --product-id \\
@@ -1588,7 +1490,6 @@ helps['apim product update'] = """
     type: command
     short-summary: update a apim product.
     examples:
-# update
       - name: ApiManagementUpdateProduct
         text: |-
                az apim product update --resource-group "rg1" --service-name "apimService1" --product-id \\
@@ -1599,7 +1500,6 @@ helps['apim product delete'] = """
     type: command
     short-summary: delete a apim product.
     examples:
-# delete
       - name: ApiManagementDeleteProduct
         text: |-
                az apim product delete --resource-group "rg1" --service-name "apimService1" --product-id \\
@@ -1625,7 +1525,6 @@ helps['apim product api create'] = """
     type: command
     short-summary: create a apim product api.
     examples:
-# create
       - name: ApiManagementCreateProductApi
         text: |-
                az apim product api create --resource-group "rg1" --service-name "apimService1" \\
@@ -1641,7 +1540,6 @@ helps['apim product api delete'] = """
     type: command
     short-summary: delete a apim product api.
     examples:
-# delete
       - name: ApiManagementDeleteProductApi
         text: |-
                az apim product api delete --resource-group "rg1" --service-name "apimService1" \\
@@ -1662,7 +1560,6 @@ helps['apim product group create'] = """
     type: command
     short-summary: create a apim product group.
     examples:
-# create
       - name: ApiManagementCreateProductGroup
         text: |-
                az apim product group create --resource-group "rg1" --service-name "apimService1" \\
@@ -1678,7 +1575,6 @@ helps['apim product group delete'] = """
     type: command
     short-summary: delete a apim product group.
     examples:
-# delete
       - name: ApiManagementDeleteProductGroup
         text: |-
                az apim product group delete --resource-group "rg1" --service-name "apimService1" \\
@@ -1699,7 +1595,6 @@ helps['apim product policy create'] = """
     type: command
     short-summary: create a apim product policy.
     examples:
-# create
       - name: ApiManagementCreateProductPolicy
         text: |-
                az apim product policy create --resource-group "rg1" --service-name "apimService1" \\
@@ -1723,7 +1618,6 @@ helps['apim product policy delete'] = """
     type: command
     short-summary: delete a apim product policy.
     examples:
-# delete
       - name: ApiManagementDeleteProductPolicy
         text: |-
                az apim product policy delete --resource-group "rg1" --service-name "apimService1" \\
@@ -1749,7 +1643,6 @@ helps['apim property create'] = """
     type: command
     short-summary: create a apim property.
     examples:
-# create
       - name: ApiManagementCreateProperty
         text: |-
                az apim property create --resource-group "rg1" --service-name "apimService1" --prop-id \\
@@ -1760,7 +1653,6 @@ helps['apim property update'] = """
     type: command
     short-summary: update a apim property.
     examples:
-# update
       - name: ApiManagementUpdateProperty
         text: |-
                az apim property update --resource-group "rg1" --service-name "apimService1" --prop-id \\
@@ -1771,7 +1663,6 @@ helps['apim property delete'] = """
     type: command
     short-summary: delete a apim property.
     examples:
-# delete
       - name: ApiManagementDeleteProperty
         text: |-
                az apim property delete --resource-group "rg1" --service-name "apimService1" --prop-id \\
@@ -1797,7 +1688,6 @@ helps['apim subscription create'] = """
     type: command
     short-summary: create a apim subscription.
     examples:
-# create
       - name: ApiManagementCreateSubscription
         text: |-
                az apim subscription create --resource-group "rg1" --service-name "apimService1" --sid \\
@@ -1812,7 +1702,6 @@ helps['apim subscription update'] = """
     type: command
     short-summary: update a apim subscription.
     examples:
-# update
       - name: ApiManagementUpdateSubscription
         text: |-
                az apim subscription update --resource-group "rg1" --service-name "apimService1" --sid \\
@@ -1823,7 +1712,6 @@ helps['apim subscription delete'] = """
     type: command
     short-summary: delete a apim subscription.
     examples:
-# delete
       - name: ApiManagementDeleteSubscription
         text: |-
                az apim subscription delete --resource-group "rg1" --service-name "apimService1" --sid \\
@@ -1849,7 +1737,6 @@ helps['apim user create'] = """
     type: command
     short-summary: create a apim user.
     examples:
-# create
       - name: ApiManagementCreateUser
         text: |-
                az apim user create --resource-group "rg1" --service-name "apimService1" --user-id \\
@@ -1861,7 +1748,6 @@ helps['apim user update'] = """
     type: command
     short-summary: update a apim user.
     examples:
-# update
       - name: ApiManagementUpdateUser
         text: |-
                az apim user update --resource-group "rg1" --service-name "apimService1" --user-id \\
@@ -1873,7 +1759,6 @@ helps['apim user delete'] = """
     type: command
     short-summary: delete a apim user.
     examples:
-# delete
       - name: ApiManagementDeleteUser
         text: |-
                az apim user delete --resource-group "rg1" --service-name "apimService1" --user-id \\
