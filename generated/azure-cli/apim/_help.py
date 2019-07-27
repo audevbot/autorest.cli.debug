@@ -16,7 +16,7 @@ helps['apim api'] = """
 
 helps['apim api create'] = """
     type: command
-    short-summary: create a api.
+    short-summary: create api.
     examples:
       - name: ApiManagementCreateApiUsingOai3Import
         text: |-
@@ -87,7 +87,7 @@ helps['apim api create'] = """
 
 helps['apim api update'] = """
     type: command
-    short-summary: update a api.
+    short-summary: update api.
     examples:
       - name: ApiManagementUpdateApi
         text: |-
@@ -98,7 +98,7 @@ helps['apim api update'] = """
 
 helps['apim api delete'] = """
     type: command
-    short-summary: delete a api.
+    short-summary: delete api.
     examples:
       - name: ApiManagementDeleteApi
         text: |-
@@ -108,12 +108,12 @@ helps['apim api delete'] = """
 
 helps['apim api list'] = """
     type: command
-    short-summary: list a api.
+    short-summary: list api.
 """
 
 helps['apim api show'] = """
     type: command
-    short-summary: show a api.
+    short-summary: show api.
 """
 
 helps['apim api release'] = """
@@ -123,7 +123,7 @@ helps['apim api release'] = """
 
 helps['apim api release create'] = """
     type: command
-    short-summary: create a api release.
+    short-summary: create api release.
     examples:
       - name: ApiManagementCreateApiRelease
         text: |-
@@ -133,7 +133,7 @@ helps['apim api release create'] = """
 
 helps['apim api release update'] = """
     type: command
-    short-summary: update a api release.
+    short-summary: update api release.
     examples:
       - name: ApiManagementUpdateApiRelease
         text: |-
@@ -143,7 +143,7 @@ helps['apim api release update'] = """
 
 helps['apim api release delete'] = """
     type: command
-    short-summary: delete a api release.
+    short-summary: delete api release.
     examples:
       - name: ApiManagementDeleteApiRelease
         text: |-
@@ -153,12 +153,12 @@ helps['apim api release delete'] = """
 
 helps['apim api release list'] = """
     type: command
-    short-summary: list a api release.
+    short-summary: list api release.
 """
 
 helps['apim api release show'] = """
     type: command
-    short-summary: show a api release.
+    short-summary: show api release.
 """
 
 helps['apim api operation'] = """
@@ -168,7 +168,7 @@ helps['apim api operation'] = """
 
 helps['apim api operation create'] = """
     type: command
-    short-summary: create a api operation.
+    short-summary: create api operation.
     examples:
       - name: ApiManagementCreateApiOperation
         text: |-
@@ -180,7 +180,7 @@ helps['apim api operation create'] = """
 
 helps['apim api operation update'] = """
     type: command
-    short-summary: update a api operation.
+    short-summary: update api operation.
     examples:
       - name: ApiManagementUpdateApiOperation
         text: |-
@@ -191,7 +191,7 @@ helps['apim api operation update'] = """
 
 helps['apim api operation delete'] = """
     type: command
-    short-summary: delete a api operation.
+    short-summary: delete api operation.
     examples:
       - name: ApiManagementDeleteApiOperation
         text: |-
@@ -201,12 +201,12 @@ helps['apim api operation delete'] = """
 
 helps['apim api operation list'] = """
     type: command
-    short-summary: list a api operation.
+    short-summary: list api operation.
 """
 
 helps['apim api operation show'] = """
     type: command
-    short-summary: show a api operation.
+    short-summary: show api operation.
 """
 
 helps['apim api operation policy'] = """
@@ -216,7 +216,7 @@ helps['apim api operation policy'] = """
 
 helps['apim api operation policy create'] = """
     type: command
-    short-summary: create a api operation policy.
+    short-summary: create api operation policy.
     examples:
       - name: ApiManagementCreateApiOperationPolicy
         text: |-
@@ -228,12 +228,12 @@ helps['apim api operation policy create'] = """
 
 helps['apim api operation policy update'] = """
     type: command
-    short-summary: update a api operation policy.
+    short-summary: update api operation policy.
 """
 
 helps['apim api operation policy delete'] = """
     type: command
-    short-summary: delete a api operation policy.
+    short-summary: delete api operation policy.
     examples:
       - name: ApiManagementDeleteApiOperationPolicy
         text: |-
@@ -243,12 +243,12 @@ helps['apim api operation policy delete'] = """
 
 helps['apim api operation policy list'] = """
     type: command
-    short-summary: list a api operation policy.
+    short-summary: list api operation policy.
 """
 
 helps['apim api operation policy show'] = """
     type: command
-    short-summary: show a api operation policy.
+    short-summary: show api operation policy.
 """
 
 helps['apim tag'] = """
@@ -258,7 +258,7 @@ helps['apim tag'] = """
 
 helps['apim tag create'] = """
     type: command
-    short-summary: create a tag.
+    short-summary: create tag.
     examples:
       - name: ApiManagementCreateTag
         text: |-
@@ -268,7 +268,7 @@ helps['apim tag create'] = """
 
 helps['apim tag update'] = """
     type: command
-    short-summary: update a tag.
+    short-summary: update tag.
     examples:
       - name: ApiManagementUpdateTag
         text: |-
@@ -278,7 +278,7 @@ helps['apim tag update'] = """
 
 helps['apim tag delete'] = """
     type: command
-    short-summary: delete a tag.
+    short-summary: delete tag.
     examples:
       - name: ApiManagementDeleteTag
         text: |-
@@ -287,12 +287,12 @@ helps['apim tag delete'] = """
 
 helps['apim tag list'] = """
     type: command
-    short-summary: list a tag.
+    short-summary: list tag.
 """
 
 helps['apim tag show'] = """
     type: command
-    short-summary: show a tag.
+    short-summary: show tag.
 """
 
 helps['apim api policy'] = """
@@ -302,7 +302,7 @@ helps['apim api policy'] = """
 
 helps['apim api policy create'] = """
     type: command
-    short-summary: create a api policy.
+    short-summary: create api policy.
     examples:
       - name: ApiManagementCreateApiPolicy
         text: |-
@@ -320,12 +320,12 @@ helps['apim api policy create'] = """
 
 helps['apim api policy update'] = """
     type: command
-    short-summary: update a api policy.
+    short-summary: update api policy.
 """
 
 helps['apim api policy delete'] = """
     type: command
-    short-summary: delete a api policy.
+    short-summary: delete api policy.
     examples:
       - name: ApiManagementDeleteApiPolicy
         text: |-
@@ -335,12 +335,12 @@ helps['apim api policy delete'] = """
 
 helps['apim api policy list'] = """
     type: command
-    short-summary: list a api policy.
+    short-summary: list api policy.
 """
 
 helps['apim api policy show'] = """
     type: command
-    short-summary: show a api policy.
+    short-summary: show api policy.
 """
 
 helps['apim api schema'] = """
@@ -350,7 +350,7 @@ helps['apim api schema'] = """
 
 helps['apim api schema create'] = """
     type: command
-    short-summary: create a api schema.
+    short-summary: create api schema.
     examples:
       - name: ApiManagementCreateApiSchema
         text: |-
@@ -361,12 +361,12 @@ helps['apim api schema create'] = """
 
 helps['apim api schema update'] = """
     type: command
-    short-summary: update a api schema.
+    short-summary: update api schema.
 """
 
 helps['apim api schema delete'] = """
     type: command
-    short-summary: delete a api schema.
+    short-summary: delete api schema.
     examples:
       - name: ApiManagementDeleteApiSchema
         text: |-
@@ -376,12 +376,12 @@ helps['apim api schema delete'] = """
 
 helps['apim api schema list'] = """
     type: command
-    short-summary: list a api schema.
+    short-summary: list api schema.
 """
 
 helps['apim api schema show'] = """
     type: command
-    short-summary: show a api schema.
+    short-summary: show api schema.
 """
 
 helps['apim api diagnostic'] = """
@@ -391,7 +391,7 @@ helps['apim api diagnostic'] = """
 
 helps['apim api diagnostic create'] = """
     type: command
-    short-summary: create a api diagnostic.
+    short-summary: create api diagnostic.
     examples:
       - name: ApiManagementCreateApiDiagnostic
         text: |-
@@ -402,7 +402,7 @@ helps['apim api diagnostic create'] = """
 
 helps['apim api diagnostic update'] = """
     type: command
-    short-summary: update a api diagnostic.
+    short-summary: update api diagnostic.
     examples:
       - name: ApiManagementUpdateApiDiagnostic
         text: |-
@@ -413,7 +413,7 @@ helps['apim api diagnostic update'] = """
 
 helps['apim api diagnostic delete'] = """
     type: command
-    short-summary: delete a api diagnostic.
+    short-summary: delete api diagnostic.
     examples:
       - name: ApiManagementDeleteApiDiagnostic
         text: |-
@@ -423,12 +423,12 @@ helps['apim api diagnostic delete'] = """
 
 helps['apim api diagnostic list'] = """
     type: command
-    short-summary: list a api diagnostic.
+    short-summary: list api diagnostic.
 """
 
 helps['apim api diagnostic show'] = """
     type: command
-    short-summary: show a api diagnostic.
+    short-summary: show api diagnostic.
 """
 
 helps['apim api issue'] = """
@@ -438,7 +438,7 @@ helps['apim api issue'] = """
 
 helps['apim api issue create'] = """
     type: command
-    short-summary: create a api issue.
+    short-summary: create api issue.
     examples:
       - name: ApiManagementCreateApiIssue
         text: |-
@@ -452,7 +452,7 @@ helps['apim api issue create'] = """
 
 helps['apim api issue update'] = """
     type: command
-    short-summary: update a api issue.
+    short-summary: update api issue.
     examples:
       - name: ApiManagementUpdateApiIssue
         text: |-
@@ -462,7 +462,7 @@ helps['apim api issue update'] = """
 
 helps['apim api issue delete'] = """
     type: command
-    short-summary: delete a api issue.
+    short-summary: delete api issue.
     examples:
       - name: ApiManagementDeleteApiIssue
         text: |-
@@ -472,12 +472,12 @@ helps['apim api issue delete'] = """
 
 helps['apim api issue list'] = """
     type: command
-    short-summary: list a api issue.
+    short-summary: list api issue.
 """
 
 helps['apim api issue show'] = """
     type: command
-    short-summary: show a api issue.
+    short-summary: show api issue.
 """
 
 helps['apim api issue comment'] = """
@@ -487,7 +487,7 @@ helps['apim api issue comment'] = """
 
 helps['apim api issue comment create'] = """
     type: command
-    short-summary: create a api issue comment.
+    short-summary: create api issue comment.
     examples:
       - name: ApiManagementCreateApiIssueComment
         text: |-
@@ -501,12 +501,12 @@ helps['apim api issue comment create'] = """
 
 helps['apim api issue comment update'] = """
     type: command
-    short-summary: update a api issue comment.
+    short-summary: update api issue comment.
 """
 
 helps['apim api issue comment delete'] = """
     type: command
-    short-summary: delete a api issue comment.
+    short-summary: delete api issue comment.
     examples:
       - name: ApiManagementDeleteApiIssueComment
         text: |-
@@ -517,12 +517,12 @@ helps['apim api issue comment delete'] = """
 
 helps['apim api issue comment list'] = """
     type: command
-    short-summary: list a api issue comment.
+    short-summary: list api issue comment.
 """
 
 helps['apim api issue comment show'] = """
     type: command
-    short-summary: show a api issue comment.
+    short-summary: show api issue comment.
 """
 
 helps['apim api issue attachment'] = """
@@ -532,7 +532,7 @@ helps['apim api issue attachment'] = """
 
 helps['apim api issue attachment create'] = """
     type: command
-    short-summary: create a api issue attachment.
+    short-summary: create api issue attachment.
     examples:
       - name: ApiManagementCreateApiIssueAttachment
         text: |-
@@ -544,12 +544,12 @@ helps['apim api issue attachment create'] = """
 
 helps['apim api issue attachment update'] = """
     type: command
-    short-summary: update a api issue attachment.
+    short-summary: update api issue attachment.
 """
 
 helps['apim api issue attachment delete'] = """
     type: command
-    short-summary: delete a api issue attachment.
+    short-summary: delete api issue attachment.
     examples:
       - name: ApiManagementDeleteApiIssueAttachment
         text: |-
@@ -560,12 +560,12 @@ helps['apim api issue attachment delete'] = """
 
 helps['apim api issue attachment list'] = """
     type: command
-    short-summary: list a api issue attachment.
+    short-summary: list api issue attachment.
 """
 
 helps['apim api issue attachment show'] = """
     type: command
-    short-summary: show a api issue attachment.
+    short-summary: show api issue attachment.
 """
 
 helps['apim api tagdescription'] = """
@@ -575,7 +575,7 @@ helps['apim api tagdescription'] = """
 
 helps['apim api tagdescription create'] = """
     type: command
-    short-summary: create a api tag description.
+    short-summary: create api tag description.
     examples:
       - name: ApiManagementCreateApiTagDescription
         text: |-
@@ -588,12 +588,12 @@ helps['apim api tagdescription create'] = """
 
 helps['apim api tagdescription update'] = """
     type: command
-    short-summary: update a api tag description.
+    short-summary: update api tag description.
 """
 
 helps['apim api tagdescription delete'] = """
     type: command
-    short-summary: delete a api tag description.
+    short-summary: delete api tag description.
     examples:
       - name: ApiManagementDeleteApiTagDescription
         text: |-
@@ -603,12 +603,12 @@ helps['apim api tagdescription delete'] = """
 
 helps['apim api tagdescription list'] = """
     type: command
-    short-summary: list a api tag description.
+    short-summary: list api tag description.
 """
 
 helps['apim api tagdescription show'] = """
     type: command
-    short-summary: show a api tag description.
+    short-summary: show api tag description.
 """
 
 helps['apim apiversionset'] = """
@@ -618,7 +618,7 @@ helps['apim apiversionset'] = """
 
 helps['apim apiversionset create'] = """
     type: command
-    short-summary: create a api version set.
+    short-summary: create api version set.
     examples:
       - name: ApiManagementCreateApiVersionSet
         text: |-
@@ -629,7 +629,7 @@ helps['apim apiversionset create'] = """
 
 helps['apim apiversionset update'] = """
     type: command
-    short-summary: update a api version set.
+    short-summary: update api version set.
     examples:
       - name: ApiManagementUpdateApiVersionSet
         text: |-
@@ -640,7 +640,7 @@ helps['apim apiversionset update'] = """
 
 helps['apim apiversionset delete'] = """
     type: command
-    short-summary: delete a api version set.
+    short-summary: delete api version set.
     examples:
       - name: ApiManagementDeleteApiVersionSet
         text: |-
@@ -650,12 +650,12 @@ helps['apim apiversionset delete'] = """
 
 helps['apim apiversionset list'] = """
     type: command
-    short-summary: list a api version set.
+    short-summary: list api version set.
 """
 
 helps['apim apiversionset show'] = """
     type: command
-    short-summary: show a api version set.
+    short-summary: show api version set.
 """
 
 helps['apim authorizationserver'] = """
@@ -665,7 +665,7 @@ helps['apim authorizationserver'] = """
 
 helps['apim authorizationserver create'] = """
     type: command
-    short-summary: create a authorization server.
+    short-summary: create authorization server.
     examples:
       - name: ApiManagementCreateAuthorizationServer
         text: |-
@@ -679,7 +679,7 @@ helps['apim authorizationserver create'] = """
 
 helps['apim authorizationserver update'] = """
     type: command
-    short-summary: update a authorization server.
+    short-summary: update authorization server.
     examples:
       - name: ApiManagementUpdateAuthorizationServer
         text: |-
@@ -689,7 +689,7 @@ helps['apim authorizationserver update'] = """
 
 helps['apim authorizationserver delete'] = """
     type: command
-    short-summary: delete a authorization server.
+    short-summary: delete authorization server.
     examples:
       - name: ApiManagementDeleteAuthorizationServer
         text: |-
@@ -699,12 +699,12 @@ helps['apim authorizationserver delete'] = """
 
 helps['apim authorizationserver list'] = """
     type: command
-    short-summary: list a authorization server.
+    short-summary: list authorization server.
 """
 
 helps['apim authorizationserver show'] = """
     type: command
-    short-summary: show a authorization server.
+    short-summary: show authorization server.
 """
 
 helps['apim backend'] = """
@@ -714,7 +714,7 @@ helps['apim backend'] = """
 
 helps['apim backend create'] = """
     type: command
-    short-summary: create a backend.
+    short-summary: create backend.
     examples:
       - name: ApiManagementCreateBackendServiceFabric
         text: |-
@@ -730,7 +730,7 @@ helps['apim backend create'] = """
 
 helps['apim backend update'] = """
     type: command
-    short-summary: update a backend.
+    short-summary: update backend.
     examples:
       - name: ApiManagementUpdateBackend
         text: |-
@@ -740,7 +740,7 @@ helps['apim backend update'] = """
 
 helps['apim backend delete'] = """
     type: command
-    short-summary: delete a backend.
+    short-summary: delete backend.
     examples:
       - name: ApiManagementDeleteBackend
         text: |-
@@ -750,12 +750,12 @@ helps['apim backend delete'] = """
 
 helps['apim backend list'] = """
     type: command
-    short-summary: list a backend.
+    short-summary: list backend.
 """
 
 helps['apim backend show'] = """
     type: command
-    short-summary: show a backend.
+    short-summary: show backend.
 """
 
 helps['apim cache'] = """
@@ -765,7 +765,7 @@ helps['apim cache'] = """
 
 helps['apim cache create'] = """
     type: command
-    short-summary: create a cache.
+    short-summary: create cache.
     examples:
       - name: ApiManagementCreateCache
         text: |-
@@ -778,7 +778,7 @@ helps['apim cache create'] = """
 
 helps['apim cache update'] = """
     type: command
-    short-summary: update a cache.
+    short-summary: update cache.
     examples:
       - name: ApiManagementUpdateCache
         text: |-
@@ -788,7 +788,7 @@ helps['apim cache update'] = """
 
 helps['apim cache delete'] = """
     type: command
-    short-summary: delete a cache.
+    short-summary: delete cache.
     examples:
       - name: ApiManagementDeleteCache
         text: |-
@@ -798,12 +798,12 @@ helps['apim cache delete'] = """
 
 helps['apim cache list'] = """
     type: command
-    short-summary: list a cache.
+    short-summary: list cache.
 """
 
 helps['apim cache show'] = """
     type: command
-    short-summary: show a cache.
+    short-summary: show cache.
 """
 
 helps['apim certificate'] = """
@@ -813,7 +813,7 @@ helps['apim certificate'] = """
 
 helps['apim certificate create'] = """
     type: command
-    short-summary: create a certificate.
+    short-summary: create certificate.
     examples:
       - name: ApiManagementCreateCertificate
         text: |-
@@ -825,12 +825,12 @@ helps['apim certificate create'] = """
 
 helps['apim certificate update'] = """
     type: command
-    short-summary: update a certificate.
+    short-summary: update certificate.
 """
 
 helps['apim certificate delete'] = """
     type: command
-    short-summary: delete a certificate.
+    short-summary: delete certificate.
     examples:
       - name: ApiManagementDeleteCertificate
         text: |-
@@ -840,12 +840,12 @@ helps['apim certificate delete'] = """
 
 helps['apim certificate list'] = """
     type: command
-    short-summary: list a certificate.
+    short-summary: list certificate.
 """
 
 helps['apim certificate show'] = """
     type: command
-    short-summary: show a certificate.
+    short-summary: show certificate.
 """
 
 helps['apim'] = """
@@ -855,7 +855,7 @@ helps['apim'] = """
 
 helps['apim create'] = """
     type: command
-    short-summary: create a api management service.
+    short-summary: create api management service.
     examples:
       - name: ApiManagementCreateService
         text: |-
@@ -881,7 +881,7 @@ helps['apim create'] = """
 
 helps['apim update'] = """
     type: command
-    short-summary: update a api management service.
+    short-summary: update api management service.
     examples:
       - name: ApiManagementUpdateServiceDisableTls10
         text: |-
@@ -894,7 +894,7 @@ helps['apim update'] = """
 
 helps['apim delete'] = """
     type: command
-    short-summary: delete a api management service.
+    short-summary: delete api management service.
     examples:
       - name: ApiManagementServiceDeleteService
         text: |-
@@ -903,12 +903,12 @@ helps['apim delete'] = """
 
 helps['apim list'] = """
     type: command
-    short-summary: list a api management service.
+    short-summary: list api management service.
 """
 
 helps['apim show'] = """
     type: command
-    short-summary: show a api management service.
+    short-summary: show api management service.
 """
 
 helps['apim diagnostic'] = """
@@ -918,7 +918,7 @@ helps['apim diagnostic'] = """
 
 helps['apim diagnostic create'] = """
     type: command
-    short-summary: create a diagnostic.
+    short-summary: create diagnostic.
     examples:
       - name: ApiManagementCreateDiagnostic
         text: |-
@@ -929,7 +929,7 @@ helps['apim diagnostic create'] = """
 
 helps['apim diagnostic update'] = """
     type: command
-    short-summary: update a diagnostic.
+    short-summary: update diagnostic.
     examples:
       - name: ApiManagementUpdateDiagnostic
         text: |-
@@ -940,7 +940,7 @@ helps['apim diagnostic update'] = """
 
 helps['apim diagnostic delete'] = """
     type: command
-    short-summary: delete a diagnostic.
+    short-summary: delete diagnostic.
     examples:
       - name: ApiManagementDeleteDiagnostic
         text: |-
@@ -950,12 +950,12 @@ helps['apim diagnostic delete'] = """
 
 helps['apim diagnostic list'] = """
     type: command
-    short-summary: list a diagnostic.
+    short-summary: list diagnostic.
 """
 
 helps['apim diagnostic show'] = """
     type: command
-    short-summary: show a diagnostic.
+    short-summary: show diagnostic.
 """
 
 helps['apim template'] = """
@@ -965,7 +965,7 @@ helps['apim template'] = """
 
 helps['apim template create'] = """
     type: command
-    short-summary: create a email template.
+    short-summary: create email template.
     examples:
       - name: ApiManagementCreateEmailTemplate
         text: |-
@@ -976,7 +976,7 @@ helps['apim template create'] = """
 
 helps['apim template update'] = """
     type: command
-    short-summary: update a email template.
+    short-summary: update email template.
     examples:
       - name: ApiManagementUpdateEmailTemplate
         text: |-
@@ -995,7 +995,7 @@ helps['apim template update'] = """
 
 helps['apim template delete'] = """
     type: command
-    short-summary: delete a email template.
+    short-summary: delete email template.
     examples:
       - name: ApiManagementDeleteEmailTemplate
         text: |-
@@ -1005,12 +1005,12 @@ helps['apim template delete'] = """
 
 helps['apim template list'] = """
     type: command
-    short-summary: list a email template.
+    short-summary: list email template.
 """
 
 helps['apim template show'] = """
     type: command
-    short-summary: show a email template.
+    short-summary: show email template.
 """
 
 helps['apim group'] = """
@@ -1020,7 +1020,7 @@ helps['apim group'] = """
 
 helps['apim group create'] = """
     type: command
-    short-summary: create a group.
+    short-summary: create group.
     examples:
       - name: ApiManagementCreateGroup
         text: |-
@@ -1036,7 +1036,7 @@ helps['apim group create'] = """
 
 helps['apim group update'] = """
     type: command
-    short-summary: update a group.
+    short-summary: update group.
     examples:
       - name: ApiManagementUpdateGroup
         text: |-
@@ -1046,7 +1046,7 @@ helps['apim group update'] = """
 
 helps['apim group delete'] = """
     type: command
-    short-summary: delete a group.
+    short-summary: delete group.
     examples:
       - name: ApiManagementDeleteGroup
         text: |-
@@ -1056,12 +1056,12 @@ helps['apim group delete'] = """
 
 helps['apim group list'] = """
     type: command
-    short-summary: list a group.
+    short-summary: list group.
 """
 
 helps['apim group show'] = """
     type: command
-    short-summary: show a group.
+    short-summary: show group.
 """
 
 helps['apim group user'] = """
@@ -1071,7 +1071,7 @@ helps['apim group user'] = """
 
 helps['apim group user create'] = """
     type: command
-    short-summary: create a group user.
+    short-summary: create group user.
     examples:
       - name: ApiManagementCreateGroupUser
         text: |-
@@ -1081,7 +1081,7 @@ helps['apim group user create'] = """
 
 helps['apim group user delete'] = """
     type: command
-    short-summary: delete a group user.
+    short-summary: delete group user.
     examples:
       - name: ApiManagementDeleteGroupUser
         text: |-
@@ -1091,7 +1091,7 @@ helps['apim group user delete'] = """
 
 helps['apim group user list'] = """
     type: command
-    short-summary: list a group user.
+    short-summary: list group user.
 """
 
 helps['apim identityprovider'] = """
@@ -1101,7 +1101,7 @@ helps['apim identityprovider'] = """
 
 helps['apim identityprovider create'] = """
     type: command
-    short-summary: create a identity provider.
+    short-summary: create identity provider.
     examples:
       - name: ApiManagementCreateIdentityProvider
         text: |-
@@ -1111,7 +1111,7 @@ helps['apim identityprovider create'] = """
 
 helps['apim identityprovider update'] = """
     type: command
-    short-summary: update a identity provider.
+    short-summary: update identity provider.
     examples:
       - name: ApiManagementUpdateIdentityProvider
         text: |-
@@ -1121,7 +1121,7 @@ helps['apim identityprovider update'] = """
 
 helps['apim identityprovider delete'] = """
     type: command
-    short-summary: delete a identity provider.
+    short-summary: delete identity provider.
     examples:
       - name: ApiManagementDeleteIdentityProvider
         text: |-
@@ -1131,12 +1131,12 @@ helps['apim identityprovider delete'] = """
 
 helps['apim identityprovider list'] = """
     type: command
-    short-summary: list a identity provider.
+    short-summary: list identity provider.
 """
 
 helps['apim identityprovider show'] = """
     type: command
-    short-summary: show a identity provider.
+    short-summary: show identity provider.
 """
 
 helps['apim logger'] = """
@@ -1146,7 +1146,7 @@ helps['apim logger'] = """
 
 helps['apim logger create'] = """
     type: command
-    short-summary: create a logger.
+    short-summary: create logger.
     examples:
       - name: ApiManagementCreateEHLogger
         text: |-
@@ -1160,7 +1160,7 @@ helps['apim logger create'] = """
 
 helps['apim logger update'] = """
     type: command
-    short-summary: update a logger.
+    short-summary: update logger.
     examples:
       - name: ApiManagementUpdateLogger
         text: |-
@@ -1170,7 +1170,7 @@ helps['apim logger update'] = """
 
 helps['apim logger delete'] = """
     type: command
-    short-summary: delete a logger.
+    short-summary: delete logger.
     examples:
       - name: ApiManagementDeleteLogger
         text: |-
@@ -1180,12 +1180,12 @@ helps['apim logger delete'] = """
 
 helps['apim logger list'] = """
     type: command
-    short-summary: list a logger.
+    short-summary: list logger.
 """
 
 helps['apim logger show'] = """
     type: command
-    short-summary: show a logger.
+    short-summary: show logger.
 """
 
 helps['apim notification'] = """
@@ -1195,7 +1195,7 @@ helps['apim notification'] = """
 
 helps['apim notification create'] = """
     type: command
-    short-summary: create a notification.
+    short-summary: create notification.
     examples:
       - name: ApiManagementCreateNotification
         text: |-
@@ -1205,17 +1205,17 @@ helps['apim notification create'] = """
 
 helps['apim notification update'] = """
     type: command
-    short-summary: update a notification.
+    short-summary: update notification.
 """
 
 helps['apim notification list'] = """
     type: command
-    short-summary: list a notification.
+    short-summary: list notification.
 """
 
 helps['apim notification show'] = """
     type: command
-    short-summary: show a notification.
+    short-summary: show notification.
 """
 
 helps['apim notification recipientuser'] = """
@@ -1225,7 +1225,7 @@ helps['apim notification recipientuser'] = """
 
 helps['apim notification recipientuser create'] = """
     type: command
-    short-summary: create a notification recipient user.
+    short-summary: create notification recipient user.
     examples:
       - name: ApiManagementCreateNotificationRecipientUser
         text: |-
@@ -1236,12 +1236,12 @@ helps['apim notification recipientuser create'] = """
 
 helps['apim notification recipientuser update'] = """
     type: command
-    short-summary: update a notification recipient user.
+    short-summary: update notification recipient user.
 """
 
 helps['apim notification recipientuser delete'] = """
     type: command
-    short-summary: delete a notification recipient user.
+    short-summary: delete notification recipient user.
     examples:
       - name: ApiManagementDeleteNotificationRecipientUser
         text: |-
@@ -1252,7 +1252,7 @@ helps['apim notification recipientuser delete'] = """
 
 helps['apim notification recipientuser list'] = """
     type: command
-    short-summary: list a notification recipient user.
+    short-summary: list notification recipient user.
 """
 
 helps['apim notification recipientemail'] = """
@@ -1262,7 +1262,7 @@ helps['apim notification recipientemail'] = """
 
 helps['apim notification recipientemail create'] = """
     type: command
-    short-summary: create a notification recipient email.
+    short-summary: create notification recipient email.
     examples:
       - name: ApiManagementCreateNotificationRecipientEmail
         text: |-
@@ -1273,12 +1273,12 @@ helps['apim notification recipientemail create'] = """
 
 helps['apim notification recipientemail update'] = """
     type: command
-    short-summary: update a notification recipient email.
+    short-summary: update notification recipient email.
 """
 
 helps['apim notification recipientemail delete'] = """
     type: command
-    short-summary: delete a notification recipient email.
+    short-summary: delete notification recipient email.
     examples:
       - name: ApiManagementDeleteNotificationRecipientEmail
         text: |-
@@ -1289,7 +1289,7 @@ helps['apim notification recipientemail delete'] = """
 
 helps['apim notification recipientemail list'] = """
     type: command
-    short-summary: list a notification recipient email.
+    short-summary: list notification recipient email.
 """
 
 helps['apim openidconnectprovider'] = """
@@ -1299,7 +1299,7 @@ helps['apim openidconnectprovider'] = """
 
 helps['apim openidconnectprovider create'] = """
     type: command
-    short-summary: create a open id connect provider.
+    short-summary: create open id connect provider.
     examples:
       - name: ApiManagementCreateOpenIdConnectProvider
         text: |-
@@ -1310,7 +1310,7 @@ helps['apim openidconnectprovider create'] = """
 
 helps['apim openidconnectprovider update'] = """
     type: command
-    short-summary: update a open id connect provider.
+    short-summary: update open id connect provider.
     examples:
       - name: ApiManagementUpdateOpenIdConnectProvider
         text: |-
@@ -1320,7 +1320,7 @@ helps['apim openidconnectprovider update'] = """
 
 helps['apim openidconnectprovider delete'] = """
     type: command
-    short-summary: delete a open id connect provider.
+    short-summary: delete open id connect provider.
     examples:
       - name: ApiManagementDeleteOpenIdConnectProvider
         text: |-
@@ -1330,12 +1330,12 @@ helps['apim openidconnectprovider delete'] = """
 
 helps['apim openidconnectprovider list'] = """
     type: command
-    short-summary: list a open id connect provider.
+    short-summary: list open id connect provider.
 """
 
 helps['apim openidconnectprovider show'] = """
     type: command
-    short-summary: show a open id connect provider.
+    short-summary: show open id connect provider.
 """
 
 helps['apim policy'] = """
@@ -1345,7 +1345,7 @@ helps['apim policy'] = """
 
 helps['apim policy create'] = """
     type: command
-    short-summary: create a policy.
+    short-summary: create policy.
     examples:
       - name: ApiManagementCreatePolicy
         text: |-
@@ -1356,12 +1356,12 @@ helps['apim policy create'] = """
 
 helps['apim policy update'] = """
     type: command
-    short-summary: update a policy.
+    short-summary: update policy.
 """
 
 helps['apim policy delete'] = """
     type: command
-    short-summary: delete a policy.
+    short-summary: delete policy.
     examples:
       - name: ApiManagementDeletePolicy
         text: |-
@@ -1371,12 +1371,12 @@ helps['apim policy delete'] = """
 
 helps['apim policy list'] = """
     type: command
-    short-summary: list a policy.
+    short-summary: list policy.
 """
 
 helps['apim policy show'] = """
     type: command
-    short-summary: show a policy.
+    short-summary: show policy.
 """
 
 helps['apim portalsetting signin'] = """
@@ -1386,7 +1386,7 @@ helps['apim portalsetting signin'] = """
 
 helps['apim portalsetting signin create'] = """
     type: command
-    short-summary: create a sign in setting.
+    short-summary: create sign in setting.
     examples:
       - name: ApiManagementPortalSettingsUpdateSignIn
         text: |-
@@ -1396,7 +1396,7 @@ helps['apim portalsetting signin create'] = """
 
 helps['apim portalsetting signin update'] = """
     type: command
-    short-summary: update a sign in setting.
+    short-summary: update sign in setting.
     examples:
       - name: ApiManagementPortalSettingsUpdateSignIn
         text: |-
@@ -1406,7 +1406,7 @@ helps['apim portalsetting signin update'] = """
 
 helps['apim portalsetting signin show'] = """
     type: command
-    short-summary: show a sign in setting.
+    short-summary: show sign in setting.
 """
 
 helps['apim portalsetting signup'] = """
@@ -1416,7 +1416,7 @@ helps['apim portalsetting signup'] = """
 
 helps['apim portalsetting signup create'] = """
     type: command
-    short-summary: create a sign up setting.
+    short-summary: create sign up setting.
     examples:
       - name: ApiManagementPortalSettingsUpdateSignUp
         text: |-
@@ -1426,7 +1426,7 @@ helps['apim portalsetting signup create'] = """
 
 helps['apim portalsetting signup update'] = """
     type: command
-    short-summary: update a sign up setting.
+    short-summary: update sign up setting.
     examples:
       - name: ApiManagementPortalSettingsUpdateSignUp
         text: |-
@@ -1436,7 +1436,7 @@ helps['apim portalsetting signup update'] = """
 
 helps['apim portalsetting signup show'] = """
     type: command
-    short-summary: show a sign up setting.
+    short-summary: show sign up setting.
 """
 
 helps['apim portalsetting delegation'] = """
@@ -1446,7 +1446,7 @@ helps['apim portalsetting delegation'] = """
 
 helps['apim portalsetting delegation create'] = """
     type: command
-    short-summary: create a delegation setting.
+    short-summary: create delegation setting.
     examples:
       - name: ApiManagementPortalSettingsUpdateDelegation
         text: |-
@@ -1457,7 +1457,7 @@ helps['apim portalsetting delegation create'] = """
 
 helps['apim portalsetting delegation update'] = """
     type: command
-    short-summary: update a delegation setting.
+    short-summary: update delegation setting.
     examples:
       - name: ApiManagementPortalSettingsUpdateDelegation
         text: |-
@@ -1468,7 +1468,7 @@ helps['apim portalsetting delegation update'] = """
 
 helps['apim portalsetting delegation show'] = """
     type: command
-    short-summary: show a delegation setting.
+    short-summary: show delegation setting.
 """
 
 helps['apim product'] = """
@@ -1478,7 +1478,7 @@ helps['apim product'] = """
 
 helps['apim product create'] = """
     type: command
-    short-summary: create a product.
+    short-summary: create product.
     examples:
       - name: ApiManagementCreateProduct
         text: |-
@@ -1488,7 +1488,7 @@ helps['apim product create'] = """
 
 helps['apim product update'] = """
     type: command
-    short-summary: update a product.
+    short-summary: update product.
     examples:
       - name: ApiManagementUpdateProduct
         text: |-
@@ -1498,7 +1498,7 @@ helps['apim product update'] = """
 
 helps['apim product delete'] = """
     type: command
-    short-summary: delete a product.
+    short-summary: delete product.
     examples:
       - name: ApiManagementDeleteProduct
         text: |-
@@ -1508,12 +1508,12 @@ helps['apim product delete'] = """
 
 helps['apim product list'] = """
     type: command
-    short-summary: list a product.
+    short-summary: list product.
 """
 
 helps['apim product show'] = """
     type: command
-    short-summary: show a product.
+    short-summary: show product.
 """
 
 helps['apim product api'] = """
@@ -1523,7 +1523,7 @@ helps['apim product api'] = """
 
 helps['apim product api create'] = """
     type: command
-    short-summary: create a product api.
+    short-summary: create product api.
     examples:
       - name: ApiManagementCreateProductApi
         text: |-
@@ -1533,12 +1533,12 @@ helps['apim product api create'] = """
 
 helps['apim product api update'] = """
     type: command
-    short-summary: update a product api.
+    short-summary: update product api.
 """
 
 helps['apim product api delete'] = """
     type: command
-    short-summary: delete a product api.
+    short-summary: delete product api.
     examples:
       - name: ApiManagementDeleteProductApi
         text: |-
@@ -1548,7 +1548,7 @@ helps['apim product api delete'] = """
 
 helps['apim product api list'] = """
     type: command
-    short-summary: list a product api.
+    short-summary: list product api.
 """
 
 helps['apim product group'] = """
@@ -1558,7 +1558,7 @@ helps['apim product group'] = """
 
 helps['apim product group create'] = """
     type: command
-    short-summary: create a product group.
+    short-summary: create product group.
     examples:
       - name: ApiManagementCreateProductGroup
         text: |-
@@ -1568,12 +1568,12 @@ helps['apim product group create'] = """
 
 helps['apim product group update'] = """
     type: command
-    short-summary: update a product group.
+    short-summary: update product group.
 """
 
 helps['apim product group delete'] = """
     type: command
-    short-summary: delete a product group.
+    short-summary: delete product group.
     examples:
       - name: ApiManagementDeleteProductGroup
         text: |-
@@ -1583,7 +1583,7 @@ helps['apim product group delete'] = """
 
 helps['apim product group list'] = """
     type: command
-    short-summary: list a product group.
+    short-summary: list product group.
 """
 
 helps['apim product policy'] = """
@@ -1593,7 +1593,7 @@ helps['apim product policy'] = """
 
 helps['apim product policy create'] = """
     type: command
-    short-summary: create a product policy.
+    short-summary: create product policy.
     examples:
       - name: ApiManagementCreateProductPolicy
         text: |-
@@ -1611,12 +1611,12 @@ helps['apim product policy create'] = """
 
 helps['apim product policy update'] = """
     type: command
-    short-summary: update a product policy.
+    short-summary: update product policy.
 """
 
 helps['apim product policy delete'] = """
     type: command
-    short-summary: delete a product policy.
+    short-summary: delete product policy.
     examples:
       - name: ApiManagementDeleteProductPolicy
         text: |-
@@ -1626,12 +1626,12 @@ helps['apim product policy delete'] = """
 
 helps['apim product policy list'] = """
     type: command
-    short-summary: list a product policy.
+    short-summary: list product policy.
 """
 
 helps['apim product policy show'] = """
     type: command
-    short-summary: show a product policy.
+    short-summary: show product policy.
 """
 
 helps['apim property'] = """
@@ -1641,7 +1641,7 @@ helps['apim property'] = """
 
 helps['apim property create'] = """
     type: command
-    short-summary: create a property.
+    short-summary: create property.
     examples:
       - name: ApiManagementCreateProperty
         text: |-
@@ -1651,7 +1651,7 @@ helps['apim property create'] = """
 
 helps['apim property update'] = """
     type: command
-    short-summary: update a property.
+    short-summary: update property.
     examples:
       - name: ApiManagementUpdateProperty
         text: |-
@@ -1661,7 +1661,7 @@ helps['apim property update'] = """
 
 helps['apim property delete'] = """
     type: command
-    short-summary: delete a property.
+    short-summary: delete property.
     examples:
       - name: ApiManagementDeleteProperty
         text: |-
@@ -1671,12 +1671,12 @@ helps['apim property delete'] = """
 
 helps['apim property list'] = """
     type: command
-    short-summary: list a property.
+    short-summary: list property.
 """
 
 helps['apim property show'] = """
     type: command
-    short-summary: show a property.
+    short-summary: show property.
 """
 
 helps['apim subscription'] = """
@@ -1686,7 +1686,7 @@ helps['apim subscription'] = """
 
 helps['apim subscription create'] = """
     type: command
-    short-summary: create a subscription.
+    short-summary: create subscription.
     examples:
       - name: ApiManagementCreateSubscription
         text: |-
@@ -1700,7 +1700,7 @@ helps['apim subscription create'] = """
 
 helps['apim subscription update'] = """
     type: command
-    short-summary: update a subscription.
+    short-summary: update subscription.
     examples:
       - name: ApiManagementUpdateSubscription
         text: |-
@@ -1710,7 +1710,7 @@ helps['apim subscription update'] = """
 
 helps['apim subscription delete'] = """
     type: command
-    short-summary: delete a subscription.
+    short-summary: delete subscription.
     examples:
       - name: ApiManagementDeleteSubscription
         text: |-
@@ -1720,12 +1720,12 @@ helps['apim subscription delete'] = """
 
 helps['apim subscription list'] = """
     type: command
-    short-summary: list a subscription.
+    short-summary: list subscription.
 """
 
 helps['apim subscription show'] = """
     type: command
-    short-summary: show a subscription.
+    short-summary: show subscription.
 """
 
 helps['apim user'] = """
@@ -1735,7 +1735,7 @@ helps['apim user'] = """
 
 helps['apim user create'] = """
     type: command
-    short-summary: create a user.
+    short-summary: create user.
     examples:
       - name: ApiManagementCreateUser
         text: |-
@@ -1746,7 +1746,7 @@ helps['apim user create'] = """
 
 helps['apim user update'] = """
     type: command
-    short-summary: update a user.
+    short-summary: update user.
     examples:
       - name: ApiManagementUpdateUser
         text: |-
@@ -1757,7 +1757,7 @@ helps['apim user update'] = """
 
 helps['apim user delete'] = """
     type: command
-    short-summary: delete a user.
+    short-summary: delete user.
     examples:
       - name: ApiManagementDeleteUser
         text: |-
@@ -1767,10 +1767,10 @@ helps['apim user delete'] = """
 
 helps['apim user list'] = """
     type: command
-    short-summary: list a user.
+    short-summary: list user.
 """
 
 helps['apim user show'] = """
     type: command
-    short-summary: show a user.
+    short-summary: show user.
 """
