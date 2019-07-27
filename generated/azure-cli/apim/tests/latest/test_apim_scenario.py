@@ -715,138 +715,138 @@ class ApimgmtScenarioTest(ScenarioTest):
         ])
 
 # create_or_update -- create
-        self.cmd('apim api tagdescription create  --resource-group "rg1" --service-name "apimService1" --api-id "5931a75ae4bbd512a88c680b" --tag-id "tagId1" --description "Some description that will be displayed for operation's tag if the tag is assigned to operation of the API" --external-docs-url "http://some.url/additionaldoc" --external-docs-description "Description of the external docs resource"', checks=[
+        self.cmd('apim api tag-description create  --resource-group "rg1" --service-name "apimService1" --api-id "5931a75ae4bbd512a88c680b" --tag-id "tagId1" --description "Some description that will be displayed for operation's tag if the tag is assigned to operation of the API" --external-docs-url "http://some.url/additionaldoc" --external-docs-description "Description of the external docs resource"', checks=[
         ])
 
-        self.cmd('apim api tagdescription create  --resource-group "rg1" --service-name "apimService1" --api-id "59d5b28d1f7fab116c282650" --tag-id "59d5b28e1f7fab116402044e"', checks=[
+        self.cmd('apim api tag-description create  --resource-group "rg1" --service-name "apimService1" --api-id "59d5b28d1f7fab116c282650" --tag-id "59d5b28e1f7fab116402044e"', checks=[
         ])
 
 # create_or_update -- update
-        self.cmd('apim api tagdescription update  --resource-group "rg1" --service-name "apimService1" --api-id "5931a75ae4bbd512a88c680b" --tag-id "tagId1" --description "Some description that will be displayed for operation's tag if the tag is assigned to operation of the API" --external-docs-url "http://some.url/additionaldoc" --external-docs-description "Description of the external docs resource"', checks=[
+        self.cmd('apim api tag-description update  --resource-group "rg1" --service-name "apimService1" --api-id "5931a75ae4bbd512a88c680b" --tag-id "tagId1" --description "Some description that will be displayed for operation's tag if the tag is assigned to operation of the API" --external-docs-url "http://some.url/additionaldoc" --external-docs-description "Description of the external docs resource"', checks=[
         ])
 
-        self.cmd('apim api tagdescription update  --resource-group "rg1" --service-name "apimService1" --api-id "59d5b28d1f7fab116c282650" --tag-id "59d5b28e1f7fab116402044e"', checks=[
+        self.cmd('apim api tag-description update  --resource-group "rg1" --service-name "apimService1" --api-id "59d5b28d1f7fab116c282650" --tag-id "59d5b28e1f7fab116402044e"', checks=[
         ])
 
 # delete -- delete
-        self.cmd('apim api tagdescription delete  --resource-group "rg1" --service-name "apimService1" --api-id "5931a75ae4bbd512a88c680b" --tag-id "tagId1"', checks=[
+        self.cmd('apim api tag-description delete  --resource-group "rg1" --service-name "apimService1" --api-id "5931a75ae4bbd512a88c680b" --tag-id "tagId1"', checks=[
         ])
 
-        self.cmd('apim api tagdescription delete  --resource-group "rg1" --service-name "apimService1" --api-id "59d5b28d1f7fab116c282650" --tag-id "59d5b28e1f7fab116402044e"', checks=[
+        self.cmd('apim api tag-description delete  --resource-group "rg1" --service-name "apimService1" --api-id "59d5b28d1f7fab116c282650" --tag-id "59d5b28e1f7fab116402044e"', checks=[
         ])
 
 # list_by_service -- list
-        self.cmd('apim api tagdescription list  --resource-group "rg1" --service-name "apimService1" --api-id "5931a75ae4bbd512a88c680b"', checks=[
+        self.cmd('apim api tag-description list  --resource-group "rg1" --service-name "apimService1" --api-id "5931a75ae4bbd512a88c680b"', checks=[
         ])
 
-        self.cmd('apim api tagdescription list  --resource-group "rg1" --service-name "apimService1" --api-id "59d5b28d1f7fab116c282650"', checks=[
+        self.cmd('apim api tag-description list  --resource-group "rg1" --service-name "apimService1" --api-id "59d5b28d1f7fab116c282650"', checks=[
         ])
 
 # get -- show
-        self.cmd('apim api tagdescription show  --resource-group "rg1" --service-name "apimService1" --api-id "5931a75ae4bbd512a88c680b" --tag-id "tagId1"', checks=[
+        self.cmd('apim api tag-description show  --resource-group "rg1" --service-name "apimService1" --api-id "5931a75ae4bbd512a88c680b" --tag-id "tagId1"', checks=[
         ])
 
-        self.cmd('apim api tagdescription show  --resource-group "rg1" --service-name "apimService1" --api-id "59d5b28d1f7fab116c282650" --tag-id "59d5b28e1f7fab116402044e"', checks=[
+        self.cmd('apim api tag-description show  --resource-group "rg1" --service-name "apimService1" --api-id "59d5b28d1f7fab116c282650" --tag-id "59d5b28e1f7fab116402044e"', checks=[
         ])
 
 # create_or_update -- create
-        self.cmd('apim apiversionset create  --resource-group "rg1" --service-name "apimService1" --version-set-id "api1" --description "Version configuration" --display-name "api set 1" --versioning-scheme "Segment"', checks=[
+        self.cmd('apim api-version-set create  --resource-group "rg1" --service-name "apimService1" --version-set-id "api1" --description "Version configuration" --display-name "api set 1" --versioning-scheme "Segment"', checks=[
         ])
 
-        self.cmd('apim apiversionset create  --resource-group "rg1" --service-name "apimService1" --version-set-id "api1" --description "Version configuration" --display-name "api set 1" --versioning-scheme "Segment"', checks=[
+        self.cmd('apim api-version-set create  --resource-group "rg1" --service-name "apimService1" --version-set-id "api1" --description "Version configuration" --display-name "api set 1" --versioning-scheme "Segment"', checks=[
         ])
 
-        self.cmd('apim apiversionset create  --resource-group "rg1" --service-name "apimService1" --version-set-id "a1"', checks=[
+        self.cmd('apim api-version-set create  --resource-group "rg1" --service-name "apimService1" --version-set-id "a1"', checks=[
         ])
 
 # create_or_update -- update
-        self.cmd('apim apiversionset update  --resource-group "rg1" --service-name "apimService1" --version-set-id "api1" --description "Version configuration" --display-name "api set 1" --versioning-scheme "Segment"', checks=[
+        self.cmd('apim api-version-set update  --resource-group "rg1" --service-name "apimService1" --version-set-id "api1" --description "Version configuration" --display-name "api set 1" --versioning-scheme "Segment"', checks=[
         ])
 
-        self.cmd('apim apiversionset update  --resource-group "rg1" --service-name "apimService1" --version-set-id "api1" --description "Version configuration" --display-name "api set 1" --versioning-scheme "Segment"', checks=[
+        self.cmd('apim api-version-set update  --resource-group "rg1" --service-name "apimService1" --version-set-id "api1" --description "Version configuration" --display-name "api set 1" --versioning-scheme "Segment"', checks=[
         ])
 
-        self.cmd('apim apiversionset update  --resource-group "rg1" --service-name "apimService1" --version-set-id "a1"', checks=[
+        self.cmd('apim api-version-set update  --resource-group "rg1" --service-name "apimService1" --version-set-id "a1"', checks=[
         ])
 
 # delete -- delete
-        self.cmd('apim apiversionset delete  --resource-group "rg1" --service-name "apimService1" --version-set-id "api1"', checks=[
+        self.cmd('apim api-version-set delete  --resource-group "rg1" --service-name "apimService1" --version-set-id "api1"', checks=[
         ])
 
-        self.cmd('apim apiversionset delete  --resource-group "rg1" --service-name "apimService1" --version-set-id "api1"', checks=[
+        self.cmd('apim api-version-set delete  --resource-group "rg1" --service-name "apimService1" --version-set-id "api1"', checks=[
         ])
 
-        self.cmd('apim apiversionset delete  --resource-group "rg1" --service-name "apimService1" --version-set-id "a1"', checks=[
+        self.cmd('apim api-version-set delete  --resource-group "rg1" --service-name "apimService1" --version-set-id "a1"', checks=[
         ])
 
 # list_by_service -- list
-        self.cmd('apim apiversionset list  --resource-group "rg1" --service-name "apimService1"', checks=[
+        self.cmd('apim api-version-set list  --resource-group "rg1" --service-name "apimService1"', checks=[
         ])
 
-        self.cmd('apim apiversionset list  --resource-group "rg1" --service-name "apimService1"', checks=[
+        self.cmd('apim api-version-set list  --resource-group "rg1" --service-name "apimService1"', checks=[
         ])
 
-        self.cmd('apim apiversionset list  --resource-group "rg1" --service-name "apimService1"', checks=[
+        self.cmd('apim api-version-set list  --resource-group "rg1" --service-name "apimService1"', checks=[
         ])
 
 # get -- show
-        self.cmd('apim apiversionset show  --resource-group "rg1" --service-name "apimService1" --version-set-id "api1"', checks=[
+        self.cmd('apim api-version-set show  --resource-group "rg1" --service-name "apimService1" --version-set-id "api1"', checks=[
         ])
 
-        self.cmd('apim apiversionset show  --resource-group "rg1" --service-name "apimService1" --version-set-id "api1"', checks=[
+        self.cmd('apim api-version-set show  --resource-group "rg1" --service-name "apimService1" --version-set-id "api1"', checks=[
         ])
 
-        self.cmd('apim apiversionset show  --resource-group "rg1" --service-name "apimService1" --version-set-id "a1"', checks=[
+        self.cmd('apim api-version-set show  --resource-group "rg1" --service-name "apimService1" --version-set-id "a1"', checks=[
         ])
 
 # create_or_update -- create
-        self.cmd('apim authorizationserver create  --resource-group "rg1" --service-name "apimService1" --authsid "newauthServer" --description "test server" --token-endpoint "https://www.contoso.com/oauth2/token" --support-state true --default-scope "read write" --client-secret "2" --resource-owner-username "un" --resource-owner-password "pwd" --display-name "test2" --client-registration-endpoint "https://www.contoso.com/apps" --authorization-endpoint "https://www.contoso.com/oauth2/auth" --client-id "1"', checks=[
+        self.cmd('apim authorization-server create  --resource-group "rg1" --service-name "apimService1" --authsid "newauthServer" --description "test server" --token-endpoint "https://www.contoso.com/oauth2/token" --support-state true --default-scope "read write" --client-secret "2" --resource-owner-username "un" --resource-owner-password "pwd" --display-name "test2" --client-registration-endpoint "https://www.contoso.com/apps" --authorization-endpoint "https://www.contoso.com/oauth2/auth" --client-id "1"', checks=[
         ])
 
-        self.cmd('apim authorizationserver create  --resource-group "rg1" --service-name "apimService1" --authsid "newauthServer" --client-secret "updated" --client-id "update"', checks=[
+        self.cmd('apim authorization-server create  --resource-group "rg1" --service-name "apimService1" --authsid "newauthServer" --client-secret "updated" --client-id "update"', checks=[
         ])
 
-        self.cmd('apim authorizationserver create  --resource-group "rg1" --service-name "apimService1" --authsid "newauthServer2"', checks=[
+        self.cmd('apim authorization-server create  --resource-group "rg1" --service-name "apimService1" --authsid "newauthServer2"', checks=[
         ])
 
 # create_or_update -- update
-        self.cmd('apim authorizationserver update  --resource-group "rg1" --service-name "apimService1" --authsid "newauthServer" --description "test server" --token-endpoint "https://www.contoso.com/oauth2/token" --support-state true --default-scope "read write" --client-secret "2" --resource-owner-username "un" --resource-owner-password "pwd" --display-name "test2" --client-registration-endpoint "https://www.contoso.com/apps" --authorization-endpoint "https://www.contoso.com/oauth2/auth" --client-id "1"', checks=[
+        self.cmd('apim authorization-server update  --resource-group "rg1" --service-name "apimService1" --authsid "newauthServer" --description "test server" --token-endpoint "https://www.contoso.com/oauth2/token" --support-state true --default-scope "read write" --client-secret "2" --resource-owner-username "un" --resource-owner-password "pwd" --display-name "test2" --client-registration-endpoint "https://www.contoso.com/apps" --authorization-endpoint "https://www.contoso.com/oauth2/auth" --client-id "1"', checks=[
         ])
 
-        self.cmd('apim authorizationserver update  --resource-group "rg1" --service-name "apimService1" --authsid "newauthServer" --client-secret "updated" --client-id "update"', checks=[
+        self.cmd('apim authorization-server update  --resource-group "rg1" --service-name "apimService1" --authsid "newauthServer" --client-secret "updated" --client-id "update"', checks=[
         ])
 
-        self.cmd('apim authorizationserver update  --resource-group "rg1" --service-name "apimService1" --authsid "newauthServer2"', checks=[
+        self.cmd('apim authorization-server update  --resource-group "rg1" --service-name "apimService1" --authsid "newauthServer2"', checks=[
         ])
 
 # delete -- delete
-        self.cmd('apim authorizationserver delete  --resource-group "rg1" --service-name "apimService1" --authsid "newauthServer"', checks=[
+        self.cmd('apim authorization-server delete  --resource-group "rg1" --service-name "apimService1" --authsid "newauthServer"', checks=[
         ])
 
-        self.cmd('apim authorizationserver delete  --resource-group "rg1" --service-name "apimService1" --authsid "newauthServer"', checks=[
+        self.cmd('apim authorization-server delete  --resource-group "rg1" --service-name "apimService1" --authsid "newauthServer"', checks=[
         ])
 
-        self.cmd('apim authorizationserver delete  --resource-group "rg1" --service-name "apimService1" --authsid "newauthServer2"', checks=[
+        self.cmd('apim authorization-server delete  --resource-group "rg1" --service-name "apimService1" --authsid "newauthServer2"', checks=[
         ])
 
 # list_by_service -- list
-        self.cmd('apim authorizationserver list  --resource-group "rg1" --service-name "apimService1"', checks=[
+        self.cmd('apim authorization-server list  --resource-group "rg1" --service-name "apimService1"', checks=[
         ])
 
-        self.cmd('apim authorizationserver list  --resource-group "rg1" --service-name "apimService1"', checks=[
+        self.cmd('apim authorization-server list  --resource-group "rg1" --service-name "apimService1"', checks=[
         ])
 
-        self.cmd('apim authorizationserver list  --resource-group "rg1" --service-name "apimService1"', checks=[
+        self.cmd('apim authorization-server list  --resource-group "rg1" --service-name "apimService1"', checks=[
         ])
 
 # get -- show
-        self.cmd('apim authorizationserver show  --resource-group "rg1" --service-name "apimService1" --authsid "newauthServer"', checks=[
+        self.cmd('apim authorization-server show  --resource-group "rg1" --service-name "apimService1" --authsid "newauthServer"', checks=[
         ])
 
-        self.cmd('apim authorizationserver show  --resource-group "rg1" --service-name "apimService1" --authsid "newauthServer"', checks=[
+        self.cmd('apim authorization-server show  --resource-group "rg1" --service-name "apimService1" --authsid "newauthServer"', checks=[
         ])
 
-        self.cmd('apim authorizationserver show  --resource-group "rg1" --service-name "apimService1" --authsid "newauthServer2"', checks=[
+        self.cmd('apim authorization-server show  --resource-group "rg1" --service-name "apimService1" --authsid "newauthServer2"', checks=[
         ])
 
 # create_or_update -- create
@@ -1318,53 +1318,53 @@ class ApimgmtScenarioTest(ScenarioTest):
         ])
 
 # create_or_update -- create
-        self.cmd('apim identityprovider create  --resource-group "rg1" --service-name "apimService1" --name "facebook" --client-id "facebookid" --client-secret "facebookapplicationsecret"', checks=[
+        self.cmd('apim identity-provider create  --resource-group "rg1" --service-name "apimService1" --name "facebook" --client-id "facebookid" --client-secret "facebookapplicationsecret"', checks=[
         ])
 
-        self.cmd('apim identityprovider create  --resource-group "rg1" --service-name "apimService1" --name "facebook" --client-id "updatedfacebookid" --client-secret "updatedfacebooksecret"', checks=[
+        self.cmd('apim identity-provider create  --resource-group "rg1" --service-name "apimService1" --name "facebook" --client-id "updatedfacebookid" --client-secret "updatedfacebooksecret"', checks=[
         ])
 
-        self.cmd('apim identityprovider create  --resource-group "rg1" --service-name "apimService1" --name "aad"', checks=[
+        self.cmd('apim identity-provider create  --resource-group "rg1" --service-name "apimService1" --name "aad"', checks=[
         ])
 
 # create_or_update -- update
-        self.cmd('apim identityprovider update  --resource-group "rg1" --service-name "apimService1" --name "facebook" --client-id "facebookid" --client-secret "facebookapplicationsecret"', checks=[
+        self.cmd('apim identity-provider update  --resource-group "rg1" --service-name "apimService1" --name "facebook" --client-id "facebookid" --client-secret "facebookapplicationsecret"', checks=[
         ])
 
-        self.cmd('apim identityprovider update  --resource-group "rg1" --service-name "apimService1" --name "facebook" --client-id "updatedfacebookid" --client-secret "updatedfacebooksecret"', checks=[
+        self.cmd('apim identity-provider update  --resource-group "rg1" --service-name "apimService1" --name "facebook" --client-id "updatedfacebookid" --client-secret "updatedfacebooksecret"', checks=[
         ])
 
-        self.cmd('apim identityprovider update  --resource-group "rg1" --service-name "apimService1" --name "aad"', checks=[
+        self.cmd('apim identity-provider update  --resource-group "rg1" --service-name "apimService1" --name "aad"', checks=[
         ])
 
 # delete -- delete
-        self.cmd('apim identityprovider delete  --resource-group "rg1" --service-name "apimService1" --name "facebook"', checks=[
+        self.cmd('apim identity-provider delete  --resource-group "rg1" --service-name "apimService1" --name "facebook"', checks=[
         ])
 
-        self.cmd('apim identityprovider delete  --resource-group "rg1" --service-name "apimService1" --name "facebook"', checks=[
+        self.cmd('apim identity-provider delete  --resource-group "rg1" --service-name "apimService1" --name "facebook"', checks=[
         ])
 
-        self.cmd('apim identityprovider delete  --resource-group "rg1" --service-name "apimService1" --name "aad"', checks=[
+        self.cmd('apim identity-provider delete  --resource-group "rg1" --service-name "apimService1" --name "aad"', checks=[
         ])
 
 # list_by_service -- list
-        self.cmd('apim identityprovider list  --resource-group "rg1" --service-name "apimService1"', checks=[
+        self.cmd('apim identity-provider list  --resource-group "rg1" --service-name "apimService1"', checks=[
         ])
 
-        self.cmd('apim identityprovider list  --resource-group "rg1" --service-name "apimService1"', checks=[
+        self.cmd('apim identity-provider list  --resource-group "rg1" --service-name "apimService1"', checks=[
         ])
 
-        self.cmd('apim identityprovider list  --resource-group "rg1" --service-name "apimService1"', checks=[
+        self.cmd('apim identity-provider list  --resource-group "rg1" --service-name "apimService1"', checks=[
         ])
 
 # get -- show
-        self.cmd('apim identityprovider show  --resource-group "rg1" --service-name "apimService1" --name "facebook"', checks=[
+        self.cmd('apim identity-provider show  --resource-group "rg1" --service-name "apimService1" --name "facebook"', checks=[
         ])
 
-        self.cmd('apim identityprovider show  --resource-group "rg1" --service-name "apimService1" --name "facebook"', checks=[
+        self.cmd('apim identity-provider show  --resource-group "rg1" --service-name "apimService1" --name "facebook"', checks=[
         ])
 
-        self.cmd('apim identityprovider show  --resource-group "rg1" --service-name "apimService1" --name "aad"', checks=[
+        self.cmd('apim identity-provider show  --resource-group "rg1" --service-name "apimService1" --name "aad"', checks=[
         ])
 
 # create_or_update -- create
@@ -1449,109 +1449,109 @@ class ApimgmtScenarioTest(ScenarioTest):
         ])
 
 # create_or_update -- create
-        self.cmd('apim notification recipientuser create  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage" --user-id "576823d0a40f7e74ec07d642"', checks=[
+        self.cmd('apim notification recipient-user create  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage" --user-id "576823d0a40f7e74ec07d642"', checks=[
         ])
 
-        self.cmd('apim notification recipientuser create  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage" --user-id "576823d0a40f7e74ec07d642"', checks=[
+        self.cmd('apim notification recipient-user create  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage" --user-id "576823d0a40f7e74ec07d642"', checks=[
         ])
 
 # create_or_update -- update
-        self.cmd('apim notification recipientuser update  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage" --user-id "576823d0a40f7e74ec07d642"', checks=[
+        self.cmd('apim notification recipient-user update  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage" --user-id "576823d0a40f7e74ec07d642"', checks=[
         ])
 
-        self.cmd('apim notification recipientuser update  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage" --user-id "576823d0a40f7e74ec07d642"', checks=[
+        self.cmd('apim notification recipient-user update  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage" --user-id "576823d0a40f7e74ec07d642"', checks=[
         ])
 
 # delete -- delete
-        self.cmd('apim notification recipientuser delete  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage" --user-id "576823d0a40f7e74ec07d642"', checks=[
+        self.cmd('apim notification recipient-user delete  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage" --user-id "576823d0a40f7e74ec07d642"', checks=[
         ])
 
-        self.cmd('apim notification recipientuser delete  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage" --user-id "576823d0a40f7e74ec07d642"', checks=[
+        self.cmd('apim notification recipient-user delete  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage" --user-id "576823d0a40f7e74ec07d642"', checks=[
         ])
 
 # list_by_notification -- list
-        self.cmd('apim notification recipientuser list  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage"', checks=[
+        self.cmd('apim notification recipient-user list  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage"', checks=[
         ])
 
-        self.cmd('apim notification recipientuser list  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage"', checks=[
+        self.cmd('apim notification recipient-user list  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage"', checks=[
         ])
 
 # create_or_update -- create
-        self.cmd('apim notification recipientemail create  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage" --email "foobar@live.com"', checks=[
+        self.cmd('apim notification recipient-email create  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage" --email "foobar@live.com"', checks=[
         ])
 
-        self.cmd('apim notification recipientemail create  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage" --email "contoso@live.com"', checks=[
+        self.cmd('apim notification recipient-email create  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage" --email "contoso@live.com"', checks=[
         ])
 
 # create_or_update -- update
-        self.cmd('apim notification recipientemail update  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage" --email "foobar@live.com"', checks=[
+        self.cmd('apim notification recipient-email update  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage" --email "foobar@live.com"', checks=[
         ])
 
-        self.cmd('apim notification recipientemail update  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage" --email "contoso@live.com"', checks=[
+        self.cmd('apim notification recipient-email update  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage" --email "contoso@live.com"', checks=[
         ])
 
 # delete -- delete
-        self.cmd('apim notification recipientemail delete  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage" --email "foobar@live.com"', checks=[
+        self.cmd('apim notification recipient-email delete  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage" --email "foobar@live.com"', checks=[
         ])
 
-        self.cmd('apim notification recipientemail delete  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage" --email "contoso@live.com"', checks=[
+        self.cmd('apim notification recipient-email delete  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage" --email "contoso@live.com"', checks=[
         ])
 
 # list_by_notification -- list
-        self.cmd('apim notification recipientemail list  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage"', checks=[
+        self.cmd('apim notification recipient-email list  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage"', checks=[
         ])
 
-        self.cmd('apim notification recipientemail list  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage"', checks=[
+        self.cmd('apim notification recipient-email list  --resource-group "rg1" --service-name "apimService1" --notification-name "RequestPublisherNotificationMessage"', checks=[
         ])
 
 # create_or_update -- create
-        self.cmd('apim openidconnectprovider create  --resource-group "rg1" --service-name "apimService1" --opid "templateOpenIdConnect3" --display-name "templateoidprovider3" --metadata-endpoint "https://oidprovider-template3.net" --client-id "oidprovidertemplate3"', checks=[
+        self.cmd('apim openid-connect-provider create  --resource-group "rg1" --service-name "apimService1" --opid "templateOpenIdConnect3" --display-name "templateoidprovider3" --metadata-endpoint "https://oidprovider-template3.net" --client-id "oidprovidertemplate3"', checks=[
         ])
 
-        self.cmd('apim openidconnectprovider create  --resource-group "rg1" --service-name "apimService1" --opid "templateOpenIdConnect2" --client-secret "updatedsecret"', checks=[
+        self.cmd('apim openid-connect-provider create  --resource-group "rg1" --service-name "apimService1" --opid "templateOpenIdConnect2" --client-secret "updatedsecret"', checks=[
         ])
 
-        self.cmd('apim openidconnectprovider create  --resource-group "rg1" --service-name "apimService1" --opid "templateOpenIdConnect3"', checks=[
+        self.cmd('apim openid-connect-provider create  --resource-group "rg1" --service-name "apimService1" --opid "templateOpenIdConnect3"', checks=[
         ])
 
 # create_or_update -- update
-        self.cmd('apim openidconnectprovider update  --resource-group "rg1" --service-name "apimService1" --opid "templateOpenIdConnect3" --display-name "templateoidprovider3" --metadata-endpoint "https://oidprovider-template3.net" --client-id "oidprovidertemplate3"', checks=[
+        self.cmd('apim openid-connect-provider update  --resource-group "rg1" --service-name "apimService1" --opid "templateOpenIdConnect3" --display-name "templateoidprovider3" --metadata-endpoint "https://oidprovider-template3.net" --client-id "oidprovidertemplate3"', checks=[
         ])
 
-        self.cmd('apim openidconnectprovider update  --resource-group "rg1" --service-name "apimService1" --opid "templateOpenIdConnect2" --client-secret "updatedsecret"', checks=[
+        self.cmd('apim openid-connect-provider update  --resource-group "rg1" --service-name "apimService1" --opid "templateOpenIdConnect2" --client-secret "updatedsecret"', checks=[
         ])
 
-        self.cmd('apim openidconnectprovider update  --resource-group "rg1" --service-name "apimService1" --opid "templateOpenIdConnect3"', checks=[
+        self.cmd('apim openid-connect-provider update  --resource-group "rg1" --service-name "apimService1" --opid "templateOpenIdConnect3"', checks=[
         ])
 
 # delete -- delete
-        self.cmd('apim openidconnectprovider delete  --resource-group "rg1" --service-name "apimService1" --opid "templateOpenIdConnect3"', checks=[
+        self.cmd('apim openid-connect-provider delete  --resource-group "rg1" --service-name "apimService1" --opid "templateOpenIdConnect3"', checks=[
         ])
 
-        self.cmd('apim openidconnectprovider delete  --resource-group "rg1" --service-name "apimService1" --opid "templateOpenIdConnect2"', checks=[
+        self.cmd('apim openid-connect-provider delete  --resource-group "rg1" --service-name "apimService1" --opid "templateOpenIdConnect2"', checks=[
         ])
 
-        self.cmd('apim openidconnectprovider delete  --resource-group "rg1" --service-name "apimService1" --opid "templateOpenIdConnect3"', checks=[
+        self.cmd('apim openid-connect-provider delete  --resource-group "rg1" --service-name "apimService1" --opid "templateOpenIdConnect3"', checks=[
         ])
 
 # list_by_service -- list
-        self.cmd('apim openidconnectprovider list  --resource-group "rg1" --service-name "apimService1"', checks=[
+        self.cmd('apim openid-connect-provider list  --resource-group "rg1" --service-name "apimService1"', checks=[
         ])
 
-        self.cmd('apim openidconnectprovider list  --resource-group "rg1" --service-name "apimService1"', checks=[
+        self.cmd('apim openid-connect-provider list  --resource-group "rg1" --service-name "apimService1"', checks=[
         ])
 
-        self.cmd('apim openidconnectprovider list  --resource-group "rg1" --service-name "apimService1"', checks=[
+        self.cmd('apim openid-connect-provider list  --resource-group "rg1" --service-name "apimService1"', checks=[
         ])
 
 # get -- show
-        self.cmd('apim openidconnectprovider show  --resource-group "rg1" --service-name "apimService1" --opid "templateOpenIdConnect3"', checks=[
+        self.cmd('apim openid-connect-provider show  --resource-group "rg1" --service-name "apimService1" --opid "templateOpenIdConnect3"', checks=[
         ])
 
-        self.cmd('apim openidconnectprovider show  --resource-group "rg1" --service-name "apimService1" --opid "templateOpenIdConnect2"', checks=[
+        self.cmd('apim openid-connect-provider show  --resource-group "rg1" --service-name "apimService1" --opid "templateOpenIdConnect2"', checks=[
         ])
 
-        self.cmd('apim openidconnectprovider show  --resource-group "rg1" --service-name "apimService1" --opid "templateOpenIdConnect3"', checks=[
+        self.cmd('apim openid-connect-provider show  --resource-group "rg1" --service-name "apimService1" --opid "templateOpenIdConnect3"', checks=[
         ])
 
 # create_or_update -- create
