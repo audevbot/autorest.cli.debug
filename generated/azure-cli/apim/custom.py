@@ -805,7 +805,7 @@ def show_apim_api_issue_attachment(cmd, client,
 
 # module equivalent: azure_rm_apimanagementapitagdescription
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}/tagDescriptions/{{ tag_description_name }}
-def create_apim_api_tag-description(cmd, client,
+def create_apim_api_tag_description(cmd, client,
                                     resource_group,
                                     service_name,
                                     api_id,
@@ -822,7 +822,7 @@ def create_apim_api_tag-description(cmd, client,
 
 # module equivalent: azure_rm_apimanagementapitagdescription
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}/tagDescriptions/{{ tag_description_name }}
-def update_apim_api_tag-description(cmd, client,
+def update_apim_api_tag_description(cmd, client,
                                     resource_group,
                                     service_name,
                                     api_id,
@@ -839,7 +839,7 @@ def update_apim_api_tag-description(cmd, client,
 
 # module equivalent: azure_rm_apimanagementapitagdescription
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}/tagDescriptions/{{ tag_description_name }}
-def delete_apim_api_tag-description(cmd, client,
+def delete_apim_api_tag_description(cmd, client,
                                     resource_group,
                                     service_name,
                                     api_id,
@@ -849,7 +849,7 @@ def delete_apim_api_tag-description(cmd, client,
 
 # module equivalent: azure_rm_apimanagementapitagdescription
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}/tagDescriptions/{{ tag_description_name }}
-def list_apim_api_tag-description(cmd, client,
+def list_apim_api_tag_description(cmd, client,
                                   resource_group,
                                   service_name,
                                   api_id):
@@ -858,7 +858,7 @@ def list_apim_api_tag-description(cmd, client,
 
 # module equivalent: azure_rm_apimanagementapitagdescription
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}/tagDescriptions/{{ tag_description_name }}
-def show_apim_api_tag-description(cmd, client,
+def show_apim_api_tag_description(cmd, client,
                                   resource_group,
                                   service_name,
                                   api_id,
@@ -868,7 +868,7 @@ def show_apim_api_tag-description(cmd, client,
 
 # module equivalent: azure_rm_apimanagementapiversionset
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apiVersionSets/{{ api_version_set_name }}
-def create_apim_api-version-set(cmd, client,
+def create_apim_api_version_set(cmd, client,
                                 resource_group,
                                 service_name,
                                 version_set_id,
@@ -888,7 +888,7 @@ def create_apim_api-version-set(cmd, client,
 
 # module equivalent: azure_rm_apimanagementapiversionset
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apiVersionSets/{{ api_version_set_name }}
-def update_apim_api-version-set(cmd, client,
+def update_apim_api_version_set(cmd, client,
                                 resource_group,
                                 service_name,
                                 version_set_id,
@@ -908,7 +908,7 @@ def update_apim_api-version-set(cmd, client,
 
 # module equivalent: azure_rm_apimanagementapiversionset
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apiVersionSets/{{ api_version_set_name }}
-def delete_apim_api-version-set(cmd, client,
+def delete_apim_api_version_set(cmd, client,
                                 resource_group,
                                 service_name,
                                 version_set_id):
@@ -917,7 +917,7 @@ def delete_apim_api-version-set(cmd, client,
 
 # module equivalent: azure_rm_apimanagementapiversionset
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apiVersionSets/{{ api_version_set_name }}
-def list_apim_api-version-set(cmd, client,
+def list_apim_api_version_set(cmd, client,
                               resource_group,
                               service_name):
     return client.api_version_set.list_by_service(resource_group_name=resource_group, service_name=service_name)
@@ -925,7 +925,7 @@ def list_apim_api-version-set(cmd, client,
 
 # module equivalent: azure_rm_apimanagementapiversionset
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apiVersionSets/{{ api_version_set_name }}
-def show_apim_api-version-set(cmd, client,
+def show_apim_api_version_set(cmd, client,
                               resource_group,
                               service_name,
                               version_set_id):
@@ -934,7 +934,7 @@ def show_apim_api-version-set(cmd, client,
 
 # module equivalent: azure_rm_apimanagementauthorizationserver
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/authorizationServers/{{ authorization_server_name }}
-def create_apim_authorization-server(cmd, client,
+def create_apim_authorization_server(cmd, client,
                                      resource_group,
                                      service_name,
                                      authsid,
@@ -976,7 +976,7 @@ def create_apim_authorization-server(cmd, client,
 
 # module equivalent: azure_rm_apimanagementauthorizationserver
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/authorizationServers/{{ authorization_server_name }}
-def update_apim_authorization-server(cmd, client,
+def update_apim_authorization_server(cmd, client,
                                      resource_group,
                                      service_name,
                                      authsid,
@@ -1018,7 +1018,7 @@ def update_apim_authorization-server(cmd, client,
 
 # module equivalent: azure_rm_apimanagementauthorizationserver
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/authorizationServers/{{ authorization_server_name }}
-def delete_apim_authorization-server(cmd, client,
+def delete_apim_authorization_server(cmd, client,
                                      resource_group,
                                      service_name,
                                      authsid):
@@ -1027,7 +1027,7 @@ def delete_apim_authorization-server(cmd, client,
 
 # module equivalent: azure_rm_apimanagementauthorizationserver
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/authorizationServers/{{ authorization_server_name }}
-def list_apim_authorization-server(cmd, client,
+def list_apim_authorization_server(cmd, client,
                                    resource_group,
                                    service_name):
     return client.authorization_server.list_by_service(resource_group_name=resource_group, service_name=service_name)
@@ -1035,7 +1035,7 @@ def list_apim_authorization-server(cmd, client,
 
 # module equivalent: azure_rm_apimanagementauthorizationserver
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/authorizationServers/{{ authorization_server_name }}
-def show_apim_authorization-server(cmd, client,
+def show_apim_authorization_server(cmd, client,
                                    resource_group,
                                    service_name,
                                    authsid):
@@ -1572,7 +1572,7 @@ def list_apim_group_user(cmd, client,
 
 # module equivalent: azure_rm_apimanagementidentityprovider
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/identityProviders/{{ identity_provider_name }}
-def create_apim_identity-provider(cmd, client,
+def create_apim_identity_provider(cmd, client,
                                   resource_group,
                                   service_name,
                                   name,
@@ -1600,7 +1600,7 @@ def create_apim_identity-provider(cmd, client,
 
 # module equivalent: azure_rm_apimanagementidentityprovider
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/identityProviders/{{ identity_provider_name }}
-def update_apim_identity-provider(cmd, client,
+def update_apim_identity_provider(cmd, client,
                                   resource_group,
                                   service_name,
                                   name,
@@ -1628,7 +1628,7 @@ def update_apim_identity-provider(cmd, client,
 
 # module equivalent: azure_rm_apimanagementidentityprovider
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/identityProviders/{{ identity_provider_name }}
-def delete_apim_identity-provider(cmd, client,
+def delete_apim_identity_provider(cmd, client,
                                   resource_group,
                                   service_name,
                                   name):
@@ -1637,7 +1637,7 @@ def delete_apim_identity-provider(cmd, client,
 
 # module equivalent: azure_rm_apimanagementidentityprovider
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/identityProviders/{{ identity_provider_name }}
-def list_apim_identity-provider(cmd, client,
+def list_apim_identity_provider(cmd, client,
                                 resource_group,
                                 service_name):
     return client.identity_provider.list_by_service(resource_group_name=resource_group, service_name=service_name)
@@ -1645,7 +1645,7 @@ def list_apim_identity-provider(cmd, client,
 
 # module equivalent: azure_rm_apimanagementidentityprovider
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/identityProviders/{{ identity_provider_name }}
-def show_apim_identity-provider(cmd, client,
+def show_apim_identity_provider(cmd, client,
                                 resource_group,
                                 service_name,
                                 name):
@@ -1761,7 +1761,7 @@ def show_apim_notification(cmd, client,
 
 # module equivalent: azure_rm_apimanagementnotificationrecipientuser
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/notifications/{{ notification_name }}/recipientUsers/{{ recipient_user_name }}
-def create_apim_notification_recipient-user(cmd, client,
+def create_apim_notification_recipient_user(cmd, client,
                                             resource_group,
                                             service_name,
                                             notification_name,
@@ -1771,7 +1771,7 @@ def create_apim_notification_recipient-user(cmd, client,
 
 # module equivalent: azure_rm_apimanagementnotificationrecipientuser
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/notifications/{{ notification_name }}/recipientUsers/{{ recipient_user_name }}
-def update_apim_notification_recipient-user(cmd, client,
+def update_apim_notification_recipient_user(cmd, client,
                                             resource_group,
                                             service_name,
                                             notification_name,
@@ -1781,7 +1781,7 @@ def update_apim_notification_recipient-user(cmd, client,
 
 # module equivalent: azure_rm_apimanagementnotificationrecipientuser
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/notifications/{{ notification_name }}/recipientUsers/{{ recipient_user_name }}
-def delete_apim_notification_recipient-user(cmd, client,
+def delete_apim_notification_recipient_user(cmd, client,
                                             resource_group,
                                             service_name,
                                             notification_name,
@@ -1791,7 +1791,7 @@ def delete_apim_notification_recipient-user(cmd, client,
 
 # module equivalent: azure_rm_apimanagementnotificationrecipientuser
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/notifications/{{ notification_name }}/recipientUsers/{{ recipient_user_name }}
-def list_apim_notification_recipient-user(cmd, client,
+def list_apim_notification_recipient_user(cmd, client,
                                           resource_group,
                                           service_name,
                                           notification_name):
@@ -1800,7 +1800,7 @@ def list_apim_notification_recipient-user(cmd, client,
 
 # module equivalent: azure_rm_apimanagementnotificationrecipientemail
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/notifications/{{ notification_name }}/recipientEmails/{{ recipient_email_name }}
-def create_apim_notification_recipient-email(cmd, client,
+def create_apim_notification_recipient_email(cmd, client,
                                              resource_group,
                                              service_name,
                                              notification_name,
@@ -1810,7 +1810,7 @@ def create_apim_notification_recipient-email(cmd, client,
 
 # module equivalent: azure_rm_apimanagementnotificationrecipientemail
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/notifications/{{ notification_name }}/recipientEmails/{{ recipient_email_name }}
-def update_apim_notification_recipient-email(cmd, client,
+def update_apim_notification_recipient_email(cmd, client,
                                              resource_group,
                                              service_name,
                                              notification_name,
@@ -1820,7 +1820,7 @@ def update_apim_notification_recipient-email(cmd, client,
 
 # module equivalent: azure_rm_apimanagementnotificationrecipientemail
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/notifications/{{ notification_name }}/recipientEmails/{{ recipient_email_name }}
-def delete_apim_notification_recipient-email(cmd, client,
+def delete_apim_notification_recipient_email(cmd, client,
                                              resource_group,
                                              service_name,
                                              notification_name,
@@ -1830,7 +1830,7 @@ def delete_apim_notification_recipient-email(cmd, client,
 
 # module equivalent: azure_rm_apimanagementnotificationrecipientemail
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/notifications/{{ notification_name }}/recipientEmails/{{ recipient_email_name }}
-def list_apim_notification_recipient-email(cmd, client,
+def list_apim_notification_recipient_email(cmd, client,
                                            resource_group,
                                            service_name,
                                            notification_name):
@@ -1839,7 +1839,7 @@ def list_apim_notification_recipient-email(cmd, client,
 
 # module equivalent: azure_rm_apimanagementopenidconnectprovider
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/openidConnectProviders/{{ openid_connect_provider_name }}
-def create_apim_openid-connect-provider(cmd, client,
+def create_apim_openid_connect_provider(cmd, client,
                                         resource_group,
                                         service_name,
                                         opid,
@@ -1859,7 +1859,7 @@ def create_apim_openid-connect-provider(cmd, client,
 
 # module equivalent: azure_rm_apimanagementopenidconnectprovider
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/openidConnectProviders/{{ openid_connect_provider_name }}
-def update_apim_openid-connect-provider(cmd, client,
+def update_apim_openid_connect_provider(cmd, client,
                                         resource_group,
                                         service_name,
                                         opid,
@@ -1879,7 +1879,7 @@ def update_apim_openid-connect-provider(cmd, client,
 
 # module equivalent: azure_rm_apimanagementopenidconnectprovider
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/openidConnectProviders/{{ openid_connect_provider_name }}
-def delete_apim_openid-connect-provider(cmd, client,
+def delete_apim_openid_connect_provider(cmd, client,
                                         resource_group,
                                         service_name,
                                         opid):
@@ -1888,7 +1888,7 @@ def delete_apim_openid-connect-provider(cmd, client,
 
 # module equivalent: azure_rm_apimanagementopenidconnectprovider
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/openidConnectProviders/{{ openid_connect_provider_name }}
-def list_apim_openid-connect-provider(cmd, client,
+def list_apim_openid_connect_provider(cmd, client,
                                       resource_group,
                                       service_name):
     return client.open_id_connect_provider.list_by_service(resource_group_name=resource_group, service_name=service_name)
@@ -1896,7 +1896,7 @@ def list_apim_openid-connect-provider(cmd, client,
 
 # module equivalent: azure_rm_apimanagementopenidconnectprovider
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/openidConnectProviders/{{ openid_connect_provider_name }}
-def show_apim_openid-connect-provider(cmd, client,
+def show_apim_openid_connect_provider(cmd, client,
                                       resource_group,
                                       service_name,
                                       opid):
