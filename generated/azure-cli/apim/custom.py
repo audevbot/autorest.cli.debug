@@ -90,7 +90,6 @@ def update_apim_api(cmd, client,
                     _format=None,
                     wsdl_selector=None,
                     api_type=None):
-    body = {}
     body['description'] = description  # str
     body['authentication_settings'] = json.loads(authentication_settings) if isinstance(authentication_settings, str) else authentication_settings
     body['subscription_key_parameter_names'] = json.loads(subscription_key_parameter_names) if isinstance(subscription_key_parameter_names, str) else subscription_key_parameter_names
@@ -113,15 +112,6 @@ def update_apim_api(cmd, client,
     body['wsdl_selector'] = json.loads(wsdl_selector) if isinstance(wsdl_selector, str) else wsdl_selector
     body['api_type'] = api_type  # str
     return client.api.create_or_update(resource_group_name=resource_group, service_name=service_name, api_id=api_id, parameters=body)
-
-
-# module equivalent: azure_rm_apimanagementapi
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}
-def delete_apim_api(cmd, client,
-                    resource_group,
-                    service_name,
-                    api_id):
-    return client.api.delete(resource_group_name=resource_group, service_name=service_name, api_id=api_id)
 
 
 # module equivalent: azure_rm_apimanagementapi
@@ -164,19 +154,8 @@ def update_apim_api_release(cmd, client,
                             api_id,
                             release_id,
                             notes=None):
-    body = {}
     body['notes'] = notes  # str
     return client.api_release.create_or_update(resource_group_name=resource_group, service_name=service_name, api_id=api_id, release_id=release_id, parameters=body)
-
-
-# module equivalent: azure_rm_apimanagementapirelease
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}/releases/{{ release_name }}
-def delete_apim_api_release(cmd, client,
-                            resource_group,
-                            service_name,
-                            api_id,
-                            release_id):
-    return client.api_release.delete(resource_group_name=resource_group, service_name=service_name, api_id=api_id, release_id=release_id)
 
 
 # module equivalent: azure_rm_apimanagementapirelease
@@ -240,7 +219,6 @@ def update_apim_api_operation(cmd, client,
                               request=None,
                               responses=None,
                               policies=None):
-    body = {}
     body['template_parameters'] = json.loads(template_parameters) if isinstance(template_parameters, str) else template_parameters
     body['description'] = description  # str
     body['request'] = json.loads(request) if isinstance(request, str) else request
@@ -250,16 +228,6 @@ def update_apim_api_operation(cmd, client,
     body['method'] = method  # str
     body['url_template'] = url_template  # str
     return client.api_operation.create_or_update(resource_group_name=resource_group, service_name=service_name, api_id=api_id, operation_id=operation_id, parameters=body)
-
-
-# module equivalent: azure_rm_apimanagementapioperation
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}/operations/{{ operation_name }}
-def delete_apim_api_operation(cmd, client,
-                              resource_group,
-                              service_name,
-                              api_id,
-                              operation_id):
-    return client.api_operation.delete(resource_group_name=resource_group, service_name=service_name, api_id=api_id, operation_id=operation_id)
 
 
 # module equivalent: azure_rm_apimanagementapioperation
@@ -307,21 +275,9 @@ def update_apim_api_operation_policy(cmd, client,
                                      policy_id,
                                      value,
                                      _format=None):
-    body = {}
     body['value'] = value  # str
     body['format'] = _format  # str
     return client.api_operation_policy.create_or_update(resource_group_name=resource_group, service_name=service_name, api_id=api_id, operation_id=operation_id, policy_id=policy_id, parameters=body)
-
-
-# module equivalent: azure_rm_apimanagementapioperationpolicy
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}/operations/{{ operation_name }}/policies/{{ policy_name }}
-def delete_apim_api_operation_policy(cmd, client,
-                                     resource_group,
-                                     service_name,
-                                     api_id,
-                                     operation_id,
-                                     policy_id):
-    return client.api_operation_policy.delete(resource_group_name=resource_group, service_name=service_name, api_id=api_id, operation_id=operation_id, policy_id=policy_id)
 
 
 # module equivalent: azure_rm_apimanagementapioperationpolicy
@@ -365,18 +321,8 @@ def update_apim_tag(cmd, client,
                     service_name,
                     tag_id,
                     display_name):
-    body = {}
     body['display_name'] = display_name  # str
     return client.tag.create_or_update(resource_group_name=resource_group, service_name=service_name, tag_id=tag_id, parameters=body)
-
-
-# module equivalent: azure_rm_apimanagementtag
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/tags/{{ tag_name }}
-def delete_apim_tag(cmd, client,
-                    resource_group,
-                    service_name,
-                    tag_id):
-    return client.tag.delete(resource_group_name=resource_group, service_name=service_name, tag_id=tag_id)
 
 
 # module equivalent: azure_rm_apimanagementtag
@@ -426,20 +372,9 @@ def update_apim_api_policy(cmd, client,
                            policy_id,
                            value,
                            _format=None):
-    body = {}
     body['value'] = value  # str
     body['format'] = _format  # str
     return client.api_policy.create_or_update(resource_group_name=resource_group, service_name=service_name, api_id=api_id, policy_id=policy_id, parameters=body)
-
-
-# module equivalent: azure_rm_apimanagementapipolicy
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}/policies/{{ policy_name }}
-def delete_apim_api_policy(cmd, client,
-                           resource_group,
-                           service_name,
-                           api_id,
-                           policy_id):
-    return client.api_policy.delete(resource_group_name=resource_group, service_name=service_name, api_id=api_id, policy_id=policy_id)
 
 
 # module equivalent: azure_rm_apimanagementapipolicy
@@ -486,20 +421,9 @@ def update_apim_api_schema(cmd, client,
                            schema_id,
                            content_type,
                            document=None):
-    body = {}
     body['content_type'] = content_type  # str
     body['document'] = json.loads(document) if isinstance(document, str) else document
     return client.api_schema.create_or_update(resource_group_name=resource_group, service_name=service_name, api_id=api_id, schema_id=schema_id, parameters=body)
-
-
-# module equivalent: azure_rm_apimanagementapischema
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}/schemas/{{ schema_name }}
-def delete_apim_api_schema(cmd, client,
-                           resource_group,
-                           service_name,
-                           api_id,
-                           schema_id):
-    return client.api_schema.delete(resource_group_name=resource_group, service_name=service_name, api_id=api_id, schema_id=schema_id)
 
 
 # module equivalent: azure_rm_apimanagementapischema
@@ -557,7 +481,6 @@ def update_apim_api_diagnostic(cmd, client,
                                frontend=None,
                                backend=None,
                                enable_http_correlation_headers=None):
-    body = {}
     body['always_log'] = always_log  # str
     body['logger_id'] = logger_id  # str
     body['sampling'] = json.loads(sampling) if isinstance(sampling, str) else sampling
@@ -565,16 +488,6 @@ def update_apim_api_diagnostic(cmd, client,
     body['backend'] = json.loads(backend) if isinstance(backend, str) else backend
     body['enable_http_correlation_headers'] = enable_http_correlation_headers  # boolean
     return client.api_diagnostic.create_or_update(resource_group_name=resource_group, service_name=service_name, api_id=api_id, diagnostic_id=diagnostic_id, parameters=body)
-
-
-# module equivalent: azure_rm_apimanagementapidiagnostic
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}/diagnostics/{{ diagnostic_name }}
-def delete_apim_api_diagnostic(cmd, client,
-                               resource_group,
-                               service_name,
-                               api_id,
-                               diagnostic_id):
-    return client.api_diagnostic.delete(resource_group_name=resource_group, service_name=service_name, api_id=api_id, diagnostic_id=diagnostic_id)
 
 
 # module equivalent: azure_rm_apimanagementapidiagnostic
@@ -629,23 +542,12 @@ def update_apim_api_issue(cmd, client,
                           user_id,
                           created_date=None,
                           state=None):
-    body = {}
     body['created_date'] = created_date  # datetime
     body['state'] = state  # str
     body['title'] = title  # str
     body['description'] = description  # str
     body['user_id'] = user_id  # str
     return client.api_issue.create_or_update(resource_group_name=resource_group, service_name=service_name, api_id=api_id, issue_id=issue_id, parameters=body)
-
-
-# module equivalent: azure_rm_apimanagementapiissue
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}/issues/{{ issue_name }}
-def delete_apim_api_issue(cmd, client,
-                          resource_group,
-                          service_name,
-                          api_id,
-                          issue_id):
-    return client.api_issue.delete(resource_group_name=resource_group, service_name=service_name, api_id=api_id, issue_id=issue_id)
 
 
 # module equivalent: azure_rm_apimanagementapiissue
@@ -696,22 +598,10 @@ def update_apim_api_issue_comment(cmd, client,
                                   text,
                                   user_id,
                                   created_date=None):
-    body = {}
     body['text'] = text  # str
     body['created_date'] = created_date  # datetime
     body['user_id'] = user_id  # str
     return client.api_issue_comment.create_or_update(resource_group_name=resource_group, service_name=service_name, api_id=api_id, issue_id=issue_id, comment_id=comment_id, parameters=body)
-
-
-# module equivalent: azure_rm_apimanagementapiissuecomment
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}/issues/{{ issue_name }}/comments/{{ comment_name }}
-def delete_apim_api_issue_comment(cmd, client,
-                                  resource_group,
-                                  service_name,
-                                  api_id,
-                                  issue_id,
-                                  comment_id):
-    return client.api_issue_comment.delete(resource_group_name=resource_group, service_name=service_name, api_id=api_id, issue_id=issue_id, comment_id=comment_id)
 
 
 # module equivalent: azure_rm_apimanagementapiissuecomment
@@ -764,22 +654,10 @@ def update_apim_api_issue_attachment(cmd, client,
                                      title,
                                      content_format,
                                      content):
-    body = {}
     body['title'] = title  # str
     body['content_format'] = content_format  # str
     body['content'] = content  # str
     return client.api_issue_attachment.create_or_update(resource_group_name=resource_group, service_name=service_name, api_id=api_id, issue_id=issue_id, attachment_id=attachment_id, parameters=body)
-
-
-# module equivalent: azure_rm_apimanagementapiissueattachment
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}/issues/{{ issue_name }}/attachments/{{ attachment_name }}
-def delete_apim_api_issue_attachment(cmd, client,
-                                     resource_group,
-                                     service_name,
-                                     api_id,
-                                     issue_id,
-                                     attachment_id):
-    return client.api_issue_attachment.delete(resource_group_name=resource_group, service_name=service_name, api_id=api_id, issue_id=issue_id, attachment_id=attachment_id)
 
 
 # module equivalent: azure_rm_apimanagementapiissueattachment
@@ -830,21 +708,10 @@ def update_apim_api_tag_description(cmd, client,
                                     description=None,
                                     external_docs_url=None,
                                     external_docs_description=None):
-    body = {}
     body['description'] = description  # str
     body['external_docs_url'] = external_docs_url  # str
     body['external_docs_description'] = external_docs_description  # str
     return client.api_tag_description.create_or_update(resource_group_name=resource_group, service_name=service_name, api_id=api_id, tag_id=tag_id, parameters=body)
-
-
-# module equivalent: azure_rm_apimanagementapitagdescription
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apis/{{ api_name }}/tagDescriptions/{{ tag_description_name }}
-def delete_apim_api_tag_description(cmd, client,
-                                    resource_group,
-                                    service_name,
-                                    api_id,
-                                    tag_id):
-    return client.api_tag_description.delete(resource_group_name=resource_group, service_name=service_name, api_id=api_id, tag_id=tag_id)
 
 
 # module equivalent: azure_rm_apimanagementapitagdescription
@@ -897,22 +764,12 @@ def update_apim_api_version_set(cmd, client,
                                 description=None,
                                 version_query_name=None,
                                 version_header_name=None):
-    body = {}
     body['description'] = description  # str
     body['version_query_name'] = version_query_name  # str
     body['version_header_name'] = version_header_name  # str
     body['display_name'] = display_name  # str
     body['versioning_scheme'] = versioning_scheme  # str
     return client.api_version_set.create_or_update(resource_group_name=resource_group, service_name=service_name, version_set_id=version_set_id, parameters=body)
-
-
-# module equivalent: azure_rm_apimanagementapiversionset
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/apiVersionSets/{{ api_version_set_name }}
-def delete_apim_api_version_set(cmd, client,
-                                resource_group,
-                                service_name,
-                                version_set_id):
-    return client.api_version_set.delete(resource_group_name=resource_group, service_name=service_name, version_set_id=version_set_id)
 
 
 # module equivalent: azure_rm_apimanagementapiversionset
@@ -996,7 +853,6 @@ def update_apim_authorization_server(cmd, client,
                                      client_secret=None,
                                      resource_owner_username=None,
                                      resource_owner_password=None):
-    body = {}
     body['description'] = description  # str
     body['authorization_methods'] = json.loads(authorization_methods) if isinstance(authorization_methods, str) else authorization_methods
     body['client_authentication_method'] = json.loads(client_authentication_method) if isinstance(client_authentication_method, str) else client_authentication_method
@@ -1014,15 +870,6 @@ def update_apim_authorization_server(cmd, client,
     body['grant_types'] = json.loads(grant_types) if isinstance(grant_types, str) else grant_types
     body['client_id'] = client_id  # str
     return client.authorization_server.create_or_update(resource_group_name=resource_group, service_name=service_name, authsid=authsid, parameters=body)
-
-
-# module equivalent: azure_rm_apimanagementauthorizationserver
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/authorizationServers/{{ authorization_server_name }}
-def delete_apim_authorization_server(cmd, client,
-                                     resource_group,
-                                     service_name,
-                                     authsid):
-    return client.authorization_server.delete(resource_group_name=resource_group, service_name=service_name, authsid=authsid)
 
 
 # module equivalent: azure_rm_apimanagementauthorizationserver
@@ -1085,7 +932,6 @@ def update_apim_backend(cmd, client,
                         credentials=None,
                         proxy=None,
                         tls=None):
-    body = {}
     body['title'] = title  # str
     body['description'] = description  # str
     body['resource_id'] = resource_id  # str
@@ -1096,15 +942,6 @@ def update_apim_backend(cmd, client,
     body['url'] = url  # str
     body['protocol'] = protocol  # str
     return client.backend.create_or_update(resource_group_name=resource_group, service_name=service_name, backend_id=backend_id, parameters=body)
-
-
-# module equivalent: azure_rm_apimanagementbackend
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/backends/{{ backend_name }}
-def delete_apim_backend(cmd, client,
-                        resource_group,
-                        service_name,
-                        backend_id):
-    return client.backend.delete(resource_group_name=resource_group, service_name=service_name, backend_id=backend_id)
 
 
 # module equivalent: azure_rm_apimanagementbackend
@@ -1149,20 +986,10 @@ def update_apim_cache(cmd, client,
                       connection_string,
                       description=None,
                       resource_id=None):
-    body = {}
     body['description'] = description  # str
     body['connection_string'] = connection_string  # str
     body['resource_id'] = resource_id  # str
     return client.cache.create_or_update(resource_group_name=resource_group, service_name=service_name, cache_id=cache_id, parameters=body)
-
-
-# module equivalent: azure_rm_apimanagementcache
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/caches/{{ cache_name }}
-def delete_apim_cache(cmd, client,
-                      resource_group,
-                      service_name,
-                      cache_id):
-    return client.cache.delete(resource_group_name=resource_group, service_name=service_name, cache_id=cache_id)
 
 
 # module equivalent: azure_rm_apimanagementcache
@@ -1204,19 +1031,9 @@ def update_apim_certificate(cmd, client,
                             certificate_id,
                             data,
                             password):
-    body = {}
     body['data'] = data  # str
     body['password'] = password  # str
     return client.certificate.create_or_update(resource_group_name=resource_group, service_name=service_name, certificate_id=certificate_id, parameters=body)
-
-
-# module equivalent: azure_rm_apimanagementcertificate
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/certificates/{{ certificate_name }}
-def delete_apim_certificate(cmd, client,
-                            resource_group,
-                            service_name,
-                            certificate_id):
-    return client.certificate.delete(resource_group_name=resource_group, service_name=service_name, certificate_id=certificate_id)
 
 
 # module equivalent: azure_rm_apimanagementcertificate
@@ -1295,7 +1112,6 @@ def update_apim(cmd, client,
                 virtual_network_type=None,
                 sku_capacity=None,
                 identity=None):
-    body = {}
     body['tags'] = tags  # dictionary
     body['notification_sender_email'] = notification_sender_email  # str
     body['hostname_configurations'] = json.loads(hostname_configurations) if isinstance(hostname_configurations, str) else hostname_configurations
@@ -1312,14 +1128,6 @@ def update_apim(cmd, client,
     body['identity'] = json.loads(identity) if isinstance(identity, str) else identity
     body['location'] = location  # str
     return client.api_management_service.create_or_update(resource_group_name=resource_group, service_name=name, parameters=body)
-
-
-# module equivalent: azure_rm_apimanagementservice
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}
-def delete_apim(cmd, client,
-                resource_group,
-                name):
-    return client.api_management_service.delete(resource_group_name=resource_group, service_name=name)
 
 
 # module equivalent: azure_rm_apimanagementservice
@@ -1373,7 +1181,6 @@ def update_apim_diagnostic(cmd, client,
                            frontend=None,
                            backend=None,
                            enable_http_correlation_headers=None):
-    body = {}
     body['always_log'] = always_log  # str
     body['logger_id'] = logger_id  # str
     body['sampling'] = json.loads(sampling) if isinstance(sampling, str) else sampling
@@ -1381,15 +1188,6 @@ def update_apim_diagnostic(cmd, client,
     body['backend'] = json.loads(backend) if isinstance(backend, str) else backend
     body['enable_http_correlation_headers'] = enable_http_correlation_headers  # boolean
     return client.diagnostic.create_or_update(resource_group_name=resource_group, service_name=service_name, diagnostic_id=diagnostic_id, parameters=body)
-
-
-# module equivalent: azure_rm_apimanagementdiagnostic
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/diagnostics/{{ diagnostic_name }}
-def delete_apim_diagnostic(cmd, client,
-                           resource_group,
-                           service_name,
-                           diagnostic_id):
-    return client.diagnostic.delete(resource_group_name=resource_group, service_name=service_name, diagnostic_id=diagnostic_id)
 
 
 # module equivalent: azure_rm_apimanagementdiagnostic
@@ -1437,21 +1235,11 @@ def update_apim_template(cmd, client,
                          title=None,
                          description=None,
                          body=None):
-    body = {}
     body['subject'] = subject  # str
     body['title'] = title  # str
     body['description'] = description  # str
     body['body'] = body  # str
     return client.email_template.create_or_update(resource_group_name=resource_group, service_name=service_name, template_name=name, parameters=body)
-
-
-# module equivalent: azure_rm_apimanagementemailtemplate
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/templates/{{ template_name }}
-def delete_apim_template(cmd, client,
-                         resource_group,
-                         service_name,
-                         name):
-    return client.email_template.delete(resource_group_name=resource_group, service_name=service_name, template_name=name)
 
 
 # module equivalent: azure_rm_apimanagementemailtemplate
@@ -1499,21 +1287,11 @@ def update_apim_group(cmd, client,
                       description=None,
                       _type=None,
                       external_id=None):
-    body = {}
     body['display_name'] = display_name  # str
     body['description'] = description  # str
     body['type'] = _type  # str
     body['external_id'] = external_id  # str
     return client.group.create_or_update(resource_group_name=resource_group, service_name=service_name, group_id=group_id, parameters=body)
-
-
-# module equivalent: azure_rm_apimanagementgroup
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/groups/{{ group_name }}
-def delete_apim_group(cmd, client,
-                      resource_group,
-                      service_name,
-                      group_id):
-    return client.group.delete(resource_group_name=resource_group, service_name=service_name, group_id=group_id)
 
 
 # module equivalent: azure_rm_apimanagementgroup
@@ -1549,16 +1327,6 @@ def create_apim_group_user(cmd, client,
                            registration_date=None,
                            groups=None):
     return client.group_user.create(resource_group_name=resource_group, service_name=service_name, group_id=group_id, user_id=user_id)
-
-
-# module equivalent: azure_rm_apimanagementgroupuser
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/groups/{{ group_name }}/users/{{ user_name }}
-def delete_apim_group_user(cmd, client,
-                           resource_group,
-                           service_name,
-                           group_id,
-                           user_id):
-    return client.group_user.delete(resource_group_name=resource_group, service_name=service_name, group_id=group_id, user_id=user_id)
 
 
 # module equivalent: azure_rm_apimanagementgroupuser
@@ -1613,7 +1381,6 @@ def update_apim_identity_provider(cmd, client,
                                   signin_policy_name=None,
                                   profile_editing_policy_name=None,
                                   password_reset_policy_name=None):
-    body = {}
     body['type'] = _type  # str
     body['allowed_tenants'] = json.loads(allowed_tenants) if isinstance(allowed_tenants, str) else allowed_tenants
     body['authority'] = authority  # str
@@ -1624,15 +1391,6 @@ def update_apim_identity_provider(cmd, client,
     body['client_id'] = client_id  # str
     body['client_secret'] = client_secret  # str
     return client.identity_provider.create_or_update(resource_group_name=resource_group, service_name=service_name, identity_provider_name=name, parameters=body)
-
-
-# module equivalent: azure_rm_apimanagementidentityprovider
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/identityProviders/{{ identity_provider_name }}
-def delete_apim_identity_provider(cmd, client,
-                                  resource_group,
-                                  service_name,
-                                  name):
-    return client.identity_provider.delete(resource_group_name=resource_group, service_name=service_name, identity_provider_name=name)
 
 
 # module equivalent: azure_rm_apimanagementidentityprovider
@@ -1683,22 +1441,12 @@ def update_apim_logger(cmd, client,
                        description=None,
                        is_buffered=None,
                        resource_id=None):
-    body = {}
     body['logger_type'] = logger_type  # str
     body['description'] = description  # str
     body['credentials'] = credentials  # dictionary
     body['is_buffered'] = is_buffered  # boolean
     body['resource_id'] = resource_id  # str
     return client.logger.create_or_update(resource_group_name=resource_group, service_name=service_name, logger_id=logger_id, parameters=body)
-
-
-# module equivalent: azure_rm_apimanagementlogger
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/loggers/{{ logger_name }}
-def delete_apim_logger(cmd, client,
-                       resource_group,
-                       service_name,
-                       logger_id):
-    return client.logger.delete(resource_group_name=resource_group, service_name=service_name, logger_id=logger_id)
 
 
 # module equivalent: azure_rm_apimanagementlogger
@@ -1781,16 +1529,6 @@ def update_apim_notification_recipient_user(cmd, client,
 
 # module equivalent: azure_rm_apimanagementnotificationrecipientuser
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/notifications/{{ notification_name }}/recipientUsers/{{ recipient_user_name }}
-def delete_apim_notification_recipient_user(cmd, client,
-                                            resource_group,
-                                            service_name,
-                                            notification_name,
-                                            user_id):
-    return client.notification_recipient_user.delete(resource_group_name=resource_group, service_name=service_name, notification_name=notification_name, user_id=user_id)
-
-
-# module equivalent: azure_rm_apimanagementnotificationrecipientuser
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/notifications/{{ notification_name }}/recipientUsers/{{ recipient_user_name }}
 def list_apim_notification_recipient_user(cmd, client,
                                           resource_group,
                                           service_name,
@@ -1816,16 +1554,6 @@ def update_apim_notification_recipient_email(cmd, client,
                                              notification_name,
                                              email):
     return client.notification_recipient_email.create_or_update(resource_group_name=resource_group, service_name=service_name, notification_name=notification_name, email=email)
-
-
-# module equivalent: azure_rm_apimanagementnotificationrecipientemail
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/notifications/{{ notification_name }}/recipientEmails/{{ recipient_email_name }}
-def delete_apim_notification_recipient_email(cmd, client,
-                                             resource_group,
-                                             service_name,
-                                             notification_name,
-                                             email):
-    return client.notification_recipient_email.delete(resource_group_name=resource_group, service_name=service_name, notification_name=notification_name, email=email)
 
 
 # module equivalent: azure_rm_apimanagementnotificationrecipientemail
@@ -1868,22 +1596,12 @@ def update_apim_openid_connect_provider(cmd, client,
                                         client_id,
                                         description=None,
                                         client_secret=None):
-    body = {}
     body['display_name'] = display_name  # str
     body['description'] = description  # str
     body['metadata_endpoint'] = metadata_endpoint  # str
     body['client_id'] = client_id  # str
     body['client_secret'] = client_secret  # str
     return client.open_id_connect_provider.create_or_update(resource_group_name=resource_group, service_name=service_name, opid=opid, parameters=body)
-
-
-# module equivalent: azure_rm_apimanagementopenidconnectprovider
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/openidConnectProviders/{{ openid_connect_provider_name }}
-def delete_apim_openid_connect_provider(cmd, client,
-                                        resource_group,
-                                        service_name,
-                                        opid):
-    return client.open_id_connect_provider.delete(resource_group_name=resource_group, service_name=service_name, opid=opid)
 
 
 # module equivalent: azure_rm_apimanagementopenidconnectprovider
@@ -1925,19 +1643,9 @@ def update_apim_policy(cmd, client,
                        policy_id,
                        value,
                        _format=None):
-    body = {}
     body['value'] = value  # str
     body['format'] = _format  # str
     return client.policy.create_or_update(resource_group_name=resource_group, service_name=service_name, policy_id=policy_id, parameters=body)
-
-
-# module equivalent: azure_rm_apimanagementpolicy
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/policies/{{ policy_name }}
-def delete_apim_policy(cmd, client,
-                       resource_group,
-                       service_name,
-                       policy_id):
-    return client.policy.delete(resource_group_name=resource_group, service_name=service_name, policy_id=policy_id)
 
 
 # module equivalent: azure_rm_apimanagementpolicy
@@ -1975,7 +1683,6 @@ def update_apim_portalsetting_signin(cmd, client,
                                      resource_group,
                                      name,
                                      enabled=None):
-    body = {}
     body['enabled'] = enabled  # boolean
     return client.sign_in_settings.create_or_update(resource_group_name=resource_group, service_name=name, parameters=body)
 
@@ -2008,7 +1715,6 @@ def update_apim_portalsetting_signup(cmd, client,
                                      name,
                                      enabled=None,
                                      terms_of_service=None):
-    body = {}
     body['enabled'] = enabled  # boolean
     body['terms_of_service'] = json.loads(terms_of_service) if isinstance(terms_of_service, str) else terms_of_service
     return client.sign_up_settings.create_or_update(resource_group_name=resource_group, service_name=name, parameters=body)
@@ -2048,7 +1754,6 @@ def update_apim_portalsetting_delegation(cmd, client,
                                          validation_key=None,
                                          subscriptions=None,
                                          user_registration=None):
-    body = {}
     body['url'] = url  # str
     body['validation_key'] = validation_key  # str
     body['subscriptions'] = json.loads(subscriptions) if isinstance(subscriptions, str) else subscriptions
@@ -2101,7 +1806,6 @@ def update_apim_product(cmd, client,
                         approval_required=None,
                         subscriptions_limit=None,
                         state=None):
-    body = {}
     body['description'] = description  # str
     body['terms'] = terms  # str
     body['subscription_required'] = subscription_required  # boolean
@@ -2110,15 +1814,6 @@ def update_apim_product(cmd, client,
     body['state'] = state  # str
     body['display_name'] = display_name  # str
     return client.product.create_or_update(resource_group_name=resource_group, service_name=service_name, product_id=product_id, parameters=body)
-
-
-# module equivalent: azure_rm_apimanagementproduct
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/products/{{ product_name }}
-def delete_apim_product(cmd, client,
-                        resource_group,
-                        service_name,
-                        product_id):
-    return client.product.delete(resource_group_name=resource_group, service_name=service_name, product_id=product_id)
 
 
 # module equivalent: azure_rm_apimanagementproduct
@@ -2198,16 +1893,6 @@ def update_apim_product_api(cmd, client,
 
 # module equivalent: azure_rm_apimanagementproductapi
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/products/{{ product_name }}/apis/{{ api_name }}
-def delete_apim_product_api(cmd, client,
-                            resource_group,
-                            service_name,
-                            product_id,
-                            api_id):
-    return client.product_api.delete(resource_group_name=resource_group, service_name=service_name, product_id=product_id, api_id=api_id)
-
-
-# module equivalent: azure_rm_apimanagementproductapi
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/products/{{ product_name }}/apis/{{ api_name }}
 def list_apim_product_api(cmd, client,
                           resource_group,
                           service_name,
@@ -2247,16 +1932,6 @@ def update_apim_product_group(cmd, client,
 
 # module equivalent: azure_rm_apimanagementproductgroup
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/products/{{ product_name }}/groups/{{ group_name }}
-def delete_apim_product_group(cmd, client,
-                              resource_group,
-                              service_name,
-                              product_id,
-                              group_id):
-    return client.product_group.delete(resource_group_name=resource_group, service_name=service_name, product_id=product_id, group_id=group_id)
-
-
-# module equivalent: azure_rm_apimanagementproductgroup
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/products/{{ product_name }}/groups/{{ group_name }}
 def list_apim_product_group(cmd, client,
                             resource_group,
                             service_name,
@@ -2288,20 +1963,9 @@ def update_apim_product_policy(cmd, client,
                                policy_id,
                                value,
                                _format=None):
-    body = {}
     body['value'] = value  # str
     body['format'] = _format  # str
     return client.product_policy.create_or_update(resource_group_name=resource_group, service_name=service_name, product_id=product_id, policy_id=policy_id, parameters=body)
-
-
-# module equivalent: azure_rm_apimanagementproductpolicy
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/products/{{ product_name }}/policies/{{ policy_name }}
-def delete_apim_product_policy(cmd, client,
-                               resource_group,
-                               service_name,
-                               product_id,
-                               policy_id):
-    return client.product_policy.delete(resource_group_name=resource_group, service_name=service_name, product_id=product_id, policy_id=policy_id)
 
 
 # module equivalent: azure_rm_apimanagementproductpolicy
@@ -2352,21 +2016,11 @@ def update_apim_property(cmd, client,
                          value,
                          tags=None,
                          secret=None):
-    body = {}
     body['tags'] = json.loads(tags) if isinstance(tags, str) else tags
     body['secret'] = secret  # boolean
     body['display_name'] = display_name  # str
     body['value'] = value  # str
     return client.property.create_or_update(resource_group_name=resource_group, service_name=service_name, prop_id=prop_id, parameters=body)
-
-
-# module equivalent: azure_rm_apimanagementproperty
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/properties/{{ property_name }}
-def delete_apim_property(cmd, client,
-                         resource_group,
-                         service_name,
-                         prop_id):
-    return client.property.delete(resource_group_name=resource_group, service_name=service_name, prop_id=prop_id)
 
 
 # module equivalent: azure_rm_apimanagementproperty
@@ -2425,7 +2079,6 @@ def update_apim_subscription(cmd, client,
                              secondary_key=None,
                              state=None,
                              allow_tracing=None):
-    body = {}
     body['owner_id'] = owner_id  # str
     body['scope'] = scope  # str
     body['display_name'] = display_name  # str
@@ -2434,15 +2087,6 @@ def update_apim_subscription(cmd, client,
     body['state'] = state  # str
     body['allow_tracing'] = allow_tracing  # boolean
     return client.subscription.create_or_update(resource_group_name=resource_group, service_name=service_name, sid=sid, parameters=body, notify=notify)
-
-
-# module equivalent: azure_rm_apimanagementsubscription
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/subscriptions/{{ subscription_id }}
-def delete_apim_subscription(cmd, client,
-                             resource_group,
-                             service_name,
-                             sid):
-    return client.subscription.delete(resource_group_name=resource_group, service_name=service_name, sid=sid)
 
 
 # module equivalent: azure_rm_apimanagementsubscription
@@ -2502,7 +2146,6 @@ def update_apim_user(cmd, client,
                      identities=None,
                      password=None,
                      confirmation=None):
-    body = {}
     body['state'] = state  # str
     body['note'] = note  # str
     body['identities'] = json.loads(identities) if isinstance(identities, str) else identities
@@ -2512,15 +2155,6 @@ def update_apim_user(cmd, client,
     body['password'] = password  # str
     body['confirmation'] = confirmation  # str
     return client.user.create_or_update(resource_group_name=resource_group, service_name=service_name, user_id=user_id, parameters=body)
-
-
-# module equivalent: azure_rm_apimanagementuser
-# URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.ApiManagement/service/{{ service_name }}/users/{{ user_name }}
-def delete_apim_user(cmd, client,
-                     resource_group,
-                     service_name,
-                     user_id):
-    return client.user.delete(resource_group_name=resource_group, service_name=service_name, user_id=user_id)
 
 
 # module equivalent: azure_rm_apimanagementuser
