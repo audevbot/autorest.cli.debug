@@ -1,0 +1,36 @@
+# ref##id##VMMemoryLeak
+- import_playbook: resourcegroups_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    smart_detector_alert_rule_name: mySmartDetectorAlertRule
+  tasks:
+
+    - name: Create or update a Smart Detector alert rule
+      azure_rm_alertsmanagementsmartdetectoralertrule:
+        resource_group: '{{resource_group}}'
+        name: '{{smart_detector_alert_rule_name}}'
+        description: Sample smart detector alert rule description
+        state: Enabled
+        severity: Sev3
+        frequency: PT5M
+        detector:
+          id: VMMemoryLeak
+        scope:
+          - >-
+            /subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourceGroups/MyVms/providers/Microsoft.Compute/virtualMachines/vm1
+        action_groups:
+          custom_email_subject: My custom email subject
+          custom_webhook_payload: '{"AlertRuleName":"#alertrulename"}'
+          group_ids:
+            - >-
+              /subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourcegroups/actionGroups/providers/microsoft.insights/actiongroups/MyActionGroup
+        throttling:
+          duration: PT20M
+    
