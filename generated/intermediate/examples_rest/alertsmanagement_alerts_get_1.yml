@@ -1,0 +1,17 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    alert_name: myAlert
+  tasks:
+    - name: GetById
+      azure_rm_resource_facts:
+        api_version: 2019-05-05-preview
+        provider: AlertsManagement
+        resource_type: alerts
+        resource_name: '{{ alert_name }}'
+      register: output
+    - debug:
+        var: output

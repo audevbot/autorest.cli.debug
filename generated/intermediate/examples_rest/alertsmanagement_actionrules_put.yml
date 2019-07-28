@@ -1,0 +1,56 @@
+- import_playbook: resourcegroups_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    action_rule_name: myActionRule
+  tasks:
+    - name: PutActionRule
+      azure_rm_resource:
+        idempotency: true
+        api_version: 2019-05-05-preview
+        resource_group: '{{ resource_group }}'
+        provider: AlertsManagement
+        resource_type: actionRules
+        resource_name: '{{ action_rule_name }}'
+        body:
+          location: Global
+          tags: {}
+          properties:
+            scope:
+              scopeType: ResourceGroup
+              values:
+                - >-
+                  /subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg
+            conditions:
+              severity:
+                operator: Equals
+                values:
+                  - Sev0
+                  - Sev2
+              monitorService:
+                operator: Equals
+                values:
+                  - Platform
+                  - Application Insights
+              monitorCondition:
+                operator: Equals
+                values:
+                  - Fired
+              targetResourceType:
+                operator: NotEquals
+                values:
+                  - Microsoft.Compute/VirtualMachines
+            type: Suppression
+            suppressionConfig:
+              recurrenceType: Daily
+              schedule:
+                startDate: 12/09/2018
+                endDate: 12/18/2018
+                startTime: '06:00:00'
+                endTime: '14:00:00'
+            description: Action rule on resource group for daily suppression
+            status: Enabled

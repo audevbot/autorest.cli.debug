@@ -1,0 +1,15 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+  tasks:
+
+    - name: List Smart Detector alert rules
+      azure_rm_alertsmanagementsmartdetectoralertrule_info:
+        resource_group: MyAlertRules
+    
+      register: output
+    - debug:
+        var: output

@@ -1,0 +1,15 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+  tasks:
+
+    - name: Summary
+      azure_rm_alertsmanagementalert_info:
+        groupby: 'severity,alertState'
+    
+      register: output
+    - debug:
+        var: output

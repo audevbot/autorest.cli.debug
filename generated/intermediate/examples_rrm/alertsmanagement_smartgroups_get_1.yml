@@ -1,0 +1,16 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    smart_group_name: mySmartGroup
+  tasks:
+
+    - name: Get
+      azure_rm_alertsmanagementsmartgroup_info:
+        smart_group_id: '{{smart_group_name}}'
+    
+      register: output
+    - debug:
+        var: output

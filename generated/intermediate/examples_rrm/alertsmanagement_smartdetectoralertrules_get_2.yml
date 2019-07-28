@@ -1,0 +1,18 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    smart_detector_alert_rule_name: mySmartDetectorAlertRule
+  tasks:
+
+    - name: Get a Smart Detector alert rule
+      azure_rm_alertsmanagementsmartdetectoralertrule_info:
+        resource_group: '{{resource_group}}'
+        name: '{{smart_detector_alert_rule_name}}'
+    
+      register: output
+    - debug:
+        var: output
