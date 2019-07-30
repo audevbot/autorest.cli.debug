@@ -1,0 +1,18 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    application_gateway_web_application_firewall_policy_name: myApplicationGatewayWebApplicationFirewallPolicy
+  tasks:
+
+    - name: Gets a WAF policy within a resource group
+      azure_rm_webapplicationfirewallpolicy_info:
+        resource_group: '{{resource_group}}'
+        name: '{{application_gateway_web_application_firewall_policy_name}}'
+    
+      register: output
+    - debug:
+        var: output
