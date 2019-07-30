@@ -13689,10 +13689,8 @@ operations:
                 alertRuleName: MyAlertRule
                 api-version: '2019-06-01'
               responses:
-                '200':
-                  body: null
-                '204':
-                  body: null
+                '200': {}
+                '204': {}
         deprecated: false
         hidden: false
     name:

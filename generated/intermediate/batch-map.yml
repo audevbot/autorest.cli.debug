@@ -3191,29 +3191,32 @@ Modules:
             applicationName: app1
           responses:
             '200':
-              value:
-                - type: Microsoft.Batch/batchAccounts/applications/versions
-                  id: >-
-                    /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                    resource_group }}/providers/Microsoft.Batch/batchAccounts/{{
-                    batch_account_name }}/applications/{{ application_name
-                    }}/versions/{{ version_name }}
-                  name: '1.0'
-                  etag: W/"0x8D64FF0B9F47F67"
-                  properties:
-                    state: Pending
-                - type: Microsoft.Batch/batchAccounts/applications/versions
-                  id: >-
-                    /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                    resource_group }}/providers/Microsoft.Batch/batchAccounts/{{
-                    batch_account_name }}/applications/{{ application_name
-                    }}/versions/{{ version_name }}
-                  name: '2.0'
-                  etag: W/"0x8D64FF0B9F47F67"
-                  properties:
-                    state: Active
-                    format: zip
-                    lastActivationTime: '2017-06-27T18:48:09.9330991Z'
+              body:
+                value:
+                  - type: Microsoft.Batch/batchAccounts/applications/versions
+                    id: >-
+                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                      resource_group
+                      }}/providers/Microsoft.Batch/batchAccounts/{{
+                      batch_account_name }}/applications/{{ application_name
+                      }}/versions/{{ version_name }}
+                    name: '1.0'
+                    etag: W/"0x8D64FF0B9F47F67"
+                    properties:
+                      state: Pending
+                  - type: Microsoft.Batch/batchAccounts/applications/versions
+                    id: >-
+                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                      resource_group
+                      }}/providers/Microsoft.Batch/batchAccounts/{{
+                      batch_account_name }}/applications/{{ application_name
+                      }}/versions/{{ version_name }}
+                    name: '2.0'
+                    etag: W/"0x8D64FF0B9F47F67"
+                    properties:
+                      state: Active
+                      format: zip
+                      lastActivationTime: '2017-06-27T18:48:09.9330991Z'
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.Batch/batchAccounts/{{ batch_account_name
@@ -4415,28 +4418,31 @@ Modules:
             subscriptionId: subid
           responses:
             '200':
-              value:
-                - type: Microsoft.Batch/batchAccounts/applications
-                  id: >-
-                    /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                    resource_group }}/providers/Microsoft.Batch/batchAccounts/{{
-                    batch_account_name }}/applications/{{ application_name }}
-                  name: app1
-                  etag: W/"0x8D64F91A9089879"
-                  properties:
-                    allowUpdates: false
-                    defaultVersion: '1'
-                - type: Microsoft.Batch/batchAccounts/applications
-                  id: >-
-                    /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                    resource_group }}/providers/Microsoft.Batch/batchAccounts/{{
-                    batch_account_name }}/applications/{{ application_name }}
-                  name: app1
-                  etag: W/"0x8D64F91A9089879"
-                  properties:
-                    allowUpdates: false
-                    defaultVersion: '2.0'
-                    displayName: myAppName
+              body:
+                value:
+                  - type: Microsoft.Batch/batchAccounts/applications
+                    id: >-
+                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                      resource_group
+                      }}/providers/Microsoft.Batch/batchAccounts/{{
+                      batch_account_name }}/applications/{{ application_name }}
+                    name: app1
+                    etag: W/"0x8D64F91A9089879"
+                    properties:
+                      allowUpdates: false
+                      defaultVersion: '1'
+                  - type: Microsoft.Batch/batchAccounts/applications
+                    id: >-
+                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                      resource_group
+                      }}/providers/Microsoft.Batch/batchAccounts/{{
+                      batch_account_name }}/applications/{{ application_name }}
+                    name: app1
+                    etag: W/"0x8D64F91A9089879"
+                    properties:
+                      allowUpdates: false
+                      defaultVersion: '2.0'
+                      displayName: myAppName
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.Batch/batchAccounts/{{ batch_account_name
