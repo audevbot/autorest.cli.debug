@@ -6751,10 +6751,8 @@ Modules:
             alertRuleName: MyAlertRule
             api-version: '2019-06-01'
           responses:
-            '200':
-              body: null
-            '204':
-              body: null
+            '200': {}
+            '204': {}
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/microsoft.alertsManagement/smartDetectorAlertRules/{{

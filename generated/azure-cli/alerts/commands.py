@@ -18,7 +18,7 @@ def load_command_table(self, _):
         client_factory=cf_smart_detector_alert_rules)
     with self.command_group('alerts', alerts_smart_detector_alert_rules, client_factory=cf_smart_detector_alert_rules) as g:
         g.custom_command('create', 'create_alerts')
-        g.custom_command('update', 'update_alerts')
+        g.generic_update_command('update', custom_func_name='update_alerts')
         g.command('delete', 'delete')
         g.custom_command('list', 'list_alerts')
-        g.command('show', 'get')
+        g.show_command('show', 'get')
