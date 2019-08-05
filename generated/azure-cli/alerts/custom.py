@@ -42,7 +42,7 @@ def create_alerts(cmd, client,
 
 # module equivalent: azure_rm_alertsmanagementsmartdetectoralertrule
 # URL: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/microsoft.alertsManagement/smartDetectorAlertRules/{{ smart_detector_alert_rule_name }}
-def update_alerts(cmd, client,
+def update_alerts(cmd, client, body,
                   resource_group,
                   name,
                   state,
@@ -56,16 +56,16 @@ def update_alerts(cmd, client,
                   description=None,
                   throttling=None):
     body = client.get(resource_group_name=resource_group, alert_rule_name=name).as_dict()
-    body['location'] = location  # str
-    body['tags'] = tags  # unknown-primary[object]
-    body['description'] = description  # str
-    body['state'] = state  # str
-    body['severity'] = severity  # str
-    body['frequency'] = frequency  # unknown-primary[timeSpan]
-    body['detector'] = json.loads(detector) if isinstance(detector, str) else detector
-    body['scope'] = json.loads(scope) if isinstance(scope, str) else scope
-    body['action_groups'] = json.loads(action_groups) if isinstance(action_groups, str) else action_groups
-    body['throttling'] = json.loads(throttling) if isinstance(throttling, str) else throttling
+    body.location = location  # str
+    body.tags = tags  # unknown-primary[object]
+    body.description = description  # str
+    body.state = state  # str
+    body.severity = severity  # str
+    body.frequency = frequency  # unknown-primary[timeSpan]
+    body.detector = json.loads(detector) if isinstance(detector, str) else detector
+    body.scope = json.loads(scope) if isinstance(scope, str) else scope
+    body.action_groups = json.loads(action_groups) if isinstance(action_groups, str) else action_groups
+    body.throttling = json.loads(throttling) if isinstance(throttling, str) else throttling
     return client.create_or_update(resource_group_name=resource_group, alert_rule_name=name, parameters=body)
 
 

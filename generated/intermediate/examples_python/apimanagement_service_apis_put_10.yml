@@ -1,4 +1,4 @@
-# getOperations
+# ApiManagementCreateApiUsingImportOverrideServiceUrl
 #
 # This script expects that the following environment vars are set:
 #
@@ -19,10 +19,20 @@ from msrest.pipeline import ClientRawResponse
 import uuid
 
 SUBSCRIPTION_ID = os.environ['AZURE_SUBSCRIPTION_ID']
+RESOURCE_GROUP = "myresourcegroup"
+SERVICE_NAME = "myservice"
+API_NAME = "myapi"
 
-BODY = {}
+BODY = {
+  "properties": {
+    "format": "swagger-link",
+    "value": "http://apimpimportviaurl.azurewebsites.net/api/apidocs/",
+    "path": "petstoreapi123",
+    "serviceUrl": "http://petstore.swagger.wordnik.com/api"
+  }
+}
 
-API_VERSION = '2018-03-01-preview'
+API_VERSION = '2019-01-01'
 
 def get_credentials():
     credentials = ServicePrincipalCredentials(
@@ -43,9 +53,10 @@ def run_example():
     query_parameters['api-version'] = API_VERSION
 
     header_parameters = {}
+    header_parameters['Content-Type'] = 'application/json; charset=utf-8'
 
     operation_config = {}
-    request = service_client.get("/providers/Microsoft.Subscription/operations", query_parameters)
+    request = service_client.put("/subscriptions/" + SUBSCRIPTION + "/resourceGroups/" + RESOURCE_GR + "/providers/Microsoft.ApiManagement/service/" + SERVICE_N + "/apis/" + API_N, query_parameters)
     response = service_client.send(request, header_parameters, BODY, **operation_config)
     print(response.text)
 

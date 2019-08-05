@@ -15,7 +15,9 @@ modelTypes:
         documentation:
           $id: '5'
           fixed: false
-          raw: The link to the new subscription.
+          raw: >-
+            The link to the new subscription. Use this link to check the status
+            of subscription creation operation.
         isRequired: false
         isConstant: false
         name:
@@ -73,7 +75,9 @@ modelTypes:
             raw: String
           deprecated: false
     serializedName: AdPrincipal
-    documentation: Active Directory Principal for subscription creation delegated permission
+    documentation: >-
+      Active Directory Principal who’ll get owner access on the new
+      subscription.
     containsConstantProperties: false
     name:
       $id: '17'
@@ -454,13 +458,16 @@ modelTypes:
       fixed: false
       raw: SubscriptionOperationListResult
     deprecated: false
+errorTypes:
+  - $ref: '50'
+headerTypes:
   - $id: '92'
     $type: CompositeType
     properties:
       - $id: '93'
         isReadOnly: false
         realPath:
-          - provider
+          - Location
         collectionFormat: none
         defaultValue:
           $id: '94'
@@ -469,14 +476,14 @@ modelTypes:
         documentation:
           $id: '95'
           fixed: false
-          raw: 'Service provider: Microsoft.Subscription'
+          raw: GET this URL to retrieve the status of the asynchronous operation.
         isRequired: false
         isConstant: false
         name:
           $id: '96'
           fixed: false
-          raw: provider
-        serializedName: provider
+          raw: Location
+        serializedName: Location
         modelType:
           $id: '97'
           $type: PrimaryType
@@ -489,7 +496,7 @@ modelTypes:
       - $id: '99'
         isReadOnly: false
         realPath:
-          - resource
+          - Retry-After
         collectionFormat: none
         defaultValue:
           $id: '100'
@@ -499,15 +506,15 @@ modelTypes:
           $id: '101'
           fixed: false
           raw: >-
-            Resource on which the operation is performed: Profile, endpoint,
-            etc.
+            The amount of delay to use while the status of the operation is
+            checked. The value is expressed in seconds.
         isRequired: false
         isConstant: false
         name:
           $id: '102'
           fixed: false
-          raw: resource
-        serializedName: resource
+          raw: Retry-After
+        serializedName: Retry-After
         modelType:
           $id: '103'
           $type: PrimaryType
@@ -517,247 +524,11 @@ modelTypes:
             fixed: false
             raw: String
           deprecated: false
-      - $id: '105'
-        isReadOnly: false
-        realPath:
-          - operation
-        collectionFormat: none
-        defaultValue:
-          $id: '106'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '107'
-          fixed: false
-          raw: 'Operation type: Read, write, delete, etc.'
-        isRequired: false
-        isConstant: false
-        name:
-          $id: '108'
-          fixed: false
-          raw: operation
-        serializedName: operation
-        modelType:
-          $id: '109'
-          $type: PrimaryType
-          knownPrimaryType: string
-          name:
-            $id: '110'
-            fixed: false
-            raw: String
-          deprecated: false
-    serializedName: Operation_display
-    documentation: The object that represents the operation.
-    containsConstantProperties: false
-    name:
-      $id: '111'
-      fixed: false
-      raw: Operation_display
-    deprecated: false
-  - $id: '112'
-    $type: CompositeType
-    properties:
-      - $id: '113'
-        isReadOnly: false
-        realPath:
-          - name
-        collectionFormat: none
-        defaultValue:
-          $id: '114'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '115'
-          fixed: false
-          raw: 'Operation name: {provider}/{resource}/{operation}'
-        isRequired: false
-        isConstant: false
-        name:
-          $id: '116'
-          fixed: false
-          raw: name
-        serializedName: name
-        modelType:
-          $id: '117'
-          $type: PrimaryType
-          knownPrimaryType: string
-          name:
-            $id: '118'
-            fixed: false
-            raw: String
-          deprecated: false
-      - $id: '119'
-        isReadOnly: false
-        realPath:
-          - display
-        collectionFormat: none
-        defaultValue:
-          $id: '120'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '121'
-          fixed: false
-          raw: The object that represents the operation.
-        isRequired: false
-        isConstant: false
-        name:
-          $id: '122'
-          fixed: false
-          raw: display
-        serializedName: display
-        modelType:
-          $ref: '92'
-    serializedName: Operation
-    documentation: REST API operation
-    containsConstantProperties: false
-    name:
-      $id: '123'
-      fixed: false
-      raw: Operation
-    deprecated: false
-  - $id: '124'
-    $type: CompositeType
-    properties:
-      - $id: '125'
-        isReadOnly: false
-        realPath:
-          - value
-        collectionFormat: none
-        defaultValue:
-          $id: '126'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '127'
-          fixed: false
-          raw: List of operations.
-        isRequired: false
-        isConstant: false
-        name:
-          $id: '128'
-          fixed: false
-          raw: value
-        serializedName: value
-        modelType:
-          $id: '129'
-          $type: SequenceType
-          elementType:
-            $ref: '112'
-          name:
-            $id: '130'
-            fixed: false
-          deprecated: false
-      - $id: '131'
-        isReadOnly: false
-        realPath:
-          - nextLink
-        collectionFormat: none
-        defaultValue:
-          $id: '132'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '133'
-          fixed: false
-          raw: URL to get the next set of operation list results if there are any.
-        isRequired: false
-        isConstant: false
-        name:
-          $id: '134'
-          fixed: false
-          raw: nextLink
-        serializedName: nextLink
-        modelType:
-          $id: '135'
-          $type: PrimaryType
-          knownPrimaryType: string
-          name:
-            $id: '136'
-            fixed: false
-            raw: String
-          deprecated: false
-    serializedName: OperationListResult
-    documentation: >-
-      Result of the request to list operations. It contains a list of operations
-      and a URL link to get the next set of results.
-    containsConstantProperties: false
-    name:
-      $id: '137'
-      fixed: false
-      raw: OperationListResult
-    deprecated: false
-errorTypes:
-  - $ref: '50'
-headerTypes:
-  - $id: '138'
-    $type: CompositeType
-    properties:
-      - $id: '139'
-        isReadOnly: false
-        realPath:
-          - Location
-        collectionFormat: none
-        defaultValue:
-          $id: '140'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '141'
-          fixed: false
-          raw: GET this URL to retrieve the status of the asynchronous operation.
-        isRequired: false
-        isConstant: false
-        name:
-          $id: '142'
-          fixed: false
-          raw: Location
-        serializedName: Location
-        modelType:
-          $id: '143'
-          $type: PrimaryType
-          knownPrimaryType: string
-          name:
-            $id: '144'
-            fixed: false
-            raw: String
-          deprecated: false
-      - $id: '145'
-        isReadOnly: false
-        realPath:
-          - Retry-After
-        collectionFormat: none
-        defaultValue:
-          $id: '146'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '147'
-          fixed: false
-          raw: >-
-            The amount of delay to use while the status of the operation is
-            checked. The value is expressed in seconds.
-        isRequired: false
-        isConstant: false
-        name:
-          $id: '148'
-          fixed: false
-          raw: Retry-After
-        serializedName: Retry-After
-        modelType:
-          $id: '149'
-          $type: PrimaryType
-          knownPrimaryType: string
-          name:
-            $id: '150'
-            fixed: false
-            raw: String
-          deprecated: false
     serializedName: SubscriptionFactory-CreateSubscriptionInEnrollmentAccount-Headers
     documentation: Defines headers for CreateSubscriptionInEnrollmentAccount operation.
     containsConstantProperties: false
     name:
-      $id: '151'
+      $id: '105'
       fixed: false
       raw: SubscriptionFactory-CreateSubscriptionInEnrollmentAccount-Headers
     deprecated: false
@@ -776,17 +547,17 @@ extensions:
     - azure_auth:
         - user_impersonation
 properties:
-  - $id: '152'
+  - $id: '106'
     isReadOnly: false
     realPath:
       - api-version
     collectionFormat: none
     defaultValue:
-      $id: '153'
+      $id: '107'
       fixed: false
     deprecated: false
     documentation:
-      $id: '154'
+      $id: '108'
       fixed: false
       raw: >-
         Version of the API to be used with the client request. Current version
@@ -794,35 +565,35 @@ properties:
     isRequired: true
     isConstant: false
     name:
-      $id: '155'
+      $id: '109'
       fixed: false
       raw: api-version
     serializedName: api-version
     modelType:
-      $id: '156'
+      $id: '110'
       $type: PrimaryType
       knownPrimaryType: string
       name:
-        $id: '157'
+        $id: '111'
         fixed: false
         raw: String
       deprecated: false
 operations:
-  - $id: '158'
+  - $id: '112'
     methods:
-      - $id: '159'
+      - $id: '113'
         parameters:
-          - $id: '160'
+          - $id: '114'
             clientProperty:
-              $ref: '152'
+              $ref: '106'
             location: query
             collectionFormat: none
             defaultValue:
-              $id: '161'
+              $id: '115'
               fixed: false
             deprecated: false
             documentation:
-              $id: '162'
+              $id: '116'
               fixed: false
               raw: >-
                 Version of the API to be used with the client request. Current
@@ -830,116 +601,25 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '163'
+              $id: '117'
               fixed: false
               raw: api-version
             serializedName: api-version
             modelType:
-              $id: '164'
+              $id: '118'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '165'
+                $id: '119'
                 fixed: false
                 raw: String
               deprecated: false
         name:
-          $id: '166'
+          $id: '120'
           fixed: false
           raw: List
         group:
-          $id: '167'
-          fixed: false
-          raw: Operations
-        serializedName: Operations_List
-        url: /providers/Microsoft.Subscription/operations
-        isAbsoluteUrl: false
-        httpMethod: get
-        responses:
-          OK:
-            $id: '168'
-            body:
-              $ref: '124'
-            isNullable: true
-        defaultResponse:
-          $id: '169'
-          body:
-            $ref: '50'
-          isNullable: true
-        returnType:
-          $id: '170'
-          body:
-            $ref: '124'
-          isNullable: true
-        description: Lists all of the available Microsoft.Subscription API operations.
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        extensions:
-          x-ms-examples:
-            getOperations:
-              parameters:
-                api-version: 2018-03-01-preview
-              responses:
-                '200':
-                  body:
-                    value:
-                      - name: Microsoft.Subscription/createOperation/action
-                        display:
-                          provider: Microsoft Subscription
-                          resource: Resources
-                          operation: Create a subscription
-        deprecated: false
-        hidden: false
-    name:
-      $id: '171'
-      fixed: false
-      raw: Operations
-    typeName:
-      $id: '172'
-      fixed: false
-    nameForProperty: Operations
-  - $id: '173'
-    methods:
-      - $id: '174'
-        parameters:
-          - $id: '175'
-            clientProperty:
-              $ref: '152'
-            location: query
-            collectionFormat: none
-            defaultValue:
-              $id: '176'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '177'
-              fixed: false
-              raw: >-
-                Version of the API to be used with the client request. Current
-                version is 2015-06-01
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '178'
-              fixed: false
-              raw: api-version
-            serializedName: api-version
-            modelType:
-              $id: '179'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '180'
-                fixed: false
-                raw: String
-              deprecated: false
-        name:
-          $id: '181'
-          fixed: false
-          raw: List
-        group:
-          $id: '182'
+          $id: '121'
           fixed: false
           raw: SubscriptionOperations
         serializedName: SubscriptionOperations_List
@@ -948,17 +628,17 @@ operations:
         httpMethod: get
         responses:
           OK:
-            $id: '183'
+            $id: '122'
             body:
               $ref: '84'
             isNullable: true
         defaultResponse:
-          $id: '184'
+          $id: '123'
           body:
             $ref: '50'
           isNullable: true
         returnType:
-          $id: '185'
+          $id: '124'
           body:
             $ref: '84'
           isNullable: true
@@ -992,26 +672,26 @@ operations:
         deprecated: false
         hidden: false
     name:
-      $id: '186'
+      $id: '125'
       fixed: false
       raw: SubscriptionOperations
     typeName:
-      $id: '187'
+      $id: '126'
       fixed: false
     nameForProperty: SubscriptionOperations
-  - $id: '188'
+  - $id: '127'
     methods:
-      - $id: '189'
+      - $id: '128'
         parameters:
-          - $id: '190'
+          - $id: '129'
             location: path
             collectionFormat: none
             defaultValue:
-              $id: '191'
+              $id: '130'
               fixed: false
             deprecated: false
             documentation:
-              $id: '192'
+              $id: '131'
               fixed: false
               raw: >-
                 The name of the enrollment account to which the subscription
@@ -1019,30 +699,30 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '193'
+              $id: '132'
               fixed: false
               raw: enrollmentAccountName
             serializedName: enrollmentAccountName
             modelType:
-              $id: '194'
+              $id: '133'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '195'
+                $id: '134'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '196'
+          - $id: '135'
             clientProperty:
-              $ref: '152'
+              $ref: '106'
             location: query
             collectionFormat: none
             defaultValue:
-              $id: '197'
+              $id: '136'
               fixed: false
             deprecated: false
             documentation:
-              $id: '198'
+              $id: '137'
               fixed: false
               raw: >-
                 Version of the API to be used with the client request. Current
@@ -1050,28 +730,28 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '199'
+              $id: '138'
               fixed: false
               raw: api-version
             serializedName: api-version
             modelType:
-              $id: '200'
+              $id: '139'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '201'
+                $id: '140'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '202'
+          - $id: '141'
             location: body
             collectionFormat: none
             defaultValue:
-              $id: '203'
+              $id: '142'
               fixed: false
             deprecated: false
             documentation:
-              $id: '204'
+              $id: '143'
               fixed: false
               raw: The subscription creation parameters.
             extensions:
@@ -1079,18 +759,18 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '205'
+              $id: '144'
               fixed: false
               raw: body
             serializedName: body
             modelType:
               $ref: '18'
         name:
-          $id: '206'
+          $id: '145'
           fixed: false
           raw: CreateSubscriptionInEnrollmentAccount
         group:
-          $id: '207'
+          $id: '146'
           fixed: false
           raw: SubscriptionFactory
         serializedName: SubscriptionFactory_CreateSubscriptionInEnrollmentAccount
@@ -1100,30 +780,30 @@ operations:
         httpMethod: post
         responses:
           OK:
-            $id: '208'
+            $id: '147'
             body:
               $ref: '2'
             headers:
-              $ref: '138'
+              $ref: '92'
             isNullable: true
           Accepted:
-            $id: '209'
+            $id: '148'
             headers:
-              $ref: '138'
+              $ref: '92'
             isNullable: true
         defaultResponse:
-          $id: '210'
+          $id: '149'
           body:
             $ref: '50'
           headers:
-            $ref: '138'
+            $ref: '92'
           isNullable: true
         returnType:
-          $id: '211'
+          $id: '150'
           body:
             $ref: '2'
           headers:
-            $ref: '138'
+            $ref: '92'
           isNullable: true
         description: Creates an Azure subscription
         requestContentType: application/json; charset=utf-8
@@ -1159,10 +839,10 @@ operations:
         deprecated: false
         hidden: false
     name:
-      $id: '212'
+      $id: '151'
       fixed: false
       raw: SubscriptionFactory
     typeName:
-      $id: '213'
+      $id: '152'
       fixed: false
     nameForProperty: SubscriptionFactory

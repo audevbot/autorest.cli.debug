@@ -32948,6 +32948,74 @@ operations:
                   headers:
                     location: >-
                       https://management.azure.com/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/tempgroup?api-version=2019-01-01&asyncId=5c730e343244df1b9cb56e85&asyncCode=201
+            ApiManagementCreateApiUsingImportOverrideServiceUrl:
+              parameters:
+                serviceName: apimService1
+                resourceGroupName: rg1
+                api-version: '2019-01-01'
+                subscriptionId: subid
+                apiId: apidocs
+                parameters:
+                  properties:
+                    format: swagger-link
+                    value: 'http://apimpimportviaurl.azurewebsites.net/api/apidocs/'
+                    path: petstoreapi123
+                    serviceUrl: 'http://petstore.swagger.wordnik.com/api'
+              responses:
+                '200':
+                  body:
+                    id: >-
+                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                      resource_group
+                      }}/providers/Microsoft.ApiManagement/service/{{
+                      service_name }}/apis/{{ api_name }}
+                    type: Microsoft.ApiManagement/service/apis
+                    name: apidocs
+                    properties:
+                      displayName: Swagger Sample App
+                      apiRevision: '1'
+                      description: >-
+                        This is a sample server Petstore server.  You can find
+                        out more about Swagger 
+                            at <a href="http://swagger.wordnik.com">http://swagger.wordnik.com</a> or on irc.freenode.net, #swagger.  For this sample,
+                            you can use the api key "special-key" to test the authorization filters
+                      serviceUrl: 'http://petstore.swagger.wordnik.com/api'
+                      path: petstoreapi123
+                      protocols:
+                        - https
+                      subscriptionKeyParameterNames:
+                        header: Ocp-Apim-Subscription-Key
+                        query: subscription-key
+                      isCurrent: true
+                '201':
+                  body:
+                    id: >-
+                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                      resource_group
+                      }}/providers/Microsoft.ApiManagement/service/{{
+                      service_name }}/apis/{{ api_name }}
+                    type: Microsoft.ApiManagement/service/apis
+                    name: apidocs
+                    properties:
+                      displayName: Swagger Sample App
+                      apiRevision: '1'
+                      description: >-
+                        This is a sample server Petstore server.  You can find
+                        out more about Swagger 
+                            at <a href="http://swagger.wordnik.com">http://swagger.wordnik.com</a> or on irc.freenode.net, #swagger.  For this sample,
+                            you can use the api key "special-key" to test the authorization filters
+                      serviceUrl: 'http://petstore.swagger.wordnik.com/api'
+                      path: petstoreapi123
+                      protocols:
+                        - https
+                      subscriptionKeyParameterNames:
+                        header: Ocp-Apim-Subscription-Key
+                        query: subscription-key
+                      isCurrent: true
+                '202':
+                  headers:
+                    location: >-
+                      https://management.azure.com/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/apidocs?api-version=2019-01-01&asyncId=5c730e343244df1b9cb56e85&asyncCode=201
           x-ms-requestBody-index: '3'
           x-ms-long-running-operation: true
         deprecated: false
@@ -37328,7 +37396,6 @@ operations:
                 apiId: PetStoreTemplate2
                 operationId: newoperations
                 parameters:
-                  name: newoperation
                   properties:
                     displayName: createUser2
                     method: POST
@@ -67951,42 +68018,43 @@ operations:
                       Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10: 'false'
               responses:
                 '200':
-                  id: >-
-                    /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                    resource_group
-                    }}/providers/Microsoft.ApiManagement/service/{{ service_name
-                    }}
-                  name: apimService1
-                  type: Microsoft.ApiManagement/service
-                  tags:
-                    Owner: sasolank
-                    UID: 4f5025fe-0669-4e2e-8320-5199466e5eb3
-                    Reserved: ''
-                    TestExpiration: 'Thu, 29 Jun 2017 18:50:40 GMT'
-                    Pool: Manual
-                    TestSuiteExpiration: 'Thu, 29 Jun 2017 18:51:46 GMT'
-                  location: West US
-                  etag: AAAAAAAYRPs=
-                  properties:
-                    publisherEmail: admin@live.com
-                    publisherName: Contoso
-                    notificationSenderEmail: apimgmt-noreply@mail.windowsazure.com
-                    provisioningState: Succeeded
-                    targetProvisioningState: ''
-                    createdAtUtc: '2017-06-29T17:50:42.3191122Z'
-                    gatewayUrl: 'https://apimService1.azure-api.net'
-                    portalUrl: 'https://apimService1.portal.azure-api.net'
-                    managementApiUrl: 'https://apimService1.management.azure-api.net'
-                    scmUrl: 'https://apimService1.scm.azure-api.net'
-                    hostnameConfigurations: []
-                    publicIPAddresses:
-                      - 40.86.176.232
-                    customProperties:
-                      Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10: 'False'
-                    virtualNetworkType: None
-                  sku:
-                    name: Standard
-                    capacity: '1'
+                  body:
+                    id: >-
+                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                      resource_group
+                      }}/providers/Microsoft.ApiManagement/service/{{
+                      service_name }}
+                    name: apimService1
+                    type: Microsoft.ApiManagement/service
+                    tags:
+                      Owner: sasolank
+                      UID: 4f5025fe-0669-4e2e-8320-5199466e5eb3
+                      Reserved: ''
+                      TestExpiration: 'Thu, 29 Jun 2017 18:50:40 GMT'
+                      Pool: Manual
+                      TestSuiteExpiration: 'Thu, 29 Jun 2017 18:51:46 GMT'
+                    location: West US
+                    etag: AAAAAAAYRPs=
+                    properties:
+                      publisherEmail: admin@live.com
+                      publisherName: Contoso
+                      notificationSenderEmail: apimgmt-noreply@mail.windowsazure.com
+                      provisioningState: Succeeded
+                      targetProvisioningState: ''
+                      createdAtUtc: '2017-06-29T17:50:42.3191122Z'
+                      gatewayUrl: 'https://apimService1.azure-api.net'
+                      portalUrl: 'https://apimService1.portal.azure-api.net'
+                      managementApiUrl: 'https://apimService1.management.azure-api.net'
+                      scmUrl: 'https://apimService1.scm.azure-api.net'
+                      hostnameConfigurations: []
+                      publicIPAddresses:
+                        - 40.86.176.232
+                      customProperties:
+                        Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10: 'False'
+                      virtualNetworkType: None
+                    sku:
+                      name: Standard
+                      capacity: '1'
                 '202':
                   id: >-
                     /subscriptions/{{ subscription_id }}/resourceGroups/{{
@@ -68031,42 +68099,43 @@ operations:
                     publisherName: Contoso Vnext
               responses:
                 '200':
-                  id: >-
-                    /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                    resource_group
-                    }}/providers/Microsoft.ApiManagement/service/{{ service_name
-                    }}
-                  name: apimService1
-                  type: Microsoft.ApiManagement/service
-                  tags:
-                    Owner: sasolank
-                    UID: 4f5025fe-0669-4e2e-8320-5199466e5eb3
-                    Reserved: ''
-                    TestExpiration: 'Thu, 29 Jun 2017 18:50:40 GMT'
-                    Pool: Manual
-                    TestSuiteExpiration: 'Thu, 29 Jun 2017 18:51:46 GMT'
-                  location: West US
-                  etag: AAAAAAAYRPs=
-                  properties:
-                    publisherEmail: foobar@live.com
-                    publisherName: Contoso Vnext
-                    notificationSenderEmail: apimgmt-noreply@mail.windowsazure.com
-                    provisioningState: Succeeded
-                    targetProvisioningState: ''
-                    createdAtUtc: '2017-06-29T17:50:42.3191122Z'
-                    gatewayUrl: 'https://apimService1.azure-api.net'
-                    portalUrl: 'https://apimService1.portal.azure-api.net'
-                    managementApiUrl: 'https://apimService1.management.azure-api.net'
-                    scmUrl: 'https://apimService1.scm.azure-api.net'
-                    hostnameConfigurations: []
-                    publicIPAddresses:
-                      - 40.86.176.232
-                    customProperties:
-                      Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10: 'False'
-                    virtualNetworkType: None
-                  sku:
-                    name: Standard
-                    capacity: '1'
+                  body:
+                    id: >-
+                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                      resource_group
+                      }}/providers/Microsoft.ApiManagement/service/{{
+                      service_name }}
+                    name: apimService1
+                    type: Microsoft.ApiManagement/service
+                    tags:
+                      Owner: sasolank
+                      UID: 4f5025fe-0669-4e2e-8320-5199466e5eb3
+                      Reserved: ''
+                      TestExpiration: 'Thu, 29 Jun 2017 18:50:40 GMT'
+                      Pool: Manual
+                      TestSuiteExpiration: 'Thu, 29 Jun 2017 18:51:46 GMT'
+                    location: West US
+                    etag: AAAAAAAYRPs=
+                    properties:
+                      publisherEmail: foobar@live.com
+                      publisherName: Contoso Vnext
+                      notificationSenderEmail: apimgmt-noreply@mail.windowsazure.com
+                      provisioningState: Succeeded
+                      targetProvisioningState: ''
+                      createdAtUtc: '2017-06-29T17:50:42.3191122Z'
+                      gatewayUrl: 'https://apimService1.azure-api.net'
+                      portalUrl: 'https://apimService1.portal.azure-api.net'
+                      managementApiUrl: 'https://apimService1.management.azure-api.net'
+                      scmUrl: 'https://apimService1.scm.azure-api.net'
+                      hostnameConfigurations: []
+                      publicIPAddresses:
+                        - 40.86.176.232
+                      customProperties:
+                        Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10: 'False'
+                      virtualNetworkType: None
+                    sku:
+                      name: Standard
+                      capacity: '1'
                 '202':
                   id: >-
                     /subscriptions/{{ subscription_id }}/resourceGroups/{{
@@ -95649,20 +95718,21 @@ operations:
                     secret: true
               responses:
                 '200':
-                  id: >-
-                    /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                    resource_group
-                    }}/providers/Microsoft.ApiManagement/service/{{ service_name
-                    }}/properties/{{ property_name }}
-                  type: Microsoft.ApiManagement/service/properties
-                  name: testprop2
-                  properties:
-                    displayName: prop3name
-                    value: propValue
-                    tags:
-                      - foo
-                      - bar
-                    secret: true
+                  body:
+                    id: >-
+                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                      resource_group
+                      }}/providers/Microsoft.ApiManagement/service/{{
+                      service_name }}/properties/{{ property_name }}
+                    type: Microsoft.ApiManagement/service/properties
+                    name: testprop2
+                    properties:
+                      displayName: prop3name
+                      value: propValue
+                      tags:
+                        - foo
+                        - bar
+                      secret: true
                 '201':
                   body:
                     id: >-
@@ -101399,29 +101469,30 @@ operations:
                     displayName: testsub
               responses:
                 '200':
-                  id: >-
-                    /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                    resource_group
-                    }}/providers/Microsoft.ApiManagement/service/{{ service_name
-                    }}/subscriptions/{{ subscription_id }}
-                  type: Microsoft.ApiManagement/service/subscriptions
-                  name: testsub
-                  properties:
-                    ownerId: >-
+                  body:
+                    id: >-
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/users/{{ user_name }}
-                    scope: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.ApiManagement/service/{{
-                      service_name }}/products/{{ product_name }}
-                    displayName: testsub
-                    state: submitted
-                    createdDate: '2017-06-02T23:34:03.1055076Z'
-                    primaryKey: 06c34e1a9d394412b292e0611e73d417
-                    secondaryKey: 1e756a7705364c529e8d1760190f47b3
+                      service_name }}/subscriptions/{{ subscription_id }}
+                    type: Microsoft.ApiManagement/service/subscriptions
+                    name: testsub
+                    properties:
+                      ownerId: >-
+                        /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                        resource_group
+                        }}/providers/Microsoft.ApiManagement/service/{{
+                        service_name }}/users/{{ user_name }}
+                      scope: >-
+                        /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                        resource_group
+                        }}/providers/Microsoft.ApiManagement/service/{{
+                        service_name }}/products/{{ product_name }}
+                      displayName: testsub
+                      state: submitted
+                      createdDate: '2017-06-02T23:34:03.1055076Z'
+                      primaryKey: 06c34e1a9d394412b292e0611e73d417
+                      secondaryKey: 1e756a7705364c529e8d1760190f47b3
                 '201':
                   body:
                     id: >-

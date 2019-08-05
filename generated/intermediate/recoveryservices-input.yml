@@ -3036,8 +3036,7 @@ operations:
                 vaultName: swaggerExample
                 api-version: '2016-06-01'
               responses:
-                '200':
-                  body: ''
+                '200': {}
         deprecated: false
         hidden: false
       - $id: '551'

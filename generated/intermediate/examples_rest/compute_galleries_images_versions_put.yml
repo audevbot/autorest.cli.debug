@@ -11,7 +11,7 @@
     image_name: myImage
     version_name: myVersion
   tasks:
-    - name: Create or update a simple gallery Image Version.
+    - name: Create or update a simple Gallery Image Version.
       azure_rm_resource:
         idempotency: true
         api_version: '2019-03-01'

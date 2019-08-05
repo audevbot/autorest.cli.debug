@@ -24,7 +24,6 @@
           - type: operations
             name: '{{ operation_name }}'
         body:
-          name: newoperation
           properties:
             displayName: createUser2
             method: POST

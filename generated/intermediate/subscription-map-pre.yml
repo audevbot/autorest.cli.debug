@@ -1,263 +1,7 @@
 Modules:
-  - ModuleName: azure_rm_subscriptionsoperation_info
-    Options:
-      - &ref_0
-        NameSwagger: value
-        NameAnsible: value
-        NamePythonSdk: value
-        NameGoSdk: Value
-        NameTerraform: Value
-        IdPortion: null
-        Type: dict
-        TypeName: Operation
-        TypeNameGo: Operation
-        IsList: true
-        Required: false
-        Documentation: List of operations.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions:
-          - NameSwagger: name
-            NameAnsible: name
-            NamePythonSdk: name
-            NameGoSdk: Name
-            NameTerraform: Name
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: 'Operation name: {provider}/{resource}/{operation}'
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /value/name
-            PathPython: /value/name
-            PathGo: /value/name
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: display
-            NameAnsible: display
-            NamePythonSdk: display
-            NameGoSdk: Display
-            NameTerraform: Display
-            IdPortion: null
-            Type: dict
-            TypeName: Operation_display
-            TypeNameGo: Operation_display
-            IsList: false
-            Required: false
-            Documentation: The object that represents the operation.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions:
-              - NameSwagger: provider
-                NameAnsible: provider
-                NamePythonSdk: provider
-                NameGoSdk: Provider
-                NameTerraform: Provider
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: 'Service provider: Microsoft.Subscription'
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /value/display/provider
-                PathPython: /value/display/provider
-                PathGo: /value/display/provider
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: resource
-                NameAnsible: resource
-                NamePythonSdk: resource
-                NameGoSdk: Resource
-                NameTerraform: Resource
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: >-
-                  Resource on which the operation is performed: Profile,
-                  endpoint, etc.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /value/display/resource
-                PathPython: /value/display/resource
-                PathGo: /value/display/resource
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: operation
-                NameAnsible: operation
-                NamePythonSdk: operation
-                NameGoSdk: Operation
-                NameTerraform: Operation
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: 'Operation type: Read, write, delete, etc.'
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /value/display/operation
-                PathPython: /value/display/operation
-                PathGo: /value/display/operation
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-            EnumValues: []
-            PathSwagger: /value/display
-            PathPython: /value/display
-            PathGo: /value/display
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /value
-        PathPython: /value
-        PathGo: /value
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_1
-        NameSwagger: nextLink
-        NameAnsible: next_link
-        NamePythonSdk: next_link
-        NameGoSdk: NextLink
-        NameTerraform: NextLink
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: URL to get the next set of operation list results if there are any.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /nextLink
-        PathPython: /nextLink
-        PathGo: /nextLink
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-    Methods:
-      - Name: List
-        Options: []
-        RequiredOptions: []
-        Url: /providers/Microsoft.Subscription/operations
-        HttpMethod: get
-        IsAsync: false
-    ResponseFields:
-      - *ref_0
-      - *ref_1
-    ModuleOperationNameUpper: Operations
-    ModuleOperationName: operations
-    ObjectName: Operation
-    ResourceNameFieldInResponse: null
-    NeedsDeleteBeforeUpdate: false
-    NeedsForceUpdate: false
-    CannotTestUpdate: false
-    Provider: Microsoft.Subscription
-    ApiVersion: 2018-03-01-preview
-    Examples:
-      - Example:
-          parameters:
-            api-version: 2018-03-01-preview
-          responses:
-            '200':
-              body:
-                value:
-                  - name: Microsoft.Subscription/createOperation/action
-                    display:
-                      provider: Microsoft Subscription
-                      resource: Resources
-                      operation: Create a subscription
-        Url: /providers/Microsoft.Subscription/operations
-        Method: get
-        Name: getOperations
-        Filename: subscription_operations_get
-        Variables: []
-        References: []
-        OperationId: '158'
-        MethodId: '159'
   - ModuleName: azure_rm_subscriptionssubscriptionoperation_info
     Options:
-      - &ref_2
+      - &ref_0
         NameSwagger: value
         NameAnsible: value
         NamePythonSdk: value
@@ -386,7 +130,7 @@ Modules:
         HttpMethod: get
         IsAsync: false
     ResponseFields:
-      - *ref_2
+      - *ref_0
     ModuleOperationNameUpper: SubscriptionOperations
     ModuleOperationName: subscription_operations
     ObjectName: SubscriptionOperation
@@ -422,8 +166,8 @@ Modules:
         Filename: subscription_subscriptionoperations_get
         Variables: []
         References: []
-        OperationId: '173'
-        MethodId: '174'
+        OperationId: '112'
+        MethodId: '113'
   - ModuleName: azure_rm_subscriptionssubscriptionfactory
     Options:
       - NameSwagger: enrollmentAccountName
@@ -657,7 +401,7 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - &ref_3
+      - &ref_1
         NameSwagger: subscriptionLink
         NameAnsible: subscription_link
         NamePythonSdk: subscription_link
@@ -669,7 +413,9 @@ Modules:
         TypeNameGo: String
         IsList: false
         Required: false
-        Documentation: The link to the new subscription.
+        Documentation: >-
+          The link to the new subscription. Use this link to check the status of
+          subscription creation operation.
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -703,7 +449,7 @@ Modules:
         HttpMethod: post
         IsAsync: true
     ResponseFields:
-      - *ref_3
+      - *ref_1
     ModuleOperationNameUpper: SubscriptionFactory
     ModuleOperationName: subscription_factory
     ObjectName: SubscriptionFactory
@@ -749,8 +495,8 @@ Modules:
             value: myEnrollmentAccount
             swaggerName: enrollmentAccountName
         References: []
-        OperationId: '188'
-        MethodId: '189'
+        OperationId: '127'
+        MethodId: '128'
 ServiceName: Subscription
 MgmtClientName: Subscription
 CliName: subscription

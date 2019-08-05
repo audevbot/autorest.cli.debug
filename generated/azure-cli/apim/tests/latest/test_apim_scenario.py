@@ -53,6 +53,9 @@ class ApimgmtScenarioTest(ScenarioTest):
         self.cmd('apim api create  --resource-group "rg1" --service-name "apimService1" --api-id "tempgroup" --description "This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters." --display-name "Swagger Petstore" --service-url "http://petstore.swagger.io/v2" --path "petstore"', checks=[
         ])
 
+        self.cmd('apim api create  --resource-group "rg1" --service-name "apimService1" --api-id "apidocs" --service-url "http://petstore.swagger.wordnik.com/api" --path "petstoreapi123" --value "http://apimpimportviaurl.azurewebsites.net/api/apidocs/" --format "swagger-link"', checks=[
+        ])
+
         self.cmd('apim api create  --resource-group "rg1" --service-name "apimService1" --api-id "echo-api" --display-name "Echo API New" --service-url "http://echoapi.cloudapp.net/api2" --path "newecho"', checks=[
         ])
 
@@ -88,6 +91,9 @@ class ApimgmtScenarioTest(ScenarioTest):
         ])
 
         self.cmd('apim api update  --resource-group "rg1" --service-name "apimService1" --api-id "tempgroup" --description "This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters." --display-name "Swagger Petstore" --service-url "http://petstore.swagger.io/v2" --path "petstore"', checks=[
+        ])
+
+        self.cmd('apim api update  --resource-group "rg1" --service-name "apimService1" --api-id "apidocs" --service-url "http://petstore.swagger.wordnik.com/api" --path "petstoreapi123" --value "http://apimpimportviaurl.azurewebsites.net/api/apidocs/" --format "swagger-link"', checks=[
         ])
 
         self.cmd('apim api update  --resource-group "rg1" --service-name "apimService1" --api-id "echo-api" --display-name "Echo API New" --service-url "http://echoapi.cloudapp.net/api2" --path "newecho"', checks=[
@@ -127,6 +133,9 @@ class ApimgmtScenarioTest(ScenarioTest):
         self.cmd('apim api delete  --resource-group "rg1" --service-name "apimService1" --api-id "tempgroup"', checks=[
         ])
 
+        self.cmd('apim api delete  --resource-group "rg1" --service-name "apimService1" --api-id "apidocs"', checks=[
+        ])
+
         self.cmd('apim api delete  --resource-group "rg1" --service-name "apimService1" --api-id "echo-api"', checks=[
         ])
 
@@ -134,6 +143,9 @@ class ApimgmtScenarioTest(ScenarioTest):
         ])
 
 # list_by_tags -- list
+        self.cmd('apim api list  --resource-group "rg1" --service-name "apimService1"', checks=[
+        ])
+
         self.cmd('apim api list  --resource-group "rg1" --service-name "apimService1"', checks=[
         ])
 
@@ -207,6 +219,9 @@ class ApimgmtScenarioTest(ScenarioTest):
         self.cmd('apim api list  --resource-group "rg1" --service-name "apimService1"', checks=[
         ])
 
+        self.cmd('apim api list  --resource-group "rg1" --service-name "apimService1"', checks=[
+        ])
+
 # get -- show
         self.cmd('apim api show  --resource-group "rg1" --service-name "apimService1" --api-id "petstore"', checks=[
         ])
@@ -236,6 +251,9 @@ class ApimgmtScenarioTest(ScenarioTest):
         ])
 
         self.cmd('apim api show  --resource-group "rg1" --service-name "apimService1" --api-id "tempgroup"', checks=[
+        ])
+
+        self.cmd('apim api show  --resource-group "rg1" --service-name "apimService1" --api-id "apidocs"', checks=[
         ])
 
         self.cmd('apim api show  --resource-group "rg1" --service-name "apimService1" --api-id "echo-api"', checks=[

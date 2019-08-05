@@ -6201,6 +6201,8 @@ properties:
     realPath:
       - subscriptionId
     collectionFormat: none
+    constraints:
+      MinLength: '1'
     defaultValue:
       $id: '1240'
       fixed: false
@@ -6208,10 +6210,7 @@ properties:
     documentation:
       $id: '1241'
       fixed: false
-      raw: >-
-        Subscription credentials which uniquely identify Microsoft Azure
-        subscription. The subscription ID forms part of the URI for every
-        service call.
+      raw: The ID of the target subscription.
     isRequired: true
     isConstant: false
     name:
@@ -7177,6 +7176,8 @@ properties:
     realPath:
       - subscriptionId
     collectionFormat: none
+    constraints:
+      MinLength: '1'
     defaultValue:
       $id: '1416'
       fixed: false
@@ -7184,7 +7185,7 @@ properties:
     documentation:
       $id: '1417'
       fixed: false
-      raw: The Azure subscription id.
+      raw: The ID of the target subscription.
     isRequired: true
     isConstant: false
     name:
@@ -7525,6 +7526,8 @@ operations:
               $ref: '1239'
             location: path
             collectionFormat: none
+            constraints:
+              MinLength: '1'
             defaultValue:
               $id: '1475'
               fixed: false
@@ -7532,10 +7535,7 @@ operations:
             documentation:
               $id: '1476'
               fixed: false
-              raw: >-
-                Subscription credentials which uniquely identify Microsoft Azure
-                subscription. The subscription ID forms part of the URI for
-                every service call.
+              raw: The ID of the target subscription.
             isRequired: true
             isConstant: false
             name:
@@ -8248,6 +8248,8 @@ operations:
               $ref: '1239'
             location: path
             collectionFormat: none
+            constraints:
+              MinLength: '1'
             defaultValue:
               $id: '1587'
               fixed: false
@@ -8255,10 +8257,7 @@ operations:
             documentation:
               $id: '1588'
               fixed: false
-              raw: >-
-                Subscription credentials which uniquely identify Microsoft Azure
-                subscription. The subscription ID forms part of the URI for
-                every service call.
+              raw: The ID of the target subscription.
             isRequired: true
             isConstant: false
             name:
@@ -8420,6 +8419,8 @@ operations:
               $ref: '1239'
             location: path
             collectionFormat: none
+            constraints:
+              MinLength: '1'
             defaultValue:
               $id: '1611'
               fixed: false
@@ -8427,10 +8428,7 @@ operations:
             documentation:
               $id: '1612'
               fixed: false
-              raw: >-
-                Subscription credentials which uniquely identify Microsoft Azure
-                subscription. The subscription ID forms part of the URI for
-                every service call.
+              raw: The ID of the target subscription.
             isRequired: true
             isConstant: false
             name:
@@ -8618,6 +8616,8 @@ operations:
               $ref: '1239'
             location: path
             collectionFormat: none
+            constraints:
+              MinLength: '1'
             defaultValue:
               $id: '1639'
               fixed: false
@@ -8625,10 +8625,7 @@ operations:
             documentation:
               $id: '1640'
               fixed: false
-              raw: >-
-                Subscription credentials which uniquely identify Microsoft Azure
-                subscription. The subscription ID forms part of the URI for
-                every service call.
+              raw: The ID of the target subscription.
             isRequired: true
             isConstant: false
             name:
@@ -8782,6 +8779,8 @@ operations:
               $ref: '1239'
             location: path
             collectionFormat: none
+            constraints:
+              MinLength: '1'
             defaultValue:
               $id: '1663'
               fixed: false
@@ -8789,10 +8788,7 @@ operations:
             documentation:
               $id: '1664'
               fixed: false
-              raw: >-
-                Subscription credentials which uniquely identify Microsoft Azure
-                subscription. The subscription ID forms part of the URI for
-                every service call.
+              raw: The ID of the target subscription.
             isRequired: true
             isConstant: false
             name:
@@ -9315,6 +9311,8 @@ operations:
               $ref: '1239'
             location: path
             collectionFormat: none
+            constraints:
+              MinLength: '1'
             defaultValue:
               $id: '1744'
               fixed: false
@@ -9322,10 +9320,7 @@ operations:
             documentation:
               $id: '1745'
               fixed: false
-              raw: >-
-                Subscription credentials which uniquely identify Microsoft Azure
-                subscription. The subscription ID forms part of the URI for
-                every service call.
+              raw: The ID of the target subscription.
             isRequired: true
             isConstant: false
             name:
@@ -9751,7 +9746,7 @@ operations:
               responses:
                 '200':
                   body:
-                    nextLink: ''
+                    nextLink: null
                     value:
                       - properties:
                           alertsCount: '1942'
@@ -9848,6 +9843,8 @@ operations:
               $ref: '1239'
             location: path
             collectionFormat: none
+            constraints:
+              MinLength: '1'
             defaultValue:
               $id: '1820'
               fixed: false
@@ -9855,10 +9852,7 @@ operations:
             documentation:
               $id: '1821'
               fixed: false
-              raw: >-
-                Subscription credentials which uniquely identify Microsoft Azure
-                subscription. The subscription ID forms part of the URI for
-                every service call.
+              raw: The ID of the target subscription.
             isRequired: true
             isConstant: false
             name:
@@ -10033,6 +10027,8 @@ operations:
               $ref: '1239'
             location: path
             collectionFormat: none
+            constraints:
+              MinLength: '1'
             defaultValue:
               $id: '1844'
               fixed: false
@@ -10040,10 +10036,7 @@ operations:
             documentation:
               $id: '1845'
               fixed: false
-              raw: >-
-                Subscription credentials which uniquely identify Microsoft Azure
-                subscription. The subscription ID forms part of the URI for
-                every service call.
+              raw: The ID of the target subscription.
             isRequired: true
             isConstant: false
             name:
@@ -10244,6 +10237,8 @@ operations:
               $ref: '1239'
             location: path
             collectionFormat: none
+            constraints:
+              MinLength: '1'
             defaultValue:
               $id: '1872'
               fixed: false
@@ -10251,10 +10246,7 @@ operations:
             documentation:
               $id: '1873'
               fixed: false
-              raw: >-
-                Subscription credentials which uniquely identify Microsoft Azure
-                subscription. The subscription ID forms part of the URI for
-                every service call.
+              raw: The ID of the target subscription.
             isRequired: true
             isConstant: false
             name:
@@ -10410,6 +10402,8 @@ operations:
               $ref: '1239'
             location: path
             collectionFormat: none
+            constraints:
+              MinLength: '1'
             defaultValue:
               $id: '1899'
               fixed: false
@@ -10417,10 +10411,7 @@ operations:
             documentation:
               $id: '1900'
               fixed: false
-              raw: >-
-                Subscription credentials which uniquely identify Microsoft Azure
-                subscription. The subscription ID forms part of the URI for
-                every service call.
+              raw: The ID of the target subscription.
             isRequired: true
             isConstant: false
             name:
@@ -10911,6 +10902,8 @@ operations:
               $ref: '1239'
             location: path
             collectionFormat: none
+            constraints:
+              MinLength: '1'
             defaultValue:
               $id: '1973'
               fixed: false
@@ -10918,10 +10911,7 @@ operations:
             documentation:
               $id: '1974'
               fixed: false
-              raw: >-
-                Subscription credentials which uniquely identify Microsoft Azure
-                subscription. The subscription ID forms part of the URI for
-                every service call.
+              raw: The ID of the target subscription.
             isRequired: true
             isConstant: false
             name:
@@ -11454,6 +11444,8 @@ operations:
               $ref: '1239'
             location: path
             collectionFormat: none
+            constraints:
+              MinLength: '1'
             defaultValue:
               $id: '2053'
               fixed: false
@@ -11461,10 +11453,7 @@ operations:
             documentation:
               $id: '2054'
               fixed: false
-              raw: >-
-                Subscription credentials which uniquely identify Microsoft Azure
-                subscription. The subscription ID forms part of the URI for
-                every service call.
+              raw: The ID of the target subscription.
             isRequired: true
             isConstant: false
             name:
@@ -11675,6 +11664,8 @@ operations:
               $ref: '1239'
             location: path
             collectionFormat: none
+            constraints:
+              MinLength: '1'
             defaultValue:
               $id: '2083'
               fixed: false
@@ -11682,10 +11673,7 @@ operations:
             documentation:
               $id: '2084'
               fixed: false
-              raw: >-
-                Subscription credentials which uniquely identify Microsoft Azure
-                subscription. The subscription ID forms part of the URI for
-                every service call.
+              raw: The ID of the target subscription.
             isRequired: true
             isConstant: false
             name:
@@ -11957,6 +11945,8 @@ operations:
               $ref: '1239'
             location: path
             collectionFormat: none
+            constraints:
+              MinLength: '1'
             defaultValue:
               $id: '2117'
               fixed: false
@@ -11964,10 +11954,7 @@ operations:
             documentation:
               $id: '2118'
               fixed: false
-              raw: >-
-                Subscription credentials which uniquely identify Microsoft Azure
-                subscription. The subscription ID forms part of the URI for
-                every service call.
+              raw: The ID of the target subscription.
             isRequired: true
             isConstant: false
             name:
@@ -12137,6 +12124,8 @@ operations:
               $ref: '1239'
             location: path
             collectionFormat: none
+            constraints:
+              MinLength: '1'
             defaultValue:
               $id: '2149'
               fixed: false
@@ -12144,10 +12133,7 @@ operations:
             documentation:
               $id: '2150'
               fixed: false
-              raw: >-
-                Subscription credentials which uniquely identify Microsoft Azure
-                subscription. The subscription ID forms part of the URI for
-                every service call.
+              raw: The ID of the target subscription.
             isRequired: true
             isConstant: false
             name:
@@ -12398,6 +12384,8 @@ operations:
               $ref: '1239'
             location: path
             collectionFormat: none
+            constraints:
+              MinLength: '1'
             defaultValue:
               $id: '2186'
               fixed: false
@@ -12405,7 +12393,7 @@ operations:
             documentation:
               $id: '2187'
               fixed: false
-              raw: The Azure subscription id.
+              raw: The ID of the target subscription.
             isRequired: true
             isConstant: false
             name:
@@ -12528,7 +12516,7 @@ operations:
               responses:
                 '200':
                   body:
-                    nextLink: ''
+                    nextLink: null
                     value:
                       - id: >-
                           /subscriptions/{{ subscription_id }}/resourceGroups/{{
@@ -12591,6 +12579,8 @@ operations:
               $ref: '1239'
             location: path
             collectionFormat: none
+            constraints:
+              MinLength: '1'
             defaultValue:
               $id: '2210'
               fixed: false
@@ -12598,7 +12588,7 @@ operations:
             documentation:
               $id: '2211'
               fixed: false
-              raw: The Azure subscription id.
+              raw: The ID of the target subscription.
             isRequired: true
             isConstant: false
             name:
@@ -12752,7 +12742,7 @@ operations:
               responses:
                 '200':
                   body:
-                    nextLink: ''
+                    nextLink: null
                     value:
                       - id: >-
                           /subscriptions/{{ subscription_id }}/resourceGroups/{{
@@ -12815,6 +12805,8 @@ operations:
               $ref: '1239'
             location: path
             collectionFormat: none
+            constraints:
+              MinLength: '1'
             defaultValue:
               $id: '2240'
               fixed: false
@@ -12822,7 +12814,7 @@ operations:
             documentation:
               $id: '2241'
               fixed: false
-              raw: The Azure subscription id.
+              raw: The ID of the target subscription.
             isRequired: true
             isConstant: false
             name:
@@ -13040,6 +13032,8 @@ operations:
               $ref: '1239'
             location: path
             collectionFormat: none
+            constraints:
+              MinLength: '1'
             defaultValue:
               $id: '2276'
               fixed: false
@@ -13047,7 +13041,7 @@ operations:
             documentation:
               $id: '2277'
               fixed: false
-              raw: The Azure subscription id.
+              raw: The ID of the target subscription.
             isRequired: true
             isConstant: false
             name:
@@ -13310,6 +13304,8 @@ operations:
               $ref: '1239'
             location: path
             collectionFormat: none
+            constraints:
+              MinLength: '1'
             defaultValue:
               $id: '2311'
               fixed: false
@@ -13317,7 +13313,7 @@ operations:
             documentation:
               $id: '2312'
               fixed: false
-              raw: The Azure subscription id.
+              raw: The ID of the target subscription.
             isRequired: true
             isConstant: false
             name:
@@ -13534,6 +13530,8 @@ operations:
               $ref: '1239'
             location: path
             collectionFormat: none
+            constraints:
+              MinLength: '1'
             defaultValue:
               $id: '2345'
               fixed: false
@@ -13541,7 +13539,7 @@ operations:
             documentation:
               $id: '2346'
               fixed: false
-              raw: The Azure subscription id.
+              raw: The ID of the target subscription.
             isRequired: true
             isConstant: false
             name:

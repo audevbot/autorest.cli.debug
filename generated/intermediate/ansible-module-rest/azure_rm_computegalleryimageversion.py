@@ -233,7 +233,7 @@ author:
 '''
 
 EXAMPLES = '''
-- name: Create or update a simple gallery Image Version.
+- name: Create or update a simple Gallery Image Version.
   azure_rm_computegalleryimageversion:
     resource_group: myResourceGroup
     gallery_name: myGallery

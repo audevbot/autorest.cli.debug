@@ -83,6 +83,11 @@ helps['apim api create'] = """
                ](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test
                 the authorization filters." --display-name "Swagger Petstore" --service-url \\
                "http://petstore.swagger.io/v2" --path "petstore"
+      - name: ApiManagementCreateApiUsingImportOverrideServiceUrl
+        text: |-
+               az apim api create --resource-group "rg1" --service-name "apimService1" --api-id \\
+               "apidocs" --service-url "http://petstore.swagger.wordnik.com/api" --path "petstoreapi123" \\
+               --value "http://apimpimportviaurl.azurewebsites.net/api/apidocs/" --format "swagger-link"
 """
 
 helps['apim api update'] = """

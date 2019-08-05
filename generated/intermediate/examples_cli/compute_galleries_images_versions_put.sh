@@ -1,4 +1,4 @@
-# Create or update a simple gallery Image Version.
+# Create or update a simple Gallery Image Version.
 RESOURCE_GROUP="myresourcegroup"
 GALLERY_NAME="mygallery"
 IMAGE_NAME="myimage"
