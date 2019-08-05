@@ -1072,7 +1072,7 @@ objects:
         name: 'value'
         description: 'Content value when Importing an API.'
         required: false
-        sample_value: 'http://www.webservicex.net/CurrencyConvertor.asmx?WSDL'
+        sample_value: 'http://apimpimportviaurl.azurewebsites.net/api/apidocs/'
         azure_sdk_references: ['/value', '/properties/value']
       - !ruby/object:Api::Type::Enum
         name: 'format'
@@ -1089,7 +1089,7 @@ objects:
           - :openapi+json
           - :openapi-link
         default_value: :wadl-xml
-        sample_value: wsdl-link
+        sample_value: swagger-link
         azure_sdk_references: ['/format', '/properties/format']
       - !ruby/object:Api::Type::NestedObject
         name: 'wsdlSelector'

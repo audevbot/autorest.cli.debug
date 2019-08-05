@@ -2043,7 +2043,10 @@ modelTypes:
         documentation:
           $id: '403'
           fixed: false
-          raw: The allowed values for OS State are 'Generalized'.
+          raw: >-
+            This property allows the user to specify whether the virtual
+            machines created under this image are 'Generalized' or
+            'Specialized'.
         extensions:
           x-ms-enum:
             name: OperatingSystemStateTypes
@@ -2617,7 +2620,7 @@ modelTypes:
             fixed: false
           deprecated: false
     serializedName: GalleryImageVersionStorageProfile
-    documentation: This is the storage profile of a gallery Image Version.
+    documentation: This is the storage profile of a Gallery Image Version.
     containsConstantProperties: false
     name:
       $id: '514'
@@ -5650,7 +5653,7 @@ operations:
           x-ms-requestBody-index: '6'
           x-ms-long-running-operation: true
           x-ms-examples:
-            Create or update a simple gallery Image Version.:
+            Create or update a simple Gallery Image Version.:
               parameters:
                 subscriptionId: '{subscription-id}'
                 resourceGroupName: myResourceGroup

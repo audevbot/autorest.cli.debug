@@ -396,6 +396,15 @@ EXAMPLES = '''
     path: petstore
     protocols:
       - https
+- name: ApiManagementCreateApiUsingImportOverrideServiceUrl
+  azure.rm.apimanagementapi:
+    resource_group: myResourceGroup
+    service_name: myService
+    api_id: myApi
+    service_url: 'http://petstore.swagger.wordnik.com/api'
+    path: petstoreapi123
+    value: 'http://apimpimportviaurl.azurewebsites.net/api/apidocs/'
+    format: swagger-link
 - name: ApiManagementUpdateApi
   azure.rm.apimanagementapi:
     resource_group: myResourceGroup

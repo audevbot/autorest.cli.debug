@@ -298,6 +298,18 @@ apim api create --resource-group rg1
         --service-url http://petstore.swagger.io/v2
         --path petstore
 ```
+
+**Example: ApiManagementCreateApiUsingImportOverrideServiceUrl**
+
+```
+apim api create --resource-group rg1
+        --service-name apimService1
+        --api-id apidocs
+        --service-url http://petstore.swagger.wordnik.com/api
+        --path petstoreapi123
+        --value http://apimpimportviaurl.azurewebsites.net/api/apidocs/
+        --format swagger-link
+```
 ### apim api update
 
 update a apim api.

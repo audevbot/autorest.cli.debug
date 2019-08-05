@@ -3699,7 +3699,7 @@ operations:
                           startTime: '2017-03-30T05:47:35.2+00:00'
                           lastModifiedTime: '2017-03-30T05:48:38.857+00:00'
                           endTime: '2017-03-30T05:48:38.857+00:00'
-                    nextLink: ''
+                    nextLink: null
           x-ms-pageable:
             nextLinkName: nextLink
           x-ms-odata: '#/components/schemas/JobCollectionItem'
@@ -4510,7 +4510,7 @@ operations:
                           summary: null
                           time: '2018-02-07T02:33:18.469135+00:00'
                           streamType: Output
-                    nextLink: ''
+                    nextLink: null
           x-ms-pageable:
             nextLinkName: nextLink
         deprecated: false

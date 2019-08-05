@@ -14,7 +14,7 @@
     version_name: myVersion
   tasks:
 
-    - name: Create or update a simple gallery Image Version.
+    - name: Create or update a simple Gallery Image Version.
       azure_rm_computegalleryimageversion:
         resource_group: '{{resource_group}}'
         gallery_name: '{{gallery_name}}'

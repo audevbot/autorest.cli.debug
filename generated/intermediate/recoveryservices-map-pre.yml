@@ -1184,8 +1184,7 @@ Modules:
             vaultName: swaggerExample
             api-version: '2016-06-01'
           responses:
-            '200':
-              body: ''
+            '200': {}
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.RecoveryServices/vaults/{{ vault_name }}

@@ -2851,7 +2851,7 @@ Modules:
           responses:
             '200':
               body:
-                nextLink: ''
+                nextLink: null
                 value:
                   - properties:
                       alertsCount: '1942'
@@ -7690,7 +7690,7 @@ Modules:
           responses:
             '200':
               body:
-                nextLink: ''
+                nextLink: null
                 value:
                   - id: >-
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
@@ -7762,7 +7762,7 @@ Modules:
           responses:
             '200':
               body:
-                nextLink: ''
+                nextLink: null
                 value:
                   - id: >-
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{

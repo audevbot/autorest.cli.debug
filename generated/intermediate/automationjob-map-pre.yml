@@ -1995,7 +1995,7 @@ Modules:
                       startTime: '2017-03-30T05:47:35.2+00:00'
                       lastModifiedTime: '2017-03-30T05:48:38.857+00:00'
                       endTime: '2017-03-30T05:48:38.857+00:00'
-                nextLink: ''
+                nextLink: null
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.Automation/automationAccounts/{{
@@ -2636,7 +2636,7 @@ Modules:
                       summary: null
                       time: '2018-02-07T02:33:18.469135+00:00'
                       streamType: Output
-                nextLink: ''
+                nextLink: null
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.Automation/automationAccounts/{{

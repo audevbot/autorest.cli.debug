@@ -63,7 +63,9 @@ options:
       {"$id":"45","$type":"DictionaryType","valueType":{"$id":"46","$type":"PrimaryType","knownPrimaryType":"object","name":{"$id":"47","fixed":false,"raw":"Object"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"48","fixed":false},"deprecated":false}]
   subscription_link:
     description:
-      - The link to the new subscription.
+      - >-
+        The link to the new subscription. Use this link to check the status of
+        subscription creation operation.
     type: str
   state:
     description:
@@ -102,7 +104,9 @@ EXAMPLES = '''
 RETURN = '''
 subscription_link:
   description:
-    - The link to the new subscription.
+    - >-
+      The link to the new subscription. Use this link to check the status of
+      subscription creation operation.
   returned: always
   type: str
   sample: null

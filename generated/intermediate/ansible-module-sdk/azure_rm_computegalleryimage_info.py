@@ -77,7 +77,9 @@ options:
     type: str
   os_state:
     description:
-      - The allowed values for OS State are 'Generalized'.
+      - >-
+        This property allows the user to specify whether the virtual machines
+        created under this image are 'Generalized' or 'Specialized'.
     required: true
     type: str
   end_of_life_date:
