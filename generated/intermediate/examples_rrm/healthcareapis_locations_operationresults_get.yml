@@ -9,7 +9,7 @@
   tasks:
 
     - name: OperationResultsGet
-      azure_rm_subscriptionsoperationresult_info:
+      azure_rm_healthcareapisoperationresult_info:
         location_name: '{{location_name}}'
         operation_result_id: '{{operationresult_name}}'
     

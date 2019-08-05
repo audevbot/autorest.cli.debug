@@ -15,7 +15,7 @@ ANSIBLE_METADATA = {'metadata_version': '1.1',
 
 DOCUMENTATION = '''
 ---
-module: subscriptionsservice_info
+module: azure_rm_healthcareapisservice_info
 version_added: '2.9'
 short_description: Get Service info.
 description:
@@ -126,12 +126,12 @@ author:
 
 EXAMPLES = '''
 - name: ServiceList
-  azure.rm.subscriptionsservice.info: {}
+  azure_rm_healthcareapisservice_info: {}
 - name: ServiceListByResourceGroup
-  azure.rm.subscriptionsservice.info:
+  azure_rm_healthcareapisservice_info:
     resource_group: myResourceGroup
 - name: ServiceGet
-  azure.rm.subscriptionsservice.info:
+  azure_rm_healthcareapisservice_info:
     resource_group: myResourceGroup
     name: myService
 
@@ -209,9 +209,15 @@ services:
 import time
 import json
 from ansible.module_utils.azure_rm_common import AzureRMModuleBase
-from ansible.module_utils.azure_rm_common_rest import GenericRestClient
 from copy import deepcopy
-from msrestazure.azure_exceptions import CloudError
+try:
+    from msrestazure.azure_exceptions import CloudError
+    from azure.mgmt.healthcareapis import HealthCareApisClient
+    from msrestazure.azure_operation import AzureOperationPoller
+    from msrest.polling import LROPoller
+except ImportError:
+    # This is handled in azure_rm_common
+    pass
 
 
 class AzureRMServicesInfo(AzureRMModuleBase):
@@ -255,7 +261,7 @@ class AzureRMServicesInfo(AzureRMModuleBase):
         for key in self.module_arg_spec:
             setattr(self, key, kwargs[key])
 
-        self.mgmt_client = self.get_mgmt_svc_client(GenericRestClient,
+        self.mgmt_client = self.get_mgmt_svc_client(HealthCareApisClient,
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         if (self.resource_group is not None and
@@ -269,95 +275,34 @@ class AzureRMServicesInfo(AzureRMModuleBase):
 
     def get(self):
         response = None
-        results = {}
-        # prepare url
-        self.url = ('/subscriptions' +
-                    '/{{ subscription_id }}' +
-                    '/resourceGroups' +
-                    '/{{ resource_group }}' +
-                    '/providers' +
-                    '/Microsoft.HealthcareApis' +
-                    '/services' +
-                    '/{{ service_name }}')
-        self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
-        self.url = self.url.replace('{{ resource_group }}', self.resource_group)
-        self.url = self.url.replace('{{ service_name }}', self.name)
 
         try:
-            response = self.mgmt_client.query(self.url,
-                                              'GET',
-                                              self.query_parameters,
-                                              self.header_parameters,
-                                              None,
-                                              self.status_code,
-                                              600,
-                                              30)
-            results['temp_item'] = json.loads(response.text)
-            # self.log('Response : {0}'.format(response))
+            response = self.mgmt_client.services.get(resource_group_name=self.resource_group,
+                                                     resource_name=self.name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 
-        return results
+        return response.as_dict()
 
     def listbyresourcegroup(self):
         response = None
-        results = {}
-        # prepare url
-        self.url = ('/subscriptions' +
-                    '/{{ subscription_id }}' +
-                    '/resourceGroups' +
-                    '/{{ resource_group }}' +
-                    '/providers' +
-                    '/Microsoft.HealthcareApis' +
-                    '/services')
-        self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
-        self.url = self.url.replace('{{ resource_group }}', self.resource_group)
-        self.url = self.url.replace('{{ service_name }}', self.name)
 
         try:
-            response = self.mgmt_client.query(self.url,
-                                              'GET',
-                                              self.query_parameters,
-                                              self.header_parameters,
-                                              None,
-                                              self.status_code,
-                                              600,
-                                              30)
-            results['temp_item'] = json.loads(response.text)
-            # self.log('Response : {0}'.format(response))
+            response = self.mgmt_client.services.list_by_resource_group(resource_group_name=self.resource_group)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 
-        return results
+        return response.as_dict()
 
     def list(self):
         response = None
-        results = {}
-        # prepare url
-        self.url = ('/subscriptions' +
-                    '/{{ subscription_id }}' +
-                    '/providers' +
-                    '/Microsoft.HealthcareApis' +
-                    '/services')
-        self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
-        self.url = self.url.replace('{{ resource_group }}', self.resource_group)
-        self.url = self.url.replace('{{ service_name }}', self.name)
 
         try:
-            response = self.mgmt_client.query(self.url,
-                                              'GET',
-                                              self.query_parameters,
-                                              self.header_parameters,
-                                              None,
-                                              self.status_code,
-                                              600,
-                                              30)
-            results['temp_item'] = json.loads(response.text)
-            # self.log('Response : {0}'.format(response))
+            response = self.mgmt_client.services.list()
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 
-        return results
+        return response.as_dict()
 
     def format_item(item):
         return item

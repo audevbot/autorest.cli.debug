@@ -15,7 +15,7 @@ ANSIBLE_METADATA = {'metadata_version': '1.1',
 
 DOCUMENTATION = '''
 ---
-module: subscriptionsservice
+module: healthcareapisservice
 version_added: '2.9'
 short_description: Manage Azure Service instance.
 description:
@@ -140,7 +140,7 @@ author:
 
 EXAMPLES = '''
 - name: ServicePut
-  azure.rm.subscriptionsservice:
+  azure.rm.healthcareapisservice:
     resource_group: myResourceGroup
     name: myService
     service_description:
@@ -172,11 +172,11 @@ EXAMPLES = '''
           maxAge: '1440'
           allowCredentials: false
 - name: ServicePatch
-  azure.rm.subscriptionsservice:
+  azure.rm.healthcareapisservice:
     resource_group: myResourceGroup
     name: myService
 - name: ServiceDelete
-  azure.rm.subscriptionsservice:
+  azure.rm.healthcareapisservice:
     resource_group: myResourceGroup
     name: myService
     state: absent
