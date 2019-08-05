@@ -15,7 +15,7 @@ ANSIBLE_METADATA = {'metadata_version': '1.1',
 
 DOCUMENTATION = '''
 ---
-module: azure_rm_subscriptionsservice_info
+module: azure_rm_healthcareapisservice_info
 version_added: '2.9'
 short_description: Get Service info.
 description:
@@ -126,12 +126,12 @@ author:
 
 EXAMPLES = '''
 - name: ServiceList
-  azure_rm_subscriptionsservice_info: {}
+  azure_rm_healthcareapisservice_info: {}
 - name: ServiceListByResourceGroup
-  azure_rm_subscriptionsservice_info:
+  azure_rm_healthcareapisservice_info:
     resource_group: myResourceGroup
 - name: ServiceGet
-  azure_rm_subscriptionsservice_info:
+  azure_rm_healthcareapisservice_info:
     resource_group: myResourceGroup
     name: myService
 

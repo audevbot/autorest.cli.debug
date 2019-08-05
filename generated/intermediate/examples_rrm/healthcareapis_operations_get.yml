@@ -7,7 +7,7 @@
   tasks:
 
     - name: OperationsList
-      azure_rm_subscriptionsoperation_info: {}
+      azure_rm_healthcareapisoperation_info: {}
     
       register: output
     - debug:

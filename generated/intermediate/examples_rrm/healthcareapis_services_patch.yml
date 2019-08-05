@@ -12,7 +12,7 @@
   tasks:
 
     - name: ServicePatch
-      azure_rm_subscriptionsservice:
+      azure_rm_healthcareapisservice:
         resource_group: '{{resource_group}}'
         name: '{{service_name}}'
     

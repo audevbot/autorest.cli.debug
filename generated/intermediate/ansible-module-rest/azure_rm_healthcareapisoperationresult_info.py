@@ -15,7 +15,7 @@ ANSIBLE_METADATA = {'metadata_version': '1.1',
 
 DOCUMENTATION = '''
 ---
-module: subscriptionsoperationresult_info
+module: azure_rm_healthcareapisoperationresult_info
 version_added: '2.9'
 short_description: Get OperationResult info.
 description:
@@ -40,7 +40,7 @@ author:
 
 EXAMPLES = '''
 - name: OperationResultsGet
-  azure.rm.subscriptionsoperationresult.info:
+  azure_rm_healthcareapisoperationresult_info:
     location_name: myLocation
     operation_result_id: myOperationresult
 

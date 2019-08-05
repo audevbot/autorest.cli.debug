@@ -1762,7 +1762,7 @@ enumTypes:
   - $ref: '303'
   - $ref: '333'
 name: HealthCareApis
-namespace: Azure.mgmt.subscriptions
+namespace: Azure.mgmt.healthcareapis
 modelsName: Models
 apiVersion: 2018-08-20-preview
 baseUrl: 'https://management.azure.com'

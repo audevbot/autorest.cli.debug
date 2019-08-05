@@ -9,7 +9,7 @@
   tasks:
 
     - name: ServiceGet
-      azure_rm_subscriptionsservice_info:
+      azure_rm_healthcareapisservice_info:
         resource_group: '{{resource_group}}'
         name: '{{service_name}}'
     

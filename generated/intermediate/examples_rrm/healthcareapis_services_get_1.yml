@@ -7,7 +7,7 @@
   tasks:
 
     - name: ServiceList
-      azure_rm_subscriptionsservice_info: {}
+      azure_rm_healthcareapisservice_info: {}
     
       register: output
     - debug:

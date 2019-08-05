@@ -1,5 +1,5 @@
 Modules:
-  - ModuleName: azure_rm_subscriptionsservice
+  - ModuleName: azure_rm_healthcareapisservice
     Options:
       - NameSwagger: resourceGroupName
         NameAnsible: resource_group_name
@@ -1725,7 +1725,7 @@ Modules:
         References: []
         OperationId: '391'
         MethodId: '491'
-  - ModuleName: azure_rm_subscriptionsservice_info
+  - ModuleName: azure_rm_healthcareapisservice_info
     Options:
       - NameSwagger: resourceGroupName
         NameAnsible: resource_group_name
@@ -2756,7 +2756,7 @@ Modules:
         References: []
         OperationId: '391'
         MethodId: '392'
-  - ModuleName: azure_rm_subscriptionsoperation_info
+  - ModuleName: azure_rm_healthcareapisoperation_info
     Options:
       - &ref_12
         NameSwagger: nextLink
@@ -3097,7 +3097,7 @@ Modules:
         References: []
         OperationId: '588'
         MethodId: '589'
-  - ModuleName: azure_rm_subscriptionsoperationresult_info
+  - ModuleName: azure_rm_healthcareapisoperationresult_info
     Options:
       - NameSwagger: locationName
         NameAnsible: location_name
@@ -3226,7 +3226,7 @@ Modules:
 ServiceName: HealthCareApis
 MgmtClientName: HealthCareApis
 CliName: healthcareapis
-Namespace: azure.mgmt.subscriptions
+Namespace: azure.mgmt.healthcareapis
 Info:
   - '  ** FOUND OPTION resourceGroupName'
   - '  ** FOUND OPTION resourceName'

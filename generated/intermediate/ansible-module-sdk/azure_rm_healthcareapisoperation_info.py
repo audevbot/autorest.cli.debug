@@ -15,7 +15,7 @@ ANSIBLE_METADATA = {'metadata_version': '1.1',
 
 DOCUMENTATION = '''
 ---
-module: azure_rm_subscriptionsoperation_info
+module: azure_rm_healthcareapisoperation_info
 version_added: '2.9'
 short_description: Get Operation info.
 description:
@@ -72,7 +72,7 @@ author:
 
 EXAMPLES = '''
 - name: OperationsList
-  azure_rm_subscriptionsoperation_info: {}
+  azure_rm_healthcareapisoperation_info: {}
 
 '''
 
@@ -157,7 +157,7 @@ from ansible.module_utils.azure_rm_common import AzureRMModuleBase
 from copy import deepcopy
 try:
     from msrestazure.azure_exceptions import CloudError
-    from azure.mgmt.subscriptions import HealthCareApisClient
+    from azure.mgmt.healthcareapis import HealthCareApisClient
     from msrestazure.azure_operation import AzureOperationPoller
     from msrest.polling import LROPoller
 except ImportError:
