@@ -1,0 +1,18 @@
+- import_playbook: healthcareapis_services_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    service_name: myService
+  tasks:
+
+    - name: ServicePatch
+      azure_rm_subscriptionsservice:
+        resource_group: '{{resource_group}}'
+        name: '{{service_name}}'
+    

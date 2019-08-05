@@ -1,0 +1,14 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+  tasks:
+
+    - name: ServiceList
+      azure_rm_subscriptionsservice_info: {}
+    
+      register: output
+    - debug:
+        var: output
