@@ -302,43 +302,43 @@ Modules:
         IncludeInDocumentation: true
         IncludeInArgSpec: true
         NoLog: false
-        SubOptions:
-          - NameSwagger: objectId
-            NameAnsible: object_id
-            NamePythonSdk: object_id
-            NameGoSdk: ObjectID
-            NameTerraform: ObjectID
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: true
-            Documentation: An object ID that is allowed access to the FHIR service.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/accessPolicies/objectId
-            PathPython: /accessPolicies/objectId
-            PathGo: /properties/accessPolicies/objectId
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: true
-            Flatten: false
+        SubOptions: []
         EnumValues: []
         PathSwagger: /properties/accessPolicies
         PathPython: /accessPolicies
         PathGo: /properties/accessPolicies
         DispositionSdk: /*
         DispositionRest: /properties/*
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: true
+        IncludeInResponse: true
+        Flatten: false
+      - NameSwagger: accessPoliciesObjectId
+        NameAnsible: access_policies_object_id
+        NamePythonSdk: object_id
+        NameGoSdk: ObjectID
+        NameTerraform: accessPoliciesObjectId
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: true
+        Documentation: An object ID that is allowed access to the FHIR service.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties/accessPolicies/objectId
+        PathPython: /accessPolicies/objectId
+        PathGo: /properties/accessPolicies/objectId
+        DispositionSdk: /access_policies/object_id
+        DispositionRest: /properties/accessPolicies/objectId
         Comparison: ''
         Updatable: true
         ExampleValue: null
@@ -362,43 +362,43 @@ Modules:
         IncludeInDocumentation: true
         IncludeInArgSpec: true
         NoLog: false
-        SubOptions:
-          - NameSwagger: offerThroughput
-            NameAnsible: offer_throughput
-            NamePythonSdk: offer_throughput
-            NameGoSdk: OfferThroughput
-            NameTerraform: OfferThroughput
-            IdPortion: null
-            Type: number
-            TypeName: Int
-            TypeNameGo: Int
-            IsList: false
-            Required: false
-            Documentation: The provisioned throughput for the backing database.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/cosmosDbConfiguration/offerThroughput
-            PathPython: /cosmosDbConfiguration/offerThroughput
-            PathGo: /properties/cosmosDbConfiguration/offerThroughput
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: true
-            Flatten: false
+        SubOptions: []
         EnumValues: []
         PathSwagger: /properties/cosmosDbConfiguration
         PathPython: /cosmosDbConfiguration
         PathGo: /properties/cosmosDbConfiguration
         DispositionSdk: /*
         DispositionRest: /properties/*
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: true
+        IncludeInResponse: true
+        Flatten: false
+      - NameSwagger: cosmosDbOfferThroughput
+        NameAnsible: cosmos_db_offer_throughput
+        NamePythonSdk: offer_throughput
+        NameGoSdk: OfferThroughput
+        NameTerraform: cosmosDbOfferThroughput
+        IdPortion: null
+        Type: number
+        TypeName: Int
+        TypeNameGo: Int
+        IsList: false
+        Required: false
+        Documentation: The provisioned throughput for the backing database.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties/cosmosDbConfiguration/offerThroughput
+        PathPython: /cosmosDbConfiguration/offerThroughput
+        PathGo: /properties/cosmosDbConfiguration/offerThroughput
+        DispositionSdk: /cosmos_db_configuration/offer_throughput
+        DispositionRest: /properties/cosmosDbConfiguration/offerThroughput
         Comparison: ''
         Updatable: true
         ExampleValue: null
@@ -422,103 +422,103 @@ Modules:
         IncludeInDocumentation: true
         IncludeInArgSpec: true
         NoLog: false
-        SubOptions:
-          - NameSwagger: authority
-            NameAnsible: authority
-            NamePythonSdk: authority
-            NameGoSdk: Authority
-            NameTerraform: Authority
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: The authority url for the service
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/authenticationConfiguration/authority
-            PathPython: /authenticationConfiguration/authority
-            PathGo: /properties/authenticationConfiguration/authority
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: true
-            Flatten: false
-          - NameSwagger: audience
-            NameAnsible: audience
-            NamePythonSdk: audience
-            NameGoSdk: Audience
-            NameTerraform: Audience
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: The audience url for the service
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/authenticationConfiguration/audience
-            PathPython: /authenticationConfiguration/audience
-            PathGo: /properties/authenticationConfiguration/audience
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: true
-            Flatten: false
-          - NameSwagger: smartProxyEnabled
-            NameAnsible: smart_proxy_enabled
-            NamePythonSdk: smart_proxy_enabled
-            NameGoSdk: SmartProxyEnabled
-            NameTerraform: SmartProxyEnabled
-            IdPortion: null
-            Type: boolean
-            TypeName: Boolean
-            TypeNameGo: Boolean
-            IsList: false
-            Required: false
-            Documentation: If the SMART on FHIR proxy is enabled
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/authenticationConfiguration/smartProxyEnabled
-            PathPython: /authenticationConfiguration/smartProxyEnabled
-            PathGo: /properties/authenticationConfiguration/smartProxyEnabled
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: true
-            Flatten: false
+        SubOptions: []
         EnumValues: []
         PathSwagger: /properties/authenticationConfiguration
         PathPython: /authenticationConfiguration
         PathGo: /properties/authenticationConfiguration
         DispositionSdk: /*
         DispositionRest: /properties/*
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: true
+        IncludeInResponse: true
+        Flatten: false
+      - NameSwagger: authenticationAuthority
+        NameAnsible: authentication_authority
+        NamePythonSdk: authority
+        NameGoSdk: Authority
+        NameTerraform: authenticationAuthority
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: The authority url for the service
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties/authenticationConfiguration/authority
+        PathPython: /authenticationConfiguration/authority
+        PathGo: /properties/authenticationConfiguration/authority
+        DispositionSdk: /authentication_configuration/authority
+        DispositionRest: /properties/authenticationConfiguration/authority
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - NameSwagger: authenticationAudience
+        NameAnsible: authentication_audience
+        NamePythonSdk: audience
+        NameGoSdk: Audience
+        NameTerraform: authenticationAudience
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: The audience url for the service
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties/authenticationConfiguration/audience
+        PathPython: /authenticationConfiguration/audience
+        PathGo: /properties/authenticationConfiguration/audience
+        DispositionSdk: /authentication_configuration/audience
+        DispositionRest: /properties/authenticationConfiguration/audience
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - NameSwagger: authenticationSmartProxyEnabled
+        NameAnsible: authentication_smart_proxy_enabled
+        NamePythonSdk: smart_proxy_enabled
+        NameGoSdk: SmartProxyEnabled
+        NameTerraform: authenticationSmartProxyEnabled
+        IdPortion: null
+        Type: boolean
+        TypeName: Boolean
+        TypeNameGo: Boolean
+        IsList: false
+        Required: false
+        Documentation: If the SMART on FHIR proxy is enabled
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties/authenticationConfiguration/smartProxyEnabled
+        PathPython: /authenticationConfiguration/smartProxyEnabled
+        PathGo: /properties/authenticationConfiguration/smartProxyEnabled
+        DispositionSdk: /authentication_configuration/smart_proxy_enabled
+        DispositionRest: /properties/authenticationConfiguration/smartProxyEnabled
         Comparison: ''
         Updatable: true
         ExampleValue: null
@@ -542,163 +542,163 @@ Modules:
         IncludeInDocumentation: true
         IncludeInArgSpec: true
         NoLog: false
-        SubOptions:
-          - NameSwagger: origins
-            NameAnsible: origins
-            NamePythonSdk: origins
-            NameGoSdk: Origins
-            NameTerraform: Origins
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: true
-            Required: false
-            Documentation: The origins to be allowed via CORS.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/corsConfiguration/origins
-            PathPython: /corsConfiguration/origins
-            PathGo: /properties/corsConfiguration/origins
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: true
-            Flatten: false
-          - NameSwagger: headers
-            NameAnsible: headers
-            NamePythonSdk: headers
-            NameGoSdk: Headers
-            NameTerraform: Headers
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: true
-            Required: false
-            Documentation: The headers to be allowed via CORS.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/corsConfiguration/headers
-            PathPython: /corsConfiguration/headers
-            PathGo: /properties/corsConfiguration/headers
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: true
-            Flatten: false
-          - NameSwagger: methods
-            NameAnsible: methods
-            NamePythonSdk: methods
-            NameGoSdk: Methods
-            NameTerraform: Methods
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: true
-            Required: false
-            Documentation: The methods to be allowed via CORS.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/corsConfiguration/methods
-            PathPython: /corsConfiguration/methods
-            PathGo: /properties/corsConfiguration/methods
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: true
-            Flatten: false
-          - NameSwagger: maxAge
-            NameAnsible: max_age
-            NamePythonSdk: max_age
-            NameGoSdk: MaxAge
-            NameTerraform: MaxAge
-            IdPortion: null
-            Type: number
-            TypeName: Int
-            TypeNameGo: Int
-            IsList: false
-            Required: false
-            Documentation: The max age to be allowed via CORS.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/corsConfiguration/maxAge
-            PathPython: /corsConfiguration/maxAge
-            PathGo: /properties/corsConfiguration/maxAge
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: true
-            Flatten: false
-          - NameSwagger: allowCredentials
-            NameAnsible: allow_credentials
-            NamePythonSdk: allow_credentials
-            NameGoSdk: AllowCredentials
-            NameTerraform: AllowCredentials
-            IdPortion: null
-            Type: boolean
-            TypeName: Boolean
-            TypeNameGo: Boolean
-            IsList: false
-            Required: false
-            Documentation: If credentials are allowed via CORS.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/corsConfiguration/allowCredentials
-            PathPython: /corsConfiguration/allowCredentials
-            PathGo: /properties/corsConfiguration/allowCredentials
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: true
-            Flatten: false
+        SubOptions: []
         EnumValues: []
         PathSwagger: /properties/corsConfiguration
         PathPython: /corsConfiguration
         PathGo: /properties/corsConfiguration
         DispositionSdk: /*
         DispositionRest: /properties/*
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: true
+        IncludeInResponse: true
+        Flatten: false
+      - NameSwagger: corsOrigins
+        NameAnsible: cors_origins
+        NamePythonSdk: origins
+        NameGoSdk: Origins
+        NameTerraform: corsOrigins
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: true
+        Required: false
+        Documentation: The origins to be allowed via CORS.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties/corsConfiguration/origins
+        PathPython: /corsConfiguration/origins
+        PathGo: /properties/corsConfiguration/origins
+        DispositionSdk: /cors_configuration/origins
+        DispositionRest: /properties/corsConfiguration/origins
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - NameSwagger: corsHeaders
+        NameAnsible: cors_headers
+        NamePythonSdk: headers
+        NameGoSdk: Headers
+        NameTerraform: corsHeaders
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: true
+        Required: false
+        Documentation: The headers to be allowed via CORS.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties/corsConfiguration/headers
+        PathPython: /corsConfiguration/headers
+        PathGo: /properties/corsConfiguration/headers
+        DispositionSdk: /cors_configuration/headers
+        DispositionRest: /properties/corsConfiguration/headers
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - NameSwagger: corsMethods
+        NameAnsible: cors_methods
+        NamePythonSdk: methods
+        NameGoSdk: Methods
+        NameTerraform: corsMethods
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: true
+        Required: false
+        Documentation: The methods to be allowed via CORS.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties/corsConfiguration/methods
+        PathPython: /corsConfiguration/methods
+        PathGo: /properties/corsConfiguration/methods
+        DispositionSdk: /cors_configuration/methods
+        DispositionRest: /properties/corsConfiguration/methods
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - NameSwagger: corsMaxAge
+        NameAnsible: cors_max_age
+        NamePythonSdk: max_age
+        NameGoSdk: MaxAge
+        NameTerraform: corsMaxAge
+        IdPortion: null
+        Type: number
+        TypeName: Int
+        TypeNameGo: Int
+        IsList: false
+        Required: false
+        Documentation: The max age to be allowed via CORS.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties/corsConfiguration/maxAge
+        PathPython: /corsConfiguration/maxAge
+        PathGo: /properties/corsConfiguration/maxAge
+        DispositionSdk: /cors_configuration/max_age
+        DispositionRest: /properties/corsConfiguration/maxAge
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: true
+        Flatten: false
+      - NameSwagger: corsAllowCredentials
+        NameAnsible: cors_allow_credentials
+        NamePythonSdk: allow_credentials
+        NameGoSdk: AllowCredentials
+        NameTerraform: corsAllowCredentials
+        IdPortion: null
+        Type: boolean
+        TypeName: Boolean
+        TypeNameGo: Boolean
+        IsList: false
+        Required: false
+        Documentation: If credentials are allowed via CORS.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties/corsConfiguration/allowCredentials
+        PathPython: /corsConfiguration/allowCredentials
+        PathGo: /properties/corsConfiguration/allowCredentials
+        DispositionSdk: /cors_configuration/allow_credentials
+        DispositionRest: /properties/corsConfiguration/allowCredentials
         Comparison: ''
         Updatable: true
         ExampleValue: null
@@ -2153,43 +2153,43 @@ Modules:
         IncludeInDocumentation: true
         IncludeInArgSpec: true
         NoLog: false
-        SubOptions:
-          - NameSwagger: objectId
-            NameAnsible: object_id
-            NamePythonSdk: object_id
-            NameGoSdk: ObjectID
-            NameTerraform: ObjectID
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: true
-            Documentation: An object ID that is allowed access to the FHIR service.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/accessPolicies/objectId
-            PathPython: /accessPolicies/objectId
-            PathGo: /properties/accessPolicies/objectId
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
+        SubOptions: []
         EnumValues: []
         PathSwagger: /properties/accessPolicies
         PathPython: /accessPolicies
         PathGo: /properties/accessPolicies
         DispositionSdk: /*
         DispositionRest: /properties/*
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: true
+        IncludeInResponse: false
+        Flatten: false
+      - NameSwagger: accessPoliciesObjectId
+        NameAnsible: access_policies_object_id
+        NamePythonSdk: object_id
+        NameGoSdk: ObjectID
+        NameTerraform: accessPoliciesObjectId
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: true
+        Documentation: An object ID that is allowed access to the FHIR service.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties/accessPolicies/objectId
+        PathPython: /accessPolicies/objectId
+        PathGo: /properties/accessPolicies/objectId
+        DispositionSdk: /access_policies/object_id
+        DispositionRest: /properties/accessPolicies/objectId
         Comparison: ''
         Updatable: true
         ExampleValue: null
@@ -2213,43 +2213,43 @@ Modules:
         IncludeInDocumentation: true
         IncludeInArgSpec: true
         NoLog: false
-        SubOptions:
-          - NameSwagger: offerThroughput
-            NameAnsible: offer_throughput
-            NamePythonSdk: offer_throughput
-            NameGoSdk: OfferThroughput
-            NameTerraform: OfferThroughput
-            IdPortion: null
-            Type: number
-            TypeName: Int
-            TypeNameGo: Int
-            IsList: false
-            Required: false
-            Documentation: The provisioned throughput for the backing database.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/cosmosDbConfiguration/offerThroughput
-            PathPython: /cosmosDbConfiguration/offerThroughput
-            PathGo: /properties/cosmosDbConfiguration/offerThroughput
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
+        SubOptions: []
         EnumValues: []
         PathSwagger: /properties/cosmosDbConfiguration
         PathPython: /cosmosDbConfiguration
         PathGo: /properties/cosmosDbConfiguration
         DispositionSdk: /*
         DispositionRest: /properties/*
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: true
+        IncludeInResponse: false
+        Flatten: false
+      - NameSwagger: cosmosDbOfferThroughput
+        NameAnsible: cosmos_db_offer_throughput
+        NamePythonSdk: offer_throughput
+        NameGoSdk: OfferThroughput
+        NameTerraform: cosmosDbOfferThroughput
+        IdPortion: null
+        Type: number
+        TypeName: Int
+        TypeNameGo: Int
+        IsList: false
+        Required: false
+        Documentation: The provisioned throughput for the backing database.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties/cosmosDbConfiguration/offerThroughput
+        PathPython: /cosmosDbConfiguration/offerThroughput
+        PathGo: /properties/cosmosDbConfiguration/offerThroughput
+        DispositionSdk: /cosmos_db_configuration/offer_throughput
+        DispositionRest: /properties/cosmosDbConfiguration/offerThroughput
         Comparison: ''
         Updatable: true
         ExampleValue: null
@@ -2273,103 +2273,103 @@ Modules:
         IncludeInDocumentation: true
         IncludeInArgSpec: true
         NoLog: false
-        SubOptions:
-          - NameSwagger: authority
-            NameAnsible: authority
-            NamePythonSdk: authority
-            NameGoSdk: Authority
-            NameTerraform: Authority
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: The authority url for the service
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/authenticationConfiguration/authority
-            PathPython: /authenticationConfiguration/authority
-            PathGo: /properties/authenticationConfiguration/authority
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: audience
-            NameAnsible: audience
-            NamePythonSdk: audience
-            NameGoSdk: Audience
-            NameTerraform: Audience
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: The audience url for the service
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/authenticationConfiguration/audience
-            PathPython: /authenticationConfiguration/audience
-            PathGo: /properties/authenticationConfiguration/audience
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: smartProxyEnabled
-            NameAnsible: smart_proxy_enabled
-            NamePythonSdk: smart_proxy_enabled
-            NameGoSdk: SmartProxyEnabled
-            NameTerraform: SmartProxyEnabled
-            IdPortion: null
-            Type: boolean
-            TypeName: Boolean
-            TypeNameGo: Boolean
-            IsList: false
-            Required: false
-            Documentation: If the SMART on FHIR proxy is enabled
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/authenticationConfiguration/smartProxyEnabled
-            PathPython: /authenticationConfiguration/smartProxyEnabled
-            PathGo: /properties/authenticationConfiguration/smartProxyEnabled
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
+        SubOptions: []
         EnumValues: []
         PathSwagger: /properties/authenticationConfiguration
         PathPython: /authenticationConfiguration
         PathGo: /properties/authenticationConfiguration
         DispositionSdk: /*
         DispositionRest: /properties/*
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: true
+        IncludeInResponse: false
+        Flatten: false
+      - NameSwagger: authenticationAuthority
+        NameAnsible: authentication_authority
+        NamePythonSdk: authority
+        NameGoSdk: Authority
+        NameTerraform: authenticationAuthority
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: The authority url for the service
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties/authenticationConfiguration/authority
+        PathPython: /authenticationConfiguration/authority
+        PathGo: /properties/authenticationConfiguration/authority
+        DispositionSdk: /authentication_configuration/authority
+        DispositionRest: /properties/authenticationConfiguration/authority
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: false
+        Flatten: false
+      - NameSwagger: authenticationAudience
+        NameAnsible: authentication_audience
+        NamePythonSdk: audience
+        NameGoSdk: Audience
+        NameTerraform: authenticationAudience
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: false
+        Required: false
+        Documentation: The audience url for the service
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties/authenticationConfiguration/audience
+        PathPython: /authenticationConfiguration/audience
+        PathGo: /properties/authenticationConfiguration/audience
+        DispositionSdk: /authentication_configuration/audience
+        DispositionRest: /properties/authenticationConfiguration/audience
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: false
+        Flatten: false
+      - NameSwagger: authenticationSmartProxyEnabled
+        NameAnsible: authentication_smart_proxy_enabled
+        NamePythonSdk: smart_proxy_enabled
+        NameGoSdk: SmartProxyEnabled
+        NameTerraform: authenticationSmartProxyEnabled
+        IdPortion: null
+        Type: boolean
+        TypeName: Boolean
+        TypeNameGo: Boolean
+        IsList: false
+        Required: false
+        Documentation: If the SMART on FHIR proxy is enabled
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties/authenticationConfiguration/smartProxyEnabled
+        PathPython: /authenticationConfiguration/smartProxyEnabled
+        PathGo: /properties/authenticationConfiguration/smartProxyEnabled
+        DispositionSdk: /authentication_configuration/smart_proxy_enabled
+        DispositionRest: /properties/authenticationConfiguration/smartProxyEnabled
         Comparison: ''
         Updatable: true
         ExampleValue: null
@@ -2393,163 +2393,163 @@ Modules:
         IncludeInDocumentation: true
         IncludeInArgSpec: true
         NoLog: false
-        SubOptions:
-          - NameSwagger: origins
-            NameAnsible: origins
-            NamePythonSdk: origins
-            NameGoSdk: Origins
-            NameTerraform: Origins
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: true
-            Required: false
-            Documentation: The origins to be allowed via CORS.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/corsConfiguration/origins
-            PathPython: /corsConfiguration/origins
-            PathGo: /properties/corsConfiguration/origins
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: headers
-            NameAnsible: headers
-            NamePythonSdk: headers
-            NameGoSdk: Headers
-            NameTerraform: Headers
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: true
-            Required: false
-            Documentation: The headers to be allowed via CORS.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/corsConfiguration/headers
-            PathPython: /corsConfiguration/headers
-            PathGo: /properties/corsConfiguration/headers
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: methods
-            NameAnsible: methods
-            NamePythonSdk: methods
-            NameGoSdk: Methods
-            NameTerraform: Methods
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: true
-            Required: false
-            Documentation: The methods to be allowed via CORS.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/corsConfiguration/methods
-            PathPython: /corsConfiguration/methods
-            PathGo: /properties/corsConfiguration/methods
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: maxAge
-            NameAnsible: max_age
-            NamePythonSdk: max_age
-            NameGoSdk: MaxAge
-            NameTerraform: MaxAge
-            IdPortion: null
-            Type: number
-            TypeName: Int
-            TypeNameGo: Int
-            IsList: false
-            Required: false
-            Documentation: The max age to be allowed via CORS.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/corsConfiguration/maxAge
-            PathPython: /corsConfiguration/maxAge
-            PathGo: /properties/corsConfiguration/maxAge
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: allowCredentials
-            NameAnsible: allow_credentials
-            NamePythonSdk: allow_credentials
-            NameGoSdk: AllowCredentials
-            NameTerraform: AllowCredentials
-            IdPortion: null
-            Type: boolean
-            TypeName: Boolean
-            TypeNameGo: Boolean
-            IsList: false
-            Required: false
-            Documentation: If credentials are allowed via CORS.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/corsConfiguration/allowCredentials
-            PathPython: /corsConfiguration/allowCredentials
-            PathGo: /properties/corsConfiguration/allowCredentials
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
+        SubOptions: []
         EnumValues: []
         PathSwagger: /properties/corsConfiguration
         PathPython: /corsConfiguration
         PathGo: /properties/corsConfiguration
         DispositionSdk: /*
         DispositionRest: /properties/*
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: true
+        IncludeInResponse: false
+        Flatten: false
+      - NameSwagger: corsOrigins
+        NameAnsible: cors_origins
+        NamePythonSdk: origins
+        NameGoSdk: Origins
+        NameTerraform: corsOrigins
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: true
+        Required: false
+        Documentation: The origins to be allowed via CORS.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties/corsConfiguration/origins
+        PathPython: /corsConfiguration/origins
+        PathGo: /properties/corsConfiguration/origins
+        DispositionSdk: /cors_configuration/origins
+        DispositionRest: /properties/corsConfiguration/origins
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: false
+        Flatten: false
+      - NameSwagger: corsHeaders
+        NameAnsible: cors_headers
+        NamePythonSdk: headers
+        NameGoSdk: Headers
+        NameTerraform: corsHeaders
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: true
+        Required: false
+        Documentation: The headers to be allowed via CORS.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties/corsConfiguration/headers
+        PathPython: /corsConfiguration/headers
+        PathGo: /properties/corsConfiguration/headers
+        DispositionSdk: /cors_configuration/headers
+        DispositionRest: /properties/corsConfiguration/headers
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: false
+        Flatten: false
+      - NameSwagger: corsMethods
+        NameAnsible: cors_methods
+        NamePythonSdk: methods
+        NameGoSdk: Methods
+        NameTerraform: corsMethods
+        IdPortion: null
+        Type: str
+        TypeName: String
+        TypeNameGo: String
+        IsList: true
+        Required: false
+        Documentation: The methods to be allowed via CORS.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties/corsConfiguration/methods
+        PathPython: /corsConfiguration/methods
+        PathGo: /properties/corsConfiguration/methods
+        DispositionSdk: /cors_configuration/methods
+        DispositionRest: /properties/corsConfiguration/methods
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: false
+        Flatten: false
+      - NameSwagger: corsMaxAge
+        NameAnsible: cors_max_age
+        NamePythonSdk: max_age
+        NameGoSdk: MaxAge
+        NameTerraform: corsMaxAge
+        IdPortion: null
+        Type: number
+        TypeName: Int
+        TypeNameGo: Int
+        IsList: false
+        Required: false
+        Documentation: The max age to be allowed via CORS.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties/corsConfiguration/maxAge
+        PathPython: /corsConfiguration/maxAge
+        PathGo: /properties/corsConfiguration/maxAge
+        DispositionSdk: /cors_configuration/max_age
+        DispositionRest: /properties/corsConfiguration/maxAge
+        Comparison: ''
+        Updatable: true
+        ExampleValue: null
+        Hidden: false
+        IncludeInResponse: false
+        Flatten: false
+      - NameSwagger: corsAllowCredentials
+        NameAnsible: cors_allow_credentials
+        NamePythonSdk: allow_credentials
+        NameGoSdk: AllowCredentials
+        NameTerraform: corsAllowCredentials
+        IdPortion: null
+        Type: boolean
+        TypeName: Boolean
+        TypeNameGo: Boolean
+        IsList: false
+        Required: false
+        Documentation: If credentials are allowed via CORS.
+        DocumentationMarkKeywords: true
+        DefaultValue: null
+        IncludeInDocumentation: true
+        IncludeInArgSpec: true
+        NoLog: false
+        SubOptions: []
+        EnumValues: []
+        PathSwagger: /properties/corsConfiguration/allowCredentials
+        PathPython: /corsConfiguration/allowCredentials
+        PathGo: /properties/corsConfiguration/allowCredentials
+        DispositionSdk: /cors_configuration/allow_credentials
+        DispositionRest: /properties/corsConfiguration/allowCredentials
         Comparison: ''
         Updatable: true
         ExampleValue: null

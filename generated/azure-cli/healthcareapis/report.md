@@ -12,12 +12,18 @@ create a healthcareapis.
 |**--name**|str|The name of the service instance.|resource_name|resourceName|
 |**--kind**|str|The kind of the service. Valid values are: fhir, fhir-Stu3 and fhir-R4.|/kind|/kind|
 |**--location**|str|The resource location.|/location|/location|
-|**--access-policies**|list|The access policies of the service instance.|/access_policies|/properties/accessPolicies|
+|**--access-policies-object-id**|str|An object ID that is allowed access to the FHIR service.|/access_policies/object_id|/properties/accessPolicies/objectId|
 |--tags|dictionary|The resource tags.|/tags|/tags|
 |--etag|str|An etag associated with the resource, used for optimistic concurrency when editing it.|/etag|/etag|
-|--cosmos-db-configuration|dict|The settings for the Cosmos DB database backing the service.|/cosmos_db_configuration|/properties/cosmosDbConfiguration|
-|--authentication-configuration|dict|The authentication configuration for the service instance.|/authentication_configuration|/properties/authenticationConfiguration|
-|--cors-configuration|dict|The settings for the CORS configuration of the service instance.|/cors_configuration|/properties/corsConfiguration|
+|--cosmos-db-offer-throughput|number|The provisioned throughput for the backing database.|/cosmos_db_configuration/offer_throughput|/properties/cosmosDbConfiguration/offerThroughput|
+|--authentication-authority|str|The authority url for the service|/authentication_configuration/authority|/properties/authenticationConfiguration/authority|
+|--authentication-audience|str|The audience url for the service|/authentication_configuration/audience|/properties/authenticationConfiguration/audience|
+|--authentication-smart-proxy-enabled|boolean|If the SMART on FHIR proxy is enabled|/authentication_configuration/smart_proxy_enabled|/properties/authenticationConfiguration/smartProxyEnabled|
+|--cors-origins|list|The origins to be allowed via CORS.|/cors_configuration/origins|/properties/corsConfiguration/origins|
+|--cors-headers|list|The headers to be allowed via CORS.|/cors_configuration/headers|/properties/corsConfiguration/headers|
+|--cors-methods|list|The methods to be allowed via CORS.|/cors_configuration/methods|/properties/corsConfiguration/methods|
+|--cors-max-age|number|The max age to be allowed via CORS.|/cors_configuration/max_age|/properties/corsConfiguration/maxAge|
+|--cors-allow-credentials|boolean|If credentials are allowed via CORS.|/cors_configuration/allow_credentials|/properties/corsConfiguration/allowCredentials|
 
 **Example: ServicePut**
 
@@ -26,6 +32,12 @@ healthcareapis create --resource-group rg1
         --name service1
         --kind fhir
         --location westus
+        --cosmos-db-offer-throughput 1000
+        --authentication-authority https://login.microsoftonline.com/common
+        --authentication-audience https://azurehealthcareapis.com
+        --authentication-smart-proxy-enabled true
+        --cors-max-age 1440
+        --cors-allow-credentials false
 ```
 ### healthcareapis update
 
@@ -37,12 +49,18 @@ update a healthcareapis.
 |**--name**|str|The name of the service instance.|resource_name|resourceName|
 |**--kind**|str|The kind of the service. Valid values are: fhir, fhir-Stu3 and fhir-R4.|/kind|/kind|
 |**--location**|str|The resource location.|/location|/location|
-|**--access-policies**|list|The access policies of the service instance.|/access_policies|/properties/accessPolicies|
+|**--access-policies-object-id**|str|An object ID that is allowed access to the FHIR service.|/access_policies/object_id|/properties/accessPolicies/objectId|
 |--tags|dictionary|The resource tags.|/tags|/tags|
 |--etag|str|An etag associated with the resource, used for optimistic concurrency when editing it.|/etag|/etag|
-|--cosmos-db-configuration|dict|The settings for the Cosmos DB database backing the service.|/cosmos_db_configuration|/properties/cosmosDbConfiguration|
-|--authentication-configuration|dict|The authentication configuration for the service instance.|/authentication_configuration|/properties/authenticationConfiguration|
-|--cors-configuration|dict|The settings for the CORS configuration of the service instance.|/cors_configuration|/properties/corsConfiguration|
+|--cosmos-db-offer-throughput|number|The provisioned throughput for the backing database.|/cosmos_db_configuration/offer_throughput|/properties/cosmosDbConfiguration/offerThroughput|
+|--authentication-authority|str|The authority url for the service|/authentication_configuration/authority|/properties/authenticationConfiguration/authority|
+|--authentication-audience|str|The audience url for the service|/authentication_configuration/audience|/properties/authenticationConfiguration/audience|
+|--authentication-smart-proxy-enabled|boolean|If the SMART on FHIR proxy is enabled|/authentication_configuration/smart_proxy_enabled|/properties/authenticationConfiguration/smartProxyEnabled|
+|--cors-origins|list|The origins to be allowed via CORS.|/cors_configuration/origins|/properties/corsConfiguration/origins|
+|--cors-headers|list|The headers to be allowed via CORS.|/cors_configuration/headers|/properties/corsConfiguration/headers|
+|--cors-methods|list|The methods to be allowed via CORS.|/cors_configuration/methods|/properties/corsConfiguration/methods|
+|--cors-max-age|number|The max age to be allowed via CORS.|/cors_configuration/max_age|/properties/corsConfiguration/maxAge|
+|--cors-allow-credentials|boolean|If credentials are allowed via CORS.|/cors_configuration/allow_credentials|/properties/corsConfiguration/allowCredentials|
 
 **Example: ServicePatch**
 
