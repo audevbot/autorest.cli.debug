@@ -23,7 +23,7 @@ class ApimgmtScenarioTest(ScenarioTest):
         })
 
 # create_or_update -- create
-        self.cmd('healthcareapis create  --resource-group "rg1" --name "service1" --kind "fhir" --location "westus"', checks=[
+        self.cmd('healthcareapis create  --resource-group "rg1" --name "service1" --kind "fhir" --location "westus" --cosmos-db-offer-throughput "1000" --authentication-authority "https://login.microsoftonline.com/common" --authentication-audience "https://azurehealthcareapis.com" --authentication-smart-proxy-enabled true --cors-max-age "1440" --cors-allow-credentials false', checks=[
         ])
 
         self.cmd('healthcareapis create  --resource-group "rg1" --name "service1"', checks=[
@@ -33,7 +33,7 @@ class ApimgmtScenarioTest(ScenarioTest):
         ])
 
 # create_or_update -- update
-        self.cmd('healthcareapis update  --resource-group "rg1" --name "service1" --kind "fhir" --location "westus"', checks=[
+        self.cmd('healthcareapis update  --resource-group "rg1" --name "service1" --kind "fhir" --location "westus" --cosmos-db-offer-throughput "1000" --authentication-authority "https://login.microsoftonline.com/common" --authentication-audience "https://azurehealthcareapis.com" --authentication-smart-proxy-enabled true --cors-max-age "1440" --cors-allow-credentials false', checks=[
         ])
 
         self.cmd('healthcareapis update  --resource-group "rg1" --name "service1"', checks=[

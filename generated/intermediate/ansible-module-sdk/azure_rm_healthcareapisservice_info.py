@@ -55,68 +55,47 @@ options:
     description:
       - The provisioning state.
     type: str
-  access_policies:
+  access_policies_object_id:
     description:
-      - The access policies of the service instance.
+      - An object ID that is allowed access to the FHIR service.
     required: true
+    type: str
+  cosmos_db_offer_throughput:
+    description:
+      - The provisioned throughput for the backing database.
+    type: number
+  authentication_authority:
+    description:
+      - The authority url for the service
+    type: str
+  authentication_audience:
+    description:
+      - The audience url for the service
+    type: str
+  authentication_smart_proxy_enabled:
+    description:
+      - If the SMART on FHIR proxy is enabled
+    type: boolean
+  cors_origins:
+    description:
+      - The origins to be allowed via CORS.
     type: list
-    suboptions:
-      object_id:
-        description:
-          - An object ID that is allowed access to the FHIR service.
-        required: true
-        type: str
-  cosmos_db_configuration:
+  cors_headers:
     description:
-      - The settings for the Cosmos DB database backing the service.
-    type: dict
-    suboptions:
-      offer_throughput:
-        description:
-          - The provisioned throughput for the backing database.
-        type: number
-  authentication_configuration:
+      - The headers to be allowed via CORS.
+    type: list
+  cors_methods:
     description:
-      - The authentication configuration for the service instance.
-    type: dict
-    suboptions:
-      authority:
-        description:
-          - The authority url for the service
-        type: str
-      audience:
-        description:
-          - The audience url for the service
-        type: str
-      smart_proxy_enabled:
-        description:
-          - If the SMART on FHIR proxy is enabled
-        type: boolean
-  cors_configuration:
+      - The methods to be allowed via CORS.
+    type: list
+  cors_max_age:
     description:
-      - The settings for the CORS configuration of the service instance.
-    type: dict
-    suboptions:
-      origins:
-        description:
-          - The origins to be allowed via CORS.
-        type: list
-      headers:
-        description:
-          - The headers to be allowed via CORS.
-        type: list
-      methods:
-        description:
-          - The methods to be allowed via CORS.
-        type: list
-      max_age:
-        description:
-          - The max age to be allowed via CORS.
-        type: number
-      allow_credentials:
-        description:
-          - If credentials are allowed via CORS.
-        type: boolean
+      - The max age to be allowed via CORS.
+    type: number
+  cors_allow_credentials:
+    description:
+      - If credentials are allowed via CORS.
+    type: boolean
 extends_documentation_fragment:
   - azure
 author:

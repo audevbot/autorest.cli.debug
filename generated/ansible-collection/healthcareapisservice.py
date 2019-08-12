@@ -46,68 +46,47 @@ options:
         An etag associated with the resource, used for optimistic concurrency
         when editing it.
     type: str
-  access_policies:
+  access_policies_object_id:
     description:
-      - The access policies of the service instance.
+      - An object ID that is allowed access to the FHIR service.
     required: true
+    type: str
+  cosmos_db_offer_throughput:
+    description:
+      - The provisioned throughput for the backing database.
+    type: number
+  authentication_authority:
+    description:
+      - The authority url for the service
+    type: str
+  authentication_audience:
+    description:
+      - The audience url for the service
+    type: str
+  authentication_smart_proxy_enabled:
+    description:
+      - If the SMART on FHIR proxy is enabled
+    type: boolean
+  cors_origins:
+    description:
+      - The origins to be allowed via CORS.
     type: list
-    suboptions:
-      object_id:
-        description:
-          - An object ID that is allowed access to the FHIR service.
-        required: true
-        type: str
-  cosmos_db_configuration:
+  cors_headers:
     description:
-      - The settings for the Cosmos DB database backing the service.
-    type: dict
-    suboptions:
-      offer_throughput:
-        description:
-          - The provisioned throughput for the backing database.
-        type: number
-  authentication_configuration:
+      - The headers to be allowed via CORS.
+    type: list
+  cors_methods:
     description:
-      - The authentication configuration for the service instance.
-    type: dict
-    suboptions:
-      authority:
-        description:
-          - The authority url for the service
-        type: str
-      audience:
-        description:
-          - The audience url for the service
-        type: str
-      smart_proxy_enabled:
-        description:
-          - If the SMART on FHIR proxy is enabled
-        type: boolean
-  cors_configuration:
+      - The methods to be allowed via CORS.
+    type: list
+  cors_max_age:
     description:
-      - The settings for the CORS configuration of the service instance.
-    type: dict
-    suboptions:
-      origins:
-        description:
-          - The origins to be allowed via CORS.
-        type: list
-      headers:
-        description:
-          - The headers to be allowed via CORS.
-        type: list
-      methods:
-        description:
-          - The methods to be allowed via CORS.
-        type: list
-      max_age:
-        description:
-          - The max age to be allowed via CORS.
-        type: number
-      allow_credentials:
-        description:
-          - If credentials are allowed via CORS.
-        type: boolean
+      - The max age to be allowed via CORS.
+    type: number
+  cors_allow_credentials:
+    description:
+      - If credentials are allowed via CORS.
+    type: boolean
   provisioning_state:
     description:
       - The provisioning state.
@@ -386,66 +365,46 @@ class AzureRMServices(AzureRMModuleBaseExt):
                 updatable=False,
                 disposition='/'
             ),
-            access_policies=dict(
+            access_policies_object_id=dict(
+                type='str',
+                disposition='/properties/accessPolicies/objectId',
+                required=true
+            ),
+            cosmos_db_offer_throughput=dict(
+                type='number',
+                disposition='/properties/cosmosDbConfiguration/offerThroughput'
+            ),
+            authentication_authority=dict(
+                type='str',
+                disposition='/properties/authenticationConfiguration/authority'
+            ),
+            authentication_audience=dict(
+                type='str',
+                disposition='/properties/authenticationConfiguration/audience'
+            ),
+            authentication_smart_proxy_enabled=dict(
+                type='boolean',
+                disposition='/properties/authenticationConfiguration/smartProxyEnabled'
+            ),
+            cors_origins=dict(
                 type='list',
-                disposition='/properties/accessPolicies',
-                required=true,
-                options=dict(
-                    object_id=dict(
-                        type='str',
-                        disposition='objectId',
-                        required=true
-                    )
-                )
+                disposition='/properties/corsConfiguration/origins'
             ),
-            cosmos_db_configuration=dict(
-                type='dict',
-                disposition='/properties/cosmosDbConfiguration',
-                options=dict(
-                    offer_throughput=dict(
-                        type='number',
-                        disposition='offerThroughput'
-                    )
-                )
+            cors_headers=dict(
+                type='list',
+                disposition='/properties/corsConfiguration/headers'
             ),
-            authentication_configuration=dict(
-                type='dict',
-                disposition='/properties/authenticationConfiguration',
-                options=dict(
-                    authority=dict(
-                        type='str'
-                    ),
-                    audience=dict(
-                        type='str'
-                    ),
-                    smart_proxy_enabled=dict(
-                        type='boolean',
-                        disposition='smartProxyEnabled'
-                    )
-                )
+            cors_methods=dict(
+                type='list',
+                disposition='/properties/corsConfiguration/methods'
             ),
-            cors_configuration=dict(
-                type='dict',
-                disposition='/properties/corsConfiguration',
-                options=dict(
-                    origins=dict(
-                        type='list'
-                    ),
-                    headers=dict(
-                        type='list'
-                    ),
-                    methods=dict(
-                        type='list'
-                    ),
-                    max_age=dict(
-                        type='number',
-                        disposition='maxAge'
-                    ),
-                    allow_credentials=dict(
-                        type='boolean',
-                        disposition='allowCredentials'
-                    )
-                )
+            cors_max_age=dict(
+                type='number',
+                disposition='/properties/corsConfiguration/maxAge'
+            ),
+            cors_allow_credentials=dict(
+                type='boolean',
+                disposition='/properties/corsConfiguration/allowCredentials'
             ),
             state=dict(
                 type='str',
