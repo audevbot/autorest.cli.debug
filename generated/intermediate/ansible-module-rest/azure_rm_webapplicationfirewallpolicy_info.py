@@ -728,7 +728,7 @@ options:
                 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
             type: >-
               unknown[DictionaryType
-              {"$id":"3130","$type":"DictionaryType","valueType":{"$ref":"3087"},"supportsAdditionalProperties":false,"name":{"$id":"3131","fixed":false},"deprecated":false}]
+              {"$id":"3152","$type":"DictionaryType","valueType":{"$ref":"3109"},"supportsAdditionalProperties":false,"name":{"$id":"3153","fixed":false},"deprecated":false}]
   provisioning_state:
     description:
       - Provisioning state of the WebApplicationFirewallPolicy.
