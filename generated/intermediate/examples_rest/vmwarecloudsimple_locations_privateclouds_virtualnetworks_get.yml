@@ -1,0 +1,22 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    location_name: myLocation
+    private_cloud_name: myPrivateCloud
+  tasks:
+    - name: ListVirtualNetworks
+      azure_rm_resource_facts:
+        api_version: '2019-04-01'
+        provider: VMwareCloudSimple
+        resource_type: locations
+        resource_name: '{{ location_name }}'
+        subresource:
+          - type: privateClouds
+            name: '{{ private_cloud_name }}'
+          - type: virtualNetworks
+      register: output
+    - debug:
+        var: output

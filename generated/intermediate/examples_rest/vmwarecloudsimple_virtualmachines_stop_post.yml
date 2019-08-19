@@ -1,0 +1,20 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    virtual_machine_name: myVirtualMachine
+  tasks:
+    - name: StopInBodyVirtualMachine
+      azure_rm_resource:
+        method: POST
+        api_version: '2019-04-01'
+        resource_group: '{{ resource_group }}'
+        provider: VMwareCloudSimple
+        resource_type: virtualMachines
+        resource_name: '{{ virtual_machine_name }}'
+        subresource:
+          - type: stop
+        body: !<tag:yaml.org,2002:js/undefined> ''

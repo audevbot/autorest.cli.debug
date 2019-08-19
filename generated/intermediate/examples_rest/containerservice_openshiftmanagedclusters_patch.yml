@@ -1,0 +1,22 @@
+- import_playbook: containerservice_openshiftmanagedclusters_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    open_shift_managed_cluster_name: myOpenShiftManagedCluster
+  tasks:
+    - name: Update OpenShift Managed Cluster Tags
+      azure_rm_resource:
+        method: PATCH
+        api_version: '2019-04-30'
+        resource_group: '{{ resource_group }}'
+        provider: ContainerService
+        resource_type: openShiftManagedClusters
+        resource_name: '{{ open_shift_managed_cluster_name }}'
+        body:
+          tags:
+            tier: testing
+            archv3: ''

@@ -1,0 +1,20 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    location_name: myLocation
+    private_cloud_name: myPrivateCloud
+    resource_pool_name: myResourcePool
+  tasks:
+
+    - name: GetResourcePool
+      azure_rm_vmwarecloudsimpleresourcepoolbypc_info:
+        region_id: '{{location_name}}'
+        pc_name: '{{private_cloud_name}}'
+        name: '{{resource_pool_name}}'
+    
+      register: output
+    - debug:
+        var: output

@@ -1,0 +1,22 @@
+- import_playbook: resourcegroups_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    dedicated_cloud_service_name: myDedicatedCloudService
+  tasks:
+    - name: CreateDedicatedCloudService
+      azure_rm_resource:
+        idempotency: true
+        api_version: '2019-04-01'
+        resource_group: '{{ resource_group }}'
+        provider: VMwareCloudSimple
+        resource_type: dedicatedCloudServices
+        resource_name: '{{ dedicated_cloud_service_name }}'
+        body:
+          location: westus
+          properties:
+            gatewaySubnet: 10.0.0.0

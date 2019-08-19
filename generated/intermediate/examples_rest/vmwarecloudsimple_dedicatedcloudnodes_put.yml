@@ -1,0 +1,30 @@
+- import_playbook: resourcegroups_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    dedicated_cloud_node_name: myDedicatedCloudNode
+  tasks:
+    - name: CreateDedicatedCloudNode
+      azure_rm_resource:
+        idempotency: true
+        api_version: '2019-04-01'
+        resource_group: '{{ resource_group }}'
+        provider: VMwareCloudSimple
+        resource_type: dedicatedCloudNodes
+        resource_name: '{{ dedicated_cloud_node_name }}'
+        body:
+          location: westus
+          properties:
+            skuDescription:
+              id: general
+              name: CS28-Node
+            placementGroupId: n1
+            availabilityZoneId: az1
+            nodesCount: '1'
+            purchaseId: 56acbd46-3d36-4bbf-9b08-57c30fdf6932
+          sku:
+            name: VMware_CloudSimple_CS28

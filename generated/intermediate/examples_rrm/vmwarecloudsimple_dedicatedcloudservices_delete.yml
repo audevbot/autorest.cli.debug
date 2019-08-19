@@ -1,0 +1,16 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    dedicated_cloud_service_name: myDedicatedCloudService
+  tasks:
+
+    - name: DeleteDedicatedCloudService
+      azure_rm_vmwarecloudsimplededicatedcloudservice:
+        resource_group: '{{resource_group}}'
+        name: '{{dedicated_cloud_service_name}}'
+        state: absent
+    

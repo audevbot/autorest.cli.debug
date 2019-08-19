@@ -1,0 +1,23 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    location_name: myLocation
+    private_cloud_name: myPrivateCloud
+  tasks:
+
+    - name: ListVirtualMachineTemplates
+      azure_rm_vmwarecloudsimplevirtualmachinetemplatesbypc_info:
+        pc_name: '{{private_cloud_name}}'
+        region_id: '{{location_name}}'
+        name: >-
+          /subscriptions/{{ subscription_id
+          }}/providers/Microsoft.VMwareCloudSimple/locations/{{ location_name
+          }}/privateClouds/{{ private_cloud_name }}/resourcePools/{{
+          resource_pool_name }}
+    
+      register: output
+    - debug:
+        var: output
