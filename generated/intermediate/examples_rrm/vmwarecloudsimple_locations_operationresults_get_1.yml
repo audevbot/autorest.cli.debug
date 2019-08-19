@@ -1,0 +1,19 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    location_name: myLocation
+    operation_result_name: myOperationResult
+  tasks:
+
+    - name: GetOperationResult
+      azure_rm_vmwarecloudsimple_info:
+        region_id: '{{location_name}}'
+        referer: 'https://management.azure.com/'
+        operation_id: '{{operation_result_name}}'
+    
+      register: output
+    - debug:
+        var: output

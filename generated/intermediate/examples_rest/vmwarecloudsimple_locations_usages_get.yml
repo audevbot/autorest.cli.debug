@@ -1,0 +1,19 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    location_name: myLocation
+  tasks:
+    - name: ListUsages
+      azure_rm_resource_facts:
+        api_version: '2019-04-01'
+        provider: VMwareCloudSimple
+        resource_type: locations
+        resource_name: '{{ location_name }}'
+        subresource:
+          - type: usages
+      register: output
+    - debug:
+        var: output

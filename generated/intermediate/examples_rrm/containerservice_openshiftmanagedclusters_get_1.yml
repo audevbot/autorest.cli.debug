@@ -1,0 +1,16 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+  tasks:
+
+    - name: Get Managed Clusters by Resource Group
+      azure_rm_openshiftmanagedcluster_info:
+        resource_group: '{{resource_group}}'
+    
+      register: output
+    - debug:
+        var: output

@@ -1,0 +1,23 @@
+# ref##Referer##https://management.azure.com/
+- import_playbook: vmwarecloudsimple_dedicatedcloudnodes_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    dedicated_cloud_node_name: myDedicatedCloudNode
+  tasks:
+
+    - name: PatchDedicatedCloudNode
+      azure_rm_vmwarecloudsimplededicatedcloudnode:
+        resource_group: '{{resource_group}}'
+        referer: 'https://management.azure.com/'
+        name: '{{dedicated_cloud_node_name}}'
+        dedicated_cloud_node_request:
+          tags:
+            myTag: tagValue
+    

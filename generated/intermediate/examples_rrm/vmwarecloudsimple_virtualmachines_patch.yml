@@ -1,0 +1,21 @@
+- import_playbook: vmwarecloudsimple_virtualmachines_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    virtual_machine_name: myVirtualMachine
+  tasks:
+
+    - name: PatchVirtualMachine
+      azure_rm_vmwarecloudsimplevirtualmachine:
+        resource_group: '{{resource_group}}'
+        name: '{{virtual_machine_name}}'
+        virtual_machine_request:
+          tags:
+            myTag: tagValue
+    

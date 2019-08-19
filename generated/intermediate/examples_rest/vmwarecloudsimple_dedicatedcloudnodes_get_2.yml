@@ -1,0 +1,19 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    dedicated_cloud_node_name: myDedicatedCloudNode
+  tasks:
+    - name: GetDedicatedCloudNode
+      azure_rm_resource_facts:
+        api_version: '2019-04-01'
+        resource_group: '{{ resource_group }}'
+        provider: VMwareCloudSimple
+        resource_type: dedicatedCloudNodes
+        resource_name: '{{ dedicated_cloud_node_name }}'
+      register: output
+    - debug:
+        var: output

@@ -1,0 +1,3315 @@
+$id: '1'
+modelTypes:
+  - $id: '2'
+    $type: CompositeType
+    properties:
+      - $id: '3'
+        isReadOnly: true
+        realPath:
+          - id
+        collectionFormat: none
+        defaultValue:
+          $id: '4'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '5'
+          fixed: false
+          raw: Resource Id
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '6'
+          fixed: false
+          raw: id
+        serializedName: id
+        modelType:
+          $id: '7'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '8'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '9'
+        isReadOnly: true
+        realPath:
+          - name
+        collectionFormat: none
+        defaultValue:
+          $id: '10'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '11'
+          fixed: false
+          raw: Resource name
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '12'
+          fixed: false
+          raw: name
+        serializedName: name
+        modelType:
+          $id: '13'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '14'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '15'
+        isReadOnly: true
+        realPath:
+          - type
+        collectionFormat: none
+        defaultValue:
+          $id: '16'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '17'
+          fixed: false
+          raw: Resource type
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '18'
+          fixed: false
+          raw: type
+        serializedName: type
+        modelType:
+          $id: '19'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '20'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '21'
+        isReadOnly: false
+        realPath:
+          - location
+        collectionFormat: none
+        defaultValue:
+          $id: '22'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '23'
+          fixed: false
+          raw: Resource location
+        extensions:
+          x-ms-mutability:
+            - read
+            - create
+        isRequired: true
+        isConstant: false
+        name:
+          $id: '24'
+          fixed: false
+          raw: location
+        serializedName: location
+        modelType:
+          $id: '25'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '26'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '27'
+        isReadOnly: false
+        realPath:
+          - tags
+        collectionFormat: none
+        defaultValue:
+          $id: '28'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '29'
+          fixed: false
+          raw: Resource tags
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '30'
+          fixed: false
+          raw: tags
+        serializedName: tags
+        modelType:
+          $id: '31'
+          $type: DictionaryType
+          valueType:
+            $id: '32'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              $id: '33'
+              fixed: false
+              raw: String
+            deprecated: false
+          supportsAdditionalProperties: false
+          name:
+            $id: '34'
+            fixed: false
+          deprecated: false
+    serializedName: Resource
+    documentation: The Resource model definition.
+    containsConstantProperties: false
+    name:
+      $id: '35'
+      fixed: false
+      raw: Resource
+    extensions:
+      x-ms-azure-resource: true
+    deprecated: false
+  - $id: '36'
+    $type: CompositeType
+    properties:
+      - $id: '37'
+        isReadOnly: false
+        realPath:
+          - code
+        collectionFormat: none
+        defaultValue:
+          $id: '38'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '39'
+          fixed: false
+          raw: >-
+            An identifier for the error. Codes are invariant and are intended to
+            be consumed programmatically.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '40'
+          fixed: false
+          raw: code
+        serializedName: code
+        modelType:
+          $id: '41'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '42'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '43'
+        isReadOnly: false
+        realPath:
+          - message
+        collectionFormat: none
+        defaultValue:
+          $id: '44'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '45'
+          fixed: false
+          raw: >-
+            A message describing the error, intended to be suitable for display
+            in a user interface.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '46'
+          fixed: false
+          raw: message
+        serializedName: message
+        modelType:
+          $id: '47'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '48'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '49'
+        isReadOnly: false
+        realPath:
+          - target
+        collectionFormat: none
+        defaultValue:
+          $id: '50'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '51'
+          fixed: false
+          raw: >-
+            The target of the particular error. For example, the name of the
+            property in error.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '52'
+          fixed: false
+          raw: target
+        serializedName: target
+        modelType:
+          $id: '53'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '54'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '55'
+        isReadOnly: false
+        realPath:
+          - details
+        collectionFormat: none
+        defaultValue:
+          $id: '56'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '57'
+          fixed: false
+          raw: A list of additional details about the error.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '58'
+          fixed: false
+          raw: details
+        serializedName: details
+        modelType:
+          $id: '59'
+          $type: SequenceType
+          elementType:
+            $ref: '36'
+          name:
+            $id: '60'
+            fixed: false
+          deprecated: false
+    serializedName: CloudErrorBody
+    documentation: An error response from the Container service.
+    containsConstantProperties: false
+    name:
+      $id: '61'
+      fixed: false
+      raw: CloudErrorBody
+    extensions:
+      x-ms-external: true
+    deprecated: false
+  - $id: '62'
+    $type: CompositeType
+    properties:
+      - $id: '63'
+        isReadOnly: false
+        realPath:
+          - error
+        collectionFormat: none
+        defaultValue:
+          $id: '64'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '65'
+          fixed: false
+          raw: Details about the error.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '66'
+          fixed: false
+          raw: error
+        serializedName: error
+        modelType:
+          $ref: '36'
+    serializedName: CloudError
+    documentation: An error response from the Container service.
+    containsConstantProperties: false
+    name:
+      $id: '67'
+      fixed: false
+      raw: CloudError
+    extensions:
+      x-ms-external: true
+    deprecated: false
+  - $id: '68'
+    $type: CompositeType
+    properties:
+      - $id: '69'
+        isReadOnly: false
+        realPath:
+          - name
+        collectionFormat: none
+        defaultValue:
+          $id: '70'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '71'
+          fixed: false
+          raw: The plan ID.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '72'
+          fixed: false
+          raw: name
+        serializedName: name
+        modelType:
+          $id: '73'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '74'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '75'
+        isReadOnly: false
+        realPath:
+          - product
+        collectionFormat: none
+        defaultValue:
+          $id: '76'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '77'
+          fixed: false
+          raw: >-
+            Specifies the product of the image from the marketplace. This is the
+            same value as Offer under the imageReference element.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '78'
+          fixed: false
+          raw: product
+        serializedName: product
+        modelType:
+          $id: '79'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '80'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '81'
+        isReadOnly: false
+        realPath:
+          - promotionCode
+        collectionFormat: none
+        defaultValue:
+          $id: '82'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '83'
+          fixed: false
+          raw: The promotion code.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '84'
+          fixed: false
+          raw: promotionCode
+        serializedName: promotionCode
+        modelType:
+          $id: '85'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '86'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '87'
+        isReadOnly: false
+        realPath:
+          - publisher
+        collectionFormat: none
+        defaultValue:
+          $id: '88'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '89'
+          fixed: false
+          raw: The plan ID.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '90'
+          fixed: false
+          raw: publisher
+        serializedName: publisher
+        modelType:
+          $id: '91'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '92'
+            fixed: false
+            raw: String
+          deprecated: false
+    serializedName: PurchasePlan
+    documentation: >-
+      Used for establishing the purchase context of any 3rd Party artifact
+      through MarketPlace.
+    containsConstantProperties: false
+    name:
+      $id: '93'
+      fixed: false
+      raw: PurchasePlan
+    deprecated: false
+  - $id: '94'
+    $type: CompositeType
+    properties:
+      - $id: '95'
+        isReadOnly: false
+        realPath:
+          - name
+        collectionFormat: none
+        defaultValue:
+          $id: '96'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '97'
+          fixed: false
+          raw: Name of the router profile.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '98'
+          fixed: false
+          raw: name
+        serializedName: name
+        modelType:
+          $id: '99'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '100'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '101'
+        isReadOnly: true
+        realPath:
+          - publicSubdomain
+        collectionFormat: none
+        defaultValue:
+          $id: '102'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '103'
+          fixed: false
+          raw: DNS subdomain for OpenShift router.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '104'
+          fixed: false
+          raw: publicSubdomain
+        serializedName: publicSubdomain
+        modelType:
+          $id: '105'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '106'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '107'
+        isReadOnly: true
+        realPath:
+          - fqdn
+        collectionFormat: none
+        defaultValue:
+          $id: '108'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '109'
+          fixed: false
+          raw: Auto-allocated FQDN for the OpenShift router.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '110'
+          fixed: false
+          raw: fqdn
+        serializedName: fqdn
+        modelType:
+          $id: '111'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '112'
+            fixed: false
+            raw: String
+          deprecated: false
+    serializedName: OpenShiftRouterProfile
+    documentation: Represents an OpenShift router
+    containsConstantProperties: false
+    name:
+      $id: '113'
+      fixed: false
+      raw: OpenShiftRouterProfile
+    deprecated: false
+  - $id: '114'
+    $type: CompositeType
+    properties:
+      - $id: '115'
+        isReadOnly: false
+        realPath:
+          - vnetCidr
+        collectionFormat: none
+        defaultValue:
+          $id: '116'
+          fixed: false
+          raw: 10.0.0.0/8
+        deprecated: false
+        documentation:
+          $id: '117'
+          fixed: false
+          raw: CIDR for the OpenShift Vnet.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '118'
+          fixed: false
+          raw: vnetCidr
+        serializedName: vnetCidr
+        modelType:
+          $id: '119'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '120'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '121'
+        isReadOnly: false
+        realPath:
+          - peerVnetId
+        collectionFormat: none
+        defaultValue:
+          $id: '122'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '123'
+          fixed: false
+          raw: CIDR of the Vnet to peer.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '124'
+          fixed: false
+          raw: peerVnetId
+        serializedName: peerVnetId
+        modelType:
+          $id: '125'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '126'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '127'
+        isReadOnly: false
+        realPath:
+          - vnetId
+        collectionFormat: none
+        defaultValue:
+          $id: '128'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '129'
+          fixed: false
+          raw: ID of the Vnet created for OSA cluster.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '130'
+          fixed: false
+          raw: vnetId
+        serializedName: vnetId
+        modelType:
+          $id: '131'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '132'
+            fixed: false
+            raw: String
+          deprecated: false
+    serializedName: NetworkProfile
+    documentation: Represents the OpenShift networking configuration
+    containsConstantProperties: false
+    name:
+      $id: '133'
+      fixed: false
+      raw: NetworkProfile
+    deprecated: false
+  - $id: '134'
+    $type: CompositeType
+    properties:
+      - $id: '135'
+        isReadOnly: false
+        realPath:
+          - name
+        collectionFormat: none
+        defaultValue:
+          $id: '136'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '137'
+          fixed: false
+          raw: >-
+            Unique name of the master pool profile in the context of the
+            subscription and resource group.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '138'
+          fixed: false
+          raw: name
+        serializedName: name
+        modelType:
+          $id: '139'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '140'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '141'
+        isReadOnly: false
+        realPath:
+          - count
+        collectionFormat: none
+        defaultValue:
+          $id: '142'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '143'
+          fixed: false
+          raw: >-
+            Number of masters (VMs) to host docker containers. The default value
+            is 3.
+        isRequired: true
+        isConstant: false
+        name:
+          $id: '144'
+          fixed: false
+          raw: count
+        serializedName: count
+        modelType:
+          $id: '145'
+          $type: PrimaryType
+          format: int32
+          knownPrimaryType: int
+          name:
+            $id: '146'
+            fixed: false
+            raw: Int
+          deprecated: false
+      - $id: '147'
+        isReadOnly: false
+        realPath:
+          - vmSize
+        collectionFormat: none
+        defaultValue:
+          $id: '148'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '149'
+          fixed: false
+          raw: Size of agent VMs.
+        extensions:
+          x-ms-enum:
+            name: OpenShiftContainerServiceVMSize
+            modelAsString: true
+        isRequired: true
+        isConstant: false
+        name:
+          $id: '150'
+          fixed: false
+          raw: vmSize
+        serializedName: vmSize
+        modelType:
+          $id: '151'
+          $type: EnumType
+          modelAsExtensible: false
+          values:
+            - $id: '152'
+              name: Standard_D2s_v3
+              serializedName: Standard_D2s_v3
+            - $id: '153'
+              name: Standard_D4s_v3
+              serializedName: Standard_D4s_v3
+            - $id: '154'
+              name: Standard_D8s_v3
+              serializedName: Standard_D8s_v3
+            - $id: '155'
+              name: Standard_D16s_v3
+              serializedName: Standard_D16s_v3
+            - $id: '156'
+              name: Standard_D32s_v3
+              serializedName: Standard_D32s_v3
+            - $id: '157'
+              name: Standard_D64s_v3
+              serializedName: Standard_D64s_v3
+            - $id: '158'
+              name: Standard_DS4_v2
+              serializedName: Standard_DS4_v2
+            - $id: '159'
+              name: Standard_DS5_v2
+              serializedName: Standard_DS5_v2
+            - $id: '160'
+              name: Standard_F8s_v2
+              serializedName: Standard_F8s_v2
+            - $id: '161'
+              name: Standard_F16s_v2
+              serializedName: Standard_F16s_v2
+            - $id: '162'
+              name: Standard_F32s_v2
+              serializedName: Standard_F32s_v2
+            - $id: '163'
+              name: Standard_F64s_v2
+              serializedName: Standard_F64s_v2
+            - $id: '164'
+              name: Standard_F72s_v2
+              serializedName: Standard_F72s_v2
+            - $id: '165'
+              name: Standard_F8s
+              serializedName: Standard_F8s
+            - $id: '166'
+              name: Standard_F16s
+              serializedName: Standard_F16s
+            - $id: '167'
+              name: Standard_E4s_v3
+              serializedName: Standard_E4s_v3
+            - $id: '168'
+              name: Standard_E8s_v3
+              serializedName: Standard_E8s_v3
+            - $id: '169'
+              name: Standard_E16s_v3
+              serializedName: Standard_E16s_v3
+            - $id: '170'
+              name: Standard_E20s_v3
+              serializedName: Standard_E20s_v3
+            - $id: '171'
+              name: Standard_E32s_v3
+              serializedName: Standard_E32s_v3
+            - $id: '172'
+              name: Standard_E64s_v3
+              serializedName: Standard_E64s_v3
+            - $id: '173'
+              name: Standard_GS2
+              serializedName: Standard_GS2
+            - $id: '174'
+              name: Standard_GS3
+              serializedName: Standard_GS3
+            - $id: '175'
+              name: Standard_GS4
+              serializedName: Standard_GS4
+            - $id: '176'
+              name: Standard_GS5
+              serializedName: Standard_GS5
+            - $id: '177'
+              name: Standard_DS12_v2
+              serializedName: Standard_DS12_v2
+            - $id: '178'
+              name: Standard_DS13_v2
+              serializedName: Standard_DS13_v2
+            - $id: '179'
+              name: Standard_DS14_v2
+              serializedName: Standard_DS14_v2
+            - $id: '180'
+              name: Standard_DS15_v2
+              serializedName: Standard_DS15_v2
+            - $id: '181'
+              name: Standard_L4s
+              serializedName: Standard_L4s
+            - $id: '182'
+              name: Standard_L8s
+              serializedName: Standard_L8s
+            - $id: '183'
+              name: Standard_L16s
+              serializedName: Standard_L16s
+            - $id: '184'
+              name: Standard_L32s
+              serializedName: Standard_L32s
+          modelAsString: true
+          underlyingType:
+            $id: '185'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              $id: '186'
+              fixed: false
+              raw: String
+            deprecated: false
+          name:
+            $id: '187'
+            fixed: false
+            raw: OpenShiftContainerServiceVMSize
+          deprecated: false
+      - $id: '188'
+        isReadOnly: false
+        realPath:
+          - subnetCidr
+        collectionFormat: none
+        defaultValue:
+          $id: '189'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '190'
+          fixed: false
+          raw: Subnet CIDR for the peering.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '191'
+          fixed: false
+          raw: subnetCidr
+        serializedName: subnetCidr
+        modelType:
+          $id: '192'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '193'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '194'
+        isReadOnly: false
+        realPath:
+          - osType
+        collectionFormat: none
+        defaultValue:
+          $id: '195'
+          fixed: false
+          raw: Linux
+        deprecated: false
+        documentation:
+          $id: '196'
+          fixed: false
+          raw: >-
+            OsType to be used to specify os type. Choose from Linux and Windows.
+            Default to Linux.
+        extensions:
+          x-ms-enum:
+            name: OSType
+            modelAsString: true
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '197'
+          fixed: false
+          raw: osType
+        serializedName: osType
+        modelType:
+          $id: '198'
+          $type: EnumType
+          modelAsExtensible: false
+          values:
+            - $id: '199'
+              name: Linux
+              serializedName: Linux
+            - $id: '200'
+              name: Windows
+              serializedName: Windows
+          modelAsString: true
+          underlyingType:
+            $id: '201'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              $id: '202'
+              fixed: false
+              raw: String
+            deprecated: false
+          name:
+            $id: '203'
+            fixed: false
+            raw: OSType
+          deprecated: false
+    serializedName: OpenShiftManagedClusterMasterPoolProfile
+    documentation: >-
+      OpenShiftManagedClusterMaterPoolProfile contains configuration for
+      OpenShift master VMs.
+    containsConstantProperties: false
+    name:
+      $id: '204'
+      fixed: false
+      raw: OpenShiftManagedClusterMasterPoolProfile
+    deprecated: false
+  - $id: '205'
+    $type: CompositeType
+    properties:
+      - $id: '206'
+        isReadOnly: false
+        realPath:
+          - name
+        collectionFormat: none
+        defaultValue:
+          $id: '207'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '208'
+          fixed: false
+          raw: >-
+            Unique name of the pool profile in the context of the subscription
+            and resource group.
+        isRequired: true
+        isConstant: false
+        name:
+          $id: '209'
+          fixed: false
+          raw: name
+        serializedName: name
+        modelType:
+          $id: '210'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '211'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '212'
+        isReadOnly: false
+        realPath:
+          - count
+        collectionFormat: none
+        defaultValue:
+          $id: '213'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '214'
+          fixed: false
+          raw: Number of agents (VMs) to host docker containers.
+        isRequired: true
+        isConstant: false
+        name:
+          $id: '215'
+          fixed: false
+          raw: count
+        serializedName: count
+        modelType:
+          $id: '216'
+          $type: PrimaryType
+          format: int32
+          knownPrimaryType: int
+          name:
+            $id: '217'
+            fixed: false
+            raw: Int
+          deprecated: false
+      - $id: '218'
+        isReadOnly: false
+        realPath:
+          - vmSize
+        collectionFormat: none
+        defaultValue:
+          $id: '219'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '220'
+          fixed: false
+          raw: Size of agent VMs.
+        extensions:
+          x-ms-enum:
+            name: OpenShiftContainerServiceVMSize
+            modelAsString: true
+        isRequired: true
+        isConstant: false
+        name:
+          $id: '221'
+          fixed: false
+          raw: vmSize
+        serializedName: vmSize
+        modelType:
+          $ref: '151'
+      - $id: '222'
+        isReadOnly: false
+        realPath:
+          - subnetCidr
+        collectionFormat: none
+        defaultValue:
+          $id: '223'
+          fixed: false
+          raw: 10.0.0.0/24
+        deprecated: false
+        documentation:
+          $id: '224'
+          fixed: false
+          raw: Subnet CIDR for the peering.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '225'
+          fixed: false
+          raw: subnetCidr
+        serializedName: subnetCidr
+        modelType:
+          $id: '226'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '227'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '228'
+        isReadOnly: false
+        realPath:
+          - osType
+        collectionFormat: none
+        defaultValue:
+          $id: '229'
+          fixed: false
+          raw: Linux
+        deprecated: false
+        documentation:
+          $id: '230'
+          fixed: false
+          raw: >-
+            OsType to be used to specify os type. Choose from Linux and Windows.
+            Default to Linux.
+        extensions:
+          x-ms-enum:
+            name: OSType
+            modelAsString: true
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '231'
+          fixed: false
+          raw: osType
+        serializedName: osType
+        modelType:
+          $ref: '198'
+      - $id: '232'
+        isReadOnly: false
+        realPath:
+          - role
+        collectionFormat: none
+        defaultValue:
+          $id: '233'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '234'
+          fixed: false
+          raw: Define the role of the AgentPoolProfile.
+        extensions:
+          x-ms-enum:
+            name: OpenShiftAgentPoolProfileRole
+            modelAsString: true
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '235'
+          fixed: false
+          raw: role
+        serializedName: role
+        modelType:
+          $id: '236'
+          $type: EnumType
+          modelAsExtensible: false
+          values:
+            - $id: '237'
+              name: compute
+              serializedName: compute
+            - $id: '238'
+              name: infra
+              serializedName: infra
+          modelAsString: true
+          underlyingType:
+            $id: '239'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              $id: '240'
+              fixed: false
+              raw: String
+            deprecated: false
+          name:
+            $id: '241'
+            fixed: false
+            raw: OpenShiftAgentPoolProfileRole
+          deprecated: false
+    serializedName: OpenShiftManagedClusterAgentPoolProfile
+    documentation: Defines the configuration of the OpenShift cluster VMs.
+    containsConstantProperties: false
+    name:
+      $id: '242'
+      fixed: false
+      raw: OpenShiftManagedClusterAgentPoolProfile
+    deprecated: false
+  - $id: '243'
+    $type: CompositeType
+    serializedName: OpenShiftManagedClusterBaseIdentityProvider
+    polymorphicDiscriminator: kind
+    documentation: Structure for any Identity provider.
+    containsConstantProperties: false
+    name:
+      $id: '244'
+      fixed: false
+      raw: OpenShiftManagedClusterBaseIdentityProvider
+    deprecated: false
+  - $id: '245'
+    $type: CompositeType
+    properties:
+      - $id: '246'
+        isReadOnly: false
+        realPath:
+          - name
+        collectionFormat: none
+        defaultValue:
+          $id: '247'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '248'
+          fixed: false
+          raw: Name of the provider.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '249'
+          fixed: false
+          raw: name
+        serializedName: name
+        modelType:
+          $id: '250'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '251'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '252'
+        isReadOnly: false
+        realPath:
+          - provider
+        collectionFormat: none
+        defaultValue:
+          $id: '253'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '254'
+          fixed: false
+          raw: Configuration of the provider.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '255'
+          fixed: false
+          raw: provider
+        serializedName: provider
+        modelType:
+          $ref: '243'
+    serializedName: OpenShiftManagedClusterIdentityProvider
+    documentation: >-
+      Defines the configuration of the identity providers to be used in the
+      OpenShift cluster.
+    containsConstantProperties: false
+    name:
+      $id: '256'
+      fixed: false
+      raw: OpenShiftManagedClusterIdentityProvider
+    deprecated: false
+  - $id: '257'
+    $type: CompositeType
+    properties:
+      - $id: '258'
+        isReadOnly: false
+        realPath:
+          - identityProviders
+        collectionFormat: none
+        defaultValue:
+          $id: '259'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '260'
+          fixed: false
+          raw: Type of authentication profile to use.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '261'
+          fixed: false
+          raw: identityProviders
+        serializedName: identityProviders
+        modelType:
+          $id: '262'
+          $type: SequenceType
+          elementType:
+            $ref: '245'
+          name:
+            $id: '263'
+            fixed: false
+          deprecated: false
+    serializedName: OpenShiftManagedClusterAuthProfile
+    documentation: Defines all possible authentication profiles for the OpenShift cluster.
+    containsConstantProperties: false
+    name:
+      $id: '264'
+      fixed: false
+      raw: OpenShiftManagedClusterAuthProfile
+    deprecated: false
+  - $id: '265'
+    $type: CompositeType
+    properties:
+      - $id: '266'
+        isReadOnly: true
+        realPath:
+          - provisioningState
+        collectionFormat: none
+        defaultValue:
+          $id: '267'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '268'
+          fixed: false
+          raw: >-
+            The current deployment or provisioning state, which only appears in
+            the response.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '269'
+          fixed: false
+          raw: provisioningState
+        serializedName: provisioningState
+        modelType:
+          $id: '270'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '271'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '272'
+        isReadOnly: false
+        realPath:
+          - openShiftVersion
+        collectionFormat: none
+        defaultValue:
+          $id: '273'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '274'
+          fixed: false
+          raw: Version of OpenShift specified when creating the cluster.
+        isRequired: true
+        isConstant: false
+        name:
+          $id: '275'
+          fixed: false
+          raw: openShiftVersion
+        serializedName: openShiftVersion
+        modelType:
+          $id: '276'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '277'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '278'
+        isReadOnly: true
+        realPath:
+          - clusterVersion
+        collectionFormat: none
+        defaultValue:
+          $id: '279'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '280'
+          fixed: false
+          raw: Version of OpenShift specified when creating the cluster.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '281'
+          fixed: false
+          raw: clusterVersion
+        serializedName: clusterVersion
+        modelType:
+          $id: '282'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '283'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '284'
+        isReadOnly: true
+        realPath:
+          - publicHostname
+        collectionFormat: none
+        defaultValue:
+          $id: '285'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '286'
+          fixed: false
+          raw: Service generated FQDN for OpenShift API server.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '287'
+          fixed: false
+          raw: publicHostname
+        serializedName: publicHostname
+        modelType:
+          $id: '288'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '289'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '290'
+        isReadOnly: true
+        realPath:
+          - fqdn
+        collectionFormat: none
+        defaultValue:
+          $id: '291'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '292'
+          fixed: false
+          raw: >-
+            Service generated FQDN for OpenShift API server loadbalancer
+            internal hostname.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '293'
+          fixed: false
+          raw: fqdn
+        serializedName: fqdn
+        modelType:
+          $id: '294'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '295'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '296'
+        isReadOnly: false
+        realPath:
+          - networkProfile
+        collectionFormat: none
+        defaultValue:
+          $id: '297'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '298'
+          fixed: false
+          raw: Configuration for OpenShift networking.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '299'
+          fixed: false
+          raw: networkProfile
+        serializedName: networkProfile
+        modelType:
+          $ref: '114'
+      - $id: '300'
+        isReadOnly: false
+        realPath:
+          - routerProfiles
+        collectionFormat: none
+        defaultValue:
+          $id: '301'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '302'
+          fixed: false
+          raw: Configuration for OpenShift router(s).
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '303'
+          fixed: false
+          raw: routerProfiles
+        serializedName: routerProfiles
+        modelType:
+          $id: '304'
+          $type: SequenceType
+          elementType:
+            $ref: '94'
+          name:
+            $id: '305'
+            fixed: false
+          deprecated: false
+      - $id: '306'
+        isReadOnly: false
+        realPath:
+          - masterPoolProfile
+        collectionFormat: none
+        defaultValue:
+          $id: '307'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '308'
+          fixed: false
+          raw: Configuration for OpenShift master VMs.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '309'
+          fixed: false
+          raw: masterPoolProfile
+        serializedName: masterPoolProfile
+        modelType:
+          $ref: '134'
+      - $id: '310'
+        isReadOnly: false
+        realPath:
+          - agentPoolProfiles
+        collectionFormat: none
+        defaultValue:
+          $id: '311'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '312'
+          fixed: false
+          raw: Configuration of OpenShift cluster VMs.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '313'
+          fixed: false
+          raw: agentPoolProfiles
+        serializedName: agentPoolProfiles
+        modelType:
+          $id: '314'
+          $type: SequenceType
+          elementType:
+            $ref: '205'
+          name:
+            $id: '315'
+            fixed: false
+          deprecated: false
+      - $id: '316'
+        isReadOnly: false
+        realPath:
+          - authProfile
+        collectionFormat: none
+        defaultValue:
+          $id: '317'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '318'
+          fixed: false
+          raw: Configures OpenShift authentication.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '319'
+          fixed: false
+          raw: authProfile
+        serializedName: authProfile
+        modelType:
+          $ref: '257'
+    serializedName: OpenShiftManagedClusterProperties
+    documentation: Properties of the OpenShift managed cluster.
+    containsConstantProperties: false
+    name:
+      $id: '320'
+      fixed: false
+      raw: OpenShiftManagedClusterProperties
+    deprecated: false
+  - $id: '321'
+    $type: CompositeType
+    properties:
+      - $id: '322'
+        isReadOnly: false
+        realPath:
+          - plan
+        collectionFormat: none
+        defaultValue:
+          $id: '323'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '324'
+          fixed: false
+          raw: Define the resource plan as required by ARM for billing purposes
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '325'
+          fixed: false
+          raw: plan
+        serializedName: plan
+        modelType:
+          $ref: '68'
+      - $id: '326'
+        isReadOnly: false
+        realPath:
+          - properties
+        collectionFormat: none
+        defaultValue:
+          $id: '327'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '328'
+          fixed: false
+          raw: Properties of a OpenShift managed cluster.
+        extensions:
+          x-ms-client-flatten: true
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '329'
+          fixed: false
+          raw: properties
+        serializedName: properties
+        modelType:
+          $ref: '265'
+    serializedName: OpenShiftManagedCluster
+    baseModelType:
+      $ref: '2'
+    documentation: OpenShift Managed cluster.
+    containsConstantProperties: false
+    name:
+      $id: '330'
+      fixed: false
+      raw: OpenShiftManagedCluster
+    deprecated: false
+  - $id: '331'
+    $type: CompositeType
+    properties:
+      - $id: '332'
+        isReadOnly: false
+        realPath:
+          - clientId
+        collectionFormat: none
+        defaultValue:
+          $id: '333'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '334'
+          fixed: false
+          raw: The clientId password associated with the provider.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '335'
+          fixed: false
+          raw: clientId
+        serializedName: clientId
+        modelType:
+          $id: '336'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '337'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '338'
+        isReadOnly: false
+        realPath:
+          - secret
+        collectionFormat: none
+        defaultValue:
+          $id: '339'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '340'
+          fixed: false
+          raw: The secret password associated with the provider.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '341'
+          fixed: false
+          raw: secret
+        serializedName: secret
+        modelType:
+          $id: '342'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '343'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '344'
+        isReadOnly: false
+        realPath:
+          - tenantId
+        collectionFormat: none
+        defaultValue:
+          $id: '345'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '346'
+          fixed: false
+          raw: The tenantId associated with the provider.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '347'
+          fixed: false
+          raw: tenantId
+        serializedName: tenantId
+        modelType:
+          $id: '348'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '349'
+            fixed: false
+            raw: String
+          deprecated: false
+      - $id: '350'
+        isReadOnly: false
+        realPath:
+          - customerAdminGroupId
+        collectionFormat: none
+        defaultValue:
+          $id: '351'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '352'
+          fixed: false
+          raw: The groupId to be granted cluster admin role.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '353'
+          fixed: false
+          raw: customerAdminGroupId
+        serializedName: customerAdminGroupId
+        modelType:
+          $id: '354'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '355'
+            fixed: false
+            raw: String
+          deprecated: false
+    serializedName: AADIdentityProvider
+    baseModelType:
+      $ref: '243'
+    documentation: Defines the Identity provider for MS AAD.
+    containsConstantProperties: false
+    name:
+      $id: '356'
+      fixed: false
+      raw: OpenShiftManagedClusterAADIdentityProvider
+    extensions:
+      x-ms-discriminator-value: AADIdentityProvider
+    deprecated: false
+  - $id: '357'
+    $type: CompositeType
+    properties:
+      - $id: '358'
+        isReadOnly: false
+        realPath:
+          - tags
+        collectionFormat: none
+        defaultValue:
+          $id: '359'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '360'
+          fixed: false
+          raw: Resource tags.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '361'
+          fixed: false
+          raw: tags
+        serializedName: tags
+        modelType:
+          $id: '362'
+          $type: DictionaryType
+          valueType:
+            $id: '363'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              $id: '364'
+              fixed: false
+              raw: String
+            deprecated: false
+          supportsAdditionalProperties: false
+          name:
+            $id: '365'
+            fixed: false
+          deprecated: false
+    serializedName: TagsObject
+    documentation: Tags object for patch operations.
+    containsConstantProperties: false
+    name:
+      $id: '366'
+      fixed: false
+      raw: TagsObject
+    deprecated: false
+  - $id: '367'
+    $type: CompositeType
+    properties:
+      - $id: '368'
+        isReadOnly: false
+        realPath:
+          - value
+        collectionFormat: none
+        defaultValue:
+          $id: '369'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '370'
+          fixed: false
+          raw: The list of OpenShift managed clusters.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '371'
+          fixed: false
+          raw: value
+        serializedName: value
+        modelType:
+          $id: '372'
+          $type: SequenceType
+          elementType:
+            $ref: '321'
+          name:
+            $id: '373'
+            fixed: false
+          deprecated: false
+      - $id: '374'
+        isReadOnly: true
+        realPath:
+          - nextLink
+        collectionFormat: none
+        defaultValue:
+          $id: '375'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '376'
+          fixed: false
+          raw: The URL to get the next set of OpenShift managed cluster results.
+        isRequired: false
+        isConstant: false
+        name:
+          $id: '377'
+          fixed: false
+          raw: nextLink
+        serializedName: nextLink
+        modelType:
+          $id: '378'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            $id: '379'
+            fixed: false
+            raw: String
+          deprecated: false
+    serializedName: OpenShiftManagedClusterListResult
+    documentation: The response from the List OpenShift Managed Clusters operation.
+    containsConstantProperties: false
+    name:
+      $id: '380'
+      fixed: false
+      raw: OpenShiftManagedClusterListResult
+    deprecated: false
+errorTypes:
+  - $ref: '62'
+enumTypes:
+  - $ref: '198'
+  - $ref: '151'
+  - $ref: '236'
+name: OpenShift
+namespace: Azure.mgmt.containerservice
+modelsName: Models
+apiVersion: '2019-04-30'
+baseUrl: 'https://management.azure.com'
+documentation: The Container Service Client.
+extensions:
+  security:
+    - azure_auth:
+        - user_impersonation
+properties:
+  - $id: '381'
+    isReadOnly: false
+    realPath:
+      - subscriptionId
+    collectionFormat: none
+    defaultValue:
+      $id: '382'
+      fixed: false
+    deprecated: false
+    documentation:
+      $id: '383'
+      fixed: false
+      raw: >-
+        Subscription credentials which uniquely identify Microsoft Azure
+        subscription. The subscription ID forms part of the URI for every
+        service call.
+    extensions:
+      x-ms-parameter-location: client
+    isRequired: true
+    isConstant: false
+    name:
+      $id: '384'
+      fixed: false
+      raw: subscriptionId
+    serializedName: subscriptionId
+    modelType:
+      $id: '385'
+      $type: PrimaryType
+      knownPrimaryType: string
+      name:
+        $id: '386'
+        fixed: false
+        raw: String
+      deprecated: false
+  - $id: '387'
+    isReadOnly: false
+    realPath:
+      - api-version
+    collectionFormat: none
+    defaultValue:
+      $id: '388'
+      fixed: false
+    deprecated: false
+    documentation:
+      $id: '389'
+      fixed: false
+      raw: Client Api Version.
+    extensions:
+      x-ms-parameter-location: client
+    isRequired: true
+    isConstant: false
+    name:
+      $id: '390'
+      fixed: false
+      raw: api-version
+    serializedName: api-version
+    modelType:
+      $id: '391'
+      $type: PrimaryType
+      knownPrimaryType: string
+      name:
+        $id: '392'
+        fixed: false
+        raw: String
+      deprecated: false
+operations:
+  - $id: '393'
+    methods:
+      - $id: '394'
+        parameters:
+          - $id: '395'
+            clientProperty:
+              $ref: '387'
+            location: query
+            collectionFormat: none
+            defaultValue:
+              $id: '396'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '397'
+              fixed: false
+              raw: Client Api Version.
+            extensions:
+              x-ms-parameter-location: client
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '398'
+              fixed: false
+              raw: api-version
+            serializedName: api-version
+            modelType:
+              $id: '399'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '400'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '401'
+            clientProperty:
+              $ref: '381'
+            location: path
+            collectionFormat: none
+            defaultValue:
+              $id: '402'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '403'
+              fixed: false
+              raw: >-
+                Subscription credentials which uniquely identify Microsoft Azure
+                subscription. The subscription ID forms part of the URI for
+                every service call.
+            extensions:
+              x-ms-parameter-location: client
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '404'
+              fixed: false
+              raw: subscriptionId
+            serializedName: subscriptionId
+            modelType:
+              $id: '405'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '406'
+                fixed: false
+                raw: String
+              deprecated: false
+        name:
+          $id: '407'
+          fixed: false
+          raw: List
+        group:
+          $id: '408'
+          fixed: false
+          raw: OpenShiftManagedClusters
+        serializedName: OpenShiftManagedClusters_List
+        url: >-
+          /subscriptions/{subscriptionId}/providers/Microsoft.ContainerService/openShiftManagedClusters
+        isAbsoluteUrl: false
+        httpMethod: get
+        responses:
+          OK:
+            $id: '409'
+            body:
+              $ref: '367'
+            isNullable: true
+        defaultResponse:
+          $id: '410'
+          isNullable: true
+        returnType:
+          $id: '411'
+          body:
+            $ref: '367'
+          isNullable: true
+        description: >-
+          Gets a list of OpenShift managed clusters in the specified
+          subscription. The operation returns properties of each OpenShift
+          managed cluster.
+        summary: >-
+          Gets a list of OpenShift managed clusters in the specified
+          subscription.
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        extensions:
+          x-ms-pageable:
+            nextLinkName: nextLink
+          x-ms-examples:
+            List Managed Clusters:
+              parameters:
+                api-version: '2019-04-30'
+                subscriptionId: subid1
+              responses:
+                '200':
+                  body:
+                    value:
+                      - id: >-
+                          /subscriptions/{{ subscription_id
+                          }}/providers/Microsoft.ContainerService/openShiftManagedClusters
+                        location: location1
+                        name: clustername1
+                        tags:
+                          archv2: ''
+                          tier: production
+                        type: Microsoft.ContainerService/OpenShiftManagedClusters
+                        properties:
+                          provisioningState: Succeeded
+                          openShiftVersion: v3.11
+                          clusterVersion: osa.1
+                          fqdn: df9337748a4b.location1.cloudapp.azure.com
+                          publicHostname: openshift.1225bdf9337748a4bd3a.location1.azmosa.io
+                          networkProfile:
+                            vnetCidr: 10.0.0.0/8
+                          masterPoolProfile:
+                            count: '3'
+                            vmSize: Standard_D4s_v3
+                            subnetCidr: 10.0.0.0/24
+                          agentPoolProfiles:
+                            - name: infra
+                              role: infra
+                              count: '2'
+                              vmSize: Standard_D4s_v3
+                              osType: Linux
+                              subnetCidr: 10.0.0.0/24
+                            - name: compute
+                              role: compute
+                              count: '4'
+                              vmSize: Standard_D4s_v3
+                              osType: Linux
+                              subnetCidr: 10.0.0.0/24
+                          routerProfiles:
+                            - name: default
+                              fqdn: >-
+                                osa2925bdf9337748f4bd3b.location1.cloudapp.azure.com
+                              publicSubdomain: apps.bc309ee87c164153871c.location1.azmosa.io
+                          authProfile:
+                            identityProviders:
+                              - name: Azure AD
+                                provider:
+                                  kind: AADIdentityProvider
+                                  clientId: clientId
+                                  tenantId: tenantId
+                                  customerAdminGroupId: customerAdminGroupId
+        deprecated: false
+        hidden: false
+      - $id: '412'
+        parameters:
+          - $id: '413'
+            clientProperty:
+              $ref: '387'
+            location: query
+            collectionFormat: none
+            defaultValue:
+              $id: '414'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '415'
+              fixed: false
+              raw: Client Api Version.
+            extensions:
+              x-ms-parameter-location: client
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '416'
+              fixed: false
+              raw: api-version
+            serializedName: api-version
+            modelType:
+              $id: '417'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '418'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '419'
+            clientProperty:
+              $ref: '381'
+            location: path
+            collectionFormat: none
+            defaultValue:
+              $id: '420'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '421'
+              fixed: false
+              raw: >-
+                Subscription credentials which uniquely identify Microsoft Azure
+                subscription. The subscription ID forms part of the URI for
+                every service call.
+            extensions:
+              x-ms-parameter-location: client
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '422'
+              fixed: false
+              raw: subscriptionId
+            serializedName: subscriptionId
+            modelType:
+              $id: '423'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '424'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '425'
+            location: path
+            collectionFormat: none
+            constraints:
+              MinLength: '1'
+            defaultValue:
+              $id: '426'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '427'
+              fixed: false
+              raw: The name of the resource group.
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '428'
+              fixed: false
+              raw: resourceGroupName
+            serializedName: resourceGroupName
+            modelType:
+              $id: '429'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '430'
+                fixed: false
+                raw: String
+              deprecated: false
+        name:
+          $id: '431'
+          fixed: false
+          raw: ListByResourceGroup
+        group:
+          $id: '432'
+          fixed: false
+          raw: OpenShiftManagedClusters
+        serializedName: OpenShiftManagedClusters_ListByResourceGroup
+        url: >-
+          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/openShiftManagedClusters
+        isAbsoluteUrl: false
+        httpMethod: get
+        responses:
+          OK:
+            $id: '433'
+            body:
+              $ref: '367'
+            isNullable: true
+        defaultResponse:
+          $id: '434'
+          isNullable: true
+        returnType:
+          $id: '435'
+          body:
+            $ref: '367'
+          isNullable: true
+        description: >-
+          Lists OpenShift managed clusters in the specified subscription and
+          resource group. The operation returns properties of each OpenShift
+          managed cluster.
+        summary: >-
+          Lists OpenShift managed clusters in the specified subscription and
+          resource group.
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        extensions:
+          x-ms-pageable:
+            nextLinkName: nextLink
+          x-ms-examples:
+            Get Managed Clusters by Resource Group:
+              parameters:
+                api-version: 2018-09-30-preview
+                subscriptionId: subid1
+                resourceGroupName: rg1
+              responses:
+                '200':
+                  body:
+                    value:
+                      - id: >-
+                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                          resource_group
+                          }}/providers/Microsoft.ContainerService/openShiftManagedClusters
+                        location: location1
+                        name: clustername1
+                        tags:
+                          archv2: ''
+                          tier: production
+                        type: Microsoft.ContainerService/OpenShiftManagedClusters
+                        properties:
+                          provisioningState: Succeeded
+                          openShiftVersion: v3.11
+                          clusterVersion: osa.1
+                          fqdn: df9337748a4b.location1.cloudapp.azure.com
+                          networkProfile:
+                            vnetCidr: 10.0.0.0/8
+                          masterPoolProfile:
+                            count: '3'
+                            vmSize: Standard_D4s_v3
+                            subnetCidr: 10.0.0.0/24
+                          agentPoolProfiles:
+                            - name: infra
+                              role: infra
+                              count: '2'
+                              vmSize: Standard_D4s_v3
+                              osType: Linux
+                              subnetCidr: 10.0.0.0/24
+                            - name: compute
+                              role: compute
+                              count: '4'
+                              vmSize: Standard_D4s_v3
+                              osType: Linux
+                              subnetCidr: 10.0.0.0/24
+                          routerProfiles:
+                            - name: default
+                              fqdn: >-
+                                dce5faa189c841b99f8a.location1.cloudapp.azure.com
+                              publicSubdomain: b788fade68d345da9b77.location1.int.aksapp.io
+                          authProfile:
+                            identityProviders:
+                              - name: Azure AD
+                                provider:
+                                  kind: AADIdentityProvider
+                                  clientId: clientId
+                                  tenantId: tenantId
+                                  customerAdminGroupId: customerAdminGroupId
+        deprecated: false
+        hidden: false
+      - $id: '436'
+        parameters:
+          - $id: '437'
+            clientProperty:
+              $ref: '387'
+            location: query
+            collectionFormat: none
+            defaultValue:
+              $id: '438'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '439'
+              fixed: false
+              raw: Client Api Version.
+            extensions:
+              x-ms-parameter-location: client
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '440'
+              fixed: false
+              raw: api-version
+            serializedName: api-version
+            modelType:
+              $id: '441'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '442'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '443'
+            clientProperty:
+              $ref: '381'
+            location: path
+            collectionFormat: none
+            defaultValue:
+              $id: '444'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '445'
+              fixed: false
+              raw: >-
+                Subscription credentials which uniquely identify Microsoft Azure
+                subscription. The subscription ID forms part of the URI for
+                every service call.
+            extensions:
+              x-ms-parameter-location: client
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '446'
+              fixed: false
+              raw: subscriptionId
+            serializedName: subscriptionId
+            modelType:
+              $id: '447'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '448'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '449'
+            location: path
+            collectionFormat: none
+            constraints:
+              MinLength: '1'
+            defaultValue:
+              $id: '450'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '451'
+              fixed: false
+              raw: The name of the resource group.
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '452'
+              fixed: false
+              raw: resourceGroupName
+            serializedName: resourceGroupName
+            modelType:
+              $id: '453'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '454'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '455'
+            location: path
+            collectionFormat: none
+            defaultValue:
+              $id: '456'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '457'
+              fixed: false
+              raw: The name of the OpenShift managed cluster resource.
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '458'
+              fixed: false
+              raw: resourceName
+            serializedName: resourceName
+            modelType:
+              $id: '459'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '460'
+                fixed: false
+                raw: String
+              deprecated: false
+        name:
+          $id: '461'
+          fixed: false
+          raw: Get
+        group:
+          $id: '462'
+          fixed: false
+          raw: OpenShiftManagedClusters
+        serializedName: OpenShiftManagedClusters_Get
+        url: >-
+          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/openShiftManagedClusters/{resourceName}
+        isAbsoluteUrl: false
+        httpMethod: get
+        responses:
+          OK:
+            $id: '463'
+            body:
+              $ref: '321'
+            isNullable: true
+        defaultResponse:
+          $id: '464'
+          body:
+            $ref: '62'
+          isNullable: true
+        returnType:
+          $id: '465'
+          body:
+            $ref: '321'
+          isNullable: true
+        description: >-
+          Gets the details of the managed OpenShift cluster with a specified
+          resource group and name.
+        summary: Gets a OpenShift managed cluster.
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        extensions:
+          x-ms-examples:
+            Get OpenShift Managed Cluster:
+              parameters:
+                api-version: '2019-04-30'
+                subscriptionId: subid1
+                resourceGroupName: rg1
+                resourceName: clustername1
+              responses:
+                '200':
+                  body:
+                    id: >-
+                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                      resource_group
+                      }}/providers/Microsoft.ContainerService/openShiftManagedClusters/{{
+                      open_shift_managed_cluster_name }}
+                    location: location1
+                    name: clustername1
+                    tags:
+                      archv2: ''
+                      tier: production
+                    type: Microsoft.ContainerService/OpenShiftManagedClusters
+                    properties:
+                      provisioningState: Succeeded
+                      openShiftVersion: v3.11
+                      clusterVersion: osa.1
+                      fqdn: df9337748a4b.location1.cloudapp.azure.com
+                      publicHostname: openshift.1225bdf9337748a4bd3a.location1.azmosa.io
+                      networkProfile:
+                        vnetCidr: 10.0.0.0/8
+                      masterPoolProfile:
+                        count: '3'
+                        vmSize: Standard_D4s_v3
+                        subnetCidr: 10.0.0.0/24
+                      agentPoolProfiles:
+                        - name: infra
+                          role: infra
+                          count: '2'
+                          vmSize: Standard_D4s_v3
+                          osType: Linux
+                          subnetCidr: 10.0.0.0/24
+                        - name: compute
+                          role: compute
+                          count: '4'
+                          vmSize: Standard_D4s_v3
+                          osType: Linux
+                          subnetCidr: 10.0.0.0/24
+                      routerProfiles:
+                        - name: default
+                          fqdn: osa2925bdf9337748f4bd3b.location1.cloudapp.azure.com
+                          publicSubdomain: apps.bc309ee87c164153871c.location1.azmosa.io
+                      authProfile:
+                        identityProviders:
+                          - name: Azure AD
+                            provider:
+                              kind: AADIdentityProvider
+                              clientId: clientId
+                              tenantId: tenantId
+                              customerAdminGroupId: customerAdminGroupId
+        deprecated: false
+        hidden: false
+      - $id: '466'
+        parameters:
+          - $id: '467'
+            clientProperty:
+              $ref: '387'
+            location: query
+            collectionFormat: none
+            defaultValue:
+              $id: '468'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '469'
+              fixed: false
+              raw: Client Api Version.
+            extensions:
+              x-ms-parameter-location: client
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '470'
+              fixed: false
+              raw: api-version
+            serializedName: api-version
+            modelType:
+              $id: '471'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '472'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '473'
+            clientProperty:
+              $ref: '381'
+            location: path
+            collectionFormat: none
+            defaultValue:
+              $id: '474'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '475'
+              fixed: false
+              raw: >-
+                Subscription credentials which uniquely identify Microsoft Azure
+                subscription. The subscription ID forms part of the URI for
+                every service call.
+            extensions:
+              x-ms-parameter-location: client
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '476'
+              fixed: false
+              raw: subscriptionId
+            serializedName: subscriptionId
+            modelType:
+              $id: '477'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '478'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '479'
+            location: path
+            collectionFormat: none
+            constraints:
+              MinLength: '1'
+            defaultValue:
+              $id: '480'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '481'
+              fixed: false
+              raw: The name of the resource group.
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '482'
+              fixed: false
+              raw: resourceGroupName
+            serializedName: resourceGroupName
+            modelType:
+              $id: '483'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '484'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '485'
+            location: path
+            collectionFormat: none
+            defaultValue:
+              $id: '486'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '487'
+              fixed: false
+              raw: The name of the OpenShift managed cluster resource.
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '488'
+              fixed: false
+              raw: resourceName
+            serializedName: resourceName
+            modelType:
+              $id: '489'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '490'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '491'
+            location: body
+            collectionFormat: none
+            defaultValue:
+              $id: '492'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '493'
+              fixed: false
+              raw: >-
+                Parameters supplied to the Create or Update an OpenShift Managed
+                Cluster operation.
+            extensions:
+              x-ms-requestBody-name: parameters
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '494'
+              fixed: false
+              raw: parameters
+            serializedName: parameters
+            modelType:
+              $ref: '321'
+        name:
+          $id: '495'
+          fixed: false
+          raw: CreateOrUpdate
+        group:
+          $id: '496'
+          fixed: false
+          raw: OpenShiftManagedClusters
+        serializedName: OpenShiftManagedClusters_CreateOrUpdate
+        url: >-
+          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/openShiftManagedClusters/{resourceName}
+        isAbsoluteUrl: false
+        httpMethod: put
+        responses:
+          OK:
+            $id: '497'
+            body:
+              $ref: '321'
+            isNullable: true
+          Created:
+            $id: '498'
+            body:
+              $ref: '321'
+            isNullable: true
+        defaultResponse:
+          $id: '499'
+          body:
+            $ref: '62'
+          isNullable: true
+        returnType:
+          $id: '500'
+          body:
+            $ref: '321'
+          isNullable: true
+        description: >-
+          Creates or updates a OpenShift managed cluster with the specified
+          configuration for agents and OpenShift version.
+        summary: Creates or updates an OpenShift managed cluster.
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        extensions:
+          x-ms-requestBody-index: '4'
+          x-ms-long-running-operation: true
+          x-ms-examples:
+            Create/Update OpenShift Managed Cluster:
+              parameters:
+                api-version: '2019-04-30'
+                subscriptionId: subid1
+                resourceGroupName: rg1
+                resourceName: clustername1
+                parameters:
+                  location: location1
+                  tags:
+                    tier: production
+                    archv2: ''
+                  properties:
+                    openShiftVersion: v3.11
+                    networkProfile:
+                      vnetCidr: 10.0.0.0/8
+                    masterPoolProfile:
+                      name: master
+                      count: '3'
+                      vmSize: Standard_D4s_v3
+                      osType: Linux
+                      subnetCidr: 10.0.0.0/24
+                    agentPoolProfiles:
+                      - name: infra
+                        role: infra
+                        count: '2'
+                        vmSize: Standard_D4s_v3
+                        osType: Linux
+                        subnetCidr: 10.0.0.0/24
+                      - name: compute
+                        role: compute
+                        count: '4'
+                        vmSize: Standard_D4s_v3
+                        osType: Linux
+                        subnetCidr: 10.0.0.0/24
+                    routerProfiles:
+                      - name: default
+                    authProfile:
+                      identityProviders:
+                        - name: Azure AD
+                          provider:
+                            kind: AADIdentityProvider
+                            clientId: clientId
+                            secret: secret
+                            tenantId: tenantId
+                            customerAdminGroupId: customerAdminGroupId
+              responses:
+                '200':
+                  body:
+                    id: >-
+                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                      resource_group
+                      }}/providers/Microsoft.ContainerService/openShiftManagedClusters/{{
+                      open_shift_managed_cluster_name }}
+                    location: location1
+                    name: clustername1
+                    tags:
+                      archv2: ''
+                      tier: production
+                    type: Microsoft.ContainerService/OpenShiftManagedClusters
+                    properties:
+                      provisioningState: Updating
+                      openShiftVersion: v3.11
+                      clusterVersion: osa.1
+                      fqdn: df9337748a4b.location1.cloudapp.azure.com
+                      publicHostname: openshift.1225bdf9337748a4bd3a.location1.azmosa.io
+                      networkProfile:
+                        vnetCidr: 10.0.0.0/8
+                      masterPoolProfile:
+                        count: '3'
+                        vmSize: Standard_D4s_v3
+                        subnetCidr: 10.0.0.0/24
+                      agentPoolProfiles:
+                        - name: infra
+                          role: infra
+                          count: '2'
+                          vmSize: Standard_D4s_v3
+                          osType: Linux
+                          subnetCidr: 10.0.0.0/24
+                        - name: compute
+                          role: compute
+                          count: '4'
+                          vmSize: Standard_D4s_v3
+                          osType: Linux
+                          subnetCidr: 10.0.0.0/24
+                      routerProfiles:
+                        - name: default
+                          fqdn: osa2925bdf9337748f4bd3b.location1.cloudapp.azure.com
+                          publicSubdomain: apps.bc309ee87c164153871c.location1.azmosa.io
+                      authProfile:
+                        identityProviders:
+                          - name: Azure AD
+                            provider:
+                              kind: AADIdentityProvider
+                              clientId: clientId
+                              tenantId: tenantId
+                              customerAdminGroupId: customerAdminGroupId
+                '201':
+                  body:
+                    id: >-
+                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                      resource_group
+                      }}/providers/Microsoft.ContainerService/openShiftManagedClusters/{{
+                      open_shift_managed_cluster_name }}
+                    location: location1
+                    name: clustername1
+                    tags:
+                      archv2: ''
+                      tier: production
+                    type: Microsoft.ContainerService/OpenShiftManagedClusters
+                    properties:
+                      provisioningState: Creating
+                      openShiftVersion: v3.11
+                      clusterVersion: osa.1
+                      fqdn: df9337748a4b.location1.cloudapp.azure.com
+                      networkProfile:
+                        vnetCidr: 10.0.0.0/8
+                      masterPoolProfile:
+                        name: master
+                        count: '3'
+                        vmSize: Standard_D4s_v3
+                        osType: Linux
+                        subnetCidr: 10.0.0.0/24
+                      agentPoolProfiles:
+                        - name: infra
+                          role: infra
+                          count: '2'
+                          vmSize: Standard_D4s_v3
+                          osType: Linux
+                          subnetCidr: 10.0.0.0/24
+                        - name: compute
+                          role: compute
+                          count: '4'
+                          vmSize: Standard_D4s_v3
+                          osType: Linux
+                          subnetCidr: 10.0.0.0/24
+                      routerProfiles:
+                        - name: default
+                      authProfile:
+                        identityProviders:
+                          - name: Azure AD
+                            provider:
+                              kind: AADIdentityProvider
+                              clientId: clientId
+                              tenantId: tenantId
+                              customerAdminGroupId: customerAdminGroupId
+        deprecated: false
+        hidden: false
+      - $id: '501'
+        parameters:
+          - $id: '502'
+            clientProperty:
+              $ref: '387'
+            location: query
+            collectionFormat: none
+            defaultValue:
+              $id: '503'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '504'
+              fixed: false
+              raw: Client Api Version.
+            extensions:
+              x-ms-parameter-location: client
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '505'
+              fixed: false
+              raw: api-version
+            serializedName: api-version
+            modelType:
+              $id: '506'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '507'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '508'
+            clientProperty:
+              $ref: '381'
+            location: path
+            collectionFormat: none
+            defaultValue:
+              $id: '509'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '510'
+              fixed: false
+              raw: >-
+                Subscription credentials which uniquely identify Microsoft Azure
+                subscription. The subscription ID forms part of the URI for
+                every service call.
+            extensions:
+              x-ms-parameter-location: client
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '511'
+              fixed: false
+              raw: subscriptionId
+            serializedName: subscriptionId
+            modelType:
+              $id: '512'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '513'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '514'
+            location: path
+            collectionFormat: none
+            constraints:
+              MinLength: '1'
+            defaultValue:
+              $id: '515'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '516'
+              fixed: false
+              raw: The name of the resource group.
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '517'
+              fixed: false
+              raw: resourceGroupName
+            serializedName: resourceGroupName
+            modelType:
+              $id: '518'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '519'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '520'
+            location: path
+            collectionFormat: none
+            defaultValue:
+              $id: '521'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '522'
+              fixed: false
+              raw: The name of the OpenShift managed cluster resource.
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '523'
+              fixed: false
+              raw: resourceName
+            serializedName: resourceName
+            modelType:
+              $id: '524'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '525'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '526'
+            location: body
+            collectionFormat: none
+            defaultValue:
+              $id: '527'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '528'
+              fixed: false
+              raw: >-
+                Parameters supplied to the Update OpenShift Managed Cluster Tags
+                operation.
+            extensions:
+              x-ms-requestBody-name: parameters
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '529'
+              fixed: false
+              raw: parameters
+            serializedName: parameters
+            modelType:
+              $ref: '357'
+        name:
+          $id: '530'
+          fixed: false
+          raw: UpdateTags
+        group:
+          $id: '531'
+          fixed: false
+          raw: OpenShiftManagedClusters
+        serializedName: OpenShiftManagedClusters_UpdateTags
+        url: >-
+          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/openShiftManagedClusters/{resourceName}
+        isAbsoluteUrl: false
+        httpMethod: patch
+        responses:
+          OK:
+            $id: '532'
+            body:
+              $ref: '321'
+            isNullable: true
+        defaultResponse:
+          $id: '533'
+          body:
+            $ref: '62'
+          isNullable: true
+        returnType:
+          $id: '534'
+          body:
+            $ref: '321'
+          isNullable: true
+        description: Updates an OpenShift managed cluster with the specified tags.
+        summary: Updates tags on an OpenShift managed cluster.
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        extensions:
+          x-ms-requestBody-index: '4'
+          x-ms-long-running-operation: true
+          x-ms-examples:
+            Update OpenShift Managed Cluster Tags:
+              parameters:
+                api-version: '2019-04-30'
+                subscriptionId: subid1
+                resourceGroupName: rg1
+                resourceName: clustername1
+                parameters:
+                  tags:
+                    tier: testing
+                    archv3: ''
+              responses:
+                '200':
+                  body:
+                    id: >-
+                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                      resource_group
+                      }}/providers/Microsoft.ContainerService/openShiftManagedClusters/{{
+                      open_shift_managed_cluster_name }}
+                    location: location1
+                    name: clustername1
+                    tags:
+                      archv3: ''
+                      tier: testing
+                    type: Microsoft.ContainerService/OpenShiftManagedClusters
+                    properties:
+                      provisioningState: Succeeded
+                      openShiftVersion: v3.11
+                      fqdn: df9337748a4b.location1.cloudapp.azure.com
+                      publicHostname: openshift.1225bdf9337748a4bd3a.location1.azmosa.io
+                      networkProfile:
+                        vnetCidr: 10.0.0.0/8
+                      masterPoolProfile:
+                        count: '3'
+                        vmSize: Standard_D4s_v3
+                        subnetCidr: 10.0.0.0/24
+                      agentPoolProfiles:
+                        - name: infra
+                          role: infra
+                          count: '2'
+                          vmSize: Standard_D4s_v3
+                          osType: Linux
+                          subnetCidr: 10.0.0.0/24
+                        - name: compute
+                          role: compute
+                          count: '4'
+                          vmSize: Standard_D4s_v3
+                          osType: Linux
+                          subnetCidr: 10.0.0.0/24
+                      routerProfiles:
+                        - name: default
+                          fqdn: osa2925bdf9337748f4bd3b.location1.cloudapp.azure.com
+                          publicSubdomain: apps.bc309ee87c164153871c.location1.azmosa.io
+                      authProfile:
+                        identityProviders:
+                          - name: Azure AD
+                            provider:
+                              kind: AADIdentityProvider
+                              clientId: clientId
+                              tenantId: tenantId
+                              customerAdminGroupId: customerAdminGroupId
+        deprecated: false
+        hidden: false
+      - $id: '535'
+        parameters:
+          - $id: '536'
+            clientProperty:
+              $ref: '387'
+            location: query
+            collectionFormat: none
+            defaultValue:
+              $id: '537'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '538'
+              fixed: false
+              raw: Client Api Version.
+            extensions:
+              x-ms-parameter-location: client
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '539'
+              fixed: false
+              raw: api-version
+            serializedName: api-version
+            modelType:
+              $id: '540'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '541'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '542'
+            clientProperty:
+              $ref: '381'
+            location: path
+            collectionFormat: none
+            defaultValue:
+              $id: '543'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '544'
+              fixed: false
+              raw: >-
+                Subscription credentials which uniquely identify Microsoft Azure
+                subscription. The subscription ID forms part of the URI for
+                every service call.
+            extensions:
+              x-ms-parameter-location: client
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '545'
+              fixed: false
+              raw: subscriptionId
+            serializedName: subscriptionId
+            modelType:
+              $id: '546'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '547'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '548'
+            location: path
+            collectionFormat: none
+            constraints:
+              MinLength: '1'
+            defaultValue:
+              $id: '549'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '550'
+              fixed: false
+              raw: The name of the resource group.
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '551'
+              fixed: false
+              raw: resourceGroupName
+            serializedName: resourceGroupName
+            modelType:
+              $id: '552'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '553'
+                fixed: false
+                raw: String
+              deprecated: false
+          - $id: '554'
+            location: path
+            collectionFormat: none
+            defaultValue:
+              $id: '555'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '556'
+              fixed: false
+              raw: The name of the OpenShift managed cluster resource.
+            isRequired: true
+            isConstant: false
+            name:
+              $id: '557'
+              fixed: false
+              raw: resourceName
+            serializedName: resourceName
+            modelType:
+              $id: '558'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                $id: '559'
+                fixed: false
+                raw: String
+              deprecated: false
+        name:
+          $id: '560'
+          fixed: false
+          raw: Delete
+        group:
+          $id: '561'
+          fixed: false
+          raw: OpenShiftManagedClusters
+        serializedName: OpenShiftManagedClusters_Delete
+        url: >-
+          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/openShiftManagedClusters/{resourceName}
+        isAbsoluteUrl: false
+        httpMethod: delete
+        responses:
+          Accepted:
+            $id: '562'
+            isNullable: true
+          NoContent:
+            $id: '563'
+            isNullable: true
+        defaultResponse:
+          $id: '564'
+          body:
+            $ref: '62'
+          isNullable: true
+        returnType:
+          $id: '565'
+          isNullable: true
+        description: >-
+          Deletes the OpenShift managed cluster with a specified resource group
+          and name.
+        summary: Deletes an OpenShift managed cluster.
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        extensions:
+          x-ms-long-running-operation: true
+          x-ms-examples:
+            Delete OpenShift Managed Cluster:
+              parameters:
+                api-version: '2019-04-30'
+                subscriptionId: subid1
+                resourceGroupName: rg1
+                resourceName: clustername1
+              responses:
+                '202': {}
+                '204': {}
+        deprecated: false
+        hidden: false
+    name:
+      $id: '566'
+      fixed: false
+      raw: OpenShiftManagedClusters
+    typeName:
+      $id: '567'
+      fixed: false
+    nameForProperty: OpenShiftManagedClusters

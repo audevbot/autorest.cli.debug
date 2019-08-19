@@ -1,0 +1,65 @@
+# ref##Referer##https://management.azure.com/
+- import_playbook: vmwarecloudsimple_locations_privateclouds_put.yml
+- import_playbook: vmwarecloudsimple_locations_privateclouds_virtualmachinetemplates_put.yml
+- import_playbook: vmwarecloudsimple_locations_privateclouds_resourcepools_put.yml
+- import_playbook: vmwarecloudsimple_locations_privateclouds_virtualnetworks_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    virtual_machine_name: myVirtualMachine
+    location_name: myLocation
+    private_cloud_name: myPrivateCloud
+    virtual_machine_template_name: myVirtualMachineTemplate
+    resource_pool_name: myResourcePool
+    virtual_network_name: myVirtualNetwork
+  tasks:
+
+    - name: CreateVirtualMachine
+      azure_rm_vmwarecloudsimplevirtualmachine:
+        resource_group: '{{resource_group}}'
+        referer: 'https://management.azure.com/'
+        name: '{{virtual_machine_name}}'
+        virtual_machine_request:
+          location: westus2
+          properties:
+            privateCloudId: >-
+              /subscriptions/{{ subscription_id
+              }}/providers/Microsoft.VMwareCloudSimple/locations/{{ location_name
+              }}/privateClouds/{{ private_cloud_name }}
+            templateId: >-
+              /subscriptions/{{ subscription_id
+              }}/providers/Microsoft.VMwareCloudSimple/locations/{{ location_name
+              }}/privateClouds/{{ private_cloud_name }}/virtualMachineTemplates/{{
+              virtual_machine_template_name }}
+            numberOfCores: '2'
+            amountOfRam: '4096'
+            disks:
+              - controllerId: '1000'
+                independenceMode: persistent
+                totalSize: '10485760'
+                virtualDiskId: '2000'
+            resourcePool:
+              id: >-
+                /subscriptions/{{ subscription_id
+                }}/providers/Microsoft.VMwareCloudSimple/locations/{{ location_name
+                }}/privateClouds/{{ private_cloud_name }}/resourcePools/{{
+                resource_pool_name }}
+            guestOS: Other (32-bit)
+            guestOSType: other
+            nics:
+              - network:
+                  id: >-
+                    /subscriptions/{{ subscription_id
+                    }}/providers/Microsoft.VMwareCloudSimple/locations/{{
+                    location_name }}/privateClouds/{{ private_cloud_name
+                    }}/virtualNetworks/{{ virtual_network_name }}
+                nicType: E1000
+                powerOnBoot: true
+                virtualNicId: '4000'
+    
