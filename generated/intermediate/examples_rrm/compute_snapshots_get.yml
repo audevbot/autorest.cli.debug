@@ -1,0 +1,18 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    snapshot_name: mySnapshot
+  tasks:
+
+    - name: Get information about a snapshot.
+      azure_rm_computesnapshot_info:
+        resource_group: '{{resource_group}}'
+        name: '{{snapshot_name}}'
+    
+      register: output
+    - debug:
+        var: output
