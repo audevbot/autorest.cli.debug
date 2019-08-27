@@ -1,0 +1,17 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+  tasks:
+    - name: List all managed disks in a resource group.
+      azure_rm_resource_facts:
+        api_version: '2018-09-30'
+        resource_group: '{{ resource_group }}'
+        provider: Compute
+        resource_type: disks
+      register: output
+    - debug:
+        var: output

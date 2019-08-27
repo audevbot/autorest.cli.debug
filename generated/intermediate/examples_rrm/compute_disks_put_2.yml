@@ -1,0 +1,29 @@
+# ref##sourceResourceId##subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myDisk1
+- import_playbook: compute_disks_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    disk_name: myDisk
+  tasks:
+
+    - name: >-
+        Create a managed disk from an existing managed disk in the same or different
+        subscription.
+      azure_rm_computedisk:
+        resource_group: '{{resource_group}}'
+        name: '{{disk_name}}'
+        disk:
+          name: myDisk2
+          location: West US
+          properties:
+            creationData:
+              createOption: Copy
+              sourceResourceId: >-
+                subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myDisk1
+    

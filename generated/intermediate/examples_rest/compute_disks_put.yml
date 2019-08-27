@@ -1,0 +1,25 @@
+- import_playbook: resourcegroups_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    disk_name: myDisk
+  tasks:
+    - name: Create an empty managed disk.
+      azure_rm_resource:
+        idempotency: true
+        api_version: '2018-09-30'
+        resource_group: '{{ resource_group }}'
+        provider: Compute
+        resource_type: disks
+        resource_name: '{{ disk_name }}'
+        body:
+          name: myDisk
+          location: West US
+          properties:
+            creationData:
+              createOption: Empty
+            diskSizeGB: '200'

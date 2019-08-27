@@ -1,0 +1,28 @@
+- import_playbook: compute_snapshots_put.yml
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    snapshot_name: mySnapshot
+  tasks:
+    - name: >-
+        Create a snapshot by importing an unmanaged blob from the same
+        subscription.
+      azure_rm_resource:
+        idempotency: true
+        api_version: '2018-09-30'
+        resource_group: '{{ resource_group }}'
+        provider: Compute
+        resource_type: snapshots
+        resource_name: '{{ snapshot_name }}'
+        body:
+          name: mySnapshot1
+          location: West US
+          properties:
+            creationData:
+              createOption: Import
+              sourceUri: >-
+                https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd
