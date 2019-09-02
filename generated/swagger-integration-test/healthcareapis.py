@@ -1,0 +1,165 @@
+# --------------------------------------------------------------------------------------------
+# Copyright (c) Microsoft Corporation. All rights reserved.
+# Licensed under the MIT License. See License.txt in the project root for license information.
+# --------------------------------------------------------------------------------------------
+
+import json
+import os
+import time
+import mock
+import unittest
+
+from azure_devtools.scenario_tests.const import MOCKED_SUBSCRIPTION_ID
+from azure_devtools.scenario_tests import AllowLargeResponse
+from azure.cli.testsdk import ScenarioTest, LiveScenarioTest, ResourceGroupPreparer, create_random_name, live_only, record_only
+from azure.cli.core.util import get_file_json
+
+
+class ResourceGroupScenarioTest(ScenarioTest):
+
+    @ResourceGroupPreparer(name_prefix='cli_test_rg_scenario')
+    def test_resource_group(self, resource_group):
+
+        self.cmd('group create -n {rg} -l westus --tag a=b c', checks=[
+            self.check('name', '{rg}'),
+            self.check('tags', {'a': 'b', 'c': ''})
+        ])
+
+        self.kwargs['sub'] = self.get_subscription_id()
+        self.kwargs['name'] = 'zimsxyzname'
+
+        # healthcareapis_services_get
+        self.cmd('rest '
+                 '--method get '
+                 '--uri /subscriptions/{sub}/resourceGroups/{rg}/providers/Microsoft.HealthcareApis/services/{name}?api-version=2019-09-16 '
+                 , checks=[
+                          ])
+
+        # healthcareapis_services_put
+        body = (
+                 '{'
+                 '  "location": "westus2",'
+                 '  "tags": {},'
+                 '  "kind": "fhir-R4",'
+                 '  "properties": {'
+                 '    "accessPolicies": ['
+                 '      {'
+                 '        "objectId": "c487e7d1-3210-41a3-8ccc-e9372b78da47"'
+                 '      },'
+                 '      {'
+                 '        "objectId": "5b307da8-43d4-492b-8b66-b0294ade872f"'
+                 '      }'
+                 '    ],'
+                 '    "cosmosDbConfiguration": {'
+                 '      "offerThroughput": "1000"'
+                 '    },'
+                 '    "authenticationConfiguration": {'
+                 '      "authority": "https://login.microsoftonline.com/common",'
+                 '      "audience": "https://azurehealthcareapis.com",'
+                 '      "smartProxyEnabled": True'
+                 '    },'
+                 '    "corsConfiguration": {'
+                 '      "origins": ['
+                 '        "*"'
+                 '      ],'
+                 '      "headers": ['
+                 '        "*"'
+                 '      ],'
+                 '      "methods": ['
+                 '        "DELETE",'
+                 '        "GET",'
+                 '        "OPTIONS",'
+                 '        "PATCH",'
+                 '        "POST",'
+                 '        "PUT"'
+                 '      ],'
+                 '      "maxAge": "1440",'
+                 '      "allowCredentials": False'
+                 '    }'
+                 '  }'
+                 '}')
+        self.kwargs['body'] = body.replace('"', '\\"')
+        self.cmd('rest '
+                 '--method put '
+                 '--uri /subscriptions/{sub}/resourceGroups/{rg}/providers/Microsoft.HealthcareApis/services/{name}?api-version=2019-09-16 '
+                 '--body "{body}"'
+                 , checks=[
+                          ])
+
+        # healthcareapis_services_put_1
+        body = (
+                 '{'
+                 '  "location": "westus2",'
+                 '  "tags": {},'
+                 '  "kind": "fhir-R4",'
+                 '  "properties": {'
+                 '    "accessPolicies": ['
+                 '      {'
+                 '        "objectId": "c487e7d1-3210-41a3-8ccc-e9372b78da47"'
+                 '      }'
+                 '    ]'
+                 '  }'
+                 '}')
+        self.kwargs['body'] = body.replace('"', '\\"')
+        self.cmd('rest '
+                 '--method put '
+                 '--uri /subscriptions/{sub}/resourceGroups/{rg}/providers/Microsoft.HealthcareApis/services/{name}?api-version=2019-09-16 '
+                 '--body "{body}"'
+                 , checks=[
+                          ])
+
+        # healthcareapis_services_patch
+        self.cmd('rest '
+                 '--method patch '
+                 '--uri /subscriptions/{sub}/resourceGroups/{rg}/providers/Microsoft.HealthcareApis/services/{name}?api-version=2019-09-16 '
+                 , checks=[
+                          ])
+
+        # healthcareapis_services_delete
+        self.cmd('rest '
+                 '--method delete '
+                 '--uri /subscriptions/{sub}/resourceGroups/{rg}/providers/Microsoft.HealthcareApis/services/{name}?api-version=2019-09-16 '
+                 , checks=[
+                          ])
+
+        # healthcareapis_services_get_1
+        self.cmd('rest '
+                 '--method get '
+                 '--uri /subscriptions/{sub}/providers/Microsoft.HealthcareApis/services?api-version=2019-09-16 '
+                 , checks=[
+                          ])
+
+        # healthcareapis_services_get_2
+        self.cmd('rest '
+                 '--method get '
+                 '--uri /subscriptions/{sub}/resourceGroups/{rg}/providers/Microsoft.HealthcareApis/services?api-version=2019-09-16 '
+                 , checks=[
+                          ])
+
+        # healthcareapis_checknameavailability_post
+        body = (
+                 '{'
+                 '  "type": "Microsoft.HealthcareApis/services",'
+                 '  "name": "serviceName"'
+                 '}')
+        self.kwargs['body'] = body.replace('"', '\\"')
+        self.cmd('rest '
+                 '--method post '
+                 '--uri /subscriptions/{sub}/providers/Microsoft.HealthcareApis/checkNameAvailability?api-version=2019-09-16 '
+                 '--body "{body}"'
+                 , checks=[
+                          ])
+
+        # healthcareapis_operations_get
+        self.cmd('rest '
+                 '--method get '
+                 '--uri /providers/Microsoft.HealthcareApis/operations?api-version=2019-09-16 '
+                 , checks=[
+                          ])
+
+        # healthcareapis_locations_operationresults_get
+        self.cmd('rest '
+                 '--method get '
+                 '--uri /subscriptions/{sub}/providers/Microsoft.HealthcareApis/locations/{LOCATION_NAME}/operationresults/{OPERATIONRESULT_NAME}?api-version=2019-09-16 '
+                 , checks=[
+                          ])

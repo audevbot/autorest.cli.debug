@@ -1,4 +1,4 @@
-# ServiceGet
+# Get metadata
 #
 # This script expects that the following environment vars are set:
 #
@@ -24,7 +24,7 @@ SERVICE_NAME = "myservice"
 
 BODY = {}
 
-API_VERSION = '2018-08-20-preview'
+API_VERSION = '2019-09-16'
 
 def get_credentials():
     credentials = ServicePrincipalCredentials(
