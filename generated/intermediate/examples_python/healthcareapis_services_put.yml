@@ -1,4 +1,4 @@
-# ServicePut
+# Create or Update a service with all parameters
 #
 # This script expects that the following environment vars are set:
 #
@@ -23,9 +23,9 @@ RESOURCE_GROUP = "myresourcegroup"
 SERVICE_NAME = "myservice"
 
 BODY = {
-  "location": "westus",
+  "location": "westus2",
   "tags": {},
-  "kind": "fhir",
+  "kind": "fhir-R4",
   "properties": {
     "accessPolicies": [
       {
@@ -64,7 +64,7 @@ BODY = {
   }
 }
 
-API_VERSION = '2018-08-20-preview'
+API_VERSION = '2019-09-16'
 
 def get_credentials():
     credentials = ServicePrincipalCredentials(

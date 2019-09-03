@@ -1,4 +1,4 @@
-# ServicePatch
+# Patch service
 #
 # This script expects that the following environment vars are set:
 #
@@ -29,7 +29,7 @@ BODY = {
   }
 }
 
-API_VERSION = '2018-08-20-preview'
+API_VERSION = '2019-09-16'
 
 def get_credentials():
     credentials = ServicePrincipalCredentials(
