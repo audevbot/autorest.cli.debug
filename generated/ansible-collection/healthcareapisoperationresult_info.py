@@ -39,7 +39,7 @@ author:
 '''
 
 EXAMPLES = '''
-- name: OperationResultsGet
+- name: Get operation result
   azure.rm.healthcareapisoperationresult.info:
     location_name: myLocation
     operation_result_id: myOperationresult
@@ -92,7 +92,7 @@ class AzureRMOperationResultsInfo(AzureRMModuleBase):
         self.status_code = [200]
 
         self.query_parameters = {}
-        self.query_parameters['api-version'] = '2018-08-20-preview'
+        self.query_parameters['api-version'] = '2019-09-16'
         self.header_parameters = {}
         self.header_parameters['Content-Type'] = 'application/json; charset=utf-8'
 

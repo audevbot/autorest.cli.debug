@@ -1,4 +1,4 @@
-# ServiceList
+# List all services in subscription
 #
 # This script expects that the following environment vars are set:
 #
@@ -22,7 +22,7 @@ SUBSCRIPTION_ID = os.environ['AZURE_SUBSCRIPTION_ID']
 
 BODY = {}
 
-API_VERSION = '2018-08-20-preview'
+API_VERSION = '2019-09-16'
 
 def get_credentials():
     credentials = ServicePrincipalCredentials(

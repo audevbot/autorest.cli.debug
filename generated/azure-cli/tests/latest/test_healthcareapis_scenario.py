@@ -23,7 +23,10 @@ class ApimgmtScenarioTest(ScenarioTest):
         })
 
 # create_or_update -- create
-        self.cmd('healthcareapis create  --resource-group "rg1" --name "service1" --kind "fhir" --location "westus" --cosmos-db-offer-throughput "1000" --authentication-authority "https://login.microsoftonline.com/common" --authentication-audience "https://azurehealthcareapis.com" --authentication-smart-proxy-enabled true --cors-max-age "1440" --cors-allow-credentials false', checks=[
+        self.cmd('healthcareapis create  --resource-group "rg1" --name "service1" --kind "fhir-R4" --location "westus2" --cosmos-db-offer-throughput "1000" --authentication-authority "https://login.microsoftonline.com/common" --authentication-audience "https://azurehealthcareapis.com" --authentication-smart-proxy-enabled true --cors-max-age "1440" --cors-allow-credentials false', checks=[
+        ])
+
+        self.cmd('healthcareapis create  --resource-group "rg1" --name "service2" --kind "fhir-R4" --location "westus2"', checks=[
         ])
 
         self.cmd('healthcareapis create  --resource-group "rg1" --name "service1"', checks=[
@@ -33,7 +36,10 @@ class ApimgmtScenarioTest(ScenarioTest):
         ])
 
 # create_or_update -- update
-        self.cmd('healthcareapis update  --resource-group "rg1" --name "service1" --kind "fhir" --location "westus" --cosmos-db-offer-throughput "1000" --authentication-authority "https://login.microsoftonline.com/common" --authentication-audience "https://azurehealthcareapis.com" --authentication-smart-proxy-enabled true --cors-max-age "1440" --cors-allow-credentials false', checks=[
+        self.cmd('healthcareapis update  --resource-group "rg1" --name "service1" --kind "fhir-R4" --location "westus2" --cosmos-db-offer-throughput "1000" --authentication-authority "https://login.microsoftonline.com/common" --authentication-audience "https://azurehealthcareapis.com" --authentication-smart-proxy-enabled true --cors-max-age "1440" --cors-allow-credentials false', checks=[
+        ])
+
+        self.cmd('healthcareapis update  --resource-group "rg1" --name "service2" --kind "fhir-R4" --location "westus2"', checks=[
         ])
 
         self.cmd('healthcareapis update  --resource-group "rg1" --name "service1"', checks=[
@@ -46,6 +52,9 @@ class ApimgmtScenarioTest(ScenarioTest):
         self.cmd('healthcareapis delete  --resource-group "rg1" --name "service1"', checks=[
         ])
 
+        self.cmd('healthcareapis delete  --resource-group "rg1" --name "service2"', checks=[
+        ])
+
         self.cmd('healthcareapis delete  --resource-group "rg1" --name "service1"', checks=[
         ])
 
@@ -53,6 +62,9 @@ class ApimgmtScenarioTest(ScenarioTest):
         ])
 
 # list_by_resource_group -- list
+        self.cmd('healthcareapis list  --resource-group "rg1"', checks=[
+        ])
+
         self.cmd('healthcareapis list  --resource-group "rg1"', checks=[
         ])
 
@@ -72,8 +84,14 @@ class ApimgmtScenarioTest(ScenarioTest):
         self.cmd('healthcareapis list  --resource-group "rg1"', checks=[
         ])
 
+        self.cmd('healthcareapis list  --resource-group "rg1"', checks=[
+        ])
+
 # get -- show
         self.cmd('healthcareapis show  --resource-group "rg1" --name "service1"', checks=[
+        ])
+
+        self.cmd('healthcareapis show  --resource-group "rg1" --name "service2"', checks=[
         ])
 
         self.cmd('healthcareapis show  --resource-group "rg1" --name "service1"', checks=[
