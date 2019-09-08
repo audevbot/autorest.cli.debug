@@ -88,33 +88,12 @@ Modules:
         Comparison: ''
         Updatable: true
         ExampleValue:
-          location: westus
+          location: westus2
           tags: {}
-          kind: fhir
+          kind: fhir-R4
           properties:
             accessPolicies:
               - objectId: c487e7d1-3210-41a3-8ccc-e9372b78da47
-              - objectId: 5b307da8-43d4-492b-8b66-b0294ade872f
-            cosmosDbConfiguration:
-              offerThroughput: '1000'
-            authenticationConfiguration:
-              authority: 'https://login.microsoftonline.com/common'
-              audience: 'https://azurehealthcareapis.com'
-              smartProxyEnabled: true
-            corsConfiguration:
-              origins:
-                - '*'
-              headers:
-                - '*'
-              methods:
-                - DELETE
-                - GET
-                - OPTIONS
-                - PATCH
-                - POST
-                - PUT
-              maxAge: '1440'
-              allowCredentials: false
         Hidden: false
         IncludeInResponse: false
         Flatten: false
@@ -129,9 +108,7 @@ Modules:
         TypeNameGo: kind
         IsList: false
         Required: true
-        Documentation: >-
-          The kind of the service. Valid values are: fhir, fhir-Stu3 and
-          fhir-R4.
+        Documentation: The kind of the service.
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -326,7 +303,9 @@ Modules:
         TypeNameGo: String
         IsList: false
         Required: true
-        Documentation: An object ID that is allowed access to the FHIR service.
+        Documentation: >-
+          An Azure AD object ID (User or Apps) that is allowed access to the
+          FHIR service.
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -942,9 +921,7 @@ Modules:
         TypeNameGo: kind
         IsList: false
         Required: true
-        Documentation: >-
-          The kind of the service. Valid values are: fhir, fhir-Stu3 and
-          fhir-R4.
+        Documentation: The kind of the service.
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -1116,7 +1093,9 @@ Modules:
                 TypeNameGo: String
                 IsList: false
                 Required: true
-                Documentation: An object ID that is allowed access to the FHIR service.
+                Documentation: >-
+                  An Azure AD object ID (User or Apps) that is allowed access to
+                  the FHIR service.
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -1527,18 +1506,18 @@ Modules:
     NeedsForceUpdate: false
     CannotTestUpdate: false
     Provider: Microsoft.HealthcareApis
-    ApiVersion: 2018-08-20-preview
+    ApiVersion: '2019-09-16'
     Examples:
       - Example:
           parameters:
             resourceName: service1
             resourceGroupName: rg1
-            api-version: 2018-08-20-preview
+            api-version: '2019-09-16'
             subscriptionId: subid
             serviceDescription:
-              location: westus
+              location: westus2
               tags: {}
-              kind: fhir
+              kind: fhir-R4
               properties:
                 accessPolicies:
                   - objectId: c487e7d1-3210-41a3-8ccc-e9372b78da47
@@ -1572,9 +1551,9 @@ Modules:
                   }}/providers/Microsoft.HealthcareApis/services/{{ service_name
                   }}
                 name: service1
-                location: West US
+                location: West US 2
                 type: Microsoft.HealthcareApis/services
-                kind: fhir
+                kind: fhir-R4
                 etag: etagvalue
                 tags: {}
                 properties:
@@ -1610,9 +1589,9 @@ Modules:
                   }}/providers/Microsoft.HealthcareApis/services/{{ service_name
                   }}
                 name: service1
-                location: West US
+                location: West US 2
                 type: Microsoft.HealthcareApis/services
-                kind: fhir
+                kind: fhir-R4
                 etag: etagvalue
                 tags: {}
                 properties:
@@ -1644,7 +1623,7 @@ Modules:
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.HealthcareApis/services/{{ service_name }}
         Method: put
-        Name: ServicePut
+        Name: Create or Update a service with all parameters
         Filename: healthcareapis_services_put
         Variables:
           - name: resource_group
@@ -1661,9 +1640,98 @@ Modules:
         MethodId: '422'
       - Example:
           parameters:
+            resourceName: service2
+            resourceGroupName: rg1
+            api-version: '2019-09-16'
+            subscriptionId: subid
+            serviceDescription:
+              location: westus2
+              tags: {}
+              kind: fhir-R4
+              properties:
+                accessPolicies:
+                  - objectId: c487e7d1-3210-41a3-8ccc-e9372b78da47
+          responses:
+            '200':
+              body:
+                id: >-
+                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                  resource_group
+                  }}/providers/Microsoft.HealthcareApis/services/{{ service_name
+                  }}
+                name: service2
+                type: Microsoft.HealthcareApis/services
+                etag: etagvalue
+                location: westus2
+                kind: fhir-R4
+                tags: {}
+                properties:
+                  accessPolicies:
+                    - objectId: c487e7d1-3210-41a3-8ccc-e9372b78da47
+                  cosmosDbConfiguration:
+                    offerThroughput: '1000'
+                  authenticationConfiguration:
+                    authority: 'https://login.microsoftonline.com/common'
+                    audience: 'https://azurehealthcareapis.com'
+                    smartProxyEnabled: false
+                  corsConfiguration:
+                    origins: []
+                    headers: []
+                    methods: []
+                    maxAge: null
+                    allowCredentials: false
+                  provisioningState: Creating
+            '201':
+              body:
+                id: >-
+                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                  resource_group
+                  }}/providers/Microsoft.HealthcareApis/services/{{ service_name
+                  }}
+                name: service2
+                type: Microsoft.HealthcareApis/services
+                etag: etagvalue
+                location: westus2
+                kind: fhir-R4
+                tags: {}
+                properties:
+                  accessPolicies:
+                    - objectId: c487e7d1-3210-41a3-8ccc-e9372b78da47
+                  cosmosDbConfiguration:
+                    offerThroughput: '1000'
+                  authenticationConfiguration:
+                    authority: 'https://login.microsoftonline.com/common'
+                    audience: 'https://azurehealthcareapis.com'
+                    smartProxyEnabled: false
+                  corsConfiguration:
+                    origins: []
+                    headers: []
+                    methods: []
+                    maxAge: null
+                    allowCredentials: false
+                  provisioningState: Creating
+        Url: >-
+          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
+          }}/providers/Microsoft.HealthcareApis/services/{{ service_name }}
+        Method: put
+        Name: Create or Update a service with minimum parameters
+        Filename: healthcareapis_services_put_1
+        Variables:
+          - name: resource_group
+            value: myResourceGroup
+            swaggerName: resourceGroupName
+          - name: service_name
+            value: myService
+            swaggerName: resourceName
+        References:
+          - healthcareapis_services_put
+        OperationId: '391'
+        MethodId: '422'
+      - Example:
+          parameters:
             resourceName: service1
             resourceGroupName: rg1
-            api-version: 2018-08-20-preview
+            api-version: '2019-09-16'
             subscriptionId: subid
             servicePatchDescription:
               tags:
@@ -1680,7 +1748,7 @@ Modules:
                 name: service1
                 location: West US
                 type: Microsoft.HealthcareApis/services
-                kind: fhir
+                kind: fhir-R4
                 etag: etagvalue
                 tags:
                   tag1: value1
@@ -1714,7 +1782,7 @@ Modules:
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.HealthcareApis/services/{{ service_name }}
         Method: patch
-        Name: ServicePatch
+        Name: Patch service
         Filename: healthcareapis_services_patch
         Variables:
           - name: resource_group
@@ -1731,7 +1799,7 @@ Modules:
           parameters:
             resourceName: service1
             resourceGroupName: rg1
-            api-version: 2018-08-20-preview
+            api-version: '2019-09-16'
             subscriptionId: subid
           responses:
             '202': {}
@@ -1740,7 +1808,7 @@ Modules:
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.HealthcareApis/services/{{ service_name }}
         Method: delete
-        Name: ServiceDelete
+        Name: Delete service
         Filename: healthcareapis_services_delete
         Variables:
           - name: resource_group
@@ -1919,9 +1987,7 @@ Modules:
         TypeNameGo: kind
         IsList: false
         Required: false
-        Documentation: >-
-          The kind of the service. Valid values are: fhir, fhir-Stu3 and
-          fhir-R4.
+        Documentation: The kind of the service.
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -2177,7 +2243,9 @@ Modules:
         TypeNameGo: String
         IsList: false
         Required: true
-        Documentation: An object ID that is allowed access to the FHIR service.
+        Documentation: >-
+          An Azure AD object ID (User or Apps) that is allowed access to the
+          FHIR service.
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -2604,11 +2672,11 @@ Modules:
     NeedsForceUpdate: false
     CannotTestUpdate: false
     Provider: Microsoft.HealthcareApis
-    ApiVersion: 2018-08-20-preview
+    ApiVersion: '2019-09-16'
     Examples:
       - Example:
           parameters:
-            api-version: 2018-08-20-preview
+            api-version: '2019-09-16'
             subscriptionId: subid
           responses:
             '200':
@@ -2622,7 +2690,7 @@ Modules:
                     name: service1
                     location: West US
                     type: Microsoft.HealthcareApis/services
-                    kind: fhir
+                    kind: fhir-R4
                     etag: etag
                     tags: {}
                     properties:
@@ -2656,7 +2724,7 @@ Modules:
           /subscriptions/{{ subscription_id
           }}/providers/Microsoft.HealthcareApis/services
         Method: get
-        Name: ServiceList
+        Name: List all services in subscription
         Filename: healthcareapis_services_get_1
         Variables: []
         References: []
@@ -2664,7 +2732,7 @@ Modules:
         MethodId: '522'
       - Example:
           parameters:
-            api-version: 2018-08-20-preview
+            api-version: '2019-09-16'
             subscriptionId: subid
             resourceGroupName: rgname
           responses:
@@ -2679,7 +2747,7 @@ Modules:
                     name: service1
                     location: westus
                     type: Microsoft.HealthcareApis/services
-                    kind: fhir
+                    kind: fhir-R4
                     tags: {}
                     etag: etagvalue
                     properties:
@@ -2713,7 +2781,7 @@ Modules:
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.HealthcareApis/services
         Method: get
-        Name: ServiceListByResourceGroup
+        Name: List all services in resource group
         Filename: healthcareapis_services_get_2
         Variables:
           - name: resource_group
@@ -2726,7 +2794,7 @@ Modules:
           parameters:
             resourceName: service1
             resourceGroupName: rg1
-            api-version: 2018-08-20-preview
+            api-version: '2019-09-16'
             subscriptionId: subid
           responses:
             '200':
@@ -2739,7 +2807,7 @@ Modules:
                 name: service1
                 location: West US
                 type: Microsoft.HealthcareApis/services
-                kind: fhir
+                kind: fhir-R4
                 etag: etagvalue
                 tags: {}
                 properties:
@@ -2771,7 +2839,7 @@ Modules:
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.HealthcareApis/services/{{ service_name }}
         Method: get
-        Name: ServiceGet
+        Name: Get metadata
         Filename: healthcareapis_services_get
         Variables:
           - name: resource_group
@@ -3079,11 +3147,11 @@ Modules:
     NeedsForceUpdate: false
     CannotTestUpdate: false
     Provider: Microsoft.HealthcareApis
-    ApiVersion: 2018-08-20-preview
+    ApiVersion: '2019-09-16'
     Examples:
       - Example:
           parameters:
-            api-version: 2018-08-20-preview
+            api-version: '2019-09-16'
           responses:
             '200':
               body:
@@ -3118,7 +3186,7 @@ Modules:
                     origin: 'user,system'
         Url: /providers/Microsoft.HealthcareApis/operations
         Method: get
-        Name: OperationsList
+        Name: List operations
         Filename: healthcareapis_operations_get
         Variables: []
         References: []
@@ -3209,11 +3277,11 @@ Modules:
     NeedsForceUpdate: false
     CannotTestUpdate: false
     Provider: Microsoft.HealthcareApis
-    ApiVersion: 2018-08-20-preview
+    ApiVersion: '2019-09-16'
     Examples:
       - Example:
           parameters:
-            api-version: 2018-08-20-preview
+            api-version: '2019-09-16'
             subscriptionId: subid
             locationName: westus
             operationResultId: exampleid
@@ -3238,7 +3306,7 @@ Modules:
           }}/providers/Microsoft.HealthcareApis/locations/{{ location_name
           }}/operationresults/{{ operationresult_name }}
         Method: get
-        Name: OperationResultsGet
+        Name: Get operation result
         Filename: healthcareapis_locations_operationresults_get
         Variables:
           - name: location_name

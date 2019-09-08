@@ -5,7 +5,7 @@ NETWORK_RULE_SET_NAME="mynetworkruleset"
 VIRTUAL_NETWORK_NAME="myvirtualnetwork"
 SUBNET_NAME="mysubnet"
 
-az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.ServiceBus/namespaces/$NAMESPACE_NAME/networkRuleSets/$NETWORK_RULE_SET_NAME --api-version 2017-04-01 --is-full-object --properties '
+az rest --method put --uri /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.ServiceBus/namespaces/$NAMESPACE_NAME/networkRuleSets/$NETWORK_RULE_SET_NAME?api-version=2017-04-01 --body '
 {
   "properties": {
     "defaultAction": "Deny",

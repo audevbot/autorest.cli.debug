@@ -2,7 +2,7 @@
 RESOURCE_GROUP="myresourcegroup"
 APPLICATION_GATEWAY_WEB_APPLICATION_FIREWALL_POLICY_NAME="myapplicationgatewaywebapplicationfirewallpolicy"
 
-az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/$APPLICATION_GATEWAY_WEB_APPLICATION_FIREWALL_POLICY_NAME --api-version 2019-06-01 --is-full-object --properties '
+az rest --method put --uri /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/$APPLICATION_GATEWAY_WEB_APPLICATION_FIREWALL_POLICY_NAME?api-version=2019-06-01 --body '
 {
   "location": "WestUs",
   "properties": {
