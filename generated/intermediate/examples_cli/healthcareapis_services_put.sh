@@ -1,12 +1,12 @@
-# ServicePut
+# Create or Update a service with all parameters
 RESOURCE_GROUP="myresourcegroup"
 SERVICE_NAME="myservice"
 
-az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.HealthcareApis/services/$SERVICE_NAME --api-version 2018-08-20-preview --is-full-object --properties '
+az rest --method put --uri /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.HealthcareApis/services/$SERVICE_NAME?api-version=2019-09-16 --body '
 {
-  "location": "westus",
+  "location": "westus2",
   "tags": {},
-  "kind": "fhir",
+  "kind": "fhir-R4",
   "properties": {
     "accessPolicies": [
       {

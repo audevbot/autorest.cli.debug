@@ -4,7 +4,7 @@ GALLERY_NAME="mygallery"
 APPLICATION_NAME="myapplication"
 VERSION_NAME="myversion"
 
-az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.Compute/galleries/$GALLERY_NAME/applications/$APPLICATION_NAME/versions/$VERSION_NAME --api-version 2019-03-01 --is-full-object --properties '
+az rest --method put --uri /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.Compute/galleries/$GALLERY_NAME/applications/$APPLICATION_NAME/versions/$VERSION_NAME?api-version=2019-03-01 --body '
 {
   "location": "West US",
   "properties": {
