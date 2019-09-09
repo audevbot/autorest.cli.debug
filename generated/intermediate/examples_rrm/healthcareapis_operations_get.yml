@@ -6,7 +6,7 @@
   vars:
   tasks:
 
-    - name: OperationsList
+    - name: List operations
       azure_rm_healthcareapisoperation_info: {}
     
       register: output

@@ -32,7 +32,7 @@ options:
     type: str
   kind:
     description:
-      - 'The kind of the service. Valid values are: fhir, fhir-Stu3 and fhir-R4.'
+      - The kind of the service.
     required: true
     type: str
   location:
@@ -48,7 +48,9 @@ options:
     type: str
   access_policies_object_id:
     description:
-      - An object ID that is allowed access to the FHIR service.
+      - >-
+        An Azure AD object ID (User or Apps) that is allowed access to the FHIR
+        service.
     required: true
     type: str
   cosmos_db_offer_throughput:
@@ -118,14 +120,14 @@ author:
 '''
 
 EXAMPLES = '''
-- name: ServicePut
+- name: Create or Update a service with all parameters
   azure.rm.healthcareapisservice:
     resource_group: myResourceGroup
     name: myService
     service_description:
-      location: westus
+      location: westus2
       tags: {}
-      kind: fhir
+      kind: fhir-R4
       properties:
         accessPolicies:
           - objectId: c487e7d1-3210-41a3-8ccc-e9372b78da47
@@ -150,11 +152,22 @@ EXAMPLES = '''
             - PUT
           maxAge: '1440'
           allowCredentials: false
-- name: ServicePatch
+- name: Create or Update a service with minimum parameters
   azure.rm.healthcareapisservice:
     resource_group: myResourceGroup
     name: myService
-- name: ServiceDelete
+    service_description:
+      location: westus2
+      tags: {}
+      kind: fhir-R4
+      properties:
+        accessPolicies:
+          - objectId: c487e7d1-3210-41a3-8ccc-e9372b78da47
+- name: Patch service
+  azure.rm.healthcareapisservice:
+    resource_group: myResourceGroup
+    name: myService
+- name: Delete service
   azure.rm.healthcareapisservice:
     resource_group: myResourceGroup
     name: myService
@@ -183,7 +196,7 @@ type:
   sample: null
 kind:
   description:
-    - 'The kind of the service. Valid values are: fhir, fhir-Stu3 and fhir-R4.'
+    - The kind of the service.
   returned: always
   type: str
   sample: null
@@ -231,7 +244,9 @@ properties:
       contains:
         object_id:
           description:
-            - An object ID that is allowed access to the FHIR service.
+            - >-
+              An Azure AD object ID (User or Apps) that is allowed access to the
+              FHIR service.
           returned: always
           type: str
           sample: null
@@ -428,7 +443,7 @@ class AzureRMServices(AzureRMModuleBaseExt):
 
         self.body = {}
         self.query_parameters = {}
-        self.query_parameters['api-version'] = '2018-08-20-preview'
+        self.query_parameters['api-version'] = '2019-09-16'
         self.header_parameters = {}
         self.header_parameters['Content-Type'] = 'application/json; charset=utf-8'
 
