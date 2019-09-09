@@ -4,7 +4,7 @@ SERVICE_NAME="myservice"
 VIRTUAL_NETWORK_NAME="myvirtualnetwork"
 SUBNET_NAME="mysubnet"
 
-az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.ApiManagement/service/$SERVICE_NAME --api-version 2019-01-01 --is-full-object --properties '
+az rest --method put --uri /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.ApiManagement/service/$SERVICE_NAME?api-version=2019-01-01 --body '
 {
   "location": "Central US",
   "sku": {

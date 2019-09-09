@@ -2,7 +2,7 @@
 {SCOPE}_NAME="myscope"
 MICROSOFT.EVENT_GRID_NAME="mymicrosofteventgrid"
 
-az resource create --id /{scope}/${SCOPE}_NAME/Microsoft.EventGrid/$MICROSOFT.EVENT_GRID_NAME/{eventSubscriptionName} --api-version 2019-01-01 --is-full-object --properties '
+az rest --method put --uri /{scope}/${SCOPE}_NAME/Microsoft.EventGrid/$MICROSOFT.EVENT_GRID_NAME/{eventSubscriptionName}?api-version=2019-01-01 --body '
 {
   "properties": {
     "destination": {
