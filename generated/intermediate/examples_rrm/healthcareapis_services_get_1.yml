@@ -6,7 +6,7 @@
   vars:
   tasks:
 
-    - name: ServiceList
+    - name: List all services in subscription
       azure_rm_healthcareapisservice_info: {}
     
       register: output

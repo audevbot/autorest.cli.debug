@@ -5,7 +5,7 @@ VIRTUAL_NETWORK_NAME="myvirtualnetwork"
 SUBNET_NAME="mysubnet"
 PUBLIC_IP_ADDRESS_NAME="mypublicipaddress"
 
-az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.Network/azureFirewalls/$AZURE_FIREWALL_NAME --api-version 2018-11-01 --is-full-object --properties '
+az rest --method put --uri /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.Network/azureFirewalls/$AZURE_FIREWALL_NAME?api-version=2018-11-01 --body '
 {
   "tags": {
     "key1": "value1"
