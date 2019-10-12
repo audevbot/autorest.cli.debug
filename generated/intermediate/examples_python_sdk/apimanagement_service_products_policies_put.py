@@ -1,0 +1,56 @@
+# ApiManagementCreateProductPolicy
+#
+# This script expects that the following environment vars are set:
+#
+# AZURE_TENANT: your Azure Active Directory tenant id or domain
+# AZURE_CLIENT_ID: your Azure Active Directory Application Client ID
+# AZURE_SECRET: your Azure Active Directory Application Secret
+# AZURE_SUBSCRIPTION_ID: your Azure Subscription Id
+
+import os
+import traceback
+from azure.common.credentials import ServicePrincipalCredentials
+from msrestazure.azure_exceptions import CloudError
+from msrestazure.azure_configuration import AzureConfiguration
+from msrest.service_client import ServiceClient
+from msrest.polling import LROPoller
+from msrestazure.polling.arm_polling import ARMPolling
+from msrest.pipeline import ClientRawResponse
+from azure.mgmt.apimanagement import ApiManagementClient
+import uuid
+
+SUBSCRIPTION_ID = os.environ['AZURE_SUBSCRIPTION_ID']
+RESOURCE_GROUP = "myresourcegroup"
+SERVICE_NAME = "myservice"
+PRODUCT_NAME = "myproduct"
+POLICY_NAME = "mypolicy"
+
+BODY = {
+  "properties": {
+    "format": "xml",
+    "value": "<policies>\r\n  <inbound>\r\n    <rate-limit calls=\"{{call-count}}\" renewal-period=\"15\"></rate-limit>\r\n    <log-to-eventhub logger-id=\"16\">\r\n                      @( string.Join(\",\", DateTime.UtcNow, context.Deployment.ServiceName, context.RequestId, context.Request.IpAddress, context.Operation.Name) ) \r\n                  </log-to-eventhub>\r\n    <quota-by-key calls=\"40\" counter-key=\"cc\" renewal-period=\"3600\" increment-count=\"@(context.Request.Method == &quot;POST&quot; ? 1:2)\" />\r\n    <base />\r\n  </inbound>\r\n  <backend>\r\n    <base />\r\n  </backend>\r\n  <outbound>\r\n    <base />\r\n  </outbound>\r\n</policies>"
+  }
+}
+
+def get_credentials():
+    credentials = ServicePrincipalCredentials(
+        client_id=os.environ['AZURE_CLIENT_ID'],
+        secret=os.environ['AZURE_SECRET'],
+        tenant=os.environ['AZURE_TENANT']
+    )
+    return credentials
+
+
+def run_example():
+    credentials = get_credentials()
+    mgmt_client = ApiManagementClient(credentials, os.environ['AZURE_SUBSCRIPTION_ID'])
+    response = mgmt_client.product_policy.create_or_update(RESOURCE_GROUP, SERVICE_NAME, PRODUCT_NAME, POLICY_NAME, BODY)
+    if isinstance(response, LROPoller):
+        while not response.done():
+            response.wait(timeout=30)
+        response = response.result()
+    print(str(response))
+
+
+if __name__ == "__main__":
+    run_example()

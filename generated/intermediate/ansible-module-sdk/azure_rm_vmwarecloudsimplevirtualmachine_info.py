@@ -109,12 +109,10 @@ options:
   guest_os:
     description:
       - The name of Guest OS
-    required: true
     type: str
   guest_ostype:
     description:
       - The Guest OS type
-    required: true
     type: str
   nics:
     description:
@@ -131,7 +129,8 @@ options:
         type: str
       network:
         description:
-          - The list of Virtual Networks
+          - Virtual Network
+        required: true
         type: dict
         suboptions:
           assignable:
@@ -277,7 +276,7 @@ EXAMPLES = '''
 '''
 
 RETURN = '''
-virtual_machine:
+virtual_machines:
   description: >-
     A list of dict results where the key is the name of the VirtualMachine and
     the values are the facts for that VirtualMachine.
@@ -344,7 +343,7 @@ except ImportError:
     pass
 
 
-class AzureRMVirtualMachineInfo(AzureRMModuleBase):
+class AzureRMVirtualMachinesInfo(AzureRMModuleBase):
     def __init__(self):
         self.module_arg_spec = dict(
             resource_group=dict(
@@ -376,7 +375,7 @@ class AzureRMVirtualMachineInfo(AzureRMModuleBase):
         self.header_parameters['Content-Type'] = 'application/json; charset=utf-8'
 
         self.mgmt_client = None
-        super(AzureRMVirtualMachineInfo, self).__init__(self.module_arg_spec, supports_tags=True)
+        super(AzureRMVirtualMachinesInfo, self).__init__(self.module_arg_spec, supports_tags=True)
 
     def exec_module(self, **kwargs):
 
@@ -388,19 +387,19 @@ class AzureRMVirtualMachineInfo(AzureRMModuleBase):
 
         if (self.resource_group is not None and
             self.name is not None):
-            self.results['virtual_machine'] = self.format_item(self.get())
+            self.results['virtual_machines'] = self.format_item(self.get())
         elif (self.resource_group is not None):
-            self.results['virtual_machine'] = self.format_item(self.listbyresourcegroup())
+            self.results['virtual_machines'] = self.format_item(self.listbyresourcegroup())
         else:
-            self.results['virtual_machine'] = [self.format_item(self.listbysubscription())]
+            self.results['virtual_machines'] = [self.format_item(self.listbysubscription())]
         return self.results
 
     def get(self):
         response = None
 
         try:
-            response = self.mgmt_client.virtual_machine.get(resource_group_name=self.resource_group,
-                                                            virtual_machine_name=self.name)
+            response = self.mgmt_client.virtual_machines.get(resource_group_name=self.resource_group,
+                                                             virtual_machine_name=self.name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 
@@ -410,7 +409,7 @@ class AzureRMVirtualMachineInfo(AzureRMModuleBase):
         response = None
 
         try:
-            response = self.mgmt_client.virtual_machine.list_by_resource_group(resource_group_name=self.resource_group)
+            response = self.mgmt_client.virtual_machines.list_by_resource_group(resource_group_name=self.resource_group)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 
@@ -420,7 +419,7 @@ class AzureRMVirtualMachineInfo(AzureRMModuleBase):
         response = None
 
         try:
-            response = self.mgmt_client.virtual_machine.list_by_subscription()
+            response = self.mgmt_client.virtual_machines.list_by_subscription()
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 
@@ -431,7 +430,7 @@ class AzureRMVirtualMachineInfo(AzureRMModuleBase):
 
 
 def main():
-    AzureRMVirtualMachineInfo()
+    AzureRMVirtualMachinesInfo()
 
 
 if __name__ == '__main__':

@@ -68,7 +68,7 @@ objects:
             python_field_name: type
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: NotificationContractProperties
             go_type_name: NotificationContractProperties
       list_by_parent: !ruby/object:Api::Azure::SDKOperationDefinition
         go_func_name: ListByService

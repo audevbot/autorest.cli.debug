@@ -168,6 +168,8 @@ Modules:
         References: []
         OperationId: '112'
         MethodId: '113'
+        OperationName: SubscriptionOperations
+        MethodName: List
   - ModuleName: azure_rm_subscriptionssubscriptionfactory
     Options:
       - NameSwagger: enrollmentAccountName
@@ -232,8 +234,8 @@ Modules:
           offerType: MS-AZR-0017P
           displayName: Test Ea Azure Sub
           owners:
-            - objectId: 973034ff-acb7-409c-b731-e789672c7b31
-            - objectId: 67439a9e-8519-4016-a630-f5f805eba567
+            - object_id: 973034ff-acb7-409c-b731-e789672c7b31
+            - object_id: 67439a9e-8519-4016-a630-f5f805eba567
           additionalParameters:
             customData:
               key1: value1
@@ -342,7 +344,7 @@ Modules:
         IdPortion: null
         Type: str
         TypeName: offerType
-        TypeNameGo: offerType
+        TypeNameGo: OfferType
         IsList: false
         Required: false
         Documentation: >-
@@ -477,8 +479,8 @@ Modules:
               offerType: MS-AZR-0017P
               displayName: Test Ea Azure Sub
               owners:
-                - objectId: 973034ff-acb7-409c-b731-e789672c7b31
-                - objectId: 67439a9e-8519-4016-a630-f5f805eba567
+                - object_id: 973034ff-acb7-409c-b731-e789672c7b31
+                - object_id: 67439a9e-8519-4016-a630-f5f805eba567
               additionalParameters:
                 customData:
                   key1: value1
@@ -506,10 +508,9 @@ Modules:
         References: []
         OperationId: '127'
         MethodId: '128'
+        OperationName: SubscriptionFactory
+        MethodName: CreateSubscriptionInEnrollmentAccount
 ServiceName: Subscription
 MgmtClientName: Subscription
 CliName: subscription
 Namespace: azure.mgmt.subscriptions
-Info:
-  - '  ** FOUND OPTION enrollmentAccountName'
-  - '  ** FOUND OPTION body'
