@@ -9,10 +9,10 @@
   tasks:
 
     - name: ListVirtualNetworks
-      azure_rm_vmwarecloudsimplevirtualnetworksbypc_info:
+      azure_rm_vmwarecloudsimplevirtualnetwork_info:
         region_id: '{{location_name}}'
         pc_name: '{{private_cloud_name}}'
-        name: >-
+        resource_pool_name: >-
           /subscriptions/{{ subscription_id
           }}/providers/Microsoft.VMwareCloudSimple/locations/{{ location_name
           }}/privateClouds/{{ private_cloud_name }}/resourcePools/{{

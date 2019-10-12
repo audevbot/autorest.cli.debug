@@ -39,6 +39,10 @@ options:
     description:
       - Resource type for API Management resource.
     type: str
+  signin_tenant:
+    description:
+      - The TenantId to use instead of Common when logging into Active Directory
+    type: str
   allowed_tenants:
     description:
       - List of Allowed Tenants when configuring Azure Active Directory login.
@@ -156,6 +160,14 @@ properties:
       returned: always
       type: str
       sample: null
+    signin_tenant:
+      description:
+        - >-
+          The TenantId to use instead of Common when logging into Active
+          Directory
+      returned: always
+      type: str
+      sample: null
     allowed_tenants:
       description:
         - List of Allowed Tenants when configuring Azure Active Directory login.
@@ -262,6 +274,10 @@ class AzureRMIdentityProvider(AzureRMModuleBaseExt):
                          'twitter',
                          'aad',
                          'aadB2C']
+            ),
+            signin_tenant=dict(
+                type='str',
+                disposition='/properties/signinTenant'
             ),
             allowed_tenants=dict(
                 type='list',

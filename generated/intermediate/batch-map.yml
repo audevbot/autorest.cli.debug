@@ -1151,6 +1151,8 @@ Modules:
           - storage_storageaccounts_put
         OperationId: '1668'
         MethodId: '1669'
+        OperationName: BatchAccount
+        MethodName: Create
       - Example:
           parameters:
             accountName: sampleacct
@@ -1231,6 +1233,8 @@ Modules:
           - batch_batchaccounts_put
         OperationId: '1668'
         MethodId: '1669'
+        OperationName: BatchAccount
+        MethodName: Create
       - Example:
           parameters:
             accountName: sampleacct
@@ -1291,6 +1295,8 @@ Modules:
           - batch_batchaccounts_put
         OperationId: '1668'
         MethodId: '1704'
+        OperationName: BatchAccount
+        MethodName: Update
       - Example:
           parameters:
             accountName: sampleacct
@@ -1317,6 +1323,8 @@ Modules:
         References: []
         OperationId: '1668'
         MethodId: '1738'
+        OperationName: BatchAccount
+        MethodName: Delete
   - ModuleName: azure_rm_batchaccount_info
     Options:
       - NameSwagger: resourceGroupName
@@ -1908,6 +1916,8 @@ Modules:
         References: []
         OperationId: '1668'
         MethodId: '1800'
+        OperationName: BatchAccount
+        MethodName: List
       - Example:
           parameters:
             resourceGroupName: default-azurebatch-japaneast
@@ -1953,6 +1963,8 @@ Modules:
         References: []
         OperationId: '1668'
         MethodId: '1818'
+        OperationName: BatchAccount
+        MethodName: ListByResourceGroup
       - Example:
           parameters:
             accountName: sampleacct
@@ -2000,6 +2012,8 @@ Modules:
         References: []
         OperationId: '1668'
         MethodId: '1770'
+        OperationName: BatchAccount
+        MethodName: Get
   - ModuleName: azure_rm_batchapplicationpackage
     Options:
       - NameSwagger: resourceGroupName
@@ -2635,6 +2649,8 @@ Modules:
           - batch_batchaccounts_applications_put
         OperationId: '1938'
         MethodId: '1985'
+        OperationName: ApplicationPackage
+        MethodName: Create
       - Example:
           parameters:
             accountName: sampleacct
@@ -2669,6 +2685,8 @@ Modules:
         References: []
         OperationId: '1938'
         MethodId: '2031'
+        OperationName: ApplicationPackage
+        MethodName: Delete
   - ModuleName: azure_rm_batchapplicationpackage_info
     Options:
       - NameSwagger: resourceGroupName
@@ -3237,6 +3255,8 @@ Modules:
         References: []
         OperationId: '1938'
         MethodId: '2116'
+        OperationName: ApplicationPackage
+        MethodName: List
       - Example:
           parameters:
             accountName: sampleacct
@@ -3285,6 +3305,8 @@ Modules:
         References: []
         OperationId: '1938'
         MethodId: '2074'
+        OperationName: ApplicationPackage
+        MethodName: Get
   - ModuleName: azure_rm_batchapplication
     Options:
       - NameSwagger: resourceGroupName
@@ -3917,6 +3939,8 @@ Modules:
           - batch_batchaccounts_put
         OperationId: '2160'
         MethodId: '2161'
+        OperationName: Application
+        MethodName: Create
       - Example:
           parameters:
             accountName: sampleacct
@@ -3966,6 +3990,8 @@ Modules:
           - batch_batchaccounts_applications_put
         OperationId: '2160'
         MethodId: '2274'
+        OperationName: Application
+        MethodName: Update
       - Example:
           parameters:
             accountName: sampleacct
@@ -3996,6 +4022,8 @@ Modules:
         References: []
         OperationId: '2160'
         MethodId: '2201'
+        OperationName: Application
+        MethodName: Delete
   - ModuleName: azure_rm_batchapplication_info
     Options:
       - NameSwagger: resourceGroupName
@@ -4460,6 +4488,8 @@ Modules:
         References: []
         OperationId: '2160'
         MethodId: '2314'
+        OperationName: Application
+        MethodName: List
       - Example:
           parameters:
             accountName: sampleacct
@@ -4502,6 +4532,8 @@ Modules:
         References: []
         OperationId: '2160'
         MethodId: '2238'
+        OperationName: Application
+        MethodName: Get
   - ModuleName: azure_rm_batchlocation_info
     Options:
       - NameSwagger: locationName
@@ -4612,6 +4644,8 @@ Modules:
         References: []
         OperationId: '2352'
         MethodId: '2353'
+        OperationName: Location
+        MethodName: GetQuotas
   - ModuleName: azure_rm_batchoperation_info
     Options:
       - &ref_23
@@ -6263,6 +6297,8 @@ Modules:
           - batch_batchaccounts_put
         OperationId: '2422'
         MethodId: '2471'
+        OperationName: Certificate
+        MethodName: Create
       - Example:
           parameters:
             accountName: sampleacct
@@ -6314,6 +6350,8 @@ Modules:
           - batch_batchaccounts_certificates_put
         OperationId: '2422'
         MethodId: '2471'
+        OperationName: Certificate
+        MethodName: Create
       - Example:
           parameters:
             accountName: sampleacct
@@ -6368,6 +6406,8 @@ Modules:
           - batch_batchaccounts_certificates_put
         OperationId: '2422'
         MethodId: '2471'
+        OperationName: Certificate
+        MethodName: Create
       - Example:
           parameters:
             accountName: sampleacct
@@ -6419,6 +6459,8 @@ Modules:
           - batch_batchaccounts_certificates_put
         OperationId: '2422'
         MethodId: '2523'
+        OperationName: Certificate
+        MethodName: Update
       - Example:
           parameters:
             subscriptionId: subid
@@ -6454,6 +6496,8 @@ Modules:
         References: []
         OperationId: '2422'
         MethodId: '2569'
+        OperationName: Certificate
+        MethodName: Delete
   - ModuleName: azure_rm_batchcertificate_info
     Options:
       - NameSwagger: resourceGroupName
@@ -7473,6 +7517,8 @@ Modules:
         References: []
         OperationId: '2422'
         MethodId: '2423'
+        OperationName: Certificate
+        MethodName: ListByBatchAccount
       - Example:
           parameters:
             subscriptionId: subid
@@ -7526,6 +7572,8 @@ Modules:
         References: []
         OperationId: '2422'
         MethodId: '2423'
+        OperationName: Certificate
+        MethodName: ListByBatchAccount
       - Example:
           parameters:
             subscriptionId: subid
@@ -7572,6 +7620,8 @@ Modules:
         References: []
         OperationId: '2422'
         MethodId: '2607'
+        OperationName: Certificate
+        MethodName: Get
       - Example:
           parameters:
             subscriptionId: subid
@@ -7633,6 +7683,8 @@ Modules:
         References: []
         OperationId: '2422'
         MethodId: '2607'
+        OperationName: Certificate
+        MethodName: Get
   - ModuleName: azure_rm_batchpool
     Options:
       - NameSwagger: resourceGroupName
@@ -8459,7 +8511,7 @@ Modules:
                     DispositionRest: '*'
                     Comparison: ''
                     Updatable: true
-                    ExampleValue: '200'
+                    ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
                     Flatten: false
@@ -8506,7 +8558,7 @@ Modules:
                     DispositionRest: '*'
                     Comparison: ''
                     Updatable: true
-                    ExampleValue: Standard_LRS
+                    ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
                     Flatten: false
@@ -9310,7 +9362,7 @@ Modules:
                     DispositionRest: '*'
                     Comparison: ''
                     Updatable: true
-                    ExampleValue: '12001'
+                    ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
                     Flatten: false
@@ -9348,7 +9400,7 @@ Modules:
                     DispositionRest: '*'
                     Comparison: ''
                     Updatable: true
-                    ExampleValue: '15000'
+                    ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
                     Flatten: false
@@ -9386,7 +9438,7 @@ Modules:
                     DispositionRest: '*'
                     Comparison: ''
                     Updatable: true
-                    ExampleValue: '15100'
+                    ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
                     Flatten: false
@@ -9426,10 +9478,7 @@ Modules:
                     DispositionRest: '*'
                     Comparison: ''
                     Updatable: true
-                    ExampleValue:
-                      access: Deny
-                      sourceAddressPrefix: '*'
-                      priority: '3500'
+                    ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
                     Flatten: false
@@ -9686,7 +9735,7 @@ Modules:
             DispositionRest: '*'
             Comparison: ''
             Updatable: true
-            ExampleValue: Admin
+            ExampleValue: null
             Hidden: false
             IncludeInResponse: true
             Flatten: false
@@ -9739,7 +9788,7 @@ Modules:
                 DispositionRest: '*'
                 Comparison: ''
                 Updatable: true
-                ExampleValue: '1234'
+                ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
                 Flatten: false
@@ -9772,7 +9821,7 @@ Modules:
                 DispositionRest: '*'
                 Comparison: ''
                 Updatable: true
-                ExampleValue: '4567'
+                ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
                 Flatten: false
@@ -9810,7 +9859,7 @@ Modules:
                 DispositionRest: '*'
                 Comparison: ''
                 Updatable: true
-                ExampleValue: sshprivatekeyvalue
+                ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
                 Flatten: false
@@ -10190,7 +10239,7 @@ Modules:
                 DispositionRest: '*'
                 Comparison: ''
                 Updatable: true
-                ExampleValue: 'https://testaccount.blob.core.windows.net/example-blob-file'
+                ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
                 Flatten: false
@@ -10265,7 +10314,7 @@ Modules:
                 DispositionRest: '*'
                 Comparison: ''
                 Updatable: true
-                ExampleValue: 'c:\temp\gohere'
+                ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
                 Flatten: false
@@ -10300,7 +10349,7 @@ Modules:
                 DispositionRest: '*'
                 Comparison: ''
                 Updatable: true
-                ExampleValue: '777'
+                ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
                 Flatten: false
@@ -11007,7 +11056,7 @@ Modules:
             DispositionRest: '*'
             Comparison: ''
             Updatable: true
-            ExampleValue: LocalMachine
+            ExampleValue: null
             Hidden: false
             IncludeInResponse: true
             Flatten: false
@@ -11043,7 +11092,7 @@ Modules:
             DispositionRest: '*'
             Comparison: ''
             Updatable: true
-            ExampleValue: MY
+            ExampleValue: null
             Hidden: false
             IncludeInResponse: true
             Flatten: false
@@ -16077,6 +16126,8 @@ Modules:
           - batch_batchaccounts_put
         OperationId: '2681'
         MethodId: '2730'
+        OperationName: Pool
+        MethodName: Create
       - Example:
           parameters:
             subscriptionId: subid
@@ -16158,6 +16209,8 @@ Modules:
           - batch_batchaccounts_pools_put
         OperationId: '2681'
         MethodId: '2730'
+        OperationName: Pool
+        MethodName: Create
       - Example:
           parameters:
             subscriptionId: subid
@@ -16187,15 +16240,15 @@ Modules:
                     inboundNatPools:
                       - name: testnat
                         protocol: TCP
-                        backendPort: '12001'
-                        frontendPortRangeStart: '15000'
-                        frontendPortRangeEnd: '15100'
-                        networkSecurityGroupRules:
+                        backend_port: '12001'
+                        frontend_port_range_start: '15000'
+                        frontend_port_range_end: '15100'
+                        network_security_group_rules:
                           - access: Allow
-                            sourceAddressPrefix: 192.100.12.45
+                            source_address_prefix: 192.100.12.45
                             priority: '150'
                           - access: Deny
-                            sourceAddressPrefix: '*'
+                            source_address_prefix: '*'
                             priority: '3500'
                 scaleSettings:
                   fixedScale:
@@ -16211,10 +16264,10 @@ Modules:
                 startTask:
                   commandLine: cmd /c SET
                   resourceFiles:
-                    - httpUrl: >-
+                    - http_url: >-
                         https://testaccount.blob.core.windows.net/example-blob-file
-                      filePath: 'c:\temp\gohere'
-                      fileMode: '777'
+                      file_path: 'c:\temp\gohere'
+                      file_mode: '777'
                   environmentSettings:
                     - name: MYSET
                       value: '1234'
@@ -16227,9 +16280,9 @@ Modules:
                 userAccounts:
                   - name: username1
                     password: examplepassword
-                    elevationLevel: Admin
-                    linuxUserConfiguration:
-                      sshPrivateKey: sshprivatekeyvalue
+                    elevation_level: Admin
+                    linux_user_configuration:
+                      ssh_private_key: sshprivatekeyvalue
                       uid: '1234'
                       gid: '4567'
                 applicationPackages:
@@ -16247,8 +16300,8 @@ Modules:
                       }}/providers/Microsoft.Batch/batchAccounts/{{
                       batch_account_name }}/pools/{{ pool_name
                       }}/certificates/{{ certificate_name }}
-                    storeLocation: LocalMachine
-                    storeName: MY
+                    store_location: LocalMachine
+                    store_name: MY
                     visibility:
                       - RemoteUser
                 applicationLicenses:
@@ -16399,6 +16452,8 @@ Modules:
           - batch_batchaccounts_pools_put
         OperationId: '2681'
         MethodId: '2730'
+        OperationName: Pool
+        MethodName: Create
       - Example:
           parameters:
             subscriptionId: subid
@@ -16480,6 +16535,8 @@ Modules:
           - batch_batchaccounts_pools_put
         OperationId: '2681'
         MethodId: '2730'
+        OperationName: Pool
+        MethodName: Create
       - Example:
           parameters:
             subscriptionId: subid
@@ -16504,26 +16561,26 @@ Modules:
                     dataDisks:
                       - lun: '0'
                         caching: ReadWrite
-                        diskSizeGB: '30'
-                        storageAccountType: Premium_LRS
+                        disk_size_gb: '30'
+                        storage_account_type: Premium_LRS
                       - lun: '1'
                         caching: None
-                        diskSizeGB: '200'
-                        storageAccountType: Standard_LRS
+                        disk_size_gb: '200'
+                        storage_account_type: Standard_LRS
                 networkConfiguration:
                   endpointConfiguration:
                     inboundNatPools:
                       - name: testnat
                         protocol: TCP
-                        backendPort: '12001'
-                        frontendPortRangeStart: '15000'
-                        frontendPortRangeEnd: '15100'
-                        networkSecurityGroupRules:
+                        backend_port: '12001'
+                        frontend_port_range_start: '15000'
+                        frontend_port_range_end: '15100'
+                        network_security_group_rules:
                           - access: Allow
-                            sourceAddressPrefix: 192.100.12.45
+                            source_address_prefix: 192.100.12.45
                             priority: '150'
                           - access: Deny
-                            sourceAddressPrefix: '*'
+                            source_address_prefix: '*'
                             priority: '3500'
                 scaleSettings:
                   autoScale:
@@ -16615,6 +16672,8 @@ Modules:
           - batch_batchaccounts_pools_put
         OperationId: '2681'
         MethodId: '2730'
+        OperationName: Pool
+        MethodName: Create
       - Example:
           parameters:
             subscriptionId: subid
@@ -16695,6 +16754,8 @@ Modules:
           - batch_batchaccounts_pools_put
         OperationId: '2681'
         MethodId: '2782'
+        OperationName: Pool
+        MethodName: Update
       - Example:
           parameters:
             subscriptionId: subid
@@ -16770,6 +16831,8 @@ Modules:
           - batch_batchaccounts_pools_put
         OperationId: '2681'
         MethodId: '2782'
+        OperationName: Pool
+        MethodName: Update
       - Example:
           parameters:
             subscriptionId: subid
@@ -16843,6 +16906,8 @@ Modules:
           - batch_batchaccounts_pools_put
         OperationId: '2681'
         MethodId: '2782'
+        OperationName: Pool
+        MethodName: Update
       - Example:
           parameters:
             subscriptionId: subid
@@ -16876,8 +16941,8 @@ Modules:
                       }}/providers/Microsoft.Batch/batchAccounts/{{
                       batch_account_name }}/pools/{{ pool_name
                       }}/certificates/{{ certificate_name }}
-                    storeLocation: LocalMachine
-                    storeName: MY
+                    store_location: LocalMachine
+                    store_name: MY
           responses:
             '200':
               headers:
@@ -16982,6 +17047,8 @@ Modules:
           - batch_batchaccounts_pools_put
         OperationId: '2681'
         MethodId: '2782'
+        OperationName: Pool
+        MethodName: Update
       - Example:
           parameters:
             subscriptionId: subid
@@ -17017,6 +17084,8 @@ Modules:
         References: []
         OperationId: '2681'
         MethodId: '2828'
+        OperationName: Pool
+        MethodName: Delete
   - ModuleName: azure_rm_batchpool_info
     Options:
       - NameSwagger: resourceGroupName
@@ -21882,6 +21951,8 @@ Modules:
         References: []
         OperationId: '2681'
         MethodId: '2682'
+        OperationName: Pool
+        MethodName: ListByBatchAccount
       - Example:
           parameters:
             subscriptionId: subid
@@ -21943,6 +22014,8 @@ Modules:
         References: []
         OperationId: '2681'
         MethodId: '2682'
+        OperationName: Pool
+        MethodName: ListByBatchAccount
       - Example:
           parameters:
             subscriptionId: subid
@@ -22080,58 +22153,9 @@ Modules:
         References: []
         OperationId: '2681'
         MethodId: '2866'
+        OperationName: Pool
+        MethodName: Get
 ServiceName: BatchManagement
 MgmtClientName: BatchManagement
 CliName: batch
 Namespace: azure.mgmt.batch
-Info:
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION applicationName'
-  - '  ** FOUND OPTION versionName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION applicationName'
-  - '  ** FOUND OPTION maxresults'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION applicationName'
-  - '  ** FOUND OPTION versionName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION applicationName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION maxresults'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION applicationName'
-  - '  ** FOUND OPTION locationName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION certificateName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION maxresults'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION certificateName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION poolName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION maxresults'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION poolName'
