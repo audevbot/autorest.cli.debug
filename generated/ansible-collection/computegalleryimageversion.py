@@ -245,10 +245,10 @@ EXAMPLES = '''
         publishingProfile:
           targetRegions:
             - name: West US
-              regionalReplicaCount: '1'
+              regional_replica_count: '1'
             - name: East US
-              regionalReplicaCount: '2'
-              storageAccountType: Standard_ZRS
+              regional_replica_count: '2'
+              storage_account_type: Standard_ZRS
           source:
             managedImage:
               id: >-

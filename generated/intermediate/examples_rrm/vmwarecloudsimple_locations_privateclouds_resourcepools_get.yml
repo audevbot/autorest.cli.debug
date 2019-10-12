@@ -9,9 +9,9 @@
   tasks:
 
     - name: ListResourcePools
-      azure_rm_vmwarecloudsimpleresourcepoolsbypc_info:
+      azure_rm_vmwarecloudsimpleresourcepool_info:
         region_id: '{{location_name}}'
-        name: '{{private_cloud_name}}'
+        pc_name: '{{private_cloud_name}}'
     
       register: output
     - debug:

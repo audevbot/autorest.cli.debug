@@ -9,10 +9,10 @@
   tasks:
 
     - name: ListVirtualMachineTemplates
-      azure_rm_vmwarecloudsimplevirtualmachinetemplatesbypc_info:
+      azure_rm_vmwarecloudsimplevirtualmachinetemplate_info:
         pc_name: '{{private_cloud_name}}'
         region_id: '{{location_name}}'
-        name: >-
+        resource_pool_name: >-
           /subscriptions/{{ subscription_id
           }}/providers/Microsoft.VMwareCloudSimple/locations/{{ location_name
           }}/privateClouds/{{ private_cloud_name }}/resourcePools/{{

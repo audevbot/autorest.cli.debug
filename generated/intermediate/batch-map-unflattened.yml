@@ -1163,6 +1163,8 @@ Modules:
           - storage_storageaccounts_put
         OperationId: '1668'
         MethodId: '1669'
+        OperationName: BatchAccount
+        MethodName: Create
       - Example:
           parameters:
             accountName: sampleacct
@@ -1243,6 +1245,8 @@ Modules:
           - batch_batchaccounts_put
         OperationId: '1668'
         MethodId: '1669'
+        OperationName: BatchAccount
+        MethodName: Create
       - Example:
           parameters:
             accountName: sampleacct
@@ -1303,6 +1307,8 @@ Modules:
           - batch_batchaccounts_put
         OperationId: '1668'
         MethodId: '1704'
+        OperationName: BatchAccount
+        MethodName: Update
       - Example:
           parameters:
             accountName: sampleacct
@@ -1329,6 +1335,8 @@ Modules:
         References: []
         OperationId: '1668'
         MethodId: '1738'
+        OperationName: BatchAccount
+        MethodName: Delete
   - ModuleName: azure_rm_batchaccount_info
     Options:
       - NameSwagger: resourceGroupName
@@ -2094,6 +2102,8 @@ Modules:
         References: []
         OperationId: '1668'
         MethodId: '1800'
+        OperationName: BatchAccount
+        MethodName: List
       - Example:
           parameters:
             resourceGroupName: default-azurebatch-japaneast
@@ -2139,6 +2149,8 @@ Modules:
         References: []
         OperationId: '1668'
         MethodId: '1818'
+        OperationName: BatchAccount
+        MethodName: ListByResourceGroup
       - Example:
           parameters:
             accountName: sampleacct
@@ -2186,6 +2198,8 @@ Modules:
         References: []
         OperationId: '1668'
         MethodId: '1770'
+        OperationName: BatchAccount
+        MethodName: Get
   - ModuleName: azure_rm_batchapplicationpackage
     Options:
       - NameSwagger: resourceGroupName
@@ -2825,6 +2839,8 @@ Modules:
           - batch_batchaccounts_applications_put
         OperationId: '1938'
         MethodId: '1985'
+        OperationName: ApplicationPackage
+        MethodName: Create
       - Example:
           parameters:
             accountName: sampleacct
@@ -2859,6 +2875,8 @@ Modules:
         References: []
         OperationId: '1938'
         MethodId: '2031'
+        OperationName: ApplicationPackage
+        MethodName: Delete
   - ModuleName: azure_rm_batchapplicationpackage_info
     Options:
       - NameSwagger: resourceGroupName
@@ -3431,6 +3449,8 @@ Modules:
         References: []
         OperationId: '1938'
         MethodId: '2116'
+        OperationName: ApplicationPackage
+        MethodName: List
       - Example:
           parameters:
             accountName: sampleacct
@@ -3479,6 +3499,8 @@ Modules:
         References: []
         OperationId: '1938'
         MethodId: '2074'
+        OperationName: ApplicationPackage
+        MethodName: Get
   - ModuleName: azure_rm_batchapplication
     Options:
       - NameSwagger: resourceGroupName
@@ -4115,6 +4137,8 @@ Modules:
           - batch_batchaccounts_put
         OperationId: '2160'
         MethodId: '2161'
+        OperationName: Application
+        MethodName: Create
       - Example:
           parameters:
             accountName: sampleacct
@@ -4164,6 +4188,8 @@ Modules:
           - batch_batchaccounts_applications_put
         OperationId: '2160'
         MethodId: '2274'
+        OperationName: Application
+        MethodName: Update
       - Example:
           parameters:
             accountName: sampleacct
@@ -4194,6 +4220,8 @@ Modules:
         References: []
         OperationId: '2160'
         MethodId: '2201'
+        OperationName: Application
+        MethodName: Delete
   - ModuleName: azure_rm_batchapplication_info
     Options:
       - NameSwagger: resourceGroupName
@@ -4662,6 +4690,8 @@ Modules:
         References: []
         OperationId: '2160'
         MethodId: '2314'
+        OperationName: Application
+        MethodName: List
       - Example:
           parameters:
             accountName: sampleacct
@@ -4704,6 +4734,8 @@ Modules:
         References: []
         OperationId: '2160'
         MethodId: '2238'
+        OperationName: Application
+        MethodName: Get
   - ModuleName: azure_rm_batchlocation_info
     Options:
       - NameSwagger: locationName
@@ -4814,6 +4846,8 @@ Modules:
         References: []
         OperationId: '2352'
         MethodId: '2353'
+        OperationName: Location
+        MethodName: GetQuotas
   - ModuleName: azure_rm_batchoperation_info
     Options:
       - &ref_40
@@ -6479,6 +6513,8 @@ Modules:
           - batch_batchaccounts_put
         OperationId: '2422'
         MethodId: '2471'
+        OperationName: Certificate
+        MethodName: Create
       - Example:
           parameters:
             accountName: sampleacct
@@ -6530,6 +6566,8 @@ Modules:
           - batch_batchaccounts_certificates_put
         OperationId: '2422'
         MethodId: '2471'
+        OperationName: Certificate
+        MethodName: Create
       - Example:
           parameters:
             accountName: sampleacct
@@ -6584,6 +6622,8 @@ Modules:
           - batch_batchaccounts_certificates_put
         OperationId: '2422'
         MethodId: '2471'
+        OperationName: Certificate
+        MethodName: Create
       - Example:
           parameters:
             accountName: sampleacct
@@ -6635,6 +6675,8 @@ Modules:
           - batch_batchaccounts_certificates_put
         OperationId: '2422'
         MethodId: '2523'
+        OperationName: Certificate
+        MethodName: Update
       - Example:
           parameters:
             subscriptionId: subid
@@ -6670,6 +6712,8 @@ Modules:
         References: []
         OperationId: '2422'
         MethodId: '2569'
+        OperationName: Certificate
+        MethodName: Delete
   - ModuleName: azure_rm_batchcertificate_info
     Options:
       - NameSwagger: resourceGroupName
@@ -7751,6 +7795,8 @@ Modules:
         References: []
         OperationId: '2422'
         MethodId: '2423'
+        OperationName: Certificate
+        MethodName: ListByBatchAccount
       - Example:
           parameters:
             subscriptionId: subid
@@ -7804,6 +7850,8 @@ Modules:
         References: []
         OperationId: '2422'
         MethodId: '2423'
+        OperationName: Certificate
+        MethodName: ListByBatchAccount
       - Example:
           parameters:
             subscriptionId: subid
@@ -7850,6 +7898,8 @@ Modules:
         References: []
         OperationId: '2422'
         MethodId: '2607'
+        OperationName: Certificate
+        MethodName: Get
       - Example:
           parameters:
             subscriptionId: subid
@@ -7911,6 +7961,8 @@ Modules:
         References: []
         OperationId: '2422'
         MethodId: '2607'
+        OperationName: Certificate
+        MethodName: Get
   - ModuleName: azure_rm_batchpool
     Options:
       - NameSwagger: resourceGroupName
@@ -16403,6 +16455,8 @@ Modules:
           - batch_batchaccounts_put
         OperationId: '2681'
         MethodId: '2730'
+        OperationName: Pool
+        MethodName: Create
       - Example:
           parameters:
             subscriptionId: subid
@@ -16484,6 +16538,8 @@ Modules:
           - batch_batchaccounts_pools_put
         OperationId: '2681'
         MethodId: '2730'
+        OperationName: Pool
+        MethodName: Create
       - Example:
           parameters:
             subscriptionId: subid
@@ -16725,6 +16781,8 @@ Modules:
           - batch_batchaccounts_pools_put
         OperationId: '2681'
         MethodId: '2730'
+        OperationName: Pool
+        MethodName: Create
       - Example:
           parameters:
             subscriptionId: subid
@@ -16806,6 +16864,8 @@ Modules:
           - batch_batchaccounts_pools_put
         OperationId: '2681'
         MethodId: '2730'
+        OperationName: Pool
+        MethodName: Create
       - Example:
           parameters:
             subscriptionId: subid
@@ -16941,6 +17001,8 @@ Modules:
           - batch_batchaccounts_pools_put
         OperationId: '2681'
         MethodId: '2730'
+        OperationName: Pool
+        MethodName: Create
       - Example:
           parameters:
             subscriptionId: subid
@@ -17021,6 +17083,8 @@ Modules:
           - batch_batchaccounts_pools_put
         OperationId: '2681'
         MethodId: '2782'
+        OperationName: Pool
+        MethodName: Update
       - Example:
           parameters:
             subscriptionId: subid
@@ -17096,6 +17160,8 @@ Modules:
           - batch_batchaccounts_pools_put
         OperationId: '2681'
         MethodId: '2782'
+        OperationName: Pool
+        MethodName: Update
       - Example:
           parameters:
             subscriptionId: subid
@@ -17169,6 +17235,8 @@ Modules:
           - batch_batchaccounts_pools_put
         OperationId: '2681'
         MethodId: '2782'
+        OperationName: Pool
+        MethodName: Update
       - Example:
           parameters:
             subscriptionId: subid
@@ -17308,6 +17376,8 @@ Modules:
           - batch_batchaccounts_pools_put
         OperationId: '2681'
         MethodId: '2782'
+        OperationName: Pool
+        MethodName: Update
       - Example:
           parameters:
             subscriptionId: subid
@@ -17343,6 +17413,8 @@ Modules:
         References: []
         OperationId: '2681'
         MethodId: '2828'
+        OperationName: Pool
+        MethodName: Delete
   - ModuleName: azure_rm_batchpool_info
     Options:
       - NameSwagger: resourceGroupName
@@ -22311,6 +22383,8 @@ Modules:
         References: []
         OperationId: '2681'
         MethodId: '2682'
+        OperationName: Pool
+        MethodName: ListByBatchAccount
       - Example:
           parameters:
             subscriptionId: subid
@@ -22372,6 +22446,8 @@ Modules:
         References: []
         OperationId: '2681'
         MethodId: '2682'
+        OperationName: Pool
+        MethodName: ListByBatchAccount
       - Example:
           parameters:
             subscriptionId: subid
@@ -22509,58 +22585,9 @@ Modules:
         References: []
         OperationId: '2681'
         MethodId: '2866'
+        OperationName: Pool
+        MethodName: Get
 ServiceName: BatchManagement
 MgmtClientName: BatchManagement
 CliName: batch
 Namespace: azure.mgmt.batch
-Info:
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION applicationName'
-  - '  ** FOUND OPTION versionName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION applicationName'
-  - '  ** FOUND OPTION maxresults'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION applicationName'
-  - '  ** FOUND OPTION versionName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION applicationName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION maxresults'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION applicationName'
-  - '  ** FOUND OPTION locationName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION certificateName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION maxresults'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION certificateName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION poolName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION maxresults'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION poolName'
