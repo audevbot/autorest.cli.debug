@@ -8,7 +8,7 @@
   tasks:
 
     - name: ListUsages
-      azure_rm_vmwarecloudsimpleusageswithinregion_info:
+      azure_rm_vmwarecloudsimpleusage_info:
         region_id: '{{location_name}}'
     
       register: output

@@ -7,7 +7,7 @@ VIRTUAL_MACHINE_TEMPLATE_NAME="myvirtualmachinetemplate"
 RESOURCE_POOL_NAME="myresourcepool"
 VIRTUAL_NETWORK_NAME="myvirtualnetwork"
 
-az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.VMwareCloudSimple/virtualMachines/$VIRTUAL_MACHINE_NAME --api-version 2019-04-01 --is-full-object --properties '
+az rest --method put --uri /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.VMwareCloudSimple/virtualMachines/$VIRTUAL_MACHINE_NAME?api-version=2019-04-01 --body '
 {
   "location": "westus2",
   "properties": {
@@ -17,25 +17,23 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
     "amountOfRam": "4096",
     "disks": [
       {
-        "controllerId": "1000",
-        "independenceMode": "persistent",
-        "totalSize": "10485760",
-        "virtualDiskId": "2000"
+        "controller_id": "1000",
+        "independence_mode": "persistent",
+        "total_size": "10485760",
+        "virtual_disk_id": "2000"
       }
     ],
     "resourcePool": {
       "id": "/subscriptions/" + SUBSCRIPTION_ID + "/providers/Microsoft.VMwareCloudSimple/locations/" + LOCATION_NAME + "/privateClouds/" + PRIVATE_CLOUD_NAME + "/resourcePools/" + RESOURCE_POOL_NAME + ""
     },
-    "guestOS": "Other (32-bit)",
-    "guestOSType": "other",
     "nics": [
       {
         "network": {
           "id": "/subscriptions/" + SUBSCRIPTION_ID + "/providers/Microsoft.VMwareCloudSimple/locations/" + LOCATION_NAME + "/privateClouds/" + PRIVATE_CLOUD_NAME + "/virtualNetworks/" + VIRTUAL_NETWORK_NAME + ""
         },
-        "nicType": "E1000",
-        "powerOnBoot": True,
-        "virtualNicId": "4000"
+        "nic_type": "E1000",
+        "power_on_boot": True,
+        "virtual_nic_id": "4000"
       }
     ]
   }

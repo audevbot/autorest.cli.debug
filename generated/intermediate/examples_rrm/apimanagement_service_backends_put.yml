@@ -26,7 +26,6 @@
             - 'https://somecluster.com'
           server_x509names:
             - name: ServerCommonName1
-              issuer_certificate_thumbprint: IssuerCertificateThumbprint1
         url: 'fabric:/mytestapp/mytestservice'
         protocol: http
     

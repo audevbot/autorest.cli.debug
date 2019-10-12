@@ -44,7 +44,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: LoggerContractProperties
             go_type_name: LoggerContractProperties
           '/loggerType': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
@@ -103,7 +103,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: LoggerContractProperties
             go_type_name: LoggerContractProperties
           '/loggerType': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
@@ -177,7 +177,7 @@ objects:
         response:
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: LoggerContractProperties
             go_type_name: LoggerContractProperties
           '/properties/loggerType': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [go]

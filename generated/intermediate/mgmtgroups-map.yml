@@ -1472,6 +1472,8 @@ Modules:
           - resourcegroups_put
         OperationId: '884'
         MethodId: '954'
+        OperationName: ManagementGroups
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             api-version: 2018-03-01-preview
@@ -1516,6 +1518,8 @@ Modules:
           - management_managementgroups_put
         OperationId: '884'
         MethodId: '985'
+        OperationName: ManagementGroups
+        MethodName: Update
       - Example:
           parameters:
             api-version: 2018-03-01-preview
@@ -1543,6 +1547,8 @@ Modules:
         References: []
         OperationId: '884'
         MethodId: '1013'
+        OperationName: ManagementGroups
+        MethodName: Delete
   - ModuleName: azure_rm_managementgroup_info
     Options:
       - NameSwagger: groupId
@@ -2712,6 +2718,8 @@ Modules:
         References: []
         OperationId: '884'
         MethodId: '885'
+        OperationName: ManagementGroups
+        MethodName: List
       - Example:
           parameters:
             api-version: 2018-03-01-preview
@@ -2749,6 +2757,8 @@ Modules:
         References: []
         OperationId: '884'
         MethodId: '909'
+        OperationName: ManagementGroups
+        MethodName: Get
       - Example:
           parameters:
             api-version: 2018-03-01-preview
@@ -2810,6 +2820,8 @@ Modules:
         References: []
         OperationId: '884'
         MethodId: '909'
+        OperationName: ManagementGroups
+        MethodName: Get
       - Example:
           parameters:
             api-version: 2018-03-01-preview
@@ -2881,6 +2893,8 @@ Modules:
         References: []
         OperationId: '884'
         MethodId: '909'
+        OperationName: ManagementGroups
+        MethodName: Get
   - ModuleName: azure_rm_managementgroupsubscription
     Options:
       - NameSwagger: groupId
@@ -2969,6 +2983,8 @@ Modules:
           - management_managementgroups_put
         OperationId: '1070'
         MethodId: '1071'
+        OperationName: ManagementGroupSubscriptions
+        MethodName: Create
       - Example:
           parameters:
             api-version: 2018-03-01-preview
@@ -2990,6 +3006,8 @@ Modules:
         References: []
         OperationId: '1070'
         MethodId: '1101'
+        OperationName: ManagementGroupSubscriptions
+        MethodName: Delete
   - ModuleName: azure_rm_managementgroupsoperation_info
     Options:
       - &ref_14
@@ -3260,8 +3278,3 @@ ServiceName: ManagementGroupsClient
 MgmtClientName: ManagementGroupsClient
 CliName: mgmtgroups
 Namespace: azure.mgmt.managementgroups
-Info:
-  - '  ** FOUND OPTION groupId'
-  - '  ** FOUND OPTION createManagementGroupRequest'
-  - '  ** FOUND OPTION groupId'
-  - '  ** FOUND OPTION groupId'

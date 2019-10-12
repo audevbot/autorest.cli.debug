@@ -1273,6 +1273,8 @@ Modules:
           - resourcegroups_put
         OperationId: '505'
         MethodId: '530'
+        OperationName: EventSubscriptions
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             scope: >-
@@ -1335,6 +1337,8 @@ Modules:
           - resourcegroups_put
         OperationId: '505'
         MethodId: '530'
+        OperationName: EventSubscriptions
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             scope: >-
@@ -1399,6 +1403,8 @@ Modules:
           - resourcegroups_put
         OperationId: '505'
         MethodId: '530'
+        OperationName: EventSubscriptions
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             api-version: '2019-01-01'
@@ -1493,6 +1499,8 @@ Modules:
           - storage_storageaccounts_put
         OperationId: '505'
         MethodId: '530'
+        OperationName: EventSubscriptions
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             api-version: '2019-01-01'
@@ -1596,6 +1604,8 @@ Modules:
           - storage_storageaccounts_put
         OperationId: '505'
         MethodId: '530'
+        OperationName: EventSubscriptions
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             api-version: '2019-01-01'
@@ -1701,6 +1711,8 @@ Modules:
           - storage_storageaccounts_put
         OperationId: '505'
         MethodId: '530'
+        OperationName: EventSubscriptions
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             api-version: '2019-01-01'
@@ -1801,6 +1813,8 @@ Modules:
           - storage_storageaccounts_put
         OperationId: '505'
         MethodId: '530'
+        OperationName: EventSubscriptions
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             scope: subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -1861,6 +1875,8 @@ Modules:
           - resourcegroups_put
         OperationId: '505'
         MethodId: '584'
+        OperationName: EventSubscriptions
+        MethodName: Update
       - Example:
           parameters:
             scope: >-
@@ -1937,6 +1953,8 @@ Modules:
           - eventhub_namespaces_eventhubs_put
         OperationId: '505'
         MethodId: '584'
+        OperationName: EventSubscriptions
+        MethodName: Update
       - Example:
           parameters:
             scope: >-
@@ -2004,6 +2022,8 @@ Modules:
           - resourcegroups_put
         OperationId: '505'
         MethodId: '584'
+        OperationName: EventSubscriptions
+        MethodName: Update
       - Example:
           parameters:
             scope: >-
@@ -2073,6 +2093,8 @@ Modules:
           - resourcegroups_put
         OperationId: '505'
         MethodId: '584'
+        OperationName: EventSubscriptions
+        MethodName: Update
       - Example:
           parameters:
             scope: subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -2098,6 +2120,8 @@ Modules:
         References: []
         OperationId: '505'
         MethodId: '558'
+        OperationName: EventSubscriptions
+        MethodName: Delete
       - Example:
           parameters:
             scope: >-
@@ -2124,6 +2148,8 @@ Modules:
         References: []
         OperationId: '505'
         MethodId: '558'
+        OperationName: EventSubscriptions
+        MethodName: Delete
       - Example:
           parameters:
             scope: >-
@@ -2150,6 +2176,8 @@ Modules:
         References: []
         OperationId: '505'
         MethodId: '558'
+        OperationName: EventSubscriptions
+        MethodName: Delete
       - Example:
           parameters:
             scope: >-
@@ -2176,6 +2204,8 @@ Modules:
         References: []
         OperationId: '505'
         MethodId: '558'
+        OperationName: EventSubscriptions
+        MethodName: Delete
   - ModuleName: azure_rm_eventgrideventsubscription_info
     Options:
       - NameSwagger: scope
@@ -3182,6 +3212,8 @@ Modules:
         References: []
         OperationId: '505'
         MethodId: '636'
+        OperationName: EventSubscriptions
+        MethodName: ListGlobalBySubscription
       - Example:
           parameters:
             scope: subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -3228,6 +3260,8 @@ Modules:
         References: []
         OperationId: '505'
         MethodId: '506'
+        OperationName: EventSubscriptions
+        MethodName: Get
       - Example:
           parameters:
             scope: >-
@@ -3278,6 +3312,8 @@ Modules:
         References: []
         OperationId: '505'
         MethodId: '506'
+        OperationName: EventSubscriptions
+        MethodName: Get
       - Example:
           parameters:
             scope: >-
@@ -3334,6 +3370,8 @@ Modules:
         References: []
         OperationId: '505'
         MethodId: '506'
+        OperationName: EventSubscriptions
+        MethodName: Get
       - Example:
           parameters:
             scope: >-
@@ -3386,6 +3424,8 @@ Modules:
         References: []
         OperationId: '505'
         MethodId: '506'
+        OperationName: EventSubscriptions
+        MethodName: Get
       - Example:
           parameters:
             subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -3471,6 +3511,8 @@ Modules:
         References: []
         OperationId: '505'
         MethodId: '732'
+        OperationName: EventSubscriptions
+        MethodName: ListRegionalBySubscription
       - Example:
           parameters:
             subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -3516,6 +3558,8 @@ Modules:
         References: []
         OperationId: '505'
         MethodId: '654'
+        OperationName: EventSubscriptions
+        MethodName: ListGlobalBySubscriptionForTopicType
       - Example:
           parameters:
             subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -3582,6 +3626,8 @@ Modules:
         References: []
         OperationId: '505'
         MethodId: '678'
+        OperationName: EventSubscriptions
+        MethodName: ListGlobalByResourceGroup
       - Example:
           parameters:
             subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -3667,6 +3713,8 @@ Modules:
         References: []
         OperationId: '505'
         MethodId: '786'
+        OperationName: EventSubscriptions
+        MethodName: ListRegionalBySubscriptionForTopicType
       - Example:
           parameters:
             subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -3752,6 +3800,8 @@ Modules:
         References: []
         OperationId: '505'
         MethodId: '756'
+        OperationName: EventSubscriptions
+        MethodName: ListRegionalByResourceGroup
       - Example:
           parameters:
             subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -3804,6 +3854,8 @@ Modules:
         References: []
         OperationId: '505'
         MethodId: '702'
+        OperationName: EventSubscriptions
+        MethodName: ListGlobalByResourceGroupForTopicType
       - Example:
           parameters:
             subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -3893,6 +3945,8 @@ Modules:
         References: []
         OperationId: '505'
         MethodId: '816'
+        OperationName: EventSubscriptions
+        MethodName: ListRegionalByResourceGroupForTopicType
       - Example:
           parameters:
             subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -3996,6 +4050,8 @@ Modules:
         References: []
         OperationId: '505'
         MethodId: '852'
+        OperationName: EventSubscriptions
+        MethodName: ListByResource
   - ModuleName: azure_rm_eventgridoperation_info
     Options:
       - &ref_9
@@ -4355,6 +4411,8 @@ Modules:
         References: []
         OperationId: '896'
         MethodId: '897'
+        OperationName: Operations
+        MethodName: List
   - ModuleName: azure_rm_eventgridtopic
     Options:
       - NameSwagger: resourceGroupName
@@ -4957,6 +5015,8 @@ Modules:
           - resourcegroups_put
         OperationId: '911'
         MethodId: '942'
+        OperationName: Topics
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -5001,6 +5061,8 @@ Modules:
           - eventgrid_topics_put
         OperationId: '911'
         MethodId: '1007'
+        OperationName: Topics
+        MethodName: Update
       - Example:
           parameters:
             subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -5026,6 +5088,8 @@ Modules:
         References: []
         OperationId: '911'
         MethodId: '976'
+        OperationName: Topics
+        MethodName: Delete
   - ModuleName: azure_rm_eventgridtopic_info
     Options:
       - NameSwagger: resourceGroupName
@@ -5557,6 +5621,8 @@ Modules:
         References: []
         OperationId: '911'
         MethodId: '1041'
+        OperationName: Topics
+        MethodName: ListBySubscription
       - Example:
           parameters:
             subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -5607,6 +5673,8 @@ Modules:
         References: []
         OperationId: '911'
         MethodId: '1059'
+        OperationName: Topics
+        MethodName: ListByResourceGroup
       - Example:
           parameters:
             subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -5646,6 +5714,8 @@ Modules:
         References: []
         OperationId: '911'
         MethodId: '912'
+        OperationName: Topics
+        MethodName: Get
       - Example:
           parameters:
             subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -5691,6 +5761,8 @@ Modules:
         References: []
         OperationId: '911'
         MethodId: '1147'
+        OperationName: Topics
+        MethodName: ListEventTypes
   - ModuleName: azure_rm_eventgridtopictype_info
     Options:
       - NameSwagger: topicTypeName
@@ -6126,6 +6198,8 @@ Modules:
         References: []
         OperationId: '1191'
         MethodId: '1192'
+        OperationName: TopicTypes
+        MethodName: List
       - Example:
           parameters:
             topicTypeName: Microsoft.Storage.StorageAccounts
@@ -6154,6 +6228,8 @@ Modules:
         References: []
         OperationId: '1191'
         MethodId: '1204'
+        OperationName: TopicTypes
+        MethodName: Get
       - Example:
           parameters:
             topicTypeName: Microsoft.Storage.StorageAccounts
@@ -6191,41 +6267,9 @@ Modules:
         References: []
         OperationId: '1191'
         MethodId: '1222'
+        OperationName: TopicTypes
+        MethodName: ListEventTypes
 ServiceName: EventGridManagementClient
 MgmtClientName: EventGridManagementClient
 CliName: eventgrid
 Namespace: azure.mgmt.eventgrid
-Info:
-  - '  ** FOUND OPTION scope'
-  - '  ** FOUND OPTION eventSubscriptionName'
-  - '  ** FOUND OPTION eventSubscriptionInfo'
-  - '  ** FOUND OPTION scope'
-  - '  ** FOUND OPTION eventSubscriptionName'
-  - '  ** FOUND OPTION location'
-  - '  ** FOUND OPTION topicTypeName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION location'
-  - '  ** FOUND OPTION topicTypeName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION location'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION topicTypeName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION location'
-  - '  ** FOUND OPTION topicTypeName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION providerNamespace'
-  - '  ** FOUND OPTION resourceTypeName'
-  - '  ** FOUND OPTION resourceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION topicName'
-  - '  ** FOUND OPTION topicInfo'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION topicName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION providerNamespace'
-  - '  ** FOUND OPTION resourceTypeName'
-  - '  ** FOUND OPTION resourceName'
-  - '  ** FOUND OPTION topicTypeName'
-  - '  ** FOUND OPTION topicTypeName'

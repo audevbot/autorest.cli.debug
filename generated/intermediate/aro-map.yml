@@ -1109,7 +1109,7 @@ Modules:
             DispositionRest: '*'
             Comparison: ''
             Updatable: true
-            ExampleValue: Standard_D4s_v3
+            ExampleValue: null
             Hidden: false
             IncludeInResponse: true
             Flatten: false
@@ -1139,7 +1139,7 @@ Modules:
             DispositionRest: '*'
             Comparison: ''
             Updatable: true
-            ExampleValue: 10.0.0.0/24
+            ExampleValue: null
             Hidden: false
             IncludeInResponse: true
             Flatten: false
@@ -1177,7 +1177,7 @@ Modules:
             DispositionRest: '*'
             Comparison: ''
             Updatable: true
-            ExampleValue: Linux
+            ExampleValue: null
             Hidden: false
             IncludeInResponse: true
             Flatten: false
@@ -1323,10 +1323,10 @@ Modules:
                 Updatable: true
                 ExampleValue:
                   kind: AADIdentityProvider
-                  clientId: clientId
+                  client_id: clientId
                   secret: secret
-                  tenantId: tenantId
-                  customerAdminGroupId: customerAdminGroupId
+                  tenant_id: tenantId
+                  customer_admin_group_id: customerAdminGroupId
                 Hidden: false
                 IncludeInResponse: true
                 Flatten: false
@@ -2872,15 +2872,15 @@ Modules:
                   - name: infra
                     role: infra
                     count: '2'
-                    vmSize: Standard_D4s_v3
-                    osType: Linux
-                    subnetCidr: 10.0.0.0/24
+                    vm_size: Standard_D4s_v3
+                    os_type: Linux
+                    subnet_cidr: 10.0.0.0/24
                   - name: compute
                     role: compute
                     count: '4'
-                    vmSize: Standard_D4s_v3
-                    osType: Linux
-                    subnetCidr: 10.0.0.0/24
+                    vm_size: Standard_D4s_v3
+                    os_type: Linux
+                    subnet_cidr: 10.0.0.0/24
                 routerProfiles:
                   - name: default
                 authProfile:
@@ -2888,10 +2888,10 @@ Modules:
                     - name: Azure AD
                       provider:
                         kind: AADIdentityProvider
-                        clientId: clientId
+                        client_id: clientId
                         secret: secret
-                        tenantId: tenantId
-                        customerAdminGroupId: customerAdminGroupId
+                        tenant_id: tenantId
+                        customer_admin_group_id: customerAdminGroupId
           responses:
             '200':
               body:
@@ -3014,6 +3014,8 @@ Modules:
           - resourcegroups_put
         OperationId: '393'
         MethodId: '466'
+        OperationName: OpenShiftManagedClusters
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             api-version: '2019-04-30'
@@ -3040,6 +3042,8 @@ Modules:
         References: []
         OperationId: '393'
         MethodId: '535'
+        OperationName: OpenShiftManagedClusters
+        MethodName: Delete
   - ModuleName: azure_rm_openshiftmanagedcluster_info
     Options:
       - NameSwagger: resourceGroupName
@@ -4689,6 +4693,8 @@ Modules:
         References: []
         OperationId: '393'
         MethodId: '394'
+        OperationName: OpenShiftManagedClusters
+        MethodName: List
       - Example:
           parameters:
             api-version: 2018-09-30-preview
@@ -4757,6 +4763,8 @@ Modules:
         References: []
         OperationId: '393'
         MethodId: '412'
+        OperationName: OpenShiftManagedClusters
+        MethodName: ListByResourceGroup
       - Example:
           parameters:
             api-version: '2019-04-30'
@@ -4831,14 +4839,9 @@ Modules:
         References: []
         OperationId: '393'
         MethodId: '436'
+        OperationName: OpenShiftManagedClusters
+        MethodName: Get
 ServiceName: OpenShift
 MgmtClientName: OpenShift
 CliName: aro
 Namespace: azure.mgmt.containerservice
-Info:
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceName'

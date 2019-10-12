@@ -4379,6 +4379,8 @@ Modules:
           - network_publicipaddresses_put
         OperationId: '472'
         MethodId: '535'
+        OperationName: AzureFirewalls
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             api-version: '2018-11-01'
@@ -4406,6 +4408,8 @@ Modules:
         References: []
         OperationId: '472'
         MethodId: '473'
+        OperationName: AzureFirewalls
+        MethodName: Delete
   - ModuleName: azure_rm_azurefirewall_info
     Options:
       - NameSwagger: resourceGroupName
@@ -6746,6 +6750,8 @@ Modules:
         References: []
         OperationId: '472'
         MethodId: '594'
+        OperationName: AzureFirewalls
+        MethodName: ListAll
       - Example:
           parameters:
             api-version: '2018-11-01'
@@ -6861,6 +6867,8 @@ Modules:
         References: []
         OperationId: '472'
         MethodId: '570'
+        OperationName: AzureFirewalls
+        MethodName: List
       - Example:
           parameters:
             api-version: '2018-11-01'
@@ -6979,14 +6987,9 @@ Modules:
         References: []
         OperationId: '472'
         MethodId: '505'
+        OperationName: AzureFirewalls
+        MethodName: Get
 ServiceName: NetworkManagementClient
 MgmtClientName: NetworkManagementClient
 CliName: network
 Namespace: azure.mgmt.network
-Info:
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION azureFirewallName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION azureFirewallName'
