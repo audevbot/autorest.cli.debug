@@ -49,8 +49,6 @@
                 }}/providers/Microsoft.VMwareCloudSimple/locations/{{
                 location_name }}/privateClouds/{{ private_cloud_name
                 }}/resourcePools/{{ resource_pool_name }}
-            guestOS: Other (32-bit)
-            guestOSType: other
             nics:
               - network:
                   id: >-

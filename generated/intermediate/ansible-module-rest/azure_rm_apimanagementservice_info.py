@@ -291,7 +291,7 @@ options:
         The default value is `true` for them.
     type: >-
       unknown[DictionaryType
-      {"$id":"2519","$type":"DictionaryType","valueType":{"$id":"2520","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2521","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2522","fixed":false},"deprecated":false}]
+      {"$id":"2513","$type":"DictionaryType","valueType":{"$id":"2514","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2515","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2516","fixed":false},"deprecated":false}]
   certificates:
     description:
       - >-
@@ -469,7 +469,7 @@ api_management_service:
           returned: always
           type: >-
             unknown[DictionaryType
-            {"$id":"2630","$type":"DictionaryType","valueType":{"$id":"2631","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2632","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2633","fixed":false},"deprecated":false}]
+            {"$id":"2624","$type":"DictionaryType","valueType":{"$id":"2625","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2626","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2627","fixed":false},"deprecated":false}]
           sample: null
         properties:
           description:

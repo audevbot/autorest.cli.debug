@@ -41,7 +41,7 @@ Modules:
         IdPortion: null
         Type: dict
         TypeName: operation
-        TypeNameGo: operation
+        TypeNameGo: Operation
         IsList: true
         Required: false
         Documentation: Array of operations
@@ -89,7 +89,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: operation_display
-            TypeNameGo: operation_display
+            TypeNameGo: Operation_display
             IsList: false
             Required: false
             Documentation: Properties of the operation
@@ -934,7 +934,7 @@ Modules:
         IdPortion: null
         Type: dict
         TypeName: alertsMetaDataProperties
-        TypeNameGo: alertsMetaDataProperties
+        TypeNameGo: AlertsMetaDataProperties
         IsList: false
         Required: false
         Documentation: ''
@@ -1098,6 +1098,8 @@ Modules:
         References: []
         OperationId: '1454'
         MethodId: '1455'
+        OperationName: Alerts
+        MethodName: MetaData
       - Example:
           parameters:
             api-version: 2019-05-05-preview
@@ -1186,6 +1188,8 @@ Modules:
         References: []
         OperationId: '1454'
         MethodId: '1473'
+        OperationName: Alerts
+        MethodName: GetAll
       - Example:
           parameters:
             api-version: 2019-05-05-preview
@@ -1265,6 +1269,8 @@ Modules:
         References: []
         OperationId: '1454'
         MethodId: '1661'
+        OperationName: Alerts
+        MethodName: GetSummary
       - Example:
           parameters:
             api-version: 2019-05-05-preview
@@ -1319,6 +1325,8 @@ Modules:
         References: []
         OperationId: '1454'
         MethodId: '1585'
+        OperationName: Alerts
+        MethodName: GetById
       - Example:
           parameters:
             api-version: 2019-05-05-preview
@@ -1364,6 +1372,8 @@ Modules:
         References: []
         OperationId: '1454'
         MethodId: '1637'
+        OperationName: Alerts
+        MethodName: GetHistory
   - ModuleName: azure_rm_alertsmanagementsmartgroup_info
     Options:
       - NameSwagger: targetResource
@@ -1779,7 +1789,7 @@ Modules:
         IdPortion: null
         Type: dict
         TypeName: smartGroup
-        TypeNameGo: smartGroup
+        TypeNameGo: SmartGroup
         IsList: true
         Required: false
         Documentation: List of alerts
@@ -1887,7 +1897,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: smartGroupProperties
-            TypeNameGo: smartGroupProperties
+            TypeNameGo: SmartGroupProperties
             IsList: false
             Required: false
             Documentation: ''
@@ -2123,7 +2133,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: smartGroupAggregatedProperty
-            TypeNameGo: smartGroupAggregatedProperty
+            TypeNameGo: SmartGroupAggregatedProperty
             IsList: true
             Required: false
             Documentation: Summary of target resources in the smart group
@@ -2213,7 +2223,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: smartGroupAggregatedProperty
-            TypeNameGo: smartGroupAggregatedProperty
+            TypeNameGo: SmartGroupAggregatedProperty
             IsList: true
             Required: false
             Documentation: Summary of target resource types in the smart group
@@ -2303,7 +2313,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: smartGroupAggregatedProperty
-            TypeNameGo: smartGroupAggregatedProperty
+            TypeNameGo: SmartGroupAggregatedProperty
             IsList: true
             Required: false
             Documentation: Summary of target resource groups in the smart group
@@ -2393,7 +2403,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: smartGroupAggregatedProperty
-            TypeNameGo: smartGroupAggregatedProperty
+            TypeNameGo: SmartGroupAggregatedProperty
             IsList: true
             Required: false
             Documentation: Summary of monitorServices in the smart group
@@ -2483,7 +2493,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: smartGroupAggregatedProperty
-            TypeNameGo: smartGroupAggregatedProperty
+            TypeNameGo: SmartGroupAggregatedProperty
             IsList: true
             Required: false
             Documentation: Summary of monitorConditions in the smart group
@@ -2573,7 +2583,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: smartGroupAggregatedProperty
-            TypeNameGo: smartGroupAggregatedProperty
+            TypeNameGo: SmartGroupAggregatedProperty
             IsList: true
             Required: false
             Documentation: Summary of alertStates in the smart group
@@ -2663,7 +2673,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: smartGroupAggregatedProperty
-            TypeNameGo: smartGroupAggregatedProperty
+            TypeNameGo: SmartGroupAggregatedProperty
             IsList: true
             Required: false
             Documentation: Summary of alertSeverities in the smart group
@@ -2949,6 +2959,8 @@ Modules:
         References: []
         OperationId: '1741'
         MethodId: '1742'
+        OperationName: SmartGroups
+        MethodName: GetAll
       - Example:
           parameters:
             api-version: 2019-05-05-preview
@@ -3011,6 +3023,8 @@ Modules:
         References: []
         OperationId: '1741'
         MethodId: '1818'
+        OperationName: SmartGroups
+        MethodName: GetById
       - Example:
           parameters:
             api-version: 2019-05-05-preview
@@ -3049,6 +3063,8 @@ Modules:
         References: []
         OperationId: '1741'
         MethodId: '1870'
+        OperationName: SmartGroups
+        MethodName: GetHistory
   - ModuleName: azure_rm_alertsmanagementactionrule_info
     Options:
       - NameSwagger: targetResourceGroup
@@ -4853,6 +4869,8 @@ Modules:
         References: []
         OperationId: '1896'
         MethodId: '1897'
+        OperationName: ActionRules
+        MethodName: ListBySubscription
       - Example:
           parameters:
             api-version: 2019-05-05-preview
@@ -4963,6 +4981,8 @@ Modules:
         References: []
         OperationId: '1896'
         MethodId: '1971'
+        OperationName: ActionRules
+        MethodName: ListByResourceGroup
       - Example:
           parameters:
             api-version: 2019-05-05-preview
@@ -5037,6 +5057,8 @@ Modules:
         References: []
         OperationId: '1896'
         MethodId: '2051'
+        OperationName: ActionRules
+        MethodName: GetByName
   - ModuleName: azure_rm_alertsmanagementsmartdetectoralertrule
     Options:
       - NameSwagger: resourceGroupName
@@ -6746,6 +6768,8 @@ Modules:
           - resourcegroups_put
         OperationId: '2183'
         MethodId: '2274'
+        OperationName: SmartDetectorAlertRules
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: b368ca2f-e298-46b7-b0ab-012281956afa
@@ -6772,6 +6796,8 @@ Modules:
         References: []
         OperationId: '2183'
         MethodId: '2343'
+        OperationName: SmartDetectorAlertRules
+        MethodName: Delete
   - ModuleName: azure_rm_alertsmanagementsmartdetectoralertrule_info
     Options:
       - NameSwagger: expandDetector
@@ -7754,6 +7780,8 @@ Modules:
         References: []
         OperationId: '2183'
         MethodId: '2184'
+        OperationName: SmartDetectorAlertRules
+        MethodName: List
       - Example:
           parameters:
             subscriptionId: b368ca2f-e298-46b7-b0ab-012281956afa
@@ -7829,6 +7857,8 @@ Modules:
         References: []
         OperationId: '2183'
         MethodId: '2208'
+        OperationName: SmartDetectorAlertRules
+        MethodName: ListByResourceGroup
       - Example:
           parameters:
             subscriptionId: b368ca2f-e298-46b7-b0ab-012281956afa
@@ -7882,85 +7912,9 @@ Modules:
         References: []
         OperationId: '2183'
         MethodId: '2238'
+        OperationName: SmartDetectorAlertRules
+        MethodName: Get
 ServiceName: RecoveryServices
 MgmtClientName: RecoveryServices
 CliName: alerts
 Namespace: azure.mgmt.alertsmanagement
-Info:
-  - '  ** FOUND OPTION identifier'
-  - '  ** FOUND OPTION targetResource'
-  - '  ** FOUND OPTION targetResourceType'
-  - '  ** FOUND OPTION targetResourceGroup'
-  - '  ** FOUND OPTION monitorService'
-  - '  ** FOUND OPTION monitorCondition'
-  - '  ** FOUND OPTION severity'
-  - '  ** FOUND OPTION alertState'
-  - '  ** FOUND OPTION alertRule'
-  - '  ** FOUND OPTION smartGroupId'
-  - '  ** FOUND OPTION includeContext'
-  - '  ** FOUND OPTION includeEgressConfig'
-  - '  ** FOUND OPTION pageCount'
-  - '  ** FOUND OPTION sortBy'
-  - '  ** FOUND OPTION sortOrder'
-  - '  ** FOUND OPTION select'
-  - '  ** FOUND OPTION timeRange'
-  - '  ** FOUND OPTION customTimeRange'
-  - '  ** FOUND OPTION groupby'
-  - '  ** FOUND OPTION includeSmartGroupsCount'
-  - '  ** FOUND OPTION targetResource'
-  - '  ** FOUND OPTION targetResourceType'
-  - '  ** FOUND OPTION targetResourceGroup'
-  - '  ** FOUND OPTION monitorService'
-  - '  ** FOUND OPTION monitorCondition'
-  - '  ** FOUND OPTION severity'
-  - '  ** FOUND OPTION alertState'
-  - '  ** FOUND OPTION alertRule'
-  - '  ** FOUND OPTION timeRange'
-  - '  ** FOUND OPTION customTimeRange'
-  - '  ** FOUND OPTION alertId'
-  - '  ** FOUND OPTION alertId'
-  - '  ** FOUND OPTION targetResource'
-  - '  ** FOUND OPTION targetResourceGroup'
-  - '  ** FOUND OPTION targetResourceType'
-  - '  ** FOUND OPTION monitorService'
-  - '  ** FOUND OPTION monitorCondition'
-  - '  ** FOUND OPTION severity'
-  - '  ** FOUND OPTION smartGroupState'
-  - '  ** FOUND OPTION timeRange'
-  - '  ** FOUND OPTION pageCount'
-  - '  ** FOUND OPTION sortBy'
-  - '  ** FOUND OPTION sortOrder'
-  - '  ** FOUND OPTION smartGroupId'
-  - '  ** FOUND OPTION smartGroupId'
-  - '  ** FOUND OPTION targetResourceGroup'
-  - '  ** FOUND OPTION targetResourceType'
-  - '  ** FOUND OPTION targetResource'
-  - '  ** FOUND OPTION severity'
-  - '  ** FOUND OPTION monitorService'
-  - '  ** FOUND OPTION impactedScope'
-  - '  ** FOUND OPTION description'
-  - '  ** FOUND OPTION alertRuleId'
-  - '  ** FOUND OPTION actionGroup'
-  - '  ** FOUND OPTION name'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION targetResourceGroup'
-  - '  ** FOUND OPTION targetResourceType'
-  - '  ** FOUND OPTION targetResource'
-  - '  ** FOUND OPTION severity'
-  - '  ** FOUND OPTION monitorService'
-  - '  ** FOUND OPTION impactedScope'
-  - '  ** FOUND OPTION description'
-  - '  ** FOUND OPTION alertRuleId'
-  - '  ** FOUND OPTION actionGroup'
-  - '  ** FOUND OPTION name'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION actionRuleName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION alertRuleName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION expandDetector'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION expandDetector'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION alertRuleName'
-  - '  ** FOUND OPTION expandDetector'

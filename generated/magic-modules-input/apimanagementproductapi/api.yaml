@@ -164,11 +164,7 @@ objects:
                   - :query
                 default_value: :authorizationHeader
                 azure_sdk_references: ['/authenticationSettings/openid/bearerTokenSendingMethods', '/properties/authenticationSettings/openid/bearerTokenSendingMethods']
-          - !ruby/object:Api::Type::Boolean
-            name: 'subscriptionKeyRequired'
-            description: 'Specifies whether subscription key is required during call to this API, true - API is included into closed products only, false - API is included into open products alone, null - there is a mix of products.'
-            required: false
-            azure_sdk_references: ['/authenticationSettings/subscriptionKeyRequired', '/properties/authenticationSettings/subscriptionKeyRequired']
+                item_type: Api::Type::String
       - !ruby/object:Api::Type::NestedObject
         name: 'subscriptionKeyParameterNames'
         description: 'Protocols over which API is made available.'
@@ -263,6 +259,7 @@ objects:
           - :https
         default_value: :http
         azure_sdk_references: ['/protocols', '/properties/protocols']
+        item_type: Api::Type::String
       - !ruby/object:Api::Type::NestedObject
         name: 'apiVersionSet'
         description: 'Version set details'
