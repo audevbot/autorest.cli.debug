@@ -444,8 +444,10 @@ Modules:
         Filename: servicebus_operations_get
         Variables: []
         References: []
-        OperationId: '1366'
-        MethodId: '1367'
+        OperationId: '1380'
+        MethodId: '1381'
+        OperationName: Operations
+        MethodName: List
   - ModuleName: azure_rm_servicebusnamespace
     Options:
       - NameSwagger: resourceGroupName
@@ -1093,6 +1095,19 @@ Modules:
           }}/providers/Microsoft.ServiceBus/namespaces/{{ namespace_name }}
         HttpMethod: get
         IsAsync: false
+      - Name: ListNetworkRuleSets
+        Options:
+          - resourceGroupName
+          - namespaceName
+        RequiredOptions:
+          - resourceGroupName
+          - namespaceName
+        Url: >-
+          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
+          }}/providers/Microsoft.ServiceBus/namespaces/{{ namespace_name
+          }}/networkRuleSets
+        HttpMethod: get
+        IsAsync: false
       - Name: ListAuthorizationRules
         Options:
           - resourceGroupName
@@ -1460,8 +1475,10 @@ Modules:
             swaggerName: namespaceName
         References:
           - resourcegroups_put
-        OperationId: '1381'
-        MethodId: '1446'
+        OperationId: '1395'
+        MethodId: '1460'
+        OperationName: Namespaces
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             namespaceName: sdk-Namespace-3285
@@ -1532,8 +1549,10 @@ Modules:
             swaggerName: namespaceName
         References:
           - servicebus_namespaces_put
-        OperationId: '1381'
-        MethodId: '1544'
+        OperationId: '1395'
+        MethodId: '1558'
+        OperationName: Namespaces
+        MethodName: Update
       - Example:
           parameters:
             namespaceName: sdk-Namespace-3285
@@ -1558,8 +1577,10 @@ Modules:
             value: my
             swaggerName: namespaceName
         References: []
-        OperationId: '1381'
-        MethodId: '1482'
+        OperationId: '1395'
+        MethodId: '1496'
+        OperationName: Namespaces
+        MethodName: Delete
   - ModuleName: azure_rm_servicebusnamespace_info
     Options:
       - NameSwagger: resourceGroupName
@@ -2173,6 +2194,19 @@ Modules:
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ServiceBus/namespaces/{{ namespace_name
           }}/AuthorizationRules
+        HttpMethod: get
+        IsAsync: false
+      - Name: ListNetworkRuleSets
+        Options:
+          - resourceGroupName
+          - namespaceName
+        RequiredOptions:
+          - resourceGroupName
+          - namespaceName
+        Url: >-
+          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
+          }}/providers/Microsoft.ServiceBus/namespaces/{{ namespace_name
+          }}/networkRuleSets
         HttpMethod: get
         IsAsync: false
       - Name: Get
@@ -3121,8 +3155,10 @@ Modules:
         Filename: servicebus_namespaces_get
         Variables: []
         References: []
-        OperationId: '1381'
-        MethodId: '1404'
+        OperationId: '1395'
+        MethodId: '1418'
+        OperationName: Namespaces
+        MethodName: List
       - Example:
           parameters:
             api-version: '2017-04-01'
@@ -3164,8 +3200,10 @@ Modules:
             value: myResourceGroup
             swaggerName: resourceGroupName
         References: []
-        OperationId: '1381'
-        MethodId: '1422'
+        OperationId: '1395'
+        MethodId: '1436'
+        OperationName: Namespaces
+        MethodName: ListByResourceGroup
       - Example:
           parameters:
             namespaceName: sdk-Namespace-2924
@@ -3208,8 +3246,82 @@ Modules:
             value: my
             swaggerName: namespaceName
         References: []
-        OperationId: '1381'
-        MethodId: '1514'
+        OperationId: '1395'
+        MethodId: '1528'
+        OperationName: Namespaces
+        MethodName: Get
+      - Example:
+          parameters:
+            namespaceName: sdk-Namespace-6019
+            resourceGroupName: ResourceGroup
+            api-version: '2017-04-01'
+            subscriptionId: Subscription
+          responses:
+            '200':
+              body:
+                value:
+                  - id: >-
+                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                      resource_group
+                      }}/providers/Microsoft.ServiceBus/namespaces/{{
+                      namespace_name }}/networkrulesets/{{ networkruleset_name
+                      }}
+                    name: default
+                    type: Microsoft.ServiceBus/Namespaces/NetworkRuleSet
+                    properties:
+                      defaultAction: Deny
+                      virtualNetworkRules:
+                        - subnet:
+                            id: >-
+                              /subscriptions/{{ subscription_id
+                              }}/resourceGroups/{{ resource_group
+                              }}/providers/Microsoft.Network/virtualNetworks/{{
+                              virtual_network_name }}/subnets/{{ subnet_name }}
+                          ignoreMissingVnetServiceEndpoint: true
+                        - subnet:
+                            id: >-
+                              /subscriptions/{{ subscription_id
+                              }}/resourceGroups/{{ resource_group
+                              }}/providers/Microsoft.Network/virtualNetworks/{{
+                              virtual_network_name }}/subnets/{{ subnet_name }}
+                          ignoreMissingVnetServiceEndpoint: false
+                        - subnet:
+                            id: >-
+                              /subscriptions/{{ subscription_id
+                              }}/resourceGroups/{{ resource_group
+                              }}/providers/Microsoft.Network/virtualNetworks/{{
+                              virtual_network_name }}/subnets/{{ subnet_name }}
+                          ignoreMissingVnetServiceEndpoint: false
+                      ipRules:
+                        - ipMask: 1.1.1.1
+                          action: Allow
+                        - ipMask: 1.1.1.2
+                          action: Allow
+                        - ipMask: 1.1.1.3
+                          action: Allow
+                        - ipMask: 1.1.1.4
+                          action: Allow
+                        - ipMask: 1.1.1.5
+                          action: Allow
+        Url: >-
+          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
+          }}/providers/Microsoft.ServiceBus/namespaces/{{ namespace_name
+          }}/networkRuleSets
+        Method: get
+        Name: NameSpaceNetworkRuleSetList
+        Filename: servicebus_namespaces_networkrulesets_get_1
+        Variables:
+          - name: resource_group
+            value: myResourceGroup
+            swaggerName: resourceGroupName
+          - name: namespace_name
+            value: my
+            swaggerName: namespaceName
+        References: []
+        OperationId: '1395'
+        MethodId: '1911'
+        OperationName: Namespaces
+        MethodName: ListNetworkRuleSets
       - Example:
           parameters:
             namespaceName: sdk-Namespace-6914
@@ -3252,8 +3364,10 @@ Modules:
             value: my
             swaggerName: namespaceName
         References: []
-        OperationId: '1381'
-        MethodId: '1580'
+        OperationId: '1395'
+        MethodId: '1594'
+        OperationName: Namespaces
+        MethodName: ListAuthorizationRules
       - Example:
           parameters:
             namespaceName: sdk-Namespace-6019
@@ -3322,8 +3436,10 @@ Modules:
             value: myNetworkRuleSet
             swaggerName: efaul
         References: []
-        OperationId: '1381'
-        MethodId: '1867'
+        OperationId: '1395'
+        MethodId: '1881'
+        OperationName: Namespaces
+        MethodName: GetNetworkRuleSet
       - Example:
           parameters:
             namespaceName: sdk-Namespace-6914
@@ -3363,8 +3479,10 @@ Modules:
             value: myAuthorizationRule
             swaggerName: authorizationRuleName
         References: []
-        OperationId: '1381'
-        MethodId: '1687'
+        OperationId: '1395'
+        MethodId: '1701'
+        OperationName: Namespaces
+        MethodName: GetAuthorizationRule
   - ModuleName: azure_rm_servicebusdisasterrecoveryconfig
     Options:
       - NameSwagger: resourceGroupName
@@ -4047,8 +4165,10 @@ Modules:
             swaggerName: alias
         References:
           - servicebus_namespaces_put
-        OperationId: '1899'
-        MethodId: '1964'
+        OperationId: '1943'
+        MethodId: '2008'
+        OperationName: DisasterRecoveryConfigs
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             namespaceName: sdk-Namespace-8860
@@ -4076,8 +4196,10 @@ Modules:
             value: myDisasterRecoveryConfig
             swaggerName: alias
         References: []
-        OperationId: '1899'
-        MethodId: '2005'
+        OperationId: '1943'
+        MethodId: '2049'
+        OperationName: DisasterRecoveryConfigs
+        MethodName: Delete
   - ModuleName: azure_rm_servicebusdisasterrecoveryconfig_info
     Options:
       - NameSwagger: resourceGroupName
@@ -4618,8 +4740,10 @@ Modules:
             value: my
             swaggerName: namespaceName
         References: []
-        OperationId: '1899'
-        MethodId: '1934'
+        OperationId: '1943'
+        MethodId: '1978'
+        OperationName: DisasterRecoveryConfigs
+        MethodName: List
       - Example:
           parameters:
             namespaceName: sdk-Namespace-8860
@@ -4660,8 +4784,10 @@ Modules:
             value: myDisasterRecoveryConfig
             swaggerName: alias
         References: []
-        OperationId: '1899'
-        MethodId: '2041'
+        OperationId: '1943'
+        MethodId: '2085'
+        OperationName: DisasterRecoveryConfigs
+        MethodName: Get
       - Example:
           parameters:
             namespaceName: sdk-Namespace-9080
@@ -4745,8 +4871,10 @@ Modules:
             value: myDisasterRecoveryConfig
             swaggerName: alias
         References: []
-        OperationId: '1899'
-        MethodId: '2149'
+        OperationId: '1943'
+        MethodId: '2193'
+        OperationName: DisasterRecoveryConfigs
+        MethodName: ListAuthorizationRules
       - Example:
           parameters:
             namespaceName: sdk-Namespace-9080
@@ -4792,8 +4920,10 @@ Modules:
             value: myAuthorizationRule
             swaggerName: authorizationRuleName
         References: []
-        OperationId: '1899'
-        MethodId: '2185'
+        OperationId: '1943'
+        MethodId: '2229'
+        OperationName: DisasterRecoveryConfigs
+        MethodName: GetAuthorizationRule
   - ModuleName: azure_rm_servicebusmigrationconfig_info
     Options:
       - NameSwagger: resourceGroupName
@@ -5251,8 +5381,10 @@ Modules:
             value: my
             swaggerName: namespaceName
         References: []
-        OperationId: '2271'
-        MethodId: '2272'
+        OperationId: '2315'
+        MethodId: '2316'
+        OperationName: MigrationConfigs
+        MethodName: List
       - Example:
           parameters:
             namespaceName: sdk-Namespace-41
@@ -5297,8 +5429,10 @@ Modules:
             value: myMigrationConfiguration
             swaggerName: configName
         References: []
-        OperationId: '2271'
-        MethodId: '2380'
+        OperationId: '2315'
+        MethodId: '2424'
+        OperationName: MigrationConfigs
+        MethodName: Get
   - ModuleName: azure_rm_servicebusqueue
     Options:
       - NameSwagger: resourceGroupName
@@ -7092,8 +7226,10 @@ Modules:
             swaggerName: queueName
         References:
           - servicebus_namespaces_put
-        OperationId: '2490'
-        MethodId: '2533'
+        OperationId: '2534'
+        MethodId: '2577'
+        OperationName: Queues
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             namespaceName: sdk-Namespace-183
@@ -7122,8 +7258,10 @@ Modules:
             value: myQueue
             swaggerName: queueName
         References: []
-        OperationId: '2490'
-        MethodId: '2573'
+        OperationId: '2534'
+        MethodId: '2617'
+        OperationName: Queues
+        MethodName: Delete
   - ModuleName: azure_rm_servicebusqueue_info
     Options:
       - NameSwagger: resourceGroupName
@@ -8333,8 +8471,10 @@ Modules:
             value: my
             swaggerName: namespaceName
         References: []
-        OperationId: '2490'
-        MethodId: '2491'
+        OperationId: '2534'
+        MethodId: '2535'
+        OperationName: Queues
+        MethodName: ListByNamespace
       - Example:
           parameters:
             namespaceName: sdk-Namespace-3174
@@ -8386,8 +8526,10 @@ Modules:
             value: myQueue
             swaggerName: queueName
         References: []
-        OperationId: '2490'
-        MethodId: '2610'
+        OperationId: '2534'
+        MethodId: '2654'
+        OperationName: Queues
+        MethodName: Get
       - Example:
           parameters:
             resourceGroupName: ArunMonocle
@@ -8429,8 +8571,10 @@ Modules:
             value: myQueue
             swaggerName: queueName
         References: []
-        OperationId: '2490'
-        MethodId: '2646'
+        OperationId: '2534'
+        MethodId: '2690'
+        OperationName: Queues
+        MethodName: ListAuthorizationRules
       - Example:
           parameters:
             resourceGroupName: ArunMonocle
@@ -8475,8 +8619,10 @@ Modules:
             value: myAuthorizationRule
             swaggerName: authorizationRuleName
         References: []
-        OperationId: '2490'
-        MethodId: '2771'
+        OperationId: '2534'
+        MethodId: '2815'
+        OperationName: Queues
+        MethodName: GetAuthorizationRule
   - ModuleName: azure_rm_servicebustopic
     Options:
       - NameSwagger: resourceGroupName
@@ -9950,8 +10096,10 @@ Modules:
             swaggerName: topicName
         References:
           - servicebus_namespaces_put
-        OperationId: '2903'
-        MethodId: '2946'
+        OperationId: '2947'
+        MethodId: '2990'
+        OperationName: Topics
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             namespaceName: sdk-Namespace-1617
@@ -9980,8 +10128,10 @@ Modules:
             value: myTopic
             swaggerName: topicName
         References: []
-        OperationId: '2903'
-        MethodId: '2986'
+        OperationId: '2947'
+        MethodId: '3030'
+        OperationName: Topics
+        MethodName: Delete
   - ModuleName: azure_rm_servicebustopic_info
     Options:
       - NameSwagger: resourceGroupName
@@ -11031,8 +11181,10 @@ Modules:
             value: my
             swaggerName: namespaceName
         References: []
-        OperationId: '2903'
-        MethodId: '2904'
+        OperationId: '2947'
+        MethodId: '2948'
+        OperationName: Topics
+        MethodName: ListByNamespace
       - Example:
           parameters:
             namespaceName: sdk-Namespace-1617
@@ -11083,8 +11235,10 @@ Modules:
             value: myTopic
             swaggerName: topicName
         References: []
-        OperationId: '2903'
-        MethodId: '3023'
+        OperationId: '2947'
+        MethodId: '3067'
+        OperationName: Topics
+        MethodName: Get
       - Example:
           parameters:
             resourceGroupName: ArunMonocle
@@ -11126,8 +11280,10 @@ Modules:
             value: myTopic
             swaggerName: topicName
         References: []
-        OperationId: '2903'
-        MethodId: '3059'
+        OperationId: '2947'
+        MethodId: '3103'
+        OperationName: Topics
+        MethodName: ListAuthorizationRules
       - Example:
           parameters:
             resourceGroupName: ArunMonocle
@@ -11172,8 +11328,10 @@ Modules:
             value: myAuthorizationRule
             swaggerName: authorizationRuleName
         References: []
-        OperationId: '2903'
-        MethodId: '3141'
+        OperationId: '2947'
+        MethodId: '3185'
+        OperationName: Topics
+        MethodName: GetAuthorizationRule
   - ModuleName: azure_rm_servicebussubscription
     Options:
       - NameSwagger: resourceGroupName
@@ -12746,8 +12904,10 @@ Modules:
             swaggerName: topicName
         References:
           - servicebus_namespaces_topics_put
-        OperationId: '3316'
-        MethodId: '3365'
+        OperationId: '3360'
+        MethodId: '3409'
+        OperationName: Subscriptions
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             namespaceName: sdk-Namespace-5882
@@ -12777,8 +12937,10 @@ Modules:
             value: myTopic
             swaggerName: topicName
         References: []
-        OperationId: '3316'
-        MethodId: '3411'
+        OperationId: '3360'
+        MethodId: '3455'
+        OperationName: Subscriptions
+        MethodName: Delete
   - ModuleName: azure_rm_servicebussubscription_info
     Options:
       - NameSwagger: resourceGroupName
@@ -13837,8 +13999,10 @@ Modules:
             value: myTopic
             swaggerName: topicName
         References: []
-        OperationId: '3316'
-        MethodId: '3317'
+        OperationId: '3360'
+        MethodId: '3361'
+        OperationName: Subscriptions
+        MethodName: ListByTopic
       - Example:
           parameters:
             namespaceName: sdk-Namespace-1349
@@ -13897,8 +14061,10 @@ Modules:
             value: myTopic
             swaggerName: topicName
         References: []
-        OperationId: '3316'
-        MethodId: '3454'
+        OperationId: '3360'
+        MethodId: '3498'
+        OperationName: Subscriptions
+        MethodName: Get
   - ModuleName: azure_rm_servicebusrule
     Options:
       - NameSwagger: resourceGroupName
@@ -14321,6 +14487,38 @@ Modules:
             Hidden: false
             IncludeInResponse: true
             Flatten: false
+          - NameSwagger: compatibilityLevel
+            NameAnsible: compatibility_level
+            NamePythonSdk: compatibility_level
+            NameGoSdk: CompatibilityLevel
+            NameTerraform: CompatibilityLevel
+            IdPortion: null
+            Type: number
+            TypeName: Int
+            TypeNameGo: Int
+            IsList: false
+            Required: false
+            Documentation: >-
+              This property is reserved for future use. An integer value showing
+              the compatibility level, currently hard-coded to 20.
+            DocumentationMarkKeywords: true
+            DefaultValue: null
+            IncludeInDocumentation: true
+            IncludeInArgSpec: true
+            NoLog: false
+            SubOptions: []
+            EnumValues: []
+            PathSwagger: /properties/sqlFilter/compatibilityLevel
+            PathPython: /sqlFilter/compatibilityLevel
+            PathGo: /properties/sqlFilter/compatibilityLevel
+            DispositionSdk: '*'
+            DispositionRest: '*'
+            Comparison: ''
+            Updatable: true
+            ExampleValue: null
+            Hidden: false
+            IncludeInResponse: true
+            Flatten: false
           - NameSwagger: requiresPreprocessing
             NameAnsible: requires_preprocessing
             NamePythonSdk: requires_preprocessing
@@ -14345,39 +14543,6 @@ Modules:
             PathSwagger: /properties/sqlFilter/requiresPreprocessing
             PathPython: /sqlFilter/requiresPreprocessing
             PathGo: /properties/sqlFilter/requiresPreprocessing
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: true
-            Flatten: false
-          - &ref_72
-            NameSwagger: compatibilityLevel
-            NameAnsible: compatibility_level
-            NamePythonSdk: compatibility_level
-            NameGoSdk: CompatibilityLevel
-            NameTerraform: CompatibilityLevel
-            IdPortion: null
-            Type: number
-            TypeName: Int
-            TypeNameGo: Int
-            IsList: false
-            Required: false
-            Documentation: >-
-              This property is reserved for future use. An integer value showing
-              the compatibility level, currently hard-coded to 20.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: false
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/sqlFilter/compatibilityLevel
-            PathPython: /sqlFilter/compatibilityLevel
-            PathGo: /properties/sqlFilter/compatibilityLevel
             DispositionSdk: '*'
             DispositionRest: '*'
             Comparison: ''
@@ -15140,7 +15305,38 @@ Modules:
                 Hidden: false
                 IncludeInResponse: false
                 Flatten: false
-              - *ref_72
+              - NameSwagger: compatibilityLevel
+                NameAnsible: compatibility_level
+                NamePythonSdk: compatibility_level
+                NameGoSdk: CompatibilityLevel
+                NameTerraform: CompatibilityLevel
+                IdPortion: null
+                Type: number
+                TypeName: Int
+                TypeNameGo: Int
+                IsList: false
+                Required: false
+                Documentation: >-
+                  This property is reserved for future use. An integer value
+                  showing the compatibility level, currently hard-coded to 20.
+                DocumentationMarkKeywords: true
+                DefaultValue: null
+                IncludeInDocumentation: true
+                IncludeInArgSpec: true
+                NoLog: false
+                SubOptions: []
+                EnumValues: []
+                PathSwagger: /properties/sqlFilter/compatibilityLevel
+                PathPython: /sqlFilter/compatibilityLevel
+                PathGo: /properties/sqlFilter/compatibilityLevel
+                DispositionSdk: '*'
+                DispositionRest: '*'
+                Comparison: ''
+                Updatable: true
+                ExampleValue: null
+                Hidden: false
+                IncludeInResponse: false
+                Flatten: false
               - NameSwagger: requiresPreprocessing
                 NameAnsible: requires_preprocessing
                 NamePythonSdk: requires_preprocessing
@@ -15592,8 +15788,10 @@ Modules:
             swaggerName: ruleName
         References:
           - servicebus_namespaces_topics_put
-        OperationId: '3498'
-        MethodId: '3553'
+        OperationId: '3542'
+        MethodId: '3597'
+        OperationName: Rules
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             namespaceName: sdk-Namespace-1319
@@ -15647,8 +15845,10 @@ Modules:
             swaggerName: ruleName
         References:
           - servicebus_namespaces_topics_rules_put
-        OperationId: '3498'
-        MethodId: '3553'
+        OperationId: '3542'
+        MethodId: '3597'
+        OperationName: Rules
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             namespaceName: sdk-Namespace-1319
@@ -15703,8 +15903,10 @@ Modules:
             swaggerName: ruleName
         References:
           - servicebus_namespaces_topics_rules_put
-        OperationId: '3498'
-        MethodId: '3553'
+        OperationId: '3542'
+        MethodId: '3597'
+        OperationName: Rules
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             namespaceName: sdk-Namespace-1319
@@ -15739,8 +15941,10 @@ Modules:
             value: myRule
             swaggerName: ruleName
         References: []
-        OperationId: '3498'
-        MethodId: '3605'
+        OperationId: '3542'
+        MethodId: '3649'
+        OperationName: Rules
+        MethodName: Delete
   - ModuleName: azure_rm_servicebusrule_info
     Options:
       - NameSwagger: resourceGroupName
@@ -15893,7 +16097,7 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - &ref_73
+      - &ref_72
         NameSwagger: id
         NameAnsible: id
         NamePythonSdk: id
@@ -15924,7 +16128,7 @@ Modules:
         Hidden: false
         IncludeInResponse: true
         Flatten: false
-      - &ref_74
+      - &ref_73
         NameSwagger: name
         NameAnsible: name
         NamePythonSdk: name
@@ -15955,7 +16159,7 @@ Modules:
         Hidden: false
         IncludeInResponse: true
         Flatten: false
-      - &ref_75
+      - &ref_74
         NameSwagger: type
         NameAnsible: type
         NamePythonSdk: type
@@ -15986,7 +16190,7 @@ Modules:
         Hidden: false
         IncludeInResponse: true
         Flatten: false
-      - &ref_76
+      - &ref_75
         NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -16678,10 +16882,10 @@ Modules:
         HttpMethod: get
         IsAsync: false
     ResponseFields:
+      - *ref_72
       - *ref_73
       - *ref_74
       - *ref_75
-      - *ref_76
     ModuleOperationNameUpper: Rules
     ModuleOperationName: rules
     ObjectName: Rule
@@ -16736,8 +16940,10 @@ Modules:
             value: myTopic
             swaggerName: topicName
         References: []
-        OperationId: '3498'
-        MethodId: '3499'
+        OperationId: '3542'
+        MethodId: '3543'
+        OperationName: Rules
+        MethodName: ListBySubscriptions
       - Example:
           parameters:
             namespaceName: sdk-Namespace-1319
@@ -16785,8 +16991,10 @@ Modules:
             value: myRule
             swaggerName: ruleName
         References: []
-        OperationId: '3498'
-        MethodId: '3654'
+        OperationId: '3542'
+        MethodId: '3698'
+        OperationName: Rules
+        MethodName: Get
   - ModuleName: azure_rm_servicebusregion_info
     Options:
       - NameSwagger: sku
@@ -16819,7 +17027,7 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - &ref_77
+      - &ref_76
         NameSwagger: value
         NameAnsible: value
         NamePythonSdk: value
@@ -17094,7 +17302,7 @@ Modules:
         Hidden: false
         IncludeInResponse: true
         Flatten: false
-      - &ref_78
+      - &ref_77
         NameSwagger: nextLink
         NameAnsible: next_link
         NamePythonSdk: next_link
@@ -17139,8 +17347,8 @@ Modules:
         HttpMethod: get
         IsAsync: false
     ResponseFields:
+      - *ref_76
       - *ref_77
-      - *ref_78
     ModuleOperationNameUpper: Regions
     ModuleOperationName: regions
     ObjectName: Region
@@ -17441,11 +17649,13 @@ Modules:
             value: mySku
             swaggerName: sku
         References: []
-        OperationId: '3704'
-        MethodId: '3705'
+        OperationId: '3748'
+        MethodId: '3749'
+        OperationName: Regions
+        MethodName: ListBySku
   - ModuleName: azure_rm_servicebuspremiummessagingregion_info
     Options:
-      - &ref_79
+      - &ref_78
         NameSwagger: value
         NameAnsible: value
         NamePythonSdk: value
@@ -17720,7 +17930,7 @@ Modules:
         Hidden: false
         IncludeInResponse: true
         Flatten: false
-      - &ref_80
+      - &ref_79
         NameSwagger: nextLink
         NameAnsible: next_link
         NamePythonSdk: next_link
@@ -17763,8 +17973,8 @@ Modules:
         HttpMethod: get
         IsAsync: false
     ResponseFields:
+      - *ref_78
       - *ref_79
-      - *ref_80
     ModuleOperationNameUpper: PremiumMessagingRegions
     ModuleOperationName: premium_messaging_regions
     ObjectName: PremiumMessagingRegion
@@ -18016,8 +18226,10 @@ Modules:
         Filename: servicebus_premiummessagingregions_get
         Variables: []
         References: []
-        OperationId: '3731'
-        MethodId: '3732'
+        OperationId: '3775'
+        MethodId: '3776'
+        OperationName: PremiumMessagingRegions
+        MethodName: List
   - ModuleName: azure_rm_servicebuseventhub_info
     Options:
       - NameSwagger: resourceGroupName
@@ -18080,7 +18292,7 @@ Modules:
         Hidden: false
         IncludeInResponse: false
         Flatten: false
-      - &ref_81
+      - &ref_80
         NameSwagger: value
         NameAnsible: value
         NamePythonSdk: value
@@ -18704,7 +18916,7 @@ Modules:
         Hidden: false
         IncludeInResponse: true
         Flatten: false
-      - &ref_82
+      - &ref_81
         NameSwagger: nextLink
         NameAnsible: next_link
         NamePythonSdk: next_link
@@ -18752,8 +18964,8 @@ Modules:
         HttpMethod: get
         IsAsync: false
     ResponseFields:
+      - *ref_80
       - *ref_81
-      - *ref_82
     ModuleOperationNameUpper: EventHubs
     ModuleOperationName: event_hubs
     ObjectName: EventHub
@@ -18823,106 +19035,11 @@ Modules:
             value: my
             swaggerName: namespaceName
         References: []
-        OperationId: '3752'
-        MethodId: '3753'
+        OperationId: '3796'
+        MethodId: '3797'
+        OperationName: EventHubs
+        MethodName: ListByNamespace
 ServiceName: ServiceBusManagementClient
 MgmtClientName: ServiceBusManagementClient
 CliName: servicebus
 Namespace: azure.mgmt.servicebus
-Info:
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION authorizationRuleName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION alias'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION alias'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION alias'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION alias'
-  - '  ** FOUND OPTION authorizationRuleName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION configName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION queueName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION queueName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION queueName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION queueName'
-  - '  ** FOUND OPTION authorizationRuleName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION topicName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION topicName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION topicName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION topicName'
-  - '  ** FOUND OPTION authorizationRuleName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION topicName'
-  - '  ** FOUND OPTION subscriptionName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION topicName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION topicName'
-  - '  ** FOUND OPTION subscriptionName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION topicName'
-  - '  ** FOUND OPTION subscriptionName'
-  - '  ** FOUND OPTION ruleName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION topicName'
-  - '  ** FOUND OPTION subscriptionName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION topicName'
-  - '  ** FOUND OPTION subscriptionName'
-  - '  ** FOUND OPTION ruleName'
-  - '  ** FOUND OPTION sku'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'

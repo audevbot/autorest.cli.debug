@@ -43,6 +43,10 @@ options:
     description:
       - Identity Provider Type identifier.
     type: str
+  signin_tenant:
+    description:
+      - The TenantId to use instead of Common when logging into Active Directory
+    type: str
   allowed_tenants:
     description:
       - List of Allowed Tenants when configuring Azure Active Directory login.

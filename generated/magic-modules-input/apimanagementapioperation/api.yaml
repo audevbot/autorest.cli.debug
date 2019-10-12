@@ -49,7 +49,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: OperationContractProperties
             go_type_name: OperationContractProperties
           '/templateParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
@@ -464,7 +464,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: OperationContractProperties
             go_type_name: OperationContractProperties
           '/templateParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
@@ -899,7 +899,7 @@ objects:
         response:
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: OperationContractProperties
             go_type_name: OperationContractProperties
           '/properties/templateParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
@@ -1425,7 +1425,6 @@ objects:
                 name: 'defaultValue'
                 description: 'Default parameter value.'
                 required: false
-                sample_value: 'sample'
                 azure_sdk_references: ['/request/queryParameters/defaultValue', '/properties/request/queryParameters/defaultValue']
               - !ruby/object:Api::Type::Boolean
                 name: 'required'
@@ -1485,7 +1484,6 @@ objects:
                 name: 'contentType'
                 description: 'Specifies a registered or custom content type for this representation, e.g. application/xml.'
                 required: true
-                sample_value: 'application/json'
                 azure_sdk_references: ['/request/representations/contentType', '/properties/request/representations/contentType']
               - !ruby/object:Api::Type::String
                 name: 'sample'
@@ -1496,13 +1494,11 @@ objects:
                 name: 'schemaId'
                 description: 'Schema identifier. Applicable only if ''contentType'' value is neither ''application/x-www-form-urlencoded'' nor ''multipart/form-data''.'
                 required: false
-                sample_value: '592f6c1d0af5840ca8897f0c'
                 azure_sdk_references: ['/request/representations/schemaId', '/properties/request/representations/schemaId']
               - !ruby/object:Api::Type::String
                 name: 'typeName'
                 description: 'Type name defined by the schema. Applicable only if ''contentType'' value is neither ''application/x-www-form-urlencoded'' nor ''multipart/form-data''.'
                 required: false
-                sample_value: 'User'
                 azure_sdk_references: ['/request/representations/typeName', '/properties/request/representations/typeName']
               - !ruby/object:Api::Type::NestedObject
                 name: 'formParameters'
@@ -1550,7 +1546,6 @@ objects:
             name: 'statusCode'
             description: 'Operation response HTTP status code.'
             required: true
-            sample_value: 500
             azure_sdk_references: ['/responses/statusCode', '/properties/responses/statusCode']
           - !ruby/object:Api::Type::String
             name: 'description'
@@ -1568,7 +1563,6 @@ objects:
                 name: 'contentType'
                 description: 'Specifies a registered or custom content type for this representation, e.g. application/xml.'
                 required: true
-                sample_value: 'application/json'
                 azure_sdk_references: ['/responses/representations/contentType', '/properties/responses/representations/contentType']
               - !ruby/object:Api::Type::String
                 name: 'sample'

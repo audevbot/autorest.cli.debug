@@ -5,7 +5,7 @@ NETWORK_RULE_SET_NAME="mynetworkruleset"
 VIRTUAL_NETWORK_NAME="myvirtualnetwork"
 SUBNET_NAME="mysubnet"
 
-az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.ServiceBus/namespaces/$NAMESPACE_NAME/networkRuleSets/$NETWORK_RULE_SET_NAME --api-version 2017-04-01 --is-full-object --properties '
+az rest --method put --uri /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.ServiceBus/namespaces/$NAMESPACE_NAME/networkRuleSets/$NETWORK_RULE_SET_NAME?api-version=2017-04-01 --body '
 {
   "properties": {
     "defaultAction": "Deny",
@@ -14,40 +14,40 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
         "subnet": {
           "id": "/subscriptions/" + SUBSCRIPTION_ID + "/resourceGroups/" + RESOURCE_GROUP + "/providers/Microsoft.Network/virtualNetworks/" + VIRTUAL_NETWORK_NAME + "/subnets/" + SUBNET_NAME + ""
         },
-        "ignoreMissingVnetServiceEndpoint": True
+        "ignore_missing_vnet_service_endpoint": True
       },
       {
         "subnet": {
           "id": "/subscriptions/" + SUBSCRIPTION_ID + "/resourceGroups/" + RESOURCE_GROUP + "/providers/Microsoft.Network/virtualNetworks/" + VIRTUAL_NETWORK_NAME + "/subnets/" + SUBNET_NAME + ""
         },
-        "ignoreMissingVnetServiceEndpoint": False
+        "ignore_missing_vnet_service_endpoint": False
       },
       {
         "subnet": {
           "id": "/subscriptions/" + SUBSCRIPTION_ID + "/resourceGroups/" + RESOURCE_GROUP + "/providers/Microsoft.Network/virtualNetworks/" + VIRTUAL_NETWORK_NAME + "/subnets/" + SUBNET_NAME + ""
         },
-        "ignoreMissingVnetServiceEndpoint": False
+        "ignore_missing_vnet_service_endpoint": False
       }
     ],
     "ipRules": [
       {
-        "ipMask": "1.1.1.1",
+        "ip_mask": "1.1.1.1",
         "action": "Allow"
       },
       {
-        "ipMask": "1.1.1.2",
+        "ip_mask": "1.1.1.2",
         "action": "Allow"
       },
       {
-        "ipMask": "1.1.1.3",
+        "ip_mask": "1.1.1.3",
         "action": "Allow"
       },
       {
-        "ipMask": "1.1.1.4",
+        "ip_mask": "1.1.1.4",
         "action": "Allow"
       },
       {
-        "ipMask": "1.1.1.5",
+        "ip_mask": "1.1.1.5",
         "action": "Allow"
       }
     ]

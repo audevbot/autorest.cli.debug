@@ -44,7 +44,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: DiagnosticContractProperties
             go_type_name: DiagnosticContractProperties
           '/alwaysLog': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
@@ -229,7 +229,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: DiagnosticContractProperties
             go_type_name: DiagnosticContractProperties
           '/alwaysLog': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
@@ -429,7 +429,7 @@ objects:
         response:
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: DiagnosticContractProperties
             go_type_name: DiagnosticContractProperties
           '/properties/alwaysLog': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [go]

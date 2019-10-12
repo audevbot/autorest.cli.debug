@@ -147,7 +147,7 @@ objects:
         response:
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: EmailTemplateUpdateParameterProperties
             go_type_name: EmailTemplateUpdateParameterProperties
           '/properties/subject': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
