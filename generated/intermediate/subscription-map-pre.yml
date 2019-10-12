@@ -168,6 +168,8 @@ Modules:
         References: []
         OperationId: '112'
         MethodId: '113'
+        OperationName: SubscriptionOperations
+        MethodName: List
   - ModuleName: azure_rm_subscriptionssubscriptionfactory
     Options:
       - NameSwagger: enrollmentAccountName
@@ -333,7 +335,7 @@ Modules:
         IdPortion: null
         Type: str
         TypeName: offerType
-        TypeNameGo: offerType
+        TypeNameGo: OfferType
         IsList: false
         Required: false
         Documentation: >-
@@ -497,10 +499,9 @@ Modules:
         References: []
         OperationId: '127'
         MethodId: '128'
+        OperationName: SubscriptionFactory
+        MethodName: CreateSubscriptionInEnrollmentAccount
 ServiceName: Subscription
 MgmtClientName: Subscription
 CliName: subscription
 Namespace: azure.mgmt.subscriptions
-Info:
-  - '  ** FOUND OPTION enrollmentAccountName'
-  - '  ** FOUND OPTION body'
