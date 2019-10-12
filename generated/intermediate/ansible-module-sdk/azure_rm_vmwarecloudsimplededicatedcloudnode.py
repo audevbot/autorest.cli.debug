@@ -385,7 +385,7 @@ class Actions:
     NoAction, Create, Update, Delete = range(4)
 
 
-class AzureRMDedicatedCloudNode(AzureRMModuleBaseExt):
+class AzureRMDedicatedCloudNodes(AzureRMModuleBaseExt):
     def __init__(self):
         self.module_arg_spec = dict(
             resource_group=dict(
@@ -486,9 +486,9 @@ class AzureRMDedicatedCloudNode(AzureRMModuleBaseExt):
         self.state = None
         self.to_do = Actions.NoAction
 
-        super(AzureRMDedicatedCloudNode, self).__init__(derived_arg_spec=self.module_arg_spec,
-                                                        supports_check_mode=True,
-                                                        supports_tags=True)
+        super(AzureRMDedicatedCloudNodes, self).__init__(derived_arg_spec=self.module_arg_spec,
+                                                         supports_check_mode=True,
+                                                         supports_tags=True)
 
     def exec_module(self, **kwargs):
         for key in list(self.module_arg_spec.keys()):
@@ -551,10 +551,10 @@ class AzureRMDedicatedCloudNode(AzureRMModuleBaseExt):
 
     def create_update_resource(self):
         try:
-            response = self.mgmt_client.dedicated_cloud_node.create_or_update(resource_group_name=self.resource_group,
-                                                                              referer=self.referer,
-                                                                              dedicated_cloud_node_name=self.name,
-                                                                              dedicated_cloud_node_request=self.dedicatedCloudNodeRequest)
+            response = self.mgmt_client.dedicated_cloud_nodes.create_or_update(resource_group_name=self.resource_group,
+                                                                               referer=self.referer,
+                                                                               dedicated_cloud_node_name=self.name,
+                                                                               dedicated_cloud_node_request=self.dedicatedCloudNodeRequest)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
         except CloudError as exc:
@@ -565,8 +565,8 @@ class AzureRMDedicatedCloudNode(AzureRMModuleBaseExt):
     def delete_resource(self):
         # self.log('Deleting the DedicatedCloudNode instance {0}'.format(self.))
         try:
-            response = self.mgmt_client.dedicated_cloud_node.delete(resource_group_name=self.resource_group,
-                                                                    dedicated_cloud_node_name=self.name)
+            response = self.mgmt_client.dedicated_cloud_nodes.delete(resource_group_name=self.resource_group,
+                                                                     dedicated_cloud_node_name=self.name)
         except CloudError as e:
             self.log('Error attempting to delete the DedicatedCloudNode instance.')
             self.fail('Error deleting the DedicatedCloudNode instance: {0}'.format(str(e)))
@@ -577,15 +577,15 @@ class AzureRMDedicatedCloudNode(AzureRMModuleBaseExt):
         # self.log('Checking if the DedicatedCloudNode instance {0} is present'.format(self.))
         found = False
         try:
-            response = self.mgmt_client.dedicated_cloud_node.get(resource_group_name=self.resource_group,
-                                                                 dedicated_cloud_node_name=self.name)
+            response = self.mgmt_client.dedicated_cloud_nodes.get(resource_group_name=self.resource_group,
+                                                                  dedicated_cloud_node_name=self.name)
         except CloudError as e:
             return False
         return response.as_dict()
 
 
 def main():
-    AzureRMDedicatedCloudNode()
+    AzureRMDedicatedCloudNodes()
 
 
 if __name__ == '__main__':

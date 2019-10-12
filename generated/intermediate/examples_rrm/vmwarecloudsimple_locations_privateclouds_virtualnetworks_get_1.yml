@@ -10,7 +10,7 @@
   tasks:
 
     - name: GetVirtualNetwork
-      azure_rm_vmwarecloudsimplevirtualnetworkbypc_info:
+      azure_rm_vmwarecloudsimplevirtualnetwork_info:
         region_id: '{{location_name}}'
         pc_name: '{{private_cloud_name}}'
         name: '{{virtual_network_name}}'

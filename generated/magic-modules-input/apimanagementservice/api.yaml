@@ -43,7 +43,7 @@ objects:
             python_field_name: tags
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: ServiceProperties
             go_type_name: ServiceProperties
           '/notificationSenderEmail': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
@@ -313,7 +313,7 @@ objects:
             python_field_name: tags
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: ServiceProperties
             go_type_name: ServiceProperties
           '/notificationSenderEmail': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
@@ -593,7 +593,7 @@ objects:
             python_field_name: tags
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: ServiceProperties
             go_type_name: ServiceProperties
           '/properties/notificationSenderEmail': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
@@ -1024,7 +1024,6 @@ objects:
             name: 'hostName'
             description: 'Hostname to configure on the Api Management service.'
             required: true
-            sample_value: 'portalhostname1.contoso.com'
             azure_sdk_references: ['/hostnameConfigurations/hostName', '/properties/hostnameConfigurations/hostName']
           - !ruby/object:Api::Type::String
             name: 'keyVaultId'
@@ -1035,13 +1034,11 @@ objects:
             name: 'encodedCertificate'
             description: 'Base64 Encoded certificate.'
             required: false
-            sample_value: '************Base 64 Encoded Pfx Certificate************************'
             azure_sdk_references: ['/hostnameConfigurations/encodedCertificate', '/properties/hostnameConfigurations/encodedCertificate']
           - !ruby/object:Api::Type::String
             name: 'certificatePassword'
             description: 'Certificate Password.'
             required: false
-            sample_value: '**************Password of the Certificate************************************************'
             azure_sdk_references: ['/hostnameConfigurations/certificatePassword', '/properties/hostnameConfigurations/certificatePassword']
           - !ruby/object:Api::Type::Boolean
             name: 'defaultSslBinding'
@@ -1052,7 +1049,6 @@ objects:
             name: 'negotiateClientCertificate'
             description: 'Specify true to always negotiate client certificate on the hostname. Default Value is false.'
             required: false
-            sample_value: true
             azure_sdk_references: ['/hostnameConfigurations/negotiateClientCertificate', '/properties/hostnameConfigurations/negotiateClientCertificate']
           - !ruby/object:Api::Type::NestedObject
             name: 'certificate'
@@ -1132,12 +1128,10 @@ objects:
             required: false
             azure_sdk_references: ['/additionalLocations/virtualNetworkConfiguration', '/properties/additionalLocations/virtualNetworkConfiguration']
             properties:
-              - !ruby/object:Api::Azure::Type::ResourceReference
+              - !ruby/object:Api::Type::String
                 name: 'subnetResourceId'
                 description: 'The full resource ID of a subnet in a virtual network to deploy the API Management service in.'
                 required: false
-                sample_value: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.Network/virtualNetworks/{{ virtual_network_name }}/subnets/{{ name }}
-                resource_type_name: TBD
                 azure_sdk_references: ['/additionalLocations/virtualNetworkConfiguration/subnetResourceId', '/properties/additionalLocations/virtualNetworkConfiguration/subnetResourceId']
       - !ruby/object:Api::Type::KeyValuePairs
         name: 'customProperties'
@@ -1155,13 +1149,11 @@ objects:
             name: 'encodedCertificate'
             description: 'Base64 Encoded certificate.'
             required: false
-            sample_value: '*******Base64 encoded Certificate******************'
             azure_sdk_references: ['/certificates/encodedCertificate', '/properties/certificates/encodedCertificate']
           - !ruby/object:Api::Type::String
             name: 'certificatePassword'
             description: 'Certificate Password.'
             required: false
-            sample_value: 'Password'
             azure_sdk_references: ['/certificates/certificatePassword', '/properties/certificates/certificatePassword']
           - !ruby/object:Api::Type::Enum
             name: 'storeName'
@@ -1171,7 +1163,6 @@ objects:
               - :CertificateAuthority
               - :Root
             default_value: :CertificateAuthority
-            sample_value: CertificateAuthority
             azure_sdk_references: ['/certificates/storeName', '/properties/certificates/storeName']
           - !ruby/object:Api::Type::NestedObject
             name: 'certificate'

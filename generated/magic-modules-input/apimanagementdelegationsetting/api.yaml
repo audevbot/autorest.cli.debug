@@ -39,7 +39,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: PortalDelegationSettingsProperties
             go_type_name: PortalDelegationSettingsProperties
           '/url': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
@@ -100,7 +100,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: PortalDelegationSettingsProperties
             go_type_name: PortalDelegationSettingsProperties
           '/url': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
@@ -157,7 +157,7 @@ objects:
         response:
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: PortalDelegationSettingsProperties
             go_type_name: PortalDelegationSettingsProperties
           '/properties/url': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
