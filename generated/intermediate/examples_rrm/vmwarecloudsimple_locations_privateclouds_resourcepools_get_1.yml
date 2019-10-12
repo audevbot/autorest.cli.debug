@@ -10,7 +10,7 @@
   tasks:
 
     - name: GetResourcePool
-      azure_rm_vmwarecloudsimpleresourcepoolbypc_info:
+      azure_rm_vmwarecloudsimpleresourcepool_info:
         region_id: '{{location_name}}'
         pc_name: '{{private_cloud_name}}'
         name: '{{resource_pool_name}}'

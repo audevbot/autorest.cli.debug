@@ -129,7 +129,7 @@ Modules:
         IdPortion: null
         Type: dict
         TypeName: softwareUpdateConfiguration
-        TypeNameGo: softwareUpdateConfiguration
+        TypeNameGo: SoftwareUpdateConfiguration
         IsList: false
         Required: !<tag:yaml.org,2002:js/undefined> ''
         Documentation: Request body.
@@ -159,7 +159,7 @@ Modules:
         IdPortion: null
         Type: dict
         TypeName: softwareUpdateConfigurationProperties
-        TypeNameGo: softwareUpdateConfigurationProperties
+        TypeNameGo: SoftwareUpdateConfigurationProperties
         IsList: false
         Required: true
         Documentation: Software update configuration properties.
@@ -177,7 +177,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: updateConfiguration
-            TypeNameGo: updateConfiguration
+            TypeNameGo: UpdateConfiguration
             IsList: false
             Required: true
             Documentation: update specific properties for the Software update configuration
@@ -1701,7 +1701,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: softwareUpdateConfigurationTasks
-            TypeNameGo: softwareUpdateConfigurationTasks
+            TypeNameGo: SoftwareUpdateConfigurationTasks
             IsList: false
             Required: false
             Documentation: Tasks information for the Software update configuration.
@@ -1719,7 +1719,7 @@ Modules:
                 IdPortion: null
                 Type: dict
                 TypeName: taskProperties
-                TypeNameGo: taskProperties
+                TypeNameGo: TaskProperties
                 IsList: false
                 Required: false
                 Documentation: Pre task properties.
@@ -1813,7 +1813,7 @@ Modules:
                 IdPortion: null
                 Type: dict
                 TypeName: taskProperties
-                TypeNameGo: taskProperties
+                TypeNameGo: TaskProperties
                 IsList: false
                 Required: false
                 Documentation: Post task properties.
@@ -2255,7 +2255,7 @@ Modules:
         IdPortion: null
         Type: dict
         TypeName: softwareUpdateConfigurationProperties
-        TypeNameGo: softwareUpdateConfigurationProperties
+        TypeNameGo: SoftwareUpdateConfigurationProperties
         IsList: false
         Required: true
         Documentation: Software update configuration properties.
@@ -2273,7 +2273,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: updateConfiguration
-            TypeNameGo: updateConfiguration
+            TypeNameGo: UpdateConfiguration
             IsList: false
             Required: true
             Documentation: update specific properties for the Software update configuration
@@ -3772,7 +3772,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: softwareUpdateConfigurationTasks
-            TypeNameGo: softwareUpdateConfigurationTasks
+            TypeNameGo: SoftwareUpdateConfigurationTasks
             IsList: false
             Required: false
             Documentation: Tasks information for the Software update configuration.
@@ -3790,7 +3790,7 @@ Modules:
                 IdPortion: null
                 Type: dict
                 TypeName: taskProperties
-                TypeNameGo: taskProperties
+                TypeNameGo: TaskProperties
                 IsList: false
                 Required: false
                 Documentation: Pre task properties.
@@ -3884,7 +3884,7 @@ Modules:
                 IdPortion: null
                 Type: dict
                 TypeName: taskProperties
-                TypeNameGo: taskProperties
+                TypeNameGo: TaskProperties
                 IsList: false
                 Required: false
                 Documentation: Post task properties.
@@ -4253,6 +4253,8 @@ Modules:
           - automation_automationaccounts_put
         OperationId: '560'
         MethodId: '561'
+        OperationName: SoftwareUpdateConfigurations
+        MethodName: Create
       - Example:
           parameters:
             subscriptionId: 51766542-3ed7-4a72-a187-0c8ab644ddab
@@ -4285,6 +4287,8 @@ Modules:
         References: []
         OperationId: '560'
         MethodId: '650'
+        OperationName: SoftwareUpdateConfigurations
+        MethodName: Delete
   - ModuleName: azure_rm_softwareupdateconfiguration_info
     Options:
       - NameSwagger: resourceGroupName
@@ -4416,7 +4420,7 @@ Modules:
         IdPortion: null
         Type: dict
         TypeName: softwareUpdateConfigurationCollectionItem
-        TypeNameGo: softwareUpdateConfigurationCollectionItem
+        TypeNameGo: SoftwareUpdateConfigurationCollectionItem
         IsList: true
         Required: false
         Documentation: outer object returned when listing all software update configurations
@@ -4494,7 +4498,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: softwareUpdateConfigurationCollectionItemProperties
-            TypeNameGo: softwareUpdateConfigurationCollectionItemProperties
+            TypeNameGo: SoftwareUpdateConfigurationCollectionItemProperties
             IsList: false
             Required: true
             Documentation: Software update configuration properties.
@@ -4512,7 +4516,7 @@ Modules:
                 IdPortion: null
                 Type: dict
                 TypeName: collectionItemUpdateConfiguration
-                TypeNameGo: collectionItemUpdateConfiguration
+                TypeNameGo: CollectionItemUpdateConfiguration
                 IsList: false
                 Required: false
                 Documentation: >-
@@ -5017,6 +5021,8 @@ Modules:
         References: []
         OperationId: '560'
         MethodId: '693'
+        OperationName: SoftwareUpdateConfigurations
+        MethodName: List
       - Example:
           parameters:
             subscriptionId: 1a7d4044-286c-4acb-969a-96639265bf2e
@@ -5126,6 +5132,8 @@ Modules:
         References: []
         OperationId: '560'
         MethodId: '693'
+        OperationName: SoftwareUpdateConfigurations
+        MethodName: List
       - Example:
           parameters:
             subscriptionId: 51766542-3ed7-4a72-a187-0c8ab644ddab
@@ -5231,20 +5239,9 @@ Modules:
         References: []
         OperationId: '560'
         MethodId: '608'
+        OperationName: SoftwareUpdateConfigurations
+        MethodName: GetByName
 ServiceName: UpdateManagementAPI
 MgmtClientName: UpdateManagementAPI
 CliName: automationcfg
 Namespace: azure.mgmt.automation
-Info:
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION automationAccountName'
-  - '  ** FOUND OPTION softwareUpdateConfigurationName'
-  - '  ** FOUND OPTION clientRequestId'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION automationAccountName'
-  - '  ** FOUND OPTION clientRequestId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION automationAccountName'
-  - '  ** FOUND OPTION softwareUpdateConfigurationName'
-  - '  ** FOUND OPTION clientRequestId'

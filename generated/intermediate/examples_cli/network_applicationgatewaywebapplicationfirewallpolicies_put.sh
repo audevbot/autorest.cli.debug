@@ -2,7 +2,7 @@
 RESOURCE_GROUP="myresourcegroup"
 APPLICATION_GATEWAY_WEB_APPLICATION_FIREWALL_POLICY_NAME="myapplicationgatewaywebapplicationfirewallpolicy"
 
-az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/$APPLICATION_GATEWAY_WEB_APPLICATION_FIREWALL_POLICY_NAME --api-version 2019-06-01 --is-full-object --properties '
+az rest --method put --uri /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/$APPLICATION_GATEWAY_WEB_APPLICATION_FIREWALL_POLICY_NAME?api-version=2019-06-01 --body '
 {
   "location": "WestUs",
   "properties": {
@@ -10,18 +10,17 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
       {
         "name": "Rule1",
         "priority": "1",
-        "ruleType": "MatchRule",
+        "rule_type": "MatchRule",
         "action": "Block",
-        "matchConditions": [
+        "match_conditions": [
           {
-            "matchVariables": [
+            "match_variables": [
               {
-                "variableName": "RemoteAddr",
-                "selector": null
+                "variable_name": "RemoteAddr"
               }
             ],
             "operator": "IPMatch",
-            "matchValues": [
+            "match_values": [
               "192.168.1.0/24",
               "10.0.0.0/24"
             ]
@@ -31,29 +30,28 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
       {
         "name": "Rule2",
         "priority": "2",
-        "ruleType": "MatchRule",
-        "matchConditions": [
+        "rule_type": "MatchRule",
+        "match_conditions": [
           {
-            "matchVariables": [
+            "match_variables": [
               {
-                "variableName": "RemoteAddr",
-                "selector": null
+                "variable_name": "RemoteAddr"
               }
             ],
             "operator": "IPMatch",
-            "matchValues": [
+            "match_values": [
               "192.168.1.0/24"
             ]
           },
           {
-            "matchVariables": [
+            "match_variables": [
               {
-                "variableName": "RequestHeaders",
+                "variable_name": "RequestHeaders",
                 "selector": "UserAgent"
               }
             ],
             "operator": "Contains",
-            "matchValues": [
+            "match_values": [
               "Windows"
             ]
           }

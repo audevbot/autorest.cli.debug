@@ -3007,6 +3007,8 @@ Modules:
           - resourcegroups_put
         OperationId: '393'
         MethodId: '466'
+        OperationName: OpenShiftManagedClusters
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             api-version: '2019-04-30'
@@ -3033,6 +3035,8 @@ Modules:
         References: []
         OperationId: '393'
         MethodId: '535'
+        OperationName: OpenShiftManagedClusters
+        MethodName: Delete
   - ModuleName: azure_rm_openshiftmanagedcluster_info
     Options:
       - NameSwagger: resourceGroupName
@@ -4682,6 +4686,8 @@ Modules:
         References: []
         OperationId: '393'
         MethodId: '394'
+        OperationName: OpenShiftManagedClusters
+        MethodName: List
       - Example:
           parameters:
             api-version: 2018-09-30-preview
@@ -4750,6 +4756,8 @@ Modules:
         References: []
         OperationId: '393'
         MethodId: '412'
+        OperationName: OpenShiftManagedClusters
+        MethodName: ListByResourceGroup
       - Example:
           parameters:
             api-version: '2019-04-30'
@@ -4824,14 +4832,9 @@ Modules:
         References: []
         OperationId: '393'
         MethodId: '436'
+        OperationName: OpenShiftManagedClusters
+        MethodName: Get
 ServiceName: OpenShift
 MgmtClientName: OpenShift
 CliName: aro
 Namespace: azure.mgmt.containerservice
-Info:
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceName'
