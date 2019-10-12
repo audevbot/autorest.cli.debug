@@ -5,11 +5,13 @@
     - _vars.yml
   vars:
     location_name: myLocation
+    private_cloud_name: myPrivateCloud
   tasks:
 
-    - name: ListPrivateCloudInLocation
-      azure_rm_vmwarecloudsimpleprivatecloudbyregion_info:
+    - name: GetPrivateCloud
+      azure_rm_vmwarecloudsimpleprivatecloud_info:
         region_id: '{{location_name}}'
+        name: '{{private_cloud_name}}'
     
       register: output
     - debug:

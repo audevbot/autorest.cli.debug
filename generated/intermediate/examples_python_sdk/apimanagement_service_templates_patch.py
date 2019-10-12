@@ -1,0 +1,55 @@
+# ApiManagementUpdateEmailTemplate
+#
+# This script expects that the following environment vars are set:
+#
+# AZURE_TENANT: your Azure Active Directory tenant id or domain
+# AZURE_CLIENT_ID: your Azure Active Directory Application Client ID
+# AZURE_SECRET: your Azure Active Directory Application Secret
+# AZURE_SUBSCRIPTION_ID: your Azure Subscription Id
+
+import os
+import traceback
+from azure.common.credentials import ServicePrincipalCredentials
+from msrestazure.azure_exceptions import CloudError
+from msrestazure.azure_configuration import AzureConfiguration
+from msrest.service_client import ServiceClient
+from msrest.polling import LROPoller
+from msrestazure.polling.arm_polling import ARMPolling
+from msrest.pipeline import ClientRawResponse
+from azure.mgmt.apimanagement import ApiManagementClient
+import uuid
+
+SUBSCRIPTION_ID = os.environ['AZURE_SUBSCRIPTION_ID']
+RESOURCE_GROUP = "myresourcegroup"
+SERVICE_NAME = "myservice"
+TEMPLATE_NAME = "mytemplate"
+
+BODY = {
+  "properties": {
+    "subject": "Your application $AppName is published in the gallery",
+    "body": "<!DOCTYPE html >\r\n<html>\r\n  <head />\r\n  <body>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">Dear $DevFirstName $DevLastName,</p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">\r\n          We are happy to let you know that your request to publish the $AppName application in the gallery has been approved. Your application has been published and can be viewed <a href=\"http://$DevPortalUrl/Applications/Details/$AppId\">here</a>.\r\n        </p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">Best,</p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">The $OrganizationName API Team</p>\r\n  </body>\r\n</html>"
+  }
+}
+
+def get_credentials():
+    credentials = ServicePrincipalCredentials(
+        client_id=os.environ['AZURE_CLIENT_ID'],
+        secret=os.environ['AZURE_SECRET'],
+        tenant=os.environ['AZURE_TENANT']
+    )
+    return credentials
+
+
+def run_example():
+    credentials = get_credentials()
+    mgmt_client = ApiManagementClient(credentials, os.environ['AZURE_SUBSCRIPTION_ID'])
+    response = mgmt_client.email_template.update(RESOURCE_GROUP, SERVICE_NAME, TEMPLATE_NAME, BODY)
+    if isinstance(response, LROPoller):
+        while not response.done():
+            response.wait(timeout=30)
+        response = response.result()
+    print(str(response))
+
+
+if __name__ == "__main__":
+    run_example()

@@ -101,14 +101,14 @@ Modules:
                   resource_group
                   }}/providers/Microsoft.Network/virtualNetworks/{{
                   virtual_network_name }}/subnets/{{ subnet_name }}
-                ignoreMissingVNetServiceEndpoint: false
+                ignore_missing_vnet_service_endpoint: false
             locations:
-              - failoverPriority: '0'
-                locationName: southcentralus
-                isZoneRedundant: false
-              - failoverPriority: '1'
-                locationName: eastus
-                isZoneRedundant: false
+              - failover_priority: '0'
+                location_name: southcentralus
+                is_zone_redundant: false
+              - failover_priority: '1'
+                location_name: eastus
+                is_zone_redundant: false
             consistencyPolicy:
               defaultConsistencyLevel: BoundedStaleness
               maxIntervalInSeconds: '10'
@@ -2889,9 +2889,9 @@ Modules:
               properties:
                 databaseAccountOfferType: Standard
                 locations:
-                  - failoverPriority: '0'
-                    locationName: southcentralus
-                    isZoneRedundant: false
+                  - failover_priority: '0'
+                    location_name: southcentralus
+                    is_zone_redundant: false
           responses:
             '200':
               body:
@@ -2947,6 +2947,8 @@ Modules:
           - resourcegroups_put
         OperationId: '1839'
         MethodId: '1904'
+        OperationName: DatabaseAccounts
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             accountName: ddb1
@@ -2967,14 +2969,14 @@ Modules:
                       resource_group
                       }}/providers/Microsoft.Network/virtualNetworks/{{
                       virtual_network_name }}/subnets/{{ subnet_name }}
-                    ignoreMissingVNetServiceEndpoint: false
+                    ignore_missing_vnet_service_endpoint: false
                 locations:
-                  - failoverPriority: '0'
-                    locationName: southcentralus
-                    isZoneRedundant: false
-                  - failoverPriority: '1'
-                    locationName: eastus
-                    isZoneRedundant: false
+                  - failover_priority: '0'
+                    location_name: southcentralus
+                    is_zone_redundant: false
+                  - failover_priority: '1'
+                    location_name: eastus
+                    is_zone_redundant: false
                 consistencyPolicy:
                   defaultConsistencyLevel: BoundedStaleness
                   maxIntervalInSeconds: '10'
@@ -3056,6 +3058,8 @@ Modules:
           - documentdb_databaseaccounts_put
         OperationId: '1839'
         MethodId: '1904'
+        OperationName: DatabaseAccounts
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             accountName: ddb1
@@ -3082,6 +3086,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '1938'
+        OperationName: DatabaseAccounts
+        MethodName: Delete
   - ModuleName: azure_rm_cosmosdbdatabaseaccount_info
     Options:
       - NameSwagger: resourceGroupName
@@ -5311,6 +5317,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2004'
+        OperationName: DatabaseAccounts
+        MethodName: List
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -5368,6 +5376,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2022'
+        OperationName: DatabaseAccounts
+        MethodName: ListByResourceGroup
       - Example:
           parameters:
             accountName: ddb1
@@ -5431,6 +5441,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '1840'
+        OperationName: DatabaseAccounts
+        MethodName: Get
       - Example:
           parameters:
             accountName: ddb1
@@ -5466,6 +5478,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2326'
+        OperationName: DatabaseAccounts
+        MethodName: ListUsages
       - Example:
           parameters:
             accountName: ddb1
@@ -5521,6 +5535,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2290'
+        OperationName: DatabaseAccounts
+        MethodName: ListMetrics
       - Example:
           parameters:
             accountName: ddb1
@@ -5549,6 +5565,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2176'
+        OperationName: DatabaseAccounts
+        MethodName: GetReadOnlyKeys
       - Example:
           parameters:
             accountName: ddb1
@@ -5593,6 +5611,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2362'
+        OperationName: DatabaseAccounts
+        MethodName: ListMetricDefinitions
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -5628,6 +5648,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3348'
+        OperationName: DatabaseAccounts
+        MethodName: ListTables
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -5668,6 +5690,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2392'
+        OperationName: DatabaseAccounts
+        MethodName: ListSqlDatabases
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -5703,6 +5727,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2870'
+        OperationName: DatabaseAccounts
+        MethodName: ListMongoDBDatabases
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -5741,6 +5767,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '4047'
+        OperationName: DatabaseAccounts
+        MethodName: ListGremlinDatabases
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -5776,6 +5804,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3569'
+        OperationName: DatabaseAccounts
+        MethodName: ListCassandraKeyspaces
       - Example:
           parameters:
             accountName: ddb1
@@ -5814,6 +5844,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3378'
+        OperationName: DatabaseAccounts
+        MethodName: GetTable
       - Example:
           parameters:
             accountName: ddb1
@@ -5858,6 +5890,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2422'
+        OperationName: DatabaseAccounts
+        MethodName: GetSqlDatabase
       - Example:
           parameters:
             accountName: ddb1
@@ -5897,6 +5931,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2900'
+        OperationName: DatabaseAccounts
+        MethodName: GetMongoDBDatabase
       - Example:
           parameters:
             accountName: ddb1
@@ -5939,6 +5975,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '4077'
+        OperationName: DatabaseAccounts
+        MethodName: GetGremlinDatabase
       - Example:
           parameters:
             accountName: ddb1
@@ -5978,6 +6016,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3599'
+        OperationName: DatabaseAccounts
+        MethodName: GetCassandraKeyspace
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -6047,6 +6087,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '4268'
+        OperationName: DatabaseAccounts
+        MethodName: ListGremlinGraphs
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -6116,6 +6158,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2613'
+        OperationName: DatabaseAccounts
+        MethodName: ListSqlContainers
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -6167,6 +6211,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3790'
+        OperationName: DatabaseAccounts
+        MethodName: ListCassandraTables
       - Example:
           parameters:
             accountName: ddb1
@@ -6206,6 +6252,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3492'
+        OperationName: DatabaseAccounts
+        MethodName: GetTableThroughput
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -6256,6 +6304,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3091'
+        OperationName: DatabaseAccounts
+        MethodName: ListMongoDBCollections
       - Example:
           parameters:
             accountName: ddb1
@@ -6295,6 +6345,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2536'
+        OperationName: DatabaseAccounts
+        MethodName: GetSqlDatabaseThroughput
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -6366,6 +6418,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '4304'
+        OperationName: DatabaseAccounts
+        MethodName: GetGremlinGraph
       - Example:
           parameters:
             accountName: ddb1
@@ -6405,6 +6459,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '4191'
+        OperationName: DatabaseAccounts
+        MethodName: GetGremlinDatabaseThroughput
       - Example:
           parameters:
             accountName: ddb1
@@ -6444,6 +6500,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3014'
+        OperationName: DatabaseAccounts
+        MethodName: GetMongoDBDatabaseThroughput
       - Example:
           parameters:
             accountName: ddb1
@@ -6497,6 +6555,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3826'
+        OperationName: DatabaseAccounts
+        MethodName: GetCassandraTable
       - Example:
           parameters:
             accountName: ddb1
@@ -6536,6 +6596,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3713'
+        OperationName: DatabaseAccounts
+        MethodName: GetCassandraKeyspaceThroughput
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -6608,6 +6670,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2649'
+        OperationName: DatabaseAccounts
+        MethodName: GetSqlContainer
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -6661,6 +6725,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3127'
+        OperationName: DatabaseAccounts
+        MethodName: GetMongoDBCollection
       - Example:
           parameters:
             accountName: ddb1
@@ -6704,6 +6770,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '4436'
+        OperationName: DatabaseAccounts
+        MethodName: GetGremlinGraphThroughput
       - Example:
           parameters:
             accountName: ddb1
@@ -6747,6 +6815,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3958'
+        OperationName: DatabaseAccounts
+        MethodName: GetCassandraTableThroughput
       - Example:
           parameters:
             accountName: ddb1
@@ -6791,6 +6861,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2781'
+        OperationName: DatabaseAccounts
+        MethodName: GetSqlContainerThroughput
       - Example:
           parameters:
             accountName: ddb1
@@ -6835,6 +6907,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3259'
+        OperationName: DatabaseAccounts
+        MethodName: GetMongoDBCollectionThroughput
   - ModuleName: azure_rm_cosmosdboperation_info
     Options:
       - &ref_15
@@ -7123,6 +7197,8 @@ Modules:
         References: []
         OperationId: '4527'
         MethodId: '4528'
+        OperationName: Operations
+        MethodName: List
   - ModuleName: azure_rm_cosmosdbdatabase_info
     Options:
       - NameSwagger: resourceGroupName
@@ -7575,6 +7651,8 @@ Modules:
         References: []
         OperationId: '4542'
         MethodId: '4585'
+        OperationName: Database
+        MethodName: ListUsages
       - Example:
           parameters:
             accountName: ddb1
@@ -7634,6 +7712,8 @@ Modules:
         References: []
         OperationId: '4542'
         MethodId: '4543'
+        OperationName: Database
+        MethodName: ListMetrics
       - Example:
           parameters:
             accountName: ddb1
@@ -7683,6 +7763,8 @@ Modules:
         References: []
         OperationId: '4542'
         MethodId: '4627'
+        OperationName: Database
+        MethodName: ListMetricDefinitions
   - ModuleName: azure_rm_cosmosdbcollection_info
     Options:
       - NameSwagger: resourceGroupName
@@ -8178,6 +8260,8 @@ Modules:
         References: []
         OperationId: '4665'
         MethodId: '4714'
+        OperationName: Collection
+        MethodName: ListUsages
       - Example:
           parameters:
             accountName: ddb1
@@ -8242,6 +8326,8 @@ Modules:
         References: []
         OperationId: '4665'
         MethodId: '4666'
+        OperationName: Collection
+        MethodName: ListMetrics
       - Example:
           parameters:
             accountName: ddb1
@@ -8296,6 +8382,8 @@ Modules:
         References: []
         OperationId: '4665'
         MethodId: '4762'
+        OperationName: Collection
+        MethodName: ListMetricDefinitions
   - ModuleName: azure_rm_cosmosdbcollectionregion_info
     Options:
       - NameSwagger: resourceGroupName
@@ -9021,6 +9109,8 @@ Modules:
         References: []
         OperationId: '4806'
         MethodId: '4807'
+        OperationName: CollectionRegion
+        MethodName: ListMetrics
   - ModuleName: azure_rm_cosmosdbdatabaseaccountregion_info
     Options:
       - NameSwagger: resourceGroupName
@@ -9672,6 +9762,8 @@ Modules:
         References: []
         OperationId: '4863'
         MethodId: '4864'
+        OperationName: DatabaseAccountRegion
+        MethodName: ListMetrics
   - ModuleName: azure_rm_cosmosdbpercentilesourcetarget_info
     Options:
       - NameSwagger: resourceGroupName
@@ -10579,6 +10671,8 @@ Modules:
         References: []
         OperationId: '4908'
         MethodId: '4909'
+        OperationName: PercentileSourceTarget
+        MethodName: ListMetrics
   - ModuleName: azure_rm_cosmosdbpercentiletarget_info
     Options:
       - NameSwagger: resourceGroupName
@@ -11464,6 +11558,8 @@ Modules:
         References: []
         OperationId: '4959'
         MethodId: '4960'
+        OperationName: PercentileTarget
+        MethodName: ListMetrics
   - ModuleName: azure_rm_cosmosdbpercentile_info
     Options:
       - NameSwagger: resourceGroupName
@@ -12311,6 +12407,8 @@ Modules:
         References: []
         OperationId: '5004'
         MethodId: '5005'
+        OperationName: Percentile
+        MethodName: ListMetrics
   - ModuleName: azure_rm_cosmosdbcollectionpartitionregion_info
     Options:
       - NameSwagger: resourceGroupName
@@ -13102,6 +13200,8 @@ Modules:
         References: []
         OperationId: '5043'
         MethodId: '5044'
+        OperationName: CollectionPartitionRegion
+        MethodName: ListMetrics
   - ModuleName: azure_rm_cosmosdbcollectionpartition_info
     Options:
       - NameSwagger: resourceGroupName
@@ -13646,6 +13746,8 @@ Modules:
         References: []
         OperationId: '5100'
         MethodId: '5149'
+        OperationName: CollectionPartition
+        MethodName: ListUsages
       - Example:
           parameters:
             accountName: ddb1
@@ -13711,6 +13813,8 @@ Modules:
         References: []
         OperationId: '5100'
         MethodId: '5101'
+        OperationName: CollectionPartition
+        MethodName: ListMetrics
   - ModuleName: azure_rm_cosmosdbpartitionkeyrangeid_info
     Options:
       - NameSwagger: resourceGroupName
@@ -14499,6 +14603,8 @@ Modules:
         References: []
         OperationId: '5199'
         MethodId: '5200'
+        OperationName: PartitionKeyRangeId
+        MethodName: ListMetrics
   - ModuleName: azure_rm_cosmosdbpartitionkeyrangeidregion_info
     Options:
       - NameSwagger: resourceGroupName
@@ -15323,168 +15429,9 @@ Modules:
         References: []
         OperationId: '5256'
         MethodId: '5257'
+        OperationName: PartitionKeyRangeIdRegion
+        MethodName: ListMetrics
 ServiceName: CosmosDB
 MgmtClientName: CosmosDB
 CliName: cosmos-db
 Namespace: azure.mgmt.cosmosdb
-Info:
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION createUpdateParameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION tableName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION keyspaceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION keyspaceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION tableName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION graphName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION keyspaceName'
-  - '  ** FOUND OPTION tableName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION keyspaceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION containerName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION collectionName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION graphName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION keyspaceName'
-  - '  ** FOUND OPTION tableName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION containerName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION collectionName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION collectionRid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION collectionRid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION collectionRid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION region'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION collectionRid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION region'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION sourceRegion'
-  - '  ** FOUND OPTION targetRegion'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION targetRegion'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION region'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION collectionRid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION collectionRid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION collectionRid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION collectionRid'
-  - '  ** FOUND OPTION partitionKeyRangeId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION region'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION collectionRid'
-  - '  ** FOUND OPTION partitionKeyRangeId'

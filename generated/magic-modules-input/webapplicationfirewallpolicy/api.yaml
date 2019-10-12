@@ -48,7 +48,7 @@ objects:
             python_field_name: tags
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: WebApplicationFirewallPolicyPropertiesFormat
             go_type_name: WebApplicationFirewallPolicyPropertiesFormat
           '/policySettings': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [python]
@@ -201,7 +201,7 @@ objects:
             python_field_name: tags
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: WebApplicationFirewallPolicyPropertiesFormat
             go_type_name: WebApplicationFirewallPolicyPropertiesFormat
           '/properties/policySettings': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
@@ -445,7 +445,6 @@ objects:
               - :MatchRule
               - :Invalid
             default_value: :MatchRule
-            sample_value: MatchRule
             azure_sdk_references: ['/customRules/ruleType', '/properties/customRules/ruleType']
           - !ruby/object:Api::Type::NestedObject
             name: 'matchConditions'
@@ -473,13 +472,11 @@ objects:
                       - :RequestBody
                       - :RequestCookies
                     default_value: :RemoteAddr
-                    sample_value: RequestHeaders
                     azure_sdk_references: ['/customRules/matchConditions/matchVariables/variableName', '/properties/customRules/matchConditions/matchVariables/variableName']
                   - !ruby/object:Api::Type::String
                     name: 'selector'
                     description: 'Describes field of the matchVariable collection.'
                     required: false
-                    sample_value: 'UserAgent'
                     azure_sdk_references: ['/customRules/matchConditions/matchVariables/selector', '/properties/customRules/matchConditions/matchVariables/selector']
               - !ruby/object:Api::Type::Enum
                 name: 'operator'
@@ -497,7 +494,6 @@ objects:
                   - :EndsWith
                   - :Regex
                 default_value: :IPMatch
-                sample_value: Contains
                 azure_sdk_references: ['/customRules/matchConditions/operator', '/properties/customRules/matchConditions/operator']
               - !ruby/object:Api::Type::Boolean
                 name: 'negationConditon'
@@ -508,7 +504,6 @@ objects:
                 name: 'matchValues'
                 description: 'Match value.'
                 required: true
-                sample_value: 'Windows'
                 azure_sdk_references: ['/customRules/matchConditions/matchValues', '/properties/customRules/matchConditions/matchValues']
               - !ruby/object:Api::Type::Enum
                 name: 'transforms'

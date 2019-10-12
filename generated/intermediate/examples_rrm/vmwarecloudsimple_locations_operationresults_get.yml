@@ -9,7 +9,7 @@
   tasks:
 
     - name: GetFailedOperationResult
-      azure_rm_vmwarecloudsimple_info:
+      azure_rm_vmwarecloudsimpleoperation_info:
         region_id: '{{location_name}}'
         referer: 'https://management.azure.com/'
         operation_id: '{{operation_result_name}}'

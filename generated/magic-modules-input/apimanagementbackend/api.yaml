@@ -44,7 +44,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: BackendContractProperties
             go_type_name: BackendContractProperties
           '/title': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
@@ -66,7 +66,7 @@ objects:
             go_field_name: ResourceID
           '/properties/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: BackendProperties
             go_type_name: BackendProperties
           '/serviceFabricCluster': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [python]
@@ -245,7 +245,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: BackendContractProperties
             go_type_name: BackendContractProperties
           '/title': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
@@ -267,7 +267,7 @@ objects:
             go_field_name: ResourceID
           '/properties/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: BackendProperties
             go_type_name: BackendProperties
           '/serviceFabricCluster': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [python]
@@ -461,7 +461,7 @@ objects:
         response:
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: BackendContractProperties
             go_type_name: BackendContractProperties
           '/properties/title': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
@@ -483,7 +483,7 @@ objects:
             python_field_name: resource_id
           '/properties/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: BackendProperties
             go_type_name: BackendProperties
           '/properties/properties/serviceFabricCluster': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
@@ -745,7 +745,6 @@ objects:
                 name: 'issuerCertificateThumbprint'
                 description: 'Thumbprint for the Issuer of the Certificate.'
                 required: false
-                sample_value: 'IssuerCertificateThumbprint1'
                 azure_sdk_references: ['/serviceFabricCluster/serverX509Names/issuerCertificateThumbprint', '/properties/properties/serviceFabricCluster/serverX509Names/issuerCertificateThumbprint']
       - !ruby/object:Api::Type::NestedObject
         name: 'credentials'
