@@ -5940,10 +5940,6 @@ operations:
                 resourceGroupName: rg1
                 frontDoorName: frontDoor1
                 frontDoorParameters:
-                  id: >-
-                    /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                    resource_group }}/providers/Microsoft.Network/frontDoors/{{
-                    front_door_name }}
                   location: westus
                   tags:
                     tag1: value1
@@ -7004,17 +7000,17 @@ operations:
         group:
           $id: '1119'
           fixed: false
-          raw: RoutingRules
-        serializedName: RoutingRules_ListByFrontDoor
+          raw: FrontendEndpoints
+        serializedName: FrontendEndpoints_ListByFrontDoor
         url: >-
-          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/routingRules
+          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/frontendEndpoints
         isAbsoluteUrl: false
         httpMethod: get
         responses:
           OK:
             $id: '1120'
             body:
-              $ref: '569'
+              $ref: '723'
             isNullable: true
         defaultResponse:
           $id: '1121'
@@ -7024,9 +7020,9 @@ operations:
         returnType:
           $id: '1122'
           body:
-            $ref: '569'
+            $ref: '723'
           isNullable: true
-        description: Lists all of the Routing Rules within a Front Door.
+        description: Lists all of the frontend endpoints within a Front Door.
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
@@ -7034,7 +7030,7 @@ operations:
           x-ms-pageable:
             nextLinkName: nextLink
           x-ms-examples:
-            List Routing Rules in a Front Door:
+            List Frontend endpoints in a Front Door:
               parameters:
                 api-version: '2019-04-01'
                 subscriptionId: subid
@@ -7048,75 +7044,19 @@ operations:
                           /subscriptions/{{ subscription_id }}/resourceGroups/{{
                           resource_group
                           }}/providers/Microsoft.Network/frontDoors/{{
-                          front_door_name }}/routingRules/{{ routing_rule_name
-                          }}
-                        name: routingRule1
+                          front_door_name }}/frontendEndpoints/{{
+                          frontend_endpoint_name }}
+                        name: frontendEndpoint1
                         properties:
-                          frontendEndpoints:
-                            - id: >-
-                                /subscriptions/{{ subscription_id
-                                }}/resourceGroups/{{ resource_group
-                                }}/providers/Microsoft.Network/frontDoors/{{
-                                front_door_name }}/frontendEndpoints/{{
-                                frontend_endpoint_name }}
-                            - id: >-
-                                /subscriptions/{{ subscription_id
-                                }}/resourceGroups/{{ resource_group
-                                }}/providers/Microsoft.Network/frontDoors/{{
-                                front_door_name }}/frontendEndpoints/{{
-                                frontend_endpoint_name }}
-                          acceptedProtocols:
-                            - Http
-                          patternsToMatch:
-                            - /*
-                          routeConfiguration:
-                            '@odata.type': >-
-                              #Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration
-                            customForwardingPath: ''
-                            forwardingProtocol: MatchRequest
-                            backendPool:
-                              id: >-
-                                /subscriptions/{{ subscription_id
-                                }}/resourceGroups/{{ resource_group
-                                }}/providers/Microsoft.Network/frontDoors/{{
-                                front_door_name }}/backendPools/{{
-                                backend_pool_name }}
-                          enabledState: Enabled
-                      - id: >-
-                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                          resource_group
-                          }}/providers/Microsoft.Network/frontDoors/{{
-                          front_door_name }}/routingRules/{{ routing_rule_name
-                          }}
-                        name: redirectRoutingRule1
-                        properties:
-                          frontendEndpoints:
-                            - id: >-
-                                /subscriptions/{{ subscription_id
-                                }}/resourceGroups/{{ resource_group
-                                }}/providers/Microsoft.Network/frontDoors/{{
-                                front_door_name }}/frontendEndpoints/{{
-                                frontend_endpoint_name }}
-                            - id: >-
-                                /subscriptions/{{ subscription_id
-                                }}/resourceGroups/{{ resource_group
-                                }}/providers/Microsoft.Network/frontDoors/{{
-                                front_door_name }}/frontendEndpoints/{{
-                                frontend_endpoint_name }}
-                          acceptedProtocols:
-                            - Https
-                          patternsToMatch:
-                            - /*
-                          routeConfiguration:
-                            '@odata.type': >-
-                              #Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration
-                            redirectType: Moved
-                            redirectProtocol: HttpsOnly
-                            customHost: www.bing.com
-                            customPath: /api
-                            customFragment: fragment
-                            customQueryString: a=b
-                          enabledState: Enabled
+                          hostName: www.contoso.com
+                          sessionAffinityEnabledState: Enabled
+                          sessionAffinityTtlSeconds: '60'
+                          webApplicationFirewallPolicyLink:
+                            id: >-
+                              /subscriptions/{{ subscription_id
+                              }}/resourceGroups/{{ resource_group
+                              }}/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/{{
+                              front_door_web_application_firewall_policy_name }}
         deprecated: false
         hidden: false
       - $id: '1123'
@@ -7225,11 +7165,11 @@ operations:
               deprecated: false
           - $id: '1142'
             clientProperty:
-              $ref: '833'
+              $ref: '857'
             location: path
             collectionFormat: none
             constraints:
-              MaxLength: '90'
+              MaxLength: '255'
               MinLength: '1'
               Pattern: '^[a-zA-Z0-9]+(-*[a-zA-Z0-9])*$'
             defaultValue:
@@ -7239,7 +7179,9 @@ operations:
             documentation:
               $id: '1144'
               fixed: false
-              raw: Name of the Routing Rule which is unique within the Front Door.
+              raw: >-
+                Name of the Frontend endpoint which is unique within the Front
+                Door.
             extensions:
               x-ms-parameter-location: method
             isRequired: true
@@ -7247,8 +7189,8 @@ operations:
             name:
               $id: '1145'
               fixed: false
-              raw: routingRuleName
-            serializedName: routingRuleName
+              raw: frontendEndpointName
+            serializedName: frontendEndpointName
             modelType:
               $id: '1146'
               $type: PrimaryType
@@ -7294,17 +7236,17 @@ operations:
         group:
           $id: '1155'
           fixed: false
-          raw: RoutingRules
-        serializedName: RoutingRules_Get
+          raw: FrontendEndpoints
+        serializedName: FrontendEndpoints_Get
         url: >-
-          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/routingRules/{routingRuleName}
+          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/frontendEndpoints/{frontendEndpointName}
         isAbsoluteUrl: false
         httpMethod: get
         responses:
           OK:
             $id: '1156'
             body:
-              $ref: '41'
+              $ref: '315'
             isNullable: true
         defaultResponse:
           $id: '1157'
@@ -7314,23 +7256,23 @@ operations:
         returnType:
           $id: '1158'
           body:
-            $ref: '41'
+            $ref: '315'
           isNullable: true
         description: >-
-          Gets a Routing Rule with the specified Rule name within the specified
+          Gets a Frontend endpoint with the specified name within the specified
           Front Door.
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
         extensions:
           x-ms-examples:
-            Get Forwarding Routing Rule:
+            Get Frontend Endpoint:
               parameters:
                 api-version: '2019-04-01'
                 subscriptionId: subid
                 resourceGroupName: rg1
                 frontDoorName: frontDoor1
-                routingRuleName: routingRule1
+                frontendEndpointName: frontendEndpoint1
               responses:
                 '200':
                   body:
@@ -7338,83 +7280,19 @@ operations:
                       /subscriptions/{{ subscription_id }}/resourceGroups/{{
                       resource_group
                       }}/providers/Microsoft.Network/frontDoors/{{
-                      front_door_name }}/routingRules/{{ routing_rule_name }}
-                    name: routingRule1
+                      front_door_name }}/frontendEndpoints/{{
+                      frontend_endpoint_name }}
+                    name: frontendEndpoint1
                     properties:
-                      frontendEndpoints:
-                        - id: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/Microsoft.Network/frontDoors/{{
-                            front_door_name }}/frontendEndpoints/{{
-                            frontend_endpoint_name }}
-                        - id: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/Microsoft.Network/frontDoors/{{
-                            front_door_name }}/frontendEndpoints/{{
-                            frontend_endpoint_name }}
-                      acceptedProtocols:
-                        - Http
-                      patternsToMatch:
-                        - /*
-                      routeConfiguration:
-                        '@odata.type': >-
-                          #Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration
-                        customForwardingPath: ''
-                        forwardingProtocol: MatchRequest
-                        backendPool:
-                          id: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/Microsoft.Network/frontDoors/{{
-                            front_door_name }}/backendPools/{{ backend_pool_name
-                            }}
-                      enabledState: Enabled
-            Get Redirect Routing Rule:
-              parameters:
-                api-version: '2019-04-01'
-                subscriptionId: subid
-                resourceGroupName: rg1
-                frontDoorName: frontDoor1
-                routingRuleName: redirectRoutingRule1
-              responses:
-                '200':
-                  body:
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Network/frontDoors/{{
-                      front_door_name }}/routingRules/{{ routing_rule_name }}
-                    name: redirectRoutingRule1
-                    properties:
-                      frontendEndpoints:
-                        - id: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/Microsoft.Network/frontDoors/{{
-                            front_door_name }}/frontendEndpoints/{{
-                            frontend_endpoint_name }}
-                        - id: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/Microsoft.Network/frontDoors/{{
-                            front_door_name }}/frontendEndpoints/{{
-                            frontend_endpoint_name }}
-                      acceptedProtocols:
-                        - Https
-                      patternsToMatch:
-                        - /*
-                      routeConfiguration:
-                        '@odata.type': >-
-                          #Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration
-                        redirectType: Moved
-                        redirectProtocol: HttpsOnly
-                        customHost: www.bing.com
-                        customPath: /api
-                        customFragment: fragment
-                        customQueryString: a=b
-                      enabledState: Enabled
+                      hostName: www.contoso.com
+                      sessionAffinityEnabledState: Enabled
+                      sessionAffinityTtlSeconds: '60'
+                      webApplicationFirewallPolicyLink:
+                        id: >-
+                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                          resource_group
+                          }}/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/{{
+                          front_door_web_application_firewall_policy_name }}
         deprecated: false
         hidden: false
       - $id: '1159'
@@ -7523,11 +7401,11 @@ operations:
               deprecated: false
           - $id: '1178'
             clientProperty:
-              $ref: '833'
+              $ref: '857'
             location: path
             collectionFormat: none
             constraints:
-              MaxLength: '90'
+              MaxLength: '255'
               MinLength: '1'
               Pattern: '^[a-zA-Z0-9]+(-*[a-zA-Z0-9])*$'
             defaultValue:
@@ -7537,7 +7415,9 @@ operations:
             documentation:
               $id: '1180'
               fixed: false
-              raw: Name of the Routing Rule which is unique within the Front Door.
+              raw: >-
+                Name of the Frontend endpoint which is unique within the Front
+                Door.
             extensions:
               x-ms-parameter-location: method
             isRequired: true
@@ -7545,8 +7425,8 @@ operations:
             name:
               $id: '1181'
               fixed: false
-              raw: routingRuleName
-            serializedName: routingRuleName
+              raw: frontendEndpointName
+            serializedName: frontendEndpointName
             modelType:
               $id: '1182'
               $type: PrimaryType
@@ -7566,18 +7446,18 @@ operations:
             documentation:
               $id: '1186'
               fixed: false
-              raw: Routing Rule properties needed to create a new Front Door.
+              raw: The configuration specifying how to enable HTTPS
             extensions:
-              x-ms-requestBody-name: routingRuleParameters
+              x-ms-requestBody-name: customHttpsConfiguration
             isRequired: true
             isConstant: false
             name:
               $id: '1187'
               fixed: false
-              raw: routingRuleParameters
-            serializedName: routingRuleParameters
+              raw: customHttpsConfiguration
+            serializedName: customHttpsConfiguration
             modelType:
-              $ref: '41'
+              $ref: '360'
           - $id: '1188'
             clientProperty:
               $ref: '863'
@@ -7610,4756 +7490,9 @@ operations:
         name:
           $id: '1194'
           fixed: false
-          raw: CreateOrUpdate
-        group:
-          $id: '1195'
-          fixed: false
-          raw: RoutingRules
-        serializedName: RoutingRules_CreateOrUpdate
-        url: >-
-          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/routingRules/{routingRuleName}
-        isAbsoluteUrl: false
-        httpMethod: put
-        responses:
-          OK:
-            $id: '1196'
-            body:
-              $ref: '41'
-            isNullable: true
-          Created:
-            $id: '1197'
-            body:
-              $ref: '41'
-            isNullable: true
-          Accepted:
-            $id: '1198'
-            body:
-              $ref: '41'
-            isNullable: true
-        defaultResponse:
-          $id: '1199'
-          body:
-            $ref: '765'
-          isNullable: true
-        returnType:
-          $id: '1200'
-          body:
-            $ref: '41'
-          isNullable: true
-        description: >-
-          Creates a new Routing Rule with the specified Rule name within the
-          specified Front Door.
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        extensions:
-          x-ms-requestBody-index: '4'
-          x-ms-examples:
-            Create or update specific Forwarding Routing Rule:
-              parameters:
-                api-version: '2019-04-01'
-                subscriptionId: subid
-                resourceGroupName: rg1
-                frontDoorName: frontDoor1
-                routingRuleName: routingRule1
-                routingRuleParameters:
-                  name: routingRule1
-                  properties:
-                    frontendEndpoints:
-                      - id: >-
-                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                          resource_group
-                          }}/providers/Microsoft.Network/frontDoors/{{
-                          front_door_name }}/frontendEndpoints/{{
-                          frontend_endpoint_name }}
-                      - id: >-
-                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                          resource_group
-                          }}/providers/Microsoft.Network/frontDoors/{{
-                          front_door_name }}/frontendEndpoints/{{
-                          frontend_endpoint_name }}
-                    acceptedProtocols:
-                      - Http
-                    patternsToMatch:
-                      - /*
-                    routeConfiguration:
-                      '@odata.type': >-
-                        #Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration
-                      backendPool:
-                        id: >-
-                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                          resource_group
-                          }}/providers/Microsoft.Network/frontDoors/{{
-                          front_door_name }}/backendPools/{{ backend_pool_name
-                          }}
-                    enabledState: Enabled
-              responses:
-                '200':
-                  body:
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Network/frontDoors/{{
-                      front_door_name }}/routingRules/{{ routing_rule_name }}
-                    name: routingRule1
-                    properties:
-                      frontendEndpoints:
-                        - id: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/Microsoft.Network/frontDoors/{{
-                            front_door_name }}/frontendEndpoints/{{
-                            frontend_endpoint_name }}
-                        - id: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/Microsoft.Network/frontDoors/{{
-                            front_door_name }}/frontendEndpoints/{{
-                            frontend_endpoint_name }}
-                      acceptedProtocols:
-                        - Http
-                      patternsToMatch:
-                        - /*
-                      routeConfiguration:
-                        '@odata.type': >-
-                          #Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration
-                        customForwardingPath: ''
-                        forwardingProtocol: MatchRequest
-                        backendPool:
-                          id: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/Microsoft.Network/frontDoors/{{
-                            front_door_name }}/backendPools/{{ backend_pool_name
-                            }}
-                      enabledState: Enabled
-                '201':
-                  body:
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Network/frontDoors/{{
-                      front_door_name }}/routingRules/{{ routing_rule_name }}
-                    name: routingRule1
-                    properties:
-                      frontendEndpoints:
-                        - id: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/Microsoft.Network/frontDoors/{{
-                            front_door_name }}/frontendEndpoints/{{
-                            frontend_endpoint_name }}
-                        - id: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/Microsoft.Network/frontDoors/{{
-                            front_door_name }}/frontendEndpoints/{{
-                            frontend_endpoint_name }}
-                      acceptedProtocols:
-                        - Http
-                      patternsToMatch:
-                        - /*
-                      routeConfiguration:
-                        '@odata.type': >-
-                          #Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration
-                        customForwardingPath: ''
-                        forwardingProtocol: MatchRequest
-                        backendPool:
-                          id: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/Microsoft.Network/frontDoors/{{
-                            front_door_name }}/backendPools/{{ backend_pool_name
-                            }}
-                      enabledState: Enabled
-                '202':
-                  body:
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Network/frontDoors/{{
-                      front_door_name }}/routingRules/{{ routing_rule_name }}
-                    name: routingRule1
-                    properties:
-                      frontendEndpoints:
-                        - id: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/Microsoft.Network/frontDoors/{{
-                            front_door_name }}/frontendEndpoints/{{
-                            frontend_endpoint_name }}
-                        - id: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/Microsoft.Network/frontDoors/{{
-                            front_door_name }}/frontendEndpoints/{{
-                            frontend_endpoint_name }}
-                      acceptedProtocols:
-                        - Http
-                      patternsToMatch:
-                        - /*
-                      routeConfiguration:
-                        '@odata.type': >-
-                          #Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration
-                        customForwardingPath: ''
-                        forwardingProtocol: MatchRequest
-                        backendPool:
-                          id: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/Microsoft.Network/frontDoors/{{
-                            front_door_name }}/backendPools/{{ backend_pool_name
-                            }}
-                      enabledState: Enabled
-            Create or update specific Redirect Routing Rule:
-              parameters:
-                api-version: '2019-04-01'
-                subscriptionId: subid
-                resourceGroupName: rg1
-                frontDoorName: frontDoor1
-                routingRuleName: redirectRoutingRule1
-                routingRuleParameters:
-                  name: redirectRoutingRule1
-                  properties:
-                    frontendEndpoints:
-                      - id: >-
-                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                          resource_group
-                          }}/providers/Microsoft.Network/frontDoors/{{
-                          front_door_name }}/frontendEndpoints/{{
-                          frontend_endpoint_name }}
-                      - id: >-
-                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                          resource_group
-                          }}/providers/Microsoft.Network/frontDoors/{{
-                          front_door_name }}/frontendEndpoints/{{
-                          frontend_endpoint_name }}
-                    acceptedProtocols:
-                      - Https
-                    patternsToMatch:
-                      - /*
-                    routeConfiguration:
-                      '@odata.type': >-
-                        #Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration
-                      redirectType: Moved
-                      redirectProtocol: HttpsOnly
-                      customHost: www.bing.com
-                      customPath: /api
-                      customFragment: fragment
-                      customQueryString: a=b
-                    enabledState: Enabled
-              responses:
-                '200':
-                  body:
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Network/frontDoors/{{
-                      front_door_name }}/routingRules/{{ routing_rule_name }}
-                    name: redirectRoutingRule1
-                    properties:
-                      frontendEndpoints:
-                        - id: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/Microsoft.Network/frontDoors/{{
-                            front_door_name }}/frontendEndpoints/{{
-                            frontend_endpoint_name }}
-                        - id: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/Microsoft.Network/frontDoors/{{
-                            front_door_name }}/frontendEndpoints/{{
-                            frontend_endpoint_name }}
-                      acceptedProtocols:
-                        - Https
-                      patternsToMatch:
-                        - /*
-                      routeConfiguration:
-                        '@odata.type': >-
-                          #Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration
-                        redirectType: Moved
-                        redirectProtocol: HttpsOnly
-                        customHost: www.bing.com
-                        customPath: /api
-                        customFragment: fragment
-                        customQueryString: a=b
-                      enabledState: Enabled
-                '201':
-                  body:
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Network/frontDoors/{{
-                      front_door_name }}/routingRules/{{ routing_rule_name }}
-                    name: redirectRoutingRule1
-                    properties:
-                      frontendEndpoints:
-                        - id: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/Microsoft.Network/frontDoors/{{
-                            front_door_name }}/frontendEndpoints/{{
-                            frontend_endpoint_name }}
-                        - id: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/Microsoft.Network/frontDoors/{{
-                            front_door_name }}/frontendEndpoints/{{
-                            frontend_endpoint_name }}
-                      acceptedProtocols:
-                        - Https
-                      patternsToMatch:
-                        - /*
-                      routeConfiguration:
-                        '@odata.type': >-
-                          #Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration
-                        redirectType: Moved
-                        redirectProtocol: HttpsOnly
-                        customHost: www.bing.com
-                        customPath: /api
-                        customFragment: fragment
-                        customQueryString: a=b
-                      enabledState: Enabled
-                '202':
-                  body:
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Network/frontDoors/{{
-                      front_door_name }}/routingRules/{{ routing_rule_name }}
-                    name: redirectRoutingRule1
-                    properties:
-                      frontendEndpoints:
-                        - id: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/Microsoft.Network/frontDoors/{{
-                            front_door_name }}/frontendEndpoints/{{
-                            frontend_endpoint_name }}
-                        - id: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/Microsoft.Network/frontDoors/{{
-                            front_door_name }}/frontendEndpoints/{{
-                            frontend_endpoint_name }}
-                      acceptedProtocols:
-                        - Https
-                      patternsToMatch:
-                        - /*
-                      routeConfiguration:
-                        '@odata.type': >-
-                          #Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration
-                        redirectType: Moved
-                        redirectProtocol: HttpsOnly
-                        customHost: www.bing.com
-                        customPath: /api
-                        customFragment: fragment
-                        customQueryString: a=b
-                      enabledState: Enabled
-          x-ms-long-running-operation: true
-        deprecated: false
-        hidden: false
-      - $id: '1201'
-        parameters:
-          - $id: '1202'
-            clientProperty:
-              $ref: '869'
-            location: path
-            collectionFormat: none
-            defaultValue:
-              $id: '1203'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1204'
-              fixed: false
-              raw: >-
-                The subscription credentials which uniquely identify the
-                Microsoft Azure subscription. The subscription ID forms part of
-                the URI for every service call.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1205'
-              fixed: false
-              raw: subscriptionId
-            serializedName: subscriptionId
-            modelType:
-              $id: '1206'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1207'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1208'
-            clientProperty:
-              $ref: '821'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '80'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9_\-\(\)\.]*[^\.]$'
-            defaultValue:
-              $id: '1209'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1210'
-              fixed: false
-              raw: Name of the Resource group within the Azure subscription.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1211'
-              fixed: false
-              raw: resourceGroupName
-            serializedName: resourceGroupName
-            modelType:
-              $id: '1212'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1213'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1214'
-            clientProperty:
-              $ref: '827'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '64'
-              MinLength: '5'
-              Pattern: '^[a-zA-Z0-9]+([-a-zA-Z0-9]?[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1215'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1216'
-              fixed: false
-              raw: Name of the Front Door which is globally unique.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1217'
-              fixed: false
-              raw: frontDoorName
-            serializedName: frontDoorName
-            modelType:
-              $id: '1218'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1219'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1220'
-            clientProperty:
-              $ref: '833'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '90'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9]+(-*[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1221'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1222'
-              fixed: false
-              raw: Name of the Routing Rule which is unique within the Front Door.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1223'
-              fixed: false
-              raw: routingRuleName
-            serializedName: routingRuleName
-            modelType:
-              $id: '1224'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1225'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1226'
-            clientProperty:
-              $ref: '863'
-            location: query
-            collectionFormat: none
-            defaultValue:
-              $id: '1227'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1228'
-              fixed: false
-              raw: Client API version.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1229'
-              fixed: false
-              raw: api-version
-            serializedName: api-version
-            modelType:
-              $id: '1230'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1231'
-                fixed: false
-                raw: String
-              deprecated: false
-        name:
-          $id: '1232'
-          fixed: false
-          raw: Delete
-        group:
-          $id: '1233'
-          fixed: false
-          raw: RoutingRules
-        serializedName: RoutingRules_Delete
-        url: >-
-          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/routingRules/{routingRuleName}
-        isAbsoluteUrl: false
-        httpMethod: delete
-        responses:
-          Accepted:
-            $id: '1234'
-            isNullable: true
-          NoContent:
-            $id: '1235'
-            isNullable: true
-        defaultResponse:
-          $id: '1236'
-          body:
-            $ref: '765'
-          isNullable: true
-        returnType:
-          $id: '1237'
-          isNullable: true
-        description: Deletes an existing Routing Rule with the specified parameters.
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        extensions:
-          x-ms-examples:
-            Delete Routing Rule:
-              parameters:
-                api-version: '2019-04-01'
-                subscriptionId: subid
-                resourceGroupName: rg1
-                frontDoorName: frontDoor1
-                routingRuleName: routingRule1
-              responses:
-                '202': {}
-                '204': {}
-          x-ms-long-running-operation: true
-        deprecated: false
-        hidden: false
-    name:
-      $id: '1238'
-      fixed: false
-      raw: RoutingRules
-    typeName:
-      $id: '1239'
-      fixed: false
-    nameForProperty: RoutingRules
-  - $id: '1240'
-    methods:
-      - $id: '1241'
-        parameters:
-          - $id: '1242'
-            clientProperty:
-              $ref: '869'
-            location: path
-            collectionFormat: none
-            defaultValue:
-              $id: '1243'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1244'
-              fixed: false
-              raw: >-
-                The subscription credentials which uniquely identify the
-                Microsoft Azure subscription. The subscription ID forms part of
-                the URI for every service call.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1245'
-              fixed: false
-              raw: subscriptionId
-            serializedName: subscriptionId
-            modelType:
-              $id: '1246'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1247'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1248'
-            clientProperty:
-              $ref: '821'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '80'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9_\-\(\)\.]*[^\.]$'
-            defaultValue:
-              $id: '1249'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1250'
-              fixed: false
-              raw: Name of the Resource group within the Azure subscription.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1251'
-              fixed: false
-              raw: resourceGroupName
-            serializedName: resourceGroupName
-            modelType:
-              $id: '1252'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1253'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1254'
-            clientProperty:
-              $ref: '827'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '64'
-              MinLength: '5'
-              Pattern: '^[a-zA-Z0-9]+([-a-zA-Z0-9]?[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1255'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1256'
-              fixed: false
-              raw: Name of the Front Door which is globally unique.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1257'
-              fixed: false
-              raw: frontDoorName
-            serializedName: frontDoorName
-            modelType:
-              $id: '1258'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1259'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1260'
-            clientProperty:
-              $ref: '863'
-            location: query
-            collectionFormat: none
-            defaultValue:
-              $id: '1261'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1262'
-              fixed: false
-              raw: Client API version.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1263'
-              fixed: false
-              raw: api-version
-            serializedName: api-version
-            modelType:
-              $id: '1264'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1265'
-                fixed: false
-                raw: String
-              deprecated: false
-        name:
-          $id: '1266'
-          fixed: false
-          raw: ListByFrontDoor
-        group:
-          $id: '1267'
-          fixed: false
-          raw: HealthProbeSettings
-        serializedName: HealthProbeSettings_ListByFrontDoor
-        url: >-
-          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/healthProbeSettings
-        isAbsoluteUrl: false
-        httpMethod: get
-        responses:
-          OK:
-            $id: '1268'
-            body:
-              $ref: '695'
-            isNullable: true
-        defaultResponse:
-          $id: '1269'
-          body:
-            $ref: '765'
-          isNullable: true
-        returnType:
-          $id: '1270'
-          body:
-            $ref: '695'
-          isNullable: true
-        description: Lists all of the HealthProbeSettings within a Front Door.
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        extensions:
-          x-ms-pageable:
-            nextLinkName: nextLink
-          x-ms-examples:
-            List HealthProbeSettings in a Front Door:
-              parameters:
-                api-version: '2019-04-01'
-                subscriptionId: subid
-                resourceGroupName: rg1
-                frontDoorName: frontDoor1
-              responses:
-                '200':
-                  body:
-                    value:
-                      - id: >-
-                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                          resource_group
-                          }}/providers/Microsoft.Network/frontDoors/{{
-                          front_door_name }}/healthProbeSettings/{{
-                          health_probe_setting_name }}
-                        name: healthProbeSettings1
-                        properties:
-                          path: /
-                          protocol: Http
-                          intervalInSeconds: '120'
-        deprecated: false
-        hidden: false
-      - $id: '1271'
-        parameters:
-          - $id: '1272'
-            clientProperty:
-              $ref: '869'
-            location: path
-            collectionFormat: none
-            defaultValue:
-              $id: '1273'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1274'
-              fixed: false
-              raw: >-
-                The subscription credentials which uniquely identify the
-                Microsoft Azure subscription. The subscription ID forms part of
-                the URI for every service call.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1275'
-              fixed: false
-              raw: subscriptionId
-            serializedName: subscriptionId
-            modelType:
-              $id: '1276'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1277'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1278'
-            clientProperty:
-              $ref: '821'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '80'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9_\-\(\)\.]*[^\.]$'
-            defaultValue:
-              $id: '1279'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1280'
-              fixed: false
-              raw: Name of the Resource group within the Azure subscription.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1281'
-              fixed: false
-              raw: resourceGroupName
-            serializedName: resourceGroupName
-            modelType:
-              $id: '1282'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1283'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1284'
-            clientProperty:
-              $ref: '827'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '64'
-              MinLength: '5'
-              Pattern: '^[a-zA-Z0-9]+([-a-zA-Z0-9]?[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1285'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1286'
-              fixed: false
-              raw: Name of the Front Door which is globally unique.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1287'
-              fixed: false
-              raw: frontDoorName
-            serializedName: frontDoorName
-            modelType:
-              $id: '1288'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1289'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1290'
-            clientProperty:
-              $ref: '839'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '90'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9]+(-*[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1291'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1292'
-              fixed: false
-              raw: >-
-                Name of the health probe settings which is unique within the
-                Front Door.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1293'
-              fixed: false
-              raw: healthProbeSettingsName
-            serializedName: healthProbeSettingsName
-            modelType:
-              $id: '1294'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1295'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1296'
-            clientProperty:
-              $ref: '863'
-            location: query
-            collectionFormat: none
-            defaultValue:
-              $id: '1297'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1298'
-              fixed: false
-              raw: Client API version.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1299'
-              fixed: false
-              raw: api-version
-            serializedName: api-version
-            modelType:
-              $id: '1300'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1301'
-                fixed: false
-                raw: String
-              deprecated: false
-        name:
-          $id: '1302'
-          fixed: false
-          raw: Get
-        group:
-          $id: '1303'
-          fixed: false
-          raw: HealthProbeSettings
-        serializedName: HealthProbeSettings_Get
-        url: >-
-          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/healthProbeSettings/{healthProbeSettingsName}
-        isAbsoluteUrl: false
-        httpMethod: get
-        responses:
-          OK:
-            $id: '1304'
-            body:
-              $ref: '173'
-            isNullable: true
-        defaultResponse:
-          $id: '1305'
-          body:
-            $ref: '765'
-          isNullable: true
-        returnType:
-          $id: '1306'
-          body:
-            $ref: '173'
-          isNullable: true
-        description: >-
-          Gets a HealthProbeSettings with the specified Rule name within the
-          specified Front Door.
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        extensions:
-          x-ms-examples:
-            Get HealthProbeSettings:
-              parameters:
-                api-version: '2019-04-01'
-                subscriptionId: subid
-                resourceGroupName: rg1
-                frontDoorName: frontDoor1
-                healthProbeSettingsName: healthProbeSettings1
-              responses:
-                '200':
-                  body:
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Network/frontDoors/{{
-                      front_door_name }}/healthProbeSettings/{{
-                      health_probe_setting_name }}
-                    name: healthProbeSettings1
-                    properties:
-                      path: /
-                      protocol: Http
-                      intervalInSeconds: '120'
-        deprecated: false
-        hidden: false
-      - $id: '1307'
-        parameters:
-          - $id: '1308'
-            clientProperty:
-              $ref: '869'
-            location: path
-            collectionFormat: none
-            defaultValue:
-              $id: '1309'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1310'
-              fixed: false
-              raw: >-
-                The subscription credentials which uniquely identify the
-                Microsoft Azure subscription. The subscription ID forms part of
-                the URI for every service call.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1311'
-              fixed: false
-              raw: subscriptionId
-            serializedName: subscriptionId
-            modelType:
-              $id: '1312'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1313'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1314'
-            clientProperty:
-              $ref: '821'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '80'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9_\-\(\)\.]*[^\.]$'
-            defaultValue:
-              $id: '1315'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1316'
-              fixed: false
-              raw: Name of the Resource group within the Azure subscription.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1317'
-              fixed: false
-              raw: resourceGroupName
-            serializedName: resourceGroupName
-            modelType:
-              $id: '1318'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1319'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1320'
-            clientProperty:
-              $ref: '827'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '64'
-              MinLength: '5'
-              Pattern: '^[a-zA-Z0-9]+([-a-zA-Z0-9]?[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1321'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1322'
-              fixed: false
-              raw: Name of the Front Door which is globally unique.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1323'
-              fixed: false
-              raw: frontDoorName
-            serializedName: frontDoorName
-            modelType:
-              $id: '1324'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1325'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1326'
-            clientProperty:
-              $ref: '839'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '90'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9]+(-*[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1327'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1328'
-              fixed: false
-              raw: >-
-                Name of the health probe settings which is unique within the
-                Front Door.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1329'
-              fixed: false
-              raw: healthProbeSettingsName
-            serializedName: healthProbeSettingsName
-            modelType:
-              $id: '1330'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1331'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1332'
-            location: body
-            collectionFormat: none
-            defaultValue:
-              $id: '1333'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1334'
-              fixed: false
-              raw: >-
-                HealthProbeSettings properties needed to create a new Front
-                Door.
-            extensions:
-              x-ms-requestBody-name: healthProbeSettingsParameters
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1335'
-              fixed: false
-              raw: healthProbeSettingsParameters
-            serializedName: healthProbeSettingsParameters
-            modelType:
-              $ref: '173'
-          - $id: '1336'
-            clientProperty:
-              $ref: '863'
-            location: query
-            collectionFormat: none
-            defaultValue:
-              $id: '1337'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1338'
-              fixed: false
-              raw: Client API version.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1339'
-              fixed: false
-              raw: api-version
-            serializedName: api-version
-            modelType:
-              $id: '1340'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1341'
-                fixed: false
-                raw: String
-              deprecated: false
-        name:
-          $id: '1342'
-          fixed: false
-          raw: CreateOrUpdate
-        group:
-          $id: '1343'
-          fixed: false
-          raw: HealthProbeSettings
-        serializedName: HealthProbeSettings_CreateOrUpdate
-        url: >-
-          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/healthProbeSettings/{healthProbeSettingsName}
-        isAbsoluteUrl: false
-        httpMethod: put
-        responses:
-          OK:
-            $id: '1344'
-            body:
-              $ref: '173'
-            isNullable: true
-          Created:
-            $id: '1345'
-            body:
-              $ref: '173'
-            isNullable: true
-          Accepted:
-            $id: '1346'
-            body:
-              $ref: '173'
-            isNullable: true
-        defaultResponse:
-          $id: '1347'
-          body:
-            $ref: '765'
-          isNullable: true
-        returnType:
-          $id: '1348'
-          body:
-            $ref: '173'
-          isNullable: true
-        description: >-
-          Creates a new HealthProbeSettings with the specified Rule name within
-          the specified Front Door.
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        extensions:
-          x-ms-requestBody-index: '4'
-          x-ms-examples:
-            Create or update specific HealthProbeSettings:
-              parameters:
-                api-version: '2019-04-01'
-                subscriptionId: subid
-                resourceGroupName: rg1
-                frontDoorName: frontDoor1
-                healthProbeSettingsName: healthProbeSettings1
-                healthProbeSettingsParameters:
-                  name: healthProbeSettings1
-                  properties:
-                    path: /
-                    protocol: Http
-                    intervalInSeconds: '120'
-              responses:
-                '200':
-                  body:
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Network/frontDoors/{{
-                      front_door_name }}/healthProbeSettings/{{
-                      health_probe_setting_name }}
-                    name: healthProbeSettings1
-                    properties:
-                      path: /
-                      protocol: Http
-                      intervalInSeconds: '120'
-                '201':
-                  body:
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Network/frontDoors/{{
-                      front_door_name }}/healthProbeSettings/{{
-                      health_probe_setting_name }}
-                    name: healthProbeSettings1
-                    properties:
-                      path: /
-                      protocol: Http
-                      intervalInSeconds: '120'
-                '202':
-                  body:
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Network/frontDoors/{{
-                      front_door_name }}/healthProbeSettings/{{
-                      health_probe_setting_name }}
-                    name: healthProbeSettings1
-                    properties:
-                      path: /
-                      protocol: Http
-                      intervalInSeconds: '120'
-          x-ms-long-running-operation: true
-        deprecated: false
-        hidden: false
-      - $id: '1349'
-        parameters:
-          - $id: '1350'
-            clientProperty:
-              $ref: '869'
-            location: path
-            collectionFormat: none
-            defaultValue:
-              $id: '1351'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1352'
-              fixed: false
-              raw: >-
-                The subscription credentials which uniquely identify the
-                Microsoft Azure subscription. The subscription ID forms part of
-                the URI for every service call.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1353'
-              fixed: false
-              raw: subscriptionId
-            serializedName: subscriptionId
-            modelType:
-              $id: '1354'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1355'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1356'
-            clientProperty:
-              $ref: '821'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '80'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9_\-\(\)\.]*[^\.]$'
-            defaultValue:
-              $id: '1357'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1358'
-              fixed: false
-              raw: Name of the Resource group within the Azure subscription.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1359'
-              fixed: false
-              raw: resourceGroupName
-            serializedName: resourceGroupName
-            modelType:
-              $id: '1360'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1361'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1362'
-            clientProperty:
-              $ref: '827'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '64'
-              MinLength: '5'
-              Pattern: '^[a-zA-Z0-9]+([-a-zA-Z0-9]?[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1363'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1364'
-              fixed: false
-              raw: Name of the Front Door which is globally unique.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1365'
-              fixed: false
-              raw: frontDoorName
-            serializedName: frontDoorName
-            modelType:
-              $id: '1366'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1367'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1368'
-            clientProperty:
-              $ref: '839'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '90'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9]+(-*[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1369'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1370'
-              fixed: false
-              raw: >-
-                Name of the health probe settings which is unique within the
-                Front Door.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1371'
-              fixed: false
-              raw: healthProbeSettingsName
-            serializedName: healthProbeSettingsName
-            modelType:
-              $id: '1372'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1373'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1374'
-            clientProperty:
-              $ref: '863'
-            location: query
-            collectionFormat: none
-            defaultValue:
-              $id: '1375'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1376'
-              fixed: false
-              raw: Client API version.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1377'
-              fixed: false
-              raw: api-version
-            serializedName: api-version
-            modelType:
-              $id: '1378'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1379'
-                fixed: false
-                raw: String
-              deprecated: false
-        name:
-          $id: '1380'
-          fixed: false
-          raw: Delete
-        group:
-          $id: '1381'
-          fixed: false
-          raw: HealthProbeSettings
-        serializedName: HealthProbeSettings_Delete
-        url: >-
-          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/healthProbeSettings/{healthProbeSettingsName}
-        isAbsoluteUrl: false
-        httpMethod: delete
-        responses:
-          Accepted:
-            $id: '1382'
-            isNullable: true
-          NoContent:
-            $id: '1383'
-            isNullable: true
-        defaultResponse:
-          $id: '1384'
-          body:
-            $ref: '765'
-          isNullable: true
-        returnType:
-          $id: '1385'
-          isNullable: true
-        description: Deletes an existing HealthProbeSettings with the specified parameters.
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        extensions:
-          x-ms-examples:
-            Delete HealthProbeSettings:
-              parameters:
-                api-version: '2019-04-01'
-                subscriptionId: subid
-                resourceGroupName: rg1
-                frontDoorName: frontDoor1
-                healthProbeSettingsName: healthProbeSettings1
-              responses:
-                '202': {}
-                '204': {}
-          x-ms-long-running-operation: true
-        deprecated: false
-        hidden: false
-    name:
-      $id: '1386'
-      fixed: false
-      raw: HealthProbeSettings
-    typeName:
-      $id: '1387'
-      fixed: false
-    nameForProperty: HealthProbeSettings
-  - $id: '1388'
-    methods:
-      - $id: '1389'
-        parameters:
-          - $id: '1390'
-            clientProperty:
-              $ref: '869'
-            location: path
-            collectionFormat: none
-            defaultValue:
-              $id: '1391'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1392'
-              fixed: false
-              raw: >-
-                The subscription credentials which uniquely identify the
-                Microsoft Azure subscription. The subscription ID forms part of
-                the URI for every service call.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1393'
-              fixed: false
-              raw: subscriptionId
-            serializedName: subscriptionId
-            modelType:
-              $id: '1394'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1395'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1396'
-            clientProperty:
-              $ref: '821'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '80'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9_\-\(\)\.]*[^\.]$'
-            defaultValue:
-              $id: '1397'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1398'
-              fixed: false
-              raw: Name of the Resource group within the Azure subscription.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1399'
-              fixed: false
-              raw: resourceGroupName
-            serializedName: resourceGroupName
-            modelType:
-              $id: '1400'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1401'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1402'
-            clientProperty:
-              $ref: '827'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '64'
-              MinLength: '5'
-              Pattern: '^[a-zA-Z0-9]+([-a-zA-Z0-9]?[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1403'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1404'
-              fixed: false
-              raw: Name of the Front Door which is globally unique.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1405'
-              fixed: false
-              raw: frontDoorName
-            serializedName: frontDoorName
-            modelType:
-              $id: '1406'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1407'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1408'
-            clientProperty:
-              $ref: '863'
-            location: query
-            collectionFormat: none
-            defaultValue:
-              $id: '1409'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1410'
-              fixed: false
-              raw: Client API version.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1411'
-              fixed: false
-              raw: api-version
-            serializedName: api-version
-            modelType:
-              $id: '1412'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1413'
-                fixed: false
-                raw: String
-              deprecated: false
-        name:
-          $id: '1414'
-          fixed: false
-          raw: ListByFrontDoor
-        group:
-          $id: '1415'
-          fixed: false
-          raw: LoadBalancingSettings
-        serializedName: LoadBalancingSettings_ListByFrontDoor
-        url: >-
-          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/loadBalancingSettings
-        isAbsoluteUrl: false
-        httpMethod: get
-        responses:
-          OK:
-            $id: '1416'
-            body:
-              $ref: '681'
-            isNullable: true
-        defaultResponse:
-          $id: '1417'
-          body:
-            $ref: '765'
-          isNullable: true
-        returnType:
-          $id: '1418'
-          body:
-            $ref: '681'
-          isNullable: true
-        description: Lists all of the LoadBalancingSettings within a Front Door.
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        extensions:
-          x-ms-pageable:
-            nextLinkName: nextLink
-          x-ms-examples:
-            List LoadBalancingSettings in a Front Door:
-              parameters:
-                api-version: '2019-04-01'
-                subscriptionId: subid
-                resourceGroupName: rg1
-                frontDoorName: frontDoor1
-              responses:
-                '200':
-                  body:
-                    value:
-                      - id: >-
-                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                          resource_group
-                          }}/providers/Microsoft.Network/frontDoors/{{
-                          front_door_name }}/loadBalancingSettings/{{
-                          load_balancing_setting_name }}
-                        name: loadBalancingSettings1
-                        properties:
-                          sampleSize: '4'
-                          successfulSamplesRequired: '2'
-        deprecated: false
-        hidden: false
-      - $id: '1419'
-        parameters:
-          - $id: '1420'
-            clientProperty:
-              $ref: '869'
-            location: path
-            collectionFormat: none
-            defaultValue:
-              $id: '1421'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1422'
-              fixed: false
-              raw: >-
-                The subscription credentials which uniquely identify the
-                Microsoft Azure subscription. The subscription ID forms part of
-                the URI for every service call.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1423'
-              fixed: false
-              raw: subscriptionId
-            serializedName: subscriptionId
-            modelType:
-              $id: '1424'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1425'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1426'
-            clientProperty:
-              $ref: '821'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '80'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9_\-\(\)\.]*[^\.]$'
-            defaultValue:
-              $id: '1427'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1428'
-              fixed: false
-              raw: Name of the Resource group within the Azure subscription.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1429'
-              fixed: false
-              raw: resourceGroupName
-            serializedName: resourceGroupName
-            modelType:
-              $id: '1430'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1431'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1432'
-            clientProperty:
-              $ref: '827'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '64'
-              MinLength: '5'
-              Pattern: '^[a-zA-Z0-9]+([-a-zA-Z0-9]?[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1433'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1434'
-              fixed: false
-              raw: Name of the Front Door which is globally unique.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1435'
-              fixed: false
-              raw: frontDoorName
-            serializedName: frontDoorName
-            modelType:
-              $id: '1436'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1437'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1438'
-            clientProperty:
-              $ref: '845'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '90'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9]+(-*[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1439'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1440'
-              fixed: false
-              raw: >-
-                Name of the load balancing settings which is unique within the
-                Front Door.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1441'
-              fixed: false
-              raw: loadBalancingSettingsName
-            serializedName: loadBalancingSettingsName
-            modelType:
-              $id: '1442'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1443'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1444'
-            clientProperty:
-              $ref: '863'
-            location: query
-            collectionFormat: none
-            defaultValue:
-              $id: '1445'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1446'
-              fixed: false
-              raw: Client API version.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1447'
-              fixed: false
-              raw: api-version
-            serializedName: api-version
-            modelType:
-              $id: '1448'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1449'
-                fixed: false
-                raw: String
-              deprecated: false
-        name:
-          $id: '1450'
-          fixed: false
-          raw: Get
-        group:
-          $id: '1451'
-          fixed: false
-          raw: LoadBalancingSettings
-        serializedName: LoadBalancingSettings_Get
-        url: >-
-          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/loadBalancingSettings/{loadBalancingSettingsName}
-        isAbsoluteUrl: false
-        httpMethod: get
-        responses:
-          OK:
-            $id: '1452'
-            body:
-              $ref: '123'
-            isNullable: true
-        defaultResponse:
-          $id: '1453'
-          body:
-            $ref: '765'
-          isNullable: true
-        returnType:
-          $id: '1454'
-          body:
-            $ref: '123'
-          isNullable: true
-        description: >-
-          Gets a LoadBalancingSettings with the specified Rule name within the
-          specified Front Door.
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        extensions:
-          x-ms-examples:
-            Get LoadBalancingSettings:
-              parameters:
-                api-version: '2019-04-01'
-                subscriptionId: subid
-                resourceGroupName: rg1
-                frontDoorName: frontDoor1
-                loadBalancingSettingsName: loadBalancingSettings1
-              responses:
-                '200':
-                  body:
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Network/frontDoors/{{
-                      front_door_name }}/loadBalancingSettings/{{
-                      load_balancing_setting_name }}
-                    name: loadBalancingSettings1
-                    properties:
-                      sampleSize: '4'
-                      successfulSamplesRequired: '2'
-        deprecated: false
-        hidden: false
-      - $id: '1455'
-        parameters:
-          - $id: '1456'
-            clientProperty:
-              $ref: '869'
-            location: path
-            collectionFormat: none
-            defaultValue:
-              $id: '1457'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1458'
-              fixed: false
-              raw: >-
-                The subscription credentials which uniquely identify the
-                Microsoft Azure subscription. The subscription ID forms part of
-                the URI for every service call.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1459'
-              fixed: false
-              raw: subscriptionId
-            serializedName: subscriptionId
-            modelType:
-              $id: '1460'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1461'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1462'
-            clientProperty:
-              $ref: '821'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '80'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9_\-\(\)\.]*[^\.]$'
-            defaultValue:
-              $id: '1463'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1464'
-              fixed: false
-              raw: Name of the Resource group within the Azure subscription.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1465'
-              fixed: false
-              raw: resourceGroupName
-            serializedName: resourceGroupName
-            modelType:
-              $id: '1466'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1467'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1468'
-            clientProperty:
-              $ref: '827'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '64'
-              MinLength: '5'
-              Pattern: '^[a-zA-Z0-9]+([-a-zA-Z0-9]?[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1469'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1470'
-              fixed: false
-              raw: Name of the Front Door which is globally unique.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1471'
-              fixed: false
-              raw: frontDoorName
-            serializedName: frontDoorName
-            modelType:
-              $id: '1472'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1473'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1474'
-            clientProperty:
-              $ref: '845'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '90'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9]+(-*[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1475'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1476'
-              fixed: false
-              raw: >-
-                Name of the load balancing settings which is unique within the
-                Front Door.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1477'
-              fixed: false
-              raw: loadBalancingSettingsName
-            serializedName: loadBalancingSettingsName
-            modelType:
-              $id: '1478'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1479'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1480'
-            location: body
-            collectionFormat: none
-            defaultValue:
-              $id: '1481'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1482'
-              fixed: false
-              raw: >-
-                LoadBalancingSettings properties needed to create a new Front
-                Door.
-            extensions:
-              x-ms-requestBody-name: loadBalancingSettingsParameters
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1483'
-              fixed: false
-              raw: loadBalancingSettingsParameters
-            serializedName: loadBalancingSettingsParameters
-            modelType:
-              $ref: '123'
-          - $id: '1484'
-            clientProperty:
-              $ref: '863'
-            location: query
-            collectionFormat: none
-            defaultValue:
-              $id: '1485'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1486'
-              fixed: false
-              raw: Client API version.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1487'
-              fixed: false
-              raw: api-version
-            serializedName: api-version
-            modelType:
-              $id: '1488'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1489'
-                fixed: false
-                raw: String
-              deprecated: false
-        name:
-          $id: '1490'
-          fixed: false
-          raw: CreateOrUpdate
-        group:
-          $id: '1491'
-          fixed: false
-          raw: LoadBalancingSettings
-        serializedName: LoadBalancingSettings_CreateOrUpdate
-        url: >-
-          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/loadBalancingSettings/{loadBalancingSettingsName}
-        isAbsoluteUrl: false
-        httpMethod: put
-        responses:
-          OK:
-            $id: '1492'
-            body:
-              $ref: '123'
-            isNullable: true
-          Created:
-            $id: '1493'
-            body:
-              $ref: '123'
-            isNullable: true
-          Accepted:
-            $id: '1494'
-            body:
-              $ref: '123'
-            isNullable: true
-        defaultResponse:
-          $id: '1495'
-          body:
-            $ref: '765'
-          isNullable: true
-        returnType:
-          $id: '1496'
-          body:
-            $ref: '123'
-          isNullable: true
-        description: >-
-          Creates a new LoadBalancingSettings with the specified Rule name
-          within the specified Front Door.
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        extensions:
-          x-ms-requestBody-index: '4'
-          x-ms-examples:
-            Create or update specific LoadBalancingSettings:
-              parameters:
-                api-version: '2019-04-01'
-                subscriptionId: subid
-                resourceGroupName: rg1
-                frontDoorName: frontDoor1
-                loadBalancingSettingsName: loadBalancingSettings1
-                loadBalancingSettingsParameters:
-                  name: loadBalancingSettings1
-                  properties:
-                    sampleSize: '4'
-                    successfulSamplesRequired: '2'
-              responses:
-                '200':
-                  body:
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Network/frontDoors/{{
-                      front_door_name }}/loadBalancingSettings/{{
-                      load_balancing_setting_name }}
-                    name: loadBalancingSettings1
-                    properties:
-                      sampleSize: '4'
-                      successfulSamplesRequired: '2'
-                '201':
-                  body:
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Network/frontDoors/{{
-                      front_door_name }}/loadBalancingSettings/{{
-                      load_balancing_setting_name }}
-                    name: loadBalancingSettings1
-                    properties:
-                      sampleSize: '4'
-                      successfulSamplesRequired: '2'
-                '202':
-                  body:
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Network/frontDoors/{{
-                      front_door_name }}/loadBalancingSettings/{{
-                      load_balancing_setting_name }}
-                    name: loadBalancingSettings1
-                    properties:
-                      sampleSize: '4'
-                      successfulSamplesRequired: '2'
-          x-ms-long-running-operation: true
-        deprecated: false
-        hidden: false
-      - $id: '1497'
-        parameters:
-          - $id: '1498'
-            clientProperty:
-              $ref: '869'
-            location: path
-            collectionFormat: none
-            defaultValue:
-              $id: '1499'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1500'
-              fixed: false
-              raw: >-
-                The subscription credentials which uniquely identify the
-                Microsoft Azure subscription. The subscription ID forms part of
-                the URI for every service call.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1501'
-              fixed: false
-              raw: subscriptionId
-            serializedName: subscriptionId
-            modelType:
-              $id: '1502'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1503'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1504'
-            clientProperty:
-              $ref: '821'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '80'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9_\-\(\)\.]*[^\.]$'
-            defaultValue:
-              $id: '1505'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1506'
-              fixed: false
-              raw: Name of the Resource group within the Azure subscription.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1507'
-              fixed: false
-              raw: resourceGroupName
-            serializedName: resourceGroupName
-            modelType:
-              $id: '1508'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1509'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1510'
-            clientProperty:
-              $ref: '827'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '64'
-              MinLength: '5'
-              Pattern: '^[a-zA-Z0-9]+([-a-zA-Z0-9]?[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1511'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1512'
-              fixed: false
-              raw: Name of the Front Door which is globally unique.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1513'
-              fixed: false
-              raw: frontDoorName
-            serializedName: frontDoorName
-            modelType:
-              $id: '1514'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1515'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1516'
-            clientProperty:
-              $ref: '845'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '90'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9]+(-*[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1517'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1518'
-              fixed: false
-              raw: >-
-                Name of the load balancing settings which is unique within the
-                Front Door.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1519'
-              fixed: false
-              raw: loadBalancingSettingsName
-            serializedName: loadBalancingSettingsName
-            modelType:
-              $id: '1520'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1521'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1522'
-            clientProperty:
-              $ref: '863'
-            location: query
-            collectionFormat: none
-            defaultValue:
-              $id: '1523'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1524'
-              fixed: false
-              raw: Client API version.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1525'
-              fixed: false
-              raw: api-version
-            serializedName: api-version
-            modelType:
-              $id: '1526'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1527'
-                fixed: false
-                raw: String
-              deprecated: false
-        name:
-          $id: '1528'
-          fixed: false
-          raw: Delete
-        group:
-          $id: '1529'
-          fixed: false
-          raw: LoadBalancingSettings
-        serializedName: LoadBalancingSettings_Delete
-        url: >-
-          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/loadBalancingSettings/{loadBalancingSettingsName}
-        isAbsoluteUrl: false
-        httpMethod: delete
-        responses:
-          Accepted:
-            $id: '1530'
-            isNullable: true
-          NoContent:
-            $id: '1531'
-            isNullable: true
-        defaultResponse:
-          $id: '1532'
-          body:
-            $ref: '765'
-          isNullable: true
-        returnType:
-          $id: '1533'
-          isNullable: true
-        description: >-
-          Deletes an existing LoadBalancingSettings with the specified
-          parameters.
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        extensions:
-          x-ms-examples:
-            Delete LoadBalancingSettings:
-              parameters:
-                api-version: '2019-04-01'
-                subscriptionId: subid
-                resourceGroupName: rg1
-                frontDoorName: frontDoor1
-                loadBalancingSettingsName: loadBalancingSettings1
-              responses:
-                '202': {}
-                '204': {}
-          x-ms-long-running-operation: true
-        deprecated: false
-        hidden: false
-    name:
-      $id: '1534'
-      fixed: false
-      raw: LoadBalancingSettings
-    typeName:
-      $id: '1535'
-      fixed: false
-    nameForProperty: LoadBalancingSettings
-  - $id: '1536'
-    methods:
-      - $id: '1537'
-        parameters:
-          - $id: '1538'
-            clientProperty:
-              $ref: '869'
-            location: path
-            collectionFormat: none
-            defaultValue:
-              $id: '1539'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1540'
-              fixed: false
-              raw: >-
-                The subscription credentials which uniquely identify the
-                Microsoft Azure subscription. The subscription ID forms part of
-                the URI for every service call.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1541'
-              fixed: false
-              raw: subscriptionId
-            serializedName: subscriptionId
-            modelType:
-              $id: '1542'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1543'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1544'
-            clientProperty:
-              $ref: '821'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '80'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9_\-\(\)\.]*[^\.]$'
-            defaultValue:
-              $id: '1545'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1546'
-              fixed: false
-              raw: Name of the Resource group within the Azure subscription.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1547'
-              fixed: false
-              raw: resourceGroupName
-            serializedName: resourceGroupName
-            modelType:
-              $id: '1548'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1549'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1550'
-            clientProperty:
-              $ref: '827'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '64'
-              MinLength: '5'
-              Pattern: '^[a-zA-Z0-9]+([-a-zA-Z0-9]?[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1551'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1552'
-              fixed: false
-              raw: Name of the Front Door which is globally unique.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1553'
-              fixed: false
-              raw: frontDoorName
-            serializedName: frontDoorName
-            modelType:
-              $id: '1554'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1555'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1556'
-            clientProperty:
-              $ref: '863'
-            location: query
-            collectionFormat: none
-            defaultValue:
-              $id: '1557'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1558'
-              fixed: false
-              raw: Client API version.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1559'
-              fixed: false
-              raw: api-version
-            serializedName: api-version
-            modelType:
-              $id: '1560'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1561'
-                fixed: false
-                raw: String
-              deprecated: false
-        name:
-          $id: '1562'
-          fixed: false
-          raw: ListByFrontDoor
-        group:
-          $id: '1563'
-          fixed: false
-          raw: BackendPools
-        serializedName: BackendPools_ListByFrontDoor
-        url: >-
-          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/backendPools
-        isAbsoluteUrl: false
-        httpMethod: get
-        responses:
-          OK:
-            $id: '1564'
-            body:
-              $ref: '709'
-            isNullable: true
-        defaultResponse:
-          $id: '1565'
-          body:
-            $ref: '765'
-          isNullable: true
-        returnType:
-          $id: '1566'
-          body:
-            $ref: '709'
-          isNullable: true
-        description: Lists all of the Backend Pools within a Front Door.
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        extensions:
-          x-ms-pageable:
-            nextLinkName: nextLink
-          x-ms-examples:
-            List Backend Pools in a Front Door:
-              parameters:
-                api-version: '2019-04-01'
-                subscriptionId: subid
-                resourceGroupName: rg1
-                frontDoorName: frontDoor1
-              responses:
-                '200':
-                  body:
-                    value:
-                      - id: >-
-                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                          resource_group
-                          }}/providers/Microsoft.Network/frontDoors/{{
-                          front_door_name }}/backendPools/{{ backend_pool_name
-                          }}
-                        name: backendPool1
-                        properties:
-                          backends:
-                            - address: w3.contoso.com
-                              httpPort: '80'
-                              httpsPort: '443'
-                              enabledState: Enabled
-                              weight: '1'
-                              priority: '2'
-                            - address: contoso.com.website-us-west-2.othercloud.net
-                              httpPort: '80'
-                              httpsPort: '443'
-                              enabledState: Enabled
-                              weight: '2'
-                              priority: '1'
-                            - address: contoso1.azurewebsites.net
-                              httpPort: '80'
-                              httpsPort: '443'
-                              enabledState: Enabled
-                              weight: '1'
-                              priority: '1'
-                          loadBalancingSettings:
-                            id: >-
-                              /subscriptions/{{ subscription_id
-                              }}/resourceGroups/{{ resource_group
-                              }}/providers/Microsoft.Network/frontDoors/{{
-                              front_door_name }}/loadBalancingSettings/{{
-                              load_balancing_setting_name }}
-                          healthProbeSettings:
-                            id: >-
-                              /subscriptions/{{ subscription_id
-                              }}/resourceGroups/{{ resource_group
-                              }}/providers/Microsoft.Network/frontDoors/{{
-                              front_door_name }}/healthProbeSettings/{{
-                              health_probe_setting_name }}
-        deprecated: false
-        hidden: false
-      - $id: '1567'
-        parameters:
-          - $id: '1568'
-            clientProperty:
-              $ref: '869'
-            location: path
-            collectionFormat: none
-            defaultValue:
-              $id: '1569'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1570'
-              fixed: false
-              raw: >-
-                The subscription credentials which uniquely identify the
-                Microsoft Azure subscription. The subscription ID forms part of
-                the URI for every service call.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1571'
-              fixed: false
-              raw: subscriptionId
-            serializedName: subscriptionId
-            modelType:
-              $id: '1572'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1573'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1574'
-            clientProperty:
-              $ref: '821'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '80'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9_\-\(\)\.]*[^\.]$'
-            defaultValue:
-              $id: '1575'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1576'
-              fixed: false
-              raw: Name of the Resource group within the Azure subscription.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1577'
-              fixed: false
-              raw: resourceGroupName
-            serializedName: resourceGroupName
-            modelType:
-              $id: '1578'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1579'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1580'
-            clientProperty:
-              $ref: '827'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '64'
-              MinLength: '5'
-              Pattern: '^[a-zA-Z0-9]+([-a-zA-Z0-9]?[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1581'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1582'
-              fixed: false
-              raw: Name of the Front Door which is globally unique.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1583'
-              fixed: false
-              raw: frontDoorName
-            serializedName: frontDoorName
-            modelType:
-              $id: '1584'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1585'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1586'
-            clientProperty:
-              $ref: '851'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '90'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9]+(-*[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1587'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1588'
-              fixed: false
-              raw: Name of the Backend Pool which is unique within the Front Door.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1589'
-              fixed: false
-              raw: backendPoolName
-            serializedName: backendPoolName
-            modelType:
-              $id: '1590'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1591'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1592'
-            clientProperty:
-              $ref: '863'
-            location: query
-            collectionFormat: none
-            defaultValue:
-              $id: '1593'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1594'
-              fixed: false
-              raw: Client API version.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1595'
-              fixed: false
-              raw: api-version
-            serializedName: api-version
-            modelType:
-              $id: '1596'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1597'
-                fixed: false
-                raw: String
-              deprecated: false
-        name:
-          $id: '1598'
-          fixed: false
-          raw: Get
-        group:
-          $id: '1599'
-          fixed: false
-          raw: BackendPools
-        serializedName: BackendPools_Get
-        url: >-
-          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/backendPools/{backendPoolName}
-        isAbsoluteUrl: false
-        httpMethod: get
-        responses:
-          OK:
-            $id: '1600'
-            body:
-              $ref: '221'
-            isNullable: true
-        defaultResponse:
-          $id: '1601'
-          body:
-            $ref: '765'
-          isNullable: true
-        returnType:
-          $id: '1602'
-          body:
-            $ref: '221'
-          isNullable: true
-        description: >-
-          Gets a Backend Pool with the specified Pool name within the specified
-          Front Door.
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        extensions:
-          x-ms-examples:
-            Get Backend Pool:
-              parameters:
-                api-version: '2019-04-01'
-                subscriptionId: subid
-                resourceGroupName: rg1
-                frontDoorName: frontDoor1
-                backendPoolName: backendPool1
-              responses:
-                '200':
-                  body:
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Network/frontDoors/{{
-                      front_door_name }}/backendPools/{{ backend_pool_name }}
-                    name: backendPool1
-                    properties:
-                      backends:
-                        - address: w3.contoso.com
-                          httpPort: '80'
-                          httpsPort: '443'
-                          enabledState: Enabled
-                          weight: '1'
-                          priority: '2'
-                        - address: contoso.com.website-us-west-2.othercloud.net
-                          httpPort: '80'
-                          httpsPort: '443'
-                          enabledState: Enabled
-                          weight: '2'
-                          priority: '1'
-                        - address: contoso1.azurewebsites.net
-                          httpPort: '80'
-                          httpsPort: '443'
-                          enabledState: Enabled
-                          weight: '1'
-                          priority: '1'
-                      loadBalancingSettings:
-                        id: >-
-                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                          resource_group
-                          }}/providers/Microsoft.Network/frontDoors/{{
-                          front_door_name }}/loadBalancingSettings/{{
-                          load_balancing_setting_name }}
-                      healthProbeSettings:
-                        id: >-
-                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                          resource_group
-                          }}/providers/Microsoft.Network/frontDoors/{{
-                          front_door_name }}/healthProbeSettings/{{
-                          health_probe_setting_name }}
-        deprecated: false
-        hidden: false
-      - $id: '1603'
-        parameters:
-          - $id: '1604'
-            clientProperty:
-              $ref: '869'
-            location: path
-            collectionFormat: none
-            defaultValue:
-              $id: '1605'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1606'
-              fixed: false
-              raw: >-
-                The subscription credentials which uniquely identify the
-                Microsoft Azure subscription. The subscription ID forms part of
-                the URI for every service call.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1607'
-              fixed: false
-              raw: subscriptionId
-            serializedName: subscriptionId
-            modelType:
-              $id: '1608'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1609'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1610'
-            clientProperty:
-              $ref: '821'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '80'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9_\-\(\)\.]*[^\.]$'
-            defaultValue:
-              $id: '1611'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1612'
-              fixed: false
-              raw: Name of the Resource group within the Azure subscription.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1613'
-              fixed: false
-              raw: resourceGroupName
-            serializedName: resourceGroupName
-            modelType:
-              $id: '1614'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1615'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1616'
-            clientProperty:
-              $ref: '827'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '64'
-              MinLength: '5'
-              Pattern: '^[a-zA-Z0-9]+([-a-zA-Z0-9]?[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1617'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1618'
-              fixed: false
-              raw: Name of the Front Door which is globally unique.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1619'
-              fixed: false
-              raw: frontDoorName
-            serializedName: frontDoorName
-            modelType:
-              $id: '1620'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1621'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1622'
-            clientProperty:
-              $ref: '851'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '90'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9]+(-*[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1623'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1624'
-              fixed: false
-              raw: Name of the Backend Pool which is unique within the Front Door.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1625'
-              fixed: false
-              raw: backendPoolName
-            serializedName: backendPoolName
-            modelType:
-              $id: '1626'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1627'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1628'
-            location: body
-            collectionFormat: none
-            defaultValue:
-              $id: '1629'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1630'
-              fixed: false
-              raw: Backend Pool properties needed to create a new Pool.
-            extensions:
-              x-ms-requestBody-name: backendPoolParameters
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1631'
-              fixed: false
-              raw: backendPoolParameters
-            serializedName: backendPoolParameters
-            modelType:
-              $ref: '221'
-          - $id: '1632'
-            clientProperty:
-              $ref: '863'
-            location: query
-            collectionFormat: none
-            defaultValue:
-              $id: '1633'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1634'
-              fixed: false
-              raw: Client API version.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1635'
-              fixed: false
-              raw: api-version
-            serializedName: api-version
-            modelType:
-              $id: '1636'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1637'
-                fixed: false
-                raw: String
-              deprecated: false
-        name:
-          $id: '1638'
-          fixed: false
-          raw: CreateOrUpdate
-        group:
-          $id: '1639'
-          fixed: false
-          raw: BackendPools
-        serializedName: BackendPools_CreateOrUpdate
-        url: >-
-          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/backendPools/{backendPoolName}
-        isAbsoluteUrl: false
-        httpMethod: put
-        responses:
-          OK:
-            $id: '1640'
-            body:
-              $ref: '221'
-            isNullable: true
-          Created:
-            $id: '1641'
-            body:
-              $ref: '221'
-            isNullable: true
-          Accepted:
-            $id: '1642'
-            body:
-              $ref: '221'
-            isNullable: true
-        defaultResponse:
-          $id: '1643'
-          body:
-            $ref: '765'
-          isNullable: true
-        returnType:
-          $id: '1644'
-          body:
-            $ref: '221'
-          isNullable: true
-        description: >-
-          Creates a new Backend Pool with the specified Pool name within the
-          specified Front Door.
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        extensions:
-          x-ms-requestBody-index: '4'
-          x-ms-examples:
-            Create or update specific Backend Pool:
-              parameters:
-                api-version: '2019-04-01'
-                subscriptionId: subid
-                resourceGroupName: rg1
-                frontDoorName: frontDoor1
-                backendPoolName: backendPool1
-                backendPoolParameters:
-                  name: backendPool1
-                  properties:
-                    backends:
-                      - address: w3.contoso.com
-                        httpPort: '80'
-                        httpsPort: '443'
-                        weight: '1'
-                        priority: '2'
-                      - address: contoso.com.website-us-west-2.othercloud.net
-                        httpPort: '80'
-                        httpsPort: '443'
-                        weight: '2'
-                        priority: '1'
-                      - address: contoso1.azurewebsites.net
-                        httpPort: '80'
-                        httpsPort: '443'
-                        weight: '1'
-                        priority: '1'
-                    loadBalancingSettings:
-                      id: >-
-                        /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                        resource_group
-                        }}/providers/Microsoft.Network/frontDoors/{{
-                        front_door_name }}/loadBalancingSettings/{{
-                        load_balancing_setting_name }}
-                    healthProbeSettings:
-                      id: >-
-                        /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                        resource_group
-                        }}/providers/Microsoft.Network/frontDoors/{{
-                        front_door_name }}/healthProbeSettings/{{
-                        health_probe_setting_name }}
-              responses:
-                '200':
-                  body:
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Network/frontDoors/{{
-                      front_door_name }}/backendPools/{{ backend_pool_name }}
-                    name: backendPool1
-                    properties:
-                      backends:
-                        - address: w3.contoso.com
-                          httpPort: '80'
-                          httpsPort: '443'
-                          enabledState: Enabled
-                          weight: '1'
-                          priority: '2'
-                        - address: contoso.com.website-us-west-2.othercloud.net
-                          httpPort: '80'
-                          httpsPort: '443'
-                          enabledState: Enabled
-                          weight: '2'
-                          priority: '1'
-                        - address: contoso1.azurewebsites.net
-                          httpPort: '80'
-                          httpsPort: '443'
-                          enabledState: Enabled
-                          weight: '1'
-                          priority: '1'
-                      loadBalancingSettings:
-                        id: >-
-                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                          resource_group
-                          }}/providers/Microsoft.Network/frontDoors/{{
-                          front_door_name }}/loadBalancingSettings/{{
-                          load_balancing_setting_name }}
-                      healthProbeSettings:
-                        id: >-
-                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                          resource_group
-                          }}/providers/Microsoft.Network/frontDoors/{{
-                          front_door_name }}/healthProbeSettings/{{
-                          health_probe_setting_name }}
-                '201':
-                  body:
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Network/frontDoors/{{
-                      front_door_name }}/backendPools/{{ backend_pool_name }}
-                    name: backendPool1
-                    properties:
-                      backends:
-                        - address: w3.contoso.com
-                          httpPort: '80'
-                          httpsPort: '443'
-                          enabledState: Enabled
-                          weight: '1'
-                          priority: '2'
-                        - address: contoso.com.website-us-west-2.othercloud.net
-                          httpPort: '80'
-                          httpsPort: '443'
-                          enabledState: Enabled
-                          weight: '2'
-                          priority: '1'
-                        - address: contoso1.azurewebsites.net
-                          httpPort: '80'
-                          httpsPort: '443'
-                          enabledState: Enabled
-                          weight: '1'
-                          priority: '1'
-                      loadBalancingSettings:
-                        id: >-
-                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                          resource_group
-                          }}/providers/Microsoft.Network/frontDoors/{{
-                          front_door_name }}/loadBalancingSettings/{{
-                          load_balancing_setting_name }}
-                      healthProbeSettings:
-                        id: >-
-                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                          resource_group
-                          }}/providers/Microsoft.Network/frontDoors/{{
-                          front_door_name }}/healthProbeSettings/{{
-                          health_probe_setting_name }}
-                '202':
-                  body:
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Network/frontDoors/{{
-                      front_door_name }}/backendPools/{{ backend_pool_name }}
-                    name: backendPool1
-                    properties:
-                      backends:
-                        - address: w3.contoso.com
-                          httpPort: '80'
-                          httpsPort: '443'
-                          enabledState: Enabled
-                          weight: '1'
-                          priority: '2'
-                        - address: contoso.com.website-us-west-2.othercloud.net
-                          httpPort: '80'
-                          httpsPort: '443'
-                          enabledState: Enabled
-                          weight: '2'
-                          priority: '1'
-                        - address: contoso1.azurewebsites.net
-                          httpPort: '80'
-                          httpsPort: '443'
-                          enabledState: Enabled
-                          weight: '1'
-                          priority: '1'
-                      loadBalancingSettings:
-                        id: >-
-                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                          resource_group
-                          }}/providers/Microsoft.Network/frontDoors/{{
-                          front_door_name }}/loadBalancingSettings/{{
-                          load_balancing_setting_name }}
-                      healthProbeSettings:
-                        id: >-
-                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                          resource_group
-                          }}/providers/Microsoft.Network/frontDoors/{{
-                          front_door_name }}/healthProbeSettings/{{
-                          health_probe_setting_name }}
-          x-ms-long-running-operation: true
-        deprecated: false
-        hidden: false
-      - $id: '1645'
-        parameters:
-          - $id: '1646'
-            clientProperty:
-              $ref: '869'
-            location: path
-            collectionFormat: none
-            defaultValue:
-              $id: '1647'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1648'
-              fixed: false
-              raw: >-
-                The subscription credentials which uniquely identify the
-                Microsoft Azure subscription. The subscription ID forms part of
-                the URI for every service call.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1649'
-              fixed: false
-              raw: subscriptionId
-            serializedName: subscriptionId
-            modelType:
-              $id: '1650'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1651'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1652'
-            clientProperty:
-              $ref: '821'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '80'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9_\-\(\)\.]*[^\.]$'
-            defaultValue:
-              $id: '1653'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1654'
-              fixed: false
-              raw: Name of the Resource group within the Azure subscription.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1655'
-              fixed: false
-              raw: resourceGroupName
-            serializedName: resourceGroupName
-            modelType:
-              $id: '1656'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1657'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1658'
-            clientProperty:
-              $ref: '827'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '64'
-              MinLength: '5'
-              Pattern: '^[a-zA-Z0-9]+([-a-zA-Z0-9]?[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1659'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1660'
-              fixed: false
-              raw: Name of the Front Door which is globally unique.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1661'
-              fixed: false
-              raw: frontDoorName
-            serializedName: frontDoorName
-            modelType:
-              $id: '1662'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1663'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1664'
-            clientProperty:
-              $ref: '851'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '90'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9]+(-*[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1665'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1666'
-              fixed: false
-              raw: Name of the Backend Pool which is unique within the Front Door.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1667'
-              fixed: false
-              raw: backendPoolName
-            serializedName: backendPoolName
-            modelType:
-              $id: '1668'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1669'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1670'
-            clientProperty:
-              $ref: '863'
-            location: query
-            collectionFormat: none
-            defaultValue:
-              $id: '1671'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1672'
-              fixed: false
-              raw: Client API version.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1673'
-              fixed: false
-              raw: api-version
-            serializedName: api-version
-            modelType:
-              $id: '1674'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1675'
-                fixed: false
-                raw: String
-              deprecated: false
-        name:
-          $id: '1676'
-          fixed: false
-          raw: Delete
-        group:
-          $id: '1677'
-          fixed: false
-          raw: BackendPools
-        serializedName: BackendPools_Delete
-        url: >-
-          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/backendPools/{backendPoolName}
-        isAbsoluteUrl: false
-        httpMethod: delete
-        responses:
-          Accepted:
-            $id: '1678'
-            isNullable: true
-          NoContent:
-            $id: '1679'
-            isNullable: true
-        defaultResponse:
-          $id: '1680'
-          body:
-            $ref: '765'
-          isNullable: true
-        returnType:
-          $id: '1681'
-          isNullable: true
-        description: Deletes an existing Backend Pool with the specified parameters.
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        extensions:
-          x-ms-examples:
-            Delete Backend Pool:
-              parameters:
-                api-version: '2019-04-01'
-                subscriptionId: subid
-                resourceGroupName: rg1
-                frontDoorName: frontDoor1
-                backendPoolName: backendPool1
-              responses:
-                '202': {}
-                '204': {}
-          x-ms-long-running-operation: true
-        deprecated: false
-        hidden: false
-    name:
-      $id: '1682'
-      fixed: false
-      raw: BackendPools
-    typeName:
-      $id: '1683'
-      fixed: false
-    nameForProperty: BackendPools
-  - $id: '1684'
-    methods:
-      - $id: '1685'
-        parameters:
-          - $id: '1686'
-            clientProperty:
-              $ref: '869'
-            location: path
-            collectionFormat: none
-            defaultValue:
-              $id: '1687'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1688'
-              fixed: false
-              raw: >-
-                The subscription credentials which uniquely identify the
-                Microsoft Azure subscription. The subscription ID forms part of
-                the URI for every service call.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1689'
-              fixed: false
-              raw: subscriptionId
-            serializedName: subscriptionId
-            modelType:
-              $id: '1690'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1691'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1692'
-            clientProperty:
-              $ref: '821'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '80'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9_\-\(\)\.]*[^\.]$'
-            defaultValue:
-              $id: '1693'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1694'
-              fixed: false
-              raw: Name of the Resource group within the Azure subscription.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1695'
-              fixed: false
-              raw: resourceGroupName
-            serializedName: resourceGroupName
-            modelType:
-              $id: '1696'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1697'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1698'
-            clientProperty:
-              $ref: '827'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '64'
-              MinLength: '5'
-              Pattern: '^[a-zA-Z0-9]+([-a-zA-Z0-9]?[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1699'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1700'
-              fixed: false
-              raw: Name of the Front Door which is globally unique.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1701'
-              fixed: false
-              raw: frontDoorName
-            serializedName: frontDoorName
-            modelType:
-              $id: '1702'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1703'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1704'
-            clientProperty:
-              $ref: '863'
-            location: query
-            collectionFormat: none
-            defaultValue:
-              $id: '1705'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1706'
-              fixed: false
-              raw: Client API version.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1707'
-              fixed: false
-              raw: api-version
-            serializedName: api-version
-            modelType:
-              $id: '1708'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1709'
-                fixed: false
-                raw: String
-              deprecated: false
-        name:
-          $id: '1710'
-          fixed: false
-          raw: ListByFrontDoor
-        group:
-          $id: '1711'
-          fixed: false
-          raw: FrontendEndpoints
-        serializedName: FrontendEndpoints_ListByFrontDoor
-        url: >-
-          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/frontendEndpoints
-        isAbsoluteUrl: false
-        httpMethod: get
-        responses:
-          OK:
-            $id: '1712'
-            body:
-              $ref: '723'
-            isNullable: true
-        defaultResponse:
-          $id: '1713'
-          body:
-            $ref: '765'
-          isNullable: true
-        returnType:
-          $id: '1714'
-          body:
-            $ref: '723'
-          isNullable: true
-        description: Lists all of the frontend endpoints within a Front Door.
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        extensions:
-          x-ms-pageable:
-            nextLinkName: nextLink
-          x-ms-examples:
-            List Frontend endpoints in a Front Door:
-              parameters:
-                api-version: '2019-04-01'
-                subscriptionId: subid
-                resourceGroupName: rg1
-                frontDoorName: frontDoor1
-              responses:
-                '200':
-                  body:
-                    value:
-                      - id: >-
-                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                          resource_group
-                          }}/providers/Microsoft.Network/frontDoors/{{
-                          front_door_name }}/frontendEndpoints/{{
-                          frontend_endpoint_name }}
-                        name: frontendEndpoint1
-                        properties:
-                          hostName: www.contoso.com
-                          sessionAffinityEnabledState: Enabled
-                          sessionAffinityTtlSeconds: '60'
-                          webApplicationFirewallPolicyLink:
-                            id: >-
-                              /subscriptions/{{ subscription_id
-                              }}/resourceGroups/{{ resource_group
-                              }}/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/{{
-                              front_door_web_application_firewall_policy_name }}
-        deprecated: false
-        hidden: false
-      - $id: '1715'
-        parameters:
-          - $id: '1716'
-            clientProperty:
-              $ref: '869'
-            location: path
-            collectionFormat: none
-            defaultValue:
-              $id: '1717'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1718'
-              fixed: false
-              raw: >-
-                The subscription credentials which uniquely identify the
-                Microsoft Azure subscription. The subscription ID forms part of
-                the URI for every service call.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1719'
-              fixed: false
-              raw: subscriptionId
-            serializedName: subscriptionId
-            modelType:
-              $id: '1720'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1721'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1722'
-            clientProperty:
-              $ref: '821'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '80'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9_\-\(\)\.]*[^\.]$'
-            defaultValue:
-              $id: '1723'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1724'
-              fixed: false
-              raw: Name of the Resource group within the Azure subscription.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1725'
-              fixed: false
-              raw: resourceGroupName
-            serializedName: resourceGroupName
-            modelType:
-              $id: '1726'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1727'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1728'
-            clientProperty:
-              $ref: '827'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '64'
-              MinLength: '5'
-              Pattern: '^[a-zA-Z0-9]+([-a-zA-Z0-9]?[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1729'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1730'
-              fixed: false
-              raw: Name of the Front Door which is globally unique.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1731'
-              fixed: false
-              raw: frontDoorName
-            serializedName: frontDoorName
-            modelType:
-              $id: '1732'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1733'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1734'
-            clientProperty:
-              $ref: '857'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '255'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9]+(-*[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1735'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1736'
-              fixed: false
-              raw: >-
-                Name of the Frontend endpoint which is unique within the Front
-                Door.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1737'
-              fixed: false
-              raw: frontendEndpointName
-            serializedName: frontendEndpointName
-            modelType:
-              $id: '1738'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1739'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1740'
-            clientProperty:
-              $ref: '863'
-            location: query
-            collectionFormat: none
-            defaultValue:
-              $id: '1741'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1742'
-              fixed: false
-              raw: Client API version.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1743'
-              fixed: false
-              raw: api-version
-            serializedName: api-version
-            modelType:
-              $id: '1744'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1745'
-                fixed: false
-                raw: String
-              deprecated: false
-        name:
-          $id: '1746'
-          fixed: false
-          raw: Get
-        group:
-          $id: '1747'
-          fixed: false
-          raw: FrontendEndpoints
-        serializedName: FrontendEndpoints_Get
-        url: >-
-          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/frontendEndpoints/{frontendEndpointName}
-        isAbsoluteUrl: false
-        httpMethod: get
-        responses:
-          OK:
-            $id: '1748'
-            body:
-              $ref: '315'
-            isNullable: true
-        defaultResponse:
-          $id: '1749'
-          body:
-            $ref: '765'
-          isNullable: true
-        returnType:
-          $id: '1750'
-          body:
-            $ref: '315'
-          isNullable: true
-        description: >-
-          Gets a Frontend endpoint with the specified name within the specified
-          Front Door.
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        extensions:
-          x-ms-examples:
-            Get Frontend Endpoint:
-              parameters:
-                api-version: '2019-04-01'
-                subscriptionId: subid
-                resourceGroupName: rg1
-                frontDoorName: frontDoor1
-                frontendEndpointName: frontendEndpoint1
-              responses:
-                '200':
-                  body:
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Network/frontDoors/{{
-                      front_door_name }}/frontendEndpoints/{{
-                      frontend_endpoint_name }}
-                    name: frontendEndpoint1
-                    properties:
-                      hostName: www.contoso.com
-                      sessionAffinityEnabledState: Enabled
-                      sessionAffinityTtlSeconds: '60'
-                      webApplicationFirewallPolicyLink:
-                        id: >-
-                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                          resource_group
-                          }}/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/{{
-                          front_door_web_application_firewall_policy_name }}
-        deprecated: false
-        hidden: false
-      - $id: '1751'
-        parameters:
-          - $id: '1752'
-            clientProperty:
-              $ref: '869'
-            location: path
-            collectionFormat: none
-            defaultValue:
-              $id: '1753'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1754'
-              fixed: false
-              raw: >-
-                The subscription credentials which uniquely identify the
-                Microsoft Azure subscription. The subscription ID forms part of
-                the URI for every service call.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1755'
-              fixed: false
-              raw: subscriptionId
-            serializedName: subscriptionId
-            modelType:
-              $id: '1756'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1757'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1758'
-            clientProperty:
-              $ref: '821'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '80'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9_\-\(\)\.]*[^\.]$'
-            defaultValue:
-              $id: '1759'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1760'
-              fixed: false
-              raw: Name of the Resource group within the Azure subscription.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1761'
-              fixed: false
-              raw: resourceGroupName
-            serializedName: resourceGroupName
-            modelType:
-              $id: '1762'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1763'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1764'
-            clientProperty:
-              $ref: '827'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '64'
-              MinLength: '5'
-              Pattern: '^[a-zA-Z0-9]+([-a-zA-Z0-9]?[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1765'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1766'
-              fixed: false
-              raw: Name of the Front Door which is globally unique.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1767'
-              fixed: false
-              raw: frontDoorName
-            serializedName: frontDoorName
-            modelType:
-              $id: '1768'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1769'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1770'
-            clientProperty:
-              $ref: '857'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '255'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9]+(-*[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1771'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1772'
-              fixed: false
-              raw: >-
-                Name of the Frontend endpoint which is unique within the Front
-                Door.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1773'
-              fixed: false
-              raw: frontendEndpointName
-            serializedName: frontendEndpointName
-            modelType:
-              $id: '1774'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1775'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1776'
-            location: body
-            collectionFormat: none
-            defaultValue:
-              $id: '1777'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1778'
-              fixed: false
-              raw: Frontend endpoint properties needed to create a new endpoint.
-            extensions:
-              x-ms-requestBody-name: frontendEndpointParameters
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1779'
-              fixed: false
-              raw: frontendEndpointParameters
-            serializedName: frontendEndpointParameters
-            modelType:
-              $ref: '315'
-          - $id: '1780'
-            clientProperty:
-              $ref: '863'
-            location: query
-            collectionFormat: none
-            defaultValue:
-              $id: '1781'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1782'
-              fixed: false
-              raw: Client API version.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1783'
-              fixed: false
-              raw: api-version
-            serializedName: api-version
-            modelType:
-              $id: '1784'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1785'
-                fixed: false
-                raw: String
-              deprecated: false
-        name:
-          $id: '1786'
-          fixed: false
-          raw: CreateOrUpdate
-        group:
-          $id: '1787'
-          fixed: false
-          raw: FrontendEndpoints
-        serializedName: FrontendEndpoints_CreateOrUpdate
-        url: >-
-          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/frontendEndpoints/{frontendEndpointName}
-        isAbsoluteUrl: false
-        httpMethod: put
-        responses:
-          OK:
-            $id: '1788'
-            body:
-              $ref: '315'
-            isNullable: true
-          Created:
-            $id: '1789'
-            body:
-              $ref: '315'
-            isNullable: true
-          Accepted:
-            $id: '1790'
-            body:
-              $ref: '315'
-            isNullable: true
-        defaultResponse:
-          $id: '1791'
-          body:
-            $ref: '765'
-          isNullable: true
-        returnType:
-          $id: '1792'
-          body:
-            $ref: '315'
-          isNullable: true
-        description: >-
-          Creates a new frontend endpoint with the specified host name within
-          the specified Front Door.
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        extensions:
-          x-ms-requestBody-index: '4'
-          x-ms-examples:
-            Create or update specific Frontend Endpoint:
-              parameters:
-                api-version: '2019-04-01'
-                subscriptionId: subid
-                resourceGroupName: rg1
-                frontDoorName: frontDoor1
-                frontendEndpointName: frontDoorEndpoint1
-                frontendEndpointParameters:
-                  name: frontendEndpoint1
-                  properties:
-                    hostName: www.contoso.com
-                    sessionAffinityEnabledState: Enabled
-                    sessionAffinityTtlSeconds: '60'
-                    webApplicationFirewallPolicyLink:
-                      id: >-
-                        /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                        resource_group
-                        }}/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/{{
-                        front_door_web_application_firewall_policy_name }}
-              responses:
-                '200':
-                  body:
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Network/frontDoors/{{
-                      front_door_name }}/frontendEndpoints/{{
-                      frontend_endpoint_name }}
-                    name: frontendEndpoint1
-                    properties:
-                      hostName: www.contoso.com
-                      sessionAffinityEnabledState: Enabled
-                      sessionAffinityTtlSeconds: '60'
-                      webApplicationFirewallPolicyLink:
-                        id: >-
-                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                          resource_group
-                          }}/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/{{
-                          front_door_web_application_firewall_policy_name }}
-                '201':
-                  body:
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Network/frontDoors/{{
-                      front_door_name }}/frontendEndpoints/{{
-                      frontend_endpoint_name }}
-                    name: frontendEndpoint1
-                    properties:
-                      hostName: www.contoso.com
-                      sessionAffinityEnabledState: Enabled
-                      sessionAffinityTtlSeconds: '60'
-                      webApplicationFirewallPolicyLink:
-                        id: >-
-                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                          resource_group
-                          }}/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/{{
-                          front_door_web_application_firewall_policy_name }}
-                '202':
-                  body:
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Network/frontDoors/{{
-                      front_door_name }}/frontendEndpoints/{{
-                      frontend_endpoint_name }}
-                    name: frontendEndpoint1
-                    properties:
-                      hostName: www.contoso.com
-                      sessionAffinityEnabledState: Enabled
-                      sessionAffinityTtlSeconds: '60'
-                      webApplicationFirewallPolicyLink:
-                        id: >-
-                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                          resource_group
-                          }}/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/{{
-                          front_door_web_application_firewall_policy_name }}
-          x-ms-long-running-operation: true
-        deprecated: false
-        hidden: false
-      - $id: '1793'
-        parameters:
-          - $id: '1794'
-            clientProperty:
-              $ref: '869'
-            location: path
-            collectionFormat: none
-            defaultValue:
-              $id: '1795'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1796'
-              fixed: false
-              raw: >-
-                The subscription credentials which uniquely identify the
-                Microsoft Azure subscription. The subscription ID forms part of
-                the URI for every service call.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1797'
-              fixed: false
-              raw: subscriptionId
-            serializedName: subscriptionId
-            modelType:
-              $id: '1798'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1799'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1800'
-            clientProperty:
-              $ref: '821'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '80'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9_\-\(\)\.]*[^\.]$'
-            defaultValue:
-              $id: '1801'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1802'
-              fixed: false
-              raw: Name of the Resource group within the Azure subscription.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1803'
-              fixed: false
-              raw: resourceGroupName
-            serializedName: resourceGroupName
-            modelType:
-              $id: '1804'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1805'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1806'
-            clientProperty:
-              $ref: '827'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '64'
-              MinLength: '5'
-              Pattern: '^[a-zA-Z0-9]+([-a-zA-Z0-9]?[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1807'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1808'
-              fixed: false
-              raw: Name of the Front Door which is globally unique.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1809'
-              fixed: false
-              raw: frontDoorName
-            serializedName: frontDoorName
-            modelType:
-              $id: '1810'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1811'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1812'
-            clientProperty:
-              $ref: '857'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '255'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9]+(-*[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1813'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1814'
-              fixed: false
-              raw: >-
-                Name of the Frontend endpoint which is unique within the Front
-                Door.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1815'
-              fixed: false
-              raw: frontendEndpointName
-            serializedName: frontendEndpointName
-            modelType:
-              $id: '1816'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1817'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1818'
-            clientProperty:
-              $ref: '863'
-            location: query
-            collectionFormat: none
-            defaultValue:
-              $id: '1819'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1820'
-              fixed: false
-              raw: Client API version.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1821'
-              fixed: false
-              raw: api-version
-            serializedName: api-version
-            modelType:
-              $id: '1822'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1823'
-                fixed: false
-                raw: String
-              deprecated: false
-        name:
-          $id: '1824'
-          fixed: false
-          raw: Delete
-        group:
-          $id: '1825'
-          fixed: false
-          raw: FrontendEndpoints
-        serializedName: FrontendEndpoints_Delete
-        url: >-
-          /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/frontendEndpoints/{frontendEndpointName}
-        isAbsoluteUrl: false
-        httpMethod: delete
-        responses:
-          Accepted:
-            $id: '1826'
-            isNullable: true
-          NoContent:
-            $id: '1827'
-            isNullable: true
-        defaultResponse:
-          $id: '1828'
-          body:
-            $ref: '765'
-          isNullable: true
-        returnType:
-          $id: '1829'
-          isNullable: true
-        description: Deletes an existing frontend endpoint with the specified parameters.
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        extensions:
-          x-ms-examples:
-            Delete Backend Pool:
-              parameters:
-                api-version: '2019-04-01'
-                subscriptionId: subid
-                resourceGroupName: rg1
-                frontDoorName: frontDoor1
-                frontendEndpointName: frontendEndpoint1
-              responses:
-                '202': {}
-                '204': {}
-          x-ms-long-running-operation: true
-        deprecated: false
-        hidden: false
-      - $id: '1830'
-        parameters:
-          - $id: '1831'
-            clientProperty:
-              $ref: '869'
-            location: path
-            collectionFormat: none
-            defaultValue:
-              $id: '1832'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1833'
-              fixed: false
-              raw: >-
-                The subscription credentials which uniquely identify the
-                Microsoft Azure subscription. The subscription ID forms part of
-                the URI for every service call.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1834'
-              fixed: false
-              raw: subscriptionId
-            serializedName: subscriptionId
-            modelType:
-              $id: '1835'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1836'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1837'
-            clientProperty:
-              $ref: '821'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '80'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9_\-\(\)\.]*[^\.]$'
-            defaultValue:
-              $id: '1838'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1839'
-              fixed: false
-              raw: Name of the Resource group within the Azure subscription.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1840'
-              fixed: false
-              raw: resourceGroupName
-            serializedName: resourceGroupName
-            modelType:
-              $id: '1841'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1842'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1843'
-            clientProperty:
-              $ref: '827'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '64'
-              MinLength: '5'
-              Pattern: '^[a-zA-Z0-9]+([-a-zA-Z0-9]?[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1844'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1845'
-              fixed: false
-              raw: Name of the Front Door which is globally unique.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1846'
-              fixed: false
-              raw: frontDoorName
-            serializedName: frontDoorName
-            modelType:
-              $id: '1847'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1848'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1849'
-            clientProperty:
-              $ref: '857'
-            location: path
-            collectionFormat: none
-            constraints:
-              MaxLength: '255'
-              MinLength: '1'
-              Pattern: '^[a-zA-Z0-9]+(-*[a-zA-Z0-9])*$'
-            defaultValue:
-              $id: '1850'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1851'
-              fixed: false
-              raw: >-
-                Name of the Frontend endpoint which is unique within the Front
-                Door.
-            extensions:
-              x-ms-parameter-location: method
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1852'
-              fixed: false
-              raw: frontendEndpointName
-            serializedName: frontendEndpointName
-            modelType:
-              $id: '1853'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1854'
-                fixed: false
-                raw: String
-              deprecated: false
-          - $id: '1855'
-            location: body
-            collectionFormat: none
-            defaultValue:
-              $id: '1856'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1857'
-              fixed: false
-              raw: The configuration specifying how to enable HTTPS
-            extensions:
-              x-ms-requestBody-name: customHttpsConfiguration
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1858'
-              fixed: false
-              raw: customHttpsConfiguration
-            serializedName: customHttpsConfiguration
-            modelType:
-              $ref: '360'
-          - $id: '1859'
-            clientProperty:
-              $ref: '863'
-            location: query
-            collectionFormat: none
-            defaultValue:
-              $id: '1860'
-              fixed: false
-            deprecated: false
-            documentation:
-              $id: '1861'
-              fixed: false
-              raw: Client API version.
-            isRequired: true
-            isConstant: false
-            name:
-              $id: '1862'
-              fixed: false
-              raw: api-version
-            serializedName: api-version
-            modelType:
-              $id: '1863'
-              $type: PrimaryType
-              knownPrimaryType: string
-              name:
-                $id: '1864'
-                fixed: false
-                raw: String
-              deprecated: false
-        name:
-          $id: '1865'
-          fixed: false
           raw: EnableHttps
         group:
-          $id: '1866'
+          $id: '1195'
           fixed: false
           raw: FrontendEndpoints
         serializedName: FrontendEndpoints_EnableHttps
@@ -12369,18 +7502,18 @@ operations:
         httpMethod: post
         responses:
           OK:
-            $id: '1867'
+            $id: '1196'
             isNullable: true
           Accepted:
-            $id: '1868'
+            $id: '1197'
             isNullable: true
         defaultResponse:
-          $id: '1869'
+          $id: '1198'
           body:
             $ref: '765'
           isNullable: true
         returnType:
-          $id: '1870'
+          $id: '1199'
           isNullable: true
         description: Enables a frontendEndpoint for HTTPS traffic
         requestContentType: application/json; charset=utf-8
@@ -12413,19 +7546,19 @@ operations:
           x-ms-long-running-operation: true
         deprecated: false
         hidden: false
-      - $id: '1871'
+      - $id: '1200'
         parameters:
-          - $id: '1872'
+          - $id: '1201'
             clientProperty:
               $ref: '869'
             location: path
             collectionFormat: none
             defaultValue:
-              $id: '1873'
+              $id: '1202'
               fixed: false
             deprecated: false
             documentation:
-              $id: '1874'
+              $id: '1203'
               fixed: false
               raw: >-
                 The subscription credentials which uniquely identify the
@@ -12434,20 +7567,20 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '1875'
+              $id: '1204'
               fixed: false
               raw: subscriptionId
             serializedName: subscriptionId
             modelType:
-              $id: '1876'
+              $id: '1205'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '1877'
+                $id: '1206'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '1878'
+          - $id: '1207'
             clientProperty:
               $ref: '821'
             location: path
@@ -12457,11 +7590,11 @@ operations:
               MinLength: '1'
               Pattern: '^[a-zA-Z0-9_\-\(\)\.]*[^\.]$'
             defaultValue:
-              $id: '1879'
+              $id: '1208'
               fixed: false
             deprecated: false
             documentation:
-              $id: '1880'
+              $id: '1209'
               fixed: false
               raw: Name of the Resource group within the Azure subscription.
             extensions:
@@ -12469,20 +7602,20 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '1881'
+              $id: '1210'
               fixed: false
               raw: resourceGroupName
             serializedName: resourceGroupName
             modelType:
-              $id: '1882'
+              $id: '1211'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '1883'
+                $id: '1212'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '1884'
+          - $id: '1213'
             clientProperty:
               $ref: '827'
             location: path
@@ -12492,11 +7625,11 @@ operations:
               MinLength: '5'
               Pattern: '^[a-zA-Z0-9]+([-a-zA-Z0-9]?[a-zA-Z0-9])*$'
             defaultValue:
-              $id: '1885'
+              $id: '1214'
               fixed: false
             deprecated: false
             documentation:
-              $id: '1886'
+              $id: '1215'
               fixed: false
               raw: Name of the Front Door which is globally unique.
             extensions:
@@ -12504,20 +7637,20 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '1887'
+              $id: '1216'
               fixed: false
               raw: frontDoorName
             serializedName: frontDoorName
             modelType:
-              $id: '1888'
+              $id: '1217'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '1889'
+                $id: '1218'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '1890'
+          - $id: '1219'
             clientProperty:
               $ref: '857'
             location: path
@@ -12527,11 +7660,11 @@ operations:
               MinLength: '1'
               Pattern: '^[a-zA-Z0-9]+(-*[a-zA-Z0-9])*$'
             defaultValue:
-              $id: '1891'
+              $id: '1220'
               fixed: false
             deprecated: false
             documentation:
-              $id: '1892'
+              $id: '1221'
               fixed: false
               raw: >-
                 Name of the Frontend endpoint which is unique within the Front
@@ -12541,54 +7674,54 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '1893'
+              $id: '1222'
               fixed: false
               raw: frontendEndpointName
             serializedName: frontendEndpointName
             modelType:
-              $id: '1894'
+              $id: '1223'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '1895'
+                $id: '1224'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '1896'
+          - $id: '1225'
             clientProperty:
               $ref: '863'
             location: query
             collectionFormat: none
             defaultValue:
-              $id: '1897'
+              $id: '1226'
               fixed: false
             deprecated: false
             documentation:
-              $id: '1898'
+              $id: '1227'
               fixed: false
               raw: Client API version.
             isRequired: true
             isConstant: false
             name:
-              $id: '1899'
+              $id: '1228'
               fixed: false
               raw: api-version
             serializedName: api-version
             modelType:
-              $id: '1900'
+              $id: '1229'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '1901'
+                $id: '1230'
                 fixed: false
                 raw: String
               deprecated: false
         name:
-          $id: '1902'
+          $id: '1231'
           fixed: false
           raw: DisableHttps
         group:
-          $id: '1903'
+          $id: '1232'
           fixed: false
           raw: FrontendEndpoints
         serializedName: FrontendEndpoints_DisableHttps
@@ -12598,18 +7731,18 @@ operations:
         httpMethod: post
         responses:
           OK:
-            $id: '1904'
+            $id: '1233'
             isNullable: true
           Accepted:
-            $id: '1905'
+            $id: '1234'
             isNullable: true
         defaultResponse:
-          $id: '1906'
+          $id: '1235'
           body:
             $ref: '765'
           isNullable: true
         returnType:
-          $id: '1907'
+          $id: '1236'
           isNullable: true
         description: Disables a frontendEndpoint for HTTPS traffic
         requestContentType: application/json; charset=utf-8
@@ -12631,28 +7764,28 @@ operations:
         deprecated: false
         hidden: false
     name:
-      $id: '1908'
+      $id: '1237'
       fixed: false
       raw: FrontendEndpoints
     typeName:
-      $id: '1909'
+      $id: '1238'
       fixed: false
     nameForProperty: FrontendEndpoints
-  - $id: '1910'
+  - $id: '1239'
     methods:
-      - $id: '1911'
+      - $id: '1240'
         parameters:
-          - $id: '1912'
+          - $id: '1241'
             clientProperty:
               $ref: '869'
             location: path
             collectionFormat: none
             defaultValue:
-              $id: '1913'
+              $id: '1242'
               fixed: false
             deprecated: false
             documentation:
-              $id: '1914'
+              $id: '1243'
               fixed: false
               raw: >-
                 The subscription credentials which uniquely identify the
@@ -12661,20 +7794,20 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '1915'
+              $id: '1244'
               fixed: false
               raw: subscriptionId
             serializedName: subscriptionId
             modelType:
-              $id: '1916'
+              $id: '1245'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '1917'
+                $id: '1246'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '1918'
+          - $id: '1247'
             clientProperty:
               $ref: '821'
             location: path
@@ -12684,11 +7817,11 @@ operations:
               MinLength: '1'
               Pattern: '^[a-zA-Z0-9_\-\(\)\.]*[^\.]$'
             defaultValue:
-              $id: '1919'
+              $id: '1248'
               fixed: false
             deprecated: false
             documentation:
-              $id: '1920'
+              $id: '1249'
               fixed: false
               raw: Name of the Resource group within the Azure subscription.
             extensions:
@@ -12696,20 +7829,20 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '1921'
+              $id: '1250'
               fixed: false
               raw: resourceGroupName
             serializedName: resourceGroupName
             modelType:
-              $id: '1922'
+              $id: '1251'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '1923'
+                $id: '1252'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '1924'
+          - $id: '1253'
             clientProperty:
               $ref: '827'
             location: path
@@ -12719,11 +7852,11 @@ operations:
               MinLength: '5'
               Pattern: '^[a-zA-Z0-9]+([-a-zA-Z0-9]?[a-zA-Z0-9])*$'
             defaultValue:
-              $id: '1925'
+              $id: '1254'
               fixed: false
             deprecated: false
             documentation:
-              $id: '1926'
+              $id: '1255'
               fixed: false
               raw: Name of the Front Door which is globally unique.
             extensions:
@@ -12731,28 +7864,28 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '1927'
+              $id: '1256'
               fixed: false
               raw: frontDoorName
             serializedName: frontDoorName
             modelType:
-              $id: '1928'
+              $id: '1257'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '1929'
+                $id: '1258'
                 fixed: false
                 raw: String
               deprecated: false
-          - $id: '1930'
+          - $id: '1259'
             location: body
             collectionFormat: none
             defaultValue:
-              $id: '1931'
+              $id: '1260'
               fixed: false
             deprecated: false
             documentation:
-              $id: '1932'
+              $id: '1261'
               fixed: false
               raw: >-
                 The path to the content to be purged. Path can be a full URL,
@@ -12764,47 +7897,47 @@ operations:
             isRequired: true
             isConstant: false
             name:
-              $id: '1933'
+              $id: '1262'
               fixed: false
               raw: contentFilePaths
             serializedName: contentFilePaths
             modelType:
               $ref: '559'
-          - $id: '1934'
+          - $id: '1263'
             clientProperty:
               $ref: '863'
             location: query
             collectionFormat: none
             defaultValue:
-              $id: '1935'
+              $id: '1264'
               fixed: false
             deprecated: false
             documentation:
-              $id: '1936'
+              $id: '1265'
               fixed: false
               raw: Client API version.
             isRequired: true
             isConstant: false
             name:
-              $id: '1937'
+              $id: '1266'
               fixed: false
               raw: api-version
             serializedName: api-version
             modelType:
-              $id: '1938'
+              $id: '1267'
               $type: PrimaryType
               knownPrimaryType: string
               name:
-                $id: '1939'
+                $id: '1268'
                 fixed: false
                 raw: String
               deprecated: false
         name:
-          $id: '1940'
+          $id: '1269'
           fixed: false
           raw: PurgeContent
         group:
-          $id: '1941'
+          $id: '1270'
           fixed: false
           raw: Endpoints
         serializedName: Endpoints_PurgeContent
@@ -12814,18 +7947,18 @@ operations:
         httpMethod: post
         responses:
           OK:
-            $id: '1942'
+            $id: '1271'
             isNullable: true
           Accepted:
-            $id: '1943'
+            $id: '1272'
             isNullable: true
         defaultResponse:
-          $id: '1944'
+          $id: '1273'
           body:
             $ref: '765'
           isNullable: true
         returnType:
-          $id: '1945'
+          $id: '1274'
           isNullable: true
         description: Removes a content from Front Door.
         requestContentType: application/json; charset=utf-8
@@ -12851,10 +7984,10 @@ operations:
         deprecated: false
         hidden: false
     name:
-      $id: '1946'
+      $id: '1275'
       fixed: false
       raw: Endpoints
     typeName:
-      $id: '1947'
+      $id: '1276'
       fixed: false
     nameForProperty: Endpoints

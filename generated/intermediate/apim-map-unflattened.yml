@@ -338,7 +338,7 @@ Modules:
                     IdPortion: null
                     Type: str
                     TypeName: bearerTokenSendingMethods
-                    TypeNameGo: bearerTokenSendingMethods
+                    TypeNameGo: BearerTokenSendingMethods
                     IsList: true
                     Required: false
                     Documentation: How to send token to the server.
@@ -374,40 +374,6 @@ Modules:
                 PathSwagger: /properties/authenticationSettings/openid
                 PathPython: /authenticationSettings/openid
                 PathGo: /properties/authenticationSettings/openid
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: true
-                Flatten: false
-              - NameSwagger: subscriptionKeyRequired
-                NameAnsible: subscription_key_required
-                NamePythonSdk: subscription_key_required
-                NameGoSdk: SubscriptionKeyRequired
-                NameTerraform: SubscriptionKeyRequired
-                IdPortion: null
-                Type: boolean
-                TypeName: Boolean
-                TypeNameGo: Boolean
-                IsList: false
-                Required: false
-                Documentation: >-
-                  Specifies whether subscription key is required during call to
-                  this API, true - API is included into closed products only,
-                  false - API is included into open products alone, null - there
-                  is a mix of products.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/authenticationSettings/subscriptionKeyRequired
-                PathPython: /authenticationSettings/subscriptionKeyRequired
-                PathGo: /properties/authenticationSettings/subscriptionKeyRequired
                 DispositionSdk: '*'
                 DispositionRest: '*'
                 Comparison: ''
@@ -1840,7 +1806,7 @@ Modules:
                     IdPortion: null
                     Type: str
                     TypeName: bearerTokenSendingMethods
-                    TypeNameGo: bearerTokenSendingMethods
+                    TypeNameGo: BearerTokenSendingMethods
                     IsList: true
                     Required: false
                     Documentation: How to send token to the server.
@@ -1876,40 +1842,6 @@ Modules:
                 PathSwagger: /properties/authenticationSettings/openid
                 PathPython: /authenticationSettings/openid
                 PathGo: /properties/authenticationSettings/openid
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: subscriptionKeyRequired
-                NameAnsible: subscription_key_required
-                NamePythonSdk: subscription_key_required
-                NameGoSdk: SubscriptionKeyRequired
-                NameTerraform: SubscriptionKeyRequired
-                IdPortion: null
-                Type: boolean
-                TypeName: Boolean
-                TypeNameGo: Boolean
-                IsList: false
-                Required: false
-                Documentation: >-
-                  Specifies whether subscription key is required during call to
-                  this API, true - API is included into closed products only,
-                  false - API is included into open products alone, null - there
-                  is a mix of products.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/authenticationSettings/subscriptionKeyRequired
-                PathPython: /authenticationSettings/subscriptionKeyRequired
-                PathGo: /properties/authenticationSettings/subscriptionKeyRequired
                 DispositionSdk: '*'
                 DispositionRest: '*'
                 Comparison: ''
@@ -2766,6 +2698,8 @@ Modules:
           - apimanagement_service_put
         OperationId: '5849'
         MethodId: '5982'
+        OperationName: Api
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -2855,6 +2789,8 @@ Modules:
           - apimanagement_service_apis_put
         OperationId: '5849'
         MethodId: '5982'
+        OperationName: Api
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -2937,6 +2873,8 @@ Modules:
           - apimanagement_service_apis_put
         OperationId: '5849'
         MethodId: '5982'
+        OperationName: Api
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -3017,6 +2955,8 @@ Modules:
           - apimanagement_service_apis_put
         OperationId: '5849'
         MethodId: '5982'
+        OperationName: Api
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -3100,6 +3040,8 @@ Modules:
           - apimanagement_service_apis_put
         OperationId: '5849'
         MethodId: '5982'
+        OperationName: Api
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -3202,6 +3144,8 @@ Modules:
           - apimanagement_service_apis_put
         OperationId: '5849'
         MethodId: '5982'
+        OperationName: Api
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -3286,6 +3230,8 @@ Modules:
           - apimanagement_service_apis_put
         OperationId: '5849'
         MethodId: '5982'
+        OperationName: Api
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -3423,6 +3369,8 @@ Modules:
           - apimanagement_service_apis_put
         OperationId: '5849'
         MethodId: '5982'
+        OperationName: Api
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -3517,6 +3465,8 @@ Modules:
           - apimanagement_service_apis_put
         OperationId: '5849'
         MethodId: '5982'
+        OperationName: Api
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -3638,6 +3588,8 @@ Modules:
           - apimanagement_service_apis_put
         OperationId: '5849'
         MethodId: '5982'
+        OperationName: Api
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -3729,6 +3681,8 @@ Modules:
           - apimanagement_service_apis_put
         OperationId: '5849'
         MethodId: '5982'
+        OperationName: Api
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -3766,6 +3720,8 @@ Modules:
           - apimanagement_service_apis_put
         OperationId: '5849'
         MethodId: '6030'
+        OperationName: Api
+        MethodName: Update
       - Example:
           parameters:
             serviceName: apimService1
@@ -3797,6 +3753,8 @@ Modules:
         References: []
         OperationId: '5849'
         MethodId: '6076'
+        OperationName: Api
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementapi_info
     Options:
       - NameSwagger: resourceGroupName
@@ -4290,7 +4248,7 @@ Modules:
                     IdPortion: null
                     Type: str
                     TypeName: bearerTokenSendingMethods
-                    TypeNameGo: bearerTokenSendingMethods
+                    TypeNameGo: BearerTokenSendingMethods
                     IsList: true
                     Required: false
                     Documentation: How to send token to the server.
@@ -4326,40 +4284,6 @@ Modules:
                 PathSwagger: /properties/authenticationSettings/openid
                 PathPython: /authenticationSettings/openid
                 PathGo: /properties/authenticationSettings/openid
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: subscriptionKeyRequired
-                NameAnsible: subscription_key_required
-                NamePythonSdk: subscription_key_required
-                NameGoSdk: SubscriptionKeyRequired
-                NameTerraform: SubscriptionKeyRequired
-                IdPortion: null
-                Type: boolean
-                TypeName: Boolean
-                TypeNameGo: Boolean
-                IsList: false
-                Required: false
-                Documentation: >-
-                  Specifies whether subscription key is required during call to
-                  this API, true - API is included into closed products only,
-                  false - API is included into open products alone, null - there
-                  is a mix of products.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/authenticationSettings/subscriptionKeyRequired
-                PathPython: /authenticationSettings/subscriptionKeyRequired
-                PathGo: /properties/authenticationSettings/subscriptionKeyRequired
                 DispositionSdk: '*'
                 DispositionRest: '*'
                 Comparison: ''
@@ -5317,6 +5241,8 @@ Modules:
         References: []
         OperationId: '5849'
         MethodId: '5850'
+        OperationName: Api
+        MethodName: ListByService
       - Example:
           parameters:
             serviceName: apimService1
@@ -5354,6 +5280,8 @@ Modules:
         References: []
         OperationId: '5849'
         MethodId: '6125'
+        OperationName: Api
+        MethodName: ListByTags
       - Example:
           parameters:
             serviceName: apimService1
@@ -5403,6 +5331,8 @@ Modules:
         References: []
         OperationId: '5849'
         MethodId: '5946'
+        OperationName: Api
+        MethodName: Get
       - Example:
           parameters:
             serviceName: apimService1
@@ -5450,6 +5380,8 @@ Modules:
         References: []
         OperationId: '5849'
         MethodId: '5946'
+        OperationName: Api
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementapirevision_info
     Options:
       - NameSwagger: resourceGroupName
@@ -5923,6 +5855,8 @@ Modules:
         References: []
         OperationId: '6181'
         MethodId: '6182'
+        OperationName: ApiRevision
+        MethodName: ListByService
   - ModuleName: azure_rm_apimanagementapirelease
     Options:
       - NameSwagger: resourceGroupName
@@ -6598,6 +6532,8 @@ Modules:
           - apimanagement_service_apis_put
         OperationId: '6238'
         MethodId: '6377'
+        OperationName: ApiRelease
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -6641,6 +6577,8 @@ Modules:
           - apimanagement_service_apis_releases_put
         OperationId: '6238'
         MethodId: '6430'
+        OperationName: ApiRelease
+        MethodName: Update
       - Example:
           parameters:
             serviceName: apimService1
@@ -6676,6 +6614,8 @@ Modules:
         References: []
         OperationId: '6238'
         MethodId: '6482'
+        OperationName: ApiRelease
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementapirelease_info
     Options:
       - NameSwagger: resourceGroupName
@@ -7141,6 +7081,8 @@ Modules:
         References: []
         OperationId: '6238'
         MethodId: '6239'
+        OperationName: ApiRelease
+        MethodName: ListByService
       - Example:
           parameters:
             serviceName: apimService1
@@ -7191,6 +7133,8 @@ Modules:
         References: []
         OperationId: '6238'
         MethodId: '6335'
+        OperationName: ApiRelease
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementapioperation
     Options:
       - NameSwagger: resourceGroupName
@@ -11549,6 +11493,8 @@ Modules:
           - apimanagement_service_apis_put
         OperationId: '6533'
         MethodId: '6678'
+        OperationName: ApiOperation
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -11611,6 +11557,8 @@ Modules:
           - apimanagement_service_apis_operations_put
         OperationId: '6533'
         MethodId: '6731'
+        OperationName: ApiOperation
+        MethodName: Update
       - Example:
           parameters:
             serviceName: apimService1
@@ -11646,6 +11594,8 @@ Modules:
         References: []
         OperationId: '6533'
         MethodId: '6783'
+        OperationName: ApiOperation
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementapioperation_info
     Options:
       - NameSwagger: resourceGroupName
@@ -13986,6 +13936,8 @@ Modules:
         References: []
         OperationId: '6533'
         MethodId: '6534'
+        OperationName: ApiOperation
+        MethodName: ListByApi
       - Example:
           parameters:
             serviceName: apimService1
@@ -14050,6 +14002,8 @@ Modules:
         References: []
         OperationId: '6533'
         MethodId: '6636'
+        OperationName: ApiOperation
+        MethodName: Get
       - Example:
           parameters:
             serviceName: apimService1
@@ -14136,6 +14090,8 @@ Modules:
         References: []
         OperationId: '6533'
         MethodId: '6636'
+        OperationName: ApiOperation
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementapioperationpolicy
     Options:
       - NameSwagger: resourceGroupName
@@ -14797,6 +14753,8 @@ Modules:
           - apimanagement_service_apis_operations_put
         OperationId: '6834'
         MethodId: '6977'
+        OperationName: ApiOperationPolicy
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -14837,6 +14795,8 @@ Modules:
         References: []
         OperationId: '6834'
         MethodId: '7036'
+        OperationName: ApiOperationPolicy
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementapioperationpolicy_info
     Options:
       - NameSwagger: resourceGroupName
@@ -15326,6 +15286,8 @@ Modules:
         References: []
         OperationId: '6834'
         MethodId: '6835'
+        OperationName: ApiOperationPolicy
+        MethodName: ListByOperation
       - Example:
           parameters:
             serviceName: apimService1
@@ -15374,6 +15336,8 @@ Modules:
         References: []
         OperationId: '6834'
         MethodId: '6925'
+        OperationName: ApiOperationPolicy
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementtag
     Options:
       - NameSwagger: resourceGroupName
@@ -15956,6 +15920,8 @@ Modules:
           - apimanagement_service_put
         OperationId: '7093'
         MethodId: '7922'
+        OperationName: Tag
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -15990,6 +15956,8 @@ Modules:
           - apimanagement_service_tags_put
         OperationId: '7093'
         MethodId: '7969'
+        OperationName: Tag
+        MethodName: Update
       - Example:
           parameters:
             serviceName: apimService1
@@ -16021,6 +15989,8 @@ Modules:
         References: []
         OperationId: '7093'
         MethodId: '8015'
+        OperationName: Tag
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementtag_info
     Options:
       - NameSwagger: resourceGroupName
@@ -16586,6 +16556,8 @@ Modules:
         References: []
         OperationId: '7093'
         MethodId: '7796'
+        OperationName: Tag
+        MethodName: ListByService
       - Example:
           parameters:
             serviceName: apimService1
@@ -16624,6 +16596,8 @@ Modules:
         References: []
         OperationId: '7093'
         MethodId: '7886'
+        OperationName: Tag
+        MethodName: Get
       - Example:
           parameters:
             serviceName: apimService1
@@ -16665,6 +16639,8 @@ Modules:
         References: []
         OperationId: '7093'
         MethodId: '7348'
+        OperationName: Tag
+        MethodName: ListByApi
       - Example:
           parameters:
             serviceName: apimService1
@@ -16707,6 +16683,8 @@ Modules:
         References: []
         OperationId: '7093'
         MethodId: '7444'
+        OperationName: Tag
+        MethodName: GetByApi
       - Example:
           parameters:
             serviceName: apimService1
@@ -16748,6 +16726,8 @@ Modules:
         References: []
         OperationId: '7093'
         MethodId: '7572'
+        OperationName: Tag
+        MethodName: ListByProduct
       - Example:
           parameters:
             serviceName: apimService1
@@ -16790,6 +16770,8 @@ Modules:
         References: []
         OperationId: '7093'
         MethodId: '7668'
+        OperationName: Tag
+        MethodName: GetByProduct
       - Example:
           parameters:
             serviceName: apimService1
@@ -16835,6 +16817,8 @@ Modules:
         References: []
         OperationId: '7093'
         MethodId: '7094'
+        OperationName: Tag
+        MethodName: ListByOperation
       - Example:
           parameters:
             serviceName: apimService1
@@ -16882,6 +16866,8 @@ Modules:
         References: []
         OperationId: '7093'
         MethodId: '7202'
+        OperationName: Tag
+        MethodName: GetByOperation
   - ModuleName: azure_rm_apimanagementapiproduct_info
     Options:
       - NameSwagger: resourceGroupName
@@ -17478,6 +17464,8 @@ Modules:
         References: []
         OperationId: '8060'
         MethodId: '8061'
+        OperationName: ApiProduct
+        MethodName: ListByApis
   - ModuleName: azure_rm_apimanagementapipolicy
     Options:
       - NameSwagger: resourceGroupName
@@ -18089,6 +18077,8 @@ Modules:
           - apimanagement_service_apis_put
         OperationId: '8117'
         MethodId: '8242'
+        OperationName: ApiPolicy
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -18149,6 +18139,8 @@ Modules:
           - apimanagement_service_apis_policies_put
         OperationId: '8117'
         MethodId: '8242'
+        OperationName: ApiPolicy
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -18184,6 +18176,8 @@ Modules:
         References: []
         OperationId: '8117'
         MethodId: '8295'
+        OperationName: ApiPolicy
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementapipolicy_info
     Options:
       - NameSwagger: resourceGroupName
@@ -18632,6 +18626,8 @@ Modules:
         References: []
         OperationId: '8117'
         MethodId: '8118'
+        OperationName: ApiPolicy
+        MethodName: ListByApi
       - Example:
           parameters:
             serviceName: apimService1
@@ -18674,6 +18670,8 @@ Modules:
         References: []
         OperationId: '8117'
         MethodId: '8196'
+        OperationName: ApiPolicy
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementapischema
     Options:
       - NameSwagger: resourceGroupName
@@ -19299,6 +19297,8 @@ Modules:
           - apimanagement_service_apis_put
         OperationId: '8346'
         MethodId: '8485'
+        OperationName: ApiSchema
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -19334,6 +19334,8 @@ Modules:
         References: []
         OperationId: '8346'
         MethodId: '8538'
+        OperationName: ApiSchema
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementapischema_info
     Options:
       - NameSwagger: resourceGroupName
@@ -19743,6 +19745,8 @@ Modules:
         References: []
         OperationId: '8346'
         MethodId: '8347'
+        OperationName: ApiSchema
+        MethodName: ListByApi
       - Example:
           parameters:
             serviceName: apimService1
@@ -19787,6 +19791,8 @@ Modules:
         References: []
         OperationId: '8346'
         MethodId: '8443'
+        OperationName: ApiSchema
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementapidiagnostic
     Options:
       - NameSwagger: resourceGroupName
@@ -21809,6 +21815,8 @@ Modules:
           - apimanagement_service_apis_put
         OperationId: '8595'
         MethodId: '8734'
+        OperationName: ApiDiagnostic
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -21874,6 +21882,8 @@ Modules:
           - apimanagement_service_apis_diagnostics_put
         OperationId: '8595'
         MethodId: '8787'
+        OperationName: ApiDiagnostic
+        MethodName: Update
       - Example:
           parameters:
             serviceName: apimService1
@@ -21909,6 +21919,8 @@ Modules:
         References: []
         OperationId: '8595'
         MethodId: '8839'
+        OperationName: ApiDiagnostic
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementapidiagnostic_info
     Options:
       - NameSwagger: resourceGroupName
@@ -23012,6 +23024,8 @@ Modules:
         References: []
         OperationId: '8595'
         MethodId: '8596'
+        OperationName: ApiDiagnostic
+        MethodName: ListByService
       - Example:
           parameters:
             serviceName: apimService1
@@ -23081,6 +23095,8 @@ Modules:
         References: []
         OperationId: '8595'
         MethodId: '8692'
+        OperationName: ApiDiagnostic
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementapiissue
     Options:
       - NameSwagger: resourceGroupName
@@ -23967,6 +23983,8 @@ Modules:
           - apimanagement_service_apis_put
         OperationId: '8890'
         MethodId: '9041'
+        OperationName: ApiIssue
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -24005,6 +24023,8 @@ Modules:
           - apimanagement_service_apis_issues_put
         OperationId: '8890'
         MethodId: '9094'
+        OperationName: ApiIssue
+        MethodName: Update
       - Example:
           parameters:
             serviceName: apimService1
@@ -24040,6 +24060,8 @@ Modules:
         References: []
         OperationId: '8890'
         MethodId: '9146'
+        OperationName: ApiIssue
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementapiissue_info
     Options:
       - NameSwagger: resourceGroupName
@@ -24620,6 +24642,8 @@ Modules:
         References: []
         OperationId: '8890'
         MethodId: '8891'
+        OperationName: ApiIssue
+        MethodName: ListByService
       - Example:
           parameters:
             serviceName: apimService1
@@ -24675,6 +24699,8 @@ Modules:
         References: []
         OperationId: '8890'
         MethodId: '8993'
+        OperationName: ApiIssue
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementapiissuecomment
     Options:
       - NameSwagger: resourceGroupName
@@ -25374,6 +25400,8 @@ Modules:
           - apimanagement_service_apis_issues_put
         OperationId: '9197'
         MethodId: '9354'
+        OperationName: ApiIssueComment
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -25414,6 +25442,8 @@ Modules:
         References: []
         OperationId: '9197'
         MethodId: '9413'
+        OperationName: ApiIssueComment
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementapiissuecomment_info
     Options:
       - NameSwagger: resourceGroupName
@@ -25891,6 +25921,8 @@ Modules:
         References: []
         OperationId: '9197'
         MethodId: '9198'
+        OperationName: ApiIssueComment
+        MethodName: ListByService
       - Example:
           parameters:
             serviceName: apimService1
@@ -25945,6 +25977,8 @@ Modules:
         References: []
         OperationId: '9197'
         MethodId: '9306'
+        OperationName: ApiIssueComment
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementapiissueattachment
     Options:
       - NameSwagger: resourceGroupName
@@ -26636,6 +26670,8 @@ Modules:
           - apimanagement_service_apis_issues_put
         OperationId: '9470'
         MethodId: '9627'
+        OperationName: ApiIssueAttachment
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -26676,6 +26712,8 @@ Modules:
         References: []
         OperationId: '9470'
         MethodId: '9686'
+        OperationName: ApiIssueAttachment
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementapiissueattachment_info
     Options:
       - NameSwagger: resourceGroupName
@@ -27152,6 +27190,8 @@ Modules:
         References: []
         OperationId: '9470'
         MethodId: '9471'
+        OperationName: ApiIssueAttachment
+        MethodName: ListByService
       - Example:
           parameters:
             serviceName: apimService1
@@ -27202,6 +27242,8 @@ Modules:
         References: []
         OperationId: '9470'
         MethodId: '9579'
+        OperationName: ApiIssueAttachment
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementapitagdescription
     Options:
       - NameSwagger: resourceGroupName
@@ -27874,6 +27916,8 @@ Modules:
           - apimanagement_service_apis_put
         OperationId: '9743'
         MethodId: '9882'
+        OperationName: ApiTagDescription
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -27909,6 +27953,8 @@ Modules:
         References: []
         OperationId: '9743'
         MethodId: '9935'
+        OperationName: ApiTagDescription
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementapitagdescription_info
     Options:
       - NameSwagger: resourceGroupName
@@ -28371,6 +28417,8 @@ Modules:
         References: []
         OperationId: '9743'
         MethodId: '9744'
+        OperationName: ApiTagDescription
+        MethodName: ListByService
       - Example:
           parameters:
             serviceName: apimService1
@@ -28416,6 +28464,8 @@ Modules:
         References: []
         OperationId: '9743'
         MethodId: '9840'
+        OperationName: ApiTagDescription
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementoperation_info
     Options:
       - NameSwagger: resourceGroupName
@@ -28868,7 +28918,7 @@ Modules:
                         IdPortion: null
                         Type: str
                         TypeName: bearerTokenSendingMethods
-                        TypeNameGo: bearerTokenSendingMethods
+                        TypeNameGo: BearerTokenSendingMethods
                         IsList: true
                         Required: false
                         Documentation: How to send token to the server.
@@ -28907,40 +28957,6 @@ Modules:
                     PathSwagger: /value/api/authenticationSettings/openid
                     PathPython: /value/api/authenticationSettings/openid
                     PathGo: /value/api/authenticationSettings/openid
-                    DispositionSdk: '*'
-                    DispositionRest: '*'
-                    Comparison: ''
-                    Updatable: true
-                    ExampleValue: null
-                    Hidden: false
-                    IncludeInResponse: false
-                    Flatten: false
-                  - NameSwagger: subscriptionKeyRequired
-                    NameAnsible: subscription_key_required
-                    NamePythonSdk: subscription_key_required
-                    NameGoSdk: SubscriptionKeyRequired
-                    NameTerraform: SubscriptionKeyRequired
-                    IdPortion: null
-                    Type: boolean
-                    TypeName: Boolean
-                    TypeNameGo: Boolean
-                    IsList: false
-                    Required: false
-                    Documentation: >-
-                      Specifies whether subscription key is required during call
-                      to this API, true - API is included into closed products
-                      only, false - API is included into open products alone,
-                      null - there is a mix of products.
-                    DocumentationMarkKeywords: true
-                    DefaultValue: null
-                    IncludeInDocumentation: true
-                    IncludeInArgSpec: true
-                    NoLog: false
-                    SubOptions: []
-                    EnumValues: []
-                    PathSwagger: /value/api/authenticationSettings/subscriptionKeyRequired
-                    PathPython: /value/api/authenticationSettings/subscriptionKeyRequired
-                    PathGo: /value/api/authenticationSettings/subscriptionKeyRequired
                     DispositionSdk: '*'
                     DispositionRest: '*'
                     Comparison: ''
@@ -30207,6 +30223,8 @@ Modules:
         References: []
         OperationId: '9986'
         MethodId: '9987'
+        OperationName: Operation
+        MethodName: ListByTags
   - ModuleName: azure_rm_apimanagementapiversionset
     Options:
       - NameSwagger: resourceGroupName
@@ -30481,7 +30499,7 @@ Modules:
             IdPortion: null
             Type: str
             TypeName: versioningScheme
-            TypeNameGo: versioningScheme
+            TypeNameGo: VersioningScheme
             IsList: false
             Required: true
             Documentation: >-
@@ -30851,7 +30869,7 @@ Modules:
             IdPortion: null
             Type: str
             TypeName: versioningScheme
-            TypeNameGo: versioningScheme
+            TypeNameGo: VersioningScheme
             IsList: false
             Required: true
             Documentation: >-
@@ -30964,6 +30982,8 @@ Modules:
           - apimanagement_service_put
         OperationId: '10049'
         MethodId: '10170'
+        OperationName: ApiVersionSet
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -31000,6 +31020,8 @@ Modules:
           - apimanagement_service_apiversionsets_put
         OperationId: '10049'
         MethodId: '10217'
+        OperationName: ApiVersionSet
+        MethodName: Update
       - Example:
           parameters:
             serviceName: apimService1
@@ -31031,6 +31053,8 @@ Modules:
         References: []
         OperationId: '10049'
         MethodId: '10263'
+        OperationName: ApiVersionSet
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementapiversionset_info
     Options:
       - NameSwagger: resourceGroupName
@@ -31369,7 +31393,7 @@ Modules:
             IdPortion: null
             Type: str
             TypeName: versioningScheme
-            TypeNameGo: versioningScheme
+            TypeNameGo: VersioningScheme
             IsList: false
             Required: true
             Documentation: >-
@@ -31508,6 +31532,8 @@ Modules:
         References: []
         OperationId: '10049'
         MethodId: '10050'
+        OperationName: ApiVersionSet
+        MethodName: ListByService
       - Example:
           parameters:
             serviceName: apimService1
@@ -31548,6 +31574,8 @@ Modules:
         References: []
         OperationId: '10049'
         MethodId: '10134'
+        OperationName: ApiVersionSet
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementauthorizationserver
     Options:
       - NameSwagger: resourceGroupName
@@ -33287,6 +33315,8 @@ Modules:
           - apimanagement_service_put
         OperationId: '10308'
         MethodId: '10429'
+        OperationName: AuthorizationServer
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -33322,6 +33352,8 @@ Modules:
           - apimanagement_service_authorizationservers_put
         OperationId: '10308'
         MethodId: '10476'
+        OperationName: AuthorizationServer
+        MethodName: Update
       - Example:
           parameters:
             serviceName: apimService1
@@ -33353,6 +33385,8 @@ Modules:
         References: []
         OperationId: '10308'
         MethodId: '10522'
+        OperationName: AuthorizationServer
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementauthorizationserver_info
     Options:
       - NameSwagger: resourceGroupName
@@ -34329,6 +34363,8 @@ Modules:
         References: []
         OperationId: '10308'
         MethodId: '10309'
+        OperationName: AuthorizationServer
+        MethodName: ListByService
       - Example:
           parameters:
             serviceName: apimService1
@@ -34387,6 +34423,8 @@ Modules:
         References: []
         OperationId: '10308'
         MethodId: '10393'
+        OperationName: AuthorizationServer
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementbackend
     Options:
       - NameSwagger: resourceGroupName
@@ -34968,11 +35006,11 @@ Modules:
                 IdPortion: null
                 Type: >-
                   unknown[DictionaryType
-                  {"$id":"1845","$type":"DictionaryType","valueType":{"$id":"1846","$type":"SequenceType","elementType":{"$id":"1847","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1848","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1849","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1850","fixed":false},"deprecated":false}]
+                  {"$id":"1839","$type":"DictionaryType","valueType":{"$id":"1840","$type":"SequenceType","elementType":{"$id":"1841","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1842","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1843","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1844","fixed":false},"deprecated":false}]
                 TypeName: >-
-                  {"$id":"1845","$type":"DictionaryType","valueType":{"$id":"1846","$type":"SequenceType","elementType":{"$id":"1847","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1848","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1849","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1850","fixed":false},"deprecated":false}
+                  {"$id":"1839","$type":"DictionaryType","valueType":{"$id":"1840","$type":"SequenceType","elementType":{"$id":"1841","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1842","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1843","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1844","fixed":false},"deprecated":false}
                 TypeNameGo: >-
-                  {"$id":"1845","$type":"DictionaryType","valueType":{"$id":"1846","$type":"SequenceType","elementType":{"$id":"1847","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1848","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1849","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1850","fixed":false},"deprecated":false}
+                  {"$id":"1839","$type":"DictionaryType","valueType":{"$id":"1840","$type":"SequenceType","elementType":{"$id":"1841","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1842","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1843","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1844","fixed":false},"deprecated":false}
                 IsList: false
                 Required: false
                 Documentation: Query Parameter description.
@@ -35002,11 +35040,11 @@ Modules:
                 IdPortion: null
                 Type: >-
                   unknown[DictionaryType
-                  {"$id":"1855","$type":"DictionaryType","valueType":{"$id":"1856","$type":"SequenceType","elementType":{"$id":"1857","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1858","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1859","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1860","fixed":false},"deprecated":false}]
+                  {"$id":"1849","$type":"DictionaryType","valueType":{"$id":"1850","$type":"SequenceType","elementType":{"$id":"1851","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1852","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1853","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1854","fixed":false},"deprecated":false}]
                 TypeName: >-
-                  {"$id":"1855","$type":"DictionaryType","valueType":{"$id":"1856","$type":"SequenceType","elementType":{"$id":"1857","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1858","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1859","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1860","fixed":false},"deprecated":false}
+                  {"$id":"1849","$type":"DictionaryType","valueType":{"$id":"1850","$type":"SequenceType","elementType":{"$id":"1851","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1852","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1853","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1854","fixed":false},"deprecated":false}
                 TypeNameGo: >-
-                  {"$id":"1855","$type":"DictionaryType","valueType":{"$id":"1856","$type":"SequenceType","elementType":{"$id":"1857","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1858","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1859","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1860","fixed":false},"deprecated":false}
+                  {"$id":"1849","$type":"DictionaryType","valueType":{"$id":"1850","$type":"SequenceType","elementType":{"$id":"1851","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1852","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1853","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1854","fixed":false},"deprecated":false}
                 IsList: false
                 Required: false
                 Documentation: Header Parameter description.
@@ -36059,11 +36097,11 @@ Modules:
                 IdPortion: null
                 Type: >-
                   unknown[DictionaryType
-                  {"$id":"1845","$type":"DictionaryType","valueType":{"$id":"1846","$type":"SequenceType","elementType":{"$id":"1847","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1848","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1849","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1850","fixed":false},"deprecated":false}]
+                  {"$id":"1839","$type":"DictionaryType","valueType":{"$id":"1840","$type":"SequenceType","elementType":{"$id":"1841","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1842","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1843","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1844","fixed":false},"deprecated":false}]
                 TypeName: >-
-                  {"$id":"1845","$type":"DictionaryType","valueType":{"$id":"1846","$type":"SequenceType","elementType":{"$id":"1847","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1848","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1849","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1850","fixed":false},"deprecated":false}
+                  {"$id":"1839","$type":"DictionaryType","valueType":{"$id":"1840","$type":"SequenceType","elementType":{"$id":"1841","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1842","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1843","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1844","fixed":false},"deprecated":false}
                 TypeNameGo: >-
-                  {"$id":"1845","$type":"DictionaryType","valueType":{"$id":"1846","$type":"SequenceType","elementType":{"$id":"1847","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1848","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1849","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1850","fixed":false},"deprecated":false}
+                  {"$id":"1839","$type":"DictionaryType","valueType":{"$id":"1840","$type":"SequenceType","elementType":{"$id":"1841","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1842","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1843","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1844","fixed":false},"deprecated":false}
                 IsList: false
                 Required: false
                 Documentation: Query Parameter description.
@@ -36093,11 +36131,11 @@ Modules:
                 IdPortion: null
                 Type: >-
                   unknown[DictionaryType
-                  {"$id":"1855","$type":"DictionaryType","valueType":{"$id":"1856","$type":"SequenceType","elementType":{"$id":"1857","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1858","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1859","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1860","fixed":false},"deprecated":false}]
+                  {"$id":"1849","$type":"DictionaryType","valueType":{"$id":"1850","$type":"SequenceType","elementType":{"$id":"1851","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1852","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1853","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1854","fixed":false},"deprecated":false}]
                 TypeName: >-
-                  {"$id":"1855","$type":"DictionaryType","valueType":{"$id":"1856","$type":"SequenceType","elementType":{"$id":"1857","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1858","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1859","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1860","fixed":false},"deprecated":false}
+                  {"$id":"1849","$type":"DictionaryType","valueType":{"$id":"1850","$type":"SequenceType","elementType":{"$id":"1851","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1852","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1853","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1854","fixed":false},"deprecated":false}
                 TypeNameGo: >-
-                  {"$id":"1855","$type":"DictionaryType","valueType":{"$id":"1856","$type":"SequenceType","elementType":{"$id":"1857","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1858","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1859","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1860","fixed":false},"deprecated":false}
+                  {"$id":"1849","$type":"DictionaryType","valueType":{"$id":"1850","$type":"SequenceType","elementType":{"$id":"1851","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1852","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1853","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1854","fixed":false},"deprecated":false}
                 IsList: false
                 Required: false
                 Documentation: Header Parameter description.
@@ -36614,6 +36652,8 @@ Modules:
           - apimanagement_service_put
         OperationId: '10567'
         MethodId: '10688'
+        OperationName: Backend
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -36734,6 +36774,8 @@ Modules:
           - apimanagement_service_backends_put
         OperationId: '10567'
         MethodId: '10688'
+        OperationName: Backend
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -36771,6 +36813,8 @@ Modules:
           - apimanagement_service_backends_put
         OperationId: '10567'
         MethodId: '10735'
+        OperationName: Backend
+        MethodName: Update
       - Example:
           parameters:
             serviceName: apimService1
@@ -36802,6 +36846,8 @@ Modules:
         References: []
         OperationId: '10567'
         MethodId: '10781'
+        OperationName: Backend
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementbackend_info
     Options:
       - NameSwagger: resourceGroupName
@@ -37447,11 +37493,11 @@ Modules:
                 IdPortion: null
                 Type: >-
                   unknown[DictionaryType
-                  {"$id":"1845","$type":"DictionaryType","valueType":{"$id":"1846","$type":"SequenceType","elementType":{"$id":"1847","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1848","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1849","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1850","fixed":false},"deprecated":false}]
+                  {"$id":"1839","$type":"DictionaryType","valueType":{"$id":"1840","$type":"SequenceType","elementType":{"$id":"1841","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1842","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1843","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1844","fixed":false},"deprecated":false}]
                 TypeName: >-
-                  {"$id":"1845","$type":"DictionaryType","valueType":{"$id":"1846","$type":"SequenceType","elementType":{"$id":"1847","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1848","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1849","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1850","fixed":false},"deprecated":false}
+                  {"$id":"1839","$type":"DictionaryType","valueType":{"$id":"1840","$type":"SequenceType","elementType":{"$id":"1841","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1842","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1843","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1844","fixed":false},"deprecated":false}
                 TypeNameGo: >-
-                  {"$id":"1845","$type":"DictionaryType","valueType":{"$id":"1846","$type":"SequenceType","elementType":{"$id":"1847","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1848","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1849","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1850","fixed":false},"deprecated":false}
+                  {"$id":"1839","$type":"DictionaryType","valueType":{"$id":"1840","$type":"SequenceType","elementType":{"$id":"1841","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1842","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1843","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1844","fixed":false},"deprecated":false}
                 IsList: false
                 Required: false
                 Documentation: Query Parameter description.
@@ -37481,11 +37527,11 @@ Modules:
                 IdPortion: null
                 Type: >-
                   unknown[DictionaryType
-                  {"$id":"1855","$type":"DictionaryType","valueType":{"$id":"1856","$type":"SequenceType","elementType":{"$id":"1857","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1858","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1859","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1860","fixed":false},"deprecated":false}]
+                  {"$id":"1849","$type":"DictionaryType","valueType":{"$id":"1850","$type":"SequenceType","elementType":{"$id":"1851","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1852","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1853","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1854","fixed":false},"deprecated":false}]
                 TypeName: >-
-                  {"$id":"1855","$type":"DictionaryType","valueType":{"$id":"1856","$type":"SequenceType","elementType":{"$id":"1857","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1858","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1859","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1860","fixed":false},"deprecated":false}
+                  {"$id":"1849","$type":"DictionaryType","valueType":{"$id":"1850","$type":"SequenceType","elementType":{"$id":"1851","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1852","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1853","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1854","fixed":false},"deprecated":false}
                 TypeNameGo: >-
-                  {"$id":"1855","$type":"DictionaryType","valueType":{"$id":"1856","$type":"SequenceType","elementType":{"$id":"1857","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1858","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1859","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1860","fixed":false},"deprecated":false}
+                  {"$id":"1849","$type":"DictionaryType","valueType":{"$id":"1850","$type":"SequenceType","elementType":{"$id":"1851","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1852","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1853","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1854","fixed":false},"deprecated":false}
                 IsList: false
                 Required: false
                 Documentation: Header Parameter description.
@@ -38029,6 +38075,8 @@ Modules:
         References: []
         OperationId: '10567'
         MethodId: '10568'
+        OperationName: Backend
+        MethodName: ListByService
       - Example:
           parameters:
             serviceName: apimService1
@@ -38078,6 +38126,8 @@ Modules:
         References: []
         OperationId: '10567'
         MethodId: '10652'
+        OperationName: Backend
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementcache
     Options:
       - NameSwagger: resourceGroupName
@@ -38697,6 +38747,8 @@ Modules:
           - apimanagement_service_put
         OperationId: '10866'
         MethodId: '10981'
+        OperationName: Cache
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -38731,6 +38783,8 @@ Modules:
           - apimanagement_service_caches_put
         OperationId: '10866'
         MethodId: '11028'
+        OperationName: Cache
+        MethodName: Update
       - Example:
           parameters:
             serviceName: apimService1
@@ -38762,6 +38816,8 @@ Modules:
         References: []
         OperationId: '10866'
         MethodId: '11074'
+        OperationName: Cache
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementcache_info
     Options:
       - NameSwagger: resourceGroupName
@@ -39153,6 +39209,8 @@ Modules:
         References: []
         OperationId: '10866'
         MethodId: '10867'
+        OperationName: Cache
+        MethodName: ListByService
       - Example:
           parameters:
             serviceName: apimService1
@@ -39196,6 +39254,8 @@ Modules:
         References: []
         OperationId: '10866'
         MethodId: '10945'
+        OperationName: Cache
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementcertificate
     Options:
       - NameSwagger: resourceGroupName
@@ -39768,6 +39828,8 @@ Modules:
           - apimanagement_service_put
         OperationId: '11119'
         MethodId: '11240'
+        OperationName: Certificate
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -39799,6 +39861,8 @@ Modules:
         References: []
         OperationId: '11119'
         MethodId: '11287'
+        OperationName: Certificate
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementcertificate_info
     Options:
       - NameSwagger: resourceGroupName
@@ -40193,6 +40257,8 @@ Modules:
         References: []
         OperationId: '11119'
         MethodId: '11120'
+        OperationName: Certificate
+        MethodName: ListByService
       - Example:
           parameters:
             serviceName: apimService1
@@ -40233,6 +40299,8 @@ Modules:
         References: []
         OperationId: '11119'
         MethodId: '11204'
+        OperationName: Certificate
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementoperation_info
     Options:
       - &ref_132
@@ -40609,6 +40677,8 @@ Modules:
         References: []
         OperationId: '11332'
         MethodId: '11333'
+        OperationName: ApiManagementOperations
+        MethodName: List
   - ModuleName: azure_rm_apimanagementservicesku_info
     Options:
       - NameSwagger: resourceGroupName
@@ -41082,6 +41152,8 @@ Modules:
         References: []
         OperationId: '11347'
         MethodId: '11348'
+        OperationName: ApiManagementServiceSkus
+        MethodName: ListAvailableServiceSkus
       - Example:
           parameters:
             api-version: '2019-01-01'
@@ -41113,6 +41185,8 @@ Modules:
         References: []
         OperationId: '11347'
         MethodId: '11348'
+        OperationName: ApiManagementServiceSkus
+        MethodName: ListAvailableServiceSkus
   - ModuleName: azure_rm_apimanagementservice
     Options:
       - NameSwagger: resourceGroupName
@@ -41215,11 +41289,11 @@ Modules:
         IdPortion: null
         Type: >-
           unknown[DictionaryType
-          {"$id":"2630","$type":"DictionaryType","valueType":{"$id":"2631","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2632","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2633","fixed":false},"deprecated":false}]
+          {"$id":"2624","$type":"DictionaryType","valueType":{"$id":"2625","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2626","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2627","fixed":false},"deprecated":false}]
         TypeName: >-
-          {"$id":"2630","$type":"DictionaryType","valueType":{"$id":"2631","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2632","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2633","fixed":false},"deprecated":false}
+          {"$id":"2624","$type":"DictionaryType","valueType":{"$id":"2625","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2626","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2627","fixed":false},"deprecated":false}
         TypeNameGo: >-
-          {"$id":"2630","$type":"DictionaryType","valueType":{"$id":"2631","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2632","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2633","fixed":false},"deprecated":false}
+          {"$id":"2624","$type":"DictionaryType","valueType":{"$id":"2625","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2626","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2627","fixed":false},"deprecated":false}
         IsList: false
         Required: false
         Documentation: Resource tags.
@@ -42216,11 +42290,11 @@ Modules:
             IdPortion: null
             Type: >-
               unknown[DictionaryType
-              {"$id":"2519","$type":"DictionaryType","valueType":{"$id":"2520","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2521","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2522","fixed":false},"deprecated":false}]
+              {"$id":"2513","$type":"DictionaryType","valueType":{"$id":"2514","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2515","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2516","fixed":false},"deprecated":false}]
             TypeName: >-
-              {"$id":"2519","$type":"DictionaryType","valueType":{"$id":"2520","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2521","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2522","fixed":false},"deprecated":false}
+              {"$id":"2513","$type":"DictionaryType","valueType":{"$id":"2514","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2515","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2516","fixed":false},"deprecated":false}
             TypeNameGo: >-
-              {"$id":"2519","$type":"DictionaryType","valueType":{"$id":"2520","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2521","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2522","fixed":false},"deprecated":false}
+              {"$id":"2513","$type":"DictionaryType","valueType":{"$id":"2514","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2515","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2516","fixed":false},"deprecated":false}
             IsList: false
             Required: false
             Documentation: >-
@@ -43478,11 +43552,11 @@ Modules:
         IdPortion: null
         Type: >-
           unknown[DictionaryType
-          {"$id":"2630","$type":"DictionaryType","valueType":{"$id":"2631","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2632","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2633","fixed":false},"deprecated":false}]
+          {"$id":"2624","$type":"DictionaryType","valueType":{"$id":"2625","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2626","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2627","fixed":false},"deprecated":false}]
         TypeName: >-
-          {"$id":"2630","$type":"DictionaryType","valueType":{"$id":"2631","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2632","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2633","fixed":false},"deprecated":false}
+          {"$id":"2624","$type":"DictionaryType","valueType":{"$id":"2625","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2626","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2627","fixed":false},"deprecated":false}
         TypeNameGo: >-
-          {"$id":"2630","$type":"DictionaryType","valueType":{"$id":"2631","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2632","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2633","fixed":false},"deprecated":false}
+          {"$id":"2624","$type":"DictionaryType","valueType":{"$id":"2625","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2626","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2627","fixed":false},"deprecated":false}
         IsList: false
         Required: false
         Documentation: Resource tags.
@@ -44263,11 +44337,11 @@ Modules:
             IdPortion: null
             Type: >-
               unknown[DictionaryType
-              {"$id":"2519","$type":"DictionaryType","valueType":{"$id":"2520","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2521","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2522","fixed":false},"deprecated":false}]
+              {"$id":"2513","$type":"DictionaryType","valueType":{"$id":"2514","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2515","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2516","fixed":false},"deprecated":false}]
             TypeName: >-
-              {"$id":"2519","$type":"DictionaryType","valueType":{"$id":"2520","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2521","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2522","fixed":false},"deprecated":false}
+              {"$id":"2513","$type":"DictionaryType","valueType":{"$id":"2514","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2515","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2516","fixed":false},"deprecated":false}
             TypeNameGo: >-
-              {"$id":"2519","$type":"DictionaryType","valueType":{"$id":"2520","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2521","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2522","fixed":false},"deprecated":false}
+              {"$id":"2513","$type":"DictionaryType","valueType":{"$id":"2514","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2515","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2516","fixed":false},"deprecated":false}
             IsList: false
             Required: false
             Documentation: >-
@@ -45062,6 +45136,8 @@ Modules:
           - resourcegroups_put
         OperationId: '11380'
         MethodId: '11451'
+        OperationName: ApiManagementService
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -45308,6 +45384,8 @@ Modules:
           - apimanagement_service_put
         OperationId: '11380'
         MethodId: '11451'
+        OperationName: ApiManagementService
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -45422,6 +45500,8 @@ Modules:
           - apimanagement_service_put
         OperationId: '11380'
         MethodId: '11451'
+        OperationName: ApiManagementService
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -45553,6 +45633,8 @@ Modules:
           - apimanagement_service_put
         OperationId: '11380'
         MethodId: '11451'
+        OperationName: ApiManagementService
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -45649,6 +45731,8 @@ Modules:
           - apimanagement_service_put
         OperationId: '11380'
         MethodId: '11487'
+        OperationName: ApiManagementService
+        MethodName: Update
       - Example:
           parameters:
             serviceName: apimService1
@@ -45745,6 +45829,8 @@ Modules:
           - apimanagement_service_put
         OperationId: '11380'
         MethodId: '11487'
+        OperationName: ApiManagementService
+        MethodName: Update
       - Example:
           parameters:
             serviceName: apimService1
@@ -45818,6 +45904,8 @@ Modules:
         References: []
         OperationId: '11380'
         MethodId: '11552'
+        OperationName: ApiManagementService
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementservice_info
     Options:
       - NameSwagger: resourceGroupName
@@ -45984,11 +46072,11 @@ Modules:
         IdPortion: null
         Type: >-
           unknown[DictionaryType
-          {"$id":"2630","$type":"DictionaryType","valueType":{"$id":"2631","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2632","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2633","fixed":false},"deprecated":false}]
+          {"$id":"2624","$type":"DictionaryType","valueType":{"$id":"2625","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2626","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2627","fixed":false},"deprecated":false}]
         TypeName: >-
-          {"$id":"2630","$type":"DictionaryType","valueType":{"$id":"2631","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2632","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2633","fixed":false},"deprecated":false}
+          {"$id":"2624","$type":"DictionaryType","valueType":{"$id":"2625","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2626","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2627","fixed":false},"deprecated":false}
         TypeNameGo: >-
-          {"$id":"2630","$type":"DictionaryType","valueType":{"$id":"2631","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2632","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2633","fixed":false},"deprecated":false}
+          {"$id":"2624","$type":"DictionaryType","valueType":{"$id":"2625","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2626","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2627","fixed":false},"deprecated":false}
         IsList: false
         Required: false
         Documentation: Resource tags.
@@ -47293,11 +47381,11 @@ Modules:
             IdPortion: null
             Type: >-
               unknown[DictionaryType
-              {"$id":"2519","$type":"DictionaryType","valueType":{"$id":"2520","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2521","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2522","fixed":false},"deprecated":false}]
+              {"$id":"2513","$type":"DictionaryType","valueType":{"$id":"2514","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2515","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2516","fixed":false},"deprecated":false}]
             TypeName: >-
-              {"$id":"2519","$type":"DictionaryType","valueType":{"$id":"2520","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2521","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2522","fixed":false},"deprecated":false}
+              {"$id":"2513","$type":"DictionaryType","valueType":{"$id":"2514","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2515","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2516","fixed":false},"deprecated":false}
             TypeNameGo: >-
-              {"$id":"2519","$type":"DictionaryType","valueType":{"$id":"2520","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2521","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2522","fixed":false},"deprecated":false}
+              {"$id":"2513","$type":"DictionaryType","valueType":{"$id":"2514","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2515","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2516","fixed":false},"deprecated":false}
             IsList: false
             Required: false
             Documentation: >-
@@ -48249,6 +48337,8 @@ Modules:
         References: []
         OperationId: '11380'
         MethodId: '11608'
+        OperationName: ApiManagementService
+        MethodName: List
       - Example:
           parameters:
             resourceGroupName: rg1
@@ -48394,6 +48484,8 @@ Modules:
         References: []
         OperationId: '11380'
         MethodId: '11584'
+        OperationName: ApiManagementService
+        MethodName: ListByResourceGroup
       - Example:
           parameters:
             serviceName: apimService1
@@ -48479,6 +48571,8 @@ Modules:
         References: []
         OperationId: '11380'
         MethodId: '11522'
+        OperationName: ApiManagementService
+        MethodName: Get
       - Example:
           parameters:
             serviceName: apimService1
@@ -48544,6 +48638,8 @@ Modules:
         References: []
         OperationId: '11380'
         MethodId: '11522'
+        OperationName: ApiManagementService
+        MethodName: Get
       - Example:
           parameters:
             serviceName: apimService1
@@ -48637,6 +48733,8 @@ Modules:
         References: []
         OperationId: '11380'
         MethodId: '11522'
+        OperationName: ApiManagementService
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementdiagnostic
     Options:
       - NameSwagger: resourceGroupName
@@ -50611,6 +50709,8 @@ Modules:
           - apimanagement_service_put
         OperationId: '11715'
         MethodId: '11836'
+        OperationName: Diagnostic
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -50672,6 +50772,8 @@ Modules:
           - apimanagement_service_diagnostics_put
         OperationId: '11715'
         MethodId: '11883'
+        OperationName: Diagnostic
+        MethodName: Update
       - Example:
           parameters:
             serviceName: apimService1
@@ -50703,6 +50805,8 @@ Modules:
         References: []
         OperationId: '11715'
         MethodId: '11929'
+        OperationName: Diagnostic
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementdiagnostic_info
     Options:
       - NameSwagger: resourceGroupName
@@ -51765,6 +51869,8 @@ Modules:
         References: []
         OperationId: '11715'
         MethodId: '11716'
+        OperationName: Diagnostic
+        MethodName: ListByService
       - Example:
           parameters:
             serviceName: apimService1
@@ -51829,6 +51935,8 @@ Modules:
         References: []
         OperationId: '11715'
         MethodId: '11800'
+        OperationName: Diagnostic
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementemailtemplate
     Options:
       - NameSwagger: resourceGroupName
@@ -52800,6 +52908,8 @@ Modules:
           - apimanagement_service_put
         OperationId: '11974'
         MethodId: '12091'
+        OperationName: EmailTemplate
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -52835,6 +52945,8 @@ Modules:
           - apimanagement_service_templates_put
         OperationId: '11974'
         MethodId: '12136'
+        OperationName: EmailTemplate
+        MethodName: Update
       - Example:
           parameters:
             serviceName: apimService1
@@ -52866,6 +52978,8 @@ Modules:
         References: []
         OperationId: '11974'
         MethodId: '12180'
+        OperationName: EmailTemplate
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementemailtemplate_info
     Options:
       - NameSwagger: resourceGroupName
@@ -53458,6 +53572,8 @@ Modules:
         References: []
         OperationId: '11974'
         MethodId: '11975'
+        OperationName: EmailTemplate
+        MethodName: ListByService
       - Example:
           parameters:
             serviceName: apimService1
@@ -53515,6 +53631,8 @@ Modules:
         References: []
         OperationId: '11974'
         MethodId: '12057'
+        OperationName: EmailTemplate
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementgroup
     Options:
       - NameSwagger: resourceGroupName
@@ -54237,6 +54355,8 @@ Modules:
           - apimanagement_service_put
         OperationId: '12223'
         MethodId: '12344'
+        OperationName: Group
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -54304,6 +54424,8 @@ Modules:
           - apimanagement_service_groups_put
         OperationId: '12223'
         MethodId: '12344'
+        OperationName: Group
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -54338,6 +54460,8 @@ Modules:
           - apimanagement_service_groups_put
         OperationId: '12223'
         MethodId: '12391'
+        OperationName: Group
+        MethodName: Update
       - Example:
           parameters:
             serviceName: apimService1
@@ -54369,6 +54493,8 @@ Modules:
         References: []
         OperationId: '12223'
         MethodId: '12437'
+        OperationName: Group
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementgroup_info
     Options:
       - NameSwagger: resourceGroupName
@@ -54881,6 +55007,8 @@ Modules:
         References: []
         OperationId: '12223'
         MethodId: '12224'
+        OperationName: Group
+        MethodName: ListByService
       - Example:
           parameters:
             serviceName: apimService1
@@ -54924,6 +55052,8 @@ Modules:
         References: []
         OperationId: '12223'
         MethodId: '12308'
+        OperationName: Group
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementgroupuser
     Options:
       - NameSwagger: resourceGroupName
@@ -55793,6 +55923,8 @@ Modules:
           - apimanagement_service_groups_put
         OperationId: '12482'
         MethodId: '12580'
+        OperationName: GroupUser
+        MethodName: Create
       - Example:
           parameters:
             serviceName: apimService1
@@ -55828,6 +55960,8 @@ Modules:
         References: []
         OperationId: '12482'
         MethodId: '12623'
+        OperationName: GroupUser
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementgroupuser_info
     Options:
       - NameSwagger: resourceGroupName
@@ -56672,6 +56806,8 @@ Modules:
         References: []
         OperationId: '12482'
         MethodId: '12483'
+        OperationName: GroupUser
+        MethodName: List
   - ModuleName: azure_rm_apimanagementidentityprovider
     Options:
       - NameSwagger: resourceGroupName
@@ -56852,6 +56988,38 @@ Modules:
             PathSwagger: /properties/type
             PathPython: /type
             PathGo: /properties/type
+            DispositionSdk: '*'
+            DispositionRest: '*'
+            Comparison: ''
+            Updatable: true
+            ExampleValue: null
+            Hidden: false
+            IncludeInResponse: true
+            Flatten: false
+          - NameSwagger: signinTenant
+            NameAnsible: signin_tenant
+            NamePythonSdk: signin_tenant
+            NameGoSdk: SigninTenant
+            NameTerraform: SigninTenant
+            IdPortion: null
+            Type: str
+            TypeName: String
+            TypeNameGo: String
+            IsList: false
+            Required: false
+            Documentation: >-
+              The TenantId to use instead of Common when logging into Active
+              Directory
+            DocumentationMarkKeywords: true
+            DefaultValue: null
+            IncludeInDocumentation: true
+            IncludeInArgSpec: true
+            NoLog: false
+            SubOptions: []
+            EnumValues: []
+            PathSwagger: /properties/signinTenant
+            PathPython: /signinTenant
+            PathGo: /properties/signinTenant
             DispositionSdk: '*'
             DispositionRest: '*'
             Comparison: ''
@@ -57366,6 +57534,38 @@ Modules:
             Hidden: false
             IncludeInResponse: false
             Flatten: false
+          - NameSwagger: signinTenant
+            NameAnsible: signin_tenant
+            NamePythonSdk: signin_tenant
+            NameGoSdk: SigninTenant
+            NameTerraform: SigninTenant
+            IdPortion: null
+            Type: str
+            TypeName: String
+            TypeNameGo: String
+            IsList: false
+            Required: false
+            Documentation: >-
+              The TenantId to use instead of Common when logging into Active
+              Directory
+            DocumentationMarkKeywords: true
+            DefaultValue: null
+            IncludeInDocumentation: true
+            IncludeInArgSpec: true
+            NoLog: false
+            SubOptions: []
+            EnumValues: []
+            PathSwagger: /properties/signinTenant
+            PathPython: /signinTenant
+            PathGo: /properties/signinTenant
+            DispositionSdk: '*'
+            DispositionRest: '*'
+            Comparison: ''
+            Updatable: true
+            ExampleValue: null
+            Hidden: false
+            IncludeInResponse: false
+            Flatten: false
           - NameSwagger: allowedTenants
             NameAnsible: allowed_tenants
             NamePythonSdk: allowed_tenants
@@ -57698,6 +57898,8 @@ Modules:
           - apimanagement_service_put
         OperationId: '12668'
         MethodId: '12767'
+        OperationName: IdentityProvider
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -57733,6 +57935,8 @@ Modules:
           - apimanagement_service_identityproviders_put
         OperationId: '12668'
         MethodId: '12812'
+        OperationName: IdentityProvider
+        MethodName: Update
       - Example:
           parameters:
             serviceName: apimService1
@@ -57764,6 +57968,8 @@ Modules:
         References: []
         OperationId: '12668'
         MethodId: '12856'
+        OperationName: IdentityProvider
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementidentityprovider_info
     Options:
       - NameSwagger: resourceGroupName
@@ -58008,6 +58214,38 @@ Modules:
             PathSwagger: /properties/type
             PathPython: /type
             PathGo: /properties/type
+            DispositionSdk: '*'
+            DispositionRest: '*'
+            Comparison: ''
+            Updatable: true
+            ExampleValue: null
+            Hidden: false
+            IncludeInResponse: false
+            Flatten: false
+          - NameSwagger: signinTenant
+            NameAnsible: signin_tenant
+            NamePythonSdk: signin_tenant
+            NameGoSdk: SigninTenant
+            NameTerraform: SigninTenant
+            IdPortion: null
+            Type: str
+            TypeName: String
+            TypeNameGo: String
+            IsList: false
+            Required: false
+            Documentation: >-
+              The TenantId to use instead of Common when logging into Active
+              Directory
+            DocumentationMarkKeywords: true
+            DefaultValue: null
+            IncludeInDocumentation: true
+            IncludeInArgSpec: true
+            NoLog: false
+            SubOptions: []
+            EnumValues: []
+            PathSwagger: /properties/signinTenant
+            PathPython: /signinTenant
+            PathGo: /properties/signinTenant
             DispositionSdk: '*'
             DispositionRest: '*'
             Comparison: ''
@@ -58395,6 +58633,8 @@ Modules:
         References: []
         OperationId: '12668'
         MethodId: '12669'
+        OperationName: IdentityProvider
+        MethodName: ListByService
       - Example:
           parameters:
             serviceName: apimService1
@@ -58410,15 +58650,18 @@ Modules:
                   resource_group }}/providers/Microsoft.ApiManagement/service/{{
                   service_name }}/identityProviders/{{ identity_provider_name }}
                 type: Microsoft.ApiManagement/service/identityProviders
-                name: aadB2C
+                name: AadB2C
                 properties:
-                  clientId: 315c8e2b-29fc-413d-822f-4efab7f43c42
-                  clientSecret: SnE4laLjmxc2QKWTPoRxOiwvSnnwMCFN+jLYDpBCUXw=
+                  clientId: f02dafe2-b8b8-48ec-a38e-27e5c16c51e5
+                  clientSecret: XXXXXXX
                   type: aadB2C
+                  authority: login.microsoftonline.com
+                  signinTenant: contosoaadb2c.onmicrosoft.com
                   allowedTenants:
-                    - samirtestbc.onmicrosoft.com
-                  signupPolicyName: B2C_1_Signup_Default
-                  signinPolicyName: B2C_1_signup-policy
+                    - contosoaadb2c.onmicrosoft.com
+                    - contoso2aadb2c.onmicrosoft.com
+                  signupPolicyName: B2C_1_policy-signup
+                  signinPolicyName: B2C_1_policy-signin
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ApiManagement/service/{{ service_name
@@ -58439,6 +58682,8 @@ Modules:
         References: []
         OperationId: '12668'
         MethodId: '12733'
+        OperationName: IdentityProvider
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementissue_info
     Options:
       - NameSwagger: resourceGroupName
@@ -58944,6 +59189,8 @@ Modules:
         References: []
         OperationId: '12899'
         MethodId: '12900'
+        OperationName: Issue
+        MethodName: ListByService
       - Example:
           parameters:
             serviceName: apimService1
@@ -58995,6 +59242,8 @@ Modules:
         References: []
         OperationId: '12899'
         MethodId: '12948'
+        OperationName: Issue
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementlogger
     Options:
       - NameSwagger: resourceGroupName
@@ -59777,6 +60026,8 @@ Modules:
           - apimanagement_service_put
         OperationId: '12986'
         MethodId: '13107'
+        OperationName: Logger
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -59844,6 +60095,8 @@ Modules:
           - apimanagement_service_loggers_put
         OperationId: '12986'
         MethodId: '13107'
+        OperationName: Logger
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -59884,6 +60137,8 @@ Modules:
           - apimanagement_service_loggers_put
         OperationId: '12986'
         MethodId: '13154'
+        OperationName: Logger
+        MethodName: Update
       - Example:
           parameters:
             serviceName: apimService1
@@ -59915,6 +60170,8 @@ Modules:
         References: []
         OperationId: '12986'
         MethodId: '13200'
+        OperationName: Logger
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementlogger_info
     Options:
       - NameSwagger: resourceGroupName
@@ -60410,6 +60667,8 @@ Modules:
         References: []
         OperationId: '12986'
         MethodId: '12987'
+        OperationName: Logger
+        MethodName: ListByService
       - Example:
           parameters:
             serviceName: apimService1
@@ -60458,6 +60717,8 @@ Modules:
         References: []
         OperationId: '12986'
         MethodId: '13071'
+        OperationName: Logger
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementnetworkstatu_info
     Options:
       - NameSwagger: resourceGroupName
@@ -60683,6 +60944,8 @@ Modules:
         References: []
         OperationId: '13251'
         MethodId: '13252'
+        OperationName: NetworkStatus
+        MethodName: ListByService
       - Example:
           parameters:
             serviceName: apimService1
@@ -60746,6 +61009,8 @@ Modules:
         References: []
         OperationId: '13251'
         MethodId: '13284'
+        OperationName: NetworkStatus
+        MethodName: ListByLocation
   - ModuleName: azure_rm_apimanagementnotification
     Options:
       - NameSwagger: resourceGroupName
@@ -61225,6 +61490,8 @@ Modules:
           - apimanagement_service_put
         OperationId: '13322'
         MethodId: '13399'
+        OperationName: Notification
+        MethodName: CreateOrUpdate
   - ModuleName: azure_rm_apimanagementnotification_info
     Options:
       - NameSwagger: resourceGroupName
@@ -61792,6 +62059,8 @@ Modules:
         References: []
         OperationId: '13322'
         MethodId: '13323'
+        OperationName: Notification
+        MethodName: ListByService
       - Example:
           parameters:
             serviceName: apimService1
@@ -61845,6 +62114,8 @@ Modules:
         References: []
         OperationId: '13322'
         MethodId: '13365'
+        OperationName: Notification
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementnotificationrecipientuser
     Options:
       - NameSwagger: resourceGroupName
@@ -62254,6 +62525,8 @@ Modules:
           - apimanagement_service_notifications_put
         OperationId: '13441'
         MethodId: '13517'
+        OperationName: NotificationRecipientUser
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -62289,6 +62562,8 @@ Modules:
         References: []
         OperationId: '13441'
         MethodId: '13558'
+        OperationName: NotificationRecipientUser
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementnotificationrecipientuser_info
     Options:
       - NameSwagger: resourceGroupName
@@ -62669,6 +62944,8 @@ Modules:
         References: []
         OperationId: '13441'
         MethodId: '13442'
+        OperationName: NotificationRecipientUser
+        MethodName: ListByNotification
   - ModuleName: azure_rm_apimanagementnotificationrecipientemail
     Options:
       - NameSwagger: resourceGroupName
@@ -63068,6 +63345,8 @@ Modules:
           - apimanagement_service_notifications_put
         OperationId: '13601'
         MethodId: '13677'
+        OperationName: NotificationRecipientEmail
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -63103,6 +63382,8 @@ Modules:
         References: []
         OperationId: '13601'
         MethodId: '13718'
+        OperationName: NotificationRecipientEmail
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementnotificationrecipientemail_info
     Options:
       - NameSwagger: resourceGroupName
@@ -63501,6 +63782,8 @@ Modules:
         References: []
         OperationId: '13601'
         MethodId: '13602'
+        OperationName: NotificationRecipientEmail
+        MethodName: ListByNotification
   - ModuleName: azure_rm_apimanagementopenidconnectprovider
     Options:
       - NameSwagger: resourceGroupName
@@ -64233,6 +64516,8 @@ Modules:
           - apimanagement_service_put
         OperationId: '13761'
         MethodId: '13882'
+        OperationName: OpenIdConnectProvider
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -64267,6 +64552,8 @@ Modules:
           - apimanagement_service_openidconnectproviders_put
         OperationId: '13761'
         MethodId: '13929'
+        OperationName: OpenIdConnectProvider
+        MethodName: Update
       - Example:
           parameters:
             serviceName: apimService1
@@ -64298,6 +64585,8 @@ Modules:
         References: []
         OperationId: '13761'
         MethodId: '13975'
+        OperationName: OpenIdConnectProvider
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementopenidconnectprovider_info
     Options:
       - NameSwagger: resourceGroupName
@@ -64752,6 +65041,8 @@ Modules:
         References: []
         OperationId: '13761'
         MethodId: '13762'
+        OperationName: OpenIdConnectProvider
+        MethodName: ListByService
       - Example:
           parameters:
             serviceName: apimService1
@@ -64795,6 +65086,8 @@ Modules:
         References: []
         OperationId: '13761'
         MethodId: '13846'
+        OperationName: OpenIdConnectProvider
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementpolicy
     Options:
       - NameSwagger: resourceGroupName
@@ -65355,6 +65648,8 @@ Modules:
           - apimanagement_service_put
         OperationId: '14020'
         MethodId: '14127'
+        OperationName: Policy
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -65386,6 +65681,8 @@ Modules:
         References: []
         OperationId: '14020'
         MethodId: '14174'
+        OperationName: Policy
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementpolicy_info
     Options:
       - NameSwagger: resourceGroupName
@@ -65792,6 +66089,8 @@ Modules:
         References: []
         OperationId: '14020'
         MethodId: '14021'
+        OperationName: Policy
+        MethodName: ListByService
       - Example:
           parameters:
             serviceName: apimService1
@@ -65830,6 +66129,8 @@ Modules:
         References: []
         OperationId: '14020'
         MethodId: '14087'
+        OperationName: Policy
+        MethodName: Get
       - Example:
           parameters:
             serviceName: apimService1
@@ -65870,6 +66171,8 @@ Modules:
         References: []
         OperationId: '14020'
         MethodId: '14087'
+        OperationName: Policy
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementpolicysnippet_info
     Options:
       - NameSwagger: resourceGroupName
@@ -66175,6 +66478,8 @@ Modules:
         References: []
         OperationId: '14219'
         MethodId: '14220'
+        OperationName: PolicySnippet
+        MethodName: ListByService
   - ModuleName: azure_rm_apimanagementsigninsetting
     Options:
       - NameSwagger: resourceGroupName
@@ -66578,6 +66883,8 @@ Modules:
           - apimanagement_service_portalsettings_put
         OperationId: '14256'
         MethodId: '14357'
+        OperationName: SignInSettings
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -66609,6 +66916,8 @@ Modules:
           - apimanagement_service_portalsettings_put
         OperationId: '14256'
         MethodId: '14317'
+        OperationName: SignInSettings
+        MethodName: Update
   - ModuleName: azure_rm_apimanagementsigninsetting_info
     Options:
       - NameSwagger: resourceGroupName
@@ -66888,6 +67197,8 @@ Modules:
         References: []
         OperationId: '14256'
         MethodId: '14287'
+        OperationName: SignInSettings
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementsignupsetting
     Options:
       - NameSwagger: resourceGroupName
@@ -67539,6 +67850,8 @@ Modules:
           - apimanagement_service_portalsettings_put
         OperationId: '14399'
         MethodId: '14500'
+        OperationName: SignUpSettings
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -67574,6 +67887,8 @@ Modules:
           - apimanagement_service_portalsettings_put
         OperationId: '14399'
         MethodId: '14460'
+        OperationName: SignUpSettings
+        MethodName: Update
   - ModuleName: azure_rm_apimanagementsignupsetting_info
     Options:
       - NameSwagger: resourceGroupName
@@ -67977,6 +68292,8 @@ Modules:
         References: []
         OperationId: '14399'
         MethodId: '14430'
+        OperationName: SignUpSettings
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementdelegationsetting
     Options:
       - NameSwagger: resourceGroupName
@@ -68700,6 +69017,8 @@ Modules:
           - apimanagement_service_portalsettings_put
         OperationId: '14542'
         MethodId: '14643'
+        OperationName: DelegationSettings
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -68741,6 +69060,8 @@ Modules:
           - apimanagement_service_portalsettings_put
         OperationId: '14542'
         MethodId: '14603'
+        OperationName: DelegationSettings
+        MethodName: Update
   - ModuleName: azure_rm_apimanagementdelegationsetting_info
     Options:
       - NameSwagger: resourceGroupName
@@ -69178,6 +69499,8 @@ Modules:
         References: []
         OperationId: '14542'
         MethodId: '14573'
+        OperationName: DelegationSettings
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementproduct
     Options:
       - NameSwagger: resourceGroupName
@@ -70104,6 +70427,8 @@ Modules:
           - apimanagement_service_put
         OperationId: '14685'
         MethodId: '14818'
+        OperationName: Product
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -70138,6 +70463,8 @@ Modules:
           - apimanagement_service_products_put
         OperationId: '14685'
         MethodId: '14865'
+        OperationName: Product
+        MethodName: Update
       - Example:
           parameters:
             serviceName: apimService1
@@ -70170,6 +70497,8 @@ Modules:
         References: []
         OperationId: '14685'
         MethodId: '14911'
+        OperationName: Product
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementproduct_info
     Options:
       - NameSwagger: resourceGroupName
@@ -70854,6 +71183,8 @@ Modules:
         References: []
         OperationId: '14685'
         MethodId: '14686'
+        OperationName: Product
+        MethodName: ListByService
       - Example:
           parameters:
             serviceName: apimService1
@@ -70895,6 +71226,8 @@ Modules:
         References: []
         OperationId: '14685'
         MethodId: '14960'
+        OperationName: Product
+        MethodName: ListByTags
       - Example:
           parameters:
             serviceName: apimService1
@@ -70940,6 +71273,8 @@ Modules:
         References: []
         OperationId: '14685'
         MethodId: '14782'
+        OperationName: Product
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementproductapi
     Options:
       - NameSwagger: resourceGroupName
@@ -71375,7 +71710,7 @@ Modules:
                     IdPortion: null
                     Type: str
                     TypeName: bearerTokenSendingMethods
-                    TypeNameGo: bearerTokenSendingMethods
+                    TypeNameGo: BearerTokenSendingMethods
                     IsList: true
                     Required: false
                     Documentation: How to send token to the server.
@@ -71411,40 +71746,6 @@ Modules:
                 PathSwagger: /properties/authenticationSettings/openid
                 PathPython: /authenticationSettings/openid
                 PathGo: /properties/authenticationSettings/openid
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: subscriptionKeyRequired
-                NameAnsible: subscription_key_required
-                NamePythonSdk: subscription_key_required
-                NameGoSdk: SubscriptionKeyRequired
-                NameTerraform: SubscriptionKeyRequired
-                IdPortion: null
-                Type: boolean
-                TypeName: Boolean
-                TypeNameGo: Boolean
-                IsList: false
-                Required: false
-                Documentation: >-
-                  Specifies whether subscription key is required during call to
-                  this API, true - API is included into closed products only,
-                  false - API is included into open products alone, null - there
-                  is a mix of products.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/authenticationSettings/subscriptionKeyRequired
-                PathPython: /authenticationSettings/subscriptionKeyRequired
-                PathGo: /properties/authenticationSettings/subscriptionKeyRequired
                 DispositionSdk: '*'
                 DispositionRest: '*'
                 Comparison: ''
@@ -72378,6 +72679,8 @@ Modules:
           - apimanagement_service_products_put
         OperationId: '15016'
         MethodId: '15113'
+        OperationName: ProductApi
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -72413,6 +72716,8 @@ Modules:
         References: []
         OperationId: '15016'
         MethodId: '15156'
+        OperationName: ProductApi
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementproductapi_info
     Options:
       - NameSwagger: resourceGroupName
@@ -72833,7 +73138,7 @@ Modules:
                         IdPortion: null
                         Type: str
                         TypeName: bearerTokenSendingMethods
-                        TypeNameGo: bearerTokenSendingMethods
+                        TypeNameGo: BearerTokenSendingMethods
                         IsList: true
                         Required: false
                         Documentation: How to send token to the server.
@@ -72872,42 +73177,6 @@ Modules:
                     PathSwagger: /value/properties/authenticationSettings/openid
                     PathPython: /value/authenticationSettings/openid
                     PathGo: /value/properties/authenticationSettings/openid
-                    DispositionSdk: '*'
-                    DispositionRest: '*'
-                    Comparison: ''
-                    Updatable: true
-                    ExampleValue: null
-                    Hidden: false
-                    IncludeInResponse: false
-                    Flatten: false
-                  - NameSwagger: subscriptionKeyRequired
-                    NameAnsible: subscription_key_required
-                    NamePythonSdk: subscription_key_required
-                    NameGoSdk: SubscriptionKeyRequired
-                    NameTerraform: SubscriptionKeyRequired
-                    IdPortion: null
-                    Type: boolean
-                    TypeName: Boolean
-                    TypeNameGo: Boolean
-                    IsList: false
-                    Required: false
-                    Documentation: >-
-                      Specifies whether subscription key is required during call
-                      to this API, true - API is included into closed products
-                      only, false - API is included into open products alone,
-                      null - there is a mix of products.
-                    DocumentationMarkKeywords: true
-                    DefaultValue: null
-                    IncludeInDocumentation: true
-                    IncludeInArgSpec: true
-                    NoLog: false
-                    SubOptions: []
-                    EnumValues: []
-                    PathSwagger: >-
-                      /value/properties/authenticationSettings/subscriptionKeyRequired
-                    PathPython: /value/authenticationSettings/subscriptionKeyRequired
-                    PathGo: >-
-                      /value/properties/authenticationSettings/subscriptionKeyRequired
                     DispositionSdk: '*'
                     DispositionRest: '*'
                     Comparison: ''
@@ -73824,6 +74093,8 @@ Modules:
         References: []
         OperationId: '15016'
         MethodId: '15017'
+        OperationName: ProductApi
+        MethodName: ListByProduct
   - ModuleName: azure_rm_apimanagementproductgroup
     Options:
       - NameSwagger: resourceGroupName
@@ -74363,6 +74634,8 @@ Modules:
           - apimanagement_service_products_put
         OperationId: '15201'
         MethodId: '15298'
+        OperationName: ProductGroup
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -74398,6 +74671,8 @@ Modules:
         References: []
         OperationId: '15201'
         MethodId: '15341'
+        OperationName: ProductGroup
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementproductgroup_info
     Options:
       - NameSwagger: resourceGroupName
@@ -74948,6 +75223,8 @@ Modules:
         References: []
         OperationId: '15201'
         MethodId: '15202'
+        OperationName: ProductGroup
+        MethodName: ListByProduct
   - ModuleName: azure_rm_apimanagementproductsubscription_info
     Options:
       - NameSwagger: resourceGroupName
@@ -75754,6 +76031,8 @@ Modules:
         References: []
         OperationId: '15386'
         MethodId: '15387'
+        OperationName: ProductSubscriptions
+        MethodName: List
   - ModuleName: azure_rm_apimanagementproductpolicy
     Options:
       - NameSwagger: resourceGroupName
@@ -76360,6 +76639,8 @@ Modules:
           - apimanagement_service_products_put
         OperationId: '15443'
         MethodId: '15568'
+        OperationName: ProductPolicy
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -76395,6 +76676,8 @@ Modules:
         References: []
         OperationId: '15443'
         MethodId: '15621'
+        OperationName: ProductPolicy
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementproductpolicy_info
     Options:
       - NameSwagger: resourceGroupName
@@ -76842,6 +77125,8 @@ Modules:
         References: []
         OperationId: '15443'
         MethodId: '15444'
+        OperationName: ProductPolicy
+        MethodName: ListByProduct
       - Example:
           parameters:
             serviceName: apimService1
@@ -76885,6 +77170,8 @@ Modules:
         References: []
         OperationId: '15443'
         MethodId: '15522'
+        OperationName: ProductPolicy
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementproperty
     Options:
       - NameSwagger: resourceGroupName
@@ -77575,6 +77862,8 @@ Modules:
           - apimanagement_service_put
         OperationId: '15672'
         MethodId: '15793'
+        OperationName: Property
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -77612,6 +77901,8 @@ Modules:
           - apimanagement_service_properties_put
         OperationId: '15672'
         MethodId: '15840'
+        OperationName: Property
+        MethodName: Update
       - Example:
           parameters:
             serviceName: apimService1
@@ -77643,6 +77934,8 @@ Modules:
         References: []
         OperationId: '15672'
         MethodId: '15886'
+        OperationName: Property
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementproperty_info
     Options:
       - NameSwagger: resourceGroupName
@@ -78085,6 +78378,8 @@ Modules:
         References: []
         OperationId: '15672'
         MethodId: '15673'
+        OperationName: Property
+        MethodName: ListByService
       - Example:
           parameters:
             serviceName: apimService1
@@ -78128,6 +78423,8 @@ Modules:
         References: []
         OperationId: '15672'
         MethodId: '15757'
+        OperationName: Property
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementquotabycounterkey_info
     Options:
       - NameSwagger: resourceGroupName
@@ -78605,6 +78902,8 @@ Modules:
         References: []
         OperationId: '15931'
         MethodId: '15932'
+        OperationName: QuotaByCounterKeys
+        MethodName: ListByService
   - ModuleName: azure_rm_apimanagementquotabyperiodkey_info
     Options:
       - NameSwagger: resourceGroupName
@@ -79030,6 +79329,8 @@ Modules:
         References: []
         OperationId: '16010'
         MethodId: '16011'
+        OperationName: QuotaByPeriodKeys
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementregion_info
     Options:
       - NameSwagger: resourceGroupName
@@ -79335,6 +79636,8 @@ Modules:
         References: []
         OperationId: '16101'
         MethodId: '16102'
+        OperationName: Region
+        MethodName: ListByService
   - ModuleName: azure_rm_apimanagementreport_info
     Options:
       - NameSwagger: resourceGroupName
@@ -80510,6 +80813,8 @@ Modules:
         References: []
         OperationId: '16134'
         MethodId: '16135'
+        OperationName: Reports
+        MethodName: ListByApi
       - Example:
           parameters:
             serviceName: apimService1
@@ -80561,6 +80866,8 @@ Modules:
         References: []
         OperationId: '16134'
         MethodId: '16351'
+        OperationName: Reports
+        MethodName: ListByGeo
       - Example:
           parameters:
             serviceName: apimService1
@@ -80644,6 +80951,8 @@ Modules:
         References: []
         OperationId: '16134'
         MethodId: '16189'
+        OperationName: Reports
+        MethodName: ListByUser
       - Example:
           parameters:
             serviceName: apimService1
@@ -80712,6 +81021,8 @@ Modules:
         References: []
         OperationId: '16134'
         MethodId: '16453'
+        OperationName: Reports
+        MethodName: ListByTime
       - Example:
           parameters:
             serviceName: apimService1
@@ -80779,6 +81090,8 @@ Modules:
         References: []
         OperationId: '16134'
         MethodId: '16297'
+        OperationName: Reports
+        MethodName: ListByProduct
       - Example:
           parameters:
             serviceName: apimService1
@@ -80848,6 +81161,8 @@ Modules:
         References: []
         OperationId: '16134'
         MethodId: '16513'
+        OperationName: Reports
+        MethodName: ListByRequest
       - Example:
           parameters:
             serviceName: apimService1
@@ -80937,6 +81252,8 @@ Modules:
         References: []
         OperationId: '16134'
         MethodId: '16243'
+        OperationName: Reports
+        MethodName: ListByOperation
       - Example:
           parameters:
             serviceName: apimService1
@@ -81026,6 +81343,8 @@ Modules:
         References: []
         OperationId: '16134'
         MethodId: '16399'
+        OperationName: Reports
+        MethodName: ListBySubscription
   - ModuleName: azure_rm_apimanagementsubscription
     Options:
       - NameSwagger: resourceGroupName
@@ -82222,6 +82541,8 @@ Modules:
           - apimanagement_service_put
         OperationId: '16563'
         MethodId: '16684'
+        OperationName: Subscription
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -82253,6 +82574,8 @@ Modules:
           - apimanagement_service_put
         OperationId: '16563'
         MethodId: '16737'
+        OperationName: Subscription
+        MethodName: Update
       - Example:
           parameters:
             serviceName: apimService1
@@ -82281,6 +82604,8 @@ Modules:
         References: []
         OperationId: '16563'
         MethodId: '16789'
+        OperationName: Subscription
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementsubscription_info
     Options:
       - NameSwagger: resourceGroupName
@@ -83085,6 +83410,8 @@ Modules:
         References: []
         OperationId: '16563'
         MethodId: '16564'
+        OperationName: Subscription
+        MethodName: List
       - Example:
           parameters:
             serviceName: apimService1
@@ -83134,6 +83461,8 @@ Modules:
         References: []
         OperationId: '16563'
         MethodId: '16648'
+        OperationName: Subscription
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementtagresource_info
     Options:
       - NameSwagger: resourceGroupName
@@ -83523,7 +83852,7 @@ Modules:
                         IdPortion: null
                         Type: str
                         TypeName: bearerTokenSendingMethods
-                        TypeNameGo: bearerTokenSendingMethods
+                        TypeNameGo: BearerTokenSendingMethods
                         IsList: true
                         Required: false
                         Documentation: How to send token to the server.
@@ -83562,40 +83891,6 @@ Modules:
                     PathSwagger: /value/api/authenticationSettings/openid
                     PathPython: /value/api/authenticationSettings/openid
                     PathGo: /value/api/authenticationSettings/openid
-                    DispositionSdk: '*'
-                    DispositionRest: '*'
-                    Comparison: ''
-                    Updatable: true
-                    ExampleValue: null
-                    Hidden: false
-                    IncludeInResponse: false
-                    Flatten: false
-                  - NameSwagger: subscriptionKeyRequired
-                    NameAnsible: subscription_key_required
-                    NamePythonSdk: subscription_key_required
-                    NameGoSdk: SubscriptionKeyRequired
-                    NameTerraform: SubscriptionKeyRequired
-                    IdPortion: null
-                    Type: boolean
-                    TypeName: Boolean
-                    TypeNameGo: Boolean
-                    IsList: false
-                    Required: false
-                    Documentation: >-
-                      Specifies whether subscription key is required during call
-                      to this API, true - API is included into closed products
-                      only, false - API is included into open products alone,
-                      null - there is a mix of products.
-                    DocumentationMarkKeywords: true
-                    DefaultValue: null
-                    IncludeInDocumentation: true
-                    IncludeInArgSpec: true
-                    NoLog: false
-                    SubOptions: []
-                    EnumValues: []
-                    PathSwagger: /value/api/authenticationSettings/subscriptionKeyRequired
-                    PathPython: /value/api/authenticationSettings/subscriptionKeyRequired
-                    PathGo: /value/api/authenticationSettings/subscriptionKeyRequired
                     DispositionSdk: '*'
                     DispositionRest: '*'
                     Comparison: ''
@@ -84879,6 +85174,8 @@ Modules:
         References: []
         OperationId: '16906'
         MethodId: '16907'
+        OperationName: TagResource
+        MethodName: ListByService
   - ModuleName: azure_rm_apimanagementtenantacces_info
     Options:
       - NameSwagger: resourceGroupName
@@ -85162,6 +85459,8 @@ Modules:
         References: []
         OperationId: '16957'
         MethodId: '16994'
+        OperationName: TenantAccess
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementtenantaccessgit_info
     Options:
       - NameSwagger: resourceGroupName
@@ -85445,6 +85744,8 @@ Modules:
         References: []
         OperationId: '17150'
         MethodId: '17151'
+        OperationName: TenantAccessGit
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementtenantconfiguration_info
     Options:
       - NameSwagger: resourceGroupName
@@ -85835,6 +86136,8 @@ Modules:
         References: []
         OperationId: '17261'
         MethodId: '17385'
+        OperationName: TenantConfiguration
+        MethodName: GetSyncState
   - ModuleName: azure_rm_apimanagementuser
     Options:
       - NameSwagger: resourceGroupName
@@ -87107,6 +87410,8 @@ Modules:
           - apimanagement_service_put
         OperationId: '17423'
         MethodId: '17550'
+        OperationName: User
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             serviceName: apimService1
@@ -87143,6 +87448,8 @@ Modules:
           - apimanagement_service_users_put
         OperationId: '17423'
         MethodId: '17597'
+        OperationName: User
+        MethodName: Update
       - Example:
           parameters:
             serviceName: apimService1
@@ -87174,6 +87481,8 @@ Modules:
         References: []
         OperationId: '17423'
         MethodId: '17643'
+        OperationName: User
+        MethodName: Delete
   - ModuleName: azure_rm_apimanagementuser_info
     Options:
       - NameSwagger: resourceGroupName
@@ -88030,6 +88339,8 @@ Modules:
         References: []
         OperationId: '17423'
         MethodId: '17424'
+        OperationName: User
+        MethodName: ListByService
       - Example:
           parameters:
             serviceName: apimService1
@@ -88075,6 +88386,8 @@ Modules:
         References: []
         OperationId: '17423'
         MethodId: '17514'
+        OperationName: User
+        MethodName: Get
   - ModuleName: azure_rm_apimanagementusergroup_info
     Options:
       - NameSwagger: resourceGroupName
@@ -88593,6 +88906,8 @@ Modules:
         References: []
         OperationId: '17776'
         MethodId: '17777'
+        OperationName: UserGroup
+        MethodName: List
   - ModuleName: azure_rm_apimanagementusersubscription_info
     Options:
       - NameSwagger: resourceGroupName
@@ -89426,6 +89741,8 @@ Modules:
         References: []
         OperationId: '17833'
         MethodId: '17834'
+        OperationName: UserSubscription
+        MethodName: List
   - ModuleName: azure_rm_apimanagementuseridentity_info
     Options:
       - NameSwagger: resourceGroupName
@@ -89737,6 +90054,8 @@ Modules:
         References: []
         OperationId: '17890'
         MethodId: '17891'
+        OperationName: UserIdentities
+        MethodName: List
   - ModuleName: azure_rm_apimanagementapiexport_info
     Options:
       - NameSwagger: resourceGroupName
@@ -90113,6 +90432,8 @@ Modules:
         References: []
         OperationId: '17968'
         MethodId: '17969'
+        OperationName: ApiExport
+        MethodName: Get
       - Example:
           parameters:
             serviceName: apimService1
@@ -90155,497 +90476,9 @@ Modules:
         References: []
         OperationId: '17968'
         MethodId: '17969'
+        OperationName: ApiExport
+        MethodName: Get
 ServiceName: ApiManagementClient
 MgmtClientName: ApiManagementClient
 CliName: apim
 Namespace: azure.mgmt.apimanagement
-Info:
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION tags'
-  - '  ** FOUND OPTION expandApiVersionSet'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION includeNotTaggedApis'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION releaseId'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION releaseId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION operationId'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION tags'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION operationId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION operationId'
-  - '  ** FOUND OPTION policyId'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION operationId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION operationId'
-  - '  ** FOUND OPTION format'
-  - '  ** FOUND OPTION policyId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION tagId'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION scope'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION tagId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION tagId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION productId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION productId'
-  - '  ** FOUND OPTION tagId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION operationId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION operationId'
-  - '  ** FOUND OPTION tagId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION policyId'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION policyId'
-  - '  ** FOUND OPTION format'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION schemaId'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION schemaId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION diagnosticId'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION diagnosticId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION issueId'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION expandCommentsAttachments'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION issueId'
-  - '  ** FOUND OPTION expandCommentsAttachments'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION issueId'
-  - '  ** FOUND OPTION commentId'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION issueId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION issueId'
-  - '  ** FOUND OPTION commentId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION issueId'
-  - '  ** FOUND OPTION attachmentId'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION issueId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION issueId'
-  - '  ** FOUND OPTION attachmentId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION tagId'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION tagId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION includeNotTaggedOperations'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION versionSetId'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION versionSetId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION authsid'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION authsid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION backendId'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION backendId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION cacheId'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION cacheId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION certificateId'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION certificateId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION diagnosticId'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION diagnosticId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION templateName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION templateName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION groupId'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION groupId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION groupId'
-  - '  ** FOUND OPTION userId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION groupId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION identityProviderName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION identityProviderName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION issueId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION loggerId'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION loggerId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION locationName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION notificationName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION notificationName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION notificationName'
-  - '  ** FOUND OPTION userId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION notificationName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION notificationName'
-  - '  ** FOUND OPTION email'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION notificationName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION opid'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION opid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION policyId'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION policyId'
-  - '  ** FOUND OPTION format'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION scope'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION productId'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION expandGroups'
-  - '  ** FOUND OPTION tags'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION includeNotTaggedProducts'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION productId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION productId'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION productId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION productId'
-  - '  ** FOUND OPTION groupId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION productId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION productId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION productId'
-  - '  ** FOUND OPTION policyId'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION productId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION productId'
-  - '  ** FOUND OPTION policyId'
-  - '  ** FOUND OPTION format'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION propId'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION propId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION quotaCounterKey'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION quotaCounterKey'
-  - '  ** FOUND OPTION quotaPeriodKey'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION interval'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION sid'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION notify'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION sid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION accessName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION accessName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION configurationName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION userId'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION expandGroups'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION userId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION userId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION userId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION userId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION serviceName'
-  - '  ** FOUND OPTION apiId'
-  - '  ** FOUND OPTION format'
-  - '  ** FOUND OPTION export'

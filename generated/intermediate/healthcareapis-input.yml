@@ -17,7 +17,9 @@ modelTypes:
         documentation:
           $id: '5'
           fixed: false
-          raw: An object ID that is allowed access to the FHIR service.
+          raw: >-
+            An Azure AD object ID (User or Apps) that is allowed access to the
+            FHIR service.
         isRequired: true
         isConstant: false
         name:
@@ -673,9 +675,7 @@ modelTypes:
           documentation:
             $id: '139'
             fixed: false
-            raw: >-
-              The kind of the service. Valid values are: fhir, fhir-Stu3 and
-              fhir-R4.
+            raw: The kind of the service.
           extensions:
             x-ms-enum:
               name: kind
@@ -1764,7 +1764,7 @@ enumTypes:
 name: HealthCareApis
 namespace: Azure.mgmt.healthcareapis
 modelsName: Models
-apiVersion: 2018-08-20-preview
+apiVersion: '2019-09-16'
 baseUrl: 'https://management.azure.com'
 documentation: >-
   Use this API to manage Microsoft HealthcareApis services in your Azure
@@ -1808,19 +1808,16 @@ properties:
     realPath:
       - api-version
     collectionFormat: none
-    constraints:
-      MinLength: '10'
     defaultValue:
       $id: '362'
       fixed: false
-      raw: 2018-08-20-preview
     deprecated: false
     documentation:
       $id: '363'
       fixed: false
-      raw: The version of the API.
+      raw: Client Api Version.
     isRequired: true
-    isConstant: true
+    isConstant: false
     name:
       $id: '364'
       fixed: false
@@ -1976,19 +1973,16 @@ operations:
               $ref: '361'
             location: query
             collectionFormat: none
-            constraints:
-              MinLength: '10'
             defaultValue:
               $id: '394'
               fixed: false
-              raw: 2018-08-20-preview
             deprecated: false
             documentation:
               $id: '395'
               fixed: false
-              raw: The version of the API.
+              raw: Client Api Version.
             isRequired: true
-            isConstant: true
+            isConstant: false
             name:
               $id: '396'
               fixed: false
@@ -2138,11 +2132,11 @@ operations:
           - application/json
         extensions:
           x-ms-examples:
-            ServiceGet:
+            Get metadata:
               parameters:
                 resourceName: service1
                 resourceGroupName: rg1
-                api-version: 2018-08-20-preview
+                api-version: '2019-09-16'
                 subscriptionId: subid
               responses:
                 '200':
@@ -2155,7 +2149,7 @@ operations:
                     name: service1
                     location: West US
                     type: Microsoft.HealthcareApis/services
-                    kind: fhir
+                    kind: fhir-R4
                     etag: etagvalue
                     tags: {}
                     properties:
@@ -2166,7 +2160,8 @@ operations:
                       cosmosDbConfiguration:
                         offerThroughput: '1000'
                       authenticationConfiguration:
-                        authority: 'https://login.microsoftonline.com/common'
+                        authority: >-
+                          https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc
                         audience: 'https://azurehealthcareapis.com'
                         smartProxyEnabled: true
                       corsConfiguration:
@@ -2192,19 +2187,16 @@ operations:
               $ref: '361'
             location: query
             collectionFormat: none
-            constraints:
-              MinLength: '10'
             defaultValue:
               $id: '424'
               fixed: false
-              raw: 2018-08-20-preview
             deprecated: false
             documentation:
               $id: '425'
               fixed: false
-              raw: The version of the API.
+              raw: Client Api Version.
             isRequired: true
-            isConstant: true
+            isConstant: false
             name:
               $id: '426'
               fixed: false
@@ -2381,16 +2373,16 @@ operations:
           - application/json
         extensions:
           x-ms-examples:
-            ServicePut:
+            Create or Update a service with all parameters:
               parameters:
                 resourceName: service1
                 resourceGroupName: rg1
-                api-version: 2018-08-20-preview
+                api-version: '2019-09-16'
                 subscriptionId: subid
                 serviceDescription:
-                  location: westus
+                  location: westus2
                   tags: {}
-                  kind: fhir
+                  kind: fhir-R4
                   properties:
                     accessPolicies:
                       - objectId: c487e7d1-3210-41a3-8ccc-e9372b78da47
@@ -2398,7 +2390,8 @@ operations:
                     cosmosDbConfiguration:
                       offerThroughput: '1000'
                     authenticationConfiguration:
-                      authority: 'https://login.microsoftonline.com/common'
+                      authority: >-
+                        https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc
                       audience: 'https://azurehealthcareapis.com'
                       smartProxyEnabled: true
                     corsConfiguration:
@@ -2424,9 +2417,9 @@ operations:
                       }}/providers/Microsoft.HealthcareApis/services/{{
                       service_name }}
                     name: service1
-                    location: West US
+                    location: West US 2
                     type: Microsoft.HealthcareApis/services
-                    kind: fhir
+                    kind: fhir-R4
                     etag: etagvalue
                     tags: {}
                     properties:
@@ -2437,7 +2430,8 @@ operations:
                       cosmosDbConfiguration:
                         offerThroughput: '1000'
                       authenticationConfiguration:
-                        authority: 'https://login.microsoftonline.com/common'
+                        authority: >-
+                          https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc
                         audience: 'https://azurehealthcareapis.com'
                         smartProxyEnabled: true
                       corsConfiguration:
@@ -2462,9 +2456,9 @@ operations:
                       }}/providers/Microsoft.HealthcareApis/services/{{
                       service_name }}
                     name: service1
-                    location: West US
+                    location: West US 2
                     type: Microsoft.HealthcareApis/services
-                    kind: fhir
+                    kind: fhir-R4
                     etag: etagvalue
                     tags: {}
                     properties:
@@ -2475,7 +2469,8 @@ operations:
                       cosmosDbConfiguration:
                         offerThroughput: '1000'
                       authenticationConfiguration:
-                        authority: 'https://login.microsoftonline.com/common'
+                        authority: >-
+                          https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc
                         audience: 'https://azurehealthcareapis.com'
                         smartProxyEnabled: true
                       corsConfiguration:
@@ -2492,6 +2487,80 @@ operations:
                           - PUT
                         maxAge: '1440'
                         allowCredentials: false
+            Create or Update a service with minimum parameters:
+              parameters:
+                resourceName: service2
+                resourceGroupName: rg1
+                api-version: '2019-09-16'
+                subscriptionId: subid
+                serviceDescription:
+                  location: westus2
+                  tags: {}
+                  kind: fhir-R4
+                  properties:
+                    accessPolicies:
+                      - objectId: c487e7d1-3210-41a3-8ccc-e9372b78da47
+              responses:
+                '200':
+                  body:
+                    id: >-
+                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                      resource_group
+                      }}/providers/Microsoft.HealthcareApis/services/{{
+                      service_name }}
+                    name: service2
+                    type: Microsoft.HealthcareApis/services
+                    etag: etagvalue
+                    location: westus2
+                    kind: fhir-R4
+                    tags: {}
+                    properties:
+                      accessPolicies:
+                        - objectId: c487e7d1-3210-41a3-8ccc-e9372b78da47
+                      cosmosDbConfiguration:
+                        offerThroughput: '1000'
+                      authenticationConfiguration:
+                        authority: >-
+                          https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc
+                        audience: 'https://azurehealthcareapis.com'
+                        smartProxyEnabled: false
+                      corsConfiguration:
+                        origins: []
+                        headers: []
+                        methods: []
+                        maxAge: null
+                        allowCredentials: false
+                      provisioningState: Creating
+                '201':
+                  body:
+                    id: >-
+                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                      resource_group
+                      }}/providers/Microsoft.HealthcareApis/services/{{
+                      service_name }}
+                    name: service2
+                    type: Microsoft.HealthcareApis/services
+                    etag: etagvalue
+                    location: westus2
+                    kind: fhir-R4
+                    tags: {}
+                    properties:
+                      accessPolicies:
+                        - objectId: c487e7d1-3210-41a3-8ccc-e9372b78da47
+                      cosmosDbConfiguration:
+                        offerThroughput: '1000'
+                      authenticationConfiguration:
+                        authority: >-
+                          https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc
+                        audience: 'https://azurehealthcareapis.com'
+                        smartProxyEnabled: false
+                      corsConfiguration:
+                        origins: []
+                        headers: []
+                        methods: []
+                        maxAge: null
+                        allowCredentials: false
+                      provisioningState: Creating
           x-ms-long-running-operation: true
           x-ms-requestBody-index: '4'
         deprecated: false
@@ -2503,19 +2572,16 @@ operations:
               $ref: '361'
             location: query
             collectionFormat: none
-            constraints:
-              MinLength: '10'
             defaultValue:
               $id: '459'
               fixed: false
-              raw: 2018-08-20-preview
             deprecated: false
             documentation:
               $id: '460'
               fixed: false
-              raw: The version of the API.
+              raw: Client Api Version.
             isRequired: true
-            isConstant: true
+            isConstant: false
             name:
               $id: '461'
               fixed: false
@@ -2687,11 +2753,11 @@ operations:
           - application/json
         extensions:
           x-ms-examples:
-            ServicePatch:
+            Patch service:
               parameters:
                 resourceName: service1
                 resourceGroupName: rg1
-                api-version: 2018-08-20-preview
+                api-version: '2019-09-16'
                 subscriptionId: subid
                 servicePatchDescription:
                   tags:
@@ -2708,7 +2774,7 @@ operations:
                     name: service1
                     location: West US
                     type: Microsoft.HealthcareApis/services
-                    kind: fhir
+                    kind: fhir-R4
                     etag: etagvalue
                     tags:
                       tag1: value1
@@ -2721,7 +2787,8 @@ operations:
                       cosmosDbConfiguration:
                         offerThroughput: '1000'
                       authenticationConfiguration:
-                        authority: 'https://login.microsoftonline.com/common'
+                        authority: >-
+                          https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc
                         audience: 'https://azurehealthcareapis.com'
                         smartProxyEnabled: true
                       corsConfiguration:
@@ -2749,19 +2816,16 @@ operations:
               $ref: '361'
             location: query
             collectionFormat: none
-            constraints:
-              MinLength: '10'
             defaultValue:
               $id: '493'
               fixed: false
-              raw: 2018-08-20-preview
             deprecated: false
             documentation:
               $id: '494'
               fixed: false
-              raw: The version of the API.
+              raw: Client Api Version.
             isRequired: true
-            isConstant: true
+            isConstant: false
             name:
               $id: '495'
               fixed: false
@@ -2910,11 +2974,11 @@ operations:
           - application/json
         extensions:
           x-ms-examples:
-            ServiceDelete:
+            Delete service:
               parameters:
                 resourceName: service1
                 resourceGroupName: rg1
-                api-version: 2018-08-20-preview
+                api-version: '2019-09-16'
                 subscriptionId: subid
               responses:
                 '202': {}
@@ -2929,19 +2993,16 @@ operations:
               $ref: '361'
             location: query
             collectionFormat: none
-            constraints:
-              MinLength: '10'
             defaultValue:
               $id: '524'
               fixed: false
-              raw: 2018-08-20-preview
             deprecated: false
             documentation:
               $id: '525'
               fixed: false
-              raw: The version of the API.
+              raw: Client Api Version.
             isRequired: true
-            isConstant: true
+            isConstant: false
             name:
               $id: '526'
               fixed: false
@@ -3020,9 +3081,9 @@ operations:
           - application/json
         extensions:
           x-ms-examples:
-            ServiceList:
+            List all services in subscription:
               parameters:
-                api-version: 2018-08-20-preview
+                api-version: '2019-09-16'
                 subscriptionId: subid
               responses:
                 '200':
@@ -3036,7 +3097,7 @@ operations:
                         name: service1
                         location: West US
                         type: Microsoft.HealthcareApis/services
-                        kind: fhir
+                        kind: fhir-R4
                         etag: etag
                         tags: {}
                         properties:
@@ -3047,7 +3108,8 @@ operations:
                           cosmosDbConfiguration:
                             offerThroughput: '1000'
                           authenticationConfiguration:
-                            authority: 'https://login.microsoftonline.com/common'
+                            authority: >-
+                              https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc
                             audience: 'https://azurehealthcareapis.com'
                             smartProxyEnabled: true
                           corsConfiguration:
@@ -3077,19 +3139,16 @@ operations:
               $ref: '361'
             location: query
             collectionFormat: none
-            constraints:
-              MinLength: '10'
             defaultValue:
               $id: '542'
               fixed: false
-              raw: 2018-08-20-preview
             deprecated: false
             documentation:
               $id: '543'
               fixed: false
-              raw: The version of the API.
+              raw: Client Api Version.
             isRequired: true
-            isConstant: true
+            isConstant: false
             name:
               $id: '544'
               fixed: false
@@ -3205,9 +3264,9 @@ operations:
           - application/json
         extensions:
           x-ms-examples:
-            ServiceListByResourceGroup:
+            List all services in resource group:
               parameters:
-                api-version: 2018-08-20-preview
+                api-version: '2019-09-16'
                 subscriptionId: subid
                 resourceGroupName: rgname
               responses:
@@ -3222,7 +3281,7 @@ operations:
                         name: service1
                         location: westus
                         type: Microsoft.HealthcareApis/services
-                        kind: fhir
+                        kind: fhir-R4
                         tags: {}
                         etag: etagvalue
                         properties:
@@ -3233,7 +3292,8 @@ operations:
                           cosmosDbConfiguration:
                             offerThroughput: '1000'
                           authenticationConfiguration:
-                            authority: 'https://login.microsoftonline.com/common'
+                            authority: >-
+                              https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc
                             audience: 'https://azurehealthcareapis.com'
                             smartProxyEnabled: true
                           corsConfiguration:
@@ -3263,19 +3323,16 @@ operations:
               $ref: '361'
             location: query
             collectionFormat: none
-            constraints:
-              MinLength: '10'
             defaultValue:
               $id: '566'
               fixed: false
-              raw: 2018-08-20-preview
             deprecated: false
             documentation:
               $id: '567'
               fixed: false
-              raw: The version of the API.
+              raw: Client Api Version.
             isRequired: true
-            isConstant: true
+            isConstant: false
             name:
               $id: '568'
               fixed: false
@@ -3378,9 +3435,9 @@ operations:
           - application/json
         extensions:
           x-ms-examples:
-            ServiceList:
+            Check name availability:
               parameters:
-                api-version: 2018-08-20-preview
+                api-version: '2019-09-16'
                 subscriptionId: subid
                 checkNameAvailabilityInputs:
                   type: Microsoft.HealthcareApis/services
@@ -3411,19 +3468,16 @@ operations:
               $ref: '361'
             location: query
             collectionFormat: none
-            constraints:
-              MinLength: '10'
             defaultValue:
               $id: '591'
               fixed: false
-              raw: 2018-08-20-preview
             deprecated: false
             documentation:
               $id: '592'
               fixed: false
-              raw: The version of the API.
+              raw: Client Api Version.
             isRequired: true
-            isConstant: true
+            isConstant: false
             name:
               $id: '593'
               fixed: false
@@ -3472,9 +3526,9 @@ operations:
           - application/json
         extensions:
           x-ms-examples:
-            OperationsList:
+            List operations:
               parameters:
-                api-version: 2018-08-20-preview
+                api-version: '2019-09-16'
               responses:
                 '200':
                   body:
@@ -3529,19 +3583,16 @@ operations:
               $ref: '361'
             location: query
             collectionFormat: none
-            constraints:
-              MinLength: '10'
             defaultValue:
               $id: '606'
               fixed: false
-              raw: 2018-08-20-preview
             deprecated: false
             documentation:
               $id: '607'
               fixed: false
-              raw: The version of the API.
+              raw: Client Api Version.
             isRequired: true
-            isConstant: true
+            isConstant: false
             name:
               $id: '608'
               fixed: false
@@ -3694,9 +3745,9 @@ operations:
           - application/json
         extensions:
           x-ms-examples:
-            OperationResultsGet:
+            Get operation result:
               parameters:
-                api-version: 2018-08-20-preview
+                api-version: '2019-09-16'
                 subscriptionId: subid
                 locationName: westus
                 operationResultId: exampleid

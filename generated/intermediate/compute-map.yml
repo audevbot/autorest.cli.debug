@@ -2398,6 +2398,8 @@ Modules:
           - resourcegroups_put
         OperationId: '499'
         MethodId: '500'
+        OperationName: Disks
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: '{subscription-id}'
@@ -2459,6 +2461,8 @@ Modules:
           - compute_disks_put
         OperationId: '499'
         MethodId: '500'
+        OperationName: Disks
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: '{subscription-id}'
@@ -2516,6 +2520,8 @@ Modules:
           - compute_disks_put
         OperationId: '499'
         MethodId: '500'
+        OperationName: Disks
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: '{subscription-id}'
@@ -2573,6 +2579,8 @@ Modules:
           - compute_disks_put
         OperationId: '499'
         MethodId: '500'
+        OperationName: Disks
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: '{subscription-id}'
@@ -2639,6 +2647,8 @@ Modules:
           - compute_disks_put
         OperationId: '499'
         MethodId: '500'
+        OperationName: Disks
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: '{subscription-id}'
@@ -2694,6 +2704,8 @@ Modules:
           - compute_disks_put
         OperationId: '499'
         MethodId: '500'
+        OperationName: Disks
+        MethodName: CreateOrUpdate
   - ModuleName: azure_rm_computedisk_info
     Options:
       - NameSwagger: resourceGroupName
@@ -4127,6 +4139,8 @@ Modules:
         References: []
         OperationId: '499'
         MethodId: '656'
+        OperationName: Disks
+        MethodName: List
       - Example:
           parameters:
             subscriptionId: '{subscription-id}'
@@ -4242,6 +4256,8 @@ Modules:
         References: []
         OperationId: '499'
         MethodId: '632'
+        OperationName: Disks
+        MethodName: ListByResourceGroup
       - Example:
           parameters:
             subscriptionId: '{subscription-id}'
@@ -4310,6 +4326,8 @@ Modules:
         References: []
         OperationId: '499'
         MethodId: '570'
+        OperationName: Disks
+        MethodName: Get
   - ModuleName: azure_rm_computesnapshot
     Options:
       - NameSwagger: resourceGroupName
@@ -6474,6 +6492,8 @@ Modules:
           - resourcegroups_put
         OperationId: '742'
         MethodId: '743'
+        OperationName: Snapshots
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: '{subscription-id}'
@@ -6531,6 +6551,8 @@ Modules:
           - compute_snapshots_put
         OperationId: '742'
         MethodId: '743'
+        OperationName: Snapshots
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: '{subscription-id}'
@@ -6597,6 +6619,8 @@ Modules:
           - compute_snapshots_put
         OperationId: '742'
         MethodId: '743'
+        OperationName: Snapshots
+        MethodName: CreateOrUpdate
   - ModuleName: azure_rm_computesnapshot_info
     Options:
       - NameSwagger: resourceGroupName
@@ -7871,6 +7895,8 @@ Modules:
         References: []
         OperationId: '742'
         MethodId: '899'
+        OperationName: Snapshots
+        MethodName: List
       - Example:
           parameters:
             subscriptionId: '{subscription-id}'
@@ -7931,6 +7957,8 @@ Modules:
         References: []
         OperationId: '742'
         MethodId: '875'
+        OperationName: Snapshots
+        MethodName: ListByResourceGroup
       - Example:
           parameters:
             subscriptionId: '{subscription-id}'
@@ -7992,20 +8020,9 @@ Modules:
         References: []
         OperationId: '742'
         MethodId: '813'
+        OperationName: Snapshots
+        MethodName: Get
 ServiceName: DiskResourceProviderClient
 MgmtClientName: DiskResourceProviderClient
 CliName: compute
 Namespace: azure.mgmt.compute
-Info:
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION diskName'
-  - '  ** FOUND OPTION disk'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION diskName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION snapshotName'
-  - '  ** FOUND OPTION snapshot'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION snapshotName'

@@ -5,7 +5,7 @@ VIRTUAL_NETWORK_NAME="myvirtualnetwork"
 SUBNET_NAME="mysubnet"
 PUBLIC_IP_ADDRESS_NAME="mypublicipaddress"
 
-az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.Network/azureFirewalls/$AZURE_FIREWALL_NAME --api-version 2018-11-01 --is-full-object --properties '
+az rest --method put --uri /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.Network/azureFirewalls/$AZURE_FIREWALL_NAME?api-version=2018-11-01 --body '
 {
   "tags": {
     "key1": "value1"
@@ -18,7 +18,7 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
           "subnet": {
             "id": "/subscriptions/" + SUBSCRIPTION_ID + "/resourceGroups/" + RESOURCE_GROUP + "/providers/Microsoft.Network/virtualNetworks/" + VIRTUAL_NETWORK_NAME + "/subnets/" + SUBNET_NAME + ""
           },
-          "publicIPAddress": {
+          "public_ip_address": {
             "id": "/subscriptions/" + SUBSCRIPTION_ID + "/resourceGroups/" + RESOURCE_GROUP + "/providers/Microsoft.Network/publicIPAddresses/" + PUBLIC_IP_ADDRESS_NAME + ""
           }
         }
@@ -38,14 +38,14 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
               "description": "Deny inbound rule",
               "protocols": [
                 {
-                  "protocolType": "Https",
+                  "protocol_type": "Https",
                   "port": "443"
                 }
               ],
-              "targetFqdns": [
+              "target_fqdns": [
                 "www.test.com"
               ],
-              "sourceAddresses": [
+              "source_addresses": [
                 "216.58.216.164",
                 "10.0.0.0/24"
               ]
@@ -66,20 +66,20 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
             {
               "name": "DNAT-HTTPS-traffic",
               "description": "D-NAT all outbound web traffic for inspection",
-              "sourceAddresses": [
+              "source_addresses": [
                 "*"
               ],
-              "destinationAddresses": [
+              "destination_addresses": [
                 "1.2.3.4"
               ],
-              "destinationPorts": [
+              "destination_ports": [
                 "443"
               ],
               "protocols": [
                 "TCP"
               ],
-              "translatedAddress": "1.2.3.5",
-              "translatedPort": "8443"
+              "translated_address": "1.2.3.5",
+              "translated_port": "8443"
             }
           ]
         }
@@ -97,15 +97,15 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
             {
               "name": "L4-traffic",
               "description": "Block traffic based on source IPs and ports",
-              "sourceAddresses": [
+              "source_addresses": [
                 "192.168.1.1-192.168.1.12",
                 "10.1.4.12-10.1.4.255"
               ],
-              "destinationPorts": [
+              "destination_ports": [
                 "443-444",
                 "8443"
               ],
-              "destinationAddresses": [
+              "destination_addresses": [
                 "*"
               ],
               "protocols": [

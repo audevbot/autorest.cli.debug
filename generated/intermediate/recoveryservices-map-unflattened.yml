@@ -1118,6 +1118,8 @@ Modules:
           - resourcegroups_put
         OperationId: '413'
         MethodId: '486'
+        OperationName: Vaults
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: 77777777-b0c6-47a2-b37c-d8e65a629c18
@@ -1179,6 +1181,8 @@ Modules:
           - recoveryservices_vaults_put
         OperationId: '413'
         MethodId: '551'
+        OperationName: Vaults
+        MethodName: Update
       - Example:
           parameters:
             subscriptionId: 77777777-b0c6-47a2-b37c-d8e65a629c18
@@ -1203,6 +1207,8 @@ Modules:
         References: []
         OperationId: '413'
         MethodId: '521'
+        OperationName: Vaults
+        MethodName: Delete
   - ModuleName: azure_rm_recoveryservicesvault_info
     Options:
       - NameSwagger: resourceGroupName
@@ -2022,6 +2028,8 @@ Modules:
         References: []
         OperationId: '413'
         MethodId: '414'
+        OperationName: Vaults
+        MethodName: ListBySubscriptionId
       - Example:
           parameters:
             subscriptionId: 77777777-b0c6-47a2-b37c-d8e65a629c18
@@ -2089,6 +2097,8 @@ Modules:
         References: []
         OperationId: '413'
         MethodId: '432'
+        OperationName: Vaults
+        MethodName: ListByResourceGroup
       - Example:
           parameters:
             subscriptionId: 77777777-b0c6-47a2-b37c-d8e65a629c18
@@ -2129,6 +2139,8 @@ Modules:
         References: []
         OperationId: '413'
         MethodId: '456'
+        OperationName: Vaults
+        MethodName: Get
   - ModuleName: azure_rm_recoveryservicesoperation_info
     Options:
       - &ref_21
@@ -2998,6 +3010,8 @@ Modules:
         References: []
         OperationId: '588'
         MethodId: '589'
+        OperationName: Operations
+        MethodName: List
   - ModuleName: azure_rm_recoveryservicesvaultextendedinfo
     Options:
       - NameSwagger: resourceGroupName
@@ -3650,6 +3664,8 @@ Modules:
           - recoveryservices_vaults_put
         OperationId: '603'
         MethodId: '634'
+        OperationName: VaultExtendedInfo
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: 77777777-b0c6-47a2-b37c-d8e65a629c18
@@ -3695,6 +3711,8 @@ Modules:
           - recoveryservices_vaults_extendedinformation_put
         OperationId: '603'
         MethodId: '668'
+        OperationName: VaultExtendedInfo
+        MethodName: Update
   - ModuleName: azure_rm_recoveryservicesvaultextendedinfo_info
     Options:
       - NameSwagger: resourceGroupName
@@ -4106,19 +4124,9 @@ Modules:
         References: []
         OperationId: '603'
         MethodId: '604'
+        OperationName: VaultExtendedInfo
+        MethodName: Get
 ServiceName: RecoveryServices
 MgmtClientName: RecoveryServices
 CliName: recoveryservices
 Namespace: azure.mgmt.recoveryservices
-Info:
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION vaultName'
-  - '  ** FOUND OPTION vault'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION vaultName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION vaultName'
-  - '  ** FOUND OPTION resourceResourceExtendedInfoDetails'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION vaultName'
