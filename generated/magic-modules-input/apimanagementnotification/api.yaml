@@ -68,7 +68,7 @@ objects:
             python_field_name: type
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: NotificationContractProperties
             go_type_name: NotificationContractProperties
       list_by_parent: !ruby/object:Api::Azure::SDKOperationDefinition
         go_func_name: ListByService
@@ -125,16 +125,18 @@ objects:
         required: false
         azure_sdk_references: ['/recipients', '/properties/recipients']
         properties:
-          - !ruby/object:Api::Type::String
+          - !ruby/object:Api::Type::Array
             name: 'emails'
             description: 'List of Emails subscribed for the notification.'
             required: false
             azure_sdk_references: ['/recipients/emails', '/properties/recipients/emails']
-          - !ruby/object:Api::Type::String
+            item_type: Api::Type::String
+          - !ruby/object:Api::Type::Array
             name: 'users'
             description: 'List of Users subscribed for the notification.'
             required: false
             azure_sdk_references: ['/recipients/users', '/properties/recipients/users']
+            item_type: Api::Type::String
       # read only values included only in response
       - !ruby/object:Api::Type::String
         name: 'id'
