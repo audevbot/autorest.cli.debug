@@ -30,6 +30,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: resourceName
         NameAnsible: resource_name
@@ -60,6 +61,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: parameters
         NameAnsible: parameters
@@ -92,6 +94,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: location
         NameAnsible: location
@@ -122,6 +125,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: tags
         NameAnsible: tags
@@ -156,6 +160,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: plan
         NameAnsible: plan
@@ -204,6 +209,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: product
             NameAnsible: product
@@ -236,6 +242,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: promotionCode
             NameAnsible: promotion_code
@@ -266,6 +273,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: publisher
             NameAnsible: publisher
@@ -296,6 +304,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /plan
@@ -308,6 +317,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: properties
         NameAnsible: properties
@@ -356,6 +366,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: networkProfile
             NameAnsible: network_profile
@@ -404,6 +415,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - NameSwagger: peerVnetId
                 NameAnsible: peer_vnet_id
@@ -434,6 +446,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - NameSwagger: vnetId
                 NameAnsible: vnet_id
@@ -464,6 +477,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/networkProfile
@@ -476,6 +490,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: routerProfiles
             NameAnsible: router_profiles
@@ -524,6 +539,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - &ref_7
                 NameSwagger: publicSubdomain
@@ -555,6 +571,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - &ref_8
                 NameSwagger: fqdn
@@ -586,6 +603,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/routerProfiles
@@ -598,6 +616,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: masterPoolProfile
             NameAnsible: master_pool_profile
@@ -648,6 +667,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - NameSwagger: count
                 NameAnsible: count
@@ -680,6 +700,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: int32
                 Flatten: false
               - NameSwagger: vmSize
                 NameAnsible: vm_size
@@ -809,6 +830,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: subnetCidr
                 NameAnsible: subnet_cidr
@@ -839,6 +861,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - NameSwagger: osType
                 NameAnsible: os_type
@@ -877,6 +900,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/masterPoolProfile
@@ -889,6 +913,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: agentPoolProfiles
             NameAnsible: agent_pool_profiles
@@ -939,6 +964,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - NameSwagger: count
                 NameAnsible: count
@@ -969,6 +995,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: int32
                 Flatten: false
               - NameSwagger: vmSize
                 NameAnsible: vm_size
@@ -1098,6 +1125,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: subnetCidr
                 NameAnsible: subnet_cidr
@@ -1128,6 +1156,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - NameSwagger: osType
                 NameAnsible: os_type
@@ -1166,6 +1195,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: role
                 NameAnsible: role
@@ -1202,6 +1232,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/agentPoolProfiles
@@ -1214,6 +1245,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: authProfile
             NameAnsible: auth_profile
@@ -1280,6 +1312,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: ''
                     Flatten: false
                   - NameSwagger: provider
                     NameAnsible: provider
@@ -1310,6 +1343,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: /properties/authProfile/identityProviders
@@ -1322,6 +1356,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/authProfile
@@ -1334,6 +1369,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - &ref_3
             NameSwagger: provisioningState
@@ -1367,6 +1403,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - &ref_4
             NameSwagger: clusterVersion
@@ -1398,6 +1435,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - &ref_5
             NameSwagger: publicHostname
@@ -1429,6 +1467,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - &ref_6
             NameSwagger: fqdn
@@ -1462,6 +1501,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties
@@ -1474,6 +1514,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_0
         NameSwagger: id
@@ -1505,6 +1546,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_1
         NameSwagger: name
@@ -1536,6 +1578,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_2
         NameSwagger: type
@@ -1567,6 +1610,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
     Methods:
       - Name: CreateOrUpdate
@@ -1661,6 +1705,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: tags
         NameAnsible: tags
@@ -1695,6 +1740,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: plan
         NameAnsible: plan
@@ -1743,6 +1789,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: product
             NameAnsible: product
@@ -1775,6 +1822,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: promotionCode
             NameAnsible: promotion_code
@@ -1805,6 +1853,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: publisher
             NameAnsible: publisher
@@ -1835,6 +1884,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /plan
@@ -1847,6 +1897,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: properties
         NameAnsible: properties
@@ -1896,6 +1947,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - *ref_4
           - *ref_5
@@ -1947,6 +1999,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: peerVnetId
                 NameAnsible: peer_vnet_id
@@ -1977,6 +2030,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: vnetId
                 NameAnsible: vnet_id
@@ -2007,6 +2061,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/networkProfile
@@ -2019,6 +2074,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: routerProfiles
             NameAnsible: router_profiles
@@ -2067,6 +2123,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - *ref_7
               - *ref_8
@@ -2081,6 +2138,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: masterPoolProfile
             NameAnsible: master_pool_profile
@@ -2131,6 +2189,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: count
                 NameAnsible: count
@@ -2163,6 +2222,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
               - NameSwagger: vmSize
                 NameAnsible: vm_size
@@ -2292,6 +2352,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: subnetCidr
                 NameAnsible: subnet_cidr
@@ -2322,6 +2383,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: osType
                 NameAnsible: os_type
@@ -2360,6 +2422,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/masterPoolProfile
@@ -2372,6 +2435,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: agentPoolProfiles
             NameAnsible: agent_pool_profiles
@@ -2422,6 +2486,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: count
                 NameAnsible: count
@@ -2452,6 +2517,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
               - NameSwagger: vmSize
                 NameAnsible: vm_size
@@ -2581,6 +2647,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: subnetCidr
                 NameAnsible: subnet_cidr
@@ -2611,6 +2678,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: osType
                 NameAnsible: os_type
@@ -2649,6 +2717,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: role
                 NameAnsible: role
@@ -2685,6 +2754,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/agentPoolProfiles
@@ -2697,6 +2767,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: authProfile
             NameAnsible: auth_profile
@@ -2763,6 +2834,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                   - NameSwagger: provider
                     NameAnsible: provider
@@ -2793,6 +2865,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: /properties/authProfile/identityProviders
@@ -2805,6 +2878,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/authProfile
@@ -2817,6 +2891,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties
@@ -2829,6 +2904,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     ModuleOperationNameUpper: OpenShiftManagedClusters
     ModuleOperationName: open_shift_managed_clusters
@@ -3007,6 +3083,8 @@ Modules:
           - resourcegroups_put
         OperationId: '393'
         MethodId: '466'
+        OperationName: OpenShiftManagedClusters
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             api-version: '2019-04-30'
@@ -3033,6 +3111,8 @@ Modules:
         References: []
         OperationId: '393'
         MethodId: '535'
+        OperationName: OpenShiftManagedClusters
+        MethodName: Delete
   - ModuleName: azure_rm_openshiftmanagedcluster_info
     Options:
       - NameSwagger: resourceGroupName
@@ -3064,6 +3144,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: resourceName
         NameAnsible: resource_name
@@ -3094,6 +3175,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_9
         NameSwagger: id
@@ -3125,6 +3207,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_10
         NameSwagger: name
@@ -3156,6 +3239,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_11
         NameSwagger: type
@@ -3187,6 +3271,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_12
         NameSwagger: location
@@ -3218,6 +3303,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_13
         NameSwagger: tags
@@ -3253,6 +3339,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_14
         NameSwagger: plan
@@ -3302,6 +3389,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: product
             NameAnsible: product
@@ -3334,6 +3422,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: promotionCode
             NameAnsible: promotion_code
@@ -3364,6 +3453,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: publisher
             NameAnsible: publisher
@@ -3394,6 +3484,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /plan
@@ -3406,6 +3497,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_15
         NameSwagger: properties
@@ -3457,6 +3549,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: openShiftVersion
             NameAnsible: open_shift_version
@@ -3487,6 +3580,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: clusterVersion
             NameAnsible: cluster_version
@@ -3517,6 +3611,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: publicHostname
             NameAnsible: public_hostname
@@ -3547,6 +3642,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: fqdn
             NameAnsible: fqdn
@@ -3579,6 +3675,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: networkProfile
             NameAnsible: network_profile
@@ -3627,6 +3724,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: peerVnetId
                 NameAnsible: peer_vnet_id
@@ -3657,6 +3755,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: vnetId
                 NameAnsible: vnet_id
@@ -3687,6 +3786,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/networkProfile
@@ -3699,6 +3799,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: routerProfiles
             NameAnsible: router_profiles
@@ -3747,6 +3848,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: publicSubdomain
                 NameAnsible: public_subdomain
@@ -3777,6 +3879,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: fqdn
                 NameAnsible: fqdn
@@ -3807,6 +3910,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/routerProfiles
@@ -3819,6 +3923,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: masterPoolProfile
             NameAnsible: master_pool_profile
@@ -3869,6 +3974,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: count
                 NameAnsible: count
@@ -3901,6 +4007,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
               - NameSwagger: vmSize
                 NameAnsible: vm_size
@@ -4030,6 +4137,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: subnetCidr
                 NameAnsible: subnet_cidr
@@ -4060,6 +4168,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: osType
                 NameAnsible: os_type
@@ -4098,6 +4207,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/masterPoolProfile
@@ -4110,6 +4220,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: agentPoolProfiles
             NameAnsible: agent_pool_profiles
@@ -4160,6 +4271,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: count
                 NameAnsible: count
@@ -4190,6 +4302,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
               - NameSwagger: vmSize
                 NameAnsible: vm_size
@@ -4319,6 +4432,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: subnetCidr
                 NameAnsible: subnet_cidr
@@ -4349,6 +4463,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: osType
                 NameAnsible: os_type
@@ -4387,6 +4502,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: role
                 NameAnsible: role
@@ -4423,6 +4539,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/agentPoolProfiles
@@ -4435,6 +4552,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: authProfile
             NameAnsible: auth_profile
@@ -4501,6 +4619,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                   - NameSwagger: provider
                     NameAnsible: provider
@@ -4531,6 +4650,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: /properties/authProfile/identityProviders
@@ -4543,6 +4663,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/authProfile
@@ -4555,6 +4676,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties
@@ -4567,6 +4689,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     Methods:
       - Name: List
@@ -4682,6 +4805,8 @@ Modules:
         References: []
         OperationId: '393'
         MethodId: '394'
+        OperationName: OpenShiftManagedClusters
+        MethodName: List
       - Example:
           parameters:
             api-version: 2018-09-30-preview
@@ -4750,6 +4875,8 @@ Modules:
         References: []
         OperationId: '393'
         MethodId: '412'
+        OperationName: OpenShiftManagedClusters
+        MethodName: ListByResourceGroup
       - Example:
           parameters:
             api-version: '2019-04-30'
@@ -4824,14 +4951,9 @@ Modules:
         References: []
         OperationId: '393'
         MethodId: '436'
+        OperationName: OpenShiftManagedClusters
+        MethodName: Get
 ServiceName: OpenShift
 MgmtClientName: OpenShift
 CliName: aro
 Namespace: azure.mgmt.containerservice
-Info:
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceName'

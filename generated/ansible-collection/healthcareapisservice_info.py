@@ -39,7 +39,7 @@ options:
     type: str
   kind:
     description:
-      - 'The kind of the service. Valid values are: fhir, fhir-Stu3 and fhir-R4.'
+      - The kind of the service.
     type: str
   location:
     description:
@@ -57,7 +57,9 @@ options:
     type: str
   access_policies_object_id:
     description:
-      - An object ID that is allowed access to the FHIR service.
+      - >-
+        An Azure AD object ID (User or Apps) that is allowed access to the FHIR
+        service.
     required: true
     type: str
   cosmos_db_offer_throughput:
@@ -104,12 +106,12 @@ author:
 '''
 
 EXAMPLES = '''
-- name: ServiceList
+- name: List all services in subscription
   azure.rm.healthcareapisservice.info: {}
-- name: ServiceListByResourceGroup
+- name: List all services in resource group
   azure.rm.healthcareapisservice.info:
     resource_group: myResourceGroup
-- name: ServiceGet
+- name: Get metadata
   azure.rm.healthcareapisservice.info:
     resource_group: myResourceGroup
     name: myService
@@ -148,9 +150,7 @@ services:
           sample: null
         kind:
           description:
-            - >-
-              The kind of the service. Valid values are: fhir, fhir-Stu3 and
-              fhir-R4.
+            - The kind of the service.
           returned: always
           type: str
           sample: null
@@ -222,7 +222,7 @@ class AzureRMServicesInfo(AzureRMModuleBase):
         self.status_code = [200]
 
         self.query_parameters = {}
-        self.query_parameters['api-version'] = '2018-08-20-preview'
+        self.query_parameters['api-version'] = '2019-09-16'
         self.header_parameters = {}
         self.header_parameters['Content-Type'] = 'application/json; charset=utf-8'
 

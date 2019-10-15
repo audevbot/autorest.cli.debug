@@ -41,6 +41,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: eventSubscriptionName
         NameAnsible: event_subscription_name
@@ -74,6 +75,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: eventSubscriptionInfo
         NameAnsible: event_subscription_info
@@ -106,6 +108,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: properties
         NameAnsible: properties
@@ -156,6 +159,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: filter
             NameAnsible: filter
@@ -208,6 +212,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - NameSwagger: subjectEndsWith
                 NameAnsible: subject_ends_with
@@ -241,6 +246,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - NameSwagger: includedEventTypes
                 NameAnsible: included_event_types
@@ -275,6 +281,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - NameSwagger: isSubjectCaseSensitive
                 NameAnsible: is_subject_case_sensitive
@@ -308,6 +315,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/filter
@@ -320,6 +328,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: labels
             NameAnsible: labels
@@ -350,6 +359,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: retryPolicy
             NameAnsible: retry_policy
@@ -400,6 +410,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: int32
                 Flatten: false
               - NameSwagger: eventTimeToLiveInMinutes
                 NameAnsible: event_time_to_live_in_minutes
@@ -430,6 +441,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: int32
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/retryPolicy
@@ -442,6 +454,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: deadLetterDestination
             NameAnsible: dead_letter_destination
@@ -472,6 +485,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - &ref_3
             NameSwagger: topic
@@ -503,6 +517,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - &ref_4
             NameSwagger: provisioningState
@@ -555,6 +570,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties
@@ -567,6 +583,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_0
         NameSwagger: id
@@ -598,6 +615,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_1
         NameSwagger: name
@@ -629,6 +647,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_2
         NameSwagger: type
@@ -660,6 +679,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
     Methods:
       - Name: CreateOrUpdate
@@ -672,8 +692,8 @@ Modules:
           - eventSubscriptionName
           - eventSubscriptionInfo
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         HttpMethod: put
         IsAsync: true
       - Name: Update
@@ -686,8 +706,8 @@ Modules:
           - eventSubscriptionName
           - eventSubscriptionUpdateParameters
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         HttpMethod: patch
         IsAsync: true
       - Name: Delete
@@ -698,8 +718,8 @@ Modules:
           - scope
           - eventSubscriptionName
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         HttpMethod: delete
         IsAsync: true
       - Name: ListGlobalBySubscription
@@ -718,8 +738,8 @@ Modules:
           - scope
           - eventSubscriptionName
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         HttpMethod: get
         IsAsync: false
       - Name: ListRegionalBySubscription
@@ -881,6 +901,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: filter
             NameAnsible: filter
@@ -933,6 +954,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: subjectEndsWith
                 NameAnsible: subject_ends_with
@@ -966,6 +988,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: includedEventTypes
                 NameAnsible: included_event_types
@@ -1000,6 +1023,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: isSubjectCaseSensitive
                 NameAnsible: is_subject_case_sensitive
@@ -1033,6 +1057,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/filter
@@ -1045,6 +1070,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: labels
             NameAnsible: labels
@@ -1075,6 +1101,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: retryPolicy
             NameAnsible: retry_policy
@@ -1125,6 +1152,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
               - NameSwagger: eventTimeToLiveInMinutes
                 NameAnsible: event_time_to_live_in_minutes
@@ -1155,6 +1183,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/retryPolicy
@@ -1167,6 +1196,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: deadLetterDestination
             NameAnsible: dead_letter_destination
@@ -1197,6 +1227,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties
@@ -1209,6 +1240,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     ModuleOperationNameUpper: EventSubscriptions
     ModuleOperationName: event_subscriptions
@@ -1256,24 +1288,23 @@ Modules:
                 name: examplesubscription3
                 type: Microsoft.EventGrid/eventSubscriptions
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: put
         Name: EventSubscriptions_CreateOrUpdateForSubscription
-        Filename: eventgrid_put
+        Filename: eventgrid_eventsubscriptions_put
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
         References:
           - '# ref##scope##subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4'
           - '# ref##endpointUrl##https://requestb.in/15ksip71'
           - resourcegroups_put
         OperationId: '505'
         MethodId: '530'
+        OperationName: EventSubscriptions
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             scope: >-
@@ -1316,26 +1347,25 @@ Modules:
                 name: examplesubscription2
                 type: Microsoft.EventGrid/eventSubscriptions
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: put
         Name: EventSubscriptions_CreateOrUpdateForResourceGroup
-        Filename: eventgrid_put_1
+        Filename: eventgrid_eventsubscriptions_put_1
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
         References:
           - >-
             #
             ref##scope##subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg
           - '# ref##endpointUrl##https://requestb.in/15ksip71'
-          - resourcegroups_put
+          - eventgrid_eventsubscriptions_put
         OperationId: '505'
         MethodId: '530'
+        OperationName: EventSubscriptions
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             scope: >-
@@ -1380,26 +1410,25 @@ Modules:
                 name: examplesubscription10
                 type: Microsoft.EventGrid/eventSubscriptions
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: put
         Name: EventSubscriptions_CreateOrUpdateForResource
-        Filename: eventgrid_put_2
+        Filename: eventgrid_eventsubscriptions_put_2
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
         References:
           - >-
             #
             ref##scope##subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventHub/namespaces/examplenamespace1
           - '# ref##endpointUrl##https://requestb.in/15ksip71'
-          - resourcegroups_put
+          - eventgrid_eventsubscriptions_put
         OperationId: '505'
         MethodId: '530'
+        OperationName: EventSubscriptions
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             api-version: '2019-01-01'
@@ -1466,18 +1495,15 @@ Modules:
                 name: examplesubscription1
                 type: Microsoft.EventGrid/eventSubscriptions
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: put
         Name: EventSubscriptions_CreateOrUpdateForCustomTopic_WebhookDestination
-        Filename: eventgrid_put_3
+        Filename: eventgrid_eventsubscriptions_put_3
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
           - name: resource_group
             value: myResourceGroup
             swaggerName: ''
@@ -1492,8 +1518,11 @@ Modules:
             #
             ref##endpointUrl##https://contosofunction.azurewebsites.net/api/HttpTriggerCSharp1?code=<HIDDEN>
           - storage_storageaccounts_put
+          - eventgrid_eventsubscriptions_put
         OperationId: '505'
         MethodId: '530'
+        OperationName: EventSubscriptions
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             api-version: '2019-01-01'
@@ -1565,18 +1594,15 @@ Modules:
                 name: examplesubscription1
                 type: Microsoft.EventGrid/eventSubscriptions
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: put
         Name: EventSubscriptions_CreateOrUpdateForCustomTopic_EventHubDestination
-        Filename: eventgrid_put_4
+        Filename: eventgrid_eventsubscriptions_put_4
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
           - name: resource_group
             value: myResourceGroup
             swaggerName: ''
@@ -1595,8 +1621,11 @@ Modules:
             ref##scope##subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1
           - eventhub_namespaces_eventhubs_put
           - storage_storageaccounts_put
+          - eventgrid_eventsubscriptions_put
         OperationId: '505'
         MethodId: '530'
+        OperationName: EventSubscriptions
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             api-version: '2019-01-01'
@@ -1669,19 +1698,16 @@ Modules:
                 name: examplesubscription1
                 type: Microsoft.EventGrid/eventSubscriptions
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: put
         Name: >-
           EventSubscriptions_CreateOrUpdateForCustomTopic_HybridConnectionDestination
-        Filename: eventgrid_put_5
+        Filename: eventgrid_eventsubscriptions_put_5
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
           - name: resource_group
             value: myResourceGroup
             swaggerName: ''
@@ -1700,8 +1726,11 @@ Modules:
             ref##scope##subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1
           - relay_namespaces_hybridconnections_put
           - storage_storageaccounts_put
+          - eventgrid_eventsubscriptions_put
         OperationId: '505'
         MethodId: '530'
+        OperationName: EventSubscriptions
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             api-version: '2019-01-01'
@@ -1775,19 +1804,16 @@ Modules:
                 name: examplesubscription1
                 type: Microsoft.EventGrid/eventSubscriptions
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: put
         Name: >-
           EventSubscriptions_CreateOrUpdateForCustomTopic_StorageQueueDestination
-        Filename: eventgrid_put_6
+        Filename: eventgrid_eventsubscriptions_put_6
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
           - name: resource_group
             value: myResourceGroup
             swaggerName: ''
@@ -1800,8 +1826,11 @@ Modules:
             ref##scope##subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1
           - storage_storageaccounts_put
           - storage_storageaccounts_put
+          - eventgrid_eventsubscriptions_put
         OperationId: '505'
         MethodId: '530'
+        OperationName: EventSubscriptions
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             scope: subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -1844,24 +1873,23 @@ Modules:
                 name: examplesubscription3
                 type: Microsoft.EventGrid/eventSubscriptions
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: patch
         Name: EventSubscriptions_UpdateForSubscription
-        Filename: eventgrid_patch
+        Filename: eventgrid_eventsubscriptions_patch
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
         References:
           - '# ref##scope##subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4'
           - '# ref##endpointUrl##https://requestb.in/15ksip71'
-          - resourcegroups_put
+          - eventgrid_eventsubscriptions_put
         OperationId: '505'
         MethodId: '584'
+        OperationName: EventSubscriptions
+        MethodName: Update
       - Example:
           parameters:
             scope: >-
@@ -1910,18 +1938,15 @@ Modules:
                 name: examplesubscription2
                 type: Microsoft.EventGrid/eventSubscriptions
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: patch
         Name: EventSubscriptions_UpdateForResourceGroup
-        Filename: eventgrid_patch_1
+        Filename: eventgrid_eventsubscriptions_patch_1
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
           - name: resource_group
             value: myResourceGroup
             swaggerName: ''
@@ -1936,8 +1961,11 @@ Modules:
             #
             ref##scope##subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg
           - eventhub_namespaces_eventhubs_put
+          - eventgrid_eventsubscriptions_put
         OperationId: '505'
         MethodId: '584'
+        OperationName: EventSubscriptions
+        MethodName: Update
       - Example:
           parameters:
             scope: >-
@@ -1985,26 +2013,25 @@ Modules:
                 name: examplesubscription1
                 type: Microsoft.EventGrid/eventSubscriptions
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: patch
         Name: EventSubscriptions_UpdateForResource
-        Filename: eventgrid_patch_2
+        Filename: eventgrid_eventsubscriptions_patch_2
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
         References:
           - >-
             #
             ref##scope##subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventHub/namespaces/examplenamespace1
           - '# ref##endpointUrl##https://requestb.in/15ksip71'
-          - resourcegroups_put
+          - eventgrid_eventsubscriptions_put
         OperationId: '505'
         MethodId: '584'
+        OperationName: EventSubscriptions
+        MethodName: Update
       - Example:
           parameters:
             scope: >-
@@ -2054,26 +2081,25 @@ Modules:
                 name: examplesubscription1
                 type: Microsoft.EventGrid/eventSubscriptions
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: patch
         Name: EventSubscriptions_UpdateForCustomTopic
-        Filename: eventgrid_patch_3
+        Filename: eventgrid_eventsubscriptions_patch_3
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
         References:
           - >-
             #
             ref##scope##subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic2
           - '# ref##endpointUrl##https://requestb.in/15ksip71'
-          - resourcegroups_put
+          - eventgrid_eventsubscriptions_put
         OperationId: '505'
         MethodId: '584'
+        OperationName: EventSubscriptions
+        MethodName: Update
       - Example:
           parameters:
             scope: subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -2084,21 +2110,20 @@ Modules:
             '202': {}
             '204': {}
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: delete
         Name: EventSubscriptions_DeleteForSubscription
-        Filename: eventgrid_delete
+        Filename: eventgrid_eventsubscriptions_delete
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
         References: []
         OperationId: '505'
         MethodId: '558'
+        OperationName: EventSubscriptions
+        MethodName: Delete
       - Example:
           parameters:
             scope: >-
@@ -2110,21 +2135,20 @@ Modules:
             '202': {}
             '204': {}
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: delete
         Name: EventSubscriptions_DeleteForResourceGroup
-        Filename: eventgrid_delete_1
+        Filename: eventgrid_eventsubscriptions_delete_1
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
         References: []
         OperationId: '505'
         MethodId: '558'
+        OperationName: EventSubscriptions
+        MethodName: Delete
       - Example:
           parameters:
             scope: >-
@@ -2136,21 +2160,20 @@ Modules:
             '202': {}
             '204': {}
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: delete
         Name: EventSubscriptions_DeleteForResource
-        Filename: eventgrid_delete_2
+        Filename: eventgrid_eventsubscriptions_delete_2
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
         References: []
         OperationId: '505'
         MethodId: '558'
+        OperationName: EventSubscriptions
+        MethodName: Delete
       - Example:
           parameters:
             scope: >-
@@ -2162,21 +2185,20 @@ Modules:
             '202': {}
             '204': {}
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: delete
         Name: EventSubscriptions_DeleteForCustomTopic
-        Filename: eventgrid_delete_3
+        Filename: eventgrid_eventsubscriptions_delete_3
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
         References: []
         OperationId: '505'
         MethodId: '558'
+        OperationName: EventSubscriptions
+        MethodName: Delete
   - ModuleName: azure_rm_eventgrideventsubscription_info
     Options:
       - NameSwagger: scope
@@ -2218,6 +2240,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: eventSubscriptionName
         NameAnsible: event_subscription_name
@@ -2248,6 +2271,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: location
         NameAnsible: location
@@ -2278,6 +2302,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: topicTypeName
         NameAnsible: topic_type_name
@@ -2308,6 +2333,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: resourceGroupName
         NameAnsible: resource_group_name
@@ -2338,6 +2364,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: providerNamespace
         NameAnsible: provider_namespace
@@ -2368,6 +2395,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: resourceTypeName
         NameAnsible: resource_type_name
@@ -2398,6 +2426,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: resourceName
         NameAnsible: resource_name
@@ -2428,6 +2457,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_5
         NameSwagger: id
@@ -2459,6 +2489,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_6
         NameSwagger: name
@@ -2490,6 +2521,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_7
         NameSwagger: type
@@ -2521,6 +2553,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_8
         NameSwagger: properties
@@ -2570,6 +2603,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: provisioningState
             NameAnsible: provisioning_state
@@ -2621,6 +2655,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: destination
             NameAnsible: destination
@@ -2653,6 +2688,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: filter
             NameAnsible: filter
@@ -2705,6 +2741,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: subjectEndsWith
                 NameAnsible: subject_ends_with
@@ -2738,6 +2775,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: includedEventTypes
                 NameAnsible: included_event_types
@@ -2772,6 +2810,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: isSubjectCaseSensitive
                 NameAnsible: is_subject_case_sensitive
@@ -2805,6 +2844,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/filter
@@ -2817,6 +2857,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: labels
             NameAnsible: labels
@@ -2847,6 +2888,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: retryPolicy
             NameAnsible: retry_policy
@@ -2897,6 +2939,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
               - NameSwagger: eventTimeToLiveInMinutes
                 NameAnsible: event_time_to_live_in_minutes
@@ -2927,6 +2970,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/retryPolicy
@@ -2939,6 +2983,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: deadLetterDestination
             NameAnsible: dead_letter_destination
@@ -2969,6 +3014,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties
@@ -2981,6 +3027,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     Methods:
       - Name: ListGlobalBySubscription
@@ -2999,8 +3046,8 @@ Modules:
           - scope
           - eventSubscriptionName
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         HttpMethod: get
         IsAsync: false
       - Name: ListRegionalBySubscription
@@ -3179,11 +3226,13 @@ Modules:
           }}/providers/Microsoft.EventGrid/eventSubscriptions
         Method: get
         Name: EventSubscriptions_ListGlobalBySubscription
-        Filename: eventgrid_eventsubscriptions_get
+        Filename: eventgrid_eventsubscriptions_get_4
         Variables: []
         References: []
         OperationId: '505'
         MethodId: '636'
+        OperationName: EventSubscriptions
+        MethodName: ListGlobalBySubscription
       - Example:
           parameters:
             scope: subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -3215,21 +3264,20 @@ Modules:
                 name: examplesubscription3
                 type: Microsoft.EventGrid/eventSubscriptions
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: get
         Name: EventSubscriptions_GetForSubscription
-        Filename: eventgrid_get
+        Filename: eventgrid_eventsubscriptions_get
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
         References: []
         OperationId: '505'
         MethodId: '506'
+        OperationName: EventSubscriptions
+        MethodName: Get
       - Example:
           parameters:
             scope: >-
@@ -3265,21 +3313,20 @@ Modules:
                 name: examplesubscription2
                 type: Microsoft.EventGrid/eventSubscriptions
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: get
         Name: EventSubscriptions_GetForResourceGroup
-        Filename: eventgrid_get_1
+        Filename: eventgrid_eventsubscriptions_get_1
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
         References: []
         OperationId: '505'
         MethodId: '506'
+        OperationName: EventSubscriptions
+        MethodName: Get
       - Example:
           parameters:
             scope: >-
@@ -3321,21 +3368,20 @@ Modules:
                 name: examplesubscription1
                 type: Microsoft.EventGrid/eventSubscriptions
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: get
         Name: EventSubscriptions_GetForResource
-        Filename: eventgrid_get_2
+        Filename: eventgrid_eventsubscriptions_get_2
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
         References: []
         OperationId: '505'
         MethodId: '506'
+        OperationName: EventSubscriptions
+        MethodName: Get
       - Example:
           parameters:
             scope: >-
@@ -3373,21 +3419,20 @@ Modules:
                 name: examplesubscription1
                 type: Microsoft.EventGrid/eventSubscriptions
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: get
         Name: EventSubscriptions_GetForCustomTopic
-        Filename: eventgrid_get_3
+        Filename: eventgrid_eventsubscriptions_get_3
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
         References: []
         OperationId: '505'
         MethodId: '506'
+        OperationName: EventSubscriptions
+        MethodName: Get
       - Example:
           parameters:
             subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -3473,6 +3518,8 @@ Modules:
         References: []
         OperationId: '505'
         MethodId: '732'
+        OperationName: EventSubscriptions
+        MethodName: ListRegionalBySubscription
       - Example:
           parameters:
             subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -3518,6 +3565,8 @@ Modules:
         References: []
         OperationId: '505'
         MethodId: '654'
+        OperationName: EventSubscriptions
+        MethodName: ListGlobalBySubscriptionForTopicType
       - Example:
           parameters:
             subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -3576,7 +3625,7 @@ Modules:
           }}/providers/Microsoft.EventGrid/eventSubscriptions
         Method: get
         Name: EventSubscriptions_ListGlobalByResourceGroup
-        Filename: eventgrid_eventsubscriptions_get_1
+        Filename: eventgrid_eventsubscriptions_get_5
         Variables:
           - name: resource_group
             value: myResourceGroup
@@ -3584,6 +3633,8 @@ Modules:
         References: []
         OperationId: '505'
         MethodId: '678'
+        OperationName: EventSubscriptions
+        MethodName: ListGlobalByResourceGroup
       - Example:
           parameters:
             subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -3669,6 +3720,8 @@ Modules:
         References: []
         OperationId: '505'
         MethodId: '786'
+        OperationName: EventSubscriptions
+        MethodName: ListRegionalBySubscriptionForTopicType
       - Example:
           parameters:
             subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -3754,6 +3807,8 @@ Modules:
         References: []
         OperationId: '505'
         MethodId: '756'
+        OperationName: EventSubscriptions
+        MethodName: ListRegionalByResourceGroup
       - Example:
           parameters:
             subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -3806,6 +3861,8 @@ Modules:
         References: []
         OperationId: '505'
         MethodId: '702'
+        OperationName: EventSubscriptions
+        MethodName: ListGlobalByResourceGroupForTopicType
       - Example:
           parameters:
             subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -3895,6 +3952,8 @@ Modules:
         References: []
         OperationId: '505'
         MethodId: '816'
+        OperationName: EventSubscriptions
+        MethodName: ListRegionalByResourceGroupForTopicType
       - Example:
           parameters:
             subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -3987,7 +4046,7 @@ Modules:
           }}/providers/Microsoft.EventGrid/eventSubscriptions
         Method: get
         Name: EventSubscriptions_ListByResource
-        Filename: eventgrid_eventsubscriptions_get_2
+        Filename: eventgrid_eventsubscriptions_get_6
         Variables:
           - name: resource_group
             value: myResourceGroup
@@ -3998,6 +4057,8 @@ Modules:
         References: []
         OperationId: '505'
         MethodId: '852'
+        OperationName: EventSubscriptions
+        MethodName: ListByResource
   - ModuleName: azure_rm_eventgridoperation_info
     Options:
       - &ref_9
@@ -4048,6 +4109,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: display
             NameAnsible: display
@@ -4096,6 +4158,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: resource
                 NameAnsible: resource
@@ -4126,6 +4189,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: operation
                 NameAnsible: operation
@@ -4156,6 +4220,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: description
                 NameAnsible: description
@@ -4186,6 +4251,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/display
@@ -4198,6 +4264,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: origin
             NameAnsible: origin
@@ -4228,6 +4295,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: properties
             NameAnsible: properties
@@ -4258,6 +4326,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /value
@@ -4270,6 +4339,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     Methods:
       - Name: List
@@ -4357,6 +4427,8 @@ Modules:
         References: []
         OperationId: '896'
         MethodId: '897'
+        OperationName: Operations
+        MethodName: List
   - ModuleName: azure_rm_eventgridtopic
     Options:
       - NameSwagger: resourceGroupName
@@ -4388,6 +4460,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: topicName
         NameAnsible: topic_name
@@ -4418,6 +4491,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: topicInfo
         NameAnsible: topic_info
@@ -4448,6 +4522,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: location
         NameAnsible: location
@@ -4478,6 +4553,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: tags
         NameAnsible: tags
@@ -4512,6 +4588,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: properties
         NameAnsible: properties
@@ -4579,6 +4656,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - &ref_14
             NameSwagger: endpoint
@@ -4610,6 +4688,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties
@@ -4622,6 +4701,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_10
         NameSwagger: id
@@ -4653,6 +4733,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_11
         NameSwagger: name
@@ -4684,6 +4765,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_12
         NameSwagger: type
@@ -4715,6 +4797,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
     Methods:
       - Name: CreateOrUpdate
@@ -4837,6 +4920,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: tags
         NameAnsible: tags
@@ -4871,6 +4955,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: properties
         NameAnsible: properties
@@ -4903,6 +4988,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     ModuleOperationNameUpper: Topics
     ModuleOperationName: topics
@@ -4959,6 +5045,8 @@ Modules:
           - resourcegroups_put
         OperationId: '911'
         MethodId: '942'
+        OperationName: Topics
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -5003,6 +5091,8 @@ Modules:
           - eventgrid_topics_put
         OperationId: '911'
         MethodId: '1007'
+        OperationName: Topics
+        MethodName: Update
       - Example:
           parameters:
             subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -5028,6 +5118,8 @@ Modules:
         References: []
         OperationId: '911'
         MethodId: '976'
+        OperationName: Topics
+        MethodName: Delete
   - ModuleName: azure_rm_eventgridtopic_info
     Options:
       - NameSwagger: resourceGroupName
@@ -5059,6 +5151,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: topicName
         NameAnsible: topic_name
@@ -5089,6 +5182,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: providerNamespace
         NameAnsible: provider_namespace
@@ -5119,6 +5213,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: resourceTypeName
         NameAnsible: resource_type_name
@@ -5149,6 +5244,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: resourceName
         NameAnsible: resource_name
@@ -5179,6 +5275,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_15
         NameSwagger: id
@@ -5210,6 +5307,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_16
         NameSwagger: name
@@ -5241,6 +5339,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_17
         NameSwagger: type
@@ -5272,6 +5371,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_18
         NameSwagger: location
@@ -5303,6 +5403,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_19
         NameSwagger: tags
@@ -5338,6 +5439,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_20
         NameSwagger: properties
@@ -5405,6 +5507,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: endpoint
             NameAnsible: endpoint
@@ -5435,6 +5538,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties
@@ -5447,6 +5551,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     Methods:
       - Name: ListBySubscription
@@ -5559,6 +5664,8 @@ Modules:
         References: []
         OperationId: '911'
         MethodId: '1041'
+        OperationName: Topics
+        MethodName: ListBySubscription
       - Example:
           parameters:
             subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -5609,6 +5716,8 @@ Modules:
         References: []
         OperationId: '911'
         MethodId: '1059'
+        OperationName: Topics
+        MethodName: ListByResourceGroup
       - Example:
           parameters:
             subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -5648,6 +5757,8 @@ Modules:
         References: []
         OperationId: '911'
         MethodId: '912'
+        OperationName: Topics
+        MethodName: Get
       - Example:
           parameters:
             subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -5693,6 +5804,8 @@ Modules:
         References: []
         OperationId: '911'
         MethodId: '1147'
+        OperationName: Topics
+        MethodName: ListEventTypes
   - ModuleName: azure_rm_eventgridtopictype_info
     Options:
       - NameSwagger: topicTypeName
@@ -5724,6 +5837,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_21
         NameSwagger: id
@@ -5755,6 +5869,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_22
         NameSwagger: name
@@ -5786,6 +5901,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_23
         NameSwagger: type
@@ -5817,6 +5933,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_24
         NameSwagger: properties
@@ -5866,6 +5983,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: displayName
             NameAnsible: display_name
@@ -5896,6 +6014,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: description
             NameAnsible: description
@@ -5926,6 +6045,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: resourceRegionType
             NameAnsible: resource_region_type
@@ -5962,6 +6082,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: provisioningState
             NameAnsible: provisioning_state
@@ -6010,6 +6131,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: supportedLocations
             NameAnsible: supported_locations
@@ -6040,6 +6162,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties
@@ -6052,6 +6175,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     Methods:
       - Name: List
@@ -6128,6 +6252,8 @@ Modules:
         References: []
         OperationId: '1191'
         MethodId: '1192'
+        OperationName: TopicTypes
+        MethodName: List
       - Example:
           parameters:
             topicTypeName: Microsoft.Storage.StorageAccounts
@@ -6156,6 +6282,8 @@ Modules:
         References: []
         OperationId: '1191'
         MethodId: '1204'
+        OperationName: TopicTypes
+        MethodName: Get
       - Example:
           parameters:
             topicTypeName: Microsoft.Storage.StorageAccounts
@@ -6193,41 +6321,9 @@ Modules:
         References: []
         OperationId: '1191'
         MethodId: '1222'
+        OperationName: TopicTypes
+        MethodName: ListEventTypes
 ServiceName: EventGridManagementClient
 MgmtClientName: EventGridManagementClient
 CliName: eventgrid
 Namespace: azure.mgmt.eventgrid
-Info:
-  - '  ** FOUND OPTION scope'
-  - '  ** FOUND OPTION eventSubscriptionName'
-  - '  ** FOUND OPTION eventSubscriptionInfo'
-  - '  ** FOUND OPTION scope'
-  - '  ** FOUND OPTION eventSubscriptionName'
-  - '  ** FOUND OPTION location'
-  - '  ** FOUND OPTION topicTypeName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION location'
-  - '  ** FOUND OPTION topicTypeName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION location'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION topicTypeName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION location'
-  - '  ** FOUND OPTION topicTypeName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION providerNamespace'
-  - '  ** FOUND OPTION resourceTypeName'
-  - '  ** FOUND OPTION resourceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION topicName'
-  - '  ** FOUND OPTION topicInfo'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION topicName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION providerNamespace'
-  - '  ** FOUND OPTION resourceTypeName'
-  - '  ** FOUND OPTION resourceName'
-  - '  ** FOUND OPTION topicTypeName'
-  - '  ** FOUND OPTION topicTypeName'

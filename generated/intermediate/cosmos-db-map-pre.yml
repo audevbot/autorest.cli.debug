@@ -30,6 +30,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: accountName
         NameAnsible: name
@@ -60,6 +61,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: createUpdateParameters
         NameAnsible: create_update_parameters
@@ -90,6 +92,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: location
         NameAnsible: location
@@ -120,6 +123,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: tags
         NameAnsible: tags
@@ -154,6 +158,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: kind
         NameAnsible: kind
@@ -195,6 +200,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: properties
         NameAnsible: properties
@@ -225,6 +231,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: consistencyPolicy
         NameAnsible: consistency_policy
@@ -290,6 +297,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: maxStalenessPrefix
             NameAnsible: max_staleness_prefix
@@ -324,6 +332,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: int64
             Flatten: false
           - NameSwagger: maxIntervalInSeconds
             NameAnsible: max_interval_in_seconds
@@ -358,6 +367,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: int32
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/consistencyPolicy
@@ -370,6 +380,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: locations
         NameAnsible: locations
@@ -420,6 +431,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: failoverPriority
             NameAnsible: failover_priority
@@ -455,6 +467,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int32
             Flatten: false
           - NameSwagger: isZoneRedundant
             NameAnsible: is_zone_redundant
@@ -487,6 +500,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/locations
@@ -499,6 +513,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: databaseAccountOfferType
         NameAnsible: database_account_offer_type
@@ -529,6 +544,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: ipRangeFilter
         NameAnsible: ip_range_filter
@@ -564,6 +580,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: isVirtualNetworkFilterEnabled
         NameAnsible: is_virtual_network_filter_enabled
@@ -594,6 +611,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: enableAutomaticFailover
         NameAnsible: enable_automatic_failover
@@ -628,6 +646,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: capabilities
         NameAnsible: capabilities
@@ -679,6 +698,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/capabilities
@@ -691,6 +711,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: virtualNetworkRules
         NameAnsible: virtual_network_rules
@@ -743,6 +764,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: ignoreMissingVNetServiceEndpoint
             NameAnsible: ignore_missing_vnet_service_endpoint
@@ -775,6 +797,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/virtualNetworkRules
@@ -787,6 +810,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: enableMultipleWriteLocations
         NameAnsible: enable_multiple_write_locations
@@ -817,6 +841,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: enableCassandraConnector
         NameAnsible: enable_cassandra_connector
@@ -847,6 +872,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: connectorOffer
         NameAnsible: connector_offer
@@ -882,6 +908,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_3
         NameSwagger: provisioningState
@@ -913,6 +940,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_4
         NameSwagger: documentEndpoint
@@ -944,6 +972,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_5
         NameSwagger: writeLocations
@@ -995,6 +1024,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: locationName
             NameAnsible: location_name
@@ -1025,6 +1055,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: documentEndpoint
             NameAnsible: document_endpoint
@@ -1057,6 +1088,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: provisioningState
             NameAnsible: provisioning_state
@@ -1087,6 +1119,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: failoverPriority
             NameAnsible: failover_priority
@@ -1122,6 +1155,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int32
             Flatten: false
           - NameSwagger: isZoneRedundant
             NameAnsible: is_zone_redundant
@@ -1154,6 +1188,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/writeLocations
@@ -1166,6 +1201,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_6
         NameSwagger: readLocations
@@ -1219,6 +1255,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: locationName
             NameAnsible: location_name
@@ -1249,6 +1286,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: documentEndpoint
             NameAnsible: document_endpoint
@@ -1281,6 +1319,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: provisioningState
             NameAnsible: provisioning_state
@@ -1311,6 +1350,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: failoverPriority
             NameAnsible: failover_priority
@@ -1346,6 +1386,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int32
             Flatten: false
           - NameSwagger: isZoneRedundant
             NameAnsible: is_zone_redundant
@@ -1378,6 +1419,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/readLocations
@@ -1390,6 +1432,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_7
         NameSwagger: failoverPolicies
@@ -1443,6 +1486,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: locationName
             NameAnsible: location_name
@@ -1473,6 +1517,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: failoverPriority
             NameAnsible: failover_priority
@@ -1508,6 +1553,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int32
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/failoverPolicies
@@ -1520,6 +1566,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_0
         NameSwagger: id
@@ -1551,6 +1598,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_1
         NameSwagger: name
@@ -1582,6 +1630,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_2
         NameSwagger: type
@@ -1613,6 +1662,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
     Methods:
       - Name: CreateOrUpdate
@@ -2193,6 +2243,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: tags
         NameAnsible: tags
@@ -2227,6 +2278,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: kind
         NameAnsible: kind
@@ -2268,6 +2320,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: properties
         NameAnsible: properties
@@ -2323,6 +2376,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: ipRangeFilter
             NameAnsible: ip_range_filter
@@ -2358,6 +2412,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: isVirtualNetworkFilterEnabled
             NameAnsible: is_virtual_network_filter_enabled
@@ -2390,6 +2445,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: enableAutomaticFailover
             NameAnsible: enable_automatic_failover
@@ -2425,6 +2481,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: consistencyPolicy
             NameAnsible: consistency_policy
@@ -2490,6 +2547,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: maxStalenessPrefix
                 NameAnsible: max_staleness_prefix
@@ -2524,6 +2582,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int64
                 Flatten: false
               - NameSwagger: maxIntervalInSeconds
                 NameAnsible: max_interval_in_seconds
@@ -2559,6 +2618,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/consistencyPolicy
@@ -2571,6 +2631,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: capabilities
             NameAnsible: capabilities
@@ -2622,6 +2683,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/capabilities
@@ -2634,6 +2696,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - *ref_5
           - *ref_6
@@ -2689,6 +2752,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: ignoreMissingVNetServiceEndpoint
                 NameAnsible: ignore_missing_vnet_service_endpoint
@@ -2723,6 +2787,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/virtualNetworkRules
@@ -2735,6 +2800,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: enableMultipleWriteLocations
             NameAnsible: enable_multiple_write_locations
@@ -2765,6 +2831,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: enableCassandraConnector
             NameAnsible: enable_cassandra_connector
@@ -2795,6 +2862,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: connectorOffer
             NameAnsible: connector_offer
@@ -2830,6 +2898,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties
@@ -2842,6 +2911,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     ModuleOperationNameUpper: DatabaseAccounts
     ModuleOperationName: database_accounts
@@ -2922,6 +2992,8 @@ Modules:
           - resourcegroups_put
         OperationId: '1839'
         MethodId: '1904'
+        OperationName: DatabaseAccounts
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             accountName: ddb1
@@ -3031,6 +3103,8 @@ Modules:
           - documentdb_databaseaccounts_put
         OperationId: '1839'
         MethodId: '1904'
+        OperationName: DatabaseAccounts
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             accountName: ddb1
@@ -3057,6 +3131,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '1938'
+        OperationName: DatabaseAccounts
+        MethodName: Delete
   - ModuleName: azure_rm_cosmosdbdatabaseaccount_info
     Options:
       - NameSwagger: resourceGroupName
@@ -3088,6 +3164,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: accountName
         NameAnsible: account_name
@@ -3118,6 +3195,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: tableName
         NameAnsible: table_name
@@ -3148,6 +3226,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: databaseName
         NameAnsible: database_name
@@ -3178,6 +3257,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: keyspaceName
         NameAnsible: keyspace_name
@@ -3208,6 +3288,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: graphName
         NameAnsible: graph_name
@@ -3238,6 +3319,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: containerName
         NameAnsible: container_name
@@ -3268,6 +3350,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: collectionName
         NameAnsible: name
@@ -3298,6 +3381,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_8
         NameSwagger: id
@@ -3329,6 +3413,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_9
         NameSwagger: name
@@ -3360,6 +3445,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_10
         NameSwagger: type
@@ -3391,6 +3477,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_11
         NameSwagger: location
@@ -3422,6 +3509,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_12
         NameSwagger: tags
@@ -3457,6 +3545,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_13
         NameSwagger: kind
@@ -3499,6 +3588,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_14
         NameSwagger: properties
@@ -3530,6 +3620,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: provisioningState
         NameAnsible: provisioning_state
@@ -3560,6 +3651,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: documentEndpoint
         NameAnsible: document_endpoint
@@ -3590,6 +3682,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: databaseAccountOfferType
         NameAnsible: database_account_offer_type
@@ -3625,6 +3718,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: ipRangeFilter
         NameAnsible: ip_range_filter
@@ -3660,6 +3754,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: isVirtualNetworkFilterEnabled
         NameAnsible: is_virtual_network_filter_enabled
@@ -3690,6 +3785,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: enableAutomaticFailover
         NameAnsible: enable_automatic_failover
@@ -3724,6 +3820,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: consistencyPolicy
         NameAnsible: consistency_policy
@@ -3789,6 +3886,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: maxStalenessPrefix
             NameAnsible: max_staleness_prefix
@@ -3823,6 +3921,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: maxIntervalInSeconds
             NameAnsible: max_interval_in_seconds
@@ -3857,6 +3956,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int32
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/consistencyPolicy
@@ -3869,6 +3969,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: capabilities
         NameAnsible: capabilities
@@ -3920,6 +4021,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/capabilities
@@ -3932,6 +4034,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: writeLocations
         NameAnsible: write_locations
@@ -3982,6 +4085,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: locationName
             NameAnsible: location_name
@@ -4012,6 +4116,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: documentEndpoint
             NameAnsible: document_endpoint
@@ -4044,6 +4149,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: provisioningState
             NameAnsible: provisioning_state
@@ -4074,6 +4180,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: failoverPriority
             NameAnsible: failover_priority
@@ -4109,6 +4216,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int32
             Flatten: false
           - NameSwagger: isZoneRedundant
             NameAnsible: is_zone_redundant
@@ -4141,6 +4249,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/writeLocations
@@ -4153,6 +4262,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: readLocations
         NameAnsible: read_locations
@@ -4205,6 +4315,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: locationName
             NameAnsible: location_name
@@ -4235,6 +4346,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: documentEndpoint
             NameAnsible: document_endpoint
@@ -4267,6 +4379,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: provisioningState
             NameAnsible: provisioning_state
@@ -4297,6 +4410,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: failoverPriority
             NameAnsible: failover_priority
@@ -4332,6 +4446,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int32
             Flatten: false
           - NameSwagger: isZoneRedundant
             NameAnsible: is_zone_redundant
@@ -4364,6 +4479,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/readLocations
@@ -4376,6 +4492,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: failoverPolicies
         NameAnsible: failover_policies
@@ -4428,6 +4545,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: locationName
             NameAnsible: location_name
@@ -4458,6 +4576,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: failoverPriority
             NameAnsible: failover_priority
@@ -4493,6 +4612,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int32
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/failoverPolicies
@@ -4505,6 +4625,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: virtualNetworkRules
         NameAnsible: virtual_network_rules
@@ -4557,6 +4678,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: ignoreMissingVNetServiceEndpoint
             NameAnsible: ignore_missing_vnet_service_endpoint
@@ -4589,6 +4711,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/virtualNetworkRules
@@ -4601,6 +4724,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: enableMultipleWriteLocations
         NameAnsible: enable_multiple_write_locations
@@ -4631,6 +4755,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: enableCassandraConnector
         NameAnsible: enable_cassandra_connector
@@ -4661,6 +4786,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: connectorOffer
         NameAnsible: connector_offer
@@ -4696,6 +4822,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     Methods:
       - Name: List
@@ -5286,6 +5413,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2004'
+        OperationName: DatabaseAccounts
+        MethodName: List
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -5343,6 +5472,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2022'
+        OperationName: DatabaseAccounts
+        MethodName: ListByResourceGroup
       - Example:
           parameters:
             accountName: ddb1
@@ -5406,6 +5537,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '1840'
+        OperationName: DatabaseAccounts
+        MethodName: Get
       - Example:
           parameters:
             accountName: ddb1
@@ -5441,6 +5574,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2326'
+        OperationName: DatabaseAccounts
+        MethodName: ListUsages
       - Example:
           parameters:
             accountName: ddb1
@@ -5496,6 +5631,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2290'
+        OperationName: DatabaseAccounts
+        MethodName: ListMetrics
       - Example:
           parameters:
             accountName: ddb1
@@ -5524,6 +5661,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2176'
+        OperationName: DatabaseAccounts
+        MethodName: GetReadOnlyKeys
       - Example:
           parameters:
             accountName: ddb1
@@ -5568,6 +5707,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2362'
+        OperationName: DatabaseAccounts
+        MethodName: ListMetricDefinitions
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -5603,6 +5744,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3348'
+        OperationName: DatabaseAccounts
+        MethodName: ListTables
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -5643,6 +5786,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2392'
+        OperationName: DatabaseAccounts
+        MethodName: ListSqlDatabases
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -5678,6 +5823,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2870'
+        OperationName: DatabaseAccounts
+        MethodName: ListMongoDBDatabases
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -5716,6 +5863,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '4047'
+        OperationName: DatabaseAccounts
+        MethodName: ListGremlinDatabases
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -5751,6 +5900,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3569'
+        OperationName: DatabaseAccounts
+        MethodName: ListCassandraKeyspaces
       - Example:
           parameters:
             accountName: ddb1
@@ -5789,6 +5940,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3378'
+        OperationName: DatabaseAccounts
+        MethodName: GetTable
       - Example:
           parameters:
             accountName: ddb1
@@ -5833,6 +5986,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2422'
+        OperationName: DatabaseAccounts
+        MethodName: GetSqlDatabase
       - Example:
           parameters:
             accountName: ddb1
@@ -5872,6 +6027,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2900'
+        OperationName: DatabaseAccounts
+        MethodName: GetMongoDBDatabase
       - Example:
           parameters:
             accountName: ddb1
@@ -5914,6 +6071,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '4077'
+        OperationName: DatabaseAccounts
+        MethodName: GetGremlinDatabase
       - Example:
           parameters:
             accountName: ddb1
@@ -5953,6 +6112,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3599'
+        OperationName: DatabaseAccounts
+        MethodName: GetCassandraKeyspace
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -6022,6 +6183,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '4268'
+        OperationName: DatabaseAccounts
+        MethodName: ListGremlinGraphs
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -6091,6 +6254,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2613'
+        OperationName: DatabaseAccounts
+        MethodName: ListSqlContainers
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -6142,6 +6307,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3790'
+        OperationName: DatabaseAccounts
+        MethodName: ListCassandraTables
       - Example:
           parameters:
             accountName: ddb1
@@ -6181,6 +6348,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3492'
+        OperationName: DatabaseAccounts
+        MethodName: GetTableThroughput
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -6231,6 +6400,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3091'
+        OperationName: DatabaseAccounts
+        MethodName: ListMongoDBCollections
       - Example:
           parameters:
             accountName: ddb1
@@ -6270,6 +6441,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2536'
+        OperationName: DatabaseAccounts
+        MethodName: GetSqlDatabaseThroughput
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -6341,6 +6514,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '4304'
+        OperationName: DatabaseAccounts
+        MethodName: GetGremlinGraph
       - Example:
           parameters:
             accountName: ddb1
@@ -6380,6 +6555,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '4191'
+        OperationName: DatabaseAccounts
+        MethodName: GetGremlinDatabaseThroughput
       - Example:
           parameters:
             accountName: ddb1
@@ -6419,6 +6596,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3014'
+        OperationName: DatabaseAccounts
+        MethodName: GetMongoDBDatabaseThroughput
       - Example:
           parameters:
             accountName: ddb1
@@ -6472,6 +6651,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3826'
+        OperationName: DatabaseAccounts
+        MethodName: GetCassandraTable
       - Example:
           parameters:
             accountName: ddb1
@@ -6511,6 +6692,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3713'
+        OperationName: DatabaseAccounts
+        MethodName: GetCassandraKeyspaceThroughput
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -6583,6 +6766,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2649'
+        OperationName: DatabaseAccounts
+        MethodName: GetSqlContainer
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -6636,6 +6821,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3127'
+        OperationName: DatabaseAccounts
+        MethodName: GetMongoDBCollection
       - Example:
           parameters:
             accountName: ddb1
@@ -6679,6 +6866,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '4436'
+        OperationName: DatabaseAccounts
+        MethodName: GetGremlinGraphThroughput
       - Example:
           parameters:
             accountName: ddb1
@@ -6722,6 +6911,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3958'
+        OperationName: DatabaseAccounts
+        MethodName: GetCassandraTableThroughput
       - Example:
           parameters:
             accountName: ddb1
@@ -6766,6 +6957,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2781'
+        OperationName: DatabaseAccounts
+        MethodName: GetSqlContainerThroughput
       - Example:
           parameters:
             accountName: ddb1
@@ -6810,6 +7003,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3259'
+        OperationName: DatabaseAccounts
+        MethodName: GetMongoDBCollectionThroughput
   - ModuleName: azure_rm_cosmosdboperation_info
     Options:
       - &ref_15
@@ -6860,6 +7055,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: display
             NameAnsible: display
@@ -6908,6 +7104,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: Resource
                 NameAnsible: resource
@@ -6940,6 +7137,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: Operation
                 NameAnsible: operation
@@ -6970,6 +7168,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: Description
                 NameAnsible: description
@@ -7000,6 +7199,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/display
@@ -7012,6 +7212,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
         EnumValues: []
         PathSwagger: /value
@@ -7024,6 +7225,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_16
         NameSwagger: nextLink
@@ -7055,6 +7257,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
     Methods:
       - Name: List
@@ -7098,6 +7301,8 @@ Modules:
         References: []
         OperationId: '4527'
         MethodId: '4528'
+        OperationName: Operations
+        MethodName: List
   - ModuleName: azure_rm_cosmosdbdatabase_info
     Options:
       - NameSwagger: resourceGroupName
@@ -7129,6 +7334,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: accountName
         NameAnsible: account_name
@@ -7159,6 +7365,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: databaseRid
         NameAnsible: database_rid
@@ -7189,6 +7396,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_17
         NameSwagger: value
@@ -7259,6 +7467,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: name
             NameAnsible: name
@@ -7307,6 +7516,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: localizedValue
                 NameAnsible: localized_value
@@ -7337,6 +7547,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/name
@@ -7349,6 +7560,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: quotaPeriod
             NameAnsible: quota_period
@@ -7379,6 +7591,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: limit
             NameAnsible: limit
@@ -7409,6 +7622,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: currentValue
             NameAnsible: current_value
@@ -7439,6 +7653,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
         EnumValues: []
         PathSwagger: /value
@@ -7451,6 +7666,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     Methods:
       - Name: ListUsages
@@ -7550,6 +7766,8 @@ Modules:
         References: []
         OperationId: '4542'
         MethodId: '4585'
+        OperationName: Database
+        MethodName: ListUsages
       - Example:
           parameters:
             accountName: ddb1
@@ -7609,6 +7827,8 @@ Modules:
         References: []
         OperationId: '4542'
         MethodId: '4543'
+        OperationName: Database
+        MethodName: ListMetrics
       - Example:
           parameters:
             accountName: ddb1
@@ -7658,6 +7878,8 @@ Modules:
         References: []
         OperationId: '4542'
         MethodId: '4627'
+        OperationName: Database
+        MethodName: ListMetricDefinitions
   - ModuleName: azure_rm_cosmosdbcollection_info
     Options:
       - NameSwagger: resourceGroupName
@@ -7689,6 +7911,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: accountName
         NameAnsible: account_name
@@ -7719,6 +7942,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: databaseRid
         NameAnsible: database_rid
@@ -7749,6 +7973,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: collectionRid
         NameAnsible: collection_rid
@@ -7779,6 +8004,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_18
         NameSwagger: value
@@ -7849,6 +8075,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: name
             NameAnsible: name
@@ -7897,6 +8124,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: localizedValue
                 NameAnsible: localized_value
@@ -7927,6 +8155,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/name
@@ -7939,6 +8168,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: quotaPeriod
             NameAnsible: quota_period
@@ -7969,6 +8199,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: limit
             NameAnsible: limit
@@ -7999,6 +8230,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: currentValue
             NameAnsible: current_value
@@ -8029,6 +8261,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
         EnumValues: []
         PathSwagger: /value
@@ -8041,6 +8274,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     Methods:
       - Name: ListUsages
@@ -8153,6 +8387,8 @@ Modules:
         References: []
         OperationId: '4665'
         MethodId: '4714'
+        OperationName: Collection
+        MethodName: ListUsages
       - Example:
           parameters:
             accountName: ddb1
@@ -8217,6 +8453,8 @@ Modules:
         References: []
         OperationId: '4665'
         MethodId: '4666'
+        OperationName: Collection
+        MethodName: ListMetrics
       - Example:
           parameters:
             accountName: ddb1
@@ -8271,6 +8509,8 @@ Modules:
         References: []
         OperationId: '4665'
         MethodId: '4762'
+        OperationName: Collection
+        MethodName: ListMetricDefinitions
   - ModuleName: azure_rm_cosmosdbcollectionregion_info
     Options:
       - NameSwagger: resourceGroupName
@@ -8302,6 +8542,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: accountName
         NameAnsible: account_name
@@ -8332,6 +8573,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: region
         NameAnsible: region
@@ -8362,6 +8604,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: databaseRid
         NameAnsible: database_rid
@@ -8392,6 +8635,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: collectionRid
         NameAnsible: collection_rid
@@ -8422,6 +8666,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_19
         NameSwagger: value
@@ -8471,6 +8716,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: endTime
             NameAnsible: end_time
@@ -8501,6 +8747,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: timeGrain
             NameAnsible: time_grain
@@ -8531,6 +8778,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: unit
             NameAnsible: unit
@@ -8582,6 +8830,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: name
             NameAnsible: name
@@ -8630,6 +8879,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: localizedValue
                 NameAnsible: localized_value
@@ -8660,6 +8910,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/name
@@ -8672,6 +8923,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: metricValues
             NameAnsible: metric_values
@@ -8720,6 +8972,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
               - NameSwagger: average
                 NameAnsible: average
@@ -8750,6 +9003,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: maximum
                 NameAnsible: maximum
@@ -8780,6 +9034,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: minimum
                 NameAnsible: minimum
@@ -8810,6 +9065,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: timestamp
                 NameAnsible: timestamp
@@ -8840,6 +9096,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: total
                 NameAnsible: total
@@ -8870,6 +9127,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/metricValues
@@ -8882,6 +9140,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
         EnumValues: []
         PathSwagger: /value
@@ -8894,6 +9153,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     Methods:
       - Name: ListMetrics
@@ -8996,6 +9256,8 @@ Modules:
         References: []
         OperationId: '4806'
         MethodId: '4807'
+        OperationName: CollectionRegion
+        MethodName: ListMetrics
   - ModuleName: azure_rm_cosmosdbdatabaseaccountregion_info
     Options:
       - NameSwagger: resourceGroupName
@@ -9027,6 +9289,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: accountName
         NameAnsible: account_name
@@ -9057,6 +9320,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: region
         NameAnsible: region
@@ -9087,6 +9351,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_20
         NameSwagger: value
@@ -9136,6 +9401,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: endTime
             NameAnsible: end_time
@@ -9166,6 +9432,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: timeGrain
             NameAnsible: time_grain
@@ -9196,6 +9463,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: unit
             NameAnsible: unit
@@ -9247,6 +9515,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: name
             NameAnsible: name
@@ -9295,6 +9564,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: localizedValue
                 NameAnsible: localized_value
@@ -9325,6 +9595,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/name
@@ -9337,6 +9608,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: metricValues
             NameAnsible: metric_values
@@ -9385,6 +9657,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
               - NameSwagger: average
                 NameAnsible: average
@@ -9415,6 +9688,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: maximum
                 NameAnsible: maximum
@@ -9445,6 +9719,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: minimum
                 NameAnsible: minimum
@@ -9475,6 +9750,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: timestamp
                 NameAnsible: timestamp
@@ -9505,6 +9781,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: total
                 NameAnsible: total
@@ -9535,6 +9812,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/metricValues
@@ -9547,6 +9825,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
         EnumValues: []
         PathSwagger: /value
@@ -9559,6 +9838,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     Methods:
       - Name: ListMetrics
@@ -9647,6 +9927,8 @@ Modules:
         References: []
         OperationId: '4863'
         MethodId: '4864'
+        OperationName: DatabaseAccountRegion
+        MethodName: ListMetrics
   - ModuleName: azure_rm_cosmosdbpercentilesourcetarget_info
     Options:
       - NameSwagger: resourceGroupName
@@ -9678,6 +9960,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: accountName
         NameAnsible: account_name
@@ -9708,6 +9991,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: sourceRegion
         NameAnsible: source_region
@@ -9740,6 +10024,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: targetRegion
         NameAnsible: target_region
@@ -9772,6 +10057,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_21
         NameSwagger: value
@@ -9821,6 +10107,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: endTime
             NameAnsible: end_time
@@ -9851,6 +10138,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: timeGrain
             NameAnsible: time_grain
@@ -9881,6 +10169,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: unit
             NameAnsible: unit
@@ -9932,6 +10221,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: name
             NameAnsible: name
@@ -9980,6 +10270,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: localizedValue
                 NameAnsible: localized_value
@@ -10010,6 +10301,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/name
@@ -10022,6 +10314,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: metricValues
             NameAnsible: metric_values
@@ -10072,6 +10365,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
               - NameSwagger: average
                 NameAnsible: average
@@ -10102,6 +10396,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: maximum
                 NameAnsible: maximum
@@ -10132,6 +10427,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: minimum
                 NameAnsible: minimum
@@ -10162,6 +10458,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: timestamp
                 NameAnsible: timestamp
@@ -10192,6 +10489,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: total
                 NameAnsible: total
@@ -10222,6 +10520,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: P10
                 NameAnsible: p10
@@ -10252,6 +10551,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: P25
                 NameAnsible: p25
@@ -10282,6 +10582,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: P50
                 NameAnsible: p50
@@ -10312,6 +10613,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: P75
                 NameAnsible: p75
@@ -10342,6 +10644,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: P90
                 NameAnsible: p90
@@ -10372,6 +10675,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: P95
                 NameAnsible: p95
@@ -10402,6 +10706,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: P99
                 NameAnsible: p99
@@ -10432,6 +10737,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/metricValues
@@ -10444,6 +10750,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
         EnumValues: []
         PathSwagger: /value
@@ -10456,6 +10763,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     Methods:
       - Name: ListMetrics
@@ -10554,6 +10862,8 @@ Modules:
         References: []
         OperationId: '4908'
         MethodId: '4909'
+        OperationName: PercentileSourceTarget
+        MethodName: ListMetrics
   - ModuleName: azure_rm_cosmosdbpercentiletarget_info
     Options:
       - NameSwagger: resourceGroupName
@@ -10585,6 +10895,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: accountName
         NameAnsible: account_name
@@ -10615,6 +10926,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: targetRegion
         NameAnsible: target_region
@@ -10647,6 +10959,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_22
         NameSwagger: value
@@ -10696,6 +11009,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: endTime
             NameAnsible: end_time
@@ -10726,6 +11040,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: timeGrain
             NameAnsible: time_grain
@@ -10756,6 +11071,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: unit
             NameAnsible: unit
@@ -10807,6 +11123,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: name
             NameAnsible: name
@@ -10855,6 +11172,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: localizedValue
                 NameAnsible: localized_value
@@ -10885,6 +11203,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/name
@@ -10897,6 +11216,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: metricValues
             NameAnsible: metric_values
@@ -10947,6 +11267,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
               - NameSwagger: average
                 NameAnsible: average
@@ -10977,6 +11298,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: maximum
                 NameAnsible: maximum
@@ -11007,6 +11329,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: minimum
                 NameAnsible: minimum
@@ -11037,6 +11360,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: timestamp
                 NameAnsible: timestamp
@@ -11067,6 +11391,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: total
                 NameAnsible: total
@@ -11097,6 +11422,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: P10
                 NameAnsible: p10
@@ -11127,6 +11453,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: P25
                 NameAnsible: p25
@@ -11157,6 +11484,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: P50
                 NameAnsible: p50
@@ -11187,6 +11515,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: P75
                 NameAnsible: p75
@@ -11217,6 +11546,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: P90
                 NameAnsible: p90
@@ -11247,6 +11577,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: P95
                 NameAnsible: p95
@@ -11277,6 +11608,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: P99
                 NameAnsible: p99
@@ -11307,6 +11639,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/metricValues
@@ -11319,6 +11652,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
         EnumValues: []
         PathSwagger: /value
@@ -11331,6 +11665,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     Methods:
       - Name: ListMetrics
@@ -11439,6 +11774,8 @@ Modules:
         References: []
         OperationId: '4959'
         MethodId: '4960'
+        OperationName: PercentileTarget
+        MethodName: ListMetrics
   - ModuleName: azure_rm_cosmosdbpercentile_info
     Options:
       - NameSwagger: resourceGroupName
@@ -11470,6 +11807,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: accountName
         NameAnsible: name
@@ -11500,6 +11838,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_23
         NameSwagger: value
@@ -11549,6 +11888,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: endTime
             NameAnsible: end_time
@@ -11579,6 +11919,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: timeGrain
             NameAnsible: time_grain
@@ -11609,6 +11950,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: unit
             NameAnsible: unit
@@ -11660,6 +12002,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: name
             NameAnsible: name
@@ -11708,6 +12051,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: localizedValue
                 NameAnsible: localized_value
@@ -11738,6 +12082,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/name
@@ -11750,6 +12095,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: metricValues
             NameAnsible: metric_values
@@ -11800,6 +12146,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
               - NameSwagger: average
                 NameAnsible: average
@@ -11830,6 +12177,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: maximum
                 NameAnsible: maximum
@@ -11860,6 +12208,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: minimum
                 NameAnsible: minimum
@@ -11890,6 +12239,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: timestamp
                 NameAnsible: timestamp
@@ -11920,6 +12270,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: total
                 NameAnsible: total
@@ -11950,6 +12301,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: P10
                 NameAnsible: p10
@@ -11980,6 +12332,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: P25
                 NameAnsible: p25
@@ -12010,6 +12363,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: P50
                 NameAnsible: p50
@@ -12040,6 +12394,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: P75
                 NameAnsible: p75
@@ -12070,6 +12425,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: P90
                 NameAnsible: p90
@@ -12100,6 +12456,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: P95
                 NameAnsible: p95
@@ -12130,6 +12487,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: P99
                 NameAnsible: p99
@@ -12160,6 +12518,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/metricValues
@@ -12172,6 +12531,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
         EnumValues: []
         PathSwagger: /value
@@ -12184,6 +12544,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     Methods:
       - Name: ListMetrics
@@ -12286,6 +12647,8 @@ Modules:
         References: []
         OperationId: '5004'
         MethodId: '5005'
+        OperationName: Percentile
+        MethodName: ListMetrics
   - ModuleName: azure_rm_cosmosdbcollectionpartitionregion_info
     Options:
       - NameSwagger: resourceGroupName
@@ -12317,6 +12680,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: accountName
         NameAnsible: account_name
@@ -12347,6 +12711,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: region
         NameAnsible: region
@@ -12377,6 +12742,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: databaseRid
         NameAnsible: database_rid
@@ -12407,6 +12773,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: collectionRid
         NameAnsible: collection_rid
@@ -12437,6 +12804,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_24
         NameSwagger: value
@@ -12486,6 +12854,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: endTime
             NameAnsible: end_time
@@ -12516,6 +12885,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: timeGrain
             NameAnsible: time_grain
@@ -12546,6 +12916,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: unit
             NameAnsible: unit
@@ -12597,6 +12968,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: name
             NameAnsible: name
@@ -12645,6 +13017,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: localizedValue
                 NameAnsible: localized_value
@@ -12675,6 +13048,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/name
@@ -12687,6 +13061,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: metricValues
             NameAnsible: metric_values
@@ -12735,6 +13110,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
               - NameSwagger: average
                 NameAnsible: average
@@ -12765,6 +13141,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: maximum
                 NameAnsible: maximum
@@ -12795,6 +13172,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: minimum
                 NameAnsible: minimum
@@ -12825,6 +13203,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: timestamp
                 NameAnsible: timestamp
@@ -12855,6 +13234,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: total
                 NameAnsible: total
@@ -12885,6 +13265,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/metricValues
@@ -12897,6 +13278,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: partitionId
             NameAnsible: partition_id
@@ -12927,6 +13309,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: partitionKeyRangeId
             NameAnsible: partition_key_range_id
@@ -12959,6 +13342,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /value
@@ -12971,6 +13355,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     Methods:
       - Name: ListMetrics
@@ -13077,6 +13462,8 @@ Modules:
         References: []
         OperationId: '5043'
         MethodId: '5044'
+        OperationName: CollectionPartitionRegion
+        MethodName: ListMetrics
   - ModuleName: azure_rm_cosmosdbcollectionpartition_info
     Options:
       - NameSwagger: resourceGroupName
@@ -13108,6 +13495,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: accountName
         NameAnsible: account_name
@@ -13138,6 +13526,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: databaseRid
         NameAnsible: database_rid
@@ -13168,6 +13557,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: collectionRid
         NameAnsible: collection_rid
@@ -13198,6 +13588,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_25
         NameSwagger: value
@@ -13270,6 +13661,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: name
             NameAnsible: name
@@ -13318,6 +13710,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: localizedValue
                 NameAnsible: localized_value
@@ -13348,6 +13741,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/name
@@ -13360,6 +13754,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: quotaPeriod
             NameAnsible: quota_period
@@ -13390,6 +13785,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: limit
             NameAnsible: limit
@@ -13420,6 +13816,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: currentValue
             NameAnsible: current_value
@@ -13450,6 +13847,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: partitionId
             NameAnsible: partition_id
@@ -13480,6 +13878,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: partitionKeyRangeId
             NameAnsible: partition_key_range_id
@@ -13510,6 +13909,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /value
@@ -13522,6 +13922,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     Methods:
       - Name: ListUsages
@@ -13621,6 +14022,8 @@ Modules:
         References: []
         OperationId: '5100'
         MethodId: '5149'
+        OperationName: CollectionPartition
+        MethodName: ListUsages
       - Example:
           parameters:
             accountName: ddb1
@@ -13686,6 +14089,8 @@ Modules:
         References: []
         OperationId: '5100'
         MethodId: '5101'
+        OperationName: CollectionPartition
+        MethodName: ListMetrics
   - ModuleName: azure_rm_cosmosdbpartitionkeyrangeid_info
     Options:
       - NameSwagger: resourceGroupName
@@ -13717,6 +14122,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: accountName
         NameAnsible: account_name
@@ -13747,6 +14153,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: databaseRid
         NameAnsible: database_rid
@@ -13777,6 +14184,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: collectionRid
         NameAnsible: collection_rid
@@ -13807,6 +14215,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: partitionKeyRangeId
         NameAnsible: partition_key_range_id
@@ -13837,6 +14246,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_26
         NameSwagger: value
@@ -13886,6 +14296,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: endTime
             NameAnsible: end_time
@@ -13916,6 +14327,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: timeGrain
             NameAnsible: time_grain
@@ -13946,6 +14358,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: unit
             NameAnsible: unit
@@ -13997,6 +14410,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: name
             NameAnsible: name
@@ -14045,6 +14459,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: localizedValue
                 NameAnsible: localized_value
@@ -14075,6 +14490,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/name
@@ -14087,6 +14503,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: metricValues
             NameAnsible: metric_values
@@ -14135,6 +14552,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
               - NameSwagger: average
                 NameAnsible: average
@@ -14165,6 +14583,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: maximum
                 NameAnsible: maximum
@@ -14195,6 +14614,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: minimum
                 NameAnsible: minimum
@@ -14225,6 +14645,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: timestamp
                 NameAnsible: timestamp
@@ -14255,6 +14676,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: total
                 NameAnsible: total
@@ -14285,6 +14707,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/metricValues
@@ -14297,6 +14720,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: partitionId
             NameAnsible: partition_id
@@ -14327,6 +14751,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: partitionKeyRangeId
             NameAnsible: partition_key_range_id
@@ -14359,6 +14784,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /value
@@ -14371,6 +14797,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     Methods:
       - Name: ListMetrics
@@ -14474,6 +14901,8 @@ Modules:
         References: []
         OperationId: '5199'
         MethodId: '5200'
+        OperationName: PartitionKeyRangeId
+        MethodName: ListMetrics
   - ModuleName: azure_rm_cosmosdbpartitionkeyrangeidregion_info
     Options:
       - NameSwagger: resourceGroupName
@@ -14505,6 +14934,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: accountName
         NameAnsible: account_name
@@ -14535,6 +14965,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: region
         NameAnsible: region
@@ -14565,6 +14996,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: databaseRid
         NameAnsible: database_rid
@@ -14595,6 +15027,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: collectionRid
         NameAnsible: collection_rid
@@ -14625,6 +15058,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: partitionKeyRangeId
         NameAnsible: partition_key_range_id
@@ -14655,6 +15089,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_27
         NameSwagger: value
@@ -14704,6 +15139,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: endTime
             NameAnsible: end_time
@@ -14734,6 +15170,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: timeGrain
             NameAnsible: time_grain
@@ -14764,6 +15201,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: unit
             NameAnsible: unit
@@ -14815,6 +15253,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: name
             NameAnsible: name
@@ -14863,6 +15302,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: localizedValue
                 NameAnsible: localized_value
@@ -14893,6 +15333,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/name
@@ -14905,6 +15346,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: metricValues
             NameAnsible: metric_values
@@ -14953,6 +15395,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
               - NameSwagger: average
                 NameAnsible: average
@@ -14983,6 +15426,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: maximum
                 NameAnsible: maximum
@@ -15013,6 +15457,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: minimum
                 NameAnsible: minimum
@@ -15043,6 +15488,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: timestamp
                 NameAnsible: timestamp
@@ -15073,6 +15519,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: total
                 NameAnsible: total
@@ -15103,6 +15550,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/metricValues
@@ -15115,6 +15563,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: partitionId
             NameAnsible: partition_id
@@ -15145,6 +15594,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: partitionKeyRangeId
             NameAnsible: partition_key_range_id
@@ -15177,6 +15627,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /value
@@ -15189,6 +15640,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     Methods:
       - Name: ListMetrics
@@ -15298,168 +15750,9 @@ Modules:
         References: []
         OperationId: '5256'
         MethodId: '5257'
+        OperationName: PartitionKeyRangeIdRegion
+        MethodName: ListMetrics
 ServiceName: CosmosDB
 MgmtClientName: CosmosDB
 CliName: cosmos-db
 Namespace: azure.mgmt.cosmosdb
-Info:
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION createUpdateParameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION tableName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION keyspaceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION keyspaceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION tableName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION graphName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION keyspaceName'
-  - '  ** FOUND OPTION tableName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION keyspaceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION containerName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION collectionName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION graphName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION keyspaceName'
-  - '  ** FOUND OPTION tableName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION containerName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION collectionName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION collectionRid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION collectionRid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION collectionRid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION region'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION collectionRid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION region'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION sourceRegion'
-  - '  ** FOUND OPTION targetRegion'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION targetRegion'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION region'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION collectionRid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION collectionRid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION collectionRid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION collectionRid'
-  - '  ** FOUND OPTION partitionKeyRangeId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION region'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION collectionRid'
-  - '  ** FOUND OPTION partitionKeyRangeId'

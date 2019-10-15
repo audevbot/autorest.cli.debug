@@ -8,7 +8,7 @@
   tasks:
 
     - name: ListAvailabilities
-      azure_rm_vmwarecloudsimpleskusavailabilitywithinregion_info:
+      azure_rm_vmwarecloudsimpleskusavailability_info:
         region_id: '{{location_name}}'
     
       register: output

@@ -147,7 +147,7 @@ objects:
         response:
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: EmailTemplateUpdateParameterProperties
             go_type_name: EmailTemplateUpdateParameterProperties
           '/properties/subject': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
@@ -274,27 +274,28 @@ objects:
         required: false
         sample_value: '<!DOCTYPE html >\n<html>\n  <head />\n  <body>\n    <p style="font-size:12pt;font-family:''Segoe UI''">Dear $DevFirstName $DevLastName,</p>\n    <p style="font-size:12pt;font-family:''Segoe UI''">\n          We are happy to let you know that your request to publish the $AppName application in the gallery has been approved. Your application has been published and can be viewed <a href="http://$DevPortalUrl/Applications/Details/$AppId">here</a>.\n        </p>\n    <p style="font-size:12pt;font-family:''Segoe UI''">Best,</p>\n    <p style="font-size:12pt;font-family:''Segoe UI''">The $OrganizationName API Team</p>\n  </body>\n</html>'
         azure_sdk_references: ['/body', '/properties/body']
-      - !ruby/object:Api::Type::NestedObject
+      - !ruby/object:Api::Type::Array
         name: 'parameters'
         description: 'Email Template Parameter values.'
         required: false
         azure_sdk_references: ['/parameters', '/properties/parameters']
-        properties:
-          - !ruby/object:Api::Type::String
-            name: 'name'
-            description: 'Template parameter name.'
-            required: false
-            azure_sdk_references: ['/parameters/name', '/properties/parameters/name', '/name']
-          - !ruby/object:Api::Type::String
-            name: 'title'
-            description: 'Template parameter title.'
-            required: false
-            azure_sdk_references: ['/parameters/title', '/properties/parameters/title']
-          - !ruby/object:Api::Type::String
-            name: 'description'
-            description: 'Template parameter description.'
-            required: false
-            azure_sdk_references: ['/parameters/description', '/properties/parameters/description']
+        item_type: !ruby/object:Api::Type::NestedObject
+          properties:
+            - !ruby/object:Api::Type::String
+              name: 'name'
+              description: 'Template parameter name.'
+              required: false
+              azure_sdk_references: ['/parameters/name', '/properties/parameters/name', '/name']
+            - !ruby/object:Api::Type::String
+              name: 'title'
+              description: 'Template parameter title.'
+              required: false
+              azure_sdk_references: ['/parameters/title', '/properties/parameters/title']
+            - !ruby/object:Api::Type::String
+              name: 'description'
+              description: 'Template parameter description.'
+              required: false
+              azure_sdk_references: ['/parameters/description', '/properties/parameters/description']
       # read only values included only in response
       - !ruby/object:Api::Type::Boolean
         name: 'isDefault'

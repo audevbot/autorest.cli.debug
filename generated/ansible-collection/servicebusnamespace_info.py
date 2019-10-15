@@ -102,6 +102,10 @@ EXAMPLES = '''
   azure.rm.servicebusnamespace.info:
     resource_group: myResourceGroup
     namespace_name: my
+- name: NameSpaceNetworkRuleSetList
+  azure.rm.servicebusnamespace.info:
+    resource_group: myResourceGroup
+    namespace_name: my
 - name: NameSpaceAuthorizationRuleListAll
   azure.rm.servicebusnamespace.info:
     resource_group: myResourceGroup
@@ -265,6 +269,9 @@ class AzureRMNamespacesInfo(AzureRMModuleBase):
             self.results['namespaces'] = self.format_item(self.listauthorizationrules())
         elif (self.resource_group is not None and
               self.namespace_name is not None):
+            self.results['namespaces'] = self.format_item(self.listnetworkrulesets())
+        elif (self.resource_group is not None and
+              self.namespace_name is not None):
             self.results['namespaces'] = self.format_item(self.get())
         elif (self.resource_group is not None):
             self.results['namespaces'] = self.format_item(self.listbyresourcegroup())
@@ -355,6 +362,40 @@ class AzureRMNamespacesInfo(AzureRMModuleBase):
                     '/namespaces' +
                     '/{{ namespace_name }}' +
                     '/AuthorizationRules')
+        self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
+        self.url = self.url.replace('{{ resource_group }}', self.resource_group)
+        self.url = self.url.replace('{{ namespace_name }}', self.namespace_name)
+        self.url = self.url.replace('{{ authorization_rule_name }}', self.name)
+
+        try:
+            response = self.mgmt_client.query(self.url,
+                                              'GET',
+                                              self.query_parameters,
+                                              self.header_parameters,
+                                              None,
+                                              self.status_code,
+                                              600,
+                                              30)
+            results['temp_item'] = json.loads(response.text)
+            # self.log('Response : {0}'.format(response))
+        except CloudError as e:
+            self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
+
+        return results
+
+    def listnetworkrulesets(self):
+        response = None
+        results = {}
+        # prepare url
+        self.url = ('/subscriptions' +
+                    '/{{ subscription_id }}' +
+                    '/resourceGroups' +
+                    '/{{ resource_group }}' +
+                    '/providers' +
+                    '/Microsoft.ServiceBus' +
+                    '/namespaces' +
+                    '/{{ namespace_name }}' +
+                    '/networkRuleSets')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ namespace_name }}', self.namespace_name)

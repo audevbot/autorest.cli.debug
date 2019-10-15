@@ -49,6 +49,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: status
             NameAnsible: status
@@ -79,6 +80,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: statusDetail
             NameAnsible: status_detail
@@ -109,6 +111,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /value
@@ -121,6 +124,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     Methods:
       - Name: List
@@ -168,6 +172,8 @@ Modules:
         References: []
         OperationId: '112'
         MethodId: '113'
+        OperationName: SubscriptionOperations
+        MethodName: List
   - ModuleName: azure_rm_subscriptionssubscriptionfactory
     Options:
       - NameSwagger: enrollmentAccountName
@@ -201,6 +207,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: body
         NameAnsible: body
@@ -231,6 +238,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: displayName
         NameAnsible: name
@@ -261,6 +269,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: owners
         NameAnsible: owners
@@ -312,6 +321,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /owners
@@ -324,6 +334,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: offerType
         NameAnsible: offer_type
@@ -333,7 +344,7 @@ Modules:
         IdPortion: null
         Type: str
         TypeName: offerType
-        TypeNameGo: offerType
+        TypeNameGo: OfferType
         IsList: false
         Required: false
         Documentation: >-
@@ -364,6 +375,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: additionalParameters
         NameAnsible: additional_parameters
@@ -400,6 +412,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_1
         NameSwagger: subscriptionLink
@@ -433,6 +446,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
     Methods:
       - Name: CreateSubscriptionInEnrollmentAccount
@@ -497,10 +511,9 @@ Modules:
         References: []
         OperationId: '127'
         MethodId: '128'
+        OperationName: SubscriptionFactory
+        MethodName: CreateSubscriptionInEnrollmentAccount
 ServiceName: Subscription
 MgmtClientName: Subscription
 CliName: subscription
 Namespace: azure.mgmt.subscriptions
-Info:
-  - '  ** FOUND OPTION enrollmentAccountName'
-  - '  ** FOUND OPTION body'
