@@ -31,6 +31,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_1
         NameSwagger: value
@@ -41,7 +42,7 @@ Modules:
         IdPortion: null
         Type: dict
         TypeName: operation
-        TypeNameGo: operation
+        TypeNameGo: Operation
         IsList: true
         Required: false
         Documentation: Array of operations
@@ -80,6 +81,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: display
             NameAnsible: display
@@ -89,7 +91,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: operation_display
-            TypeNameGo: operation_display
+            TypeNameGo: Operation_display
             IsList: false
             Required: false
             Documentation: Properties of the operation
@@ -128,6 +130,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: resource
                 NameAnsible: resource
@@ -158,6 +161,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: operation
                 NameAnsible: operation
@@ -188,6 +192,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: description
                 NameAnsible: description
@@ -218,6 +223,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/display
@@ -230,6 +236,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
         EnumValues: []
         PathSwagger: /value
@@ -242,6 +249,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     Methods:
       - Name: List
@@ -294,6 +302,7 @@ Modules:
         ExampleValue: MonitorServiceList
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: targetResource
         NameAnsible: target_resource
@@ -326,6 +335,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: targetResourceType
         NameAnsible: target_resource_type
@@ -356,6 +366,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: targetResourceGroup
         NameAnsible: target_resource_group
@@ -386,6 +397,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: monitorService
         NameAnsible: monitor_service
@@ -418,6 +430,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: monitorCondition
         NameAnsible: monitor_condition
@@ -450,6 +463,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: severity
         NameAnsible: severity
@@ -480,6 +494,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: alertState
         NameAnsible: alert_state
@@ -510,6 +525,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: alertRule
         NameAnsible: alert_rule
@@ -540,6 +556,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: smartGroupId
         NameAnsible: smart_group_id
@@ -570,6 +587,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: includeContext
         NameAnsible: include_context
@@ -602,6 +620,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: includeEgressConfig
         NameAnsible: include_egress_config
@@ -634,6 +653,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: pageCount
         NameAnsible: page_count
@@ -667,6 +687,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: sortBy
         NameAnsible: sort_by
@@ -699,6 +720,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: sortOrder
         NameAnsible: sort_order
@@ -731,6 +753,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: select
         NameAnsible: select
@@ -765,6 +788,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: timeRange
         NameAnsible: time_range
@@ -795,6 +819,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: customTimeRange
         NameAnsible: custom_time_range
@@ -829,6 +854,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: groupby
         NameAnsible: groupby
@@ -862,6 +888,7 @@ Modules:
         ExampleValue: 'severity,alertState'
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: includeSmartGroupsCount
         NameAnsible: include_smart_groups_count
@@ -894,6 +921,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: alertId
         NameAnsible: alert_id
@@ -924,6 +952,7 @@ Modules:
         ExampleValue: '{{alert_name}}'
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_2
         NameSwagger: properties
@@ -934,7 +963,7 @@ Modules:
         IdPortion: null
         Type: dict
         TypeName: alertsMetaDataProperties
-        TypeNameGo: alertsMetaDataProperties
+        TypeNameGo: AlertsMetaDataProperties
         IsList: false
         Required: false
         Documentation: ''
@@ -955,6 +984,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     Methods:
       - Name: GetHistory
@@ -1098,6 +1128,8 @@ Modules:
         References: []
         OperationId: '1454'
         MethodId: '1455'
+        OperationName: Alerts
+        MethodName: MetaData
       - Example:
           parameters:
             api-version: 2019-05-05-preview
@@ -1186,6 +1218,8 @@ Modules:
         References: []
         OperationId: '1454'
         MethodId: '1473'
+        OperationName: Alerts
+        MethodName: GetAll
       - Example:
           parameters:
             api-version: 2019-05-05-preview
@@ -1265,6 +1299,8 @@ Modules:
         References: []
         OperationId: '1454'
         MethodId: '1661'
+        OperationName: Alerts
+        MethodName: GetSummary
       - Example:
           parameters:
             api-version: 2019-05-05-preview
@@ -1319,6 +1355,8 @@ Modules:
         References: []
         OperationId: '1454'
         MethodId: '1585'
+        OperationName: Alerts
+        MethodName: GetById
       - Example:
           parameters:
             api-version: 2019-05-05-preview
@@ -1364,6 +1402,8 @@ Modules:
         References: []
         OperationId: '1454'
         MethodId: '1637'
+        OperationName: Alerts
+        MethodName: GetHistory
   - ModuleName: azure_rm_alertsmanagementsmartgroup_info
     Options:
       - NameSwagger: targetResource
@@ -1397,6 +1437,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: targetResourceGroup
         NameAnsible: target_resource_group
@@ -1427,6 +1468,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: targetResourceType
         NameAnsible: target_resource_type
@@ -1457,6 +1499,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: monitorService
         NameAnsible: monitor_service
@@ -1489,6 +1532,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: monitorCondition
         NameAnsible: monitor_condition
@@ -1521,6 +1565,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: severity
         NameAnsible: severity
@@ -1551,6 +1596,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: smartGroupState
         NameAnsible: smart_group_state
@@ -1581,6 +1627,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: timeRange
         NameAnsible: time_range
@@ -1611,6 +1658,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: pageCount
         NameAnsible: page_count
@@ -1644,6 +1692,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: sortBy
         NameAnsible: sort_by
@@ -1676,6 +1725,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: sortOrder
         NameAnsible: sort_order
@@ -1708,6 +1758,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: smartGroupId
         NameAnsible: smart_group_id
@@ -1738,6 +1789,7 @@ Modules:
         ExampleValue: '{{smart_group_name}}'
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_3
         NameSwagger: nextLink
@@ -1769,6 +1821,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_4
         NameSwagger: value
@@ -1779,7 +1832,7 @@ Modules:
         IdPortion: null
         Type: dict
         TypeName: smartGroup
-        TypeNameGo: smartGroup
+        TypeNameGo: SmartGroup
         IsList: true
         Required: false
         Documentation: List of alerts
@@ -1818,6 +1871,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: type
             NameAnsible: type
@@ -1848,6 +1902,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: name
             NameAnsible: name
@@ -1878,6 +1933,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: properties
             NameAnsible: properties
@@ -1887,7 +1943,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: smartGroupProperties
-            TypeNameGo: smartGroupProperties
+            TypeNameGo: SmartGroupProperties
             IsList: false
             Required: false
             Documentation: ''
@@ -1908,6 +1964,7 @@ Modules:
             ExampleValue: null
             Hidden: true
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: alertsCount
             NameAnsible: alerts_count
@@ -1938,6 +1995,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: smartGroupState
             NameAnsible: smart_group_state
@@ -1977,6 +2035,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: severity
             NameAnsible: severity
@@ -2024,6 +2083,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: startDateTime
             NameAnsible: start_date_time
@@ -2054,6 +2114,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: lastModifiedDateTime
             NameAnsible: last_modified_date_time
@@ -2084,6 +2145,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: lastModifiedUserName
             NameAnsible: last_modified_user_name
@@ -2114,6 +2176,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: resources
             NameAnsible: resources
@@ -2123,7 +2186,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: smartGroupAggregatedProperty
-            TypeNameGo: smartGroupAggregatedProperty
+            TypeNameGo: SmartGroupAggregatedProperty
             IsList: true
             Required: false
             Documentation: Summary of target resources in the smart group
@@ -2162,6 +2225,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: count
                 NameAnsible: count
@@ -2192,6 +2256,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/properties/resources
@@ -2204,6 +2269,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: resourceTypes
             NameAnsible: resource_types
@@ -2213,7 +2279,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: smartGroupAggregatedProperty
-            TypeNameGo: smartGroupAggregatedProperty
+            TypeNameGo: SmartGroupAggregatedProperty
             IsList: true
             Required: false
             Documentation: Summary of target resource types in the smart group
@@ -2252,6 +2318,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: count
                 NameAnsible: count
@@ -2282,6 +2349,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/properties/resourceTypes
@@ -2294,6 +2362,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: resourceGroups
             NameAnsible: resource_groups
@@ -2303,7 +2372,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: smartGroupAggregatedProperty
-            TypeNameGo: smartGroupAggregatedProperty
+            TypeNameGo: SmartGroupAggregatedProperty
             IsList: true
             Required: false
             Documentation: Summary of target resource groups in the smart group
@@ -2342,6 +2411,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: count
                 NameAnsible: count
@@ -2372,6 +2442,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/properties/resourceGroups
@@ -2384,6 +2455,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: monitorServices
             NameAnsible: monitor_services
@@ -2393,7 +2465,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: smartGroupAggregatedProperty
-            TypeNameGo: smartGroupAggregatedProperty
+            TypeNameGo: SmartGroupAggregatedProperty
             IsList: true
             Required: false
             Documentation: Summary of monitorServices in the smart group
@@ -2432,6 +2504,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: count
                 NameAnsible: count
@@ -2462,6 +2535,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/properties/monitorServices
@@ -2474,6 +2548,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: monitorConditions
             NameAnsible: monitor_conditions
@@ -2483,7 +2558,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: smartGroupAggregatedProperty
-            TypeNameGo: smartGroupAggregatedProperty
+            TypeNameGo: SmartGroupAggregatedProperty
             IsList: true
             Required: false
             Documentation: Summary of monitorConditions in the smart group
@@ -2522,6 +2597,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: count
                 NameAnsible: count
@@ -2552,6 +2628,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/properties/monitorConditions
@@ -2564,6 +2641,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: alertStates
             NameAnsible: alert_states
@@ -2573,7 +2651,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: smartGroupAggregatedProperty
-            TypeNameGo: smartGroupAggregatedProperty
+            TypeNameGo: SmartGroupAggregatedProperty
             IsList: true
             Required: false
             Documentation: Summary of alertStates in the smart group
@@ -2612,6 +2690,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: count
                 NameAnsible: count
@@ -2642,6 +2721,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/properties/alertStates
@@ -2654,6 +2734,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: alertSeverities
             NameAnsible: alert_severities
@@ -2663,7 +2744,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: smartGroupAggregatedProperty
-            TypeNameGo: smartGroupAggregatedProperty
+            TypeNameGo: SmartGroupAggregatedProperty
             IsList: true
             Required: false
             Documentation: Summary of alertSeverities in the smart group
@@ -2702,6 +2783,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: count
                 NameAnsible: count
@@ -2732,6 +2814,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/properties/alertSeverities
@@ -2744,6 +2827,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: nextLink
             NameAnsible: next_link
@@ -2776,6 +2860,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /value
@@ -2788,6 +2873,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     Methods:
       - Name: GetHistory
@@ -2949,6 +3035,8 @@ Modules:
         References: []
         OperationId: '1741'
         MethodId: '1742'
+        OperationName: SmartGroups
+        MethodName: GetAll
       - Example:
           parameters:
             api-version: 2019-05-05-preview
@@ -3011,6 +3099,8 @@ Modules:
         References: []
         OperationId: '1741'
         MethodId: '1818'
+        OperationName: SmartGroups
+        MethodName: GetById
       - Example:
           parameters:
             api-version: 2019-05-05-preview
@@ -3049,6 +3139,8 @@ Modules:
         References: []
         OperationId: '1741'
         MethodId: '1870'
+        OperationName: SmartGroups
+        MethodName: GetHistory
   - ModuleName: azure_rm_alertsmanagementactionrule_info
     Options:
       - NameSwagger: targetResourceGroup
@@ -3080,6 +3172,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: targetResourceType
         NameAnsible: target_resource_type
@@ -3110,6 +3203,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: targetResource
         NameAnsible: target_resource
@@ -3142,6 +3236,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: severity
         NameAnsible: severity
@@ -3172,6 +3267,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: monitorService
         NameAnsible: monitor_service
@@ -3204,6 +3300,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: impactedScope
         NameAnsible: impacted_scope
@@ -3237,6 +3334,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: description
         NameAnsible: description
@@ -3267,6 +3365,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: alertRuleId
         NameAnsible: alert_rule_id
@@ -3297,6 +3396,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: actionGroup
         NameAnsible: action_group
@@ -3327,6 +3427,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: name
         NameAnsible: name
@@ -3357,6 +3458,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: resourceGroupName
         NameAnsible: resource_group
@@ -3387,6 +3489,7 @@ Modules:
         ExampleValue: '{{resource_group}}'
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: actionRuleName
         NameAnsible: name
@@ -3417,6 +3520,7 @@ Modules:
         ExampleValue: '{{action_rule_name}}'
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_5
         NameSwagger: nextLink
@@ -3448,6 +3552,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_6
         NameSwagger: value
@@ -3497,6 +3602,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: type
             NameAnsible: type
@@ -3527,6 +3633,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: name
             NameAnsible: name
@@ -3557,6 +3664,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: location
             NameAnsible: location
@@ -3587,6 +3695,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: tags
             NameAnsible: tags
@@ -3621,6 +3730,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: properties
             NameAnsible: properties
@@ -3651,6 +3761,7 @@ Modules:
             ExampleValue: null
             Hidden: true
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: scope
             NameAnsible: scope
@@ -3705,6 +3816,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: values
                 NameAnsible: values
@@ -3737,6 +3849,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/properties/scope
@@ -3749,6 +3862,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: conditions
             NameAnsible: conditions
@@ -3827,6 +3941,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - NameSwagger: values
                     NameAnsible: values
@@ -3857,6 +3972,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: /value/properties/conditions/severity
@@ -3869,6 +3985,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: monitorService
                 NameAnsible: monitor_service
@@ -3929,6 +4046,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - NameSwagger: values
                     NameAnsible: values
@@ -3959,6 +4077,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: /value/properties/conditions/monitorService
@@ -3971,6 +4090,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: monitorCondition
                 NameAnsible: monitor_condition
@@ -4031,6 +4151,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - NameSwagger: values
                     NameAnsible: values
@@ -4061,6 +4182,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: /value/properties/conditions/monitorCondition
@@ -4073,6 +4195,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: targetResourceType
                 NameAnsible: target_resource_type
@@ -4133,6 +4256,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - NameSwagger: values
                     NameAnsible: values
@@ -4163,6 +4287,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: /value/properties/conditions/targetResourceType
@@ -4175,6 +4300,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: alertRuleId
                 NameAnsible: alert_rule_id
@@ -4235,6 +4361,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - NameSwagger: values
                     NameAnsible: values
@@ -4265,6 +4392,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: /value/properties/conditions/alertRuleId
@@ -4277,6 +4405,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: description
                 NameAnsible: description
@@ -4337,6 +4466,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - NameSwagger: values
                     NameAnsible: values
@@ -4367,6 +4497,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: /value/properties/conditions/description
@@ -4379,6 +4510,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: alertContext
                 NameAnsible: alert_context
@@ -4439,6 +4571,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - NameSwagger: values
                     NameAnsible: values
@@ -4469,6 +4602,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: /value/properties/conditions/alertContext
@@ -4481,6 +4615,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/properties/conditions
@@ -4493,6 +4628,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: description
             NameAnsible: description
@@ -4523,6 +4659,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: createdAt
             NameAnsible: created_at
@@ -4553,6 +4690,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: lastModifiedAt
             NameAnsible: last_modified_at
@@ -4583,6 +4721,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: createdBy
             NameAnsible: created_by
@@ -4613,6 +4752,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: lastModifiedBy
             NameAnsible: last_modified_by
@@ -4643,6 +4783,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: status
             NameAnsible: status
@@ -4679,6 +4820,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
         EnumValues: []
         PathSwagger: /value
@@ -4691,6 +4833,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     Methods:
       - Name: GetByName
@@ -4853,6 +4996,8 @@ Modules:
         References: []
         OperationId: '1896'
         MethodId: '1897'
+        OperationName: ActionRules
+        MethodName: ListBySubscription
       - Example:
           parameters:
             api-version: 2019-05-05-preview
@@ -4963,6 +5108,8 @@ Modules:
         References: []
         OperationId: '1896'
         MethodId: '1971'
+        OperationName: ActionRules
+        MethodName: ListByResourceGroup
       - Example:
           parameters:
             api-version: 2019-05-05-preview
@@ -5037,6 +5184,8 @@ Modules:
         References: []
         OperationId: '1896'
         MethodId: '2051'
+        OperationName: ActionRules
+        MethodName: GetByName
   - ModuleName: azure_rm_alertsmanagementsmartdetectoralertrule
     Options:
       - NameSwagger: resourceGroupName
@@ -5068,6 +5217,7 @@ Modules:
         ExampleValue: '{{resource_group}}'
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: alertRuleName
         NameAnsible: name
@@ -5098,6 +5248,7 @@ Modules:
         ExampleValue: '{{smart_detector_alert_rule_name}}'
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: parameters
         NameAnsible: parameters
@@ -5128,6 +5279,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: location
         NameAnsible: location
@@ -5158,6 +5310,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: tags
         NameAnsible: tags
@@ -5188,6 +5341,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: properties
         NameAnsible: properties
@@ -5218,6 +5372,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: description
         NameAnsible: description
@@ -5248,6 +5403,7 @@ Modules:
         ExampleValue: Sample smart detector alert rule description
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: state
         NameAnsible: state
@@ -5284,6 +5440,7 @@ Modules:
         ExampleValue: Enabled
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: severity
         NameAnsible: severity
@@ -5329,6 +5486,7 @@ Modules:
         ExampleValue: Sev3
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: frequency
         NameAnsible: frequency
@@ -5361,6 +5519,7 @@ Modules:
         ExampleValue: PT5M
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: detector
         NameAnsible: detector
@@ -5409,6 +5568,7 @@ Modules:
             ExampleValue: VMMemoryLeak
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: parameters
             NameAnsible: parameters
@@ -5443,6 +5603,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: name
             NameAnsible: name
@@ -5475,6 +5636,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: description
             NameAnsible: description
@@ -5507,6 +5669,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: supportedResourceTypes
             NameAnsible: supported_resource_types
@@ -5539,6 +5702,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: imagePaths
             NameAnsible: image_paths
@@ -5571,6 +5735,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/detector
@@ -5583,6 +5748,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: scope
         NameAnsible: scope
@@ -5614,6 +5780,7 @@ Modules:
           /subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourceGroups/MyVms/providers/Microsoft.Compute/virtualMachines/vm1
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: actionGroups
         NameAnsible: action_groups
@@ -5662,6 +5829,7 @@ Modules:
             ExampleValue: My custom email subject
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: customWebhookPayload
             NameAnsible: custom_webhook_payload
@@ -5694,6 +5862,7 @@ Modules:
             ExampleValue: '{"AlertRuleName":"#alertrulename"}'
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: groupIds
             NameAnsible: group_ids
@@ -5725,6 +5894,7 @@ Modules:
               /subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourcegroups/actionGroups/providers/microsoft.insights/actiongroups/MyActionGroup
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/actionGroups
@@ -5737,6 +5907,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: throttling
         NameAnsible: throttling
@@ -5788,6 +5959,7 @@ Modules:
             ExampleValue: PT20M
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/throttling
@@ -5800,6 +5972,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_7
         NameSwagger: id
@@ -5831,6 +6004,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_8
         NameSwagger: type
@@ -5862,6 +6036,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_9
         NameSwagger: name
@@ -5893,6 +6068,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
     Methods:
       - Name: CreateOrUpdate
@@ -5990,6 +6166,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: tags
         NameAnsible: tags
@@ -6020,6 +6197,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: properties
         NameAnsible: properties
@@ -6068,6 +6246,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: state
             NameAnsible: state
@@ -6104,6 +6283,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: severity
             NameAnsible: severity
@@ -6149,6 +6329,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: frequency
             NameAnsible: frequency
@@ -6181,6 +6362,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: detector
             NameAnsible: detector
@@ -6229,6 +6411,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: parameters
                 NameAnsible: parameters
@@ -6263,6 +6446,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: name
                 NameAnsible: name
@@ -6295,6 +6479,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: description
                 NameAnsible: description
@@ -6327,6 +6512,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: supportedResourceTypes
                 NameAnsible: supported_resource_types
@@ -6359,6 +6545,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: imagePaths
                 NameAnsible: image_paths
@@ -6391,6 +6578,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/detector
@@ -6403,6 +6591,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: scope
             NameAnsible: scope
@@ -6433,6 +6622,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: actionGroups
             NameAnsible: action_groups
@@ -6483,6 +6673,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: customWebhookPayload
                 NameAnsible: custom_webhook_payload
@@ -6515,6 +6706,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: groupIds
                 NameAnsible: group_ids
@@ -6545,6 +6737,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/actionGroups
@@ -6557,6 +6750,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: throttling
             NameAnsible: throttling
@@ -6608,6 +6802,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/throttling
@@ -6620,6 +6815,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties
@@ -6632,6 +6828,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     ModuleOperationNameUpper: SmartDetectorAlertRules
     ModuleOperationName: smart_detector_alert_rules
@@ -6746,6 +6943,8 @@ Modules:
           - resourcegroups_put
         OperationId: '2183'
         MethodId: '2274'
+        OperationName: SmartDetectorAlertRules
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: b368ca2f-e298-46b7-b0ab-012281956afa
@@ -6772,6 +6971,8 @@ Modules:
         References: []
         OperationId: '2183'
         MethodId: '2343'
+        OperationName: SmartDetectorAlertRules
+        MethodName: Delete
   - ModuleName: azure_rm_alertsmanagementsmartdetectoralertrule_info
     Options:
       - NameSwagger: expandDetector
@@ -6803,6 +7004,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: resourceGroupName
         NameAnsible: resource_group
@@ -6833,6 +7035,7 @@ Modules:
         ExampleValue: '{{resource_group}}'
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: alertRuleName
         NameAnsible: name
@@ -6863,6 +7066,7 @@ Modules:
         ExampleValue: '{{smart_detector_alert_rule_name}}'
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_10
         NameSwagger: id
@@ -6894,6 +7098,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_11
         NameSwagger: type
@@ -6925,6 +7130,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_12
         NameSwagger: name
@@ -6956,6 +7162,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_13
         NameSwagger: location
@@ -6987,6 +7194,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_14
         NameSwagger: tags
@@ -7018,6 +7226,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_15
         NameSwagger: properties
@@ -7049,6 +7258,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: description
         NameAnsible: description
@@ -7079,6 +7289,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: state
         NameAnsible: state
@@ -7115,6 +7326,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: severity
         NameAnsible: severity
@@ -7160,6 +7372,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: frequency
         NameAnsible: frequency
@@ -7192,6 +7405,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: detector
         NameAnsible: detector
@@ -7240,6 +7454,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: parameters
             NameAnsible: parameters
@@ -7274,6 +7489,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: name
             NameAnsible: name
@@ -7306,6 +7522,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: description
             NameAnsible: description
@@ -7338,6 +7555,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: supportedResourceTypes
             NameAnsible: supported_resource_types
@@ -7370,6 +7588,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: imagePaths
             NameAnsible: image_paths
@@ -7402,6 +7621,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/detector
@@ -7414,6 +7634,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: scope
         NameAnsible: scope
@@ -7444,6 +7665,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: actionGroups
         NameAnsible: action_groups
@@ -7492,6 +7714,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: customWebhookPayload
             NameAnsible: custom_webhook_payload
@@ -7524,6 +7747,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: groupIds
             NameAnsible: group_ids
@@ -7554,6 +7778,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/actionGroups
@@ -7566,6 +7791,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: throttling
         NameAnsible: throttling
@@ -7617,6 +7843,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/throttling
@@ -7629,6 +7856,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     Methods:
       - Name: Get
@@ -7754,6 +7982,8 @@ Modules:
         References: []
         OperationId: '2183'
         MethodId: '2184'
+        OperationName: SmartDetectorAlertRules
+        MethodName: List
       - Example:
           parameters:
             subscriptionId: b368ca2f-e298-46b7-b0ab-012281956afa
@@ -7829,6 +8059,8 @@ Modules:
         References: []
         OperationId: '2183'
         MethodId: '2208'
+        OperationName: SmartDetectorAlertRules
+        MethodName: ListByResourceGroup
       - Example:
           parameters:
             subscriptionId: b368ca2f-e298-46b7-b0ab-012281956afa
@@ -7882,85 +8114,9 @@ Modules:
         References: []
         OperationId: '2183'
         MethodId: '2238'
+        OperationName: SmartDetectorAlertRules
+        MethodName: Get
 ServiceName: RecoveryServices
 MgmtClientName: RecoveryServices
 CliName: alerts
 Namespace: azure.mgmt.alertsmanagement
-Info:
-  - '  ** FOUND OPTION identifier'
-  - '  ** FOUND OPTION targetResource'
-  - '  ** FOUND OPTION targetResourceType'
-  - '  ** FOUND OPTION targetResourceGroup'
-  - '  ** FOUND OPTION monitorService'
-  - '  ** FOUND OPTION monitorCondition'
-  - '  ** FOUND OPTION severity'
-  - '  ** FOUND OPTION alertState'
-  - '  ** FOUND OPTION alertRule'
-  - '  ** FOUND OPTION smartGroupId'
-  - '  ** FOUND OPTION includeContext'
-  - '  ** FOUND OPTION includeEgressConfig'
-  - '  ** FOUND OPTION pageCount'
-  - '  ** FOUND OPTION sortBy'
-  - '  ** FOUND OPTION sortOrder'
-  - '  ** FOUND OPTION select'
-  - '  ** FOUND OPTION timeRange'
-  - '  ** FOUND OPTION customTimeRange'
-  - '  ** FOUND OPTION groupby'
-  - '  ** FOUND OPTION includeSmartGroupsCount'
-  - '  ** FOUND OPTION targetResource'
-  - '  ** FOUND OPTION targetResourceType'
-  - '  ** FOUND OPTION targetResourceGroup'
-  - '  ** FOUND OPTION monitorService'
-  - '  ** FOUND OPTION monitorCondition'
-  - '  ** FOUND OPTION severity'
-  - '  ** FOUND OPTION alertState'
-  - '  ** FOUND OPTION alertRule'
-  - '  ** FOUND OPTION timeRange'
-  - '  ** FOUND OPTION customTimeRange'
-  - '  ** FOUND OPTION alertId'
-  - '  ** FOUND OPTION alertId'
-  - '  ** FOUND OPTION targetResource'
-  - '  ** FOUND OPTION targetResourceGroup'
-  - '  ** FOUND OPTION targetResourceType'
-  - '  ** FOUND OPTION monitorService'
-  - '  ** FOUND OPTION monitorCondition'
-  - '  ** FOUND OPTION severity'
-  - '  ** FOUND OPTION smartGroupState'
-  - '  ** FOUND OPTION timeRange'
-  - '  ** FOUND OPTION pageCount'
-  - '  ** FOUND OPTION sortBy'
-  - '  ** FOUND OPTION sortOrder'
-  - '  ** FOUND OPTION smartGroupId'
-  - '  ** FOUND OPTION smartGroupId'
-  - '  ** FOUND OPTION targetResourceGroup'
-  - '  ** FOUND OPTION targetResourceType'
-  - '  ** FOUND OPTION targetResource'
-  - '  ** FOUND OPTION severity'
-  - '  ** FOUND OPTION monitorService'
-  - '  ** FOUND OPTION impactedScope'
-  - '  ** FOUND OPTION description'
-  - '  ** FOUND OPTION alertRuleId'
-  - '  ** FOUND OPTION actionGroup'
-  - '  ** FOUND OPTION name'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION targetResourceGroup'
-  - '  ** FOUND OPTION targetResourceType'
-  - '  ** FOUND OPTION targetResource'
-  - '  ** FOUND OPTION severity'
-  - '  ** FOUND OPTION monitorService'
-  - '  ** FOUND OPTION impactedScope'
-  - '  ** FOUND OPTION description'
-  - '  ** FOUND OPTION alertRuleId'
-  - '  ** FOUND OPTION actionGroup'
-  - '  ** FOUND OPTION name'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION actionRuleName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION alertRuleName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION expandDetector'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION expandDetector'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION alertRuleName'
-  - '  ** FOUND OPTION expandDetector'

@@ -30,6 +30,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: diskName
         NameAnsible: name
@@ -63,6 +64,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: disk
         NameAnsible: disk
@@ -93,6 +95,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: location
         NameAnsible: location
@@ -123,6 +126,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: tags
         NameAnsible: tags
@@ -157,6 +161,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: sku
         NameAnsible: sku
@@ -217,6 +222,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - &ref_4
             NameSwagger: tier
@@ -248,6 +254,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /sku
@@ -260,6 +267,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: zones
         NameAnsible: zones
@@ -290,6 +298,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: properties
         NameAnsible: properties
@@ -320,6 +329,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: osType
         NameAnsible: os_type
@@ -356,6 +366,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: hyperVGeneration
         NameAnsible: hyper_vgeneration
@@ -394,6 +405,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: creationData
         NameAnsible: creation_data
@@ -465,6 +477,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: storageAccountId
             NameAnsible: storage_account_id
@@ -498,6 +511,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: imageReference
             NameAnsible: image_reference
@@ -548,6 +562,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - NameSwagger: lun
                 NameAnsible: lun
@@ -581,6 +596,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: int32
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/creationData/imageReference
@@ -593,6 +609,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: sourceUri
             NameAnsible: source_uri
@@ -625,6 +642,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: sourceResourceId
             NameAnsible: source_resource_id
@@ -657,6 +675,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/creationData
@@ -669,6 +688,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: diskSizeGB
         NameAnsible: disk_size_gb
@@ -704,6 +724,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: int32
         Flatten: false
       - NameSwagger: encryptionSettingsCollection
         NameAnsible: encryption_settings_collection
@@ -759,6 +780,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: encryptionSettings
             NameAnsible: encryption_settings
@@ -828,6 +850,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - NameSwagger: secretUrl
                     NameAnsible: secret_url
@@ -861,6 +884,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: >-
@@ -876,6 +900,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: keyEncryptionKey
                 NameAnsible: key_encryption_key
@@ -930,6 +955,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - NameSwagger: keyUrl
                     NameAnsible: key_url
@@ -963,6 +989,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: >-
@@ -978,6 +1005,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/encryptionSettingsCollection/encryptionSettings
@@ -990,6 +1018,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/encryptionSettingsCollection
@@ -1002,6 +1031,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: diskIOPSReadWrite
         NameAnsible: disk_iopsread_write
@@ -1034,6 +1064,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: int64
         Flatten: false
       - NameSwagger: diskMBpsReadWrite
         NameAnsible: disk_mbps_read_write
@@ -1067,6 +1098,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: int32
         Flatten: false
       - &ref_5
         NameSwagger: timeCreated
@@ -1098,6 +1130,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_6
         NameSwagger: provisioningState
@@ -1129,6 +1162,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_7
         NameSwagger: diskState
@@ -1178,6 +1212,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_0
         NameSwagger: id
@@ -1209,6 +1244,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_1
         NameSwagger: name
@@ -1240,6 +1276,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_2
         NameSwagger: type
@@ -1271,6 +1308,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_3
         NameSwagger: managedBy
@@ -1302,6 +1340,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
     Methods:
       - Name: CreateOrUpdate
@@ -1405,6 +1444,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: tags
         NameAnsible: tags
@@ -1439,6 +1479,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - *ref_3
       - NameSwagger: sku
@@ -1500,6 +1541,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - *ref_4
         EnumValues: []
@@ -1513,6 +1555,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: zones
         NameAnsible: zones
@@ -1543,6 +1586,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: properties
         NameAnsible: properties
@@ -1598,6 +1642,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: hyperVGeneration
             NameAnsible: hyper_vgeneration
@@ -1636,6 +1681,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: creationData
             NameAnsible: creation_data
@@ -1707,6 +1753,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: storageAccountId
                 NameAnsible: storage_account_id
@@ -1741,6 +1788,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: imageReference
                 NameAnsible: image_reference
@@ -1791,6 +1839,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                   - NameSwagger: lun
                     NameAnsible: lun
@@ -1824,6 +1873,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: int32
                     Flatten: false
                 EnumValues: []
                 PathSwagger: /properties/creationData/imageReference
@@ -1836,6 +1886,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: sourceUri
                 NameAnsible: source_uri
@@ -1868,6 +1919,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: sourceResourceId
                 NameAnsible: source_resource_id
@@ -1900,6 +1952,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/creationData
@@ -1912,6 +1965,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: diskSizeGB
             NameAnsible: disk_size_gb
@@ -1947,6 +2001,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int32
             Flatten: false
           - NameSwagger: encryptionSettingsCollection
             NameAnsible: encryption_settings_collection
@@ -2002,6 +2057,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: encryptionSettings
                 NameAnsible: encryption_settings
@@ -2075,6 +2131,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
                       - NameSwagger: secretUrl
                         NameAnsible: secret_url
@@ -2108,6 +2165,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                     EnumValues: []
                     PathSwagger: >-
@@ -2123,6 +2181,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - NameSwagger: keyEncryptionKey
                     NameAnsible: key_encryption_key
@@ -2179,6 +2238,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
                       - NameSwagger: keyUrl
                         NameAnsible: key_url
@@ -2212,6 +2272,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                     EnumValues: []
                     PathSwagger: >-
@@ -2227,6 +2288,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: /properties/encryptionSettingsCollection/encryptionSettings
@@ -2239,6 +2301,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/encryptionSettingsCollection
@@ -2251,6 +2314,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - *ref_6
           - NameSwagger: diskIOPSReadWrite
@@ -2285,6 +2349,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: diskMBpsReadWrite
             NameAnsible: disk_mbps_read_write
@@ -2318,6 +2383,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int32
             Flatten: false
           - *ref_7
         EnumValues: []
@@ -2331,6 +2397,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     ModuleOperationNameUpper: Disks
     ModuleOperationName: disks
@@ -2391,6 +2458,8 @@ Modules:
           - resourcegroups_put
         OperationId: '499'
         MethodId: '500'
+        OperationName: Disks
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: '{subscription-id}'
@@ -2452,6 +2521,8 @@ Modules:
           - compute_disks_put
         OperationId: '499'
         MethodId: '500'
+        OperationName: Disks
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: '{subscription-id}'
@@ -2509,6 +2580,8 @@ Modules:
           - compute_disks_put
         OperationId: '499'
         MethodId: '500'
+        OperationName: Disks
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: '{subscription-id}'
@@ -2566,6 +2639,8 @@ Modules:
           - compute_disks_put
         OperationId: '499'
         MethodId: '500'
+        OperationName: Disks
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: '{subscription-id}'
@@ -2632,6 +2707,8 @@ Modules:
           - compute_disks_put
         OperationId: '499'
         MethodId: '500'
+        OperationName: Disks
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: '{subscription-id}'
@@ -2687,6 +2764,8 @@ Modules:
           - compute_disks_put
         OperationId: '499'
         MethodId: '500'
+        OperationName: Disks
+        MethodName: CreateOrUpdate
   - ModuleName: azure_rm_computedisk_info
     Options:
       - NameSwagger: resourceGroupName
@@ -2718,6 +2797,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: diskName
         NameAnsible: name
@@ -2751,6 +2831,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_8
         NameSwagger: id
@@ -2782,6 +2863,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_9
         NameSwagger: name
@@ -2813,6 +2895,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_10
         NameSwagger: type
@@ -2844,6 +2927,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_11
         NameSwagger: location
@@ -2875,6 +2959,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_12
         NameSwagger: tags
@@ -2910,6 +2995,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_13
         NameSwagger: managedBy
@@ -2941,6 +3027,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_14
         NameSwagger: sku
@@ -3002,6 +3089,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: tier
             NameAnsible: tier
@@ -3032,6 +3120,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /sku
@@ -3044,6 +3133,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_15
         NameSwagger: zones
@@ -3075,6 +3165,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_16
         NameSwagger: properties
@@ -3106,6 +3197,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: timeCreated
         NameAnsible: time_created
@@ -3136,6 +3228,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: osType
         NameAnsible: os_type
@@ -3172,6 +3265,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: hyperVGeneration
         NameAnsible: hyper_vgeneration
@@ -3210,6 +3304,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: creationData
         NameAnsible: creation_data
@@ -3281,6 +3376,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: storageAccountId
             NameAnsible: storage_account_id
@@ -3314,6 +3410,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: imageReference
             NameAnsible: image_reference
@@ -3364,6 +3461,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: lun
                 NameAnsible: lun
@@ -3397,6 +3495,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/creationData/imageReference
@@ -3409,6 +3508,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: sourceUri
             NameAnsible: source_uri
@@ -3441,6 +3541,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: sourceResourceId
             NameAnsible: source_resource_id
@@ -3473,6 +3574,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/creationData
@@ -3485,6 +3587,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: diskSizeGB
         NameAnsible: disk_size_gb
@@ -3520,6 +3623,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: int32
         Flatten: false
       - NameSwagger: encryptionSettingsCollection
         NameAnsible: encryption_settings_collection
@@ -3575,6 +3679,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: encryptionSettings
             NameAnsible: encryption_settings
@@ -3644,6 +3749,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - NameSwagger: secretUrl
                     NameAnsible: secret_url
@@ -3677,6 +3783,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: >-
@@ -3692,6 +3799,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: keyEncryptionKey
                 NameAnsible: key_encryption_key
@@ -3746,6 +3854,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - NameSwagger: keyUrl
                     NameAnsible: key_url
@@ -3779,6 +3888,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: >-
@@ -3794,6 +3904,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/encryptionSettingsCollection/encryptionSettings
@@ -3806,6 +3917,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/encryptionSettingsCollection
@@ -3818,6 +3930,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: provisioningState
         NameAnsible: provisioning_state
@@ -3848,6 +3961,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: diskIOPSReadWrite
         NameAnsible: disk_iopsread_write
@@ -3880,6 +3994,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: int64
         Flatten: false
       - NameSwagger: diskMBpsReadWrite
         NameAnsible: disk_mbps_read_write
@@ -3913,6 +4028,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: int32
         Flatten: false
       - NameSwagger: diskState
         NameAnsible: disk_state
@@ -3961,6 +4077,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     Methods:
       - Name: List
@@ -4120,6 +4237,8 @@ Modules:
         References: []
         OperationId: '499'
         MethodId: '656'
+        OperationName: Disks
+        MethodName: List
       - Example:
           parameters:
             subscriptionId: '{subscription-id}'
@@ -4235,6 +4354,8 @@ Modules:
         References: []
         OperationId: '499'
         MethodId: '632'
+        OperationName: Disks
+        MethodName: ListByResourceGroup
       - Example:
           parameters:
             subscriptionId: '{subscription-id}'
@@ -4303,6 +4424,8 @@ Modules:
         References: []
         OperationId: '499'
         MethodId: '570'
+        OperationName: Disks
+        MethodName: Get
   - ModuleName: azure_rm_computesnapshot
     Options:
       - NameSwagger: resourceGroupName
@@ -4334,6 +4457,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: snapshotName
         NameAnsible: name
@@ -4367,6 +4491,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: snapshot
         NameAnsible: snapshot
@@ -4397,6 +4522,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: location
         NameAnsible: location
@@ -4427,6 +4553,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: tags
         NameAnsible: tags
@@ -4461,6 +4588,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: sku
         NameAnsible: sku
@@ -4518,6 +4646,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - &ref_21
             NameSwagger: tier
@@ -4549,6 +4678,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /sku
@@ -4561,6 +4691,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: properties
         NameAnsible: properties
@@ -4591,6 +4722,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: osType
         NameAnsible: os_type
@@ -4627,6 +4759,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: hyperVGeneration
         NameAnsible: hyper_vgeneration
@@ -4665,6 +4798,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: creationData
         NameAnsible: creation_data
@@ -4736,6 +4870,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: storageAccountId
             NameAnsible: storage_account_id
@@ -4769,6 +4904,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: imageReference
             NameAnsible: image_reference
@@ -4819,6 +4955,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - NameSwagger: lun
                 NameAnsible: lun
@@ -4852,6 +4989,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: int32
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/creationData/imageReference
@@ -4864,6 +5002,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: sourceUri
             NameAnsible: source_uri
@@ -4896,6 +5035,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: sourceResourceId
             NameAnsible: source_resource_id
@@ -4928,6 +5068,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/creationData
@@ -4940,6 +5081,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: diskSizeGB
         NameAnsible: disk_size_gb
@@ -4975,6 +5117,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: int32
         Flatten: false
       - NameSwagger: encryptionSettingsCollection
         NameAnsible: encryption_settings_collection
@@ -5030,6 +5173,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: encryptionSettings
             NameAnsible: encryption_settings
@@ -5099,6 +5243,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - NameSwagger: secretUrl
                     NameAnsible: secret_url
@@ -5132,6 +5277,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: >-
@@ -5147,6 +5293,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: keyEncryptionKey
                 NameAnsible: key_encryption_key
@@ -5201,6 +5348,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - NameSwagger: keyUrl
                     NameAnsible: key_url
@@ -5234,6 +5382,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: >-
@@ -5249,6 +5398,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/encryptionSettingsCollection/encryptionSettings
@@ -5261,6 +5411,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/encryptionSettingsCollection
@@ -5273,6 +5424,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_22
         NameSwagger: timeCreated
@@ -5304,6 +5456,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_23
         NameSwagger: provisioningState
@@ -5335,6 +5488,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_17
         NameSwagger: id
@@ -5366,6 +5520,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_18
         NameSwagger: name
@@ -5397,6 +5552,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_19
         NameSwagger: type
@@ -5428,6 +5584,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_20
         NameSwagger: managedBy
@@ -5459,6 +5616,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
     Methods:
       - Name: CreateOrUpdate
@@ -5564,6 +5722,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: tags
         NameAnsible: tags
@@ -5598,6 +5757,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - *ref_20
       - NameSwagger: sku
@@ -5656,6 +5816,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - *ref_21
         EnumValues: []
@@ -5669,6 +5830,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: properties
         NameAnsible: properties
@@ -5724,6 +5886,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: hyperVGeneration
             NameAnsible: hyper_vgeneration
@@ -5762,6 +5925,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: creationData
             NameAnsible: creation_data
@@ -5833,6 +5997,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: storageAccountId
                 NameAnsible: storage_account_id
@@ -5867,6 +6032,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: imageReference
                 NameAnsible: image_reference
@@ -5917,6 +6083,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                   - NameSwagger: lun
                     NameAnsible: lun
@@ -5950,6 +6117,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: int32
                     Flatten: false
                 EnumValues: []
                 PathSwagger: /properties/creationData/imageReference
@@ -5962,6 +6130,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: sourceUri
                 NameAnsible: source_uri
@@ -5994,6 +6163,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: sourceResourceId
                 NameAnsible: source_resource_id
@@ -6026,6 +6196,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/creationData
@@ -6038,6 +6209,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: diskSizeGB
             NameAnsible: disk_size_gb
@@ -6073,6 +6245,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int32
             Flatten: false
           - NameSwagger: encryptionSettingsCollection
             NameAnsible: encryption_settings_collection
@@ -6128,6 +6301,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: encryptionSettings
                 NameAnsible: encryption_settings
@@ -6201,6 +6375,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
                       - NameSwagger: secretUrl
                         NameAnsible: secret_url
@@ -6234,6 +6409,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                     EnumValues: []
                     PathSwagger: >-
@@ -6249,6 +6425,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - NameSwagger: keyEncryptionKey
                     NameAnsible: key_encryption_key
@@ -6305,6 +6482,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
                       - NameSwagger: keyUrl
                         NameAnsible: key_url
@@ -6338,6 +6516,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                     EnumValues: []
                     PathSwagger: >-
@@ -6353,6 +6532,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: /properties/encryptionSettingsCollection/encryptionSettings
@@ -6365,6 +6545,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/encryptionSettingsCollection
@@ -6377,6 +6558,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - *ref_23
         EnumValues: []
@@ -6390,6 +6572,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     ModuleOperationNameUpper: Snapshots
     ModuleOperationName: snapshots
@@ -6458,6 +6641,8 @@ Modules:
           - resourcegroups_put
         OperationId: '742'
         MethodId: '743'
+        OperationName: Snapshots
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: '{subscription-id}'
@@ -6515,6 +6700,8 @@ Modules:
           - compute_snapshots_put
         OperationId: '742'
         MethodId: '743'
+        OperationName: Snapshots
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: '{subscription-id}'
@@ -6581,6 +6768,8 @@ Modules:
           - compute_snapshots_put
         OperationId: '742'
         MethodId: '743'
+        OperationName: Snapshots
+        MethodName: CreateOrUpdate
   - ModuleName: azure_rm_computesnapshot_info
     Options:
       - NameSwagger: resourceGroupName
@@ -6612,6 +6801,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: snapshotName
         NameAnsible: name
@@ -6645,6 +6835,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_24
         NameSwagger: id
@@ -6676,6 +6867,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_25
         NameSwagger: name
@@ -6707,6 +6899,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_26
         NameSwagger: type
@@ -6738,6 +6931,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_27
         NameSwagger: location
@@ -6769,6 +6963,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_28
         NameSwagger: tags
@@ -6804,6 +6999,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_29
         NameSwagger: managedBy
@@ -6835,6 +7031,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_30
         NameSwagger: sku
@@ -6893,6 +7090,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: tier
             NameAnsible: tier
@@ -6923,6 +7121,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /sku
@@ -6935,6 +7134,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_31
         NameSwagger: properties
@@ -6966,6 +7166,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: timeCreated
         NameAnsible: time_created
@@ -6996,6 +7197,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: osType
         NameAnsible: os_type
@@ -7032,6 +7234,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: hyperVGeneration
         NameAnsible: hyper_vgeneration
@@ -7070,6 +7273,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: creationData
         NameAnsible: creation_data
@@ -7141,6 +7345,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: storageAccountId
             NameAnsible: storage_account_id
@@ -7174,6 +7379,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: imageReference
             NameAnsible: image_reference
@@ -7224,6 +7430,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: lun
                 NameAnsible: lun
@@ -7257,6 +7464,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/creationData/imageReference
@@ -7269,6 +7477,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: sourceUri
             NameAnsible: source_uri
@@ -7301,6 +7510,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: sourceResourceId
             NameAnsible: source_resource_id
@@ -7333,6 +7543,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/creationData
@@ -7345,6 +7556,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: diskSizeGB
         NameAnsible: disk_size_gb
@@ -7380,6 +7592,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: int32
         Flatten: false
       - NameSwagger: encryptionSettingsCollection
         NameAnsible: encryption_settings_collection
@@ -7435,6 +7648,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: encryptionSettings
             NameAnsible: encryption_settings
@@ -7504,6 +7718,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - NameSwagger: secretUrl
                     NameAnsible: secret_url
@@ -7537,6 +7752,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: >-
@@ -7552,6 +7768,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: keyEncryptionKey
                 NameAnsible: key_encryption_key
@@ -7606,6 +7823,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - NameSwagger: keyUrl
                     NameAnsible: key_url
@@ -7639,6 +7857,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: >-
@@ -7654,6 +7873,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/encryptionSettingsCollection/encryptionSettings
@@ -7666,6 +7886,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/encryptionSettingsCollection
@@ -7678,6 +7899,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: provisioningState
         NameAnsible: provisioning_state
@@ -7708,6 +7930,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
     Methods:
       - Name: List
@@ -7855,6 +8078,8 @@ Modules:
         References: []
         OperationId: '742'
         MethodId: '899'
+        OperationName: Snapshots
+        MethodName: List
       - Example:
           parameters:
             subscriptionId: '{subscription-id}'
@@ -7915,6 +8140,8 @@ Modules:
         References: []
         OperationId: '742'
         MethodId: '875'
+        OperationName: Snapshots
+        MethodName: ListByResourceGroup
       - Example:
           parameters:
             subscriptionId: '{subscription-id}'
@@ -7976,20 +8203,9 @@ Modules:
         References: []
         OperationId: '742'
         MethodId: '813'
+        OperationName: Snapshots
+        MethodName: Get
 ServiceName: DiskResourceProviderClient
 MgmtClientName: DiskResourceProviderClient
 CliName: compute
 Namespace: azure.mgmt.compute
-Info:
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION diskName'
-  - '  ** FOUND OPTION disk'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION diskName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION snapshotName'
-  - '  ** FOUND OPTION snapshot'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION snapshotName'

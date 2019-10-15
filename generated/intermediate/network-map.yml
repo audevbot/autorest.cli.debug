@@ -30,6 +30,7 @@ Modules:
         ExampleValue: '{{resource_group}}'
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: azureFirewallName
         NameAnsible: name
@@ -60,6 +61,7 @@ Modules:
         ExampleValue: '{{azure_firewall_name}}'
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: parameters
         NameAnsible: parameters
@@ -90,6 +92,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: id
         NameAnsible: id
@@ -120,6 +123,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: location
         NameAnsible: location
@@ -150,6 +154,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: tags
         NameAnsible: tags
@@ -185,6 +190,7 @@ Modules:
           key1: value1
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: properties
         NameAnsible: properties
@@ -215,6 +221,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: applicationRuleCollections
         NameAnsible: application_rule_collections
@@ -263,6 +270,7 @@ Modules:
             ExampleValue: null
             Hidden: true
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: priority
             NameAnsible: priority
@@ -293,6 +301,7 @@ Modules:
             ExampleValue: '110'
             Hidden: false
             IncludeInResponse: true
+            format: int32
             Flatten: false
           - NameSwagger: action
             NameAnsible: action
@@ -347,6 +356,7 @@ Modules:
                 ExampleValue: null
                 Hidden: true
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/applicationRuleCollections/properties/action
@@ -359,6 +369,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: rules
             NameAnsible: rules
@@ -407,6 +418,7 @@ Modules:
                 ExampleValue: rule1
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - NameSwagger: description
                 NameAnsible: description
@@ -439,6 +451,7 @@ Modules:
                 ExampleValue: Deny inbound rule
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - NameSwagger: sourceAddresses
                 NameAnsible: source_addresses
@@ -468,9 +481,10 @@ Modules:
                 DispositionRest: '*'
                 Comparison: ''
                 Updatable: true
-                ExampleValue: 10.0.0.0/24
+                ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - NameSwagger: protocols
                 NameAnsible: protocols
@@ -501,10 +515,11 @@ Modules:
                 Comparison: ''
                 Updatable: true
                 ExampleValue:
-                  protocolType: Https
+                  protocol_type: Https
                   port: '443'
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: targetFqdns
                 NameAnsible: target_fqdns
@@ -534,9 +549,10 @@ Modules:
                 DispositionRest: '*'
                 Comparison: ''
                 Updatable: true
-                ExampleValue: www.test.com
+                ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - NameSwagger: fqdnTags
                 NameAnsible: fqdn_tags
@@ -569,6 +585,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/applicationRuleCollections/properties/rules
@@ -581,6 +598,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - &ref_2
             NameSwagger: provisioningState
@@ -626,6 +644,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: name
             NameAnsible: name
@@ -658,6 +677,7 @@ Modules:
             ExampleValue: apprulecoll
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - &ref_3
             NameSwagger: etag
@@ -691,6 +711,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/applicationRuleCollections
@@ -703,6 +724,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: natRuleCollections
         NameAnsible: nat_rule_collections
@@ -751,6 +773,7 @@ Modules:
             ExampleValue: null
             Hidden: true
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: priority
             NameAnsible: priority
@@ -781,6 +804,7 @@ Modules:
             ExampleValue: '112'
             Hidden: false
             IncludeInResponse: true
+            format: int32
             Flatten: false
           - NameSwagger: action
             NameAnsible: action
@@ -835,6 +859,7 @@ Modules:
                 ExampleValue: Dnat
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/natRuleCollections/properties/action
@@ -847,6 +872,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: rules
             NameAnsible: rules
@@ -895,6 +921,7 @@ Modules:
                 ExampleValue: DNAT-HTTPS-traffic
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - NameSwagger: description
                 NameAnsible: description
@@ -925,6 +952,7 @@ Modules:
                 ExampleValue: D-NAT all outbound web traffic for inspection
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - NameSwagger: sourceAddresses
                 NameAnsible: source_addresses
@@ -954,9 +982,10 @@ Modules:
                 DispositionRest: '*'
                 Comparison: ''
                 Updatable: true
-                ExampleValue: '*'
+                ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - NameSwagger: destinationAddresses
                 NameAnsible: destination_addresses
@@ -986,9 +1015,10 @@ Modules:
                 DispositionRest: '*'
                 Comparison: ''
                 Updatable: true
-                ExampleValue: 1.2.3.4
+                ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - NameSwagger: destinationPorts
                 NameAnsible: destination_ports
@@ -1018,9 +1048,10 @@ Modules:
                 DispositionRest: '*'
                 Comparison: ''
                 Updatable: true
-                ExampleValue: '443'
+                ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - NameSwagger: protocols
                 NameAnsible: protocols
@@ -1065,6 +1096,7 @@ Modules:
                 ExampleValue: TCP
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: translatedAddress
                 NameAnsible: translated_address
@@ -1094,9 +1126,10 @@ Modules:
                 DispositionRest: '*'
                 Comparison: ''
                 Updatable: true
-                ExampleValue: 1.2.3.5
+                ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - NameSwagger: translatedPort
                 NameAnsible: translated_port
@@ -1124,9 +1157,10 @@ Modules:
                 DispositionRest: '*'
                 Comparison: ''
                 Updatable: true
-                ExampleValue: '8443'
+                ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/natRuleCollections/properties/rules
@@ -1139,6 +1173,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - &ref_4
             NameSwagger: provisioningState
@@ -1182,6 +1217,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: name
             NameAnsible: name
@@ -1214,6 +1250,7 @@ Modules:
             ExampleValue: natrulecoll
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - &ref_5
             NameSwagger: etag
@@ -1247,6 +1284,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/natRuleCollections
@@ -1259,6 +1297,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: networkRuleCollections
         NameAnsible: network_rule_collections
@@ -1307,6 +1346,7 @@ Modules:
             ExampleValue: null
             Hidden: true
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: priority
             NameAnsible: priority
@@ -1337,6 +1377,7 @@ Modules:
             ExampleValue: '112'
             Hidden: false
             IncludeInResponse: true
+            format: int32
             Flatten: false
           - NameSwagger: action
             NameAnsible: action
@@ -1391,6 +1432,7 @@ Modules:
                 ExampleValue: Deny
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/networkRuleCollections/properties/action
@@ -1403,6 +1445,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: rules
             NameAnsible: rules
@@ -1451,6 +1494,7 @@ Modules:
                 ExampleValue: L4-traffic
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - NameSwagger: description
                 NameAnsible: description
@@ -1483,6 +1527,7 @@ Modules:
                 ExampleValue: Block traffic based on source IPs and ports
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - NameSwagger: protocols
                 NameAnsible: protocols
@@ -1525,6 +1570,7 @@ Modules:
                 ExampleValue: TCP
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: sourceAddresses
                 NameAnsible: source_addresses
@@ -1554,9 +1600,10 @@ Modules:
                 DispositionRest: '*'
                 Comparison: ''
                 Updatable: true
-                ExampleValue: 10.1.4.12-10.1.4.255
+                ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - NameSwagger: destinationAddresses
                 NameAnsible: destination_addresses
@@ -1586,9 +1633,10 @@ Modules:
                 DispositionRest: '*'
                 Comparison: ''
                 Updatable: true
-                ExampleValue: '*'
+                ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - NameSwagger: destinationPorts
                 NameAnsible: destination_ports
@@ -1618,9 +1666,10 @@ Modules:
                 DispositionRest: '*'
                 Comparison: ''
                 Updatable: true
-                ExampleValue: '8443'
+                ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/networkRuleCollections/properties/rules
@@ -1633,6 +1682,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - &ref_6
             NameSwagger: provisioningState
@@ -1676,6 +1726,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: name
             NameAnsible: name
@@ -1708,6 +1759,7 @@ Modules:
             ExampleValue: netrulecoll
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - &ref_7
             NameSwagger: etag
@@ -1741,6 +1793,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/networkRuleCollections
@@ -1753,6 +1806,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: ipConfigurations
         NameAnsible: ip_configurations
@@ -1801,6 +1855,7 @@ Modules:
             ExampleValue: null
             Hidden: true
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: subnet
             NameAnsible: subnet
@@ -1833,6 +1888,7 @@ Modules:
             ExampleValue: null
             Hidden: true
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: id
             NameAnsible: id
@@ -1866,6 +1922,7 @@ Modules:
               virtual_network_name }}/subnets/{{ subnet_name }}
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: publicIPAddress
             NameAnsible: public_ip_address
@@ -1898,6 +1955,7 @@ Modules:
             ExampleValue: null
             Hidden: true
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: id
             NameAnsible: id
@@ -1925,12 +1983,10 @@ Modules:
             DispositionRest: properties/publicIPAddress/id
             Comparison: ''
             Updatable: true
-            ExampleValue: >-
-              /subscriptions/{{ subscription_id }}/resourceGroups/{{
-              resource_group }}/providers/Microsoft.Network/publicIPAddresses/{{
-              public_ip_address_name }}
+            ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - &ref_8
             NameSwagger: privateIPAddress
@@ -1964,6 +2020,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - &ref_9
             NameSwagger: provisioningState
@@ -2007,6 +2064,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: name
             NameAnsible: name
@@ -2039,6 +2097,7 @@ Modules:
             ExampleValue: azureFirewallIpConfiguration
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - &ref_10
             NameSwagger: etag
@@ -2072,6 +2131,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/ipConfigurations
@@ -2084,6 +2144,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_11
         NameSwagger: provisioningState
@@ -2127,6 +2188,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_0
         NameSwagger: name
@@ -2158,6 +2220,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_1
         NameSwagger: type
@@ -2189,6 +2252,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_12
         NameSwagger: etag
@@ -2222,6 +2286,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
     Methods:
       - Name: CreateOrUpdate
@@ -2313,6 +2378,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - *ref_0
       - *ref_1
@@ -2345,6 +2411,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: tags
         NameAnsible: tags
@@ -2379,6 +2446,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: properties
         NameAnsible: properties
@@ -2445,6 +2513,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: properties
                 NameAnsible: properties
@@ -2493,6 +2562,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: int32
                     Flatten: false
                   - NameSwagger: action
                     NameAnsible: action
@@ -2549,6 +2619,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
                     EnumValues: []
                     PathSwagger: /properties/applicationRuleCollections/properties/action
@@ -2561,6 +2632,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - NameSwagger: rules
                     NameAnsible: rules
@@ -2611,6 +2683,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                       - NameSwagger: description
                         NameAnsible: description
@@ -2643,6 +2716,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                       - NameSwagger: sourceAddresses
                         NameAnsible: source_addresses
@@ -2675,6 +2749,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                       - NameSwagger: protocols
                         NameAnsible: protocols
@@ -2707,6 +2782,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
                       - NameSwagger: targetFqdns
                         NameAnsible: target_fqdns
@@ -2739,6 +2815,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                       - NameSwagger: fqdnTags
                         NameAnsible: fqdn_tags
@@ -2771,6 +2848,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                     EnumValues: []
                     PathSwagger: /properties/applicationRuleCollections/properties/rules
@@ -2783,6 +2861,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - *ref_2
                 EnumValues: []
@@ -2796,6 +2875,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: name
                 NameAnsible: name
@@ -2828,6 +2908,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - *ref_3
             EnumValues: []
@@ -2841,6 +2922,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: natRuleCollections
             NameAnsible: nat_rule_collections
@@ -2889,6 +2971,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: properties
                 NameAnsible: properties
@@ -2937,6 +3020,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: int32
                     Flatten: false
                   - NameSwagger: action
                     NameAnsible: action
@@ -2991,6 +3075,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
                     EnumValues: []
                     PathSwagger: /properties/natRuleCollections/properties/action
@@ -3003,6 +3088,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - NameSwagger: rules
                     NameAnsible: rules
@@ -3051,6 +3137,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                       - NameSwagger: description
                         NameAnsible: description
@@ -3083,6 +3170,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                       - NameSwagger: sourceAddresses
                         NameAnsible: source_addresses
@@ -3115,6 +3203,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                       - NameSwagger: destinationAddresses
                         NameAnsible: destination_addresses
@@ -3147,6 +3236,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                       - NameSwagger: destinationPorts
                         NameAnsible: destination_ports
@@ -3179,6 +3269,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                       - NameSwagger: protocols
                         NameAnsible: protocols
@@ -3225,6 +3316,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
                       - NameSwagger: translatedAddress
                         NameAnsible: translated_address
@@ -3257,6 +3349,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                       - NameSwagger: translatedPort
                         NameAnsible: translated_port
@@ -3289,6 +3382,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                     EnumValues: []
                     PathSwagger: /properties/natRuleCollections/properties/rules
@@ -3301,6 +3395,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - *ref_4
                 EnumValues: []
@@ -3314,6 +3409,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: name
                 NameAnsible: name
@@ -3346,6 +3442,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - *ref_5
             EnumValues: []
@@ -3359,6 +3456,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: networkRuleCollections
             NameAnsible: network_rule_collections
@@ -3407,6 +3505,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: properties
                 NameAnsible: properties
@@ -3455,6 +3554,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: int32
                     Flatten: false
                   - NameSwagger: action
                     NameAnsible: action
@@ -3511,6 +3611,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
                     EnumValues: []
                     PathSwagger: /properties/networkRuleCollections/properties/action
@@ -3523,6 +3624,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - NameSwagger: rules
                     NameAnsible: rules
@@ -3573,6 +3675,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                       - NameSwagger: description
                         NameAnsible: description
@@ -3605,6 +3708,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                       - NameSwagger: protocols
                         NameAnsible: protocols
@@ -3649,6 +3753,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
                       - NameSwagger: sourceAddresses
                         NameAnsible: source_addresses
@@ -3681,6 +3786,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                       - NameSwagger: destinationAddresses
                         NameAnsible: destination_addresses
@@ -3713,6 +3819,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                       - NameSwagger: destinationPorts
                         NameAnsible: destination_ports
@@ -3745,6 +3852,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                     EnumValues: []
                     PathSwagger: /properties/networkRuleCollections/properties/rules
@@ -3757,6 +3865,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - *ref_6
                 EnumValues: []
@@ -3770,6 +3879,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: name
                 NameAnsible: name
@@ -3802,6 +3912,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - *ref_7
             EnumValues: []
@@ -3815,6 +3926,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: ipConfigurations
             NameAnsible: ip_configurations
@@ -3863,6 +3975,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: properties
                 NameAnsible: properties
@@ -3932,6 +4045,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                     EnumValues: []
                     PathSwagger: /properties/ipConfigurations/properties/subnet
@@ -3944,6 +4058,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - NameSwagger: publicIPAddress
                     NameAnsible: public_ip_address
@@ -3996,6 +4111,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                     EnumValues: []
                     PathSwagger: /properties/ipConfigurations/properties/publicIPAddress
@@ -4008,6 +4124,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - *ref_9
                 EnumValues: []
@@ -4021,6 +4138,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: name
                 NameAnsible: name
@@ -4053,6 +4171,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - *ref_10
             EnumValues: []
@@ -4066,6 +4185,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - *ref_11
         EnumValues: []
@@ -4079,6 +4199,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - *ref_12
     ModuleOperationNameUpper: AzureFirewalls
@@ -4110,7 +4231,7 @@ Modules:
                           resource_group
                           }}/providers/Microsoft.Network/virtualNetworks/{{
                           virtual_network_name }}/subnets/{{ subnet_name }}
-                      publicIPAddress:
+                      public_ip_address:
                         id: >-
                           /subscriptions/{{ subscription_id }}/resourceGroups/{{
                           resource_group
@@ -4126,11 +4247,11 @@ Modules:
                         - name: rule1
                           description: Deny inbound rule
                           protocols:
-                            - protocolType: Https
+                            - protocol_type: Https
                               port: '443'
-                          targetFqdns:
+                          target_fqdns:
                             - www.test.com
-                          sourceAddresses:
+                          source_addresses:
                             - 216.58.216.164
                             - 10.0.0.0/24
                 natRuleCollections:
@@ -4142,16 +4263,16 @@ Modules:
                       rules:
                         - name: DNAT-HTTPS-traffic
                           description: D-NAT all outbound web traffic for inspection
-                          sourceAddresses:
+                          source_addresses:
                             - '*'
-                          destinationAddresses:
+                          destination_addresses:
                             - 1.2.3.4
-                          destinationPorts:
+                          destination_ports:
                             - '443'
                           protocols:
                             - TCP
-                          translatedAddress: 1.2.3.5
-                          translatedPort: '8443'
+                          translated_address: 1.2.3.5
+                          translated_port: '8443'
                 networkRuleCollections:
                   - name: netrulecoll
                     properties:
@@ -4161,13 +4282,13 @@ Modules:
                       rules:
                         - name: L4-traffic
                           description: Block traffic based on source IPs and ports
-                          sourceAddresses:
+                          source_addresses:
                             - 192.168.1.1-192.168.1.12
                             - 10.1.4.12-10.1.4.255
-                          destinationPorts:
+                          destination_ports:
                             - 443-444
                             - '8443'
-                          destinationAddresses:
+                          destination_addresses:
                             - '*'
                           protocols:
                             - TCP
@@ -4388,6 +4509,8 @@ Modules:
           - network_publicipaddresses_put
         OperationId: '472'
         MethodId: '535'
+        OperationName: AzureFirewalls
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             api-version: '2018-11-01'
@@ -4415,6 +4538,8 @@ Modules:
         References: []
         OperationId: '472'
         MethodId: '473'
+        OperationName: AzureFirewalls
+        MethodName: Delete
   - ModuleName: azure_rm_azurefirewall_info
     Options:
       - NameSwagger: resourceGroupName
@@ -4446,6 +4571,7 @@ Modules:
         ExampleValue: '{{resource_group}}'
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: azureFirewallName
         NameAnsible: name
@@ -4476,6 +4602,7 @@ Modules:
         ExampleValue: '{{azure_firewall_name}}'
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_13
         NameSwagger: id
@@ -4507,6 +4634,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_14
         NameSwagger: name
@@ -4538,6 +4666,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_15
         NameSwagger: type
@@ -4569,6 +4698,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_16
         NameSwagger: location
@@ -4600,6 +4730,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_17
         NameSwagger: tags
@@ -4635,6 +4766,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_18
         NameSwagger: properties
@@ -4666,6 +4798,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: applicationRuleCollections
         NameAnsible: application_rule_collections
@@ -4714,6 +4847,7 @@ Modules:
             ExampleValue: null
             Hidden: true
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: priority
             NameAnsible: priority
@@ -4744,6 +4878,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int32
             Flatten: false
           - NameSwagger: action
             NameAnsible: action
@@ -4798,6 +4933,7 @@ Modules:
                 ExampleValue: null
                 Hidden: true
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/applicationRuleCollections/properties/action
@@ -4810,6 +4946,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: rules
             NameAnsible: rules
@@ -4858,6 +4995,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: description
                 NameAnsible: description
@@ -4890,6 +5028,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: sourceAddresses
                 NameAnsible: source_addresses
@@ -4922,6 +5061,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: protocols
                 NameAnsible: protocols
@@ -4954,6 +5094,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: targetFqdns
                 NameAnsible: target_fqdns
@@ -4986,6 +5127,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: fqdnTags
                 NameAnsible: fqdn_tags
@@ -5018,6 +5160,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/applicationRuleCollections/properties/rules
@@ -5030,6 +5173,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: provisioningState
             NameAnsible: provisioning_state
@@ -5074,6 +5218,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: name
             NameAnsible: name
@@ -5106,6 +5251,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: etag
             NameAnsible: etag
@@ -5138,6 +5284,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/applicationRuleCollections
@@ -5150,6 +5297,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: natRuleCollections
         NameAnsible: nat_rule_collections
@@ -5198,6 +5346,7 @@ Modules:
             ExampleValue: null
             Hidden: true
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: priority
             NameAnsible: priority
@@ -5228,6 +5377,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int32
             Flatten: false
           - NameSwagger: action
             NameAnsible: action
@@ -5282,6 +5432,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/natRuleCollections/properties/action
@@ -5294,6 +5445,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: rules
             NameAnsible: rules
@@ -5342,6 +5494,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: description
                 NameAnsible: description
@@ -5372,6 +5525,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: sourceAddresses
                 NameAnsible: source_addresses
@@ -5404,6 +5558,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: destinationAddresses
                 NameAnsible: destination_addresses
@@ -5436,6 +5591,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: destinationPorts
                 NameAnsible: destination_ports
@@ -5468,6 +5624,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: protocols
                 NameAnsible: protocols
@@ -5512,6 +5669,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: translatedAddress
                 NameAnsible: translated_address
@@ -5544,6 +5702,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: translatedPort
                 NameAnsible: translated_port
@@ -5574,6 +5733,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/natRuleCollections/properties/rules
@@ -5586,6 +5746,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: provisioningState
             NameAnsible: provisioning_state
@@ -5628,6 +5789,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: name
             NameAnsible: name
@@ -5660,6 +5822,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: etag
             NameAnsible: etag
@@ -5692,6 +5855,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/natRuleCollections
@@ -5704,6 +5868,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: networkRuleCollections
         NameAnsible: network_rule_collections
@@ -5752,6 +5917,7 @@ Modules:
             ExampleValue: null
             Hidden: true
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: priority
             NameAnsible: priority
@@ -5782,6 +5948,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int32
             Flatten: false
           - NameSwagger: action
             NameAnsible: action
@@ -5836,6 +6003,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/networkRuleCollections/properties/action
@@ -5848,6 +6016,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: rules
             NameAnsible: rules
@@ -5896,6 +6065,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: description
                 NameAnsible: description
@@ -5928,6 +6098,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: protocols
                 NameAnsible: protocols
@@ -5970,6 +6141,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: sourceAddresses
                 NameAnsible: source_addresses
@@ -6002,6 +6174,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: destinationAddresses
                 NameAnsible: destination_addresses
@@ -6034,6 +6207,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: destinationPorts
                 NameAnsible: destination_ports
@@ -6066,6 +6240,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/networkRuleCollections/properties/rules
@@ -6078,6 +6253,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: provisioningState
             NameAnsible: provisioning_state
@@ -6120,6 +6296,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: name
             NameAnsible: name
@@ -6152,6 +6329,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: etag
             NameAnsible: etag
@@ -6184,6 +6362,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/networkRuleCollections
@@ -6196,6 +6375,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: ipConfigurations
         NameAnsible: ip_configurations
@@ -6244,6 +6424,7 @@ Modules:
             ExampleValue: null
             Hidden: true
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: privateIPAddress
             NameAnsible: private_ip_address
@@ -6276,6 +6457,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: subnet
             NameAnsible: subnet
@@ -6308,6 +6490,7 @@ Modules:
             ExampleValue: null
             Hidden: true
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: id
             NameAnsible: id
@@ -6338,6 +6521,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: publicIPAddress
             NameAnsible: public_ip_address
@@ -6370,6 +6554,7 @@ Modules:
             ExampleValue: null
             Hidden: true
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: id
             NameAnsible: id
@@ -6400,6 +6585,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: provisioningState
             NameAnsible: provisioning_state
@@ -6442,6 +6628,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: name
             NameAnsible: name
@@ -6474,6 +6661,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: etag
             NameAnsible: etag
@@ -6506,6 +6694,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/ipConfigurations
@@ -6518,6 +6707,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: provisioningState
         NameAnsible: provisioning_state
@@ -6560,6 +6750,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_19
         NameSwagger: etag
@@ -6593,6 +6784,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
     Methods:
       - Name: Get
@@ -6755,6 +6947,8 @@ Modules:
         References: []
         OperationId: '472'
         MethodId: '594'
+        OperationName: AzureFirewalls
+        MethodName: ListAll
       - Example:
           parameters:
             api-version: '2018-11-01'
@@ -6870,6 +7064,8 @@ Modules:
         References: []
         OperationId: '472'
         MethodId: '570'
+        OperationName: AzureFirewalls
+        MethodName: List
       - Example:
           parameters:
             api-version: '2018-11-01'
@@ -6988,14 +7184,9 @@ Modules:
         References: []
         OperationId: '472'
         MethodId: '505'
+        OperationName: AzureFirewalls
+        MethodName: Get
 ServiceName: NetworkManagementClient
 MgmtClientName: NetworkManagementClient
 CliName: network
 Namespace: azure.mgmt.network
-Info:
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION azureFirewallName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION azureFirewallName'

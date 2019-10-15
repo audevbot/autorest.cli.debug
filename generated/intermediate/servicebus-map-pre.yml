@@ -51,6 +51,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: display
             NameAnsible: display
@@ -99,6 +100,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: resource
                 NameAnsible: resource
@@ -129,6 +131,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: operation
                 NameAnsible: operation
@@ -159,6 +162,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/display
@@ -171,6 +175,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
         EnumValues: []
         PathSwagger: /value
@@ -183,6 +188,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_1
         NameSwagger: nextLink
@@ -214,6 +220,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
     Methods:
       - Name: List
@@ -444,8 +451,10 @@ Modules:
         Filename: servicebus_operations_get
         Variables: []
         References: []
-        OperationId: '1366'
-        MethodId: '1367'
+        OperationId: '1380'
+        MethodId: '1381'
+        OperationName: Operations
+        MethodName: List
   - ModuleName: azure_rm_servicebusnamespace
     Options:
       - NameSwagger: resourceGroupName
@@ -477,6 +486,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: namespaceName
         NameAnsible: name
@@ -507,6 +517,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: parameters
         NameAnsible: parameters
@@ -537,6 +548,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: location
         NameAnsible: location
@@ -567,6 +579,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: tags
         NameAnsible: tags
@@ -601,6 +614,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: sku
         NameAnsible: sku
@@ -658,6 +672,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: tier
             NameAnsible: tier
@@ -697,6 +712,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: capacity
             NameAnsible: capacity
@@ -729,6 +745,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: int32
             Flatten: false
         EnumValues: []
         PathSwagger: /sku
@@ -741,6 +758,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: properties
         NameAnsible: properties
@@ -771,6 +789,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_5
         NameSwagger: provisioningState
@@ -802,6 +821,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_6
         NameSwagger: createdAt
@@ -833,6 +853,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_7
         NameSwagger: updatedAt
@@ -864,6 +885,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_8
         NameSwagger: serviceBusEndpoint
@@ -895,6 +917,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_9
         NameSwagger: metricId
@@ -926,6 +949,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_2
         NameSwagger: id
@@ -957,6 +981,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_3
         NameSwagger: name
@@ -988,6 +1013,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_4
         NameSwagger: type
@@ -1019,6 +1045,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
     Methods:
       - Name: CreateOrUpdate
@@ -1089,6 +1116,19 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ServiceBus/namespaces/{{ namespace_name }}
+        HttpMethod: get
+        IsAsync: false
+      - Name: ListNetworkRuleSets
+        Options:
+          - resourceGroupName
+          - namespaceName
+        RequiredOptions:
+          - resourceGroupName
+          - namespaceName
+        Url: >-
+          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
+          }}/providers/Microsoft.ServiceBus/namespaces/{{ namespace_name
+          }}/networkRuleSets
         HttpMethod: get
         IsAsync: false
       - Name: ListAuthorizationRules
@@ -1165,6 +1205,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: tags
         NameAnsible: tags
@@ -1199,6 +1240,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: sku
         NameAnsible: sku
@@ -1256,6 +1298,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: tier
             NameAnsible: tier
@@ -1295,6 +1338,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: capacity
             NameAnsible: capacity
@@ -1327,6 +1371,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int32
             Flatten: false
         EnumValues: []
         PathSwagger: /sku
@@ -1339,6 +1384,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: properties
         NameAnsible: properties
@@ -1374,6 +1420,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     ModuleOperationNameUpper: Namespaces
     ModuleOperationName: namespaces
@@ -1458,8 +1505,10 @@ Modules:
             swaggerName: namespaceName
         References:
           - resourcegroups_put
-        OperationId: '1381'
-        MethodId: '1446'
+        OperationId: '1395'
+        MethodId: '1460'
+        OperationName: Namespaces
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             namespaceName: sdk-Namespace-3285
@@ -1530,8 +1579,10 @@ Modules:
             swaggerName: namespaceName
         References:
           - servicebus_namespaces_put
-        OperationId: '1381'
-        MethodId: '1544'
+        OperationId: '1395'
+        MethodId: '1558'
+        OperationName: Namespaces
+        MethodName: Update
       - Example:
           parameters:
             namespaceName: sdk-Namespace-3285
@@ -1556,8 +1607,10 @@ Modules:
             value: my
             swaggerName: namespaceName
         References: []
-        OperationId: '1381'
-        MethodId: '1482'
+        OperationId: '1395'
+        MethodId: '1496'
+        OperationName: Namespaces
+        MethodName: Delete
   - ModuleName: azure_rm_servicebusnamespace_info
     Options:
       - NameSwagger: resourceGroupName
@@ -1589,6 +1642,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: namespaceName
         NameAnsible: namespace_name
@@ -1619,6 +1673,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: authorizationRuleName
         NameAnsible: name
@@ -1649,6 +1704,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_10
         NameSwagger: id
@@ -1680,6 +1736,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_11
         NameSwagger: name
@@ -1711,6 +1768,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_12
         NameSwagger: type
@@ -1742,6 +1800,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_13
         NameSwagger: location
@@ -1773,6 +1832,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_14
         NameSwagger: tags
@@ -1808,6 +1868,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_15
         NameSwagger: sku
@@ -1866,6 +1927,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: tier
             NameAnsible: tier
@@ -1905,6 +1967,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: capacity
             NameAnsible: capacity
@@ -1937,6 +2000,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int32
             Flatten: false
         EnumValues: []
         PathSwagger: /sku
@@ -1949,6 +2013,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_16
         NameSwagger: properties
@@ -1980,6 +2045,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: provisioningState
         NameAnsible: provisioning_state
@@ -2010,6 +2076,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: createdAt
         NameAnsible: created_at
@@ -2040,6 +2107,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: updatedAt
         NameAnsible: updated_at
@@ -2070,6 +2138,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: serviceBusEndpoint
         NameAnsible: service_bus_endpoint
@@ -2100,6 +2169,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: metricId
         NameAnsible: metric_id
@@ -2130,6 +2200,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
     Methods:
       - Name: List
@@ -2160,6 +2231,19 @@ Modules:
         Url: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.ServiceBus/namespaces/{{ namespace_name }}
+        HttpMethod: get
+        IsAsync: false
+      - Name: ListNetworkRuleSets
+        Options:
+          - resourceGroupName
+          - namespaceName
+        RequiredOptions:
+          - resourceGroupName
+          - namespaceName
+        Url: >-
+          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
+          }}/providers/Microsoft.ServiceBus/namespaces/{{ namespace_name
+          }}/networkRuleSets
         HttpMethod: get
         IsAsync: false
       - Name: ListAuthorizationRules
@@ -3119,8 +3203,10 @@ Modules:
         Filename: servicebus_namespaces_get
         Variables: []
         References: []
-        OperationId: '1381'
-        MethodId: '1404'
+        OperationId: '1395'
+        MethodId: '1418'
+        OperationName: Namespaces
+        MethodName: List
       - Example:
           parameters:
             api-version: '2017-04-01'
@@ -3162,8 +3248,10 @@ Modules:
             value: myResourceGroup
             swaggerName: resourceGroupName
         References: []
-        OperationId: '1381'
-        MethodId: '1422'
+        OperationId: '1395'
+        MethodId: '1436'
+        OperationName: Namespaces
+        MethodName: ListByResourceGroup
       - Example:
           parameters:
             namespaceName: sdk-Namespace-2924
@@ -3206,8 +3294,82 @@ Modules:
             value: my
             swaggerName: namespaceName
         References: []
-        OperationId: '1381'
-        MethodId: '1514'
+        OperationId: '1395'
+        MethodId: '1528'
+        OperationName: Namespaces
+        MethodName: Get
+      - Example:
+          parameters:
+            namespaceName: sdk-Namespace-6019
+            resourceGroupName: ResourceGroup
+            api-version: '2017-04-01'
+            subscriptionId: Subscription
+          responses:
+            '200':
+              body:
+                value:
+                  - id: >-
+                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                      resource_group
+                      }}/providers/Microsoft.ServiceBus/namespaces/{{
+                      namespace_name }}/networkrulesets/{{ networkruleset_name
+                      }}
+                    name: default
+                    type: Microsoft.ServiceBus/Namespaces/NetworkRuleSet
+                    properties:
+                      defaultAction: Deny
+                      virtualNetworkRules:
+                        - subnet:
+                            id: >-
+                              /subscriptions/{{ subscription_id
+                              }}/resourceGroups/{{ resource_group
+                              }}/providers/Microsoft.Network/virtualNetworks/{{
+                              virtual_network_name }}/subnets/{{ subnet_name }}
+                          ignoreMissingVnetServiceEndpoint: true
+                        - subnet:
+                            id: >-
+                              /subscriptions/{{ subscription_id
+                              }}/resourceGroups/{{ resource_group
+                              }}/providers/Microsoft.Network/virtualNetworks/{{
+                              virtual_network_name }}/subnets/{{ subnet_name }}
+                          ignoreMissingVnetServiceEndpoint: false
+                        - subnet:
+                            id: >-
+                              /subscriptions/{{ subscription_id
+                              }}/resourceGroups/{{ resource_group
+                              }}/providers/Microsoft.Network/virtualNetworks/{{
+                              virtual_network_name }}/subnets/{{ subnet_name }}
+                          ignoreMissingVnetServiceEndpoint: false
+                      ipRules:
+                        - ipMask: 1.1.1.1
+                          action: Allow
+                        - ipMask: 1.1.1.2
+                          action: Allow
+                        - ipMask: 1.1.1.3
+                          action: Allow
+                        - ipMask: 1.1.1.4
+                          action: Allow
+                        - ipMask: 1.1.1.5
+                          action: Allow
+        Url: >-
+          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
+          }}/providers/Microsoft.ServiceBus/namespaces/{{ namespace_name
+          }}/networkRuleSets
+        Method: get
+        Name: NameSpaceNetworkRuleSetList
+        Filename: servicebus_namespaces_networkrulesets_get_1
+        Variables:
+          - name: resource_group
+            value: myResourceGroup
+            swaggerName: resourceGroupName
+          - name: namespace_name
+            value: my
+            swaggerName: namespaceName
+        References: []
+        OperationId: '1395'
+        MethodId: '1911'
+        OperationName: Namespaces
+        MethodName: ListNetworkRuleSets
       - Example:
           parameters:
             namespaceName: sdk-Namespace-6914
@@ -3250,8 +3412,10 @@ Modules:
             value: my
             swaggerName: namespaceName
         References: []
-        OperationId: '1381'
-        MethodId: '1580'
+        OperationId: '1395'
+        MethodId: '1594'
+        OperationName: Namespaces
+        MethodName: ListAuthorizationRules
       - Example:
           parameters:
             namespaceName: sdk-Namespace-6019
@@ -3320,8 +3484,10 @@ Modules:
             value: myNetworkRuleSet
             swaggerName: efaul
         References: []
-        OperationId: '1381'
-        MethodId: '1867'
+        OperationId: '1395'
+        MethodId: '1881'
+        OperationName: Namespaces
+        MethodName: GetNetworkRuleSet
       - Example:
           parameters:
             namespaceName: sdk-Namespace-6914
@@ -3361,8 +3527,10 @@ Modules:
             value: myAuthorizationRule
             swaggerName: authorizationRuleName
         References: []
-        OperationId: '1381'
-        MethodId: '1687'
+        OperationId: '1395'
+        MethodId: '1701'
+        OperationName: Namespaces
+        MethodName: GetAuthorizationRule
   - ModuleName: azure_rm_servicebusdisasterrecoveryconfig
     Options:
       - NameSwagger: resourceGroupName
@@ -3394,6 +3562,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: namespaceName
         NameAnsible: namespace_name
@@ -3424,6 +3593,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: alias
         NameAnsible: alias
@@ -3454,6 +3624,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: parameters
         NameAnsible: parameters
@@ -3486,6 +3657,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: properties
         NameAnsible: properties
@@ -3518,6 +3690,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: partnerNamespace
         NameAnsible: partner_namespace
@@ -3550,6 +3723,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: alternateName
         NameAnsible: alternate_name
@@ -3582,6 +3756,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_20
         NameSwagger: provisioningState
@@ -3624,6 +3799,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_21
         NameSwagger: pendingReplicationOperationsCount
@@ -3655,6 +3831,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: int64
         Flatten: false
       - &ref_22
         NameSwagger: role
@@ -3697,6 +3874,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_17
         NameSwagger: id
@@ -3728,6 +3906,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_18
         NameSwagger: name
@@ -3759,6 +3938,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_19
         NameSwagger: type
@@ -3790,6 +3970,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
     Methods:
       - Name: CreateOrUpdate
@@ -3943,6 +4124,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: alternateName
             NameAnsible: alternate_name
@@ -3975,6 +4157,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - *ref_22
         EnumValues: []
@@ -3988,6 +4171,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     ModuleOperationNameUpper: DisasterRecoveryConfigs
     ModuleOperationName: disaster_recovery_configs
@@ -4045,8 +4229,10 @@ Modules:
             swaggerName: alias
         References:
           - servicebus_namespaces_put
-        OperationId: '1899'
-        MethodId: '1964'
+        OperationId: '1943'
+        MethodId: '2008'
+        OperationName: DisasterRecoveryConfigs
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             namespaceName: sdk-Namespace-8860
@@ -4074,8 +4260,10 @@ Modules:
             value: myDisasterRecoveryConfig
             swaggerName: alias
         References: []
-        OperationId: '1899'
-        MethodId: '2005'
+        OperationId: '1943'
+        MethodId: '2049'
+        OperationName: DisasterRecoveryConfigs
+        MethodName: Delete
   - ModuleName: azure_rm_servicebusdisasterrecoveryconfig_info
     Options:
       - NameSwagger: resourceGroupName
@@ -4107,6 +4295,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: namespaceName
         NameAnsible: namespace_name
@@ -4137,6 +4326,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: alias
         NameAnsible: alias
@@ -4167,6 +4357,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: authorizationRuleName
         NameAnsible: name
@@ -4197,6 +4388,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_23
         NameSwagger: id
@@ -4228,6 +4420,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_24
         NameSwagger: name
@@ -4259,6 +4452,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_25
         NameSwagger: type
@@ -4290,6 +4484,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_26
         NameSwagger: properties
@@ -4323,6 +4518,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: provisioningState
         NameAnsible: provisioning_state
@@ -4364,6 +4560,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: pendingReplicationOperationsCount
         NameAnsible: pending_replication_operations_count
@@ -4394,6 +4591,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: int64
         Flatten: false
       - NameSwagger: partnerNamespace
         NameAnsible: partner_namespace
@@ -4426,6 +4624,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: alternateName
         NameAnsible: alternate_name
@@ -4458,6 +4657,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: role
         NameAnsible: role
@@ -4499,6 +4699,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     Methods:
       - Name: List
@@ -4616,8 +4817,10 @@ Modules:
             value: my
             swaggerName: namespaceName
         References: []
-        OperationId: '1899'
-        MethodId: '1934'
+        OperationId: '1943'
+        MethodId: '1978'
+        OperationName: DisasterRecoveryConfigs
+        MethodName: List
       - Example:
           parameters:
             namespaceName: sdk-Namespace-8860
@@ -4658,8 +4861,10 @@ Modules:
             value: myDisasterRecoveryConfig
             swaggerName: alias
         References: []
-        OperationId: '1899'
-        MethodId: '2041'
+        OperationId: '1943'
+        MethodId: '2085'
+        OperationName: DisasterRecoveryConfigs
+        MethodName: Get
       - Example:
           parameters:
             namespaceName: sdk-Namespace-9080
@@ -4743,8 +4948,10 @@ Modules:
             value: myDisasterRecoveryConfig
             swaggerName: alias
         References: []
-        OperationId: '1899'
-        MethodId: '2149'
+        OperationId: '1943'
+        MethodId: '2193'
+        OperationName: DisasterRecoveryConfigs
+        MethodName: ListAuthorizationRules
       - Example:
           parameters:
             namespaceName: sdk-Namespace-9080
@@ -4790,8 +4997,10 @@ Modules:
             value: myAuthorizationRule
             swaggerName: authorizationRuleName
         References: []
-        OperationId: '1899'
-        MethodId: '2185'
+        OperationId: '1943'
+        MethodId: '2229'
+        OperationName: DisasterRecoveryConfigs
+        MethodName: GetAuthorizationRule
   - ModuleName: azure_rm_servicebusmigrationconfig_info
     Options:
       - NameSwagger: resourceGroupName
@@ -4823,6 +5032,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: namespaceName
         NameAnsible: namespace_name
@@ -4853,6 +5063,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: configName
         NameAnsible: name
@@ -4883,6 +5094,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_27
         NameSwagger: id
@@ -4914,6 +5126,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_28
         NameSwagger: name
@@ -4945,6 +5158,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_29
         NameSwagger: type
@@ -4976,6 +5190,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_30
         NameSwagger: properties
@@ -5007,6 +5222,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: provisioningState
         NameAnsible: provisioning_state
@@ -5037,6 +5253,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: pendingReplicationOperationsCount
         NameAnsible: pending_replication_operations_count
@@ -5067,6 +5284,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: int64
         Flatten: false
       - NameSwagger: targetNamespace
         NameAnsible: target_namespace
@@ -5099,6 +5317,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: postMigrationName
         NameAnsible: post_migration_name
@@ -5129,6 +5348,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: migrationState
         NameAnsible: migration_state
@@ -5161,6 +5381,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
     Methods:
       - Name: List
@@ -5249,8 +5470,10 @@ Modules:
             value: my
             swaggerName: namespaceName
         References: []
-        OperationId: '2271'
-        MethodId: '2272'
+        OperationId: '2315'
+        MethodId: '2316'
+        OperationName: MigrationConfigs
+        MethodName: List
       - Example:
           parameters:
             namespaceName: sdk-Namespace-41
@@ -5295,8 +5518,10 @@ Modules:
             value: myMigrationConfiguration
             swaggerName: configName
         References: []
-        OperationId: '2271'
-        MethodId: '2380'
+        OperationId: '2315'
+        MethodId: '2424'
+        OperationName: MigrationConfigs
+        MethodName: Get
   - ModuleName: azure_rm_servicebusqueue
     Options:
       - NameSwagger: resourceGroupName
@@ -5328,6 +5553,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: namespaceName
         NameAnsible: namespace_name
@@ -5358,6 +5584,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: queueName
         NameAnsible: name
@@ -5388,6 +5615,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: parameters
         NameAnsible: parameters
@@ -5418,6 +5646,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: properties
         NameAnsible: properties
@@ -5448,6 +5677,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: lockDuration
         NameAnsible: lock_duration
@@ -5481,6 +5711,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: maxSizeInMegabytes
         NameAnsible: max_size_in_megabytes
@@ -5513,6 +5744,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: int32
         Flatten: false
       - NameSwagger: requiresDuplicateDetection
         NameAnsible: requires_duplicate_detection
@@ -5543,6 +5775,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: requiresSession
         NameAnsible: requires_session
@@ -5575,6 +5808,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: defaultMessageTimeToLive
         NameAnsible: default_message_time_to_live
@@ -5609,6 +5843,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: deadLetteringOnMessageExpiration
         NameAnsible: dead_lettering_on_message_expiration
@@ -5641,6 +5876,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: duplicateDetectionHistoryTimeWindow
         NameAnsible: duplicate_detection_history_time_window
@@ -5673,6 +5909,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: maxDeliveryCount
         NameAnsible: max_delivery_count
@@ -5705,6 +5942,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: int32
         Flatten: false
       - NameSwagger: status
         NameAnsible: status
@@ -5762,6 +6000,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: enableBatchedOperations
         NameAnsible: enable_batched_operations
@@ -5794,6 +6033,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: autoDeleteOnIdle
         NameAnsible: auto_delete_on_idle
@@ -5826,6 +6066,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: enablePartitioning
         NameAnsible: enable_partitioning
@@ -5858,6 +6099,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: enableExpress
         NameAnsible: enable_express
@@ -5891,6 +6133,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: forwardTo
         NameAnsible: forward_to
@@ -5921,6 +6164,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: forwardDeadLetteredMessagesTo
         NameAnsible: forward_dead_lettered_messages_to
@@ -5951,6 +6195,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_34
         NameSwagger: countDetails
@@ -6000,6 +6245,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: deadLetterMessageCount
             NameAnsible: dead_letter_message_count
@@ -6030,6 +6276,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: scheduledMessageCount
             NameAnsible: scheduled_message_count
@@ -6060,6 +6307,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: transferMessageCount
             NameAnsible: transfer_message_count
@@ -6092,6 +6340,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: transferDeadLetterMessageCount
             NameAnsible: transfer_dead_letter_message_count
@@ -6122,6 +6371,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/countDetails
@@ -6134,6 +6384,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_35
         NameSwagger: createdAt
@@ -6165,6 +6416,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_36
         NameSwagger: updatedAt
@@ -6196,6 +6448,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_37
         NameSwagger: accessedAt
@@ -6229,6 +6482,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_38
         NameSwagger: sizeInBytes
@@ -6260,6 +6514,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: int64
         Flatten: false
       - &ref_39
         NameSwagger: messageCount
@@ -6291,6 +6546,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: int64
         Flatten: false
       - &ref_31
         NameSwagger: id
@@ -6322,6 +6578,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_32
         NameSwagger: name
@@ -6353,6 +6610,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_33
         NameSwagger: type
@@ -6384,6 +6642,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
     Methods:
       - Name: CreateOrUpdate
@@ -6540,6 +6799,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: maxSizeInMegabytes
             NameAnsible: max_size_in_megabytes
@@ -6572,6 +6832,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int32
             Flatten: false
           - NameSwagger: requiresDuplicateDetection
             NameAnsible: requires_duplicate_detection
@@ -6602,6 +6863,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: requiresSession
             NameAnsible: requires_session
@@ -6634,6 +6896,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: defaultMessageTimeToLive
             NameAnsible: default_message_time_to_live
@@ -6668,6 +6931,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: deadLetteringOnMessageExpiration
             NameAnsible: dead_lettering_on_message_expiration
@@ -6700,6 +6964,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: duplicateDetectionHistoryTimeWindow
             NameAnsible: duplicate_detection_history_time_window
@@ -6732,6 +6997,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: maxDeliveryCount
             NameAnsible: max_delivery_count
@@ -6764,6 +7030,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int32
             Flatten: false
           - NameSwagger: status
             NameAnsible: status
@@ -6823,6 +7090,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: enableBatchedOperations
             NameAnsible: enable_batched_operations
@@ -6855,6 +7123,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: autoDeleteOnIdle
             NameAnsible: auto_delete_on_idle
@@ -6887,6 +7156,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: enablePartitioning
             NameAnsible: enable_partitioning
@@ -6919,6 +7189,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: enableExpress
             NameAnsible: enable_express
@@ -6952,6 +7223,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: forwardTo
             NameAnsible: forward_to
@@ -6982,6 +7254,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: forwardDeadLetteredMessagesTo
             NameAnsible: forward_dead_lettered_messages_to
@@ -7012,6 +7285,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties
@@ -7024,6 +7298,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     ModuleOperationNameUpper: Queues
     ModuleOperationName: queues
@@ -7090,8 +7365,10 @@ Modules:
             swaggerName: queueName
         References:
           - servicebus_namespaces_put
-        OperationId: '2490'
-        MethodId: '2533'
+        OperationId: '2534'
+        MethodId: '2577'
+        OperationName: Queues
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             namespaceName: sdk-Namespace-183
@@ -7120,8 +7397,10 @@ Modules:
             value: myQueue
             swaggerName: queueName
         References: []
-        OperationId: '2490'
-        MethodId: '2573'
+        OperationId: '2534'
+        MethodId: '2617'
+        OperationName: Queues
+        MethodName: Delete
   - ModuleName: azure_rm_servicebusqueue_info
     Options:
       - NameSwagger: resourceGroupName
@@ -7153,6 +7432,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: namespaceName
         NameAnsible: namespace_name
@@ -7183,6 +7463,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: queueName
         NameAnsible: queue_name
@@ -7213,6 +7494,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: authorizationRuleName
         NameAnsible: name
@@ -7243,6 +7525,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_40
         NameSwagger: id
@@ -7274,6 +7557,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_41
         NameSwagger: name
@@ -7305,6 +7589,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_42
         NameSwagger: type
@@ -7336,6 +7621,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_43
         NameSwagger: properties
@@ -7367,6 +7653,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: countDetails
         NameAnsible: count_details
@@ -7415,6 +7702,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: deadLetterMessageCount
             NameAnsible: dead_letter_message_count
@@ -7445,6 +7733,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: scheduledMessageCount
             NameAnsible: scheduled_message_count
@@ -7475,6 +7764,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: transferMessageCount
             NameAnsible: transfer_message_count
@@ -7507,6 +7797,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: transferDeadLetterMessageCount
             NameAnsible: transfer_dead_letter_message_count
@@ -7537,6 +7828,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/countDetails
@@ -7549,6 +7841,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: createdAt
         NameAnsible: created_at
@@ -7579,6 +7872,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: updatedAt
         NameAnsible: updated_at
@@ -7609,6 +7903,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: accessedAt
         NameAnsible: accessed_at
@@ -7641,6 +7936,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: sizeInBytes
         NameAnsible: size_in_bytes
@@ -7671,6 +7967,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: int64
         Flatten: false
       - NameSwagger: messageCount
         NameAnsible: message_count
@@ -7701,6 +7998,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: int64
         Flatten: false
       - NameSwagger: lockDuration
         NameAnsible: lock_duration
@@ -7734,6 +8032,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: maxSizeInMegabytes
         NameAnsible: max_size_in_megabytes
@@ -7766,6 +8065,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: int32
         Flatten: false
       - NameSwagger: requiresDuplicateDetection
         NameAnsible: requires_duplicate_detection
@@ -7796,6 +8096,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: requiresSession
         NameAnsible: requires_session
@@ -7828,6 +8129,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: defaultMessageTimeToLive
         NameAnsible: default_message_time_to_live
@@ -7862,6 +8164,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: deadLetteringOnMessageExpiration
         NameAnsible: dead_lettering_on_message_expiration
@@ -7894,6 +8197,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: duplicateDetectionHistoryTimeWindow
         NameAnsible: duplicate_detection_history_time_window
@@ -7926,6 +8230,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: maxDeliveryCount
         NameAnsible: max_delivery_count
@@ -7958,6 +8263,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: int32
         Flatten: false
       - NameSwagger: status
         NameAnsible: status
@@ -8015,6 +8321,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: enableBatchedOperations
         NameAnsible: enable_batched_operations
@@ -8047,6 +8354,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: autoDeleteOnIdle
         NameAnsible: auto_delete_on_idle
@@ -8079,6 +8387,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: enablePartitioning
         NameAnsible: enable_partitioning
@@ -8111,6 +8420,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: enableExpress
         NameAnsible: enable_express
@@ -8144,6 +8454,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: forwardTo
         NameAnsible: forward_to
@@ -8174,6 +8485,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: forwardDeadLetteredMessagesTo
         NameAnsible: forward_dead_lettered_messages_to
@@ -8204,6 +8516,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
     Methods:
       - Name: ListByNamespace
@@ -8331,8 +8644,10 @@ Modules:
             value: my
             swaggerName: namespaceName
         References: []
-        OperationId: '2490'
-        MethodId: '2491'
+        OperationId: '2534'
+        MethodId: '2535'
+        OperationName: Queues
+        MethodName: ListByNamespace
       - Example:
           parameters:
             namespaceName: sdk-Namespace-3174
@@ -8384,8 +8699,10 @@ Modules:
             value: myQueue
             swaggerName: queueName
         References: []
-        OperationId: '2490'
-        MethodId: '2610'
+        OperationId: '2534'
+        MethodId: '2654'
+        OperationName: Queues
+        MethodName: Get
       - Example:
           parameters:
             resourceGroupName: ArunMonocle
@@ -8427,8 +8744,10 @@ Modules:
             value: myQueue
             swaggerName: queueName
         References: []
-        OperationId: '2490'
-        MethodId: '2646'
+        OperationId: '2534'
+        MethodId: '2690'
+        OperationName: Queues
+        MethodName: ListAuthorizationRules
       - Example:
           parameters:
             resourceGroupName: ArunMonocle
@@ -8473,8 +8792,10 @@ Modules:
             value: myAuthorizationRule
             swaggerName: authorizationRuleName
         References: []
-        OperationId: '2490'
-        MethodId: '2771'
+        OperationId: '2534'
+        MethodId: '2815'
+        OperationName: Queues
+        MethodName: GetAuthorizationRule
   - ModuleName: azure_rm_servicebustopic
     Options:
       - NameSwagger: resourceGroupName
@@ -8506,6 +8827,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: namespaceName
         NameAnsible: namespace_name
@@ -8536,6 +8858,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: topicName
         NameAnsible: name
@@ -8566,6 +8889,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: parameters
         NameAnsible: parameters
@@ -8596,6 +8920,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: properties
         NameAnsible: properties
@@ -8626,6 +8951,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: defaultMessageTimeToLive
         NameAnsible: default_message_time_to_live
@@ -8660,6 +8986,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: maxSizeInMegabytes
         NameAnsible: max_size_in_megabytes
@@ -8692,6 +9019,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: int32
         Flatten: false
       - NameSwagger: requiresDuplicateDetection
         NameAnsible: requires_duplicate_detection
@@ -8722,6 +9050,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: duplicateDetectionHistoryTimeWindow
         NameAnsible: duplicate_detection_history_time_window
@@ -8754,6 +9083,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: enableBatchedOperations
         NameAnsible: enable_batched_operations
@@ -8786,6 +9116,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: status
         NameAnsible: status
@@ -8843,6 +9174,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: supportOrdering
         NameAnsible: support_ordering
@@ -8873,6 +9205,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: autoDeleteOnIdle
         NameAnsible: auto_delete_on_idle
@@ -8905,6 +9238,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: enablePartitioning
         NameAnsible: enable_partitioning
@@ -8937,6 +9271,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: enableExpress
         NameAnsible: enable_express
@@ -8970,6 +9305,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_47
         NameSwagger: sizeInBytes
@@ -9001,6 +9337,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: int64
         Flatten: false
       - &ref_48
         NameSwagger: createdAt
@@ -9032,6 +9369,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_49
         NameSwagger: updatedAt
@@ -9063,6 +9401,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_50
         NameSwagger: accessedAt
@@ -9096,6 +9435,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_51
         NameSwagger: subscriptionCount
@@ -9127,6 +9467,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: int32
         Flatten: false
       - &ref_52
         NameSwagger: countDetails
@@ -9176,6 +9517,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: deadLetterMessageCount
             NameAnsible: dead_letter_message_count
@@ -9206,6 +9548,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: scheduledMessageCount
             NameAnsible: scheduled_message_count
@@ -9236,6 +9579,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: transferMessageCount
             NameAnsible: transfer_message_count
@@ -9268,6 +9612,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: transferDeadLetterMessageCount
             NameAnsible: transfer_dead_letter_message_count
@@ -9298,6 +9643,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/countDetails
@@ -9310,6 +9656,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_44
         NameSwagger: id
@@ -9341,6 +9688,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_45
         NameSwagger: name
@@ -9372,6 +9720,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_46
         NameSwagger: type
@@ -9403,6 +9752,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
     Methods:
       - Name: CreateOrUpdate
@@ -9559,6 +9909,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: maxSizeInMegabytes
             NameAnsible: max_size_in_megabytes
@@ -9591,6 +9942,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int32
             Flatten: false
           - NameSwagger: requiresDuplicateDetection
             NameAnsible: requires_duplicate_detection
@@ -9621,6 +9973,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: duplicateDetectionHistoryTimeWindow
             NameAnsible: duplicate_detection_history_time_window
@@ -9653,6 +10006,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: enableBatchedOperations
             NameAnsible: enable_batched_operations
@@ -9685,6 +10039,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: status
             NameAnsible: status
@@ -9744,6 +10099,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: supportOrdering
             NameAnsible: support_ordering
@@ -9774,6 +10130,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: autoDeleteOnIdle
             NameAnsible: auto_delete_on_idle
@@ -9806,6 +10163,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: enablePartitioning
             NameAnsible: enable_partitioning
@@ -9838,6 +10196,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: enableExpress
             NameAnsible: enable_express
@@ -9871,6 +10230,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties
@@ -9883,6 +10243,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     ModuleOperationNameUpper: Topics
     ModuleOperationName: topics
@@ -9948,8 +10309,10 @@ Modules:
             swaggerName: topicName
         References:
           - servicebus_namespaces_put
-        OperationId: '2903'
-        MethodId: '2946'
+        OperationId: '2947'
+        MethodId: '2990'
+        OperationName: Topics
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             namespaceName: sdk-Namespace-1617
@@ -9978,8 +10341,10 @@ Modules:
             value: myTopic
             swaggerName: topicName
         References: []
-        OperationId: '2903'
-        MethodId: '2986'
+        OperationId: '2947'
+        MethodId: '3030'
+        OperationName: Topics
+        MethodName: Delete
   - ModuleName: azure_rm_servicebustopic_info
     Options:
       - NameSwagger: resourceGroupName
@@ -10011,6 +10376,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: namespaceName
         NameAnsible: namespace_name
@@ -10041,6 +10407,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: topicName
         NameAnsible: topic_name
@@ -10071,6 +10438,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: authorizationRuleName
         NameAnsible: name
@@ -10101,6 +10469,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_53
         NameSwagger: id
@@ -10132,6 +10501,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_54
         NameSwagger: name
@@ -10163,6 +10533,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_55
         NameSwagger: type
@@ -10194,6 +10565,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_56
         NameSwagger: properties
@@ -10225,6 +10597,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: sizeInBytes
         NameAnsible: size_in_bytes
@@ -10255,6 +10628,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: int64
         Flatten: false
       - NameSwagger: createdAt
         NameAnsible: created_at
@@ -10285,6 +10659,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: updatedAt
         NameAnsible: updated_at
@@ -10315,6 +10690,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: accessedAt
         NameAnsible: accessed_at
@@ -10347,6 +10723,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: subscriptionCount
         NameAnsible: subscription_count
@@ -10377,6 +10754,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: int32
         Flatten: false
       - NameSwagger: countDetails
         NameAnsible: count_details
@@ -10425,6 +10803,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: deadLetterMessageCount
             NameAnsible: dead_letter_message_count
@@ -10455,6 +10834,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: scheduledMessageCount
             NameAnsible: scheduled_message_count
@@ -10485,6 +10865,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: transferMessageCount
             NameAnsible: transfer_message_count
@@ -10517,6 +10898,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: transferDeadLetterMessageCount
             NameAnsible: transfer_dead_letter_message_count
@@ -10547,6 +10929,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/countDetails
@@ -10559,6 +10942,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: defaultMessageTimeToLive
         NameAnsible: default_message_time_to_live
@@ -10593,6 +10977,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: maxSizeInMegabytes
         NameAnsible: max_size_in_megabytes
@@ -10625,6 +11010,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: int32
         Flatten: false
       - NameSwagger: requiresDuplicateDetection
         NameAnsible: requires_duplicate_detection
@@ -10655,6 +11041,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: duplicateDetectionHistoryTimeWindow
         NameAnsible: duplicate_detection_history_time_window
@@ -10687,6 +11074,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: enableBatchedOperations
         NameAnsible: enable_batched_operations
@@ -10719,6 +11107,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: status
         NameAnsible: status
@@ -10776,6 +11165,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: supportOrdering
         NameAnsible: support_ordering
@@ -10806,6 +11196,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: autoDeleteOnIdle
         NameAnsible: auto_delete_on_idle
@@ -10838,6 +11229,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: enablePartitioning
         NameAnsible: enable_partitioning
@@ -10870,6 +11262,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: enableExpress
         NameAnsible: enable_express
@@ -10903,6 +11296,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
     Methods:
       - Name: ListByNamespace
@@ -11029,8 +11423,10 @@ Modules:
             value: my
             swaggerName: namespaceName
         References: []
-        OperationId: '2903'
-        MethodId: '2904'
+        OperationId: '2947'
+        MethodId: '2948'
+        OperationName: Topics
+        MethodName: ListByNamespace
       - Example:
           parameters:
             namespaceName: sdk-Namespace-1617
@@ -11081,8 +11477,10 @@ Modules:
             value: myTopic
             swaggerName: topicName
         References: []
-        OperationId: '2903'
-        MethodId: '3023'
+        OperationId: '2947'
+        MethodId: '3067'
+        OperationName: Topics
+        MethodName: Get
       - Example:
           parameters:
             resourceGroupName: ArunMonocle
@@ -11124,8 +11522,10 @@ Modules:
             value: myTopic
             swaggerName: topicName
         References: []
-        OperationId: '2903'
-        MethodId: '3059'
+        OperationId: '2947'
+        MethodId: '3103'
+        OperationName: Topics
+        MethodName: ListAuthorizationRules
       - Example:
           parameters:
             resourceGroupName: ArunMonocle
@@ -11170,8 +11570,10 @@ Modules:
             value: myAuthorizationRule
             swaggerName: authorizationRuleName
         References: []
-        OperationId: '2903'
-        MethodId: '3141'
+        OperationId: '2947'
+        MethodId: '3185'
+        OperationName: Topics
+        MethodName: GetAuthorizationRule
   - ModuleName: azure_rm_servicebussubscription
     Options:
       - NameSwagger: resourceGroupName
@@ -11203,6 +11605,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: namespaceName
         NameAnsible: namespace_name
@@ -11233,6 +11636,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: topicName
         NameAnsible: topic_name
@@ -11263,6 +11667,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: subscriptionName
         NameAnsible: name
@@ -11293,6 +11698,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: parameters
         NameAnsible: parameters
@@ -11323,6 +11729,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: properties
         NameAnsible: properties
@@ -11353,6 +11760,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: lockDuration
         NameAnsible: lock_duration
@@ -11385,6 +11793,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: requiresSession
         NameAnsible: requires_session
@@ -11415,6 +11824,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: defaultMessageTimeToLive
         NameAnsible: default_message_time_to_live
@@ -11449,6 +11859,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: deadLetteringOnFilterEvaluationExceptions
         NameAnsible: dead_lettering_on_filter_evaluation_exceptions
@@ -11481,6 +11892,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: deadLetteringOnMessageExpiration
         NameAnsible: dead_lettering_on_message_expiration
@@ -11513,6 +11925,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: duplicateDetectionHistoryTimeWindow
         NameAnsible: duplicate_detection_history_time_window
@@ -11545,6 +11958,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: maxDeliveryCount
         NameAnsible: max_delivery_count
@@ -11575,6 +11989,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: int32
         Flatten: false
       - NameSwagger: status
         NameAnsible: status
@@ -11632,6 +12047,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: enableBatchedOperations
         NameAnsible: enable_batched_operations
@@ -11664,6 +12080,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: autoDeleteOnIdle
         NameAnsible: auto_delete_on_idle
@@ -11696,6 +12113,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: forwardTo
         NameAnsible: forward_to
@@ -11726,6 +12144,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: forwardDeadLetteredMessagesTo
         NameAnsible: forward_dead_lettered_messages_to
@@ -11756,6 +12175,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_60
         NameSwagger: messageCount
@@ -11787,6 +12207,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: int64
         Flatten: false
       - &ref_61
         NameSwagger: createdAt
@@ -11818,6 +12239,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_62
         NameSwagger: accessedAt
@@ -11849,6 +12271,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_63
         NameSwagger: updatedAt
@@ -11880,6 +12303,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_64
         NameSwagger: countDetails
@@ -11929,6 +12353,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: deadLetterMessageCount
             NameAnsible: dead_letter_message_count
@@ -11959,6 +12384,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: scheduledMessageCount
             NameAnsible: scheduled_message_count
@@ -11989,6 +12415,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: transferMessageCount
             NameAnsible: transfer_message_count
@@ -12021,6 +12448,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: transferDeadLetterMessageCount
             NameAnsible: transfer_dead_letter_message_count
@@ -12051,6 +12479,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/countDetails
@@ -12063,6 +12492,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_57
         NameSwagger: id
@@ -12094,6 +12524,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_58
         NameSwagger: name
@@ -12125,6 +12556,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_59
         NameSwagger: type
@@ -12156,6 +12588,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
     Methods:
       - Name: CreateOrUpdate
@@ -12284,6 +12717,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: requiresSession
             NameAnsible: requires_session
@@ -12316,6 +12750,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: defaultMessageTimeToLive
             NameAnsible: default_message_time_to_live
@@ -12350,6 +12785,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: deadLetteringOnFilterEvaluationExceptions
             NameAnsible: dead_lettering_on_filter_evaluation_exceptions
@@ -12382,6 +12818,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: deadLetteringOnMessageExpiration
             NameAnsible: dead_lettering_on_message_expiration
@@ -12414,6 +12851,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: duplicateDetectionHistoryTimeWindow
             NameAnsible: duplicate_detection_history_time_window
@@ -12446,6 +12884,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: maxDeliveryCount
             NameAnsible: max_delivery_count
@@ -12476,6 +12915,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int32
             Flatten: false
           - NameSwagger: status
             NameAnsible: status
@@ -12535,6 +12975,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: enableBatchedOperations
             NameAnsible: enable_batched_operations
@@ -12567,6 +13008,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: autoDeleteOnIdle
             NameAnsible: auto_delete_on_idle
@@ -12599,6 +13041,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: forwardTo
             NameAnsible: forward_to
@@ -12629,6 +13072,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: forwardDeadLetteredMessagesTo
             NameAnsible: forward_dead_lettered_messages_to
@@ -12659,6 +13103,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties
@@ -12671,6 +13116,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     ModuleOperationNameUpper: Subscriptions
     ModuleOperationName: subscriptions
@@ -12744,8 +13190,10 @@ Modules:
             swaggerName: topicName
         References:
           - servicebus_namespaces_topics_put
-        OperationId: '3316'
-        MethodId: '3365'
+        OperationId: '3360'
+        MethodId: '3409'
+        OperationName: Subscriptions
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             namespaceName: sdk-Namespace-5882
@@ -12775,8 +13223,10 @@ Modules:
             value: myTopic
             swaggerName: topicName
         References: []
-        OperationId: '3316'
-        MethodId: '3411'
+        OperationId: '3360'
+        MethodId: '3455'
+        OperationName: Subscriptions
+        MethodName: Delete
   - ModuleName: azure_rm_servicebussubscription_info
     Options:
       - NameSwagger: resourceGroupName
@@ -12808,6 +13258,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: namespaceName
         NameAnsible: namespace_name
@@ -12838,6 +13289,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: topicName
         NameAnsible: topic_name
@@ -12868,6 +13320,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: subscriptionName
         NameAnsible: name
@@ -12898,6 +13351,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_65
         NameSwagger: id
@@ -12929,6 +13383,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_66
         NameSwagger: name
@@ -12960,6 +13415,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_67
         NameSwagger: type
@@ -12991,6 +13447,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_68
         NameSwagger: properties
@@ -13022,6 +13479,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: messageCount
         NameAnsible: message_count
@@ -13052,6 +13510,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: int64
         Flatten: false
       - NameSwagger: createdAt
         NameAnsible: created_at
@@ -13082,6 +13541,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: accessedAt
         NameAnsible: accessed_at
@@ -13112,6 +13572,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: updatedAt
         NameAnsible: updated_at
@@ -13142,6 +13603,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: countDetails
         NameAnsible: count_details
@@ -13190,6 +13652,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: deadLetterMessageCount
             NameAnsible: dead_letter_message_count
@@ -13220,6 +13683,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: scheduledMessageCount
             NameAnsible: scheduled_message_count
@@ -13250,6 +13714,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: transferMessageCount
             NameAnsible: transfer_message_count
@@ -13282,6 +13747,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: transferDeadLetterMessageCount
             NameAnsible: transfer_dead_letter_message_count
@@ -13312,6 +13778,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/countDetails
@@ -13324,6 +13791,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: lockDuration
         NameAnsible: lock_duration
@@ -13356,6 +13824,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: requiresSession
         NameAnsible: requires_session
@@ -13386,6 +13855,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: defaultMessageTimeToLive
         NameAnsible: default_message_time_to_live
@@ -13420,6 +13890,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: deadLetteringOnFilterEvaluationExceptions
         NameAnsible: dead_lettering_on_filter_evaluation_exceptions
@@ -13452,6 +13923,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: deadLetteringOnMessageExpiration
         NameAnsible: dead_lettering_on_message_expiration
@@ -13484,6 +13956,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: duplicateDetectionHistoryTimeWindow
         NameAnsible: duplicate_detection_history_time_window
@@ -13516,6 +13989,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: maxDeliveryCount
         NameAnsible: max_delivery_count
@@ -13546,6 +14020,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: int32
         Flatten: false
       - NameSwagger: status
         NameAnsible: status
@@ -13603,6 +14078,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: enableBatchedOperations
         NameAnsible: enable_batched_operations
@@ -13635,6 +14111,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: autoDeleteOnIdle
         NameAnsible: auto_delete_on_idle
@@ -13667,6 +14144,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: forwardTo
         NameAnsible: forward_to
@@ -13697,6 +14175,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: forwardDeadLetteredMessagesTo
         NameAnsible: forward_dead_lettered_messages_to
@@ -13727,6 +14206,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
     Methods:
       - Name: ListByTopic
@@ -13835,8 +14315,10 @@ Modules:
             value: myTopic
             swaggerName: topicName
         References: []
-        OperationId: '3316'
-        MethodId: '3317'
+        OperationId: '3360'
+        MethodId: '3361'
+        OperationName: Subscriptions
+        MethodName: ListByTopic
       - Example:
           parameters:
             namespaceName: sdk-Namespace-1349
@@ -13895,8 +14377,10 @@ Modules:
             value: myTopic
             swaggerName: topicName
         References: []
-        OperationId: '3316'
-        MethodId: '3454'
+        OperationId: '3360'
+        MethodId: '3498'
+        OperationName: Subscriptions
+        MethodName: Get
   - ModuleName: azure_rm_servicebusrule
     Options:
       - NameSwagger: resourceGroupName
@@ -13928,6 +14412,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: namespaceName
         NameAnsible: namespace_name
@@ -13958,6 +14443,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: topicName
         NameAnsible: topic_name
@@ -13988,6 +14474,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: subscriptionName
         NameAnsible: subscription_name
@@ -14018,6 +14505,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: ruleName
         NameAnsible: name
@@ -14048,6 +14536,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: parameters
         NameAnsible: parameters
@@ -14078,6 +14567,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: properties
         NameAnsible: properties
@@ -14108,6 +14598,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: action
         NameAnsible: action
@@ -14158,6 +14649,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: compatibilityLevel
             NameAnsible: compatibility_level
@@ -14190,6 +14682,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: int32
             Flatten: false
           - NameSwagger: requiresPreprocessing
             NameAnsible: requires_preprocessing
@@ -14222,6 +14715,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/action
@@ -14234,6 +14728,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: filterType
         NameAnsible: filter_type
@@ -14270,6 +14765,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: sqlFilter
         NameAnsible: sql_filter
@@ -14318,6 +14814,40 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
+            Flatten: false
+          - NameSwagger: compatibilityLevel
+            NameAnsible: compatibility_level
+            NamePythonSdk: compatibility_level
+            NameGoSdk: CompatibilityLevel
+            NameTerraform: CompatibilityLevel
+            IdPortion: null
+            Type: number
+            TypeName: Int
+            TypeNameGo: Int
+            IsList: false
+            Required: false
+            Documentation: >-
+              This property is reserved for future use. An integer value showing
+              the compatibility level, currently hard-coded to 20.
+            DocumentationMarkKeywords: true
+            DefaultValue: null
+            IncludeInDocumentation: true
+            IncludeInArgSpec: true
+            NoLog: false
+            SubOptions: []
+            EnumValues: []
+            PathSwagger: /properties/sqlFilter/compatibilityLevel
+            PathPython: /sqlFilter/compatibilityLevel
+            PathGo: /properties/sqlFilter/compatibilityLevel
+            DispositionSdk: '*'
+            DispositionRest: '*'
+            Comparison: ''
+            Updatable: true
+            ExampleValue: null
+            Hidden: false
+            IncludeInResponse: true
+            format: int32
             Flatten: false
           - NameSwagger: requiresPreprocessing
             NameAnsible: requires_preprocessing
@@ -14350,39 +14880,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
-            Flatten: false
-          - &ref_72
-            NameSwagger: compatibilityLevel
-            NameAnsible: compatibility_level
-            NamePythonSdk: compatibility_level
-            NameGoSdk: CompatibilityLevel
-            NameTerraform: CompatibilityLevel
-            IdPortion: null
-            Type: number
-            TypeName: Int
-            TypeNameGo: Int
-            IsList: false
-            Required: false
-            Documentation: >-
-              This property is reserved for future use. An integer value showing
-              the compatibility level, currently hard-coded to 20.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: false
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/sqlFilter/compatibilityLevel
-            PathPython: /sqlFilter/compatibilityLevel
-            PathGo: /properties/sqlFilter/compatibilityLevel
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: true
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/sqlFilter
@@ -14395,6 +14893,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: correlationFilter
         NameAnsible: correlation_filter
@@ -14447,6 +14946,7 @@ Modules:
             ExampleValue: null
             Hidden: true
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: correlationId
             NameAnsible: correlation_id
@@ -14477,6 +14977,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: messageId
             NameAnsible: message_id
@@ -14507,6 +15008,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: to
             NameAnsible: to
@@ -14537,6 +15039,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: replyTo
             NameAnsible: reply_to
@@ -14567,6 +15070,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: label
             NameAnsible: label
@@ -14597,6 +15101,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: sessionId
             NameAnsible: session_id
@@ -14627,6 +15132,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: replyToSessionId
             NameAnsible: reply_to_session_id
@@ -14657,6 +15163,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: contentType
             NameAnsible: content_type
@@ -14687,6 +15194,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: requiresPreprocessing
             NameAnsible: requires_preprocessing
@@ -14719,6 +15227,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/correlationFilter
@@ -14731,6 +15240,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_69
         NameSwagger: id
@@ -14762,6 +15272,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_70
         NameSwagger: name
@@ -14793,6 +15304,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_71
         NameSwagger: type
@@ -14824,6 +15336,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
     Methods:
       - Name: CreateOrUpdate
@@ -14977,6 +15490,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: compatibilityLevel
                 NameAnsible: compatibility_level
@@ -15009,6 +15523,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
               - NameSwagger: requiresPreprocessing
                 NameAnsible: requires_preprocessing
@@ -15041,6 +15556,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/action
@@ -15053,6 +15569,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: filterType
             NameAnsible: filter_type
@@ -15089,6 +15606,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: sqlFilter
             NameAnsible: sql_filter
@@ -15137,8 +15655,41 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
-              - *ref_72
+              - NameSwagger: compatibilityLevel
+                NameAnsible: compatibility_level
+                NamePythonSdk: compatibility_level
+                NameGoSdk: CompatibilityLevel
+                NameTerraform: CompatibilityLevel
+                IdPortion: null
+                Type: number
+                TypeName: Int
+                TypeNameGo: Int
+                IsList: false
+                Required: false
+                Documentation: >-
+                  This property is reserved for future use. An integer value
+                  showing the compatibility level, currently hard-coded to 20.
+                DocumentationMarkKeywords: true
+                DefaultValue: null
+                IncludeInDocumentation: true
+                IncludeInArgSpec: true
+                NoLog: false
+                SubOptions: []
+                EnumValues: []
+                PathSwagger: /properties/sqlFilter/compatibilityLevel
+                PathPython: /sqlFilter/compatibilityLevel
+                PathGo: /properties/sqlFilter/compatibilityLevel
+                DispositionSdk: '*'
+                DispositionRest: '*'
+                Comparison: ''
+                Updatable: true
+                ExampleValue: null
+                Hidden: false
+                IncludeInResponse: false
+                format: int32
+                Flatten: false
               - NameSwagger: requiresPreprocessing
                 NameAnsible: requires_preprocessing
                 NamePythonSdk: requires_preprocessing
@@ -15170,6 +15721,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/sqlFilter
@@ -15182,6 +15734,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: correlationFilter
             NameAnsible: correlation_filter
@@ -15234,6 +15787,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: correlationId
                 NameAnsible: correlation_id
@@ -15264,6 +15818,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: messageId
                 NameAnsible: message_id
@@ -15294,6 +15849,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: to
                 NameAnsible: to
@@ -15324,6 +15880,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: replyTo
                 NameAnsible: reply_to
@@ -15354,6 +15911,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: label
                 NameAnsible: label
@@ -15384,6 +15942,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: sessionId
                 NameAnsible: session_id
@@ -15414,6 +15973,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: replyToSessionId
                 NameAnsible: reply_to_session_id
@@ -15444,6 +16004,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: contentType
                 NameAnsible: content_type
@@ -15474,6 +16035,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: requiresPreprocessing
                 NameAnsible: requires_preprocessing
@@ -15506,6 +16068,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/correlationFilter
@@ -15518,6 +16081,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties
@@ -15530,6 +16094,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     ModuleOperationNameUpper: Rules
     ModuleOperationName: rules
@@ -15590,8 +16155,10 @@ Modules:
             swaggerName: ruleName
         References:
           - servicebus_namespaces_topics_put
-        OperationId: '3498'
-        MethodId: '3553'
+        OperationId: '3542'
+        MethodId: '3597'
+        OperationName: Rules
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             namespaceName: sdk-Namespace-1319
@@ -15645,8 +16212,10 @@ Modules:
             swaggerName: ruleName
         References:
           - servicebus_namespaces_topics_rules_put
-        OperationId: '3498'
-        MethodId: '3553'
+        OperationId: '3542'
+        MethodId: '3597'
+        OperationName: Rules
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             namespaceName: sdk-Namespace-1319
@@ -15701,8 +16270,10 @@ Modules:
             swaggerName: ruleName
         References:
           - servicebus_namespaces_topics_rules_put
-        OperationId: '3498'
-        MethodId: '3553'
+        OperationId: '3542'
+        MethodId: '3597'
+        OperationName: Rules
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             namespaceName: sdk-Namespace-1319
@@ -15737,8 +16308,10 @@ Modules:
             value: myRule
             swaggerName: ruleName
         References: []
-        OperationId: '3498'
-        MethodId: '3605'
+        OperationId: '3542'
+        MethodId: '3649'
+        OperationName: Rules
+        MethodName: Delete
   - ModuleName: azure_rm_servicebusrule_info
     Options:
       - NameSwagger: resourceGroupName
@@ -15770,6 +16343,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: namespaceName
         NameAnsible: namespace_name
@@ -15800,6 +16374,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: topicName
         NameAnsible: topic_name
@@ -15830,6 +16405,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: subscriptionName
         NameAnsible: subscription_name
@@ -15860,6 +16436,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: ruleName
         NameAnsible: name
@@ -15890,8 +16467,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
-      - &ref_73
+      - &ref_72
         NameSwagger: id
         NameAnsible: id
         NamePythonSdk: id
@@ -15921,8 +16499,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
-      - &ref_74
+      - &ref_73
         NameSwagger: name
         NameAnsible: name
         NamePythonSdk: name
@@ -15952,8 +16531,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
-      - &ref_75
+      - &ref_74
         NameSwagger: type
         NameAnsible: type
         NamePythonSdk: type
@@ -15983,8 +16563,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
-      - &ref_76
+      - &ref_75
         NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -16014,6 +16595,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: action
         NameAnsible: action
@@ -16064,6 +16646,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: compatibilityLevel
             NameAnsible: compatibility_level
@@ -16096,6 +16679,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int32
             Flatten: false
           - NameSwagger: requiresPreprocessing
             NameAnsible: requires_preprocessing
@@ -16128,6 +16712,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/action
@@ -16140,6 +16725,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: filterType
         NameAnsible: filter_type
@@ -16176,6 +16762,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: sqlFilter
         NameAnsible: sql_filter
@@ -16224,6 +16811,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: compatibilityLevel
             NameAnsible: compatibility_level
@@ -16256,6 +16844,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int32
             Flatten: false
           - NameSwagger: requiresPreprocessing
             NameAnsible: requires_preprocessing
@@ -16288,6 +16877,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/sqlFilter
@@ -16300,6 +16890,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: correlationFilter
         NameAnsible: correlation_filter
@@ -16352,6 +16943,7 @@ Modules:
             ExampleValue: null
             Hidden: true
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: correlationId
             NameAnsible: correlation_id
@@ -16382,6 +16974,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: messageId
             NameAnsible: message_id
@@ -16412,6 +17005,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: to
             NameAnsible: to
@@ -16442,6 +17036,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: replyTo
             NameAnsible: reply_to
@@ -16472,6 +17067,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: label
             NameAnsible: label
@@ -16502,6 +17098,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: sessionId
             NameAnsible: session_id
@@ -16532,6 +17129,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: replyToSessionId
             NameAnsible: reply_to_session_id
@@ -16562,6 +17160,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: contentType
             NameAnsible: content_type
@@ -16592,6 +17191,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: requiresPreprocessing
             NameAnsible: requires_preprocessing
@@ -16624,6 +17224,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/correlationFilter
@@ -16636,6 +17237,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     Methods:
       - Name: ListBySubscriptions
@@ -16676,10 +17278,10 @@ Modules:
         HttpMethod: get
         IsAsync: false
     ResponseFields:
+      - *ref_72
       - *ref_73
       - *ref_74
       - *ref_75
-      - *ref_76
     ModuleOperationNameUpper: Rules
     ModuleOperationName: rules
     ObjectName: Rule
@@ -16734,8 +17336,10 @@ Modules:
             value: myTopic
             swaggerName: topicName
         References: []
-        OperationId: '3498'
-        MethodId: '3499'
+        OperationId: '3542'
+        MethodId: '3543'
+        OperationName: Rules
+        MethodName: ListBySubscriptions
       - Example:
           parameters:
             namespaceName: sdk-Namespace-1319
@@ -16783,8 +17387,10 @@ Modules:
             value: myRule
             swaggerName: ruleName
         References: []
-        OperationId: '3498'
-        MethodId: '3654'
+        OperationId: '3542'
+        MethodId: '3698'
+        OperationName: Rules
+        MethodName: Get
   - ModuleName: azure_rm_servicebusregion_info
     Options:
       - NameSwagger: sku
@@ -16816,8 +17422,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
-      - &ref_77
+      - &ref_76
         NameSwagger: value
         NameAnsible: value
         NamePythonSdk: value
@@ -16865,6 +17472,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: name
             NameAnsible: name
@@ -16895,6 +17503,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: type
             NameAnsible: type
@@ -16925,6 +17534,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: location
             NameAnsible: location
@@ -16955,6 +17565,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: tags
             NameAnsible: tags
@@ -16989,6 +17600,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: properties
             NameAnsible: properties
@@ -17019,6 +17631,7 @@ Modules:
             ExampleValue: null
             Hidden: true
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: code
             NameAnsible: code
@@ -17049,6 +17662,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: fullName
             NameAnsible: full_name
@@ -17079,6 +17693,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /value
@@ -17091,8 +17706,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
-      - &ref_78
+      - &ref_77
         NameSwagger: nextLink
         NameAnsible: next_link
         NamePythonSdk: next_link
@@ -17124,6 +17740,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
     Methods:
       - Name: ListBySku
@@ -17137,8 +17754,8 @@ Modules:
         HttpMethod: get
         IsAsync: false
     ResponseFields:
+      - *ref_76
       - *ref_77
-      - *ref_78
     ModuleOperationNameUpper: Regions
     ModuleOperationName: regions
     ObjectName: Region
@@ -17439,11 +18056,13 @@ Modules:
             value: mySku
             swaggerName: sku
         References: []
-        OperationId: '3704'
-        MethodId: '3705'
+        OperationId: '3748'
+        MethodId: '3749'
+        OperationName: Regions
+        MethodName: ListBySku
   - ModuleName: azure_rm_servicebuspremiummessagingregion_info
     Options:
-      - &ref_79
+      - &ref_78
         NameSwagger: value
         NameAnsible: value
         NamePythonSdk: value
@@ -17491,6 +18110,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: name
             NameAnsible: name
@@ -17521,6 +18141,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: type
             NameAnsible: type
@@ -17551,6 +18172,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: location
             NameAnsible: location
@@ -17581,6 +18203,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: tags
             NameAnsible: tags
@@ -17615,6 +18238,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: properties
             NameAnsible: properties
@@ -17645,6 +18269,7 @@ Modules:
             ExampleValue: null
             Hidden: true
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: code
             NameAnsible: code
@@ -17675,6 +18300,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: fullName
             NameAnsible: full_name
@@ -17705,6 +18331,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /value
@@ -17717,8 +18344,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
-      - &ref_80
+      - &ref_79
         NameSwagger: nextLink
         NameAnsible: next_link
         NamePythonSdk: next_link
@@ -17750,6 +18378,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
     Methods:
       - Name: List
@@ -17761,8 +18390,8 @@ Modules:
         HttpMethod: get
         IsAsync: false
     ResponseFields:
+      - *ref_78
       - *ref_79
-      - *ref_80
     ModuleOperationNameUpper: PremiumMessagingRegions
     ModuleOperationName: premium_messaging_regions
     ObjectName: PremiumMessagingRegion
@@ -18014,8 +18643,10 @@ Modules:
         Filename: servicebus_premiummessagingregions_get
         Variables: []
         References: []
-        OperationId: '3731'
-        MethodId: '3732'
+        OperationId: '3775'
+        MethodId: '3776'
+        OperationName: PremiumMessagingRegions
+        MethodName: List
   - ModuleName: azure_rm_servicebuseventhub_info
     Options:
       - NameSwagger: resourceGroupName
@@ -18047,6 +18678,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: namespaceName
         NameAnsible: name
@@ -18077,8 +18709,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
-      - &ref_81
+      - &ref_80
         NameSwagger: value
         NameAnsible: value
         NamePythonSdk: value
@@ -18126,6 +18759,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: name
             NameAnsible: name
@@ -18156,6 +18790,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: type
             NameAnsible: type
@@ -18186,6 +18821,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: properties
             NameAnsible: properties
@@ -18216,6 +18852,7 @@ Modules:
             ExampleValue: null
             Hidden: true
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: partitionIds
             NameAnsible: partition_ids
@@ -18246,6 +18883,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: createdAt
             NameAnsible: created_at
@@ -18276,6 +18914,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: updatedAt
             NameAnsible: updated_at
@@ -18306,6 +18945,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: messageRetentionInDays
             NameAnsible: message_retention_in_days
@@ -18338,6 +18978,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: partitionCount
             NameAnsible: partition_count
@@ -18370,6 +19011,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
           - NameSwagger: status
             NameAnsible: status
@@ -18427,6 +19069,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: captureDescription
             NameAnsible: capture_description
@@ -18477,6 +19120,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: encoding
                 NameAnsible: encoding
@@ -18515,6 +19159,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: intervalInSeconds
                 NameAnsible: interval_in_seconds
@@ -18548,6 +19193,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
               - NameSwagger: sizeLimitInBytes
                 NameAnsible: size_limit_in_bytes
@@ -18581,6 +19227,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
               - NameSwagger: destination
                 NameAnsible: destination
@@ -18631,6 +19278,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                   - NameSwagger: properties
                     NameAnsible: properties
@@ -18665,6 +19313,7 @@ Modules:
                     ExampleValue: null
                     Hidden: true
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: /value/properties/captureDescription/destination
@@ -18677,6 +19326,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/properties/captureDescription
@@ -18689,6 +19339,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
         EnumValues: []
         PathSwagger: /value
@@ -18701,8 +19352,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
-      - &ref_82
+      - &ref_81
         NameSwagger: nextLink
         NameAnsible: next_link
         NamePythonSdk: next_link
@@ -18734,6 +19386,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
     Methods:
       - Name: ListByNamespace
@@ -18750,8 +19403,8 @@ Modules:
         HttpMethod: get
         IsAsync: false
     ResponseFields:
+      - *ref_80
       - *ref_81
-      - *ref_82
     ModuleOperationNameUpper: EventHubs
     ModuleOperationName: event_hubs
     ObjectName: EventHub
@@ -18821,106 +19474,11 @@ Modules:
             value: my
             swaggerName: namespaceName
         References: []
-        OperationId: '3752'
-        MethodId: '3753'
+        OperationId: '3796'
+        MethodId: '3797'
+        OperationName: EventHubs
+        MethodName: ListByNamespace
 ServiceName: ServiceBusManagementClient
 MgmtClientName: ServiceBusManagementClient
 CliName: servicebus
 Namespace: azure.mgmt.servicebus
-Info:
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION authorizationRuleName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION alias'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION alias'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION alias'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION alias'
-  - '  ** FOUND OPTION authorizationRuleName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION configName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION queueName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION queueName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION queueName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION queueName'
-  - '  ** FOUND OPTION authorizationRuleName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION topicName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION topicName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION topicName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION topicName'
-  - '  ** FOUND OPTION authorizationRuleName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION topicName'
-  - '  ** FOUND OPTION subscriptionName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION topicName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION topicName'
-  - '  ** FOUND OPTION subscriptionName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION topicName'
-  - '  ** FOUND OPTION subscriptionName'
-  - '  ** FOUND OPTION ruleName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION topicName'
-  - '  ** FOUND OPTION subscriptionName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'
-  - '  ** FOUND OPTION topicName'
-  - '  ** FOUND OPTION subscriptionName'
-  - '  ** FOUND OPTION ruleName'
-  - '  ** FOUND OPTION sku'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION namespaceName'

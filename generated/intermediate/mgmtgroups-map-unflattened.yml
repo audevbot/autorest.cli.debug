@@ -30,6 +30,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: createManagementGroupRequest
         NameAnsible: create_management_group_request
@@ -60,6 +61,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: name
         NameAnsible: name
@@ -92,6 +94,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: properties
         NameAnsible: properties
@@ -142,6 +145,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: details
             NameAnsible: details
@@ -211,6 +215,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: ''
                     Flatten: false
                   - &ref_7
                     NameSwagger: name
@@ -242,6 +247,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: ''
                     Flatten: false
                   - &ref_8
                     NameSwagger: displayName
@@ -273,6 +279,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: /properties/details/parent
@@ -285,6 +292,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - &ref_4
                 NameSwagger: version
@@ -316,6 +324,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: int32
                 Flatten: false
               - &ref_5
                 NameSwagger: updatedTime
@@ -347,6 +356,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - &ref_6
                 NameSwagger: updatedBy
@@ -380,6 +390,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/details
@@ -392,6 +403,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - &ref_2
             NameSwagger: tenantId
@@ -425,6 +437,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - &ref_3
             NameSwagger: roles
@@ -456,6 +469,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - &ref_9
             NameSwagger: children
@@ -514,6 +528,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: id
                 NameAnsible: id
@@ -547,6 +562,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: name
                 NameAnsible: name
@@ -577,6 +593,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: displayName
                 NameAnsible: display_name
@@ -607,6 +624,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: roles
                 NameAnsible: roles
@@ -637,6 +655,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: children
                 NameAnsible: children
@@ -694,6 +713,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - NameSwagger: id
                     NameAnsible: id
@@ -727,6 +747,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                   - NameSwagger: name
                     NameAnsible: name
@@ -757,6 +778,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                   - NameSwagger: displayName
                     NameAnsible: display_name
@@ -787,6 +809,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                   - NameSwagger: roles
                     NameAnsible: roles
@@ -819,6 +842,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                   - NameSwagger: children
                     NameAnsible: children
@@ -876,6 +900,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
                       - NameSwagger: id
                         NameAnsible: id
@@ -909,6 +934,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                       - NameSwagger: name
                         NameAnsible: name
@@ -939,6 +965,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                       - NameSwagger: displayName
                         NameAnsible: display_name
@@ -969,6 +996,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                       - NameSwagger: roles
                         NameAnsible: roles
@@ -1001,6 +1029,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                       - NameSwagger: children
                         NameAnsible: children
@@ -1031,6 +1060,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
                     EnumValues: []
                     PathSwagger: /properties/children/children/children
@@ -1043,6 +1073,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: /properties/children/children
@@ -1055,6 +1086,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/children
@@ -1067,6 +1099,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties
@@ -1079,6 +1112,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_0
         NameSwagger: id
@@ -1112,6 +1146,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_1
         NameSwagger: type
@@ -1145,6 +1180,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
     Methods:
       - Name: CreateOrUpdate
@@ -1236,6 +1272,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: properties
         NameAnsible: properties
@@ -1285,6 +1322,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - *ref_3
           - NameSwagger: details
@@ -1358,6 +1396,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                   - *ref_7
                   - *ref_8
@@ -1372,6 +1411,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/details
@@ -1384,6 +1424,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - *ref_9
         EnumValues: []
@@ -1397,6 +1438,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     ModuleOperationNameUpper: ManagementGroups
     ModuleOperationName: management_groups
@@ -1468,6 +1510,8 @@ Modules:
           - resourcegroups_put
         OperationId: '884'
         MethodId: '954'
+        OperationName: ManagementGroups
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             api-version: 2018-03-01-preview
@@ -1512,6 +1556,8 @@ Modules:
           - management_managementgroups_put
         OperationId: '884'
         MethodId: '985'
+        OperationName: ManagementGroups
+        MethodName: Update
       - Example:
           parameters:
             api-version: 2018-03-01-preview
@@ -1539,6 +1585,8 @@ Modules:
         References: []
         OperationId: '884'
         MethodId: '1013'
+        OperationName: ManagementGroups
+        MethodName: Delete
   - ModuleName: azure_rm_managementgroup_info
     Options:
       - NameSwagger: groupId
@@ -1570,6 +1618,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_10
         NameSwagger: id
@@ -1603,6 +1652,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_11
         NameSwagger: type
@@ -1636,6 +1686,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_12
         NameSwagger: name
@@ -1669,6 +1720,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_13
         NameSwagger: properties
@@ -1720,6 +1772,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: displayName
             NameAnsible: display_name
@@ -1750,6 +1803,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: roles
             NameAnsible: roles
@@ -1780,6 +1834,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: details
             NameAnsible: details
@@ -1828,6 +1883,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
               - NameSwagger: updatedTime
                 NameAnsible: updated_time
@@ -1858,6 +1914,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: updatedBy
                 NameAnsible: updated_by
@@ -1890,6 +1947,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: parent
                 NameAnsible: parent
@@ -1941,6 +1999,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                   - NameSwagger: name
                     NameAnsible: name
@@ -1971,6 +2030,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                   - NameSwagger: displayName
                     NameAnsible: display_name
@@ -2001,6 +2061,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: /properties/details/parent
@@ -2013,6 +2074,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/details
@@ -2025,6 +2087,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: children
             NameAnsible: children
@@ -2082,6 +2145,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: id
                 NameAnsible: id
@@ -2115,6 +2179,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: name
                 NameAnsible: name
@@ -2145,6 +2210,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: displayName
                 NameAnsible: display_name
@@ -2175,6 +2241,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: roles
                 NameAnsible: roles
@@ -2205,6 +2272,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: children
                 NameAnsible: children
@@ -2262,6 +2330,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - NameSwagger: id
                     NameAnsible: id
@@ -2295,6 +2364,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                   - NameSwagger: name
                     NameAnsible: name
@@ -2325,6 +2395,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                   - NameSwagger: displayName
                     NameAnsible: display_name
@@ -2355,6 +2426,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                   - NameSwagger: roles
                     NameAnsible: roles
@@ -2387,6 +2459,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                   - NameSwagger: children
                     NameAnsible: children
@@ -2444,6 +2517,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
                       - NameSwagger: id
                         NameAnsible: id
@@ -2477,6 +2551,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                       - NameSwagger: name
                         NameAnsible: name
@@ -2507,6 +2582,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                       - NameSwagger: displayName
                         NameAnsible: display_name
@@ -2537,6 +2613,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                       - NameSwagger: roles
                         NameAnsible: roles
@@ -2569,6 +2646,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                       - NameSwagger: children
                         NameAnsible: children
@@ -2599,6 +2677,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
                     EnumValues: []
                     PathSwagger: /properties/children/children/children
@@ -2611,6 +2690,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: /properties/children/children
@@ -2623,6 +2703,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/children
@@ -2635,6 +2716,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties
@@ -2647,6 +2729,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     Methods:
       - Name: List
@@ -2713,6 +2796,8 @@ Modules:
         References: []
         OperationId: '884'
         MethodId: '885'
+        OperationName: ManagementGroups
+        MethodName: List
       - Example:
           parameters:
             api-version: 2018-03-01-preview
@@ -2750,6 +2835,8 @@ Modules:
         References: []
         OperationId: '884'
         MethodId: '909'
+        OperationName: ManagementGroups
+        MethodName: Get
       - Example:
           parameters:
             api-version: 2018-03-01-preview
@@ -2811,6 +2898,8 @@ Modules:
         References: []
         OperationId: '884'
         MethodId: '909'
+        OperationName: ManagementGroups
+        MethodName: Get
       - Example:
           parameters:
             api-version: 2018-03-01-preview
@@ -2882,6 +2971,8 @@ Modules:
         References: []
         OperationId: '884'
         MethodId: '909'
+        OperationName: ManagementGroups
+        MethodName: Get
   - ModuleName: azure_rm_managementgroupsubscription
     Options:
       - NameSwagger: groupId
@@ -2913,6 +3004,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
     Methods:
       - Name: Create
@@ -2970,6 +3062,8 @@ Modules:
           - management_managementgroups_put
         OperationId: '1070'
         MethodId: '1071'
+        OperationName: ManagementGroupSubscriptions
+        MethodName: Create
       - Example:
           parameters:
             api-version: 2018-03-01-preview
@@ -2991,6 +3085,8 @@ Modules:
         References: []
         OperationId: '1070'
         MethodId: '1101'
+        OperationName: ManagementGroupSubscriptions
+        MethodName: Delete
   - ModuleName: azure_rm_managementgroupsoperation_info
     Options:
       - &ref_14
@@ -3043,6 +3139,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: display
             NameAnsible: display
@@ -3091,6 +3188,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: resource
                 NameAnsible: resource
@@ -3121,6 +3219,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: operation
                 NameAnsible: operation
@@ -3151,6 +3250,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: description
                 NameAnsible: description
@@ -3181,6 +3281,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/display
@@ -3193,6 +3294,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
         EnumValues: []
         PathSwagger: /value
@@ -3205,6 +3307,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_15
         NameSwagger: nextLink
@@ -3236,6 +3339,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
     Methods:
       - Name: List
@@ -3261,8 +3365,3 @@ ServiceName: ManagementGroupsClient
 MgmtClientName: ManagementGroupsClient
 CliName: mgmtgroups
 Namespace: azure.mgmt.managementgroups
-Info:
-  - '  ** FOUND OPTION groupId'
-  - '  ** FOUND OPTION createManagementGroupRequest'
-  - '  ** FOUND OPTION groupId'
-  - '  ** FOUND OPTION groupId'

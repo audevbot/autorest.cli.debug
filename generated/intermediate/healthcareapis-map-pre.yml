@@ -30,6 +30,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: resourceName
         NameAnsible: name
@@ -60,6 +61,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: serviceDescription
         NameAnsible: service_description
@@ -90,6 +92,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: kind
         NameAnsible: kind
@@ -99,12 +102,10 @@ Modules:
         IdPortion: null
         Type: str
         TypeName: kind
-        TypeNameGo: kind
+        TypeNameGo: Kind
         IsList: false
         Required: true
-        Documentation: >-
-          The kind of the service. Valid values are: fhir, fhir-Stu3 and
-          fhir-R4.
+        Documentation: The kind of the service.
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -131,6 +132,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: location
         NameAnsible: location
@@ -161,6 +163,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: tags
         NameAnsible: tags
@@ -195,6 +198,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: etag
         NameAnsible: etag
@@ -227,6 +231,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: properties
         NameAnsible: properties
@@ -257,6 +262,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: accessPolicies
         NameAnsible: access_policies
@@ -287,6 +293,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: accessPoliciesObjectId
         NameAnsible: access_policies_object_id
@@ -299,7 +306,9 @@ Modules:
         TypeNameGo: String
         IsList: false
         Required: true
-        Documentation: An object ID that is allowed access to the FHIR service.
+        Documentation: >-
+          An Azure AD object ID (User or Apps) that is allowed access to the
+          FHIR service.
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -317,6 +326,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: cosmosDbConfiguration
         NameAnsible: cosmos_db_configuration
@@ -347,6 +357,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: cosmosDbOfferThroughput
         NameAnsible: cosmos_db_offer_throughput
@@ -377,6 +388,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: authenticationConfiguration
         NameAnsible: authentication_configuration
@@ -407,6 +419,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: authenticationAuthority
         NameAnsible: authentication_authority
@@ -437,6 +450,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: authenticationAudience
         NameAnsible: authentication_audience
@@ -467,6 +481,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: authenticationSmartProxyEnabled
         NameAnsible: authentication_smart_proxy_enabled
@@ -497,6 +512,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: corsConfiguration
         NameAnsible: cors_configuration
@@ -527,6 +543,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: corsOrigins
         NameAnsible: cors_origins
@@ -557,6 +574,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: corsHeaders
         NameAnsible: cors_headers
@@ -587,6 +605,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: corsMethods
         NameAnsible: cors_methods
@@ -617,6 +636,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - NameSwagger: corsMaxAge
         NameAnsible: cors_max_age
@@ -647,6 +667,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: corsAllowCredentials
         NameAnsible: cors_allow_credentials
@@ -677,6 +698,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_3
         NameSwagger: provisioningState
@@ -687,7 +709,7 @@ Modules:
         IdPortion: null
         Type: str
         TypeName: provisioningState
-        TypeNameGo: provisioningState
+        TypeNameGo: ProvisioningState
         IsList: false
         Required: false
         Documentation: The provisioning state.
@@ -735,6 +757,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_0
         NameSwagger: id
@@ -766,6 +789,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_1
         NameSwagger: name
@@ -797,6 +821,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_2
         NameSwagger: type
@@ -828,6 +853,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
     Methods:
       - Name: CreateOrUpdate
@@ -912,12 +938,10 @@ Modules:
         IdPortion: null
         Type: str
         TypeName: kind
-        TypeNameGo: kind
+        TypeNameGo: Kind
         IsList: false
         Required: true
-        Documentation: >-
-          The kind of the service. Valid values are: fhir, fhir-Stu3 and
-          fhir-R4.
+        Documentation: The kind of the service.
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -944,6 +968,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: location
         NameAnsible: location
@@ -974,6 +999,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: tags
         NameAnsible: tags
@@ -1008,6 +1034,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: etag
         NameAnsible: etag
@@ -1040,6 +1067,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: properties
         NameAnsible: properties
@@ -1089,7 +1117,9 @@ Modules:
                 TypeNameGo: String
                 IsList: false
                 Required: true
-                Documentation: An object ID that is allowed access to the FHIR service.
+                Documentation: >-
+                  An Azure AD object ID (User or Apps) that is allowed access to
+                  the FHIR service.
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -1107,6 +1137,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/accessPolicies
@@ -1119,6 +1150,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: cosmosDbConfiguration
             NameAnsible: cosmos_db_configuration
@@ -1167,6 +1199,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/cosmosDbConfiguration
@@ -1179,6 +1212,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: authenticationConfiguration
             NameAnsible: authentication_configuration
@@ -1227,6 +1261,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: audience
                 NameAnsible: audience
@@ -1257,6 +1292,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: smartProxyEnabled
                 NameAnsible: smart_proxy_enabled
@@ -1287,6 +1323,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/authenticationConfiguration
@@ -1299,6 +1336,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: corsConfiguration
             NameAnsible: cors_configuration
@@ -1347,6 +1385,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: headers
                 NameAnsible: headers
@@ -1377,6 +1416,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: methods
                 NameAnsible: methods
@@ -1407,6 +1447,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: maxAge
                 NameAnsible: max_age
@@ -1437,6 +1478,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: allowCredentials
                 NameAnsible: allow_credentials
@@ -1467,6 +1509,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/corsConfiguration
@@ -1479,6 +1522,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties
@@ -1491,6 +1535,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     ModuleOperationNameUpper: Services
     ModuleOperationName: services
@@ -1500,18 +1545,18 @@ Modules:
     NeedsForceUpdate: false
     CannotTestUpdate: false
     Provider: Microsoft.HealthcareApis
-    ApiVersion: 2018-08-20-preview
+    ApiVersion: '2019-09-16'
     Examples:
       - Example:
           parameters:
             resourceName: service1
             resourceGroupName: rg1
-            api-version: 2018-08-20-preview
+            api-version: '2019-09-16'
             subscriptionId: subid
             serviceDescription:
-              location: westus
+              location: westus2
               tags: {}
-              kind: fhir
+              kind: fhir-R4
               properties:
                 accessPolicies:
                   - objectId: c487e7d1-3210-41a3-8ccc-e9372b78da47
@@ -1519,7 +1564,8 @@ Modules:
                 cosmosDbConfiguration:
                   offerThroughput: '1000'
                 authenticationConfiguration:
-                  authority: 'https://login.microsoftonline.com/common'
+                  authority: >-
+                    https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc
                   audience: 'https://azurehealthcareapis.com'
                   smartProxyEnabled: true
                 corsConfiguration:
@@ -1545,9 +1591,9 @@ Modules:
                   }}/providers/Microsoft.HealthcareApis/services/{{ service_name
                   }}
                 name: service1
-                location: West US
+                location: West US 2
                 type: Microsoft.HealthcareApis/services
-                kind: fhir
+                kind: fhir-R4
                 etag: etagvalue
                 tags: {}
                 properties:
@@ -1558,7 +1604,8 @@ Modules:
                   cosmosDbConfiguration:
                     offerThroughput: '1000'
                   authenticationConfiguration:
-                    authority: 'https://login.microsoftonline.com/common'
+                    authority: >-
+                      https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc
                     audience: 'https://azurehealthcareapis.com'
                     smartProxyEnabled: true
                   corsConfiguration:
@@ -1583,9 +1630,9 @@ Modules:
                   }}/providers/Microsoft.HealthcareApis/services/{{ service_name
                   }}
                 name: service1
-                location: West US
+                location: West US 2
                 type: Microsoft.HealthcareApis/services
-                kind: fhir
+                kind: fhir-R4
                 etag: etagvalue
                 tags: {}
                 properties:
@@ -1596,7 +1643,8 @@ Modules:
                   cosmosDbConfiguration:
                     offerThroughput: '1000'
                   authenticationConfiguration:
-                    authority: 'https://login.microsoftonline.com/common'
+                    authority: >-
+                      https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc
                     audience: 'https://azurehealthcareapis.com'
                     smartProxyEnabled: true
                   corsConfiguration:
@@ -1617,7 +1665,7 @@ Modules:
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.HealthcareApis/services/{{ service_name }}
         Method: put
-        Name: ServicePut
+        Name: Create or Update a service with all parameters
         Filename: healthcareapis_services_put
         Variables:
           - name: resource_group
@@ -1627,16 +1675,113 @@ Modules:
             value: myService
             swaggerName: resourceName
         References:
-          - '# ref##authority##https://login.microsoftonline.com/common'
+          - >-
+            #
+            ref##authority##https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc
           - '# ref##audience##https://azurehealthcareapis.com'
           - resourcegroups_put
         OperationId: '391'
         MethodId: '422'
+        OperationName: Services
+        MethodName: CreateOrUpdate
+      - Example:
+          parameters:
+            resourceName: service2
+            resourceGroupName: rg1
+            api-version: '2019-09-16'
+            subscriptionId: subid
+            serviceDescription:
+              location: westus2
+              tags: {}
+              kind: fhir-R4
+              properties:
+                accessPolicies:
+                  - objectId: c487e7d1-3210-41a3-8ccc-e9372b78da47
+          responses:
+            '200':
+              body:
+                id: >-
+                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                  resource_group
+                  }}/providers/Microsoft.HealthcareApis/services/{{ service_name
+                  }}
+                name: service2
+                type: Microsoft.HealthcareApis/services
+                etag: etagvalue
+                location: westus2
+                kind: fhir-R4
+                tags: {}
+                properties:
+                  accessPolicies:
+                    - objectId: c487e7d1-3210-41a3-8ccc-e9372b78da47
+                  cosmosDbConfiguration:
+                    offerThroughput: '1000'
+                  authenticationConfiguration:
+                    authority: >-
+                      https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc
+                    audience: 'https://azurehealthcareapis.com'
+                    smartProxyEnabled: false
+                  corsConfiguration:
+                    origins: []
+                    headers: []
+                    methods: []
+                    maxAge: null
+                    allowCredentials: false
+                  provisioningState: Creating
+            '201':
+              body:
+                id: >-
+                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                  resource_group
+                  }}/providers/Microsoft.HealthcareApis/services/{{ service_name
+                  }}
+                name: service2
+                type: Microsoft.HealthcareApis/services
+                etag: etagvalue
+                location: westus2
+                kind: fhir-R4
+                tags: {}
+                properties:
+                  accessPolicies:
+                    - objectId: c487e7d1-3210-41a3-8ccc-e9372b78da47
+                  cosmosDbConfiguration:
+                    offerThroughput: '1000'
+                  authenticationConfiguration:
+                    authority: >-
+                      https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc
+                    audience: 'https://azurehealthcareapis.com'
+                    smartProxyEnabled: false
+                  corsConfiguration:
+                    origins: []
+                    headers: []
+                    methods: []
+                    maxAge: null
+                    allowCredentials: false
+                  provisioningState: Creating
+        Url: >-
+          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
+          }}/providers/Microsoft.HealthcareApis/services/{{ service_name }}
+        Method: put
+        Name: Create or Update a service with minimum parameters
+        Filename: healthcareapis_services_put_1
+        Variables:
+          - name: resource_group
+            value: myResourceGroup
+            swaggerName: resourceGroupName
+          - name: service_name
+            value: myService
+            swaggerName: resourceName
+        References:
+          - healthcareapis_services_put
+        OperationId: '391'
+        MethodId: '422'
+        OperationName: Services
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             resourceName: service1
             resourceGroupName: rg1
-            api-version: 2018-08-20-preview
+            api-version: '2019-09-16'
             subscriptionId: subid
             servicePatchDescription:
               tags:
@@ -1653,7 +1798,7 @@ Modules:
                 name: service1
                 location: West US
                 type: Microsoft.HealthcareApis/services
-                kind: fhir
+                kind: fhir-R4
                 etag: etagvalue
                 tags:
                   tag1: value1
@@ -1666,7 +1811,8 @@ Modules:
                   cosmosDbConfiguration:
                     offerThroughput: '1000'
                   authenticationConfiguration:
-                    authority: 'https://login.microsoftonline.com/common'
+                    authority: >-
+                      https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc
                     audience: 'https://azurehealthcareapis.com'
                     smartProxyEnabled: true
                   corsConfiguration:
@@ -1687,7 +1833,7 @@ Modules:
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.HealthcareApis/services/{{ service_name }}
         Method: patch
-        Name: ServicePatch
+        Name: Patch service
         Filename: healthcareapis_services_patch
         Variables:
           - name: resource_group
@@ -1700,11 +1846,13 @@ Modules:
           - healthcareapis_services_put
         OperationId: '391'
         MethodId: '457'
+        OperationName: Services
+        MethodName: Update
       - Example:
           parameters:
             resourceName: service1
             resourceGroupName: rg1
-            api-version: 2018-08-20-preview
+            api-version: '2019-09-16'
             subscriptionId: subid
           responses:
             '202': {}
@@ -1713,7 +1861,7 @@ Modules:
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.HealthcareApis/services/{{ service_name }}
         Method: delete
-        Name: ServiceDelete
+        Name: Delete service
         Filename: healthcareapis_services_delete
         Variables:
           - name: resource_group
@@ -1725,6 +1873,8 @@ Modules:
         References: []
         OperationId: '391'
         MethodId: '491'
+        OperationName: Services
+        MethodName: Delete
   - ModuleName: azure_rm_healthcareapisservice_info
     Options:
       - NameSwagger: resourceGroupName
@@ -1756,6 +1906,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: resourceName
         NameAnsible: name
@@ -1786,6 +1937,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_4
         NameSwagger: id
@@ -1817,6 +1969,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_5
         NameSwagger: name
@@ -1848,6 +2001,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_6
         NameSwagger: type
@@ -1879,6 +2033,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_7
         NameSwagger: kind
@@ -1889,12 +2044,10 @@ Modules:
         IdPortion: null
         Type: str
         TypeName: kind
-        TypeNameGo: kind
+        TypeNameGo: Kind
         IsList: false
         Required: false
-        Documentation: >-
-          The kind of the service. Valid values are: fhir, fhir-Stu3 and
-          fhir-R4.
+        Documentation: The kind of the service.
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -1921,6 +2074,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_8
         NameSwagger: location
@@ -1952,6 +2106,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_9
         NameSwagger: tags
@@ -1987,6 +2142,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_10
         NameSwagger: etag
@@ -2020,6 +2176,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_11
         NameSwagger: properties
@@ -2051,6 +2208,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: provisioningState
         NameAnsible: provisioning_state
@@ -2060,7 +2218,7 @@ Modules:
         IdPortion: null
         Type: str
         TypeName: provisioningState
-        TypeNameGo: provisioningState
+        TypeNameGo: ProvisioningState
         IsList: false
         Required: false
         Documentation: The provisioning state.
@@ -2108,6 +2266,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: accessPolicies
         NameAnsible: access_policies
@@ -2138,6 +2297,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: accessPoliciesObjectId
         NameAnsible: access_policies_object_id
@@ -2150,7 +2310,9 @@ Modules:
         TypeNameGo: String
         IsList: false
         Required: true
-        Documentation: An object ID that is allowed access to the FHIR service.
+        Documentation: >-
+          An Azure AD object ID (User or Apps) that is allowed access to the
+          FHIR service.
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -2168,6 +2330,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: cosmosDbConfiguration
         NameAnsible: cosmos_db_configuration
@@ -2198,6 +2361,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: cosmosDbOfferThroughput
         NameAnsible: cosmos_db_offer_throughput
@@ -2228,6 +2392,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: authenticationConfiguration
         NameAnsible: authentication_configuration
@@ -2258,6 +2423,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: authenticationAuthority
         NameAnsible: authentication_authority
@@ -2288,6 +2454,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: authenticationAudience
         NameAnsible: authentication_audience
@@ -2318,6 +2485,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: authenticationSmartProxyEnabled
         NameAnsible: authentication_smart_proxy_enabled
@@ -2348,6 +2516,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: corsConfiguration
         NameAnsible: cors_configuration
@@ -2378,6 +2547,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: corsOrigins
         NameAnsible: cors_origins
@@ -2408,6 +2578,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: corsHeaders
         NameAnsible: cors_headers
@@ -2438,6 +2609,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: corsMethods
         NameAnsible: cors_methods
@@ -2468,6 +2640,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: corsMaxAge
         NameAnsible: cors_max_age
@@ -2498,6 +2671,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: corsAllowCredentials
         NameAnsible: cors_allow_credentials
@@ -2528,6 +2702,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
     Methods:
       - Name: List
@@ -2577,11 +2752,11 @@ Modules:
     NeedsForceUpdate: false
     CannotTestUpdate: false
     Provider: Microsoft.HealthcareApis
-    ApiVersion: 2018-08-20-preview
+    ApiVersion: '2019-09-16'
     Examples:
       - Example:
           parameters:
-            api-version: 2018-08-20-preview
+            api-version: '2019-09-16'
             subscriptionId: subid
           responses:
             '200':
@@ -2595,7 +2770,7 @@ Modules:
                     name: service1
                     location: West US
                     type: Microsoft.HealthcareApis/services
-                    kind: fhir
+                    kind: fhir-R4
                     etag: etag
                     tags: {}
                     properties:
@@ -2606,7 +2781,8 @@ Modules:
                       cosmosDbConfiguration:
                         offerThroughput: '1000'
                       authenticationConfiguration:
-                        authority: 'https://login.microsoftonline.com/common'
+                        authority: >-
+                          https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc
                         audience: 'https://azurehealthcareapis.com'
                         smartProxyEnabled: true
                       corsConfiguration:
@@ -2629,15 +2805,17 @@ Modules:
           /subscriptions/{{ subscription_id
           }}/providers/Microsoft.HealthcareApis/services
         Method: get
-        Name: ServiceList
+        Name: List all services in subscription
         Filename: healthcareapis_services_get_1
         Variables: []
         References: []
         OperationId: '391'
         MethodId: '522'
+        OperationName: Services
+        MethodName: List
       - Example:
           parameters:
-            api-version: 2018-08-20-preview
+            api-version: '2019-09-16'
             subscriptionId: subid
             resourceGroupName: rgname
           responses:
@@ -2652,7 +2830,7 @@ Modules:
                     name: service1
                     location: westus
                     type: Microsoft.HealthcareApis/services
-                    kind: fhir
+                    kind: fhir-R4
                     tags: {}
                     etag: etagvalue
                     properties:
@@ -2663,7 +2841,8 @@ Modules:
                       cosmosDbConfiguration:
                         offerThroughput: '1000'
                       authenticationConfiguration:
-                        authority: 'https://login.microsoftonline.com/common'
+                        authority: >-
+                          https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc
                         audience: 'https://azurehealthcareapis.com'
                         smartProxyEnabled: true
                       corsConfiguration:
@@ -2686,7 +2865,7 @@ Modules:
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.HealthcareApis/services
         Method: get
-        Name: ServiceListByResourceGroup
+        Name: List all services in resource group
         Filename: healthcareapis_services_get_2
         Variables:
           - name: resource_group
@@ -2695,11 +2874,13 @@ Modules:
         References: []
         OperationId: '391'
         MethodId: '540'
+        OperationName: Services
+        MethodName: ListByResourceGroup
       - Example:
           parameters:
             resourceName: service1
             resourceGroupName: rg1
-            api-version: 2018-08-20-preview
+            api-version: '2019-09-16'
             subscriptionId: subid
           responses:
             '200':
@@ -2712,7 +2893,7 @@ Modules:
                 name: service1
                 location: West US
                 type: Microsoft.HealthcareApis/services
-                kind: fhir
+                kind: fhir-R4
                 etag: etagvalue
                 tags: {}
                 properties:
@@ -2723,7 +2904,8 @@ Modules:
                   cosmosDbConfiguration:
                     offerThroughput: '1000'
                   authenticationConfiguration:
-                    authority: 'https://login.microsoftonline.com/common'
+                    authority: >-
+                      https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc
                     audience: 'https://azurehealthcareapis.com'
                     smartProxyEnabled: true
                   corsConfiguration:
@@ -2744,7 +2926,7 @@ Modules:
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.HealthcareApis/services/{{ service_name }}
         Method: get
-        Name: ServiceGet
+        Name: Get metadata
         Filename: healthcareapis_services_get
         Variables:
           - name: resource_group
@@ -2756,6 +2938,8 @@ Modules:
         References: []
         OperationId: '391'
         MethodId: '392'
+        OperationName: Services
+        MethodName: Get
   - ModuleName: azure_rm_healthcareapisoperation_info
     Options:
       - &ref_12
@@ -2788,6 +2972,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_13
         NameSwagger: value
@@ -2841,6 +3026,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: origin
             NameAnsible: origin
@@ -2871,6 +3057,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: display
             NameAnsible: display
@@ -2919,6 +3106,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: resource
                 NameAnsible: resource
@@ -2949,6 +3137,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: operation
                 NameAnsible: operation
@@ -2979,6 +3168,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: description
                 NameAnsible: description
@@ -3009,6 +3199,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/display
@@ -3021,6 +3212,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
         EnumValues: []
         PathSwagger: /value
@@ -3033,6 +3225,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     Methods:
       - Name: List
@@ -3052,11 +3245,11 @@ Modules:
     NeedsForceUpdate: false
     CannotTestUpdate: false
     Provider: Microsoft.HealthcareApis
-    ApiVersion: 2018-08-20-preview
+    ApiVersion: '2019-09-16'
     Examples:
       - Example:
           parameters:
-            api-version: 2018-08-20-preview
+            api-version: '2019-09-16'
           responses:
             '200':
               body:
@@ -3091,12 +3284,14 @@ Modules:
                     origin: 'user,system'
         Url: /providers/Microsoft.HealthcareApis/operations
         Method: get
-        Name: OperationsList
+        Name: List operations
         Filename: healthcareapis_operations_get
         Variables: []
         References: []
         OperationId: '588'
         MethodId: '589'
+        OperationName: Operations
+        MethodName: List
   - ModuleName: azure_rm_healthcareapisoperationresult_info
     Options:
       - NameSwagger: locationName
@@ -3128,6 +3323,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: operationResultId
         NameAnsible: operation_result_id
@@ -3158,6 +3354,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
     Methods:
       - Name: Get
@@ -3182,11 +3379,11 @@ Modules:
     NeedsForceUpdate: false
     CannotTestUpdate: false
     Provider: Microsoft.HealthcareApis
-    ApiVersion: 2018-08-20-preview
+    ApiVersion: '2019-09-16'
     Examples:
       - Example:
           parameters:
-            api-version: 2018-08-20-preview
+            api-version: '2019-09-16'
             subscriptionId: subid
             locationName: westus
             operationResultId: exampleid
@@ -3211,7 +3408,7 @@ Modules:
           }}/providers/Microsoft.HealthcareApis/locations/{{ location_name
           }}/operationresults/{{ operationresult_name }}
         Method: get
-        Name: OperationResultsGet
+        Name: Get operation result
         Filename: healthcareapis_locations_operationresults_get
         Variables:
           - name: location_name
@@ -3223,16 +3420,9 @@ Modules:
         References: []
         OperationId: '603'
         MethodId: '604'
+        OperationName: OperationResults
+        MethodName: Get
 ServiceName: HealthCareApis
 MgmtClientName: HealthCareApis
 CliName: healthcareapis
 Namespace: azure.mgmt.healthcareapis
-Info:
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceName'
-  - '  ** FOUND OPTION serviceDescription'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceName'
-  - '  ** FOUND OPTION locationName'
-  - '  ** FOUND OPTION operationResultId'
