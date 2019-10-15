@@ -20,7 +20,7 @@
           properties:
             databaseAccountOfferType: Standard
             locations:
-              - failoverPriority: '0'
-                locationName: southcentralus
-                isZoneRedundant: false
+              - failover_priority: '0'
+                location_name: southcentralus
+                is_zone_redundant: false
     

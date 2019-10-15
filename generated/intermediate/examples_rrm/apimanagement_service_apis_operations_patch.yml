@@ -28,17 +28,14 @@
                 A sample parameter that is required and has a default value of
                 "sample".
               type: string
-              default_value: sample
               required: true
               values:
                 - sample
         responses:
-          - status_code: '200'
-            description: Returned in all cases.
+          - description: Returned in all cases.
             representations: []
             headers: []
-          - status_code: '500'
-            description: Server Error.
+          - description: Server Error.
             representations: []
             headers: []
         display_name: Retrieve resource

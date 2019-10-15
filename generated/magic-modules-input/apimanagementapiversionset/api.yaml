@@ -44,7 +44,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: ApiVersionSetContractProperties
             go_type_name: ApiVersionSetContractProperties
           '/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
@@ -76,7 +76,7 @@ objects:
           '/properties/versioningScheme': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [go]
             go_field_name: VersioningScheme
-            go_enum_type_name: versioningScheme
+            go_enum_type_name: VersioningScheme
       update: !ruby/object:Api::Azure::SDKOperationDefinition
         go_func_name: Update
         python_func_name: update
@@ -103,7 +103,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: ApiVersionSetContractProperties
             go_type_name: ApiVersionSetContractProperties
           '/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
@@ -135,7 +135,7 @@ objects:
           '/properties/versioningScheme': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [go]
             go_field_name: VersioningScheme
-            go_enum_type_name: versioningScheme
+            go_enum_type_name: VersioningScheme
       delete: !ruby/object:Api::Azure::SDKOperationDefinition
         go_func_name: Delete
         python_func_name: delete
@@ -177,7 +177,7 @@ objects:
         response:
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: ApiVersionSetContractProperties
             go_type_name: ApiVersionSetContractProperties
           '/properties/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
@@ -206,7 +206,7 @@ objects:
           '/properties/versioningScheme': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [go]
             go_field_name: VersioningScheme
-            go_enum_type_name: versioningScheme
+            go_enum_type_name: VersioningScheme
           '/versioningScheme': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: versioning_scheme

@@ -30,6 +30,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: automationAccountName
         NameAnsible: automation_account_name
@@ -60,6 +61,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: softwareUpdateConfigurationName
         NameAnsible: name
@@ -90,6 +92,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: clientRequestId
         NameAnsible: client_request_id
@@ -120,6 +123,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: parameters
         NameAnsible: parameters
@@ -129,7 +133,7 @@ Modules:
         IdPortion: null
         Type: dict
         TypeName: softwareUpdateConfiguration
-        TypeNameGo: softwareUpdateConfiguration
+        TypeNameGo: SoftwareUpdateConfiguration
         IsList: false
         Required: !<tag:yaml.org,2002:js/undefined> ''
         Documentation: Request body.
@@ -150,6 +154,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: properties
         NameAnsible: properties
@@ -159,7 +164,7 @@ Modules:
         IdPortion: null
         Type: dict
         TypeName: softwareUpdateConfigurationProperties
-        TypeNameGo: softwareUpdateConfigurationProperties
+        TypeNameGo: SoftwareUpdateConfigurationProperties
         IsList: false
         Required: true
         Documentation: Software update configuration properties.
@@ -180,6 +185,7 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: updateConfiguration
         NameAnsible: update_configuration
@@ -189,7 +195,7 @@ Modules:
         IdPortion: null
         Type: dict
         TypeName: updateConfiguration
-        TypeNameGo: updateConfiguration
+        TypeNameGo: UpdateConfiguration
         IsList: false
         Required: true
         Documentation: update specific properties for the Software update configuration
@@ -234,6 +240,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: windows
             NameAnsible: windows
@@ -313,6 +320,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: excludedKbNumbers
                 NameAnsible: excluded_kb_numbers
@@ -343,6 +351,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - NameSwagger: includedKbNumbers
                 NameAnsible: included_kb_numbers
@@ -373,6 +382,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - NameSwagger: rebootSetting
                 NameAnsible: reboot_setting
@@ -403,6 +413,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/updateConfiguration/windows
@@ -415,6 +426,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: linux
             NameAnsible: linux
@@ -479,6 +491,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: excludedPackageNameMasks
                 NameAnsible: excluded_package_name_masks
@@ -509,6 +522,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - NameSwagger: includedPackageNameMasks
                 NameAnsible: included_package_name_masks
@@ -539,6 +553,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - NameSwagger: rebootSetting
                 NameAnsible: reboot_setting
@@ -569,6 +584,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/updateConfiguration/linux
@@ -581,6 +597,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: duration
             NameAnsible: duration
@@ -614,6 +631,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: azureVirtualMachines
             NameAnsible: azure_virtual_machines
@@ -646,6 +664,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: nonAzureComputerNames
             NameAnsible: non_azure_computer_names
@@ -678,6 +697,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: targets
             NameAnsible: targets
@@ -744,6 +764,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: ''
                     Flatten: false
                   - NameSwagger: locations
                     NameAnsible: locations
@@ -776,6 +797,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: ''
                     Flatten: false
                   - NameSwagger: tagSettings
                     NameAnsible: tag_settings
@@ -808,6 +830,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: /properties/updateConfiguration/targets/azureQueries
@@ -820,6 +843,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: nonAzureQueries
                 NameAnsible: non_azure_queries
@@ -872,6 +896,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: ''
                     Flatten: false
                   - NameSwagger: workspaceId
                     NameAnsible: workspace_id
@@ -906,6 +931,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: /properties/updateConfiguration/targets/nonAzureQueries
@@ -918,6 +944,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/updateConfiguration/targets
@@ -930,6 +957,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/updateConfiguration
@@ -942,6 +970,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: scheduleInfo
         NameAnsible: schedule_info
@@ -990,6 +1019,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: expiryTime
             NameAnsible: expiry_time
@@ -1020,6 +1050,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: expiryTimeOffsetMinutes
             NameAnsible: expiry_time_offset_minutes
@@ -1050,6 +1081,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: double
             Flatten: false
           - NameSwagger: isEnabled
             NameAnsible: is_enabled
@@ -1080,6 +1112,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: nextRun
             NameAnsible: next_run
@@ -1110,6 +1143,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: nextRunOffsetMinutes
             NameAnsible: next_run_offset_minutes
@@ -1140,6 +1174,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: double
             Flatten: false
           - NameSwagger: interval
             NameAnsible: interval
@@ -1170,6 +1205,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: frequency
             NameAnsible: frequency
@@ -1220,6 +1256,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: timeZone
             NameAnsible: time_zone
@@ -1250,6 +1287,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: advancedSchedule
             NameAnsible: advanced_schedule
@@ -1298,6 +1336,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
               - NameSwagger: monthDays
                 NameAnsible: month_days
@@ -1330,6 +1369,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: int32
                 Flatten: false
               - NameSwagger: monthlyOccurrences
                 NameAnsible: monthly_occurrences
@@ -1383,6 +1423,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: int32
                     Flatten: false
                   - NameSwagger: day
                     NameAnsible: day
@@ -1438,6 +1479,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: /properties/scheduleInfo/advancedSchedule/monthlyOccurrences
@@ -1450,6 +1492,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/scheduleInfo/advancedSchedule
@@ -1462,6 +1505,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: creationTime
             NameAnsible: creation_time
@@ -1492,6 +1536,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: lastModifiedTime
             NameAnsible: last_modified_time
@@ -1522,6 +1567,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: description
             NameAnsible: description
@@ -1552,6 +1598,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - &ref_3
             NameSwagger: startTimeOffsetMinutes
@@ -1583,6 +1630,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: double
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/scheduleInfo
@@ -1595,6 +1643,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: error
         NameAnsible: error
@@ -1643,6 +1692,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
           - NameSwagger: message
             NameAnsible: message
@@ -1673,6 +1723,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/error
@@ -1685,6 +1736,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - NameSwagger: tasks
         NameAnsible: tasks
@@ -1694,7 +1746,7 @@ Modules:
         IdPortion: null
         Type: dict
         TypeName: softwareUpdateConfigurationTasks
-        TypeNameGo: softwareUpdateConfigurationTasks
+        TypeNameGo: SoftwareUpdateConfigurationTasks
         IsList: false
         Required: false
         Documentation: Tasks information for the Software update configuration.
@@ -1712,7 +1764,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: taskProperties
-            TypeNameGo: taskProperties
+            TypeNameGo: TaskProperties
             IsList: false
             Required: false
             Documentation: Pre task properties.
@@ -1755,6 +1807,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: source
                 NameAnsible: source
@@ -1785,6 +1838,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/tasks/preTask
@@ -1797,6 +1851,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: postTask
             NameAnsible: post_task
@@ -1806,7 +1861,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: taskProperties
-            TypeNameGo: taskProperties
+            TypeNameGo: TaskProperties
             IsList: false
             Required: false
             Documentation: Post task properties.
@@ -1849,6 +1904,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: source
                 NameAnsible: source
@@ -1879,6 +1935,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/tasks/postTask
@@ -1891,6 +1948,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties/tasks
@@ -1903,6 +1961,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
       - &ref_4
         NameSwagger: provisioningState
@@ -1936,6 +1995,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_5
         NameSwagger: creationTime
@@ -1967,6 +2027,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_6
         NameSwagger: createdBy
@@ -1998,6 +2059,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_7
         NameSwagger: lastModifiedTime
@@ -2029,6 +2091,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_8
         NameSwagger: lastModifiedBy
@@ -2060,6 +2123,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_0
         NameSwagger: name
@@ -2091,6 +2155,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_1
         NameSwagger: id
@@ -2122,6 +2187,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
       - &ref_2
         NameSwagger: type
@@ -2153,6 +2219,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
     Methods:
       - Name: Create
@@ -2234,7 +2301,7 @@ Modules:
         IdPortion: null
         Type: dict
         TypeName: softwareUpdateConfigurationProperties
-        TypeNameGo: softwareUpdateConfigurationProperties
+        TypeNameGo: SoftwareUpdateConfigurationProperties
         IsList: false
         Required: true
         Documentation: Software update configuration properties.
@@ -2252,7 +2319,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: updateConfiguration
-            TypeNameGo: updateConfiguration
+            TypeNameGo: UpdateConfiguration
             IsList: false
             Required: true
             Documentation: update specific properties for the Software update configuration
@@ -2297,6 +2364,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: windows
                 NameAnsible: windows
@@ -2377,6 +2445,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - NameSwagger: excludedKbNumbers
                     NameAnsible: excluded_kb_numbers
@@ -2409,6 +2478,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                   - NameSwagger: includedKbNumbers
                     NameAnsible: included_kb_numbers
@@ -2441,6 +2511,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                   - NameSwagger: rebootSetting
                     NameAnsible: reboot_setting
@@ -2471,6 +2542,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: /properties/updateConfiguration/windows
@@ -2483,6 +2555,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: linux
                 NameAnsible: linux
@@ -2547,6 +2620,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - NameSwagger: excludedPackageNameMasks
                     NameAnsible: excluded_package_name_masks
@@ -2579,6 +2653,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                   - NameSwagger: includedPackageNameMasks
                     NameAnsible: included_package_name_masks
@@ -2611,6 +2686,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                   - NameSwagger: rebootSetting
                     NameAnsible: reboot_setting
@@ -2641,6 +2717,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: /properties/updateConfiguration/linux
@@ -2653,6 +2730,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: duration
                 NameAnsible: duration
@@ -2686,6 +2764,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: azureVirtualMachines
                 NameAnsible: azure_virtual_machines
@@ -2718,6 +2797,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: nonAzureComputerNames
                 NameAnsible: non_azure_computer_names
@@ -2750,6 +2830,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: targets
                 NameAnsible: targets
@@ -2820,6 +2901,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                       - NameSwagger: locations
                         NameAnsible: locations
@@ -2852,6 +2934,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                       - NameSwagger: tagSettings
                         NameAnsible: tag_settings
@@ -2884,6 +2967,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
                     EnumValues: []
                     PathSwagger: /properties/updateConfiguration/targets/azureQueries
@@ -2896,6 +2980,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - NameSwagger: nonAzureQueries
                     NameAnsible: non_azure_queries
@@ -2949,6 +3034,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                       - NameSwagger: workspaceId
                         NameAnsible: workspace_id
@@ -2984,6 +3070,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
                     EnumValues: []
                     PathSwagger: /properties/updateConfiguration/targets/nonAzureQueries
@@ -2996,6 +3083,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: /properties/updateConfiguration/targets
@@ -3008,6 +3096,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/updateConfiguration
@@ -3020,6 +3109,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: scheduleInfo
             NameAnsible: schedule_info
@@ -3068,6 +3158,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - *ref_3
               - NameSwagger: expiryTime
@@ -3099,6 +3190,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: expiryTimeOffsetMinutes
                 NameAnsible: expiry_time_offset_minutes
@@ -3129,6 +3221,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: isEnabled
                 NameAnsible: is_enabled
@@ -3161,6 +3254,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: nextRun
                 NameAnsible: next_run
@@ -3191,6 +3285,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: nextRunOffsetMinutes
                 NameAnsible: next_run_offset_minutes
@@ -3221,6 +3316,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
               - NameSwagger: interval
                 NameAnsible: interval
@@ -3251,6 +3347,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: frequency
                 NameAnsible: frequency
@@ -3301,6 +3398,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: timeZone
                 NameAnsible: time_zone
@@ -3331,6 +3429,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: advancedSchedule
                 NameAnsible: advanced_schedule
@@ -3379,6 +3478,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                   - NameSwagger: monthDays
                     NameAnsible: month_days
@@ -3411,6 +3511,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: int32
                     Flatten: false
                   - NameSwagger: monthlyOccurrences
                     NameAnsible: monthly_occurrences
@@ -3464,6 +3565,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: int32
                         Flatten: false
                       - NameSwagger: day
                         NameAnsible: day
@@ -3519,6 +3621,7 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
                     EnumValues: []
                     PathSwagger: >-
@@ -3533,6 +3636,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: /properties/scheduleInfo/advancedSchedule
@@ -3545,6 +3649,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: creationTime
                 NameAnsible: creation_time
@@ -3575,6 +3680,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: lastModifiedTime
                 NameAnsible: last_modified_time
@@ -3605,6 +3711,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: description
                 NameAnsible: description
@@ -3635,6 +3742,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/scheduleInfo
@@ -3647,6 +3755,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - *ref_4
           - NameSwagger: error
@@ -3696,6 +3805,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: message
                 NameAnsible: message
@@ -3726,6 +3836,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/error
@@ -3738,6 +3849,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - *ref_5
           - *ref_6
@@ -3751,7 +3863,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: softwareUpdateConfigurationTasks
-            TypeNameGo: softwareUpdateConfigurationTasks
+            TypeNameGo: SoftwareUpdateConfigurationTasks
             IsList: false
             Required: false
             Documentation: Tasks information for the Software update configuration.
@@ -3769,7 +3881,7 @@ Modules:
                 IdPortion: null
                 Type: dict
                 TypeName: taskProperties
-                TypeNameGo: taskProperties
+                TypeNameGo: TaskProperties
                 IsList: false
                 Required: false
                 Documentation: Pre task properties.
@@ -3812,6 +3924,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - NameSwagger: source
                     NameAnsible: source
@@ -3842,6 +3955,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: /properties/tasks/preTask
@@ -3854,6 +3968,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
               - NameSwagger: postTask
                 NameAnsible: post_task
@@ -3863,7 +3978,7 @@ Modules:
                 IdPortion: null
                 Type: dict
                 TypeName: taskProperties
-                TypeNameGo: taskProperties
+                TypeNameGo: TaskProperties
                 IsList: false
                 Required: false
                 Documentation: Post task properties.
@@ -3906,6 +4021,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
                   - NameSwagger: source
                     NameAnsible: source
@@ -3936,6 +4052,7 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
                 EnumValues: []
                 PathSwagger: /properties/tasks/postTask
@@ -3948,6 +4065,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /properties/tasks
@@ -3960,6 +4078,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
         EnumValues: []
         PathSwagger: /properties
@@ -3972,6 +4091,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     ModuleOperationNameUpper: SoftwareUpdateConfigurations
     ModuleOperationName: software_update_configurations
@@ -4232,6 +4352,8 @@ Modules:
           - automation_automationaccounts_put
         OperationId: '560'
         MethodId: '561'
+        OperationName: SoftwareUpdateConfigurations
+        MethodName: Create
       - Example:
           parameters:
             subscriptionId: 51766542-3ed7-4a72-a187-0c8ab644ddab
@@ -4264,6 +4386,8 @@ Modules:
         References: []
         OperationId: '560'
         MethodId: '650'
+        OperationName: SoftwareUpdateConfigurations
+        MethodName: Delete
   - ModuleName: azure_rm_softwareupdateconfiguration_info
     Options:
       - NameSwagger: resourceGroupName
@@ -4295,6 +4419,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: automationAccountName
         NameAnsible: automation_account_name
@@ -4325,6 +4450,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: clientRequestId
         NameAnsible: client_request_id
@@ -4355,6 +4481,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - NameSwagger: softwareUpdateConfigurationName
         NameAnsible: name
@@ -4385,6 +4512,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
       - &ref_9
         NameSwagger: value
@@ -4395,7 +4523,7 @@ Modules:
         IdPortion: null
         Type: dict
         TypeName: softwareUpdateConfigurationCollectionItem
-        TypeNameGo: softwareUpdateConfigurationCollectionItem
+        TypeNameGo: SoftwareUpdateConfigurationCollectionItem
         IsList: true
         Required: false
         Documentation: outer object returned when listing all software update configurations
@@ -4434,6 +4562,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: id
             NameAnsible: id
@@ -4464,6 +4593,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: properties
             NameAnsible: properties
@@ -4473,7 +4603,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: softwareUpdateConfigurationCollectionItemProperties
-            TypeNameGo: softwareUpdateConfigurationCollectionItemProperties
+            TypeNameGo: SoftwareUpdateConfigurationCollectionItemProperties
             IsList: false
             Required: true
             Documentation: Software update configuration properties.
@@ -4494,6 +4624,7 @@ Modules:
             ExampleValue: null
             Hidden: true
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: updateConfiguration
             NameAnsible: update_configuration
@@ -4503,7 +4634,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: collectionItemUpdateConfiguration
-            TypeNameGo: collectionItemUpdateConfiguration
+            TypeNameGo: CollectionItemUpdateConfiguration
             IsList: false
             Required: false
             Documentation: Update specific properties of the software update configuration.
@@ -4544,6 +4675,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
               - NameSwagger: duration
                 NameAnsible: duration
@@ -4577,6 +4709,7 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
             EnumValues: []
             PathSwagger: /value/properties/updateConfiguration
@@ -4589,6 +4722,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: frequency
             NameAnsible: frequency
@@ -4641,6 +4775,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
           - NameSwagger: startTime
             NameAnsible: start_time
@@ -4671,6 +4806,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: creationTime
             NameAnsible: creation_time
@@ -4703,6 +4839,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: lastModifiedTime
             NameAnsible: last_modified_time
@@ -4735,6 +4872,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: provisioningState
             NameAnsible: provisioning_state
@@ -4767,6 +4905,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
           - NameSwagger: nextRun
             NameAnsible: next_run
@@ -4797,6 +4936,7 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
         EnumValues: []
         PathSwagger: /value
@@ -4809,6 +4949,7 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
     Methods:
       - Name: List
@@ -4994,6 +5135,8 @@ Modules:
         References: []
         OperationId: '560'
         MethodId: '693'
+        OperationName: SoftwareUpdateConfigurations
+        MethodName: List
       - Example:
           parameters:
             subscriptionId: 1a7d4044-286c-4acb-969a-96639265bf2e
@@ -5103,6 +5246,8 @@ Modules:
         References: []
         OperationId: '560'
         MethodId: '693'
+        OperationName: SoftwareUpdateConfigurations
+        MethodName: List
       - Example:
           parameters:
             subscriptionId: 51766542-3ed7-4a72-a187-0c8ab644ddab
@@ -5208,20 +5353,9 @@ Modules:
         References: []
         OperationId: '560'
         MethodId: '608'
+        OperationName: SoftwareUpdateConfigurations
+        MethodName: GetByName
 ServiceName: UpdateManagementAPI
 MgmtClientName: UpdateManagementAPI
 CliName: automationcfg
 Namespace: azure.mgmt.automation
-Info:
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION automationAccountName'
-  - '  ** FOUND OPTION softwareUpdateConfigurationName'
-  - '  ** FOUND OPTION clientRequestId'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION automationAccountName'
-  - '  ** FOUND OPTION clientRequestId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION automationAccountName'
-  - '  ** FOUND OPTION softwareUpdateConfigurationName'
-  - '  ** FOUND OPTION clientRequestId'
