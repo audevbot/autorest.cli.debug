@@ -5,10 +5,10 @@
     - _vars.yml
   vars: {}
   tasks:
-    - name: ServiceList
+    - name: Check name availability
       azure_rm_resource:
         method: POST
-        api_version: 2018-08-20-preview
+        api_version: '2019-09-16'
         provider: HealthcareApis
         resource_type: checkNameAvailability
         body:

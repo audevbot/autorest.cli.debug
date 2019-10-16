@@ -6,9 +6,9 @@
   vars:
     resource_group: myResourceGroup
   tasks:
-    - name: ServiceListByResourceGroup
+    - name: List all services in resource group
       azure_rm_resource_facts:
-        api_version: 2018-08-20-preview
+        api_version: '2019-09-16'
         resource_group: '{{ resource_group }}'
         provider: HealthcareApis
         resource_type: services

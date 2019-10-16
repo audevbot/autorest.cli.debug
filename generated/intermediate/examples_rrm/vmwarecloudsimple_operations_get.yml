@@ -7,7 +7,7 @@
   tasks:
 
     - name: ListOperations
-      azure_rm_vmwarecloudsimpleavailableoperation_info: {}
+      azure_rm_vmwarecloudsimpleoperation_info: {}
     
       register: output
     - debug:

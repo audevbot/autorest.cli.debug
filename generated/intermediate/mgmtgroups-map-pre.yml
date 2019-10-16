@@ -30,7 +30,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: createManagementGroupRequest
         NameAnsible: create_management_group_request
         NamePythonSdk: create_management_group_request
@@ -53,14 +55,16 @@ Modules:
         PathSwagger: ''
         PathPython: null
         PathGo: null
-        DispositionSdk: dictionary
+        DispositionSdk: '*'
         DispositionRest: '*'
         Comparison: ''
         Updatable: true
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 2
       - NameSwagger: name
         NameAnsible: name
         NamePythonSdk: name
@@ -92,7 +96,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -122,7 +128,9 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: displayName
         NameAnsible: display_name
         NamePythonSdk: display_name
@@ -154,7 +162,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: details
         NameAnsible: details
         NamePythonSdk: details
@@ -223,7 +233,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - &ref_7
                 NameSwagger: name
                 NameAnsible: name
@@ -254,7 +266,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - &ref_8
                 NameSwagger: displayName
                 NameAnsible: display_name
@@ -285,7 +299,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/details/parent
             PathPython: /details/parent
@@ -297,7 +313,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - &ref_4
             NameSwagger: version
             NameAnsible: version
@@ -328,7 +346,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: int32
             Flatten: false
+            Kind: 1
           - &ref_5
             NameSwagger: updatedTime
             NameAnsible: updated_time
@@ -359,7 +379,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - &ref_6
             NameSwagger: updatedBy
             NameAnsible: updated_by
@@ -390,7 +412,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/details
         PathPython: /details
@@ -402,7 +426,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_2
         NameSwagger: tenantId
         NameAnsible: tenant_id
@@ -435,7 +461,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_3
         NameSwagger: roles
         NameAnsible: roles
@@ -466,7 +494,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_9
         NameSwagger: children
         NameAnsible: children
@@ -523,7 +553,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: id
             NameAnsible: id
             NamePythonSdk: id
@@ -556,7 +588,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: name
             NameAnsible: name
             NamePythonSdk: name
@@ -586,7 +620,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: displayName
             NameAnsible: display_name
             NamePythonSdk: display_name
@@ -616,7 +652,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: roles
             NameAnsible: roles
             NamePythonSdk: roles
@@ -646,7 +684,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: children
             NameAnsible: children
             NamePythonSdk: children
@@ -703,7 +743,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: id
                 NameAnsible: id
                 NamePythonSdk: id
@@ -736,7 +778,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: name
                 NameAnsible: name
                 NamePythonSdk: name
@@ -766,7 +810,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: displayName
                 NameAnsible: display_name
                 NamePythonSdk: display_name
@@ -796,7 +842,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: roles
                 NameAnsible: roles
                 NamePythonSdk: roles
@@ -826,7 +874,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: children
                 NameAnsible: children
                 NamePythonSdk: children
@@ -883,7 +933,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: id
                     NameAnsible: id
                     NamePythonSdk: id
@@ -916,7 +968,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: name
                     NameAnsible: name
                     NamePythonSdk: name
@@ -946,7 +1000,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: displayName
                     NameAnsible: display_name
                     NamePythonSdk: display_name
@@ -976,7 +1032,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: roles
                     NameAnsible: roles
                     NamePythonSdk: roles
@@ -1008,7 +1066,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: children
                     NameAnsible: children
                     NamePythonSdk: children
@@ -1038,7 +1098,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /properties/children/children/children
                 PathPython: /children/children/children
@@ -1050,7 +1112,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/children/children
             PathPython: /children/children
@@ -1062,7 +1126,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/children
         PathPython: /children
@@ -1074,7 +1140,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_0
         NameSwagger: id
         NameAnsible: id
@@ -1107,7 +1175,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_1
         NameSwagger: type
         NameAnsible: type
@@ -1140,7 +1210,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: CreateOrUpdate
         Options:
@@ -1231,7 +1303,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -1280,7 +1354,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - *ref_3
           - NameSwagger: details
             NameAnsible: details
@@ -1353,7 +1429,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                   - *ref_7
                   - *ref_8
                 EnumValues: []
@@ -1367,7 +1445,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/details
             PathPython: /details
@@ -1379,7 +1459,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - *ref_9
         EnumValues: []
         PathSwagger: /properties
@@ -1392,7 +1474,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     ModuleOperationNameUpper: ManagementGroups
     ModuleOperationName: management_groups
     ObjectName: ManagementGroup
@@ -1463,6 +1547,8 @@ Modules:
           - resourcegroups_put
         OperationId: '884'
         MethodId: '954'
+        OperationName: ManagementGroups
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             api-version: 2018-03-01-preview
@@ -1507,6 +1593,8 @@ Modules:
           - management_managementgroups_put
         OperationId: '884'
         MethodId: '985'
+        OperationName: ManagementGroups
+        MethodName: Update
       - Example:
           parameters:
             api-version: 2018-03-01-preview
@@ -1534,6 +1622,8 @@ Modules:
         References: []
         OperationId: '884'
         MethodId: '1013'
+        OperationName: ManagementGroups
+        MethodName: Delete
   - ModuleName: azure_rm_managementgroup_info
     Options:
       - NameSwagger: groupId
@@ -1565,7 +1655,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - &ref_10
         NameSwagger: id
         NameAnsible: id
@@ -1598,7 +1690,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_11
         NameSwagger: type
         NameAnsible: type
@@ -1631,7 +1725,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_12
         NameSwagger: name
         NameAnsible: name
@@ -1664,7 +1760,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_13
         NameSwagger: properties
         NameAnsible: properties
@@ -1695,7 +1793,9 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: tenantId
         NameAnsible: tenant_id
         NamePythonSdk: tenant_id
@@ -1727,7 +1827,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: displayName
         NameAnsible: display_name
         NamePythonSdk: display_name
@@ -1757,7 +1859,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: roles
         NameAnsible: roles
         NamePythonSdk: roles
@@ -1787,7 +1891,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: details
         NameAnsible: details
         NamePythonSdk: details
@@ -1835,7 +1941,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int32
             Flatten: false
+            Kind: 1
           - NameSwagger: updatedTime
             NameAnsible: updated_time
             NamePythonSdk: updated_time
@@ -1865,7 +1973,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: updatedBy
             NameAnsible: updated_by
             NamePythonSdk: updated_by
@@ -1895,7 +2005,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: parent
             NameAnsible: parent
             NamePythonSdk: parent
@@ -1946,7 +2058,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: name
                 NameAnsible: name
                 NamePythonSdk: name
@@ -1976,7 +2090,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: displayName
                 NameAnsible: display_name
                 NamePythonSdk: display_name
@@ -2006,7 +2122,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/details/parent
             PathPython: /details/parent
@@ -2018,7 +2136,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/details
         PathPython: /details
@@ -2030,7 +2150,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: children
         NameAnsible: children
         NamePythonSdk: children
@@ -2086,7 +2208,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: id
             NameAnsible: id
             NamePythonSdk: id
@@ -2119,7 +2243,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: name
             NameAnsible: name
             NamePythonSdk: name
@@ -2149,7 +2275,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: displayName
             NameAnsible: display_name
             NamePythonSdk: display_name
@@ -2179,7 +2307,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: roles
             NameAnsible: roles
             NamePythonSdk: roles
@@ -2209,7 +2339,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: children
             NameAnsible: children
             NamePythonSdk: children
@@ -2266,7 +2398,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: id
                 NameAnsible: id
                 NamePythonSdk: id
@@ -2299,7 +2433,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: name
                 NameAnsible: name
                 NamePythonSdk: name
@@ -2329,7 +2465,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: displayName
                 NameAnsible: display_name
                 NamePythonSdk: display_name
@@ -2359,7 +2497,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: roles
                 NameAnsible: roles
                 NamePythonSdk: roles
@@ -2389,7 +2529,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: children
                 NameAnsible: children
                 NamePythonSdk: children
@@ -2446,7 +2588,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: id
                     NameAnsible: id
                     NamePythonSdk: id
@@ -2479,7 +2623,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: name
                     NameAnsible: name
                     NamePythonSdk: name
@@ -2509,7 +2655,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: displayName
                     NameAnsible: display_name
                     NamePythonSdk: display_name
@@ -2539,7 +2687,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: roles
                     NameAnsible: roles
                     NamePythonSdk: roles
@@ -2571,7 +2721,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: children
                     NameAnsible: children
                     NamePythonSdk: children
@@ -2601,7 +2753,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /properties/children/children/children
                 PathPython: /children/children/children
@@ -2613,7 +2767,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/children/children
             PathPython: /children/children
@@ -2625,7 +2781,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/children
         PathPython: /children
@@ -2637,7 +2795,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: List
         Options:
@@ -2703,6 +2863,8 @@ Modules:
         References: []
         OperationId: '884'
         MethodId: '885'
+        OperationName: ManagementGroups
+        MethodName: List
       - Example:
           parameters:
             api-version: 2018-03-01-preview
@@ -2740,6 +2902,8 @@ Modules:
         References: []
         OperationId: '884'
         MethodId: '909'
+        OperationName: ManagementGroups
+        MethodName: Get
       - Example:
           parameters:
             api-version: 2018-03-01-preview
@@ -2801,6 +2965,8 @@ Modules:
         References: []
         OperationId: '884'
         MethodId: '909'
+        OperationName: ManagementGroups
+        MethodName: Get
       - Example:
           parameters:
             api-version: 2018-03-01-preview
@@ -2872,6 +3038,8 @@ Modules:
         References: []
         OperationId: '884'
         MethodId: '909'
+        OperationName: ManagementGroups
+        MethodName: Get
   - ModuleName: azure_rm_managementgroupsubscription
     Options:
       - NameSwagger: groupId
@@ -2903,7 +3071,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
     Methods:
       - Name: Create
         Options:
@@ -2960,6 +3130,8 @@ Modules:
           - management_managementgroups_put
         OperationId: '1070'
         MethodId: '1071'
+        OperationName: ManagementGroupSubscriptions
+        MethodName: Create
       - Example:
           parameters:
             api-version: 2018-03-01-preview
@@ -2981,6 +3153,8 @@ Modules:
         References: []
         OperationId: '1070'
         MethodId: '1101'
+        OperationName: ManagementGroupSubscriptions
+        MethodName: Delete
   - ModuleName: azure_rm_managementgroupsoperation_info
     Options:
       - &ref_14
@@ -3033,7 +3207,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: display
             NameAnsible: display
             NamePythonSdk: display
@@ -3081,7 +3257,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: resource
                 NameAnsible: resource
                 NamePythonSdk: resource
@@ -3111,7 +3289,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: operation
                 NameAnsible: operation
                 NamePythonSdk: operation
@@ -3141,7 +3321,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: description
                 NameAnsible: description
                 NamePythonSdk: description
@@ -3171,7 +3353,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/display
             PathPython: /value/display
@@ -3183,7 +3367,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /value
         PathPython: /value
@@ -3195,7 +3381,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_15
         NameSwagger: nextLink
         NameAnsible: next_link
@@ -3226,7 +3414,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: List
         Options: []
@@ -3251,8 +3441,3 @@ ServiceName: ManagementGroupsClient
 MgmtClientName: ManagementGroupsClient
 CliName: mgmtgroups
 Namespace: azure.mgmt.managementgroups
-Info:
-  - '  ** FOUND OPTION groupId'
-  - '  ** FOUND OPTION createManagementGroupRequest'
-  - '  ** FOUND OPTION groupId'
-  - '  ** FOUND OPTION groupId'
