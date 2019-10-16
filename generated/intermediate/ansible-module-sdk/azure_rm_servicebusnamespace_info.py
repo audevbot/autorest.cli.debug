@@ -102,6 +102,10 @@ EXAMPLES = '''
   azure_rm_servicebusnamespace_info:
     resource_group: myResourceGroup
     namespace_name: my
+- name: NameSpaceNetworkRuleSetList
+  azure_rm_servicebusnamespace_info:
+    resource_group: myResourceGroup
+    namespace_name: my
 - name: NameSpaceAuthorizationRuleListAll
   azure_rm_servicebusnamespace_info:
     resource_group: myResourceGroup
@@ -271,6 +275,9 @@ class AzureRMNamespacesInfo(AzureRMModuleBase):
             self.results['namespaces'] = self.format_item(self.listauthorizationrules())
         elif (self.resource_group is not None and
               self.namespace_name is not None):
+            self.results['namespaces'] = self.format_item(self.listnetworkrulesets())
+        elif (self.resource_group is not None and
+              self.namespace_name is not None):
             self.results['namespaces'] = self.format_item(self.get())
         elif (self.resource_group is not None):
             self.results['namespaces'] = self.format_item(self.listbyresourcegroup())
@@ -307,6 +314,17 @@ class AzureRMNamespacesInfo(AzureRMModuleBase):
         try:
             response = self.mgmt_client.namespaces.list_authorization_rules(resource_group_name=self.resource_group,
                                                                             namespace_name=self.namespace_name)
+        except CloudError as e:
+            self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
+
+        return response.as_dict()
+
+    def listnetworkrulesets(self):
+        response = None
+
+        try:
+            response = self.mgmt_client.namespaces.list_network_rule_sets(resource_group_name=self.resource_group,
+                                                                          namespace_name=self.namespace_name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 

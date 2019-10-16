@@ -145,7 +145,7 @@ EXAMPLES = '''
 '''
 
 RETURN = '''
-dedicated_cloud_node:
+dedicated_cloud_nodes:
   description: >-
     A list of dict results where the key is the name of the DedicatedCloudNode
     and the values are the facts for that DedicatedCloudNode.
@@ -218,7 +218,7 @@ except ImportError:
     pass
 
 
-class AzureRMDedicatedCloudNodeInfo(AzureRMModuleBase):
+class AzureRMDedicatedCloudNodesInfo(AzureRMModuleBase):
     def __init__(self):
         self.module_arg_spec = dict(
             resource_group=dict(
@@ -251,7 +251,7 @@ class AzureRMDedicatedCloudNodeInfo(AzureRMModuleBase):
         self.header_parameters['Content-Type'] = 'application/json; charset=utf-8'
 
         self.mgmt_client = None
-        super(AzureRMDedicatedCloudNodeInfo, self).__init__(self.module_arg_spec, supports_tags=True)
+        super(AzureRMDedicatedCloudNodesInfo, self).__init__(self.module_arg_spec, supports_tags=True)
 
     def exec_module(self, **kwargs):
 
@@ -263,19 +263,19 @@ class AzureRMDedicatedCloudNodeInfo(AzureRMModuleBase):
 
         if (self.resource_group is not None and
             self.name is not None):
-            self.results['dedicated_cloud_node'] = self.format_item(self.get())
+            self.results['dedicated_cloud_nodes'] = self.format_item(self.get())
         elif (self.resource_group is not None):
-            self.results['dedicated_cloud_node'] = self.format_item(self.listbyresourcegroup())
+            self.results['dedicated_cloud_nodes'] = self.format_item(self.listbyresourcegroup())
         else:
-            self.results['dedicated_cloud_node'] = [self.format_item(self.listbysubscription())]
+            self.results['dedicated_cloud_nodes'] = [self.format_item(self.listbysubscription())]
         return self.results
 
     def get(self):
         response = None
 
         try:
-            response = self.mgmt_client.dedicated_cloud_node.get(resource_group_name=self.resource_group,
-                                                                 dedicated_cloud_node_name=self.name)
+            response = self.mgmt_client.dedicated_cloud_nodes.get(resource_group_name=self.resource_group,
+                                                                  dedicated_cloud_node_name=self.name)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 
@@ -285,7 +285,7 @@ class AzureRMDedicatedCloudNodeInfo(AzureRMModuleBase):
         response = None
 
         try:
-            response = self.mgmt_client.dedicated_cloud_node.list_by_resource_group(resource_group_name=self.resource_group)
+            response = self.mgmt_client.dedicated_cloud_nodes.list_by_resource_group(resource_group_name=self.resource_group)
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 
@@ -295,7 +295,7 @@ class AzureRMDedicatedCloudNodeInfo(AzureRMModuleBase):
         response = None
 
         try:
-            response = self.mgmt_client.dedicated_cloud_node.list_by_subscription()
+            response = self.mgmt_client.dedicated_cloud_nodes.list_by_subscription()
         except CloudError as e:
             self.log('Could not get info for @(Model.ModuleOperationNameUpper).')
 
@@ -306,7 +306,7 @@ class AzureRMDedicatedCloudNodeInfo(AzureRMModuleBase):
 
 
 def main():
-    AzureRMDedicatedCloudNodeInfo()
+    AzureRMDedicatedCloudNodesInfo()
 
 
 if __name__ == '__main__':
