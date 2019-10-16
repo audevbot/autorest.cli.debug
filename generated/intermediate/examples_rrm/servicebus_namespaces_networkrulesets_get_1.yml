@@ -1,0 +1,18 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+    namespace_name: my
+  tasks:
+
+    - name: NameSpaceNetworkRuleSetList
+      azure_rm_servicebusnamespace_info:
+        resource_group: '{{resource_group}}'
+        namespace_name: '{{namespace_name}}'
+    
+      register: output
+    - debug:
+        var: output

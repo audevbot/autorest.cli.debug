@@ -30,7 +30,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: resourceName
         NameAnsible: name
         NamePythonSdk: resource_name
@@ -60,7 +62,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: parameters
         NameAnsible: parameters
         NamePythonSdk: parameters
@@ -85,14 +89,16 @@ Modules:
         PathSwagger: ''
         PathPython: null
         PathGo: null
-        DispositionSdk: dictionary
+        DispositionSdk: '*'
         DispositionRest: '*'
         Comparison: ''
         Updatable: true
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 2
       - NameSwagger: location
         NameAnsible: location
         NamePythonSdk: location
@@ -122,7 +128,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: tags
         NameAnsible: tags
         NamePythonSdk: tags
@@ -156,7 +164,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: plan
         NameAnsible: plan
         NamePythonSdk: plan
@@ -204,7 +214,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: product
             NameAnsible: product
             NamePythonSdk: product
@@ -236,7 +248,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: promotionCode
             NameAnsible: promotion_code
             NamePythonSdk: promotion_code
@@ -266,7 +280,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: publisher
             NameAnsible: publisher
             NamePythonSdk: publisher
@@ -296,7 +312,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /plan
         PathPython: /plan
@@ -308,7 +326,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -338,7 +358,9 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: openShiftVersion
         NameAnsible: open_shift_version
         NamePythonSdk: open_shift_version
@@ -368,7 +390,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: networkProfile
         NameAnsible: network_profile
         NamePythonSdk: network_profile
@@ -416,7 +440,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: peerVnetId
             NameAnsible: peer_vnet_id
             NamePythonSdk: peer_vnet_id
@@ -446,7 +472,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: vnetId
             NameAnsible: vnet_id
             NamePythonSdk: vnet_id
@@ -476,7 +504,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/networkProfile
         PathPython: /networkProfile
@@ -488,7 +518,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: routerProfiles
         NameAnsible: router_profiles
         NamePythonSdk: router_profiles
@@ -536,7 +568,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - &ref_7
             NameSwagger: publicSubdomain
             NameAnsible: public_subdomain
@@ -567,7 +601,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - &ref_8
             NameSwagger: fqdn
             NameAnsible: fqdn
@@ -598,7 +634,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/routerProfiles
         PathPython: /routerProfiles
@@ -610,7 +648,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: masterPoolProfile
         NameAnsible: master_pool_profile
         NamePythonSdk: master_pool_profile
@@ -660,7 +700,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: count
             NameAnsible: count
             NamePythonSdk: count
@@ -692,7 +734,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: int32
             Flatten: false
+            Kind: 1
           - NameSwagger: vmSize
             NameAnsible: vm_size
             NamePythonSdk: vm_size
@@ -821,7 +865,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: subnetCidr
             NameAnsible: subnet_cidr
             NamePythonSdk: subnet_cidr
@@ -851,7 +897,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: osType
             NameAnsible: os_type
             NamePythonSdk: os_type
@@ -889,7 +937,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/masterPoolProfile
         PathPython: /masterPoolProfile
@@ -901,7 +951,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: agentPoolProfiles
         NameAnsible: agent_pool_profiles
         NamePythonSdk: agent_pool_profiles
@@ -951,7 +1003,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: count
             NameAnsible: count
             NamePythonSdk: count
@@ -981,7 +1035,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: int32
             Flatten: false
+            Kind: 1
           - NameSwagger: vmSize
             NameAnsible: vm_size
             NamePythonSdk: vm_size
@@ -1110,7 +1166,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: subnetCidr
             NameAnsible: subnet_cidr
             NamePythonSdk: subnet_cidr
@@ -1140,7 +1198,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: osType
             NameAnsible: os_type
             NamePythonSdk: os_type
@@ -1178,7 +1238,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: role
             NameAnsible: role
             NamePythonSdk: role
@@ -1214,7 +1276,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/agentPoolProfiles
         PathPython: /agentPoolProfiles
@@ -1226,7 +1290,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: authProfile
         NameAnsible: auth_profile
         NamePythonSdk: auth_profile
@@ -1292,7 +1358,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: provider
                 NameAnsible: provider
                 NamePythonSdk: provider
@@ -1322,7 +1390,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/authProfile/identityProviders
             PathPython: /authProfile/identityProviders
@@ -1334,7 +1404,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/authProfile
         PathPython: /authProfile
@@ -1346,7 +1418,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_3
         NameSwagger: provisioningState
         NameAnsible: provisioning_state
@@ -1379,7 +1453,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_4
         NameSwagger: clusterVersion
         NameAnsible: cluster_version
@@ -1410,7 +1486,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_5
         NameSwagger: publicHostname
         NameAnsible: public_hostname
@@ -1441,7 +1519,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_6
         NameSwagger: fqdn
         NameAnsible: fqdn
@@ -1474,7 +1554,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_0
         NameSwagger: id
         NameAnsible: id
@@ -1505,7 +1587,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_1
         NameSwagger: name
         NameAnsible: name
@@ -1536,7 +1620,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_2
         NameSwagger: type
         NameAnsible: type
@@ -1567,7 +1653,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: CreateOrUpdate
         Options:
@@ -1661,7 +1749,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: tags
         NameAnsible: tags
         NamePythonSdk: tags
@@ -1695,7 +1785,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: plan
         NameAnsible: plan
         NamePythonSdk: plan
@@ -1743,7 +1835,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: product
             NameAnsible: product
             NamePythonSdk: product
@@ -1775,7 +1869,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: promotionCode
             NameAnsible: promotion_code
             NamePythonSdk: promotion_code
@@ -1805,7 +1901,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: publisher
             NameAnsible: publisher
             NamePythonSdk: publisher
@@ -1835,7 +1933,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /plan
         PathPython: /plan
@@ -1847,7 +1947,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -1896,7 +1998,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - *ref_4
           - *ref_5
           - *ref_6
@@ -1947,7 +2051,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: peerVnetId
                 NameAnsible: peer_vnet_id
                 NamePythonSdk: peer_vnet_id
@@ -1977,7 +2083,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: vnetId
                 NameAnsible: vnet_id
                 NamePythonSdk: vnet_id
@@ -2007,7 +2115,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/networkProfile
             PathPython: /networkProfile
@@ -2019,7 +2129,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: routerProfiles
             NameAnsible: router_profiles
             NamePythonSdk: router_profiles
@@ -2067,7 +2179,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - *ref_7
               - *ref_8
             EnumValues: []
@@ -2081,7 +2195,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: masterPoolProfile
             NameAnsible: master_pool_profile
             NamePythonSdk: master_pool_profile
@@ -2131,7 +2247,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: count
                 NameAnsible: count
                 NamePythonSdk: count
@@ -2163,7 +2281,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
+                Kind: 1
               - NameSwagger: vmSize
                 NameAnsible: vm_size
                 NamePythonSdk: vm_size
@@ -2292,7 +2412,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: subnetCidr
                 NameAnsible: subnet_cidr
                 NamePythonSdk: subnet_cidr
@@ -2322,7 +2444,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: osType
                 NameAnsible: os_type
                 NamePythonSdk: os_type
@@ -2360,7 +2484,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/masterPoolProfile
             PathPython: /masterPoolProfile
@@ -2372,7 +2498,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: agentPoolProfiles
             NameAnsible: agent_pool_profiles
             NamePythonSdk: agent_pool_profiles
@@ -2422,7 +2550,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: count
                 NameAnsible: count
                 NamePythonSdk: count
@@ -2452,7 +2582,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
+                Kind: 1
               - NameSwagger: vmSize
                 NameAnsible: vm_size
                 NamePythonSdk: vm_size
@@ -2581,7 +2713,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: subnetCidr
                 NameAnsible: subnet_cidr
                 NamePythonSdk: subnet_cidr
@@ -2611,7 +2745,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: osType
                 NameAnsible: os_type
                 NamePythonSdk: os_type
@@ -2649,7 +2785,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: role
                 NameAnsible: role
                 NamePythonSdk: role
@@ -2685,7 +2823,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/agentPoolProfiles
             PathPython: /agentPoolProfiles
@@ -2697,7 +2837,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: authProfile
             NameAnsible: auth_profile
             NamePythonSdk: auth_profile
@@ -2763,7 +2905,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: provider
                     NameAnsible: provider
                     NamePythonSdk: provider
@@ -2793,7 +2937,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /properties/authProfile/identityProviders
                 PathPython: /authProfile/identityProviders
@@ -2805,7 +2951,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/authProfile
             PathPython: /authProfile
@@ -2817,7 +2965,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties
         PathPython: ''
@@ -2829,7 +2979,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     ModuleOperationNameUpper: OpenShiftManagedClusters
     ModuleOperationName: open_shift_managed_clusters
     ObjectName: OpenShiftManagedCluster
@@ -3007,6 +3159,8 @@ Modules:
           - resourcegroups_put
         OperationId: '393'
         MethodId: '466'
+        OperationName: OpenShiftManagedClusters
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             api-version: '2019-04-30'
@@ -3033,6 +3187,8 @@ Modules:
         References: []
         OperationId: '393'
         MethodId: '535'
+        OperationName: OpenShiftManagedClusters
+        MethodName: Delete
   - ModuleName: azure_rm_openshiftmanagedcluster_info
     Options:
       - NameSwagger: resourceGroupName
@@ -3064,7 +3220,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: resourceName
         NameAnsible: name
         NamePythonSdk: resource_name
@@ -3094,7 +3252,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - &ref_9
         NameSwagger: id
         NameAnsible: id
@@ -3125,7 +3285,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_10
         NameSwagger: name
         NameAnsible: name
@@ -3156,7 +3318,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_11
         NameSwagger: type
         NameAnsible: type
@@ -3187,7 +3351,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_12
         NameSwagger: location
         NameAnsible: location
@@ -3218,7 +3384,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_13
         NameSwagger: tags
         NameAnsible: tags
@@ -3253,7 +3421,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_14
         NameSwagger: plan
         NameAnsible: plan
@@ -3302,7 +3472,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: product
             NameAnsible: product
             NamePythonSdk: product
@@ -3334,7 +3506,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: promotionCode
             NameAnsible: promotion_code
             NamePythonSdk: promotion_code
@@ -3364,7 +3538,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: publisher
             NameAnsible: publisher
             NamePythonSdk: publisher
@@ -3394,7 +3570,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /plan
         PathPython: /plan
@@ -3406,7 +3584,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_15
         NameSwagger: properties
         NameAnsible: properties
@@ -3437,7 +3617,9 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: provisioningState
         NameAnsible: provisioning_state
         NamePythonSdk: provisioning_state
@@ -3469,7 +3651,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: openShiftVersion
         NameAnsible: open_shift_version
         NamePythonSdk: open_shift_version
@@ -3499,7 +3683,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: clusterVersion
         NameAnsible: cluster_version
         NamePythonSdk: cluster_version
@@ -3529,7 +3715,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: publicHostname
         NameAnsible: public_hostname
         NamePythonSdk: public_hostname
@@ -3559,7 +3747,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: fqdn
         NameAnsible: fqdn
         NamePythonSdk: fqdn
@@ -3591,7 +3781,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: networkProfile
         NameAnsible: network_profile
         NamePythonSdk: network_profile
@@ -3639,7 +3831,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: peerVnetId
             NameAnsible: peer_vnet_id
             NamePythonSdk: peer_vnet_id
@@ -3669,7 +3863,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: vnetId
             NameAnsible: vnet_id
             NamePythonSdk: vnet_id
@@ -3699,7 +3895,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/networkProfile
         PathPython: /networkProfile
@@ -3711,7 +3909,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: routerProfiles
         NameAnsible: router_profiles
         NamePythonSdk: router_profiles
@@ -3759,7 +3959,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: publicSubdomain
             NameAnsible: public_subdomain
             NamePythonSdk: public_subdomain
@@ -3789,7 +3991,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: fqdn
             NameAnsible: fqdn
             NamePythonSdk: fqdn
@@ -3819,7 +4023,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/routerProfiles
         PathPython: /routerProfiles
@@ -3831,7 +4037,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: masterPoolProfile
         NameAnsible: master_pool_profile
         NamePythonSdk: master_pool_profile
@@ -3881,7 +4089,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: count
             NameAnsible: count
             NamePythonSdk: count
@@ -3913,7 +4123,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int32
             Flatten: false
+            Kind: 1
           - NameSwagger: vmSize
             NameAnsible: vm_size
             NamePythonSdk: vm_size
@@ -4042,7 +4254,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: subnetCidr
             NameAnsible: subnet_cidr
             NamePythonSdk: subnet_cidr
@@ -4072,7 +4286,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: osType
             NameAnsible: os_type
             NamePythonSdk: os_type
@@ -4110,7 +4326,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/masterPoolProfile
         PathPython: /masterPoolProfile
@@ -4122,7 +4340,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: agentPoolProfiles
         NameAnsible: agent_pool_profiles
         NamePythonSdk: agent_pool_profiles
@@ -4172,7 +4392,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: count
             NameAnsible: count
             NamePythonSdk: count
@@ -4202,7 +4424,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int32
             Flatten: false
+            Kind: 1
           - NameSwagger: vmSize
             NameAnsible: vm_size
             NamePythonSdk: vm_size
@@ -4331,7 +4555,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: subnetCidr
             NameAnsible: subnet_cidr
             NamePythonSdk: subnet_cidr
@@ -4361,7 +4587,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: osType
             NameAnsible: os_type
             NamePythonSdk: os_type
@@ -4399,7 +4627,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: role
             NameAnsible: role
             NamePythonSdk: role
@@ -4435,7 +4665,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/agentPoolProfiles
         PathPython: /agentPoolProfiles
@@ -4447,7 +4679,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: authProfile
         NameAnsible: auth_profile
         NamePythonSdk: auth_profile
@@ -4513,7 +4747,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: provider
                 NameAnsible: provider
                 NamePythonSdk: provider
@@ -4543,7 +4779,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/authProfile/identityProviders
             PathPython: /authProfile/identityProviders
@@ -4555,7 +4793,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/authProfile
         PathPython: /authProfile
@@ -4567,7 +4807,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: List
         Options: []
@@ -4682,6 +4924,8 @@ Modules:
         References: []
         OperationId: '393'
         MethodId: '394'
+        OperationName: OpenShiftManagedClusters
+        MethodName: List
       - Example:
           parameters:
             api-version: 2018-09-30-preview
@@ -4750,6 +4994,8 @@ Modules:
         References: []
         OperationId: '393'
         MethodId: '412'
+        OperationName: OpenShiftManagedClusters
+        MethodName: ListByResourceGroup
       - Example:
           parameters:
             api-version: '2019-04-30'
@@ -4824,14 +5070,9 @@ Modules:
         References: []
         OperationId: '393'
         MethodId: '436'
+        OperationName: OpenShiftManagedClusters
+        MethodName: Get
 ServiceName: OpenShift
 MgmtClientName: OpenShift
 CliName: aro
 Namespace: azure.mgmt.containerservice
-Info:
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceName'

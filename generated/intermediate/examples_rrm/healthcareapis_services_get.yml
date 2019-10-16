@@ -8,7 +8,7 @@
     service_name: myService
   tasks:
 
-    - name: ServiceGet
+    - name: Get metadata
       azure_rm_healthcareapisservice_info:
         resource_group: '{{resource_group}}'
         name: '{{service_name}}'

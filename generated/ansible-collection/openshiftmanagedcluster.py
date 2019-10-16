@@ -253,25 +253,19 @@ EXAMPLES = '''
     agent_pool_profiles:
       - name: infra
         count: '2'
-        vm_size: Standard_D4s_v3
-        subnet_cidr: 10.0.0.0/24
-        os_type: Linux
         role: infra
       - name: compute
         count: '4'
-        vm_size: Standard_D4s_v3
-        subnet_cidr: 10.0.0.0/24
-        os_type: Linux
         role: compute
     auth_profile:
       identity_providers:
         - name: Azure AD
           provider:
             kind: AADIdentityProvider
-            clientId: clientId
+            client_id: clientId
             secret: secret
-            tenantId: tenantId
-            customerAdminGroupId: customerAdminGroupId
+            tenant_id: tenantId
+            customer_admin_group_id: customerAdminGroupId
 - name: Delete OpenShift Managed Cluster
   azure.rm.openshiftmanagedcluster:
     resource_group: myResourceGroup

@@ -82,7 +82,7 @@ EXAMPLES = '''
 '''
 
 RETURN = '''
-dedicated_cloud_service:
+dedicated_cloud_services:
   description: >-
     A list of dict results where the key is the name of the
     DedicatedCloudService and the values are the facts for that
@@ -144,7 +144,7 @@ from copy import deepcopy
 from msrestazure.azure_exceptions import CloudError
 
 
-class AzureRMDedicatedCloudServiceInfo(AzureRMModuleBase):
+class AzureRMDedicatedCloudServicesInfo(AzureRMModuleBase):
     def __init__(self):
         self.module_arg_spec = dict(
             resource_group=dict(
@@ -176,7 +176,7 @@ class AzureRMDedicatedCloudServiceInfo(AzureRMModuleBase):
         self.header_parameters['Content-Type'] = 'application/json; charset=utf-8'
 
         self.mgmt_client = None
-        super(AzureRMDedicatedCloudServiceInfo, self).__init__(self.module_arg_spec, supports_tags=True)
+        super(AzureRMDedicatedCloudServicesInfo, self).__init__(self.module_arg_spec, supports_tags=True)
 
     def exec_module(self, **kwargs):
 
@@ -188,11 +188,11 @@ class AzureRMDedicatedCloudServiceInfo(AzureRMModuleBase):
 
         if (self.resource_group is not None and
             self.name is not None):
-            self.results['dedicated_cloud_service'] = self.format_item(self.get())
+            self.results['dedicated_cloud_services'] = self.format_item(self.get())
         elif (self.resource_group is not None):
-            self.results['dedicated_cloud_service'] = self.format_item(self.listbyresourcegroup())
+            self.results['dedicated_cloud_services'] = self.format_item(self.listbyresourcegroup())
         else:
-            self.results['dedicated_cloud_service'] = [self.format_item(self.listbysubscription())]
+            self.results['dedicated_cloud_services'] = [self.format_item(self.listbysubscription())]
         return self.results
 
     def get(self):
@@ -292,7 +292,7 @@ class AzureRMDedicatedCloudServiceInfo(AzureRMModuleBase):
 
 
 def main():
-    AzureRMDedicatedCloudServiceInfo()
+    AzureRMDedicatedCloudServicesInfo()
 
 
 if __name__ == '__main__':
