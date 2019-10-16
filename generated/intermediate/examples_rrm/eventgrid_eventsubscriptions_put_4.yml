@@ -1,0 +1,46 @@
+# ref##scope##subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1
+- import_playbook: eventhub_namespaces_eventhubs_put.yml
+- import_playbook: storage_storageaccounts_put.yml
+- import_playbook: eventgrid_eventsubscriptions_put.yml
+
+
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    event_subscription_name: myEventSubscription
+    resource_group: myResourceGroup
+    namespace_name: my
+    eventhub_name: myEventhub
+    storage_account_name: myStorageAccount
+  tasks:
+
+    - name: EventSubscriptions_CreateOrUpdateForCustomTopic_EventHubDestination
+      azure_rm_eventgrideventsubscription:
+        scope: >-
+          subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1
+        name: '{{event_subscription_name}}'
+        event_subscription_info:
+          properties:
+            destination:
+              endpointType: EventHub
+              properties:
+                resourceId: >-
+                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                  resource_group }}/providers/Microsoft.EventHub/namespaces/{{
+                  namespace_name }}/eventhubs/{{ eventhub_name }}
+            filter:
+              isSubjectCaseSensitive: false
+              subjectBeginsWith: ExamplePrefix
+              subjectEndsWith: ExampleSuffix
+            deadLetterDestination:
+              endpointType: StorageBlob
+              properties:
+                resourceId: >-
+                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                  resource_group }}/providers/Microsoft.Storage/storageAccounts/{{
+                  storage_account_name }}
+                blobContainerName: contosocontainer
+    

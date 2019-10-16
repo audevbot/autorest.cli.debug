@@ -10,9 +10,9 @@
   tasks:
 
     - name: GetVirtualMachineTemplate
-      azure_rm_vmwarecloudsimplevirtualmachinetemplatebypc_info:
-        region_id: '{{location_name}}'
+      azure_rm_vmwarecloudsimplevirtualmachinetemplate_info:
         pc_name: '{{private_cloud_name}}'
+        region_id: '{{location_name}}'
         name: '{{virtual_machine_template_name}}'
     
       register: output

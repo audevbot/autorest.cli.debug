@@ -154,22 +154,22 @@ EXAMPLES = '''
 - name: EventSubscriptions_GetForSubscription
   azure_rm_eventgrideventsubscription_info:
     scope: subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4
-    event_subscription_name: examplesubscription3
+    event_subscription_name: myEventSubscription
 - name: EventSubscriptions_GetForResourceGroup
   azure_rm_eventgrideventsubscription_info:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg
-    event_subscription_name: examplesubscription2
+    event_subscription_name: myEventSubscription
 - name: EventSubscriptions_GetForResource
   azure_rm_eventgrideventsubscription_info:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventHub/namespaces/examplenamespace1
-    event_subscription_name: examplesubscription1
+    event_subscription_name: myEventSubscription
 - name: EventSubscriptions_GetForCustomTopic
   azure_rm_eventgrideventsubscription_info:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic2
-    event_subscription_name: examplesubscription1
+    event_subscription_name: myEventSubscription
 - name: EventSubscriptions_ListRegionalBySubscription
   azure_rm_eventgrideventsubscription_info:
     location: myLocation
