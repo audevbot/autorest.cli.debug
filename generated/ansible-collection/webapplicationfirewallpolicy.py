@@ -771,30 +771,9 @@ EXAMPLES = '''
     custom_rules:
       - name: Rule1
         priority: '1'
-        rule_type: MatchRule
-        match_conditions:
-          - match_variables:
-              - variable_name: RemoteAddr
-            operator: IPMatch
-            match_values:
-              - 192.168.1.0/24
-              - 10.0.0.0/24
         action: Block
       - name: Rule2
         priority: '2'
-        rule_type: MatchRule
-        match_conditions:
-          - match_variables:
-              - variable_name: RemoteAddr
-            operator: IPMatch
-            match_values:
-              - 192.168.1.0/24
-          - match_variables:
-              - variable_name: RequestHeaders
-                selector: UserAgent
-            operator: Contains
-            match_values:
-              - Windows
         action: Block
 - name: Deletes a WAF policy within a resource group
   azure.rm.webapplicationfirewallpolicy:

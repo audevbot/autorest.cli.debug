@@ -154,22 +154,22 @@ EXAMPLES = '''
 - name: EventSubscriptions_GetForSubscription
   azure.rm.eventgrideventsubscription.info:
     scope: subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4
-    event_subscription_name: examplesubscription3
+    event_subscription_name: myEventSubscription
 - name: EventSubscriptions_GetForResourceGroup
   azure.rm.eventgrideventsubscription.info:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg
-    event_subscription_name: examplesubscription2
+    event_subscription_name: myEventSubscription
 - name: EventSubscriptions_GetForResource
   azure.rm.eventgrideventsubscription.info:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventHub/namespaces/examplenamespace1
-    event_subscription_name: examplesubscription1
+    event_subscription_name: myEventSubscription
 - name: EventSubscriptions_GetForCustomTopic
   azure.rm.eventgrideventsubscription.info:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic2
-    event_subscription_name: examplesubscription1
+    event_subscription_name: myEventSubscription
 - name: EventSubscriptions_ListRegionalBySubscription
   azure.rm.eventgrideventsubscription.info:
     location: myLocation
@@ -614,10 +614,10 @@ class AzureRMEventSubscriptionsInfo(AzureRMModuleBase):
         results = {}
         # prepare url
         self.url = ('/{scope}' +
-                    '/{{ {scope}_name }}' +
+                    '/providers' +
                     '/Microsoft.EventGrid' +
-                    '/{{ microsoft.event_grid_name }}' +
-                    '/{eventSubscriptionName}')
+                    '/eventSubscriptions' +
+                    '/{{ event_subscription_name }}')
         self.url = self.url.replace('{{ subscription_id }}', self.subscription_id)
         self.url = self.url.replace('{{ resource_group }}', self.resource_group)
         self.url = self.url.replace('{{ {resource_type_name}_name }}', self.name)

@@ -140,7 +140,7 @@ EXAMPLES = '''
 - name: EventSubscriptions_CreateOrUpdateForSubscription
   azure_rm_eventgrideventsubscription:
     scope: subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4
-    name: examplesubscription3
+    name: myEventSubscription
     event_subscription_info:
       properties:
         destination:
@@ -153,7 +153,7 @@ EXAMPLES = '''
   azure_rm_eventgrideventsubscription:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg
-    name: examplesubscription2
+    name: myEventSubscription
     event_subscription_info:
       properties:
         destination:
@@ -168,7 +168,7 @@ EXAMPLES = '''
   azure_rm_eventgrideventsubscription:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventHub/namespaces/examplenamespace1
-    name: examplesubscription10
+    name: myEventSubscription
     event_subscription_info:
       properties:
         destination:
@@ -183,7 +183,7 @@ EXAMPLES = '''
   azure_rm_eventgrideventsubscription:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1
-    name: examplesubscription1
+    name: myEventSubscription
     event_subscription_info:
       properties:
         destination:
@@ -207,7 +207,7 @@ EXAMPLES = '''
   azure_rm_eventgrideventsubscription:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1
-    name: examplesubscription1
+    name: myEventSubscription
     event_subscription_info:
       properties:
         destination:
@@ -233,7 +233,7 @@ EXAMPLES = '''
   azure_rm_eventgrideventsubscription:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1
-    name: examplesubscription1
+    name: myEventSubscription
     event_subscription_info:
       properties:
         destination:
@@ -259,7 +259,7 @@ EXAMPLES = '''
   azure_rm_eventgrideventsubscription:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1
-    name: examplesubscription1
+    name: myEventSubscription
     event_subscription_info:
       properties:
         destination:
@@ -285,44 +285,44 @@ EXAMPLES = '''
 - name: EventSubscriptions_UpdateForSubscription
   azure_rm_eventgrideventsubscription:
     scope: subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4
-    name: examplesubscription3
+    name: myEventSubscription
 - name: EventSubscriptions_UpdateForResourceGroup
   azure_rm_eventgrideventsubscription:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg
-    name: examplesubscription2
+    name: myEventSubscription
 - name: EventSubscriptions_UpdateForResource
   azure_rm_eventgrideventsubscription:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventHub/namespaces/examplenamespace1
-    name: examplesubscription1
+    name: myEventSubscription
 - name: EventSubscriptions_UpdateForCustomTopic
   azure_rm_eventgrideventsubscription:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic2
-    name: examplesubscription1
+    name: myEventSubscription
 - name: EventSubscriptions_DeleteForSubscription
   azure_rm_eventgrideventsubscription:
     scope: subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4
-    name: examplesubscription3
+    name: myEventSubscription
     state: absent
 - name: EventSubscriptions_DeleteForResourceGroup
   azure_rm_eventgrideventsubscription:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg
-    name: examplesubscription2
+    name: myEventSubscription
     state: absent
 - name: EventSubscriptions_DeleteForResource
   azure_rm_eventgrideventsubscription:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventHub/namespaces/examplenamespace1
-    name: examplesubscription10
+    name: myEventSubscription
     state: absent
 - name: EventSubscriptions_DeleteForCustomTopic
   azure_rm_eventgrideventsubscription:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1
-    name: examplesubscription1
+    name: myEventSubscription
     state: absent
 
 '''

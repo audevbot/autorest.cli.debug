@@ -145,7 +145,7 @@ EXAMPLES = '''
 '''
 
 RETURN = '''
-dedicated_cloud_node:
+dedicated_cloud_nodes:
   description: >-
     A list of dict results where the key is the name of the DedicatedCloudNode
     and the values are the facts for that DedicatedCloudNode.
@@ -212,7 +212,7 @@ from copy import deepcopy
 from msrestazure.azure_exceptions import CloudError
 
 
-class AzureRMDedicatedCloudNodeInfo(AzureRMModuleBase):
+class AzureRMDedicatedCloudNodesInfo(AzureRMModuleBase):
     def __init__(self):
         self.module_arg_spec = dict(
             resource_group=dict(
@@ -245,7 +245,7 @@ class AzureRMDedicatedCloudNodeInfo(AzureRMModuleBase):
         self.header_parameters['Content-Type'] = 'application/json; charset=utf-8'
 
         self.mgmt_client = None
-        super(AzureRMDedicatedCloudNodeInfo, self).__init__(self.module_arg_spec, supports_tags=True)
+        super(AzureRMDedicatedCloudNodesInfo, self).__init__(self.module_arg_spec, supports_tags=True)
 
     def exec_module(self, **kwargs):
 
@@ -257,11 +257,11 @@ class AzureRMDedicatedCloudNodeInfo(AzureRMModuleBase):
 
         if (self.resource_group is not None and
             self.name is not None):
-            self.results['dedicated_cloud_node'] = self.format_item(self.get())
+            self.results['dedicated_cloud_nodes'] = self.format_item(self.get())
         elif (self.resource_group is not None):
-            self.results['dedicated_cloud_node'] = self.format_item(self.listbyresourcegroup())
+            self.results['dedicated_cloud_nodes'] = self.format_item(self.listbyresourcegroup())
         else:
-            self.results['dedicated_cloud_node'] = [self.format_item(self.listbysubscription())]
+            self.results['dedicated_cloud_nodes'] = [self.format_item(self.listbysubscription())]
         return self.results
 
     def get(self):
@@ -361,7 +361,7 @@ class AzureRMDedicatedCloudNodeInfo(AzureRMModuleBase):
 
 
 def main():
-    AzureRMDedicatedCloudNodeInfo()
+    AzureRMDedicatedCloudNodesInfo()
 
 
 if __name__ == '__main__':
