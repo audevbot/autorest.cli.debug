@@ -93,14 +93,6 @@ options:
             description:
               - How to send token to the server.
             type: list
-      subscription_key_required:
-        description:
-          - >-
-            Specifies whether subscription key is required during call to this
-            API, true - API is included into closed products only, false - API
-            is included into open products alone, null - there is a mix of
-            products.
-        type: boolean
   subscription_key_parameter_names:
     description:
       - Protocols over which API is made available.
@@ -355,10 +347,6 @@ class AzureRMProductApi(AzureRMModuleBaseExt):
                                          'query']
                             )
                         )
-                    ),
-                    subscription_key_required=dict(
-                        type='boolean',
-                        disposition='subscriptionKeyRequired'
                     )
                 )
             ),

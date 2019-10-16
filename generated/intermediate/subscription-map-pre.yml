@@ -49,7 +49,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: status
             NameAnsible: status
             NamePythonSdk: status
@@ -79,7 +81,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: statusDetail
             NameAnsible: status_detail
             NamePythonSdk: status_detail
@@ -109,7 +113,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /value
         PathPython: /value
@@ -121,7 +127,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: List
         Options: []
@@ -168,6 +176,8 @@ Modules:
         References: []
         OperationId: '112'
         MethodId: '113'
+        OperationName: SubscriptionOperations
+        MethodName: List
   - ModuleName: azure_rm_subscriptionssubscriptionfactory
     Options:
       - NameSwagger: enrollmentAccountName
@@ -201,7 +211,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: body
         NameAnsible: body
         NamePythonSdk: body
@@ -224,14 +236,16 @@ Modules:
         PathSwagger: ''
         PathPython: null
         PathGo: null
-        DispositionSdk: dictionary
+        DispositionSdk: '*'
         DispositionRest: '*'
         Comparison: ''
         Updatable: true
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 2
       - NameSwagger: displayName
         NameAnsible: name
         NamePythonSdk: display_name
@@ -261,7 +275,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: owners
         NameAnsible: owners
         NamePythonSdk: owners
@@ -312,7 +328,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /owners
         PathPython: /owners
@@ -324,7 +342,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: offerType
         NameAnsible: offer_type
         NamePythonSdk: offer_type
@@ -333,7 +353,7 @@ Modules:
         IdPortion: null
         Type: str
         TypeName: offerType
-        TypeNameGo: offerType
+        TypeNameGo: OfferType
         IsList: false
         Required: false
         Documentation: >-
@@ -364,7 +384,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: additionalParameters
         NameAnsible: additional_parameters
         NamePythonSdk: additional_parameters
@@ -400,7 +422,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_1
         NameSwagger: subscriptionLink
         NameAnsible: subscription_link
@@ -433,7 +457,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: CreateSubscriptionInEnrollmentAccount
         Options:
@@ -497,10 +523,9 @@ Modules:
         References: []
         OperationId: '127'
         MethodId: '128'
+        OperationName: SubscriptionFactory
+        MethodName: CreateSubscriptionInEnrollmentAccount
 ServiceName: Subscription
 MgmtClientName: Subscription
 CliName: subscription
 Namespace: azure.mgmt.subscriptions
-Info:
-  - '  ** FOUND OPTION enrollmentAccountName'
-  - '  ** FOUND OPTION body'

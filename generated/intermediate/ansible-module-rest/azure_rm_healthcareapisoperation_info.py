@@ -71,7 +71,7 @@ author:
 '''
 
 EXAMPLES = '''
-- name: OperationsList
+- name: List operations
   azure_rm_healthcareapisoperation_info: {}
 
 '''
@@ -174,7 +174,7 @@ class AzureRMOperationsInfo(AzureRMModuleBase):
         self.status_code = [200]
 
         self.query_parameters = {}
-        self.query_parameters['api-version'] = '2018-08-20-preview'
+        self.query_parameters['api-version'] = '2019-09-16'
         self.header_parameters = {}
         self.header_parameters['Content-Type'] = 'application/json; charset=utf-8'
 

@@ -44,7 +44,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: AuthorizationServerContractProperties
             go_type_name: AuthorizationServerContractProperties
           '/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
@@ -185,7 +185,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: AuthorizationServerContractProperties
             go_type_name: AuthorizationServerContractProperties
           '/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
@@ -341,7 +341,7 @@ objects:
         response:
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: AuthorizationServerContractProperties
             go_type_name: AuthorizationServerContractProperties
           '/properties/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
@@ -526,6 +526,7 @@ objects:
         default_value: :HEAD
         sample_value: GET
         azure_sdk_references: ['/authorizationMethods', '/properties/authorizationMethods']
+        item_type: Api::Type::String
       - !ruby/object:Api::Type::Enum
         name: 'clientAuthenticationMethod'
         description: 'Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.'
@@ -535,22 +536,24 @@ objects:
           - :Body
         default_value: :Basic
         azure_sdk_references: ['/clientAuthenticationMethod', '/properties/clientAuthenticationMethod']
-      - !ruby/object:Api::Type::NestedObject
+        item_type: Api::Type::String
+      - !ruby/object:Api::Type::Array
         name: 'tokenBodyParameters'
         description: 'Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.'
         required: false
         azure_sdk_references: ['/tokenBodyParameters', '/properties/tokenBodyParameters']
-        properties:
-          - !ruby/object:Api::Type::String
-            name: 'name'
-            description: 'body parameter name.'
-            required: true
-            azure_sdk_references: ['/tokenBodyParameters/name', '/properties/tokenBodyParameters/name', '/name']
-          - !ruby/object:Api::Type::String
-            name: 'value'
-            description: 'body parameter value.'
-            required: true
-            azure_sdk_references: ['/tokenBodyParameters/value', '/properties/tokenBodyParameters/value']
+        item_type: !ruby/object:Api::Type::NestedObject
+          properties:
+            - !ruby/object:Api::Type::String
+              name: 'name'
+              description: 'body parameter name.'
+              required: true
+              azure_sdk_references: ['/tokenBodyParameters/name', '/properties/tokenBodyParameters/name', '/name']
+            - !ruby/object:Api::Type::String
+              name: 'value'
+              description: 'body parameter value.'
+              required: true
+              azure_sdk_references: ['/tokenBodyParameters/value', '/properties/tokenBodyParameters/value']
       - !ruby/object:Api::Type::String
         name: 'tokenEndpoint'
         description: 'OAuth token endpoint. Contains absolute URI to entity being referenced.'
@@ -579,6 +582,7 @@ objects:
         default_value: :authorizationHeader
         sample_value: authorizationHeader
         azure_sdk_references: ['/bearerTokenSendingMethods', '/properties/bearerTokenSendingMethods']
+        item_type: Api::Type::String
       - !ruby/object:Api::Type::String
         name: 'clientSecret'
         description: 'Client or app secret registered with this authorization server.'
@@ -627,6 +631,7 @@ objects:
         default_value: :authorizationCode
         sample_value: implicit
         azure_sdk_references: ['/grantTypes', '/properties/grantTypes']
+        item_type: Api::Type::String
       - !ruby/object:Api::Type::String
         name: 'clientId'
         description: 'Client or app id registered with this authorization server.'
