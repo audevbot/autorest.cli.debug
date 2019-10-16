@@ -2,14 +2,14 @@
 RESOURCE_GROUP="myresourcegroup"
 SERVICE_NAME="myservice"
 
-az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.ApiManagement/service/$SERVICE_NAME --api-version 2019-01-01 --is-full-object --properties '
+az rest --method put --uri /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.ApiManagement/service/$SERVICE_NAME?api-version=2019-01-01 --body '
 {
   "properties": {
     "certificates": [
       {
-        "encodedCertificate": "*******Base64 encoded Certificate******************",
-        "certificatePassword": "Password",
-        "storeName": "CertificateAuthority"
+        "encoded_certificate": "*******Base64 encoded Certificate******************",
+        "certificate_password": "Password",
+        "store_name": "CertificateAuthority"
       }
     ],
     "publisherEmail": "apim@autorestsdk.com",

@@ -1,3 +1,3 @@
 # OperationsList
 
-az resource show --id /providers/Microsoft.ServiceBus/operations --api-version 2016-07-01
+az rest --method get --uri /providers/Microsoft.ServiceBus/operations?api-version=2016-07-01

@@ -4,19 +4,14 @@
   vars_files:
     - _vars.yml
   vars:
-    resource_group: myResourceGroup
-    '{resource_type_name}_name': myResourceType
+    event_subscription_name: myEventSubscription
   tasks:
-    - name: EventSubscriptions_ListByResource
+    - name: EventSubscriptions_GetForResource
       azure_rm_resource_facts:
         api_version: '2019-01-01'
-        resource_group: '{{ resource_group }}'
         provider: EventGrid
-        resource_type: '{resourceTypeName}'
-        resource_name: '{{ {resource_type_name}_name }}'
-        subresource:
-          - type: providers
-          - type: eventSubscriptions
+        resource_type: eventSubscriptions
+        resource_name: '{{ event_subscription_name }}'
       register: output
     - debug:
         var: output
