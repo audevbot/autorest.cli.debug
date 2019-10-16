@@ -4,12 +4,14 @@
   vars_files:
     - _vars.yml
   vars:
-    resource_group: myResourceGroup
+    event_subscription_name: myEventSubscription
   tasks:
 
-    - name: EventSubscriptions_ListGlobalByResourceGroup
+    - name: EventSubscriptions_GetForResourceGroup
       azure_rm_eventgrideventsubscription_info:
-        resource_group: '{{resource_group}}'
+        scope: >-
+          subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg
+        event_subscription_name: '{{event_subscription_name}}'
     
       register: output
     - debug:

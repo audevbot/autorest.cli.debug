@@ -8,7 +8,7 @@
     operationresult_name: myOperationresult
   tasks:
 
-    - name: OperationResultsGet
+    - name: Get operation result
       azure_rm_healthcareapisoperationresult_info:
         location_name: '{{location_name}}'
         operation_result_id: '{{operationresult_name}}'

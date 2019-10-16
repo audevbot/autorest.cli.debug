@@ -7,7 +7,7 @@
     resource_group: myResourceGroup
   tasks:
 
-    - name: ServiceListByResourceGroup
+    - name: List all services in resource group
       azure_rm_healthcareapisservice_info:
         resource_group: '{{resource_group}}'
     
