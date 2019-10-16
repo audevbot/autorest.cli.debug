@@ -32,7 +32,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: vaultName
         NameAnsible: vault_name
         NamePythonSdk: vault_name
@@ -62,7 +64,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: vault
         NameAnsible: vault
         NamePythonSdk: vault
@@ -85,14 +89,16 @@ Modules:
         PathSwagger: ''
         PathPython: null
         PathGo: null
-        DispositionSdk: dictionary
+        DispositionSdk: '*'
         DispositionRest: '*'
         Comparison: ''
         Updatable: true
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 2
       - NameSwagger: eTag
         NameAnsible: e_tag
         NamePythonSdk: e_tag
@@ -122,7 +128,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: location
         NameAnsible: location
         NamePythonSdk: location
@@ -152,7 +160,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: tags
         NameAnsible: tags
         NamePythonSdk: tags
@@ -186,7 +196,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -253,7 +265,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - &ref_5
                 NameSwagger: startTimeUtc
                 NameAnsible: start_time_utc
@@ -284,7 +298,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - &ref_6
                 NameSwagger: lastUpdatedTimeUtc
                 NameAnsible: last_updated_time_utc
@@ -317,7 +333,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - &ref_7
                 NameSwagger: endTimeUtc
                 NameAnsible: end_time_utc
@@ -348,7 +366,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - &ref_8
                 NameSwagger: status
                 NameAnsible: status
@@ -391,7 +411,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - &ref_9
                 NameSwagger: message
                 NameAnsible: message
@@ -424,7 +446,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - &ref_10
                 NameSwagger: triggerType
                 NameAnsible: trigger_type
@@ -461,7 +485,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - &ref_11
                 NameSwagger: upgradedResourceId
                 NameAnsible: upgraded_resource_id
@@ -492,7 +518,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - &ref_12
                 NameSwagger: previousResourceId
                 NameAnsible: previous_resource_id
@@ -523,7 +551,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/upgradeDetails
             PathPython: /upgradeDetails
@@ -535,7 +565,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - &ref_3
             NameSwagger: provisioningState
             NameAnsible: provisioning_state
@@ -566,7 +598,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties
         PathPython: ''
@@ -578,7 +612,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: sku
         NameAnsible: sku
         NamePythonSdk: sku
@@ -632,7 +668,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /sku
         PathPython: /sku
@@ -644,7 +682,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_0
         NameSwagger: id
         NameAnsible: id
@@ -675,7 +715,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_1
         NameSwagger: name
         NameAnsible: name
@@ -706,7 +748,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_2
         NameSwagger: type
         NameAnsible: type
@@ -739,7 +783,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: CreateOrUpdate
         Options:
@@ -844,7 +890,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: location
         NameAnsible: location
         NamePythonSdk: location
@@ -874,7 +922,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: tags
         NameAnsible: tags
         NamePythonSdk: tags
@@ -908,7 +958,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -966,7 +1018,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties
         PathPython: ''
@@ -978,7 +1032,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: sku
         NameAnsible: sku
         NamePythonSdk: sku
@@ -1032,7 +1088,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /sku
         PathPython: /sku
@@ -1044,7 +1102,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     ModuleOperationNameUpper: Vaults
     ModuleOperationName: vaults
     ObjectName: Vault
@@ -1118,6 +1178,8 @@ Modules:
           - resourcegroups_put
         OperationId: '413'
         MethodId: '486'
+        OperationName: Vaults
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: 77777777-b0c6-47a2-b37c-d8e65a629c18
@@ -1179,6 +1241,8 @@ Modules:
           - recoveryservices_vaults_put
         OperationId: '413'
         MethodId: '551'
+        OperationName: Vaults
+        MethodName: Update
       - Example:
           parameters:
             subscriptionId: 77777777-b0c6-47a2-b37c-d8e65a629c18
@@ -1203,6 +1267,8 @@ Modules:
         References: []
         OperationId: '413'
         MethodId: '521'
+        OperationName: Vaults
+        MethodName: Delete
   - ModuleName: azure_rm_recoveryservicesvault_info
     Options:
       - NameSwagger: resourceGroupName
@@ -1236,7 +1302,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: vaultName
         NameAnsible: vault_name
         NamePythonSdk: vault_name
@@ -1266,7 +1334,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - &ref_13
         NameSwagger: id
         NameAnsible: id
@@ -1297,7 +1367,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_14
         NameSwagger: name
         NameAnsible: name
@@ -1328,7 +1400,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_15
         NameSwagger: type
         NameAnsible: type
@@ -1361,7 +1435,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_16
         NameSwagger: eTag
         NameAnsible: e_tag
@@ -1392,7 +1468,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_17
         NameSwagger: location
         NameAnsible: location
@@ -1423,7 +1501,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_18
         NameSwagger: tags
         NameAnsible: tags
@@ -1458,7 +1538,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_19
         NameSwagger: properties
         NameAnsible: properties
@@ -1507,7 +1589,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: upgradeDetails
             NameAnsible: upgrade_details
             NamePythonSdk: upgrade_details
@@ -1555,7 +1639,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: startTimeUtc
                 NameAnsible: start_time_utc
                 NamePythonSdk: start_time_utc
@@ -1585,7 +1671,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: lastUpdatedTimeUtc
                 NameAnsible: last_updated_time_utc
                 NamePythonSdk: last_updated_time_utc
@@ -1617,7 +1705,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: endTimeUtc
                 NameAnsible: end_time_utc
                 NamePythonSdk: end_time_utc
@@ -1647,7 +1737,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: status
                 NameAnsible: status
                 NamePythonSdk: status
@@ -1689,7 +1781,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: message
                 NameAnsible: message
                 NamePythonSdk: message
@@ -1721,7 +1815,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: triggerType
                 NameAnsible: trigger_type
                 NamePythonSdk: trigger_type
@@ -1757,7 +1853,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: upgradedResourceId
                 NameAnsible: upgraded_resource_id
                 NamePythonSdk: upgraded_resource_id
@@ -1787,7 +1885,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: previousResourceId
                 NameAnsible: previous_resource_id
                 NamePythonSdk: previous_resource_id
@@ -1817,7 +1917,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/upgradeDetails
             PathPython: /upgradeDetails
@@ -1829,7 +1931,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties
         PathPython: ''
@@ -1841,7 +1945,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_20
         NameSwagger: sku
         NameAnsible: sku
@@ -1896,7 +2002,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /sku
         PathPython: /sku
@@ -1908,7 +2016,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: ListBySubscriptionId
         Options: []
@@ -2022,6 +2132,8 @@ Modules:
         References: []
         OperationId: '413'
         MethodId: '414'
+        OperationName: Vaults
+        MethodName: ListBySubscriptionId
       - Example:
           parameters:
             subscriptionId: 77777777-b0c6-47a2-b37c-d8e65a629c18
@@ -2089,6 +2201,8 @@ Modules:
         References: []
         OperationId: '413'
         MethodId: '432'
+        OperationName: Vaults
+        MethodName: ListByResourceGroup
       - Example:
           parameters:
             subscriptionId: 77777777-b0c6-47a2-b37c-d8e65a629c18
@@ -2129,6 +2243,8 @@ Modules:
         References: []
         OperationId: '413'
         MethodId: '456'
+        OperationName: Vaults
+        MethodName: Get
   - ModuleName: azure_rm_recoveryservicesoperation_info
     Options:
       - &ref_21
@@ -2179,7 +2295,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: display
             NameAnsible: display
             NamePythonSdk: display
@@ -2229,7 +2347,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: resource
                 NameAnsible: resource
                 NamePythonSdk: resource
@@ -2259,7 +2379,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: operation
                 NameAnsible: operation
                 NamePythonSdk: operation
@@ -2289,7 +2411,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: description
                 NameAnsible: description
                 NamePythonSdk: description
@@ -2321,7 +2445,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/display
             PathPython: /value/display
@@ -2333,7 +2459,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: origin
             NameAnsible: origin
             NamePythonSdk: origin
@@ -2365,7 +2493,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: properties
             NameAnsible: properties
             NamePythonSdk: properties
@@ -2451,7 +2581,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: displayName
                         NameAnsible: display_name
                         NamePythonSdk: display_name
@@ -2484,7 +2616,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: blobDuration
                         NameAnsible: blob_duration
                         NamePythonSdk: blob_duration
@@ -2517,7 +2651,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /value/properties/serviceSpecification/logSpecifications
                     PathPython: /value/serviceSpecification/logSpecifications
@@ -2529,7 +2665,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /value/properties/serviceSpecification
                 PathPython: /value/serviceSpecification
@@ -2541,7 +2679,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/properties
             PathPython: /value
@@ -2553,7 +2693,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /value
         PathPython: /value
@@ -2565,7 +2707,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_22
         NameSwagger: nextLink
         NameAnsible: next_link
@@ -2596,7 +2740,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: List
         Options: []
@@ -2998,6 +3144,8 @@ Modules:
         References: []
         OperationId: '588'
         MethodId: '589'
+        OperationName: Operations
+        MethodName: List
   - ModuleName: azure_rm_recoveryservicesvaultextendedinfo
     Options:
       - NameSwagger: resourceGroupName
@@ -3031,7 +3179,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: vaultName
         NameAnsible: vault_name
         NamePythonSdk: vault_name
@@ -3061,7 +3211,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: resourceResourceExtendedInfoDetails
         NameAnsible: resource_resource_extended_info_details
         NamePythonSdk: resource_resource_extended_info_details
@@ -3084,14 +3236,16 @@ Modules:
         PathSwagger: ''
         PathPython: null
         PathGo: null
-        DispositionSdk: dictionary
+        DispositionSdk: '*'
         DispositionRest: '*'
         Comparison: ''
         Updatable: true
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 2
       - NameSwagger: eTag
         NameAnsible: e_tag
         NamePythonSdk: e_tag
@@ -3121,7 +3275,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -3169,7 +3325,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: encryptionKey
             NameAnsible: encryption_key
             NamePythonSdk: encryption_key
@@ -3199,7 +3357,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: encryptionKeyThumbprint
             NameAnsible: encryption_key_thumbprint
             NamePythonSdk: encryption_key_thumbprint
@@ -3229,7 +3389,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: algorithm
             NameAnsible: algorithm
             NamePythonSdk: algorithm
@@ -3259,7 +3421,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties
         PathPython: ''
@@ -3271,7 +3435,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_23
         NameSwagger: id
         NameAnsible: id
@@ -3302,7 +3468,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_24
         NameSwagger: name
         NameAnsible: name
@@ -3333,7 +3501,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_25
         NameSwagger: type
         NameAnsible: type
@@ -3366,7 +3536,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: CreateOrUpdate
         Options:
@@ -3444,7 +3616,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -3492,7 +3666,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: encryptionKey
             NameAnsible: encryption_key
             NamePythonSdk: encryption_key
@@ -3522,7 +3698,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: encryptionKeyThumbprint
             NameAnsible: encryption_key_thumbprint
             NamePythonSdk: encryption_key_thumbprint
@@ -3552,7 +3730,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: algorithm
             NameAnsible: algorithm
             NamePythonSdk: algorithm
@@ -3582,7 +3762,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties
         PathPython: ''
@@ -3594,7 +3776,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     ModuleOperationNameUpper: VaultExtendedInfo
     ModuleOperationName: vault_extended_info
     ObjectName: VaultExtendedInfo
@@ -3650,6 +3834,8 @@ Modules:
           - recoveryservices_vaults_put
         OperationId: '603'
         MethodId: '634'
+        OperationName: VaultExtendedInfo
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: 77777777-b0c6-47a2-b37c-d8e65a629c18
@@ -3695,6 +3881,8 @@ Modules:
           - recoveryservices_vaults_extendedinformation_put
         OperationId: '603'
         MethodId: '668'
+        OperationName: VaultExtendedInfo
+        MethodName: Update
   - ModuleName: azure_rm_recoveryservicesvaultextendedinfo_info
     Options:
       - NameSwagger: resourceGroupName
@@ -3728,7 +3916,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: vaultName
         NameAnsible: vault_name
         NamePythonSdk: vault_name
@@ -3758,7 +3948,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - &ref_26
         NameSwagger: id
         NameAnsible: id
@@ -3789,7 +3981,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_27
         NameSwagger: name
         NameAnsible: name
@@ -3820,7 +4014,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_28
         NameSwagger: type
         NameAnsible: type
@@ -3853,7 +4049,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_29
         NameSwagger: eTag
         NameAnsible: e_tag
@@ -3884,7 +4082,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_30
         NameSwagger: properties
         NameAnsible: properties
@@ -3933,7 +4133,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: encryptionKey
             NameAnsible: encryption_key
             NamePythonSdk: encryption_key
@@ -3963,7 +4165,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: encryptionKeyThumbprint
             NameAnsible: encryption_key_thumbprint
             NamePythonSdk: encryption_key_thumbprint
@@ -3993,7 +4197,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: algorithm
             NameAnsible: algorithm
             NamePythonSdk: algorithm
@@ -4023,7 +4229,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties
         PathPython: ''
@@ -4035,7 +4243,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: Get
         Options:
@@ -4106,19 +4316,9 @@ Modules:
         References: []
         OperationId: '603'
         MethodId: '604'
+        OperationName: VaultExtendedInfo
+        MethodName: Get
 ServiceName: RecoveryServices
 MgmtClientName: RecoveryServices
 CliName: recoveryservices
 Namespace: azure.mgmt.recoveryservices
-Info:
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION vaultName'
-  - '  ** FOUND OPTION vault'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION vaultName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION vaultName'
-  - '  ** FOUND OPTION resourceResourceExtendedInfoDetails'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION vaultName'

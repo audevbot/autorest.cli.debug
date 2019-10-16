@@ -79,16 +79,16 @@ options:
         description:
           - The SQL expression. e.g. MyProperty='ABC'
         type: str
-      requires_preprocessing:
-        description:
-          - Value that indicates whether the rule action requires preprocessing.
-        type: boolean
       compatibility_level:
         description:
           - >-
             This property is reserved for future use. An integer value showing
             the compatibility level, currently hard-coded to 20.
         type: number
+      requires_preprocessing:
+        description:
+          - Value that indicates whether the rule action requires preprocessing.
+        type: boolean
   correlation_filter:
     description:
       - Properties of correlationFilter
@@ -438,6 +438,10 @@ class AzureRMRules(AzureRMModuleBaseExt):
                     sql_expression=dict(
                         type='str',
                         disposition='sqlExpression'
+                    ),
+                    compatibility_level=dict(
+                        type='number',
+                        disposition='compatibilityLevel'
                     ),
                     requires_preprocessing=dict(
                         type='boolean',

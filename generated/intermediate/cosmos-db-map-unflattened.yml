@@ -30,7 +30,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: accountName
         NameAnsible: account_name
         NamePythonSdk: account_name
@@ -60,7 +62,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: createUpdateParameters
         NameAnsible: create_update_parameters
         NamePythonSdk: create_update_parameters
@@ -83,14 +87,16 @@ Modules:
         PathSwagger: ''
         PathPython: null
         PathGo: null
-        DispositionSdk: dictionary
+        DispositionSdk: '*'
         DispositionRest: '*'
         Comparison: ''
         Updatable: true
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 2
       - NameSwagger: location
         NameAnsible: location
         NamePythonSdk: location
@@ -120,7 +126,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: tags
         NameAnsible: tags
         NamePythonSdk: tags
@@ -154,7 +162,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: kind
         NameAnsible: kind
         NamePythonSdk: kind
@@ -195,7 +205,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -278,7 +290,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: maxStalenessPrefix
                 NameAnsible: max_staleness_prefix
                 NamePythonSdk: max_staleness_prefix
@@ -312,7 +326,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: int64
                 Flatten: false
+                Kind: 1
               - NameSwagger: maxIntervalInSeconds
                 NameAnsible: max_interval_in_seconds
                 NamePythonSdk: max_interval_in_seconds
@@ -347,7 +363,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: int32
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/consistencyPolicy
             PathPython: /consistencyPolicy
@@ -359,7 +377,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: locations
             NameAnsible: locations
             NamePythonSdk: locations
@@ -409,7 +429,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: failoverPriority
                 NameAnsible: failover_priority
                 NamePythonSdk: failover_priority
@@ -444,7 +466,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
+                Kind: 1
               - NameSwagger: isZoneRedundant
                 NameAnsible: is_zone_redundant
                 NamePythonSdk: is_zone_redundant
@@ -476,7 +500,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/locations
             PathPython: /locations
@@ -488,7 +514,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: databaseAccountOfferType
             NameAnsible: database_account_offer_type
             NamePythonSdk: database_account_offer_type
@@ -518,7 +546,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: ipRangeFilter
             NameAnsible: ip_range_filter
             NamePythonSdk: ip_range_filter
@@ -553,7 +583,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: isVirtualNetworkFilterEnabled
             NameAnsible: is_virtual_network_filter_enabled
             NamePythonSdk: is_virtual_network_filter_enabled
@@ -585,7 +617,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: enableAutomaticFailover
             NameAnsible: enable_automatic_failover
             NamePythonSdk: enable_automatic_failover
@@ -620,7 +654,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: capabilities
             NameAnsible: capabilities
             NamePythonSdk: capabilities
@@ -671,7 +707,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/capabilities
             PathPython: /capabilities
@@ -683,7 +721,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: virtualNetworkRules
             NameAnsible: virtual_network_rules
             NamePythonSdk: virtual_network_rules
@@ -735,7 +775,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: ignoreMissingVNetServiceEndpoint
                 NameAnsible: ignore_missing_vnet_service_endpoint
                 NamePythonSdk: ignore_missing_vnet_service_endpoint
@@ -769,7 +811,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/virtualNetworkRules
             PathPython: /virtualNetworkRules
@@ -781,7 +825,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: enableMultipleWriteLocations
             NameAnsible: enable_multiple_write_locations
             NamePythonSdk: enable_multiple_write_locations
@@ -811,7 +857,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: enableCassandraConnector
             NameAnsible: enable_cassandra_connector
             NamePythonSdk: enable_cassandra_connector
@@ -841,7 +889,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: connectorOffer
             NameAnsible: connector_offer
             NamePythonSdk: connector_offer
@@ -876,7 +926,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - &ref_3
             NameSwagger: provisioningState
             NameAnsible: provisioning_state
@@ -907,7 +959,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - &ref_4
             NameSwagger: documentEndpoint
             NameAnsible: document_endpoint
@@ -938,7 +992,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - &ref_5
             NameSwagger: writeLocations
             NameAnsible: write_locations
@@ -991,7 +1047,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: locationName
                 NameAnsible: location_name
                 NamePythonSdk: location_name
@@ -1021,7 +1079,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: documentEndpoint
                 NameAnsible: document_endpoint
                 NamePythonSdk: document_endpoint
@@ -1053,7 +1113,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: provisioningState
                 NameAnsible: provisioning_state
                 NamePythonSdk: provisioning_state
@@ -1083,7 +1145,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: failoverPriority
                 NameAnsible: failover_priority
                 NamePythonSdk: failover_priority
@@ -1118,7 +1182,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
+                Kind: 1
               - NameSwagger: isZoneRedundant
                 NameAnsible: is_zone_redundant
                 NamePythonSdk: is_zone_redundant
@@ -1150,7 +1216,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/writeLocations
             PathPython: /writeLocations
@@ -1162,7 +1230,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - &ref_6
             NameSwagger: readLocations
             NameAnsible: read_locations
@@ -1215,7 +1285,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: locationName
                 NameAnsible: location_name
                 NamePythonSdk: location_name
@@ -1245,7 +1317,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: documentEndpoint
                 NameAnsible: document_endpoint
                 NamePythonSdk: document_endpoint
@@ -1277,7 +1351,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: provisioningState
                 NameAnsible: provisioning_state
                 NamePythonSdk: provisioning_state
@@ -1307,7 +1383,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: failoverPriority
                 NameAnsible: failover_priority
                 NamePythonSdk: failover_priority
@@ -1342,7 +1420,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
+                Kind: 1
               - NameSwagger: isZoneRedundant
                 NameAnsible: is_zone_redundant
                 NamePythonSdk: is_zone_redundant
@@ -1374,7 +1454,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/readLocations
             PathPython: /readLocations
@@ -1386,7 +1468,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - &ref_7
             NameSwagger: failoverPolicies
             NameAnsible: failover_policies
@@ -1440,7 +1524,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: locationName
                 NameAnsible: location_name
                 NamePythonSdk: location_name
@@ -1470,7 +1556,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: failoverPriority
                 NameAnsible: failover_priority
                 NamePythonSdk: failover_priority
@@ -1505,7 +1593,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/failoverPolicies
             PathPython: /failoverPolicies
@@ -1517,7 +1607,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties
         PathPython: ''
@@ -1529,7 +1621,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_0
         NameSwagger: id
         NameAnsible: id
@@ -1560,7 +1654,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_1
         NameSwagger: name
         NameAnsible: name
@@ -1591,7 +1687,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_2
         NameSwagger: type
         NameAnsible: type
@@ -1622,7 +1720,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: CreateOrUpdate
         Options:
@@ -2202,7 +2302,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: tags
         NameAnsible: tags
         NamePythonSdk: tags
@@ -2236,7 +2338,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: kind
         NameAnsible: kind
         NamePythonSdk: kind
@@ -2277,7 +2381,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -2332,7 +2438,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: ipRangeFilter
             NameAnsible: ip_range_filter
             NamePythonSdk: ip_range_filter
@@ -2367,7 +2475,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: isVirtualNetworkFilterEnabled
             NameAnsible: is_virtual_network_filter_enabled
             NamePythonSdk: is_virtual_network_filter_enabled
@@ -2399,7 +2509,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: enableAutomaticFailover
             NameAnsible: enable_automatic_failover
             NamePythonSdk: enable_automatic_failover
@@ -2434,7 +2546,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: consistencyPolicy
             NameAnsible: consistency_policy
             NamePythonSdk: consistency_policy
@@ -2499,7 +2613,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: maxStalenessPrefix
                 NameAnsible: max_staleness_prefix
                 NamePythonSdk: max_staleness_prefix
@@ -2533,7 +2649,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int64
                 Flatten: false
+                Kind: 1
               - NameSwagger: maxIntervalInSeconds
                 NameAnsible: max_interval_in_seconds
                 NamePythonSdk: max_interval_in_seconds
@@ -2568,7 +2686,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/consistencyPolicy
             PathPython: /consistencyPolicy
@@ -2580,7 +2700,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: capabilities
             NameAnsible: capabilities
             NamePythonSdk: capabilities
@@ -2631,7 +2753,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/capabilities
             PathPython: /capabilities
@@ -2643,7 +2767,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - *ref_5
           - *ref_6
           - *ref_7
@@ -2698,7 +2824,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: ignoreMissingVNetServiceEndpoint
                 NameAnsible: ignore_missing_vnet_service_endpoint
                 NamePythonSdk: ignore_missing_vnet_service_endpoint
@@ -2732,7 +2860,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/virtualNetworkRules
             PathPython: /virtualNetworkRules
@@ -2744,7 +2874,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: enableMultipleWriteLocations
             NameAnsible: enable_multiple_write_locations
             NamePythonSdk: enable_multiple_write_locations
@@ -2774,7 +2906,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: enableCassandraConnector
             NameAnsible: enable_cassandra_connector
             NamePythonSdk: enable_cassandra_connector
@@ -2804,7 +2938,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: connectorOffer
             NameAnsible: connector_offer
             NamePythonSdk: connector_offer
@@ -2839,7 +2975,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties
         PathPython: ''
@@ -2851,7 +2989,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     ModuleOperationNameUpper: DatabaseAccounts
     ModuleOperationName: database_accounts
     ObjectName: DatabaseAccount
@@ -2931,6 +3071,8 @@ Modules:
           - resourcegroups_put
         OperationId: '1839'
         MethodId: '1904'
+        OperationName: DatabaseAccounts
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             accountName: ddb1
@@ -3040,6 +3182,8 @@ Modules:
           - documentdb_databaseaccounts_put
         OperationId: '1839'
         MethodId: '1904'
+        OperationName: DatabaseAccounts
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             accountName: ddb1
@@ -3066,6 +3210,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '1938'
+        OperationName: DatabaseAccounts
+        MethodName: Delete
   - ModuleName: azure_rm_cosmosdbdatabaseaccount_info
     Options:
       - NameSwagger: resourceGroupName
@@ -3097,7 +3243,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: accountName
         NameAnsible: account_name
         NamePythonSdk: account_name
@@ -3127,7 +3275,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: tableName
         NameAnsible: table_name
         NamePythonSdk: table_name
@@ -3157,7 +3307,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: databaseName
         NameAnsible: database_name
         NamePythonSdk: database_name
@@ -3187,7 +3339,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: keyspaceName
         NameAnsible: keyspace_name
         NamePythonSdk: keyspace_name
@@ -3217,7 +3371,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: graphName
         NameAnsible: graph_name
         NamePythonSdk: graph_name
@@ -3247,7 +3403,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: containerName
         NameAnsible: container_name
         NamePythonSdk: container_name
@@ -3277,7 +3435,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: collectionName
         NameAnsible: collection_name
         NamePythonSdk: collection_name
@@ -3307,7 +3467,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - &ref_8
         NameSwagger: id
         NameAnsible: id
@@ -3338,7 +3500,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_9
         NameSwagger: name
         NameAnsible: name
@@ -3369,7 +3533,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_10
         NameSwagger: type
         NameAnsible: type
@@ -3400,7 +3566,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_11
         NameSwagger: location
         NameAnsible: location
@@ -3431,7 +3599,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_12
         NameSwagger: tags
         NameAnsible: tags
@@ -3466,7 +3636,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_13
         NameSwagger: kind
         NameAnsible: kind
@@ -3508,7 +3680,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_14
         NameSwagger: properties
         NameAnsible: properties
@@ -3557,7 +3731,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: documentEndpoint
             NameAnsible: document_endpoint
             NamePythonSdk: document_endpoint
@@ -3587,7 +3763,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: databaseAccountOfferType
             NameAnsible: database_account_offer_type
             NamePythonSdk: database_account_offer_type
@@ -3622,7 +3800,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: ipRangeFilter
             NameAnsible: ip_range_filter
             NamePythonSdk: ip_range_filter
@@ -3657,7 +3837,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: isVirtualNetworkFilterEnabled
             NameAnsible: is_virtual_network_filter_enabled
             NamePythonSdk: is_virtual_network_filter_enabled
@@ -3689,7 +3871,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: enableAutomaticFailover
             NameAnsible: enable_automatic_failover
             NamePythonSdk: enable_automatic_failover
@@ -3724,7 +3908,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: consistencyPolicy
             NameAnsible: consistency_policy
             NamePythonSdk: consistency_policy
@@ -3789,7 +3975,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: maxStalenessPrefix
                 NameAnsible: max_staleness_prefix
                 NamePythonSdk: max_staleness_prefix
@@ -3823,7 +4011,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int64
                 Flatten: false
+                Kind: 1
               - NameSwagger: maxIntervalInSeconds
                 NameAnsible: max_interval_in_seconds
                 NamePythonSdk: max_interval_in_seconds
@@ -3858,7 +4048,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/consistencyPolicy
             PathPython: /consistencyPolicy
@@ -3870,7 +4062,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: capabilities
             NameAnsible: capabilities
             NamePythonSdk: capabilities
@@ -3921,7 +4115,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/capabilities
             PathPython: /capabilities
@@ -3933,7 +4129,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: writeLocations
             NameAnsible: write_locations
             NamePythonSdk: write_locations
@@ -3985,7 +4183,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: locationName
                 NameAnsible: location_name
                 NamePythonSdk: location_name
@@ -4015,7 +4215,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: documentEndpoint
                 NameAnsible: document_endpoint
                 NamePythonSdk: document_endpoint
@@ -4047,7 +4249,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: provisioningState
                 NameAnsible: provisioning_state
                 NamePythonSdk: provisioning_state
@@ -4077,7 +4281,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: failoverPriority
                 NameAnsible: failover_priority
                 NamePythonSdk: failover_priority
@@ -4112,7 +4318,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
+                Kind: 1
               - NameSwagger: isZoneRedundant
                 NameAnsible: is_zone_redundant
                 NamePythonSdk: is_zone_redundant
@@ -4144,7 +4352,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/writeLocations
             PathPython: /writeLocations
@@ -4156,7 +4366,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: readLocations
             NameAnsible: read_locations
             NamePythonSdk: read_locations
@@ -4208,7 +4420,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: locationName
                 NameAnsible: location_name
                 NamePythonSdk: location_name
@@ -4238,7 +4452,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: documentEndpoint
                 NameAnsible: document_endpoint
                 NamePythonSdk: document_endpoint
@@ -4270,7 +4486,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: provisioningState
                 NameAnsible: provisioning_state
                 NamePythonSdk: provisioning_state
@@ -4300,7 +4518,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: failoverPriority
                 NameAnsible: failover_priority
                 NamePythonSdk: failover_priority
@@ -4335,7 +4555,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
+                Kind: 1
               - NameSwagger: isZoneRedundant
                 NameAnsible: is_zone_redundant
                 NamePythonSdk: is_zone_redundant
@@ -4367,7 +4589,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/readLocations
             PathPython: /readLocations
@@ -4379,7 +4603,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: failoverPolicies
             NameAnsible: failover_policies
             NamePythonSdk: failover_policies
@@ -4432,7 +4658,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: locationName
                 NameAnsible: location_name
                 NamePythonSdk: location_name
@@ -4462,7 +4690,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: failoverPriority
                 NameAnsible: failover_priority
                 NamePythonSdk: failover_priority
@@ -4497,7 +4727,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/failoverPolicies
             PathPython: /failoverPolicies
@@ -4509,7 +4741,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: virtualNetworkRules
             NameAnsible: virtual_network_rules
             NamePythonSdk: virtual_network_rules
@@ -4561,7 +4795,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: ignoreMissingVNetServiceEndpoint
                 NameAnsible: ignore_missing_vnet_service_endpoint
                 NamePythonSdk: ignore_missing_vnet_service_endpoint
@@ -4595,7 +4831,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/virtualNetworkRules
             PathPython: /virtualNetworkRules
@@ -4607,7 +4845,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: enableMultipleWriteLocations
             NameAnsible: enable_multiple_write_locations
             NamePythonSdk: enable_multiple_write_locations
@@ -4637,7 +4877,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: enableCassandraConnector
             NameAnsible: enable_cassandra_connector
             NamePythonSdk: enable_cassandra_connector
@@ -4667,7 +4909,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: connectorOffer
             NameAnsible: connector_offer
             NamePythonSdk: connector_offer
@@ -4702,7 +4946,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties
         PathPython: ''
@@ -4714,7 +4960,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: List
         Options: []
@@ -5304,6 +5552,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2004'
+        OperationName: DatabaseAccounts
+        MethodName: List
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -5361,6 +5611,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2022'
+        OperationName: DatabaseAccounts
+        MethodName: ListByResourceGroup
       - Example:
           parameters:
             accountName: ddb1
@@ -5424,6 +5676,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '1840'
+        OperationName: DatabaseAccounts
+        MethodName: Get
       - Example:
           parameters:
             accountName: ddb1
@@ -5459,6 +5713,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2326'
+        OperationName: DatabaseAccounts
+        MethodName: ListUsages
       - Example:
           parameters:
             accountName: ddb1
@@ -5514,6 +5770,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2290'
+        OperationName: DatabaseAccounts
+        MethodName: ListMetrics
       - Example:
           parameters:
             accountName: ddb1
@@ -5542,6 +5800,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2176'
+        OperationName: DatabaseAccounts
+        MethodName: GetReadOnlyKeys
       - Example:
           parameters:
             accountName: ddb1
@@ -5586,6 +5846,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2362'
+        OperationName: DatabaseAccounts
+        MethodName: ListMetricDefinitions
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -5621,6 +5883,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3348'
+        OperationName: DatabaseAccounts
+        MethodName: ListTables
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -5661,6 +5925,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2392'
+        OperationName: DatabaseAccounts
+        MethodName: ListSqlDatabases
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -5696,6 +5962,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2870'
+        OperationName: DatabaseAccounts
+        MethodName: ListMongoDBDatabases
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -5734,6 +6002,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '4047'
+        OperationName: DatabaseAccounts
+        MethodName: ListGremlinDatabases
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -5769,6 +6039,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3569'
+        OperationName: DatabaseAccounts
+        MethodName: ListCassandraKeyspaces
       - Example:
           parameters:
             accountName: ddb1
@@ -5807,6 +6079,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3378'
+        OperationName: DatabaseAccounts
+        MethodName: GetTable
       - Example:
           parameters:
             accountName: ddb1
@@ -5851,6 +6125,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2422'
+        OperationName: DatabaseAccounts
+        MethodName: GetSqlDatabase
       - Example:
           parameters:
             accountName: ddb1
@@ -5890,6 +6166,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2900'
+        OperationName: DatabaseAccounts
+        MethodName: GetMongoDBDatabase
       - Example:
           parameters:
             accountName: ddb1
@@ -5932,6 +6210,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '4077'
+        OperationName: DatabaseAccounts
+        MethodName: GetGremlinDatabase
       - Example:
           parameters:
             accountName: ddb1
@@ -5971,6 +6251,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3599'
+        OperationName: DatabaseAccounts
+        MethodName: GetCassandraKeyspace
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -6040,6 +6322,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '4268'
+        OperationName: DatabaseAccounts
+        MethodName: ListGremlinGraphs
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -6109,6 +6393,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2613'
+        OperationName: DatabaseAccounts
+        MethodName: ListSqlContainers
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -6160,6 +6446,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3790'
+        OperationName: DatabaseAccounts
+        MethodName: ListCassandraTables
       - Example:
           parameters:
             accountName: ddb1
@@ -6199,6 +6487,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3492'
+        OperationName: DatabaseAccounts
+        MethodName: GetTableThroughput
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -6249,6 +6539,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3091'
+        OperationName: DatabaseAccounts
+        MethodName: ListMongoDBCollections
       - Example:
           parameters:
             accountName: ddb1
@@ -6288,6 +6580,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2536'
+        OperationName: DatabaseAccounts
+        MethodName: GetSqlDatabaseThroughput
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -6359,6 +6653,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '4304'
+        OperationName: DatabaseAccounts
+        MethodName: GetGremlinGraph
       - Example:
           parameters:
             accountName: ddb1
@@ -6398,6 +6694,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '4191'
+        OperationName: DatabaseAccounts
+        MethodName: GetGremlinDatabaseThroughput
       - Example:
           parameters:
             accountName: ddb1
@@ -6437,6 +6735,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3014'
+        OperationName: DatabaseAccounts
+        MethodName: GetMongoDBDatabaseThroughput
       - Example:
           parameters:
             accountName: ddb1
@@ -6490,6 +6790,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3826'
+        OperationName: DatabaseAccounts
+        MethodName: GetCassandraTable
       - Example:
           parameters:
             accountName: ddb1
@@ -6529,6 +6831,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3713'
+        OperationName: DatabaseAccounts
+        MethodName: GetCassandraKeyspaceThroughput
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -6601,6 +6905,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2649'
+        OperationName: DatabaseAccounts
+        MethodName: GetSqlContainer
       - Example:
           parameters:
             api-version: '2015-04-08'
@@ -6654,6 +6960,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3127'
+        OperationName: DatabaseAccounts
+        MethodName: GetMongoDBCollection
       - Example:
           parameters:
             accountName: ddb1
@@ -6697,6 +7005,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '4436'
+        OperationName: DatabaseAccounts
+        MethodName: GetGremlinGraphThroughput
       - Example:
           parameters:
             accountName: ddb1
@@ -6740,6 +7050,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3958'
+        OperationName: DatabaseAccounts
+        MethodName: GetCassandraTableThroughput
       - Example:
           parameters:
             accountName: ddb1
@@ -6784,6 +7096,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '2781'
+        OperationName: DatabaseAccounts
+        MethodName: GetSqlContainerThroughput
       - Example:
           parameters:
             accountName: ddb1
@@ -6828,6 +7142,8 @@ Modules:
         References: []
         OperationId: '1839'
         MethodId: '3259'
+        OperationName: DatabaseAccounts
+        MethodName: GetMongoDBCollectionThroughput
   - ModuleName: azure_rm_cosmosdboperation_info
     Options:
       - &ref_15
@@ -6878,7 +7194,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: display
             NameAnsible: display
             NamePythonSdk: display
@@ -6926,7 +7244,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: Resource
                 NameAnsible: resource
                 NamePythonSdk: resource
@@ -6958,7 +7278,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: Operation
                 NameAnsible: operation
                 NamePythonSdk: operation
@@ -6988,7 +7310,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: Description
                 NameAnsible: description
                 NamePythonSdk: description
@@ -7018,7 +7342,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/display
             PathPython: /value/display
@@ -7030,7 +7356,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /value
         PathPython: /value
@@ -7042,7 +7370,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_16
         NameSwagger: nextLink
         NameAnsible: next_link
@@ -7073,7 +7403,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: List
         Options: []
@@ -7116,6 +7448,8 @@ Modules:
         References: []
         OperationId: '4527'
         MethodId: '4528'
+        OperationName: Operations
+        MethodName: List
   - ModuleName: azure_rm_cosmosdbdatabase_info
     Options:
       - NameSwagger: resourceGroupName
@@ -7147,7 +7481,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: accountName
         NameAnsible: account_name
         NamePythonSdk: account_name
@@ -7177,7 +7513,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: databaseRid
         NameAnsible: database_rid
         NamePythonSdk: database_rid
@@ -7207,7 +7545,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - &ref_17
         NameSwagger: value
         NameAnsible: value
@@ -7277,7 +7617,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: name
             NameAnsible: name
             NamePythonSdk: name
@@ -7325,7 +7667,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: localizedValue
                 NameAnsible: localized_value
                 NamePythonSdk: localized_value
@@ -7355,7 +7699,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/name
             PathPython: /value/name
@@ -7367,7 +7713,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: quotaPeriod
             NameAnsible: quota_period
             NamePythonSdk: quota_period
@@ -7397,7 +7745,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: limit
             NameAnsible: limit
             NamePythonSdk: limit
@@ -7427,7 +7777,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
+            Kind: 1
           - NameSwagger: currentValue
             NameAnsible: current_value
             NamePythonSdk: current_value
@@ -7457,7 +7809,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /value
         PathPython: /value
@@ -7469,7 +7823,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: ListUsages
         Options:
@@ -7568,6 +7924,8 @@ Modules:
         References: []
         OperationId: '4542'
         MethodId: '4585'
+        OperationName: Database
+        MethodName: ListUsages
       - Example:
           parameters:
             accountName: ddb1
@@ -7627,6 +7985,8 @@ Modules:
         References: []
         OperationId: '4542'
         MethodId: '4543'
+        OperationName: Database
+        MethodName: ListMetrics
       - Example:
           parameters:
             accountName: ddb1
@@ -7676,6 +8036,8 @@ Modules:
         References: []
         OperationId: '4542'
         MethodId: '4627'
+        OperationName: Database
+        MethodName: ListMetricDefinitions
   - ModuleName: azure_rm_cosmosdbcollection_info
     Options:
       - NameSwagger: resourceGroupName
@@ -7707,7 +8069,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: accountName
         NameAnsible: account_name
         NamePythonSdk: account_name
@@ -7737,7 +8101,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: databaseRid
         NameAnsible: database_rid
         NamePythonSdk: database_rid
@@ -7767,7 +8133,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: collectionRid
         NameAnsible: collection_rid
         NamePythonSdk: collection_rid
@@ -7797,7 +8165,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - &ref_18
         NameSwagger: value
         NameAnsible: value
@@ -7867,7 +8237,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: name
             NameAnsible: name
             NamePythonSdk: name
@@ -7915,7 +8287,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: localizedValue
                 NameAnsible: localized_value
                 NamePythonSdk: localized_value
@@ -7945,7 +8319,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/name
             PathPython: /value/name
@@ -7957,7 +8333,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: quotaPeriod
             NameAnsible: quota_period
             NamePythonSdk: quota_period
@@ -7987,7 +8365,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: limit
             NameAnsible: limit
             NamePythonSdk: limit
@@ -8017,7 +8397,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
+            Kind: 1
           - NameSwagger: currentValue
             NameAnsible: current_value
             NamePythonSdk: current_value
@@ -8047,7 +8429,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /value
         PathPython: /value
@@ -8059,7 +8443,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: ListUsages
         Options:
@@ -8171,6 +8557,8 @@ Modules:
         References: []
         OperationId: '4665'
         MethodId: '4714'
+        OperationName: Collection
+        MethodName: ListUsages
       - Example:
           parameters:
             accountName: ddb1
@@ -8235,6 +8623,8 @@ Modules:
         References: []
         OperationId: '4665'
         MethodId: '4666'
+        OperationName: Collection
+        MethodName: ListMetrics
       - Example:
           parameters:
             accountName: ddb1
@@ -8289,6 +8679,8 @@ Modules:
         References: []
         OperationId: '4665'
         MethodId: '4762'
+        OperationName: Collection
+        MethodName: ListMetricDefinitions
   - ModuleName: azure_rm_cosmosdbcollectionregion_info
     Options:
       - NameSwagger: resourceGroupName
@@ -8320,7 +8712,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: accountName
         NameAnsible: account_name
         NamePythonSdk: account_name
@@ -8350,7 +8744,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: region
         NameAnsible: region
         NamePythonSdk: region
@@ -8380,7 +8776,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: databaseRid
         NameAnsible: database_rid
         NamePythonSdk: database_rid
@@ -8410,7 +8808,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: collectionRid
         NameAnsible: collection_rid
         NamePythonSdk: collection_rid
@@ -8440,7 +8840,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - &ref_19
         NameSwagger: value
         NameAnsible: value
@@ -8489,7 +8891,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: endTime
             NameAnsible: end_time
             NamePythonSdk: end_time
@@ -8519,7 +8923,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: timeGrain
             NameAnsible: time_grain
             NamePythonSdk: time_grain
@@ -8549,7 +8955,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: unit
             NameAnsible: unit
             NamePythonSdk: unit
@@ -8600,7 +9008,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: name
             NameAnsible: name
             NamePythonSdk: name
@@ -8648,7 +9058,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: localizedValue
                 NameAnsible: localized_value
                 NamePythonSdk: localized_value
@@ -8678,7 +9090,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/name
             PathPython: /value/name
@@ -8690,7 +9104,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: metricValues
             NameAnsible: metric_values
             NamePythonSdk: metric_values
@@ -8738,7 +9154,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
+                Kind: 1
               - NameSwagger: average
                 NameAnsible: average
                 NamePythonSdk: average
@@ -8768,7 +9186,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: maximum
                 NameAnsible: maximum
                 NamePythonSdk: maximum
@@ -8798,7 +9218,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: minimum
                 NameAnsible: minimum
                 NamePythonSdk: minimum
@@ -8828,7 +9250,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: timestamp
                 NameAnsible: timestamp
                 NamePythonSdk: timestamp
@@ -8858,7 +9282,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: total
                 NameAnsible: total
                 NamePythonSdk: total
@@ -8888,7 +9314,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/metricValues
             PathPython: /value/metricValues
@@ -8900,7 +9328,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /value
         PathPython: /value
@@ -8912,7 +9342,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: ListMetrics
         Options:
@@ -9014,6 +9446,8 @@ Modules:
         References: []
         OperationId: '4806'
         MethodId: '4807'
+        OperationName: CollectionRegion
+        MethodName: ListMetrics
   - ModuleName: azure_rm_cosmosdbdatabaseaccountregion_info
     Options:
       - NameSwagger: resourceGroupName
@@ -9045,7 +9479,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: accountName
         NameAnsible: account_name
         NamePythonSdk: account_name
@@ -9075,7 +9511,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: region
         NameAnsible: region
         NamePythonSdk: region
@@ -9105,7 +9543,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - &ref_20
         NameSwagger: value
         NameAnsible: value
@@ -9154,7 +9594,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: endTime
             NameAnsible: end_time
             NamePythonSdk: end_time
@@ -9184,7 +9626,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: timeGrain
             NameAnsible: time_grain
             NamePythonSdk: time_grain
@@ -9214,7 +9658,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: unit
             NameAnsible: unit
             NamePythonSdk: unit
@@ -9265,7 +9711,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: name
             NameAnsible: name
             NamePythonSdk: name
@@ -9313,7 +9761,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: localizedValue
                 NameAnsible: localized_value
                 NamePythonSdk: localized_value
@@ -9343,7 +9793,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/name
             PathPython: /value/name
@@ -9355,7 +9807,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: metricValues
             NameAnsible: metric_values
             NamePythonSdk: metric_values
@@ -9403,7 +9857,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
+                Kind: 1
               - NameSwagger: average
                 NameAnsible: average
                 NamePythonSdk: average
@@ -9433,7 +9889,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: maximum
                 NameAnsible: maximum
                 NamePythonSdk: maximum
@@ -9463,7 +9921,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: minimum
                 NameAnsible: minimum
                 NamePythonSdk: minimum
@@ -9493,7 +9953,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: timestamp
                 NameAnsible: timestamp
                 NamePythonSdk: timestamp
@@ -9523,7 +9985,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: total
                 NameAnsible: total
                 NamePythonSdk: total
@@ -9553,7 +10017,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/metricValues
             PathPython: /value/metricValues
@@ -9565,7 +10031,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /value
         PathPython: /value
@@ -9577,7 +10045,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: ListMetrics
         Options:
@@ -9665,6 +10135,8 @@ Modules:
         References: []
         OperationId: '4863'
         MethodId: '4864'
+        OperationName: DatabaseAccountRegion
+        MethodName: ListMetrics
   - ModuleName: azure_rm_cosmosdbpercentilesourcetarget_info
     Options:
       - NameSwagger: resourceGroupName
@@ -9696,7 +10168,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: accountName
         NameAnsible: account_name
         NamePythonSdk: account_name
@@ -9726,7 +10200,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: sourceRegion
         NameAnsible: source_region
         NamePythonSdk: source_region
@@ -9758,7 +10234,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: targetRegion
         NameAnsible: target_region
         NamePythonSdk: target_region
@@ -9790,7 +10268,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - &ref_21
         NameSwagger: value
         NameAnsible: value
@@ -9839,7 +10319,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: endTime
             NameAnsible: end_time
             NamePythonSdk: end_time
@@ -9869,7 +10351,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: timeGrain
             NameAnsible: time_grain
             NamePythonSdk: time_grain
@@ -9899,7 +10383,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: unit
             NameAnsible: unit
             NamePythonSdk: unit
@@ -9950,7 +10436,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: name
             NameAnsible: name
             NamePythonSdk: name
@@ -9998,7 +10486,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: localizedValue
                 NameAnsible: localized_value
                 NamePythonSdk: localized_value
@@ -10028,7 +10518,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/name
             PathPython: /value/name
@@ -10040,7 +10532,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: metricValues
             NameAnsible: metric_values
             NamePythonSdk: metric_values
@@ -10090,7 +10584,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
+                Kind: 1
               - NameSwagger: average
                 NameAnsible: average
                 NamePythonSdk: average
@@ -10120,7 +10616,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: maximum
                 NameAnsible: maximum
                 NamePythonSdk: maximum
@@ -10150,7 +10648,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: minimum
                 NameAnsible: minimum
                 NamePythonSdk: minimum
@@ -10180,7 +10680,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: timestamp
                 NameAnsible: timestamp
                 NamePythonSdk: timestamp
@@ -10210,7 +10712,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: total
                 NameAnsible: total
                 NamePythonSdk: total
@@ -10240,7 +10744,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: P10
                 NameAnsible: p10
                 NamePythonSdk: p10
@@ -10270,7 +10776,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: P25
                 NameAnsible: p25
                 NamePythonSdk: p25
@@ -10300,7 +10808,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: P50
                 NameAnsible: p50
                 NamePythonSdk: p50
@@ -10330,7 +10840,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: P75
                 NameAnsible: p75
                 NamePythonSdk: p75
@@ -10360,7 +10872,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: P90
                 NameAnsible: p90
                 NamePythonSdk: p90
@@ -10390,7 +10904,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: P95
                 NameAnsible: p95
                 NamePythonSdk: p95
@@ -10420,7 +10936,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: P99
                 NameAnsible: p99
                 NamePythonSdk: p99
@@ -10450,7 +10968,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/metricValues
             PathPython: /value/metricValues
@@ -10462,7 +10982,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /value
         PathPython: /value
@@ -10474,7 +10996,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: ListMetrics
         Options:
@@ -10572,6 +11096,8 @@ Modules:
         References: []
         OperationId: '4908'
         MethodId: '4909'
+        OperationName: PercentileSourceTarget
+        MethodName: ListMetrics
   - ModuleName: azure_rm_cosmosdbpercentiletarget_info
     Options:
       - NameSwagger: resourceGroupName
@@ -10603,7 +11129,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: accountName
         NameAnsible: account_name
         NamePythonSdk: account_name
@@ -10633,7 +11161,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: targetRegion
         NameAnsible: target_region
         NamePythonSdk: target_region
@@ -10665,7 +11195,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - &ref_22
         NameSwagger: value
         NameAnsible: value
@@ -10714,7 +11246,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: endTime
             NameAnsible: end_time
             NamePythonSdk: end_time
@@ -10744,7 +11278,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: timeGrain
             NameAnsible: time_grain
             NamePythonSdk: time_grain
@@ -10774,7 +11310,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: unit
             NameAnsible: unit
             NamePythonSdk: unit
@@ -10825,7 +11363,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: name
             NameAnsible: name
             NamePythonSdk: name
@@ -10873,7 +11413,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: localizedValue
                 NameAnsible: localized_value
                 NamePythonSdk: localized_value
@@ -10903,7 +11445,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/name
             PathPython: /value/name
@@ -10915,7 +11459,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: metricValues
             NameAnsible: metric_values
             NamePythonSdk: metric_values
@@ -10965,7 +11511,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
+                Kind: 1
               - NameSwagger: average
                 NameAnsible: average
                 NamePythonSdk: average
@@ -10995,7 +11543,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: maximum
                 NameAnsible: maximum
                 NamePythonSdk: maximum
@@ -11025,7 +11575,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: minimum
                 NameAnsible: minimum
                 NamePythonSdk: minimum
@@ -11055,7 +11607,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: timestamp
                 NameAnsible: timestamp
                 NamePythonSdk: timestamp
@@ -11085,7 +11639,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: total
                 NameAnsible: total
                 NamePythonSdk: total
@@ -11115,7 +11671,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: P10
                 NameAnsible: p10
                 NamePythonSdk: p10
@@ -11145,7 +11703,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: P25
                 NameAnsible: p25
                 NamePythonSdk: p25
@@ -11175,7 +11735,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: P50
                 NameAnsible: p50
                 NamePythonSdk: p50
@@ -11205,7 +11767,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: P75
                 NameAnsible: p75
                 NamePythonSdk: p75
@@ -11235,7 +11799,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: P90
                 NameAnsible: p90
                 NamePythonSdk: p90
@@ -11265,7 +11831,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: P95
                 NameAnsible: p95
                 NamePythonSdk: p95
@@ -11295,7 +11863,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: P99
                 NameAnsible: p99
                 NamePythonSdk: p99
@@ -11325,7 +11895,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/metricValues
             PathPython: /value/metricValues
@@ -11337,7 +11909,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /value
         PathPython: /value
@@ -11349,7 +11923,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: ListMetrics
         Options:
@@ -11457,6 +12033,8 @@ Modules:
         References: []
         OperationId: '4959'
         MethodId: '4960'
+        OperationName: PercentileTarget
+        MethodName: ListMetrics
   - ModuleName: azure_rm_cosmosdbpercentile_info
     Options:
       - NameSwagger: resourceGroupName
@@ -11488,7 +12066,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: accountName
         NameAnsible: account_name
         NamePythonSdk: account_name
@@ -11518,7 +12098,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - &ref_23
         NameSwagger: value
         NameAnsible: value
@@ -11567,7 +12149,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: endTime
             NameAnsible: end_time
             NamePythonSdk: end_time
@@ -11597,7 +12181,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: timeGrain
             NameAnsible: time_grain
             NamePythonSdk: time_grain
@@ -11627,7 +12213,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: unit
             NameAnsible: unit
             NamePythonSdk: unit
@@ -11678,7 +12266,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: name
             NameAnsible: name
             NamePythonSdk: name
@@ -11726,7 +12316,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: localizedValue
                 NameAnsible: localized_value
                 NamePythonSdk: localized_value
@@ -11756,7 +12348,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/name
             PathPython: /value/name
@@ -11768,7 +12362,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: metricValues
             NameAnsible: metric_values
             NamePythonSdk: metric_values
@@ -11818,7 +12414,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
+                Kind: 1
               - NameSwagger: average
                 NameAnsible: average
                 NamePythonSdk: average
@@ -11848,7 +12446,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: maximum
                 NameAnsible: maximum
                 NamePythonSdk: maximum
@@ -11878,7 +12478,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: minimum
                 NameAnsible: minimum
                 NamePythonSdk: minimum
@@ -11908,7 +12510,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: timestamp
                 NameAnsible: timestamp
                 NamePythonSdk: timestamp
@@ -11938,7 +12542,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: total
                 NameAnsible: total
                 NamePythonSdk: total
@@ -11968,7 +12574,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: P10
                 NameAnsible: p10
                 NamePythonSdk: p10
@@ -11998,7 +12606,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: P25
                 NameAnsible: p25
                 NamePythonSdk: p25
@@ -12028,7 +12638,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: P50
                 NameAnsible: p50
                 NamePythonSdk: p50
@@ -12058,7 +12670,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: P75
                 NameAnsible: p75
                 NamePythonSdk: p75
@@ -12088,7 +12702,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: P90
                 NameAnsible: p90
                 NamePythonSdk: p90
@@ -12118,7 +12734,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: P95
                 NameAnsible: p95
                 NamePythonSdk: p95
@@ -12148,7 +12766,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: P99
                 NameAnsible: p99
                 NamePythonSdk: p99
@@ -12178,7 +12798,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/metricValues
             PathPython: /value/metricValues
@@ -12190,7 +12812,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /value
         PathPython: /value
@@ -12202,7 +12826,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: ListMetrics
         Options:
@@ -12304,6 +12930,8 @@ Modules:
         References: []
         OperationId: '5004'
         MethodId: '5005'
+        OperationName: Percentile
+        MethodName: ListMetrics
   - ModuleName: azure_rm_cosmosdbcollectionpartitionregion_info
     Options:
       - NameSwagger: resourceGroupName
@@ -12335,7 +12963,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: accountName
         NameAnsible: account_name
         NamePythonSdk: account_name
@@ -12365,7 +12995,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: region
         NameAnsible: region
         NamePythonSdk: region
@@ -12395,7 +13027,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: databaseRid
         NameAnsible: database_rid
         NamePythonSdk: database_rid
@@ -12425,7 +13059,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: collectionRid
         NameAnsible: collection_rid
         NamePythonSdk: collection_rid
@@ -12455,7 +13091,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - &ref_24
         NameSwagger: value
         NameAnsible: value
@@ -12504,7 +13142,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: endTime
             NameAnsible: end_time
             NamePythonSdk: end_time
@@ -12534,7 +13174,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: timeGrain
             NameAnsible: time_grain
             NamePythonSdk: time_grain
@@ -12564,7 +13206,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: unit
             NameAnsible: unit
             NamePythonSdk: unit
@@ -12615,7 +13259,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: name
             NameAnsible: name
             NamePythonSdk: name
@@ -12663,7 +13309,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: localizedValue
                 NameAnsible: localized_value
                 NamePythonSdk: localized_value
@@ -12693,7 +13341,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/name
             PathPython: /value/name
@@ -12705,7 +13355,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: metricValues
             NameAnsible: metric_values
             NamePythonSdk: metric_values
@@ -12753,7 +13405,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
+                Kind: 1
               - NameSwagger: average
                 NameAnsible: average
                 NamePythonSdk: average
@@ -12783,7 +13437,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: maximum
                 NameAnsible: maximum
                 NamePythonSdk: maximum
@@ -12813,7 +13469,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: minimum
                 NameAnsible: minimum
                 NamePythonSdk: minimum
@@ -12843,7 +13501,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: timestamp
                 NameAnsible: timestamp
                 NamePythonSdk: timestamp
@@ -12873,7 +13533,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: total
                 NameAnsible: total
                 NamePythonSdk: total
@@ -12903,7 +13565,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/metricValues
             PathPython: /value/metricValues
@@ -12915,7 +13579,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: partitionId
             NameAnsible: partition_id
             NamePythonSdk: partition_id
@@ -12945,7 +13611,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: partitionKeyRangeId
             NameAnsible: partition_key_range_id
             NamePythonSdk: partition_key_range_id
@@ -12977,7 +13645,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /value
         PathPython: /value
@@ -12989,7 +13659,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: ListMetrics
         Options:
@@ -13095,6 +13767,8 @@ Modules:
         References: []
         OperationId: '5043'
         MethodId: '5044'
+        OperationName: CollectionPartitionRegion
+        MethodName: ListMetrics
   - ModuleName: azure_rm_cosmosdbcollectionpartition_info
     Options:
       - NameSwagger: resourceGroupName
@@ -13126,7 +13800,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: accountName
         NameAnsible: account_name
         NamePythonSdk: account_name
@@ -13156,7 +13832,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: databaseRid
         NameAnsible: database_rid
         NamePythonSdk: database_rid
@@ -13186,7 +13864,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: collectionRid
         NameAnsible: collection_rid
         NamePythonSdk: collection_rid
@@ -13216,7 +13896,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - &ref_25
         NameSwagger: value
         NameAnsible: value
@@ -13288,7 +13970,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: name
             NameAnsible: name
             NamePythonSdk: name
@@ -13336,7 +14020,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: localizedValue
                 NameAnsible: localized_value
                 NamePythonSdk: localized_value
@@ -13366,7 +14052,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/name
             PathPython: /value/name
@@ -13378,7 +14066,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: quotaPeriod
             NameAnsible: quota_period
             NamePythonSdk: quota_period
@@ -13408,7 +14098,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: limit
             NameAnsible: limit
             NamePythonSdk: limit
@@ -13438,7 +14130,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
+            Kind: 1
           - NameSwagger: currentValue
             NameAnsible: current_value
             NamePythonSdk: current_value
@@ -13468,7 +14162,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
+            Kind: 1
           - NameSwagger: partitionId
             NameAnsible: partition_id
             NamePythonSdk: partition_id
@@ -13498,7 +14194,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: partitionKeyRangeId
             NameAnsible: partition_key_range_id
             NamePythonSdk: partition_key_range_id
@@ -13528,7 +14226,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /value
         PathPython: /value
@@ -13540,7 +14240,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: ListUsages
         Options:
@@ -13639,6 +14341,8 @@ Modules:
         References: []
         OperationId: '5100'
         MethodId: '5149'
+        OperationName: CollectionPartition
+        MethodName: ListUsages
       - Example:
           parameters:
             accountName: ddb1
@@ -13704,6 +14408,8 @@ Modules:
         References: []
         OperationId: '5100'
         MethodId: '5101'
+        OperationName: CollectionPartition
+        MethodName: ListMetrics
   - ModuleName: azure_rm_cosmosdbpartitionkeyrangeid_info
     Options:
       - NameSwagger: resourceGroupName
@@ -13735,7 +14441,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: accountName
         NameAnsible: account_name
         NamePythonSdk: account_name
@@ -13765,7 +14473,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: databaseRid
         NameAnsible: database_rid
         NamePythonSdk: database_rid
@@ -13795,7 +14505,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: collectionRid
         NameAnsible: collection_rid
         NamePythonSdk: collection_rid
@@ -13825,7 +14537,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: partitionKeyRangeId
         NameAnsible: partition_key_range_id
         NamePythonSdk: partition_key_range_id
@@ -13855,7 +14569,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - &ref_26
         NameSwagger: value
         NameAnsible: value
@@ -13904,7 +14620,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: endTime
             NameAnsible: end_time
             NamePythonSdk: end_time
@@ -13934,7 +14652,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: timeGrain
             NameAnsible: time_grain
             NamePythonSdk: time_grain
@@ -13964,7 +14684,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: unit
             NameAnsible: unit
             NamePythonSdk: unit
@@ -14015,7 +14737,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: name
             NameAnsible: name
             NamePythonSdk: name
@@ -14063,7 +14787,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: localizedValue
                 NameAnsible: localized_value
                 NamePythonSdk: localized_value
@@ -14093,7 +14819,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/name
             PathPython: /value/name
@@ -14105,7 +14833,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: metricValues
             NameAnsible: metric_values
             NamePythonSdk: metric_values
@@ -14153,7 +14883,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
+                Kind: 1
               - NameSwagger: average
                 NameAnsible: average
                 NamePythonSdk: average
@@ -14183,7 +14915,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: maximum
                 NameAnsible: maximum
                 NamePythonSdk: maximum
@@ -14213,7 +14947,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: minimum
                 NameAnsible: minimum
                 NamePythonSdk: minimum
@@ -14243,7 +14979,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: timestamp
                 NameAnsible: timestamp
                 NamePythonSdk: timestamp
@@ -14273,7 +15011,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: total
                 NameAnsible: total
                 NamePythonSdk: total
@@ -14303,7 +15043,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/metricValues
             PathPython: /value/metricValues
@@ -14315,7 +15057,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: partitionId
             NameAnsible: partition_id
             NamePythonSdk: partition_id
@@ -14345,7 +15089,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: partitionKeyRangeId
             NameAnsible: partition_key_range_id
             NamePythonSdk: partition_key_range_id
@@ -14377,7 +15123,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /value
         PathPython: /value
@@ -14389,7 +15137,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: ListMetrics
         Options:
@@ -14492,6 +15242,8 @@ Modules:
         References: []
         OperationId: '5199'
         MethodId: '5200'
+        OperationName: PartitionKeyRangeId
+        MethodName: ListMetrics
   - ModuleName: azure_rm_cosmosdbpartitionkeyrangeidregion_info
     Options:
       - NameSwagger: resourceGroupName
@@ -14523,7 +15275,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: accountName
         NameAnsible: account_name
         NamePythonSdk: account_name
@@ -14553,7 +15307,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: region
         NameAnsible: region
         NamePythonSdk: region
@@ -14583,7 +15339,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: databaseRid
         NameAnsible: database_rid
         NamePythonSdk: database_rid
@@ -14613,7 +15371,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: collectionRid
         NameAnsible: collection_rid
         NamePythonSdk: collection_rid
@@ -14643,7 +15403,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: partitionKeyRangeId
         NameAnsible: partition_key_range_id
         NamePythonSdk: partition_key_range_id
@@ -14673,7 +15435,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - &ref_27
         NameSwagger: value
         NameAnsible: value
@@ -14722,7 +15486,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: endTime
             NameAnsible: end_time
             NamePythonSdk: end_time
@@ -14752,7 +15518,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: timeGrain
             NameAnsible: time_grain
             NamePythonSdk: time_grain
@@ -14782,7 +15550,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: unit
             NameAnsible: unit
             NamePythonSdk: unit
@@ -14833,7 +15603,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: name
             NameAnsible: name
             NamePythonSdk: name
@@ -14881,7 +15653,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: localizedValue
                 NameAnsible: localized_value
                 NamePythonSdk: localized_value
@@ -14911,7 +15685,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/name
             PathPython: /value/name
@@ -14923,7 +15699,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: metricValues
             NameAnsible: metric_values
             NamePythonSdk: metric_values
@@ -14971,7 +15749,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
+                Kind: 1
               - NameSwagger: average
                 NameAnsible: average
                 NamePythonSdk: average
@@ -15001,7 +15781,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: maximum
                 NameAnsible: maximum
                 NamePythonSdk: maximum
@@ -15031,7 +15813,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: minimum
                 NameAnsible: minimum
                 NamePythonSdk: minimum
@@ -15061,7 +15845,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: timestamp
                 NameAnsible: timestamp
                 NamePythonSdk: timestamp
@@ -15091,7 +15877,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: total
                 NameAnsible: total
                 NamePythonSdk: total
@@ -15121,7 +15909,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/metricValues
             PathPython: /value/metricValues
@@ -15133,7 +15923,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: partitionId
             NameAnsible: partition_id
             NamePythonSdk: partition_id
@@ -15163,7 +15955,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: partitionKeyRangeId
             NameAnsible: partition_key_range_id
             NamePythonSdk: partition_key_range_id
@@ -15195,7 +15989,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /value
         PathPython: /value
@@ -15207,7 +16003,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: ListMetrics
         Options:
@@ -15316,168 +16114,9 @@ Modules:
         References: []
         OperationId: '5256'
         MethodId: '5257'
+        OperationName: PartitionKeyRangeIdRegion
+        MethodName: ListMetrics
 ServiceName: CosmosDB
 MgmtClientName: CosmosDB
 CliName: cosmos-db
 Namespace: azure.mgmt.cosmosdb
-Info:
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION createUpdateParameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION tableName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION keyspaceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION keyspaceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION tableName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION graphName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION keyspaceName'
-  - '  ** FOUND OPTION tableName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION keyspaceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION containerName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION collectionName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION graphName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION keyspaceName'
-  - '  ** FOUND OPTION tableName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION containerName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseName'
-  - '  ** FOUND OPTION collectionName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION collectionRid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION collectionRid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION collectionRid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION region'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION collectionRid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION region'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION sourceRegion'
-  - '  ** FOUND OPTION targetRegion'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION targetRegion'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION region'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION collectionRid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION collectionRid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION collectionRid'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION collectionRid'
-  - '  ** FOUND OPTION partitionKeyRangeId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION accountName'
-  - '  ** FOUND OPTION region'
-  - '  ** FOUND OPTION databaseRid'
-  - '  ** FOUND OPTION collectionRid'
-  - '  ** FOUND OPTION partitionKeyRangeId'

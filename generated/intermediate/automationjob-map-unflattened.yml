@@ -30,7 +30,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: automationAccountName
         NameAnsible: automation_account_name
         NamePythonSdk: automation_account_name
@@ -60,7 +62,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: jobName
         NameAnsible: job_name
         NamePythonSdk: job_name
@@ -90,7 +94,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: parameters
         NameAnsible: parameters
         NamePythonSdk: parameters
@@ -113,14 +119,16 @@ Modules:
         PathSwagger: ''
         PathPython: null
         PathGo: null
-        DispositionSdk: dictionary
+        DispositionSdk: '*'
         DispositionRest: '*'
         Comparison: ''
         Updatable: true
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 2
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -186,7 +194,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/runbook
             PathPython: /runbook
@@ -198,7 +208,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: parameters
             NameAnsible: parameters
             NamePythonSdk: parameters
@@ -232,7 +244,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: runOn
             NameAnsible: run_on
             NamePythonSdk: run_on
@@ -264,7 +278,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - &ref_3
             NameSwagger: startedBy
             NameAnsible: started_by
@@ -295,7 +311,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - &ref_4
             NameSwagger: jobId
             NameAnsible: job_id
@@ -326,7 +344,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - &ref_5
             NameSwagger: creationTime
             NameAnsible: creation_time
@@ -357,7 +377,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - &ref_6
             NameSwagger: status
             NameAnsible: status
@@ -427,7 +449,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - &ref_7
             NameSwagger: statusDetails
             NameAnsible: status_details
@@ -458,7 +482,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - &ref_8
             NameSwagger: startTime
             NameAnsible: start_time
@@ -489,7 +515,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - &ref_9
             NameSwagger: endTime
             NameAnsible: end_time
@@ -520,7 +548,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - &ref_10
             NameSwagger: exception
             NameAnsible: exception
@@ -551,7 +581,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - &ref_11
             NameSwagger: lastModifiedTime
             NameAnsible: last_modified_time
@@ -582,7 +614,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - &ref_12
             NameSwagger: lastStatusModifiedTime
             NameAnsible: last_status_modified_time
@@ -613,7 +647,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - &ref_13
             NameSwagger: provisioningState
             NameAnsible: provisioning_state
@@ -656,7 +692,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties
         PathPython: ''
@@ -668,7 +706,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: clientRequestId
         NameAnsible: client_request_id
         NamePythonSdk: client_request_id
@@ -698,7 +738,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - &ref_0
         NameSwagger: id
         NameAnsible: id
@@ -729,7 +771,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_1
         NameSwagger: name
         NameAnsible: name
@@ -760,7 +804,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_2
         NameSwagger: type
         NameAnsible: type
@@ -791,7 +837,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: Create
         Options:
@@ -942,7 +990,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/runbook
             PathPython: /runbook
@@ -954,7 +1004,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - *ref_3
           - NameSwagger: runOn
             NameAnsible: run_on
@@ -987,7 +1039,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - *ref_4
           - *ref_5
           - *ref_6
@@ -1030,7 +1084,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - *ref_13
         EnumValues: []
         PathSwagger: /properties
@@ -1043,7 +1099,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     ModuleOperationNameUpper: Job
     ModuleOperationName: job
     ObjectName: Job
@@ -1118,6 +1176,8 @@ Modules:
           - automation_automationaccounts_put
         OperationId: '378'
         MethodId: '593'
+        OperationName: Job
+        MethodName: Create
   - ModuleName: azure_rm_automationjob_info
     Options:
       - NameSwagger: resourceGroupName
@@ -1149,7 +1209,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: automationAccountName
         NameAnsible: automation_account_name
         NamePythonSdk: automation_account_name
@@ -1179,7 +1241,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: clientRequestId
         NameAnsible: client_request_id
         NamePythonSdk: client_request_id
@@ -1209,7 +1273,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: jobName
         NameAnsible: job_name
         NamePythonSdk: job_name
@@ -1239,7 +1305,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - &ref_14
         NameSwagger: id
         NameAnsible: id
@@ -1270,7 +1338,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_15
         NameSwagger: name
         NameAnsible: name
@@ -1301,7 +1371,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_16
         NameSwagger: type
         NameAnsible: type
@@ -1332,7 +1404,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_17
         NameSwagger: properties
         NameAnsible: properties
@@ -1399,7 +1473,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/runbook
             PathPython: /runbook
@@ -1411,7 +1487,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: startedBy
             NameAnsible: started_by
             NamePythonSdk: started_by
@@ -1441,7 +1519,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: runOn
             NameAnsible: run_on
             NamePythonSdk: run_on
@@ -1473,7 +1553,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: jobId
             NameAnsible: job_id
             NamePythonSdk: job_id
@@ -1503,7 +1585,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: creationTime
             NameAnsible: creation_time
             NamePythonSdk: creation_time
@@ -1533,7 +1617,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: status
             NameAnsible: status
             NamePythonSdk: status
@@ -1602,7 +1688,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: statusDetails
             NameAnsible: status_details
             NamePythonSdk: status_details
@@ -1632,7 +1720,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: startTime
             NameAnsible: start_time
             NamePythonSdk: start_time
@@ -1662,7 +1752,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: endTime
             NameAnsible: end_time
             NamePythonSdk: end_time
@@ -1692,7 +1784,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: exception
             NameAnsible: exception
             NamePythonSdk: exception
@@ -1722,7 +1816,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: lastModifiedTime
             NameAnsible: last_modified_time
             NamePythonSdk: last_modified_time
@@ -1752,7 +1848,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: lastStatusModifiedTime
             NameAnsible: last_status_modified_time
             NamePythonSdk: last_status_modified_time
@@ -1782,7 +1880,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: parameters
             NameAnsible: parameters
             NamePythonSdk: parameters
@@ -1816,7 +1916,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: provisioningState
             NameAnsible: provisioning_state
             NamePythonSdk: provisioning_state
@@ -1858,7 +1960,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties
         PathPython: ''
@@ -1870,7 +1974,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: ListByAutomationAccount
         Options:
@@ -2013,6 +2119,8 @@ Modules:
         References: []
         OperationId: '378'
         MethodId: '639'
+        OperationName: Job
+        MethodName: ListByAutomationAccount
       - Example:
           parameters:
             subscriptionId: 51766542-3ed7-4a72-a187-0c8ab644ddab
@@ -2068,6 +2176,8 @@ Modules:
         References: []
         OperationId: '378'
         MethodId: '551'
+        OperationName: Job
+        MethodName: Get
       - Example:
           parameters:
             subscriptionId: 51766542-3ed7-4a72-a187-0c8ab644ddab
@@ -2100,6 +2210,8 @@ Modules:
         References: []
         OperationId: '378'
         MethodId: '379'
+        OperationName: Job
+        MethodName: GetOutput
       - Example:
           parameters:
             subscriptionId: 51766542-3ed7-4a72-a187-0c8ab644ddab
@@ -2132,6 +2244,8 @@ Modules:
         References: []
         OperationId: '378'
         MethodId: '423'
+        OperationName: Job
+        MethodName: GetRunbookContent
   - ModuleName: azure_rm_automationjobstream_info
     Options:
       - NameSwagger: resourceGroupName
@@ -2163,7 +2277,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: automationAccountName
         NameAnsible: automation_account_name
         NamePythonSdk: automation_account_name
@@ -2193,7 +2309,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: jobName
         NameAnsible: job_name
         NamePythonSdk: job_name
@@ -2223,7 +2341,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: clientRequestId
         NameAnsible: client_request_id
         NamePythonSdk: client_request_id
@@ -2253,7 +2373,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: jobStreamId
         NameAnsible: job_stream_id
         NamePythonSdk: job_stream_id
@@ -2283,7 +2405,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - &ref_18
         NameSwagger: id
         NameAnsible: id
@@ -2314,7 +2438,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_19
         NameSwagger: properties
         NameAnsible: properties
@@ -2363,7 +2489,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: time
             NameAnsible: time
             NamePythonSdk: time
@@ -2393,7 +2521,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: streamType
             NameAnsible: stream_type
             NamePythonSdk: stream_type
@@ -2444,7 +2574,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: streamText
             NameAnsible: stream_text
             NamePythonSdk: stream_text
@@ -2474,7 +2606,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: summary
             NameAnsible: summary
             NamePythonSdk: summary
@@ -2504,7 +2638,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: value
             NameAnsible: value
             NamePythonSdk: value
@@ -2538,7 +2674,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties
         PathPython: ''
@@ -2550,7 +2688,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: ListByJob
         Options:
@@ -2657,6 +2797,8 @@ Modules:
         References: []
         OperationId: '725'
         MethodId: '774'
+        OperationName: JobStream
+        MethodName: ListByJob
       - Example:
           parameters:
             subscriptionId: 51766542-3ed7-4a72-a187-0c8ab644ddab
@@ -2708,37 +2850,9 @@ Modules:
         References: []
         OperationId: '725'
         MethodId: '726'
+        OperationName: JobStream
+        MethodName: Get
 ServiceName: AutomationManagement
 MgmtClientName: AutomationManagement
 CliName: automationjob
 Namespace: azure.mgmt.automation
-Info:
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION automationAccountName'
-  - '  ** FOUND OPTION jobName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION clientRequestId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION automationAccountName'
-  - '  ** FOUND OPTION clientRequestId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION automationAccountName'
-  - '  ** FOUND OPTION jobName'
-  - '  ** FOUND OPTION clientRequestId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION automationAccountName'
-  - '  ** FOUND OPTION jobName'
-  - '  ** FOUND OPTION clientRequestId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION automationAccountName'
-  - '  ** FOUND OPTION jobName'
-  - '  ** FOUND OPTION clientRequestId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION automationAccountName'
-  - '  ** FOUND OPTION jobName'
-  - '  ** FOUND OPTION clientRequestId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION automationAccountName'
-  - '  ** FOUND OPTION jobName'
-  - '  ** FOUND OPTION jobStreamId'
-  - '  ** FOUND OPTION clientRequestId'

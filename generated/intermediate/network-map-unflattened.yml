@@ -30,7 +30,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: azureFirewallName
         NameAnsible: azure_firewall_name
         NamePythonSdk: azure_firewall_name
@@ -60,7 +62,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: parameters
         NameAnsible: parameters
         NamePythonSdk: parameters
@@ -83,14 +87,16 @@ Modules:
         PathSwagger: ''
         PathPython: null
         PathGo: null
-        DispositionSdk: dictionary
+        DispositionSdk: '*'
         DispositionRest: '*'
         Comparison: ''
         Updatable: true
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 2
       - NameSwagger: id
         NameAnsible: id
         NamePythonSdk: id
@@ -120,7 +126,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: location
         NameAnsible: location
         NamePythonSdk: location
@@ -150,7 +158,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: tags
         NameAnsible: tags
         NamePythonSdk: tags
@@ -184,7 +194,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -250,7 +262,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: properties
                 NameAnsible: properties
                 NamePythonSdk: properties
@@ -298,7 +312,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: int32
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: action
                     NameAnsible: action
                     NamePythonSdk: action
@@ -354,7 +370,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: true
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/applicationRuleCollections/properties/action
                     PathPython: /applicationRuleCollections/action
@@ -366,7 +384,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: rules
                     NameAnsible: rules
                     NamePythonSdk: rules
@@ -416,7 +436,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: true
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: description
                         NameAnsible: description
                         NamePythonSdk: description
@@ -448,7 +470,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: true
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: sourceAddresses
                         NameAnsible: source_addresses
                         NamePythonSdk: source_addresses
@@ -480,7 +504,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: true
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: protocols
                         NameAnsible: protocols
                         NamePythonSdk: protocols
@@ -512,7 +538,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: true
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: targetFqdns
                         NameAnsible: target_fqdns
                         NamePythonSdk: target_fqdns
@@ -544,7 +572,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: true
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: fqdnTags
                         NameAnsible: fqdn_tags
                         NamePythonSdk: fqdn_tags
@@ -576,7 +606,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: true
+                        format: ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/applicationRuleCollections/properties/rules
                     PathPython: /applicationRuleCollections/rules
@@ -588,7 +620,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - &ref_2
                     NameSwagger: provisioningState
                     NameAnsible: provisioning_state
@@ -633,7 +667,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /properties/applicationRuleCollections/properties
                 PathPython: /applicationRuleCollections
@@ -645,7 +681,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: name
                 NameAnsible: name
                 NamePythonSdk: name
@@ -677,7 +715,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - &ref_3
                 NameSwagger: etag
                 NameAnsible: etag
@@ -710,7 +750,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/applicationRuleCollections
             PathPython: /applicationRuleCollections
@@ -722,7 +764,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: natRuleCollections
             NameAnsible: nat_rule_collections
             NamePythonSdk: nat_rule_collections
@@ -770,7 +814,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: properties
                 NameAnsible: properties
                 NamePythonSdk: properties
@@ -818,7 +864,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: int32
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: action
                     NameAnsible: action
                     NamePythonSdk: action
@@ -872,7 +920,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: true
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/natRuleCollections/properties/action
                     PathPython: /natRuleCollections/action
@@ -884,7 +934,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: rules
                     NameAnsible: rules
                     NamePythonSdk: rules
@@ -932,7 +984,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: true
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: description
                         NameAnsible: description
                         NamePythonSdk: description
@@ -964,7 +1018,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: true
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: sourceAddresses
                         NameAnsible: source_addresses
                         NamePythonSdk: source_addresses
@@ -996,7 +1052,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: true
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: destinationAddresses
                         NameAnsible: destination_addresses
                         NamePythonSdk: destination_addresses
@@ -1028,7 +1086,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: true
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: destinationPorts
                         NameAnsible: destination_ports
                         NamePythonSdk: destination_ports
@@ -1060,7 +1120,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: true
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: protocols
                         NameAnsible: protocols
                         NamePythonSdk: protocols
@@ -1106,7 +1168,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: true
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: translatedAddress
                         NameAnsible: translated_address
                         NamePythonSdk: translated_address
@@ -1138,7 +1202,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: true
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: translatedPort
                         NameAnsible: translated_port
                         NamePythonSdk: translated_port
@@ -1170,7 +1236,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: true
+                        format: ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/natRuleCollections/properties/rules
                     PathPython: /natRuleCollections/rules
@@ -1182,7 +1250,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - &ref_4
                     NameSwagger: provisioningState
                     NameAnsible: provisioning_state
@@ -1227,7 +1297,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /properties/natRuleCollections/properties
                 PathPython: /natRuleCollections
@@ -1239,7 +1311,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: name
                 NameAnsible: name
                 NamePythonSdk: name
@@ -1271,7 +1345,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - &ref_5
                 NameSwagger: etag
                 NameAnsible: etag
@@ -1304,7 +1380,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/natRuleCollections
             PathPython: /natRuleCollections
@@ -1316,7 +1394,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: networkRuleCollections
             NameAnsible: network_rule_collections
             NamePythonSdk: network_rule_collections
@@ -1364,7 +1444,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: properties
                 NameAnsible: properties
                 NamePythonSdk: properties
@@ -1412,7 +1494,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: int32
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: action
                     NameAnsible: action
                     NamePythonSdk: action
@@ -1468,7 +1552,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: true
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/networkRuleCollections/properties/action
                     PathPython: /networkRuleCollections/action
@@ -1480,7 +1566,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: rules
                     NameAnsible: rules
                     NamePythonSdk: rules
@@ -1530,7 +1618,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: true
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: description
                         NameAnsible: description
                         NamePythonSdk: description
@@ -1562,7 +1652,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: true
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: protocols
                         NameAnsible: protocols
                         NamePythonSdk: protocols
@@ -1606,7 +1698,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: true
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: sourceAddresses
                         NameAnsible: source_addresses
                         NamePythonSdk: source_addresses
@@ -1638,7 +1732,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: true
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: destinationAddresses
                         NameAnsible: destination_addresses
                         NamePythonSdk: destination_addresses
@@ -1670,7 +1766,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: true
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: destinationPorts
                         NameAnsible: destination_ports
                         NamePythonSdk: destination_ports
@@ -1702,7 +1800,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: true
+                        format: ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/networkRuleCollections/properties/rules
                     PathPython: /networkRuleCollections/rules
@@ -1714,7 +1814,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - &ref_6
                     NameSwagger: provisioningState
                     NameAnsible: provisioning_state
@@ -1759,7 +1861,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /properties/networkRuleCollections/properties
                 PathPython: /networkRuleCollections
@@ -1771,7 +1875,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: name
                 NameAnsible: name
                 NamePythonSdk: name
@@ -1803,7 +1909,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - &ref_7
                 NameSwagger: etag
                 NameAnsible: etag
@@ -1836,7 +1944,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/networkRuleCollections
             PathPython: /networkRuleCollections
@@ -1848,7 +1958,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: ipConfigurations
             NameAnsible: ip_configurations
             NamePythonSdk: ip_configurations
@@ -1896,7 +2008,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: properties
                 NameAnsible: properties
                 NamePythonSdk: properties
@@ -1964,7 +2078,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: true
+                        format: ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/ipConfigurations/properties/subnet
                     PathPython: /ipConfigurations/subnet
@@ -1976,7 +2092,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: publicIPAddress
                     NameAnsible: public_ip_address
                     NamePythonSdk: public_ip_address
@@ -2028,7 +2146,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: true
+                        format: ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/ipConfigurations/properties/publicIPAddress
                     PathPython: /ipConfigurations/publicIPAddress
@@ -2040,7 +2160,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - &ref_8
                     NameSwagger: privateIPAddress
                     NameAnsible: private_ip_address
@@ -2073,7 +2195,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: ''
                     Flatten: false
+                    Kind: 1
                   - &ref_9
                     NameSwagger: provisioningState
                     NameAnsible: provisioning_state
@@ -2116,7 +2240,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /properties/ipConfigurations/properties
                 PathPython: /ipConfigurations
@@ -2128,7 +2254,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: name
                 NameAnsible: name
                 NamePythonSdk: name
@@ -2160,7 +2288,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - &ref_10
                 NameSwagger: etag
                 NameAnsible: etag
@@ -2193,7 +2323,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/ipConfigurations
             PathPython: /ipConfigurations
@@ -2205,7 +2337,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - &ref_11
             NameSwagger: provisioningState
             NameAnsible: provisioning_state
@@ -2248,7 +2382,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties
         PathPython: ''
@@ -2260,7 +2396,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_0
         NameSwagger: name
         NameAnsible: name
@@ -2291,7 +2429,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_1
         NameSwagger: type
         NameAnsible: type
@@ -2322,7 +2462,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_12
         NameSwagger: etag
         NameAnsible: etag
@@ -2355,7 +2497,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: CreateOrUpdate
         Options:
@@ -2446,7 +2590,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - *ref_0
       - *ref_1
       - NameSwagger: location
@@ -2478,7 +2624,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: tags
         NameAnsible: tags
         NamePythonSdk: tags
@@ -2512,7 +2660,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -2578,7 +2728,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: properties
                 NameAnsible: properties
                 NamePythonSdk: properties
@@ -2626,7 +2778,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: int32
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: action
                     NameAnsible: action
                     NamePythonSdk: action
@@ -2682,7 +2836,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/applicationRuleCollections/properties/action
                     PathPython: /applicationRuleCollections/action
@@ -2694,7 +2850,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: rules
                     NameAnsible: rules
                     NamePythonSdk: rules
@@ -2744,7 +2902,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: description
                         NameAnsible: description
                         NamePythonSdk: description
@@ -2776,7 +2936,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: sourceAddresses
                         NameAnsible: source_addresses
                         NamePythonSdk: source_addresses
@@ -2808,7 +2970,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: protocols
                         NameAnsible: protocols
                         NamePythonSdk: protocols
@@ -2840,7 +3004,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: targetFqdns
                         NameAnsible: target_fqdns
                         NamePythonSdk: target_fqdns
@@ -2872,7 +3038,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: fqdnTags
                         NameAnsible: fqdn_tags
                         NamePythonSdk: fqdn_tags
@@ -2904,7 +3072,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/applicationRuleCollections/properties/rules
                     PathPython: /applicationRuleCollections/rules
@@ -2916,7 +3086,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - *ref_2
                 EnumValues: []
                 PathSwagger: /properties/applicationRuleCollections/properties
@@ -2929,7 +3101,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: name
                 NameAnsible: name
                 NamePythonSdk: name
@@ -2961,7 +3135,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - *ref_3
             EnumValues: []
             PathSwagger: /properties/applicationRuleCollections
@@ -2974,7 +3150,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: natRuleCollections
             NameAnsible: nat_rule_collections
             NamePythonSdk: nat_rule_collections
@@ -3022,7 +3200,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: properties
                 NameAnsible: properties
                 NamePythonSdk: properties
@@ -3070,7 +3250,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: int32
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: action
                     NameAnsible: action
                     NamePythonSdk: action
@@ -3124,7 +3306,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/natRuleCollections/properties/action
                     PathPython: /natRuleCollections/action
@@ -3136,7 +3320,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: rules
                     NameAnsible: rules
                     NamePythonSdk: rules
@@ -3184,7 +3370,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: description
                         NameAnsible: description
                         NamePythonSdk: description
@@ -3216,7 +3404,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: sourceAddresses
                         NameAnsible: source_addresses
                         NamePythonSdk: source_addresses
@@ -3248,7 +3438,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: destinationAddresses
                         NameAnsible: destination_addresses
                         NamePythonSdk: destination_addresses
@@ -3280,7 +3472,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: destinationPorts
                         NameAnsible: destination_ports
                         NamePythonSdk: destination_ports
@@ -3312,7 +3506,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: protocols
                         NameAnsible: protocols
                         NamePythonSdk: protocols
@@ -3358,7 +3554,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: translatedAddress
                         NameAnsible: translated_address
                         NamePythonSdk: translated_address
@@ -3390,7 +3588,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: translatedPort
                         NameAnsible: translated_port
                         NamePythonSdk: translated_port
@@ -3422,7 +3622,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/natRuleCollections/properties/rules
                     PathPython: /natRuleCollections/rules
@@ -3434,7 +3636,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - *ref_4
                 EnumValues: []
                 PathSwagger: /properties/natRuleCollections/properties
@@ -3447,7 +3651,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: name
                 NameAnsible: name
                 NamePythonSdk: name
@@ -3479,7 +3685,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - *ref_5
             EnumValues: []
             PathSwagger: /properties/natRuleCollections
@@ -3492,7 +3700,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: networkRuleCollections
             NameAnsible: network_rule_collections
             NamePythonSdk: network_rule_collections
@@ -3540,7 +3750,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: properties
                 NameAnsible: properties
                 NamePythonSdk: properties
@@ -3588,7 +3800,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: int32
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: action
                     NameAnsible: action
                     NamePythonSdk: action
@@ -3644,7 +3858,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/networkRuleCollections/properties/action
                     PathPython: /networkRuleCollections/action
@@ -3656,7 +3872,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: rules
                     NameAnsible: rules
                     NamePythonSdk: rules
@@ -3706,7 +3924,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: description
                         NameAnsible: description
                         NamePythonSdk: description
@@ -3738,7 +3958,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: protocols
                         NameAnsible: protocols
                         NamePythonSdk: protocols
@@ -3782,7 +4004,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: sourceAddresses
                         NameAnsible: source_addresses
                         NamePythonSdk: source_addresses
@@ -3814,7 +4038,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: destinationAddresses
                         NameAnsible: destination_addresses
                         NamePythonSdk: destination_addresses
@@ -3846,7 +4072,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: destinationPorts
                         NameAnsible: destination_ports
                         NamePythonSdk: destination_ports
@@ -3878,7 +4106,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/networkRuleCollections/properties/rules
                     PathPython: /networkRuleCollections/rules
@@ -3890,7 +4120,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - *ref_6
                 EnumValues: []
                 PathSwagger: /properties/networkRuleCollections/properties
@@ -3903,7 +4135,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: name
                 NameAnsible: name
                 NamePythonSdk: name
@@ -3935,7 +4169,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - *ref_7
             EnumValues: []
             PathSwagger: /properties/networkRuleCollections
@@ -3948,7 +4184,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: ipConfigurations
             NameAnsible: ip_configurations
             NamePythonSdk: ip_configurations
@@ -3996,7 +4234,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: properties
                 NameAnsible: properties
                 NamePythonSdk: properties
@@ -4065,7 +4305,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/ipConfigurations/properties/subnet
                     PathPython: /ipConfigurations/subnet
@@ -4077,7 +4319,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: publicIPAddress
                     NameAnsible: public_ip_address
                     NamePythonSdk: public_ip_address
@@ -4129,7 +4373,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/ipConfigurations/properties/publicIPAddress
                     PathPython: /ipConfigurations/publicIPAddress
@@ -4141,7 +4387,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - *ref_9
                 EnumValues: []
                 PathSwagger: /properties/ipConfigurations/properties
@@ -4154,7 +4402,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: name
                 NameAnsible: name
                 NamePythonSdk: name
@@ -4186,7 +4436,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - *ref_10
             EnumValues: []
             PathSwagger: /properties/ipConfigurations
@@ -4199,7 +4451,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - *ref_11
         EnumValues: []
         PathSwagger: /properties
@@ -4212,7 +4466,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - *ref_12
     ModuleOperationNameUpper: AzureFirewalls
     ModuleOperationName: azure_firewalls
@@ -4521,6 +4777,8 @@ Modules:
           - network_publicipaddresses_put
         OperationId: '472'
         MethodId: '535'
+        OperationName: AzureFirewalls
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             api-version: '2018-11-01'
@@ -4548,6 +4806,8 @@ Modules:
         References: []
         OperationId: '472'
         MethodId: '473'
+        OperationName: AzureFirewalls
+        MethodName: Delete
   - ModuleName: azure_rm_azurefirewall_info
     Options:
       - NameSwagger: resourceGroupName
@@ -4579,7 +4839,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: azureFirewallName
         NameAnsible: azure_firewall_name
         NamePythonSdk: azure_firewall_name
@@ -4609,7 +4871,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - &ref_13
         NameSwagger: id
         NameAnsible: id
@@ -4640,7 +4904,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_14
         NameSwagger: name
         NameAnsible: name
@@ -4671,7 +4937,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_15
         NameSwagger: type
         NameAnsible: type
@@ -4702,7 +4970,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_16
         NameSwagger: location
         NameAnsible: location
@@ -4733,7 +5003,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_17
         NameSwagger: tags
         NameAnsible: tags
@@ -4768,7 +5040,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_18
         NameSwagger: properties
         NameAnsible: properties
@@ -4835,7 +5109,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: properties
                 NameAnsible: properties
                 NamePythonSdk: properties
@@ -4883,7 +5159,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: int32
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: action
                     NameAnsible: action
                     NamePythonSdk: action
@@ -4939,7 +5217,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/applicationRuleCollections/properties/action
                     PathPython: /applicationRuleCollections/action
@@ -4951,7 +5231,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: rules
                     NameAnsible: rules
                     NamePythonSdk: rules
@@ -5001,7 +5283,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: description
                         NameAnsible: description
                         NamePythonSdk: description
@@ -5033,7 +5317,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: sourceAddresses
                         NameAnsible: source_addresses
                         NamePythonSdk: source_addresses
@@ -5065,7 +5351,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: protocols
                         NameAnsible: protocols
                         NamePythonSdk: protocols
@@ -5097,7 +5385,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: targetFqdns
                         NameAnsible: target_fqdns
                         NamePythonSdk: target_fqdns
@@ -5129,7 +5419,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: fqdnTags
                         NameAnsible: fqdn_tags
                         NamePythonSdk: fqdn_tags
@@ -5161,7 +5453,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/applicationRuleCollections/properties/rules
                     PathPython: /applicationRuleCollections/rules
@@ -5173,7 +5467,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: provisioningState
                     NameAnsible: provisioning_state
                     NamePythonSdk: provisioning_state
@@ -5217,7 +5513,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /properties/applicationRuleCollections/properties
                 PathPython: /applicationRuleCollections
@@ -5229,7 +5527,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: name
                 NameAnsible: name
                 NamePythonSdk: name
@@ -5261,7 +5561,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: etag
                 NameAnsible: etag
                 NamePythonSdk: etag
@@ -5293,7 +5595,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/applicationRuleCollections
             PathPython: /applicationRuleCollections
@@ -5305,7 +5609,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: natRuleCollections
             NameAnsible: nat_rule_collections
             NamePythonSdk: nat_rule_collections
@@ -5353,7 +5659,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: properties
                 NameAnsible: properties
                 NamePythonSdk: properties
@@ -5401,7 +5709,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: int32
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: action
                     NameAnsible: action
                     NamePythonSdk: action
@@ -5455,7 +5765,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/natRuleCollections/properties/action
                     PathPython: /natRuleCollections/action
@@ -5467,7 +5779,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: rules
                     NameAnsible: rules
                     NamePythonSdk: rules
@@ -5515,7 +5829,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: description
                         NameAnsible: description
                         NamePythonSdk: description
@@ -5547,7 +5863,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: sourceAddresses
                         NameAnsible: source_addresses
                         NamePythonSdk: source_addresses
@@ -5579,7 +5897,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: destinationAddresses
                         NameAnsible: destination_addresses
                         NamePythonSdk: destination_addresses
@@ -5611,7 +5931,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: destinationPorts
                         NameAnsible: destination_ports
                         NamePythonSdk: destination_ports
@@ -5643,7 +5965,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: protocols
                         NameAnsible: protocols
                         NamePythonSdk: protocols
@@ -5689,7 +6013,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: translatedAddress
                         NameAnsible: translated_address
                         NamePythonSdk: translated_address
@@ -5721,7 +6047,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: translatedPort
                         NameAnsible: translated_port
                         NamePythonSdk: translated_port
@@ -5753,7 +6081,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/natRuleCollections/properties/rules
                     PathPython: /natRuleCollections/rules
@@ -5765,7 +6095,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: provisioningState
                     NameAnsible: provisioning_state
                     NamePythonSdk: provisioning_state
@@ -5809,7 +6141,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /properties/natRuleCollections/properties
                 PathPython: /natRuleCollections
@@ -5821,7 +6155,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: name
                 NameAnsible: name
                 NamePythonSdk: name
@@ -5853,7 +6189,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: etag
                 NameAnsible: etag
                 NamePythonSdk: etag
@@ -5885,7 +6223,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/natRuleCollections
             PathPython: /natRuleCollections
@@ -5897,7 +6237,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: networkRuleCollections
             NameAnsible: network_rule_collections
             NamePythonSdk: network_rule_collections
@@ -5945,7 +6287,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: properties
                 NameAnsible: properties
                 NamePythonSdk: properties
@@ -5993,7 +6337,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: int32
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: action
                     NameAnsible: action
                     NamePythonSdk: action
@@ -6049,7 +6395,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/networkRuleCollections/properties/action
                     PathPython: /networkRuleCollections/action
@@ -6061,7 +6409,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: rules
                     NameAnsible: rules
                     NamePythonSdk: rules
@@ -6111,7 +6461,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: description
                         NameAnsible: description
                         NamePythonSdk: description
@@ -6143,7 +6495,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: protocols
                         NameAnsible: protocols
                         NamePythonSdk: protocols
@@ -6187,7 +6541,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: sourceAddresses
                         NameAnsible: source_addresses
                         NamePythonSdk: source_addresses
@@ -6219,7 +6575,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: destinationAddresses
                         NameAnsible: destination_addresses
                         NamePythonSdk: destination_addresses
@@ -6251,7 +6609,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: destinationPorts
                         NameAnsible: destination_ports
                         NamePythonSdk: destination_ports
@@ -6283,7 +6643,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/networkRuleCollections/properties/rules
                     PathPython: /networkRuleCollections/rules
@@ -6295,7 +6657,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: provisioningState
                     NameAnsible: provisioning_state
                     NamePythonSdk: provisioning_state
@@ -6339,7 +6703,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /properties/networkRuleCollections/properties
                 PathPython: /networkRuleCollections
@@ -6351,7 +6717,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: name
                 NameAnsible: name
                 NamePythonSdk: name
@@ -6383,7 +6751,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: etag
                 NameAnsible: etag
                 NamePythonSdk: etag
@@ -6415,7 +6785,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/networkRuleCollections
             PathPython: /networkRuleCollections
@@ -6427,7 +6799,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: ipConfigurations
             NameAnsible: ip_configurations
             NamePythonSdk: ip_configurations
@@ -6475,7 +6849,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: properties
                 NameAnsible: properties
                 NamePythonSdk: properties
@@ -6525,7 +6901,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: subnet
                     NameAnsible: subnet
                     NamePythonSdk: subnet
@@ -6575,7 +6953,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/ipConfigurations/properties/subnet
                     PathPython: /ipConfigurations/subnet
@@ -6587,7 +6967,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: publicIPAddress
                     NameAnsible: public_ip_address
                     NamePythonSdk: public_ip_address
@@ -6639,7 +7021,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/ipConfigurations/properties/publicIPAddress
                     PathPython: /ipConfigurations/publicIPAddress
@@ -6651,7 +7035,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: provisioningState
                     NameAnsible: provisioning_state
                     NamePythonSdk: provisioning_state
@@ -6693,7 +7079,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /properties/ipConfigurations/properties
                 PathPython: /ipConfigurations
@@ -6705,7 +7093,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: name
                 NameAnsible: name
                 NamePythonSdk: name
@@ -6737,7 +7127,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: etag
                 NameAnsible: etag
                 NamePythonSdk: etag
@@ -6769,7 +7161,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/ipConfigurations
             PathPython: /ipConfigurations
@@ -6781,7 +7175,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: provisioningState
             NameAnsible: provisioning_state
             NamePythonSdk: provisioning_state
@@ -6823,7 +7219,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties
         PathPython: ''
@@ -6835,7 +7233,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_19
         NameSwagger: etag
         NameAnsible: etag
@@ -6868,7 +7268,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: ListAll
         Options: []
@@ -7030,6 +7432,8 @@ Modules:
         References: []
         OperationId: '472'
         MethodId: '594'
+        OperationName: AzureFirewalls
+        MethodName: ListAll
       - Example:
           parameters:
             api-version: '2018-11-01'
@@ -7145,6 +7549,8 @@ Modules:
         References: []
         OperationId: '472'
         MethodId: '570'
+        OperationName: AzureFirewalls
+        MethodName: List
       - Example:
           parameters:
             api-version: '2018-11-01'
@@ -7263,14 +7669,9 @@ Modules:
         References: []
         OperationId: '472'
         MethodId: '505'
+        OperationName: AzureFirewalls
+        MethodName: Get
 ServiceName: NetworkManagementClient
 MgmtClientName: NetworkManagementClient
 CliName: network
 Namespace: azure.mgmt.network
-Info:
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION azureFirewallName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION azureFirewallName'
