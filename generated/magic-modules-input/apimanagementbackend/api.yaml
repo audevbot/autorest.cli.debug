@@ -44,7 +44,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: BackendContractProperties
             go_type_name: BackendContractProperties
           '/title': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
@@ -66,7 +66,7 @@ objects:
             go_field_name: ResourceID
           '/properties/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: BackendProperties
             go_type_name: BackendProperties
           '/serviceFabricCluster': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [python]
@@ -74,13 +74,13 @@ objects:
           '/serviceFabricCluster/clientCertificatethumbprint': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: client_certificatethumbprint
-          '/serviceFabricCluster/maxPartitionResolutionRetries': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
+          '/serviceFabricCluster/maxPartitionResolutionRetries': !ruby/object:Api::Azure::SDKTypeDefinition::Integer32Object
             applicable_to: [python]
             python_field_name: max_partition_resolution_retries
-          '/serviceFabricCluster/managementEndpoints': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/serviceFabricCluster/managementEndpoints': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: management_endpoints
-          '/serviceFabricCluster/serverCertificateThumbprints': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/serviceFabricCluster/serverCertificateThumbprints': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: server_certificate_thumbprints
           '/serviceFabricCluster/serverX509Names': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -99,13 +99,13 @@ objects:
           '/properties/properties/serviceFabricCluster/clientCertificatethumbprint': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: ClientCertificatethumbprint
-          '/properties/properties/serviceFabricCluster/maxPartitionResolutionRetries': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
+          '/properties/properties/serviceFabricCluster/maxPartitionResolutionRetries': !ruby/object:Api::Azure::SDKTypeDefinition::Integer32Object
             applicable_to: [go]
             go_field_name: MaxPartitionResolutionRetries
-          '/properties/properties/serviceFabricCluster/managementEndpoints': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/properties/serviceFabricCluster/managementEndpoints': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: ManagementEndpoints
-          '/properties/properties/serviceFabricCluster/serverCertificateThumbprints': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/properties/serviceFabricCluster/serverCertificateThumbprints': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: ServerCertificateThumbprints
           '/properties/properties/serviceFabricCluster/serverX509Names': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -121,7 +121,7 @@ objects:
           '/credentials': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [python]
             python_field_name: credentials
-          '/credentials/certificate': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/credentials/certificate': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: certificate
           '/credentials/query': !ruby/object:Api::Azure::SDKTypeDefinition::StringMapObject
@@ -143,7 +143,7 @@ objects:
             applicable_to: [go]
             go_field_name: Credentials
             go_type_name: BackendCredentialsContract
-          '/properties/credentials/certificate': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/credentials/certificate': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: Certificate
           '/properties/credentials/query': !ruby/object:Api::Azure::SDKTypeDefinition::StringMapObject
@@ -245,7 +245,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: BackendContractProperties
             go_type_name: BackendContractProperties
           '/title': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
@@ -267,7 +267,7 @@ objects:
             go_field_name: ResourceID
           '/properties/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: BackendProperties
             go_type_name: BackendProperties
           '/serviceFabricCluster': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [python]
@@ -275,13 +275,13 @@ objects:
           '/serviceFabricCluster/clientCertificatethumbprint': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: client_certificatethumbprint
-          '/serviceFabricCluster/maxPartitionResolutionRetries': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
+          '/serviceFabricCluster/maxPartitionResolutionRetries': !ruby/object:Api::Azure::SDKTypeDefinition::Integer32Object
             applicable_to: [python]
             python_field_name: max_partition_resolution_retries
-          '/serviceFabricCluster/managementEndpoints': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/serviceFabricCluster/managementEndpoints': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: management_endpoints
-          '/serviceFabricCluster/serverCertificateThumbprints': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/serviceFabricCluster/serverCertificateThumbprints': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: server_certificate_thumbprints
           '/serviceFabricCluster/serverX509Names': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -300,13 +300,13 @@ objects:
           '/properties/properties/serviceFabricCluster/clientCertificatethumbprint': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: ClientCertificatethumbprint
-          '/properties/properties/serviceFabricCluster/maxPartitionResolutionRetries': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
+          '/properties/properties/serviceFabricCluster/maxPartitionResolutionRetries': !ruby/object:Api::Azure::SDKTypeDefinition::Integer32Object
             applicable_to: [go]
             go_field_name: MaxPartitionResolutionRetries
-          '/properties/properties/serviceFabricCluster/managementEndpoints': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/properties/serviceFabricCluster/managementEndpoints': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: ManagementEndpoints
-          '/properties/properties/serviceFabricCluster/serverCertificateThumbprints': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/properties/serviceFabricCluster/serverCertificateThumbprints': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: ServerCertificateThumbprints
           '/properties/properties/serviceFabricCluster/serverX509Names': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -322,7 +322,7 @@ objects:
           '/credentials': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [python]
             python_field_name: credentials
-          '/credentials/certificate': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/credentials/certificate': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: certificate
           '/credentials/query': !ruby/object:Api::Azure::SDKTypeDefinition::StringMapObject
@@ -344,7 +344,7 @@ objects:
             applicable_to: [go]
             go_field_name: Credentials
             go_type_name: BackendCredentialsContract
-          '/properties/credentials/certificate': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/credentials/certificate': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: Certificate
           '/properties/credentials/query': !ruby/object:Api::Azure::SDKTypeDefinition::StringMapObject
@@ -461,7 +461,7 @@ objects:
         response:
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: BackendContractProperties
             go_type_name: BackendContractProperties
           '/properties/title': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
@@ -483,7 +483,7 @@ objects:
             python_field_name: resource_id
           '/properties/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: BackendProperties
             go_type_name: BackendProperties
           '/properties/properties/serviceFabricCluster': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
@@ -492,13 +492,13 @@ objects:
           '/properties/properties/serviceFabricCluster/clientCertificatethumbprint': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: ClientCertificatethumbprint
-          '/properties/properties/serviceFabricCluster/maxPartitionResolutionRetries': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
+          '/properties/properties/serviceFabricCluster/maxPartitionResolutionRetries': !ruby/object:Api::Azure::SDKTypeDefinition::Integer32Object
             applicable_to: [go]
             go_field_name: MaxPartitionResolutionRetries
-          '/properties/properties/serviceFabricCluster/managementEndpoints': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/properties/serviceFabricCluster/managementEndpoints': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: ManagementEndpoints
-          '/properties/properties/serviceFabricCluster/serverCertificateThumbprints': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/properties/serviceFabricCluster/serverCertificateThumbprints': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: ServerCertificateThumbprints
           '/properties/properties/serviceFabricCluster/serverX509Names': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -517,13 +517,13 @@ objects:
           '/serviceFabricCluster/clientCertificatethumbprint': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: client_certificatethumbprint
-          '/serviceFabricCluster/maxPartitionResolutionRetries': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
+          '/serviceFabricCluster/maxPartitionResolutionRetries': !ruby/object:Api::Azure::SDKTypeDefinition::Integer32Object
             applicable_to: [python]
             python_field_name: max_partition_resolution_retries
-          '/serviceFabricCluster/managementEndpoints': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/serviceFabricCluster/managementEndpoints': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: management_endpoints
-          '/serviceFabricCluster/serverCertificateThumbprints': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/serviceFabricCluster/serverCertificateThumbprints': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: server_certificate_thumbprints
           '/serviceFabricCluster/serverX509Names': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -539,7 +539,7 @@ objects:
             applicable_to: [go]
             go_field_name: Credentials
             go_type_name: BackendCredentialsContract
-          '/properties/credentials/certificate': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/credentials/certificate': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: Certificate
           '/properties/credentials/query': !ruby/object:Api::Azure::SDKTypeDefinition::StringMapObject
@@ -561,7 +561,7 @@ objects:
           '/credentials': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [python]
             python_field_name: credentials
-          '/credentials/certificate': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/credentials/certificate': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: certificate
           '/credentials/query': !ruby/object:Api::Azure::SDKTypeDefinition::StringMapObject
@@ -718,46 +718,49 @@ objects:
             required: false
             sample_value: 5
             azure_sdk_references: ['/serviceFabricCluster/maxPartitionResolutionRetries', '/properties/properties/serviceFabricCluster/maxPartitionResolutionRetries']
-          - !ruby/object:Api::Type::String
+          - !ruby/object:Api::Type::Array
             name: 'managementEndpoints'
             description: 'The cluster management endpoint.'
             required: true
-            sample_value: 'https://somecluster.com'
+            sample_value: https://somecluster.com
             azure_sdk_references: ['/serviceFabricCluster/managementEndpoints', '/properties/properties/serviceFabricCluster/managementEndpoints']
-          - !ruby/object:Api::Type::String
+            item_type: Api::Type::String
+          - !ruby/object:Api::Type::Array
             name: 'serverCertificateThumbprints'
             description: 'Thumbprints of certificates cluster management service uses for tls communication'
             required: false
             azure_sdk_references: ['/serviceFabricCluster/serverCertificateThumbprints', '/properties/properties/serviceFabricCluster/serverCertificateThumbprints']
-          - !ruby/object:Api::Type::NestedObject
+            item_type: Api::Type::String
+          - !ruby/object:Api::Type::Array
             name: 'serverX509names'
             description: 'Server X509 Certificate Names Collection'
             required: false
             azure_sdk_references: ['/serviceFabricCluster/serverX509Names', '/properties/properties/serviceFabricCluster/serverX509Names']
-            properties:
-              - !ruby/object:Api::Type::String
-                name: 'name'
-                description: 'Common Name of the Certificate.'
-                required: false
-                sample_value: 'ServerCommonName1'
-                azure_sdk_references: ['/serviceFabricCluster/serverX509Names/name', '/properties/properties/serviceFabricCluster/serverX509Names/name', '/name']
-              - !ruby/object:Api::Type::String
-                name: 'issuerCertificateThumbprint'
-                description: 'Thumbprint for the Issuer of the Certificate.'
-                required: false
-                sample_value: 'IssuerCertificateThumbprint1'
-                azure_sdk_references: ['/serviceFabricCluster/serverX509Names/issuerCertificateThumbprint', '/properties/properties/serviceFabricCluster/serverX509Names/issuerCertificateThumbprint']
+            item_type: !ruby/object:Api::Type::NestedObject
+              properties:
+                - !ruby/object:Api::Type::String
+                  name: 'name'
+                  description: 'Common Name of the Certificate.'
+                  required: false
+                  sample_value: 'ServerCommonName1'
+                  azure_sdk_references: ['/serviceFabricCluster/serverX509Names/name', '/properties/properties/serviceFabricCluster/serverX509Names/name', '/name']
+                - !ruby/object:Api::Type::String
+                  name: 'issuerCertificateThumbprint'
+                  description: 'Thumbprint for the Issuer of the Certificate.'
+                  required: false
+                  azure_sdk_references: ['/serviceFabricCluster/serverX509Names/issuerCertificateThumbprint', '/properties/properties/serviceFabricCluster/serverX509Names/issuerCertificateThumbprint']
       - !ruby/object:Api::Type::NestedObject
         name: 'credentials'
         description: 'Backend Credentials Contract Properties'
         required: false
         azure_sdk_references: ['/credentials', '/properties/credentials']
         properties:
-          - !ruby/object:Api::Type::String
+          - !ruby/object:Api::Type::Array
             name: 'certificate'
             description: 'List of Client Certificate Thumbprint.'
             required: false
             azure_sdk_references: ['/credentials/certificate', '/properties/credentials/certificate']
+            item_type: Api::Type::String
           - !ruby/object:Api::Type::KeyValuePairs
             name: 'query'
             description: 'Query Parameter description.'

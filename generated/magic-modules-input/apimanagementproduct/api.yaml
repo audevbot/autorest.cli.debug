@@ -44,7 +44,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: ProductContractProperties
             go_type_name: ProductContractProperties
           '/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
@@ -70,10 +70,10 @@ objects:
           '/properties/approvalRequired': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
             go_field_name: ApprovalRequired
-          '/subscriptionsLimit': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
+          '/subscriptionsLimit': !ruby/object:Api::Azure::SDKTypeDefinition::Integer32Object
             applicable_to: [python]
             python_field_name: subscriptions_limit
-          '/properties/subscriptionsLimit': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
+          '/properties/subscriptionsLimit': !ruby/object:Api::Azure::SDKTypeDefinition::Integer32Object
             applicable_to: [go]
             go_field_name: SubscriptionsLimit
           '/state': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
@@ -115,7 +115,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: ProductContractProperties
             go_type_name: ProductContractProperties
           '/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
@@ -141,10 +141,10 @@ objects:
           '/properties/approvalRequired': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
             go_field_name: ApprovalRequired
-          '/subscriptionsLimit': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
+          '/subscriptionsLimit': !ruby/object:Api::Azure::SDKTypeDefinition::Integer32Object
             applicable_to: [python]
             python_field_name: subscriptions_limit
-          '/properties/subscriptionsLimit': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
+          '/properties/subscriptionsLimit': !ruby/object:Api::Azure::SDKTypeDefinition::Integer32Object
             applicable_to: [go]
             go_field_name: SubscriptionsLimit
           '/state': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
@@ -201,7 +201,7 @@ objects:
         response:
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: ProductContractProperties
             go_type_name: ProductContractProperties
           '/properties/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
@@ -227,10 +227,10 @@ objects:
           '/approvalRequired': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [python]
             python_field_name: approval_required
-          '/properties/subscriptionsLimit': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
+          '/properties/subscriptionsLimit': !ruby/object:Api::Azure::SDKTypeDefinition::Integer32Object
             applicable_to: [go]
             go_field_name: SubscriptionsLimit
-          '/subscriptionsLimit': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
+          '/subscriptionsLimit': !ruby/object:Api::Azure::SDKTypeDefinition::Integer32Object
             applicable_to: [python]
             python_field_name: subscriptions_limit
           '/properties/state': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
