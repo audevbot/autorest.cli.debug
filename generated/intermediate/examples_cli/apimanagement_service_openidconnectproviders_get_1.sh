@@ -3,4 +3,4 @@ RESOURCE_GROUP="myresourcegroup"
 SERVICE_NAME="myservice"
 OPENID_CONNECT_PROVIDER_NAME="myopenidconnectprovider"
 
-az resource show --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.ApiManagement/service/$SERVICE_NAME/openidConnectProviders/$OPENID_CONNECT_PROVIDER_NAME --api-version 2019-01-01
+az rest --method get --uri /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.ApiManagement/service/$SERVICE_NAME/openidConnectProviders/$OPENID_CONNECT_PROVIDER_NAME?api-version=2019-01-01

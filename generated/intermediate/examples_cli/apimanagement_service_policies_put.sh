@@ -3,7 +3,7 @@ RESOURCE_GROUP="myresourcegroup"
 SERVICE_NAME="myservice"
 POLICY_NAME="mypolicy"
 
-az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.ApiManagement/service/$SERVICE_NAME/policies/$POLICY_NAME --api-version 2019-01-01 --is-full-object --properties '
+az rest --method put --uri /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.ApiManagement/service/$SERVICE_NAME/policies/$POLICY_NAME?api-version=2019-01-01 --body '
 {
   "properties": {
     "format": "xml",

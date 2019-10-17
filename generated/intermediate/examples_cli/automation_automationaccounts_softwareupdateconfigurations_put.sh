@@ -3,7 +3,7 @@ RESOURCE_GROUP="myresourcegroup"
 AUTOMATION_ACCOUNT_NAME="myautomationaccount"
 SOFTWARE_UPDATE_CONFIGURATION_NAME="mysoftwareupdateconfiguration"
 
-az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.Automation/automationAccounts/$AUTOMATION_ACCOUNT_NAME/softwareUpdateConfigurations/$SOFTWARE_UPDATE_CONFIGURATION_NAME --api-version 2017-05-15-preview --is-full-object --properties '
+az rest --method put --uri /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.Automation/automationAccounts/$AUTOMATION_ACCOUNT_NAME/softwareUpdateConfigurations/$SOFTWARE_UPDATE_CONFIGURATION_NAME?api-version=2017-05-15-preview --body '
 {
   "properties": {
     "updateConfiguration": {
@@ -33,7 +33,7 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
               "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources",
               "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067"
             ],
-            "tagSettings": {
+            "tag_settings": {
               "tags": [
                 {
                   "tag1": [
@@ -50,7 +50,7 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
                   ]
                 }
               ],
-              "filterOperator": "All"
+              "filter_operator": "All"
             },
             "locations": [
               "Japan East",
@@ -60,12 +60,12 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
         ],
         "nonAzureQueries": [
           {
-            "functionAlias": "SavedSearch1",
-            "workspaceId": "WorkspaceId1"
+            "function_alias": "SavedSearch1",
+            "workspace_id": "WorkspaceId1"
           },
           {
-            "functionAlias": "SavedSearch2",
-            "workspaceId": "WorkspaceId2"
+            "function_alias": "SavedSearch2",
+            "workspace_id": "WorkspaceId2"
           }
         ]
       }
