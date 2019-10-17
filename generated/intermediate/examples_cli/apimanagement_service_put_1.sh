@@ -4,7 +4,7 @@ SERVICE_NAME="myservice"
 VIRTUAL_NETWORK_NAME="myvirtualnetwork"
 SUBNET_NAME="mysubnet"
 
-az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.ApiManagement/service/$SERVICE_NAME --api-version 2019-01-01 --is-full-object --properties '
+az rest --method put --uri /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.ApiManagement/service/$SERVICE_NAME?api-version=2019-01-01 --body '
 {
   "location": "Central US",
   "sku": {
@@ -21,30 +21,30 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
           "name": "Premium",
           "capacity": "1"
         },
-        "virtualNetworkConfiguration": {
-          "subnetResourceId": "/subscriptions/" + SUBSCRIPTION_ID + "/resourceGroups/" + RESOURCE_GROUP + "/providers/Microsoft.Network/virtualNetworks/" + VIRTUAL_NETWORK_NAME + "/subnets/" + SUBNET_NAME + ""
+        "virtual_network_configuration": {
+          "subnet_resource_id": "/subscriptions/" + SUBSCRIPTION_ID + "/resourceGroups/" + RESOURCE_GROUP + "/providers/Microsoft.Network/virtualNetworks/" + VIRTUAL_NETWORK_NAME + "/subnets/" + SUBNET_NAME + ""
         }
       }
     ],
     "hostnameConfigurations": [
       {
         "type": "Proxy",
-        "hostName": "proxyhostname1.contoso.com",
-        "encodedCertificate": "************Base 64 Encoded Pfx Certificate************************",
-        "certificatePassword": "**************Password of the Certificate************************************************"
+        "host_name": "proxyhostname1.contoso.com",
+        "encoded_certificate": "************Base 64 Encoded Pfx Certificate************************",
+        "certificate_password": "**************Password of the Certificate************************************************"
       },
       {
         "type": "Proxy",
-        "hostName": "proxyhostname2.contoso.com",
-        "encodedCertificate": "************Base 64 Encoded Pfx Certificate************************",
-        "certificatePassword": "**************Password of the Certificate************************************************",
-        "negotiateClientCertificate": True
+        "host_name": "proxyhostname2.contoso.com",
+        "encoded_certificate": "************Base 64 Encoded Pfx Certificate************************",
+        "certificate_password": "**************Password of the Certificate************************************************",
+        "negotiate_client_certificate": True
       },
       {
         "type": "Portal",
-        "hostName": "portalhostname1.contoso.com",
-        "encodedCertificate": "************Base 64 Encoded Pfx Certificate************************",
-        "certificatePassword": "**************Password of the Certificate************************************************"
+        "host_name": "portalhostname1.contoso.com",
+        "encoded_certificate": "************Base 64 Encoded Pfx Certificate************************",
+        "certificate_password": "**************Password of the Certificate************************************************"
       }
     ],
     "virtualNetworkConfiguration": {
