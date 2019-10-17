@@ -7,7 +7,7 @@ SUBNET_NAME="mysubnet"
 APPLICATION_NAME="myapplication"
 CERTIFICATE_NAME="mycertificate"
 
-az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.Batch/batchAccounts/$BATCH_ACCOUNT_NAME/pools/$POOL_NAME --api-version 2018-12-01 --is-full-object --properties '
+az rest --method put --uri /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.Batch/batchAccounts/$BATCH_ACCOUNT_NAME/pools/$POOL_NAME?api-version=2018-12-01 --body '
 {
   "properties": {
     "displayName": "my-pool-name",
@@ -30,18 +30,18 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
           {
             "name": "testnat",
             "protocol": "TCP",
-            "backendPort": "12001",
-            "frontendPortRangeStart": "15000",
-            "frontendPortRangeEnd": "15100",
-            "networkSecurityGroupRules": [
+            "backend_port": "12001",
+            "frontend_port_range_start": "15000",
+            "frontend_port_range_end": "15100",
+            "network_security_group_rules": [
               {
                 "access": "Allow",
-                "sourceAddressPrefix": "192.100.12.45",
+                "source_address_prefix": "192.100.12.45",
                 "priority": "150"
               },
               {
                 "access": "Deny",
-                "sourceAddressPrefix": "*",
+                "source_address_prefix": "*",
                 "priority": "3500"
               }
             ]
@@ -71,9 +71,9 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
       "commandLine": "cmd /c SET",
       "resourceFiles": [
         {
-          "httpUrl": "https://testaccount.blob.core.windows.net/example-blob-file",
-          "filePath": "c:\\temp\\gohere",
-          "fileMode": "777"
+          "http_url": "https://testaccount.blob.core.windows.net/example-blob-file",
+          "file_path": "c:\\temp\\gohere",
+          "file_mode": "777"
         }
       ],
       "environmentSettings": [
@@ -95,9 +95,9 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
       {
         "name": "username1",
         "password": "examplepassword",
-        "elevationLevel": "Admin",
-        "linuxUserConfiguration": {
-          "sshPrivateKey": "sshprivatekeyvalue",
+        "elevation_level": "Admin",
+        "linux_user_configuration": {
+          "ssh_private_key": "sshprivatekeyvalue",
           "uid": "1234",
           "gid": "4567"
         }
@@ -112,8 +112,8 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
     "certificates": [
       {
         "id": "/subscriptions/" + SUBSCRIPTION_ID + "/resourceGroups/" + RESOURCE_GROUP + "/providers/Microsoft.Batch/batchAccounts/" + BATCH_ACCOUNT_NAME + "/pools/" + POOL_NAME + "/certificates/" + CERTIFICATE_NAME + "",
-        "storeLocation": "LocalMachine",
-        "storeName": "MY",
+        "store_location": "LocalMachine",
+        "store_name": "MY",
         "visibility": [
           "RemoteUser"
         ]

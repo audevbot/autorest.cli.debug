@@ -44,7 +44,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: IdentityProviderContractProperties
             go_type_name: IdentityProviderContractProperties
           '/type': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
@@ -53,10 +53,16 @@ objects:
             applicable_to: [go]
             go_field_name: Type
             go_enum_type_name: IdentityProviderType
-          '/allowedTenants': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/signinTenant': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+            applicable_to: [python]
+            python_field_name: signin_tenant
+          '/properties/signinTenant': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+            applicable_to: [go]
+            go_field_name: SigninTenant
+          '/allowedTenants': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: allowed_tenants
-          '/properties/allowedTenants': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/allowedTenants': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: AllowedTenants
           '/authority': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -127,7 +133,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: IdentityProviderContractProperties
             go_type_name: IdentityProviderContractProperties
           '/type': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
@@ -136,10 +142,16 @@ objects:
             applicable_to: [go]
             go_field_name: Type
             go_enum_type_name: IdentityProviderType
-          '/allowedTenants': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/signinTenant': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+            applicable_to: [python]
+            python_field_name: signin_tenant
+          '/properties/signinTenant': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+            applicable_to: [go]
+            go_field_name: SigninTenant
+          '/allowedTenants': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: allowed_tenants
-          '/properties/allowedTenants': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/allowedTenants': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: AllowedTenants
           '/authority': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -225,7 +237,7 @@ objects:
         response:
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: IdentityProviderContractProperties
             go_type_name: IdentityProviderContractProperties
           '/properties/type': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [go]
@@ -234,10 +246,16 @@ objects:
           '/type': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: type
-          '/properties/allowedTenants': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/signinTenant': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+            applicable_to: [go]
+            go_field_name: SigninTenant
+          '/signinTenant': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+            applicable_to: [python]
+            python_field_name: signin_tenant
+          '/properties/allowedTenants': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: AllowedTenants
-          '/allowedTenants': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/allowedTenants': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: allowed_tenants
           '/properties/authority': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -344,10 +362,16 @@ objects:
         default_value: :facebook
         azure_sdk_references: ['/type', '/properties/type']
       - !ruby/object:Api::Type::String
+        name: 'signinTenant'
+        description: 'The TenantId to use instead of Common when logging into Active Directory'
+        required: false
+        azure_sdk_references: ['/signinTenant', '/properties/signinTenant']
+      - !ruby/object:Api::Type::Array
         name: 'allowedTenants'
         description: 'List of Allowed Tenants when configuring Azure Active Directory login.'
         required: false
         azure_sdk_references: ['/allowedTenants', '/properties/allowedTenants']
+        item_type: Api::Type::String
       - !ruby/object:Api::Type::String
         name: 'authority'
         description: 'OpenID Connect discovery endpoint hostname for AAD or AAD B2C.'

@@ -4,7 +4,7 @@ GALLERY_NAME="mygallery"
 IMAGE_NAME="myimage"
 VERSION_NAME="myversion"
 
-az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.Compute/galleries/$GALLERY_NAME/images/$IMAGE_NAME/versions/$VERSION_NAME --api-version 2019-03-01 --is-full-object --properties '
+az rest --method put --uri /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.Compute/galleries/$GALLERY_NAME/images/$IMAGE_NAME/versions/$VERSION_NAME?api-version=2019-03-01 --body '
 {
   "location": "West US",
   "properties": {
@@ -12,12 +12,12 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
       "targetRegions": [
         {
           "name": "West US",
-          "regionalReplicaCount": "1"
+          "regional_replica_count": "1"
         },
         {
           "name": "East US",
-          "regionalReplicaCount": "2",
-          "storageAccountType": "Standard_ZRS"
+          "regional_replica_count": "2",
+          "storage_account_type": "Standard_ZRS"
         }
       ],
       "source": {
