@@ -32,7 +32,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: vaultName
         NameAnsible: vault_name
         NamePythonSdk: vault_name
@@ -62,7 +64,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: vault
         NameAnsible: vault
         NamePythonSdk: vault
@@ -85,14 +89,16 @@ Modules:
         PathSwagger: ''
         PathPython: null
         PathGo: null
-        DispositionSdk: dictionary
+        DispositionSdk: '*'
         DispositionRest: '*'
         Comparison: ''
         Updatable: true
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 2
       - NameSwagger: eTag
         NameAnsible: e_tag
         NamePythonSdk: e_tag
@@ -122,7 +128,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: location
         NameAnsible: location
         NamePythonSdk: location
@@ -152,7 +160,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: tags
         NameAnsible: tags
         NamePythonSdk: tags
@@ -186,7 +196,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -253,7 +265,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - &ref_5
                 NameSwagger: startTimeUtc
                 NameAnsible: start_time_utc
@@ -284,7 +298,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - &ref_6
                 NameSwagger: lastUpdatedTimeUtc
                 NameAnsible: last_updated_time_utc
@@ -317,7 +333,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - &ref_7
                 NameSwagger: endTimeUtc
                 NameAnsible: end_time_utc
@@ -348,7 +366,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - &ref_8
                 NameSwagger: status
                 NameAnsible: status
@@ -391,7 +411,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - &ref_9
                 NameSwagger: message
                 NameAnsible: message
@@ -424,7 +446,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - &ref_10
                 NameSwagger: triggerType
                 NameAnsible: trigger_type
@@ -461,7 +485,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - &ref_11
                 NameSwagger: upgradedResourceId
                 NameAnsible: upgraded_resource_id
@@ -492,7 +518,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - &ref_12
                 NameSwagger: previousResourceId
                 NameAnsible: previous_resource_id
@@ -523,7 +551,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/upgradeDetails
             PathPython: /upgradeDetails
@@ -535,7 +565,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - &ref_3
             NameSwagger: provisioningState
             NameAnsible: provisioning_state
@@ -566,7 +598,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties
         PathPython: ''
@@ -578,7 +612,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: sku
         NameAnsible: sku
         NamePythonSdk: sku
@@ -632,7 +668,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /sku
         PathPython: /sku
@@ -644,7 +682,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_0
         NameSwagger: id
         NameAnsible: id
@@ -675,7 +715,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_1
         NameSwagger: name
         NameAnsible: name
@@ -706,7 +748,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_2
         NameSwagger: type
         NameAnsible: type
@@ -739,7 +783,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: CreateOrUpdate
         Options:
@@ -844,7 +890,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: location
         NameAnsible: location
         NamePythonSdk: location
@@ -874,7 +922,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: tags
         NameAnsible: tags
         NamePythonSdk: tags
@@ -908,7 +958,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -966,7 +1018,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties
         PathPython: ''
@@ -978,7 +1032,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: sku
         NameAnsible: sku
         NamePythonSdk: sku
@@ -1032,7 +1088,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /sku
         PathPython: /sku
@@ -1044,7 +1102,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     ModuleOperationNameUpper: Vaults
     ModuleOperationName: vaults
     ObjectName: Vault
@@ -1118,6 +1178,8 @@ Modules:
           - resourcegroups_put
         OperationId: '413'
         MethodId: '486'
+        OperationName: Vaults
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: 77777777-b0c6-47a2-b37c-d8e65a629c18
@@ -1179,6 +1241,8 @@ Modules:
           - recoveryservices_vaults_put
         OperationId: '413'
         MethodId: '551'
+        OperationName: Vaults
+        MethodName: Update
       - Example:
           parameters:
             subscriptionId: 77777777-b0c6-47a2-b37c-d8e65a629c18
@@ -1203,1801 +1267,8 @@ Modules:
         References: []
         OperationId: '413'
         MethodId: '521'
-  - ModuleName: azure_rm_recoveryservicesvault_info
-    Options:
-      - NameSwagger: resourceGroupName
-        NameAnsible: resource_group_name
-        NamePythonSdk: resource_group_name
-        NameGoSdk: ResourceGroupName
-        NameTerraform: ResourceGroupName
-        IdPortion: resourceGroups
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: >-
-          The name of the resource group where the recovery services vault is
-          present.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: vaultName
-        NameAnsible: vault_name
-        NamePythonSdk: vault_name
-        NameGoSdk: VaultName
-        NameTerraform: VaultName
-        IdPortion: vaults
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: The name of the recovery services vault.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - &ref_13
-        NameSwagger: id
-        NameAnsible: id
-        NamePythonSdk: id
-        NameGoSdk: ID
-        NameTerraform: ID
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Resource Id represents the complete path to the resource.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /id
-        PathPython: /id
-        PathGo: /id
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_14
-        NameSwagger: name
-        NameAnsible: name
-        NamePythonSdk: name
-        NameGoSdk: Name
-        NameTerraform: Name
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Resource name associated with the resource.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /name
-        PathPython: /name
-        PathGo: /name
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_15
-        NameSwagger: type
-        NameAnsible: type
-        NamePythonSdk: type
-        NameGoSdk: Type
-        NameTerraform: Type
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: >-
-          Resource type represents the complete path of the form
-          Namespace/ResourceType/ResourceType/...
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /type
-        PathPython: /type
-        PathGo: /type
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_16
-        NameSwagger: eTag
-        NameAnsible: e_tag
-        NamePythonSdk: e_tag
-        NameGoSdk: ETag
-        NameTerraform: ETag
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Optional ETag.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /eTag
-        PathPython: /eTag
-        PathGo: /eTag
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_17
-        NameSwagger: location
-        NameAnsible: location
-        NamePythonSdk: location
-        NameGoSdk: Location
-        NameTerraform: Location
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Resource location.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /location
-        PathPython: /location
-        PathGo: /location
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_18
-        NameSwagger: tags
-        NameAnsible: tags
-        NamePythonSdk: tags
-        NameGoSdk: Tags
-        NameTerraform: Tags
-        IdPortion: null
-        Type: >-
-          unknown[DictionaryType
-          {"$id":"187","$type":"DictionaryType","valueType":{"$id":"188","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"189","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"190","fixed":false},"deprecated":false}]
-        TypeName: >-
-          {"$id":"187","$type":"DictionaryType","valueType":{"$id":"188","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"189","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"190","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"187","$type":"DictionaryType","valueType":{"$id":"188","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"189","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"190","fixed":false},"deprecated":false}
-        IsList: false
-        Required: false
-        Documentation: Resource tags.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /tags
-        PathPython: /tags
-        PathGo: /tags
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_19
-        NameSwagger: properties
-        NameAnsible: properties
-        NamePythonSdk: properties
-        NameGoSdk: Properties
-        NameTerraform: Properties
-        IdPortion: null
-        Type: dict
-        TypeName: VaultProperties
-        TypeNameGo: VaultProperties
-        IsList: false
-        Required: false
-        Documentation: ''
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions:
-          - NameSwagger: provisioningState
-            NameAnsible: provisioning_state
-            NamePythonSdk: provisioning_state
-            NameGoSdk: ProvisioningState
-            NameTerraform: ProvisioningState
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: Provisioning State.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/provisioningState
-            PathPython: /provisioningState
-            PathGo: /properties/provisioningState
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: upgradeDetails
-            NameAnsible: upgrade_details
-            NamePythonSdk: upgrade_details
-            NameGoSdk: UpgradeDetails
-            NameTerraform: UpgradeDetails
-            IdPortion: null
-            Type: dict
-            TypeName: UpgradeDetails
-            TypeNameGo: UpgradeDetails
-            IsList: false
-            Required: false
-            Documentation: ''
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions:
-              - NameSwagger: operationId
-                NameAnsible: operation_id
-                NamePythonSdk: operation_id
-                NameGoSdk: OperationID
-                NameTerraform: OperationID
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: ID of the vault upgrade operation.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/upgradeDetails/operationId
-                PathPython: /upgradeDetails/operationId
-                PathGo: /properties/upgradeDetails/operationId
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: startTimeUtc
-                NameAnsible: start_time_utc
-                NamePythonSdk: start_time_utc
-                NameGoSdk: StartTimeUtc
-                NameTerraform: StartTimeUtc
-                IdPortion: null
-                Type: datetime
-                TypeName: DateTime
-                TypeNameGo: DateTime
-                IsList: false
-                Required: false
-                Documentation: UTC time at which the upgrade operation has started.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/upgradeDetails/startTimeUtc
-                PathPython: /upgradeDetails/startTimeUtc
-                PathGo: /properties/upgradeDetails/startTimeUtc
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: lastUpdatedTimeUtc
-                NameAnsible: last_updated_time_utc
-                NamePythonSdk: last_updated_time_utc
-                NameGoSdk: LastUpdatedTimeUtc
-                NameTerraform: LastUpdatedTimeUtc
-                IdPortion: null
-                Type: datetime
-                TypeName: DateTime
-                TypeNameGo: DateTime
-                IsList: false
-                Required: false
-                Documentation: >-
-                  UTC time at which the upgrade operation status was last
-                  updated.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/upgradeDetails/lastUpdatedTimeUtc
-                PathPython: /upgradeDetails/lastUpdatedTimeUtc
-                PathGo: /properties/upgradeDetails/lastUpdatedTimeUtc
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: endTimeUtc
-                NameAnsible: end_time_utc
-                NamePythonSdk: end_time_utc
-                NameGoSdk: EndTimeUtc
-                NameTerraform: EndTimeUtc
-                IdPortion: null
-                Type: datetime
-                TypeName: DateTime
-                TypeNameGo: DateTime
-                IsList: false
-                Required: false
-                Documentation: UTC time at which the upgrade operation has ended.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/upgradeDetails/endTimeUtc
-                PathPython: /upgradeDetails/endTimeUtc
-                PathGo: /properties/upgradeDetails/endTimeUtc
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: status
-                NameAnsible: status
-                NamePythonSdk: status
-                NameGoSdk: Status
-                NameTerraform: Status
-                IdPortion: null
-                Type: str
-                TypeName: VaultUpgradeState
-                TypeNameGo: VaultUpgradeState
-                IsList: false
-                Required: false
-                Documentation: Status of the vault upgrade operation.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues:
-                  - Key: Unknown
-                    Value: Unknown
-                    Description: !<tag:yaml.org,2002:js/undefined> ''
-                  - Key: InProgress
-                    Value: InProgress
-                    Description: !<tag:yaml.org,2002:js/undefined> ''
-                  - Key: Upgraded
-                    Value: Upgraded
-                    Description: !<tag:yaml.org,2002:js/undefined> ''
-                  - Key: Failed
-                    Value: Failed
-                    Description: !<tag:yaml.org,2002:js/undefined> ''
-                PathSwagger: /properties/upgradeDetails/status
-                PathPython: /upgradeDetails/status
-                PathGo: /properties/upgradeDetails/status
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: message
-                NameAnsible: message
-                NamePythonSdk: message
-                NameGoSdk: Message
-                NameTerraform: Message
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: >-
-                  Message to the user containing information about the upgrade
-                  operation.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/upgradeDetails/message
-                PathPython: /upgradeDetails/message
-                PathGo: /properties/upgradeDetails/message
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: triggerType
-                NameAnsible: trigger_type
-                NamePythonSdk: trigger_type
-                NameGoSdk: TriggerType
-                NameTerraform: TriggerType
-                IdPortion: null
-                Type: str
-                TypeName: TriggerType
-                TypeNameGo: TriggerType
-                IsList: false
-                Required: false
-                Documentation: The way the vault upgrade was triggered.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues:
-                  - Key: UserTriggered
-                    Value: UserTriggered
-                    Description: !<tag:yaml.org,2002:js/undefined> ''
-                  - Key: ForcedUpgrade
-                    Value: ForcedUpgrade
-                    Description: !<tag:yaml.org,2002:js/undefined> ''
-                PathSwagger: /properties/upgradeDetails/triggerType
-                PathPython: /upgradeDetails/triggerType
-                PathGo: /properties/upgradeDetails/triggerType
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: upgradedResourceId
-                NameAnsible: upgraded_resource_id
-                NamePythonSdk: upgraded_resource_id
-                NameGoSdk: UpgradedResourceID
-                NameTerraform: UpgradedResourceID
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: Resource ID of the upgraded vault.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/upgradeDetails/upgradedResourceId
-                PathPython: /upgradeDetails/upgradedResourceId
-                PathGo: /properties/upgradeDetails/upgradedResourceId
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: previousResourceId
-                NameAnsible: previous_resource_id
-                NamePythonSdk: previous_resource_id
-                NameGoSdk: PreviousResourceID
-                NameTerraform: PreviousResourceID
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: Resource ID of the vault before the upgrade.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/upgradeDetails/previousResourceId
-                PathPython: /upgradeDetails/previousResourceId
-                PathGo: /properties/upgradeDetails/previousResourceId
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-            EnumValues: []
-            PathSwagger: /properties/upgradeDetails
-            PathPython: /upgradeDetails
-            PathGo: /properties/upgradeDetails
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /properties
-        PathPython: ''
-        PathGo: /properties
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_20
-        NameSwagger: sku
-        NameAnsible: sku
-        NamePythonSdk: sku
-        NameGoSdk: Sku
-        NameTerraform: Sku
-        IdPortion: null
-        Type: dict
-        TypeName: Sku
-        TypeNameGo: Sku
-        IsList: false
-        Required: false
-        Documentation: ''
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions:
-          - NameSwagger: name
-            NameAnsible: name
-            NamePythonSdk: name
-            NameGoSdk: Name
-            NameTerraform: Name
-            IdPortion: null
-            Type: str
-            TypeName: SkuName
-            TypeNameGo: SkuName
-            IsList: false
-            Required: true
-            Documentation: The Sku name.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues:
-              - Key: Standard
-                Value: Standard
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: RS0
-                Value: RS0
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-            PathSwagger: /sku/name
-            PathPython: /sku/name
-            PathGo: /sku/name
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /sku
-        PathPython: /sku
-        PathGo: /sku
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-    Methods:
-      - Name: ListBySubscriptionId
-        Options: []
-        RequiredOptions: []
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/Microsoft.RecoveryServices/vaults
-        HttpMethod: get
-        IsAsync: false
-      - Name: ListByResourceGroup
-        Options:
-          - resourceGroupName
-        RequiredOptions:
-          - resourceGroupName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.RecoveryServices/vaults
-        HttpMethod: get
-        IsAsync: false
-      - Name: Get
-        Options:
-          - resourceGroupName
-          - vaultName
-        RequiredOptions:
-          - resourceGroupName
-          - vaultName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.RecoveryServices/vaults/{{ vault_name }}
-        HttpMethod: get
-        IsAsync: false
-    ResponseFields:
-      - *ref_13
-      - *ref_14
-      - *ref_15
-      - *ref_16
-      - *ref_17
-      - *ref_18
-      - *ref_19
-      - *ref_20
-    ModuleOperationNameUpper: Vaults
-    ModuleOperationName: vaults
-    ObjectName: Vault
-    ResourceNameFieldInResponse: null
-    NeedsDeleteBeforeUpdate: false
-    NeedsForceUpdate: false
-    CannotTestUpdate: false
-    Provider: Microsoft.RecoveryServices
-    ApiVersion: '2016-06-01'
-    Examples:
-      - Example:
-          parameters:
-            subscriptionId: 77777777-b0c6-47a2-b37c-d8e65a629c18
-            api-version: '2016-06-01'
-          responses:
-            '200':
-              body:
-                value:
-                  - location: westus
-                    name: patchtest
-                    eTag: W/"datetime'2017-11-22T11%3A05%3A19.907Z'"
-                    tags:
-                      Love: India
-                    properties:
-                      provisioningState: Succeeded
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.RecoveryServices/vaults/{{
-                      vault_name }}
-                    type: Microsoft.RecoveryServices/vaults
-                    sku:
-                      name: Standard
-                  - location: westus
-                    name: swaggerExample
-                    eTag: W/"datetime'2017-12-15T12%3A36%3A51.68Z'"
-                    tags:
-                      TestUpdatedKey: TestUpdatedValue
-                    properties:
-                      provisioningState: Succeeded
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.RecoveryServices/vaults/{{
-                      vault_name }}
-                    type: Microsoft.RecoveryServices/vaults
-                    sku:
-                      name: Standard
-                  - location: westus
-                    name: today1
-                    eTag: W/"datetime'2017-11-21T10%3A52%3A19.633Z'"
-                    tags:
-                      TestUpdatedKey: TestUpdatedValue
-                    properties:
-                      provisioningState: Succeeded
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.RecoveryServices/vaults/{{
-                      vault_name }}
-                    type: Microsoft.RecoveryServices/vaults
-                    sku:
-                      name: Standard
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/Microsoft.RecoveryServices/vaults
-        Method: get
-        Name: List of Recovery Services Resources in SubscriptionId
-        Filename: recoveryservices_vaults_get
-        Variables: []
-        References: []
-        OperationId: '413'
-        MethodId: '414'
-      - Example:
-          parameters:
-            subscriptionId: 77777777-b0c6-47a2-b37c-d8e65a629c18
-            resourceGroupName: Default-RecoveryServices-ResourceGroup
-            api-version: '2016-06-01'
-          responses:
-            '200':
-              body:
-                value:
-                  - location: westus
-                    name: patchtest
-                    eTag: W/"datetime'2017-11-22T11%3A05%3A19.907Z'"
-                    tags:
-                      Love: India
-                    properties:
-                      provisioningState: Succeeded
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.RecoveryServices/vaults/{{
-                      vault_name }}
-                    type: Microsoft.RecoveryServices/vaults
-                    sku:
-                      name: Standard
-                  - location: westus
-                    name: swaggerExample
-                    eTag: W/"datetime'2017-12-15T12%3A36%3A51.68Z'"
-                    tags:
-                      TestUpdatedKey: TestUpdatedValue
-                    properties:
-                      provisioningState: Succeeded
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.RecoveryServices/vaults/{{
-                      vault_name }}
-                    type: Microsoft.RecoveryServices/vaults
-                    sku:
-                      name: Standard
-                  - location: westus
-                    name: today1
-                    eTag: W/"datetime'2017-11-21T10%3A52%3A19.633Z'"
-                    tags:
-                      TestUpdatedKey: TestUpdatedValue
-                    properties:
-                      provisioningState: Succeeded
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.RecoveryServices/vaults/{{
-                      vault_name }}
-                    type: Microsoft.RecoveryServices/vaults
-                    sku:
-                      name: Standard
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.RecoveryServices/vaults
-        Method: get
-        Name: List of Recovery Services Resources in ResourceGroup
-        Filename: recoveryservices_vaults_get_1
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-        References: []
-        OperationId: '413'
-        MethodId: '432'
-      - Example:
-          parameters:
-            subscriptionId: 77777777-b0c6-47a2-b37c-d8e65a629c18
-            resourceGroupName: Default-RecoveryServices-ResourceGroup
-            vaultName: swaggerExample
-            api-version: '2016-06-01'
-          responses:
-            '200':
-              body:
-                location: westus
-                name: swaggerExample
-                eTag: W/"datetime'2017-12-15T12%3A36%3A51.68Z'"
-                tags:
-                  TestUpdatedKey: TestUpdatedValue
-                properties:
-                  provisioningState: Succeeded
-                id: >-
-                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                  resource_group
-                  }}/providers/Microsoft.RecoveryServices/vaults/{{ vault_name
-                  }}
-                type: Microsoft.RecoveryServices/vaults
-                sku:
-                  name: Standard
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.RecoveryServices/vaults/{{ vault_name }}
-        Method: get
-        Name: Get Recovery Services Resource
-        Filename: recoveryservices_vaults_get_2
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-          - name: vault_name
-            value: myVault
-            swaggerName: vaultName
-        References: []
-        OperationId: '413'
-        MethodId: '456'
-  - ModuleName: azure_rm_recoveryservicesoperation_info
-    Options:
-      - &ref_21
-        NameSwagger: value
-        NameAnsible: value
-        NamePythonSdk: value
-        NameGoSdk: Value
-        NameTerraform: Value
-        IdPortion: null
-        Type: dict
-        TypeName: ClientDiscoveryValueForSingleApi
-        TypeNameGo: ClientDiscoveryValueForSingleApi
-        IsList: true
-        Required: false
-        Documentation: List of available operations.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions:
-          - NameSwagger: name
-            NameAnsible: name
-            NamePythonSdk: name
-            NameGoSdk: Name
-            NameTerraform: Name
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: Name of the Operation.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /value/name
-            PathPython: /value/name
-            PathGo: /value/name
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: display
-            NameAnsible: display
-            NamePythonSdk: display
-            NameGoSdk: Display
-            NameTerraform: Display
-            IdPortion: null
-            Type: dict
-            TypeName: ClientDiscoveryDisplay
-            TypeNameGo: ClientDiscoveryDisplay
-            IsList: false
-            Required: false
-            Documentation: >-
-              Contains the localized display information for this particular
-              operation
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions:
-              - NameSwagger: provider
-                NameAnsible: provider
-                NamePythonSdk: provider
-                NameGoSdk: Provider
-                NameTerraform: Provider
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: Name of the provider for display purposes
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /value/display/provider
-                PathPython: /value/display/provider
-                PathGo: /value/display/provider
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: resource
-                NameAnsible: resource
-                NamePythonSdk: resource
-                NameGoSdk: Resource
-                NameTerraform: Resource
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: ResourceType for which this Operation can be performed.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /value/display/resource
-                PathPython: /value/display/resource
-                PathGo: /value/display/resource
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: operation
-                NameAnsible: operation
-                NamePythonSdk: operation
-                NameGoSdk: Operation
-                NameTerraform: Operation
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: Operations Name itself.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /value/display/operation
-                PathPython: /value/display/operation
-                PathGo: /value/display/operation
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: description
-                NameAnsible: description
-                NamePythonSdk: description
-                NameGoSdk: Description
-                NameTerraform: Description
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: >-
-                  Description of the operation having details of what operation
-                  is about.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /value/display/description
-                PathPython: /value/display/description
-                PathGo: /value/display/description
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-            EnumValues: []
-            PathSwagger: /value/display
-            PathPython: /value/display
-            PathGo: /value/display
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: origin
-            NameAnsible: origin
-            NamePythonSdk: origin
-            NameGoSdk: Origin
-            NameTerraform: Origin
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: >-
-              The intended executor of the operation;governs the display of the
-              operation in the RBAC UX and the audit logs UX
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /value/origin
-            PathPython: /value/origin
-            PathGo: /value/origin
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: properties
-            NameAnsible: properties
-            NamePythonSdk: properties
-            NameGoSdk: Properties
-            NameTerraform: Properties
-            IdPortion: null
-            Type: dict
-            TypeName: ClientDiscoveryForProperties
-            TypeNameGo: ClientDiscoveryForProperties
-            IsList: false
-            Required: false
-            Documentation: ShoeBox properties for the given operation.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions:
-              - NameSwagger: serviceSpecification
-                NameAnsible: service_specification
-                NamePythonSdk: service_specification
-                NameGoSdk: ServiceSpecification
-                NameTerraform: ServiceSpecification
-                IdPortion: null
-                Type: dict
-                TypeName: ClientDiscoveryForServiceSpecification
-                TypeNameGo: ClientDiscoveryForServiceSpecification
-                IsList: false
-                Required: false
-                Documentation: Operation properties.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions:
-                  - NameSwagger: logSpecifications
-                    NameAnsible: log_specifications
-                    NamePythonSdk: log_specifications
-                    NameGoSdk: LogSpecifications
-                    NameTerraform: LogSpecifications
-                    IdPortion: null
-                    Type: dict
-                    TypeName: ClientDiscoveryForLogSpecification
-                    TypeNameGo: ClientDiscoveryForLogSpecification
-                    IsList: true
-                    Required: false
-                    Documentation: List of log specifications of this operation.
-                    DocumentationMarkKeywords: true
-                    DefaultValue: null
-                    IncludeInDocumentation: true
-                    IncludeInArgSpec: true
-                    NoLog: false
-                    SubOptions:
-                      - NameSwagger: name
-                        NameAnsible: name
-                        NamePythonSdk: name
-                        NameGoSdk: Name
-                        NameTerraform: Name
-                        IdPortion: null
-                        Type: str
-                        TypeName: String
-                        TypeNameGo: String
-                        IsList: false
-                        Required: false
-                        Documentation: Name of the log.
-                        DocumentationMarkKeywords: true
-                        DefaultValue: null
-                        IncludeInDocumentation: true
-                        IncludeInArgSpec: true
-                        NoLog: false
-                        SubOptions: []
-                        EnumValues: []
-                        PathSwagger: >-
-                          /value/properties/serviceSpecification/logSpecifications/name
-                        PathPython: /value/serviceSpecification/logSpecifications/name
-                        PathGo: >-
-                          /value/properties/serviceSpecification/logSpecifications/name
-                        DispositionSdk: '*'
-                        DispositionRest: '*'
-                        Comparison: ''
-                        Updatable: true
-                        ExampleValue: null
-                        Hidden: false
-                        IncludeInResponse: false
-                        Flatten: false
-                      - NameSwagger: displayName
-                        NameAnsible: display_name
-                        NamePythonSdk: display_name
-                        NameGoSdk: DisplayName
-                        NameTerraform: DisplayName
-                        IdPortion: null
-                        Type: str
-                        TypeName: String
-                        TypeNameGo: String
-                        IsList: false
-                        Required: false
-                        Documentation: Localized display name
-                        DocumentationMarkKeywords: true
-                        DefaultValue: null
-                        IncludeInDocumentation: true
-                        IncludeInArgSpec: true
-                        NoLog: false
-                        SubOptions: []
-                        EnumValues: []
-                        PathSwagger: >-
-                          /value/properties/serviceSpecification/logSpecifications/displayName
-                        PathPython: >-
-                          /value/serviceSpecification/logSpecifications/displayName
-                        PathGo: >-
-                          /value/properties/serviceSpecification/logSpecifications/displayName
-                        DispositionSdk: '*'
-                        DispositionRest: '*'
-                        Comparison: ''
-                        Updatable: true
-                        ExampleValue: null
-                        Hidden: false
-                        IncludeInResponse: false
-                        Flatten: false
-                      - NameSwagger: blobDuration
-                        NameAnsible: blob_duration
-                        NamePythonSdk: blob_duration
-                        NameGoSdk: BlobDuration
-                        NameTerraform: BlobDuration
-                        IdPortion: null
-                        Type: str
-                        TypeName: String
-                        TypeNameGo: String
-                        IsList: false
-                        Required: false
-                        Documentation: Blobs created in customer storage account per hour
-                        DocumentationMarkKeywords: true
-                        DefaultValue: null
-                        IncludeInDocumentation: true
-                        IncludeInArgSpec: true
-                        NoLog: false
-                        SubOptions: []
-                        EnumValues: []
-                        PathSwagger: >-
-                          /value/properties/serviceSpecification/logSpecifications/blobDuration
-                        PathPython: >-
-                          /value/serviceSpecification/logSpecifications/blobDuration
-                        PathGo: >-
-                          /value/properties/serviceSpecification/logSpecifications/blobDuration
-                        DispositionSdk: '*'
-                        DispositionRest: '*'
-                        Comparison: ''
-                        Updatable: true
-                        ExampleValue: null
-                        Hidden: false
-                        IncludeInResponse: false
-                        Flatten: false
-                    EnumValues: []
-                    PathSwagger: /value/properties/serviceSpecification/logSpecifications
-                    PathPython: /value/serviceSpecification/logSpecifications
-                    PathGo: /value/properties/serviceSpecification/logSpecifications
-                    DispositionSdk: '*'
-                    DispositionRest: '*'
-                    Comparison: ''
-                    Updatable: true
-                    ExampleValue: null
-                    Hidden: false
-                    IncludeInResponse: false
-                    Flatten: false
-                EnumValues: []
-                PathSwagger: /value/properties/serviceSpecification
-                PathPython: /value/serviceSpecification
-                PathGo: /value/properties/serviceSpecification
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-            EnumValues: []
-            PathSwagger: /value/properties
-            PathPython: /value
-            PathGo: /value/properties
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /value
-        PathPython: /value
-        PathGo: /value
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_22
-        NameSwagger: nextLink
-        NameAnsible: next_link
-        NamePythonSdk: next_link
-        NameGoSdk: NextLink
-        NameTerraform: NextLink
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Link to the next chunk of the response
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /nextLink
-        PathPython: /nextLink
-        PathGo: /nextLink
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-    Methods:
-      - Name: List
-        Options: []
-        RequiredOptions: []
-        Url: /providers/Microsoft.RecoveryServices/operations
-        HttpMethod: get
-        IsAsync: false
-    ResponseFields:
-      - *ref_21
-      - *ref_22
-    ModuleOperationNameUpper: Operations
-    ModuleOperationName: operations
-    ObjectName: Operation
-    ResourceNameFieldInResponse: null
-    NeedsDeleteBeforeUpdate: false
-    NeedsForceUpdate: false
-    CannotTestUpdate: false
-    Provider: Microsoft.RecoveryServices
-    ApiVersion: '2016-06-01'
-    Examples:
-      - Example:
-          parameters:
-            api-version: '2016-06-01'
-          responses:
-            '200':
-              body:
-                value:
-                  - name: microsoft.recoveryservices/vaults/usages/read
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Vault Usage
-                      operation: Recovery Services Vault usage details.
-                      description: Returns usage details for a Recovery Services Vault.
-                    origin: user
-                  - name: >-
-                      microsoft.recoveryservices/vaults/backupUsageSummaries/read
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Backup Usages Summaries
-                      operation: >-
-                        Recovery Services Protected Items and Protected Servers
-                        usage summaries details.
-                      description: >-
-                        Returns summaries for Protected Items and Protected
-                        Servers for a Recovery Services .
-                    origin: user
-                  - name: microsoft.recoveryservices/vaults/storageConfig/read
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Vault Storage Config
-                      operation: Get Resource Storage Config
-                      description: >-
-                        Returns Storage Configuration for Recovery Services
-                        Vault.
-                    origin: user
-                  - name: microsoft.recoveryservices/vaults/storageConfig/write
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Vault Storage Config
-                      operation: Write Resource Storage Config
-                      description: >-
-                        Updates Storage Configuration for Recovery Services
-                        Vault.
-                    origin: user
-                  - name: >-
-                      microsoft.recoveryservices/vaults/backupconfig/vaultconfig/read
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Vault Config
-                      operation: Get Resource Config
-                      description: Returns Configuration for Recovery Services Vault.
-                    origin: user
-                  - name: >-
-                      microsoft.recoveryservices/vaults/backupconfig/vaultconfig/write
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Vault Config
-                      operation: Update Resource Config
-                      description: Updates Configuration for Recovery Services Vault.
-                    origin: user
-                  - name: microsoft.recoveryservices/vaults/tokenInfo/read
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Token Info
-                      operation: Get Vault Token Info
-                      description: Returns token information for Recovery Services Vault.
-                    origin: user
-                  - name: microsoft.recoveryservices/vaults/backupSecurityPIN/read
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: SecurityPINInfo
-                      operation: Get Security PIN Info
-                      description: >-
-                        Returns Security PIN Information for Recovery Services
-                        Vault.
-                    origin: user
-                  - name: >-
-                      microsoft.recoveryservices/vaults/backupManagementMetaData/read
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Backup Management Metadata
-                      operation: Get Backup Management Metadata
-                      description: >-
-                        Returns Backup Management Metadata for Recovery Services
-                        Vault.
-                    origin: user
-                  - name: >-
-                      microsoft.recoveryservices/vaults/backupOperationResults/read
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Backup Operation Results
-                      operation: Get Backup Operation Result
-                      description: >-
-                        Returns Backup Operation Result for Recovery Services
-                        Vault.
-                    origin: user
-                  - name: microsoft.recoveryservices/vaults/backupOperations/read
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Backup Operation Status
-                      operation: Get Backup Operation Status
-                      description: >-
-                        Returns Backup Operation Status for Recovery Services
-                        Vault.
-                    origin: user
-                  - name: microsoft.recoveryservices/vaults/backupJobs/read
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Backup Jobs
-                      operation: Get Jobs
-                      description: Returns all Job Objects
-                    origin: user
-                  - name: microsoft.recoveryservices/vaults/backupJobs/cancel/action
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Backup Jobs
-                      operation: Cancel Jobs
-                      description: Cancel the Job
-                    origin: user
-                  - name: microsoft.recoveryservices/vaults/backupJobsExport/action
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Export Backup Jobs
-                      operation: Export Jobs
-                      description: Export Jobs
-                    origin: user
-                  - name: >-
-                      microsoft.recoveryservices/vaults/backupJobs/operationResults/read
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Backup Jobs Operation Results
-                      operation: Get Job Operation Result
-                      description: Returns the Result of Job Operation.
-                    origin: user
-                  - name: >-
-                      microsoft.recoveryservices/vaults/backupJobsExport/operationResults/read
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Export Backup Jobs Operation Results
-                      operation: Get Export Job Operation Result
-                      description: Returns the Result of Export Job Operation.
-                    origin: user
-                  - name: >-
-                      microsoft.recoveryservices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints/read
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Recovery Points
-                      operation: Get Recovery Points
-                      description: Get Recovery Points for Protected Items.
-                    origin: user
-                  - name: >-
-                      microsoft.recoveryservices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints/restore/action
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Recovery Points
-                      operation: Restore Recovery Points
-                      description: Restore Recovery Points for Protected Items.
-                    origin: user
-                  - name: >-
-                      microsoft.recoveryservices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints/provisionInstantItemRecovery/action
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Recovery Points
-                      operation: Provision Instant Item Recovery for Protected Item
-                      description: Provision Instant Item Recovery for Protected Item
-                    origin: user
-                  - name: >-
-                      microsoft.recoveryservices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints/revokeInstantItemRecovery/action
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Recovery Points
-                      operation: Revoke Instant Item Recovery for Protected Item
-                      description: Revoke Instant Item Recovery for Protected Item
-                    origin: user
-                  - name: microsoft.recoveryservices/vaults/backupPolicies/read
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Backup Policies
-                      operation: Get Protection Policy
-                      description: Returns all Protection Policies
-                    origin: user
-                  - name: microsoft.recoveryservices/vaults/backupPolicies/write
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Backup Policies
-                      operation: Create Protection Policy
-                      description: Creates Protection Policy
-                    origin: user
-                  - name: microsoft.recoveryservices/vaults/backupPolicies/delete
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Backup Policies
-                      operation: Delete Protection Policy
-                      description: Delete a Protection Policy
-                    origin: user
-                  - name: >-
-                      microsoft.recoveryservices/vaults/backupPolicies/operationResults/read
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Backup Policy Operation Results
-                      operation: Get Policy Operation Results
-                      description: Get Results of Policy Operation.
-                    origin: user
-                  - name: >-
-                      microsoft.recoveryservices/vaults/backupPolicies/operationsStatus/read
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Backup Policy Operation Status
-                      operation: Get Policy Operation Status
-                      description: Get Status of Policy Operation.
-                    origin: user
-                  - name: >-
-                      microsoft.recoveryservices/vaults/backupFabrics/protectionContainers/protectedItems/read
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Protected Items
-                      operation: Get Protected Item Details
-                      description: Returns object details of the Protected Item
-                    origin: user
-                  - name: >-
-                      microsoft.recoveryservices/vaults/backupProtectedItems/read
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Protected Items
-                      operation: Get All Protected Items
-                      description: Returns the list of all Protected Items.
-                    origin: user
-                  - name: >-
-                      microsoft.recoveryservices/vaults/backupFabrics/protectionContainers/protectedItems/write
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Protected Items
-                      operation: Create Backup Protected Item
-                      description: Create a backup Protected Item
-                    origin: user
-                  - name: >-
-                      microsoft.recoveryservices/vaults/backupFabrics/protectionContainers/protectedItems/delete
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Protected Items
-                      operation: Delete Protected Items
-                      description: Deletes Protected Item
-                    origin: user
-                  - name: >-
-                      microsoft.recoveryservices/vaults/backupFabrics/protectionContainers/protectedItems/operationResults/read
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Protected Item Operation Results
-                      operation: Get Protected Items Operation Results
-                      description: Gets Result of Operation Performed on Protected Items.
-                    origin: user
-                  - name: >-
-                      microsoft.recoveryservices/vaults/backupFabrics/protectionContainers/protectedItems/operationsStatus/read
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Protected Item Operation Status
-                      operation: Get Protected Items operation status
-                      description: >-
-                        Returns the status of Operation performed on Protected
-                        Items.
-                    origin: user
-                  - name: >-
-                      microsoft.recoveryservices/vaults/backupFabrics/protectionContainers/protectedItems/backup/action
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Protected Items
-                      operation: Backup Protected Item
-                      description: Performs Backup for Protected Item.
-                    origin: user
-                  - name: >-
-                      microsoft.recoveryservices/vaults/backupProtectableItems/read
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Backup Protectable Items
-                      operation: Get Protectable Items
-                      description: Returns list of all Protectable Items.
-                    origin: user
-                  - name: microsoft.recoveryservices/vaults/refreshContainers/read
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Refresh Containers
-                      operation: Refresh container
-                      description: Refreshes the container list
-                    origin: user
-                  - name: >-
-                      microsoft.recoveryservices/vaults/backupFabrics/operationResults/read
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Refresh Containers Operation Results
-                      operation: Get Operation Results
-                      description: Returns status of the operation
-                    origin: user
-                  - name: >-
-                      microsoft.recoveryservices/vaults/backupProtectionContainers/read
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Backup Protection Containers
-                      operation: Get Containers In Subscription
-                      description: Returns all containers belonging to the subscription
-                    origin: user
-                  - name: >-
-                      microsoft.recoveryservices/vaults/backupFabrics/protectionContainers/read
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Protection Containers
-                      operation: Get Registered Container
-                      description: Returns all registered containers
-                    origin: user
-                  - name: >-
-                      microsoft.recoveryservices/vaults/backupFabrics/protectionContainers/operationResults/read
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Protection Containers Operation Results
-                      operation: Get Container Operation Results
-                      description: >-
-                        Gets result of Operation performed on Protection
-                        Container.
-                    origin: user
-                  - name: microsoft.recoveryservices/vaults/backupEngines
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Backup Engines
-                      operation: List of backup management servers.
-                      description: >-
-                        Returns all the backup management servers registered
-                        with vault.
-                    origin: user
-                  - name: microsoft.recoveryservices/vaults/backupStatus
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Backup Status
-                      operation: Check Backup Status for Vault
-                      description: Check Backup Status for Recovery Services Vaults
-                    origin: user
-                  - name: >-
-                      microsoft.recoveryservices/vaults/backupPreValidateProtection
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: PreValidate Protection
-                      operation: Pre Validate Enable Protection
-                      description: ''
-                    origin: user
-                  - name: microsoft.recoveryservices/vaults/backupValidateFeatures
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Validate Features
-                      operation: Validate Features
-                      description: Validate Features
-                    origin: user
-                  - name: >-
-                      microsoft.recoveryservices/vaults/backupFabrics/backupProtectionIntent/write
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Protection Intent
-                      operation: Create backup Protection Intent
-                      description: Create a backup Protection Intent
-                    origin: user
-                  - name: >-
-                      microsoft.recoveryservices/vaults/backupFabrics/{fabricName}/protectionContainers/{containerName}/items/read
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Workload Items
-                      operation: Get all items in a container
-                      description: Get all items in a container
-                    origin: user
-                  - name: >-
-                      microsoft.recoveryservices/vaults/backupFabrics/protectionContainers/inquire/action
-                    display:
-                      provider: microsoft.recoveryservices
-                      resource: Protection Containers Inquire
-                      operation: Get all items in a container
-                      description: Get all items in a container
-                    origin: user
-        Url: /providers/Microsoft.RecoveryServices/operations
-        Method: get
-        Name: ListOperations
-        Filename: recoveryservices_operations_get
-        Variables: []
-        References: []
-        OperationId: '588'
-        MethodId: '589'
+        OperationName: Vaults
+        MethodName: Delete
   - ModuleName: azure_rm_recoveryservicesvaultextendedinfo
     Options:
       - NameSwagger: resourceGroupName
@@ -3031,7 +1302,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: vaultName
         NameAnsible: vault_name
         NamePythonSdk: vault_name
@@ -3061,7 +1334,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: resourceResourceExtendedInfoDetails
         NameAnsible: resource_resource_extended_info_details
         NamePythonSdk: resource_resource_extended_info_details
@@ -3084,14 +1359,16 @@ Modules:
         PathSwagger: ''
         PathPython: null
         PathGo: null
-        DispositionSdk: dictionary
+        DispositionSdk: '*'
         DispositionRest: '*'
         Comparison: ''
         Updatable: true
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 2
       - NameSwagger: eTag
         NameAnsible: e_tag
         NamePythonSdk: e_tag
@@ -3121,7 +1398,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -3169,7 +1448,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: encryptionKey
             NameAnsible: encryption_key
             NamePythonSdk: encryption_key
@@ -3199,7 +1480,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: encryptionKeyThumbprint
             NameAnsible: encryption_key_thumbprint
             NamePythonSdk: encryption_key_thumbprint
@@ -3229,7 +1512,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: algorithm
             NameAnsible: algorithm
             NamePythonSdk: algorithm
@@ -3259,7 +1544,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties
         PathPython: ''
@@ -3271,8 +1558,10 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
-      - &ref_23
+        Kind: 1
+      - &ref_13
         NameSwagger: id
         NameAnsible: id
         NamePythonSdk: id
@@ -3302,8 +1591,10 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
-      - &ref_24
+        Kind: 1
+      - &ref_14
         NameSwagger: name
         NameAnsible: name
         NamePythonSdk: name
@@ -3333,8 +1624,10 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
-      - &ref_25
+        Kind: 1
+      - &ref_15
         NameSwagger: type
         NameAnsible: type
         NamePythonSdk: type
@@ -3366,7 +1659,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: CreateOrUpdate
         Options:
@@ -3412,9 +1707,9 @@ Modules:
         HttpMethod: get
         IsAsync: false
     ResponseFields:
-      - *ref_23
-      - *ref_24
-      - *ref_25
+      - *ref_13
+      - *ref_14
+      - *ref_15
       - NameSwagger: eTag
         NameAnsible: e_tag
         NamePythonSdk: e_tag
@@ -3444,7 +1739,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -3492,7 +1789,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: encryptionKey
             NameAnsible: encryption_key
             NamePythonSdk: encryption_key
@@ -3522,7 +1821,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: encryptionKeyThumbprint
             NameAnsible: encryption_key_thumbprint
             NamePythonSdk: encryption_key_thumbprint
@@ -3552,7 +1853,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: algorithm
             NameAnsible: algorithm
             NamePythonSdk: algorithm
@@ -3582,7 +1885,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties
         PathPython: ''
@@ -3594,7 +1899,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     ModuleOperationNameUpper: VaultExtendedInfo
     ModuleOperationName: vault_extended_info
     ObjectName: VaultExtendedInfo
@@ -3650,6 +1957,8 @@ Modules:
           - recoveryservices_vaults_put
         OperationId: '603'
         MethodId: '634'
+        OperationName: VaultExtendedInfo
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: 77777777-b0c6-47a2-b37c-d8e65a629c18
@@ -3695,430 +2004,9 @@ Modules:
           - recoveryservices_vaults_extendedinformation_put
         OperationId: '603'
         MethodId: '668'
-  - ModuleName: azure_rm_recoveryservicesvaultextendedinfo_info
-    Options:
-      - NameSwagger: resourceGroupName
-        NameAnsible: resource_group_name
-        NamePythonSdk: resource_group_name
-        NameGoSdk: ResourceGroupName
-        NameTerraform: ResourceGroupName
-        IdPortion: resourceGroups
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: true
-        Documentation: >-
-          The name of the resource group where the recovery services vault is
-          present.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: vaultName
-        NameAnsible: vault_name
-        NamePythonSdk: vault_name
-        NameGoSdk: VaultName
-        NameTerraform: VaultName
-        IdPortion: vaults
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: true
-        Documentation: The name of the recovery services vault.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - &ref_26
-        NameSwagger: id
-        NameAnsible: id
-        NamePythonSdk: id
-        NameGoSdk: ID
-        NameTerraform: ID
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Resource Id represents the complete path to the resource.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /id
-        PathPython: /id
-        PathGo: /id
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_27
-        NameSwagger: name
-        NameAnsible: name
-        NamePythonSdk: name
-        NameGoSdk: Name
-        NameTerraform: Name
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Resource name associated with the resource.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /name
-        PathPython: /name
-        PathGo: /name
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_28
-        NameSwagger: type
-        NameAnsible: type
-        NamePythonSdk: type
-        NameGoSdk: Type
-        NameTerraform: Type
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: >-
-          Resource type represents the complete path of the form
-          Namespace/ResourceType/ResourceType/...
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /type
-        PathPython: /type
-        PathGo: /type
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_29
-        NameSwagger: eTag
-        NameAnsible: e_tag
-        NamePythonSdk: e_tag
-        NameGoSdk: ETag
-        NameTerraform: ETag
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Optional ETag.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /eTag
-        PathPython: /eTag
-        PathGo: /eTag
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_30
-        NameSwagger: properties
-        NameAnsible: properties
-        NamePythonSdk: properties
-        NameGoSdk: Properties
-        NameTerraform: Properties
-        IdPortion: null
-        Type: dict
-        TypeName: VaultExtendedInfo
-        TypeNameGo: VaultExtendedInfo
-        IsList: false
-        Required: false
-        Documentation: ''
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions:
-          - NameSwagger: integrityKey
-            NameAnsible: integrity_key
-            NamePythonSdk: integrity_key
-            NameGoSdk: IntegrityKey
-            NameTerraform: IntegrityKey
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: Integrity key.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/integrityKey
-            PathPython: /integrityKey
-            PathGo: /properties/integrityKey
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: encryptionKey
-            NameAnsible: encryption_key
-            NamePythonSdk: encryption_key
-            NameGoSdk: EncryptionKey
-            NameTerraform: EncryptionKey
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: Encryption key.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/encryptionKey
-            PathPython: /encryptionKey
-            PathGo: /properties/encryptionKey
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: encryptionKeyThumbprint
-            NameAnsible: encryption_key_thumbprint
-            NamePythonSdk: encryption_key_thumbprint
-            NameGoSdk: EncryptionKeyThumbprint
-            NameTerraform: EncryptionKeyThumbprint
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: Encryption key thumbprint.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/encryptionKeyThumbprint
-            PathPython: /encryptionKeyThumbprint
-            PathGo: /properties/encryptionKeyThumbprint
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: algorithm
-            NameAnsible: algorithm
-            NamePythonSdk: algorithm
-            NameGoSdk: Algorithm
-            NameTerraform: Algorithm
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: Algorithm for Vault ExtendedInfo
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/algorithm
-            PathPython: /algorithm
-            PathGo: /properties/algorithm
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /properties
-        PathPython: ''
-        PathGo: /properties
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-    Methods:
-      - Name: Get
-        Options:
-          - resourceGroupName
-          - vaultName
-        RequiredOptions:
-          - resourceGroupName
-          - vaultName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.RecoveryServices/vaults/{{ vault_name
-          }}/extendedInformation/{{ extended_information_name }}
-        HttpMethod: get
-        IsAsync: false
-    ResponseFields:
-      - *ref_26
-      - *ref_27
-      - *ref_28
-      - *ref_29
-      - *ref_30
-    ModuleOperationNameUpper: VaultExtendedInfo
-    ModuleOperationName: vault_extended_info
-    ObjectName: VaultExtendedInfo
-    ResourceNameFieldInResponse: null
-    NeedsDeleteBeforeUpdate: false
-    NeedsForceUpdate: false
-    CannotTestUpdate: false
-    Provider: Microsoft.RecoveryServices
-    ApiVersion: '2016-06-01'
-    Examples:
-      - Example:
-          parameters:
-            subscriptionId: 77777777-b0c6-47a2-b37c-d8e65a629c18
-            resourceGroupName: Default-RecoveryServices-ResourceGroup
-            vaultName: swaggerExample
-            api-version: '2016-06-01'
-          responses:
-            '200':
-              body:
-                name: vaultExtendedInfo
-                eTag: f0d0260b-b92d-4458-ba0a-32c6cdabacb7
-                properties:
-                  integrityKey: J09wzS27fnJ+Wjot7xO5wA==
-                  algorithm: None
-                id: >-
-                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                  resource_group
-                  }}/providers/Microsoft.RecoveryServices/vaults/{{ vault_name
-                  }}/extendedInformation/{{ extended_information_name }}
-                type: Microsoft.RecoveryServices/vaults/extendedInformation
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.RecoveryServices/vaults/{{ vault_name
-          }}/extendedInformation/{{ extended_information_name }}
-        Method: get
-        Name: Get ExtendedInfo of Resource
-        Filename: recoveryservices_vaults_extendedinformation_get
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-          - name: vault_name
-            value: myVault
-            swaggerName: vaultName
-          - name: extended_information_name
-            value: myExtendedInformation
-            swaggerName: aultExtendedInf
-        References: []
-        OperationId: '603'
-        MethodId: '604'
+        OperationName: VaultExtendedInfo
+        MethodName: Update
 ServiceName: RecoveryServices
 MgmtClientName: RecoveryServices
 CliName: recoveryservices
 Namespace: azure.mgmt.recoveryservices
-Info:
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION vaultName'
-  - '  ** FOUND OPTION vault'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION vaultName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION vaultName'
-  - '  ** FOUND OPTION resourceResourceExtendedInfoDetails'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION vaultName'
