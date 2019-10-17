@@ -30,7 +30,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: azureFirewallName
         NameAnsible: name
         NamePythonSdk: azure_firewall_name
@@ -60,7 +62,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: parameters
         NameAnsible: parameters
         NamePythonSdk: parameters
@@ -83,14 +87,16 @@ Modules:
         PathSwagger: ''
         PathPython: null
         PathGo: null
-        DispositionSdk: dictionary
+        DispositionSdk: '*'
         DispositionRest: '*'
         Comparison: ''
         Updatable: true
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 2
       - NameSwagger: id
         NameAnsible: id
         NamePythonSdk: id
@@ -120,7 +126,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: location
         NameAnsible: location
         NamePythonSdk: location
@@ -150,7 +158,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: tags
         NameAnsible: tags
         NamePythonSdk: tags
@@ -184,7 +194,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -214,7 +226,9 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: applicationRuleCollections
         NameAnsible: application_rule_collections
         NamePythonSdk: application_rule_collections
@@ -262,7 +276,9 @@ Modules:
             ExampleValue: null
             Hidden: true
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: priority
             NameAnsible: priority
             NamePythonSdk: priority
@@ -292,7 +308,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: int32
             Flatten: false
+            Kind: 1
           - NameSwagger: action
             NameAnsible: action
             NamePythonSdk: action
@@ -346,7 +364,9 @@ Modules:
                 ExampleValue: null
                 Hidden: true
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/applicationRuleCollections/properties/action
             PathPython: /applicationRuleCollections/action
@@ -358,7 +378,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: rules
             NameAnsible: rules
             NamePythonSdk: rules
@@ -406,7 +428,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: description
                 NameAnsible: description
                 NamePythonSdk: description
@@ -438,7 +462,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: sourceAddresses
                 NameAnsible: source_addresses
                 NamePythonSdk: source_addresses
@@ -470,7 +496,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: protocols
                 NameAnsible: protocols
                 NamePythonSdk: protocols
@@ -502,7 +530,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: targetFqdns
                 NameAnsible: target_fqdns
                 NamePythonSdk: target_fqdns
@@ -534,7 +564,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: fqdnTags
                 NameAnsible: fqdn_tags
                 NamePythonSdk: fqdn_tags
@@ -566,7 +598,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/applicationRuleCollections/properties/rules
             PathPython: /applicationRuleCollections/rules
@@ -578,7 +612,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - &ref_2
             NameSwagger: provisioningState
             NameAnsible: provisioning_state
@@ -623,7 +659,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: name
             NameAnsible: name
             NamePythonSdk: name
@@ -655,7 +693,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - &ref_3
             NameSwagger: etag
             NameAnsible: etag
@@ -688,7 +728,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/applicationRuleCollections
         PathPython: /applicationRuleCollections
@@ -700,7 +742,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: natRuleCollections
         NameAnsible: nat_rule_collections
         NamePythonSdk: nat_rule_collections
@@ -748,7 +792,9 @@ Modules:
             ExampleValue: null
             Hidden: true
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: priority
             NameAnsible: priority
             NamePythonSdk: priority
@@ -778,7 +824,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: int32
             Flatten: false
+            Kind: 1
           - NameSwagger: action
             NameAnsible: action
             NamePythonSdk: action
@@ -832,7 +880,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/natRuleCollections/properties/action
             PathPython: /natRuleCollections/action
@@ -844,7 +894,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: rules
             NameAnsible: rules
             NamePythonSdk: rules
@@ -892,7 +944,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: description
                 NameAnsible: description
                 NamePythonSdk: description
@@ -922,7 +976,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: sourceAddresses
                 NameAnsible: source_addresses
                 NamePythonSdk: source_addresses
@@ -954,7 +1010,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: destinationAddresses
                 NameAnsible: destination_addresses
                 NamePythonSdk: destination_addresses
@@ -986,7 +1044,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: destinationPorts
                 NameAnsible: destination_ports
                 NamePythonSdk: destination_ports
@@ -1018,7 +1078,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: protocols
                 NameAnsible: protocols
                 NamePythonSdk: protocols
@@ -1062,7 +1124,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: translatedAddress
                 NameAnsible: translated_address
                 NamePythonSdk: translated_address
@@ -1094,7 +1158,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: translatedPort
                 NameAnsible: translated_port
                 NamePythonSdk: translated_port
@@ -1124,7 +1190,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/natRuleCollections/properties/rules
             PathPython: /natRuleCollections/rules
@@ -1136,7 +1204,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - &ref_4
             NameSwagger: provisioningState
             NameAnsible: provisioning_state
@@ -1179,7 +1249,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: name
             NameAnsible: name
             NamePythonSdk: name
@@ -1211,7 +1283,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - &ref_5
             NameSwagger: etag
             NameAnsible: etag
@@ -1244,7 +1318,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/natRuleCollections
         PathPython: /natRuleCollections
@@ -1256,7 +1332,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: networkRuleCollections
         NameAnsible: network_rule_collections
         NamePythonSdk: network_rule_collections
@@ -1304,7 +1382,9 @@ Modules:
             ExampleValue: null
             Hidden: true
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: priority
             NameAnsible: priority
             NamePythonSdk: priority
@@ -1334,7 +1414,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: int32
             Flatten: false
+            Kind: 1
           - NameSwagger: action
             NameAnsible: action
             NamePythonSdk: action
@@ -1388,7 +1470,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/networkRuleCollections/properties/action
             PathPython: /networkRuleCollections/action
@@ -1400,7 +1484,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: rules
             NameAnsible: rules
             NamePythonSdk: rules
@@ -1448,7 +1534,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: description
                 NameAnsible: description
                 NamePythonSdk: description
@@ -1480,7 +1568,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: protocols
                 NameAnsible: protocols
                 NamePythonSdk: protocols
@@ -1522,7 +1612,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: sourceAddresses
                 NameAnsible: source_addresses
                 NamePythonSdk: source_addresses
@@ -1554,7 +1646,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: destinationAddresses
                 NameAnsible: destination_addresses
                 NamePythonSdk: destination_addresses
@@ -1586,7 +1680,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: destinationPorts
                 NameAnsible: destination_ports
                 NamePythonSdk: destination_ports
@@ -1618,7 +1714,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/networkRuleCollections/properties/rules
             PathPython: /networkRuleCollections/rules
@@ -1630,7 +1728,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - &ref_6
             NameSwagger: provisioningState
             NameAnsible: provisioning_state
@@ -1673,7 +1773,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: name
             NameAnsible: name
             NamePythonSdk: name
@@ -1705,7 +1807,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - &ref_7
             NameSwagger: etag
             NameAnsible: etag
@@ -1738,7 +1842,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/networkRuleCollections
         PathPython: /networkRuleCollections
@@ -1750,7 +1856,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: ipConfigurations
         NameAnsible: ip_configurations
         NamePythonSdk: ip_configurations
@@ -1798,7 +1906,9 @@ Modules:
             ExampleValue: null
             Hidden: true
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: subnet
             NameAnsible: subnet
             NamePythonSdk: subnet
@@ -1830,7 +1940,9 @@ Modules:
             ExampleValue: null
             Hidden: true
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: id
             NameAnsible: id
             NamePythonSdk: id
@@ -1860,7 +1972,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: publicIPAddress
             NameAnsible: public_ip_address
             NamePythonSdk: public_ip_address
@@ -1892,7 +2006,9 @@ Modules:
             ExampleValue: null
             Hidden: true
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: id
             NameAnsible: id
             NamePythonSdk: id
@@ -1922,7 +2038,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - &ref_8
             NameSwagger: privateIPAddress
             NameAnsible: private_ip_address
@@ -1955,7 +2073,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - &ref_9
             NameSwagger: provisioningState
             NameAnsible: provisioning_state
@@ -1998,7 +2118,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: name
             NameAnsible: name
             NamePythonSdk: name
@@ -2030,7 +2152,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - &ref_10
             NameSwagger: etag
             NameAnsible: etag
@@ -2063,7 +2187,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/ipConfigurations
         PathPython: /ipConfigurations
@@ -2075,7 +2201,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_11
         NameSwagger: provisioningState
         NameAnsible: provisioning_state
@@ -2118,7 +2246,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_0
         NameSwagger: name
         NameAnsible: name
@@ -2149,7 +2279,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_1
         NameSwagger: type
         NameAnsible: type
@@ -2180,7 +2312,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_12
         NameSwagger: etag
         NameAnsible: etag
@@ -2213,7 +2347,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: CreateOrUpdate
         Options:
@@ -2304,7 +2440,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - *ref_0
       - *ref_1
       - NameSwagger: location
@@ -2336,7 +2474,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: tags
         NameAnsible: tags
         NamePythonSdk: tags
@@ -2370,7 +2510,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -2436,7 +2578,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: properties
                 NameAnsible: properties
                 NamePythonSdk: properties
@@ -2484,7 +2628,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: int32
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: action
                     NameAnsible: action
                     NamePythonSdk: action
@@ -2540,7 +2686,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/applicationRuleCollections/properties/action
                     PathPython: /applicationRuleCollections/action
@@ -2552,7 +2700,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: rules
                     NameAnsible: rules
                     NamePythonSdk: rules
@@ -2602,7 +2752,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: description
                         NameAnsible: description
                         NamePythonSdk: description
@@ -2634,7 +2786,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: sourceAddresses
                         NameAnsible: source_addresses
                         NamePythonSdk: source_addresses
@@ -2666,7 +2820,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: protocols
                         NameAnsible: protocols
                         NamePythonSdk: protocols
@@ -2698,7 +2854,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: targetFqdns
                         NameAnsible: target_fqdns
                         NamePythonSdk: target_fqdns
@@ -2730,7 +2888,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: fqdnTags
                         NameAnsible: fqdn_tags
                         NamePythonSdk: fqdn_tags
@@ -2762,7 +2922,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/applicationRuleCollections/properties/rules
                     PathPython: /applicationRuleCollections/rules
@@ -2774,7 +2936,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - *ref_2
                 EnumValues: []
                 PathSwagger: /properties/applicationRuleCollections/properties
@@ -2787,7 +2951,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: name
                 NameAnsible: name
                 NamePythonSdk: name
@@ -2819,7 +2985,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - *ref_3
             EnumValues: []
             PathSwagger: /properties/applicationRuleCollections
@@ -2832,7 +3000,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: natRuleCollections
             NameAnsible: nat_rule_collections
             NamePythonSdk: nat_rule_collections
@@ -2880,7 +3050,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: properties
                 NameAnsible: properties
                 NamePythonSdk: properties
@@ -2928,7 +3100,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: int32
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: action
                     NameAnsible: action
                     NamePythonSdk: action
@@ -2982,7 +3156,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/natRuleCollections/properties/action
                     PathPython: /natRuleCollections/action
@@ -2994,7 +3170,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: rules
                     NameAnsible: rules
                     NamePythonSdk: rules
@@ -3042,7 +3220,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: description
                         NameAnsible: description
                         NamePythonSdk: description
@@ -3074,7 +3254,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: sourceAddresses
                         NameAnsible: source_addresses
                         NamePythonSdk: source_addresses
@@ -3106,7 +3288,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: destinationAddresses
                         NameAnsible: destination_addresses
                         NamePythonSdk: destination_addresses
@@ -3138,7 +3322,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: destinationPorts
                         NameAnsible: destination_ports
                         NamePythonSdk: destination_ports
@@ -3170,7 +3356,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: protocols
                         NameAnsible: protocols
                         NamePythonSdk: protocols
@@ -3216,7 +3404,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: translatedAddress
                         NameAnsible: translated_address
                         NamePythonSdk: translated_address
@@ -3248,7 +3438,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: translatedPort
                         NameAnsible: translated_port
                         NamePythonSdk: translated_port
@@ -3280,7 +3472,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/natRuleCollections/properties/rules
                     PathPython: /natRuleCollections/rules
@@ -3292,7 +3486,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - *ref_4
                 EnumValues: []
                 PathSwagger: /properties/natRuleCollections/properties
@@ -3305,7 +3501,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: name
                 NameAnsible: name
                 NamePythonSdk: name
@@ -3337,7 +3535,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - *ref_5
             EnumValues: []
             PathSwagger: /properties/natRuleCollections
@@ -3350,7 +3550,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: networkRuleCollections
             NameAnsible: network_rule_collections
             NamePythonSdk: network_rule_collections
@@ -3398,7 +3600,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: properties
                 NameAnsible: properties
                 NamePythonSdk: properties
@@ -3446,7 +3650,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: int32
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: action
                     NameAnsible: action
                     NamePythonSdk: action
@@ -3502,7 +3708,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/networkRuleCollections/properties/action
                     PathPython: /networkRuleCollections/action
@@ -3514,7 +3722,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: rules
                     NameAnsible: rules
                     NamePythonSdk: rules
@@ -3564,7 +3774,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: description
                         NameAnsible: description
                         NamePythonSdk: description
@@ -3596,7 +3808,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: protocols
                         NameAnsible: protocols
                         NamePythonSdk: protocols
@@ -3640,7 +3854,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: sourceAddresses
                         NameAnsible: source_addresses
                         NamePythonSdk: source_addresses
@@ -3672,7 +3888,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: destinationAddresses
                         NameAnsible: destination_addresses
                         NamePythonSdk: destination_addresses
@@ -3704,7 +3922,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: destinationPorts
                         NameAnsible: destination_ports
                         NamePythonSdk: destination_ports
@@ -3736,7 +3956,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/networkRuleCollections/properties/rules
                     PathPython: /networkRuleCollections/rules
@@ -3748,7 +3970,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - *ref_6
                 EnumValues: []
                 PathSwagger: /properties/networkRuleCollections/properties
@@ -3761,7 +3985,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: name
                 NameAnsible: name
                 NamePythonSdk: name
@@ -3793,7 +4019,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - *ref_7
             EnumValues: []
             PathSwagger: /properties/networkRuleCollections
@@ -3806,7 +4034,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: ipConfigurations
             NameAnsible: ip_configurations
             NamePythonSdk: ip_configurations
@@ -3854,7 +4084,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: properties
                 NameAnsible: properties
                 NamePythonSdk: properties
@@ -3923,7 +4155,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/ipConfigurations/properties/subnet
                     PathPython: /ipConfigurations/subnet
@@ -3935,7 +4169,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: publicIPAddress
                     NameAnsible: public_ip_address
                     NamePythonSdk: public_ip_address
@@ -3987,7 +4223,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/ipConfigurations/properties/publicIPAddress
                     PathPython: /ipConfigurations/publicIPAddress
@@ -3999,7 +4237,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - *ref_9
                 EnumValues: []
                 PathSwagger: /properties/ipConfigurations/properties
@@ -4012,7 +4252,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: name
                 NameAnsible: name
                 NamePythonSdk: name
@@ -4044,7 +4286,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - *ref_10
             EnumValues: []
             PathSwagger: /properties/ipConfigurations
@@ -4057,7 +4301,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - *ref_11
         EnumValues: []
         PathSwagger: /properties
@@ -4070,7 +4316,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - *ref_12
     ModuleOperationNameUpper: AzureFirewalls
     ModuleOperationName: azure_firewalls
@@ -4379,6 +4627,8 @@ Modules:
           - network_publicipaddresses_put
         OperationId: '472'
         MethodId: '535'
+        OperationName: AzureFirewalls
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             api-version: '2018-11-01'
@@ -4406,2587 +4656,9 @@ Modules:
         References: []
         OperationId: '472'
         MethodId: '473'
-  - ModuleName: azure_rm_azurefirewall_info
-    Options:
-      - NameSwagger: resourceGroupName
-        NameAnsible: resource_group
-        NamePythonSdk: resource_group_name
-        NameGoSdk: ResourceGroup
-        NameTerraform: resourceGroup
-        IdPortion: resourceGroups
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: The name of the resource group.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: azureFirewallName
-        NameAnsible: name
-        NamePythonSdk: azure_firewall_name
-        NameGoSdk: AzureFirewallName
-        NameTerraform: name
-        IdPortion: azureFirewalls
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: The name of the Azure Firewall.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - &ref_13
-        NameSwagger: id
-        NameAnsible: id
-        NamePythonSdk: id
-        NameGoSdk: ID
-        NameTerraform: ID
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Resource ID.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /id
-        PathPython: /id
-        PathGo: /id
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_14
-        NameSwagger: name
-        NameAnsible: name
-        NamePythonSdk: name
-        NameGoSdk: Name
-        NameTerraform: Name
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Resource name.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /name
-        PathPython: /name
-        PathGo: /name
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_15
-        NameSwagger: type
-        NameAnsible: type
-        NamePythonSdk: type
-        NameGoSdk: Type
-        NameTerraform: Type
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Resource type.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /type
-        PathPython: /type
-        PathGo: /type
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_16
-        NameSwagger: location
-        NameAnsible: location
-        NamePythonSdk: location
-        NameGoSdk: Location
-        NameTerraform: Location
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Resource location.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /location
-        PathPython: /location
-        PathGo: /location
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_17
-        NameSwagger: tags
-        NameAnsible: tags
-        NamePythonSdk: tags
-        NameGoSdk: Tags
-        NameTerraform: Tags
-        IdPortion: null
-        Type: >-
-          unknown[DictionaryType
-          {"$id":"440","$type":"DictionaryType","valueType":{"$id":"441","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"442","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"443","fixed":false},"deprecated":false}]
-        TypeName: >-
-          {"$id":"440","$type":"DictionaryType","valueType":{"$id":"441","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"442","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"443","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"440","$type":"DictionaryType","valueType":{"$id":"441","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"442","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"443","fixed":false},"deprecated":false}
-        IsList: false
-        Required: false
-        Documentation: Resource tags.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /tags
-        PathPython: /tags
-        PathGo: /tags
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_18
-        NameSwagger: properties
-        NameAnsible: properties
-        NamePythonSdk: properties
-        NameGoSdk: Properties
-        NameTerraform: Properties
-        IdPortion: null
-        Type: dict
-        TypeName: AzureFirewallPropertiesFormat
-        TypeNameGo: AzureFirewallPropertiesFormat
-        IsList: false
-        Required: false
-        Documentation: ''
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties
-        PathPython: ''
-        PathGo: /properties
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: true
-        IncludeInResponse: true
-        Flatten: false
-      - NameSwagger: applicationRuleCollections
-        NameAnsible: application_rule_collections
-        NamePythonSdk: application_rule_collections
-        NameGoSdk: ApplicationRuleCollections
-        NameTerraform: ApplicationRuleCollections
-        IdPortion: null
-        Type: dict
-        TypeName: AzureFirewallApplicationRuleCollection
-        TypeNameGo: AzureFirewallApplicationRuleCollection
-        IsList: true
-        Required: false
-        Documentation: Collection of application rule collections used by Azure Firewall.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions:
-          - NameSwagger: properties
-            NameAnsible: properties
-            NamePythonSdk: properties
-            NameGoSdk: Properties
-            NameTerraform: Properties
-            IdPortion: null
-            Type: dict
-            TypeName: AzureFirewallApplicationRuleCollectionPropertiesFormat
-            TypeNameGo: AzureFirewallApplicationRuleCollectionPropertiesFormat
-            IsList: false
-            Required: false
-            Documentation: ''
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/applicationRuleCollections/properties
-            PathPython: /applicationRuleCollections
-            PathGo: /properties/applicationRuleCollections/properties
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: true
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: priority
-            NameAnsible: priority
-            NamePythonSdk: priority
-            NameGoSdk: Priority
-            NameTerraform: Priority
-            IdPortion: null
-            Type: number
-            TypeName: Int
-            TypeNameGo: Int
-            IsList: false
-            Required: false
-            Documentation: Priority of the application rule collection resource.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/applicationRuleCollections/properties/priority
-            PathPython: /applicationRuleCollections/priority
-            PathGo: /properties/applicationRuleCollections/properties/priority
-            DispositionSdk: '*'
-            DispositionRest: properties/*
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: action
-            NameAnsible: action
-            NamePythonSdk: action
-            NameGoSdk: Action
-            NameTerraform: Action
-            IdPortion: null
-            Type: dict
-            TypeName: AzureFirewallRCAction
-            TypeNameGo: AzureFirewallRCAction
-            IsList: false
-            Required: false
-            Documentation: The action type of a rule collection
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions:
-              - NameSwagger: type
-                NameAnsible: type
-                NamePythonSdk: type
-                NameGoSdk: Type
-                NameTerraform: Type
-                IdPortion: null
-                Type: str
-                TypeName: AzureFirewallRCActionType
-                TypeNameGo: AzureFirewallRCActionType
-                IsList: false
-                Required: false
-                Documentation: The type of action.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues:
-                  - Key: Allow
-                    Value: Allow
-                    Description: !<tag:yaml.org,2002:js/undefined> ''
-                  - Key: Deny
-                    Value: Deny
-                    Description: !<tag:yaml.org,2002:js/undefined> ''
-                PathSwagger: /properties/applicationRuleCollections/properties/action/type
-                PathPython: /applicationRuleCollections/action/type
-                PathGo: /properties/applicationRuleCollections/properties/action/type
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: true
-                IncludeInResponse: false
-                Flatten: false
-            EnumValues: []
-            PathSwagger: /properties/applicationRuleCollections/properties/action
-            PathPython: /applicationRuleCollections/action
-            PathGo: /properties/applicationRuleCollections/properties/action
-            DispositionSdk: '*'
-            DispositionRest: properties/*
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: rules
-            NameAnsible: rules
-            NamePythonSdk: rules
-            NameGoSdk: Rules
-            NameTerraform: Rules
-            IdPortion: null
-            Type: dict
-            TypeName: AzureFirewallApplicationRule
-            TypeNameGo: AzureFirewallApplicationRule
-            IsList: true
-            Required: false
-            Documentation: Collection of rules used by a application rule collection.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions:
-              - NameSwagger: name
-                NameAnsible: name
-                NamePythonSdk: name
-                NameGoSdk: Name
-                NameTerraform: Name
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: Name of the application rule.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/applicationRuleCollections/properties/rules/name
-                PathPython: /applicationRuleCollections/rules/name
-                PathGo: /properties/applicationRuleCollections/properties/rules/name
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: description
-                NameAnsible: description
-                NamePythonSdk: description
-                NameGoSdk: Description
-                NameTerraform: Description
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: Description of the rule.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: >-
-                  /properties/applicationRuleCollections/properties/rules/description
-                PathPython: /applicationRuleCollections/rules/description
-                PathGo: >-
-                  /properties/applicationRuleCollections/properties/rules/description
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: sourceAddresses
-                NameAnsible: source_addresses
-                NamePythonSdk: source_addresses
-                NameGoSdk: SourceAddresses
-                NameTerraform: SourceAddresses
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: true
-                Required: false
-                Documentation: List of source IP addresses for this rule.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: >-
-                  /properties/applicationRuleCollections/properties/rules/sourceAddresses
-                PathPython: /applicationRuleCollections/rules/sourceAddresses
-                PathGo: >-
-                  /properties/applicationRuleCollections/properties/rules/sourceAddresses
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: protocols
-                NameAnsible: protocols
-                NamePythonSdk: protocols
-                NameGoSdk: Protocols
-                NameTerraform: Protocols
-                IdPortion: null
-                Type: dict
-                TypeName: AzureFirewallApplicationRuleProtocol
-                TypeNameGo: AzureFirewallApplicationRuleProtocol
-                IsList: true
-                Required: false
-                Documentation: Array of ApplicationRuleProtocols.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: >-
-                  /properties/applicationRuleCollections/properties/rules/protocols
-                PathPython: /applicationRuleCollections/rules/protocols
-                PathGo: >-
-                  /properties/applicationRuleCollections/properties/rules/protocols
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: targetFqdns
-                NameAnsible: target_fqdns
-                NamePythonSdk: target_fqdns
-                NameGoSdk: TargetFqdns
-                NameTerraform: TargetFqdns
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: true
-                Required: false
-                Documentation: List of FQDNs for this rule.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: >-
-                  /properties/applicationRuleCollections/properties/rules/targetFqdns
-                PathPython: /applicationRuleCollections/rules/targetFqdns
-                PathGo: >-
-                  /properties/applicationRuleCollections/properties/rules/targetFqdns
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: fqdnTags
-                NameAnsible: fqdn_tags
-                NamePythonSdk: fqdn_tags
-                NameGoSdk: FqdnTags
-                NameTerraform: FqdnTags
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: true
-                Required: false
-                Documentation: List of FQDN Tags for this rule.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: >-
-                  /properties/applicationRuleCollections/properties/rules/fqdnTags
-                PathPython: /applicationRuleCollections/rules/fqdnTags
-                PathGo: >-
-                  /properties/applicationRuleCollections/properties/rules/fqdnTags
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-            EnumValues: []
-            PathSwagger: /properties/applicationRuleCollections/properties/rules
-            PathPython: /applicationRuleCollections/rules
-            PathGo: /properties/applicationRuleCollections/properties/rules
-            DispositionSdk: '*'
-            DispositionRest: properties/*
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: provisioningState
-            NameAnsible: provisioning_state
-            NamePythonSdk: provisioning_state
-            NameGoSdk: ProvisioningState
-            NameTerraform: ProvisioningState
-            IdPortion: null
-            Type: str
-            TypeName: ProvisioningState
-            TypeNameGo: ProvisioningState
-            IsList: false
-            Required: false
-            Documentation: The provisioning state of the resource.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues:
-              - Key: Succeeded
-                Value: Succeeded
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Updating
-                Value: Updating
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Deleting
-                Value: Deleting
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Failed
-                Value: Failed
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-            PathSwagger: >-
-              /properties/applicationRuleCollections/properties/provisioningState
-            PathPython: /applicationRuleCollections/provisioningState
-            PathGo: >-
-              /properties/applicationRuleCollections/properties/provisioningState
-            DispositionSdk: '*'
-            DispositionRest: properties/*
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: name
-            NameAnsible: name
-            NamePythonSdk: name
-            NameGoSdk: Name
-            NameTerraform: Name
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: >-
-              Gets name of the resource that is unique within a resource group.
-              This name can be used to access the resource.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/applicationRuleCollections/name
-            PathPython: /applicationRuleCollections/name
-            PathGo: /properties/applicationRuleCollections/name
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: etag
-            NameAnsible: etag
-            NamePythonSdk: etag
-            NameGoSdk: Etag
-            NameTerraform: Etag
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: >-
-              Gets a unique read-only string that changes whenever the resource
-              is updated.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/applicationRuleCollections/etag
-            PathPython: /applicationRuleCollections/etag
-            PathGo: /properties/applicationRuleCollections/etag
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /properties/applicationRuleCollections
-        PathPython: /applicationRuleCollections
-        PathGo: /properties/applicationRuleCollections
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: natRuleCollections
-        NameAnsible: nat_rule_collections
-        NamePythonSdk: nat_rule_collections
-        NameGoSdk: NatRuleCollections
-        NameTerraform: NatRuleCollections
-        IdPortion: null
-        Type: dict
-        TypeName: AzureFirewallNatRuleCollection
-        TypeNameGo: AzureFirewallNatRuleCollection
-        IsList: true
-        Required: false
-        Documentation: Collection of NAT rule collections used by Azure Firewall.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions:
-          - NameSwagger: properties
-            NameAnsible: properties
-            NamePythonSdk: properties
-            NameGoSdk: Properties
-            NameTerraform: Properties
-            IdPortion: null
-            Type: dict
-            TypeName: AzureFirewallNatRuleCollectionProperties
-            TypeNameGo: AzureFirewallNatRuleCollectionProperties
-            IsList: false
-            Required: false
-            Documentation: ''
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/natRuleCollections/properties
-            PathPython: /natRuleCollections
-            PathGo: /properties/natRuleCollections/properties
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: true
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: priority
-            NameAnsible: priority
-            NamePythonSdk: priority
-            NameGoSdk: Priority
-            NameTerraform: Priority
-            IdPortion: null
-            Type: number
-            TypeName: Int
-            TypeNameGo: Int
-            IsList: false
-            Required: false
-            Documentation: Priority of the NAT rule collection resource.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/natRuleCollections/properties/priority
-            PathPython: /natRuleCollections/priority
-            PathGo: /properties/natRuleCollections/properties/priority
-            DispositionSdk: '*'
-            DispositionRest: properties/*
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: action
-            NameAnsible: action
-            NamePythonSdk: action
-            NameGoSdk: Action
-            NameTerraform: Action
-            IdPortion: null
-            Type: dict
-            TypeName: AzureFirewallNatRCAction
-            TypeNameGo: AzureFirewallNatRCAction
-            IsList: false
-            Required: false
-            Documentation: The action type of a NAT rule collection
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions:
-              - NameSwagger: type
-                NameAnsible: type
-                NamePythonSdk: type
-                NameGoSdk: Type
-                NameTerraform: Type
-                IdPortion: null
-                Type: str
-                TypeName: AzureFirewallNatRCActionType
-                TypeNameGo: AzureFirewallNatRCActionType
-                IsList: false
-                Required: false
-                Documentation: The type of action.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues:
-                  - Key: Snat
-                    Value: Snat
-                    Description: !<tag:yaml.org,2002:js/undefined> ''
-                  - Key: Dnat
-                    Value: Dnat
-                    Description: !<tag:yaml.org,2002:js/undefined> ''
-                PathSwagger: /properties/natRuleCollections/properties/action/type
-                PathPython: /natRuleCollections/action/type
-                PathGo: /properties/natRuleCollections/properties/action/type
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-            EnumValues: []
-            PathSwagger: /properties/natRuleCollections/properties/action
-            PathPython: /natRuleCollections/action
-            PathGo: /properties/natRuleCollections/properties/action
-            DispositionSdk: '*'
-            DispositionRest: properties/*
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: rules
-            NameAnsible: rules
-            NamePythonSdk: rules
-            NameGoSdk: Rules
-            NameTerraform: Rules
-            IdPortion: null
-            Type: dict
-            TypeName: AzureFirewallNatRule
-            TypeNameGo: AzureFirewallNatRule
-            IsList: true
-            Required: false
-            Documentation: Collection of rules used by a NAT rule collection.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions:
-              - NameSwagger: name
-                NameAnsible: name
-                NamePythonSdk: name
-                NameGoSdk: Name
-                NameTerraform: Name
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: Name of the NAT rule.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/natRuleCollections/properties/rules/name
-                PathPython: /natRuleCollections/rules/name
-                PathGo: /properties/natRuleCollections/properties/rules/name
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: description
-                NameAnsible: description
-                NamePythonSdk: description
-                NameGoSdk: Description
-                NameTerraform: Description
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: Description of the rule.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/natRuleCollections/properties/rules/description
-                PathPython: /natRuleCollections/rules/description
-                PathGo: /properties/natRuleCollections/properties/rules/description
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: sourceAddresses
-                NameAnsible: source_addresses
-                NamePythonSdk: source_addresses
-                NameGoSdk: SourceAddresses
-                NameTerraform: SourceAddresses
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: true
-                Required: false
-                Documentation: List of source IP addresses for this rule.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: >-
-                  /properties/natRuleCollections/properties/rules/sourceAddresses
-                PathPython: /natRuleCollections/rules/sourceAddresses
-                PathGo: >-
-                  /properties/natRuleCollections/properties/rules/sourceAddresses
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: destinationAddresses
-                NameAnsible: destination_addresses
-                NamePythonSdk: destination_addresses
-                NameGoSdk: DestinationAddresses
-                NameTerraform: DestinationAddresses
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: true
-                Required: false
-                Documentation: List of destination IP addresses for this rule.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: >-
-                  /properties/natRuleCollections/properties/rules/destinationAddresses
-                PathPython: /natRuleCollections/rules/destinationAddresses
-                PathGo: >-
-                  /properties/natRuleCollections/properties/rules/destinationAddresses
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: destinationPorts
-                NameAnsible: destination_ports
-                NamePythonSdk: destination_ports
-                NameGoSdk: DestinationPorts
-                NameTerraform: DestinationPorts
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: true
-                Required: false
-                Documentation: List of destination ports.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: >-
-                  /properties/natRuleCollections/properties/rules/destinationPorts
-                PathPython: /natRuleCollections/rules/destinationPorts
-                PathGo: >-
-                  /properties/natRuleCollections/properties/rules/destinationPorts
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: protocols
-                NameAnsible: protocols
-                NamePythonSdk: protocols
-                NameGoSdk: Protocols
-                NameTerraform: Protocols
-                IdPortion: null
-                Type: str
-                TypeName: AzureFirewallNetworkRuleProtocol
-                TypeNameGo: AzureFirewallNetworkRuleProtocol
-                IsList: true
-                Required: false
-                Documentation: >-
-                  Array of AzureFirewallNetworkRuleProtocols applicable to this
-                  NAT rule.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues:
-                  - Key: TCP
-                    Value: TCP
-                    Description: !<tag:yaml.org,2002:js/undefined> ''
-                  - Key: UDP
-                    Value: UDP
-                    Description: !<tag:yaml.org,2002:js/undefined> ''
-                  - Key: Any
-                    Value: Any
-                    Description: !<tag:yaml.org,2002:js/undefined> ''
-                  - Key: ICMP
-                    Value: ICMP
-                    Description: !<tag:yaml.org,2002:js/undefined> ''
-                PathSwagger: /properties/natRuleCollections/properties/rules/protocols
-                PathPython: /natRuleCollections/rules/protocols
-                PathGo: /properties/natRuleCollections/properties/rules/protocols
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: translatedAddress
-                NameAnsible: translated_address
-                NamePythonSdk: translated_address
-                NameGoSdk: TranslatedAddress
-                NameTerraform: TranslatedAddress
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: The translated address for this NAT rule.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: >-
-                  /properties/natRuleCollections/properties/rules/translatedAddress
-                PathPython: /natRuleCollections/rules/translatedAddress
-                PathGo: >-
-                  /properties/natRuleCollections/properties/rules/translatedAddress
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: translatedPort
-                NameAnsible: translated_port
-                NamePythonSdk: translated_port
-                NameGoSdk: TranslatedPort
-                NameTerraform: TranslatedPort
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: The translated port for this NAT rule.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/natRuleCollections/properties/rules/translatedPort
-                PathPython: /natRuleCollections/rules/translatedPort
-                PathGo: /properties/natRuleCollections/properties/rules/translatedPort
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-            EnumValues: []
-            PathSwagger: /properties/natRuleCollections/properties/rules
-            PathPython: /natRuleCollections/rules
-            PathGo: /properties/natRuleCollections/properties/rules
-            DispositionSdk: '*'
-            DispositionRest: properties/*
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: provisioningState
-            NameAnsible: provisioning_state
-            NamePythonSdk: provisioning_state
-            NameGoSdk: ProvisioningState
-            NameTerraform: ProvisioningState
-            IdPortion: null
-            Type: str
-            TypeName: ProvisioningState
-            TypeNameGo: ProvisioningState
-            IsList: false
-            Required: false
-            Documentation: The provisioning state of the resource.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues:
-              - Key: Succeeded
-                Value: Succeeded
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Updating
-                Value: Updating
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Deleting
-                Value: Deleting
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Failed
-                Value: Failed
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-            PathSwagger: /properties/natRuleCollections/properties/provisioningState
-            PathPython: /natRuleCollections/provisioningState
-            PathGo: /properties/natRuleCollections/properties/provisioningState
-            DispositionSdk: '*'
-            DispositionRest: properties/*
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: name
-            NameAnsible: name
-            NamePythonSdk: name
-            NameGoSdk: Name
-            NameTerraform: Name
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: >-
-              Gets name of the resource that is unique within a resource group.
-              This name can be used to access the resource.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/natRuleCollections/name
-            PathPython: /natRuleCollections/name
-            PathGo: /properties/natRuleCollections/name
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: etag
-            NameAnsible: etag
-            NamePythonSdk: etag
-            NameGoSdk: Etag
-            NameTerraform: Etag
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: >-
-              Gets a unique read-only string that changes whenever the resource
-              is updated.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/natRuleCollections/etag
-            PathPython: /natRuleCollections/etag
-            PathGo: /properties/natRuleCollections/etag
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /properties/natRuleCollections
-        PathPython: /natRuleCollections
-        PathGo: /properties/natRuleCollections
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: networkRuleCollections
-        NameAnsible: network_rule_collections
-        NamePythonSdk: network_rule_collections
-        NameGoSdk: NetworkRuleCollections
-        NameTerraform: NetworkRuleCollections
-        IdPortion: null
-        Type: dict
-        TypeName: AzureFirewallNetworkRuleCollection
-        TypeNameGo: AzureFirewallNetworkRuleCollection
-        IsList: true
-        Required: false
-        Documentation: Collection of network rule collections used by Azure Firewall.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions:
-          - NameSwagger: properties
-            NameAnsible: properties
-            NamePythonSdk: properties
-            NameGoSdk: Properties
-            NameTerraform: Properties
-            IdPortion: null
-            Type: dict
-            TypeName: AzureFirewallNetworkRuleCollectionPropertiesFormat
-            TypeNameGo: AzureFirewallNetworkRuleCollectionPropertiesFormat
-            IsList: false
-            Required: false
-            Documentation: ''
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/networkRuleCollections/properties
-            PathPython: /networkRuleCollections
-            PathGo: /properties/networkRuleCollections/properties
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: true
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: priority
-            NameAnsible: priority
-            NamePythonSdk: priority
-            NameGoSdk: Priority
-            NameTerraform: Priority
-            IdPortion: null
-            Type: number
-            TypeName: Int
-            TypeNameGo: Int
-            IsList: false
-            Required: false
-            Documentation: Priority of the network rule collection resource.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/networkRuleCollections/properties/priority
-            PathPython: /networkRuleCollections/priority
-            PathGo: /properties/networkRuleCollections/properties/priority
-            DispositionSdk: '*'
-            DispositionRest: properties/*
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: action
-            NameAnsible: action
-            NamePythonSdk: action
-            NameGoSdk: Action
-            NameTerraform: Action
-            IdPortion: null
-            Type: dict
-            TypeName: AzureFirewallRCAction
-            TypeNameGo: AzureFirewallRCAction
-            IsList: false
-            Required: false
-            Documentation: The action type of a rule collection
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions:
-              - NameSwagger: type
-                NameAnsible: type
-                NamePythonSdk: type
-                NameGoSdk: Type
-                NameTerraform: Type
-                IdPortion: null
-                Type: str
-                TypeName: AzureFirewallRCActionType
-                TypeNameGo: AzureFirewallRCActionType
-                IsList: false
-                Required: false
-                Documentation: The type of action.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues:
-                  - Key: Allow
-                    Value: Allow
-                    Description: !<tag:yaml.org,2002:js/undefined> ''
-                  - Key: Deny
-                    Value: Deny
-                    Description: !<tag:yaml.org,2002:js/undefined> ''
-                PathSwagger: /properties/networkRuleCollections/properties/action/type
-                PathPython: /networkRuleCollections/action/type
-                PathGo: /properties/networkRuleCollections/properties/action/type
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-            EnumValues: []
-            PathSwagger: /properties/networkRuleCollections/properties/action
-            PathPython: /networkRuleCollections/action
-            PathGo: /properties/networkRuleCollections/properties/action
-            DispositionSdk: '*'
-            DispositionRest: properties/*
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: rules
-            NameAnsible: rules
-            NamePythonSdk: rules
-            NameGoSdk: Rules
-            NameTerraform: Rules
-            IdPortion: null
-            Type: dict
-            TypeName: AzureFirewallNetworkRule
-            TypeNameGo: AzureFirewallNetworkRule
-            IsList: true
-            Required: false
-            Documentation: Collection of rules used by a network rule collection.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions:
-              - NameSwagger: name
-                NameAnsible: name
-                NamePythonSdk: name
-                NameGoSdk: Name
-                NameTerraform: Name
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: Name of the network rule.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/networkRuleCollections/properties/rules/name
-                PathPython: /networkRuleCollections/rules/name
-                PathGo: /properties/networkRuleCollections/properties/rules/name
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: description
-                NameAnsible: description
-                NamePythonSdk: description
-                NameGoSdk: Description
-                NameTerraform: Description
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: Description of the rule.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: >-
-                  /properties/networkRuleCollections/properties/rules/description
-                PathPython: /networkRuleCollections/rules/description
-                PathGo: >-
-                  /properties/networkRuleCollections/properties/rules/description
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: protocols
-                NameAnsible: protocols
-                NamePythonSdk: protocols
-                NameGoSdk: Protocols
-                NameTerraform: Protocols
-                IdPortion: null
-                Type: str
-                TypeName: AzureFirewallNetworkRuleProtocol
-                TypeNameGo: AzureFirewallNetworkRuleProtocol
-                IsList: true
-                Required: false
-                Documentation: Array of AzureFirewallNetworkRuleProtocols.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues:
-                  - Key: TCP
-                    Value: TCP
-                    Description: !<tag:yaml.org,2002:js/undefined> ''
-                  - Key: UDP
-                    Value: UDP
-                    Description: !<tag:yaml.org,2002:js/undefined> ''
-                  - Key: Any
-                    Value: Any
-                    Description: !<tag:yaml.org,2002:js/undefined> ''
-                  - Key: ICMP
-                    Value: ICMP
-                    Description: !<tag:yaml.org,2002:js/undefined> ''
-                PathSwagger: /properties/networkRuleCollections/properties/rules/protocols
-                PathPython: /networkRuleCollections/rules/protocols
-                PathGo: /properties/networkRuleCollections/properties/rules/protocols
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: sourceAddresses
-                NameAnsible: source_addresses
-                NamePythonSdk: source_addresses
-                NameGoSdk: SourceAddresses
-                NameTerraform: SourceAddresses
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: true
-                Required: false
-                Documentation: List of source IP addresses for this rule.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: >-
-                  /properties/networkRuleCollections/properties/rules/sourceAddresses
-                PathPython: /networkRuleCollections/rules/sourceAddresses
-                PathGo: >-
-                  /properties/networkRuleCollections/properties/rules/sourceAddresses
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: destinationAddresses
-                NameAnsible: destination_addresses
-                NamePythonSdk: destination_addresses
-                NameGoSdk: DestinationAddresses
-                NameTerraform: DestinationAddresses
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: true
-                Required: false
-                Documentation: List of destination IP addresses.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: >-
-                  /properties/networkRuleCollections/properties/rules/destinationAddresses
-                PathPython: /networkRuleCollections/rules/destinationAddresses
-                PathGo: >-
-                  /properties/networkRuleCollections/properties/rules/destinationAddresses
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: destinationPorts
-                NameAnsible: destination_ports
-                NamePythonSdk: destination_ports
-                NameGoSdk: DestinationPorts
-                NameTerraform: DestinationPorts
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: true
-                Required: false
-                Documentation: List of destination ports.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: >-
-                  /properties/networkRuleCollections/properties/rules/destinationPorts
-                PathPython: /networkRuleCollections/rules/destinationPorts
-                PathGo: >-
-                  /properties/networkRuleCollections/properties/rules/destinationPorts
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-            EnumValues: []
-            PathSwagger: /properties/networkRuleCollections/properties/rules
-            PathPython: /networkRuleCollections/rules
-            PathGo: /properties/networkRuleCollections/properties/rules
-            DispositionSdk: '*'
-            DispositionRest: properties/*
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: provisioningState
-            NameAnsible: provisioning_state
-            NamePythonSdk: provisioning_state
-            NameGoSdk: ProvisioningState
-            NameTerraform: ProvisioningState
-            IdPortion: null
-            Type: str
-            TypeName: ProvisioningState
-            TypeNameGo: ProvisioningState
-            IsList: false
-            Required: false
-            Documentation: The provisioning state of the resource.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues:
-              - Key: Succeeded
-                Value: Succeeded
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Updating
-                Value: Updating
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Deleting
-                Value: Deleting
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Failed
-                Value: Failed
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-            PathSwagger: /properties/networkRuleCollections/properties/provisioningState
-            PathPython: /networkRuleCollections/provisioningState
-            PathGo: /properties/networkRuleCollections/properties/provisioningState
-            DispositionSdk: '*'
-            DispositionRest: properties/*
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: name
-            NameAnsible: name
-            NamePythonSdk: name
-            NameGoSdk: Name
-            NameTerraform: Name
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: >-
-              Gets name of the resource that is unique within a resource group.
-              This name can be used to access the resource.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/networkRuleCollections/name
-            PathPython: /networkRuleCollections/name
-            PathGo: /properties/networkRuleCollections/name
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: etag
-            NameAnsible: etag
-            NamePythonSdk: etag
-            NameGoSdk: Etag
-            NameTerraform: Etag
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: >-
-              Gets a unique read-only string that changes whenever the resource
-              is updated.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/networkRuleCollections/etag
-            PathPython: /networkRuleCollections/etag
-            PathGo: /properties/networkRuleCollections/etag
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /properties/networkRuleCollections
-        PathPython: /networkRuleCollections
-        PathGo: /properties/networkRuleCollections
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: ipConfigurations
-        NameAnsible: ip_configurations
-        NamePythonSdk: ip_configurations
-        NameGoSdk: IpConfigurations
-        NameTerraform: IpConfigurations
-        IdPortion: null
-        Type: dict
-        TypeName: AzureFirewallIPConfiguration
-        TypeNameGo: AzureFirewallIPConfiguration
-        IsList: true
-        Required: false
-        Documentation: IP configuration of the Azure Firewall resource.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions:
-          - NameSwagger: properties
-            NameAnsible: properties
-            NamePythonSdk: properties
-            NameGoSdk: Properties
-            NameTerraform: Properties
-            IdPortion: null
-            Type: dict
-            TypeName: AzureFirewallIPConfigurationPropertiesFormat
-            TypeNameGo: AzureFirewallIPConfigurationPropertiesFormat
-            IsList: false
-            Required: false
-            Documentation: ''
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/ipConfigurations/properties
-            PathPython: /ipConfigurations
-            PathGo: /properties/ipConfigurations/properties
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: true
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: privateIPAddress
-            NameAnsible: private_ip_address
-            NamePythonSdk: private_ip_address
-            NameGoSdk: PrivateIpAddress
-            NameTerraform: PrivateIpAddress
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: >-
-              The Firewall Internal Load Balancer IP to be used as the next hop
-              in User Defined Routes.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/ipConfigurations/properties/privateIPAddress
-            PathPython: /ipConfigurations/privateIPAddress
-            PathGo: /properties/ipConfigurations/properties/privateIPAddress
-            DispositionSdk: '*'
-            DispositionRest: properties/*
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: subnet
-            NameAnsible: subnet
-            NamePythonSdk: subnet
-            NameGoSdk: Subnet
-            NameTerraform: Subnet
-            IdPortion: null
-            Type: dict
-            TypeName: SubResource
-            TypeNameGo: SubResource
-            IsList: false
-            Required: false
-            Documentation: >-
-              Reference of the subnet resource. This resource must be named
-              'AzureFirewallSubnet'.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/ipConfigurations/properties/subnet
-            PathPython: /ipConfigurations/subnet
-            PathGo: /properties/ipConfigurations/properties/subnet
-            DispositionSdk: '*'
-            DispositionRest: properties/*
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: true
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: id
-            NameAnsible: id
-            NamePythonSdk: id
-            NameGoSdk: ID
-            NameTerraform: id
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: Resource ID.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/ipConfigurations/properties/subnet/id
-            PathPython: /ipConfigurations/subnet/id
-            PathGo: /properties/ipConfigurations/properties/subnet/id
-            DispositionSdk: subnet/id
-            DispositionRest: properties/subnet/id
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: publicIPAddress
-            NameAnsible: public_ip_address
-            NamePythonSdk: public_ip_address
-            NameGoSdk: PublicIpAddress
-            NameTerraform: PublicIpAddress
-            IdPortion: null
-            Type: dict
-            TypeName: SubResource
-            TypeNameGo: SubResource
-            IsList: false
-            Required: false
-            Documentation: >-
-              Reference of the PublicIP resource. This field is a mandatory
-              input if subnet is not null.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/ipConfigurations/properties/publicIPAddress
-            PathPython: /ipConfigurations/publicIPAddress
-            PathGo: /properties/ipConfigurations/properties/publicIPAddress
-            DispositionSdk: '*'
-            DispositionRest: properties/*
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: true
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: id
-            NameAnsible: id
-            NamePythonSdk: id
-            NameGoSdk: ID
-            NameTerraform: id
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: Resource ID.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/ipConfigurations/properties/publicIPAddress/id
-            PathPython: /ipConfigurations/publicIPAddress/id
-            PathGo: /properties/ipConfigurations/properties/publicIPAddress/id
-            DispositionSdk: public_ip_address/id
-            DispositionRest: properties/publicIPAddress/id
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: provisioningState
-            NameAnsible: provisioning_state
-            NamePythonSdk: provisioning_state
-            NameGoSdk: ProvisioningState
-            NameTerraform: ProvisioningState
-            IdPortion: null
-            Type: str
-            TypeName: ProvisioningState
-            TypeNameGo: ProvisioningState
-            IsList: false
-            Required: false
-            Documentation: The provisioning state of the resource.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues:
-              - Key: Succeeded
-                Value: Succeeded
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Updating
-                Value: Updating
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Deleting
-                Value: Deleting
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Failed
-                Value: Failed
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-            PathSwagger: /properties/ipConfigurations/properties/provisioningState
-            PathPython: /ipConfigurations/provisioningState
-            PathGo: /properties/ipConfigurations/properties/provisioningState
-            DispositionSdk: '*'
-            DispositionRest: properties/*
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: name
-            NameAnsible: name
-            NamePythonSdk: name
-            NameGoSdk: Name
-            NameTerraform: Name
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: >-
-              Name of the resource that is unique within a resource group. This
-              name can be used to access the resource.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/ipConfigurations/name
-            PathPython: /ipConfigurations/name
-            PathGo: /properties/ipConfigurations/name
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: etag
-            NameAnsible: etag
-            NamePythonSdk: etag
-            NameGoSdk: Etag
-            NameTerraform: Etag
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: >-
-              A unique read-only string that changes whenever the resource is
-              updated.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/ipConfigurations/etag
-            PathPython: /ipConfigurations/etag
-            PathGo: /properties/ipConfigurations/etag
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /properties/ipConfigurations
-        PathPython: /ipConfigurations
-        PathGo: /properties/ipConfigurations
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: provisioningState
-        NameAnsible: provisioning_state
-        NamePythonSdk: provisioning_state
-        NameGoSdk: ProvisioningState
-        NameTerraform: ProvisioningState
-        IdPortion: null
-        Type: str
-        TypeName: ProvisioningState
-        TypeNameGo: ProvisioningState
-        IsList: false
-        Required: false
-        Documentation: The provisioning state of the resource.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues:
-          - Key: Succeeded
-            Value: Succeeded
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Updating
-            Value: Updating
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Deleting
-            Value: Deleting
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Failed
-            Value: Failed
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-        PathSwagger: /properties/provisioningState
-        PathPython: /provisioningState
-        PathGo: /properties/provisioningState
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - &ref_19
-        NameSwagger: etag
-        NameAnsible: etag
-        NamePythonSdk: etag
-        NameGoSdk: Etag
-        NameTerraform: Etag
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: >-
-          Gets a unique read-only string that changes whenever the resource is
-          updated.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /etag
-        PathPython: /etag
-        PathGo: /etag
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-    Methods:
-      - Name: ListAll
-        Options: []
-        RequiredOptions: []
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/Microsoft.Network/azureFirewalls
-        HttpMethod: get
-        IsAsync: false
-      - Name: List
-        Options:
-          - resourceGroupName
-        RequiredOptions:
-          - resourceGroupName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.Network/azureFirewalls
-        HttpMethod: get
-        IsAsync: false
-      - Name: Get
-        Options:
-          - resourceGroupName
-          - azureFirewallName
-        RequiredOptions:
-          - resourceGroupName
-          - azureFirewallName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.Network/azureFirewalls/{{ azure_firewall_name
-          }}
-        HttpMethod: get
-        IsAsync: false
-    ResponseFields:
-      - *ref_13
-      - *ref_14
-      - *ref_15
-      - *ref_16
-      - *ref_17
-      - *ref_18
-      - *ref_19
-    ModuleOperationNameUpper: AzureFirewalls
-    ModuleOperationName: azure_firewalls
-    ObjectName: AzureFirewall
-    ResourceNameFieldInResponse: null
-    NeedsDeleteBeforeUpdate: false
-    NeedsForceUpdate: false
-    CannotTestUpdate: false
-    Provider: Microsoft.Network
-    ApiVersion: '2018-11-01'
-    Examples:
-      - Example:
-          parameters:
-            api-version: '2018-11-01'
-            subscriptionId: subid
-          responses:
-            '200':
-              body:
-                value:
-                  - name: azurefirewall
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Network/azureFirewalls/{{
-                      azure_firewall_name }}
-                    type: Microsoft.Network/azureFirewalls
-                    etag: w/\00000000-0000-0000-0000-000000000000\
-                    location: West US
-                    tags:
-                      key1: value1
-                    properties:
-                      provisioningState: Succeeded
-                      ipConfigurations:
-                        - name: azureFirewallIpConfiguration
-                          id: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/Microsoft.Network/azureFirewalls/{{
-                            azure_firewall_name }}/ipConfigurations/{{
-                            ip_configuration_name }}
-                          etag: w/\00000000-0000-0000-0000-000000000000\
-                          properties:
-                            provisioningState: Succeeded
-                            privateIPAddress: 10.0.0.0
-                            subnet:
-                              id: >-
-                                /subscriptions/{{ subscription_id
-                                }}/resourceGroups/{{ resource_group
-                                }}/providers/Microsoft.Network/virtualNetworks/{{
-                                virtual_network_name }}/subnets/{{ subnet_name
-                                }}
-                            publicIPAddress:
-                              id: >-
-                                /subscriptions/{{ subscription_id
-                                }}/resourceGroups/{{ resource_group
-                                }}/providers/Microsoft.Network/publicIPAddresses/{{
-                                public_ip_address_name }}
-                      applicationRuleCollections:
-                        - name: apprulecoll
-                          properties:
-                            priority: '110'
-                            action:
-                              type: Deny
-                            rules:
-                              - name: rule1
-                                description: Deny inbound rule
-                                protocols:
-                                  - protocolType: Https
-                                    port: '443'
-                                targetFqdns:
-                                  - www.test.com
-                                sourceAddresses:
-                                  - 216.58.216.164
-                                  - 10.0.0.0/24
-                      natRuleCollections:
-                        - name: natrulecoll
-                          properties:
-                            priority: '112'
-                            action:
-                              type: Dnat
-                            rules:
-                              - name: DNAT-HTTPS-traffic
-                                description: D-NAT all outbound web traffic for inspection
-                                sourceAddresses:
-                                  - '*'
-                                destinationAddresses:
-                                  - 1.2.3.4
-                                destinationPorts:
-                                  - '443'
-                                protocols:
-                                  - TCP
-                                translatedAddress: 1.2.3.5
-                                translatedPort: '8443'
-                      networkRuleCollections:
-                        - name: netrulecoll
-                          properties:
-                            priority: '112'
-                            action:
-                              type: Deny
-                            rules:
-                              - name: L4-traffic
-                                description: Block traffic based on source IPs and ports
-                                sourceAddresses:
-                                  - 192.168.1.1-192.168.1.12
-                                  - 10.1.4.12-10.1.4.255
-                                destinationPorts:
-                                  - 443-444
-                                  - '8443'
-                                destinationAddresses:
-                                  - '*'
-                                protocols:
-                                  - TCP
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/Microsoft.Network/azureFirewalls
-        Method: get
-        Name: List all Azure Firewalls for a given subscription
-        Filename: network_azurefirewalls_get_2
-        Variables: []
-        References: []
-        OperationId: '472'
-        MethodId: '594'
-      - Example:
-          parameters:
-            api-version: '2018-11-01'
-            subscriptionId: subid
-            resourceGroupName: rg1
-          responses:
-            '200':
-              body:
-                value:
-                  - name: azurefirewall
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Network/azureFirewalls/{{
-                      azure_firewall_name }}
-                    type: Microsoft.Network/azureFirewalls
-                    etag: w/\00000000-0000-0000-0000-000000000000\
-                    location: West US
-                    tags:
-                      key1: value1
-                    properties:
-                      provisioningState: Succeeded
-                      ipConfigurations:
-                        - name: azureFirewallIpConfiguration
-                          id: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/Microsoft.Network/azureFirewalls/{{
-                            azure_firewall_name }}/ipConfigurations/{{
-                            ip_configuration_name }}
-                          etag: w/\00000000-0000-0000-0000-000000000000\
-                          properties:
-                            provisioningState: Succeeded
-                            privateIPAddress: 10.0.0.0
-                            subnet:
-                              id: >-
-                                /subscriptions/{{ subscription_id
-                                }}/resourceGroups/{{ resource_group
-                                }}/providers/Microsoft.Network/virtualNetworks/{{
-                                virtual_network_name }}/subnets/{{ subnet_name
-                                }}
-                            publicIPAddress:
-                              id: >-
-                                /subscriptions/{{ subscription_id
-                                }}/resourceGroups/{{ resource_group
-                                }}/providers/Microsoft.Network/publicIPAddresses/{{
-                                public_ip_address_name }}
-                      applicationRuleCollections:
-                        - name: apprulecoll
-                          properties:
-                            priority: '110'
-                            action:
-                              type: Deny
-                            rules:
-                              - name: rule1
-                                description: Deny inbound rule
-                                protocols:
-                                  - protocolType: Https
-                                    port: '443'
-                                targetFqdns:
-                                  - www.test.com
-                                sourceAddresses:
-                                  - 216.58.216.164
-                                  - 10.0.0.0/24
-                      natRuleCollections:
-                        - name: natrulecoll
-                          properties:
-                            priority: '112'
-                            action:
-                              type: Dnat
-                            rules:
-                              - name: DNAT-HTTPS-traffic
-                                description: D-NAT all outbound web traffic for inspection
-                                sourceAddresses:
-                                  - '*'
-                                destinationAddresses:
-                                  - 1.2.3.4
-                                destinationPorts:
-                                  - '443'
-                                protocols:
-                                  - TCP
-                                translatedAddress: 1.2.3.5
-                                translatedPort: '8443'
-                      networkRuleCollections:
-                        - name: netrulecoll
-                          properties:
-                            priority: '112'
-                            action:
-                              type: Deny
-                            rules:
-                              - name: L4-traffic
-                                description: Block traffic based on source IPs and ports
-                                sourceAddresses:
-                                  - 192.168.1.1-192.168.1.12
-                                  - 10.1.4.12-10.1.4.255
-                                destinationPorts:
-                                  - 443-444
-                                  - '8443'
-                                destinationAddresses:
-                                  - '*'
-                                protocols:
-                                  - TCP
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.Network/azureFirewalls
-        Method: get
-        Name: List all Azure Firewalls for a given resource group
-        Filename: network_azurefirewalls_get_1
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-        References: []
-        OperationId: '472'
-        MethodId: '570'
-      - Example:
-          parameters:
-            api-version: '2018-11-01'
-            subscriptionId: subid
-            resourceGroupName: rg1
-            azureFirewallName: azurefirewall
-          responses:
-            '200':
-              body:
-                name: azurefirewall
-                id: >-
-                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                  resource_group
-                  }}/providers/Microsoft.Network/azureFirewalls/{{
-                  azure_firewall_name }}
-                type: Microsoft.Network/azureFirewalls
-                etag: w/\00000000-0000-0000-0000-000000000000\
-                location: West US
-                tags:
-                  key1: value1
-                properties:
-                  provisioningState: Succeeded
-                  ipConfigurations:
-                    - name: azureFirewallIpConfiguration
-                      id: >-
-                        /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                        resource_group
-                        }}/providers/Microsoft.Network/azureFirewalls/{{
-                        azure_firewall_name }}/ipConfigurations/{{
-                        ip_configuration_name }}
-                      etag: w/\00000000-0000-0000-0000-000000000000\
-                      properties:
-                        provisioningState: Succeeded
-                        privateIPAddress: 10.0.0.0
-                        subnet:
-                          id: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/Microsoft.Network/virtualNetworks/{{
-                            virtual_network_name }}/subnets/{{ subnet_name }}
-                        publicIPAddress:
-                          id: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/Microsoft.Network/publicIPAddresses/{{
-                            public_ip_address_name }}
-                  applicationRuleCollections:
-                    - name: apprulecoll
-                      properties:
-                        priority: '110'
-                        action:
-                          type: Deny
-                        rules:
-                          - name: rule1
-                            description: Deny inbound rule
-                            protocols:
-                              - protocolType: Https
-                                port: '443'
-                            targetFqdns:
-                              - www.test.com
-                            sourceAddresses:
-                              - 216.58.216.164
-                              - 10.0.0.0/24
-                  natRuleCollections:
-                    - name: natrulecoll
-                      properties:
-                        priority: '112'
-                        action:
-                          type: Dnat
-                        rules:
-                          - name: DNAT-HTTPS-traffic
-                            description: D-NAT all outbound web traffic for inspection
-                            sourceAddresses:
-                              - '*'
-                            destinationAddresses:
-                              - 1.2.3.4
-                            destinationPorts:
-                              - '443'
-                            protocols:
-                              - TCP
-                            translatedAddress: 1.2.3.5
-                            translatedPort: '8443'
-                  networkRuleCollections:
-                    - name: netrulecoll
-                      properties:
-                        priority: '112'
-                        action:
-                          type: Deny
-                        rules:
-                          - name: L4-traffic
-                            description: Block traffic based on source IPs and ports
-                            sourceAddresses:
-                              - 192.168.1.1-192.168.1.12
-                              - 10.1.4.12-10.1.4.255
-                            destinationPorts:
-                              - 443-444
-                              - '8443'
-                            destinationAddresses:
-                              - '*'
-                            protocols:
-                              - TCP
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.Network/azureFirewalls/{{ azure_firewall_name
-          }}
-        Method: get
-        Name: Get Azure Firewall
-        Filename: network_azurefirewalls_get
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-          - name: azure_firewall_name
-            value: myAzureFirewall
-            swaggerName: azureFirewallName
-        References: []
-        OperationId: '472'
-        MethodId: '505'
+        OperationName: AzureFirewalls
+        MethodName: Delete
 ServiceName: NetworkManagementClient
 MgmtClientName: NetworkManagementClient
 CliName: network
 Namespace: azure.mgmt.network
-Info:
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION azureFirewallName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION azureFirewallName'
