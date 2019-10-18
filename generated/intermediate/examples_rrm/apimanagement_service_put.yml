@@ -14,7 +14,7 @@
     - name: ApiManagementCreateService
       azure_rm_apimanagementservice:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         tags:
           tag1: value1
           tag2: value2

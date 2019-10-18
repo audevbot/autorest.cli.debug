@@ -15,6 +15,6 @@
         resource_group: '{{resource_group}}'
         account_name: '{{batch_account_name}}'
         application_name: '{{application_name}}'
-        name: '{{version_name}}'
+        version_name: '{{version_name}}'
         state: absent
     

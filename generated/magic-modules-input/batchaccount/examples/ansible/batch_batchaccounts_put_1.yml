@@ -4,7 +4,7 @@ task: !ruby/object:Provider::Ansible::Task
   description: BatchAccountCreate_BYOS
   code:
     resource_group: myResourceGroup
-    name: myBatchAccount
+    account_name: myBatchAccount
     location: japaneast
     auto_storage_account_id: >-
       /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group

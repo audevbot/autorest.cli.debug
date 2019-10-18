@@ -31,9 +31,10 @@ options:
       - referer url
     required: true
     type: str
-  name:
+  dedicated_cloud_node_name:
     description:
-      - '{dedicatedCloudNodeName}'
+      - dedicated cloud node name
+    required: true
     type: str
   location:
     description:
@@ -127,6 +128,10 @@ options:
       - >-
         /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/dedicatedCloudNodes/{dedicatedCloudNodeName}
     type: str
+  name:
+    description:
+      - '{dedicatedCloudNodeName}'
+    type: str
   type:
     description:
       - '{resourceProviderNamespace}/{resourceType}'
@@ -154,7 +159,7 @@ EXAMPLES = '''
   azure_rm_vmwarecloudsimplededicatedcloudnode:
     resource_group: myResourceGroup
     referer: 'https://management.azure.com/'
-    name: myDedicatedCloudNode
+    dedicated_cloud_node_name: myDedicatedCloudNode
     dedicated_cloud_node_request:
       location: westus
       properties:
@@ -171,14 +176,14 @@ EXAMPLES = '''
   azure_rm_vmwarecloudsimplededicatedcloudnode:
     resource_group: myResourceGroup
     referer: 'https://management.azure.com/'
-    name: myDedicatedCloudNode
+    dedicated_cloud_node_name: myDedicatedCloudNode
     dedicated_cloud_node_request:
       tags:
         myTag: tagValue
 - name: DeleteDedicatedCloudNode
   azure_rm_vmwarecloudsimplededicatedcloudnode:
     resource_group: myResourceGroup
-    name: myDedicatedCloudNode
+    dedicated_cloud_node_name: myDedicatedCloudNode
     state: absent
 
 '''
@@ -383,7 +388,7 @@ class Actions:
     NoAction, Create, Update, Delete = range(4)
 
 
-class AzureRMDedicatedCloudNode(AzureRMModuleBaseExt):
+class AzureRMDedicatedCloudNodes(AzureRMModuleBaseExt):
     def __init__(self):
         self.module_arg_spec = dict(
             resource_group=dict(
@@ -398,7 +403,7 @@ class AzureRMDedicatedCloudNode(AzureRMModuleBaseExt):
                 disposition='Referer',
                 required=true
             ),
-            name=dict(
+            dedicated_cloud_node_name=dict(
                 type='str',
                 updatable=False,
                 disposition='dedicatedCloudNodeName',
@@ -474,7 +479,7 @@ class AzureRMDedicatedCloudNode(AzureRMModuleBaseExt):
 
         self.resource_group = None
         self.referer = None
-        self.name = None
+        self.dedicated_cloud_node_name = None
         self.id = None
         self.name = None
         self.type = None
@@ -492,9 +497,9 @@ class AzureRMDedicatedCloudNode(AzureRMModuleBaseExt):
         self.header_parameters = {}
         self.header_parameters['Content-Type'] = 'application/json; charset=utf-8'
 
-        super(AzureRMDedicatedCloudNode, self).__init__(derived_arg_spec=self.module_arg_spec,
-                                                        supports_check_mode=True,
-                                                        supports_tags=True)
+        super(AzureRMDedicatedCloudNodes, self).__init__(derived_arg_spec=self.module_arg_spec,
+                                                         supports_check_mode=True,
+                                                         supports_tags=True)
 
     def exec_module(self, **kwargs):
         for key in list(self.module_arg_spec.keys()):
@@ -659,7 +664,7 @@ class AzureRMDedicatedCloudNode(AzureRMModuleBaseExt):
 
 
 def main():
-    AzureRMDedicatedCloudNode()
+    AzureRMDedicatedCloudNodes()
 
 
 if __name__ == '__main__':

@@ -33,9 +33,13 @@ options:
         Definition is to be created.
     required: true
     type: str
-  name:
+  gallery_application_name:
     description:
-      - Resource name
+      - >-
+        The name of the gallery Application Definition to be created or updated.
+        The allowed characters are alphabets and numbers with dots, dashes, and
+        periods allowed in the middle. The maximum length is 80 characters.
+    required: true
     type: str
   location:
     description:
@@ -79,6 +83,10 @@ options:
     description:
       - Resource Id
     type: str
+  name:
+    description:
+      - Resource name
+    type: str
   type:
     description:
       - Resource type
@@ -106,7 +114,7 @@ EXAMPLES = '''
   azure_rm_computegalleryapplication:
     resource_group: myResourceGroup
     gallery_name: myGallery
-    name: myApplication
+    gallery_application_name: myApplication
     gallery_application:
       location: West US
       properties:
@@ -119,7 +127,7 @@ EXAMPLES = '''
   azure_rm_computegalleryapplication:
     resource_group: myResourceGroup
     gallery_name: myGallery
-    name: myApplication
+    gallery_application_name: myApplication
     state: absent
 
 '''
@@ -244,10 +252,9 @@ class AzureRMGalleryApplications(AzureRMModuleBaseExt):
                 updatable=False,
                 required=true
             ),
-            name=dict(
+            gallery_application_name=dict(
                 type='str',
                 updatable=False,
-                disposition='gallery_application_name',
                 required=true
             ),
             location=dict(
@@ -292,7 +299,7 @@ class AzureRMGalleryApplications(AzureRMModuleBaseExt):
 
         self.resource_group = None
         self.gallery_name = None
-        self.name = None
+        self.gallery_application_name = None
         self.id = None
         self.name = None
         self.type = None
@@ -369,7 +376,7 @@ class AzureRMGalleryApplications(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.gallery_applications.create_or_update(resource_group_name=self.resource_group,
                                                                               gallery_name=self.gallery_name,
-                                                                              gallery_application_name=self.name,
+                                                                              gallery_application_name=self.gallery_application_name,
                                                                               gallery_application=self.galleryApplication)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
@@ -383,7 +390,7 @@ class AzureRMGalleryApplications(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.gallery_applications.delete(resource_group_name=self.resource_group,
                                                                     gallery_name=self.gallery_name,
-                                                                    gallery_application_name=self.name)
+                                                                    gallery_application_name=self.gallery_application_name)
         except CloudError as e:
             self.log('Error attempting to delete the GalleryApplication instance.')
             self.fail('Error deleting the GalleryApplication instance: {0}'.format(str(e)))
@@ -396,7 +403,7 @@ class AzureRMGalleryApplications(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.gallery_applications.get(resource_group_name=self.resource_group,
                                                                  gallery_name=self.gallery_name,
-                                                                 gallery_application_name=self.name)
+                                                                 gallery_application_name=self.gallery_application_name)
         except CloudError as e:
             return False
         return response.as_dict()

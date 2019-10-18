@@ -36,9 +36,10 @@ options:
       - The topic name.
     required: true
     type: str
-  name:
+  subscription_name:
     description:
-      - Resource name
+      - The subscription name.
+    required: true
     type: str
   lock_duration:
     description:
@@ -149,6 +150,10 @@ options:
     description:
       - Resource Id
     type: str
+  name:
+    description:
+      - Resource name
+    type: str
   type:
     description:
       - Resource type
@@ -176,14 +181,14 @@ EXAMPLES = '''
     resource_group: myResourceGroup
     namespace_name: my
     topic_name: myTopic
-    name: sdk-Subscriptions-2178
+    subscription_name: sdk-Subscriptions-2178
     enable_batched_operations: true
 - name: SubscriptionDelete
   azure_rm_servicebussubscription:
     resource_group: myResourceGroup
     namespace_name: my
     topic_name: myTopic
-    name: sdk-Subscriptions-3670
+    subscription_name: sdk-Subscriptions-3670
     state: absent
 
 '''
@@ -406,10 +411,9 @@ class AzureRMSubscriptions(AzureRMModuleBaseExt):
                 updatable=False,
                 required=true
             ),
-            name=dict(
+            subscription_name=dict(
                 type='str',
                 updatable=False,
-                disposition='subscription_name',
                 required=true
             ),
             lock_duration=dict(
@@ -479,7 +483,7 @@ class AzureRMSubscriptions(AzureRMModuleBaseExt):
         self.resource_group = None
         self.namespace_name = None
         self.topic_name = None
-        self.name = None
+        self.subscription_name = None
         self.id = None
         self.name = None
         self.type = None
@@ -555,7 +559,7 @@ class AzureRMSubscriptions(AzureRMModuleBaseExt):
             response = self.mgmt_client.subscriptions.create_or_update(resource_group_name=self.resource_group,
                                                                        namespace_name=self.namespace_name,
                                                                        topic_name=self.topic_name,
-                                                                       subscription_name=self.name,
+                                                                       subscription_name=self.subscription_name,
                                                                        parameters=self.body)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
@@ -570,7 +574,7 @@ class AzureRMSubscriptions(AzureRMModuleBaseExt):
             response = self.mgmt_client.subscriptions.delete(resource_group_name=self.resource_group,
                                                              namespace_name=self.namespace_name,
                                                              topic_name=self.topic_name,
-                                                             subscription_name=self.name)
+                                                             subscription_name=self.subscription_name)
         except CloudError as e:
             self.log('Error attempting to delete the Subscription instance.')
             self.fail('Error deleting the Subscription instance: {0}'.format(str(e)))
@@ -584,7 +588,7 @@ class AzureRMSubscriptions(AzureRMModuleBaseExt):
             response = self.mgmt_client.subscriptions.get(resource_group_name=self.resource_group,
                                                           namespace_name=self.namespace_name,
                                                           topic_name=self.topic_name,
-                                                          subscription_name=self.name)
+                                                          subscription_name=self.subscription_name)
         except CloudError as e:
             return False
         return response.as_dict()

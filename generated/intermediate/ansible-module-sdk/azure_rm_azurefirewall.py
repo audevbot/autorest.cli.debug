@@ -26,9 +26,10 @@ options:
       - The name of the resource group.
     required: true
     type: str
-  name:
+  azure_firewall_name:
     description:
-      - Resource name.
+      - The name of the Azure Firewall.
+    required: true
     type: str
   id:
     description:
@@ -267,6 +268,10 @@ options:
     description:
       - The provisioning state of the resource.
     type: str
+  name:
+    description:
+      - Resource name.
+    type: str
   type:
     description:
       - Resource type.
@@ -299,7 +304,7 @@ EXAMPLES = '''
 - name: Create Azure Firewall
   azure_rm_azurefirewall:
     resource_group: myResourceGroup
-    name: myAzureFirewall
+    azure_firewall_name: myAzureFirewall
     tags:
       key1: value1
     application_rule_collections:
@@ -308,14 +313,9 @@ EXAMPLES = '''
         rules:
           - name: rule1
             description: Deny inbound rule
-            source_addresses:
-              - 216.58.216.164
-              - 10.0.0.0/24
             protocols:
-              - protocolType: Https
+              - protocol_type: Https
                 port: '443'
-            target_fqdns:
-              - www.test.com
         name: apprulecoll
     nat_rule_collections:
       - priority: '112'
@@ -324,16 +324,8 @@ EXAMPLES = '''
         rules:
           - name: DNAT-HTTPS-traffic
             description: D-NAT all outbound web traffic for inspection
-            source_addresses:
-              - '*'
-            destination_addresses:
-              - 1.2.3.4
-            destination_ports:
-              - '443'
             protocols:
               - TCP
-            translated_address: 1.2.3.5
-            translated_port: '8443'
         name: natrulecoll
     network_rule_collections:
       - priority: '112'
@@ -344,25 +336,17 @@ EXAMPLES = '''
             description: Block traffic based on source IPs and ports
             protocols:
               - TCP
-            source_addresses:
-              - 192.168.1.1-192.168.1.12
-              - 10.1.4.12-10.1.4.255
-            destination_addresses:
-              - '*'
-            destination_ports:
-              - 443-444
-              - '8443'
         name: netrulecoll
     ip_configurations:
       - id: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.Network/publicIPAddresses/{{
-          public_ip_address_name }}
+          }}/providers/Microsoft.Network/virtualNetworks/{{ virtual_network_name
+          }}/subnets/{{ subnet_name }}
         name: azureFirewallIpConfiguration
 - name: Delete Azure Firewall
   azure_rm_azurefirewall:
     resource_group: myResourceGroup
-    name: myAzureFirewall
+    azure_firewall_name: myAzureFirewall
     state: absent
 
 '''
@@ -858,10 +842,9 @@ class AzureRMAzureFirewalls(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            name=dict(
+            azure_firewall_name=dict(
                 type='str',
                 updatable=False,
-                disposition='azure_firewall_name',
                 required=true
             ),
             id=dict(
@@ -1029,11 +1012,8 @@ class AzureRMAzureFirewalls(AzureRMModuleBaseExt):
                                  '/{{ name }}')
                     ),
                     id=dict(
-                        type='raw',
-                        disposition='public_ip_address/id',
-                        pattern=('//subscriptions/{{ subscription_id }}/resourceGroups'
-                                 '/{{ resource_group }}/providers/Microsoft.Network'
-                                 '/publicIPAddresses/{{ name }}')
+                        type='str',
+                        disposition='public_ip_address/id'
                     ),
                     name=dict(
                         type='str'
@@ -1048,7 +1028,7 @@ class AzureRMAzureFirewalls(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.azure_firewall_name = None
         self.name = None
         self.type = None
         self.etag = None
@@ -1125,7 +1105,7 @@ class AzureRMAzureFirewalls(AzureRMModuleBaseExt):
     def create_update_resource(self):
         try:
             response = self.mgmt_client.azure_firewalls.create_or_update(resource_group_name=self.resource_group,
-                                                                         azure_firewall_name=self.name,
+                                                                         azure_firewall_name=self.azure_firewall_name,
                                                                          parameters=self.body)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
@@ -1138,7 +1118,7 @@ class AzureRMAzureFirewalls(AzureRMModuleBaseExt):
         # self.log('Deleting the AzureFirewall instance {0}'.format(self.))
         try:
             response = self.mgmt_client.azure_firewalls.delete(resource_group_name=self.resource_group,
-                                                               azure_firewall_name=self.name)
+                                                               azure_firewall_name=self.azure_firewall_name)
         except CloudError as e:
             self.log('Error attempting to delete the AzureFirewall instance.')
             self.fail('Error deleting the AzureFirewall instance: {0}'.format(str(e)))
@@ -1150,7 +1130,7 @@ class AzureRMAzureFirewalls(AzureRMModuleBaseExt):
         found = False
         try:
             response = self.mgmt_client.azure_firewalls.get(resource_group_name=self.resource_group,
-                                                            azure_firewall_name=self.name)
+                                                            azure_firewall_name=self.azure_firewall_name)
         except CloudError as e:
             return False
         return response.as_dict()

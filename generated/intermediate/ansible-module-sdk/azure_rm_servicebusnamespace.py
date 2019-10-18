@@ -26,9 +26,10 @@ options:
       - Name of the Resource group within the Azure subscription.
     required: true
     type: str
-  name:
+  namespace_name:
     description:
-      - Resource name
+      - The namespace name.
+    required: true
     type: str
   location:
     description:
@@ -79,6 +80,10 @@ options:
     description:
       - Resource Id
     type: str
+  name:
+    description:
+      - Resource name
+    type: str
   type:
     description:
       - Resource type
@@ -105,7 +110,7 @@ EXAMPLES = '''
 - name: NameSpaceCreate
   azure_rm_servicebusnamespace:
     resource_group: myResourceGroup
-    name: my
+    namespace_name: my
     location: South Central US
     tags:
       tag1: value1
@@ -116,7 +121,7 @@ EXAMPLES = '''
 - name: NameSpaceUpdate
   azure_rm_servicebusnamespace:
     resource_group: myResourceGroup
-    name: my
+    namespace_name: my
     location: South Central US
     tags:
       tag3: value3
@@ -124,7 +129,7 @@ EXAMPLES = '''
 - name: NameSpaceDelete
   azure_rm_servicebusnamespace:
     resource_group: myResourceGroup
-    name: my
+    namespace_name: my
     state: absent
 
 '''
@@ -257,10 +262,9 @@ class AzureRMNamespaces(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            name=dict(
+            namespace_name=dict(
                 type='str',
                 updatable=False,
-                disposition='namespace_name',
                 required=true
             ),
             location=dict(
@@ -299,7 +303,7 @@ class AzureRMNamespaces(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.namespace_name = None
         self.id = None
         self.name = None
         self.type = None
@@ -376,7 +380,7 @@ class AzureRMNamespaces(AzureRMModuleBaseExt):
     def create_update_resource(self):
         try:
             response = self.mgmt_client.namespaces.create_or_update(resource_group_name=self.resource_group,
-                                                                    namespace_name=self.name,
+                                                                    namespace_name=self.namespace_name,
                                                                     parameters=self.body)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
@@ -389,7 +393,7 @@ class AzureRMNamespaces(AzureRMModuleBaseExt):
         # self.log('Deleting the Namespace instance {0}'.format(self.))
         try:
             response = self.mgmt_client.namespaces.delete(resource_group_name=self.resource_group,
-                                                          namespace_name=self.name)
+                                                          namespace_name=self.namespace_name)
         except CloudError as e:
             self.log('Error attempting to delete the Namespace instance.')
             self.fail('Error deleting the Namespace instance: {0}'.format(str(e)))
@@ -401,7 +405,7 @@ class AzureRMNamespaces(AzureRMModuleBaseExt):
         found = False
         try:
             response = self.mgmt_client.namespaces.get(resource_group_name=self.resource_group,
-                                                       namespace_name=self.name)
+                                                       namespace_name=self.namespace_name)
         except CloudError as e:
             return False
         return response.as_dict()

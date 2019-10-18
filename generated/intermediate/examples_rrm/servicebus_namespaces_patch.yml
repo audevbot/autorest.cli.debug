@@ -14,7 +14,7 @@
     - name: NameSpaceUpdate
       azure_rm_servicebusnamespace:
         resource_group: '{{resource_group}}'
-        name: '{{namespace_name}}'
+        namespace_name: '{{namespace_name}}'
         location: South Central US
         tags:
           tag3: value3

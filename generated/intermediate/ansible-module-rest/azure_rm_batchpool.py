@@ -31,7 +31,7 @@ options:
       - The name of the Batch account.
     required: true
     type: str
-  name:
+  pool_name:
     description:
       - The pool name. This must be unique within the account.
     required: true
@@ -974,7 +974,7 @@ EXAMPLES = '''
   azure_rm_batchpool:
     resource_group: myResourceGroup
     account_name: myBatchAccount
-    name: myPool
+    pool_name: myPool
     vm_size: STANDARD_D4
     deployment_configuration:
       cloud_service_configuration:
@@ -986,7 +986,7 @@ EXAMPLES = '''
   azure_rm_batchpool:
     resource_group: myResourceGroup
     account_name: myBatchAccount
-    name: myPool
+    pool_name: myPool
     vm_size: STANDARD_D4
     deployment_configuration:
       virtual_machine_configuration:
@@ -1004,7 +1004,7 @@ EXAMPLES = '''
   azure_rm_batchpool:
     resource_group: myResourceGroup
     account_name: myBatchAccount
-    name: myPool
+    pool_name: myPool
     display_name: my-pool-name
     vm_size: STANDARD_D4
     deployment_configuration:
@@ -1027,27 +1027,12 @@ EXAMPLES = '''
         inbound_nat_pools:
           - name: testnat
             protocol: TCP
-            backend_port: '12001'
-            frontend_port_range_start: '15000'
-            frontend_port_range_end: '15100'
-            network_security_group_rules:
-              - access: Allow
-                sourceAddressPrefix: 192.100.12.45
-                priority: '150'
-              - access: Deny
-                sourceAddressPrefix: '*'
-                priority: '3500'
     max_tasks_per_node: '13'
     task_scheduling_policy:
       node_fill_type: Pack
     user_accounts:
       - name: username1
         password: examplepassword
-        elevation_level: Admin
-        linux_user_configuration:
-          uid: '1234'
-          gid: '4567'
-          ssh_private_key: sshprivatekeyvalue
     metadata:
       - name: metadata-1
         value: value-1
@@ -1056,9 +1041,7 @@ EXAMPLES = '''
     start_task:
       command_line: cmd /c SET
       resource_files:
-        - http_url: 'https://testaccount.blob.core.windows.net/example-blob-file'
-          file_path: 'c:\temp\gohere'
-          file_mode: '777'
+        - {}
       environment_settings:
         - name: MYSET
           value: '1234'
@@ -1073,8 +1056,6 @@ EXAMPLES = '''
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.Batch/batchAccounts/{{ batch_account_name
           }}/pools/{{ pool_name }}/certificates/{{ certificate_name }}
-        store_location: LocalMachine
-        store_name: MY
         visibility:
           - RemoteUser
     application_packages:
@@ -1090,7 +1071,7 @@ EXAMPLES = '''
   azure_rm_batchpool:
     resource_group: myResourceGroup
     account_name: myBatchAccount
-    name: myPool
+    pool_name: myPool
     vm_size: STANDARD_D4
     deployment_configuration:
       virtual_machine_configuration:
@@ -1104,7 +1085,7 @@ EXAMPLES = '''
   azure_rm_batchpool:
     resource_group: myResourceGroup
     account_name: myBatchAccount
-    name: myPool
+    pool_name: myPool
     vm_size: STANDARD_D4
     deployment_configuration:
       virtual_machine_configuration:
@@ -1119,12 +1100,8 @@ EXAMPLES = '''
         data_disks:
           - lun: '0'
             caching: ReadWrite
-            disk_size_gb: '30'
-            storage_account_type: Premium_LRS
           - lun: '1'
             caching: None
-            disk_size_gb: '200'
-            storage_account_type: Standard_LRS
         license_type: Windows_Server
     scale_settings:
       auto_scale:
@@ -1135,21 +1112,11 @@ EXAMPLES = '''
         inbound_nat_pools:
           - name: testnat
             protocol: TCP
-            backend_port: '12001'
-            frontend_port_range_start: '15000'
-            frontend_port_range_end: '15100'
-            network_security_group_rules:
-              - access: Allow
-                sourceAddressPrefix: 192.100.12.45
-                priority: '150'
-              - access: Deny
-                sourceAddressPrefix: '*'
-                priority: '3500'
 - name: UpdatePool - Resize Pool
   azure_rm_batchpool:
     resource_group: myResourceGroup
     account_name: myBatchAccount
-    name: myPool
+    pool_name: myPool
     scale_settings:
       fixed_scale:
         resize_timeout: PT8M
@@ -1160,7 +1127,7 @@ EXAMPLES = '''
   azure_rm_batchpool:
     resource_group: myResourceGroup
     account_name: myBatchAccount
-    name: myPool
+    pool_name: myPool
     scale_settings:
       auto_scale:
         formula: $TargetDedicatedNodes=34
@@ -1168,13 +1135,13 @@ EXAMPLES = '''
   azure_rm_batchpool:
     resource_group: myResourceGroup
     account_name: myBatchAccount
-    name: myPool
+    pool_name: myPool
     start_task: {}
 - name: UpdatePool - Other Properties
   azure_rm_batchpool:
     resource_group: myResourceGroup
     account_name: myBatchAccount
-    name: myPool
+    pool_name: myPool
     metadata:
       - name: key1
         value: value1
@@ -1183,8 +1150,6 @@ EXAMPLES = '''
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.Batch/batchAccounts/{{ batch_account_name
           }}/pools/{{ pool_name }}/certificates/{{ certificate_name }}
-        store_location: LocalMachine
-        store_name: MY
     application_packages:
       - id: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
@@ -1199,7 +1164,7 @@ EXAMPLES = '''
   azure_rm_batchpool:
     resource_group: myResourceGroup
     account_name: myBatchAccount
-    name: myPool
+    pool_name: myPool
     state: absent
 
 '''
@@ -2415,7 +2380,7 @@ class AzureRMPool(AzureRMModuleBaseExt):
                 disposition='accountName',
                 required=true
             ),
-            name=dict(
+            pool_name=dict(
                 type='str',
                 updatable=False,
                 disposition='poolName',
@@ -2915,7 +2880,7 @@ class AzureRMPool(AzureRMModuleBaseExt):
 
         self.resource_group = None
         self.account_name = None
-        self.name = None
+        self.pool_name = None
         self.id = None
         self.etag = None
 

@@ -31,7 +31,7 @@ options:
       - The name of the Batch account.
     required: true
     type: str
-  name:
+  application_name:
     description:
       - The name of the application. This must be unique within the account.
     required: true
@@ -83,14 +83,14 @@ EXAMPLES = '''
   azure_rm_batchapplication:
     resource_group: myResourceGroup
     account_name: myBatchAccount
-    name: myApplication
+    application_name: myApplication
     display_name: myAppName
     allow_updates: false
 - name: ApplicationUpdate
   azure_rm_batchapplication:
     resource_group: myResourceGroup
     account_name: myBatchAccount
-    name: myApplication
+    application_name: myApplication
     display_name: myAppName
     allow_updates: true
     default_version: '2'
@@ -98,7 +98,7 @@ EXAMPLES = '''
   azure_rm_batchapplication:
     resource_group: myResourceGroup
     account_name: myBatchAccount
-    name: myApplication
+    application_name: myApplication
     state: absent
 
 '''
@@ -194,10 +194,9 @@ class AzureRMApplication(AzureRMModuleBaseExt):
                 updatable=False,
                 required=true
             ),
-            name=dict(
+            application_name=dict(
                 type='str',
                 updatable=False,
-                disposition='application_name',
                 required=true
             ),
             display_name=dict(
@@ -221,7 +220,7 @@ class AzureRMApplication(AzureRMModuleBaseExt):
 
         self.resource_group = None
         self.account_name = None
-        self.name = None
+        self.application_name = None
         self.id = None
         self.etag = None
         self.body = {}
@@ -297,11 +296,11 @@ class AzureRMApplication(AzureRMModuleBaseExt):
             if self.to_do == Actions.Create:
                 response = self.mgmt_client.application.create(resource_group_name=self.resource_group,
                                                                account_name=self.account_name,
-                                                               application_name=self.name)
+                                                               application_name=self.application_name)
             else:
                 response = self.mgmt_client.application.update(resource_group_name=self.resource_group,
                                                                account_name=self.account_name,
-                                                               application_name=self.name,
+                                                               application_name=self.application_name,
                                                                parameters=self.body)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
@@ -315,7 +314,7 @@ class AzureRMApplication(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.application.delete(resource_group_name=self.resource_group,
                                                            account_name=self.account_name,
-                                                           application_name=self.name)
+                                                           application_name=self.application_name)
         except CloudError as e:
             self.log('Error attempting to delete the Application instance.')
             self.fail('Error deleting the Application instance: {0}'.format(str(e)))
@@ -328,7 +327,7 @@ class AzureRMApplication(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.application.get(resource_group_name=self.resource_group,
                                                         account_name=self.account_name,
-                                                        application_name=self.name)
+                                                        application_name=self.application_name)
         except CloudError as e:
             return False
         return response.as_dict()

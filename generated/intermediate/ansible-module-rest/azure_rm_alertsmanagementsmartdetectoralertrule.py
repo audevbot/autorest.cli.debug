@@ -26,9 +26,10 @@ options:
       - The name of the resource group.
     required: true
     type: str
-  name:
+  alert_rule_name:
     description:
-      - The resource name.
+      - The name of the alert rule.
+    required: true
     type: str
   location:
     description:
@@ -147,6 +148,10 @@ options:
     description:
       - The resource type.
     type: str
+  name:
+    description:
+      - The resource name.
+    type: str
 extends_documentation_fragment:
   - azure
   - azure_tags
@@ -159,7 +164,7 @@ EXAMPLES = '''
 - name: Create or update a Smart Detector alert rule
   azure_rm_alertsmanagementsmartdetectoralertrule:
     resource_group: myResourceGroup
-    name: mySmartDetectorAlertRule
+    alert_rule_name: mySmartDetectorAlertRule
     description: Sample smart detector alert rule description
     state: Enabled
     severity: Sev3
@@ -180,7 +185,7 @@ EXAMPLES = '''
 - name: Delete a Smart Detector alert rule
   azure_rm_alertsmanagementsmartdetectoralertrule:
     resource_group: myResourceGroup
-    name: mySmartDetectorAlertRule
+    alert_rule_name: mySmartDetectorAlertRule
     state: absent
 
 '''
@@ -380,7 +385,7 @@ class AzureRMSmartDetectorAlertRules(AzureRMModuleBaseExt):
                 disposition='resourceGroupName',
                 required=true
             ),
-            name=dict(
+            alert_rule_name=dict(
                 type='str',
                 updatable=False,
                 disposition='alertRuleName',
@@ -492,7 +497,7 @@ class AzureRMSmartDetectorAlertRules(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.alert_rule_name = None
         self.id = None
         self.type = None
         self.name = None

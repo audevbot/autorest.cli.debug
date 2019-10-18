@@ -11,6 +11,6 @@
     - name: ApiManagementServiceDeleteService
       azure_rm_apimanagementservice:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         state: absent
     

@@ -4,7 +4,7 @@ task: !ruby/object:Provider::Ansible::Task
   description: ApiManagementCreateServiceHavingMsi
   code:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     tags:
       tag1: value1
       tag2: value2

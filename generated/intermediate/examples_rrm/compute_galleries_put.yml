@@ -14,7 +14,7 @@
     - name: Create or update a simple gallery.
       azure_rm_computegallery:
         resource_group: '{{resource_group}}'
-        name: '{{gallery_name}}'
+        gallery_name: '{{gallery_name}}'
         gallery:
           location: West US
           properties:

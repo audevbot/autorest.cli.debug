@@ -31,13 +31,18 @@ options:
       - The name of the API Management service.
     required: true
     type: str
-  name:
+  notification_name:
     description:
-      - Resource name.
+      - Notification Name Identifier.
+    required: true
     type: str
   id:
     description:
       - Resource ID.
+    type: str
+  name:
+    description:
+      - Resource name.
     type: str
   type:
     description:
@@ -87,7 +92,7 @@ EXAMPLES = '''
   azure_rm_apimanagementnotification:
     resource_group: myResourceGroup
     service_name: myService
-    name: myNotification
+    notification_name: myNotification
 
 '''
 
@@ -152,10 +157,9 @@ class AzureRMNotification(AzureRMModuleBaseExt):
                 updatable=False,
                 required=true
             ),
-            name=dict(
+            notification_name=dict(
                 type='str',
                 updatable=False,
-                disposition='notification_name',
                 required=true
             ),
             title=dict(
@@ -188,7 +192,7 @@ class AzureRMNotification(AzureRMModuleBaseExt):
 
         self.resource_group = None
         self.service_name = None
-        self.name = None
+        self.notification_name = None
         self.id = None
         self.name = None
         self.type = None
@@ -264,7 +268,7 @@ class AzureRMNotification(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.notification.create_or_update(resource_group_name=self.resource_group,
                                                                       service_name=self.service_name,
-                                                                      notification_name=self.name)
+                                                                      notification_name=self.notification_name)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
         except CloudError as exc:
@@ -288,7 +292,7 @@ class AzureRMNotification(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.notification.get(resource_group_name=self.resource_group,
                                                          service_name=self.service_name,
-                                                         notification_name=self.name)
+                                                         notification_name=self.notification_name)
         except CloudError as e:
             return False
         return response.as_dict()

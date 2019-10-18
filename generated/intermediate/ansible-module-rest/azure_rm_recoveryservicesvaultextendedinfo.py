@@ -28,9 +28,10 @@ options:
         present.
     required: true
     type: str
-  name:
+  vault_name:
     description:
-      - Resource name associated with the resource.
+      - The name of the recovery services vault.
+    required: true
     type: str
   e_tag:
     description:
@@ -55,6 +56,10 @@ options:
   id:
     description:
       - Resource Id represents the complete path to the resource.
+    type: str
+  name:
+    description:
+      - Resource name associated with the resource.
     type: str
   type:
     description:
@@ -83,7 +88,7 @@ EXAMPLES = '''
 - name: Put ExtendedInfo of Resource
   azure_rm_recoveryservicesvaultextendedinfo:
     resource_group: myResourceGroup
-    name: myVault
+    vault_name: myVault
     resource_resource_extended_info_details:
       properties:
         integrityKey: J99wzS27fmJ+Wjot7xO5wA==
@@ -91,7 +96,7 @@ EXAMPLES = '''
 - name: PATCH ExtendedInfo of Resource
   azure_rm_recoveryservicesvaultextendedinfo:
     resource_group: myResourceGroup
-    name: myVault
+    vault_name: myVault
     resource_resource_extended_info_details:
       properties:
         integrityKey: J99wzS27fmJ+Wjot7xO5wA==
@@ -186,7 +191,7 @@ class AzureRMVaultExtendedInfo(AzureRMModuleBaseExt):
                 disposition='resourceGroupName',
                 required=true
             ),
-            name=dict(
+            vault_name=dict(
                 type='str',
                 updatable=False,
                 disposition='vaultName',
@@ -221,7 +226,7 @@ class AzureRMVaultExtendedInfo(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.vault_name = None
         self.id = None
         self.name = None
         self.type = None

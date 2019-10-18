@@ -26,9 +26,10 @@ options:
       - The name of the resource group
     required: true
     type: str
-  name:
+  dedicated_cloud_service_name:
     description:
-      - '{dedicatedCloudServiceName}'
+      - dedicated cloud Service name
+    required: true
     type: str
   location:
     description:
@@ -59,6 +60,10 @@ options:
       - >-
         /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/dedicatedCloudServices/{dedicatedCloudServiceName}
     type: str
+  name:
+    description:
+      - '{dedicatedCloudServiceName}'
+    type: str
   type:
     description:
       - '{resourceProviderNamespace}/{resourceType}'
@@ -85,7 +90,7 @@ EXAMPLES = '''
 - name: CreateDedicatedCloudService
   azure_rm_vmwarecloudsimplededicatedcloudservice:
     resource_group: myResourceGroup
-    name: myDedicatedCloudService
+    dedicated_cloud_service_name: myDedicatedCloudService
     dedicated_cloud_service_request:
       location: westus
       properties:
@@ -93,14 +98,14 @@ EXAMPLES = '''
 - name: PatchDedicatedService
   azure_rm_vmwarecloudsimplededicatedcloudservice:
     resource_group: myResourceGroup
-    name: myDedicatedCloudService
+    dedicated_cloud_service_name: myDedicatedCloudService
     dedicated_cloud_service_request:
       tags:
         myTag: tagValue
 - name: DeleteDedicatedCloudService
   azure_rm_vmwarecloudsimplededicatedcloudservice:
     resource_group: myResourceGroup
-    name: myDedicatedCloudService
+    dedicated_cloud_service_name: myDedicatedCloudService
     state: absent
 
 '''
@@ -194,7 +199,7 @@ class Actions:
     NoAction, Create, Update, Delete = range(4)
 
 
-class AzureRMDedicatedCloudService(AzureRMModuleBaseExt):
+class AzureRMDedicatedCloudServices(AzureRMModuleBaseExt):
     def __init__(self):
         self.module_arg_spec = dict(
             resource_group=dict(
@@ -203,10 +208,9 @@ class AzureRMDedicatedCloudService(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            name=dict(
+            dedicated_cloud_service_name=dict(
                 type='str',
                 updatable=False,
-                disposition='dedicated_cloud_service_name',
                 required=true
             ),
             location=dict(
@@ -236,7 +240,7 @@ class AzureRMDedicatedCloudService(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.dedicated_cloud_service_name = None
         self.id = None
         self.name = None
         self.type = None
@@ -247,9 +251,9 @@ class AzureRMDedicatedCloudService(AzureRMModuleBaseExt):
         self.state = None
         self.to_do = Actions.NoAction
 
-        super(AzureRMDedicatedCloudService, self).__init__(derived_arg_spec=self.module_arg_spec,
-                                                           supports_check_mode=True,
-                                                           supports_tags=True)
+        super(AzureRMDedicatedCloudServices, self).__init__(derived_arg_spec=self.module_arg_spec,
+                                                            supports_check_mode=True,
+                                                            supports_tags=True)
 
     def exec_module(self, **kwargs):
         for key in list(self.module_arg_spec.keys()):
@@ -311,9 +315,9 @@ class AzureRMDedicatedCloudService(AzureRMModuleBaseExt):
 
     def create_update_resource(self):
         try:
-            response = self.mgmt_client.dedicated_cloud_service.create_or_update(resource_group_name=self.resource_group,
-                                                                                 dedicated_cloud_service_name=self.name,
-                                                                                 dedicated_cloud_service_request=self.dedicatedCloudServiceRequest)
+            response = self.mgmt_client.dedicated_cloud_services.create_or_update(resource_group_name=self.resource_group,
+                                                                                  dedicated_cloud_service_name=self.dedicated_cloud_service_name,
+                                                                                  dedicated_cloud_service_request=self.dedicatedCloudServiceRequest)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
         except CloudError as exc:
@@ -324,8 +328,8 @@ class AzureRMDedicatedCloudService(AzureRMModuleBaseExt):
     def delete_resource(self):
         # self.log('Deleting the DedicatedCloudService instance {0}'.format(self.))
         try:
-            response = self.mgmt_client.dedicated_cloud_service.delete(resource_group_name=self.resource_group,
-                                                                       dedicated_cloud_service_name=self.name)
+            response = self.mgmt_client.dedicated_cloud_services.delete(resource_group_name=self.resource_group,
+                                                                        dedicated_cloud_service_name=self.dedicated_cloud_service_name)
         except CloudError as e:
             self.log('Error attempting to delete the DedicatedCloudService instance.')
             self.fail('Error deleting the DedicatedCloudService instance: {0}'.format(str(e)))
@@ -336,15 +340,15 @@ class AzureRMDedicatedCloudService(AzureRMModuleBaseExt):
         # self.log('Checking if the DedicatedCloudService instance {0} is present'.format(self.))
         found = False
         try:
-            response = self.mgmt_client.dedicated_cloud_service.get(resource_group_name=self.resource_group,
-                                                                    dedicated_cloud_service_name=self.name)
+            response = self.mgmt_client.dedicated_cloud_services.get(resource_group_name=self.resource_group,
+                                                                     dedicated_cloud_service_name=self.dedicated_cloud_service_name)
         except CloudError as e:
             return False
         return response.as_dict()
 
 
 def main():
-    AzureRMDedicatedCloudService()
+    AzureRMDedicatedCloudServices()
 
 
 if __name__ == '__main__':

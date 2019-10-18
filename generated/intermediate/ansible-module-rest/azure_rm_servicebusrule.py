@@ -41,9 +41,10 @@ options:
       - The subscription name.
     required: true
     type: str
-  name:
+  rule_name:
     description:
-      - Resource name
+      - The rule name.
+    required: true
     type: str
   action:
     description:
@@ -79,16 +80,16 @@ options:
         description:
           - The SQL expression. e.g. MyProperty='ABC'
         type: str
-      requires_preprocessing:
-        description:
-          - Value that indicates whether the rule action requires preprocessing.
-        type: boolean
       compatibility_level:
         description:
           - >-
             This property is reserved for future use. An integer value showing
             the compatibility level, currently hard-coded to 20.
         type: number
+      requires_preprocessing:
+        description:
+          - Value that indicates whether the rule action requires preprocessing.
+        type: boolean
   correlation_filter:
     description:
       - Properties of correlationFilter
@@ -134,6 +135,10 @@ options:
     description:
       - Resource Id
     type: str
+  name:
+    description:
+      - Resource name
+    type: str
   type:
     description:
       - Resource type
@@ -160,14 +165,14 @@ EXAMPLES = '''
     namespace_name: my
     topic_name: myTopic
     subscription_name: sdk-Subscriptions-8691
-    name: myRule
+    rule_name: myRule
 - name: RulesCreateSqlFilter
   azure_rm_servicebusrule:
     resource_group: myResourceGroup
     namespace_name: my
     topic_name: myTopic
     subscription_name: sdk-Subscriptions-8691
-    name: myRule
+    rule_name: myRule
     filter_type: SqlFilter
     sql_filter:
       sql_expression: myproperty=test
@@ -177,7 +182,7 @@ EXAMPLES = '''
     namespace_name: my
     topic_name: myTopic
     subscription_name: sdk-Subscriptions-8691
-    name: myRule
+    rule_name: myRule
     filter_type: CorrelationFilter
     correlation_filter: {}
 - name: RulesDelete
@@ -186,7 +191,7 @@ EXAMPLES = '''
     namespace_name: my
     topic_name: myTopic
     subscription_name: sdk-Subscriptions-8691
-    name: myRule
+    rule_name: myRule
     state: absent
 
 '''
@@ -401,7 +406,7 @@ class AzureRMRules(AzureRMModuleBaseExt):
                 disposition='subscriptionName',
                 required=true
             ),
-            name=dict(
+            rule_name=dict(
                 type='str',
                 updatable=False,
                 disposition='ruleName',
@@ -438,6 +443,10 @@ class AzureRMRules(AzureRMModuleBaseExt):
                     sql_expression=dict(
                         type='str',
                         disposition='sqlExpression'
+                    ),
+                    compatibility_level=dict(
+                        type='number',
+                        disposition='compatibilityLevel'
                     ),
                     requires_preprocessing=dict(
                         type='boolean',
@@ -496,7 +505,7 @@ class AzureRMRules(AzureRMModuleBaseExt):
         self.namespace_name = None
         self.topic_name = None
         self.subscription_name = None
-        self.name = None
+        self.rule_name = None
         self.id = None
         self.name = None
         self.type = None

@@ -15,7 +15,7 @@
     - name: BatchAccountCreate_Default
       azure_rm_batchaccount:
         resource_group: '{{resource_group}}'
-        name: '{{batch_account_name}}'
+        account_name: '{{batch_account_name}}'
         location: japaneast
         auto_storage_account_id: >-
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
