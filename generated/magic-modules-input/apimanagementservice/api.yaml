@@ -43,7 +43,7 @@ objects:
             python_field_name: tags
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: ServiceProperties
             go_type_name: ServiceProperties
           '/notificationSenderEmail': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
@@ -151,7 +151,7 @@ objects:
           '/additionalLocations/sku/name': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: name
-          '/additionalLocations/sku/capacity': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
+          '/additionalLocations/sku/capacity': !ruby/object:Api::Azure::SDKTypeDefinition::Integer32Object
             applicable_to: [python]
             python_field_name: capacity
           '/additionalLocations/virtualNetworkConfiguration': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -175,7 +175,7 @@ objects:
             applicable_to: [go]
             go_field_name: Name
             go_enum_type_name: SkuType
-          '/properties/additionalLocations/sku/capacity': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
+          '/properties/additionalLocations/sku/capacity': !ruby/object:Api::Azure::SDKTypeDefinition::Integer32Object
             applicable_to: [go]
             go_field_name: Capacity
           '/properties/additionalLocations/virtualNetworkConfiguration': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -275,7 +275,7 @@ objects:
             go_field_name: skuName
             go_enum_type_name: SkuType
             python_field_name: name
-          '/sku/capacity': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
+          '/sku/capacity': !ruby/object:Api::Azure::SDKTypeDefinition::Integer32Object
             go_field_name: skuCapacity
             python_field_name: capacity
           '/identity': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -313,7 +313,7 @@ objects:
             python_field_name: tags
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: ServiceProperties
             go_type_name: ServiceProperties
           '/notificationSenderEmail': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
@@ -421,7 +421,7 @@ objects:
           '/additionalLocations/sku/name': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: name
-          '/additionalLocations/sku/capacity': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
+          '/additionalLocations/sku/capacity': !ruby/object:Api::Azure::SDKTypeDefinition::Integer32Object
             applicable_to: [python]
             python_field_name: capacity
           '/additionalLocations/virtualNetworkConfiguration': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -445,7 +445,7 @@ objects:
             applicable_to: [go]
             go_field_name: Name
             go_enum_type_name: SkuType
-          '/properties/additionalLocations/sku/capacity': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
+          '/properties/additionalLocations/sku/capacity': !ruby/object:Api::Azure::SDKTypeDefinition::Integer32Object
             applicable_to: [go]
             go_field_name: Capacity
           '/properties/additionalLocations/virtualNetworkConfiguration': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -545,7 +545,7 @@ objects:
             go_field_name: skuName
             go_enum_type_name: SkuType
             python_field_name: name
-          '/sku/capacity': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
+          '/sku/capacity': !ruby/object:Api::Azure::SDKTypeDefinition::Integer32Object
             go_field_name: skuCapacity
             python_field_name: capacity
           '/identity': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -593,7 +593,7 @@ objects:
             python_field_name: tags
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: ServiceProperties
             go_type_name: ServiceProperties
           '/properties/notificationSenderEmail': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
@@ -716,7 +716,7 @@ objects:
             applicable_to: [go]
             go_field_name: Name
             go_enum_type_name: SkuType
-          '/properties/additionalLocations/sku/capacity': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
+          '/properties/additionalLocations/sku/capacity': !ruby/object:Api::Azure::SDKTypeDefinition::Integer32Object
             applicable_to: [go]
             go_field_name: Capacity
           '/properties/additionalLocations/virtualNetworkConfiguration': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -732,10 +732,10 @@ objects:
           '/properties/additionalLocations/virtualNetworkConfiguration/subnetname': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Subnetname
-          '/properties/additionalLocations/publicIPAddresses': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/additionalLocations/publicIPAddresses': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: PublicIpAddresses
-          '/properties/additionalLocations/privateIPAddresses': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/additionalLocations/privateIPAddresses': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: PrivateIpAddresses
           '/properties/additionalLocations/gatewayRegionalUrl': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -753,7 +753,7 @@ objects:
           '/additionalLocations/sku/name': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: name
-          '/additionalLocations/sku/capacity': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
+          '/additionalLocations/sku/capacity': !ruby/object:Api::Azure::SDKTypeDefinition::Integer32Object
             applicable_to: [python]
             python_field_name: capacity
           '/additionalLocations/virtualNetworkConfiguration': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -768,10 +768,10 @@ objects:
           '/additionalLocations/virtualNetworkConfiguration/subnetname': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: subnetname
-          '/additionalLocations/publicIPAddresses': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/additionalLocations/publicIPAddresses': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: public_ip_addresses
-          '/additionalLocations/privateIPAddresses': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/additionalLocations/privateIPAddresses': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: private_ip_addresses
           '/additionalLocations/gatewayRegionalUrl': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -907,16 +907,16 @@ objects:
           '/scmUrl': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: scm_url
-          '/properties/publicIPAddresses': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/publicIPAddresses': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: PublicIpAddresses
-          '/publicIPAddresses': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/publicIPAddresses': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: public_ip_addresses
-          '/properties/privateIPAddresses': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/privateIPAddresses': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: PrivateIpAddresses
-          '/privateIPAddresses': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/privateIPAddresses': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: private_ip_addresses
           '/sku': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -927,7 +927,7 @@ objects:
             go_field_name: skuName
             go_enum_type_name: SkuType
             python_field_name: name
-          '/sku/capacity': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
+          '/sku/capacity': !ruby/object:Api::Azure::SDKTypeDefinition::Integer32Object
             go_field_name: skuCapacity
             python_field_name: capacity
           '/identity': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -1001,80 +1001,76 @@ objects:
         description: 'Email address from which the notification will be sent.'
         required: false
         azure_sdk_references: ['/notificationSenderEmail', '/properties/notificationSenderEmail']
-      - !ruby/object:Api::Type::NestedObject
+      - !ruby/object:Api::Type::Array
         name: 'hostnameConfigurations'
         description: 'Custom hostname configuration of the API Management service.'
         required: false
         azure_sdk_references: ['/hostnameConfigurations', '/properties/hostnameConfigurations']
-        properties:
-          - !ruby/object:Api::Type::Enum
-            name: 'type'
-            description: 'Hostname type.'
-            required: true
-            values:
-              - :Proxy
-              - :Portal
-              - :Management
-              - :Scm
-              - :DeveloperPortal
-            default_value: :Proxy
-            sample_value: Portal
-            azure_sdk_references: ['/hostnameConfigurations/type', '/properties/hostnameConfigurations/type']
-          - !ruby/object:Api::Type::String
-            name: 'hostName'
-            description: 'Hostname to configure on the Api Management service.'
-            required: true
-            sample_value: 'portalhostname1.contoso.com'
-            azure_sdk_references: ['/hostnameConfigurations/hostName', '/properties/hostnameConfigurations/hostName']
-          - !ruby/object:Api::Type::String
-            name: 'keyVaultId'
-            description: 'Url to the KeyVault Secret containing the Ssl Certificate. If absolute Url containing version is provided, auto-update of ssl certificate will not work. This requires Api Management service to be configured with MSI. The secret should be of type *application/x-pkcs12*'
-            required: false
-            azure_sdk_references: ['/hostnameConfigurations/keyVaultId', '/properties/hostnameConfigurations/keyVaultId']
-          - !ruby/object:Api::Type::String
-            name: 'encodedCertificate'
-            description: 'Base64 Encoded certificate.'
-            required: false
-            sample_value: '************Base 64 Encoded Pfx Certificate************************'
-            azure_sdk_references: ['/hostnameConfigurations/encodedCertificate', '/properties/hostnameConfigurations/encodedCertificate']
-          - !ruby/object:Api::Type::String
-            name: 'certificatePassword'
-            description: 'Certificate Password.'
-            required: false
-            sample_value: '**************Password of the Certificate************************************************'
-            azure_sdk_references: ['/hostnameConfigurations/certificatePassword', '/properties/hostnameConfigurations/certificatePassword']
-          - !ruby/object:Api::Type::Boolean
-            name: 'defaultSslBinding'
-            description: 'Specify true to setup the certificate associated with this Hostname as the Default SSL Certificate. If a client does not send the SNI header, then this will be the certificate that will be challenged. The property is useful if a service has multiple custom hostname enabled and it needs to decide on the default ssl certificate. The setting only applied to Proxy Hostname Type.'
-            required: false
-            azure_sdk_references: ['/hostnameConfigurations/defaultSslBinding', '/properties/hostnameConfigurations/defaultSslBinding']
-          - !ruby/object:Api::Type::Boolean
-            name: 'negotiateClientCertificate'
-            description: 'Specify true to always negotiate client certificate on the hostname. Default Value is false.'
-            required: false
-            sample_value: true
-            azure_sdk_references: ['/hostnameConfigurations/negotiateClientCertificate', '/properties/hostnameConfigurations/negotiateClientCertificate']
-          - !ruby/object:Api::Type::NestedObject
-            name: 'certificate'
-            description: 'Certificate information.'
-            required: false
-            azure_sdk_references: ['/hostnameConfigurations/certificate', '/properties/hostnameConfigurations/certificate']
-            properties:
-              - !ruby/object:Api::Azure::Type::ISO8601DateTime
-                name: 'expiry'
-                description: 'Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.'
-                required: true
-                azure_sdk_references: ['/hostnameConfigurations/certificate/expiry', '/properties/hostnameConfigurations/certificate/expiry']
-              - !ruby/object:Api::Type::String
-                name: 'thumbprint'
-                description: 'Thumbprint of the certificate.'
-                required: true
-                azure_sdk_references: ['/hostnameConfigurations/certificate/thumbprint', '/properties/hostnameConfigurations/certificate/thumbprint']
-              - !ruby/object:Api::Type::String
-                name: 'subject'
-                description: 'Subject of the certificate.'
-                required: true
-                azure_sdk_references: ['/hostnameConfigurations/certificate/subject', '/properties/hostnameConfigurations/certificate/subject']
+        item_type: !ruby/object:Api::Type::NestedObject
+          properties:
+            - !ruby/object:Api::Type::Enum
+              name: 'type'
+              description: 'Hostname type.'
+              required: true
+              sample_value: Portal
+              azure_sdk_references: ['/hostnameConfigurations/type', '/properties/hostnameConfigurations/type']
+              values:
+                - :Proxy
+                - :Portal
+                - :Management
+                - :Scm
+                - :DeveloperPortal
+            - !ruby/object:Api::Type::String
+              name: 'hostName'
+              description: 'Hostname to configure on the Api Management service.'
+              required: true
+              azure_sdk_references: ['/hostnameConfigurations/hostName', '/properties/hostnameConfigurations/hostName']
+            - !ruby/object:Api::Type::String
+              name: 'keyVaultId'
+              description: 'Url to the KeyVault Secret containing the Ssl Certificate. If absolute Url containing version is provided, auto-update of ssl certificate will not work. This requires Api Management service to be configured with MSI. The secret should be of type *application/x-pkcs12*'
+              required: false
+              azure_sdk_references: ['/hostnameConfigurations/keyVaultId', '/properties/hostnameConfigurations/keyVaultId']
+            - !ruby/object:Api::Type::String
+              name: 'encodedCertificate'
+              description: 'Base64 Encoded certificate.'
+              required: false
+              azure_sdk_references: ['/hostnameConfigurations/encodedCertificate', '/properties/hostnameConfigurations/encodedCertificate']
+            - !ruby/object:Api::Type::String
+              name: 'certificatePassword'
+              description: 'Certificate Password.'
+              required: false
+              azure_sdk_references: ['/hostnameConfigurations/certificatePassword', '/properties/hostnameConfigurations/certificatePassword']
+            - !ruby/object:Api::Type::Boolean
+              name: 'defaultSslBinding'
+              description: 'Specify true to setup the certificate associated with this Hostname as the Default SSL Certificate. If a client does not send the SNI header, then this will be the certificate that will be challenged. The property is useful if a service has multiple custom hostname enabled and it needs to decide on the default ssl certificate. The setting only applied to Proxy Hostname Type.'
+              required: false
+              azure_sdk_references: ['/hostnameConfigurations/defaultSslBinding', '/properties/hostnameConfigurations/defaultSslBinding']
+            - !ruby/object:Api::Type::Boolean
+              name: 'negotiateClientCertificate'
+              description: 'Specify true to always negotiate client certificate on the hostname. Default Value is false.'
+              required: false
+              azure_sdk_references: ['/hostnameConfigurations/negotiateClientCertificate', '/properties/hostnameConfigurations/negotiateClientCertificate']
+            - !ruby/object:Api::Type::NestedObject
+              name: 'certificate'
+              description: 'Certificate information.'
+              required: false
+              azure_sdk_references: ['/hostnameConfigurations/certificate', '/properties/hostnameConfigurations/certificate']
+              properties:
+                - !ruby/object:Api::Azure::Type::ISO8601DateTime
+                  name: 'expiry'
+                  description: 'Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.'
+                  required: true
+                  azure_sdk_references: ['/hostnameConfigurations/certificate/expiry', '/properties/hostnameConfigurations/certificate/expiry']
+                - !ruby/object:Api::Type::String
+                  name: 'thumbprint'
+                  description: 'Thumbprint of the certificate.'
+                  required: true
+                  azure_sdk_references: ['/hostnameConfigurations/certificate/thumbprint', '/properties/hostnameConfigurations/certificate/thumbprint']
+                - !ruby/object:Api::Type::String
+                  name: 'subject'
+                  description: 'Subject of the certificate.'
+                  required: true
+                  azure_sdk_references: ['/hostnameConfigurations/certificate/subject', '/properties/hostnameConfigurations/certificate/subject']
       - !ruby/object:Api::Type::NestedObject
         name: 'virtualNetworkConfiguration'
         description: 'Virtual network configuration of the API Management service.'
@@ -1088,112 +1084,107 @@ objects:
             sample_value: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.Network/virtualNetworks/{{ virtual_network_name }}/subnets/{{ name }}
             resource_type_name: TBD
             azure_sdk_references: ['/virtualNetworkConfiguration/subnetResourceId', '/properties/virtualNetworkConfiguration/subnetResourceId']
-      - !ruby/object:Api::Type::NestedObject
+      - !ruby/object:Api::Type::Array
         name: 'additionalLocations'
         description: 'Additional datacenter locations of the API Management service.'
         required: false
         azure_sdk_references: ['/additionalLocations', '/properties/additionalLocations']
-        properties:
-          - !ruby/object:Api::Azure::Type::Location
-            name: 'location'
-            description: 'The location name of the additional region among Azure Data center regions.'
-            required: true
-            input: true
-            sample_value: North Europe
-            azure_sdk_references: ['/additionalLocations/location', '/properties/additionalLocations/location']
-          - !ruby/object:Api::Type::NestedObject
-            name: 'sku'
-            description: 'SKU properties of the API Management service.'
-            required: true
-            azure_sdk_references: ['/additionalLocations/sku', '/properties/additionalLocations/sku']
-            properties:
-              - !ruby/object:Api::Type::Enum
-                name: 'name'
-                description: 'Name of the Sku.'
-                required: true
-                values:
-                  - :Developer
-                  - :Standard
-                  - :Premium
-                  - :Basic
-                  - :Consumption
-                default_value: :Developer
-                sample_value: Premium
-                azure_sdk_references: ['/additionalLocations/sku/name', '/properties/additionalLocations/sku/name', '/name']
-              - !ruby/object:Api::Type::Integer
-                name: 'capacity'
-                description: 'Capacity of the SKU (number of deployed units of the SKU).'
-                required: false
-                sample_value: 1
-                azure_sdk_references: ['/additionalLocations/sku/capacity', '/properties/additionalLocations/sku/capacity']
-          - !ruby/object:Api::Type::NestedObject
-            name: 'virtualNetworkConfiguration'
-            description: 'Virtual network configuration for the location.'
-            required: false
-            azure_sdk_references: ['/additionalLocations/virtualNetworkConfiguration', '/properties/additionalLocations/virtualNetworkConfiguration']
-            properties:
-              - !ruby/object:Api::Azure::Type::ResourceReference
-                name: 'subnetResourceId'
-                description: 'The full resource ID of a subnet in a virtual network to deploy the API Management service in.'
-                required: false
-                sample_value: /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group }}/providers/Microsoft.Network/virtualNetworks/{{ virtual_network_name }}/subnets/{{ name }}
-                resource_type_name: TBD
-                azure_sdk_references: ['/additionalLocations/virtualNetworkConfiguration/subnetResourceId', '/properties/additionalLocations/virtualNetworkConfiguration/subnetResourceId']
+        item_type: !ruby/object:Api::Type::NestedObject
+          properties:
+            - !ruby/object:Api::Azure::Type::Location
+              name: 'location'
+              description: 'The location name of the additional region among Azure Data center regions.'
+              required: true
+              input: true
+              sample_value: North Europe
+              azure_sdk_references: ['/additionalLocations/location', '/properties/additionalLocations/location']
+            - !ruby/object:Api::Type::NestedObject
+              name: 'sku'
+              description: 'SKU properties of the API Management service.'
+              required: true
+              azure_sdk_references: ['/additionalLocations/sku', '/properties/additionalLocations/sku']
+              properties:
+                - !ruby/object:Api::Type::Enum
+                  name: 'name'
+                  description: 'Name of the Sku.'
+                  required: true
+                  sample_value: Premium
+                  azure_sdk_references: ['/additionalLocations/sku/name', '/properties/additionalLocations/sku/name', '/name']
+                  values:
+                    - :Developer
+                    - :Standard
+                    - :Premium
+                    - :Basic
+                    - :Consumption
+                - !ruby/object:Api::Type::Integer
+                  name: 'capacity'
+                  description: 'Capacity of the SKU (number of deployed units of the SKU).'
+                  required: false
+                  sample_value: 1
+                  azure_sdk_references: ['/additionalLocations/sku/capacity', '/properties/additionalLocations/sku/capacity']
+            - !ruby/object:Api::Type::NestedObject
+              name: 'virtualNetworkConfiguration'
+              description: 'Virtual network configuration for the location.'
+              required: false
+              azure_sdk_references: ['/additionalLocations/virtualNetworkConfiguration', '/properties/additionalLocations/virtualNetworkConfiguration']
+              properties:
+                - !ruby/object:Api::Type::String
+                  name: 'subnetResourceId'
+                  description: 'The full resource ID of a subnet in a virtual network to deploy the API Management service in.'
+                  required: false
+                  azure_sdk_references: ['/additionalLocations/virtualNetworkConfiguration/subnetResourceId', '/properties/additionalLocations/virtualNetworkConfiguration/subnetResourceId']
       - !ruby/object:Api::Type::KeyValuePairs
         name: 'customProperties'
         description: 'Custom properties of the API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168` will disable the cipher TLS_RSA_WITH_3DES_EDE_CBC_SHA for all TLS(1.0, 1.1 and 1.2).</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11` can be used to disable just TLS 1.1.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10` can be used to disable TLS 1.0 on an API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11` can be used to disable just TLS 1.1 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10` can be used to disable TLS 1.0 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2` can be used to enable HTTP2 protocol on an API Management service.</br>Not specifying any of these properties on PATCH operation will reset omitted properties'' values to their defaults. For all the settings except Http2 the default value is `True` if the service was created on or before April 1st 2018 and `False` otherwise. Http2 setting''s default value is `False`.</br></br>You can disable any of next ciphers by using settings `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.[cipher_name]`: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA. For example, `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_CBC_SHA256`:`false`. The default value is `true` for them.'
         required: false
         sample_value: [object Object]
         azure_sdk_references: ['/customProperties', '/properties/customProperties']
-      - !ruby/object:Api::Type::NestedObject
+      - !ruby/object:Api::Type::Array
         name: 'certificates'
         description: 'List of Certificates that need to be installed in the API Management service. Max supported certificates that can be installed is 10.'
         required: false
         azure_sdk_references: ['/certificates', '/properties/certificates']
-        properties:
-          - !ruby/object:Api::Type::String
-            name: 'encodedCertificate'
-            description: 'Base64 Encoded certificate.'
-            required: false
-            sample_value: '*******Base64 encoded Certificate******************'
-            azure_sdk_references: ['/certificates/encodedCertificate', '/properties/certificates/encodedCertificate']
-          - !ruby/object:Api::Type::String
-            name: 'certificatePassword'
-            description: 'Certificate Password.'
-            required: false
-            sample_value: 'Password'
-            azure_sdk_references: ['/certificates/certificatePassword', '/properties/certificates/certificatePassword']
-          - !ruby/object:Api::Type::Enum
-            name: 'storeName'
-            description: 'The System.Security.Cryptography.x509certificates.StoreName certificate store location. Only Root and CertificateAuthority are valid locations.'
-            required: true
-            values:
-              - :CertificateAuthority
-              - :Root
-            default_value: :CertificateAuthority
-            sample_value: CertificateAuthority
-            azure_sdk_references: ['/certificates/storeName', '/properties/certificates/storeName']
-          - !ruby/object:Api::Type::NestedObject
-            name: 'certificate'
-            description: 'Certificate information.'
-            required: false
-            azure_sdk_references: ['/certificates/certificate', '/properties/certificates/certificate']
-            properties:
-              - !ruby/object:Api::Azure::Type::ISO8601DateTime
-                name: 'expiry'
-                description: 'Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.'
-                required: true
-                azure_sdk_references: ['/certificates/certificate/expiry', '/properties/certificates/certificate/expiry']
-              - !ruby/object:Api::Type::String
-                name: 'thumbprint'
-                description: 'Thumbprint of the certificate.'
-                required: true
-                azure_sdk_references: ['/certificates/certificate/thumbprint', '/properties/certificates/certificate/thumbprint']
-              - !ruby/object:Api::Type::String
-                name: 'subject'
-                description: 'Subject of the certificate.'
-                required: true
-                azure_sdk_references: ['/certificates/certificate/subject', '/properties/certificates/certificate/subject']
+        item_type: !ruby/object:Api::Type::NestedObject
+          properties:
+            - !ruby/object:Api::Type::String
+              name: 'encodedCertificate'
+              description: 'Base64 Encoded certificate.'
+              required: false
+              azure_sdk_references: ['/certificates/encodedCertificate', '/properties/certificates/encodedCertificate']
+            - !ruby/object:Api::Type::String
+              name: 'certificatePassword'
+              description: 'Certificate Password.'
+              required: false
+              azure_sdk_references: ['/certificates/certificatePassword', '/properties/certificates/certificatePassword']
+            - !ruby/object:Api::Type::Enum
+              name: 'storeName'
+              description: 'The System.Security.Cryptography.x509certificates.StoreName certificate store location. Only Root and CertificateAuthority are valid locations.'
+              required: true
+              azure_sdk_references: ['/certificates/storeName', '/properties/certificates/storeName']
+              values:
+                - :CertificateAuthority
+                - :Root
+            - !ruby/object:Api::Type::NestedObject
+              name: 'certificate'
+              description: 'Certificate information.'
+              required: false
+              azure_sdk_references: ['/certificates/certificate', '/properties/certificates/certificate']
+              properties:
+                - !ruby/object:Api::Azure::Type::ISO8601DateTime
+                  name: 'expiry'
+                  description: 'Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.'
+                  required: true
+                  azure_sdk_references: ['/certificates/certificate/expiry', '/properties/certificates/certificate/expiry']
+                - !ruby/object:Api::Type::String
+                  name: 'thumbprint'
+                  description: 'Thumbprint of the certificate.'
+                  required: true
+                  azure_sdk_references: ['/certificates/certificate/thumbprint', '/properties/certificates/certificate/thumbprint']
+                - !ruby/object:Api::Type::String
+                  name: 'subject'
+                  description: 'Subject of the certificate.'
+                  required: true
+                  azure_sdk_references: ['/certificates/certificate/subject', '/properties/certificates/certificate/subject']
       - !ruby/object:Api::Type::Boolean
         name: 'enableClientCertificate'
         description: 'Property only meant to be used for Consumption SKU Service. This enforces a client certificate to be presented on each request to the gateway. This also enables the ability to authenticate the certificate in the policy on the gateway.'
@@ -1203,13 +1194,13 @@ objects:
         name: 'virtualNetworkType'
         description: 'The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.'
         required: false
+        sample_value: External
+        azure_sdk_references: ['/virtualNetworkType', '/properties/virtualNetworkType']
         values:
           - :None
           - :External
           - :Internal
         default_value: :None
-        sample_value: External
-        azure_sdk_references: ['/virtualNetworkType', '/properties/virtualNetworkType']
       - !ruby/object:Api::Type::String
         name: 'publisherEmail'
         description: 'Publisher email.'
@@ -1226,15 +1217,14 @@ objects:
         name: 'skuName'
         description: 'Name of the Sku.'
         required: true
+        sample_value: Basic
+        azure_sdk_references: ['/sku/name']
         values:
           - :Developer
           - :Standard
           - :Premium
           - :Basic
           - :Consumption
-        default_value: :Developer
-        sample_value: Basic
-        azure_sdk_references: ['/sku/name']
       - !ruby/object:Api::Type::Integer
         name: 'skuCapacity'
         description: 'Capacity of the SKU (number of deployed units of the SKU).'
@@ -1301,37 +1291,35 @@ objects:
         description: 'SCM endpoint URL of the API Management service.'
         output: true
         azure_sdk_references: ['/scmUrl', '/properties/scmUrl']
-      - !ruby/object:Api::Type::String
+      - !ruby/object:Api::Type::Array
         name: 'publicIpAddresses'
         description: 'Public Static Load Balanced IP addresses of the API Management service in Primary region. Available only for Basic, Standard and Premium SKU.'
         output: true
         azure_sdk_references: ['/publicIPAddresses', '/properties/publicIPAddresses']
-      - !ruby/object:Api::Type::String
+        item_type: Api::Type::String
+      - !ruby/object:Api::Type::Array
         name: 'privateIpAddresses'
         description: 'Private Static Load Balanced IP addresses of the API Management service in Primary region which is deployed in an Internal Virtual Network. Available only for Basic, Standard and Premium SKU.'
         output: true
         azure_sdk_references: ['/privateIPAddresses', '/properties/privateIPAddresses']
+        item_type: Api::Type::String
       - !ruby/object:Api::Type::String
         name: 'id'
         description: 'Resource ID.'
-        input: true
         output: true
         azure_sdk_references: ['/id']
       - !ruby/object:Api::Type::String
         name: 'name'
         description: 'Resource name.'
-        input: true
         output: true
         azure_sdk_references: ['/name']
       - !ruby/object:Api::Type::String
         name: 'type'
         description: 'Resource type for API Management resource is set to Microsoft.ApiManagement.'
-        input: true
         output: true
         azure_sdk_references: ['/type']
       - !ruby/object:Api::Type::String
         name: 'etag'
         description: 'ETag of the resource.'
-        input: true
         output: true
         azure_sdk_references: ['/etag']

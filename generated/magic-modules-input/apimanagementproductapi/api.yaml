@@ -155,20 +155,18 @@ objects:
                 description: 'OAuth authorization server identifier.'
                 required: false
                 azure_sdk_references: ['/authenticationSettings/openid/openidProviderId', '/properties/authenticationSettings/openid/openidProviderId']
-              - !ruby/object:Api::Type::Enum
+              - !ruby/object:Api::Type::Array
                 name: 'bearerTokenSendingMethods'
                 description: 'How to send token to the server.'
                 required: false
-                values:
-                  - :authorizationHeader
-                  - :query
-                default_value: :authorizationHeader
                 azure_sdk_references: ['/authenticationSettings/openid/bearerTokenSendingMethods', '/properties/authenticationSettings/openid/bearerTokenSendingMethods']
-          - !ruby/object:Api::Type::Boolean
-            name: 'subscriptionKeyRequired'
-            description: 'Specifies whether subscription key is required during call to this API, true - API is included into closed products only, false - API is included into open products alone, null - there is a mix of products.'
-            required: false
-            azure_sdk_references: ['/authenticationSettings/subscriptionKeyRequired', '/properties/authenticationSettings/subscriptionKeyRequired']
+                item_type: !ruby/object:Api::Type::Enum
+                  name: 'TBD'
+                  description: 'TBD'
+                  values:
+                    - :authorizationHeader
+                    - :query
+                  default_value: :authorizationHeader
       - !ruby/object:Api::Type::NestedObject
         name: 'subscriptionKeyParameterNames'
         description: 'Protocols over which API is made available.'
@@ -189,11 +187,11 @@ objects:
         name: 'type'
         description: 'Type of API.'
         required: false
+        azure_sdk_references: ['/type', '/properties/type']
         values:
           - :http
           - :soap
         default_value: :http
-        azure_sdk_references: ['/type', '/properties/type']
       - !ruby/object:Api::Type::String
         name: 'apiRevision'
         description: 'Describes the Revision of the Api. If no value is provided, default revision 1 is created'
@@ -254,15 +252,18 @@ objects:
         description: 'Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.'
         required: true
         azure_sdk_references: ['/path', '/properties/path']
-      - !ruby/object:Api::Type::Enum
+      - !ruby/object:Api::Type::Array
         name: 'protocols'
         description: 'Describes on which protocols the operations in this API can be invoked.'
         required: false
-        values:
-          - :http
-          - :https
-        default_value: :http
         azure_sdk_references: ['/protocols', '/properties/protocols']
+        item_type: !ruby/object:Api::Type::Enum
+          name: 'TBD'
+          description: 'TBD'
+          values:
+            - :http
+            - :https
+          default_value: :http
       - !ruby/object:Api::Type::NestedObject
         name: 'apiVersionSet'
         description: 'Version set details'
@@ -288,12 +289,12 @@ objects:
             name: 'versioningScheme'
             description: 'An value that determines where the API Version identifer will be located in a HTTP request.'
             required: false
+            azure_sdk_references: ['/apiVersionSet/versioningScheme', '/properties/apiVersionSet/versioningScheme']
             values:
               - :Segment
               - :Query
               - :Header
             default_value: :Segment
-            azure_sdk_references: ['/apiVersionSet/versioningScheme', '/properties/apiVersionSet/versioningScheme']
           - !ruby/object:Api::Type::String
             name: 'versionQueryName'
             description: 'Name of query parameter that indicates the API Version if versioningScheme is set to `query`.'
@@ -308,18 +309,15 @@ objects:
       - !ruby/object:Api::Type::String
         name: 'id'
         description: 'Resource ID.'
-        input: true
         output: true
         azure_sdk_references: ['/id']
       - !ruby/object:Api::Type::String
         name: 'name'
         description: 'Resource name.'
-        input: true
         output: true
         azure_sdk_references: ['/name']
       - !ruby/object:Api::Type::String
         name: 'type'
         description: 'Resource type for API Management resource.'
-        input: true
         output: true
         azure_sdk_references: ['/type']

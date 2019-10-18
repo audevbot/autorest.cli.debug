@@ -49,7 +49,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: OperationContractProperties
             go_type_name: OperationContractProperties
           '/templateParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
@@ -69,7 +69,7 @@ objects:
           '/templateParameters/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [python]
             python_field_name: required
-          '/templateParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/templateParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: values
           '/properties/templateParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -91,7 +91,7 @@ objects:
           '/properties/templateParameters/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
             go_field_name: Required
-          '/properties/templateParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/templateParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: Values
           '/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -124,7 +124,7 @@ objects:
           '/request/queryParameters/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [python]
             python_field_name: required
-          '/request/queryParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/request/queryParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: values
           '/request/headers': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -145,7 +145,7 @@ objects:
           '/request/headers/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [python]
             python_field_name: required
-          '/request/headers/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/request/headers/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: values
           '/request/representations': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -181,7 +181,7 @@ objects:
           '/request/representations/formParameters/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [python]
             python_field_name: required
-          '/request/representations/formParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/request/representations/formParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: values
           '/properties/request': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -210,7 +210,7 @@ objects:
           '/properties/request/queryParameters/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
             go_field_name: Required
-          '/properties/request/queryParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/request/queryParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: Values
           '/properties/request/headers': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -232,7 +232,7 @@ objects:
           '/properties/request/headers/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
             go_field_name: Required
-          '/properties/request/headers/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/request/headers/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: Values
           '/properties/request/representations': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -270,13 +270,13 @@ objects:
           '/properties/request/representations/formParameters/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
             go_field_name: Required
-          '/properties/request/representations/formParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/request/representations/formParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: Values
           '/responses': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
             python_field_name: responses
-          '/responses/statusCode': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
+          '/responses/statusCode': !ruby/object:Api::Azure::SDKTypeDefinition::Integer32Object
             applicable_to: [python]
             python_field_name: status_code
           '/responses/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -315,7 +315,7 @@ objects:
           '/responses/representations/formParameters/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [python]
             python_field_name: required
-          '/responses/representations/formParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/responses/representations/formParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: values
           '/responses/headers': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -336,14 +336,14 @@ objects:
           '/responses/headers/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [python]
             python_field_name: required
-          '/responses/headers/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/responses/headers/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: values
           '/properties/responses': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Responses
             go_type_name: ResponseContract
-          '/properties/responses/statusCode': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
+          '/properties/responses/statusCode': !ruby/object:Api::Azure::SDKTypeDefinition::Integer32Object
             applicable_to: [go]
             go_field_name: StatusCode
           '/properties/responses/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -384,7 +384,7 @@ objects:
           '/properties/responses/representations/formParameters/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
             go_field_name: Required
-          '/properties/responses/representations/formParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/responses/representations/formParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: Values
           '/properties/responses/headers': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -406,7 +406,7 @@ objects:
           '/properties/responses/headers/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
             go_field_name: Required
-          '/properties/responses/headers/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/responses/headers/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: Values
           '/policies': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -464,7 +464,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: OperationContractProperties
             go_type_name: OperationContractProperties
           '/templateParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
@@ -484,7 +484,7 @@ objects:
           '/templateParameters/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [python]
             python_field_name: required
-          '/templateParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/templateParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: values
           '/properties/templateParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -506,7 +506,7 @@ objects:
           '/properties/templateParameters/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
             go_field_name: Required
-          '/properties/templateParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/templateParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: Values
           '/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -539,7 +539,7 @@ objects:
           '/request/queryParameters/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [python]
             python_field_name: required
-          '/request/queryParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/request/queryParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: values
           '/request/headers': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -560,7 +560,7 @@ objects:
           '/request/headers/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [python]
             python_field_name: required
-          '/request/headers/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/request/headers/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: values
           '/request/representations': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -596,7 +596,7 @@ objects:
           '/request/representations/formParameters/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [python]
             python_field_name: required
-          '/request/representations/formParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/request/representations/formParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: values
           '/properties/request': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -625,7 +625,7 @@ objects:
           '/properties/request/queryParameters/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
             go_field_name: Required
-          '/properties/request/queryParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/request/queryParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: Values
           '/properties/request/headers': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -647,7 +647,7 @@ objects:
           '/properties/request/headers/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
             go_field_name: Required
-          '/properties/request/headers/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/request/headers/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: Values
           '/properties/request/representations': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -685,13 +685,13 @@ objects:
           '/properties/request/representations/formParameters/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
             go_field_name: Required
-          '/properties/request/representations/formParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/request/representations/formParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: Values
           '/responses': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
             python_field_name: responses
-          '/responses/statusCode': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
+          '/responses/statusCode': !ruby/object:Api::Azure::SDKTypeDefinition::Integer32Object
             applicable_to: [python]
             python_field_name: status_code
           '/responses/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -730,7 +730,7 @@ objects:
           '/responses/representations/formParameters/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [python]
             python_field_name: required
-          '/responses/representations/formParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/responses/representations/formParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: values
           '/responses/headers': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -751,14 +751,14 @@ objects:
           '/responses/headers/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [python]
             python_field_name: required
-          '/responses/headers/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/responses/headers/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: values
           '/properties/responses': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Responses
             go_type_name: ResponseContract
-          '/properties/responses/statusCode': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
+          '/properties/responses/statusCode': !ruby/object:Api::Azure::SDKTypeDefinition::Integer32Object
             applicable_to: [go]
             go_field_name: StatusCode
           '/properties/responses/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -799,7 +799,7 @@ objects:
           '/properties/responses/representations/formParameters/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
             go_field_name: Required
-          '/properties/responses/representations/formParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/responses/representations/formParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: Values
           '/properties/responses/headers': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -821,7 +821,7 @@ objects:
           '/properties/responses/headers/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
             go_field_name: Required
-          '/properties/responses/headers/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/responses/headers/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: Values
           '/policies': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -899,7 +899,7 @@ objects:
         response:
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: OperationContractProperties
             go_type_name: OperationContractProperties
           '/properties/templateParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
@@ -920,7 +920,7 @@ objects:
           '/properties/templateParameters/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
             go_field_name: Required
-          '/properties/templateParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/templateParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: Values
           '/templateParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -941,7 +941,7 @@ objects:
           '/templateParameters/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [python]
             python_field_name: required
-          '/templateParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/templateParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: values
           '/properties/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -976,7 +976,7 @@ objects:
           '/properties/request/queryParameters/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
             go_field_name: Required
-          '/properties/request/queryParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/request/queryParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: Values
           '/properties/request/headers': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -998,7 +998,7 @@ objects:
           '/properties/request/headers/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
             go_field_name: Required
-          '/properties/request/headers/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/request/headers/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: Values
           '/properties/request/representations': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -1036,7 +1036,7 @@ objects:
           '/properties/request/representations/formParameters/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
             go_field_name: Required
-          '/properties/request/representations/formParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/request/representations/formParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: Values
           '/request': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
@@ -1063,7 +1063,7 @@ objects:
           '/request/queryParameters/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [python]
             python_field_name: required
-          '/request/queryParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/request/queryParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: values
           '/request/headers': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -1084,7 +1084,7 @@ objects:
           '/request/headers/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [python]
             python_field_name: required
-          '/request/headers/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/request/headers/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: values
           '/request/representations': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -1120,14 +1120,14 @@ objects:
           '/request/representations/formParameters/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [python]
             python_field_name: required
-          '/request/representations/formParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/request/representations/formParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: values
           '/properties/responses': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [go]
             go_field_name: Responses
             go_type_name: ResponseContract
-          '/properties/responses/statusCode': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
+          '/properties/responses/statusCode': !ruby/object:Api::Azure::SDKTypeDefinition::Integer32Object
             applicable_to: [go]
             go_field_name: StatusCode
           '/properties/responses/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -1168,7 +1168,7 @@ objects:
           '/properties/responses/representations/formParameters/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
             go_field_name: Required
-          '/properties/responses/representations/formParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/responses/representations/formParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: Values
           '/properties/responses/headers': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -1190,13 +1190,13 @@ objects:
           '/properties/responses/headers/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
             go_field_name: Required
-          '/properties/responses/headers/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/properties/responses/headers/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [go]
             go_field_name: Values
           '/responses': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
             python_field_name: responses
-          '/responses/statusCode': !ruby/object:Api::Azure::SDKTypeDefinition::IntegerObject
+          '/responses/statusCode': !ruby/object:Api::Azure::SDKTypeDefinition::Integer32Object
             applicable_to: [python]
             python_field_name: status_code
           '/responses/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -1235,7 +1235,7 @@ objects:
           '/responses/representations/formParameters/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [python]
             python_field_name: required
-          '/responses/representations/formParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/responses/representations/formParameters/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: values
           '/responses/headers': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -1256,7 +1256,7 @@ objects:
           '/responses/headers/required': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [python]
             python_field_name: required
-          '/responses/headers/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+          '/responses/headers/values': !ruby/object:Api::Azure::SDKTypeDefinition::StringArrayObject
             applicable_to: [python]
             python_field_name: values
           '/properties/policies': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -1343,42 +1343,44 @@ objects:
         input: true
         sample_value: 'myOperation'
         azure_sdk_references: ['operationId']
-      - !ruby/object:Api::Type::NestedObject
+      - !ruby/object:Api::Type::Array
         name: 'templateParameters'
         description: 'Collection of URL template parameters.'
         required: false
         azure_sdk_references: ['/templateParameters', '/properties/templateParameters']
-        properties:
-          - !ruby/object:Api::Type::String
-            name: 'name'
-            description: 'Parameter name.'
-            required: true
-            azure_sdk_references: ['/templateParameters/name', '/properties/templateParameters/name', '/name']
-          - !ruby/object:Api::Type::String
-            name: 'description'
-            description: 'Parameter description.'
-            required: false
-            azure_sdk_references: ['/templateParameters/description', '/properties/templateParameters/description']
-          - !ruby/object:Api::Type::String
-            name: 'type'
-            description: 'Parameter type.'
-            required: true
-            azure_sdk_references: ['/templateParameters/type', '/properties/templateParameters/type']
-          - !ruby/object:Api::Type::String
-            name: 'defaultValue'
-            description: 'Default parameter value.'
-            required: false
-            azure_sdk_references: ['/templateParameters/defaultValue', '/properties/templateParameters/defaultValue']
-          - !ruby/object:Api::Type::Boolean
-            name: 'required'
-            description: 'Specifies whether parameter is required or not.'
-            required: false
-            azure_sdk_references: ['/templateParameters/required', '/properties/templateParameters/required']
-          - !ruby/object:Api::Type::String
-            name: 'values'
-            description: 'Parameter values.'
-            required: false
-            azure_sdk_references: ['/templateParameters/values', '/properties/templateParameters/values']
+        item_type: !ruby/object:Api::Type::NestedObject
+          properties:
+            - !ruby/object:Api::Type::String
+              name: 'name'
+              description: 'Parameter name.'
+              required: true
+              azure_sdk_references: ['/templateParameters/name', '/properties/templateParameters/name', '/name']
+            - !ruby/object:Api::Type::String
+              name: 'description'
+              description: 'Parameter description.'
+              required: false
+              azure_sdk_references: ['/templateParameters/description', '/properties/templateParameters/description']
+            - !ruby/object:Api::Type::String
+              name: 'type'
+              description: 'Parameter type.'
+              required: true
+              azure_sdk_references: ['/templateParameters/type', '/properties/templateParameters/type']
+            - !ruby/object:Api::Type::String
+              name: 'defaultValue'
+              description: 'Default parameter value.'
+              required: false
+              azure_sdk_references: ['/templateParameters/defaultValue', '/properties/templateParameters/defaultValue']
+            - !ruby/object:Api::Type::Boolean
+              name: 'required'
+              description: 'Specifies whether parameter is required or not.'
+              required: false
+              azure_sdk_references: ['/templateParameters/required', '/properties/templateParameters/required']
+            - !ruby/object:Api::Type::Array
+              name: 'values'
+              description: 'Parameter values.'
+              required: false
+              azure_sdk_references: ['/templateParameters/values', '/properties/templateParameters/values']
+              item_type: Api::Type::String
       - !ruby/object:Api::Type::String
         name: 'description'
         description: 'Description of the operation. May include HTML formatting tags.'
@@ -1397,266 +1399,273 @@ objects:
             required: false
             sample_value: 'Created user object'
             azure_sdk_references: ['/request/description', '/properties/request/description']
-          - !ruby/object:Api::Type::NestedObject
+          - !ruby/object:Api::Type::Array
             name: 'queryParameters'
             description: 'Collection of operation request query parameters.'
             required: false
             azure_sdk_references: ['/request/queryParameters', '/properties/request/queryParameters']
-            properties:
-              - !ruby/object:Api::Type::String
-                name: 'name'
-                description: 'Parameter name.'
-                required: true
-                sample_value: 'param1'
-                azure_sdk_references: ['/request/queryParameters/name', '/properties/request/queryParameters/name', '/name']
-              - !ruby/object:Api::Type::String
-                name: 'description'
-                description: 'Parameter description.'
-                required: false
-                sample_value: 'A sample parameter that is required and has a default value of "sample".'
-                azure_sdk_references: ['/request/queryParameters/description', '/properties/request/queryParameters/description']
-              - !ruby/object:Api::Type::String
-                name: 'type'
-                description: 'Parameter type.'
-                required: true
-                sample_value: 'string'
-                azure_sdk_references: ['/request/queryParameters/type', '/properties/request/queryParameters/type']
-              - !ruby/object:Api::Type::String
-                name: 'defaultValue'
-                description: 'Default parameter value.'
-                required: false
-                sample_value: 'sample'
-                azure_sdk_references: ['/request/queryParameters/defaultValue', '/properties/request/queryParameters/defaultValue']
-              - !ruby/object:Api::Type::Boolean
-                name: 'required'
-                description: 'Specifies whether parameter is required or not.'
-                required: false
-                sample_value: true
-                azure_sdk_references: ['/request/queryParameters/required', '/properties/request/queryParameters/required']
-              - !ruby/object:Api::Type::String
-                name: 'values'
-                description: 'Parameter values.'
-                required: false
-                sample_value: 'sample'
-                azure_sdk_references: ['/request/queryParameters/values', '/properties/request/queryParameters/values']
-          - !ruby/object:Api::Type::NestedObject
+            item_type: !ruby/object:Api::Type::NestedObject
+              properties:
+                - !ruby/object:Api::Type::String
+                  name: 'name'
+                  description: 'Parameter name.'
+                  required: true
+                  sample_value: 'param1'
+                  azure_sdk_references: ['/request/queryParameters/name', '/properties/request/queryParameters/name', '/name']
+                - !ruby/object:Api::Type::String
+                  name: 'description'
+                  description: 'Parameter description.'
+                  required: false
+                  sample_value: 'A sample parameter that is required and has a default value of "sample".'
+                  azure_sdk_references: ['/request/queryParameters/description', '/properties/request/queryParameters/description']
+                - !ruby/object:Api::Type::String
+                  name: 'type'
+                  description: 'Parameter type.'
+                  required: true
+                  sample_value: 'string'
+                  azure_sdk_references: ['/request/queryParameters/type', '/properties/request/queryParameters/type']
+                - !ruby/object:Api::Type::String
+                  name: 'defaultValue'
+                  description: 'Default parameter value.'
+                  required: false
+                  azure_sdk_references: ['/request/queryParameters/defaultValue', '/properties/request/queryParameters/defaultValue']
+                - !ruby/object:Api::Type::Boolean
+                  name: 'required'
+                  description: 'Specifies whether parameter is required or not.'
+                  required: false
+                  sample_value: true
+                  azure_sdk_references: ['/request/queryParameters/required', '/properties/request/queryParameters/required']
+                - !ruby/object:Api::Type::Array
+                  name: 'values'
+                  description: 'Parameter values.'
+                  required: false
+                  sample_value: sample
+                  azure_sdk_references: ['/request/queryParameters/values', '/properties/request/queryParameters/values']
+                  item_type: Api::Type::String
+          - !ruby/object:Api::Type::Array
             name: 'headers'
             description: 'Collection of operation request headers.'
             required: false
             azure_sdk_references: ['/request/headers', '/properties/request/headers']
-            properties:
-              - !ruby/object:Api::Type::String
-                name: 'name'
-                description: 'Parameter name.'
-                required: true
-                azure_sdk_references: ['/request/headers/name', '/properties/request/headers/name', '/name']
-              - !ruby/object:Api::Type::String
-                name: 'description'
-                description: 'Parameter description.'
-                required: false
-                azure_sdk_references: ['/request/headers/description', '/properties/request/headers/description']
-              - !ruby/object:Api::Type::String
-                name: 'type'
-                description: 'Parameter type.'
-                required: true
-                azure_sdk_references: ['/request/headers/type', '/properties/request/headers/type']
-              - !ruby/object:Api::Type::String
-                name: 'defaultValue'
-                description: 'Default parameter value.'
-                required: false
-                azure_sdk_references: ['/request/headers/defaultValue', '/properties/request/headers/defaultValue']
-              - !ruby/object:Api::Type::Boolean
-                name: 'required'
-                description: 'Specifies whether parameter is required or not.'
-                required: false
-                azure_sdk_references: ['/request/headers/required', '/properties/request/headers/required']
-              - !ruby/object:Api::Type::String
-                name: 'values'
-                description: 'Parameter values.'
-                required: false
-                azure_sdk_references: ['/request/headers/values', '/properties/request/headers/values']
-          - !ruby/object:Api::Type::NestedObject
+            item_type: !ruby/object:Api::Type::NestedObject
+              properties:
+                - !ruby/object:Api::Type::String
+                  name: 'name'
+                  description: 'Parameter name.'
+                  required: true
+                  azure_sdk_references: ['/request/headers/name', '/properties/request/headers/name', '/name']
+                - !ruby/object:Api::Type::String
+                  name: 'description'
+                  description: 'Parameter description.'
+                  required: false
+                  azure_sdk_references: ['/request/headers/description', '/properties/request/headers/description']
+                - !ruby/object:Api::Type::String
+                  name: 'type'
+                  description: 'Parameter type.'
+                  required: true
+                  azure_sdk_references: ['/request/headers/type', '/properties/request/headers/type']
+                - !ruby/object:Api::Type::String
+                  name: 'defaultValue'
+                  description: 'Default parameter value.'
+                  required: false
+                  azure_sdk_references: ['/request/headers/defaultValue', '/properties/request/headers/defaultValue']
+                - !ruby/object:Api::Type::Boolean
+                  name: 'required'
+                  description: 'Specifies whether parameter is required or not.'
+                  required: false
+                  azure_sdk_references: ['/request/headers/required', '/properties/request/headers/required']
+                - !ruby/object:Api::Type::Array
+                  name: 'values'
+                  description: 'Parameter values.'
+                  required: false
+                  azure_sdk_references: ['/request/headers/values', '/properties/request/headers/values']
+                  item_type: Api::Type::String
+          - !ruby/object:Api::Type::Array
             name: 'representations'
             description: 'Collection of operation request representations.'
             required: false
             azure_sdk_references: ['/request/representations', '/properties/request/representations']
-            properties:
-              - !ruby/object:Api::Type::String
-                name: 'contentType'
-                description: 'Specifies a registered or custom content type for this representation, e.g. application/xml.'
-                required: true
-                sample_value: 'application/json'
-                azure_sdk_references: ['/request/representations/contentType', '/properties/request/representations/contentType']
-              - !ruby/object:Api::Type::String
-                name: 'sample'
-                description: 'An example of the representation.'
-                required: false
-                azure_sdk_references: ['/request/representations/sample', '/properties/request/representations/sample']
-              - !ruby/object:Api::Type::String
-                name: 'schemaId'
-                description: 'Schema identifier. Applicable only if ''contentType'' value is neither ''application/x-www-form-urlencoded'' nor ''multipart/form-data''.'
-                required: false
-                sample_value: '592f6c1d0af5840ca8897f0c'
-                azure_sdk_references: ['/request/representations/schemaId', '/properties/request/representations/schemaId']
-              - !ruby/object:Api::Type::String
-                name: 'typeName'
-                description: 'Type name defined by the schema. Applicable only if ''contentType'' value is neither ''application/x-www-form-urlencoded'' nor ''multipart/form-data''.'
-                required: false
-                sample_value: 'User'
-                azure_sdk_references: ['/request/representations/typeName', '/properties/request/representations/typeName']
-              - !ruby/object:Api::Type::NestedObject
-                name: 'formParameters'
-                description: 'Collection of form parameters. Required if ''contentType'' value is either ''application/x-www-form-urlencoded'' or ''multipart/form-data''..'
-                required: false
-                azure_sdk_references: ['/request/representations/formParameters', '/properties/request/representations/formParameters']
-                properties:
-                  - !ruby/object:Api::Type::String
-                    name: 'name'
-                    description: 'Parameter name.'
-                    required: true
-                    azure_sdk_references: ['/request/representations/formParameters/name', '/properties/request/representations/formParameters/name', '/name']
-                  - !ruby/object:Api::Type::String
-                    name: 'description'
-                    description: 'Parameter description.'
-                    required: false
-                    azure_sdk_references: ['/request/representations/formParameters/description', '/properties/request/representations/formParameters/description']
-                  - !ruby/object:Api::Type::String
-                    name: 'type'
-                    description: 'Parameter type.'
-                    required: true
-                    azure_sdk_references: ['/request/representations/formParameters/type', '/properties/request/representations/formParameters/type']
-                  - !ruby/object:Api::Type::String
-                    name: 'defaultValue'
-                    description: 'Default parameter value.'
-                    required: false
-                    azure_sdk_references: ['/request/representations/formParameters/defaultValue', '/properties/request/representations/formParameters/defaultValue']
-                  - !ruby/object:Api::Type::Boolean
-                    name: 'required'
-                    description: 'Specifies whether parameter is required or not.'
-                    required: false
-                    azure_sdk_references: ['/request/representations/formParameters/required', '/properties/request/representations/formParameters/required']
-                  - !ruby/object:Api::Type::String
-                    name: 'values'
-                    description: 'Parameter values.'
-                    required: false
-                    azure_sdk_references: ['/request/representations/formParameters/values', '/properties/request/representations/formParameters/values']
-      - !ruby/object:Api::Type::NestedObject
+            item_type: !ruby/object:Api::Type::NestedObject
+              properties:
+                - !ruby/object:Api::Type::String
+                  name: 'contentType'
+                  description: 'Specifies a registered or custom content type for this representation, e.g. application/xml.'
+                  required: true
+                  azure_sdk_references: ['/request/representations/contentType', '/properties/request/representations/contentType']
+                - !ruby/object:Api::Type::String
+                  name: 'sample'
+                  description: 'An example of the representation.'
+                  required: false
+                  azure_sdk_references: ['/request/representations/sample', '/properties/request/representations/sample']
+                - !ruby/object:Api::Type::String
+                  name: 'schemaId'
+                  description: 'Schema identifier. Applicable only if ''contentType'' value is neither ''application/x-www-form-urlencoded'' nor ''multipart/form-data''.'
+                  required: false
+                  azure_sdk_references: ['/request/representations/schemaId', '/properties/request/representations/schemaId']
+                - !ruby/object:Api::Type::String
+                  name: 'typeName'
+                  description: 'Type name defined by the schema. Applicable only if ''contentType'' value is neither ''application/x-www-form-urlencoded'' nor ''multipart/form-data''.'
+                  required: false
+                  azure_sdk_references: ['/request/representations/typeName', '/properties/request/representations/typeName']
+                - !ruby/object:Api::Type::Array
+                  name: 'formParameters'
+                  description: 'Collection of form parameters. Required if ''contentType'' value is either ''application/x-www-form-urlencoded'' or ''multipart/form-data''..'
+                  required: false
+                  azure_sdk_references: ['/request/representations/formParameters', '/properties/request/representations/formParameters']
+                  item_type: !ruby/object:Api::Type::NestedObject
+                    properties:
+                      - !ruby/object:Api::Type::String
+                        name: 'name'
+                        description: 'Parameter name.'
+                        required: true
+                        azure_sdk_references: ['/request/representations/formParameters/name', '/properties/request/representations/formParameters/name', '/name']
+                      - !ruby/object:Api::Type::String
+                        name: 'description'
+                        description: 'Parameter description.'
+                        required: false
+                        azure_sdk_references: ['/request/representations/formParameters/description', '/properties/request/representations/formParameters/description']
+                      - !ruby/object:Api::Type::String
+                        name: 'type'
+                        description: 'Parameter type.'
+                        required: true
+                        azure_sdk_references: ['/request/representations/formParameters/type', '/properties/request/representations/formParameters/type']
+                      - !ruby/object:Api::Type::String
+                        name: 'defaultValue'
+                        description: 'Default parameter value.'
+                        required: false
+                        azure_sdk_references: ['/request/representations/formParameters/defaultValue', '/properties/request/representations/formParameters/defaultValue']
+                      - !ruby/object:Api::Type::Boolean
+                        name: 'required'
+                        description: 'Specifies whether parameter is required or not.'
+                        required: false
+                        azure_sdk_references: ['/request/representations/formParameters/required', '/properties/request/representations/formParameters/required']
+                      - !ruby/object:Api::Type::Array
+                        name: 'values'
+                        description: 'Parameter values.'
+                        required: false
+                        azure_sdk_references: ['/request/representations/formParameters/values', '/properties/request/representations/formParameters/values']
+                        item_type: Api::Type::String
+      - !ruby/object:Api::Type::Array
         name: 'responses'
         description: 'Array of Operation responses.'
         required: false
         azure_sdk_references: ['/responses', '/properties/responses']
-        properties:
-          - !ruby/object:Api::Type::Integer
-            name: 'statusCode'
-            description: 'Operation response HTTP status code.'
-            required: true
-            sample_value: 500
-            azure_sdk_references: ['/responses/statusCode', '/properties/responses/statusCode']
-          - !ruby/object:Api::Type::String
-            name: 'description'
-            description: 'Operation response description.'
-            required: false
-            sample_value: 'Server Error.'
-            azure_sdk_references: ['/responses/description', '/properties/responses/description']
-          - !ruby/object:Api::Type::NestedObject
-            name: 'representations'
-            description: 'Collection of operation response representations.'
-            required: false
-            azure_sdk_references: ['/responses/representations', '/properties/responses/representations']
-            properties:
-              - !ruby/object:Api::Type::String
-                name: 'contentType'
-                description: 'Specifies a registered or custom content type for this representation, e.g. application/xml.'
-                required: true
-                sample_value: 'application/json'
-                azure_sdk_references: ['/responses/representations/contentType', '/properties/responses/representations/contentType']
-              - !ruby/object:Api::Type::String
-                name: 'sample'
-                description: 'An example of the representation.'
-                required: false
-                azure_sdk_references: ['/responses/representations/sample', '/properties/responses/representations/sample']
-              - !ruby/object:Api::Type::String
-                name: 'schemaId'
-                description: 'Schema identifier. Applicable only if ''contentType'' value is neither ''application/x-www-form-urlencoded'' nor ''multipart/form-data''.'
-                required: false
-                azure_sdk_references: ['/responses/representations/schemaId', '/properties/responses/representations/schemaId']
-              - !ruby/object:Api::Type::String
-                name: 'typeName'
-                description: 'Type name defined by the schema. Applicable only if ''contentType'' value is neither ''application/x-www-form-urlencoded'' nor ''multipart/form-data''.'
-                required: false
-                azure_sdk_references: ['/responses/representations/typeName', '/properties/responses/representations/typeName']
-              - !ruby/object:Api::Type::NestedObject
-                name: 'formParameters'
-                description: 'Collection of form parameters. Required if ''contentType'' value is either ''application/x-www-form-urlencoded'' or ''multipart/form-data''..'
-                required: false
-                azure_sdk_references: ['/responses/representations/formParameters', '/properties/responses/representations/formParameters']
+        item_type: !ruby/object:Api::Type::NestedObject
+          properties:
+            - !ruby/object:Api::Type::Integer
+              name: 'statusCode'
+              description: 'Operation response HTTP status code.'
+              required: true
+              azure_sdk_references: ['/responses/statusCode', '/properties/responses/statusCode']
+            - !ruby/object:Api::Type::String
+              name: 'description'
+              description: 'Operation response description.'
+              required: false
+              sample_value: 'Server Error.'
+              azure_sdk_references: ['/responses/description', '/properties/responses/description']
+            - !ruby/object:Api::Type::Array
+              name: 'representations'
+              description: 'Collection of operation response representations.'
+              required: false
+              azure_sdk_references: ['/responses/representations', '/properties/responses/representations']
+              item_type: !ruby/object:Api::Type::NestedObject
+                properties:
+                  - !ruby/object:Api::Type::String
+                    name: 'contentType'
+                    description: 'Specifies a registered or custom content type for this representation, e.g. application/xml.'
+                    required: true
+                    azure_sdk_references: ['/responses/representations/contentType', '/properties/responses/representations/contentType']
+                  - !ruby/object:Api::Type::String
+                    name: 'sample'
+                    description: 'An example of the representation.'
+                    required: false
+                    azure_sdk_references: ['/responses/representations/sample', '/properties/responses/representations/sample']
+                  - !ruby/object:Api::Type::String
+                    name: 'schemaId'
+                    description: 'Schema identifier. Applicable only if ''contentType'' value is neither ''application/x-www-form-urlencoded'' nor ''multipart/form-data''.'
+                    required: false
+                    azure_sdk_references: ['/responses/representations/schemaId', '/properties/responses/representations/schemaId']
+                  - !ruby/object:Api::Type::String
+                    name: 'typeName'
+                    description: 'Type name defined by the schema. Applicable only if ''contentType'' value is neither ''application/x-www-form-urlencoded'' nor ''multipart/form-data''.'
+                    required: false
+                    azure_sdk_references: ['/responses/representations/typeName', '/properties/responses/representations/typeName']
+                  - !ruby/object:Api::Type::Array
+                    name: 'formParameters'
+                    description: 'Collection of form parameters. Required if ''contentType'' value is either ''application/x-www-form-urlencoded'' or ''multipart/form-data''..'
+                    required: false
+                    azure_sdk_references: ['/responses/representations/formParameters', '/properties/responses/representations/formParameters']
+                    item_type: !ruby/object:Api::Type::NestedObject
+                      properties:
+                        - !ruby/object:Api::Type::String
+                          name: 'name'
+                          description: 'Parameter name.'
+                          required: true
+                          azure_sdk_references: ['/responses/representations/formParameters/name', '/properties/responses/representations/formParameters/name', '/name']
+                        - !ruby/object:Api::Type::String
+                          name: 'description'
+                          description: 'Parameter description.'
+                          required: false
+                          azure_sdk_references: ['/responses/representations/formParameters/description', '/properties/responses/representations/formParameters/description']
+                        - !ruby/object:Api::Type::String
+                          name: 'type'
+                          description: 'Parameter type.'
+                          required: true
+                          azure_sdk_references: ['/responses/representations/formParameters/type', '/properties/responses/representations/formParameters/type']
+                        - !ruby/object:Api::Type::String
+                          name: 'defaultValue'
+                          description: 'Default parameter value.'
+                          required: false
+                          azure_sdk_references: ['/responses/representations/formParameters/defaultValue', '/properties/responses/representations/formParameters/defaultValue']
+                        - !ruby/object:Api::Type::Boolean
+                          name: 'required'
+                          description: 'Specifies whether parameter is required or not.'
+                          required: false
+                          azure_sdk_references: ['/responses/representations/formParameters/required', '/properties/responses/representations/formParameters/required']
+                        - !ruby/object:Api::Type::Array
+                          name: 'values'
+                          description: 'Parameter values.'
+                          required: false
+                          azure_sdk_references: ['/responses/representations/formParameters/values', '/properties/responses/representations/formParameters/values']
+                          item_type: Api::Type::String
+            - !ruby/object:Api::Type::Array
+              name: 'headers'
+              description: 'Collection of operation response headers.'
+              required: false
+              azure_sdk_references: ['/responses/headers', '/properties/responses/headers']
+              item_type: !ruby/object:Api::Type::NestedObject
                 properties:
                   - !ruby/object:Api::Type::String
                     name: 'name'
                     description: 'Parameter name.'
                     required: true
-                    azure_sdk_references: ['/responses/representations/formParameters/name', '/properties/responses/representations/formParameters/name', '/name']
+                    azure_sdk_references: ['/responses/headers/name', '/properties/responses/headers/name', '/name']
                   - !ruby/object:Api::Type::String
                     name: 'description'
                     description: 'Parameter description.'
                     required: false
-                    azure_sdk_references: ['/responses/representations/formParameters/description', '/properties/responses/representations/formParameters/description']
+                    azure_sdk_references: ['/responses/headers/description', '/properties/responses/headers/description']
                   - !ruby/object:Api::Type::String
                     name: 'type'
                     description: 'Parameter type.'
                     required: true
-                    azure_sdk_references: ['/responses/representations/formParameters/type', '/properties/responses/representations/formParameters/type']
+                    azure_sdk_references: ['/responses/headers/type', '/properties/responses/headers/type']
                   - !ruby/object:Api::Type::String
                     name: 'defaultValue'
                     description: 'Default parameter value.'
                     required: false
-                    azure_sdk_references: ['/responses/representations/formParameters/defaultValue', '/properties/responses/representations/formParameters/defaultValue']
+                    azure_sdk_references: ['/responses/headers/defaultValue', '/properties/responses/headers/defaultValue']
                   - !ruby/object:Api::Type::Boolean
                     name: 'required'
                     description: 'Specifies whether parameter is required or not.'
                     required: false
-                    azure_sdk_references: ['/responses/representations/formParameters/required', '/properties/responses/representations/formParameters/required']
-                  - !ruby/object:Api::Type::String
+                    azure_sdk_references: ['/responses/headers/required', '/properties/responses/headers/required']
+                  - !ruby/object:Api::Type::Array
                     name: 'values'
                     description: 'Parameter values.'
                     required: false
-                    azure_sdk_references: ['/responses/representations/formParameters/values', '/properties/responses/representations/formParameters/values']
-          - !ruby/object:Api::Type::NestedObject
-            name: 'headers'
-            description: 'Collection of operation response headers.'
-            required: false
-            azure_sdk_references: ['/responses/headers', '/properties/responses/headers']
-            properties:
-              - !ruby/object:Api::Type::String
-                name: 'name'
-                description: 'Parameter name.'
-                required: true
-                azure_sdk_references: ['/responses/headers/name', '/properties/responses/headers/name', '/name']
-              - !ruby/object:Api::Type::String
-                name: 'description'
-                description: 'Parameter description.'
-                required: false
-                azure_sdk_references: ['/responses/headers/description', '/properties/responses/headers/description']
-              - !ruby/object:Api::Type::String
-                name: 'type'
-                description: 'Parameter type.'
-                required: true
-                azure_sdk_references: ['/responses/headers/type', '/properties/responses/headers/type']
-              - !ruby/object:Api::Type::String
-                name: 'defaultValue'
-                description: 'Default parameter value.'
-                required: false
-                azure_sdk_references: ['/responses/headers/defaultValue', '/properties/responses/headers/defaultValue']
-              - !ruby/object:Api::Type::Boolean
-                name: 'required'
-                description: 'Specifies whether parameter is required or not.'
-                required: false
-                azure_sdk_references: ['/responses/headers/required', '/properties/responses/headers/required']
-              - !ruby/object:Api::Type::String
-                name: 'values'
-                description: 'Parameter values.'
-                required: false
-                azure_sdk_references: ['/responses/headers/values', '/properties/responses/headers/values']
+                    azure_sdk_references: ['/responses/headers/values', '/properties/responses/headers/values']
+                    item_type: Api::Type::String
       - !ruby/object:Api::Type::String
         name: 'policies'
         description: 'Operation Policies'
@@ -1684,18 +1693,15 @@ objects:
       - !ruby/object:Api::Type::String
         name: 'id'
         description: 'Resource ID.'
-        input: true
         output: true
         azure_sdk_references: ['/id']
       - !ruby/object:Api::Type::String
         name: 'name'
         description: 'Resource name.'
-        input: true
         output: true
         azure_sdk_references: ['/name']
       - !ruby/object:Api::Type::String
         name: 'type'
         description: 'Resource type for API Management resource.'
-        input: true
         output: true
         azure_sdk_references: ['/type']

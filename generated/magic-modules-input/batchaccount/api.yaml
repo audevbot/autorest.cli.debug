@@ -46,7 +46,7 @@ objects:
             python_field_name: tags
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: AccountCreateProperties
             go_type_name: AccountCreateProperties
           '/properties/autoStorage': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
@@ -111,7 +111,7 @@ objects:
             python_field_name: tags
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: AccountCreateProperties
             go_type_name: AccountCreateProperties
           '/properties/autoStorage': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
@@ -187,7 +187,7 @@ objects:
             python_field_name: tags
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: AccountCreateProperties
             go_type_name: AccountCreateProperties
           '/properties/autoStorage': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
@@ -295,12 +295,12 @@ objects:
         name: 'poolAllocationMode'
         description: 'The pool allocation mode also affects how clients may authenticate to the Batch Service API. If the mode is BatchService, clients may authenticate using access keys or Azure Active Directory. If the mode is UserSubscription, clients must use Azure Active Directory. The default is BatchService.'
         required: false
+        sample_value: UserSubscription
+        azure_sdk_references: ['/poolAllocationMode', '/properties/poolAllocationMode']
         values:
           - :BatchService
           - :UserSubscription
         default_value: :BatchService
-        sample_value: UserSubscription
-        azure_sdk_references: ['/poolAllocationMode', '/properties/poolAllocationMode']
       - !ruby/object:Api::Type::NestedObject
         name: 'keyVaultReference'
         description: 'A reference to the Azure key vault associated with the Batch account.'
@@ -334,6 +334,5 @@ objects:
       - !ruby/object:Api::Type::String
         name: 'id'
         description: 'The ID of the resource.'
-        input: true
         output: true
         azure_sdk_references: ['/id']

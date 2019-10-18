@@ -30,7 +30,9 @@ Modules:
         ExampleValue: myResourceGroup
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: automationAccountName
         NameAnsible: automation_account_name
         NamePythonSdk: automation_account_name
@@ -60,7 +62,9 @@ Modules:
         ExampleValue: myAutomationAccount
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: softwareUpdateConfigurationName
         NameAnsible: name
         NamePythonSdk: software_update_configuration_name
@@ -90,7 +94,9 @@ Modules:
         ExampleValue: mySoftwareUpdateConfiguration
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: clientRequestId
         NameAnsible: client_request_id
         NamePythonSdk: client_request_id
@@ -120,7 +126,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: parameters
         NameAnsible: parameters
         NamePythonSdk: parameters
@@ -129,7 +137,7 @@ Modules:
         IdPortion: null
         Type: dict
         TypeName: softwareUpdateConfiguration
-        TypeNameGo: softwareUpdateConfiguration
+        TypeNameGo: SoftwareUpdateConfiguration
         IsList: false
         Required: !<tag:yaml.org,2002:js/undefined> ''
         Documentation: Request body.
@@ -143,14 +151,16 @@ Modules:
         PathSwagger: ''
         PathPython: null
         PathGo: null
-        DispositionSdk: dictionary
+        DispositionSdk: '*'
         DispositionRest: '*'
         Comparison: ''
         Updatable: true
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 2
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -159,7 +169,7 @@ Modules:
         IdPortion: null
         Type: dict
         TypeName: softwareUpdateConfigurationProperties
-        TypeNameGo: softwareUpdateConfigurationProperties
+        TypeNameGo: SoftwareUpdateConfigurationProperties
         IsList: false
         Required: true
         Documentation: Software update configuration properties.
@@ -180,7 +190,9 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: updateConfiguration
         NameAnsible: update_configuration
         NamePythonSdk: update_configuration
@@ -189,7 +201,7 @@ Modules:
         IdPortion: null
         Type: dict
         TypeName: updateConfiguration
-        TypeNameGo: updateConfiguration
+        TypeNameGo: UpdateConfiguration
         IsList: false
         Required: true
         Documentation: update specific properties for the Software update configuration
@@ -234,7 +246,9 @@ Modules:
             ExampleValue: Windows
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: windows
             NameAnsible: windows
             NamePythonSdk: windows
@@ -313,7 +327,9 @@ Modules:
                 ExampleValue: Critical
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: excludedKbNumbers
                 NameAnsible: excluded_kb_numbers
                 NamePythonSdk: excluded_kb_numbers
@@ -343,7 +359,9 @@ Modules:
                 ExampleValue: '168973'
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: includedKbNumbers
                 NameAnsible: included_kb_numbers
                 NamePythonSdk: included_kb_numbers
@@ -373,7 +391,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: rebootSetting
                 NameAnsible: reboot_setting
                 NamePythonSdk: reboot_setting
@@ -403,7 +423,9 @@ Modules:
                 ExampleValue: IfRequired
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/updateConfiguration/windows
             PathPython: /updateConfiguration/windows
@@ -415,7 +437,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: linux
             NameAnsible: linux
             NamePythonSdk: linux
@@ -479,7 +503,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: excludedPackageNameMasks
                 NameAnsible: excluded_package_name_masks
                 NamePythonSdk: excluded_package_name_masks
@@ -509,7 +535,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: includedPackageNameMasks
                 NameAnsible: included_package_name_masks
                 NamePythonSdk: included_package_name_masks
@@ -539,7 +567,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: rebootSetting
                 NameAnsible: reboot_setting
                 NamePythonSdk: reboot_setting
@@ -569,7 +599,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/updateConfiguration/linux
             PathPython: /updateConfiguration/linux
@@ -581,7 +613,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: duration
             NameAnsible: duration
             NamePythonSdk: duration
@@ -614,7 +648,9 @@ Modules:
             ExampleValue: PT2H0M
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: azureVirtualMachines
             NameAnsible: azure_virtual_machines
             NamePythonSdk: azure_virtual_machines
@@ -647,7 +683,9 @@ Modules:
               /subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-03
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: nonAzureComputerNames
             NameAnsible: non_azure_computer_names
             NamePythonSdk: non_azure_computer_names
@@ -679,7 +717,9 @@ Modules:
             ExampleValue: box2.contoso.com
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: targets
             NameAnsible: targets
             NamePythonSdk: targets
@@ -745,7 +785,9 @@ Modules:
                     ExampleValue: /subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067
                     Hidden: false
                     IncludeInResponse: true
+                    format: ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: locations
                     NameAnsible: locations
                     NamePythonSdk: locations
@@ -777,7 +819,9 @@ Modules:
                     ExampleValue: UK South
                     Hidden: false
                     IncludeInResponse: true
+                    format: ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: tagSettings
                     NameAnsible: tag_settings
                     NamePythonSdk: tag_settings
@@ -806,20 +850,12 @@ Modules:
                     DispositionRest: '*'
                     Comparison: ''
                     Updatable: true
-                    ExampleValue:
-                      tags:
-                        - tag1:
-                            - tag1Value1
-                            - tag1Value2
-                            - tag1Value3
-                        - tag2:
-                            - tag2Value1
-                            - tag2Value2
-                            - tag2Value3
-                      filterOperator: All
+                    ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /properties/updateConfiguration/targets/azureQueries
                 PathPython: /updateConfiguration/targets/azureQueries
@@ -831,7 +867,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: nonAzureQueries
                 NameAnsible: non_azure_queries
                 NamePythonSdk: non_azure_queries
@@ -880,10 +918,12 @@ Modules:
                     DispositionRest: '*'
                     Comparison: ''
                     Updatable: true
-                    ExampleValue: SavedSearch2
+                    ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: workspaceId
                     NameAnsible: workspace_id
                     NamePythonSdk: workspace_id
@@ -914,10 +954,12 @@ Modules:
                     DispositionRest: '*'
                     Comparison: ''
                     Updatable: true
-                    ExampleValue: WorkspaceId2
+                    ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /properties/updateConfiguration/targets/nonAzureQueries
                 PathPython: /updateConfiguration/targets/nonAzureQueries
@@ -929,7 +971,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/updateConfiguration/targets
             PathPython: /updateConfiguration/targets
@@ -941,7 +985,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/updateConfiguration
         PathPython: /updateConfiguration
@@ -953,7 +999,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: scheduleInfo
         NameAnsible: schedule_info
         NamePythonSdk: schedule_info
@@ -1001,7 +1049,9 @@ Modules:
             ExampleValue: '2017-10-19T12:22:57+00:00'
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: expiryTime
             NameAnsible: expiry_time
             NamePythonSdk: expiry_time
@@ -1031,7 +1081,9 @@ Modules:
             ExampleValue: '2018-11-09T11:22:57+00:00'
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: expiryTimeOffsetMinutes
             NameAnsible: expiry_time_offset_minutes
             NamePythonSdk: expiry_time_offset_minutes
@@ -1061,7 +1113,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: double
             Flatten: false
+            Kind: 1
           - NameSwagger: isEnabled
             NameAnsible: is_enabled
             NamePythonSdk: is_enabled
@@ -1091,7 +1145,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: nextRun
             NameAnsible: next_run
             NamePythonSdk: next_run
@@ -1121,7 +1177,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: nextRunOffsetMinutes
             NameAnsible: next_run_offset_minutes
             NamePythonSdk: next_run_offset_minutes
@@ -1151,7 +1209,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: double
             Flatten: false
+            Kind: 1
           - NameSwagger: interval
             NameAnsible: interval
             NamePythonSdk: interval
@@ -1181,7 +1241,9 @@ Modules:
             ExampleValue: '1'
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: frequency
             NameAnsible: frequency
             NamePythonSdk: frequency
@@ -1231,7 +1293,9 @@ Modules:
             ExampleValue: Hour
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: timeZone
             NameAnsible: time_zone
             NamePythonSdk: time_zone
@@ -1261,7 +1325,9 @@ Modules:
             ExampleValue: America/Los_Angeles
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: advancedSchedule
             NameAnsible: advanced_schedule
             NamePythonSdk: advanced_schedule
@@ -1309,7 +1375,9 @@ Modules:
                 ExampleValue: Thursday
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: monthDays
                 NameAnsible: month_days
                 NamePythonSdk: month_days
@@ -1341,7 +1409,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: int32
                 Flatten: false
+                Kind: 1
               - NameSwagger: monthlyOccurrences
                 NameAnsible: monthly_occurrences
                 NamePythonSdk: monthly_occurrences
@@ -1394,7 +1464,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: int32
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: day
                     NameAnsible: day
                     NamePythonSdk: day
@@ -1449,7 +1521,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /properties/scheduleInfo/advancedSchedule/monthlyOccurrences
                 PathPython: /scheduleInfo/advancedSchedule/monthlyOccurrences
@@ -1461,7 +1535,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/scheduleInfo/advancedSchedule
             PathPython: /scheduleInfo/advancedSchedule
@@ -1473,7 +1549,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: creationTime
             NameAnsible: creation_time
             NamePythonSdk: creation_time
@@ -1503,7 +1581,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: lastModifiedTime
             NameAnsible: last_modified_time
             NamePythonSdk: last_modified_time
@@ -1533,7 +1613,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: description
             NameAnsible: description
             NamePythonSdk: description
@@ -1563,7 +1645,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - &ref_3
             NameSwagger: startTimeOffsetMinutes
             NameAnsible: start_time_offset_minutes
@@ -1594,7 +1678,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: double
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/scheduleInfo
         PathPython: /scheduleInfo
@@ -1606,7 +1692,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: error
         NameAnsible: error
         NamePythonSdk: error
@@ -1654,7 +1742,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: message
             NameAnsible: message
             NamePythonSdk: message
@@ -1684,7 +1774,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/error
         PathPython: /error
@@ -1696,7 +1788,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: tasks
         NameAnsible: tasks
         NamePythonSdk: tasks
@@ -1705,7 +1799,7 @@ Modules:
         IdPortion: null
         Type: dict
         TypeName: softwareUpdateConfigurationTasks
-        TypeNameGo: softwareUpdateConfigurationTasks
+        TypeNameGo: SoftwareUpdateConfigurationTasks
         IsList: false
         Required: false
         Documentation: Tasks information for the Software update configuration.
@@ -1723,7 +1817,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: taskProperties
-            TypeNameGo: taskProperties
+            TypeNameGo: TaskProperties
             IsList: false
             Required: false
             Documentation: Pre task properties.
@@ -1766,7 +1860,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: source
                 NameAnsible: source
                 NamePythonSdk: source
@@ -1796,7 +1892,9 @@ Modules:
                 ExampleValue: HelloWorld
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/tasks/preTask
             PathPython: /tasks/preTask
@@ -1808,7 +1906,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: postTask
             NameAnsible: post_task
             NamePythonSdk: post_task
@@ -1817,7 +1917,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: taskProperties
-            TypeNameGo: taskProperties
+            TypeNameGo: TaskProperties
             IsList: false
             Required: false
             Documentation: Post task properties.
@@ -1860,7 +1960,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: source
                 NameAnsible: source
                 NamePythonSdk: source
@@ -1890,7 +1992,9 @@ Modules:
                 ExampleValue: GetCache
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/tasks/postTask
             PathPython: /tasks/postTask
@@ -1902,7 +2006,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/tasks
         PathPython: /tasks
@@ -1914,7 +2020,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_4
         NameSwagger: provisioningState
         NameAnsible: provisioning_state
@@ -1947,7 +2055,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_5
         NameSwagger: creationTime
         NameAnsible: creation_time
@@ -1978,7 +2088,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_6
         NameSwagger: createdBy
         NameAnsible: created_by
@@ -2009,7 +2121,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_7
         NameSwagger: lastModifiedTime
         NameAnsible: last_modified_time
@@ -2040,7 +2154,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_8
         NameSwagger: lastModifiedBy
         NameAnsible: last_modified_by
@@ -2071,7 +2187,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_0
         NameSwagger: name
         NameAnsible: name
@@ -2102,7 +2220,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_1
         NameSwagger: id
         NameAnsible: id
@@ -2133,7 +2253,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_2
         NameSwagger: type
         NameAnsible: type
@@ -2164,7 +2286,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: Create
         Options:
@@ -2245,7 +2369,7 @@ Modules:
         IdPortion: null
         Type: dict
         TypeName: softwareUpdateConfigurationProperties
-        TypeNameGo: softwareUpdateConfigurationProperties
+        TypeNameGo: SoftwareUpdateConfigurationProperties
         IsList: false
         Required: true
         Documentation: Software update configuration properties.
@@ -2263,7 +2387,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: updateConfiguration
-            TypeNameGo: updateConfiguration
+            TypeNameGo: UpdateConfiguration
             IsList: false
             Required: true
             Documentation: update specific properties for the Software update configuration
@@ -2308,7 +2432,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: windows
                 NameAnsible: windows
                 NamePythonSdk: windows
@@ -2388,7 +2514,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: excludedKbNumbers
                     NameAnsible: excluded_kb_numbers
                     NamePythonSdk: excluded_kb_numbers
@@ -2420,7 +2548,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: includedKbNumbers
                     NameAnsible: included_kb_numbers
                     NamePythonSdk: included_kb_numbers
@@ -2452,7 +2582,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: rebootSetting
                     NameAnsible: reboot_setting
                     NamePythonSdk: reboot_setting
@@ -2482,7 +2614,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /properties/updateConfiguration/windows
                 PathPython: /updateConfiguration/windows
@@ -2494,7 +2628,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: linux
                 NameAnsible: linux
                 NamePythonSdk: linux
@@ -2558,7 +2694,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: excludedPackageNameMasks
                     NameAnsible: excluded_package_name_masks
                     NamePythonSdk: excluded_package_name_masks
@@ -2590,7 +2728,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: includedPackageNameMasks
                     NameAnsible: included_package_name_masks
                     NamePythonSdk: included_package_name_masks
@@ -2622,7 +2762,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: rebootSetting
                     NameAnsible: reboot_setting
                     NamePythonSdk: reboot_setting
@@ -2652,7 +2794,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /properties/updateConfiguration/linux
                 PathPython: /updateConfiguration/linux
@@ -2664,7 +2808,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: duration
                 NameAnsible: duration
                 NamePythonSdk: duration
@@ -2697,7 +2843,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: azureVirtualMachines
                 NameAnsible: azure_virtual_machines
                 NamePythonSdk: azure_virtual_machines
@@ -2729,7 +2877,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: nonAzureComputerNames
                 NameAnsible: non_azure_computer_names
                 NamePythonSdk: non_azure_computer_names
@@ -2761,7 +2911,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: targets
                 NameAnsible: targets
                 NamePythonSdk: targets
@@ -2831,7 +2983,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: locations
                         NameAnsible: locations
                         NamePythonSdk: locations
@@ -2863,7 +3017,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: tagSettings
                         NameAnsible: tag_settings
                         NamePythonSdk: tag_settings
@@ -2895,7 +3051,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/updateConfiguration/targets/azureQueries
                     PathPython: /updateConfiguration/targets/azureQueries
@@ -2907,7 +3065,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: nonAzureQueries
                     NameAnsible: non_azure_queries
                     NamePythonSdk: non_azure_queries
@@ -2960,7 +3120,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: workspaceId
                         NameAnsible: workspace_id
                         NamePythonSdk: workspace_id
@@ -2995,7 +3157,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: /properties/updateConfiguration/targets/nonAzureQueries
                     PathPython: /updateConfiguration/targets/nonAzureQueries
@@ -3007,7 +3171,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /properties/updateConfiguration/targets
                 PathPython: /updateConfiguration/targets
@@ -3019,7 +3185,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/updateConfiguration
             PathPython: /updateConfiguration
@@ -3031,7 +3199,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: scheduleInfo
             NameAnsible: schedule_info
             NamePythonSdk: schedule_info
@@ -3079,7 +3249,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - *ref_3
               - NameSwagger: expiryTime
                 NameAnsible: expiry_time
@@ -3110,7 +3282,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: expiryTimeOffsetMinutes
                 NameAnsible: expiry_time_offset_minutes
                 NamePythonSdk: expiry_time_offset_minutes
@@ -3140,7 +3314,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: isEnabled
                 NameAnsible: is_enabled
                 NamePythonSdk: is_enabled
@@ -3172,7 +3348,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: nextRun
                 NameAnsible: next_run
                 NamePythonSdk: next_run
@@ -3202,7 +3380,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: nextRunOffsetMinutes
                 NameAnsible: next_run_offset_minutes
                 NamePythonSdk: next_run_offset_minutes
@@ -3232,7 +3412,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: double
                 Flatten: false
+                Kind: 1
               - NameSwagger: interval
                 NameAnsible: interval
                 NamePythonSdk: interval
@@ -3262,7 +3444,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: frequency
                 NameAnsible: frequency
                 NamePythonSdk: frequency
@@ -3312,7 +3496,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: timeZone
                 NameAnsible: time_zone
                 NamePythonSdk: time_zone
@@ -3342,7 +3528,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: advancedSchedule
                 NameAnsible: advanced_schedule
                 NamePythonSdk: advanced_schedule
@@ -3390,7 +3578,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: monthDays
                     NameAnsible: month_days
                     NamePythonSdk: month_days
@@ -3422,7 +3612,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: int32
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: monthlyOccurrences
                     NameAnsible: monthly_occurrences
                     NamePythonSdk: monthly_occurrences
@@ -3475,7 +3667,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: int32
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: day
                         NameAnsible: day
                         NamePythonSdk: day
@@ -3530,7 +3724,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: >-
                       /properties/scheduleInfo/advancedSchedule/monthlyOccurrences
@@ -3544,7 +3740,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /properties/scheduleInfo/advancedSchedule
                 PathPython: /scheduleInfo/advancedSchedule
@@ -3556,7 +3754,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: creationTime
                 NameAnsible: creation_time
                 NamePythonSdk: creation_time
@@ -3586,7 +3786,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: lastModifiedTime
                 NameAnsible: last_modified_time
                 NamePythonSdk: last_modified_time
@@ -3616,7 +3818,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: description
                 NameAnsible: description
                 NamePythonSdk: description
@@ -3646,7 +3850,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/scheduleInfo
             PathPython: /scheduleInfo
@@ -3658,7 +3864,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - *ref_4
           - NameSwagger: error
             NameAnsible: error
@@ -3707,7 +3915,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: message
                 NameAnsible: message
                 NamePythonSdk: message
@@ -3737,7 +3947,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/error
             PathPython: /error
@@ -3749,7 +3961,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - *ref_5
           - *ref_6
           - *ref_7
@@ -3762,7 +3976,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: softwareUpdateConfigurationTasks
-            TypeNameGo: softwareUpdateConfigurationTasks
+            TypeNameGo: SoftwareUpdateConfigurationTasks
             IsList: false
             Required: false
             Documentation: Tasks information for the Software update configuration.
@@ -3780,7 +3994,7 @@ Modules:
                 IdPortion: null
                 Type: dict
                 TypeName: taskProperties
-                TypeNameGo: taskProperties
+                TypeNameGo: TaskProperties
                 IsList: false
                 Required: false
                 Documentation: Pre task properties.
@@ -3823,7 +4037,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: source
                     NameAnsible: source
                     NamePythonSdk: source
@@ -3853,7 +4069,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /properties/tasks/preTask
                 PathPython: /tasks/preTask
@@ -3865,7 +4083,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: postTask
                 NameAnsible: post_task
                 NamePythonSdk: post_task
@@ -3874,7 +4094,7 @@ Modules:
                 IdPortion: null
                 Type: dict
                 TypeName: taskProperties
-                TypeNameGo: taskProperties
+                TypeNameGo: TaskProperties
                 IsList: false
                 Required: false
                 Documentation: Post task properties.
@@ -3917,7 +4137,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: source
                     NameAnsible: source
                     NamePythonSdk: source
@@ -3947,7 +4169,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /properties/tasks/postTask
                 PathPython: /tasks/postTask
@@ -3959,7 +4183,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/tasks
             PathPython: /tasks
@@ -3971,7 +4197,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties
         PathPython: ''
@@ -3983,7 +4211,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     ModuleOperationNameUpper: SoftwareUpdateConfigurations
     ModuleOperationName: software_update_configurations
     ObjectName: SoftwareUpdateConfiguration
@@ -4028,7 +4258,7 @@ Modules:
                           - >-
                             /subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources
                           - /subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067
-                        tagSettings:
+                        tag_settings:
                           tags:
                             - tag1:
                                 - tag1Value1
@@ -4038,15 +4268,15 @@ Modules:
                                 - tag2Value1
                                 - tag2Value2
                                 - tag2Value3
-                          filterOperator: All
+                          filter_operator: All
                         locations:
                           - Japan East
                           - UK South
                     nonAzureQueries:
-                      - functionAlias: SavedSearch1
-                        workspaceId: WorkspaceId1
-                      - functionAlias: SavedSearch2
-                        workspaceId: WorkspaceId2
+                      - function_alias: SavedSearch1
+                        workspace_id: WorkspaceId1
+                      - function_alias: SavedSearch2
+                        workspace_id: WorkspaceId2
                 scheduleInfo:
                   frequency: Hour
                   startTime: '2017-10-19T12:22:57+00:00'
@@ -4243,6 +4473,8 @@ Modules:
           - automation_automationaccounts_put
         OperationId: '560'
         MethodId: '561'
+        OperationName: SoftwareUpdateConfigurations
+        MethodName: Create
       - Example:
           parameters:
             subscriptionId: 51766542-3ed7-4a72-a187-0c8ab644ddab
@@ -4275,964 +4507,9 @@ Modules:
         References: []
         OperationId: '560'
         MethodId: '650'
-  - ModuleName: azure_rm_softwareupdateconfiguration_info
-    Options:
-      - NameSwagger: resourceGroupName
-        NameAnsible: resource_group
-        NamePythonSdk: resource_group_name
-        NameGoSdk: ResourceGroup
-        NameTerraform: resourceGroup
-        IdPortion: resourceGroups
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: true
-        Documentation: Name of an Azure Resource group.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: '{{resource_group}}'
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: automationAccountName
-        NameAnsible: automation_account_name
-        NamePythonSdk: automation_account_name
-        NameGoSdk: AutomationAccountName
-        NameTerraform: AutomationAccountName
-        IdPortion: automationAccounts
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: true
-        Documentation: The name of the automation account.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: '{{automation_account_name}}'
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: clientRequestId
-        NameAnsible: client_request_id
-        NamePythonSdk: client_request_id
-        NameGoSdk: ClientRequestID
-        NameTerraform: ClientRequestID
-        IdPortion: null
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: true
-        Documentation: Identifies this specific client request.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: softwareUpdateConfigurationName
-        NameAnsible: name
-        NamePythonSdk: software_update_configuration_name
-        NameGoSdk: SoftwareUpdateConfigurationName
-        NameTerraform: name
-        IdPortion: softwareUpdateConfigurations
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: The name of the software update configuration to be created.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: '{{software_update_configuration_name}}'
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - &ref_9
-        NameSwagger: value
-        NameAnsible: value
-        NamePythonSdk: value
-        NameGoSdk: Value
-        NameTerraform: Value
-        IdPortion: null
-        Type: dict
-        TypeName: softwareUpdateConfigurationCollectionItem
-        TypeNameGo: softwareUpdateConfigurationCollectionItem
-        IsList: true
-        Required: false
-        Documentation: outer object returned when listing all software update configurations
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions:
-          - NameSwagger: name
-            NameAnsible: name
-            NamePythonSdk: name
-            NameGoSdk: Name
-            NameTerraform: Name
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: Name of the software update configuration.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /value/name
-            PathPython: /value/name
-            PathGo: /value/name
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: id
-            NameAnsible: id
-            NamePythonSdk: id
-            NameGoSdk: ID
-            NameTerraform: ID
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: Resource Id of the software update configuration
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /value/id
-            PathPython: /value/id
-            PathGo: /value/id
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: properties
-            NameAnsible: properties
-            NamePythonSdk: properties
-            NameGoSdk: Properties
-            NameTerraform: Properties
-            IdPortion: null
-            Type: dict
-            TypeName: softwareUpdateConfigurationCollectionItemProperties
-            TypeNameGo: softwareUpdateConfigurationCollectionItemProperties
-            IsList: false
-            Required: true
-            Documentation: Software update configuration properties.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /value/properties
-            PathPython: /value
-            PathGo: /value/properties
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: true
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: updateConfiguration
-            NameAnsible: update_configuration
-            NamePythonSdk: update_configuration
-            NameGoSdk: UpdateConfiguration
-            NameTerraform: UpdateConfiguration
-            IdPortion: null
-            Type: dict
-            TypeName: collectionItemUpdateConfiguration
-            TypeNameGo: collectionItemUpdateConfiguration
-            IsList: false
-            Required: false
-            Documentation: Update specific properties of the software update configuration.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions:
-              - NameSwagger: azureVirtualMachines
-                NameAnsible: azure_virtual_machines
-                NamePythonSdk: azure_virtual_machines
-                NameGoSdk: AzureVirtualMachines
-                NameTerraform: AzureVirtualMachines
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: true
-                Required: false
-                Documentation: >-
-                  List of azure resource Ids for azure virtual machines targeted
-                  by the software update configuration.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /value/properties/updateConfiguration/azureVirtualMachines
-                PathPython: /value/updateConfiguration/azureVirtualMachines
-                PathGo: /value/properties/updateConfiguration/azureVirtualMachines
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: duration
-                NameAnsible: duration
-                NamePythonSdk: duration
-                NameGoSdk: Duration
-                NameTerraform: Duration
-                IdPortion: null
-                Type: 'unknown-primary[timeSpan]'
-                TypeName: TimeSpan
-                TypeNameGo: TimeSpan
-                IsList: false
-                Required: false
-                Documentation: >-
-                  Maximum time allowed for the software update configuration
-                  run. Duration needs to be specified using the format
-                  PT[n]H[n]M[n]S as per ISO8601
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /value/properties/updateConfiguration/duration
-                PathPython: /value/updateConfiguration/duration
-                PathGo: /value/properties/updateConfiguration/duration
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-            EnumValues: []
-            PathSwagger: /value/properties/updateConfiguration
-            PathPython: /value/updateConfiguration
-            PathGo: /value/properties/updateConfiguration
-            DispositionSdk: '*'
-            DispositionRest: properties/*
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: frequency
-            NameAnsible: frequency
-            NamePythonSdk: frequency
-            NameGoSdk: Frequency
-            NameTerraform: Frequency
-            IdPortion: null
-            Type: str
-            TypeName: ScheduleFrequency
-            TypeNameGo: ScheduleFrequency
-            IsList: false
-            Required: false
-            Documentation: >-
-              execution frequency of the schedule associated with the software
-              update configuration
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues:
-              - Key: OneTime
-                Value: OneTime
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Day
-                Value: Day
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Hour
-                Value: Hour
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Week
-                Value: Week
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Month
-                Value: Month
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Minute
-                Value: Minute
-                Description: >-
-                  The minimum allowed interval for Minute schedules is 15
-                  minutes.
-            PathSwagger: /value/properties/frequency
-            PathPython: /value/frequency
-            PathGo: /value/properties/frequency
-            DispositionSdk: '*'
-            DispositionRest: properties/*
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: startTime
-            NameAnsible: start_time
-            NamePythonSdk: start_time
-            NameGoSdk: StartTime
-            NameTerraform: StartTime
-            IdPortion: null
-            Type: datetime
-            TypeName: DateTime
-            TypeNameGo: DateTime
-            IsList: false
-            Required: false
-            Documentation: the start time of the update.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /value/properties/startTime
-            PathPython: /value/startTime
-            PathGo: /value/properties/startTime
-            DispositionSdk: '*'
-            DispositionRest: properties/*
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: creationTime
-            NameAnsible: creation_time
-            NamePythonSdk: creation_time
-            NameGoSdk: CreationTime
-            NameTerraform: CreationTime
-            IdPortion: null
-            Type: datetime
-            TypeName: DateTime
-            TypeNameGo: DateTime
-            IsList: false
-            Required: false
-            Documentation: >-
-              Creation time of the software update configuration, which only
-              appears in the response.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /value/properties/creationTime
-            PathPython: /value/creationTime
-            PathGo: /value/properties/creationTime
-            DispositionSdk: '*'
-            DispositionRest: properties/*
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: lastModifiedTime
-            NameAnsible: last_modified_time
-            NamePythonSdk: last_modified_time
-            NameGoSdk: LastModifiedTime
-            NameTerraform: LastModifiedTime
-            IdPortion: null
-            Type: datetime
-            TypeName: DateTime
-            TypeNameGo: DateTime
-            IsList: false
-            Required: false
-            Documentation: >-
-              Last time software update configuration was modified, which only
-              appears in the response.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /value/properties/lastModifiedTime
-            PathPython: /value/lastModifiedTime
-            PathGo: /value/properties/lastModifiedTime
-            DispositionSdk: '*'
-            DispositionRest: properties/*
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: provisioningState
-            NameAnsible: provisioning_state
-            NamePythonSdk: provisioning_state
-            NameGoSdk: ProvisioningState
-            NameTerraform: ProvisioningState
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: >-
-              Provisioning state for the software update configuration, which
-              only appears in the response.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /value/properties/provisioningState
-            PathPython: /value/provisioningState
-            PathGo: /value/properties/provisioningState
-            DispositionSdk: '*'
-            DispositionRest: properties/*
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: nextRun
-            NameAnsible: next_run
-            NamePythonSdk: next_run
-            NameGoSdk: NextRun
-            NameTerraform: NextRun
-            IdPortion: null
-            Type: datetime
-            TypeName: DateTime
-            TypeNameGo: DateTime
-            IsList: false
-            Required: false
-            Documentation: ext run time of the update.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /value/properties/nextRun
-            PathPython: /value/nextRun
-            PathGo: /value/properties/nextRun
-            DispositionSdk: '*'
-            DispositionRest: properties/*
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /value
-        PathPython: /value
-        PathGo: /value
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-    Methods:
-      - Name: GetByName
-        Options:
-          - resourceGroupName
-          - automationAccountName
-          - softwareUpdateConfigurationName
-          - clientRequestId
-        RequiredOptions:
-          - resourceGroupName
-          - automationAccountName
-          - softwareUpdateConfigurationName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.Automation/automationAccounts/{{
-          automation_account_name }}/softwareUpdateConfigurations/{{
-          software_update_configuration_name }}
-        HttpMethod: get
-        IsAsync: false
-      - Name: List
-        Options:
-          - resourceGroupName
-          - automationAccountName
-          - clientRequestId
-        RequiredOptions:
-          - resourceGroupName
-          - automationAccountName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.Automation/automationAccounts/{{
-          automation_account_name }}/softwareUpdateConfigurations
-        HttpMethod: get
-        IsAsync: false
-    ResponseFields:
-      - *ref_9
-    ModuleOperationNameUpper: SoftwareUpdateConfigurations
-    ModuleOperationName: software_update_configurations
-    ObjectName: SoftwareUpdateConfiguration
-    ResourceNameFieldInResponse: null
-    NeedsDeleteBeforeUpdate: false
-    NeedsForceUpdate: false
-    CannotTestUpdate: false
-    Provider: Microsoft.Automation
-    ApiVersion: 2017-05-15-preview
-    Examples:
-      - Example:
-          parameters:
-            subscriptionId: 1a7d4044-286c-4acb-969a-96639265bf2e
-            resourceGroupName: mygroup
-            automationAccountName: myaccount
-            api-version: 2017-05-15-preview
-            body: {}
-          responses:
-            '200':
-              body:
-                value:
-                  - name: testpatch-01
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Automation/automationAccounts/{{
-                      automation_account_name }}/softwareUpdateConfigurations/{{
-                      software_update_configuration_name }}
-                    properties:
-                      updateConfiguration:
-                        operatingSystem: Windows
-                        windows:
-                          includedUpdateClassifications: >-
-                            Critical, Security, UpdateRollup, FeaturePack,
-                            ServicePack, Definition, Tools, Updates
-                          excludedKbNumbers: null
-                        linux: null
-                        targets:
-                          azureQueries:
-                            - scope:
-                                - >-
-                                  /subscriptions/422b6c61-95b0-4213-b3be-7282315df71d/resourceGroups/a-stasku-rg0
-                                - >-
-                                  /subscriptions/422b6c61-95b0-4213-b3be-7282315df71d
-                              tagSettings:
-                                tags:
-                                  tag1:
-                                    - tag1Value1
-                                    - tag1Value2
-                                  tag2:
-                                    - tag2Value1
-                                    - tag2Value2
-                                filterOperator: All
-                              locations: null
-                        duration: PT2H
-                        azureVirtualMachines:
-                          - >-
-                            /subscriptions/1a7d4044-286c-4acb-969a-96639265bf2e/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-01
-                          - >-
-                            /subscriptions/1a7d4044-286c-4acb-969a-96639265bf2e/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-02
-                          - >-
-                            /subscriptions/1a7d4044-286c-4acb-969a-96639265bf2e/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-03
-                        nonAzureComputerNames: null
-                      tasks:
-                        preTask:
-                          source: HelloWorld
-                          parameters:
-                            COMPUTERNAME: Computer1
-                        postTask:
-                          source: GetCache
-                          parameters: null
-                      frequency: Week
-                      startTime: '2017-10-19T19:22:00+00:00'
-                      creationTime: '2017-10-19T18:54:50.5233333+00:00'
-                      lastModifiedTime: '2017-10-19T18:54:50.68+00:00'
-                      provisioningState: Succeeded
-                      nextRun: '2017-10-23T19:22:00+00:00'
-                  - name: testpatch-02
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Automation/automationAccounts/{{
-                      automation_account_name }}/softwareUpdateConfigurations/{{
-                      software_update_configuration_name }}
-                    properties:
-                      updateConfiguration:
-                        operatingSystem: Windows
-                        windows:
-                          includedUpdateClassifications: 'Critical, FeaturePack'
-                          excludedKbNumbers: null
-                        linux: null
-                        targets:
-                          azureQueries:
-                            - scope:
-                                - >-
-                                  /subscriptions/422b6c61-95b0-4213-b3be-7282315df71d/resourceGroups/a-stasku-rg0
-                                - >-
-                                  /subscriptions/422b6c61-95b0-4213-b3be-7282315df71d
-                              tagSettings:
-                                tags:
-                                  tag1:
-                                    - tag1Value1
-                                    - tag1Value2
-                                  tag2:
-                                    - tag2Value1
-                                    - tag2Value2
-                                filterOperator: All
-                              locations:
-                                - Japan East
-                                - UK South
-                        duration: PT2H30M
-                        azureVirtualMachines:
-                          - >-
-                            /subscriptions/1a7d4044-286c-4acb-969a-96639265bf2e/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-04
-                          - >-
-                            /subscriptions/1a7d4044-286c-4acb-969a-96639265bf2e/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-05
-                          - >-
-                            /subscriptions/1a7d4044-286c-4acb-969a-96639265bf2e/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-06
-                        nonAzureComputerNames: null
-                      tasks:
-                        preTask:
-                          source: HelloWorld
-                          parameters:
-                            COMPUTERNAME: Computer1
-                        postTask:
-                          source: GetCache
-                          parameters: null
-                      frequency: Hour
-                      startTime: '2018-05-05T19:26:00+00:00'
-                      creationTime: '2017-08-11T21:52:02.7733333+00:00'
-                      lastModifiedTime: '2017-08-11T21:52:22.88+00:00'
-                      provisioningState: Succeeded
-                      nextRun: '2018-05-05T19:26:00+00:00'
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.Automation/automationAccounts/{{
-          automation_account_name }}/softwareUpdateConfigurations
-        Method: get
-        Name: List software update configurations
-        Filename: automation_automationaccounts_softwareupdateconfigurations_get_1
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-          - name: automation_account_name
-            value: myAutomationAccount
-            swaggerName: automationAccountName
-        References: []
-        OperationId: '560'
-        MethodId: '693'
-      - Example:
-          parameters:
-            subscriptionId: 1a7d4044-286c-4acb-969a-96639265bf2e
-            resourceGroupName: mygroup
-            automationAccountName: myaccount
-            $filter: >-
-              properties/updateConfiguration/azureVirtualMachines/any(m: m eq
-              '/subscriptions/1a7d4044-286c-4acb-969a-96639265bf2e/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-01')
-            api-version: 2017-05-15-preview
-            body: {}
-          responses:
-            '200':
-              body:
-                value:
-                  - name: testpatch-01
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Automation/automationAccounts/{{
-                      automation_account_name }}/softwareUpdateConfigurations/{{
-                      software_update_configuration_name }}
-                    properties:
-                      updateConfiguration:
-                        operatingSystem: Windows
-                        windows:
-                          includedUpdateClassifications: >-
-                            Critical, Security, UpdateRollup, FeaturePack,
-                            ServicePack, Definition, Tools, Updates
-                          excludedKbNumbers: null
-                        linux: null
-                        duration: PT2H
-                        azureVirtualMachines:
-                          - >-
-                            /subscriptions/1a7d4044-286c-4acb-969a-96639265bf2e/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-01
-                          - >-
-                            /subscriptions/1a7d4044-286c-4acb-969a-96639265bf2e/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-02
-                          - >-
-                            /subscriptions/1a7d4044-286c-4acb-969a-96639265bf2e/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-03
-                        nonAzureComputerNames: null
-                      tasks:
-                        preTask:
-                          source: HelloWorld
-                          parameters:
-                            COMPUTERNAME: Computer1
-                        postTask:
-                          source: GetCache
-                          parameters: null
-                      frequency: Week
-                      startTime: '2017-10-19T19:22:00+00:00'
-                      creationTime: '2017-10-19T18:54:50.5233333+00:00'
-                      lastModifiedTime: '2017-10-19T18:54:50.68+00:00'
-                      provisioningState: Succeeded
-                      nextRun: '2017-10-23T19:22:00+00:00'
-                  - name: testpatch-02
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Automation/automationAccounts/{{
-                      automation_account_name }}/softwareUpdateConfigurations/{{
-                      software_update_configuration_name }}
-                    properties:
-                      updateConfiguration:
-                        operatingSystem: Windows
-                        windows:
-                          includedUpdateClassifications: 'Critical, FeaturePack'
-                          excludedKbNumbers: null
-                        linux: null
-                        duration: PT2H30M
-                        azureVirtualMachines:
-                          - >-
-                            /subscriptions/1a7d4044-286c-4acb-969a-96639265bf2e/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-01
-                          - >-
-                            /subscriptions/1a7d4044-286c-4acb-969a-96639265bf2e/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-05
-                          - >-
-                            /subscriptions/1a7d4044-286c-4acb-969a-96639265bf2e/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-06
-                        nonAzureComputerNames: null
-                      tasks:
-                        preTask:
-                          source: HelloWorld
-                          parameters:
-                            COMPUTERNAME: Computer1
-                        postTask:
-                          source: GetCache
-                          parameters: null
-                      frequency: Hour
-                      startTime: '2018-05-05T19:26:00+00:00'
-                      creationTime: '2017-08-11T21:52:02.7733333+00:00'
-                      lastModifiedTime: '2017-08-11T21:52:22.88+00:00'
-                      provisioningState: Succeeded
-                      nextRun: '2018-05-05T19:26:00+00:00'
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.Automation/automationAccounts/{{
-          automation_account_name }}/softwareUpdateConfigurations
-        Method: get
-        Name: >-
-          List software update configurations Targeting a specific azure virtual
-          machine
-        Filename: automation_automationaccounts_softwareupdateconfigurations_get_2
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-          - name: automation_account_name
-            value: myAutomationAccount
-            swaggerName: automationAccountName
-        References: []
-        OperationId: '560'
-        MethodId: '693'
-      - Example:
-          parameters:
-            subscriptionId: 51766542-3ed7-4a72-a187-0c8ab644ddab
-            resourceGroupName: mygroup
-            automationAccountName: myaccount
-            softwareUpdateConfigurationName: mypatch
-            api-version: 2017-05-15-preview
-            body: {}
-          responses:
-            '200':
-              headers: {}
-              body:
-                name: testpatch
-                id: >-
-                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                  resource_group
-                  }}/providers/Microsoft.Automation/automationAccounts/{{
-                  automation_account_name }}/softwareUpdateConfigurations/{{
-                  software_update_configuration_name }}
-                properties:
-                  updateConfiguration:
-                    operatingSystem: Windows
-                    windows:
-                      includedUpdateClassifications: Critical
-                      excludedKbNumbers:
-                        - '168934'
-                        - '168973'
-                    linux: {}
-                    targets:
-                      azureQueries:
-                        - scope:
-                            - >-
-                              /subscriptions/422b6c61-95b0-4213-b3be-7282315df71d/resourceGroups/a-stasku-rg0
-                            - >-
-                              /subscriptions/422b6c61-95b0-4213-b3be-7282315df71d
-                          tagSettings:
-                            tags:
-                              tag1:
-                                - tag1Value1
-                                - tag1Value2
-                              tag2:
-                                - tag2Value1
-                                - tag2Value2
-                            filterOperator: All
-                          locations: null
-                    duration: PT2H
-                    azureVirtualMachines:
-                      - >-
-                        /subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-01
-                      - >-
-                        /subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-02
-                      - >-
-                        /subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-03
-                    nonAzureComputerNames:
-                      - box1.contoso.com
-                      - box2.contoso.com
-                  scheduleInfo:
-                    description: ''
-                    startTime: '2017-10-19T19:22:00+00:00'
-                    startTimeOffsetMinutes: '-420'
-                    expiryTime: '2018-11-09T19:22:00+00:00'
-                    expiryTimeOffsetMinutes: '-480'
-                    isEnabled: true
-                    nextRun: '2017-10-19T19:22:00+00:00'
-                    nextRunOffsetMinutes: '-420'
-                    interval: '1'
-                    frequency: Week
-                    creationTime: '2017-10-19T18:54:50.5233333+00:00'
-                    lastModifiedTime: '2017-10-19T18:54:50.5233333+00:00'
-                    timeZone: America/Los_Angeles
-                  tasks:
-                    preTask:
-                      source: HelloWorld
-                      parameters:
-                        COMPUTERNAME: Computer1
-                    postTask:
-                      source: GetCache
-                      parameters: null
-                  provisioningState: Provisioning
-                  createdBy: eve@contoso.com
-                  error: {}
-                  creationTime: '2017-10-19T18:54:50.5233333+00:00'
-                  lastModifiedBy: ''
-                  lastModifiedTime: '2017-10-19T18:54:50.68+00:00'
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.Automation/automationAccounts/{{
-          automation_account_name }}/softwareUpdateConfigurations/{{
-          software_update_configuration_name }}
-        Method: get
-        Name: Get software update configuration by name
-        Filename: automation_automationaccounts_softwareupdateconfigurations_get
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-          - name: automation_account_name
-            value: myAutomationAccount
-            swaggerName: automationAccountName
-          - name: software_update_configuration_name
-            value: mySoftwareUpdateConfiguration
-            swaggerName: softwareUpdateConfigurationName
-        References: []
-        OperationId: '560'
-        MethodId: '608'
+        OperationName: SoftwareUpdateConfigurations
+        MethodName: Delete
 ServiceName: UpdateManagementAPI
 MgmtClientName: UpdateManagementAPI
 CliName: automationcfg
 Namespace: azure.mgmt.automation
-Info:
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION automationAccountName'
-  - '  ** FOUND OPTION softwareUpdateConfigurationName'
-  - '  ** FOUND OPTION clientRequestId'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION automationAccountName'
-  - '  ** FOUND OPTION clientRequestId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION automationAccountName'
-  - '  ** FOUND OPTION softwareUpdateConfigurationName'
-  - '  ** FOUND OPTION clientRequestId'

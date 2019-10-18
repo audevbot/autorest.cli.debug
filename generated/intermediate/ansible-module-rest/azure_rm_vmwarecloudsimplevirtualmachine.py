@@ -77,16 +77,6 @@ options:
     description:
       - Expose Guest OS or not
     type: boolean
-  guest_os:
-    description:
-      - The name of Guest OS
-    required: true
-    type: str
-  guest_ostype:
-    description:
-      - The Guest OS type
-    required: true
-    type: str
   nics:
     description:
       - The list of Virtual NICs
@@ -102,17 +92,14 @@ options:
         type: str
       network:
         description:
-          - The list of Virtual Networks
+          - Virtual Network
+        required: true
         type: dict
         suboptions:
           id:
             description:
               - 'virtual network id (privateCloudId:vsphereId)'
             required: true
-            type: str
-          location:
-            description:
-              - Azure region
             type: str
           private_cloud_id:
             description:
@@ -122,6 +109,10 @@ options:
             description:
               - can be used in vm creation/deletion
             type: boolean
+          location:
+            description:
+              - Azure region
+            type: str
           name:
             description:
               - '{VirtualNetworkName}'
@@ -171,13 +162,13 @@ options:
           - 'resource pool id (privateCloudId:vsphereId)'
         required: true
         type: str
-      location:
-        description:
-          - Azure region
-        type: str
       full_name:
         description:
           - Hierarchical resource pool name
+        type: str
+      location:
+        description:
+          - Azure region
         type: str
       name:
         description:
@@ -233,6 +224,14 @@ options:
   folder:
     description:
       - The path to virtual machine folder in VCenter
+    type: str
+  guest_os:
+    description:
+      - The name of Guest OS
+    type: str
+  guest_ostype:
+    description:
+      - The Guest OS type
     type: str
   provisioning_state:
     description:
@@ -302,18 +301,16 @@ EXAMPLES = '''
         numberOfCores: '2'
         amountOfRam: '4096'
         disks:
-          - controllerId: '1000'
-            independenceMode: persistent
-            totalSize: '10485760'
-            virtualDiskId: '2000'
+          - controller_id: '1000'
+            independence_mode: persistent
+            total_size: '10485760'
+            virtual_disk_id: '2000'
         resourcePool:
           id: >-
             /subscriptions/{{ subscription_id
             }}/providers/Microsoft.VMwareCloudSimple/locations/{{ location_name
             }}/privateClouds/{{ private_cloud_name }}/resourcePools/{{
             resource_pool_name }}
-        guestOS: Other (32-bit)
-        guestOSType: other
         nics:
           - network:
               id: >-
@@ -321,9 +318,9 @@ EXAMPLES = '''
                 }}/providers/Microsoft.VMwareCloudSimple/locations/{{
                 location_name }}/privateClouds/{{ private_cloud_name
                 }}/virtualNetworks/{{ virtual_network_name }}
-            nicType: E1000
-            powerOnBoot: true
-            virtualNicId: '4000'
+            nic_type: E1000
+            power_on_boot: true
+            virtual_nic_id: '4000'
 - name: PatchVirtualMachine
   azure_rm_vmwarecloudsimplevirtualmachine:
     resource_group: myResourceGroup
@@ -494,7 +491,7 @@ properties:
           sample: null
         network:
           description:
-            - The list of Virtual Networks
+            - Virtual Network
           returned: always
           type: dict
           sample: null
@@ -716,7 +713,7 @@ class Actions:
     NoAction, Create, Update, Delete = range(4)
 
 
-class AzureRMVirtualMachine(AzureRMModuleBaseExt):
+class AzureRMVirtualMachines(AzureRMModuleBaseExt):
     def __init__(self):
         self.module_arg_spec = dict(
             resource_group=dict(
@@ -780,19 +777,6 @@ class AzureRMVirtualMachine(AzureRMModuleBaseExt):
                 type='boolean',
                 disposition='/properties/exposeToGuestVM'
             ),
-            guest_os=dict(
-                type='str',
-                disposition='/properties/guestOS',
-                required=true
-            ),
-            guest_ostype=dict(
-                type='str',
-                disposition='/properties/guestOSType',
-                choices=['linux',
-                         'windows',
-                         'other'],
-                required=true
-            ),
             nics=dict(
                 type='list',
                 disposition='/properties/*',
@@ -807,14 +791,11 @@ class AzureRMVirtualMachine(AzureRMModuleBaseExt):
                     ),
                     network=dict(
                         type='dict',
+                        required=true,
                         options=dict(
                             id=dict(
                                 type='str',
                                 required=true
-                            ),
-                            location=dict(
-                                type='str',
-                                updatable=False
                             )
                         )
                     ),
@@ -861,10 +842,6 @@ class AzureRMVirtualMachine(AzureRMModuleBaseExt):
                     id=dict(
                         type='str',
                         required=true
-                    ),
-                    location=dict(
-                        type='str',
-                        updatable=False
                     )
                 )
             ),
@@ -907,9 +884,9 @@ class AzureRMVirtualMachine(AzureRMModuleBaseExt):
         self.header_parameters = {}
         self.header_parameters['Content-Type'] = 'application/json; charset=utf-8'
 
-        super(AzureRMVirtualMachine, self).__init__(derived_arg_spec=self.module_arg_spec,
-                                                    supports_check_mode=True,
-                                                    supports_tags=True)
+        super(AzureRMVirtualMachines, self).__init__(derived_arg_spec=self.module_arg_spec,
+                                                     supports_check_mode=True,
+                                                     supports_tags=True)
 
     def exec_module(self, **kwargs):
         for key in list(self.module_arg_spec.keys()):
@@ -1073,7 +1050,7 @@ class AzureRMVirtualMachine(AzureRMModuleBaseExt):
 
 
 def main():
-    AzureRMVirtualMachine()
+    AzureRMVirtualMachines()
 
 
 if __name__ == '__main__':

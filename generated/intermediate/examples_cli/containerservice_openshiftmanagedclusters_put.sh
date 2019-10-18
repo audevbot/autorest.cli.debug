@@ -2,7 +2,7 @@
 RESOURCE_GROUP="myresourcegroup"
 OPEN_SHIFT_MANAGED_CLUSTER_NAME="myopenshiftmanagedcluster"
 
-az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.ContainerService/openShiftManagedClusters/$OPEN_SHIFT_MANAGED_CLUSTER_NAME --api-version 2019-04-30 --is-full-object --properties '
+az rest --method put --uri /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.ContainerService/openShiftManagedClusters/$OPEN_SHIFT_MANAGED_CLUSTER_NAME?api-version=2019-04-30 --body '
 {
   "location": "location1",
   "tags": {
@@ -26,17 +26,17 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
         "name": "infra",
         "role": "infra",
         "count": "2",
-        "vmSize": "Standard_D4s_v3",
-        "osType": "Linux",
-        "subnetCidr": "10.0.0.0/24"
+        "vm_size": "Standard_D4s_v3",
+        "os_type": "Linux",
+        "subnet_cidr": "10.0.0.0/24"
       },
       {
         "name": "compute",
         "role": "compute",
         "count": "4",
-        "vmSize": "Standard_D4s_v3",
-        "osType": "Linux",
-        "subnetCidr": "10.0.0.0/24"
+        "vm_size": "Standard_D4s_v3",
+        "os_type": "Linux",
+        "subnet_cidr": "10.0.0.0/24"
       }
     ],
     "routerProfiles": [
@@ -50,10 +50,10 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
           "name": "Azure AD",
           "provider": {
             "kind": "AADIdentityProvider",
-            "clientId": "clientId",
+            "client_id": "clientId",
             "secret": "secret",
-            "tenantId": "tenantId",
-            "customerAdminGroupId": "customerAdminGroupId"
+            "tenant_id": "tenantId",
+            "customer_admin_group_id": "customerAdminGroupId"
           }
         }
       ]

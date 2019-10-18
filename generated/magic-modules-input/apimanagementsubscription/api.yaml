@@ -44,7 +44,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: SubscriptionCreateParameterProperties
             go_type_name: SubscriptionCreateParameterProperties
           '/ownerId': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
@@ -120,7 +120,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: SubscriptionCreateParameterProperties
             go_type_name: SubscriptionCreateParameterProperties
           '/ownerId': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
@@ -211,7 +211,7 @@ objects:
         response:
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: SubscriptionCreateParameterProperties
             go_type_name: SubscriptionCreateParameterProperties
           '/properties/ownerId': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
@@ -374,6 +374,7 @@ objects:
         name: 'state'
         description: 'Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.'
         required: false
+        azure_sdk_references: ['/state', '/properties/state']
         values:
           - :suspended
           - :active
@@ -382,7 +383,6 @@ objects:
           - :rejected
           - :cancelled
         default_value: :suspended
-        azure_sdk_references: ['/state', '/properties/state']
       - !ruby/object:Api::Type::Boolean
         name: 'allowTracing'
         description: 'Determines whether tracing can be enabled'
@@ -428,18 +428,15 @@ objects:
       - !ruby/object:Api::Type::String
         name: 'id'
         description: 'Resource ID.'
-        input: true
         output: true
         azure_sdk_references: ['/id']
       - !ruby/object:Api::Type::String
         name: 'name'
         description: 'Resource name.'
-        input: true
         output: true
         azure_sdk_references: ['/name']
       - !ruby/object:Api::Type::String
         name: 'type'
         description: 'Resource type for API Management resource.'
-        input: true
         output: true
         azure_sdk_references: ['/type']
