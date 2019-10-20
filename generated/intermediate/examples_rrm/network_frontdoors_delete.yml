@@ -11,6 +11,6 @@
     - name: Delete Front Door
       azure_rm_frontdoor:
         resource_group: '{{resource_group}}'
-        name: '{{front_door_name}}'
+        front_door_name: '{{front_door_name}}'
         state: absent
     

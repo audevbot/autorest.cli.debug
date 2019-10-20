@@ -30,7 +30,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: resourceName
         NameAnsible: resource_name
         NamePythonSdk: resource_name
@@ -60,7 +62,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: serviceDescription
         NameAnsible: service_description
         NamePythonSdk: service_description
@@ -83,14 +87,16 @@ Modules:
         PathSwagger: ''
         PathPython: null
         PathGo: null
-        DispositionSdk: dictionary
+        DispositionSdk: '*'
         DispositionRest: '*'
         Comparison: ''
         Updatable: true
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 2
       - NameSwagger: kind
         NameAnsible: kind
         NamePythonSdk: kind
@@ -99,12 +105,10 @@ Modules:
         IdPortion: null
         Type: str
         TypeName: kind
-        TypeNameGo: kind
+        TypeNameGo: Kind
         IsList: false
         Required: true
-        Documentation: >-
-          The kind of the service. Valid values are: fhir, fhir-Stu3 and
-          fhir-R4.
+        Documentation: The kind of the service.
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -131,7 +135,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: location
         NameAnsible: location
         NamePythonSdk: location
@@ -161,7 +167,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: tags
         NameAnsible: tags
         NamePythonSdk: tags
@@ -195,7 +203,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: etag
         NameAnsible: etag
         NamePythonSdk: etag
@@ -227,7 +237,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -275,7 +287,9 @@ Modules:
                 TypeNameGo: String
                 IsList: false
                 Required: true
-                Documentation: An object ID that is allowed access to the FHIR service.
+                Documentation: >-
+                  An Azure AD object ID (User or Apps) that is allowed access to
+                  the FHIR service.
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -293,7 +307,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/accessPolicies
             PathPython: /accessPolicies
@@ -305,7 +321,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: cosmosDbConfiguration
             NameAnsible: cosmos_db_configuration
             NamePythonSdk: cosmos_db_configuration
@@ -353,7 +371,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/cosmosDbConfiguration
             PathPython: /cosmosDbConfiguration
@@ -365,7 +385,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: authenticationConfiguration
             NameAnsible: authentication_configuration
             NamePythonSdk: authentication_configuration
@@ -413,7 +435,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: audience
                 NameAnsible: audience
                 NamePythonSdk: audience
@@ -443,7 +467,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: smartProxyEnabled
                 NameAnsible: smart_proxy_enabled
                 NamePythonSdk: smart_proxy_enabled
@@ -473,7 +499,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/authenticationConfiguration
             PathPython: /authenticationConfiguration
@@ -485,7 +513,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: corsConfiguration
             NameAnsible: cors_configuration
             NamePythonSdk: cors_configuration
@@ -533,7 +563,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: headers
                 NameAnsible: headers
                 NamePythonSdk: headers
@@ -563,7 +595,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: methods
                 NameAnsible: methods
                 NamePythonSdk: methods
@@ -593,7 +627,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: maxAge
                 NameAnsible: max_age
                 NamePythonSdk: max_age
@@ -623,7 +659,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: allowCredentials
                 NameAnsible: allow_credentials
                 NamePythonSdk: allow_credentials
@@ -653,7 +691,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/corsConfiguration
             PathPython: /corsConfiguration
@@ -665,7 +705,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - &ref_3
             NameSwagger: provisioningState
             NameAnsible: provisioning_state
@@ -675,7 +717,7 @@ Modules:
             IdPortion: null
             Type: str
             TypeName: provisioningState
-            TypeNameGo: provisioningState
+            TypeNameGo: ProvisioningState
             IsList: false
             Required: false
             Documentation: The provisioning state.
@@ -723,7 +765,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties
         PathPython: ''
@@ -735,7 +779,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_0
         NameSwagger: id
         NameAnsible: id
@@ -766,7 +812,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_1
         NameSwagger: name
         NameAnsible: name
@@ -797,7 +845,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_2
         NameSwagger: type
         NameAnsible: type
@@ -828,7 +878,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: CreateOrUpdate
         Options:
@@ -912,12 +964,10 @@ Modules:
         IdPortion: null
         Type: str
         TypeName: kind
-        TypeNameGo: kind
+        TypeNameGo: Kind
         IsList: false
         Required: true
-        Documentation: >-
-          The kind of the service. Valid values are: fhir, fhir-Stu3 and
-          fhir-R4.
+        Documentation: The kind of the service.
         DocumentationMarkKeywords: true
         DefaultValue: null
         IncludeInDocumentation: true
@@ -944,7 +994,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: location
         NameAnsible: location
         NamePythonSdk: location
@@ -974,7 +1026,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: tags
         NameAnsible: tags
         NamePythonSdk: tags
@@ -1008,7 +1062,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: etag
         NameAnsible: etag
         NamePythonSdk: etag
@@ -1040,7 +1096,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -1089,7 +1147,9 @@ Modules:
                 TypeNameGo: String
                 IsList: false
                 Required: true
-                Documentation: An object ID that is allowed access to the FHIR service.
+                Documentation: >-
+                  An Azure AD object ID (User or Apps) that is allowed access to
+                  the FHIR service.
                 DocumentationMarkKeywords: true
                 DefaultValue: null
                 IncludeInDocumentation: true
@@ -1107,7 +1167,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/accessPolicies
             PathPython: /accessPolicies
@@ -1119,7 +1181,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: cosmosDbConfiguration
             NameAnsible: cosmos_db_configuration
             NamePythonSdk: cosmos_db_configuration
@@ -1167,7 +1231,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/cosmosDbConfiguration
             PathPython: /cosmosDbConfiguration
@@ -1179,7 +1245,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: authenticationConfiguration
             NameAnsible: authentication_configuration
             NamePythonSdk: authentication_configuration
@@ -1227,7 +1295,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: audience
                 NameAnsible: audience
                 NamePythonSdk: audience
@@ -1257,7 +1327,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: smartProxyEnabled
                 NameAnsible: smart_proxy_enabled
                 NamePythonSdk: smart_proxy_enabled
@@ -1287,7 +1359,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/authenticationConfiguration
             PathPython: /authenticationConfiguration
@@ -1299,7 +1373,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: corsConfiguration
             NameAnsible: cors_configuration
             NamePythonSdk: cors_configuration
@@ -1347,7 +1423,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: headers
                 NameAnsible: headers
                 NamePythonSdk: headers
@@ -1377,7 +1455,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: methods
                 NameAnsible: methods
                 NamePythonSdk: methods
@@ -1407,7 +1487,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: maxAge
                 NameAnsible: max_age
                 NamePythonSdk: max_age
@@ -1437,7 +1519,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: allowCredentials
                 NameAnsible: allow_credentials
                 NamePythonSdk: allow_credentials
@@ -1467,7 +1551,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/corsConfiguration
             PathPython: /corsConfiguration
@@ -1479,7 +1565,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties
         PathPython: ''
@@ -1491,7 +1579,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     ModuleOperationNameUpper: Services
     ModuleOperationName: services
     ObjectName: Service
@@ -1500,18 +1590,18 @@ Modules:
     NeedsForceUpdate: false
     CannotTestUpdate: false
     Provider: Microsoft.HealthcareApis
-    ApiVersion: 2018-08-20-preview
+    ApiVersion: '2019-09-16'
     Examples:
       - Example:
           parameters:
             resourceName: service1
             resourceGroupName: rg1
-            api-version: 2018-08-20-preview
+            api-version: '2019-09-16'
             subscriptionId: subid
             serviceDescription:
-              location: westus
+              location: westus2
               tags: {}
-              kind: fhir
+              kind: fhir-R4
               properties:
                 accessPolicies:
                   - objectId: c487e7d1-3210-41a3-8ccc-e9372b78da47
@@ -1519,7 +1609,8 @@ Modules:
                 cosmosDbConfiguration:
                   offerThroughput: '1000'
                 authenticationConfiguration:
-                  authority: 'https://login.microsoftonline.com/common'
+                  authority: >-
+                    https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc
                   audience: 'https://azurehealthcareapis.com'
                   smartProxyEnabled: true
                 corsConfiguration:
@@ -1545,9 +1636,9 @@ Modules:
                   }}/providers/Microsoft.HealthcareApis/services/{{ service_name
                   }}
                 name: service1
-                location: West US
+                location: West US 2
                 type: Microsoft.HealthcareApis/services
-                kind: fhir
+                kind: fhir-R4
                 etag: etagvalue
                 tags: {}
                 properties:
@@ -1558,7 +1649,8 @@ Modules:
                   cosmosDbConfiguration:
                     offerThroughput: '1000'
                   authenticationConfiguration:
-                    authority: 'https://login.microsoftonline.com/common'
+                    authority: >-
+                      https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc
                     audience: 'https://azurehealthcareapis.com'
                     smartProxyEnabled: true
                   corsConfiguration:
@@ -1583,9 +1675,9 @@ Modules:
                   }}/providers/Microsoft.HealthcareApis/services/{{ service_name
                   }}
                 name: service1
-                location: West US
+                location: West US 2
                 type: Microsoft.HealthcareApis/services
-                kind: fhir
+                kind: fhir-R4
                 etag: etagvalue
                 tags: {}
                 properties:
@@ -1596,7 +1688,8 @@ Modules:
                   cosmosDbConfiguration:
                     offerThroughput: '1000'
                   authenticationConfiguration:
-                    authority: 'https://login.microsoftonline.com/common'
+                    authority: >-
+                      https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc
                     audience: 'https://azurehealthcareapis.com'
                     smartProxyEnabled: true
                   corsConfiguration:
@@ -1617,7 +1710,7 @@ Modules:
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.HealthcareApis/services/{{ service_name }}
         Method: put
-        Name: ServicePut
+        Name: Create or Update a service with all parameters
         Filename: healthcareapis_services_put
         Variables:
           - name: resource_group
@@ -1627,16 +1720,113 @@ Modules:
             value: myService
             swaggerName: resourceName
         References:
-          - '# ref##authority##https://login.microsoftonline.com/common'
+          - >-
+            #
+            ref##authority##https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc
           - '# ref##audience##https://azurehealthcareapis.com'
           - resourcegroups_put
         OperationId: '391'
         MethodId: '422'
+        OperationName: Services
+        MethodName: CreateOrUpdate
+      - Example:
+          parameters:
+            resourceName: service2
+            resourceGroupName: rg1
+            api-version: '2019-09-16'
+            subscriptionId: subid
+            serviceDescription:
+              location: westus2
+              tags: {}
+              kind: fhir-R4
+              properties:
+                accessPolicies:
+                  - objectId: c487e7d1-3210-41a3-8ccc-e9372b78da47
+          responses:
+            '200':
+              body:
+                id: >-
+                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                  resource_group
+                  }}/providers/Microsoft.HealthcareApis/services/{{ service_name
+                  }}
+                name: service2
+                type: Microsoft.HealthcareApis/services
+                etag: etagvalue
+                location: westus2
+                kind: fhir-R4
+                tags: {}
+                properties:
+                  accessPolicies:
+                    - objectId: c487e7d1-3210-41a3-8ccc-e9372b78da47
+                  cosmosDbConfiguration:
+                    offerThroughput: '1000'
+                  authenticationConfiguration:
+                    authority: >-
+                      https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc
+                    audience: 'https://azurehealthcareapis.com'
+                    smartProxyEnabled: false
+                  corsConfiguration:
+                    origins: []
+                    headers: []
+                    methods: []
+                    maxAge: null
+                    allowCredentials: false
+                  provisioningState: Creating
+            '201':
+              body:
+                id: >-
+                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
+                  resource_group
+                  }}/providers/Microsoft.HealthcareApis/services/{{ service_name
+                  }}
+                name: service2
+                type: Microsoft.HealthcareApis/services
+                etag: etagvalue
+                location: westus2
+                kind: fhir-R4
+                tags: {}
+                properties:
+                  accessPolicies:
+                    - objectId: c487e7d1-3210-41a3-8ccc-e9372b78da47
+                  cosmosDbConfiguration:
+                    offerThroughput: '1000'
+                  authenticationConfiguration:
+                    authority: >-
+                      https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc
+                    audience: 'https://azurehealthcareapis.com'
+                    smartProxyEnabled: false
+                  corsConfiguration:
+                    origins: []
+                    headers: []
+                    methods: []
+                    maxAge: null
+                    allowCredentials: false
+                  provisioningState: Creating
+        Url: >-
+          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
+          }}/providers/Microsoft.HealthcareApis/services/{{ service_name }}
+        Method: put
+        Name: Create or Update a service with minimum parameters
+        Filename: healthcareapis_services_put_1
+        Variables:
+          - name: resource_group
+            value: myResourceGroup
+            swaggerName: resourceGroupName
+          - name: service_name
+            value: myService
+            swaggerName: resourceName
+        References:
+          - healthcareapis_services_put
+        OperationId: '391'
+        MethodId: '422'
+        OperationName: Services
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             resourceName: service1
             resourceGroupName: rg1
-            api-version: 2018-08-20-preview
+            api-version: '2019-09-16'
             subscriptionId: subid
             servicePatchDescription:
               tags:
@@ -1653,7 +1843,7 @@ Modules:
                 name: service1
                 location: West US
                 type: Microsoft.HealthcareApis/services
-                kind: fhir
+                kind: fhir-R4
                 etag: etagvalue
                 tags:
                   tag1: value1
@@ -1666,7 +1856,8 @@ Modules:
                   cosmosDbConfiguration:
                     offerThroughput: '1000'
                   authenticationConfiguration:
-                    authority: 'https://login.microsoftonline.com/common'
+                    authority: >-
+                      https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc
                     audience: 'https://azurehealthcareapis.com'
                     smartProxyEnabled: true
                   corsConfiguration:
@@ -1687,7 +1878,7 @@ Modules:
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.HealthcareApis/services/{{ service_name }}
         Method: patch
-        Name: ServicePatch
+        Name: Patch service
         Filename: healthcareapis_services_patch
         Variables:
           - name: resource_group
@@ -1700,11 +1891,13 @@ Modules:
           - healthcareapis_services_put
         OperationId: '391'
         MethodId: '457'
+        OperationName: Services
+        MethodName: Update
       - Example:
           parameters:
             resourceName: service1
             resourceGroupName: rg1
-            api-version: 2018-08-20-preview
+            api-version: '2019-09-16'
             subscriptionId: subid
           responses:
             '202': {}
@@ -1713,7 +1906,7 @@ Modules:
           /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
           }}/providers/Microsoft.HealthcareApis/services/{{ service_name }}
         Method: delete
-        Name: ServiceDelete
+        Name: Delete service
         Filename: healthcareapis_services_delete
         Variables:
           - name: resource_group
@@ -1725,1514 +1918,9 @@ Modules:
         References: []
         OperationId: '391'
         MethodId: '491'
-  - ModuleName: azure_rm_healthcareapisservice_info
-    Options:
-      - NameSwagger: resourceGroupName
-        NameAnsible: resource_group_name
-        NamePythonSdk: resource_group_name
-        NameGoSdk: ResourceGroupName
-        NameTerraform: ResourceGroupName
-        IdPortion: resourceGroups
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: The name of the resource group that contains the service instance.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: resourceName
-        NameAnsible: resource_name
-        NamePythonSdk: resource_name
-        NameGoSdk: ResourceName
-        NameTerraform: ResourceName
-        IdPortion: services
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: The name of the service instance.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - &ref_4
-        NameSwagger: id
-        NameAnsible: id
-        NamePythonSdk: id
-        NameGoSdk: ID
-        NameTerraform: ID
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: The resource identifier.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /id
-        PathPython: /id
-        PathGo: /id
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_5
-        NameSwagger: name
-        NameAnsible: name
-        NamePythonSdk: name
-        NameGoSdk: Name
-        NameTerraform: Name
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: The resource name.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /name
-        PathPython: /name
-        PathGo: /name
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_6
-        NameSwagger: type
-        NameAnsible: type
-        NamePythonSdk: type
-        NameGoSdk: Type
-        NameTerraform: Type
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: The resource type.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /type
-        PathPython: /type
-        PathGo: /type
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_7
-        NameSwagger: kind
-        NameAnsible: kind
-        NamePythonSdk: kind
-        NameGoSdk: Kind
-        NameTerraform: Kind
-        IdPortion: null
-        Type: str
-        TypeName: kind
-        TypeNameGo: kind
-        IsList: false
-        Required: false
-        Documentation: >-
-          The kind of the service. Valid values are: fhir, fhir-Stu3 and
-          fhir-R4.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues:
-          - Key: fhir
-            Value: fhir
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: fhir-Stu3
-            Value: fhir-Stu3
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: fhir-R4
-            Value: fhir-R4
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-        PathSwagger: /kind
-        PathPython: /kind
-        PathGo: /kind
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_8
-        NameSwagger: location
-        NameAnsible: location
-        NamePythonSdk: location
-        NameGoSdk: Location
-        NameTerraform: Location
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: The resource location.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /location
-        PathPython: /location
-        PathGo: /location
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_9
-        NameSwagger: tags
-        NameAnsible: tags
-        NamePythonSdk: tags
-        NameGoSdk: Tags
-        NameTerraform: Tags
-        IdPortion: null
-        Type: >-
-          unknown[DictionaryType
-          {"$id":"158","$type":"DictionaryType","valueType":{"$id":"159","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"160","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"161","fixed":false},"deprecated":false}]
-        TypeName: >-
-          {"$id":"158","$type":"DictionaryType","valueType":{"$id":"159","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"160","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"161","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"158","$type":"DictionaryType","valueType":{"$id":"159","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"160","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"161","fixed":false},"deprecated":false}
-        IsList: false
-        Required: false
-        Documentation: The resource tags.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /tags
-        PathPython: /tags
-        PathGo: /tags
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_10
-        NameSwagger: etag
-        NameAnsible: etag
-        NamePythonSdk: etag
-        NameGoSdk: Etag
-        NameTerraform: Etag
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: >-
-          An etag associated with the resource, used for optimistic concurrency
-          when editing it.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /etag
-        PathPython: /etag
-        PathGo: /etag
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_11
-        NameSwagger: properties
-        NameAnsible: properties
-        NamePythonSdk: properties
-        NameGoSdk: Properties
-        NameTerraform: Properties
-        IdPortion: null
-        Type: dict
-        TypeName: ServicesProperties
-        TypeNameGo: ServicesProperties
-        IsList: false
-        Required: false
-        Documentation: The common properties of a service.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions:
-          - NameSwagger: provisioningState
-            NameAnsible: provisioning_state
-            NamePythonSdk: provisioning_state
-            NameGoSdk: ProvisioningState
-            NameTerraform: ProvisioningState
-            IdPortion: null
-            Type: str
-            TypeName: provisioningState
-            TypeNameGo: provisioningState
-            IsList: false
-            Required: false
-            Documentation: The provisioning state.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues:
-              - Key: Deleting
-                Value: Deleting
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Succeeded
-                Value: Succeeded
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Creating
-                Value: Creating
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Accepted
-                Value: Accepted
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Verifying
-                Value: Verifying
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Updating
-                Value: Updating
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Failed
-                Value: Failed
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Canceled
-                Value: Canceled
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Deprovisioned
-                Value: Deprovisioned
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-            PathSwagger: /properties/provisioningState
-            PathPython: /provisioningState
-            PathGo: /properties/provisioningState
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: accessPolicies
-            NameAnsible: access_policies
-            NamePythonSdk: access_policies
-            NameGoSdk: AccessPolicies
-            NameTerraform: AccessPolicies
-            IdPortion: null
-            Type: dict
-            TypeName: ServiceAccessPolicyEntry
-            TypeNameGo: ServiceAccessPolicyEntry
-            IsList: true
-            Required: true
-            Documentation: The access policies of the service instance.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions:
-              - NameSwagger: objectId
-                NameAnsible: object_id
-                NamePythonSdk: object_id
-                NameGoSdk: ObjectID
-                NameTerraform: ObjectID
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: true
-                Documentation: An object ID that is allowed access to the FHIR service.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/accessPolicies/objectId
-                PathPython: /accessPolicies/objectId
-                PathGo: /properties/accessPolicies/objectId
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-            EnumValues: []
-            PathSwagger: /properties/accessPolicies
-            PathPython: /accessPolicies
-            PathGo: /properties/accessPolicies
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: cosmosDbConfiguration
-            NameAnsible: cosmos_db_configuration
-            NamePythonSdk: cosmos_db_configuration
-            NameGoSdk: CosmosDbConfiguration
-            NameTerraform: CosmosDbConfiguration
-            IdPortion: null
-            Type: dict
-            TypeName: ServiceCosmosDbConfigurationInfo
-            TypeNameGo: ServiceCosmosDbConfigurationInfo
-            IsList: false
-            Required: false
-            Documentation: The settings for the Cosmos DB database backing the service.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions:
-              - NameSwagger: offerThroughput
-                NameAnsible: offer_throughput
-                NamePythonSdk: offer_throughput
-                NameGoSdk: OfferThroughput
-                NameTerraform: OfferThroughput
-                IdPortion: null
-                Type: number
-                TypeName: Int
-                TypeNameGo: Int
-                IsList: false
-                Required: false
-                Documentation: The provisioned throughput for the backing database.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/cosmosDbConfiguration/offerThroughput
-                PathPython: /cosmosDbConfiguration/offerThroughput
-                PathGo: /properties/cosmosDbConfiguration/offerThroughput
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-            EnumValues: []
-            PathSwagger: /properties/cosmosDbConfiguration
-            PathPython: /cosmosDbConfiguration
-            PathGo: /properties/cosmosDbConfiguration
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: authenticationConfiguration
-            NameAnsible: authentication_configuration
-            NamePythonSdk: authentication_configuration
-            NameGoSdk: AuthenticationConfiguration
-            NameTerraform: AuthenticationConfiguration
-            IdPortion: null
-            Type: dict
-            TypeName: ServiceAuthenticationConfigurationInfo
-            TypeNameGo: ServiceAuthenticationConfigurationInfo
-            IsList: false
-            Required: false
-            Documentation: The authentication configuration for the service instance.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions:
-              - NameSwagger: authority
-                NameAnsible: authority
-                NamePythonSdk: authority
-                NameGoSdk: Authority
-                NameTerraform: Authority
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: The authority url for the service
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/authenticationConfiguration/authority
-                PathPython: /authenticationConfiguration/authority
-                PathGo: /properties/authenticationConfiguration/authority
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: audience
-                NameAnsible: audience
-                NamePythonSdk: audience
-                NameGoSdk: Audience
-                NameTerraform: Audience
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: The audience url for the service
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/authenticationConfiguration/audience
-                PathPython: /authenticationConfiguration/audience
-                PathGo: /properties/authenticationConfiguration/audience
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: smartProxyEnabled
-                NameAnsible: smart_proxy_enabled
-                NamePythonSdk: smart_proxy_enabled
-                NameGoSdk: SmartProxyEnabled
-                NameTerraform: SmartProxyEnabled
-                IdPortion: null
-                Type: boolean
-                TypeName: Boolean
-                TypeNameGo: Boolean
-                IsList: false
-                Required: false
-                Documentation: If the SMART on FHIR proxy is enabled
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/authenticationConfiguration/smartProxyEnabled
-                PathPython: /authenticationConfiguration/smartProxyEnabled
-                PathGo: /properties/authenticationConfiguration/smartProxyEnabled
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-            EnumValues: []
-            PathSwagger: /properties/authenticationConfiguration
-            PathPython: /authenticationConfiguration
-            PathGo: /properties/authenticationConfiguration
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: corsConfiguration
-            NameAnsible: cors_configuration
-            NamePythonSdk: cors_configuration
-            NameGoSdk: CorsConfiguration
-            NameTerraform: CorsConfiguration
-            IdPortion: null
-            Type: dict
-            TypeName: ServiceCorsConfigurationInfo
-            TypeNameGo: ServiceCorsConfigurationInfo
-            IsList: false
-            Required: false
-            Documentation: The settings for the CORS configuration of the service instance.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions:
-              - NameSwagger: origins
-                NameAnsible: origins
-                NamePythonSdk: origins
-                NameGoSdk: Origins
-                NameTerraform: Origins
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: true
-                Required: false
-                Documentation: The origins to be allowed via CORS.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/corsConfiguration/origins
-                PathPython: /corsConfiguration/origins
-                PathGo: /properties/corsConfiguration/origins
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: headers
-                NameAnsible: headers
-                NamePythonSdk: headers
-                NameGoSdk: Headers
-                NameTerraform: Headers
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: true
-                Required: false
-                Documentation: The headers to be allowed via CORS.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/corsConfiguration/headers
-                PathPython: /corsConfiguration/headers
-                PathGo: /properties/corsConfiguration/headers
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: methods
-                NameAnsible: methods
-                NamePythonSdk: methods
-                NameGoSdk: Methods
-                NameTerraform: Methods
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: true
-                Required: false
-                Documentation: The methods to be allowed via CORS.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/corsConfiguration/methods
-                PathPython: /corsConfiguration/methods
-                PathGo: /properties/corsConfiguration/methods
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: maxAge
-                NameAnsible: max_age
-                NamePythonSdk: max_age
-                NameGoSdk: MaxAge
-                NameTerraform: MaxAge
-                IdPortion: null
-                Type: number
-                TypeName: Int
-                TypeNameGo: Int
-                IsList: false
-                Required: false
-                Documentation: The max age to be allowed via CORS.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/corsConfiguration/maxAge
-                PathPython: /corsConfiguration/maxAge
-                PathGo: /properties/corsConfiguration/maxAge
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: allowCredentials
-                NameAnsible: allow_credentials
-                NamePythonSdk: allow_credentials
-                NameGoSdk: AllowCredentials
-                NameTerraform: AllowCredentials
-                IdPortion: null
-                Type: boolean
-                TypeName: Boolean
-                TypeNameGo: Boolean
-                IsList: false
-                Required: false
-                Documentation: If credentials are allowed via CORS.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/corsConfiguration/allowCredentials
-                PathPython: /corsConfiguration/allowCredentials
-                PathGo: /properties/corsConfiguration/allowCredentials
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-            EnumValues: []
-            PathSwagger: /properties/corsConfiguration
-            PathPython: /corsConfiguration
-            PathGo: /properties/corsConfiguration
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /properties
-        PathPython: ''
-        PathGo: /properties
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-    Methods:
-      - Name: List
-        Options: []
-        RequiredOptions: []
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/Microsoft.HealthcareApis/services
-        HttpMethod: get
-        IsAsync: false
-      - Name: ListByResourceGroup
-        Options:
-          - resourceGroupName
-        RequiredOptions:
-          - resourceGroupName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.HealthcareApis/services
-        HttpMethod: get
-        IsAsync: false
-      - Name: Get
-        Options:
-          - resourceGroupName
-          - resourceName
-        RequiredOptions:
-          - resourceGroupName
-          - resourceName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.HealthcareApis/services/{{ service_name }}
-        HttpMethod: get
-        IsAsync: false
-    ResponseFields:
-      - *ref_4
-      - *ref_5
-      - *ref_6
-      - *ref_7
-      - *ref_8
-      - *ref_9
-      - *ref_10
-      - *ref_11
-    ModuleOperationNameUpper: Services
-    ModuleOperationName: services
-    ObjectName: Service
-    ResourceNameFieldInResponse: null
-    NeedsDeleteBeforeUpdate: false
-    NeedsForceUpdate: false
-    CannotTestUpdate: false
-    Provider: Microsoft.HealthcareApis
-    ApiVersion: 2018-08-20-preview
-    Examples:
-      - Example:
-          parameters:
-            api-version: 2018-08-20-preview
-            subscriptionId: subid
-          responses:
-            '200':
-              body:
-                value:
-                  - id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.HealthcareApis/services/{{
-                      service_name }}
-                    name: service1
-                    location: West US
-                    type: Microsoft.HealthcareApis/services
-                    kind: fhir
-                    etag: etag
-                    tags: {}
-                    properties:
-                      provisioningState: Creating
-                      accessPolicies:
-                        - objectId: c487e7d1-3210-41a3-8ccc-e9372b78da47
-                        - objectId: 5b307da8-43d4-492b-8b66-b0294ade872f
-                      cosmosDbConfiguration:
-                        offerThroughput: '1000'
-                      authenticationConfiguration:
-                        authority: 'https://login.microsoftonline.com/common'
-                        audience: 'https://azurehealthcareapis.com'
-                        smartProxyEnabled: true
-                      corsConfiguration:
-                        origins:
-                          - '*'
-                        headers:
-                          - '*'
-                        methods:
-                          - DELETE
-                          - GET
-                          - OPTIONS
-                          - PATCH
-                          - POST
-                          - PUT
-                        maxAge: '1440'
-                        allowCredentials: false
-                nextLink: >-
-                  https://host/subscriptions/subid/providers/Microsoft.HealthcareApis/services?api-version=2018-08-20-preview&%24skipToken=e30%3d
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/Microsoft.HealthcareApis/services
-        Method: get
-        Name: ServiceList
-        Filename: healthcareapis_services_get_1
-        Variables: []
-        References: []
-        OperationId: '391'
-        MethodId: '522'
-      - Example:
-          parameters:
-            api-version: 2018-08-20-preview
-            subscriptionId: subid
-            resourceGroupName: rgname
-          responses:
-            '200':
-              body:
-                value:
-                  - id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.HealthcareApis/services/{{
-                      service_name }}
-                    name: service1
-                    location: westus
-                    type: Microsoft.HealthcareApis/services
-                    kind: fhir
-                    tags: {}
-                    etag: etagvalue
-                    properties:
-                      provisioningState: Creating
-                      accessPolicies:
-                        - objectId: c487e7d1-3210-41a3-8ccc-e9372b78da47
-                        - objectId: 5b307da8-43d4-492b-8b66-b0294ade872f
-                      cosmosDbConfiguration:
-                        offerThroughput: '1000'
-                      authenticationConfiguration:
-                        authority: 'https://login.microsoftonline.com/common'
-                        audience: 'https://azurehealthcareapis.com'
-                        smartProxyEnabled: true
-                      corsConfiguration:
-                        origins:
-                          - '*'
-                        headers:
-                          - '*'
-                        methods:
-                          - DELETE
-                          - GET
-                          - OPTIONS
-                          - PATCH
-                          - POST
-                          - PUT
-                        maxAge: '1440'
-                        allowCredentials: false
-                nextLink: >-
-                  https://host/subscriptions/subid/resourceGroups/rgname/providers/Microsoft.HealthcareApis/services?api-version=2018-08-20-preview&%24skipToken=e30%3d
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.HealthcareApis/services
-        Method: get
-        Name: ServiceListByResourceGroup
-        Filename: healthcareapis_services_get_2
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-        References: []
-        OperationId: '391'
-        MethodId: '540'
-      - Example:
-          parameters:
-            resourceName: service1
-            resourceGroupName: rg1
-            api-version: 2018-08-20-preview
-            subscriptionId: subid
-          responses:
-            '200':
-              body:
-                id: >-
-                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                  resource_group
-                  }}/providers/Microsoft.HealthcareApis/services/{{ service_name
-                  }}
-                name: service1
-                location: West US
-                type: Microsoft.HealthcareApis/services
-                kind: fhir
-                etag: etagvalue
-                tags: {}
-                properties:
-                  provisioningState: Creating
-                  accessPolicies:
-                    - objectId: c487e7d1-3210-41a3-8ccc-e9372b78da47
-                    - objectId: 5b307da8-43d4-492b-8b66-b0294ade872f
-                  cosmosDbConfiguration:
-                    offerThroughput: '1000'
-                  authenticationConfiguration:
-                    authority: 'https://login.microsoftonline.com/common'
-                    audience: 'https://azurehealthcareapis.com'
-                    smartProxyEnabled: true
-                  corsConfiguration:
-                    origins:
-                      - '*'
-                    headers:
-                      - '*'
-                    methods:
-                      - DELETE
-                      - GET
-                      - OPTIONS
-                      - PATCH
-                      - POST
-                      - PUT
-                    maxAge: '1440'
-                    allowCredentials: false
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.HealthcareApis/services/{{ service_name }}
-        Method: get
-        Name: ServiceGet
-        Filename: healthcareapis_services_get
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-          - name: service_name
-            value: myService
-            swaggerName: resourceName
-        References: []
-        OperationId: '391'
-        MethodId: '392'
-  - ModuleName: azure_rm_healthcareapisoperation_info
-    Options:
-      - &ref_12
-        NameSwagger: nextLink
-        NameAnsible: next_link
-        NamePythonSdk: next_link
-        NameGoSdk: NextLink
-        NameTerraform: NextLink
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: The link used to get the next page of service description objects.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /nextLink
-        PathPython: /nextLink
-        PathGo: /nextLink
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_13
-        NameSwagger: value
-        NameAnsible: value
-        NamePythonSdk: value
-        NameGoSdk: Value
-        NameTerraform: Value
-        IdPortion: null
-        Type: dict
-        TypeName: Operation
-        TypeNameGo: Operation
-        IsList: true
-        Required: false
-        Documentation: >-
-          A list of service operations supported by the Microsoft.HealthcareApis
-          resource provider.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions:
-          - NameSwagger: name
-            NameAnsible: name
-            NamePythonSdk: name
-            NameGoSdk: Name
-            NameTerraform: Name
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: >-
-              Operation name: {provider}/{resource}/{read | write | action |
-              delete}
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /value/name
-            PathPython: /value/name
-            PathGo: /value/name
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: origin
-            NameAnsible: origin
-            NamePythonSdk: origin
-            NameGoSdk: Origin
-            NameTerraform: Origin
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: 'Default value is ''user,system''.'
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /value/origin
-            PathPython: /value/origin
-            PathGo: /value/origin
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: display
-            NameAnsible: display
-            NamePythonSdk: display
-            NameGoSdk: Display
-            NameTerraform: Display
-            IdPortion: null
-            Type: dict
-            TypeName: OperationDisplay
-            TypeNameGo: OperationDisplay
-            IsList: false
-            Required: false
-            Documentation: The information displayed about the operation.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions:
-              - NameSwagger: provider
-                NameAnsible: provider
-                NamePythonSdk: provider
-                NameGoSdk: Provider
-                NameTerraform: Provider
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: 'Service provider: Microsoft.HealthcareApis'
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /value/display/provider
-                PathPython: /value/display/provider
-                PathGo: /value/display/provider
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: resource
-                NameAnsible: resource
-                NamePythonSdk: resource
-                NameGoSdk: Resource
-                NameTerraform: Resource
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: 'Resource Type: Services'
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /value/display/resource
-                PathPython: /value/display/resource
-                PathGo: /value/display/resource
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: operation
-                NameAnsible: operation
-                NamePythonSdk: operation
-                NameGoSdk: Operation
-                NameTerraform: Operation
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: Name of the operation
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /value/display/operation
-                PathPython: /value/display/operation
-                PathGo: /value/display/operation
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: description
-                NameAnsible: description
-                NamePythonSdk: description
-                NameGoSdk: Description
-                NameTerraform: Description
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: 'Friendly description for the operation,'
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /value/display/description
-                PathPython: /value/display/description
-                PathGo: /value/display/description
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-            EnumValues: []
-            PathSwagger: /value/display
-            PathPython: /value/display
-            PathGo: /value/display
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /value
-        PathPython: /value
-        PathGo: /value
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-    Methods:
-      - Name: List
-        Options: []
-        RequiredOptions: []
-        Url: /providers/Microsoft.HealthcareApis/operations
-        HttpMethod: get
-        IsAsync: false
-    ResponseFields:
-      - *ref_12
-      - *ref_13
-    ModuleOperationNameUpper: Operations
-    ModuleOperationName: operations
-    ObjectName: Operation
-    ResourceNameFieldInResponse: null
-    NeedsDeleteBeforeUpdate: false
-    NeedsForceUpdate: false
-    CannotTestUpdate: false
-    Provider: Microsoft.HealthcareApis
-    ApiVersion: 2018-08-20-preview
-    Examples:
-      - Example:
-          parameters:
-            api-version: 2018-08-20-preview
-          responses:
-            '200':
-              body:
-                value:
-                  - name: Microsoft.HealthcareApis/services/read
-                    display: {}
-                    origin: 'user,system'
-                  - name: Microsoft.HealthcareApis/services/write
-                    display: {}
-                    origin: 'user,system'
-                  - name: Microsoft.HealthcareApis/services/delete
-                    display: {}
-                    origin: 'user,system'
-                  - name: Microsoft.HealthcareApis/locations/operationresults/read
-                    display:
-                      provider: Microsoft.HealthcareApis
-                      resource: operationresults
-                      operation: read
-                      description: Get the status of an asynchronous operation
-                    origin: 'user,system'
-                  - name: Microsoft.HealthcareApis/checkNameAvailability/post
-                    display: {}
-                    origin: user
-                  - name: Microsoft.HealthcareApis/Operations/read
-                    display:
-                      provider: Microsoft.HealthcareApis
-                      resource: operations
-                      operation: read
-                      description: >-
-                        Get the list of operations supported by this Resource
-                        Provider.
-                    origin: 'user,system'
-        Url: /providers/Microsoft.HealthcareApis/operations
-        Method: get
-        Name: OperationsList
-        Filename: healthcareapis_operations_get
-        Variables: []
-        References: []
-        OperationId: '588'
-        MethodId: '589'
-  - ModuleName: azure_rm_healthcareapisoperationresult_info
-    Options:
-      - NameSwagger: locationName
-        NameAnsible: location_name
-        NamePythonSdk: location_name
-        NameGoSdk: LocationName
-        NameTerraform: LocationName
-        IdPortion: locations
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: true
-        Documentation: The location of the operation.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: operationResultId
-        NameAnsible: operation_result_id
-        NamePythonSdk: operation_result_id
-        NameGoSdk: OperationResultID
-        NameTerraform: OperationResultID
-        IdPortion: operationresults
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: true
-        Documentation: The ID of the operation result to get.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-    Methods:
-      - Name: Get
-        Options:
-          - locationName
-          - operationResultId
-        RequiredOptions:
-          - locationName
-          - operationResultId
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/Microsoft.HealthcareApis/locations/{{ location_name
-          }}/operationresults/{{ operationresult_name }}
-        HttpMethod: get
-        IsAsync: false
-    ResponseFields: []
-    ModuleOperationNameUpper: OperationResults
-    ModuleOperationName: operation_results
-    ObjectName: OperationResult
-    ResourceNameFieldInResponse: null
-    NeedsDeleteBeforeUpdate: false
-    NeedsForceUpdate: false
-    CannotTestUpdate: false
-    Provider: Microsoft.HealthcareApis
-    ApiVersion: 2018-08-20-preview
-    Examples:
-      - Example:
-          parameters:
-            api-version: 2018-08-20-preview
-            subscriptionId: subid
-            locationName: westus
-            operationResultId: exampleid
-          responses:
-            '200':
-              body:
-                id: >-
-                  /subscriptions/{{ subscription_id
-                  }}/providers/Microsoft.HealthcareApis/locations/{{
-                  location_name }}/operationresults/{{ operationresult_name }}
-                name: servicename
-                status: Requested
-                startTime: '2019-01-21T06:03:30.2716301Z'
-                properties: {}
-            '404':
-              body:
-                error:
-                  code: OperationResultNotFound
-                  message: The operation result was not found.
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/Microsoft.HealthcareApis/locations/{{ location_name
-          }}/operationresults/{{ operationresult_name }}
-        Method: get
-        Name: OperationResultsGet
-        Filename: healthcareapis_locations_operationresults_get
-        Variables:
-          - name: location_name
-            value: myLocation
-            swaggerName: locationName
-          - name: operationresult_name
-            value: myOperationresult
-            swaggerName: operationResultId
-        References: []
-        OperationId: '603'
-        MethodId: '604'
+        OperationName: Services
+        MethodName: Delete
 ServiceName: HealthCareApis
 MgmtClientName: HealthCareApis
 CliName: healthcareapis
 Namespace: azure.mgmt.healthcareapis
-Info:
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceName'
-  - '  ** FOUND OPTION serviceDescription'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceName'
-  - '  ** FOUND OPTION locationName'
-  - '  ** FOUND OPTION operationResultId'

@@ -26,9 +26,10 @@ options:
       - Name of the Resource group within the Azure subscription.
     required: true
     type: str
-  name:
+  namespace_name:
     description:
-      - Resource name
+      - The namespace name.
+    required: true
     type: str
   location:
     description:
@@ -79,6 +80,10 @@ options:
     description:
       - Resource Id
     type: str
+  name:
+    description:
+      - Resource name
+    type: str
   type:
     description:
       - Resource type
@@ -105,7 +110,7 @@ EXAMPLES = '''
 - name: NameSpaceCreate
   azure.rm.servicebusnamespace:
     resource_group: myResourceGroup
-    name: my
+    namespace_name: my
     location: South Central US
     tags:
       tag1: value1
@@ -116,7 +121,7 @@ EXAMPLES = '''
 - name: NameSpaceUpdate
   azure.rm.servicebusnamespace:
     resource_group: myResourceGroup
-    name: my
+    namespace_name: my
     location: South Central US
     tags:
       tag3: value3
@@ -124,7 +129,7 @@ EXAMPLES = '''
 - name: NameSpaceDelete
   azure.rm.servicebusnamespace:
     resource_group: myResourceGroup
-    name: my
+    namespace_name: my
     state: absent
 
 '''
@@ -255,7 +260,7 @@ class AzureRMNamespaces(AzureRMModuleBaseExt):
                 disposition='resourceGroupName',
                 required=true
             ),
-            name=dict(
+            namespace_name=dict(
                 type='str',
                 updatable=False,
                 disposition='namespaceName',
@@ -297,7 +302,7 @@ class AzureRMNamespaces(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.namespace_name = None
         self.id = None
         self.name = None
         self.type = None

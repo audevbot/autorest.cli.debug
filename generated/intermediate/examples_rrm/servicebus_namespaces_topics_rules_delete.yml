@@ -16,6 +16,6 @@
         namespace_name: '{{namespace_name}}'
         topic_name: '{{topic_name}}'
         subscription_name: sdk-Subscriptions-8691
-        name: '{{rule_name}}'
+        rule_name: '{{rule_name}}'
         state: absent
     

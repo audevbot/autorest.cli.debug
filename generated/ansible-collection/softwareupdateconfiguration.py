@@ -31,9 +31,10 @@ options:
       - The name of the automation account.
     required: true
     type: str
-  name:
+  software_update_configuration_name:
     description:
-      - Resource name.
+      - The name of the software update configuration to be created.
+    required: true
     type: str
   client_request_id:
     description:
@@ -312,6 +313,10 @@ options:
     description:
       - 'LastModifiedBy property, which only appears in the response.'
     type: str
+  name:
+    description:
+      - Resource name.
+    type: str
   id:
     description:
       - Resource Id.
@@ -342,7 +347,7 @@ EXAMPLES = '''
   azure.rm.softwareupdateconfiguration:
     resource_group: myResourceGroup
     automation_account_name: myAutomationAccount
-    name: mySoftwareUpdateConfiguration
+    software_update_configuration_name: mySoftwareUpdateConfiguration
     update_configuration:
       operating_system: Windows
       windows:
@@ -371,22 +376,9 @@ EXAMPLES = '''
             locations:
               - Japan East
               - UK South
-            tag_settings:
-              tags:
-                - tag1:
-                    - tag1Value1
-                    - tag1Value2
-                    - tag1Value3
-                - tag2:
-                    - tag2Value1
-                    - tag2Value2
-                    - tag2Value3
-              filterOperator: All
         non_azure_queries:
-          - function_alias: SavedSearch1
-            workspace_id: WorkspaceId1
-          - function_alias: SavedSearch2
-            workspace_id: WorkspaceId2
+          - {}
+          - {}
     schedule_info:
       start_time: '2017-10-19T12:22:57+00:00'
       expiry_time: '2018-11-09T11:22:57+00:00'
@@ -406,7 +398,7 @@ EXAMPLES = '''
   azure.rm.softwareupdateconfiguration:
     resource_group: myResourceGroup
     automation_account_name: myAutomationAccount
-    name: mySoftwareUpdateConfiguration
+    software_update_configuration_name: mySoftwareUpdateConfiguration
     state: absent
 
 '''
@@ -860,7 +852,7 @@ class AzureRMSoftwareUpdateConfigurations(AzureRMModuleBaseExt):
                 disposition='automationAccountName',
                 required=true
             ),
-            name=dict(
+            software_update_configuration_name=dict(
                 type='str',
                 updatable=False,
                 disposition='softwareUpdateConfigurationName',
@@ -1133,7 +1125,7 @@ class AzureRMSoftwareUpdateConfigurations(AzureRMModuleBaseExt):
 
         self.resource_group = None
         self.automation_account_name = None
-        self.name = None
+        self.software_update_configuration_name = None
         self.client_request_id = None
         self.name = None
         self.id = None

@@ -26,13 +26,14 @@ options:
       - The name of the resource group that contains the service instance.
     required: true
     type: str
-  name:
+  resource_name:
     description:
-      - The resource name.
+      - The name of the service instance.
+    required: true
     type: str
   kind:
     description:
-      - 'The kind of the service. Valid values are: fhir, fhir-Stu3 and fhir-R4.'
+      - The kind of the service.
     required: true
     type: str
   location:
@@ -48,7 +49,9 @@ options:
     type: str
   access_policies_object_id:
     description:
-      - An object ID that is allowed access to the FHIR service.
+      - >-
+        An Azure AD object ID (User or Apps) that is allowed access to the FHIR
+        service.
     required: true
     type: str
   cosmos_db_offer_throughput:
@@ -95,6 +98,10 @@ options:
     description:
       - The resource identifier.
     type: str
+  name:
+    description:
+      - The resource name.
+    type: str
   type:
     description:
       - The resource type.
@@ -118,22 +125,23 @@ author:
 '''
 
 EXAMPLES = '''
-- name: ServicePut
+- name: Create or Update a service with all parameters
   azure_rm_healthcareapisservice:
     resource_group: myResourceGroup
-    name: myService
+    resource_name: myService
     service_description:
-      location: westus
+      location: westus2
       tags: {}
-      kind: fhir
+      kind: fhir-R4
       properties:
         accessPolicies:
-          - objectId: c487e7d1-3210-41a3-8ccc-e9372b78da47
-          - objectId: 5b307da8-43d4-492b-8b66-b0294ade872f
+          - object_id: c487e7d1-3210-41a3-8ccc-e9372b78da47
+          - object_id: 5b307da8-43d4-492b-8b66-b0294ade872f
         cosmosDbConfiguration:
           offerThroughput: '1000'
         authenticationConfiguration:
-          authority: 'https://login.microsoftonline.com/common'
+          authority: >-
+            https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc
           audience: 'https://azurehealthcareapis.com'
           smartProxyEnabled: true
         corsConfiguration:
@@ -150,14 +158,25 @@ EXAMPLES = '''
             - PUT
           maxAge: '1440'
           allowCredentials: false
-- name: ServicePatch
+- name: Create or Update a service with minimum parameters
   azure_rm_healthcareapisservice:
     resource_group: myResourceGroup
-    name: myService
-- name: ServiceDelete
+    resource_name: myService
+    service_description:
+      location: westus2
+      tags: {}
+      kind: fhir-R4
+      properties:
+        accessPolicies:
+          - object_id: c487e7d1-3210-41a3-8ccc-e9372b78da47
+- name: Patch service
   azure_rm_healthcareapisservice:
     resource_group: myResourceGroup
-    name: myService
+    resource_name: myService
+- name: Delete service
+  azure_rm_healthcareapisservice:
+    resource_group: myResourceGroup
+    resource_name: myService
     state: absent
 
 '''
@@ -183,7 +202,7 @@ type:
   sample: null
 kind:
   description:
-    - 'The kind of the service. Valid values are: fhir, fhir-Stu3 and fhir-R4.'
+    - The kind of the service.
   returned: always
   type: str
   sample: null
@@ -231,7 +250,9 @@ properties:
       contains:
         object_id:
           description:
-            - An object ID that is allowed access to the FHIR service.
+            - >-
+              An Azure AD object ID (User or Apps) that is allowed access to the
+              FHIR service.
           returned: always
           type: str
           sample: null
@@ -341,10 +362,9 @@ class AzureRMServices(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            name=dict(
+            resource_name=dict(
                 type='str',
                 updatable=False,
-                disposition='resource_name',
                 required=true
             ),
             kind=dict(
@@ -416,7 +436,7 @@ class AzureRMServices(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.resource_name = None
         self.id = None
         self.name = None
         self.type = None
@@ -494,7 +514,7 @@ class AzureRMServices(AzureRMModuleBaseExt):
     def create_update_resource(self):
         try:
             response = self.mgmt_client.services.create_or_update(resource_group_name=self.resource_group,
-                                                                  resource_name=self.name,
+                                                                  resource_name=self.resource_name,
                                                                   service_description=self.serviceDescription)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
@@ -507,7 +527,7 @@ class AzureRMServices(AzureRMModuleBaseExt):
         # self.log('Deleting the Service instance {0}'.format(self.))
         try:
             response = self.mgmt_client.services.delete(resource_group_name=self.resource_group,
-                                                        resource_name=self.name)
+                                                        resource_name=self.resource_name)
         except CloudError as e:
             self.log('Error attempting to delete the Service instance.')
             self.fail('Error deleting the Service instance: {0}'.format(str(e)))
@@ -519,7 +539,7 @@ class AzureRMServices(AzureRMModuleBaseExt):
         found = False
         try:
             response = self.mgmt_client.services.get(resource_group_name=self.resource_group,
-                                                     resource_name=self.name)
+                                                     resource_name=self.resource_name)
         except CloudError as e:
             return False
         return response.as_dict()

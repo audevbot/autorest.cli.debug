@@ -31,9 +31,10 @@ options:
       - The name of the automation account.
     required: true
     type: str
-  name:
+  job_name:
     description:
-      - The name of the resource
+      - The job name.
+    required: true
     type: str
   runbook:
     description:
@@ -108,6 +109,10 @@ options:
     description:
       - Fully qualified resource Id for the resource
     type: str
+  name:
+    description:
+      - The name of the resource
+    type: str
   type:
     description:
       - The type of the resource.
@@ -132,7 +137,7 @@ EXAMPLES = '''
   azure_rm_automationjob:
     resource_group: myResourceGroup
     automation_account_name: myAutomationAccount
-    name: myJob
+    job_name: myJob
     runbook:
       name: TestRunbook
     run_on: ''
@@ -296,10 +301,9 @@ class AzureRMJob(AzureRMModuleBaseExt):
                 updatable=False,
                 required=true
             ),
-            name=dict(
+            job_name=dict(
                 type='str',
                 updatable=False,
-                disposition='job_name',
                 required=true
             ),
             runbook=dict(
@@ -332,7 +336,7 @@ class AzureRMJob(AzureRMModuleBaseExt):
 
         self.resource_group = None
         self.automation_account_name = None
-        self.name = None
+        self.job_name = None
         self.client_request_id = None
         self.id = None
         self.name = None
@@ -409,7 +413,7 @@ class AzureRMJob(AzureRMModuleBaseExt):
             if self.to_do == Actions.Create:
                 response = self.mgmt_client.job.create(resource_group_name=self.resource_group,
                                                        automation_account_name=self.automation_account_name,
-                                                       job_name=self.name,
+                                                       job_name=self.job_name,
                                                        parameters=self.body)
             else:
                 response = self.mgmt_client.job.update()
@@ -436,7 +440,7 @@ class AzureRMJob(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.job.get(resource_group_name=self.resource_group,
                                                 automation_account_name=self.automation_account_name,
-                                                job_name=self.name)
+                                                job_name=self.job_name)
         except CloudError as e:
             return False
         return response.as_dict()

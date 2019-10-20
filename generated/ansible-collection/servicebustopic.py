@@ -31,9 +31,10 @@ options:
       - The namespace name
     required: true
     type: str
-  name:
+  topic_name:
     description:
-      - Resource name
+      - The topic name.
+    required: true
     type: str
   default_message_time_to_live:
     description:
@@ -143,6 +144,10 @@ options:
     description:
       - Resource Id
     type: str
+  name:
+    description:
+      - Resource name
+    type: str
   type:
     description:
       - Resource type
@@ -167,13 +172,13 @@ EXAMPLES = '''
   azure.rm.servicebustopic:
     resource_group: myResourceGroup
     namespace_name: my
-    name: myTopic
+    topic_name: myTopic
     enable_express: true
 - name: TopicDelete
   azure.rm.servicebustopic:
     resource_group: myResourceGroup
     namespace_name: my
-    name: myTopic
+    topic_name: myTopic
     state: absent
 
 '''
@@ -387,7 +392,7 @@ class AzureRMTopics(AzureRMModuleBaseExt):
                 disposition='namespaceName',
                 required=true
             ),
-            name=dict(
+            topic_name=dict(
                 type='str',
                 updatable=False,
                 disposition='topicName',
@@ -451,7 +456,7 @@ class AzureRMTopics(AzureRMModuleBaseExt):
 
         self.resource_group = None
         self.namespace_name = None
-        self.name = None
+        self.topic_name = None
         self.id = None
         self.name = None
         self.type = None

@@ -31,9 +31,10 @@ options:
       - The namespace name
     required: true
     type: str
-  name:
+  queue_name:
     description:
-      - Resource name
+      - The queue name.
+    required: true
     type: str
   lock_duration:
     description:
@@ -172,6 +173,10 @@ options:
     description:
       - Resource Id
     type: str
+  name:
+    description:
+      - Resource name
+    type: str
   type:
     description:
       - Resource type
@@ -196,13 +201,13 @@ EXAMPLES = '''
   azure_rm_servicebusqueue:
     resource_group: myResourceGroup
     namespace_name: my
-    name: myQueue
+    queue_name: myQueue
     enable_partitioning: true
 - name: QueueDelete
   azure_rm_servicebusqueue:
     resource_group: myResourceGroup
     namespace_name: my
-    name: myQueue
+    queue_name: myQueue
     state: absent
 
 '''
@@ -456,10 +461,9 @@ class AzureRMQueues(AzureRMModuleBaseExt):
                 updatable=False,
                 required=true
             ),
-            name=dict(
+            queue_name=dict(
                 type='str',
                 updatable=False,
-                disposition='queue_name',
                 required=true
             ),
             lock_duration=dict(
@@ -540,7 +544,7 @@ class AzureRMQueues(AzureRMModuleBaseExt):
 
         self.resource_group = None
         self.namespace_name = None
-        self.name = None
+        self.queue_name = None
         self.id = None
         self.name = None
         self.type = None
@@ -615,7 +619,7 @@ class AzureRMQueues(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.queues.create_or_update(resource_group_name=self.resource_group,
                                                                 namespace_name=self.namespace_name,
-                                                                queue_name=self.name,
+                                                                queue_name=self.queue_name,
                                                                 parameters=self.body)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
@@ -629,7 +633,7 @@ class AzureRMQueues(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.queues.delete(resource_group_name=self.resource_group,
                                                       namespace_name=self.namespace_name,
-                                                      queue_name=self.name)
+                                                      queue_name=self.queue_name)
         except CloudError as e:
             self.log('Error attempting to delete the Queue instance.')
             self.fail('Error deleting the Queue instance: {0}'.format(str(e)))
@@ -642,7 +646,7 @@ class AzureRMQueues(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.queues.get(resource_group_name=self.resource_group,
                                                    namespace_name=self.namespace_name,
-                                                   queue_name=self.name)
+                                                   queue_name=self.queue_name)
         except CloudError as e:
             return False
         return response.as_dict()

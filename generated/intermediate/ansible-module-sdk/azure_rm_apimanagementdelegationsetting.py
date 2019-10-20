@@ -26,9 +26,10 @@ options:
       - The name of the resource group.
     required: true
     type: str
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
     type: str
   url:
     description:
@@ -62,6 +63,10 @@ options:
     description:
       - Resource ID.
     type: str
+  name:
+    description:
+      - Resource name.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
@@ -87,7 +92,7 @@ EXAMPLES = '''
 - name: ApiManagementPortalSettingsUpdateDelegation
   azure_rm_apimanagementdelegationsetting:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     url: 'http://contoso.com/delegation'
     validation_key: >-
       nVF7aKIvr9mV/RM5lOD0sYoi8ThXTRHQP7o66hvUmjCDkPKR3qxPu/otJcNciz2aQdqPuzJH3ECG4TU2yZjQ7Q==
@@ -98,7 +103,7 @@ EXAMPLES = '''
 - name: ApiManagementPortalSettingsUpdateDelegation
   azure_rm_apimanagementdelegationsetting:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     url: 'http://contoso.com/delegation'
     validation_key: >-
       nVF7aKIvr9mV/RM5lOD0sYoi8ThXTRHQP7o66hvUmjCDkPKR3qxPu/otJcNciz2aQdqPuzJH3ECG4TU2yZjQ7Q==
@@ -206,10 +211,9 @@ class AzureRMDelegationSettings(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
-                disposition='service_name',
                 required=true
             ),
             url=dict(
@@ -246,7 +250,7 @@ class AzureRMDelegationSettings(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.id = None
         self.name = None
         self.type = None
@@ -320,7 +324,7 @@ class AzureRMDelegationSettings(AzureRMModuleBaseExt):
     def create_update_resource(self):
         try:
             response = self.mgmt_client.delegation_settings.create_or_update(resource_group_name=self.resource_group,
-                                                                             service_name=self.name,
+                                                                             service_name=self.service_name,
                                                                              parameters=self.body)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
@@ -344,7 +348,7 @@ class AzureRMDelegationSettings(AzureRMModuleBaseExt):
         found = False
         try:
             response = self.mgmt_client.delegation_settings.get(resource_group_name=self.resource_group,
-                                                                service_name=self.name)
+                                                                service_name=self.service_name)
         except CloudError as e:
             return False
         return response.as_dict()

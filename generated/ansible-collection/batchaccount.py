@@ -26,7 +26,7 @@ options:
       - The name of the resource group that contains the Batch account.
     required: true
     type: str
-  name:
+  account_name:
     description:
       - >-
         A name for the Batch account which must be unique within the region.
@@ -105,7 +105,7 @@ EXAMPLES = '''
 - name: BatchAccountCreate_Default
   azure.rm.batchaccount:
     resource_group: myResourceGroup
-    name: myBatchAccount
+    account_name: myBatchAccount
     location: japaneast
     auto_storage_account_id: >-
       /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
@@ -113,7 +113,7 @@ EXAMPLES = '''
 - name: BatchAccountCreate_BYOS
   azure.rm.batchaccount:
     resource_group: myResourceGroup
-    name: myBatchAccount
+    account_name: myBatchAccount
     location: japaneast
     auto_storage_account_id: >-
       /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
@@ -127,14 +127,14 @@ EXAMPLES = '''
 - name: BatchAccountUpdate
   azure.rm.batchaccount:
     resource_group: myResourceGroup
-    name: myBatchAccount
+    account_name: myBatchAccount
     auto_storage_account_id: >-
       /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
       }}/providers/Microsoft.Storage/storageAccounts/{{ storage_account_name }}
 - name: BatchAccountDelete
   azure.rm.batchaccount:
     resource_group: myResourceGroup
-    name: myBatchAccount
+    account_name: myBatchAccount
     state: absent
 
 '''
@@ -294,7 +294,7 @@ class AzureRMBatchAccount(AzureRMModuleBaseExt):
                 disposition='resourceGroupName',
                 required=true
             ),
-            name=dict(
+            account_name=dict(
                 type='str',
                 updatable=False,
                 disposition='accountName',
@@ -345,7 +345,7 @@ class AzureRMBatchAccount(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.account_name = None
         self.id = None
 
         self.results = dict(changed=False)

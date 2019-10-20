@@ -11,6 +11,6 @@
     - name: Deletes a WAF policy within a resource group
       azure_rm_webapplicationfirewallpolicy:
         resource_group: '{{resource_group}}'
-        name: '{{application_gateway_web_application_firewall_policy_name}}'
+        policy_name: '{{application_gateway_web_application_firewall_policy_name}}'
         state: absent
     

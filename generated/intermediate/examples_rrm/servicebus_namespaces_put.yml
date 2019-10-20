@@ -14,7 +14,7 @@
     - name: NameSpaceCreate
       azure_rm_servicebusnamespace:
         resource_group: '{{resource_group}}'
-        name: '{{namespace_name}}'
+        namespace_name: '{{namespace_name}}'
         location: South Central US
         tags:
           tag1: value1

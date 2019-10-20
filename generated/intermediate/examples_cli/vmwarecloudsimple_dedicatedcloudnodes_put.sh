@@ -2,7 +2,7 @@
 RESOURCE_GROUP="myresourcegroup"
 DEDICATED_CLOUD_NODE_NAME="mydedicatedcloudnode"
 
-az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.VMwareCloudSimple/dedicatedCloudNodes/$DEDICATED_CLOUD_NODE_NAME --api-version 2019-04-01 --is-full-object --properties '
+az rest --method put --uri /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.VMwareCloudSimple/dedicatedCloudNodes/$DEDICATED_CLOUD_NODE_NAME?api-version=2019-04-01 --body '
 {
   "location": "westus",
   "properties": {

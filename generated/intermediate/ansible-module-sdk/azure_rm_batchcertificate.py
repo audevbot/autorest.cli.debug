@@ -31,7 +31,7 @@ options:
       - The name of the Batch account.
     required: true
     type: str
-  name:
+  certificate_name:
     description:
       - >-
         The identifier for the certificate. This must be made up of algorithm
@@ -193,21 +193,21 @@ EXAMPLES = '''
   azure_rm_batchcertificate:
     resource_group: myResourceGroup
     account_name: myBatchAccount
-    name: myCertificate
+    certificate_name: myCertificate
     data: MIIJsgIBAzCCCW4GCSqGSIb3DQE...
     password: KG0UY40e...
 - name: CreateCertificate - Minimal Cer
   azure_rm_batchcertificate:
     resource_group: myResourceGroup
     account_name: myBatchAccount
-    name: myCertificate
+    certificate_name: myCertificate
     format: Cer
     data: MIICrjCCAZagAwI...
 - name: CreateCertificate - Full
   azure_rm_batchcertificate:
     resource_group: myResourceGroup
     account_name: myBatchAccount
-    name: myCertificate
+    certificate_name: myCertificate
     thumbprint_algorithm: SHA1
     thumbprint: 0A0E4F50D51BEADEAC1D35AFC5116098E7902E6E
     format: Pfx
@@ -217,14 +217,14 @@ EXAMPLES = '''
   azure_rm_batchcertificate:
     resource_group: myResourceGroup
     account_name: myBatchAccount
-    name: myCertificate
+    certificate_name: myCertificate
     data: MIIJsgIBAzCCCW4GCSqGSIb3DQE...
     password: KG0UY40e...
 - name: CertificateDelete
   azure_rm_batchcertificate:
     resource_group: myResourceGroup
     account_name: myBatchAccount
-    name: myCertificate
+    certificate_name: myCertificate
     state: absent
 
 '''
@@ -450,10 +450,9 @@ class AzureRMCertificate(AzureRMModuleBaseExt):
                 updatable=False,
                 required=true
             ),
-            name=dict(
+            certificate_name=dict(
                 type='str',
                 updatable=False,
-                disposition='certificate_name',
                 required=true
             ),
             thumbprint_algorithm=dict(
@@ -489,7 +488,7 @@ class AzureRMCertificate(AzureRMModuleBaseExt):
 
         self.resource_group = None
         self.account_name = None
-        self.name = None
+        self.certificate_name = None
         self.id = None
         self.etag = None
         self.body = {}
@@ -565,12 +564,12 @@ class AzureRMCertificate(AzureRMModuleBaseExt):
             if self.to_do == Actions.Create:
                 response = self.mgmt_client.certificate.create(resource_group_name=self.resource_group,
                                                                account_name=self.account_name,
-                                                               certificate_name=self.name,
+                                                               certificate_name=self.certificate_name,
                                                                parameters=self.body)
             else:
                 response = self.mgmt_client.certificate.update(resource_group_name=self.resource_group,
                                                                account_name=self.account_name,
-                                                               certificate_name=self.name,
+                                                               certificate_name=self.certificate_name,
                                                                parameters=self.body)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
@@ -584,7 +583,7 @@ class AzureRMCertificate(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.certificate.delete(resource_group_name=self.resource_group,
                                                            account_name=self.account_name,
-                                                           certificate_name=self.name)
+                                                           certificate_name=self.certificate_name)
         except CloudError as e:
             self.log('Error attempting to delete the Certificate instance.')
             self.fail('Error deleting the Certificate instance: {0}'.format(str(e)))
@@ -597,7 +596,7 @@ class AzureRMCertificate(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.certificate.get(resource_group_name=self.resource_group,
                                                         account_name=self.account_name,
-                                                        certificate_name=self.name)
+                                                        certificate_name=self.certificate_name)
         except CloudError as e:
             return False
         return response.as_dict()
