@@ -17,6 +17,6 @@
         resource_group: '{{resource_group}}'
         namespace_name: '{{namespace_name}}'
         topic_name: '{{topic_name}}'
-        name: sdk-Subscriptions-2178
+        subscription_name: sdk-Subscriptions-2178
         enable_batched_operations: true
     

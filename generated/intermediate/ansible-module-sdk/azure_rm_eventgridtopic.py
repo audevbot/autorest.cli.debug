@@ -26,9 +26,10 @@ options:
       - The name of the resource group within the user's subscription.
     required: true
     type: str
-  name:
+  topic_name:
     description:
-      - Name of the resource
+      - Name of the topic
+    required: true
     type: str
   location:
     description:
@@ -46,6 +47,10 @@ options:
   id:
     description:
       - Fully qualified identifier of the resource
+    type: str
+  name:
+    description:
+      - Name of the resource
     type: str
   type:
     description:
@@ -71,7 +76,7 @@ EXAMPLES = '''
 - name: Topics_CreateOrUpdate
   azure_rm_eventgridtopic:
     resource_group: myResourceGroup
-    name: myTopic
+    topic_name: myTopic
     topic_info:
       location: westus2
       tags:
@@ -80,11 +85,11 @@ EXAMPLES = '''
 - name: Topics_Update
   azure_rm_eventgridtopic:
     resource_group: myResourceGroup
-    name: myTopic
+    topic_name: myTopic
 - name: Topics_Delete
   azure_rm_eventgridtopic:
     resource_group: myResourceGroup
-    name: myTopic
+    topic_name: myTopic
     state: absent
 
 '''
@@ -172,10 +177,9 @@ class AzureRMTopics(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            name=dict(
+            topic_name=dict(
                 type='str',
                 updatable=False,
-                disposition='topic_name',
                 required=true
             ),
             location=dict(
@@ -192,7 +196,7 @@ class AzureRMTopics(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.topic_name = None
         self.id = None
         self.name = None
         self.type = None
@@ -268,7 +272,7 @@ class AzureRMTopics(AzureRMModuleBaseExt):
     def create_update_resource(self):
         try:
             response = self.mgmt_client.topics.create_or_update(resource_group_name=self.resource_group,
-                                                                topic_name=self.name,
+                                                                topic_name=self.topic_name,
                                                                 topic_info=self.topicInfo)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
@@ -281,7 +285,7 @@ class AzureRMTopics(AzureRMModuleBaseExt):
         # self.log('Deleting the Topic instance {0}'.format(self.))
         try:
             response = self.mgmt_client.topics.delete(resource_group_name=self.resource_group,
-                                                      topic_name=self.name)
+                                                      topic_name=self.topic_name)
         except CloudError as e:
             self.log('Error attempting to delete the Topic instance.')
             self.fail('Error deleting the Topic instance: {0}'.format(str(e)))
@@ -293,7 +297,7 @@ class AzureRMTopics(AzureRMModuleBaseExt):
         found = False
         try:
             response = self.mgmt_client.topics.get(resource_group_name=self.resource_group,
-                                                   topic_name=self.name)
+                                                   topic_name=self.topic_name)
         except CloudError as e:
             return False
         return response.as_dict()

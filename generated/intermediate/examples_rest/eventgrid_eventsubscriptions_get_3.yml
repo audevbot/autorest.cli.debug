@@ -1,0 +1,17 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    event_subscription_name: myEventSubscription
+  tasks:
+    - name: EventSubscriptions_GetForCustomTopic
+      azure_rm_resource_facts:
+        api_version: '2019-01-01'
+        provider: EventGrid
+        resource_type: eventSubscriptions
+        resource_name: '{{ event_subscription_name }}'
+      register: output
+    - debug:
+        var: output

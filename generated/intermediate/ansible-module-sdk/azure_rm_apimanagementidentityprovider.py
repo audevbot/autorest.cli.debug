@@ -31,13 +31,18 @@ options:
       - The name of the API Management service.
     required: true
     type: str
-  name:
+  identity_provider_name:
     description:
-      - Resource name.
+      - Identity Provider Type identifier.
+    required: true
     type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
+  signin_tenant:
+    description:
+      - The TenantId to use instead of Common when logging into Active Directory
     type: str
   allowed_tenants:
     description:
@@ -83,6 +88,10 @@ options:
     description:
       - Resource ID.
     type: str
+  name:
+    description:
+      - Resource name.
+    type: str
   state:
     description:
       - Assert the state of the IdentityProvider.
@@ -105,21 +114,21 @@ EXAMPLES = '''
   azure_rm_apimanagementidentityprovider:
     resource_group: myResourceGroup
     service_name: myService
-    name: myIdentityProvider
+    identity_provider_name: myIdentityProvider
     client_id: facebookid
     client_secret: facebookapplicationsecret
 - name: ApiManagementUpdateIdentityProvider
   azure_rm_apimanagementidentityprovider:
     resource_group: myResourceGroup
     service_name: myService
-    name: myIdentityProvider
+    identity_provider_name: myIdentityProvider
     client_id: updatedfacebookid
     client_secret: updatedfacebooksecret
 - name: ApiManagementDeleteIdentityProvider
   azure_rm_apimanagementidentityprovider:
     resource_group: myResourceGroup
     service_name: myService
-    name: myIdentityProvider
+    identity_provider_name: myIdentityProvider
     state: absent
 
 '''
@@ -153,6 +162,14 @@ properties:
     type:
       description:
         - Identity Provider Type identifier.
+      returned: always
+      type: str
+      sample: null
+    signin_tenant:
+      description:
+        - >-
+          The TenantId to use instead of Common when logging into Active
+          Directory
       returned: always
       type: str
       sample: null
@@ -248,10 +265,9 @@ class AzureRMIdentityProvider(AzureRMModuleBaseExt):
                 updatable=False,
                 required=true
             ),
-            name=dict(
+            identity_provider_name=dict(
                 type='str',
                 updatable=False,
-                disposition='identity_provider_name',
                 required=true
             ),
             type=dict(
@@ -263,6 +279,10 @@ class AzureRMIdentityProvider(AzureRMModuleBaseExt):
                          'twitter',
                          'aad',
                          'aadB2C']
+            ),
+            signin_tenant=dict(
+                type='str',
+                disposition='/'
             ),
             allowed_tenants=dict(
                 type='list',
@@ -308,7 +328,7 @@ class AzureRMIdentityProvider(AzureRMModuleBaseExt):
 
         self.resource_group = None
         self.service_name = None
-        self.name = None
+        self.identity_provider_name = None
         self.id = None
         self.name = None
         self.type = None
@@ -383,7 +403,7 @@ class AzureRMIdentityProvider(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.identity_provider.create_or_update(resource_group_name=self.resource_group,
                                                                            service_name=self.service_name,
-                                                                           identity_provider_name=self.name,
+                                                                           identity_provider_name=self.identity_provider_name,
                                                                            parameters=self.body)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
@@ -397,7 +417,7 @@ class AzureRMIdentityProvider(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.identity_provider.delete(resource_group_name=self.resource_group,
                                                                  service_name=self.service_name,
-                                                                 identity_provider_name=self.name)
+                                                                 identity_provider_name=self.identity_provider_name)
         except CloudError as e:
             self.log('Error attempting to delete the IdentityProvider instance.')
             self.fail('Error deleting the IdentityProvider instance: {0}'.format(str(e)))
@@ -410,7 +430,7 @@ class AzureRMIdentityProvider(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.identity_provider.get(resource_group_name=self.resource_group,
                                                               service_name=self.service_name,
-                                                              identity_provider_name=self.name)
+                                                              identity_provider_name=self.identity_provider_name)
         except CloudError as e:
             return False
         return response.as_dict()

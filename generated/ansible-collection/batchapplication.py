@@ -31,7 +31,7 @@ options:
       - The name of the Batch account.
     required: true
     type: str
-  name:
+  application_name:
     description:
       - The name of the application. This must be unique within the account.
     required: true
@@ -83,14 +83,14 @@ EXAMPLES = '''
   azure.rm.batchapplication:
     resource_group: myResourceGroup
     account_name: myBatchAccount
-    name: myApplication
+    application_name: myApplication
     display_name: myAppName
     allow_updates: false
 - name: ApplicationUpdate
   azure.rm.batchapplication:
     resource_group: myResourceGroup
     account_name: myBatchAccount
-    name: myApplication
+    application_name: myApplication
     display_name: myAppName
     allow_updates: true
     default_version: '2'
@@ -98,7 +98,7 @@ EXAMPLES = '''
   azure.rm.batchapplication:
     resource_group: myResourceGroup
     account_name: myBatchAccount
-    name: myApplication
+    application_name: myApplication
     state: absent
 
 '''
@@ -193,7 +193,7 @@ class AzureRMApplication(AzureRMModuleBaseExt):
                 disposition='accountName',
                 required=true
             ),
-            name=dict(
+            application_name=dict(
                 type='str',
                 updatable=False,
                 disposition='applicationName',
@@ -220,7 +220,7 @@ class AzureRMApplication(AzureRMModuleBaseExt):
 
         self.resource_group = None
         self.account_name = None
-        self.name = None
+        self.application_name = None
         self.id = None
         self.etag = None
 

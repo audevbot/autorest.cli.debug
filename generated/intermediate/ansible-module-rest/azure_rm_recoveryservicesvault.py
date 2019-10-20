@@ -28,9 +28,10 @@ options:
         present.
     required: true
     type: str
-  name:
+  vault_name:
     description:
-      - Resource name associated with the resource.
+      - The name of the recovery services vault.
+    required: true
     type: str
   e_tag:
     description:
@@ -97,6 +98,10 @@ options:
     description:
       - Resource Id represents the complete path to the resource.
     type: str
+  name:
+    description:
+      - Resource name associated with the resource.
+    type: str
   type:
     description:
       - >-
@@ -123,7 +128,7 @@ EXAMPLES = '''
 - name: Create of Update Recovery Services vault
   azure_rm_recoveryservicesvault:
     resource_group: myResourceGroup
-    name: myVault
+    vault_name: myVault
     vault:
       properties: {}
       sku:
@@ -132,14 +137,14 @@ EXAMPLES = '''
 - name: Update Resource
   azure_rm_recoveryservicesvault:
     resource_group: myResourceGroup
-    name: myVault
+    vault_name: myVault
     vault:
       tags:
         PatchKey: PatchKeyUpdated
 - name: Delete Recovery Services Vault
   azure_rm_recoveryservicesvault:
     resource_group: myResourceGroup
-    name: myVault
+    vault_name: myVault
     state: absent
 
 '''
@@ -303,7 +308,7 @@ class AzureRMVaults(AzureRMModuleBaseExt):
                 disposition='resourceGroupName',
                 required=true
             ),
-            name=dict(
+            vault_name=dict(
                 type='str',
                 updatable=False,
                 disposition='vaultName',
@@ -341,7 +346,7 @@ class AzureRMVaults(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.vault_name = None
         self.id = None
         self.name = None
         self.type = None

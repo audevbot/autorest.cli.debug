@@ -30,12 +30,14 @@ Modules:
         ExampleValue: '{{resource_group}}'
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: diskName
-        NameAnsible: name
+        NameAnsible: disk_name
         NamePythonSdk: disk_name
         NameGoSdk: DiskName
-        NameTerraform: name
+        NameTerraform: DiskName
         IdPortion: disks
         Type: str
         TypeName: xxx
@@ -63,7 +65,9 @@ Modules:
         ExampleValue: '{{disk_name}}'
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: disk
         NameAnsible: disk
         NamePythonSdk: disk
@@ -86,7 +90,7 @@ Modules:
         PathSwagger: ''
         PathPython: null
         PathGo: null
-        DispositionSdk: dictionary
+        DispositionSdk: '*'
         DispositionRest: '*'
         Comparison: ''
         Updatable: true
@@ -100,7 +104,9 @@ Modules:
                 subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 2
       - NameSwagger: location
         NameAnsible: location
         NamePythonSdk: location
@@ -130,7 +136,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: tags
         NameAnsible: tags
         NamePythonSdk: tags
@@ -164,7 +172,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: sku
         NameAnsible: sku
         NamePythonSdk: sku
@@ -224,7 +234,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - &ref_4
             NameSwagger: tier
             NameAnsible: tier
@@ -255,7 +267,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /sku
         PathPython: /sku
@@ -267,7 +281,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: zones
         NameAnsible: zones
         NamePythonSdk: zones
@@ -297,7 +313,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -327,7 +345,9 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: osType
         NameAnsible: os_type
         NamePythonSdk: os_type
@@ -363,7 +383,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: hyperVGeneration
         NameAnsible: hyper_vgeneration
         NamePythonSdk: hyper_vgeneration
@@ -401,7 +423,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: creationData
         NameAnsible: creation_data
         NamePythonSdk: creation_data
@@ -472,7 +496,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: storageAccountId
             NameAnsible: storage_account_id
             NamePythonSdk: storage_account_id
@@ -505,7 +531,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: imageReference
             NameAnsible: image_reference
             NamePythonSdk: image_reference
@@ -555,7 +583,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: lun
                 NameAnsible: lun
                 NamePythonSdk: lun
@@ -588,7 +618,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: int32
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/creationData/imageReference
             PathPython: /creationData/imageReference
@@ -600,7 +632,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: sourceUri
             NameAnsible: source_uri
             NamePythonSdk: source_uri
@@ -632,7 +666,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: sourceResourceId
             NameAnsible: source_resource_id
             NamePythonSdk: source_resource_id
@@ -664,7 +700,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/creationData
         PathPython: /creationData
@@ -676,7 +714,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: diskSizeGB
         NameAnsible: disk_size_gb
         NamePythonSdk: disk_size_gb
@@ -711,7 +751,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: int32
         Flatten: false
+        Kind: 1
       - NameSwagger: encryptionSettingsCollection
         NameAnsible: encryption_settings_collection
         NamePythonSdk: encryption_settings_collection
@@ -766,7 +808,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: encryptionSettings
             NameAnsible: encryption_settings
             NamePythonSdk: encryption_settings
@@ -835,7 +879,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: secretUrl
                     NameAnsible: secret_url
                     NamePythonSdk: secret_url
@@ -868,7 +914,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: >-
                   /properties/encryptionSettingsCollection/encryptionSettings/diskEncryptionKey
@@ -883,7 +931,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: keyEncryptionKey
                 NameAnsible: key_encryption_key
                 NamePythonSdk: key_encryption_key
@@ -937,7 +987,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: keyUrl
                     NameAnsible: key_url
                     NamePythonSdk: key_url
@@ -970,7 +1022,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: >-
                   /properties/encryptionSettingsCollection/encryptionSettings/keyEncryptionKey
@@ -985,7 +1039,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/encryptionSettingsCollection/encryptionSettings
             PathPython: /encryptionSettingsCollection/encryptionSettings
@@ -997,7 +1053,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/encryptionSettingsCollection
         PathPython: /encryptionSettingsCollection
@@ -1009,7 +1067,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: diskIOPSReadWrite
         NameAnsible: disk_iopsread_write
         NamePythonSdk: disk_iopsread_write
@@ -1041,7 +1101,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: int64
         Flatten: false
+        Kind: 1
       - NameSwagger: diskMBpsReadWrite
         NameAnsible: disk_mbps_read_write
         NamePythonSdk: disk_mbps_read_write
@@ -1074,7 +1136,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: int32
         Flatten: false
+        Kind: 1
       - &ref_5
         NameSwagger: timeCreated
         NameAnsible: time_created
@@ -1105,7 +1169,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_6
         NameSwagger: provisioningState
         NameAnsible: provisioning_state
@@ -1136,7 +1202,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_7
         NameSwagger: diskState
         NameAnsible: disk_state
@@ -1185,7 +1253,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_0
         NameSwagger: id
         NameAnsible: id
@@ -1216,7 +1286,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_1
         NameSwagger: name
         NameAnsible: name
@@ -1247,7 +1319,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_2
         NameSwagger: type
         NameAnsible: type
@@ -1278,7 +1352,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_3
         NameSwagger: managedBy
         NameAnsible: managed_by
@@ -1309,7 +1385,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: CreateOrUpdate
         Options:
@@ -1412,7 +1490,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: tags
         NameAnsible: tags
         NamePythonSdk: tags
@@ -1446,7 +1526,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - *ref_3
       - NameSwagger: sku
         NameAnsible: sku
@@ -1507,7 +1589,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - *ref_4
         EnumValues: []
         PathSwagger: /sku
@@ -1520,7 +1604,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: zones
         NameAnsible: zones
         NamePythonSdk: zones
@@ -1550,7 +1636,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -1605,7 +1693,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: hyperVGeneration
             NameAnsible: hyper_vgeneration
             NamePythonSdk: hyper_vgeneration
@@ -1643,7 +1733,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: creationData
             NameAnsible: creation_data
             NamePythonSdk: creation_data
@@ -1714,7 +1806,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: storageAccountId
                 NameAnsible: storage_account_id
                 NamePythonSdk: storage_account_id
@@ -1748,7 +1842,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: imageReference
                 NameAnsible: image_reference
                 NamePythonSdk: image_reference
@@ -1798,7 +1894,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: lun
                     NameAnsible: lun
                     NamePythonSdk: lun
@@ -1831,7 +1929,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: int32
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /properties/creationData/imageReference
                 PathPython: /creationData/imageReference
@@ -1843,7 +1943,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: sourceUri
                 NameAnsible: source_uri
                 NamePythonSdk: source_uri
@@ -1875,7 +1977,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: sourceResourceId
                 NameAnsible: source_resource_id
                 NamePythonSdk: source_resource_id
@@ -1907,7 +2011,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/creationData
             PathPython: /creationData
@@ -1919,7 +2025,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: diskSizeGB
             NameAnsible: disk_size_gb
             NamePythonSdk: disk_size_gb
@@ -1954,7 +2062,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int32
             Flatten: false
+            Kind: 1
           - NameSwagger: encryptionSettingsCollection
             NameAnsible: encryption_settings_collection
             NamePythonSdk: encryption_settings_collection
@@ -2009,7 +2119,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: encryptionSettings
                 NameAnsible: encryption_settings
                 NamePythonSdk: encryption_settings
@@ -2082,7 +2194,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: secretUrl
                         NameAnsible: secret_url
                         NamePythonSdk: secret_url
@@ -2115,7 +2229,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: >-
                       /properties/encryptionSettingsCollection/encryptionSettings/diskEncryptionKey
@@ -2130,7 +2246,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: keyEncryptionKey
                     NameAnsible: key_encryption_key
                     NamePythonSdk: key_encryption_key
@@ -2186,7 +2304,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: keyUrl
                         NameAnsible: key_url
                         NamePythonSdk: key_url
@@ -2219,7 +2339,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: >-
                       /properties/encryptionSettingsCollection/encryptionSettings/keyEncryptionKey
@@ -2234,7 +2356,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /properties/encryptionSettingsCollection/encryptionSettings
                 PathPython: /encryptionSettingsCollection/encryptionSettings
@@ -2246,7 +2370,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/encryptionSettingsCollection
             PathPython: /encryptionSettingsCollection
@@ -2258,7 +2384,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - *ref_6
           - NameSwagger: diskIOPSReadWrite
             NameAnsible: disk_iopsread_write
@@ -2292,7 +2420,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int64
             Flatten: false
+            Kind: 1
           - NameSwagger: diskMBpsReadWrite
             NameAnsible: disk_mbps_read_write
             NamePythonSdk: disk_mbps_read_write
@@ -2325,7 +2455,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int32
             Flatten: false
+            Kind: 1
           - *ref_7
         EnumValues: []
         PathSwagger: /properties
@@ -2338,7 +2470,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     ModuleOperationNameUpper: Disks
     ModuleOperationName: disks
     ObjectName: Disk
@@ -2398,6 +2532,8 @@ Modules:
           - resourcegroups_put
         OperationId: '499'
         MethodId: '500'
+        OperationName: Disks
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: '{subscription-id}'
@@ -2459,6 +2595,8 @@ Modules:
           - compute_disks_put
         OperationId: '499'
         MethodId: '500'
+        OperationName: Disks
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: '{subscription-id}'
@@ -2516,6 +2654,8 @@ Modules:
           - compute_disks_put
         OperationId: '499'
         MethodId: '500'
+        OperationName: Disks
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: '{subscription-id}'
@@ -2573,6 +2713,8 @@ Modules:
           - compute_disks_put
         OperationId: '499'
         MethodId: '500'
+        OperationName: Disks
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: '{subscription-id}'
@@ -2639,6 +2781,8 @@ Modules:
           - compute_disks_put
         OperationId: '499'
         MethodId: '500'
+        OperationName: Disks
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: '{subscription-id}'
@@ -2694,1622 +2838,8 @@ Modules:
           - compute_disks_put
         OperationId: '499'
         MethodId: '500'
-  - ModuleName: azure_rm_computedisk_info
-    Options:
-      - NameSwagger: resourceGroupName
-        NameAnsible: resource_group
-        NamePythonSdk: resource_group_name
-        NameGoSdk: ResourceGroup
-        NameTerraform: resourceGroup
-        IdPortion: resourceGroups
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: The name of the resource group.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: '{{resource_group}}'
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: diskName
-        NameAnsible: name
-        NamePythonSdk: disk_name
-        NameGoSdk: DiskName
-        NameTerraform: name
-        IdPortion: disks
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: >-
-          The name of the managed disk that is being created. The name can't be
-          changed after the disk is created. Supported characters for the name
-          are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: '{{disk_name}}'
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - &ref_8
-        NameSwagger: id
-        NameAnsible: id
-        NamePythonSdk: id
-        NameGoSdk: ID
-        NameTerraform: ID
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Resource Id
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /id
-        PathPython: /id
-        PathGo: /id
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_9
-        NameSwagger: name
-        NameAnsible: name
-        NamePythonSdk: name
-        NameGoSdk: Name
-        NameTerraform: Name
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Resource name
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /name
-        PathPython: /name
-        PathGo: /name
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_10
-        NameSwagger: type
-        NameAnsible: type
-        NamePythonSdk: type
-        NameGoSdk: Type
-        NameTerraform: Type
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Resource type
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /type
-        PathPython: /type
-        PathGo: /type
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_11
-        NameSwagger: location
-        NameAnsible: location
-        NamePythonSdk: location
-        NameGoSdk: Location
-        NameTerraform: Location
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Resource location
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /location
-        PathPython: /location
-        PathGo: /location
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_12
-        NameSwagger: tags
-        NameAnsible: tags
-        NamePythonSdk: tags
-        NameGoSdk: Tags
-        NameTerraform: Tags
-        IdPortion: null
-        Type: >-
-          unknown[DictionaryType
-          {"$id":"31","$type":"DictionaryType","valueType":{"$id":"32","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"33","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"34","fixed":false},"deprecated":false}]
-        TypeName: >-
-          {"$id":"31","$type":"DictionaryType","valueType":{"$id":"32","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"33","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"34","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"31","$type":"DictionaryType","valueType":{"$id":"32","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"33","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"34","fixed":false},"deprecated":false}
-        IsList: false
-        Required: false
-        Documentation: Resource tags
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /tags
-        PathPython: /tags
-        PathGo: /tags
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_13
-        NameSwagger: managedBy
-        NameAnsible: managed_by
-        NamePythonSdk: managed_by
-        NameGoSdk: ManagedBy
-        NameTerraform: ManagedBy
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: A relative URI containing the ID of the VM that has the disk attached.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /managedBy
-        PathPython: /managedBy
-        PathGo: /managedBy
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_14
-        NameSwagger: sku
-        NameAnsible: sku
-        NamePythonSdk: sku
-        NameGoSdk: Sku
-        NameTerraform: Sku
-        IdPortion: null
-        Type: dict
-        TypeName: DiskSku
-        TypeNameGo: DiskSku
-        IsList: false
-        Required: false
-        Documentation: ''
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions:
-          - NameSwagger: name
-            NameAnsible: name
-            NamePythonSdk: name
-            NameGoSdk: Name
-            NameTerraform: Name
-            IdPortion: null
-            Type: str
-            TypeName: DiskStorageAccountTypes
-            TypeNameGo: DiskStorageAccountTypes
-            IsList: false
-            Required: false
-            Documentation: The sku name.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues:
-              - Key: Standard_LRS
-                Value: Standard_LRS
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Premium_LRS
-                Value: Premium_LRS
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: StandardSSD_LRS
-                Value: StandardSSD_LRS
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: UltraSSD_LRS
-                Value: UltraSSD_LRS
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-            PathSwagger: /sku/name
-            PathPython: /sku/name
-            PathGo: /sku/name
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: tier
-            NameAnsible: tier
-            NamePythonSdk: tier
-            NameGoSdk: Tier
-            NameTerraform: Tier
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: The sku tier.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /sku/tier
-            PathPython: /sku/tier
-            PathGo: /sku/tier
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /sku
-        PathPython: /sku
-        PathGo: /sku
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_15
-        NameSwagger: zones
-        NameAnsible: zones
-        NamePythonSdk: zones
-        NameGoSdk: Zones
-        NameTerraform: Zones
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: true
-        Required: false
-        Documentation: The Logical zone list for Disk.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /zones
-        PathPython: /zones
-        PathGo: /zones
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_16
-        NameSwagger: properties
-        NameAnsible: properties
-        NamePythonSdk: properties
-        NameGoSdk: Properties
-        NameTerraform: Properties
-        IdPortion: null
-        Type: dict
-        TypeName: DiskProperties
-        TypeNameGo: DiskProperties
-        IsList: false
-        Required: false
-        Documentation: ''
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties
-        PathPython: ''
-        PathGo: /properties
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: true
-        IncludeInResponse: true
-        Flatten: false
-      - NameSwagger: timeCreated
-        NameAnsible: time_created
-        NamePythonSdk: time_created
-        NameGoSdk: TimeCreated
-        NameTerraform: TimeCreated
-        IdPortion: null
-        Type: datetime
-        TypeName: DateTime
-        TypeNameGo: DateTime
-        IsList: false
-        Required: false
-        Documentation: The time when the disk was created.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/timeCreated
-        PathPython: /timeCreated
-        PathGo: /properties/timeCreated
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: osType
-        NameAnsible: os_type
-        NamePythonSdk: os_type
-        NameGoSdk: OsType
-        NameTerraform: OsType
-        IdPortion: null
-        Type: str
-        TypeName: OperatingSystemTypes
-        TypeNameGo: OperatingSystemTypes
-        IsList: false
-        Required: false
-        Documentation: The Operating System type.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues:
-          - Key: Windows
-            Value: Windows
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Linux
-            Value: Linux
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-        PathSwagger: /properties/osType
-        PathPython: /osType
-        PathGo: /properties/osType
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: hyperVGeneration
-        NameAnsible: hyper_vgeneration
-        NamePythonSdk: hyper_vgeneration
-        NameGoSdk: HyperVgeneration
-        NameTerraform: HyperVgeneration
-        IdPortion: null
-        Type: str
-        TypeName: HyperVGeneration
-        TypeNameGo: HyperVGeneration
-        IsList: false
-        Required: false
-        Documentation: >-
-          The hypervisor generation of the Virtual Machine. Applicable to OS
-          disks only.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues:
-          - Key: V1
-            Value: V1
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: V2
-            Value: V2
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-        PathSwagger: /properties/hyperVGeneration
-        PathPython: /hyperVGeneration
-        PathGo: /properties/hyperVGeneration
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: creationData
-        NameAnsible: creation_data
-        NamePythonSdk: creation_data
-        NameGoSdk: CreationData
-        NameTerraform: CreationData
-        IdPortion: null
-        Type: dict
-        TypeName: CreationData
-        TypeNameGo: CreationData
-        IsList: false
-        Required: true
-        Documentation: >-
-          Disk source information. CreationData information cannot be changed
-          after the disk has been created.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions:
-          - NameSwagger: createOption
-            NameAnsible: create_option
-            NamePythonSdk: create_option
-            NameGoSdk: CreateOption
-            NameTerraform: CreateOption
-            IdPortion: null
-            Type: str
-            TypeName: DiskCreateOption
-            TypeNameGo: DiskCreateOption
-            IsList: false
-            Required: true
-            Documentation: This enumerates the possible sources of a disk's creation.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues:
-              - Key: Empty
-                Value: Empty
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Attach
-                Value: Attach
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: FromImage
-                Value: FromImage
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Import
-                Value: Import
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Copy
-                Value: Copy
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Restore
-                Value: Restore
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Upload
-                Value: Upload
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-            PathSwagger: /properties/creationData/createOption
-            PathPython: /creationData/createOption
-            PathGo: /properties/creationData/createOption
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: storageAccountId
-            NameAnsible: storage_account_id
-            NamePythonSdk: storage_account_id
-            NameGoSdk: StorageAccountID
-            NameTerraform: StorageAccountID
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: >-
-              If createOption is Import, the Azure Resource Manager identifier
-              of the storage account containing the blob to import as a disk.
-              Required only if the blob is in a different subscription
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/creationData/storageAccountId
-            PathPython: /creationData/storageAccountId
-            PathGo: /properties/creationData/storageAccountId
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: imageReference
-            NameAnsible: image_reference
-            NamePythonSdk: image_reference
-            NameGoSdk: ImageReference
-            NameTerraform: ImageReference
-            IdPortion: null
-            Type: dict
-            TypeName: ImageDiskReference
-            TypeNameGo: ImageDiskReference
-            IsList: false
-            Required: false
-            Documentation: Disk source information.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions:
-              - NameSwagger: id
-                NameAnsible: id
-                NamePythonSdk: id
-                NameGoSdk: ID
-                NameTerraform: ID
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: true
-                Documentation: >-
-                  A relative uri containing either a Platform Image Repository
-                  or user image reference.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/creationData/imageReference/id
-                PathPython: /creationData/imageReference/id
-                PathGo: /properties/creationData/imageReference/id
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: lun
-                NameAnsible: lun
-                NamePythonSdk: lun
-                NameGoSdk: Lun
-                NameTerraform: Lun
-                IdPortion: null
-                Type: number
-                TypeName: Int
-                TypeNameGo: Int
-                IsList: false
-                Required: false
-                Documentation: >-
-                  If the disk is created from an image's data disk, this is an
-                  index that indicates which of the data disks in the image to
-                  use. For OS disks, this field is null.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/creationData/imageReference/lun
-                PathPython: /creationData/imageReference/lun
-                PathGo: /properties/creationData/imageReference/lun
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-            EnumValues: []
-            PathSwagger: /properties/creationData/imageReference
-            PathPython: /creationData/imageReference
-            PathGo: /properties/creationData/imageReference
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: sourceUri
-            NameAnsible: source_uri
-            NamePythonSdk: source_uri
-            NameGoSdk: SourceUri
-            NameTerraform: SourceUri
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: >-
-              If createOption is Import, this is the URI of a blob to be
-              imported into a managed disk.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/creationData/sourceUri
-            PathPython: /creationData/sourceUri
-            PathGo: /properties/creationData/sourceUri
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: sourceResourceId
-            NameAnsible: source_resource_id
-            NamePythonSdk: source_resource_id
-            NameGoSdk: SourceResourceID
-            NameTerraform: SourceResourceID
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: >-
-              If createOption is Copy, this is the ARM id of the source snapshot
-              or disk.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/creationData/sourceResourceId
-            PathPython: /creationData/sourceResourceId
-            PathGo: /properties/creationData/sourceResourceId
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /properties/creationData
-        PathPython: /creationData
-        PathGo: /properties/creationData
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: diskSizeGB
-        NameAnsible: disk_size_gb
-        NamePythonSdk: disk_size_gb
-        NameGoSdk: DiskSizeGb
-        NameTerraform: DiskSizeGb
-        IdPortion: null
-        Type: number
-        TypeName: Int
-        TypeNameGo: Int
-        IsList: false
-        Required: false
-        Documentation: >-
-          If creationData.createOption is Empty, this field is mandatory and it
-          indicates the size of the VHD to create. If this field is present for
-          updates or creation with other options, it indicates a resize. Resizes
-          are only allowed if the disk is not attached to a running VM, and can
-          only increase the disk's size.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/diskSizeGB
-        PathPython: /diskSizeGB
-        PathGo: /properties/diskSizeGB
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: encryptionSettingsCollection
-        NameAnsible: encryption_settings_collection
-        NamePythonSdk: encryption_settings_collection
-        NameGoSdk: EncryptionSettingsCollection
-        NameTerraform: EncryptionSettingsCollection
-        IdPortion: null
-        Type: dict
-        TypeName: EncryptionSettingsCollection
-        TypeNameGo: EncryptionSettingsCollection
-        IsList: false
-        Required: false
-        Documentation: >-
-          Encryption settings collection used for Azure Disk Encryption, can
-          contain multiple encryption settings per disk or snapshot.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions:
-          - NameSwagger: enabled
-            NameAnsible: enabled
-            NamePythonSdk: enabled
-            NameGoSdk: Enabled
-            NameTerraform: Enabled
-            IdPortion: null
-            Type: boolean
-            TypeName: Boolean
-            TypeNameGo: Boolean
-            IsList: false
-            Required: true
-            Documentation: >-
-              Set this flag to true and provide DiskEncryptionKey and optional
-              KeyEncryptionKey to enable encryption. Set this flag to false and
-              remove DiskEncryptionKey and KeyEncryptionKey to disable
-              encryption. If EncryptionSettings is null in the request object,
-              the existing settings remain unchanged.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/encryptionSettingsCollection/enabled
-            PathPython: /encryptionSettingsCollection/enabled
-            PathGo: /properties/encryptionSettingsCollection/enabled
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: encryptionSettings
-            NameAnsible: encryption_settings
-            NamePythonSdk: encryption_settings
-            NameGoSdk: EncryptionSettings
-            NameTerraform: EncryptionSettings
-            IdPortion: null
-            Type: dict
-            TypeName: EncryptionSettingsElement
-            TypeNameGo: EncryptionSettingsElement
-            IsList: true
-            Required: false
-            Documentation: 'A collection of encryption settings, one for each disk volume.'
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions:
-              - NameSwagger: diskEncryptionKey
-                NameAnsible: disk_encryption_key
-                NamePythonSdk: disk_encryption_key
-                NameGoSdk: DiskEncryptionKey
-                NameTerraform: DiskEncryptionKey
-                IdPortion: null
-                Type: dict
-                TypeName: KeyVaultAndSecretReference
-                TypeNameGo: KeyVaultAndSecretReference
-                IsList: false
-                Required: false
-                Documentation: Key Vault Secret Url and vault id of the disk encryption key
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions:
-                  - NameSwagger: sourceVault
-                    NameAnsible: source_vault
-                    NamePythonSdk: source_vault
-                    NameGoSdk: SourceVault
-                    NameTerraform: SourceVault
-                    IdPortion: null
-                    Type: dict
-                    TypeName: SourceVault
-                    TypeNameGo: SourceVault
-                    IsList: false
-                    Required: true
-                    Documentation: Resource id of the KeyVault containing the key or secret
-                    DocumentationMarkKeywords: true
-                    DefaultValue: null
-                    IncludeInDocumentation: true
-                    IncludeInArgSpec: true
-                    NoLog: false
-                    SubOptions: []
-                    EnumValues: []
-                    PathSwagger: >-
-                      /properties/encryptionSettingsCollection/encryptionSettings/diskEncryptionKey/sourceVault
-                    PathPython: >-
-                      /encryptionSettingsCollection/encryptionSettings/diskEncryptionKey/sourceVault
-                    PathGo: >-
-                      /properties/encryptionSettingsCollection/encryptionSettings/diskEncryptionKey/sourceVault
-                    DispositionSdk: '*'
-                    DispositionRest: '*'
-                    Comparison: ''
-                    Updatable: true
-                    ExampleValue: null
-                    Hidden: false
-                    IncludeInResponse: false
-                    Flatten: false
-                  - NameSwagger: secretUrl
-                    NameAnsible: secret_url
-                    NamePythonSdk: secret_url
-                    NameGoSdk: SecretURL
-                    NameTerraform: SecretURL
-                    IdPortion: null
-                    Type: str
-                    TypeName: String
-                    TypeNameGo: String
-                    IsList: false
-                    Required: true
-                    Documentation: Url pointing to a key or secret in KeyVault
-                    DocumentationMarkKeywords: true
-                    DefaultValue: null
-                    IncludeInDocumentation: true
-                    IncludeInArgSpec: true
-                    NoLog: false
-                    SubOptions: []
-                    EnumValues: []
-                    PathSwagger: >-
-                      /properties/encryptionSettingsCollection/encryptionSettings/diskEncryptionKey/secretUrl
-                    PathPython: >-
-                      /encryptionSettingsCollection/encryptionSettings/diskEncryptionKey/secretUrl
-                    PathGo: >-
-                      /properties/encryptionSettingsCollection/encryptionSettings/diskEncryptionKey/secretUrl
-                    DispositionSdk: '*'
-                    DispositionRest: '*'
-                    Comparison: ''
-                    Updatable: true
-                    ExampleValue: null
-                    Hidden: false
-                    IncludeInResponse: false
-                    Flatten: false
-                EnumValues: []
-                PathSwagger: >-
-                  /properties/encryptionSettingsCollection/encryptionSettings/diskEncryptionKey
-                PathPython: >-
-                  /encryptionSettingsCollection/encryptionSettings/diskEncryptionKey
-                PathGo: >-
-                  /properties/encryptionSettingsCollection/encryptionSettings/diskEncryptionKey
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: keyEncryptionKey
-                NameAnsible: key_encryption_key
-                NamePythonSdk: key_encryption_key
-                NameGoSdk: KeyEncryptionKey
-                NameTerraform: KeyEncryptionKey
-                IdPortion: null
-                Type: dict
-                TypeName: KeyVaultAndKeyReference
-                TypeNameGo: KeyVaultAndKeyReference
-                IsList: false
-                Required: false
-                Documentation: >-
-                  Key Vault Key Url and vault id of the key encryption key.
-                  KeyEncryptionKey is optional and when provided is used to
-                  unwrap the disk encryption key.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions:
-                  - NameSwagger: sourceVault
-                    NameAnsible: source_vault
-                    NamePythonSdk: source_vault
-                    NameGoSdk: SourceVault
-                    NameTerraform: SourceVault
-                    IdPortion: null
-                    Type: dict
-                    TypeName: SourceVault
-                    TypeNameGo: SourceVault
-                    IsList: false
-                    Required: true
-                    Documentation: Resource id of the KeyVault containing the key or secret
-                    DocumentationMarkKeywords: true
-                    DefaultValue: null
-                    IncludeInDocumentation: true
-                    IncludeInArgSpec: true
-                    NoLog: false
-                    SubOptions: []
-                    EnumValues: []
-                    PathSwagger: >-
-                      /properties/encryptionSettingsCollection/encryptionSettings/keyEncryptionKey/sourceVault
-                    PathPython: >-
-                      /encryptionSettingsCollection/encryptionSettings/keyEncryptionKey/sourceVault
-                    PathGo: >-
-                      /properties/encryptionSettingsCollection/encryptionSettings/keyEncryptionKey/sourceVault
-                    DispositionSdk: '*'
-                    DispositionRest: '*'
-                    Comparison: ''
-                    Updatable: true
-                    ExampleValue: null
-                    Hidden: false
-                    IncludeInResponse: false
-                    Flatten: false
-                  - NameSwagger: keyUrl
-                    NameAnsible: key_url
-                    NamePythonSdk: key_url
-                    NameGoSdk: KeyURL
-                    NameTerraform: KeyURL
-                    IdPortion: null
-                    Type: str
-                    TypeName: String
-                    TypeNameGo: String
-                    IsList: false
-                    Required: true
-                    Documentation: Url pointing to a key or secret in KeyVault
-                    DocumentationMarkKeywords: true
-                    DefaultValue: null
-                    IncludeInDocumentation: true
-                    IncludeInArgSpec: true
-                    NoLog: false
-                    SubOptions: []
-                    EnumValues: []
-                    PathSwagger: >-
-                      /properties/encryptionSettingsCollection/encryptionSettings/keyEncryptionKey/keyUrl
-                    PathPython: >-
-                      /encryptionSettingsCollection/encryptionSettings/keyEncryptionKey/keyUrl
-                    PathGo: >-
-                      /properties/encryptionSettingsCollection/encryptionSettings/keyEncryptionKey/keyUrl
-                    DispositionSdk: '*'
-                    DispositionRest: '*'
-                    Comparison: ''
-                    Updatable: true
-                    ExampleValue: null
-                    Hidden: false
-                    IncludeInResponse: false
-                    Flatten: false
-                EnumValues: []
-                PathSwagger: >-
-                  /properties/encryptionSettingsCollection/encryptionSettings/keyEncryptionKey
-                PathPython: >-
-                  /encryptionSettingsCollection/encryptionSettings/keyEncryptionKey
-                PathGo: >-
-                  /properties/encryptionSettingsCollection/encryptionSettings/keyEncryptionKey
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-            EnumValues: []
-            PathSwagger: /properties/encryptionSettingsCollection/encryptionSettings
-            PathPython: /encryptionSettingsCollection/encryptionSettings
-            PathGo: /properties/encryptionSettingsCollection/encryptionSettings
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /properties/encryptionSettingsCollection
-        PathPython: /encryptionSettingsCollection
-        PathGo: /properties/encryptionSettingsCollection
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: provisioningState
-        NameAnsible: provisioning_state
-        NamePythonSdk: provisioning_state
-        NameGoSdk: ProvisioningState
-        NameTerraform: ProvisioningState
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: The disk provisioning state.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/provisioningState
-        PathPython: /provisioningState
-        PathGo: /properties/provisioningState
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: diskIOPSReadWrite
-        NameAnsible: disk_iopsread_write
-        NamePythonSdk: disk_iopsread_write
-        NameGoSdk: DiskIopsreadWrite
-        NameTerraform: DiskIopsreadWrite
-        IdPortion: null
-        Type: number
-        TypeName: Long
-        TypeNameGo: Long
-        IsList: false
-        Required: false
-        Documentation: >-
-          The number of IOPS allowed for this disk; only settable for UltraSSD
-          disks. One operation can transfer between 4k and 256k bytes.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/diskIOPSReadWrite
-        PathPython: /diskIOPSReadWrite
-        PathGo: /properties/diskIOPSReadWrite
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: diskMBpsReadWrite
-        NameAnsible: disk_mbps_read_write
-        NamePythonSdk: disk_mbps_read_write
-        NameGoSdk: DiskMbpsReadWrite
-        NameTerraform: DiskMbpsReadWrite
-        IdPortion: null
-        Type: number
-        TypeName: Int
-        TypeNameGo: Int
-        IsList: false
-        Required: false
-        Documentation: >-
-          The bandwidth allowed for this disk; only settable for UltraSSD disks.
-          MBps means millions of bytes per second - MB here uses the ISO
-          notation, of powers of 10.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/diskMBpsReadWrite
-        PathPython: /diskMBpsReadWrite
-        PathGo: /properties/diskMBpsReadWrite
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: diskState
-        NameAnsible: disk_state
-        NamePythonSdk: disk_state
-        NameGoSdk: DiskState
-        NameTerraform: DiskState
-        IdPortion: null
-        Type: str
-        TypeName: DiskState
-        TypeNameGo: DiskState
-        IsList: false
-        Required: false
-        Documentation: The state of the disk.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues:
-          - Key: Unattached
-            Value: Unattached
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Attached
-            Value: Attached
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Reserved
-            Value: Reserved
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: ActiveSAS
-            Value: ActiveSAS
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: ReadyToUpload
-            Value: ReadyToUpload
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: ActiveUpload
-            Value: ActiveUpload
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-        PathSwagger: /properties/diskState
-        PathPython: /diskState
-        PathGo: /properties/diskState
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-    Methods:
-      - Name: Get
-        Options:
-          - resourceGroupName
-          - diskName
-        RequiredOptions:
-          - resourceGroupName
-          - diskName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.Compute/disks/{{ disk_name }}
-        HttpMethod: get
-        IsAsync: false
-      - Name: ListByResourceGroup
-        Options:
-          - resourceGroupName
-        RequiredOptions:
-          - resourceGroupName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.Compute/disks
-        HttpMethod: get
-        IsAsync: false
-      - Name: List
-        Options: []
-        RequiredOptions: []
-        Url: '/subscriptions/{{ subscription_id }}/providers/Microsoft.Compute/disks'
-        HttpMethod: get
-        IsAsync: false
-    ResponseFields:
-      - *ref_8
-      - *ref_9
-      - *ref_10
-      - *ref_11
-      - *ref_12
-      - *ref_13
-      - *ref_14
-      - *ref_15
-      - *ref_16
-    ModuleOperationNameUpper: Disks
-    ModuleOperationName: disks
-    ObjectName: Disk
-    ResourceNameFieldInResponse: null
-    NeedsDeleteBeforeUpdate: false
-    NeedsForceUpdate: false
-    CannotTestUpdate: false
-    Provider: Microsoft.Compute
-    ApiVersion: '2018-09-30'
-    Examples:
-      - Example:
-          parameters:
-            subscriptionId: '{subscription-id}'
-            api-version: '2018-09-30'
-          responses:
-            '200':
-              body:
-                value:
-                  - properties:
-                      osType: Windows
-                      creationData:
-                        createOption: Copy
-                        sourceResourceId: >-
-                          subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk1
-                      diskSizeGB: '200'
-                      encryptionSettings:
-                        enabled: true
-                        diskEncryptionKey:
-                          sourceVault:
-                            id: >-
-                              /subscriptions/{{ subscription_id
-                              }}/resourceGroups/{{ resource_group
-                              }}/providers/Microsoft.KeyVault/vaults/{{
-                              vault_name }}
-                          secretUrl: >-
-                            https://myvmvault.vault-int.azure-int.net/secrets/{secret}
-                        keyEncryptionKey:
-                          sourceVault:
-                            id: >-
-                              /subscriptions/{{ subscription_id
-                              }}/resourceGroups/{{ resource_group
-                              }}/providers/Microsoft.KeyVault/vaults/{{
-                              vault_name }}
-                          keyUrl: 'https://myvmvault.vault-int.azure-int.net/keys/{key}'
-                      timeCreated: '2016-12-28T04:41:35.9278721+00:00'
-                      provisioningState: Succeeded
-                    type: Microsoft.Compute/disks
-                    location: westus
-                    tags:
-                      department: Development
-                      project: ManagedDisks
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group }}/providers/Microsoft.Compute/disks/{{
-                      disk_name }}
-                    name: myManagedDisk1
-                  - properties:
-                      osType: Windows
-                      creationData:
-                        createOption: Empty
-                      diskSizeGB: '10'
-                      timeCreated: '2016-12-28T04:41:36.872242+00:00'
-                      provisioningState: Succeeded
-                    type: Microsoft.Compute/disks
-                    location: westus
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group }}/providers/Microsoft.Compute/disks/{{
-                      disk_name }}
-                    name: myManagedDisk2
-                  - properties:
-                      osType: Windows
-                      creationData:
-                        createOption: FromImage
-                        imageReference:
-                          id: >-
-                            /Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/uswest/Publishers/Microsoft/ArtifactTypes/VMImage/Offers/{offer}
-                      diskSizeGB: '200'
-                      encryptionSettings:
-                        enabled: true
-                        diskEncryptionKey:
-                          sourceVault:
-                            id: >-
-                              /subscriptions/{{ subscription_id
-                              }}/resourceGroups/{{ resource_group
-                              }}/providers/Microsoft.KeyVault/vaults/{{
-                              vault_name }}
-                          secretUrl: >-
-                            https://myvmvault.vault-int.azure-int.net/secrets/{secret}
-                        keyEncryptionKey:
-                          sourceVault:
-                            id: >-
-                              /subscriptions/{{ subscription_id
-                              }}/resourceGroups/{{ resource_group
-                              }}/providers/Microsoft.KeyVault/vaults/{{
-                              vault_name }}
-                          keyUrl: 'https://myvmvault.vault-int.azure-int.net/keys/{key}'
-                      timeCreated: '2016-12-28T04:41:36.3973934+00:00'
-                      provisioningState: Succeeded
-                    type: Microsoft.Compute/disks
-                    location: westus
-                    tags:
-                      department: Development
-                      project: ManagedDisks
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group }}/providers/Microsoft.Compute/disks/{{
-                      disk_name }}
-                    name: myManagedDisk3
-                nextLink: >-
-                  http://disksvchost:99/subscriptions/{subscriptionId}/providers/Microsoft.Compute/disks?$skiptoken={token}/Subscriptions/{subscriptionId}/ResourceGroups/myResourceGroup/Disks/myManagedDisk
-        Url: '/subscriptions/{{ subscription_id }}/providers/Microsoft.Compute/disks'
-        Method: get
-        Name: List all managed disks in a subscription.
-        Filename: compute_disks_get_2
-        Variables: []
-        References: []
-        OperationId: '499'
-        MethodId: '656'
-      - Example:
-          parameters:
-            subscriptionId: '{subscription-id}'
-            resourceGroupName: myResourceGroup
-            api-version: '2018-09-30'
-          responses:
-            '200':
-              body:
-                value:
-                  - properties:
-                      osType: Windows
-                      creationData:
-                        createOption: Copy
-                        sourceResourceId: >-
-                          subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk
-                      diskSizeGB: '200'
-                      encryptionSettings:
-                        enabled: true
-                        diskEncryptionKey:
-                          sourceVault:
-                            id: >-
-                              /subscriptions/{{ subscription_id
-                              }}/resourceGroups/{{ resource_group
-                              }}/providers/Microsoft.KeyVault/vaults/{{
-                              vault_name }}
-                          secretUrl: >-
-                            https://myvmvault.vault-int.azure-int.net/secrets/{secret}
-                        keyEncryptionKey:
-                          sourceVault:
-                            id: >-
-                              /subscriptions/{{ subscription_id
-                              }}/resourceGroups/{{ resource_group
-                              }}/providers/Microsoft.KeyVault/vaults/{{
-                              vault_name }}
-                          keyUrl: 'https://myvmvault.vault-int.azure-int.net/keys/{key}'
-                      timeCreated: '2016-12-28T04:41:35.9278721+00:00'
-                      provisioningState: Succeeded
-                    type: Microsoft.Compute/disks
-                    location: westus
-                    tags:
-                      department: Development
-                      project: ManagedDisks
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group }}/providers/Microsoft.Compute/disks/{{
-                      disk_name }}
-                    name: myManagedDisk
-                  - properties:
-                      osType: Windows
-                      creationData:
-                        createOption: Empty
-                      diskSizeGB: '10'
-                      timeCreated: '2016-12-28T04:41:36.872242+00:00'
-                      provisioningState: Succeeded
-                    type: Microsoft.Compute/disks
-                    location: westus
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group }}/providers/Microsoft.Compute/disks/{{
-                      disk_name }}
-                    name: myManagedDisk
-                  - properties:
-                      osType: Windows
-                      creationData:
-                        createOption: FromImage
-                        imageReference:
-                          id: >-
-                            /Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/uswest/Publishers/Microsoft/ArtifactTypes/VMImage/Offers/{offer}
-                      diskSizeGB: '200'
-                      encryptionSettings:
-                        enabled: true
-                        diskEncryptionKey:
-                          sourceVault:
-                            id: >-
-                              /subscriptions/{{ subscription_id
-                              }}/resourceGroups/{{ resource_group
-                              }}/providers/Microsoft.KeyVault/vaults/{{
-                              vault_name }}
-                          secretUrl: >-
-                            https://myvmvault.vault-int.azure-int.net/secrets/{secret}
-                        keyEncryptionKey:
-                          sourceVault:
-                            id: >-
-                              /subscriptions/{{ subscription_id
-                              }}/resourceGroups/{{ resource_group
-                              }}/providers/Microsoft.KeyVault/vaults/{{
-                              vault_name }}
-                          keyUrl: 'https://myvmvault.vault-int.azure-int.net/keys/{key}'
-                      timeCreated: '2016-12-28T04:41:36.3973934+00:00'
-                      provisioningState: Succeeded
-                    type: Microsoft.Compute/disks
-                    location: westus
-                    tags:
-                      department: Development
-                      project: ManagedDisks
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group }}/providers/Microsoft.Compute/disks/{{
-                      disk_name }}
-                    name: myManagedDisk
-                nextLink: >-
-                  http://disksvchost:99/subscriptions/{subscriptionId}/providers/Microsoft.Compute/disks?$skiptoken={token}/Subscriptions/{subscriptionId}/ResourceGroups/myResourceGroup/Disks/myManagedDisk
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.Compute/disks
-        Method: get
-        Name: List all managed disks in a resource group.
-        Filename: compute_disks_get_1
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-        References: []
-        OperationId: '499'
-        MethodId: '632'
-      - Example:
-          parameters:
-            subscriptionId: '{subscription-id}'
-            resourceGroupName: myResourceGroup
-            api-version: '2018-09-30'
-            diskName: myManagedDisk
-          responses:
-            '200':
-              body:
-                managedBy: >-
-                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                  resource_group
-                  }}/providers/Microsoft.Compute/virtualMachines/{{
-                  virtual_machine_name }}
-                sku:
-                  name: Standard_LRS
-                properties:
-                  osType: Windows
-                  creationData:
-                    createOption: Empty
-                  diskSizeGB: '10'
-                  encryptionSettings:
-                    enabled: true
-                    diskEncryptionKey:
-                      sourceVault:
-                        id: >-
-                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                          resource_group
-                          }}/providers/Microsoft.KeyVault/vaults/{{ vault_name
-                          }}
-                      secretUrl: >-
-                        https://myvmvault.vault-int.azure-int.net/secrets/{secret}
-                    keyEncryptionKey:
-                      sourceVault:
-                        id: >-
-                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                          resource_group
-                          }}/providers/Microsoft.KeyVault/vaults/{{ vault_name
-                          }}
-                      keyUrl: 'https://myvmvault.vault-int.azure-int.net/keys/{key}'
-                  timeCreated: '2016-12-28T04:41:35.079872+00:00'
-                  provisioningState: Succeeded
-                type: Microsoft.Compute/disks
-                location: westus
-                tags:
-                  department: Development
-                  project: ManagedDisks
-                id: >-
-                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                  resource_group }}/providers/Microsoft.Compute/disks/{{
-                  disk_name }}
-                name: myManagedDisk
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.Compute/disks/{{ disk_name }}
-        Method: get
-        Name: Get information about a managed disk.
-        Filename: compute_disks_get
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-          - name: disk_name
-            value: myDisk
-            swaggerName: diskName
-        References: []
-        OperationId: '499'
-        MethodId: '570'
+        OperationName: Disks
+        MethodName: CreateOrUpdate
   - ModuleName: azure_rm_computesnapshot
     Options:
       - NameSwagger: resourceGroupName
@@ -4341,12 +2871,14 @@ Modules:
         ExampleValue: '{{resource_group}}'
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: snapshotName
-        NameAnsible: name
+        NameAnsible: snapshot_name
         NamePythonSdk: snapshot_name
         NameGoSdk: SnapshotName
-        NameTerraform: name
+        NameTerraform: SnapshotName
         IdPortion: snapshots
         Type: str
         TypeName: xxx
@@ -4374,7 +2906,9 @@ Modules:
         ExampleValue: '{{snapshot_name}}'
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: snapshot
         NameAnsible: snapshot
         NamePythonSdk: snapshot
@@ -4397,7 +2931,7 @@ Modules:
         PathSwagger: ''
         PathPython: null
         PathGo: null
-        DispositionSdk: dictionary
+        DispositionSdk: '*'
         DispositionRest: '*'
         Comparison: ''
         Updatable: true
@@ -4413,7 +2947,9 @@ Modules:
                 https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 2
       - NameSwagger: location
         NameAnsible: location
         NamePythonSdk: location
@@ -4443,7 +2979,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: tags
         NameAnsible: tags
         NamePythonSdk: tags
@@ -4477,7 +3015,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: sku
         NameAnsible: sku
         NamePythonSdk: sku
@@ -4534,8 +3074,10 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
-          - &ref_21
+            Kind: 1
+          - &ref_12
             NameSwagger: tier
             NameAnsible: tier
             NamePythonSdk: tier
@@ -4565,7 +3107,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /sku
         PathPython: /sku
@@ -4577,7 +3121,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -4607,7 +3153,9 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: osType
         NameAnsible: os_type
         NamePythonSdk: os_type
@@ -4643,7 +3191,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: hyperVGeneration
         NameAnsible: hyper_vgeneration
         NamePythonSdk: hyper_vgeneration
@@ -4681,7 +3231,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: creationData
         NameAnsible: creation_data
         NamePythonSdk: creation_data
@@ -4752,7 +3304,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: storageAccountId
             NameAnsible: storage_account_id
             NamePythonSdk: storage_account_id
@@ -4785,7 +3339,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: imageReference
             NameAnsible: image_reference
             NamePythonSdk: image_reference
@@ -4835,7 +3391,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: lun
                 NameAnsible: lun
                 NamePythonSdk: lun
@@ -4868,7 +3426,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: int32
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/creationData/imageReference
             PathPython: /creationData/imageReference
@@ -4880,7 +3440,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: sourceUri
             NameAnsible: source_uri
             NamePythonSdk: source_uri
@@ -4912,7 +3474,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: sourceResourceId
             NameAnsible: source_resource_id
             NamePythonSdk: source_resource_id
@@ -4944,7 +3508,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/creationData
         PathPython: /creationData
@@ -4956,7 +3522,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: diskSizeGB
         NameAnsible: disk_size_gb
         NamePythonSdk: disk_size_gb
@@ -4991,7 +3559,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: int32
         Flatten: false
+        Kind: 1
       - NameSwagger: encryptionSettingsCollection
         NameAnsible: encryption_settings_collection
         NamePythonSdk: encryption_settings_collection
@@ -5046,7 +3616,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: encryptionSettings
             NameAnsible: encryption_settings
             NamePythonSdk: encryption_settings
@@ -5115,7 +3687,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: secretUrl
                     NameAnsible: secret_url
                     NamePythonSdk: secret_url
@@ -5148,7 +3722,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: >-
                   /properties/encryptionSettingsCollection/encryptionSettings/diskEncryptionKey
@@ -5163,7 +3739,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: keyEncryptionKey
                 NameAnsible: key_encryption_key
                 NamePythonSdk: key_encryption_key
@@ -5217,7 +3795,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: keyUrl
                     NameAnsible: key_url
                     NamePythonSdk: key_url
@@ -5250,7 +3830,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: true
+                    format: ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: >-
                   /properties/encryptionSettingsCollection/encryptionSettings/keyEncryptionKey
@@ -5265,7 +3847,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/encryptionSettingsCollection/encryptionSettings
             PathPython: /encryptionSettingsCollection/encryptionSettings
@@ -5277,7 +3861,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/encryptionSettingsCollection
         PathPython: /encryptionSettingsCollection
@@ -5289,8 +3875,10 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
-      - &ref_22
+        Kind: 1
+      - &ref_13
         NameSwagger: timeCreated
         NameAnsible: time_created
         NamePythonSdk: time_created
@@ -5320,8 +3908,10 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
-      - &ref_23
+        Kind: 1
+      - &ref_14
         NameSwagger: provisioningState
         NameAnsible: provisioning_state
         NamePythonSdk: provisioning_state
@@ -5351,8 +3941,10 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
-      - &ref_17
+        Kind: 1
+      - &ref_8
         NameSwagger: id
         NameAnsible: id
         NamePythonSdk: id
@@ -5382,8 +3974,10 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
-      - &ref_18
+        Kind: 1
+      - &ref_9
         NameSwagger: name
         NameAnsible: name
         NamePythonSdk: name
@@ -5413,8 +4007,10 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
-      - &ref_19
+        Kind: 1
+      - &ref_10
         NameSwagger: type
         NameAnsible: type
         NamePythonSdk: type
@@ -5444,8 +4040,10 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
-      - &ref_20
+        Kind: 1
+      - &ref_11
         NameSwagger: managedBy
         NameAnsible: managed_by
         NamePythonSdk: managed_by
@@ -5475,7 +4073,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: CreateOrUpdate
         Options:
@@ -5548,9 +4148,9 @@ Modules:
         HttpMethod: get
         IsAsync: false
     ResponseFields:
-      - *ref_17
-      - *ref_18
-      - *ref_19
+      - *ref_8
+      - *ref_9
+      - *ref_10
       - NameSwagger: location
         NameAnsible: location
         NamePythonSdk: location
@@ -5580,7 +4180,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: tags
         NameAnsible: tags
         NamePythonSdk: tags
@@ -5614,8 +4216,10 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
-      - *ref_20
+        Kind: 1
+      - *ref_11
       - NameSwagger: sku
         NameAnsible: sku
         NamePythonSdk: sku
@@ -5672,8 +4276,10 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
-          - *ref_21
+            Kind: 1
+          - *ref_12
         EnumValues: []
         PathSwagger: /sku
         PathPython: /sku
@@ -5685,7 +4291,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -5704,7 +4312,7 @@ Modules:
         IncludeInArgSpec: true
         NoLog: false
         SubOptions:
-          - *ref_22
+          - *ref_13
           - NameSwagger: osType
             NameAnsible: os_type
             NamePythonSdk: os_type
@@ -5740,7 +4348,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: hyperVGeneration
             NameAnsible: hyper_vgeneration
             NamePythonSdk: hyper_vgeneration
@@ -5778,7 +4388,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: creationData
             NameAnsible: creation_data
             NamePythonSdk: creation_data
@@ -5849,7 +4461,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: storageAccountId
                 NameAnsible: storage_account_id
                 NamePythonSdk: storage_account_id
@@ -5883,7 +4497,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: imageReference
                 NameAnsible: image_reference
                 NamePythonSdk: image_reference
@@ -5933,7 +4549,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: lun
                     NameAnsible: lun
                     NamePythonSdk: lun
@@ -5966,7 +4584,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: int32
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /properties/creationData/imageReference
                 PathPython: /creationData/imageReference
@@ -5978,7 +4598,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: sourceUri
                 NameAnsible: source_uri
                 NamePythonSdk: source_uri
@@ -6010,7 +4632,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: sourceResourceId
                 NameAnsible: source_resource_id
                 NamePythonSdk: source_resource_id
@@ -6042,7 +4666,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/creationData
             PathPython: /creationData
@@ -6054,7 +4680,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: diskSizeGB
             NameAnsible: disk_size_gb
             NamePythonSdk: disk_size_gb
@@ -6089,7 +4717,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: int32
             Flatten: false
+            Kind: 1
           - NameSwagger: encryptionSettingsCollection
             NameAnsible: encryption_settings_collection
             NamePythonSdk: encryption_settings_collection
@@ -6144,7 +4774,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: encryptionSettings
                 NameAnsible: encryption_settings
                 NamePythonSdk: encryption_settings
@@ -6217,7 +4849,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: secretUrl
                         NameAnsible: secret_url
                         NamePythonSdk: secret_url
@@ -6250,7 +4884,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: >-
                       /properties/encryptionSettingsCollection/encryptionSettings/diskEncryptionKey
@@ -6265,7 +4901,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: keyEncryptionKey
                     NameAnsible: key_encryption_key
                     NamePythonSdk: key_encryption_key
@@ -6321,7 +4959,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: !<tag:yaml.org,2002:js/undefined> ''
                         Flatten: false
+                        Kind: 1
                       - NameSwagger: keyUrl
                         NameAnsible: key_url
                         NamePythonSdk: key_url
@@ -6354,7 +4994,9 @@ Modules:
                         ExampleValue: null
                         Hidden: false
                         IncludeInResponse: false
+                        format: ''
                         Flatten: false
+                        Kind: 1
                     EnumValues: []
                     PathSwagger: >-
                       /properties/encryptionSettingsCollection/encryptionSettings/keyEncryptionKey
@@ -6369,7 +5011,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /properties/encryptionSettingsCollection/encryptionSettings
                 PathPython: /encryptionSettingsCollection/encryptionSettings
@@ -6381,7 +5025,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/encryptionSettingsCollection
             PathPython: /encryptionSettingsCollection
@@ -6393,8 +5039,10 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
-          - *ref_23
+            Kind: 1
+          - *ref_14
         EnumValues: []
         PathSwagger: /properties
         PathPython: ''
@@ -6406,7 +5054,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     ModuleOperationNameUpper: Snapshots
     ModuleOperationName: snapshots
     ObjectName: Snapshot
@@ -6474,6 +5124,8 @@ Modules:
           - resourcegroups_put
         OperationId: '742'
         MethodId: '743'
+        OperationName: Snapshots
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: '{subscription-id}'
@@ -6531,6 +5183,8 @@ Modules:
           - compute_snapshots_put
         OperationId: '742'
         MethodId: '743'
+        OperationName: Snapshots
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: '{subscription-id}'
@@ -6597,1415 +5251,9 @@ Modules:
           - compute_snapshots_put
         OperationId: '742'
         MethodId: '743'
-  - ModuleName: azure_rm_computesnapshot_info
-    Options:
-      - NameSwagger: resourceGroupName
-        NameAnsible: resource_group
-        NamePythonSdk: resource_group_name
-        NameGoSdk: ResourceGroup
-        NameTerraform: resourceGroup
-        IdPortion: resourceGroups
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: The name of the resource group.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: '{{resource_group}}'
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: snapshotName
-        NameAnsible: name
-        NamePythonSdk: snapshot_name
-        NameGoSdk: SnapshotName
-        NameTerraform: name
-        IdPortion: snapshots
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: >-
-          The name of the snapshot that is being created. The name can't be
-          changed after the snapshot is created. Supported characters for the
-          name are a-z, A-Z, 0-9 and _. The max name length is 80 characters.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: '{{snapshot_name}}'
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - &ref_24
-        NameSwagger: id
-        NameAnsible: id
-        NamePythonSdk: id
-        NameGoSdk: ID
-        NameTerraform: ID
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Resource Id
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /id
-        PathPython: /id
-        PathGo: /id
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_25
-        NameSwagger: name
-        NameAnsible: name
-        NamePythonSdk: name
-        NameGoSdk: Name
-        NameTerraform: Name
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Resource name
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /name
-        PathPython: /name
-        PathGo: /name
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_26
-        NameSwagger: type
-        NameAnsible: type
-        NamePythonSdk: type
-        NameGoSdk: Type
-        NameTerraform: Type
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Resource type
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /type
-        PathPython: /type
-        PathGo: /type
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_27
-        NameSwagger: location
-        NameAnsible: location
-        NamePythonSdk: location
-        NameGoSdk: Location
-        NameTerraform: Location
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Resource location
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /location
-        PathPython: /location
-        PathGo: /location
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_28
-        NameSwagger: tags
-        NameAnsible: tags
-        NamePythonSdk: tags
-        NameGoSdk: Tags
-        NameTerraform: Tags
-        IdPortion: null
-        Type: >-
-          unknown[DictionaryType
-          {"$id":"31","$type":"DictionaryType","valueType":{"$id":"32","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"33","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"34","fixed":false},"deprecated":false}]
-        TypeName: >-
-          {"$id":"31","$type":"DictionaryType","valueType":{"$id":"32","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"33","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"34","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"31","$type":"DictionaryType","valueType":{"$id":"32","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"33","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"34","fixed":false},"deprecated":false}
-        IsList: false
-        Required: false
-        Documentation: Resource tags
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /tags
-        PathPython: /tags
-        PathGo: /tags
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_29
-        NameSwagger: managedBy
-        NameAnsible: managed_by
-        NamePythonSdk: managed_by
-        NameGoSdk: ManagedBy
-        NameTerraform: ManagedBy
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Unused. Always Null.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /managedBy
-        PathPython: /managedBy
-        PathGo: /managedBy
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_30
-        NameSwagger: sku
-        NameAnsible: sku
-        NamePythonSdk: sku
-        NameGoSdk: Sku
-        NameTerraform: Sku
-        IdPortion: null
-        Type: dict
-        TypeName: SnapshotSku
-        TypeNameGo: SnapshotSku
-        IsList: false
-        Required: false
-        Documentation: ''
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions:
-          - NameSwagger: name
-            NameAnsible: name
-            NamePythonSdk: name
-            NameGoSdk: Name
-            NameTerraform: Name
-            IdPortion: null
-            Type: str
-            TypeName: SnapshotStorageAccountTypes
-            TypeNameGo: SnapshotStorageAccountTypes
-            IsList: false
-            Required: false
-            Documentation: The sku name.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues:
-              - Key: Standard_LRS
-                Value: Standard_LRS
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Premium_LRS
-                Value: Premium_LRS
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_ZRS
-                Value: Standard_ZRS
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-            PathSwagger: /sku/name
-            PathPython: /sku/name
-            PathGo: /sku/name
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: tier
-            NameAnsible: tier
-            NamePythonSdk: tier
-            NameGoSdk: Tier
-            NameTerraform: Tier
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: The sku tier.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /sku/tier
-            PathPython: /sku/tier
-            PathGo: /sku/tier
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /sku
-        PathPython: /sku
-        PathGo: /sku
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_31
-        NameSwagger: properties
-        NameAnsible: properties
-        NamePythonSdk: properties
-        NameGoSdk: Properties
-        NameTerraform: Properties
-        IdPortion: null
-        Type: dict
-        TypeName: SnapshotProperties
-        TypeNameGo: SnapshotProperties
-        IsList: false
-        Required: false
-        Documentation: ''
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties
-        PathPython: ''
-        PathGo: /properties
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: true
-        IncludeInResponse: true
-        Flatten: false
-      - NameSwagger: timeCreated
-        NameAnsible: time_created
-        NamePythonSdk: time_created
-        NameGoSdk: TimeCreated
-        NameTerraform: TimeCreated
-        IdPortion: null
-        Type: datetime
-        TypeName: DateTime
-        TypeNameGo: DateTime
-        IsList: false
-        Required: false
-        Documentation: The time when the disk was created.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/timeCreated
-        PathPython: /timeCreated
-        PathGo: /properties/timeCreated
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: osType
-        NameAnsible: os_type
-        NamePythonSdk: os_type
-        NameGoSdk: OsType
-        NameTerraform: OsType
-        IdPortion: null
-        Type: str
-        TypeName: OperatingSystemTypes
-        TypeNameGo: OperatingSystemTypes
-        IsList: false
-        Required: false
-        Documentation: The Operating System type.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues:
-          - Key: Windows
-            Value: Windows
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Linux
-            Value: Linux
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-        PathSwagger: /properties/osType
-        PathPython: /osType
-        PathGo: /properties/osType
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: hyperVGeneration
-        NameAnsible: hyper_vgeneration
-        NamePythonSdk: hyper_vgeneration
-        NameGoSdk: HyperVgeneration
-        NameTerraform: HyperVgeneration
-        IdPortion: null
-        Type: str
-        TypeName: HyperVGeneration
-        TypeNameGo: HyperVGeneration
-        IsList: false
-        Required: false
-        Documentation: >-
-          The hypervisor generation of the Virtual Machine. Applicable to OS
-          disks only.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues:
-          - Key: V1
-            Value: V1
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: V2
-            Value: V2
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-        PathSwagger: /properties/hyperVGeneration
-        PathPython: /hyperVGeneration
-        PathGo: /properties/hyperVGeneration
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: creationData
-        NameAnsible: creation_data
-        NamePythonSdk: creation_data
-        NameGoSdk: CreationData
-        NameTerraform: CreationData
-        IdPortion: null
-        Type: dict
-        TypeName: CreationData
-        TypeNameGo: CreationData
-        IsList: false
-        Required: true
-        Documentation: >-
-          Disk source information. CreationData information cannot be changed
-          after the disk has been created.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions:
-          - NameSwagger: createOption
-            NameAnsible: create_option
-            NamePythonSdk: create_option
-            NameGoSdk: CreateOption
-            NameTerraform: CreateOption
-            IdPortion: null
-            Type: str
-            TypeName: DiskCreateOption
-            TypeNameGo: DiskCreateOption
-            IsList: false
-            Required: true
-            Documentation: This enumerates the possible sources of a disk's creation.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues:
-              - Key: Empty
-                Value: Empty
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Attach
-                Value: Attach
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: FromImage
-                Value: FromImage
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Import
-                Value: Import
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Copy
-                Value: Copy
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Restore
-                Value: Restore
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Upload
-                Value: Upload
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-            PathSwagger: /properties/creationData/createOption
-            PathPython: /creationData/createOption
-            PathGo: /properties/creationData/createOption
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: storageAccountId
-            NameAnsible: storage_account_id
-            NamePythonSdk: storage_account_id
-            NameGoSdk: StorageAccountID
-            NameTerraform: StorageAccountID
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: >-
-              If createOption is Import, the Azure Resource Manager identifier
-              of the storage account containing the blob to import as a disk.
-              Required only if the blob is in a different subscription
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/creationData/storageAccountId
-            PathPython: /creationData/storageAccountId
-            PathGo: /properties/creationData/storageAccountId
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: imageReference
-            NameAnsible: image_reference
-            NamePythonSdk: image_reference
-            NameGoSdk: ImageReference
-            NameTerraform: ImageReference
-            IdPortion: null
-            Type: dict
-            TypeName: ImageDiskReference
-            TypeNameGo: ImageDiskReference
-            IsList: false
-            Required: false
-            Documentation: Disk source information.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions:
-              - NameSwagger: id
-                NameAnsible: id
-                NamePythonSdk: id
-                NameGoSdk: ID
-                NameTerraform: ID
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: true
-                Documentation: >-
-                  A relative uri containing either a Platform Image Repository
-                  or user image reference.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/creationData/imageReference/id
-                PathPython: /creationData/imageReference/id
-                PathGo: /properties/creationData/imageReference/id
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: lun
-                NameAnsible: lun
-                NamePythonSdk: lun
-                NameGoSdk: Lun
-                NameTerraform: Lun
-                IdPortion: null
-                Type: number
-                TypeName: Int
-                TypeNameGo: Int
-                IsList: false
-                Required: false
-                Documentation: >-
-                  If the disk is created from an image's data disk, this is an
-                  index that indicates which of the data disks in the image to
-                  use. For OS disks, this field is null.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/creationData/imageReference/lun
-                PathPython: /creationData/imageReference/lun
-                PathGo: /properties/creationData/imageReference/lun
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-            EnumValues: []
-            PathSwagger: /properties/creationData/imageReference
-            PathPython: /creationData/imageReference
-            PathGo: /properties/creationData/imageReference
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: sourceUri
-            NameAnsible: source_uri
-            NamePythonSdk: source_uri
-            NameGoSdk: SourceUri
-            NameTerraform: SourceUri
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: >-
-              If createOption is Import, this is the URI of a blob to be
-              imported into a managed disk.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/creationData/sourceUri
-            PathPython: /creationData/sourceUri
-            PathGo: /properties/creationData/sourceUri
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: sourceResourceId
-            NameAnsible: source_resource_id
-            NamePythonSdk: source_resource_id
-            NameGoSdk: SourceResourceID
-            NameTerraform: SourceResourceID
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: >-
-              If createOption is Copy, this is the ARM id of the source snapshot
-              or disk.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/creationData/sourceResourceId
-            PathPython: /creationData/sourceResourceId
-            PathGo: /properties/creationData/sourceResourceId
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /properties/creationData
-        PathPython: /creationData
-        PathGo: /properties/creationData
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: diskSizeGB
-        NameAnsible: disk_size_gb
-        NamePythonSdk: disk_size_gb
-        NameGoSdk: DiskSizeGb
-        NameTerraform: DiskSizeGb
-        IdPortion: null
-        Type: number
-        TypeName: Int
-        TypeNameGo: Int
-        IsList: false
-        Required: false
-        Documentation: >-
-          If creationData.createOption is Empty, this field is mandatory and it
-          indicates the size of the VHD to create. If this field is present for
-          updates or creation with other options, it indicates a resize. Resizes
-          are only allowed if the disk is not attached to a running VM, and can
-          only increase the disk's size.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/diskSizeGB
-        PathPython: /diskSizeGB
-        PathGo: /properties/diskSizeGB
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: encryptionSettingsCollection
-        NameAnsible: encryption_settings_collection
-        NamePythonSdk: encryption_settings_collection
-        NameGoSdk: EncryptionSettingsCollection
-        NameTerraform: EncryptionSettingsCollection
-        IdPortion: null
-        Type: dict
-        TypeName: EncryptionSettingsCollection
-        TypeNameGo: EncryptionSettingsCollection
-        IsList: false
-        Required: false
-        Documentation: >-
-          Encryption settings collection used be Azure Disk Encryption, can
-          contain multiple encryption settings per disk or snapshot.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions:
-          - NameSwagger: enabled
-            NameAnsible: enabled
-            NamePythonSdk: enabled
-            NameGoSdk: Enabled
-            NameTerraform: Enabled
-            IdPortion: null
-            Type: boolean
-            TypeName: Boolean
-            TypeNameGo: Boolean
-            IsList: false
-            Required: true
-            Documentation: >-
-              Set this flag to true and provide DiskEncryptionKey and optional
-              KeyEncryptionKey to enable encryption. Set this flag to false and
-              remove DiskEncryptionKey and KeyEncryptionKey to disable
-              encryption. If EncryptionSettings is null in the request object,
-              the existing settings remain unchanged.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/encryptionSettingsCollection/enabled
-            PathPython: /encryptionSettingsCollection/enabled
-            PathGo: /properties/encryptionSettingsCollection/enabled
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: encryptionSettings
-            NameAnsible: encryption_settings
-            NamePythonSdk: encryption_settings
-            NameGoSdk: EncryptionSettings
-            NameTerraform: EncryptionSettings
-            IdPortion: null
-            Type: dict
-            TypeName: EncryptionSettingsElement
-            TypeNameGo: EncryptionSettingsElement
-            IsList: true
-            Required: false
-            Documentation: 'A collection of encryption settings, one for each disk volume.'
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions:
-              - NameSwagger: diskEncryptionKey
-                NameAnsible: disk_encryption_key
-                NamePythonSdk: disk_encryption_key
-                NameGoSdk: DiskEncryptionKey
-                NameTerraform: DiskEncryptionKey
-                IdPortion: null
-                Type: dict
-                TypeName: KeyVaultAndSecretReference
-                TypeNameGo: KeyVaultAndSecretReference
-                IsList: false
-                Required: false
-                Documentation: Key Vault Secret Url and vault id of the disk encryption key
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions:
-                  - NameSwagger: sourceVault
-                    NameAnsible: source_vault
-                    NamePythonSdk: source_vault
-                    NameGoSdk: SourceVault
-                    NameTerraform: SourceVault
-                    IdPortion: null
-                    Type: dict
-                    TypeName: SourceVault
-                    TypeNameGo: SourceVault
-                    IsList: false
-                    Required: true
-                    Documentation: Resource id of the KeyVault containing the key or secret
-                    DocumentationMarkKeywords: true
-                    DefaultValue: null
-                    IncludeInDocumentation: true
-                    IncludeInArgSpec: true
-                    NoLog: false
-                    SubOptions: []
-                    EnumValues: []
-                    PathSwagger: >-
-                      /properties/encryptionSettingsCollection/encryptionSettings/diskEncryptionKey/sourceVault
-                    PathPython: >-
-                      /encryptionSettingsCollection/encryptionSettings/diskEncryptionKey/sourceVault
-                    PathGo: >-
-                      /properties/encryptionSettingsCollection/encryptionSettings/diskEncryptionKey/sourceVault
-                    DispositionSdk: '*'
-                    DispositionRest: '*'
-                    Comparison: ''
-                    Updatable: true
-                    ExampleValue: null
-                    Hidden: false
-                    IncludeInResponse: false
-                    Flatten: false
-                  - NameSwagger: secretUrl
-                    NameAnsible: secret_url
-                    NamePythonSdk: secret_url
-                    NameGoSdk: SecretURL
-                    NameTerraform: SecretURL
-                    IdPortion: null
-                    Type: str
-                    TypeName: String
-                    TypeNameGo: String
-                    IsList: false
-                    Required: true
-                    Documentation: Url pointing to a key or secret in KeyVault
-                    DocumentationMarkKeywords: true
-                    DefaultValue: null
-                    IncludeInDocumentation: true
-                    IncludeInArgSpec: true
-                    NoLog: false
-                    SubOptions: []
-                    EnumValues: []
-                    PathSwagger: >-
-                      /properties/encryptionSettingsCollection/encryptionSettings/diskEncryptionKey/secretUrl
-                    PathPython: >-
-                      /encryptionSettingsCollection/encryptionSettings/diskEncryptionKey/secretUrl
-                    PathGo: >-
-                      /properties/encryptionSettingsCollection/encryptionSettings/diskEncryptionKey/secretUrl
-                    DispositionSdk: '*'
-                    DispositionRest: '*'
-                    Comparison: ''
-                    Updatable: true
-                    ExampleValue: null
-                    Hidden: false
-                    IncludeInResponse: false
-                    Flatten: false
-                EnumValues: []
-                PathSwagger: >-
-                  /properties/encryptionSettingsCollection/encryptionSettings/diskEncryptionKey
-                PathPython: >-
-                  /encryptionSettingsCollection/encryptionSettings/diskEncryptionKey
-                PathGo: >-
-                  /properties/encryptionSettingsCollection/encryptionSettings/diskEncryptionKey
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: keyEncryptionKey
-                NameAnsible: key_encryption_key
-                NamePythonSdk: key_encryption_key
-                NameGoSdk: KeyEncryptionKey
-                NameTerraform: KeyEncryptionKey
-                IdPortion: null
-                Type: dict
-                TypeName: KeyVaultAndKeyReference
-                TypeNameGo: KeyVaultAndKeyReference
-                IsList: false
-                Required: false
-                Documentation: >-
-                  Key Vault Key Url and vault id of the key encryption key.
-                  KeyEncryptionKey is optional and when provided is used to
-                  unwrap the disk encryption key.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions:
-                  - NameSwagger: sourceVault
-                    NameAnsible: source_vault
-                    NamePythonSdk: source_vault
-                    NameGoSdk: SourceVault
-                    NameTerraform: SourceVault
-                    IdPortion: null
-                    Type: dict
-                    TypeName: SourceVault
-                    TypeNameGo: SourceVault
-                    IsList: false
-                    Required: true
-                    Documentation: Resource id of the KeyVault containing the key or secret
-                    DocumentationMarkKeywords: true
-                    DefaultValue: null
-                    IncludeInDocumentation: true
-                    IncludeInArgSpec: true
-                    NoLog: false
-                    SubOptions: []
-                    EnumValues: []
-                    PathSwagger: >-
-                      /properties/encryptionSettingsCollection/encryptionSettings/keyEncryptionKey/sourceVault
-                    PathPython: >-
-                      /encryptionSettingsCollection/encryptionSettings/keyEncryptionKey/sourceVault
-                    PathGo: >-
-                      /properties/encryptionSettingsCollection/encryptionSettings/keyEncryptionKey/sourceVault
-                    DispositionSdk: '*'
-                    DispositionRest: '*'
-                    Comparison: ''
-                    Updatable: true
-                    ExampleValue: null
-                    Hidden: false
-                    IncludeInResponse: false
-                    Flatten: false
-                  - NameSwagger: keyUrl
-                    NameAnsible: key_url
-                    NamePythonSdk: key_url
-                    NameGoSdk: KeyURL
-                    NameTerraform: KeyURL
-                    IdPortion: null
-                    Type: str
-                    TypeName: String
-                    TypeNameGo: String
-                    IsList: false
-                    Required: true
-                    Documentation: Url pointing to a key or secret in KeyVault
-                    DocumentationMarkKeywords: true
-                    DefaultValue: null
-                    IncludeInDocumentation: true
-                    IncludeInArgSpec: true
-                    NoLog: false
-                    SubOptions: []
-                    EnumValues: []
-                    PathSwagger: >-
-                      /properties/encryptionSettingsCollection/encryptionSettings/keyEncryptionKey/keyUrl
-                    PathPython: >-
-                      /encryptionSettingsCollection/encryptionSettings/keyEncryptionKey/keyUrl
-                    PathGo: >-
-                      /properties/encryptionSettingsCollection/encryptionSettings/keyEncryptionKey/keyUrl
-                    DispositionSdk: '*'
-                    DispositionRest: '*'
-                    Comparison: ''
-                    Updatable: true
-                    ExampleValue: null
-                    Hidden: false
-                    IncludeInResponse: false
-                    Flatten: false
-                EnumValues: []
-                PathSwagger: >-
-                  /properties/encryptionSettingsCollection/encryptionSettings/keyEncryptionKey
-                PathPython: >-
-                  /encryptionSettingsCollection/encryptionSettings/keyEncryptionKey
-                PathGo: >-
-                  /properties/encryptionSettingsCollection/encryptionSettings/keyEncryptionKey
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-            EnumValues: []
-            PathSwagger: /properties/encryptionSettingsCollection/encryptionSettings
-            PathPython: /encryptionSettingsCollection/encryptionSettings
-            PathGo: /properties/encryptionSettingsCollection/encryptionSettings
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /properties/encryptionSettingsCollection
-        PathPython: /encryptionSettingsCollection
-        PathGo: /properties/encryptionSettingsCollection
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: provisioningState
-        NameAnsible: provisioning_state
-        NamePythonSdk: provisioning_state
-        NameGoSdk: ProvisioningState
-        NameTerraform: ProvisioningState
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: The disk provisioning state.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/provisioningState
-        PathPython: /provisioningState
-        PathGo: /properties/provisioningState
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-    Methods:
-      - Name: Get
-        Options:
-          - resourceGroupName
-          - snapshotName
-        RequiredOptions:
-          - resourceGroupName
-          - snapshotName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.Compute/snapshots/{{ snapshot_name }}
-        HttpMethod: get
-        IsAsync: false
-      - Name: ListByResourceGroup
-        Options:
-          - resourceGroupName
-        RequiredOptions:
-          - resourceGroupName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.Compute/snapshots
-        HttpMethod: get
-        IsAsync: false
-      - Name: List
-        Options: []
-        RequiredOptions: []
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/Microsoft.Compute/snapshots
-        HttpMethod: get
-        IsAsync: false
-    ResponseFields:
-      - *ref_24
-      - *ref_25
-      - *ref_26
-      - *ref_27
-      - *ref_28
-      - *ref_29
-      - *ref_30
-      - *ref_31
-    ModuleOperationNameUpper: Snapshots
-    ModuleOperationName: snapshots
-    ObjectName: Snapshot
-    ResourceNameFieldInResponse: null
-    NeedsDeleteBeforeUpdate: false
-    NeedsForceUpdate: false
-    CannotTestUpdate: false
-    Provider: Microsoft.Compute
-    ApiVersion: '2018-09-30'
-    Examples:
-      - Example:
-          parameters:
-            subscriptionId: '{subscription-id}'
-            api-version: '2018-09-30'
-          responses:
-            '200':
-              body:
-                value:
-                  - properties:
-                      osType: Windows
-                      creationData:
-                        createOption: Copy
-                        sourceResourceId: >-
-                          subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot
-                      diskSizeGB: '200'
-                      encryptionSettings:
-                        enabled: true
-                        diskEncryptionKey:
-                          sourceVault:
-                            id: >-
-                              /subscriptions/{{ subscription_id
-                              }}/resourceGroups/{{ resource_group
-                              }}/providers/Microsoft.KeyVault/vaults/{{
-                              vault_name }}
-                          secretUrl: >-
-                            https://myvmvault.vault-int.azure-int.net/secrets/{secret}
-                        keyEncryptionKey:
-                          sourceVault:
-                            id: >-
-                              /subscriptions/{{ subscription_id
-                              }}/resourceGroups/{{ resource_group
-                              }}/providers/Microsoft.KeyVault/vaults/{{
-                              vault_name }}
-                          keyUrl: 'https://myvmvault.vault-int.azure-int.net/keys/{key}'
-                      timeCreated: '2016-12-28T04:47:30.6630569+00:00'
-                      provisioningState: Succeeded
-                    type: Microsoft.Compute/snapshots
-                    location: westus
-                    tags:
-                      department: Development
-                      project: Snapshots
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group }}/providers/Microsoft.Compute/snapshots/{{
-                      snapshot_name }}
-                    name: mySnapshot1
-                  - properties:
-                      osType: Windows
-                      creationData:
-                        createOption: Import
-                        storageAccountId: >-
-                          subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount
-                        sourceUri: >-
-                          https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd
-                      diskSizeGB: '200'
-                      encryptionSettings:
-                        enabled: true
-                        diskEncryptionKey:
-                          sourceVault:
-                            id: >-
-                              /subscriptions/{{ subscription_id
-                              }}/resourceGroups/{{ resource_group
-                              }}/providers/Microsoft.KeyVault/vaults/{{
-                              vault_name }}
-                          secretUrl: >-
-                            https://myvmvault.vault-int.azure-int.net/secrets/{secret}
-                        keyEncryptionKey:
-                          sourceVault:
-                            id: >-
-                              /subscriptions/{{ subscription_id
-                              }}/resourceGroups/{{ resource_group
-                              }}/providers/Microsoft.KeyVault/vaults/{{
-                              vault_name }}
-                          keyUrl: 'https://myvmvault.vault-int.azure-int.net/keys/{key}'
-                      timeCreated: '2016-12-28T04:47:30.3247198+00:00'
-                      provisioningState: Succeeded
-                    type: Microsoft.Compute/snapshots
-                    location: westus
-                    tags:
-                      department: Development
-                      project: Snapshots
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group }}/providers/Microsoft.Compute/snapshots/{{
-                      snapshot_name }}
-                    name: mySnapshot2
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/Microsoft.Compute/snapshots
-        Method: get
-        Name: List all snapshots in a subscription.
-        Filename: compute_snapshots_get_2
-        Variables: []
-        References: []
-        OperationId: '742'
-        MethodId: '899'
-      - Example:
-          parameters:
-            subscriptionId: '{subscription-id}'
-            resourceGroupName: myResourceGroup
-            api-version: '2018-09-30'
-          responses:
-            '200':
-              body:
-                value:
-                  - properties:
-                      osType: Windows
-                      creationData:
-                        createOption: Copy
-                        sourceResourceId: >-
-                          subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot
-                      diskSizeGB: '200'
-                      encryptionSettings:
-                        enabled: true
-                        diskEncryptionKey:
-                          sourceVault:
-                            id: >-
-                              /subscriptions/{{ subscription_id
-                              }}/resourceGroups/{{ resource_group
-                              }}/providers/Microsoft.KeyVault/vaults/{{
-                              vault_name }}
-                          secretUrl: >-
-                            https://myvmvault.vault-int.azure-int.net/secrets/{secret}
-                        keyEncryptionKey:
-                          sourceVault:
-                            id: >-
-                              /subscriptions/{{ subscription_id
-                              }}/resourceGroups/{{ resource_group
-                              }}/providers/Microsoft.KeyVault/vaults/{{
-                              vault_name }}
-                          keyUrl: 'https://myvmvault.vault-int.azure-int.net/keys/{key}'
-                      timeCreated: '2016-12-28T04:41:35.9278721+00:00'
-                      provisioningState: Succeeded
-                    type: Microsoft.Compute/snapshots
-                    location: westus
-                    tags:
-                      department: Development
-                      project: Snapshots
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group }}/providers/Microsoft.Compute/snapshots/{{
-                      snapshot_name }}
-                    name: mySnapshot
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.Compute/snapshots
-        Method: get
-        Name: List all snapshots in a resource group.
-        Filename: compute_snapshots_get_1
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-        References: []
-        OperationId: '742'
-        MethodId: '875'
-      - Example:
-          parameters:
-            subscriptionId: '{subscription-id}'
-            resourceGroupName: myResourceGroup
-            api-version: '2018-09-30'
-            snapshotName: mySnapshot
-          responses:
-            '200':
-              body:
-                properties:
-                  osType: Windows
-                  creationData:
-                    createOption: Empty
-                  diskSizeGB: '100'
-                  encryptionSettings:
-                    enabled: true
-                    diskEncryptionKey:
-                      sourceVault:
-                        id: >-
-                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                          resource_group
-                          }}/providers/Microsoft.KeyVault/vaults/{{ vault_name
-                          }}
-                      secretUrl: >-
-                        https://myvmvault.vault-int.azure-int.net/secrets/{secret}
-                    keyEncryptionKey:
-                      sourceVault:
-                        id: >-
-                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                          resource_group
-                          }}/providers/Microsoft.KeyVault/vaults/{{ vault_name
-                          }}
-                      keyUrl: 'https://myvmvault.vault-int.azure-int.net/keys/{key}'
-                  timeCreated: '2016-12-28T04:41:35.079872+00:00'
-                  provisioningState: Succeeded
-                type: Microsoft.Compute/snapshots
-                location: westus
-                tags:
-                  department: Development
-                  project: Snapshots
-                id: >-
-                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                  resource_group }}/providers/Microsoft.Compute/snapshots/{{
-                  snapshot_name }}
-                name: mySnapshot
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.Compute/snapshots/{{ snapshot_name }}
-        Method: get
-        Name: Get information about a snapshot.
-        Filename: compute_snapshots_get
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-          - name: snapshot_name
-            value: mySnapshot
-            swaggerName: snapshotName
-        References: []
-        OperationId: '742'
-        MethodId: '813'
+        OperationName: Snapshots
+        MethodName: CreateOrUpdate
 ServiceName: DiskResourceProviderClient
 MgmtClientName: DiskResourceProviderClient
 CliName: compute
 Namespace: azure.mgmt.compute
-Info:
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION diskName'
-  - '  ** FOUND OPTION disk'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION diskName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION snapshotName'
-  - '  ** FOUND OPTION snapshot'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION snapshotName'

@@ -26,9 +26,10 @@ options:
       - The name of the resource group within the user's subscription.
     required: true
     type: str
-  name:
+  topic_name:
     description:
-      - Name of the resource
+      - Name of the topic
+    required: true
     type: str
   location:
     description:
@@ -46,6 +47,10 @@ options:
   id:
     description:
       - Fully qualified identifier of the resource
+    type: str
+  name:
+    description:
+      - Name of the resource
     type: str
   type:
     description:
@@ -71,7 +76,7 @@ EXAMPLES = '''
 - name: Topics_CreateOrUpdate
   azure.rm.eventgridtopic:
     resource_group: myResourceGroup
-    name: myTopic
+    topic_name: myTopic
     topic_info:
       location: westus2
       tags:
@@ -80,11 +85,11 @@ EXAMPLES = '''
 - name: Topics_Update
   azure.rm.eventgridtopic:
     resource_group: myResourceGroup
-    name: myTopic
+    topic_name: myTopic
 - name: Topics_Delete
   azure.rm.eventgridtopic:
     resource_group: myResourceGroup
-    name: myTopic
+    topic_name: myTopic
     state: absent
 
 '''
@@ -170,7 +175,7 @@ class AzureRMTopics(AzureRMModuleBaseExt):
                 disposition='resourceGroupName',
                 required=true
             ),
-            name=dict(
+            topic_name=dict(
                 type='str',
                 updatable=False,
                 disposition='topicName',
@@ -190,7 +195,7 @@ class AzureRMTopics(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.topic_name = None
         self.id = None
         self.name = None
         self.type = None

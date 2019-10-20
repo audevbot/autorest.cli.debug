@@ -26,9 +26,10 @@ options:
       - The name of the resource group.
     required: true
     type: str
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
     type: str
   url:
     description:
@@ -62,6 +63,10 @@ options:
     description:
       - Resource ID.
     type: str
+  name:
+    description:
+      - Resource name.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
@@ -87,7 +92,7 @@ EXAMPLES = '''
 - name: ApiManagementPortalSettingsUpdateDelegation
   azure.rm.apimanagementdelegationsetting:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     url: 'http://contoso.com/delegation'
     validation_key: >-
       nVF7aKIvr9mV/RM5lOD0sYoi8ThXTRHQP7o66hvUmjCDkPKR3qxPu/otJcNciz2aQdqPuzJH3ECG4TU2yZjQ7Q==
@@ -98,7 +103,7 @@ EXAMPLES = '''
 - name: ApiManagementPortalSettingsUpdateDelegation
   azure.rm.apimanagementdelegationsetting:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     url: 'http://contoso.com/delegation'
     validation_key: >-
       nVF7aKIvr9mV/RM5lOD0sYoi8ThXTRHQP7o66hvUmjCDkPKR3qxPu/otJcNciz2aQdqPuzJH3ECG4TU2yZjQ7Q==
@@ -204,7 +209,7 @@ class AzureRMDelegationSettings(AzureRMModuleBaseExt):
                 disposition='resourceGroupName',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
                 disposition='serviceName',
@@ -244,7 +249,7 @@ class AzureRMDelegationSettings(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.id = None
         self.name = None
         self.type = None

@@ -26,9 +26,10 @@ options:
       - The name of the resource group.
     required: true
     type: str
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
     type: str
   enabled:
     description:
@@ -55,6 +56,10 @@ options:
     description:
       - Resource ID.
     type: str
+  name:
+    description:
+      - Resource name.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
@@ -80,7 +85,7 @@ EXAMPLES = '''
 - name: ApiManagementPortalSettingsUpdateSignUp
   azure_rm_apimanagementsignupsetting:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     enabled: true
     terms_of_service:
       text: Terms of service text.
@@ -89,7 +94,7 @@ EXAMPLES = '''
 - name: ApiManagementPortalSettingsUpdateSignUp
   azure_rm_apimanagementsignupsetting:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     enabled: true
     terms_of_service:
       text: Terms of service text.
@@ -184,7 +189,7 @@ class AzureRMSignUpSettings(AzureRMModuleBaseExt):
                 disposition='resourceGroupName',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
                 disposition='serviceName',
@@ -218,7 +223,7 @@ class AzureRMSignUpSettings(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.id = None
         self.name = None
         self.type = None

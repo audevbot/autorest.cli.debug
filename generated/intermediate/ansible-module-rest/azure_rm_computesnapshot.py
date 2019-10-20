@@ -26,9 +26,13 @@ options:
       - The name of the resource group.
     required: true
     type: str
-  name:
+  snapshot_name:
     description:
-      - Resource name
+      - >-
+        The name of the snapshot that is being created. The name can't be
+        changed after the snapshot is created. Supported characters for the name
+        are a-z, A-Z, 0-9 and _. The max name length is 80 characters.
+    required: true
     type: str
   location:
     description:
@@ -185,6 +189,10 @@ options:
     description:
       - Resource Id
     type: str
+  name:
+    description:
+      - Resource name
+    type: str
   type:
     description:
       - Resource type
@@ -217,7 +225,7 @@ EXAMPLES = '''
     subscription.
   azure_rm_computesnapshot:
     resource_group: myResourceGroup
-    name: mySnapshot
+    snapshot_name: mySnapshot
     snapshot:
       name: mySnapshot2
       location: West US
@@ -229,7 +237,7 @@ EXAMPLES = '''
 - name: Create a snapshot by importing an unmanaged blob from the same subscription.
   azure_rm_computesnapshot:
     resource_group: myResourceGroup
-    name: mySnapshot
+    snapshot_name: mySnapshot
     snapshot:
       name: mySnapshot1
       location: West US
@@ -242,7 +250,7 @@ EXAMPLES = '''
     subscription.
   azure_rm_computesnapshot:
     resource_group: myResourceGroup
-    name: mySnapshot
+    snapshot_name: mySnapshot
     snapshot:
       name: mySnapshot1
       location: West US
@@ -518,7 +526,7 @@ class AzureRMSnapshots(AzureRMModuleBaseExt):
                 disposition='resourceGroupName',
                 required=true
             ),
-            name=dict(
+            snapshot_name=dict(
                 type='str',
                 updatable=False,
                 disposition='snapshotName',
@@ -658,7 +666,7 @@ class AzureRMSnapshots(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.snapshot_name = None
         self.id = None
         self.name = None
         self.type = None

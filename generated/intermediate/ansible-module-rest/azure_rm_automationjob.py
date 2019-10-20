@@ -31,9 +31,10 @@ options:
       - The name of the automation account.
     required: true
     type: str
-  name:
+  job_name:
     description:
-      - The name of the resource
+      - The job name.
+    required: true
     type: str
   runbook:
     description:
@@ -108,6 +109,10 @@ options:
     description:
       - Fully qualified resource Id for the resource
     type: str
+  name:
+    description:
+      - The name of the resource
+    type: str
   type:
     description:
       - The type of the resource.
@@ -132,7 +137,7 @@ EXAMPLES = '''
   azure_rm_automationjob:
     resource_group: myResourceGroup
     automation_account_name: myAutomationAccount
-    name: myJob
+    job_name: myJob
     runbook:
       name: TestRunbook
     run_on: ''
@@ -295,7 +300,7 @@ class AzureRMJob(AzureRMModuleBaseExt):
                 disposition='automationAccountName',
                 required=true
             ),
-            name=dict(
+            job_name=dict(
                 type='str',
                 updatable=False,
                 disposition='jobName',
@@ -332,7 +337,7 @@ class AzureRMJob(AzureRMModuleBaseExt):
 
         self.resource_group = None
         self.automation_account_name = None
-        self.name = None
+        self.job_name = None
         self.client_request_id = None
         self.id = None
         self.name = None

@@ -34,9 +34,9 @@ objects:
             python_variable_name: service_name
           'notificationName': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             id_portion: notifications
-            go_variable_name: name
+            go_variable_name: notificationName
             python_parameter_name: notification_name
-            python_variable_name: name
+            python_variable_name: notification_name
       read: !ruby/object:Api::Azure::SDKOperationDefinition
         go_func_name: Get
         python_func_name: get
@@ -53,9 +53,9 @@ objects:
             python_variable_name: service_name
           'notificationName': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             id_portion: notifications
-            go_variable_name: name
+            go_variable_name: notificationName
             python_parameter_name: notification_name
-            python_variable_name: name
+            python_variable_name: notification_name
         response:
           '/id': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             go_field_name: ID
@@ -68,7 +68,7 @@ objects:
             python_field_name: type
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: NotificationContractProperties
             go_type_name: NotificationContractProperties
       list_by_parent: !ruby/object:Api::Azure::SDKOperationDefinition
         go_func_name: ListByService
@@ -103,12 +103,12 @@ objects:
         sample_value: 'myService'
         azure_sdk_references: ['serviceName']
       - !ruby/object:Api::Type::String
-        name: 'name'
+        name: 'notificationName'
         description: 'Notification Name Identifier.'
         required: true
         input: true
         sample_value: 'myNotification'
-        azure_sdk_references: ['notificationName', '/name']
+        azure_sdk_references: ['notificationName']
       - !ruby/object:Api::Type::String
         name: 'title'
         description: 'Title of the Notification.'
@@ -125,32 +125,31 @@ objects:
         required: false
         azure_sdk_references: ['/recipients', '/properties/recipients']
         properties:
-          - !ruby/object:Api::Type::String
+          - !ruby/object:Api::Type::Array
             name: 'emails'
             description: 'List of Emails subscribed for the notification.'
             required: false
             azure_sdk_references: ['/recipients/emails', '/properties/recipients/emails']
-          - !ruby/object:Api::Type::String
+            item_type: Api::Type::String
+          - !ruby/object:Api::Type::Array
             name: 'users'
             description: 'List of Users subscribed for the notification.'
             required: false
             azure_sdk_references: ['/recipients/users', '/properties/recipients/users']
+            item_type: Api::Type::String
       # read only values included only in response
       - !ruby/object:Api::Type::String
         name: 'id'
         description: 'Resource ID.'
-        input: true
         output: true
         azure_sdk_references: ['/id']
       - !ruby/object:Api::Type::String
         name: 'name'
         description: 'Resource name.'
-        input: true
         output: true
         azure_sdk_references: ['/name']
       - !ruby/object:Api::Type::String
         name: 'type'
         description: 'Resource type for API Management resource.'
-        input: true
         output: true
         azure_sdk_references: ['/type']

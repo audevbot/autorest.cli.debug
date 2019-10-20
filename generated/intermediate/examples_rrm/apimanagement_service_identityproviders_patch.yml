@@ -16,7 +16,7 @@
       azure_rm_apimanagementidentityprovider:
         resource_group: '{{resource_group}}'
         service_name: '{{service_name}}'
-        name: '{{identity_provider_name}}'
+        identity_provider_name: '{{identity_provider_name}}'
         client_id: updatedfacebookid
         client_secret: updatedfacebooksecret
     

@@ -16,7 +16,7 @@
       azure_rm_batchpool:
         resource_group: '{{resource_group}}'
         account_name: '{{batch_account_name}}'
-        name: '{{pool_name}}'
+        pool_name: '{{pool_name}}'
         scale_settings:
           auto_scale:
             formula: $TargetDedicatedNodes=34

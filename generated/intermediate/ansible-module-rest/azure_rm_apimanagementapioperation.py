@@ -392,15 +392,12 @@ EXAMPLES = '''
       query_parameters: []
       headers: []
       representations:
-        - content_type: application/json
-          schema_id: 592f6c1d0af5840ca8897f0c
-          type_name: User
+        - {}
     responses:
-      - status_code: '200'
-        description: successful operation
+      - description: successful operation
         representations:
-          - content_type: application/xml
-          - content_type: application/json
+          - {}
+          - {}
         headers: []
     display_name: createUser2
     method: POST
@@ -419,17 +416,14 @@ EXAMPLES = '''
             A sample parameter that is required and has a default value of
             "sample".
           type: string
-          default_value: sample
           required: true
           values:
             - sample
     responses:
-      - status_code: '200'
-        description: Returned in all cases.
+      - description: Returned in all cases.
         representations: []
         headers: []
-      - status_code: '500'
-        description: Server Error.
+      - description: Server Error.
         representations: []
         headers: []
     display_name: Retrieve resource

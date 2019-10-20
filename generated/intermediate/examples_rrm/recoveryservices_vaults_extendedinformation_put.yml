@@ -15,7 +15,7 @@
     - name: Put ExtendedInfo of Resource
       azure_rm_recoveryservicesvaultextendedinfo:
         resource_group: '{{resource_group}}'
-        name: '{{vault_name}}'
+        vault_name: '{{vault_name}}'
         resource_resource_extended_info_details:
           properties:
             integrityKey: J99wzS27fmJ+Wjot7xO5wA==

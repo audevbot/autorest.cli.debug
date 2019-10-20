@@ -26,9 +26,13 @@ options:
       - The name of the resource group.
     required: true
     type: str
-  name:
+  disk_name:
     description:
-      - Resource name
+      - >-
+        The name of the managed disk that is being created. The name can't be
+        changed after the disk is created. Supported characters for the name are
+        a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.
+    required: true
     type: str
   location:
     description:
@@ -206,6 +210,10 @@ options:
     description:
       - Resource Id
     type: str
+  name:
+    description:
+      - Resource name
+    type: str
   type:
     description:
       - Resource type
@@ -234,7 +242,7 @@ EXAMPLES = '''
 - name: Create an empty managed disk.
   azure.rm.computedisk:
     resource_group: myResourceGroup
-    name: myDisk
+    disk_name: myDisk
     disk:
       name: myDisk
       location: West US
@@ -245,7 +253,7 @@ EXAMPLES = '''
 - name: Create a managed disk from a platform image.
   azure.rm.computedisk:
     resource_group: myResourceGroup
-    name: myDisk
+    disk_name: myDisk
     disk:
       name: myDisk
       location: West US
@@ -261,7 +269,7 @@ EXAMPLES = '''
     subscription.
   azure.rm.computedisk:
     resource_group: myResourceGroup
-    name: myDisk
+    disk_name: myDisk
     disk:
       name: myDisk2
       location: West US
@@ -275,7 +283,7 @@ EXAMPLES = '''
     subscription.
   azure.rm.computedisk:
     resource_group: myResourceGroup
-    name: myDisk
+    disk_name: myDisk
     disk:
       name: myDisk
       location: West US
@@ -288,7 +296,7 @@ EXAMPLES = '''
     subscription.
   azure.rm.computedisk:
     resource_group: myResourceGroup
-    name: myDisk
+    disk_name: myDisk
     disk:
       name: myDisk
       location: West US
@@ -301,7 +309,7 @@ EXAMPLES = '''
 - name: Create a managed disk by copying a snapshot.
   azure.rm.computedisk:
     resource_group: myResourceGroup
-    name: myDisk
+    disk_name: myDisk
     disk:
       name: myDisk
       location: West US
@@ -605,7 +613,7 @@ class AzureRMDisks(AzureRMModuleBaseExt):
                 disposition='resourceGroupName',
                 required=true
             ),
-            name=dict(
+            disk_name=dict(
                 type='str',
                 updatable=False,
                 disposition='diskName',
@@ -759,7 +767,7 @@ class AzureRMDisks(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.disk_name = None
         self.id = None
         self.name = None
         self.type = None

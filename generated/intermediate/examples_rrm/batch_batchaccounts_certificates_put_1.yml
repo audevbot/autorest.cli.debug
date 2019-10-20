@@ -16,7 +16,7 @@
       azure_rm_batchcertificate:
         resource_group: '{{resource_group}}'
         account_name: '{{batch_account_name}}'
-        name: '{{certificate_name}}'
+        certificate_name: '{{certificate_name}}'
         format: Cer
         data: MIICrjCCAZagAwI...
     

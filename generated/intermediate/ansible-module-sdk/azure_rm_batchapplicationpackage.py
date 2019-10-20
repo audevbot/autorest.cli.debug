@@ -36,7 +36,7 @@ options:
       - The name of the application. This must be unique within the account.
     required: true
     type: str
-  name:
+  version_name:
     description:
       - The version of the application.
     required: true
@@ -90,13 +90,13 @@ EXAMPLES = '''
     resource_group: myResourceGroup
     account_name: myBatchAccount
     application_name: myApplication
-    name: myVersion
+    version_name: myVersion
 - name: ApplicationPackageDelete
   azure_rm_batchapplicationpackage:
     resource_group: myResourceGroup
     account_name: myBatchAccount
     application_name: myApplication
-    name: myVersion
+    version_name: myVersion
     state: absent
 
 '''
@@ -206,10 +206,9 @@ class AzureRMApplicationPackage(AzureRMModuleBaseExt):
                 updatable=False,
                 required=true
             ),
-            name=dict(
+            version_name=dict(
                 type='str',
                 updatable=False,
-                disposition='version_name',
                 required=true
             ),
             state=dict(
@@ -222,7 +221,7 @@ class AzureRMApplicationPackage(AzureRMModuleBaseExt):
         self.resource_group = None
         self.account_name = None
         self.application_name = None
-        self.name = None
+        self.version_name = None
         self.id = None
         self.etag = None
         self.body = {}
@@ -299,7 +298,7 @@ class AzureRMApplicationPackage(AzureRMModuleBaseExt):
                 response = self.mgmt_client.application_package.create(resource_group_name=self.resource_group,
                                                                        account_name=self.account_name,
                                                                        application_name=self.application_name,
-                                                                       version_name=self.name)
+                                                                       version_name=self.version_name)
             else:
                 response = self.mgmt_client.application_package.update()
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
@@ -315,7 +314,7 @@ class AzureRMApplicationPackage(AzureRMModuleBaseExt):
             response = self.mgmt_client.application_package.delete(resource_group_name=self.resource_group,
                                                                    account_name=self.account_name,
                                                                    application_name=self.application_name,
-                                                                   version_name=self.name)
+                                                                   version_name=self.version_name)
         except CloudError as e:
             self.log('Error attempting to delete the ApplicationPackage instance.')
             self.fail('Error deleting the ApplicationPackage instance: {0}'.format(str(e)))
@@ -329,7 +328,7 @@ class AzureRMApplicationPackage(AzureRMModuleBaseExt):
             response = self.mgmt_client.application_package.get(resource_group_name=self.resource_group,
                                                                 account_name=self.account_name,
                                                                 application_name=self.application_name,
-                                                                version_name=self.name)
+                                                                version_name=self.version_name)
         except CloudError as e:
             return False
         return response.as_dict()

@@ -30,12 +30,14 @@ Modules:
         ExampleValue: '{{resource_group}}'
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: resourceName
-        NameAnsible: name
+        NameAnsible: resource_name
         NamePythonSdk: resource_name
         NameGoSdk: ResourceName
-        NameTerraform: name
+        NameTerraform: ResourceName
         IdPortion: openShiftManagedClusters
         Type: str
         TypeName: xxx
@@ -60,7 +62,9 @@ Modules:
         ExampleValue: '{{open_shift_managed_cluster_name}}'
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: parameters
         NameAnsible: parameters
         NamePythonSdk: parameters
@@ -85,14 +89,16 @@ Modules:
         PathSwagger: ''
         PathPython: null
         PathGo: null
-        DispositionSdk: dictionary
+        DispositionSdk: '*'
         DispositionRest: '*'
         Comparison: ''
         Updatable: true
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 2
       - NameSwagger: location
         NameAnsible: location
         NamePythonSdk: location
@@ -122,7 +128,9 @@ Modules:
         ExampleValue: location1
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: tags
         NameAnsible: tags
         NamePythonSdk: tags
@@ -158,7 +166,9 @@ Modules:
           archv2: ''
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: plan
         NameAnsible: plan
         NamePythonSdk: plan
@@ -206,7 +216,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: product
             NameAnsible: product
             NamePythonSdk: product
@@ -238,7 +250,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: promotionCode
             NameAnsible: promotion_code
             NamePythonSdk: promotion_code
@@ -268,7 +282,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: publisher
             NameAnsible: publisher
             NamePythonSdk: publisher
@@ -298,7 +314,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /plan
         PathPython: /plan
@@ -310,7 +328,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -340,7 +360,9 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: openShiftVersion
         NameAnsible: open_shift_version
         NamePythonSdk: open_shift_version
@@ -370,7 +392,9 @@ Modules:
         ExampleValue: v3.11
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: networkProfile
         NameAnsible: network_profile
         NamePythonSdk: network_profile
@@ -418,7 +442,9 @@ Modules:
             ExampleValue: 10.0.0.0/8
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: peerVnetId
             NameAnsible: peer_vnet_id
             NamePythonSdk: peer_vnet_id
@@ -448,7 +474,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: vnetId
             NameAnsible: vnet_id
             NamePythonSdk: vnet_id
@@ -478,7 +506,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/networkProfile
         PathPython: /networkProfile
@@ -490,7 +520,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: routerProfiles
         NameAnsible: router_profiles
         NamePythonSdk: router_profiles
@@ -538,7 +570,9 @@ Modules:
             ExampleValue: default
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - &ref_7
             NameSwagger: publicSubdomain
             NameAnsible: public_subdomain
@@ -569,7 +603,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - &ref_8
             NameSwagger: fqdn
             NameAnsible: fqdn
@@ -600,7 +636,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/routerProfiles
         PathPython: /routerProfiles
@@ -612,7 +650,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: masterPoolProfile
         NameAnsible: master_pool_profile
         NamePythonSdk: master_pool_profile
@@ -662,7 +702,9 @@ Modules:
             ExampleValue: master
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: count
             NameAnsible: count
             NamePythonSdk: count
@@ -694,7 +736,9 @@ Modules:
             ExampleValue: '3'
             Hidden: false
             IncludeInResponse: true
+            format: int32
             Flatten: false
+            Kind: 1
           - NameSwagger: vmSize
             NameAnsible: vm_size
             NamePythonSdk: vm_size
@@ -823,7 +867,9 @@ Modules:
             ExampleValue: Standard_D4s_v3
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: subnetCidr
             NameAnsible: subnet_cidr
             NamePythonSdk: subnet_cidr
@@ -853,7 +899,9 @@ Modules:
             ExampleValue: 10.0.0.0/24
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: osType
             NameAnsible: os_type
             NamePythonSdk: os_type
@@ -891,7 +939,9 @@ Modules:
             ExampleValue: Linux
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/masterPoolProfile
         PathPython: /masterPoolProfile
@@ -903,7 +953,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: agentPoolProfiles
         NameAnsible: agent_pool_profiles
         NamePythonSdk: agent_pool_profiles
@@ -953,7 +1005,9 @@ Modules:
             ExampleValue: compute
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: count
             NameAnsible: count
             NamePythonSdk: count
@@ -983,7 +1037,9 @@ Modules:
             ExampleValue: '4'
             Hidden: false
             IncludeInResponse: true
+            format: int32
             Flatten: false
+            Kind: 1
           - NameSwagger: vmSize
             NameAnsible: vm_size
             NamePythonSdk: vm_size
@@ -1109,10 +1165,12 @@ Modules:
             DispositionRest: '*'
             Comparison: ''
             Updatable: true
-            ExampleValue: Standard_D4s_v3
+            ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: subnetCidr
             NameAnsible: subnet_cidr
             NamePythonSdk: subnet_cidr
@@ -1139,10 +1197,12 @@ Modules:
             DispositionRest: '*'
             Comparison: ''
             Updatable: true
-            ExampleValue: 10.0.0.0/24
+            ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: osType
             NameAnsible: os_type
             NamePythonSdk: os_type
@@ -1177,10 +1237,12 @@ Modules:
             DispositionRest: '*'
             Comparison: ''
             Updatable: true
-            ExampleValue: Linux
+            ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: role
             NameAnsible: role
             NamePythonSdk: role
@@ -1216,7 +1278,9 @@ Modules:
             ExampleValue: compute
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/agentPoolProfiles
         PathPython: /agentPoolProfiles
@@ -1228,7 +1292,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: authProfile
         NameAnsible: auth_profile
         NamePythonSdk: auth_profile
@@ -1294,7 +1360,9 @@ Modules:
                 ExampleValue: Azure AD
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: provider
                 NameAnsible: provider
                 NamePythonSdk: provider
@@ -1323,13 +1391,15 @@ Modules:
                 Updatable: true
                 ExampleValue:
                   kind: AADIdentityProvider
-                  clientId: clientId
+                  client_id: clientId
                   secret: secret
-                  tenantId: tenantId
-                  customerAdminGroupId: customerAdminGroupId
+                  tenant_id: tenantId
+                  customer_admin_group_id: customerAdminGroupId
                 Hidden: false
                 IncludeInResponse: true
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/authProfile/identityProviders
             PathPython: /authProfile/identityProviders
@@ -1341,7 +1411,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/authProfile
         PathPython: /authProfile
@@ -1353,7 +1425,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_3
         NameSwagger: provisioningState
         NameAnsible: provisioning_state
@@ -1386,7 +1460,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_4
         NameSwagger: clusterVersion
         NameAnsible: cluster_version
@@ -1417,7 +1493,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_5
         NameSwagger: publicHostname
         NameAnsible: public_hostname
@@ -1448,7 +1526,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_6
         NameSwagger: fqdn
         NameAnsible: fqdn
@@ -1481,7 +1561,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_0
         NameSwagger: id
         NameAnsible: id
@@ -1512,7 +1594,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_1
         NameSwagger: name
         NameAnsible: name
@@ -1543,7 +1627,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_2
         NameSwagger: type
         NameAnsible: type
@@ -1574,7 +1660,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: CreateOrUpdate
         Options:
@@ -1668,7 +1756,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: tags
         NameAnsible: tags
         NamePythonSdk: tags
@@ -1702,7 +1792,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: plan
         NameAnsible: plan
         NamePythonSdk: plan
@@ -1750,7 +1842,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: product
             NameAnsible: product
             NamePythonSdk: product
@@ -1782,7 +1876,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: promotionCode
             NameAnsible: promotion_code
             NamePythonSdk: promotion_code
@@ -1812,7 +1908,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: publisher
             NameAnsible: publisher
             NamePythonSdk: publisher
@@ -1842,7 +1940,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /plan
         PathPython: /plan
@@ -1854,7 +1954,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -1903,7 +2005,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - *ref_4
           - *ref_5
           - *ref_6
@@ -1954,7 +2058,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: peerVnetId
                 NameAnsible: peer_vnet_id
                 NamePythonSdk: peer_vnet_id
@@ -1984,7 +2090,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: vnetId
                 NameAnsible: vnet_id
                 NamePythonSdk: vnet_id
@@ -2014,7 +2122,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/networkProfile
             PathPython: /networkProfile
@@ -2026,7 +2136,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: routerProfiles
             NameAnsible: router_profiles
             NamePythonSdk: router_profiles
@@ -2074,7 +2186,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - *ref_7
               - *ref_8
             EnumValues: []
@@ -2088,7 +2202,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: masterPoolProfile
             NameAnsible: master_pool_profile
             NamePythonSdk: master_pool_profile
@@ -2138,7 +2254,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: count
                 NameAnsible: count
                 NamePythonSdk: count
@@ -2170,7 +2288,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
+                Kind: 1
               - NameSwagger: vmSize
                 NameAnsible: vm_size
                 NamePythonSdk: vm_size
@@ -2299,7 +2419,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: subnetCidr
                 NameAnsible: subnet_cidr
                 NamePythonSdk: subnet_cidr
@@ -2329,7 +2451,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: osType
                 NameAnsible: os_type
                 NamePythonSdk: os_type
@@ -2367,7 +2491,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/masterPoolProfile
             PathPython: /masterPoolProfile
@@ -2379,7 +2505,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: agentPoolProfiles
             NameAnsible: agent_pool_profiles
             NamePythonSdk: agent_pool_profiles
@@ -2429,7 +2557,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: count
                 NameAnsible: count
                 NamePythonSdk: count
@@ -2459,7 +2589,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
+                Kind: 1
               - NameSwagger: vmSize
                 NameAnsible: vm_size
                 NamePythonSdk: vm_size
@@ -2588,7 +2720,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: subnetCidr
                 NameAnsible: subnet_cidr
                 NamePythonSdk: subnet_cidr
@@ -2618,7 +2752,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: osType
                 NameAnsible: os_type
                 NamePythonSdk: os_type
@@ -2656,7 +2792,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: role
                 NameAnsible: role
                 NamePythonSdk: role
@@ -2692,7 +2830,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/agentPoolProfiles
             PathPython: /agentPoolProfiles
@@ -2704,7 +2844,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: authProfile
             NameAnsible: auth_profile
             NamePythonSdk: auth_profile
@@ -2770,7 +2912,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: provider
                     NameAnsible: provider
                     NamePythonSdk: provider
@@ -2800,7 +2944,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /properties/authProfile/identityProviders
                 PathPython: /authProfile/identityProviders
@@ -2812,7 +2958,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/authProfile
             PathPython: /authProfile
@@ -2824,7 +2972,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties
         PathPython: ''
@@ -2836,7 +2986,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     ModuleOperationNameUpper: OpenShiftManagedClusters
     ModuleOperationName: open_shift_managed_clusters
     ObjectName: OpenShiftManagedCluster
@@ -2872,15 +3024,15 @@ Modules:
                   - name: infra
                     role: infra
                     count: '2'
-                    vmSize: Standard_D4s_v3
-                    osType: Linux
-                    subnetCidr: 10.0.0.0/24
+                    vm_size: Standard_D4s_v3
+                    os_type: Linux
+                    subnet_cidr: 10.0.0.0/24
                   - name: compute
                     role: compute
                     count: '4'
-                    vmSize: Standard_D4s_v3
-                    osType: Linux
-                    subnetCidr: 10.0.0.0/24
+                    vm_size: Standard_D4s_v3
+                    os_type: Linux
+                    subnet_cidr: 10.0.0.0/24
                 routerProfiles:
                   - name: default
                 authProfile:
@@ -2888,10 +3040,10 @@ Modules:
                     - name: Azure AD
                       provider:
                         kind: AADIdentityProvider
-                        clientId: clientId
+                        client_id: clientId
                         secret: secret
-                        tenantId: tenantId
-                        customerAdminGroupId: customerAdminGroupId
+                        tenant_id: tenantId
+                        customer_admin_group_id: customerAdminGroupId
           responses:
             '200':
               body:
@@ -3014,6 +3166,8 @@ Modules:
           - resourcegroups_put
         OperationId: '393'
         MethodId: '466'
+        OperationName: OpenShiftManagedClusters
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             api-version: '2019-04-30'
@@ -3040,1805 +3194,9 @@ Modules:
         References: []
         OperationId: '393'
         MethodId: '535'
-  - ModuleName: azure_rm_openshiftmanagedcluster_info
-    Options:
-      - NameSwagger: resourceGroupName
-        NameAnsible: resource_group
-        NamePythonSdk: resource_group_name
-        NameGoSdk: ResourceGroup
-        NameTerraform: resourceGroup
-        IdPortion: resourceGroups
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: The name of the resource group.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: '{{resource_group}}'
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: resourceName
-        NameAnsible: name
-        NamePythonSdk: resource_name
-        NameGoSdk: ResourceName
-        NameTerraform: name
-        IdPortion: openShiftManagedClusters
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: The name of the OpenShift managed cluster resource.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: '{{open_shift_managed_cluster_name}}'
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - &ref_9
-        NameSwagger: id
-        NameAnsible: id
-        NamePythonSdk: id
-        NameGoSdk: ID
-        NameTerraform: ID
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Resource Id
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /id
-        PathPython: /id
-        PathGo: /id
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_10
-        NameSwagger: name
-        NameAnsible: name
-        NamePythonSdk: name
-        NameGoSdk: Name
-        NameTerraform: Name
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Resource name
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /name
-        PathPython: /name
-        PathGo: /name
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_11
-        NameSwagger: type
-        NameAnsible: type
-        NamePythonSdk: type
-        NameGoSdk: Type
-        NameTerraform: Type
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Resource type
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /type
-        PathPython: /type
-        PathGo: /type
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_12
-        NameSwagger: location
-        NameAnsible: location
-        NamePythonSdk: location
-        NameGoSdk: Location
-        NameTerraform: Location
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Resource location
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /location
-        PathPython: /location
-        PathGo: /location
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_13
-        NameSwagger: tags
-        NameAnsible: tags
-        NamePythonSdk: tags
-        NameGoSdk: Tags
-        NameTerraform: Tags
-        IdPortion: null
-        Type: >-
-          unknown[DictionaryType
-          {"$id":"31","$type":"DictionaryType","valueType":{"$id":"32","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"33","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"34","fixed":false},"deprecated":false}]
-        TypeName: >-
-          {"$id":"31","$type":"DictionaryType","valueType":{"$id":"32","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"33","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"34","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"31","$type":"DictionaryType","valueType":{"$id":"32","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"33","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"34","fixed":false},"deprecated":false}
-        IsList: false
-        Required: false
-        Documentation: Resource tags
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /tags
-        PathPython: /tags
-        PathGo: /tags
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_14
-        NameSwagger: plan
-        NameAnsible: plan
-        NamePythonSdk: plan
-        NameGoSdk: Plan
-        NameTerraform: Plan
-        IdPortion: null
-        Type: dict
-        TypeName: PurchasePlan
-        TypeNameGo: PurchasePlan
-        IsList: false
-        Required: false
-        Documentation: Define the resource plan as required by ARM for billing purposes
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions:
-          - NameSwagger: name
-            NameAnsible: name
-            NamePythonSdk: name
-            NameGoSdk: Name
-            NameTerraform: Name
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: The plan ID.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /plan/name
-            PathPython: /plan/name
-            PathGo: /plan/name
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: product
-            NameAnsible: product
-            NamePythonSdk: product
-            NameGoSdk: Product
-            NameTerraform: Product
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: >-
-              Specifies the product of the image from the marketplace. This is
-              the same value as Offer under the imageReference element.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /plan/product
-            PathPython: /plan/product
-            PathGo: /plan/product
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: promotionCode
-            NameAnsible: promotion_code
-            NamePythonSdk: promotion_code
-            NameGoSdk: PromotionCode
-            NameTerraform: PromotionCode
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: The promotion code.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /plan/promotionCode
-            PathPython: /plan/promotionCode
-            PathGo: /plan/promotionCode
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: publisher
-            NameAnsible: publisher
-            NamePythonSdk: publisher
-            NameGoSdk: Publisher
-            NameTerraform: Publisher
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: The plan ID.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /plan/publisher
-            PathPython: /plan/publisher
-            PathGo: /plan/publisher
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /plan
-        PathPython: /plan
-        PathGo: /plan
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_15
-        NameSwagger: properties
-        NameAnsible: properties
-        NamePythonSdk: properties
-        NameGoSdk: Properties
-        NameTerraform: Properties
-        IdPortion: null
-        Type: dict
-        TypeName: OpenShiftManagedClusterProperties
-        TypeNameGo: OpenShiftManagedClusterProperties
-        IsList: false
-        Required: false
-        Documentation: Properties of a OpenShift managed cluster.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties
-        PathPython: ''
-        PathGo: /properties
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: true
-        IncludeInResponse: true
-        Flatten: false
-      - NameSwagger: provisioningState
-        NameAnsible: provisioning_state
-        NamePythonSdk: provisioning_state
-        NameGoSdk: ProvisioningState
-        NameTerraform: ProvisioningState
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: >-
-          The current deployment or provisioning state, which only appears in
-          the response.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/provisioningState
-        PathPython: /provisioningState
-        PathGo: /properties/provisioningState
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: openShiftVersion
-        NameAnsible: open_shift_version
-        NamePythonSdk: open_shift_version
-        NameGoSdk: OpenShiftVersion
-        NameTerraform: OpenShiftVersion
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: true
-        Documentation: Version of OpenShift specified when creating the cluster.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/openShiftVersion
-        PathPython: /openShiftVersion
-        PathGo: /properties/openShiftVersion
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: clusterVersion
-        NameAnsible: cluster_version
-        NamePythonSdk: cluster_version
-        NameGoSdk: ClusterVersion
-        NameTerraform: ClusterVersion
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Version of OpenShift specified when creating the cluster.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/clusterVersion
-        PathPython: /clusterVersion
-        PathGo: /properties/clusterVersion
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: publicHostname
-        NameAnsible: public_hostname
-        NamePythonSdk: public_hostname
-        NameGoSdk: PublicHostname
-        NameTerraform: PublicHostname
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Service generated FQDN for OpenShift API server.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/publicHostname
-        PathPython: /publicHostname
-        PathGo: /properties/publicHostname
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: fqdn
-        NameAnsible: fqdn
-        NamePythonSdk: fqdn
-        NameGoSdk: Fqdn
-        NameTerraform: Fqdn
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: >-
-          Service generated FQDN for OpenShift API server loadbalancer internal
-          hostname.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/fqdn
-        PathPython: /fqdn
-        PathGo: /properties/fqdn
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: networkProfile
-        NameAnsible: network_profile
-        NamePythonSdk: network_profile
-        NameGoSdk: NetworkProfile
-        NameTerraform: NetworkProfile
-        IdPortion: null
-        Type: dict
-        TypeName: NetworkProfile
-        TypeNameGo: NetworkProfile
-        IsList: false
-        Required: false
-        Documentation: Configuration for OpenShift networking.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions:
-          - NameSwagger: vnetCidr
-            NameAnsible: vnet_cidr
-            NamePythonSdk: vnet_cidr
-            NameGoSdk: VnetCidr
-            NameTerraform: VnetCidr
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: CIDR for the OpenShift Vnet.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/networkProfile/vnetCidr
-            PathPython: /networkProfile/vnetCidr
-            PathGo: /properties/networkProfile/vnetCidr
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: peerVnetId
-            NameAnsible: peer_vnet_id
-            NamePythonSdk: peer_vnet_id
-            NameGoSdk: PeerVnetID
-            NameTerraform: PeerVnetID
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: CIDR of the Vnet to peer.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/networkProfile/peerVnetId
-            PathPython: /networkProfile/peerVnetId
-            PathGo: /properties/networkProfile/peerVnetId
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: vnetId
-            NameAnsible: vnet_id
-            NamePythonSdk: vnet_id
-            NameGoSdk: VnetID
-            NameTerraform: VnetID
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: ID of the Vnet created for OSA cluster.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/networkProfile/vnetId
-            PathPython: /networkProfile/vnetId
-            PathGo: /properties/networkProfile/vnetId
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /properties/networkProfile
-        PathPython: /networkProfile
-        PathGo: /properties/networkProfile
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: routerProfiles
-        NameAnsible: router_profiles
-        NamePythonSdk: router_profiles
-        NameGoSdk: RouterProfiles
-        NameTerraform: RouterProfiles
-        IdPortion: null
-        Type: dict
-        TypeName: OpenShiftRouterProfile
-        TypeNameGo: OpenShiftRouterProfile
-        IsList: true
-        Required: false
-        Documentation: Configuration for OpenShift router(s).
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions:
-          - NameSwagger: name
-            NameAnsible: name
-            NamePythonSdk: name
-            NameGoSdk: Name
-            NameTerraform: Name
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: Name of the router profile.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/routerProfiles/name
-            PathPython: /routerProfiles/name
-            PathGo: /properties/routerProfiles/name
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: publicSubdomain
-            NameAnsible: public_subdomain
-            NamePythonSdk: public_subdomain
-            NameGoSdk: PublicSubdomain
-            NameTerraform: PublicSubdomain
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: DNS subdomain for OpenShift router.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/routerProfiles/publicSubdomain
-            PathPython: /routerProfiles/publicSubdomain
-            PathGo: /properties/routerProfiles/publicSubdomain
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: fqdn
-            NameAnsible: fqdn
-            NamePythonSdk: fqdn
-            NameGoSdk: Fqdn
-            NameTerraform: Fqdn
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: Auto-allocated FQDN for the OpenShift router.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/routerProfiles/fqdn
-            PathPython: /routerProfiles/fqdn
-            PathGo: /properties/routerProfiles/fqdn
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /properties/routerProfiles
-        PathPython: /routerProfiles
-        PathGo: /properties/routerProfiles
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: masterPoolProfile
-        NameAnsible: master_pool_profile
-        NamePythonSdk: master_pool_profile
-        NameGoSdk: MasterPoolProfile
-        NameTerraform: MasterPoolProfile
-        IdPortion: null
-        Type: dict
-        TypeName: OpenShiftManagedClusterMasterPoolProfile
-        TypeNameGo: OpenShiftManagedClusterMasterPoolProfile
-        IsList: false
-        Required: false
-        Documentation: Configuration for OpenShift master VMs.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions:
-          - NameSwagger: name
-            NameAnsible: name
-            NamePythonSdk: name
-            NameGoSdk: Name
-            NameTerraform: Name
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: >-
-              Unique name of the master pool profile in the context of the
-              subscription and resource group.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/masterPoolProfile/name
-            PathPython: /masterPoolProfile/name
-            PathGo: /properties/masterPoolProfile/name
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: count
-            NameAnsible: count
-            NamePythonSdk: count
-            NameGoSdk: Count
-            NameTerraform: Count
-            IdPortion: null
-            Type: number
-            TypeName: Int
-            TypeNameGo: Int
-            IsList: false
-            Required: true
-            Documentation: >-
-              Number of masters (VMs) to host docker containers. The default
-              value is 3.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/masterPoolProfile/count
-            PathPython: /masterPoolProfile/count
-            PathGo: /properties/masterPoolProfile/count
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: vmSize
-            NameAnsible: vm_size
-            NamePythonSdk: vm_size
-            NameGoSdk: VmSize
-            NameTerraform: VmSize
-            IdPortion: null
-            Type: str
-            TypeName: OpenShiftContainerServiceVMSize
-            TypeNameGo: OpenShiftContainerServiceVMSize
-            IsList: false
-            Required: true
-            Documentation: Size of agent VMs.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues:
-              - Key: Standard_D2s_v3
-                Value: Standard_D2s_v3
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_D4s_v3
-                Value: Standard_D4s_v3
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_D8s_v3
-                Value: Standard_D8s_v3
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_D16s_v3
-                Value: Standard_D16s_v3
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_D32s_v3
-                Value: Standard_D32s_v3
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_D64s_v3
-                Value: Standard_D64s_v3
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_DS4_v2
-                Value: Standard_DS4_v2
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_DS5_v2
-                Value: Standard_DS5_v2
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_F8s_v2
-                Value: Standard_F8s_v2
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_F16s_v2
-                Value: Standard_F16s_v2
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_F32s_v2
-                Value: Standard_F32s_v2
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_F64s_v2
-                Value: Standard_F64s_v2
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_F72s_v2
-                Value: Standard_F72s_v2
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_F8s
-                Value: Standard_F8s
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_F16s
-                Value: Standard_F16s
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_E4s_v3
-                Value: Standard_E4s_v3
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_E8s_v3
-                Value: Standard_E8s_v3
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_E16s_v3
-                Value: Standard_E16s_v3
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_E20s_v3
-                Value: Standard_E20s_v3
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_E32s_v3
-                Value: Standard_E32s_v3
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_E64s_v3
-                Value: Standard_E64s_v3
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_GS2
-                Value: Standard_GS2
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_GS3
-                Value: Standard_GS3
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_GS4
-                Value: Standard_GS4
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_GS5
-                Value: Standard_GS5
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_DS12_v2
-                Value: Standard_DS12_v2
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_DS13_v2
-                Value: Standard_DS13_v2
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_DS14_v2
-                Value: Standard_DS14_v2
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_DS15_v2
-                Value: Standard_DS15_v2
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_L4s
-                Value: Standard_L4s
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_L8s
-                Value: Standard_L8s
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_L16s
-                Value: Standard_L16s
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_L32s
-                Value: Standard_L32s
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-            PathSwagger: /properties/masterPoolProfile/vmSize
-            PathPython: /masterPoolProfile/vmSize
-            PathGo: /properties/masterPoolProfile/vmSize
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: subnetCidr
-            NameAnsible: subnet_cidr
-            NamePythonSdk: subnet_cidr
-            NameGoSdk: SubnetCidr
-            NameTerraform: SubnetCidr
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: Subnet CIDR for the peering.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/masterPoolProfile/subnetCidr
-            PathPython: /masterPoolProfile/subnetCidr
-            PathGo: /properties/masterPoolProfile/subnetCidr
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: osType
-            NameAnsible: os_type
-            NamePythonSdk: os_type
-            NameGoSdk: OsType
-            NameTerraform: OsType
-            IdPortion: null
-            Type: str
-            TypeName: OSType
-            TypeNameGo: OSType
-            IsList: false
-            Required: false
-            Documentation: >-
-              OsType to be used to specify os type. Choose from Linux and
-              Windows. Default to Linux.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues:
-              - Key: Linux
-                Value: Linux
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Windows
-                Value: Windows
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-            PathSwagger: /properties/masterPoolProfile/osType
-            PathPython: /masterPoolProfile/osType
-            PathGo: /properties/masterPoolProfile/osType
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /properties/masterPoolProfile
-        PathPython: /masterPoolProfile
-        PathGo: /properties/masterPoolProfile
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: agentPoolProfiles
-        NameAnsible: agent_pool_profiles
-        NamePythonSdk: agent_pool_profiles
-        NameGoSdk: AgentPoolProfiles
-        NameTerraform: AgentPoolProfiles
-        IdPortion: null
-        Type: dict
-        TypeName: OpenShiftManagedClusterAgentPoolProfile
-        TypeNameGo: OpenShiftManagedClusterAgentPoolProfile
-        IsList: true
-        Required: false
-        Documentation: Configuration of OpenShift cluster VMs.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions:
-          - NameSwagger: name
-            NameAnsible: name
-            NamePythonSdk: name
-            NameGoSdk: Name
-            NameTerraform: Name
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: true
-            Documentation: >-
-              Unique name of the pool profile in the context of the subscription
-              and resource group.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/agentPoolProfiles/name
-            PathPython: /agentPoolProfiles/name
-            PathGo: /properties/agentPoolProfiles/name
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: count
-            NameAnsible: count
-            NamePythonSdk: count
-            NameGoSdk: Count
-            NameTerraform: Count
-            IdPortion: null
-            Type: number
-            TypeName: Int
-            TypeNameGo: Int
-            IsList: false
-            Required: true
-            Documentation: Number of agents (VMs) to host docker containers.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/agentPoolProfiles/count
-            PathPython: /agentPoolProfiles/count
-            PathGo: /properties/agentPoolProfiles/count
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: vmSize
-            NameAnsible: vm_size
-            NamePythonSdk: vm_size
-            NameGoSdk: VmSize
-            NameTerraform: VmSize
-            IdPortion: null
-            Type: str
-            TypeName: OpenShiftContainerServiceVMSize
-            TypeNameGo: OpenShiftContainerServiceVMSize
-            IsList: false
-            Required: true
-            Documentation: Size of agent VMs.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues:
-              - Key: Standard_D2s_v3
-                Value: Standard_D2s_v3
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_D4s_v3
-                Value: Standard_D4s_v3
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_D8s_v3
-                Value: Standard_D8s_v3
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_D16s_v3
-                Value: Standard_D16s_v3
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_D32s_v3
-                Value: Standard_D32s_v3
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_D64s_v3
-                Value: Standard_D64s_v3
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_DS4_v2
-                Value: Standard_DS4_v2
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_DS5_v2
-                Value: Standard_DS5_v2
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_F8s_v2
-                Value: Standard_F8s_v2
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_F16s_v2
-                Value: Standard_F16s_v2
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_F32s_v2
-                Value: Standard_F32s_v2
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_F64s_v2
-                Value: Standard_F64s_v2
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_F72s_v2
-                Value: Standard_F72s_v2
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_F8s
-                Value: Standard_F8s
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_F16s
-                Value: Standard_F16s
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_E4s_v3
-                Value: Standard_E4s_v3
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_E8s_v3
-                Value: Standard_E8s_v3
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_E16s_v3
-                Value: Standard_E16s_v3
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_E20s_v3
-                Value: Standard_E20s_v3
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_E32s_v3
-                Value: Standard_E32s_v3
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_E64s_v3
-                Value: Standard_E64s_v3
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_GS2
-                Value: Standard_GS2
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_GS3
-                Value: Standard_GS3
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_GS4
-                Value: Standard_GS4
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_GS5
-                Value: Standard_GS5
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_DS12_v2
-                Value: Standard_DS12_v2
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_DS13_v2
-                Value: Standard_DS13_v2
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_DS14_v2
-                Value: Standard_DS14_v2
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_DS15_v2
-                Value: Standard_DS15_v2
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_L4s
-                Value: Standard_L4s
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_L8s
-                Value: Standard_L8s
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_L16s
-                Value: Standard_L16s
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Standard_L32s
-                Value: Standard_L32s
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-            PathSwagger: /properties/agentPoolProfiles/vmSize
-            PathPython: /agentPoolProfiles/vmSize
-            PathGo: /properties/agentPoolProfiles/vmSize
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: subnetCidr
-            NameAnsible: subnet_cidr
-            NamePythonSdk: subnet_cidr
-            NameGoSdk: SubnetCidr
-            NameTerraform: SubnetCidr
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: Subnet CIDR for the peering.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/agentPoolProfiles/subnetCidr
-            PathPython: /agentPoolProfiles/subnetCidr
-            PathGo: /properties/agentPoolProfiles/subnetCidr
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: osType
-            NameAnsible: os_type
-            NamePythonSdk: os_type
-            NameGoSdk: OsType
-            NameTerraform: OsType
-            IdPortion: null
-            Type: str
-            TypeName: OSType
-            TypeNameGo: OSType
-            IsList: false
-            Required: false
-            Documentation: >-
-              OsType to be used to specify os type. Choose from Linux and
-              Windows. Default to Linux.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues:
-              - Key: Linux
-                Value: Linux
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: Windows
-                Value: Windows
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-            PathSwagger: /properties/agentPoolProfiles/osType
-            PathPython: /agentPoolProfiles/osType
-            PathGo: /properties/agentPoolProfiles/osType
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: role
-            NameAnsible: role
-            NamePythonSdk: role
-            NameGoSdk: Role
-            NameTerraform: Role
-            IdPortion: null
-            Type: str
-            TypeName: OpenShiftAgentPoolProfileRole
-            TypeNameGo: OpenShiftAgentPoolProfileRole
-            IsList: false
-            Required: false
-            Documentation: Define the role of the AgentPoolProfile.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues:
-              - Key: compute
-                Value: compute
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: infra
-                Value: infra
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-            PathSwagger: /properties/agentPoolProfiles/role
-            PathPython: /agentPoolProfiles/role
-            PathGo: /properties/agentPoolProfiles/role
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /properties/agentPoolProfiles
-        PathPython: /agentPoolProfiles
-        PathGo: /properties/agentPoolProfiles
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: authProfile
-        NameAnsible: auth_profile
-        NamePythonSdk: auth_profile
-        NameGoSdk: AuthProfile
-        NameTerraform: AuthProfile
-        IdPortion: null
-        Type: dict
-        TypeName: OpenShiftManagedClusterAuthProfile
-        TypeNameGo: OpenShiftManagedClusterAuthProfile
-        IsList: false
-        Required: false
-        Documentation: Configures OpenShift authentication.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions:
-          - NameSwagger: identityProviders
-            NameAnsible: identity_providers
-            NamePythonSdk: identity_providers
-            NameGoSdk: IdentityProviders
-            NameTerraform: IdentityProviders
-            IdPortion: null
-            Type: dict
-            TypeName: OpenShiftManagedClusterIdentityProvider
-            TypeNameGo: OpenShiftManagedClusterIdentityProvider
-            IsList: true
-            Required: false
-            Documentation: Type of authentication profile to use.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions:
-              - NameSwagger: name
-                NameAnsible: name
-                NamePythonSdk: name
-                NameGoSdk: Name
-                NameTerraform: Name
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: Name of the provider.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/authProfile/identityProviders/name
-                PathPython: /authProfile/identityProviders/name
-                PathGo: /properties/authProfile/identityProviders/name
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: provider
-                NameAnsible: provider
-                NamePythonSdk: provider
-                NameGoSdk: Provider
-                NameTerraform: Provider
-                IdPortion: null
-                Type: dict
-                TypeName: OpenShiftManagedClusterBaseIdentityProvider
-                TypeNameGo: OpenShiftManagedClusterBaseIdentityProvider
-                IsList: false
-                Required: false
-                Documentation: Configuration of the provider.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/authProfile/identityProviders/provider
-                PathPython: /authProfile/identityProviders/provider
-                PathGo: /properties/authProfile/identityProviders/provider
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-            EnumValues: []
-            PathSwagger: /properties/authProfile/identityProviders
-            PathPython: /authProfile/identityProviders
-            PathGo: /properties/authProfile/identityProviders
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /properties/authProfile
-        PathPython: /authProfile
-        PathGo: /properties/authProfile
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-    Methods:
-      - Name: Get
-        Options:
-          - resourceGroupName
-          - resourceName
-        RequiredOptions:
-          - resourceGroupName
-          - resourceName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.ContainerService/openShiftManagedClusters/{{
-          open_shift_managed_cluster_name }}
-        HttpMethod: get
-        IsAsync: false
-      - Name: ListByResourceGroup
-        Options:
-          - resourceGroupName
-        RequiredOptions:
-          - resourceGroupName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.ContainerService/openShiftManagedClusters
-        HttpMethod: get
-        IsAsync: false
-      - Name: List
-        Options: []
-        RequiredOptions: []
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/Microsoft.ContainerService/openShiftManagedClusters
-        HttpMethod: get
-        IsAsync: false
-    ResponseFields:
-      - *ref_9
-      - *ref_10
-      - *ref_11
-      - *ref_12
-      - *ref_13
-      - *ref_14
-      - *ref_15
-    ModuleOperationNameUpper: OpenShiftManagedClusters
-    ModuleOperationName: open_shift_managed_clusters
-    ObjectName: OpenShiftManagedCluster
-    ResourceNameFieldInResponse: null
-    NeedsDeleteBeforeUpdate: false
-    NeedsForceUpdate: false
-    CannotTestUpdate: false
-    Provider: Microsoft.ContainerService
-    ApiVersion: '2019-04-30'
-    Examples:
-      - Example:
-          parameters:
-            api-version: '2019-04-30'
-            subscriptionId: subid1
-          responses:
-            '200':
-              body:
-                value:
-                  - id: >-
-                      /subscriptions/{{ subscription_id
-                      }}/providers/Microsoft.ContainerService/openShiftManagedClusters
-                    location: location1
-                    name: clustername1
-                    tags:
-                      archv2: ''
-                      tier: production
-                    type: Microsoft.ContainerService/OpenShiftManagedClusters
-                    properties:
-                      provisioningState: Succeeded
-                      openShiftVersion: v3.11
-                      clusterVersion: osa.1
-                      fqdn: df9337748a4b.location1.cloudapp.azure.com
-                      publicHostname: openshift.1225bdf9337748a4bd3a.location1.azmosa.io
-                      networkProfile:
-                        vnetCidr: 10.0.0.0/8
-                      masterPoolProfile:
-                        count: '3'
-                        vmSize: Standard_D4s_v3
-                        subnetCidr: 10.0.0.0/24
-                      agentPoolProfiles:
-                        - name: infra
-                          role: infra
-                          count: '2'
-                          vmSize: Standard_D4s_v3
-                          osType: Linux
-                          subnetCidr: 10.0.0.0/24
-                        - name: compute
-                          role: compute
-                          count: '4'
-                          vmSize: Standard_D4s_v3
-                          osType: Linux
-                          subnetCidr: 10.0.0.0/24
-                      routerProfiles:
-                        - name: default
-                          fqdn: osa2925bdf9337748f4bd3b.location1.cloudapp.azure.com
-                          publicSubdomain: apps.bc309ee87c164153871c.location1.azmosa.io
-                      authProfile:
-                        identityProviders:
-                          - name: Azure AD
-                            provider:
-                              kind: AADIdentityProvider
-                              clientId: clientId
-                              tenantId: tenantId
-                              customerAdminGroupId: customerAdminGroupId
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/Microsoft.ContainerService/openShiftManagedClusters
-        Method: get
-        Name: List Managed Clusters
-        Filename: containerservice_openshiftmanagedclusters_get
-        Variables: []
-        References: []
-        OperationId: '393'
-        MethodId: '394'
-      - Example:
-          parameters:
-            api-version: 2018-09-30-preview
-            subscriptionId: subid1
-            resourceGroupName: rg1
-          responses:
-            '200':
-              body:
-                value:
-                  - id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.ContainerService/openShiftManagedClusters
-                    location: location1
-                    name: clustername1
-                    tags:
-                      archv2: ''
-                      tier: production
-                    type: Microsoft.ContainerService/OpenShiftManagedClusters
-                    properties:
-                      provisioningState: Succeeded
-                      openShiftVersion: v3.11
-                      clusterVersion: osa.1
-                      fqdn: df9337748a4b.location1.cloudapp.azure.com
-                      networkProfile:
-                        vnetCidr: 10.0.0.0/8
-                      masterPoolProfile:
-                        count: '3'
-                        vmSize: Standard_D4s_v3
-                        subnetCidr: 10.0.0.0/24
-                      agentPoolProfiles:
-                        - name: infra
-                          role: infra
-                          count: '2'
-                          vmSize: Standard_D4s_v3
-                          osType: Linux
-                          subnetCidr: 10.0.0.0/24
-                        - name: compute
-                          role: compute
-                          count: '4'
-                          vmSize: Standard_D4s_v3
-                          osType: Linux
-                          subnetCidr: 10.0.0.0/24
-                      routerProfiles:
-                        - name: default
-                          fqdn: dce5faa189c841b99f8a.location1.cloudapp.azure.com
-                          publicSubdomain: b788fade68d345da9b77.location1.int.aksapp.io
-                      authProfile:
-                        identityProviders:
-                          - name: Azure AD
-                            provider:
-                              kind: AADIdentityProvider
-                              clientId: clientId
-                              tenantId: tenantId
-                              customerAdminGroupId: customerAdminGroupId
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.ContainerService/openShiftManagedClusters
-        Method: get
-        Name: Get Managed Clusters by Resource Group
-        Filename: containerservice_openshiftmanagedclusters_get_1
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-        References: []
-        OperationId: '393'
-        MethodId: '412'
-      - Example:
-          parameters:
-            api-version: '2019-04-30'
-            subscriptionId: subid1
-            resourceGroupName: rg1
-            resourceName: clustername1
-          responses:
-            '200':
-              body:
-                id: >-
-                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                  resource_group
-                  }}/providers/Microsoft.ContainerService/openShiftManagedClusters/{{
-                  open_shift_managed_cluster_name }}
-                location: location1
-                name: clustername1
-                tags:
-                  archv2: ''
-                  tier: production
-                type: Microsoft.ContainerService/OpenShiftManagedClusters
-                properties:
-                  provisioningState: Succeeded
-                  openShiftVersion: v3.11
-                  clusterVersion: osa.1
-                  fqdn: df9337748a4b.location1.cloudapp.azure.com
-                  publicHostname: openshift.1225bdf9337748a4bd3a.location1.azmosa.io
-                  networkProfile:
-                    vnetCidr: 10.0.0.0/8
-                  masterPoolProfile:
-                    count: '3'
-                    vmSize: Standard_D4s_v3
-                    subnetCidr: 10.0.0.0/24
-                  agentPoolProfiles:
-                    - name: infra
-                      role: infra
-                      count: '2'
-                      vmSize: Standard_D4s_v3
-                      osType: Linux
-                      subnetCidr: 10.0.0.0/24
-                    - name: compute
-                      role: compute
-                      count: '4'
-                      vmSize: Standard_D4s_v3
-                      osType: Linux
-                      subnetCidr: 10.0.0.0/24
-                  routerProfiles:
-                    - name: default
-                      fqdn: osa2925bdf9337748f4bd3b.location1.cloudapp.azure.com
-                      publicSubdomain: apps.bc309ee87c164153871c.location1.azmosa.io
-                  authProfile:
-                    identityProviders:
-                      - name: Azure AD
-                        provider:
-                          kind: AADIdentityProvider
-                          clientId: clientId
-                          tenantId: tenantId
-                          customerAdminGroupId: customerAdminGroupId
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.ContainerService/openShiftManagedClusters/{{
-          open_shift_managed_cluster_name }}
-        Method: get
-        Name: Get OpenShift Managed Cluster
-        Filename: containerservice_openshiftmanagedclusters_get_2
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-          - name: open_shift_managed_cluster_name
-            value: myOpenShiftManagedCluster
-            swaggerName: resourceName
-        References: []
-        OperationId: '393'
-        MethodId: '436'
+        OperationName: OpenShiftManagedClusters
+        MethodName: Delete
 ServiceName: OpenShift
 MgmtClientName: OpenShift
 CliName: aro
 Namespace: azure.mgmt.containerservice
-Info:
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceName'
