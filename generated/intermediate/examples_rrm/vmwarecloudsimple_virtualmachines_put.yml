@@ -24,7 +24,7 @@
       azure_rm_vmwarecloudsimplevirtualmachine:
         resource_group: '{{resource_group}}'
         referer: 'https://management.azure.com/'
-        name: '{{virtual_machine_name}}'
+        virtual_machine_name: '{{virtual_machine_name}}'
         virtual_machine_request:
           location: westus2
           properties:
@@ -40,18 +40,16 @@
             numberOfCores: '2'
             amountOfRam: '4096'
             disks:
-              - controllerId: '1000'
-                independenceMode: persistent
-                totalSize: '10485760'
-                virtualDiskId: '2000'
+              - controller_id: '1000'
+                independence_mode: persistent
+                total_size: '10485760'
+                virtual_disk_id: '2000'
             resourcePool:
               id: >-
                 /subscriptions/{{ subscription_id
                 }}/providers/Microsoft.VMwareCloudSimple/locations/{{ location_name
                 }}/privateClouds/{{ private_cloud_name }}/resourcePools/{{
                 resource_pool_name }}
-            guestOS: Other (32-bit)
-            guestOSType: other
             nics:
               - network:
                   id: >-
@@ -59,7 +57,7 @@
                     }}/providers/Microsoft.VMwareCloudSimple/locations/{{
                     location_name }}/privateClouds/{{ private_cloud_name
                     }}/virtualNetworks/{{ virtual_network_name }}
-                nicType: E1000
-                powerOnBoot: true
-                virtualNicId: '4000'
+                nic_type: E1000
+                power_on_boot: true
+                virtual_nic_id: '4000'
     

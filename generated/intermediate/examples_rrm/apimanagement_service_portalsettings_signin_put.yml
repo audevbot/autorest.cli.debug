@@ -14,6 +14,6 @@
     - name: ApiManagementPortalSettingsUpdateSignIn
       azure_rm_apimanagementsigninsetting:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         enabled: true
     

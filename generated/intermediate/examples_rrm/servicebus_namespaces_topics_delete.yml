@@ -13,6 +13,6 @@
       azure_rm_servicebustopic:
         resource_group: '{{resource_group}}'
         namespace_name: '{{namespace_name}}'
-        name: '{{topic_name}}'
+        topic_name: '{{topic_name}}'
         state: absent
     

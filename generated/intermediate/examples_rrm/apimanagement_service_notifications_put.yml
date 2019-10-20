@@ -16,5 +16,5 @@
       azure_rm_apimanagementnotification:
         resource_group: '{{resource_group}}'
         service_name: '{{service_name}}'
-        name: '{{notification_name}}'
+        notification_name: '{{notification_name}}'
     

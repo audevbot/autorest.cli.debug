@@ -11,6 +11,6 @@
     - name: CosmosDBDatabaseAccountDelete
       azure_rm_cosmosdbdatabaseaccount:
         resource_group: '{{resource_group}}'
-        name: '{{database_account_name}}'
+        account_name: '{{database_account_name}}'
         state: absent
     

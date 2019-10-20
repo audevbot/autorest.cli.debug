@@ -16,7 +16,7 @@
       azure_rm_batchapplication:
         resource_group: '{{resource_group}}'
         account_name: '{{batch_account_name}}'
-        name: '{{application_name}}'
+        application_name: '{{application_name}}'
         display_name: myAppName
         allow_updates: true
         default_version: '2'

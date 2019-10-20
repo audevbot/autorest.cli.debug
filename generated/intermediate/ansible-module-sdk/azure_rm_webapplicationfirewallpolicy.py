@@ -26,9 +26,10 @@ options:
       - The name of the resource group.
     required: true
     type: str
-  name:
+  policy_name:
     description:
-      - Resource name.
+      - The name of the policy.
+    required: true
     type: str
   id:
     description:
@@ -740,6 +741,10 @@ options:
         Gets a unique read-only string that changes whenever the resource is
         updated.
     type: str
+  name:
+    description:
+      - Resource name.
+    type: str
   type:
     description:
       - Resource type.
@@ -766,40 +771,19 @@ EXAMPLES = '''
 - name: Creates or updates a WAF policy within a resource group
   azure_rm_webapplicationfirewallpolicy:
     resource_group: myResourceGroup
-    name: myApplicationGatewayWebApplicationFirewallPolicy
+    policy_name: myApplicationGatewayWebApplicationFirewallPolicy
     location: WestUs
     custom_rules:
       - name: Rule1
         priority: '1'
-        rule_type: MatchRule
-        match_conditions:
-          - match_variables:
-              - variable_name: RemoteAddr
-            operator: IPMatch
-            match_values:
-              - 192.168.1.0/24
-              - 10.0.0.0/24
         action: Block
       - name: Rule2
         priority: '2'
-        rule_type: MatchRule
-        match_conditions:
-          - match_variables:
-              - variable_name: RemoteAddr
-            operator: IPMatch
-            match_values:
-              - 192.168.1.0/24
-          - match_variables:
-              - variable_name: RequestHeaders
-                selector: UserAgent
-            operator: Contains
-            match_values:
-              - Windows
         action: Block
 - name: Deletes a WAF policy within a resource group
   azure_rm_webapplicationfirewallpolicy:
     resource_group: myResourceGroup
-    name: myApplicationGatewayWebApplicationFirewallPolicy
+    policy_name: myApplicationGatewayWebApplicationFirewallPolicy
     state: absent
 
 '''
@@ -1941,10 +1925,9 @@ class AzureRMWebApplicationFirewallPolicies(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            name=dict(
+            policy_name=dict(
                 type='str',
                 updatable=False,
-                disposition='policy_name',
                 required=true
             ),
             id=dict(
@@ -2069,7 +2052,7 @@ class AzureRMWebApplicationFirewallPolicies(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.policy_name = None
         self.name = None
         self.type = None
         self.body = {}
@@ -2145,7 +2128,7 @@ class AzureRMWebApplicationFirewallPolicies(AzureRMModuleBaseExt):
     def create_update_resource(self):
         try:
             response = self.mgmt_client.web_application_firewall_policies.create_or_update(resource_group_name=self.resource_group,
-                                                                                           policy_name=self.name,
+                                                                                           policy_name=self.policy_name,
                                                                                            parameters=self.body)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
@@ -2158,7 +2141,7 @@ class AzureRMWebApplicationFirewallPolicies(AzureRMModuleBaseExt):
         # self.log('Deleting the WebApplicationFirewallPolicy instance {0}'.format(self.))
         try:
             response = self.mgmt_client.web_application_firewall_policies.delete(resource_group_name=self.resource_group,
-                                                                                 policy_name=self.name)
+                                                                                 policy_name=self.policy_name)
         except CloudError as e:
             self.log('Error attempting to delete the WebApplicationFirewallPolicy instance.')
             self.fail('Error deleting the WebApplicationFirewallPolicy instance: {0}'.format(str(e)))
@@ -2170,7 +2153,7 @@ class AzureRMWebApplicationFirewallPolicies(AzureRMModuleBaseExt):
         found = False
         try:
             response = self.mgmt_client.web_application_firewall_policies.get(resource_group_name=self.resource_group,
-                                                                              policy_name=self.name)
+                                                                              policy_name=self.policy_name)
         except CloudError as e:
             return False
         return response.as_dict()

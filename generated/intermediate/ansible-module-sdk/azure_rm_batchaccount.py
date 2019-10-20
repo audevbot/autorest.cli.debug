@@ -26,7 +26,7 @@ options:
       - The name of the resource group that contains the Batch account.
     required: true
     type: str
-  name:
+  account_name:
     description:
       - >-
         A name for the Batch account which must be unique within the region.
@@ -105,7 +105,7 @@ EXAMPLES = '''
 - name: BatchAccountCreate_Default
   azure_rm_batchaccount:
     resource_group: myResourceGroup
-    name: myBatchAccount
+    account_name: myBatchAccount
     location: japaneast
     auto_storage_account_id: >-
       /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
@@ -113,7 +113,7 @@ EXAMPLES = '''
 - name: BatchAccountCreate_BYOS
   azure_rm_batchaccount:
     resource_group: myResourceGroup
-    name: myBatchAccount
+    account_name: myBatchAccount
     location: japaneast
     auto_storage_account_id: >-
       /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
@@ -127,14 +127,14 @@ EXAMPLES = '''
 - name: BatchAccountUpdate
   azure_rm_batchaccount:
     resource_group: myResourceGroup
-    name: myBatchAccount
+    account_name: myBatchAccount
     auto_storage_account_id: >-
       /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
       }}/providers/Microsoft.Storage/storageAccounts/{{ storage_account_name }}
 - name: BatchAccountDelete
   azure_rm_batchaccount:
     resource_group: myResourceGroup
-    name: myBatchAccount
+    account_name: myBatchAccount
     state: absent
 
 '''
@@ -296,10 +296,9 @@ class AzureRMBatchAccount(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            name=dict(
+            account_name=dict(
                 type='str',
                 updatable=False,
-                disposition='account_name',
                 required=true
             ),
             location=dict(
@@ -347,7 +346,7 @@ class AzureRMBatchAccount(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.account_name = None
         self.id = None
         self.body = {}
 
@@ -422,11 +421,11 @@ class AzureRMBatchAccount(AzureRMModuleBaseExt):
         try:
             if self.to_do == Actions.Create:
                 response = self.mgmt_client.batch_account.create(resource_group_name=self.resource_group,
-                                                                 account_name=self.name,
+                                                                 account_name=self.account_name,
                                                                  parameters=self.body)
             else:
                 response = self.mgmt_client.batch_account.update(resource_group_name=self.resource_group,
-                                                                 account_name=self.name,
+                                                                 account_name=self.account_name,
                                                                  parameters=self.body)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
@@ -439,7 +438,7 @@ class AzureRMBatchAccount(AzureRMModuleBaseExt):
         # self.log('Deleting the BatchAccount instance {0}'.format(self.))
         try:
             response = self.mgmt_client.batch_account.delete(resource_group_name=self.resource_group,
-                                                             account_name=self.name)
+                                                             account_name=self.account_name)
         except CloudError as e:
             self.log('Error attempting to delete the BatchAccount instance.')
             self.fail('Error deleting the BatchAccount instance: {0}'.format(str(e)))
@@ -451,7 +450,7 @@ class AzureRMBatchAccount(AzureRMModuleBaseExt):
         found = False
         try:
             response = self.mgmt_client.batch_account.get(resource_group_name=self.resource_group,
-                                                          account_name=self.name)
+                                                          account_name=self.account_name)
         except CloudError as e:
             return False
         return response.as_dict()

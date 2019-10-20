@@ -14,7 +14,7 @@
     - name: ApiManagementPortalSettingsUpdateSignUp
       azure_rm_apimanagementsignupsetting:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        service_name: '{{service_name}}'
         enabled: true
         terms_of_service:
           text: Terms of service text.

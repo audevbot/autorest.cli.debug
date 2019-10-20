@@ -26,9 +26,10 @@ options:
       - The name of the resource group.
     required: true
     type: str
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
     type: str
   enabled:
     description:
@@ -55,6 +56,10 @@ options:
     description:
       - Resource ID.
     type: str
+  name:
+    description:
+      - Resource name.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
@@ -80,7 +85,7 @@ EXAMPLES = '''
 - name: ApiManagementPortalSettingsUpdateSignUp
   azure_rm_apimanagementsignupsetting:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     enabled: true
     terms_of_service:
       text: Terms of service text.
@@ -89,7 +94,7 @@ EXAMPLES = '''
 - name: ApiManagementPortalSettingsUpdateSignUp
   azure_rm_apimanagementsignupsetting:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     enabled: true
     terms_of_service:
       text: Terms of service text.
@@ -186,10 +191,9 @@ class AzureRMSignUpSettings(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
-                disposition='service_name',
                 required=true
             ),
             enabled=dict(
@@ -219,7 +223,7 @@ class AzureRMSignUpSettings(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.id = None
         self.name = None
         self.type = None
@@ -293,7 +297,7 @@ class AzureRMSignUpSettings(AzureRMModuleBaseExt):
     def create_update_resource(self):
         try:
             response = self.mgmt_client.sign_up_settings.create_or_update(resource_group_name=self.resource_group,
-                                                                          service_name=self.name,
+                                                                          service_name=self.service_name,
                                                                           parameters=self.body)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
@@ -317,7 +321,7 @@ class AzureRMSignUpSettings(AzureRMModuleBaseExt):
         found = False
         try:
             response = self.mgmt_client.sign_up_settings.get(resource_group_name=self.resource_group,
-                                                             service_name=self.name)
+                                                             service_name=self.service_name)
         except CloudError as e:
             return False
         return response.as_dict()

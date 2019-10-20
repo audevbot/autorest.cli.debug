@@ -26,9 +26,13 @@ options:
       - The name of the resource group.
     required: true
     type: str
-  name:
+  snapshot_name:
     description:
-      - Resource name
+      - >-
+        The name of the snapshot that is being created. The name can't be
+        changed after the snapshot is created. Supported characters for the name
+        are a-z, A-Z, 0-9 and _. The max name length is 80 characters.
+    required: true
     type: str
   location:
     description:
@@ -185,6 +189,10 @@ options:
     description:
       - Resource Id
     type: str
+  name:
+    description:
+      - Resource name
+    type: str
   type:
     description:
       - Resource type
@@ -217,7 +225,7 @@ EXAMPLES = '''
     subscription.
   azure_rm_computesnapshot:
     resource_group: myResourceGroup
-    name: mySnapshot
+    snapshot_name: mySnapshot
     snapshot:
       name: mySnapshot2
       location: West US
@@ -229,7 +237,7 @@ EXAMPLES = '''
 - name: Create a snapshot by importing an unmanaged blob from the same subscription.
   azure_rm_computesnapshot:
     resource_group: myResourceGroup
-    name: mySnapshot
+    snapshot_name: mySnapshot
     snapshot:
       name: mySnapshot1
       location: West US
@@ -242,7 +250,7 @@ EXAMPLES = '''
     subscription.
   azure_rm_computesnapshot:
     resource_group: myResourceGroup
-    name: mySnapshot
+    snapshot_name: mySnapshot
     snapshot:
       name: mySnapshot1
       location: West US
@@ -520,10 +528,9 @@ class AzureRMSnapshots(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            name=dict(
+            snapshot_name=dict(
                 type='str',
                 updatable=False,
-                disposition='snapshot_name',
                 required=true
             ),
             location=dict(
@@ -648,7 +655,7 @@ class AzureRMSnapshots(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.snapshot_name = None
         self.id = None
         self.name = None
         self.type = None
@@ -727,7 +734,7 @@ class AzureRMSnapshots(AzureRMModuleBaseExt):
     def create_update_resource(self):
         try:
             response = self.mgmt_client.snapshots.create_or_update(resource_group_name=self.resource_group,
-                                                                   snapshot_name=self.name,
+                                                                   snapshot_name=self.snapshot_name,
                                                                    snapshot=self.snapshot)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
@@ -740,7 +747,7 @@ class AzureRMSnapshots(AzureRMModuleBaseExt):
         # self.log('Deleting the Snapshot instance {0}'.format(self.))
         try:
             response = self.mgmt_client.snapshots.delete(resource_group_name=self.resource_group,
-                                                         snapshot_name=self.name)
+                                                         snapshot_name=self.snapshot_name)
         except CloudError as e:
             self.log('Error attempting to delete the Snapshot instance.')
             self.fail('Error deleting the Snapshot instance: {0}'.format(str(e)))
@@ -752,7 +759,7 @@ class AzureRMSnapshots(AzureRMModuleBaseExt):
         found = False
         try:
             response = self.mgmt_client.snapshots.get(resource_group_name=self.resource_group,
-                                                      snapshot_name=self.name)
+                                                      snapshot_name=self.snapshot_name)
         except CloudError as e:
             return False
         return response.as_dict()

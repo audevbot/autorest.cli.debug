@@ -31,9 +31,10 @@ options:
       - The namespace name
     required: true
     type: str
-  name:
+  queue_name:
     description:
-      - Resource name
+      - The queue name.
+    required: true
     type: str
   lock_duration:
     description:
@@ -172,6 +173,10 @@ options:
     description:
       - Resource Id
     type: str
+  name:
+    description:
+      - Resource name
+    type: str
   type:
     description:
       - Resource type
@@ -196,13 +201,13 @@ EXAMPLES = '''
   azure_rm_servicebusqueue:
     resource_group: myResourceGroup
     namespace_name: my
-    name: myQueue
+    queue_name: myQueue
     enable_partitioning: true
 - name: QueueDelete
   azure_rm_servicebusqueue:
     resource_group: myResourceGroup
     namespace_name: my
-    name: myQueue
+    queue_name: myQueue
     state: absent
 
 '''
@@ -455,7 +460,7 @@ class AzureRMQueues(AzureRMModuleBaseExt):
                 disposition='namespaceName',
                 required=true
             ),
-            name=dict(
+            queue_name=dict(
                 type='str',
                 updatable=False,
                 disposition='queueName',
@@ -539,7 +544,7 @@ class AzureRMQueues(AzureRMModuleBaseExt):
 
         self.resource_group = None
         self.namespace_name = None
-        self.name = None
+        self.queue_name = None
         self.id = None
         self.name = None
         self.type = None

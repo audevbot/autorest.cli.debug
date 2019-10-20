@@ -16,6 +16,6 @@
       azure_rm_apimanagementemailtemplate:
         resource_group: '{{resource_group}}'
         service_name: '{{service_name}}'
-        name: '{{template_name}}'
+        template_name: '{{template_name}}'
         subject: Your request for $IssueName was successfully received.
     

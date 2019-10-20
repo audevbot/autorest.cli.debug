@@ -31,13 +31,18 @@ options:
       - The name of the API Management service.
     required: true
     type: str
-  name:
+  identity_provider_name:
     description:
-      - Resource name.
+      - Identity Provider Type identifier.
+    required: true
     type: str
   type:
     description:
       - Resource type for API Management resource.
+    type: str
+  signin_tenant:
+    description:
+      - The TenantId to use instead of Common when logging into Active Directory
     type: str
   allowed_tenants:
     description:
@@ -83,6 +88,10 @@ options:
     description:
       - Resource ID.
     type: str
+  name:
+    description:
+      - Resource name.
+    type: str
   state:
     description:
       - Assert the state of the IdentityProvider.
@@ -105,21 +114,21 @@ EXAMPLES = '''
   azure_rm_apimanagementidentityprovider:
     resource_group: myResourceGroup
     service_name: myService
-    name: myIdentityProvider
+    identity_provider_name: myIdentityProvider
     client_id: facebookid
     client_secret: facebookapplicationsecret
 - name: ApiManagementUpdateIdentityProvider
   azure_rm_apimanagementidentityprovider:
     resource_group: myResourceGroup
     service_name: myService
-    name: myIdentityProvider
+    identity_provider_name: myIdentityProvider
     client_id: updatedfacebookid
     client_secret: updatedfacebooksecret
 - name: ApiManagementDeleteIdentityProvider
   azure_rm_apimanagementidentityprovider:
     resource_group: myResourceGroup
     service_name: myService
-    name: myIdentityProvider
+    identity_provider_name: myIdentityProvider
     state: absent
 
 '''
@@ -153,6 +162,14 @@ properties:
     type:
       description:
         - Identity Provider Type identifier.
+      returned: always
+      type: str
+      sample: null
+    signin_tenant:
+      description:
+        - >-
+          The TenantId to use instead of Common when logging into Active
+          Directory
       returned: always
       type: str
       sample: null
@@ -247,7 +264,7 @@ class AzureRMIdentityProvider(AzureRMModuleBaseExt):
                 disposition='serviceName',
                 required=true
             ),
-            name=dict(
+            identity_provider_name=dict(
                 type='str',
                 updatable=False,
                 disposition='identityProviderName',
@@ -262,6 +279,10 @@ class AzureRMIdentityProvider(AzureRMModuleBaseExt):
                          'twitter',
                          'aad',
                          'aadB2C']
+            ),
+            signin_tenant=dict(
+                type='str',
+                disposition='/properties/signinTenant'
             ),
             allowed_tenants=dict(
                 type='list',
@@ -307,7 +328,7 @@ class AzureRMIdentityProvider(AzureRMModuleBaseExt):
 
         self.resource_group = None
         self.service_name = None
-        self.name = None
+        self.identity_provider_name = None
         self.id = None
         self.name = None
         self.type = None

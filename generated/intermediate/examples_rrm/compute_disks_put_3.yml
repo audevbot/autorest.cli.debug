@@ -17,7 +17,7 @@
         subscription.
       azure_rm_computedisk:
         resource_group: '{{resource_group}}'
-        name: '{{disk_name}}'
+        disk_name: '{{disk_name}}'
         disk:
           name: myDisk
           location: West US

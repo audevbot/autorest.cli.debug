@@ -26,9 +26,10 @@ options:
       - The name of the resource group.
     required: true
     type: str
-  name:
+  resource_name:
     description:
-      - Resource name
+      - The name of the OpenShift managed cluster resource.
+    required: true
     type: str
   location:
     description:
@@ -208,6 +209,10 @@ options:
     description:
       - Resource Id
     type: str
+  name:
+    description:
+      - Resource name
+    type: str
   type:
     description:
       - Resource type
@@ -234,7 +239,7 @@ EXAMPLES = '''
 - name: Create/Update OpenShift Managed Cluster
   azure_rm_openshiftmanagedcluster:
     resource_group: myResourceGroup
-    name: myOpenShiftManagedCluster
+    resource_name: myOpenShiftManagedCluster
     location: location1
     tags:
       tier: production
@@ -253,29 +258,23 @@ EXAMPLES = '''
     agent_pool_profiles:
       - name: infra
         count: '2'
-        vm_size: Standard_D4s_v3
-        subnet_cidr: 10.0.0.0/24
-        os_type: Linux
         role: infra
       - name: compute
         count: '4'
-        vm_size: Standard_D4s_v3
-        subnet_cidr: 10.0.0.0/24
-        os_type: Linux
         role: compute
     auth_profile:
       identity_providers:
         - name: Azure AD
           provider:
             kind: AADIdentityProvider
-            clientId: clientId
+            client_id: clientId
             secret: secret
-            tenantId: tenantId
-            customerAdminGroupId: customerAdminGroupId
+            tenant_id: tenantId
+            customer_admin_group_id: customerAdminGroupId
 - name: Delete OpenShift Managed Cluster
   azure_rm_openshiftmanagedcluster:
     resource_group: myResourceGroup
-    name: myOpenShiftManagedCluster
+    resource_name: myOpenShiftManagedCluster
     state: absent
 
 '''
@@ -582,7 +581,7 @@ class AzureRMOpenShiftManagedClusters(AzureRMModuleBaseExt):
                 disposition='resourceGroupName',
                 required=true
             ),
-            name=dict(
+            resource_name=dict(
                 type='str',
                 updatable=False,
                 disposition='resourceName',
@@ -799,7 +798,7 @@ class AzureRMOpenShiftManagedClusters(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.resource_name = None
         self.id = None
         self.name = None
         self.type = None

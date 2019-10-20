@@ -29,9 +29,9 @@ objects:
             python_variable_name: resource_group
           'serviceName': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             id_portion: service
-            go_variable_name: name
+            go_variable_name: serviceName
             python_parameter_name: service_name
-            python_variable_name: name
+            python_variable_name: service_name
           '/': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             go_variable_name: parameters
             go_type_name: PortalSigninSettings
@@ -39,7 +39,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: PortalSigninSettingProperties
             go_type_name: PortalSigninSettingProperties
           '/enabled': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [python]
@@ -58,9 +58,9 @@ objects:
             python_variable_name: resource_group
           'serviceName': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             id_portion: service
-            go_variable_name: name
+            go_variable_name: serviceName
             python_parameter_name: service_name
-            python_variable_name: name
+            python_variable_name: service_name
           '/': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             go_variable_name: parameters
             go_type_name: PortalSigninSettings
@@ -68,7 +68,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: PortalSigninSettingProperties
             go_type_name: PortalSigninSettingProperties
           '/enabled': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [python]
@@ -87,13 +87,13 @@ objects:
             python_variable_name: resource_group
           'serviceName': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             id_portion: service
-            go_variable_name: name
+            go_variable_name: serviceName
             python_parameter_name: service_name
-            python_variable_name: name
+            python_variable_name: service_name
         response:
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: PortalSigninSettingProperties
             go_type_name: PortalSigninSettingProperties
           '/properties/enabled': !ruby/object:Api::Azure::SDKTypeDefinition::BooleanObject
             applicable_to: [go]
@@ -122,12 +122,12 @@ objects:
         sample_value: myResourceGroup
         azure_sdk_references: ['resourceGroupName']
       - !ruby/object:Api::Type::String
-        name: 'name'
+        name: 'serviceName'
         description: 'The name of the API Management service.'
         required: true
         input: true
         sample_value: 'myService'
-        azure_sdk_references: ['serviceName', '/name']
+        azure_sdk_references: ['serviceName']
       - !ruby/object:Api::Type::Boolean
         name: 'enabled'
         description: 'Redirect Anonymous users to the Sign-In page.'
@@ -138,18 +138,15 @@ objects:
       - !ruby/object:Api::Type::String
         name: 'id'
         description: 'Resource ID.'
-        input: true
         output: true
         azure_sdk_references: ['/id']
       - !ruby/object:Api::Type::String
         name: 'name'
         description: 'Resource name.'
-        input: true
         output: true
         azure_sdk_references: ['/name']
       - !ruby/object:Api::Type::String
         name: 'type'
         description: 'Resource type for API Management resource.'
-        input: true
         output: true
         azure_sdk_references: ['/type']

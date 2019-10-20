@@ -16,7 +16,7 @@
       azure_rm_computegalleryapplication:
         resource_group: '{{resource_group}}'
         gallery_name: '{{gallery_name}}'
-        name: '{{application_name}}'
+        gallery_application_name: '{{application_name}}'
         gallery_application:
           location: West US
           properties:

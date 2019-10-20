@@ -26,9 +26,13 @@ options:
       - The name of the resource group.
     required: true
     type: str
-  name:
+  gallery_name:
     description:
-      - Resource name
+      - >-
+        The name of the Shared Image Gallery. The allowed characters are
+        alphabets and numbers with dots and periods allowed in the middle. The
+        maximum length is 80 characters.
+    required: true
     type: str
   location:
     description:
@@ -60,6 +64,10 @@ options:
     description:
       - Resource Id
     type: str
+  name:
+    description:
+      - Resource name
+    type: str
   type:
     description:
       - Resource type
@@ -86,7 +94,7 @@ EXAMPLES = '''
 - name: Create or update a simple gallery.
   azure.rm.computegallery:
     resource_group: myResourceGroup
-    name: myGallery
+    gallery_name: myGallery
     gallery:
       location: West US
       properties:
@@ -94,7 +102,7 @@ EXAMPLES = '''
 - name: Delete a gallery.
   azure.rm.computegallery:
     resource_group: myResourceGroup
-    name: myGallery
+    gallery_name: myGallery
     state: absent
 
 '''
@@ -197,7 +205,7 @@ class AzureRMGalleries(AzureRMModuleBaseExt):
                 disposition='resourceGroupName',
                 required=true
             ),
-            name=dict(
+            gallery_name=dict(
                 type='str',
                 updatable=False,
                 disposition='galleryName',
@@ -227,7 +235,7 @@ class AzureRMGalleries(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.gallery_name = None
         self.id = None
         self.name = None
         self.type = None

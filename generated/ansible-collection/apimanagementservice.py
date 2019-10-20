@@ -26,9 +26,10 @@ options:
       - The name of the resource group.
     required: true
     type: str
-  name:
+  service_name:
     description:
-      - Resource name.
+      - The name of the API Management service.
+    required: true
     type: str
   notification_sender_email:
     description:
@@ -229,7 +230,7 @@ options:
         The default value is `true` for them.
     type: >-
       unknown[DictionaryType
-      {"$id":"2519","$type":"DictionaryType","valueType":{"$id":"2520","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2521","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2522","fixed":false},"deprecated":false}]
+      {"$id":"2513","$type":"DictionaryType","valueType":{"$id":"2514","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2515","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2516","fixed":false},"deprecated":false}]
   certificates:
     description:
       - >-
@@ -395,6 +396,10 @@ options:
     description:
       - Resource ID.
     type: str
+  name:
+    description:
+      - Resource name.
+    type: str
   type:
     description:
       - >-
@@ -427,7 +432,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateService
   azure.rm.apimanagementservice:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     tags:
       tag1: value1
       tag2: value2
@@ -440,27 +445,11 @@ EXAMPLES = '''
 - name: ApiManagementCreateMultiRegionServiceWithCustomHostname
   azure.rm.apimanagementservice:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     hostname_configurations:
       - type: Proxy
-        host_name: proxyhostname1.contoso.com
-        encoded_certificate: '************Base 64 Encoded Pfx Certificate************************'
-        certificate_password: >-
-          **************Password of the
-          Certificate************************************************
       - type: Proxy
-        host_name: proxyhostname2.contoso.com
-        encoded_certificate: '************Base 64 Encoded Pfx Certificate************************'
-        certificate_password: >-
-          **************Password of the
-          Certificate************************************************
-        negotiate_client_certificate: true
       - type: Portal
-        host_name: portalhostname1.contoso.com
-        encoded_certificate: '************Base 64 Encoded Pfx Certificate************************'
-        certificate_password: >-
-          **************Password of the
-          Certificate************************************************
     virtual_network_configuration:
       subnet_resource_id: >-
         /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
@@ -471,11 +460,6 @@ EXAMPLES = '''
         sku:
           name: Premium
           capacity: '1'
-        virtual_network_configuration:
-          subnet_resource_id: >-
-            /subscriptions/{{ subscription_id }}/resourceGroups/{{
-            resource_group }}/providers/Microsoft.Network/virtualNetworks/{{
-            virtual_network_name }}/subnets/{{ subnet_name }}
     virtual_network_type: External
     publisher_email: admin@live.com
     publisher_name: contoso
@@ -485,7 +469,7 @@ EXAMPLES = '''
 - name: ApiManagementCreateServiceHavingMsi
   azure.rm.apimanagementservice:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     tags:
       tag1: value1
       tag2: value2
@@ -499,15 +483,13 @@ EXAMPLES = '''
 - name: ApiManagementCreateServiceWithSystemCertificates
   azure.rm.apimanagementservice:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     tags:
       tag1: value1
       tag2: value2
       tag3: value3
     certificates:
-      - encoded_certificate: '*******Base64 encoded Certificate******************'
-        certificate_password: Password
-        store_name: CertificateAuthority
+      - {}
     publisher_email: apim@autorestsdk.com
     publisher_name: autorestsdk
     sku_name: Basic
@@ -516,19 +498,19 @@ EXAMPLES = '''
 - name: ApiManagementUpdateServiceDisableTls10
   azure.rm.apimanagementservice:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     custom_properties:
       Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10: 'false'
 - name: ApiManagementUpdateServicePublisherDetails
   azure.rm.apimanagementservice:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     publisher_email: foobar@live.com
     publisher_name: Contoso Vnext
 - name: ApiManagementServiceDeleteService
   azure.rm.apimanagementservice:
     resource_group: myResourceGroup
-    name: myService
+    service_name: myService
     state: absent
 
 '''
@@ -560,7 +542,7 @@ tags:
   returned: always
   type: >-
     unknown[DictionaryType
-    {"$id":"2630","$type":"DictionaryType","valueType":{"$id":"2631","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2632","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2633","fixed":false},"deprecated":false}]
+    {"$id":"2624","$type":"DictionaryType","valueType":{"$id":"2625","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2626","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2627","fixed":false},"deprecated":false}]
   sample: null
 properties:
   description:
@@ -894,7 +876,7 @@ properties:
       returned: always
       type: >-
         unknown[DictionaryType
-        {"$id":"2519","$type":"DictionaryType","valueType":{"$id":"2520","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2521","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2522","fixed":false},"deprecated":false}]
+        {"$id":"2513","$type":"DictionaryType","valueType":{"$id":"2514","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2515","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2516","fixed":false},"deprecated":false}]
       sample: null
     certificates:
       description:
@@ -1075,7 +1057,7 @@ class AzureRMApiManagementService(AzureRMModuleBaseExt):
                 disposition='resourceGroupName',
                 required=true
             ),
-            name=dict(
+            service_name=dict(
                 type='str',
                 updatable=False,
                 disposition='serviceName',
@@ -1188,19 +1170,15 @@ class AzureRMApiManagementService(AzureRMModuleBaseExt):
                         disposition='virtualNetworkConfiguration',
                         options=dict(
                             subnet_resource_id=dict(
-                                type='raw',
-                                disposition='subnetResourceId',
-                                pattern=('//subscriptions/{{ subscription_id }}'
-                                         '/resourceGroups/{{ resource_group }}/providers'
-                                         '/Microsoft.Network/virtualNetworks'
-                                         '/{{ virtual_network_name }}/subnets/{{ name }}')
+                                type='str',
+                                disposition='subnetResourceId'
                             )
                         )
                     )
                 )
             ),
             custom_properties=dict(
-                type='unknown[DictionaryType {"$id":"2519","$type":"DictionaryType","valueType":{"$id":"2520","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2521","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2522","fixed":false},"deprecated":false}]',
+                type='unknown[DictionaryType {"$id":"2513","$type":"DictionaryType","valueType":{"$id":"2514","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"2515","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"2516","fixed":false},"deprecated":false}]',
                 disposition='/properties/customProperties'
             ),
             certificates=dict(
@@ -1300,7 +1278,7 @@ class AzureRMApiManagementService(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.service_name = None
         self.id = None
         self.name = None
         self.type = None

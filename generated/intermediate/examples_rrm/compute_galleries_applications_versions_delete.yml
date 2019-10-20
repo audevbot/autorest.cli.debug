@@ -15,6 +15,6 @@
         resource_group: '{{resource_group}}'
         gallery_name: '{{gallery_name}}'
         gallery_application_name: '{{application_name}}'
-        name: '{{version_name}}'
+        gallery_application_version_name: '{{version_name}}'
         state: absent
     

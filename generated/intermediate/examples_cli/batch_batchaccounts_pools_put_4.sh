@@ -3,7 +3,7 @@ RESOURCE_GROUP="myresourcegroup"
 BATCH_ACCOUNT_NAME="mybatchaccount"
 POOL_NAME="mypool"
 
-az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.Batch/batchAccounts/$BATCH_ACCOUNT_NAME/pools/$POOL_NAME --api-version 2018-12-01 --is-full-object --properties '
+az rest --method put --uri /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.Batch/batchAccounts/$BATCH_ACCOUNT_NAME/pools/$POOL_NAME?api-version=2018-12-01 --body '
 {
   "properties": {
     "vmSize": "STANDARD_D4",
@@ -24,14 +24,14 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
           {
             "lun": "0",
             "caching": "ReadWrite",
-            "diskSizeGB": "30",
-            "storageAccountType": "Premium_LRS"
+            "disk_size_gb": "30",
+            "storage_account_type": "Premium_LRS"
           },
           {
             "lun": "1",
             "caching": "None",
-            "diskSizeGB": "200",
-            "storageAccountType": "Standard_LRS"
+            "disk_size_gb": "200",
+            "storage_account_type": "Standard_LRS"
           }
         ]
       }
@@ -42,18 +42,18 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
           {
             "name": "testnat",
             "protocol": "TCP",
-            "backendPort": "12001",
-            "frontendPortRangeStart": "15000",
-            "frontendPortRangeEnd": "15100",
-            "networkSecurityGroupRules": [
+            "backend_port": "12001",
+            "frontend_port_range_start": "15000",
+            "frontend_port_range_end": "15100",
+            "network_security_group_rules": [
               {
                 "access": "Allow",
-                "sourceAddressPrefix": "192.100.12.45",
+                "source_address_prefix": "192.100.12.45",
                 "priority": "150"
               },
               {
                 "access": "Deny",
-                "sourceAddressPrefix": "*",
+                "source_address_prefix": "*",
                 "priority": "3500"
               }
             ]

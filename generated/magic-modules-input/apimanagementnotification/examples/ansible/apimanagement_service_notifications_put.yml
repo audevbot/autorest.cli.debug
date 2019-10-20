@@ -5,5 +5,5 @@ task: !ruby/object:Provider::Ansible::Task
   code:
     resource_group: myResourceGroup
     service_name: myService
-    name: myNotification
+    notification_name: myNotification
   

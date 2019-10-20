@@ -36,9 +36,10 @@ options:
       - The topic name.
     required: true
     type: str
-  name:
+  subscription_name:
     description:
-      - Resource name
+      - The subscription name.
+    required: true
     type: str
   lock_duration:
     description:
@@ -149,6 +150,10 @@ options:
     description:
       - Resource Id
     type: str
+  name:
+    description:
+      - Resource name
+    type: str
   type:
     description:
       - Resource type
@@ -176,14 +181,14 @@ EXAMPLES = '''
     resource_group: myResourceGroup
     namespace_name: my
     topic_name: myTopic
-    name: sdk-Subscriptions-2178
+    subscription_name: sdk-Subscriptions-2178
     enable_batched_operations: true
 - name: SubscriptionDelete
   azure.rm.servicebussubscription:
     resource_group: myResourceGroup
     namespace_name: my
     topic_name: myTopic
-    name: sdk-Subscriptions-3670
+    subscription_name: sdk-Subscriptions-3670
     state: absent
 
 '''
@@ -406,7 +411,7 @@ class AzureRMSubscriptions(AzureRMModuleBaseExt):
                 disposition='topicName',
                 required=true
             ),
-            name=dict(
+            subscription_name=dict(
                 type='str',
                 updatable=False,
                 disposition='subscriptionName',
@@ -479,7 +484,7 @@ class AzureRMSubscriptions(AzureRMModuleBaseExt):
         self.resource_group = None
         self.namespace_name = None
         self.topic_name = None
-        self.name = None
+        self.subscription_name = None
         self.id = None
         self.name = None
         self.type = None

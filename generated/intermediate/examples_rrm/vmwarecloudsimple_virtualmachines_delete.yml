@@ -12,6 +12,6 @@
       azure_rm_vmwarecloudsimplevirtualmachine:
         resource_group: '{{resource_group}}'
         referer: 'https://management.azure.com/'
-        name: '{{virtual_machine_name}}'
+        virtual_machine_name: '{{virtual_machine_name}}'
         state: absent
     

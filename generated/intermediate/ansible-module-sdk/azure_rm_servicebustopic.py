@@ -31,9 +31,10 @@ options:
       - The namespace name
     required: true
     type: str
-  name:
+  topic_name:
     description:
-      - Resource name
+      - The topic name.
+    required: true
     type: str
   default_message_time_to_live:
     description:
@@ -143,6 +144,10 @@ options:
     description:
       - Resource Id
     type: str
+  name:
+    description:
+      - Resource name
+    type: str
   type:
     description:
       - Resource type
@@ -167,13 +172,13 @@ EXAMPLES = '''
   azure_rm_servicebustopic:
     resource_group: myResourceGroup
     namespace_name: my
-    name: myTopic
+    topic_name: myTopic
     enable_express: true
 - name: TopicDelete
   azure_rm_servicebustopic:
     resource_group: myResourceGroup
     namespace_name: my
-    name: myTopic
+    topic_name: myTopic
     state: absent
 
 '''
@@ -388,10 +393,9 @@ class AzureRMTopics(AzureRMModuleBaseExt):
                 updatable=False,
                 required=true
             ),
-            name=dict(
+            topic_name=dict(
                 type='str',
                 updatable=False,
-                disposition='topic_name',
                 required=true
             ),
             default_message_time_to_live=dict(
@@ -452,7 +456,7 @@ class AzureRMTopics(AzureRMModuleBaseExt):
 
         self.resource_group = None
         self.namespace_name = None
-        self.name = None
+        self.topic_name = None
         self.id = None
         self.name = None
         self.type = None
@@ -527,7 +531,7 @@ class AzureRMTopics(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.topics.create_or_update(resource_group_name=self.resource_group,
                                                                 namespace_name=self.namespace_name,
-                                                                topic_name=self.name,
+                                                                topic_name=self.topic_name,
                                                                 parameters=self.body)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
@@ -541,7 +545,7 @@ class AzureRMTopics(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.topics.delete(resource_group_name=self.resource_group,
                                                       namespace_name=self.namespace_name,
-                                                      topic_name=self.name)
+                                                      topic_name=self.topic_name)
         except CloudError as e:
             self.log('Error attempting to delete the Topic instance.')
             self.fail('Error deleting the Topic instance: {0}'.format(str(e)))
@@ -554,7 +558,7 @@ class AzureRMTopics(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.topics.get(resource_group_name=self.resource_group,
                                                    namespace_name=self.namespace_name,
-                                                   topic_name=self.name)
+                                                   topic_name=self.topic_name)
         except CloudError as e:
             return False
         return response.as_dict()

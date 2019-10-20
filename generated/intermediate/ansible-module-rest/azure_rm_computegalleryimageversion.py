@@ -40,9 +40,14 @@ options:
         to be created.
     required: true
     type: str
-  name:
+  gallery_image_version_name:
     description:
-      - Resource name
+      - >-
+        The name of the gallery Image Version to be created. Needs to follow
+        semantic version name pattern: The allowed characters are digit and
+        period. Digits must be within the range of a 32-bit integer. Format:
+        <MajorVersion>.<MinorVersion>.<Patch>
+    required: true
     type: str
   location:
     description:
@@ -210,6 +215,10 @@ options:
     description:
       - Resource Id
     type: str
+  name:
+    description:
+      - Resource name
+    type: str
   type:
     description:
       - Resource type
@@ -238,17 +247,17 @@ EXAMPLES = '''
     resource_group: myResourceGroup
     gallery_name: myGallery
     gallery_image_name: myImage
-    name: myVersion
+    gallery_image_version_name: myVersion
     gallery_image_version:
       location: West US
       properties:
         publishingProfile:
           targetRegions:
             - name: West US
-              regionalReplicaCount: '1'
+              regional_replica_count: '1'
             - name: East US
-              regionalReplicaCount: '2'
-              storageAccountType: Standard_ZRS
+              regional_replica_count: '2'
+              storage_account_type: Standard_ZRS
           source:
             managedImage:
               id: >-
@@ -260,7 +269,7 @@ EXAMPLES = '''
     resource_group: myResourceGroup
     gallery_name: myGallery
     gallery_image_name: myImage
-    name: myVersion
+    gallery_image_version_name: myVersion
     state: absent
 
 '''
@@ -557,7 +566,7 @@ class AzureRMGalleryImageVersions(AzureRMModuleBaseExt):
                 disposition='galleryImageName',
                 required=true
             ),
-            name=dict(
+            gallery_image_version_name=dict(
                 type='str',
                 updatable=False,
                 disposition='galleryImageVersionName',
@@ -641,7 +650,7 @@ class AzureRMGalleryImageVersions(AzureRMModuleBaseExt):
         self.resource_group = None
         self.gallery_name = None
         self.gallery_image_name = None
-        self.name = None
+        self.gallery_image_version_name = None
         self.id = None
         self.name = None
         self.type = None

@@ -30,9 +30,9 @@ objects:
             python_variable_name: resource_group
           'accountName': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             id_portion: batchAccounts
-            go_variable_name: name
+            go_variable_name: accountName
             python_parameter_name: account_name
-            python_variable_name: name
+            python_variable_name: account_name
           '/': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             go_variable_name: parameters
             go_type_name: AccountCreateParameters
@@ -46,7 +46,7 @@ objects:
             python_field_name: tags
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: AccountCreateProperties
             go_type_name: AccountCreateProperties
           '/properties/autoStorage': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
@@ -95,9 +95,9 @@ objects:
             python_variable_name: resource_group
           'accountName': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             id_portion: batchAccounts
-            go_variable_name: name
+            go_variable_name: accountName
             python_parameter_name: account_name
-            python_variable_name: name
+            python_variable_name: account_name
           '/': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             go_variable_name: parameters
             go_type_name: AccountCreateParameters
@@ -111,7 +111,7 @@ objects:
             python_field_name: tags
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: AccountCreateProperties
             go_type_name: AccountCreateProperties
           '/properties/autoStorage': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
@@ -161,9 +161,9 @@ objects:
             python_variable_name: resource_group
           'accountName': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             id_portion: batchAccounts
-            go_variable_name: name
+            go_variable_name: accountName
             python_parameter_name: account_name
-            python_variable_name: name
+            python_variable_name: account_name
       read: !ruby/object:Api::Azure::SDKOperationDefinition
         go_func_name: Get
         python_func_name: get
@@ -175,9 +175,9 @@ objects:
             python_variable_name: resource_group
           'accountName': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             id_portion: batchAccounts
-            go_variable_name: name
+            go_variable_name: accountName
             python_parameter_name: account_name
-            python_variable_name: name
+            python_variable_name: account_name
         response:
           '/location': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             go_field_name: Location
@@ -187,7 +187,7 @@ objects:
             python_field_name: tags
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: AccountCreateProperties
             go_type_name: AccountCreateProperties
           '/properties/autoStorage': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
@@ -265,12 +265,12 @@ objects:
         sample_value: myResourceGroup
         azure_sdk_references: ['resourceGroupName']
       - !ruby/object:Api::Type::String
-        name: 'name'
+        name: 'accountName'
         description: 'A name for the Batch account which must be unique within the region. Batch account names must be between 3 and 24 characters in length and must use only numbers and lowercase letters. This name is used as part of the DNS name that is used to access the Batch service in the region in which the account is created. For example: http://accountname.region.batch.azure.com/.'
         required: true
         input: true
         sample_value: 'myBatchAccount'
-        azure_sdk_references: ['accountName', '/name']
+        azure_sdk_references: ['accountName']
       - !ruby/object:Api::Azure::Type::Location
         name: 'location'
         description: 'The region in which to create the account.'
@@ -295,12 +295,12 @@ objects:
         name: 'poolAllocationMode'
         description: 'The pool allocation mode also affects how clients may authenticate to the Batch Service API. If the mode is BatchService, clients may authenticate using access keys or Azure Active Directory. If the mode is UserSubscription, clients must use Azure Active Directory. The default is BatchService.'
         required: false
+        sample_value: UserSubscription
+        azure_sdk_references: ['/poolAllocationMode', '/properties/poolAllocationMode']
         values:
           - :BatchService
           - :UserSubscription
         default_value: :BatchService
-        sample_value: UserSubscription
-        azure_sdk_references: ['/poolAllocationMode', '/properties/poolAllocationMode']
       - !ruby/object:Api::Type::NestedObject
         name: 'keyVaultReference'
         description: 'A reference to the Azure key vault associated with the Batch account.'
@@ -334,6 +334,5 @@ objects:
       - !ruby/object:Api::Type::String
         name: 'id'
         description: 'The ID of the resource.'
-        input: true
         output: true
         azure_sdk_references: ['/id']
