@@ -11,6 +11,6 @@
     - name: BatchAccountDelete
       azure_rm_batchaccount:
         resource_group: '{{resource_group}}'
-        name: '{{batch_account_name}}'
+        account_name: '{{batch_account_name}}'
         state: absent
     

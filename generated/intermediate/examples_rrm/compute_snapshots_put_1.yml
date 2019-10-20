@@ -15,7 +15,7 @@
     - name: Create a snapshot by importing an unmanaged blob from the same subscription.
       azure_rm_computesnapshot:
         resource_group: '{{resource_group}}'
-        name: '{{snapshot_name}}'
+        snapshot_name: '{{snapshot_name}}'
         snapshot:
           name: mySnapshot1
           location: West US

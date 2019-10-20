@@ -13,6 +13,6 @@
       azure_rm_batchapplication:
         resource_group: '{{resource_group}}'
         account_name: '{{batch_account_name}}'
-        name: '{{application_name}}'
+        application_name: '{{application_name}}'
         state: absent
     

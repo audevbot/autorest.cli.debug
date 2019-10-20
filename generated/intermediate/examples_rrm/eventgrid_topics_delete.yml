@@ -11,6 +11,6 @@
     - name: Topics_Delete
       azure_rm_eventgridtopic:
         resource_group: '{{resource_group}}'
-        name: '{{topic_name}}'
+        topic_name: '{{topic_name}}'
         state: absent
     

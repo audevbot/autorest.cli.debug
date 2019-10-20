@@ -40,9 +40,14 @@ options:
         to be created.
     required: true
     type: str
-  name:
+  gallery_image_version_name:
     description:
-      - Resource name
+      - >-
+        The name of the gallery Image Version to be created. Needs to follow
+        semantic version name pattern: The allowed characters are digit and
+        period. Digits must be within the range of a 32-bit integer. Format:
+        <MajorVersion>.<MinorVersion>.<Patch>
+    required: true
     type: str
   location:
     description:
@@ -210,6 +215,10 @@ options:
     description:
       - Resource Id
     type: str
+  name:
+    description:
+      - Resource name
+    type: str
   type:
     description:
       - Resource type
@@ -238,17 +247,17 @@ EXAMPLES = '''
     resource_group: myResourceGroup
     gallery_name: myGallery
     gallery_image_name: myImage
-    name: myVersion
+    gallery_image_version_name: myVersion
     gallery_image_version:
       location: West US
       properties:
         publishingProfile:
           targetRegions:
             - name: West US
-              regionalReplicaCount: '1'
+              regional_replica_count: '1'
             - name: East US
-              regionalReplicaCount: '2'
-              storageAccountType: Standard_ZRS
+              regional_replica_count: '2'
+              storage_account_type: Standard_ZRS
           source:
             managedImage:
               id: >-
@@ -260,7 +269,7 @@ EXAMPLES = '''
     resource_group: myResourceGroup
     gallery_name: myGallery
     gallery_image_name: myImage
-    name: myVersion
+    gallery_image_version_name: myVersion
     state: absent
 
 '''
@@ -557,10 +566,9 @@ class AzureRMGalleryImageVersions(AzureRMModuleBaseExt):
                 updatable=False,
                 required=true
             ),
-            name=dict(
+            gallery_image_version_name=dict(
                 type='str',
                 updatable=False,
-                disposition='gallery_image_version_name',
                 required=true
             ),
             location=dict(
@@ -633,7 +641,7 @@ class AzureRMGalleryImageVersions(AzureRMModuleBaseExt):
         self.resource_group = None
         self.gallery_name = None
         self.gallery_image_name = None
-        self.name = None
+        self.gallery_image_version_name = None
         self.id = None
         self.name = None
         self.type = None
@@ -711,7 +719,7 @@ class AzureRMGalleryImageVersions(AzureRMModuleBaseExt):
             response = self.mgmt_client.gallery_image_versions.create_or_update(resource_group_name=self.resource_group,
                                                                                 gallery_name=self.gallery_name,
                                                                                 gallery_image_name=self.gallery_image_name,
-                                                                                gallery_image_version_name=self.name,
+                                                                                gallery_image_version_name=self.gallery_image_version_name,
                                                                                 gallery_image_version=self.galleryImageVersion)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
@@ -726,7 +734,7 @@ class AzureRMGalleryImageVersions(AzureRMModuleBaseExt):
             response = self.mgmt_client.gallery_image_versions.delete(resource_group_name=self.resource_group,
                                                                       gallery_name=self.gallery_name,
                                                                       gallery_image_name=self.gallery_image_name,
-                                                                      gallery_image_version_name=self.name)
+                                                                      gallery_image_version_name=self.gallery_image_version_name)
         except CloudError as e:
             self.log('Error attempting to delete the GalleryImageVersion instance.')
             self.fail('Error deleting the GalleryImageVersion instance: {0}'.format(str(e)))
@@ -740,7 +748,7 @@ class AzureRMGalleryImageVersions(AzureRMModuleBaseExt):
             response = self.mgmt_client.gallery_image_versions.get(resource_group_name=self.resource_group,
                                                                    gallery_name=self.gallery_name,
                                                                    gallery_image_name=self.gallery_image_name,
-                                                                   gallery_image_version_name=self.name)
+                                                                   gallery_image_version_name=self.gallery_image_version_name)
         except CloudError as e:
             return False
         return response.as_dict()

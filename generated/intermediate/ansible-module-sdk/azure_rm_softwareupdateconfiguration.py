@@ -31,9 +31,10 @@ options:
       - The name of the automation account.
     required: true
     type: str
-  name:
+  software_update_configuration_name:
     description:
-      - Resource name.
+      - The name of the software update configuration to be created.
+    required: true
     type: str
   client_request_id:
     description:
@@ -312,6 +313,10 @@ options:
     description:
       - 'LastModifiedBy property, which only appears in the response.'
     type: str
+  name:
+    description:
+      - Resource name.
+    type: str
   id:
     description:
       - Resource Id.
@@ -342,7 +347,7 @@ EXAMPLES = '''
   azure_rm_softwareupdateconfiguration:
     resource_group: myResourceGroup
     automation_account_name: myAutomationAccount
-    name: mySoftwareUpdateConfiguration
+    software_update_configuration_name: mySoftwareUpdateConfiguration
     update_configuration:
       operating_system: Windows
       windows:
@@ -371,22 +376,9 @@ EXAMPLES = '''
             locations:
               - Japan East
               - UK South
-            tag_settings:
-              tags:
-                - tag1:
-                    - tag1Value1
-                    - tag1Value2
-                    - tag1Value3
-                - tag2:
-                    - tag2Value1
-                    - tag2Value2
-                    - tag2Value3
-              filterOperator: All
         non_azure_queries:
-          - function_alias: SavedSearch1
-            workspace_id: WorkspaceId1
-          - function_alias: SavedSearch2
-            workspace_id: WorkspaceId2
+          - {}
+          - {}
     schedule_info:
       start_time: '2017-10-19T12:22:57+00:00'
       expiry_time: '2018-11-09T11:22:57+00:00'
@@ -406,7 +398,7 @@ EXAMPLES = '''
   azure_rm_softwareupdateconfiguration:
     resource_group: myResourceGroup
     automation_account_name: myAutomationAccount
-    name: mySoftwareUpdateConfiguration
+    software_update_configuration_name: mySoftwareUpdateConfiguration
     state: absent
 
 '''
@@ -861,10 +853,9 @@ class AzureRMSoftwareUpdateConfigurations(AzureRMModuleBaseExt):
                 updatable=False,
                 required=true
             ),
-            name=dict(
+            software_update_configuration_name=dict(
                 type='str',
                 updatable=False,
-                disposition='software_update_configuration_name',
                 required=true
             ),
             client_request_id=dict(
@@ -1102,7 +1093,7 @@ class AzureRMSoftwareUpdateConfigurations(AzureRMModuleBaseExt):
 
         self.resource_group = None
         self.automation_account_name = None
-        self.name = None
+        self.software_update_configuration_name = None
         self.client_request_id = None
         self.name = None
         self.id = None
@@ -1179,7 +1170,7 @@ class AzureRMSoftwareUpdateConfigurations(AzureRMModuleBaseExt):
             if self.to_do == Actions.Create:
                 response = self.mgmt_client.software_update_configurations.create(resource_group_name=self.resource_group,
                                                                                   automation_account_name=self.automation_account_name,
-                                                                                  software_update_configuration_name=self.name,
+                                                                                  software_update_configuration_name=self.software_update_configuration_name,
                                                                                   parameters=self.body)
             else:
                 response = self.mgmt_client.software_update_configurations.update()
@@ -1195,7 +1186,7 @@ class AzureRMSoftwareUpdateConfigurations(AzureRMModuleBaseExt):
         try:
             response = self.mgmt_client.software_update_configurations.delete(resource_group_name=self.resource_group,
                                                                               automation_account_name=self.automation_account_name,
-                                                                              software_update_configuration_name=self.name)
+                                                                              software_update_configuration_name=self.software_update_configuration_name)
         except CloudError as e:
             self.log('Error attempting to delete the SoftwareUpdateConfiguration instance.')
             self.fail('Error deleting the SoftwareUpdateConfiguration instance: {0}'.format(str(e)))

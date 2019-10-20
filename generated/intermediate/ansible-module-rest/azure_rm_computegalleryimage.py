@@ -33,9 +33,13 @@ options:
         be created.
     required: true
     type: str
-  name:
+  gallery_image_name:
     description:
-      - Resource name
+      - >-
+        The name of the gallery Image Definition to be created or updated. The
+        allowed characters are alphabets and numbers with dots, dashes, and
+        periods allowed in the middle. The maximum length is 80 characters.
+    required: true
     type: str
   location:
     description:
@@ -167,6 +171,10 @@ options:
     description:
       - Resource Id
     type: str
+  name:
+    description:
+      - Resource name
+    type: str
   type:
     description:
       - Resource type
@@ -194,7 +202,7 @@ EXAMPLES = '''
   azure_rm_computegalleryimage:
     resource_group: myResourceGroup
     gallery_name: myGallery
-    name: myImage
+    gallery_image_name: myImage
     gallery_image:
       location: West US
       properties:
@@ -208,7 +216,7 @@ EXAMPLES = '''
   azure_rm_computegalleryimage:
     resource_group: myResourceGroup
     gallery_name: myGallery
-    name: myImage
+    gallery_image_name: myImage
     state: absent
 
 '''
@@ -453,7 +461,7 @@ class AzureRMGalleryImages(AzureRMModuleBaseExt):
                 disposition='galleryName',
                 required=true
             ),
-            name=dict(
+            gallery_image_name=dict(
                 type='str',
                 updatable=False,
                 disposition='galleryImageName',
@@ -581,7 +589,7 @@ class AzureRMGalleryImages(AzureRMModuleBaseExt):
 
         self.resource_group = None
         self.gallery_name = None
-        self.name = None
+        self.gallery_image_name = None
         self.id = None
         self.name = None
         self.type = None

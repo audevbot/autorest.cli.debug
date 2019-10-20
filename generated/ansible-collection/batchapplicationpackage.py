@@ -36,7 +36,7 @@ options:
       - The name of the application. This must be unique within the account.
     required: true
     type: str
-  name:
+  version_name:
     description:
       - The version of the application.
     required: true
@@ -90,13 +90,13 @@ EXAMPLES = '''
     resource_group: myResourceGroup
     account_name: myBatchAccount
     application_name: myApplication
-    name: myVersion
+    version_name: myVersion
 - name: ApplicationPackageDelete
   azure.rm.batchapplicationpackage:
     resource_group: myResourceGroup
     account_name: myBatchAccount
     application_name: myApplication
-    name: myVersion
+    version_name: myVersion
     state: absent
 
 '''
@@ -206,7 +206,7 @@ class AzureRMApplicationPackage(AzureRMModuleBaseExt):
                 disposition='applicationName',
                 required=true
             ),
-            name=dict(
+            version_name=dict(
                 type='str',
                 updatable=False,
                 disposition='versionName',
@@ -222,7 +222,7 @@ class AzureRMApplicationPackage(AzureRMModuleBaseExt):
         self.resource_group = None
         self.account_name = None
         self.application_name = None
-        self.name = None
+        self.version_name = None
         self.id = None
         self.etag = None
 

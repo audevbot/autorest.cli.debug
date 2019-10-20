@@ -16,6 +16,6 @@
       azure_rm_servicebusqueue:
         resource_group: '{{resource_group}}'
         namespace_name: '{{namespace_name}}'
-        name: '{{queue_name}}'
+        queue_name: '{{queue_name}}'
         enable_partitioning: true
     

@@ -26,9 +26,10 @@ options:
       - Name of an Azure resource group.
     required: true
     type: str
-  name:
+  account_name:
     description:
-      - The name of the database account.
+      - Cosmos DB database account name.
+    required: true
     type: str
   location:
     description:
@@ -277,6 +278,10 @@ options:
     description:
       - The unique resource identifier of the database account.
     type: str
+  name:
+    description:
+      - The name of the database account.
+    type: str
   type:
     description:
       - The type of Azure resource.
@@ -303,19 +308,19 @@ EXAMPLES = '''
 - name: CosmosDBDatabaseAccountCreateMin
   azure_rm_cosmosdbdatabaseaccount:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
+    account_name: myDatabaseAccount
     create_update_parameters:
       location: westus
       properties:
         databaseAccountOfferType: Standard
         locations:
-          - failoverPriority: '0'
-            locationName: southcentralus
-            isZoneRedundant: false
+          - failover_priority: '0'
+            location_name: southcentralus
+            is_zone_redundant: false
 - name: CosmosDBDatabaseAccountCreateMax
   azure_rm_cosmosdbdatabaseaccount:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
+    account_name: myDatabaseAccount
     create_update_parameters:
       location: westus
       tags: {}
@@ -329,14 +334,14 @@ EXAMPLES = '''
               /subscriptions/{{ subscription_id }}/resourceGroups/{{
               resource_group }}/providers/Microsoft.Network/virtualNetworks/{{
               virtual_network_name }}/subnets/{{ subnet_name }}
-            ignoreMissingVNetServiceEndpoint: false
+            ignore_missing_vnet_service_endpoint: false
         locations:
-          - failoverPriority: '0'
-            locationName: southcentralus
-            isZoneRedundant: false
-          - failoverPriority: '1'
-            locationName: eastus
-            isZoneRedundant: false
+          - failover_priority: '0'
+            location_name: southcentralus
+            is_zone_redundant: false
+          - failover_priority: '1'
+            location_name: eastus
+            is_zone_redundant: false
         consistencyPolicy:
           defaultConsistencyLevel: BoundedStaleness
           maxIntervalInSeconds: '10'
@@ -344,7 +349,7 @@ EXAMPLES = '''
 - name: CosmosDBDatabaseAccountDelete
   azure_rm_cosmosdbdatabaseaccount:
     resource_group: myResourceGroup
-    name: myDatabaseAccount
+    account_name: myDatabaseAccount
     state: absent
 
 '''
@@ -715,10 +720,9 @@ class AzureRMDatabaseAccounts(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            name=dict(
+            account_name=dict(
                 type='str',
                 updatable=False,
-                disposition='account_name',
                 required=true
             ),
             location=dict(
@@ -830,7 +834,7 @@ class AzureRMDatabaseAccounts(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.account_name = None
         self.id = None
         self.name = None
         self.type = None
@@ -907,7 +911,7 @@ class AzureRMDatabaseAccounts(AzureRMModuleBaseExt):
     def create_update_resource(self):
         try:
             response = self.mgmt_client.database_accounts.create_or_update(resource_group_name=self.resource_group,
-                                                                           account_name=self.name,
+                                                                           account_name=self.account_name,
                                                                            create_update_parameters=self.createUpdateParameters)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
@@ -920,7 +924,7 @@ class AzureRMDatabaseAccounts(AzureRMModuleBaseExt):
         # self.log('Deleting the DatabaseAccount instance {0}'.format(self.))
         try:
             response = self.mgmt_client.database_accounts.delete(resource_group_name=self.resource_group,
-                                                                 account_name=self.name)
+                                                                 account_name=self.account_name)
         except CloudError as e:
             self.log('Error attempting to delete the DatabaseAccount instance.')
             self.fail('Error deleting the DatabaseAccount instance: {0}'.format(str(e)))
@@ -932,7 +936,7 @@ class AzureRMDatabaseAccounts(AzureRMModuleBaseExt):
         found = False
         try:
             response = self.mgmt_client.database_accounts.get(resource_group_name=self.resource_group,
-                                                              account_name=self.name)
+                                                              account_name=self.account_name)
         except CloudError as e:
             return False
         return response.as_dict()

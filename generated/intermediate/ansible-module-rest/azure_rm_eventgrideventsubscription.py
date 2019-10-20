@@ -37,9 +37,12 @@ options:
         for an EventGrid topic.
     required: true
     type: str
-  name:
+  event_subscription_name:
     description:
-      - Name of the resource
+      - >-
+        Name of the event subscription. Event subscription names must be between
+        3 and 64 characters in length and should use alphanumeric letters only.
+    required: true
     type: str
   destination:
     description:
@@ -115,6 +118,10 @@ options:
     description:
       - Fully qualified identifier of the resource
     type: str
+  name:
+    description:
+      - Name of the resource
+    type: str
   type:
     description:
       - Type of the resource
@@ -140,7 +147,7 @@ EXAMPLES = '''
 - name: EventSubscriptions_CreateOrUpdateForSubscription
   azure_rm_eventgrideventsubscription:
     scope: subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4
-    name: examplesubscription3
+    event_subscription_name: myEventSubscription
     event_subscription_info:
       properties:
         destination:
@@ -153,7 +160,7 @@ EXAMPLES = '''
   azure_rm_eventgrideventsubscription:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg
-    name: examplesubscription2
+    event_subscription_name: myEventSubscription
     event_subscription_info:
       properties:
         destination:
@@ -168,7 +175,7 @@ EXAMPLES = '''
   azure_rm_eventgrideventsubscription:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventHub/namespaces/examplenamespace1
-    name: examplesubscription10
+    event_subscription_name: myEventSubscription
     event_subscription_info:
       properties:
         destination:
@@ -183,7 +190,7 @@ EXAMPLES = '''
   azure_rm_eventgrideventsubscription:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1
-    name: examplesubscription1
+    event_subscription_name: myEventSubscription
     event_subscription_info:
       properties:
         destination:
@@ -207,7 +214,7 @@ EXAMPLES = '''
   azure_rm_eventgrideventsubscription:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1
-    name: examplesubscription1
+    event_subscription_name: myEventSubscription
     event_subscription_info:
       properties:
         destination:
@@ -233,7 +240,7 @@ EXAMPLES = '''
   azure_rm_eventgrideventsubscription:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1
-    name: examplesubscription1
+    event_subscription_name: myEventSubscription
     event_subscription_info:
       properties:
         destination:
@@ -259,7 +266,7 @@ EXAMPLES = '''
   azure_rm_eventgrideventsubscription:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1
-    name: examplesubscription1
+    event_subscription_name: myEventSubscription
     event_subscription_info:
       properties:
         destination:
@@ -285,44 +292,44 @@ EXAMPLES = '''
 - name: EventSubscriptions_UpdateForSubscription
   azure_rm_eventgrideventsubscription:
     scope: subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4
-    name: examplesubscription3
+    event_subscription_name: myEventSubscription
 - name: EventSubscriptions_UpdateForResourceGroup
   azure_rm_eventgrideventsubscription:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg
-    name: examplesubscription2
+    event_subscription_name: myEventSubscription
 - name: EventSubscriptions_UpdateForResource
   azure_rm_eventgrideventsubscription:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventHub/namespaces/examplenamespace1
-    name: examplesubscription1
+    event_subscription_name: myEventSubscription
 - name: EventSubscriptions_UpdateForCustomTopic
   azure_rm_eventgrideventsubscription:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic2
-    name: examplesubscription1
+    event_subscription_name: myEventSubscription
 - name: EventSubscriptions_DeleteForSubscription
   azure_rm_eventgrideventsubscription:
     scope: subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4
-    name: examplesubscription3
+    event_subscription_name: myEventSubscription
     state: absent
 - name: EventSubscriptions_DeleteForResourceGroup
   azure_rm_eventgrideventsubscription:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg
-    name: examplesubscription2
+    event_subscription_name: myEventSubscription
     state: absent
 - name: EventSubscriptions_DeleteForResource
   azure_rm_eventgrideventsubscription:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventHub/namespaces/examplenamespace1
-    name: examplesubscription10
+    event_subscription_name: myEventSubscription
     state: absent
 - name: EventSubscriptions_DeleteForCustomTopic
   azure_rm_eventgrideventsubscription:
     scope: >-
       subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1
-    name: examplesubscription1
+    event_subscription_name: myEventSubscription
     state: absent
 
 '''
@@ -478,7 +485,7 @@ class AzureRMEventSubscriptions(AzureRMModuleBaseExt):
                 updatable=False,
                 required=true
             ),
-            name=dict(
+            event_subscription_name=dict(
                 type='str',
                 updatable=False,
                 disposition='eventSubscriptionName',
@@ -540,7 +547,7 @@ class AzureRMEventSubscriptions(AzureRMModuleBaseExt):
         )
 
         self.scope = None
-        self.name = None
+        self.event_subscription_name = None
         self.id = None
         self.name = None
         self.type = None
@@ -578,12 +585,11 @@ class AzureRMEventSubscriptions(AzureRMModuleBaseExt):
                                                     base_url=self._cloud_environment.endpoints.resource_manager)
 
         self.url = ('/{scope}' +
-                    '/{{ {scope}_name }}' +
+                    '/providers' +
                     '/Microsoft.EventGrid' +
-                    '/{{ microsoft.event_grid_name }}' +
-                    '/{eventSubscriptionName}')
-        self.url = self.url.replace('{{ {scope}_name }}', self.{scope}_name)
-        self.url = self.url.replace('{{ microsoft.event_grid_name }}', self.name)
+                    '/eventSubscriptions' +
+                    '/{{ event_subscription_name }}')
+        self.url = self.url.replace('{{ event_subscription_name }}', self.name)
 
         old_response = self.get_resource()
 

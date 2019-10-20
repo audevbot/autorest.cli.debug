@@ -13,6 +13,6 @@
       azure_rm_computegalleryimage:
         resource_group: '{{resource_group}}'
         gallery_name: '{{gallery_name}}'
-        name: '{{image_name}}'
+        gallery_image_name: '{{image_name}}'
         state: absent
     

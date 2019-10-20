@@ -31,7 +31,7 @@ options:
       - The name of the Batch account.
     required: true
     type: str
-  name:
+  certificate_name:
     description:
       - >-
         The identifier for the certificate. This must be made up of algorithm
@@ -193,21 +193,21 @@ EXAMPLES = '''
   azure_rm_batchcertificate:
     resource_group: myResourceGroup
     account_name: myBatchAccount
-    name: myCertificate
+    certificate_name: myCertificate
     data: MIIJsgIBAzCCCW4GCSqGSIb3DQE...
     password: KG0UY40e...
 - name: CreateCertificate - Minimal Cer
   azure_rm_batchcertificate:
     resource_group: myResourceGroup
     account_name: myBatchAccount
-    name: myCertificate
+    certificate_name: myCertificate
     format: Cer
     data: MIICrjCCAZagAwI...
 - name: CreateCertificate - Full
   azure_rm_batchcertificate:
     resource_group: myResourceGroup
     account_name: myBatchAccount
-    name: myCertificate
+    certificate_name: myCertificate
     thumbprint_algorithm: SHA1
     thumbprint: 0A0E4F50D51BEADEAC1D35AFC5116098E7902E6E
     format: Pfx
@@ -217,14 +217,14 @@ EXAMPLES = '''
   azure_rm_batchcertificate:
     resource_group: myResourceGroup
     account_name: myBatchAccount
-    name: myCertificate
+    certificate_name: myCertificate
     data: MIIJsgIBAzCCCW4GCSqGSIb3DQE...
     password: KG0UY40e...
 - name: CertificateDelete
   azure_rm_batchcertificate:
     resource_group: myResourceGroup
     account_name: myBatchAccount
-    name: myCertificate
+    certificate_name: myCertificate
     state: absent
 
 '''
@@ -449,7 +449,7 @@ class AzureRMCertificate(AzureRMModuleBaseExt):
                 disposition='accountName',
                 required=true
             ),
-            name=dict(
+            certificate_name=dict(
                 type='str',
                 updatable=False,
                 disposition='certificateName',
@@ -488,7 +488,7 @@ class AzureRMCertificate(AzureRMModuleBaseExt):
 
         self.resource_group = None
         self.account_name = None
-        self.name = None
+        self.certificate_name = None
         self.id = None
         self.etag = None
 

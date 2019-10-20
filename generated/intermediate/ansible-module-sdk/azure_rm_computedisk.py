@@ -26,9 +26,13 @@ options:
       - The name of the resource group.
     required: true
     type: str
-  name:
+  disk_name:
     description:
-      - Resource name
+      - >-
+        The name of the managed disk that is being created. The name can't be
+        changed after the disk is created. Supported characters for the name are
+        a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.
+    required: true
     type: str
   location:
     description:
@@ -206,6 +210,10 @@ options:
     description:
       - Resource Id
     type: str
+  name:
+    description:
+      - Resource name
+    type: str
   type:
     description:
       - Resource type
@@ -234,7 +242,7 @@ EXAMPLES = '''
 - name: Create an empty managed disk.
   azure_rm_computedisk:
     resource_group: myResourceGroup
-    name: myDisk
+    disk_name: myDisk
     disk:
       name: myDisk
       location: West US
@@ -245,7 +253,7 @@ EXAMPLES = '''
 - name: Create a managed disk from a platform image.
   azure_rm_computedisk:
     resource_group: myResourceGroup
-    name: myDisk
+    disk_name: myDisk
     disk:
       name: myDisk
       location: West US
@@ -261,7 +269,7 @@ EXAMPLES = '''
     subscription.
   azure_rm_computedisk:
     resource_group: myResourceGroup
-    name: myDisk
+    disk_name: myDisk
     disk:
       name: myDisk2
       location: West US
@@ -275,7 +283,7 @@ EXAMPLES = '''
     subscription.
   azure_rm_computedisk:
     resource_group: myResourceGroup
-    name: myDisk
+    disk_name: myDisk
     disk:
       name: myDisk
       location: West US
@@ -288,7 +296,7 @@ EXAMPLES = '''
     subscription.
   azure_rm_computedisk:
     resource_group: myResourceGroup
-    name: myDisk
+    disk_name: myDisk
     disk:
       name: myDisk
       location: West US
@@ -301,7 +309,7 @@ EXAMPLES = '''
 - name: Create a managed disk by copying a snapshot.
   azure_rm_computedisk:
     resource_group: myResourceGroup
-    name: myDisk
+    disk_name: myDisk
     disk:
       name: myDisk
       location: West US
@@ -607,10 +615,9 @@ class AzureRMDisks(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            name=dict(
+            disk_name=dict(
                 type='str',
                 updatable=False,
-                disposition='disk_name',
                 required=true
             ),
             location=dict(
@@ -749,7 +756,7 @@ class AzureRMDisks(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.disk_name = None
         self.id = None
         self.name = None
         self.type = None
@@ -829,7 +836,7 @@ class AzureRMDisks(AzureRMModuleBaseExt):
     def create_update_resource(self):
         try:
             response = self.mgmt_client.disks.create_or_update(resource_group_name=self.resource_group,
-                                                               disk_name=self.name,
+                                                               disk_name=self.disk_name,
                                                                disk=self.disk)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
@@ -842,7 +849,7 @@ class AzureRMDisks(AzureRMModuleBaseExt):
         # self.log('Deleting the Disk instance {0}'.format(self.))
         try:
             response = self.mgmt_client.disks.delete(resource_group_name=self.resource_group,
-                                                     disk_name=self.name)
+                                                     disk_name=self.disk_name)
         except CloudError as e:
             self.log('Error attempting to delete the Disk instance.')
             self.fail('Error deleting the Disk instance: {0}'.format(str(e)))
@@ -854,7 +861,7 @@ class AzureRMDisks(AzureRMModuleBaseExt):
         found = False
         try:
             response = self.mgmt_client.disks.get(resource_group_name=self.resource_group,
-                                                  disk_name=self.name)
+                                                  disk_name=self.disk_name)
         except CloudError as e:
             return False
         return response.as_dict()

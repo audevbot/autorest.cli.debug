@@ -14,7 +14,7 @@
     - name: Create of Update Recovery Services vault
       azure_rm_recoveryservicesvault:
         resource_group: '{{resource_group}}'
-        name: '{{vault_name}}'
+        vault_name: '{{vault_name}}'
         vault:
           properties: {}
           sku:

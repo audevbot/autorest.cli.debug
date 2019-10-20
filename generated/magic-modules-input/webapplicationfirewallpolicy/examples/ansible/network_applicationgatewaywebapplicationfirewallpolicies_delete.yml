@@ -4,6 +4,6 @@ task: !ruby/object:Provider::Ansible::Task
   description: Deletes a WAF policy within a resource group
   code:
     resource_group: myResourceGroup
-    name: myApplicationGatewayWebApplicationFirewallPolicy
+    policy_name: myApplicationGatewayWebApplicationFirewallPolicy
     state: absent
   

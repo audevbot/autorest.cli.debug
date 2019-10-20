@@ -14,7 +14,7 @@
     - name: PatchDedicatedService
       azure_rm_vmwarecloudsimplededicatedcloudservice:
         resource_group: '{{resource_group}}'
-        name: '{{dedicated_cloud_service_name}}'
+        dedicated_cloud_service_name: '{{dedicated_cloud_service_name}}'
         dedicated_cloud_service_request:
           tags:
             myTag: tagValue

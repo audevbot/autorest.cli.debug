@@ -16,7 +16,7 @@
       azure_rm_batchpool:
         resource_group: '{{resource_group}}'
         account_name: '{{batch_account_name}}'
-        name: '{{pool_name}}'
+        pool_name: '{{pool_name}}'
         vm_size: STANDARD_D4
         deployment_configuration:
           virtual_machine_configuration:

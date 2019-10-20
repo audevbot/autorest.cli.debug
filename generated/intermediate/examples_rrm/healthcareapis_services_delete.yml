@@ -8,9 +8,9 @@
     service_name: myService
   tasks:
 
-    - name: ServiceDelete
+    - name: Delete service
       azure_rm_healthcareapisservice:
         resource_group: '{{resource_group}}'
-        name: '{{service_name}}'
+        resource_name: '{{service_name}}'
         state: absent
     

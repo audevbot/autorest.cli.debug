@@ -31,9 +31,10 @@ options:
       - The name of the API Management service.
     required: true
     type: str
-  name:
+  template_name:
     description:
-      - Resource name.
+      - Email Template Name Identifier.
+    required: true
     type: str
   subject:
     description:
@@ -78,6 +79,10 @@ options:
     description:
       - Resource ID.
     type: str
+  name:
+    description:
+      - Resource name.
+    type: str
   type:
     description:
       - Resource type for API Management resource.
@@ -104,20 +109,20 @@ EXAMPLES = '''
   azure_rm_apimanagementemailtemplate:
     resource_group: myResourceGroup
     service_name: myService
-    name: myTemplate
+    template_name: myTemplate
     subject: Your request for $IssueName was successfully received.
 - name: ApiManagementUpdateEmailTemplate
   azure_rm_apimanagementemailtemplate:
     resource_group: myResourceGroup
     service_name: myService
-    name: myTemplate
+    template_name: myTemplate
     subject: Your application $AppName is published in the gallery
     body: "<!DOCTYPE html >\r\n<html>\r\n  <head />\r\n  <body>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">Dear $DevFirstName $DevLastName,</p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">\r\n          We are happy to let you know that your request to publish the $AppName application in the gallery has been approved. Your application has been published and can be viewed <a href=\"http://$DevPortalUrl/Applications/Details/$AppId\">here</a>.\r\n        </p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">Best,</p>\r\n    <p style=\"font-size:12pt;font-family:'Segoe UI'\">The $OrganizationName API Team</p>\r\n  </body>\r\n</html>"
 - name: ApiManagementDeleteEmailTemplate
   azure_rm_apimanagementemailtemplate:
     resource_group: myResourceGroup
     service_name: myService
-    name: myTemplate
+    template_name: myTemplate
     state: absent
 
 '''
@@ -240,7 +245,7 @@ class AzureRMEmailTemplate(AzureRMModuleBaseExt):
                 disposition='serviceName',
                 required=true
             ),
-            name=dict(
+            template_name=dict(
                 type='str',
                 updatable=False,
                 disposition='templateName',
@@ -286,7 +291,7 @@ class AzureRMEmailTemplate(AzureRMModuleBaseExt):
 
         self.resource_group = None
         self.service_name = None
-        self.name = None
+        self.template_name = None
         self.id = None
         self.name = None
         self.type = None

@@ -41,12 +41,14 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: eventSubscriptionName
-        NameAnsible: name
+        NameAnsible: event_subscription_name
         NamePythonSdk: event_subscription_name
         NameGoSdk: EventSubscriptionName
-        NameTerraform: name
+        NameTerraform: EventSubscriptionName
         IdPortion: eventSubscriptions
         Type: str
         TypeName: xxx
@@ -74,7 +76,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: eventSubscriptionInfo
         NameAnsible: event_subscription_info
         NamePythonSdk: event_subscription_info
@@ -99,14 +103,16 @@ Modules:
         PathSwagger: ''
         PathPython: null
         PathGo: null
-        DispositionSdk: dictionary
+        DispositionSdk: '*'
         DispositionRest: '*'
         Comparison: ''
         Updatable: true
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 2
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -136,7 +142,9 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: destination
         NameAnsible: destination
         NamePythonSdk: destination
@@ -168,7 +176,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: filter
         NameAnsible: filter
         NamePythonSdk: filter
@@ -220,7 +230,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: subjectEndsWith
             NameAnsible: subject_ends_with
             NamePythonSdk: subject_ends_with
@@ -253,7 +265,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: includedEventTypes
             NameAnsible: included_event_types
             NamePythonSdk: included_event_types
@@ -287,7 +301,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: isSubjectCaseSensitive
             NameAnsible: is_subject_case_sensitive
             NamePythonSdk: is_subject_case_sensitive
@@ -319,7 +335,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/filter
         PathPython: /filter
@@ -331,7 +349,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: labels
         NameAnsible: labels
         NamePythonSdk: labels
@@ -361,7 +381,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: retryPolicy
         NameAnsible: retry_policy
         NamePythonSdk: retry_policy
@@ -411,7 +433,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: int32
             Flatten: false
+            Kind: 1
           - NameSwagger: eventTimeToLiveInMinutes
             NameAnsible: event_time_to_live_in_minutes
             NamePythonSdk: event_time_to_live_in_minutes
@@ -441,7 +465,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: int32
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/retryPolicy
         PathPython: /retryPolicy
@@ -453,7 +479,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: deadLetterDestination
         NameAnsible: dead_letter_destination
         NamePythonSdk: dead_letter_destination
@@ -483,7 +511,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_3
         NameSwagger: topic
         NameAnsible: topic
@@ -514,7 +544,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_4
         NameSwagger: provisioningState
         NameAnsible: provisioning_state
@@ -566,7 +598,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_0
         NameSwagger: id
         NameAnsible: id
@@ -597,7 +631,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_1
         NameSwagger: name
         NameAnsible: name
@@ -628,7 +664,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_2
         NameSwagger: type
         NameAnsible: type
@@ -659,7 +697,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: CreateOrUpdate
         Options:
@@ -671,8 +711,8 @@ Modules:
           - eventSubscriptionName
           - eventSubscriptionInfo
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         HttpMethod: put
         IsAsync: true
       - Name: Update
@@ -685,8 +725,8 @@ Modules:
           - eventSubscriptionName
           - eventSubscriptionUpdateParameters
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         HttpMethod: patch
         IsAsync: true
       - Name: Delete
@@ -697,8 +737,8 @@ Modules:
           - scope
           - eventSubscriptionName
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         HttpMethod: delete
         IsAsync: true
       - Name: ListGlobalBySubscription
@@ -717,8 +757,8 @@ Modules:
           - scope
           - eventSubscriptionName
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         HttpMethod: get
         IsAsync: false
       - Name: ListRegionalBySubscription
@@ -880,7 +920,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: filter
             NameAnsible: filter
             NamePythonSdk: filter
@@ -932,7 +974,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: subjectEndsWith
                 NameAnsible: subject_ends_with
                 NamePythonSdk: subject_ends_with
@@ -965,7 +1009,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: includedEventTypes
                 NameAnsible: included_event_types
                 NamePythonSdk: included_event_types
@@ -999,7 +1045,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: isSubjectCaseSensitive
                 NameAnsible: is_subject_case_sensitive
                 NamePythonSdk: is_subject_case_sensitive
@@ -1032,7 +1080,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/filter
             PathPython: /filter
@@ -1044,7 +1094,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: labels
             NameAnsible: labels
             NamePythonSdk: labels
@@ -1074,7 +1126,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: retryPolicy
             NameAnsible: retry_policy
             NamePythonSdk: retry_policy
@@ -1124,7 +1178,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
+                Kind: 1
               - NameSwagger: eventTimeToLiveInMinutes
                 NameAnsible: event_time_to_live_in_minutes
                 NamePythonSdk: event_time_to_live_in_minutes
@@ -1154,7 +1210,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: int32
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/retryPolicy
             PathPython: /retryPolicy
@@ -1166,7 +1224,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: deadLetterDestination
             NameAnsible: dead_letter_destination
             NamePythonSdk: dead_letter_destination
@@ -1196,7 +1256,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties
         PathPython: ''
@@ -1208,7 +1270,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     ModuleOperationNameUpper: EventSubscriptions
     ModuleOperationName: event_subscriptions
     ObjectName: EventSubscription
@@ -1255,24 +1319,23 @@ Modules:
                 name: examplesubscription3
                 type: Microsoft.EventGrid/eventSubscriptions
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: put
         Name: EventSubscriptions_CreateOrUpdateForSubscription
-        Filename: eventgrid_put
+        Filename: eventgrid_eventsubscriptions_put
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
         References:
           - '# ref##scope##subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4'
           - '# ref##endpointUrl##https://requestb.in/15ksip71'
           - resourcegroups_put
         OperationId: '505'
         MethodId: '530'
+        OperationName: EventSubscriptions
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             scope: >-
@@ -1315,26 +1378,25 @@ Modules:
                 name: examplesubscription2
                 type: Microsoft.EventGrid/eventSubscriptions
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: put
         Name: EventSubscriptions_CreateOrUpdateForResourceGroup
-        Filename: eventgrid_put_1
+        Filename: eventgrid_eventsubscriptions_put_1
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
         References:
           - >-
             #
             ref##scope##subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg
           - '# ref##endpointUrl##https://requestb.in/15ksip71'
-          - resourcegroups_put
+          - eventgrid_eventsubscriptions_put
         OperationId: '505'
         MethodId: '530'
+        OperationName: EventSubscriptions
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             scope: >-
@@ -1379,26 +1441,25 @@ Modules:
                 name: examplesubscription10
                 type: Microsoft.EventGrid/eventSubscriptions
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: put
         Name: EventSubscriptions_CreateOrUpdateForResource
-        Filename: eventgrid_put_2
+        Filename: eventgrid_eventsubscriptions_put_2
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
         References:
           - >-
             #
             ref##scope##subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventHub/namespaces/examplenamespace1
           - '# ref##endpointUrl##https://requestb.in/15ksip71'
-          - resourcegroups_put
+          - eventgrid_eventsubscriptions_put
         OperationId: '505'
         MethodId: '530'
+        OperationName: EventSubscriptions
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             api-version: '2019-01-01'
@@ -1465,18 +1526,15 @@ Modules:
                 name: examplesubscription1
                 type: Microsoft.EventGrid/eventSubscriptions
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: put
         Name: EventSubscriptions_CreateOrUpdateForCustomTopic_WebhookDestination
-        Filename: eventgrid_put_3
+        Filename: eventgrid_eventsubscriptions_put_3
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
           - name: resource_group
             value: myResourceGroup
             swaggerName: ''
@@ -1491,8 +1549,11 @@ Modules:
             #
             ref##endpointUrl##https://contosofunction.azurewebsites.net/api/HttpTriggerCSharp1?code=<HIDDEN>
           - storage_storageaccounts_put
+          - eventgrid_eventsubscriptions_put
         OperationId: '505'
         MethodId: '530'
+        OperationName: EventSubscriptions
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             api-version: '2019-01-01'
@@ -1564,18 +1625,15 @@ Modules:
                 name: examplesubscription1
                 type: Microsoft.EventGrid/eventSubscriptions
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: put
         Name: EventSubscriptions_CreateOrUpdateForCustomTopic_EventHubDestination
-        Filename: eventgrid_put_4
+        Filename: eventgrid_eventsubscriptions_put_4
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
           - name: resource_group
             value: myResourceGroup
             swaggerName: ''
@@ -1594,8 +1652,11 @@ Modules:
             ref##scope##subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1
           - eventhub_namespaces_eventhubs_put
           - storage_storageaccounts_put
+          - eventgrid_eventsubscriptions_put
         OperationId: '505'
         MethodId: '530'
+        OperationName: EventSubscriptions
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             api-version: '2019-01-01'
@@ -1668,19 +1729,16 @@ Modules:
                 name: examplesubscription1
                 type: Microsoft.EventGrid/eventSubscriptions
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: put
         Name: >-
           EventSubscriptions_CreateOrUpdateForCustomTopic_HybridConnectionDestination
-        Filename: eventgrid_put_5
+        Filename: eventgrid_eventsubscriptions_put_5
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
           - name: resource_group
             value: myResourceGroup
             swaggerName: ''
@@ -1699,8 +1757,11 @@ Modules:
             ref##scope##subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1
           - relay_namespaces_hybridconnections_put
           - storage_storageaccounts_put
+          - eventgrid_eventsubscriptions_put
         OperationId: '505'
         MethodId: '530'
+        OperationName: EventSubscriptions
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             api-version: '2019-01-01'
@@ -1774,19 +1835,16 @@ Modules:
                 name: examplesubscription1
                 type: Microsoft.EventGrid/eventSubscriptions
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: put
         Name: >-
           EventSubscriptions_CreateOrUpdateForCustomTopic_StorageQueueDestination
-        Filename: eventgrid_put_6
+        Filename: eventgrid_eventsubscriptions_put_6
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
           - name: resource_group
             value: myResourceGroup
             swaggerName: ''
@@ -1799,8 +1857,11 @@ Modules:
             ref##scope##subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1
           - storage_storageaccounts_put
           - storage_storageaccounts_put
+          - eventgrid_eventsubscriptions_put
         OperationId: '505'
         MethodId: '530'
+        OperationName: EventSubscriptions
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             scope: subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -1843,24 +1904,23 @@ Modules:
                 name: examplesubscription3
                 type: Microsoft.EventGrid/eventSubscriptions
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: patch
         Name: EventSubscriptions_UpdateForSubscription
-        Filename: eventgrid_patch
+        Filename: eventgrid_eventsubscriptions_patch
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
         References:
           - '# ref##scope##subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4'
           - '# ref##endpointUrl##https://requestb.in/15ksip71'
-          - resourcegroups_put
+          - eventgrid_eventsubscriptions_put
         OperationId: '505'
         MethodId: '584'
+        OperationName: EventSubscriptions
+        MethodName: Update
       - Example:
           parameters:
             scope: >-
@@ -1909,18 +1969,15 @@ Modules:
                 name: examplesubscription2
                 type: Microsoft.EventGrid/eventSubscriptions
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: patch
         Name: EventSubscriptions_UpdateForResourceGroup
-        Filename: eventgrid_patch_1
+        Filename: eventgrid_eventsubscriptions_patch_1
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
           - name: resource_group
             value: myResourceGroup
             swaggerName: ''
@@ -1935,8 +1992,11 @@ Modules:
             #
             ref##scope##subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg
           - eventhub_namespaces_eventhubs_put
+          - eventgrid_eventsubscriptions_put
         OperationId: '505'
         MethodId: '584'
+        OperationName: EventSubscriptions
+        MethodName: Update
       - Example:
           parameters:
             scope: >-
@@ -1984,26 +2044,25 @@ Modules:
                 name: examplesubscription1
                 type: Microsoft.EventGrid/eventSubscriptions
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: patch
         Name: EventSubscriptions_UpdateForResource
-        Filename: eventgrid_patch_2
+        Filename: eventgrid_eventsubscriptions_patch_2
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
         References:
           - >-
             #
             ref##scope##subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventHub/namespaces/examplenamespace1
           - '# ref##endpointUrl##https://requestb.in/15ksip71'
-          - resourcegroups_put
+          - eventgrid_eventsubscriptions_put
         OperationId: '505'
         MethodId: '584'
+        OperationName: EventSubscriptions
+        MethodName: Update
       - Example:
           parameters:
             scope: >-
@@ -2053,26 +2112,25 @@ Modules:
                 name: examplesubscription1
                 type: Microsoft.EventGrid/eventSubscriptions
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: patch
         Name: EventSubscriptions_UpdateForCustomTopic
-        Filename: eventgrid_patch_3
+        Filename: eventgrid_eventsubscriptions_patch_3
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
         References:
           - >-
             #
             ref##scope##subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic2
           - '# ref##endpointUrl##https://requestb.in/15ksip71'
-          - resourcegroups_put
+          - eventgrid_eventsubscriptions_put
         OperationId: '505'
         MethodId: '584'
+        OperationName: EventSubscriptions
+        MethodName: Update
       - Example:
           parameters:
             scope: subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -2083,21 +2141,20 @@ Modules:
             '202': {}
             '204': {}
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: delete
         Name: EventSubscriptions_DeleteForSubscription
-        Filename: eventgrid_delete
+        Filename: eventgrid_eventsubscriptions_delete
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
         References: []
         OperationId: '505'
         MethodId: '558'
+        OperationName: EventSubscriptions
+        MethodName: Delete
       - Example:
           parameters:
             scope: >-
@@ -2109,21 +2166,20 @@ Modules:
             '202': {}
             '204': {}
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: delete
         Name: EventSubscriptions_DeleteForResourceGroup
-        Filename: eventgrid_delete_1
+        Filename: eventgrid_eventsubscriptions_delete_1
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
         References: []
         OperationId: '505'
         MethodId: '558'
+        OperationName: EventSubscriptions
+        MethodName: Delete
       - Example:
           parameters:
             scope: >-
@@ -2135,21 +2191,20 @@ Modules:
             '202': {}
             '204': {}
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: delete
         Name: EventSubscriptions_DeleteForResource
-        Filename: eventgrid_delete_2
+        Filename: eventgrid_eventsubscriptions_delete_2
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
         References: []
         OperationId: '505'
         MethodId: '558'
+        OperationName: EventSubscriptions
+        MethodName: Delete
       - Example:
           parameters:
             scope: >-
@@ -2161,2200 +2216,20 @@ Modules:
             '202': {}
             '204': {}
         Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
+          /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{{
+          event_subscription_name }}
         Method: delete
         Name: EventSubscriptions_DeleteForCustomTopic
-        Filename: eventgrid_delete_3
+        Filename: eventgrid_eventsubscriptions_delete_3
         Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
+          - name: event_subscription_name
+            value: myEventSubscription
+            swaggerName: eventSubscriptionName
         References: []
         OperationId: '505'
         MethodId: '558'
-  - ModuleName: azure_rm_eventgrideventsubscription_info
-    Options:
-      - NameSwagger: scope
-        NameAnsible: scope
-        NamePythonSdk: scope
-        NameGoSdk: Scope
-        NameTerraform: Scope
-        IdPortion: ''
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: >-
-          The scope of the event subscription. The scope can be a subscription,
-          or a resource group, or a top level resource belonging to a resource
-          provider namespace, or an EventGrid topic. For example, use
-          '/subscriptions/{subscriptionId}/' for a subscription,
-          '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}'
-          for a resource group, and
-          '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}'
-          for a resource, and
-          '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}'
-          for an EventGrid topic.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: eventSubscriptionName
-        NameAnsible: event_subscription_name
-        NamePythonSdk: event_subscription_name
-        NameGoSdk: EventSubscriptionName
-        NameTerraform: EventSubscriptionName
-        IdPortion: eventSubscriptions
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: Name of the event subscription
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: location
-        NameAnsible: location
-        NamePythonSdk: location
-        NameGoSdk: Location
-        NameTerraform: Location
-        IdPortion: locations
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: Name of the location
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: topicTypeName
-        NameAnsible: topic_type_name
-        NamePythonSdk: topic_type_name
-        NameGoSdk: TopicTypeName
-        NameTerraform: TopicTypeName
-        IdPortion: topicTypes
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: Name of the topic type
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: resourceGroupName
-        NameAnsible: resource_group
-        NamePythonSdk: resource_group_name
-        NameGoSdk: ResourceGroup
-        NameTerraform: resourceGroup
-        IdPortion: resourceGroups
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: The name of the resource group within the user's subscription.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: providerNamespace
-        NameAnsible: provider_namespace
-        NamePythonSdk: provider_namespace
-        NameGoSdk: ProviderNamespace
-        NameTerraform: ProviderNamespace
-        IdPortion: providers
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: Namespace of the provider of the topic
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: resourceTypeName
-        NameAnsible: resource_type_name
-        NamePythonSdk: resource_type_name
-        NameGoSdk: ResourceTypeName
-        NameTerraform: ResourceTypeName
-        IdPortion: '{providerNamespace}'
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: Name of the resource type
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: resourceName
-        NameAnsible: name
-        NamePythonSdk: resource_name
-        NameGoSdk: ResourceName
-        NameTerraform: name
-        IdPortion: '{resourceTypeName}'
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: Name of the resource
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - &ref_5
-        NameSwagger: id
-        NameAnsible: id
-        NamePythonSdk: id
-        NameGoSdk: ID
-        NameTerraform: ID
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Fully qualified identifier of the resource
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /id
-        PathPython: /id
-        PathGo: /id
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_6
-        NameSwagger: name
-        NameAnsible: name
-        NamePythonSdk: name
-        NameGoSdk: Name
-        NameTerraform: Name
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Name of the resource
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /name
-        PathPython: /name
-        PathGo: /name
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_7
-        NameSwagger: type
-        NameAnsible: type
-        NamePythonSdk: type
-        NameGoSdk: Type
-        NameTerraform: Type
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Type of the resource
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /type
-        PathPython: /type
-        PathGo: /type
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_8
-        NameSwagger: properties
-        NameAnsible: properties
-        NamePythonSdk: properties
-        NameGoSdk: Properties
-        NameTerraform: Properties
-        IdPortion: null
-        Type: dict
-        TypeName: EventSubscriptionProperties
-        TypeNameGo: EventSubscriptionProperties
-        IsList: false
-        Required: false
-        Documentation: Properties of the event subscription
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties
-        PathPython: ''
-        PathGo: /properties
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: true
-        IncludeInResponse: true
-        Flatten: false
-      - NameSwagger: topic
-        NameAnsible: topic
-        NamePythonSdk: topic
-        NameGoSdk: Topic
-        NameTerraform: Topic
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Name of the topic of the event subscription.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/topic
-        PathPython: /topic
-        PathGo: /properties/topic
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: provisioningState
-        NameAnsible: provisioning_state
-        NamePythonSdk: provisioning_state
-        NameGoSdk: ProvisioningState
-        NameTerraform: ProvisioningState
-        IdPortion: null
-        Type: str
-        TypeName: EventSubscriptionProvisioningState
-        TypeNameGo: EventSubscriptionProvisioningState
-        IsList: false
-        Required: false
-        Documentation: Provisioning state of the event subscription.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues:
-          - Key: Creating
-            Value: Creating
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Updating
-            Value: Updating
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Deleting
-            Value: Deleting
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Succeeded
-            Value: Succeeded
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Canceled
-            Value: Canceled
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Failed
-            Value: Failed
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: AwaitingManualAction
-            Value: AwaitingManualAction
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-        PathSwagger: /properties/provisioningState
-        PathPython: /provisioningState
-        PathGo: /properties/provisioningState
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: destination
-        NameAnsible: destination
-        NamePythonSdk: destination
-        NameGoSdk: Destination
-        NameTerraform: Destination
-        IdPortion: null
-        Type: dict
-        TypeName: EventSubscriptionDestination
-        TypeNameGo: EventSubscriptionDestination
-        IsList: false
-        Required: false
-        Documentation: >-
-          Information about the destination where events have to be delivered
-          for the event subscription.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/destination
-        PathPython: /destination
-        PathGo: /properties/destination
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: filter
-        NameAnsible: filter
-        NamePythonSdk: filter
-        NameGoSdk: Filter
-        NameTerraform: Filter
-        IdPortion: null
-        Type: dict
-        TypeName: EventSubscriptionFilter
-        TypeNameGo: EventSubscriptionFilter
-        IsList: false
-        Required: false
-        Documentation: Information about the filter for the event subscription.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions:
-          - NameSwagger: subjectBeginsWith
-            NameAnsible: subject_begins_with
-            NamePythonSdk: subject_begins_with
-            NameGoSdk: SubjectBeginsWith
-            NameTerraform: SubjectBeginsWith
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: >-
-              An optional string to filter events for an event subscription
-              based on a resource path prefix.<br>The format of this depends on
-              the publisher of the events. <br>Wildcard characters are not
-              supported in this path.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/filter/subjectBeginsWith
-            PathPython: /filter/subjectBeginsWith
-            PathGo: /properties/filter/subjectBeginsWith
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: subjectEndsWith
-            NameAnsible: subject_ends_with
-            NamePythonSdk: subject_ends_with
-            NameGoSdk: SubjectEndsWith
-            NameTerraform: SubjectEndsWith
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: >-
-              An optional string to filter events for an event subscription
-              based on a resource path suffix.<br>Wildcard characters are not
-              supported in this path.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/filter/subjectEndsWith
-            PathPython: /filter/subjectEndsWith
-            PathGo: /properties/filter/subjectEndsWith
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: includedEventTypes
-            NameAnsible: included_event_types
-            NamePythonSdk: included_event_types
-            NameGoSdk: IncludedEventTypes
-            NameTerraform: IncludedEventTypes
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: true
-            Required: false
-            Documentation: >-
-              A list of applicable event types that need to be part of the event
-              subscription. <br>If it is desired to subscribe to all event
-              types, the string "all" needs to be specified as an element in
-              this list.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/filter/includedEventTypes
-            PathPython: /filter/includedEventTypes
-            PathGo: /properties/filter/includedEventTypes
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: isSubjectCaseSensitive
-            NameAnsible: is_subject_case_sensitive
-            NamePythonSdk: is_subject_case_sensitive
-            NameGoSdk: IsSubjectCaseSensitive
-            NameTerraform: IsSubjectCaseSensitive
-            IdPortion: null
-            Type: boolean
-            TypeName: Boolean
-            TypeNameGo: Boolean
-            IsList: false
-            Required: false
-            Documentation: >-
-              Specifies if the SubjectBeginsWith and SubjectEndsWith properties
-              of the filter <br>should be compared in a case sensitive manner.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/filter/isSubjectCaseSensitive
-            PathPython: /filter/isSubjectCaseSensitive
-            PathGo: /properties/filter/isSubjectCaseSensitive
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /properties/filter
-        PathPython: /filter
-        PathGo: /properties/filter
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: labels
-        NameAnsible: labels
-        NamePythonSdk: labels
-        NameGoSdk: Labels
-        NameTerraform: Labels
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: true
-        Required: false
-        Documentation: List of user defined labels.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/labels
-        PathPython: /labels
-        PathGo: /properties/labels
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: retryPolicy
-        NameAnsible: retry_policy
-        NamePythonSdk: retry_policy
-        NameGoSdk: RetryPolicy
-        NameTerraform: RetryPolicy
-        IdPortion: null
-        Type: dict
-        TypeName: RetryPolicy
-        TypeNameGo: RetryPolicy
-        IsList: false
-        Required: false
-        Documentation: >-
-          The retry policy for events. This can be used to configure maximum
-          number of delivery attempts and time to live for events.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions:
-          - NameSwagger: maxDeliveryAttempts
-            NameAnsible: max_delivery_attempts
-            NamePythonSdk: max_delivery_attempts
-            NameGoSdk: MaxDeliveryAttempts
-            NameTerraform: MaxDeliveryAttempts
-            IdPortion: null
-            Type: number
-            TypeName: Int
-            TypeNameGo: Int
-            IsList: false
-            Required: false
-            Documentation: Maximum number of delivery retry attempts for events.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/retryPolicy/maxDeliveryAttempts
-            PathPython: /retryPolicy/maxDeliveryAttempts
-            PathGo: /properties/retryPolicy/maxDeliveryAttempts
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: eventTimeToLiveInMinutes
-            NameAnsible: event_time_to_live_in_minutes
-            NamePythonSdk: event_time_to_live_in_minutes
-            NameGoSdk: EventTimeToLiveInMinutes
-            NameTerraform: EventTimeToLiveInMinutes
-            IdPortion: null
-            Type: number
-            TypeName: Int
-            TypeNameGo: Int
-            IsList: false
-            Required: false
-            Documentation: Time To Live (in minutes) for events.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/retryPolicy/eventTimeToLiveInMinutes
-            PathPython: /retryPolicy/eventTimeToLiveInMinutes
-            PathGo: /properties/retryPolicy/eventTimeToLiveInMinutes
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /properties/retryPolicy
-        PathPython: /retryPolicy
-        PathGo: /properties/retryPolicy
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: deadLetterDestination
-        NameAnsible: dead_letter_destination
-        NamePythonSdk: dead_letter_destination
-        NameGoSdk: DeadLetterDestination
-        NameTerraform: DeadLetterDestination
-        IdPortion: null
-        Type: dict
-        TypeName: DeadLetterDestination
-        TypeNameGo: DeadLetterDestination
-        IsList: false
-        Required: false
-        Documentation: The DeadLetter destination of the event subscription.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/deadLetterDestination
-        PathPython: /deadLetterDestination
-        PathGo: /properties/deadLetterDestination
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-    Methods:
-      - Name: ListGlobalBySubscription
-        Options: []
-        RequiredOptions: []
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/Microsoft.EventGrid/eventSubscriptions
-        HttpMethod: get
-        IsAsync: false
-      - Name: Get
-        Options:
-          - scope
-          - eventSubscriptionName
-        RequiredOptions:
-          - scope
-          - eventSubscriptionName
-        Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
-        HttpMethod: get
-        IsAsync: false
-      - Name: ListRegionalBySubscription
-        Options:
-          - location
-        RequiredOptions:
-          - location
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/Microsoft.EventGrid/locations/{{ location_name
-          }}/eventSubscriptions
-        HttpMethod: get
-        IsAsync: false
-      - Name: ListGlobalBySubscriptionForTopicType
-        Options:
-          - topicTypeName
-        RequiredOptions:
-          - topicTypeName
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/Microsoft.EventGrid/topicTypes/{{ topic_type_name
-          }}/eventSubscriptions
-        HttpMethod: get
-        IsAsync: false
-      - Name: ListGlobalByResourceGroup
-        Options:
-          - resourceGroupName
-        RequiredOptions:
-          - resourceGroupName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.EventGrid/eventSubscriptions
-        HttpMethod: get
-        IsAsync: false
-      - Name: ListRegionalBySubscriptionForTopicType
-        Options:
-          - location
-          - topicTypeName
-        RequiredOptions:
-          - location
-          - topicTypeName
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/Microsoft.EventGrid/locations/{{ location_name
-          }}/topicTypes/{{ topic_type_name }}/eventSubscriptions
-        HttpMethod: get
-        IsAsync: false
-      - Name: ListRegionalByResourceGroup
-        Options:
-          - resourceGroupName
-          - location
-        RequiredOptions:
-          - resourceGroupName
-          - location
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.EventGrid/locations/{{ location_name
-          }}/eventSubscriptions
-        HttpMethod: get
-        IsAsync: false
-      - Name: ListGlobalByResourceGroupForTopicType
-        Options:
-          - resourceGroupName
-          - topicTypeName
-        RequiredOptions:
-          - resourceGroupName
-          - topicTypeName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.EventGrid/topicTypes/{{ topic_type_name
-          }}/eventSubscriptions
-        HttpMethod: get
-        IsAsync: false
-      - Name: ListRegionalByResourceGroupForTopicType
-        Options:
-          - resourceGroupName
-          - location
-          - topicTypeName
-        RequiredOptions:
-          - resourceGroupName
-          - location
-          - topicTypeName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.EventGrid/locations/{{ location_name
-          }}/topicTypes/{{ topic_type_name }}/eventSubscriptions
-        HttpMethod: get
-        IsAsync: false
-      - Name: ListByResource
-        Options:
-          - resourceGroupName
-          - providerNamespace
-          - resourceTypeName
-          - resourceName
-        RequiredOptions:
-          - resourceGroupName
-          - providerNamespace
-          - resourceTypeName
-          - resourceName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/{providerNamespace}/{resourceTypeName}/{{
-          {resource_type_name}_name
-          }}/providers/Microsoft.EventGrid/eventSubscriptions
-        HttpMethod: get
-        IsAsync: false
-    ResponseFields:
-      - *ref_5
-      - *ref_6
-      - *ref_7
-      - *ref_8
-    ModuleOperationNameUpper: EventSubscriptions
-    ModuleOperationName: event_subscriptions
-    ObjectName: EventSubscription
-    ResourceNameFieldInResponse: null
-    NeedsDeleteBeforeUpdate: false
-    NeedsForceUpdate: false
-    CannotTestUpdate: false
-    Provider: Microsoft.EventGrid
-    ApiVersion: '2019-01-01'
-    Examples:
-      - Example:
-          parameters:
-            subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
-            api-version: '2019-01-01'
-          responses:
-            '200':
-              body:
-                value:
-                  - properties:
-                      destination:
-                        properties:
-                          endpointBaseUrl: 'https://requestb.in/15ksip71'
-                        endpointType: WebHook
-                      filter:
-                        includedEventTypes:
-                          - All
-                        isSubjectCaseSensitive: false
-                        subjectBeginsWith: ''
-                        subjectEndsWith: ''
-                      provisioningState: Succeeded
-                      topic: >-
-                        /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                        resource_group }}
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.EventGrid/eventSubscriptions/{{
-                      event_subscription_name }}
-                    name: examplesubscription2
-                    type: Microsoft.EventGrid/eventSubscriptions
-                  - properties:
-                      destination:
-                        properties:
-                          endpointBaseUrl: 'https://requestb.in/15ksip71'
-                        endpointType: WebHook
-                      filter:
-                        includedEventTypes:
-                          - All
-                        isSubjectCaseSensitive: false
-                        subjectBeginsWith: ''
-                        subjectEndsWith: ''
-                      provisioningState: Succeeded
-                      topic: >-
-                        /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                        resource_group }}
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.EventGrid/eventSubscriptions/{{
-                      event_subscription_name }}
-                    name: examplesubscription4
-                    type: Microsoft.EventGrid/eventSubscriptions
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/Microsoft.EventGrid/eventSubscriptions
-        Method: get
-        Name: EventSubscriptions_ListGlobalBySubscription
-        Filename: eventgrid_eventsubscriptions_get
-        Variables: []
-        References: []
-        OperationId: '505'
-        MethodId: '636'
-      - Example:
-          parameters:
-            scope: subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4
-            eventSubscriptionName: examplesubscription3
-            api-version: '2019-01-01'
-          responses:
-            '200':
-              body:
-                properties:
-                  destination:
-                    properties:
-                      endpointBaseUrl: 'https://requestb.in/15ksip71'
-                    endpointType: WebHook
-                  filter:
-                    includedEventTypes:
-                      - All
-                    isSubjectCaseSensitive: false
-                    subjectBeginsWith: ExamplePrefix
-                    subjectEndsWith: ExampleSuffix
-                  labels:
-                    - label1
-                    - label2
-                  provisioningState: Succeeded
-                  topic: '/subscriptions/{{ subscription_id }}'
-                id: >-
-                  /subscriptions/{{ subscription_id
-                  }}/providers/Microsoft.EventGrid/eventSubscriptions/{{
-                  event_subscription_name }}
-                name: examplesubscription3
-                type: Microsoft.EventGrid/eventSubscriptions
-        Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
-        Method: get
-        Name: EventSubscriptions_GetForSubscription
-        Filename: eventgrid_get
-        Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
-        References: []
-        OperationId: '505'
-        MethodId: '506'
-      - Example:
-          parameters:
-            scope: >-
-              subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg
-            eventSubscriptionName: examplesubscription2
-            api-version: '2019-01-01'
-          responses:
-            '200':
-              body:
-                properties:
-                  destination:
-                    properties:
-                      endpointBaseUrl: 'https://requestb.in/15ksip71'
-                    endpointType: WebHook
-                  filter:
-                    includedEventTypes:
-                      - All
-                    isSubjectCaseSensitive: false
-                    subjectBeginsWith: ExamplePrefix
-                    subjectEndsWith: ExampleSuffix
-                  labels:
-                    - label1
-                    - label2
-                  provisioningState: Succeeded
-                  topic: >-
-                    /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                    resource_group }}
-                id: >-
-                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                  resource_group
-                  }}/providers/Microsoft.EventGrid/eventSubscriptions/{{
-                  event_subscription_name }}
-                name: examplesubscription2
-                type: Microsoft.EventGrid/eventSubscriptions
-        Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
-        Method: get
-        Name: EventSubscriptions_GetForResourceGroup
-        Filename: eventgrid_get_1
-        Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
-        References: []
-        OperationId: '505'
-        MethodId: '506'
-      - Example:
-          parameters:
-            scope: >-
-              subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventHub/namespaces/examplenamespace1
-            eventSubscriptionName: examplesubscription1
-            api-version: '2019-01-01'
-          responses:
-            '200':
-              body:
-                properties:
-                  destination:
-                    properties:
-                      resourceId: >-
-                        /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                        resource_group
-                        }}/providers/Microsoft.EventHub/namespaces/{{
-                        namespace_name }}/eventhubs/{{ eventhub_name }}
-                    endpointType: EventHub
-                  filter:
-                    includedEventTypes:
-                      - All
-                    isSubjectCaseSensitive: false
-                    subjectBeginsWith: ExamplePrefix
-                    subjectEndsWith: ExampleSuffix
-                  labels:
-                    - label1
-                    - label2
-                  provisioningState: Succeeded
-                  topic: >-
-                    /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                    resource_group }}/providers/Microsoft.EventHub/namespaces/{{
-                    namespace_name }}
-                id: >-
-                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                  resource_group }}/providers/Microsoft.EventHub/namespaces/{{
-                  namespace_name
-                  }}/providers/Microsoft.EventGrid/eventSubscriptions/{{
-                  event_subscription_name }}
-                name: examplesubscription1
-                type: Microsoft.EventGrid/eventSubscriptions
-        Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
-        Method: get
-        Name: EventSubscriptions_GetForResource
-        Filename: eventgrid_get_2
-        Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
-        References: []
-        OperationId: '505'
-        MethodId: '506'
-      - Example:
-          parameters:
-            scope: >-
-              subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic2
-            eventSubscriptionName: examplesubscription1
-            api-version: '2019-01-01'
-          responses:
-            '200':
-              body:
-                properties:
-                  destination:
-                    properties:
-                      endpointBaseUrl: 'https://requestb.in/15ksip71'
-                    endpointType: WebHook
-                  filter:
-                    includedEventTypes:
-                      - All
-                    isSubjectCaseSensitive: false
-                    subjectBeginsWith: ExamplePrefix
-                    subjectEndsWith: ExampleSuffix
-                  labels:
-                    - label1
-                    - label2
-                  provisioningState: Succeeded
-                  topic: >-
-                    /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                    resource_group }}/providers/microsoft.eventgrid/topics/{{
-                    topic_name }}
-                id: >-
-                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                  resource_group }}/providers/Microsoft.EventGrid/topics/{{
-                  topic_name
-                  }}/providers/Microsoft.EventGrid/eventSubscriptions/{{
-                  event_subscription_name }}
-                name: examplesubscription1
-                type: Microsoft.EventGrid/eventSubscriptions
-        Url: >-
-          /{scope}/{{ {scope}_name }}/Microsoft.EventGrid/{{
-          microsoft.event_grid_name }}/{eventSubscriptionName}
-        Method: get
-        Name: EventSubscriptions_GetForCustomTopic
-        Filename: eventgrid_get_3
-        Variables:
-          - name: '{scope}_name'
-            value: myScope
-            swaggerName: rovider
-          - name: microsoft.event_grid_name
-            value: myMicrosoftEventGrid
-            swaggerName: ventSubscription
-        References: []
-        OperationId: '505'
-        MethodId: '506'
-      - Example:
-          parameters:
-            subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
-            location: westus2
-            api-version: '2019-01-01'
-          responses:
-            '200':
-              body:
-                value:
-                  - properties:
-                      destination:
-                        properties:
-                          resourceId: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/Microsoft.EventHub/namespaces/{{
-                            namespace_name }}/eventhubs/{{ eventhub_name }}
-                        endpointType: EventHub
-                      filter:
-                        includedEventTypes:
-                          - All
-                        isSubjectCaseSensitive: false
-                        subjectBeginsWith: ExamplePrefix
-                        subjectEndsWith: ExampleSuffix
-                      labels:
-                        - Finance
-                        - HR
-                      provisioningState: Succeeded
-                      topic: >-
-                        /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                        resource_group
-                        }}/providers/microsoft.eventhub/namespaces/{{
-                        namespace_name }}
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.EventHub/namespaces/{{
-                      namespace_name
-                      }}/providers/Microsoft.EventGrid/eventSubscriptions/{{
-                      event_subscription_name }}
-                    name: examplesubscription10
-                    type: Microsoft.EventGrid/eventSubscriptions
-                  - properties:
-                      destination:
-                        properties:
-                          endpointBaseUrl: 'https://requestb.in/15ksip71'
-                        endpointType: WebHook
-                      filter:
-                        includedEventTypes:
-                          - All
-                        isSubjectCaseSensitive: false
-                        subjectBeginsWith: ExamplePrefix
-                        subjectEndsWith: ExampleSuffix
-                      labels:
-                        - Finance
-                        - HR
-                      provisioningState: Succeeded
-                      topic: >-
-                        /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                        resource_group
-                        }}/providers/microsoft.eventhub/namespaces/{{
-                        namespace_name }}
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.EventHub/namespaces/{{
-                      namespace_name
-                      }}/providers/Microsoft.EventGrid/eventSubscriptions/{{
-                      event_subscription_name }}
-                    name: examplesubscription11
-                    type: Microsoft.EventGrid/eventSubscriptions
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/Microsoft.EventGrid/locations/{{ location_name
-          }}/eventSubscriptions
-        Method: get
-        Name: EventSubscriptions_ListRegionalBySubscription
-        Filename: eventgrid_locations_eventsubscriptions_get
-        Variables:
-          - name: location_name
-            value: myLocation
-            swaggerName: location
-        References: []
-        OperationId: '505'
-        MethodId: '732'
-      - Example:
-          parameters:
-            subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
-            topicTypeName: Microsoft.Resources.Subscriptions
-            api-version: '2019-01-01'
-          responses:
-            '200':
-              body:
-                value:
-                  - properties:
-                      destination:
-                        properties:
-                          endpointBaseUrl: 'https://requestb.in/15ksip71'
-                        endpointType: WebHook
-                      filter:
-                        includedEventTypes:
-                          - All
-                        isSubjectCaseSensitive: false
-                        subjectBeginsWith: ExamplePrefix
-                        subjectEndsWith: ExampleSuffix
-                      labels:
-                        - Finance
-                        - HR
-                      provisioningState: Succeeded
-                      topic: '/subscriptions/{{ subscription_id }}'
-                    id: >-
-                      /subscriptions/{{ subscription_id
-                      }}/providers/Microsoft.EventGrid/eventSubscriptions/{{
-                      event_subscription_name }}
-                    name: examplesubscription3
-                    type: Microsoft.EventGrid/eventSubscriptions
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/Microsoft.EventGrid/topicTypes/{{ topic_type_name
-          }}/eventSubscriptions
-        Method: get
-        Name: EventSubscriptions_ListGlobalBySubscriptionForTopicType
-        Filename: eventgrid_topictypes_eventsubscriptions_get
-        Variables:
-          - name: topic_type_name
-            value: myTopicType
-            swaggerName: topicTypeName
-        References: []
-        OperationId: '505'
-        MethodId: '654'
-      - Example:
-          parameters:
-            subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
-            resourceGroupName: examplerg
-            api-version: '2019-01-01'
-          responses:
-            '200':
-              body:
-                value:
-                  - properties:
-                      destination:
-                        properties:
-                          endpointBaseUrl: 'https://requestb.in/15ksip71'
-                        endpointType: WebHook
-                      filter:
-                        includedEventTypes:
-                          - All
-                        isSubjectCaseSensitive: false
-                        subjectBeginsWith: ''
-                        subjectEndsWith: ''
-                      provisioningState: Succeeded
-                      topic: >-
-                        /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                        resource_group }}
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.EventGrid/eventSubscriptions/{{
-                      event_subscription_name }}
-                    name: examplesubscription2
-                    type: Microsoft.EventGrid/eventSubscriptions
-                  - properties:
-                      destination:
-                        properties:
-                          endpointBaseUrl: 'https://requestb.in/15ksip71'
-                        endpointType: WebHook
-                      filter:
-                        includedEventTypes:
-                          - All
-                        isSubjectCaseSensitive: false
-                        subjectBeginsWith: ''
-                        subjectEndsWith: ''
-                      provisioningState: Succeeded
-                      topic: >-
-                        /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                        resource_group }}
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.EventGrid/eventSubscriptions/{{
-                      event_subscription_name }}
-                    name: examplesubscription4
-                    type: Microsoft.EventGrid/eventSubscriptions
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.EventGrid/eventSubscriptions
-        Method: get
-        Name: EventSubscriptions_ListGlobalByResourceGroup
-        Filename: eventgrid_eventsubscriptions_get_1
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-        References: []
-        OperationId: '505'
-        MethodId: '678'
-      - Example:
-          parameters:
-            subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
-            location: westus2
-            topicTypeName: Microsoft.EventHub.namespaces
-            api-version: '2019-01-01'
-          responses:
-            '200':
-              body:
-                value:
-                  - properties:
-                      destination:
-                        properties:
-                          endpointBaseUrl: 'https://requestb.in/15ksip71'
-                        endpointType: WebHook
-                      filter:
-                        includedEventTypes:
-                          - All
-                        isSubjectCaseSensitive: false
-                        subjectBeginsWith: ExamplePrefix
-                        subjectEndsWith: ExampleSuffix
-                      labels:
-                        - Finance
-                        - HR
-                      provisioningState: Succeeded
-                      topic: >-
-                        /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                        resource_group
-                        }}/providers/microsoft.eventhub/namespaces/{{
-                        namespace_name }}
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.EventHub/namespaces/{{
-                      namespace_name
-                      }}/providers/Microsoft.EventGrid/eventSubscriptions/{{
-                      event_subscription_name }}
-                    name: examplesubscription10
-                    type: Microsoft.EventGrid/eventSubscriptions
-                  - properties:
-                      destination:
-                        properties:
-                          endpointBaseUrl: 'https://requestb.in/15ksip71'
-                        endpointType: WebHook
-                      filter:
-                        includedEventTypes:
-                          - All
-                        isSubjectCaseSensitive: false
-                        subjectBeginsWith: ExamplePrefix
-                        subjectEndsWith: ExampleSuffix
-                      labels:
-                        - Finance
-                        - HR
-                      provisioningState: Succeeded
-                      topic: >-
-                        /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                        resource_group
-                        }}/providers/microsoft.eventhub/namespaces/{{
-                        namespace_name }}
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.EventHub/namespaces/{{
-                      namespace_name
-                      }}/providers/Microsoft.EventGrid/eventSubscriptions/{{
-                      event_subscription_name }}
-                    name: examplesubscription11
-                    type: Microsoft.EventGrid/eventSubscriptions
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/Microsoft.EventGrid/locations/{{ location_name
-          }}/topicTypes/{{ topic_type_name }}/eventSubscriptions
-        Method: get
-        Name: EventSubscriptions_ListRegionalBySubscriptionForTopicType
-        Filename: eventgrid_locations_topictypes_eventsubscriptions_get
-        Variables:
-          - name: location_name
-            value: myLocation
-            swaggerName: location
-          - name: topic_type_name
-            value: myTopicType
-            swaggerName: topicTypeName
-        References: []
-        OperationId: '505'
-        MethodId: '786'
-      - Example:
-          parameters:
-            subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
-            resourceGroupName: examplerg
-            location: westus2
-            api-version: '2019-01-01'
-          responses:
-            '200':
-              body:
-                value:
-                  - properties:
-                      destination:
-                        properties:
-                          endpointBaseUrl: 'https://requestb.in/15ksip71'
-                        endpointType: WebHook
-                      filter:
-                        includedEventTypes:
-                          - All
-                        isSubjectCaseSensitive: false
-                        subjectBeginsWith: ExamplePrefix
-                        subjectEndsWith: ExampleSuffix
-                      labels:
-                        - Finance
-                        - HR
-                      provisioningState: Succeeded
-                      topic: >-
-                        /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                        resource_group
-                        }}/providers/microsoft.eventhub/namespaces/{{
-                        namespace_name }}
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.EventHub/namespaces/{{
-                      namespace_name
-                      }}/providers/Microsoft.EventGrid/eventSubscriptions/{{
-                      event_subscription_name }}
-                    name: examplesubscription10
-                    type: Microsoft.EventGrid/eventSubscriptions
-                  - properties:
-                      destination:
-                        properties:
-                          endpointBaseUrl: 'https://requestb.in/15ksip71'
-                        endpointType: WebHook
-                      filter:
-                        includedEventTypes:
-                          - All
-                        isSubjectCaseSensitive: false
-                        subjectBeginsWith: ExamplePrefix
-                        subjectEndsWith: ExampleSuffix
-                      labels:
-                        - Finance
-                        - HR
-                      provisioningState: Succeeded
-                      topic: >-
-                        /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                        resource_group
-                        }}/providers/microsoft.eventhub/namespaces/{{
-                        namespace_name }}
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.EventHub/namespaces/{{
-                      namespace_name
-                      }}/providers/Microsoft.EventGrid/eventSubscriptions/{{
-                      event_subscription_name }}
-                    name: examplesubscription11
-                    type: Microsoft.EventGrid/eventSubscriptions
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.EventGrid/locations/{{ location_name
-          }}/eventSubscriptions
-        Method: get
-        Name: EventSubscriptions_ListRegionalByResourceGroup
-        Filename: eventgrid_locations_eventsubscriptions_get_1
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-          - name: location_name
-            value: myLocation
-            swaggerName: location
-        References: []
-        OperationId: '505'
-        MethodId: '756'
-      - Example:
-          parameters:
-            subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
-            resourceGroupName: examplerg
-            topicTypeName: Microsoft.Resources.ResourceGroups
-            api-version: '2019-01-01'
-          responses:
-            '200':
-              body:
-                value:
-                  - properties:
-                      destination:
-                        properties:
-                          endpointBaseUrl: 'https://requestb.in/15ksip71'
-                        endpointType: WebHook
-                      filter:
-                        includedEventTypes:
-                          - All
-                        isSubjectCaseSensitive: false
-                        subjectBeginsWith: ExamplePrefix
-                        subjectEndsWith: ExampleSuffix
-                      labels:
-                        - Finance
-                        - HR
-                      provisioningState: Succeeded
-                      topic: >-
-                        /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                        resource_group }}
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.EventGrid/eventSubscriptions/{{
-                      event_subscription_name }}
-                    name: examplesubscription3
-                    type: Microsoft.EventGrid/eventSubscriptions
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.EventGrid/topicTypes/{{ topic_type_name
-          }}/eventSubscriptions
-        Method: get
-        Name: EventSubscriptions_ListGlobalByResourceGroupForTopicType
-        Filename: eventgrid_topictypes_eventsubscriptions_get_1
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-          - name: topic_type_name
-            value: myTopicType
-            swaggerName: topicTypeName
-        References: []
-        OperationId: '505'
-        MethodId: '702'
-      - Example:
-          parameters:
-            subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
-            resourceGroupName: examplerg
-            location: westus2
-            topicTypeName: Microsoft.EventHub.namespaces
-            api-version: '2019-01-01'
-          responses:
-            '200':
-              body:
-                value:
-                  - properties:
-                      destination:
-                        properties:
-                          endpointBaseUrl: 'https://requestb.in/15ksip71'
-                        endpointType: WebHook
-                      filter:
-                        includedEventTypes:
-                          - All
-                        isSubjectCaseSensitive: false
-                        subjectBeginsWith: ExamplePrefix
-                        subjectEndsWith: ExampleSuffix
-                      labels:
-                        - Finance
-                        - HR
-                      provisioningState: Succeeded
-                      topic: >-
-                        /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                        resource_group
-                        }}/providers/microsoft.eventhub/namespaces/{{
-                        namespace_name }}
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.EventHub/namespaces/{{
-                      namespace_name
-                      }}/providers/Microsoft.EventGrid/eventSubscriptions/{{
-                      event_subscription_name }}
-                    name: examplesubscription10
-                    type: Microsoft.EventGrid/eventSubscriptions
-                  - properties:
-                      destination:
-                        properties:
-                          endpointBaseUrl: 'https://requestb.in/15ksip71'
-                        endpointType: WebHook
-                      filter:
-                        includedEventTypes:
-                          - All
-                        isSubjectCaseSensitive: false
-                        subjectBeginsWith: ExamplePrefix
-                        subjectEndsWith: ExampleSuffix
-                      labels:
-                        - Finance
-                        - HR
-                      provisioningState: Succeeded
-                      topic: >-
-                        /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                        resource_group
-                        }}/providers/microsoft.eventhub/namespaces/{{
-                        namespace_name }}
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.EventHub/namespaces/{{
-                      namespace_name
-                      }}/providers/Microsoft.EventGrid/eventSubscriptions/{{
-                      event_subscription_name }}
-                    name: examplesubscription11
-                    type: Microsoft.EventGrid/eventSubscriptions
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.EventGrid/locations/{{ location_name
-          }}/topicTypes/{{ topic_type_name }}/eventSubscriptions
-        Method: get
-        Name: EventSubscriptions_ListRegionalByResourceGroupForTopicType
-        Filename: eventgrid_locations_topictypes_eventsubscriptions_get_1
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-          - name: location_name
-            value: myLocation
-            swaggerName: location
-          - name: topic_type_name
-            value: myTopicType
-            swaggerName: topicTypeName
-        References: []
-        OperationId: '505'
-        MethodId: '816'
-      - Example:
-          parameters:
-            subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
-            resourceGroupName: examplerg
-            providerNamespace: Microsoft.EventGrid
-            resourceTypeName: topics
-            resourceName: exampletopic2
-            api-version: '2019-01-01'
-          responses:
-            '200':
-              body:
-                value:
-                  - properties:
-                      destination:
-                        properties:
-                          endpointBaseUrl: 'https://requestb.in/15ksip71'
-                        endpointType: WebHook
-                      filter:
-                        includedEventTypes:
-                          - All
-                        isSubjectCaseSensitive: false
-                        subjectBeginsWith: ''
-                        subjectEndsWith: ''
-                      provisioningState: Succeeded
-                      topic: >-
-                        /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                        resource_group
-                        }}/providers/microsoft.eventgrid/topics/{{ topic_name }}
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group }}/providers/Microsoft.EventGrid/topics/{{
-                      topic_name
-                      }}/providers/Microsoft.EventGrid/eventSubscriptions/{{
-                      event_subscription_name }}
-                    name: examplesubscription1
-                    type: Microsoft.EventGrid/eventSubscriptions
-                  - properties:
-                      destination:
-                        properties:
-                          endpointBaseUrl: 'https://requestb.in/15ksip71'
-                        endpointType: WebHook
-                      filter:
-                        includedEventTypes:
-                          - All
-                        isSubjectCaseSensitive: false
-                        subjectBeginsWith: ''
-                        subjectEndsWith: ''
-                      provisioningState: Succeeded
-                      topic: >-
-                        /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                        resource_group
-                        }}/providers/microsoft.eventgrid/topics/{{ topic_name }}
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group }}/providers/Microsoft.EventGrid/topics/{{
-                      topic_name
-                      }}/providers/Microsoft.EventGrid/eventSubscriptions/{{
-                      event_subscription_name }}
-                    name: examplesubscription2
-                    type: Microsoft.EventGrid/eventSubscriptions
-                  - properties:
-                      destination:
-                        properties:
-                          endpointBaseUrl: 'https://requestb.in/15ksip71'
-                        endpointType: WebHook
-                      filter:
-                        includedEventTypes:
-                          - All
-                        isSubjectCaseSensitive: false
-                        subjectBeginsWith: ''
-                        subjectEndsWith: ''
-                      labels: []
-                      provisioningState: Succeeded
-                      topic: >-
-                        /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                        resource_group
-                        }}/providers/microsoft.eventgrid/topics/{{ topic_name }}
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group }}/providers/Microsoft.EventGrid/topics/{{
-                      topic_name
-                      }}/providers/Microsoft.EventGrid/eventSubscriptions/{{
-                      event_subscription_name }}
-                    name: examplesubscription3
-                    type: Microsoft.EventGrid/eventSubscriptions
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/{providerNamespace}/{resourceTypeName}/{{
-          {resource_type_name}_name
-          }}/providers/Microsoft.EventGrid/eventSubscriptions
-        Method: get
-        Name: EventSubscriptions_ListByResource
-        Filename: eventgrid_eventsubscriptions_get_2
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-          - name: '{resource_type_name}_name'
-            value: myResourceType
-            swaggerName: resourceName
-        References: []
-        OperationId: '505'
-        MethodId: '852'
-  - ModuleName: azure_rm_eventgridoperation_info
-    Options:
-      - &ref_9
-        NameSwagger: value
-        NameAnsible: value
-        NamePythonSdk: value
-        NameGoSdk: Value
-        NameTerraform: Value
-        IdPortion: null
-        Type: dict
-        TypeName: Operation
-        TypeNameGo: Operation
-        IsList: true
-        Required: false
-        Documentation: A collection of operations
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions:
-          - NameSwagger: name
-            NameAnsible: name
-            NamePythonSdk: name
-            NameGoSdk: Name
-            NameTerraform: Name
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: Name of the operation
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /value/name
-            PathPython: /value/name
-            PathGo: /value/name
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: display
-            NameAnsible: display
-            NamePythonSdk: display
-            NameGoSdk: Display
-            NameTerraform: Display
-            IdPortion: null
-            Type: dict
-            TypeName: OperationInfo
-            TypeNameGo: OperationInfo
-            IsList: false
-            Required: false
-            Documentation: Display name of the operation
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions:
-              - NameSwagger: provider
-                NameAnsible: provider
-                NamePythonSdk: provider
-                NameGoSdk: Provider
-                NameTerraform: Provider
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: Name of the provider
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /value/display/provider
-                PathPython: /value/display/provider
-                PathGo: /value/display/provider
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: resource
-                NameAnsible: resource
-                NamePythonSdk: resource
-                NameGoSdk: Resource
-                NameTerraform: Resource
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: Name of the resource type
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /value/display/resource
-                PathPython: /value/display/resource
-                PathGo: /value/display/resource
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: operation
-                NameAnsible: operation
-                NamePythonSdk: operation
-                NameGoSdk: Operation
-                NameTerraform: Operation
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: Name of the operation
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /value/display/operation
-                PathPython: /value/display/operation
-                PathGo: /value/display/operation
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: description
-                NameAnsible: description
-                NamePythonSdk: description
-                NameGoSdk: Description
-                NameTerraform: Description
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: Description of the operation
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /value/display/description
-                PathPython: /value/display/description
-                PathGo: /value/display/description
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-            EnumValues: []
-            PathSwagger: /value/display
-            PathPython: /value/display
-            PathGo: /value/display
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: origin
-            NameAnsible: origin
-            NamePythonSdk: origin
-            NameGoSdk: Origin
-            NameTerraform: Origin
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: Origin of the operation
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /value/origin
-            PathPython: /value/origin
-            PathGo: /value/origin
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: properties
-            NameAnsible: properties
-            NamePythonSdk: properties
-            NameGoSdk: Properties
-            NameTerraform: Properties
-            IdPortion: null
-            Type: 'unknown-primary[object]'
-            TypeName: Object
-            TypeNameGo: Object
-            IsList: false
-            Required: false
-            Documentation: Properties of the operation
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /value/properties
-            PathPython: /value
-            PathGo: /value/properties
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: true
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /value
-        PathPython: /value
-        PathGo: /value
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-    Methods:
-      - Name: List
-        Options: []
-        RequiredOptions: []
-        Url: /providers/Microsoft.EventGrid/operations
-        HttpMethod: get
-        IsAsync: false
-    ResponseFields:
-      - *ref_9
-    ModuleOperationNameUpper: Operations
-    ModuleOperationName: operations
-    ObjectName: Operation
-    ResourceNameFieldInResponse: null
-    NeedsDeleteBeforeUpdate: false
-    NeedsForceUpdate: false
-    CannotTestUpdate: false
-    Provider: Microsoft.EventGrid
-    ApiVersion: '2019-01-01'
-    Examples:
-      - Example:
-          parameters:
-            api-version: '2019-01-01'
-          responses:
-            '200':
-              body:
-                value:
-                  - name: Microsoft.EventGrid/register/action
-                    display:
-                      provider: Microsoft Event Grid
-                      resource: EventGrid Resource Provider
-                      operation: Registers the EventGrid Resource Provider
-                      description: >-
-                        Registers the eventSubscription for the EventGrid
-                        resource provider and enables the creation of Event Grid
-                        subscriptions.
-                    origin: UserAndSystem
-                  - name: Microsoft.EventGrid/eventSubscriptions/write
-                    display:
-                      provider: Microsoft Event Grid
-                      resource: eventSubscriptions
-                      operation: Write EventSubscription
-                      description: Create or update a eventSubscription
-                    origin: UserAndSystem
-                  - name: Microsoft.EventGrid/eventSubscriptions/read
-                    display:
-                      provider: Microsoft Event Grid
-                      resource: eventSubscriptions
-                      operation: Read EventSubscription
-                      description: Read a eventSubscription
-                    origin: UserAndSystem
-                  - name: Microsoft.EventGrid/eventSubscriptions/delete
-                    display:
-                      provider: Microsoft Event Grid
-                      resource: eventSubscriptions
-                      operation: Delete EventSubscription
-                      description: Delete a eventSubscription
-                    origin: UserAndSystem
-                  - name: Microsoft.EventGrid/topics/write
-                    display:
-                      provider: Microsoft Event Grid
-                      resource: topics
-                      operation: Write Topic
-                      description: Create or update a topic
-                    origin: UserAndSystem
-                  - name: Microsoft.EventGrid/topics/read
-                    display:
-                      provider: Microsoft Event Grid
-                      resource: topics
-                      operation: Read Topic
-                      description: Read a topic
-                    origin: UserAndSystem
-                  - name: Microsoft.EventGrid/topics/delete
-                    display:
-                      provider: Microsoft Event Grid
-                      resource: topics
-                      operation: Delete Topic
-                      description: Delete a topic
-                    origin: UserAndSystem
-        Url: /providers/Microsoft.EventGrid/operations
-        Method: get
-        Name: Operations_List
-        Filename: eventgrid_operations_get
-        Variables: []
-        References: []
-        OperationId: '896'
-        MethodId: '897'
+        OperationName: EventSubscriptions
+        MethodName: Delete
   - ModuleName: azure_rm_eventgridtopic
     Options:
       - NameSwagger: resourceGroupName
@@ -4386,12 +2261,14 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: topicName
-        NameAnsible: name
+        NameAnsible: topic_name
         NamePythonSdk: topic_name
         NameGoSdk: TopicName
-        NameTerraform: name
+        NameTerraform: TopicName
         IdPortion: topics
         Type: str
         TypeName: xxx
@@ -4416,7 +2293,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: topicInfo
         NameAnsible: topic_info
         NamePythonSdk: topic_info
@@ -4439,14 +2318,16 @@ Modules:
         PathSwagger: ''
         PathPython: null
         PathGo: null
-        DispositionSdk: dictionary
+        DispositionSdk: '*'
         DispositionRest: '*'
         Comparison: ''
         Updatable: true
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 2
       - NameSwagger: location
         NameAnsible: location
         NamePythonSdk: location
@@ -4476,7 +2357,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: tags
         NameAnsible: tags
         NamePythonSdk: tags
@@ -4510,7 +2393,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -4540,8 +2425,10 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
-      - &ref_13
+        Kind: 1
+      - &ref_8
         NameSwagger: provisioningState
         NameAnsible: provisioning_state
         NamePythonSdk: provisioning_state
@@ -4589,8 +2476,10 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
-      - &ref_14
+        Kind: 1
+      - &ref_9
         NameSwagger: endpoint
         NameAnsible: endpoint
         NamePythonSdk: endpoint
@@ -4620,8 +2509,10 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
-      - &ref_10
+        Kind: 1
+      - &ref_5
         NameSwagger: id
         NameAnsible: id
         NamePythonSdk: id
@@ -4651,8 +2542,10 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
-      - &ref_11
+        Kind: 1
+      - &ref_6
         NameSwagger: name
         NameAnsible: name
         NamePythonSdk: name
@@ -4682,8 +2575,10 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
-      - &ref_12
+        Kind: 1
+      - &ref_7
         NameSwagger: type
         NameAnsible: type
         NamePythonSdk: type
@@ -4713,7 +2608,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: CreateOrUpdate
         Options:
@@ -4803,9 +2700,9 @@ Modules:
         HttpMethod: get
         IsAsync: false
     ResponseFields:
-      - *ref_10
-      - *ref_11
-      - *ref_12
+      - *ref_5
+      - *ref_6
+      - *ref_7
       - NameSwagger: location
         NameAnsible: location
         NamePythonSdk: location
@@ -4835,7 +2732,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: tags
         NameAnsible: tags
         NamePythonSdk: tags
@@ -4869,7 +2768,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -4888,8 +2789,8 @@ Modules:
         IncludeInArgSpec: true
         NoLog: false
         SubOptions:
-          - *ref_13
-          - *ref_14
+          - *ref_8
+          - *ref_9
         EnumValues: []
         PathSwagger: /properties
         PathPython: ''
@@ -4901,7 +2802,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     ModuleOperationNameUpper: Topics
     ModuleOperationName: topics
     ObjectName: Topic
@@ -4957,6 +2860,8 @@ Modules:
           - resourcegroups_put
         OperationId: '911'
         MethodId: '942'
+        OperationName: Topics
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -5001,6 +2906,8 @@ Modules:
           - eventgrid_topics_put
         OperationId: '911'
         MethodId: '1007'
+        OperationName: Topics
+        MethodName: Update
       - Example:
           parameters:
             subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
@@ -5026,1206 +2933,9 @@ Modules:
         References: []
         OperationId: '911'
         MethodId: '976'
-  - ModuleName: azure_rm_eventgridtopic_info
-    Options:
-      - NameSwagger: resourceGroupName
-        NameAnsible: resource_group
-        NamePythonSdk: resource_group_name
-        NameGoSdk: ResourceGroup
-        NameTerraform: resourceGroup
-        IdPortion: resourceGroups
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: The name of the resource group within the user's subscription.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: topicName
-        NameAnsible: topic_name
-        NamePythonSdk: topic_name
-        NameGoSdk: TopicName
-        NameTerraform: TopicName
-        IdPortion: topics
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: Name of the topic
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: providerNamespace
-        NameAnsible: provider_namespace
-        NamePythonSdk: provider_namespace
-        NameGoSdk: ProviderNamespace
-        NameTerraform: ProviderNamespace
-        IdPortion: providers
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: Namespace of the provider of the topic
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: resourceTypeName
-        NameAnsible: resource_type_name
-        NamePythonSdk: resource_type_name
-        NameGoSdk: ResourceTypeName
-        NameTerraform: ResourceTypeName
-        IdPortion: '{providerNamespace}'
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: Name of the topic type
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: resourceName
-        NameAnsible: name
-        NamePythonSdk: resource_name
-        NameGoSdk: ResourceName
-        NameTerraform: name
-        IdPortion: '{resourceTypeName}'
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: Name of the topic
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - &ref_15
-        NameSwagger: id
-        NameAnsible: id
-        NamePythonSdk: id
-        NameGoSdk: ID
-        NameTerraform: ID
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Fully qualified identifier of the resource
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /id
-        PathPython: /id
-        PathGo: /id
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_16
-        NameSwagger: name
-        NameAnsible: name
-        NamePythonSdk: name
-        NameGoSdk: Name
-        NameTerraform: Name
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Name of the resource
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /name
-        PathPython: /name
-        PathGo: /name
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_17
-        NameSwagger: type
-        NameAnsible: type
-        NamePythonSdk: type
-        NameGoSdk: Type
-        NameTerraform: Type
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Type of the resource
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /type
-        PathPython: /type
-        PathGo: /type
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_18
-        NameSwagger: location
-        NameAnsible: location
-        NamePythonSdk: location
-        NameGoSdk: Location
-        NameTerraform: Location
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Location of the resource
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /location
-        PathPython: /location
-        PathGo: /location
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_19
-        NameSwagger: tags
-        NameAnsible: tags
-        NamePythonSdk: tags
-        NameGoSdk: Tags
-        NameTerraform: Tags
-        IdPortion: null
-        Type: >-
-          unknown[DictionaryType
-          {"$id":"342","$type":"DictionaryType","valueType":{"$id":"343","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"344","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"345","fixed":false},"deprecated":false}]
-        TypeName: >-
-          {"$id":"342","$type":"DictionaryType","valueType":{"$id":"343","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"344","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"345","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"342","$type":"DictionaryType","valueType":{"$id":"343","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"344","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"345","fixed":false},"deprecated":false}
-        IsList: false
-        Required: false
-        Documentation: Tags of the resource
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /tags
-        PathPython: /tags
-        PathGo: /tags
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_20
-        NameSwagger: properties
-        NameAnsible: properties
-        NamePythonSdk: properties
-        NameGoSdk: Properties
-        NameTerraform: Properties
-        IdPortion: null
-        Type: dict
-        TypeName: TopicProperties
-        TypeNameGo: TopicProperties
-        IsList: false
-        Required: false
-        Documentation: Properties of the topic
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties
-        PathPython: ''
-        PathGo: /properties
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: true
-        IncludeInResponse: true
-        Flatten: false
-      - NameSwagger: provisioningState
-        NameAnsible: provisioning_state
-        NamePythonSdk: provisioning_state
-        NameGoSdk: ProvisioningState
-        NameTerraform: ProvisioningState
-        IdPortion: null
-        Type: str
-        TypeName: TopicProvisioningState
-        TypeNameGo: TopicProvisioningState
-        IsList: false
-        Required: false
-        Documentation: Provisioning state of the topic.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues:
-          - Key: Creating
-            Value: Creating
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Updating
-            Value: Updating
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Deleting
-            Value: Deleting
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Succeeded
-            Value: Succeeded
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Canceled
-            Value: Canceled
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Failed
-            Value: Failed
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-        PathSwagger: /properties/provisioningState
-        PathPython: /provisioningState
-        PathGo: /properties/provisioningState
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: endpoint
-        NameAnsible: endpoint
-        NamePythonSdk: endpoint
-        NameGoSdk: Endpoint
-        NameTerraform: Endpoint
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Endpoint for the topic.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/endpoint
-        PathPython: /endpoint
-        PathGo: /properties/endpoint
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-    Methods:
-      - Name: ListBySubscription
-        Options: []
-        RequiredOptions: []
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/Microsoft.EventGrid/topics
-        HttpMethod: get
-        IsAsync: false
-      - Name: ListByResourceGroup
-        Options:
-          - resourceGroupName
-        RequiredOptions:
-          - resourceGroupName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.EventGrid/topics
-        HttpMethod: get
-        IsAsync: false
-      - Name: Get
-        Options:
-          - resourceGroupName
-          - topicName
-        RequiredOptions:
-          - resourceGroupName
-          - topicName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.EventGrid/topics/{{ topic_name }}
-        HttpMethod: get
-        IsAsync: false
-      - Name: ListEventTypes
-        Options:
-          - resourceGroupName
-          - providerNamespace
-          - resourceTypeName
-          - resourceName
-        RequiredOptions:
-          - resourceGroupName
-          - providerNamespace
-          - resourceTypeName
-          - resourceName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/{providerNamespace}/{resourceTypeName}/{{
-          {resource_type_name}_name }}/providers/Microsoft.EventGrid/eventTypes
-        HttpMethod: get
-        IsAsync: false
-    ResponseFields:
-      - *ref_15
-      - *ref_16
-      - *ref_17
-      - *ref_18
-      - *ref_19
-      - *ref_20
-    ModuleOperationNameUpper: Topics
-    ModuleOperationName: topics
-    ObjectName: Topic
-    ResourceNameFieldInResponse: null
-    NeedsDeleteBeforeUpdate: false
-    NeedsForceUpdate: false
-    CannotTestUpdate: false
-    Provider: Microsoft.EventGrid
-    ApiVersion: '2019-01-01'
-    Examples:
-      - Example:
-          parameters:
-            subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
-            api-version: '2019-01-01'
-          responses:
-            '200':
-              body:
-                value:
-                  - properties:
-                      endpoint: >-
-                        https://exampletopic1.westus2-1.eventgrid.azure.net/api/events
-                      provisioningState: Succeeded
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group }}/providers/Microsoft.EventGrid/topics/{{
-                      topic_name }}
-                    location: westus2
-                    name: exampletopic1
-                    tags:
-                      tag1: value1
-                      tag2: value2
-                    type: Microsoft.EventGrid/topics
-                  - properties:
-                      endpoint: >-
-                        https://exampletopic2.westcentralus-1.eventgrid.azure.net/api/events
-                      provisioningState: Succeeded
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group }}/providers/Microsoft.EventGrid/topics/{{
-                      topic_name }}
-                    location: westcentralus
-                    name: exampletopic2
-                    tags:
-                      tag1: value1
-                      tag2: value2
-                    type: Microsoft.EventGrid/topics
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/Microsoft.EventGrid/topics
-        Method: get
-        Name: Topics_ListBySubscription
-        Filename: eventgrid_topics_get_1
-        Variables: []
-        References: []
-        OperationId: '911'
-        MethodId: '1041'
-      - Example:
-          parameters:
-            subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
-            resourceGroupName: examplerg
-            api-version: '2019-01-01'
-          responses:
-            '200':
-              body:
-                value:
-                  - properties:
-                      endpoint: >-
-                        https://exampletopic1.westus2-1.eventgrid.azure.net/api/events
-                      provisioningState: Succeeded
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group }}/providers/Microsoft.EventGrid/topics/{{
-                      topic_name }}
-                    location: westus2
-                    name: exampletopic1
-                    tags:
-                      tag1: value1
-                      tag2: value2
-                    type: Microsoft.EventGrid/topics
-                  - properties:
-                      endpoint: >-
-                        https://exampletopic2.westcentralus-1.eventgrid.azure.net/api/events
-                      provisioningState: Succeeded
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group }}/providers/Microsoft.EventGrid/topics/{{
-                      topic_name }}
-                    location: westcentralus
-                    name: exampletopic2
-                    tags:
-                      tag1: value1
-                      tag2: value2
-                    type: Microsoft.EventGrid/topics
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.EventGrid/topics
-        Method: get
-        Name: Topics_ListByResourceGroup
-        Filename: eventgrid_topics_get_2
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-        References: []
-        OperationId: '911'
-        MethodId: '1059'
-      - Example:
-          parameters:
-            subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
-            resourceGroupName: examplerg
-            topicName: exampletopic2
-            api-version: '2019-01-01'
-          responses:
-            '200':
-              body:
-                properties:
-                  endpoint: >-
-                    https://exampletopic2.westcentralus-1.eventgrid.azure.net/api/events
-                  provisioningState: Succeeded
-                id: >-
-                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                  resource_group }}/providers/Microsoft.EventGrid/topics/{{
-                  topic_name }}
-                location: westcentralus
-                name: exampletopic2
-                tags:
-                  tag1: value1
-                  tag2: value2
-                type: Microsoft.EventGrid/topics
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.EventGrid/topics/{{ topic_name }}
-        Method: get
-        Name: Topics_Get
-        Filename: eventgrid_topics_get
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-          - name: topic_name
-            value: myTopic
-            swaggerName: topicName
-        References: []
-        OperationId: '911'
-        MethodId: '912'
-      - Example:
-          parameters:
-            subscriptionId: 5b4b650e-28b9-4790-b3ab-ddbd88d727c4
-            resourceGroupName: examplerg
-            providerNamespace: Microsoft.Storage
-            resourceTypeName: storageAccounts
-            resourceName: ExampleStorageAccount
-            api-version: '2019-01-01'
-          responses:
-            '200':
-              body:
-                value:
-                  - properties:
-                      description: Raised when a blob is created.
-                      schemaUrl: tbd
-                      displayName: Blob Created
-                    id: >-
-                      providers/Microsoft.EventGrid/topicTypes/Microsoft.Storage.StorageAccounts/eventTypes/Microsoft.Storage.BlobCreated
-                    name: Microsoft.Storage.BlobCreated
-                    type: Microsoft.EventGrid/topicTypes/eventTypes
-                  - properties:
-                      description: Raised when a blob is deleted.
-                      schemaUrl: tbd
-                      displayName: Blob Deleted
-                    id: >-
-                      providers/Microsoft.EventGrid/topicTypes/Microsoft.Storage.StorageAccounts/eventTypes/Microsoft.Storage.BlobDeleted
-                    name: Microsoft.Storage.BlobDeleted
-                    type: Microsoft.EventGrid/topicTypes/eventTypes
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/{providerNamespace}/{resourceTypeName}/{{
-          {resource_type_name}_name }}/providers/Microsoft.EventGrid/eventTypes
-        Method: get
-        Name: Topics_ListEventTypes
-        Filename: eventgrid_eventtypes_get
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-          - name: '{resource_type_name}_name'
-            value: myResourceType
-            swaggerName: resourceName
-        References: []
-        OperationId: '911'
-        MethodId: '1147'
-  - ModuleName: azure_rm_eventgridtopictype_info
-    Options:
-      - NameSwagger: topicTypeName
-        NameAnsible: name
-        NamePythonSdk: topic_type_name
-        NameGoSdk: TopicTypeName
-        NameTerraform: name
-        IdPortion: topicTypes
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: Name of the topic type
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - &ref_21
-        NameSwagger: id
-        NameAnsible: id
-        NamePythonSdk: id
-        NameGoSdk: ID
-        NameTerraform: ID
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Fully qualified identifier of the resource
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /id
-        PathPython: /id
-        PathGo: /id
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_22
-        NameSwagger: name
-        NameAnsible: name
-        NamePythonSdk: name
-        NameGoSdk: Name
-        NameTerraform: Name
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Name of the resource
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /name
-        PathPython: /name
-        PathGo: /name
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_23
-        NameSwagger: type
-        NameAnsible: type
-        NamePythonSdk: type
-        NameGoSdk: Type
-        NameTerraform: Type
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Type of the resource
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /type
-        PathPython: /type
-        PathGo: /type
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_24
-        NameSwagger: properties
-        NameAnsible: properties
-        NamePythonSdk: properties
-        NameGoSdk: Properties
-        NameTerraform: Properties
-        IdPortion: null
-        Type: dict
-        TypeName: TopicTypeProperties
-        TypeNameGo: TopicTypeProperties
-        IsList: false
-        Required: false
-        Documentation: Properties of the topic type info
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties
-        PathPython: ''
-        PathGo: /properties
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: true
-        IncludeInResponse: true
-        Flatten: false
-      - NameSwagger: provider
-        NameAnsible: provider
-        NamePythonSdk: provider
-        NameGoSdk: Provider
-        NameTerraform: Provider
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Namespace of the provider of the topic type.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/provider
-        PathPython: /provider
-        PathGo: /properties/provider
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: displayName
-        NameAnsible: display_name
-        NamePythonSdk: display_name
-        NameGoSdk: DisplayName
-        NameTerraform: DisplayName
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Display Name for the topic type.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/displayName
-        PathPython: /displayName
-        PathGo: /properties/displayName
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: description
-        NameAnsible: description
-        NamePythonSdk: description
-        NameGoSdk: Description
-        NameTerraform: Description
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Description of the topic type.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/description
-        PathPython: /description
-        PathGo: /properties/description
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: resourceRegionType
-        NameAnsible: resource_region_type
-        NamePythonSdk: resource_region_type
-        NameGoSdk: ResourceRegionType
-        NameTerraform: ResourceRegionType
-        IdPortion: null
-        Type: str
-        TypeName: ResourceRegionType
-        TypeNameGo: ResourceRegionType
-        IsList: false
-        Required: false
-        Documentation: Region type of the resource.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues:
-          - Key: RegionalResource
-            Value: RegionalResource
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: GlobalResource
-            Value: GlobalResource
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-        PathSwagger: /properties/resourceRegionType
-        PathPython: /resourceRegionType
-        PathGo: /properties/resourceRegionType
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: provisioningState
-        NameAnsible: provisioning_state
-        NamePythonSdk: provisioning_state
-        NameGoSdk: ProvisioningState
-        NameTerraform: ProvisioningState
-        IdPortion: null
-        Type: str
-        TypeName: TopicTypeProvisioningState
-        TypeNameGo: TopicTypeProvisioningState
-        IsList: false
-        Required: false
-        Documentation: Provisioning state of the topic type
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues:
-          - Key: Creating
-            Value: Creating
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Updating
-            Value: Updating
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Deleting
-            Value: Deleting
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Succeeded
-            Value: Succeeded
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Canceled
-            Value: Canceled
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Failed
-            Value: Failed
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-        PathSwagger: /properties/provisioningState
-        PathPython: /provisioningState
-        PathGo: /properties/provisioningState
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: supportedLocations
-        NameAnsible: supported_locations
-        NamePythonSdk: supported_locations
-        NameGoSdk: SupportedLocations
-        NameTerraform: SupportedLocations
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: true
-        Required: false
-        Documentation: List of locations supported by this topic type.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/supportedLocations
-        PathPython: /supportedLocations
-        PathGo: /properties/supportedLocations
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-    Methods:
-      - Name: List
-        Options: []
-        RequiredOptions: []
-        Url: /providers/Microsoft.EventGrid/topicTypes
-        HttpMethod: get
-        IsAsync: false
-      - Name: Get
-        Options:
-          - topicTypeName
-        RequiredOptions:
-          - topicTypeName
-        Url: '/providers/Microsoft.EventGrid/topicTypes/{{ topic_type_name }}'
-        HttpMethod: get
-        IsAsync: false
-      - Name: ListEventTypes
-        Options:
-          - topicTypeName
-        RequiredOptions:
-          - topicTypeName
-        Url: >-
-          /providers/Microsoft.EventGrid/topicTypes/{{ topic_type_name
-          }}/eventTypes
-        HttpMethod: get
-        IsAsync: false
-    ResponseFields:
-      - *ref_21
-      - *ref_22
-      - *ref_23
-      - *ref_24
-    ModuleOperationNameUpper: TopicTypes
-    ModuleOperationName: topic_types
-    ObjectName: TopicType
-    ResourceNameFieldInResponse: null
-    NeedsDeleteBeforeUpdate: false
-    NeedsForceUpdate: false
-    CannotTestUpdate: false
-    Provider: Microsoft.EventGrid
-    ApiVersion: '2019-01-01'
-    Examples:
-      - Example:
-          parameters:
-            api-version: '2019-01-01'
-          responses:
-            '200':
-              body:
-                value:
-                  - properties:
-                      description: Microsoft EventHubs service events.
-                      displayName: EventHubs Namespace
-                      provider: Microsoft.Eventhub
-                      provisioningState: Succeeded
-                      resourceRegionType: RegionalResource
-                    id: >-
-                      providers/Microsoft.EventGrid/topicTypes/Microsoft.Eventhub.Namespaces
-                    name: Microsoft.Eventhub.Namespaces
-                    type: Microsoft.EventGrid/topicTypes
-                  - properties:
-                      description: Microsoft Storage service events.
-                      displayName: Storage Accounts
-                      provider: Microsoft.Storage
-                      provisioningState: Succeeded
-                      resourceRegionType: RegionalResource
-                    id: >-
-                      providers/Microsoft.EventGrid/topicTypes/Microsoft.Storage.StorageAccounts
-                    name: Microsoft.Storage.StorageAccounts
-                    type: Microsoft.EventGrid/topicTypes
-        Url: /providers/Microsoft.EventGrid/topicTypes
-        Method: get
-        Name: TopicTypes_List
-        Filename: eventgrid_topictypes_get
-        Variables: []
-        References: []
-        OperationId: '1191'
-        MethodId: '1192'
-      - Example:
-          parameters:
-            topicTypeName: Microsoft.Storage.StorageAccounts
-            api-version: '2019-01-01'
-          responses:
-            '200':
-              body:
-                properties:
-                  description: Microsoft Storage service events.
-                  displayName: Storage Accounts
-                  provider: Microsoft.Storage
-                  provisioningState: Succeeded
-                  resourceRegionType: RegionalResource
-                id: >-
-                  providers/Microsoft.EventGrid/topicTypes/Microsoft.Storage.StorageAccounts
-                name: Microsoft.Storage.StorageAccounts
-                type: Microsoft.EventGrid/topicTypes
-        Url: '/providers/Microsoft.EventGrid/topicTypes/{{ topic_type_name }}'
-        Method: get
-        Name: TopicTypes_Get
-        Filename: eventgrid_topictypes_get_1
-        Variables:
-          - name: topic_type_name
-            value: myTopicType
-            swaggerName: topicTypeName
-        References: []
-        OperationId: '1191'
-        MethodId: '1204'
-      - Example:
-          parameters:
-            topicTypeName: Microsoft.Storage.StorageAccounts
-            api-version: '2019-01-01'
-          responses:
-            '200':
-              body:
-                value:
-                  - properties:
-                      displayName: Blob Created
-                      description: Raised when a blob is created.
-                      schemaUrl: tbd
-                    id: >-
-                      providers/Microsoft.EventGrid/topicTypes/Microsoft.Storage.StorageAccounts/eventTypes/Microsoft.Storage.BlobCreated
-                    name: Microsoft.Storage.BlobCreated
-                    type: Microsoft.EventGrid/topicTypes/eventTypes
-                  - properties:
-                      description: Raised when a blob is deleted.
-                      schemaUrl: tbd
-                      displayName: Blob Deleted
-                    id: >-
-                      providers/Microsoft.EventGrid/topicTypes/Microsoft.Storage.StorageAccounts/eventTypes/Microsoft.Storage.BlobDeleted
-                    name: Microsoft.Storage.BlobDeleted
-                    type: Microsoft.EventGrid/topicTypes/eventTypes
-        Url: >-
-          /providers/Microsoft.EventGrid/topicTypes/{{ topic_type_name
-          }}/eventTypes
-        Method: get
-        Name: TopicTypes_ListEventTypes
-        Filename: eventgrid_topictypes_eventtypes_get
-        Variables:
-          - name: topic_type_name
-            value: myTopicType
-            swaggerName: topicTypeName
-        References: []
-        OperationId: '1191'
-        MethodId: '1222'
+        OperationName: Topics
+        MethodName: Delete
 ServiceName: EventGridManagementClient
 MgmtClientName: EventGridManagementClient
 CliName: eventgrid
 Namespace: azure.mgmt.eventgrid
-Info:
-  - '  ** FOUND OPTION scope'
-  - '  ** FOUND OPTION eventSubscriptionName'
-  - '  ** FOUND OPTION eventSubscriptionInfo'
-  - '  ** FOUND OPTION scope'
-  - '  ** FOUND OPTION eventSubscriptionName'
-  - '  ** FOUND OPTION location'
-  - '  ** FOUND OPTION topicTypeName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION location'
-  - '  ** FOUND OPTION topicTypeName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION location'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION topicTypeName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION location'
-  - '  ** FOUND OPTION topicTypeName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION providerNamespace'
-  - '  ** FOUND OPTION resourceTypeName'
-  - '  ** FOUND OPTION resourceName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION topicName'
-  - '  ** FOUND OPTION topicInfo'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION topicName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION providerNamespace'
-  - '  ** FOUND OPTION resourceTypeName'
-  - '  ** FOUND OPTION resourceName'
-  - '  ** FOUND OPTION topicTypeName'
-  - '  ** FOUND OPTION topicTypeName'

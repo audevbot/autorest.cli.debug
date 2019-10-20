@@ -19,17 +19,17 @@
         resource_group: '{{resource_group}}'
         gallery_name: '{{gallery_name}}'
         gallery_image_name: '{{image_name}}'
-        name: '{{version_name}}'
+        gallery_image_version_name: '{{version_name}}'
         gallery_image_version:
           location: West US
           properties:
             publishingProfile:
               targetRegions:
                 - name: West US
-                  regionalReplicaCount: '1'
+                  regional_replica_count: '1'
                 - name: East US
-                  regionalReplicaCount: '2'
-                  storageAccountType: Standard_ZRS
+                  regional_replica_count: '2'
+                  storage_account_type: Standard_ZRS
               source:
                 managedImage:
                   id: >-
