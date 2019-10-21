@@ -54,7 +54,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: PolicyContractProperties
             go_type_name: PolicyContractProperties
           '/value': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
@@ -122,6 +122,11 @@ objects:
             go_variable_name: operationID
             python_parameter_name: operation_id
             python_variable_name: operation_id
+          'policyId': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
+            id_portion: policies
+            go_variable_name: policyID
+            python_parameter_name: policy_id
+            python_variable_name: policy_id
           '/properties/format': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [go]
             go_field_name: Format
@@ -129,15 +134,10 @@ objects:
           '/format': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
             python_field_name: format
-          'policyId': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
-            id_portion: policies
-            go_variable_name: policyID
-            python_parameter_name: policy_id
-            python_variable_name: policy_id
         response:
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: PolicyContractProperties
             go_type_name: PolicyContractProperties
           '/properties/value': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
@@ -234,30 +234,27 @@ objects:
         name: 'format'
         description: 'Format of the policyContent.'
         required: false
+        sample_value: xml
+        azure_sdk_references: ['/format', '/properties/format']
         values:
           - :xml
           - :xml-link
           - :rawxml
           - :rawxml-link
         default_value: :xml
-        sample_value: xml
-        azure_sdk_references: ['/format', '/properties/format']
       # read only values included only in response
       - !ruby/object:Api::Type::String
         name: 'id'
         description: 'Resource ID.'
-        input: true
         output: true
         azure_sdk_references: ['/id']
       - !ruby/object:Api::Type::String
         name: 'name'
         description: 'Resource name.'
-        input: true
         output: true
         azure_sdk_references: ['/name']
       - !ruby/object:Api::Type::String
         name: 'type'
         description: 'Resource type for API Management resource.'
-        input: true
         output: true
         azure_sdk_references: ['/type']

@@ -8,10 +8,10 @@
     resource_group: myResourceGroup
     service_name: myService
   tasks:
-    - name: ServicePatch
+    - name: Patch service
       azure_rm_resource:
         method: PATCH
-        api_version: 2018-08-20-preview
+        api_version: '2019-09-16'
         resource_group: '{{ resource_group }}'
         provider: HealthcareApis
         resource_type: services
