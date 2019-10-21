@@ -1,5 +1,5 @@
 Modules:
-  - ModuleName: azure_rm_subscriptionssubscriptionoperation_info
+  - ModuleName: azure_rm_subscriptionssubscriptionoperation
     Options:
       - &ref_0
         NameSwagger: value
@@ -49,7 +49,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: status
             NameAnsible: status
             NamePythonSdk: status
@@ -79,7 +81,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: statusDetail
             NameAnsible: status_detail
             NamePythonSdk: status_detail
@@ -109,7 +113,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /value
         PathPython: /value
@@ -121,7 +127,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: List
         Options: []
@@ -140,41 +148,14 @@ Modules:
     CannotTestUpdate: false
     Provider: Microsoft.Subscription
     ApiVersion: 2018-03-01-preview
-    Examples:
-      - Example:
-          parameters:
-            api-version: 2018-03-01-preview
-          responses:
-            '200':
-              body:
-                value:
-                  - id: >-
-                      /providers/Microsoft.Subscription/subscriptionOperations/c03acf6e-5295-44c2-92d3-cb1daa4c701c
-                    status: Pending
-                    statusDetail: Subscription Creation in Progress
-                  - id: >-
-                      /providers/Microsoft.Subscription/subscriptionOperations/d46dcd37-f8b3-43a4-aed6-41de9131412d
-                    status: Pending
-                    statusDetail: Subscription Creation in Progress
-                  - id: >-
-                      /providers/Microsoft.Subscription/subscriptionOperations/54e3cde0-2420-451c-969d-f538d5349834
-                    status: Completed
-                    statusDetail: Subscription Created Successfully
-        Url: /providers/Microsoft.Subscription/subscriptionOperations
-        Method: get
-        Name: getPendingSubscriptionOperations
-        Filename: subscription_subscriptionoperations_get
-        Variables: []
-        References: []
-        OperationId: '112'
-        MethodId: '113'
+    Examples: []
   - ModuleName: azure_rm_subscriptionssubscriptionfactory
     Options:
       - NameSwagger: enrollmentAccountName
-        NameAnsible: enrollment_account_name
+        NameAnsible: name
         NamePythonSdk: enrollment_account_name
         NameGoSdk: EnrollmentAccountName
-        NameTerraform: EnrollmentAccountName
+        NameTerraform: name
         IdPortion: enrollmentAccounts
         Type: str
         TypeName: xxx
@@ -201,7 +182,9 @@ Modules:
         ExampleValue: '{{enrollment_account_name}}'
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: body
         NameAnsible: body
         NamePythonSdk: body
@@ -224,7 +207,7 @@ Modules:
         PathSwagger: ''
         PathPython: null
         PathGo: null
-        DispositionSdk: dictionary
+        DispositionSdk: '*'
         DispositionRest: '*'
         Comparison: ''
         Updatable: true
@@ -232,20 +215,22 @@ Modules:
           offerType: MS-AZR-0017P
           displayName: Test Ea Azure Sub
           owners:
-            - objectId: 973034ff-acb7-409c-b731-e789672c7b31
-            - objectId: 67439a9e-8519-4016-a630-f5f805eba567
+            - object_id: 973034ff-acb7-409c-b731-e789672c7b31
+            - object_id: 67439a9e-8519-4016-a630-f5f805eba567
           additionalParameters:
             customData:
               key1: value1
               key2: true
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 2
       - NameSwagger: displayName
-        NameAnsible: name
+        NameAnsible: display_name
         NamePythonSdk: display_name
         NameGoSdk: DisplayName
-        NameTerraform: name
+        NameTerraform: DisplayName
         IdPortion: null
         Type: str
         TypeName: String
@@ -270,7 +255,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: owners
         NameAnsible: owners
         NamePythonSdk: owners
@@ -321,7 +308,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /owners
         PathPython: /owners
@@ -333,7 +322,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: offerType
         NameAnsible: offer_type
         NamePythonSdk: offer_type
@@ -342,7 +333,7 @@ Modules:
         IdPortion: null
         Type: str
         TypeName: offerType
-        TypeNameGo: offerType
+        TypeNameGo: OfferType
         IsList: false
         Required: false
         Documentation: >-
@@ -373,7 +364,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: additionalParameters
         NameAnsible: additional_parameters
         NamePythonSdk: additional_parameters
@@ -409,7 +402,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_1
         NameSwagger: subscriptionLink
         NameAnsible: subscription_link
@@ -442,7 +437,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: CreateSubscriptionInEnrollmentAccount
         Options:
@@ -477,8 +474,8 @@ Modules:
               offerType: MS-AZR-0017P
               displayName: Test Ea Azure Sub
               owners:
-                - objectId: 973034ff-acb7-409c-b731-e789672c7b31
-                - objectId: 67439a9e-8519-4016-a630-f5f805eba567
+                - object_id: 973034ff-acb7-409c-b731-e789672c7b31
+                - object_id: 67439a9e-8519-4016-a630-f5f805eba567
               additionalParameters:
                 customData:
                   key1: value1
@@ -506,10 +503,9 @@ Modules:
         References: []
         OperationId: '127'
         MethodId: '128'
+        OperationName: SubscriptionFactory
+        MethodName: CreateSubscriptionInEnrollmentAccount
 ServiceName: Subscription
 MgmtClientName: Subscription
 CliName: subscription
 Namespace: azure.mgmt.subscriptions
-Info:
-  - '  ** FOUND OPTION enrollmentAccountName'
-  - '  ** FOUND OPTION body'

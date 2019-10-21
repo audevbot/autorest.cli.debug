@@ -7873,8 +7873,8 @@ modelTypes:
               name: Total
               serializedName: Total
             - $id: '1514'
-              name: Minimimum
-              serializedName: Minimimum
+              name: Minimum
+              serializedName: Minimum
             - $id: '1515'
               name: Maximum
               serializedName: Maximum

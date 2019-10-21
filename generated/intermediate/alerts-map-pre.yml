@@ -1,5 +1,5 @@
 Modules:
-  - ModuleName: azure_rm_alertsmanagementoperation_info
+  - ModuleName: azure_rm_alertsmanagementoperation
     Options:
       - &ref_0
         NameSwagger: nextLink
@@ -31,7 +31,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_1
         NameSwagger: value
         NameAnsible: value
@@ -41,9 +43,9 @@ Modules:
         IdPortion: null
         Type: dict
         TypeName: operation
-        TypeNameGo: operation
+        TypeNameGo: Operation
         IsList: true
-        Required: false
+        Required: true
         Documentation: Array of operations
         DocumentationMarkKeywords: true
         DefaultValue: null
@@ -80,7 +82,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: display
             NameAnsible: display
             NamePythonSdk: display
@@ -89,7 +93,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: operation_display
-            TypeNameGo: operation_display
+            TypeNameGo: Operation_display
             IsList: false
             Required: false
             Documentation: Properties of the operation
@@ -128,7 +132,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: resource
                 NameAnsible: resource
                 NamePythonSdk: resource
@@ -158,7 +164,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: operation
                 NameAnsible: operation
                 NamePythonSdk: operation
@@ -188,7 +196,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: description
                 NameAnsible: description
                 NamePythonSdk: description
@@ -218,7 +228,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/display
             PathPython: /value/display
@@ -230,7 +242,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /value
         PathPython: /value
@@ -242,7 +256,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: List
         Options: []
@@ -263,7 +279,7 @@ Modules:
     Provider: Microsoft.AlertsManagement
     ApiVersion: !<tag:yaml.org,2002:js/undefined> ''
     Examples: []
-  - ModuleName: azure_rm_alertsmanagementalert_info
+  - ModuleName: azure_rm_alertsmanagementalert
     Options:
       - NameSwagger: identifier
         NameAnsible: identifier
@@ -275,7 +291,7 @@ Modules:
         TypeName: xxx
         TypeNameGo: null
         IsList: false
-        Required: false
+        Required: true
         Documentation: Identification of the information to be retrieved by API call.
         DocumentationMarkKeywords: true
         DefaultValue: null
@@ -294,637 +310,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
-      - NameSwagger: targetResource
-        NameAnsible: target_resource
-        NamePythonSdk: target_resource
-        NameGoSdk: TargetResource
-        NameTerraform: TargetResource
-        IdPortion: null
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: >-
-          Filter by target resource( which is full ARM ID) Default value is
-          select all.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: targetResourceType
-        NameAnsible: target_resource_type
-        NamePythonSdk: target_resource_type
-        NameGoSdk: TargetResourceType
-        NameTerraform: TargetResourceType
-        IdPortion: null
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: Filter by target resource type. Default value is select all.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: targetResourceGroup
-        NameAnsible: target_resource_group
-        NamePythonSdk: target_resource_group
-        NameGoSdk: TargetResourceGroup
-        NameTerraform: TargetResourceGroup
-        IdPortion: null
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: Filter by target resource group name. Default value is select all.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: monitorService
-        NameAnsible: monitor_service
-        NamePythonSdk: monitor_service
-        NameGoSdk: MonitorService
-        NameTerraform: MonitorService
-        IdPortion: null
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: >-
-          Filter by monitor service which generates the alert instance. Default
-          value is select all.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: monitorCondition
-        NameAnsible: monitor_condition
-        NamePythonSdk: monitor_condition
-        NameGoSdk: MonitorCondition
-        NameTerraform: MonitorCondition
-        IdPortion: null
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: >-
-          Filter by monitor condition which is either 'Fired' or 'Resolved'.
-          Default value is to select all.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: severity
-        NameAnsible: severity
-        NamePythonSdk: severity
-        NameGoSdk: Severity
-        NameTerraform: Severity
-        IdPortion: null
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: Filter by severity.  Default value is select all.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: alertState
-        NameAnsible: alert_state
-        NamePythonSdk: alert_state
-        NameGoSdk: AlertState
-        NameTerraform: AlertState
-        IdPortion: null
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: Filter by state of the alert instance. Default value is to select all.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: alertRule
-        NameAnsible: alert_rule
-        NamePythonSdk: alert_rule
-        NameGoSdk: AlertRule
-        NameTerraform: AlertRule
-        IdPortion: null
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: Filter by specific alert rule.  Default value is to select all.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: smartGroupId
-        NameAnsible: smart_group_id
-        NamePythonSdk: smart_group_id
-        NameGoSdk: SmartGroupID
-        NameTerraform: SmartGroupID
-        IdPortion: null
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: Filter the alerts list by the Smart Group Id. Default value is none.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: includeContext
-        NameAnsible: include_context
-        NamePythonSdk: include_context
-        NameGoSdk: IncludeContext
-        NameTerraform: IncludeContext
-        IdPortion: null
-        Type: boolean
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: >-
-          Include context which has contextual data specific to the monitor
-          service. Default value is false'
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: includeEgressConfig
-        NameAnsible: include_egress_config
-        NamePythonSdk: include_egress_config
-        NameGoSdk: IncludeEgressConfig
-        NameTerraform: IncludeEgressConfig
-        IdPortion: null
-        Type: boolean
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: >-
-          Include egress config which would be used for displaying the content
-          in portal.  Default value is 'false'.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: pageCount
-        NameAnsible: page_count
-        NamePythonSdk: page_count
-        NameGoSdk: PageCount
-        NameTerraform: PageCount
-        IdPortion: null
-        Type: number
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: >-
-          Determines number of alerts returned per page in response. Permissible
-          value is between 1 to 250. When the "includeContent"  filter is
-          selected, maximum value allowed is 25. Default value is 25.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: sortBy
-        NameAnsible: sort_by
-        NamePythonSdk: sort_by
-        NameGoSdk: SortBy
-        NameTerraform: SortBy
-        IdPortion: null
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: >-
-          Sort the query results by input field,  Default value is
-          'lastModifiedDateTime'.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: sortOrder
-        NameAnsible: sort_order
-        NamePythonSdk: sort_order
-        NameGoSdk: SortOrder
-        NameTerraform: SortOrder
-        IdPortion: null
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: >-
-          Sort the query results order in either ascending or descending. 
-          Default value is 'desc' for time fields and 'asc' for others.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: select
-        NameAnsible: select
-        NamePythonSdk: select
-        NameGoSdk: Select
-        NameTerraform: Select
-        IdPortion: null
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: >-
-          This filter allows to selection of the fields(comma separated) which
-          would  be part of the essential section. This would allow to project
-          only the  required fields rather than getting entire content.  Default
-          is to fetch all the fields in the essentials section.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: timeRange
-        NameAnsible: time_range
-        NamePythonSdk: time_range
-        NameGoSdk: TimeRange
-        NameTerraform: TimeRange
-        IdPortion: null
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: Filter by time range by below listed values. Default value is 1 day.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: customTimeRange
-        NameAnsible: custom_time_range
-        NamePythonSdk: custom_time_range
-        NameGoSdk: CustomTimeRange
-        NameTerraform: CustomTimeRange
-        IdPortion: null
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: >-
-          Filter by custom time range in the format <start-time>/<end-time> 
-          where time is in (ISO-8601 format)'. Permissible values is within 30
-          days from  query time. Either timeRange or customTimeRange could be
-          used but not both. Default is none.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: groupby
-        NameAnsible: groupby
-        NamePythonSdk: groupby
-        NameGoSdk: Groupby
-        NameTerraform: Groupby
-        IdPortion: null
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: >-
-          This parameter allows the result set to be grouped by input fields
-          (Maximum 2 comma separated fields supported). For example,
-          groupby=severity or groupby=severity,alertstate.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: includeSmartGroupsCount
-        NameAnsible: include_smart_groups_count
-        NamePythonSdk: include_smart_groups_count
-        NameGoSdk: IncludeSmartGroupsCount
-        NameTerraform: IncludeSmartGroupsCount
-        IdPortion: null
-        Type: boolean
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: >-
-          Include count of the SmartGroups as part of the summary. Default value
-          is 'false'.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: alertId
-        NameAnsible: alert_id
-        NamePythonSdk: alert_id
-        NameGoSdk: AlertID
-        NameTerraform: AlertID
-        IdPortion: alerts
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: Unique ID of an alert instance.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
+        Kind: 0
       - &ref_2
         NameSwagger: properties
         NameAnsible: properties
@@ -934,7 +322,7 @@ Modules:
         IdPortion: null
         Type: dict
         TypeName: alertsMetaDataProperties
-        TypeNameGo: alertsMetaDataProperties
+        TypeNameGo: AlertsMetaDataProperties
         IsList: false
         Required: false
         Documentation: ''
@@ -955,7 +343,9 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: MetaData
         Options:
@@ -1043,328 +433,8 @@ Modules:
     CannotTestUpdate: false
     Provider: Microsoft.AlertsManagement
     ApiVersion: !<tag:yaml.org,2002:js/undefined> ''
-    Examples:
-      - Example:
-          parameters:
-            api-version: 2019-05-05-preview
-            identifier: MonitorServiceList
-          responses:
-            '200':
-              body:
-                properties:
-                  metadataIdentifier: MonitorServiceList
-                  data:
-                    - name: ActivityLog Administrative
-                      displayName: Activity Log - Administrative
-                    - name: ActivityLog Autoscale
-                      displayName: Activity Log - Autoscale
-                    - name: ActivityLog Policy
-                      displayName: Activity Log - Policy
-                    - name: ActivityLog Recommendation
-                      displayName: Activity Log - Recommendation
-                    - name: ActivityLog Security
-                      displayName: Activity Log - Security
-                    - name: Application Insights
-                      displayName: Application Insights
-                    - name: Azure Backup
-                      displayName: Azure Backup
-                    - name: Custom
-                      displayName: Custom
-                    - name: Data Box Edge
-                      displayName: Data Box Edge
-                    - name: VM Insights
-                      displayName: VM Insights
-                    - name: Log Analytics
-                      displayName: Log Analytics
-                    - name: Nagios
-                      displayName: NAGIOS
-                    - name: Platform
-                      displayName: Platform
-                    - name: Resource Health
-                      displayName: Resource Health
-                    - name: SCOM
-                      displayName: SCOM
-                    - name: ServiceHealth
-                      displayName: Service Health
-                    - name: Smart Detector
-                      displayName: SmartDetector
-                    - name: Zabbix
-                      displayName: ZABBIX
-        Url: /providers/Microsoft.AlertsManagement/alertsMetaData
-        Method: get
-        Name: MonService
-        Filename: alertsmanagement_alertsmetadata_get
-        Variables: []
-        References: []
-        OperationId: '1454'
-        MethodId: '1455'
-      - Example:
-          parameters:
-            api-version: 2019-05-05-preview
-            subscriptionId: 1e3ff1c0-771a-4119-a03b-be82a51e232d
-          responses:
-            '200':
-              body:
-                nextLink: >-
-                  https://management.azure.com:443/subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/providers/Microsoft.AlertsManagement/alerts?api-version=2018-05-05-preview&timeRange=1d&ctoken=%2bRID%3aPlwOAPHEGwB9UwEAAAAgCw%3d%3d%23RT%3a2%23TRC%3a500%23RTD%3aqtQyMDE4LTA2LTEyVDE1OjEyOjE1
-                value:
-                  - properties:
-                      essentials:
-                        severity: Sev3
-                        signalType: Log
-                        alertState: Acknowledged
-                        monitorCondition: Fired
-                        monitorService: Application Insights
-                        targetResource: >-
-                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                          resource_group
-                          }}/providers/microsoft.insights/components/{{
-                          component_name }}
-                        targetResourceName: servicedeskappinsight
-                        targetResourceGroup: servicedeskresourcegroup
-                        targetResourceType: components
-                        sourceCreatedId: 6cd6b2ce-8c54-468f-aff0-9d12aebb7e49
-                        smartGroupId: 23d6b2ce-8c54-468f-aff0-sd32aebb7e56
-                        smartGroupingReason: Occurred frequently with other alerts
-                        alertRule: >-
-                          https://servisdffsdf.portal.mms.microsoft.com/#Workspace/overview/settings/details/Edit
-                          Alert Rule/details/index?savedSearchId=&scheduleId=
-                        startDateTime: '2018-09-13T15:51:02Z'
-                        lastModifiedDateTime: '2018-09-13T15:51:02Z'
-                        lastModifiedUserName: System
-                        monitorConditionResolvedDateTime: '2018-09-13T15:51:02Z'
-                      egressConfig: {}
-                      context: {}
-                    id: >-
-                      /subscriptions/{{ subscription_id
-                      }}/providers/Microsoft.AlertsManagement/alerts/{{
-                      alert_name }}
-                    type: Microsoft.AlertsManagement/alerts
-                    name: cpu alert
-                  - properties:
-                      essentials:
-                        severity: Sev3
-                        signalType: Log
-                        alertState: New
-                        monitorCondition: Fired
-                        monitorService: Application Insights
-                        targetResource: >-
-                          /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                          resource_group
-                          }}/providers/microsoft.operationalinsights/workspaces/{{
-                          workspace_name }}
-                        targetResourceName: servicedeskwcus
-                        targetResourceGroup: servicedeskresourcegroup
-                        targetResourceType: components
-                        sourceCreatedId: 6cd6b2ce-8c54-468f-aff0-9d12aebb7e49
-                        smartGroupId: d1c49c89-ea95-4697-a299-c0f5ebac62f1
-                        smartGroupingReason: >-
-                          Alerts that frequently occur together have been
-                          grouped.
-                        alertRule: >-
-                          https://servicsdfsdf.portal.mms.microsoft.com/#Workspace/overview/settings/details/Edit
-                          Alert Rule/details/index?savedSearchId=&scheduleId=
-                        startDateTime: '2018-09-13T15:51:02Z'
-                        lastModifiedDateTime: '2018-09-13T15:51:02Z'
-                        lastModifiedUserName: System
-                        monitorConditionResolvedDateTime: '2018-09-13T15:51:02Z'
-                      egressConfig: {}
-                      context: {}
-                    id: >-
-                      /subscriptions/{{ subscription_id
-                      }}/providers/Microsoft.AlertsManagement/alerts/{{
-                      alert_name }}
-                    type: Microsoft.AlertsManagement/alerts
-                    name: cpu alert
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/Microsoft.AlertsManagement/alerts
-        Method: get
-        Name: ListAlerts
-        Filename: alertsmanagement_alerts_get
-        Variables: []
-        References: []
-        OperationId: '1454'
-        MethodId: '1473'
-      - Example:
-          parameters:
-            api-version: 2019-05-05-preview
-            subscriptionId: 1e3ff1c0-771a-4119-a03b-be82a51e232d
-            groupby: 'severity,alertState'
-          responses:
-            '200':
-              body:
-                properties:
-                  groupedby: severity
-                  smartGroupsCount: '100'
-                  total: '14189'
-                  values:
-                    - name: Sev0
-                      count: '6517'
-                      groupedby: alertState
-                      values:
-                        - name: New
-                          count: '6517'
-                        - name: Acknowledged
-                          count: '0'
-                        - name: Closed
-                          count: '0'
-                    - name: Sev1
-                      count: '3175'
-                      groupedby: alertState
-                      values:
-                        - name: New
-                          count: '3175'
-                        - name: Acknowledged
-                          count: '0'
-                        - name: Closed
-                          count: '0'
-                    - name: Sev2
-                      count: '1120'
-                      groupedby: alertState
-                      values:
-                        - name: New
-                          count: '1120'
-                        - name: Acknowledged
-                          count: '0'
-                        - name: Closed
-                          count: '0'
-                    - name: Sev3
-                      count: '1902'
-                      groupedby: alertState
-                      values:
-                        - name: New
-                          count: '1902'
-                        - name: Acknowledged
-                          count: '0'
-                        - name: Closed
-                          count: '0'
-                    - name: Sev4
-                      count: '1475'
-                      groupedby: alertState
-                      values:
-                        - name: New
-                          count: '1475'
-                        - name: Acknowledged
-                          count: '0'
-                        - name: Closed
-                          count: '0'
-                id: >-
-                  /subscriptions/{{ subscription_id
-                  }}/providers/Microsoft.AlertsManagement/alertsSummary/{{
-                  alerts_summary_name }}
-                type: Microsoft.AlertsManagement/alertsSummary
-                name: current
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/Microsoft.AlertsManagement/alertsSummary
-        Method: get
-        Name: Summary
-        Filename: alertsmanagement_alertssummary_get
-        Variables: []
-        References: []
-        OperationId: '1454'
-        MethodId: '1661'
-      - Example:
-          parameters:
-            api-version: 2019-05-05-preview
-            subscriptionId: 9e261de7-c804-4b9d-9ebf-6f50fe350a9a
-            alertId: 66114d64-d9d9-478b-95c9-b789d6502100
-          responses:
-            '200':
-              body:
-                properties:
-                  essentials:
-                    severity: Sev3
-                    signalType: Log
-                    alertState: Acknowledged
-                    monitorCondition: Fired
-                    monitorService: Application Insights
-                    targetResource: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/microsoft.insights/components/{{
-                      component_name }}
-                    targetResourceName: servicedeskappinsight
-                    targetResourceGroup: servicedeskresourcegroup
-                    targetResourceType: components
-                    sourceCreatedId: 6cd6b2ce-8c54-468f-aff0-9d12aebb7e49
-                    smartGroupId: 23d6b2ce-8c54-468f-aff0-sd32aebb7e56
-                    smartGroupingReason: Occurred frequently with other alerts
-                    alertRule: >-
-                      https://sersdfsdfinsight.portal.mms.microsoft.com/#Workspace/overview/settings/details/Edit
-                      Alert Rule/details/index?savedSearchId=&scheduleId=
-                    startDateTime: '2018-09-13T15:51:02Z'
-                    lastModifiedDateTime: '2018-09-13T15:51:02Z'
-                    lastModifiedUserName: System
-                    monitorConditionResolvedDateTime: '2018-09-13T15:51:02Z'
-                  egressConfig: {}
-                  context: {}
-                id: >-
-                  /subscriptions/{{ subscription_id
-                  }}/providers/Microsoft.AlertsManagement/alerts/{{ alert_name
-                  }}
-                type: Microsoft.AlertsManagement/alerts
-                name: cpu alert
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/Microsoft.AlertsManagement/alerts/{{ alert_name }}
-        Method: get
-        Name: GetById
-        Filename: alertsmanagement_alerts_get_1
-        Variables:
-          - name: alert_name
-            value: myAlert
-            swaggerName: alertId
-        References: []
-        OperationId: '1454'
-        MethodId: '1585'
-      - Example:
-          parameters:
-            api-version: 2019-05-05-preview
-            subscriptionId: 9e261de7-c804-4b9d-9ebf-6f50fe350a9a
-            alertId: 66114d64-d9d9-478b-95c9-b789d6502100
-          responses:
-            '200':
-              body:
-                properties:
-                  alertId: 66114d64-d9d9-478b-95c9-b789d6502100
-                  modifications:
-                    - modificationEvent: StateChange
-                      oldValue: New
-                      newValue: Acknowledged
-                      modifiedAt: '2018-06-13T06:14:15.7378737Z'
-                      modifiedBy: vikramm@microsoft.com
-                      comments: Acknowledging alert
-                      description: State changed from 'New' to 'Acknowledged'
-                    - modificationEvent: AlertCreated
-                      oldValue: ''
-                      newValue: ''
-                      modifiedAt: '2018-06-13T06:09:01Z'
-                      modifiedBy: System
-                      comments: ''
-                      description: New Alert Object is created
-                id: >-
-                  /subscriptions/{{ subscription_id
-                  }}/providers/Microsoft.AlertsManagement/alerts/{{ alert_name
-                  }}/history/{{ history_name }}
-                type: Microsoft.AlertsManagement/alerts
-                name: CPU Alert
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/Microsoft.AlertsManagement/alerts/{{ alert_name
-          }}/history
-        Method: get
-        Name: Resolve
-        Filename: alertsmanagement_alerts_history_get
-        Variables:
-          - name: alert_name
-            value: myAlert
-            swaggerName: alertId
-        References: []
-        OperationId: '1454'
-        MethodId: '1637'
-  - ModuleName: azure_rm_alertsmanagementsmartgroup_info
+    Examples: []
+  - ModuleName: azure_rm_alertsmanagementsmartgroup
     Options:
       - NameSwagger: targetResource
         NameAnsible: target_resource
@@ -1397,7 +467,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: targetResourceGroup
         NameAnsible: target_resource_group
         NamePythonSdk: target_resource_group
@@ -1427,7 +499,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: targetResourceType
         NameAnsible: target_resource_type
         NamePythonSdk: target_resource_type
@@ -1457,7 +531,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: monitorService
         NameAnsible: monitor_service
         NamePythonSdk: monitor_service
@@ -1489,7 +565,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 0
       - NameSwagger: monitorCondition
         NameAnsible: monitor_condition
         NamePythonSdk: monitor_condition
@@ -1521,7 +599,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 0
       - NameSwagger: severity
         NameAnsible: severity
         NamePythonSdk: severity
@@ -1551,7 +631,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 0
       - NameSwagger: smartGroupState
         NameAnsible: smart_group_state
         NamePythonSdk: smart_group_state
@@ -1581,7 +663,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 0
       - NameSwagger: timeRange
         NameAnsible: time_range
         NamePythonSdk: time_range
@@ -1611,7 +695,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 0
       - NameSwagger: pageCount
         NameAnsible: page_count
         NamePythonSdk: page_count
@@ -1644,7 +730,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 0
       - NameSwagger: sortBy
         NameAnsible: sort_by
         NamePythonSdk: sort_by
@@ -1676,7 +764,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 0
       - NameSwagger: sortOrder
         NameAnsible: sort_order
         NamePythonSdk: sort_order
@@ -1708,37 +798,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
-      - NameSwagger: smartGroupId
-        NameAnsible: smart_group_id
-        NamePythonSdk: smart_group_id
-        NameGoSdk: SmartGroupID
-        NameTerraform: SmartGroupID
-        IdPortion: smartGroups
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: 'Smart group unique id. '
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
+        Kind: 0
       - &ref_3
         NameSwagger: nextLink
         NameAnsible: next_link
@@ -1769,7 +831,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_4
         NameSwagger: value
         NameAnsible: value
@@ -1779,7 +843,7 @@ Modules:
         IdPortion: null
         Type: dict
         TypeName: smartGroup
-        TypeNameGo: smartGroup
+        TypeNameGo: SmartGroup
         IsList: true
         Required: false
         Documentation: List of alerts
@@ -1818,7 +882,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: type
             NameAnsible: type
             NamePythonSdk: type
@@ -1848,7 +914,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: name
             NameAnsible: name
             NamePythonSdk: name
@@ -1878,7 +946,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: properties
             NameAnsible: properties
             NamePythonSdk: properties
@@ -1887,7 +957,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: smartGroupProperties
-            TypeNameGo: smartGroupProperties
+            TypeNameGo: SmartGroupProperties
             IsList: false
             Required: false
             Documentation: ''
@@ -1908,7 +978,9 @@ Modules:
             ExampleValue: null
             Hidden: true
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: alertsCount
             NameAnsible: alerts_count
             NamePythonSdk: alerts_count
@@ -1938,7 +1010,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: smartGroupState
             NameAnsible: smart_group_state
             NamePythonSdk: smart_group_state
@@ -1977,7 +1051,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: severity
             NameAnsible: severity
             NamePythonSdk: severity
@@ -2024,7 +1100,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: startDateTime
             NameAnsible: start_date_time
             NamePythonSdk: start_date_time
@@ -2054,7 +1132,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: lastModifiedDateTime
             NameAnsible: last_modified_date_time
             NamePythonSdk: last_modified_date_time
@@ -2084,7 +1164,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: lastModifiedUserName
             NameAnsible: last_modified_user_name
             NamePythonSdk: last_modified_user_name
@@ -2114,7 +1196,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: resources
             NameAnsible: resources
             NamePythonSdk: resources
@@ -2123,7 +1207,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: smartGroupAggregatedProperty
-            TypeNameGo: smartGroupAggregatedProperty
+            TypeNameGo: SmartGroupAggregatedProperty
             IsList: true
             Required: false
             Documentation: Summary of target resources in the smart group
@@ -2162,7 +1246,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: count
                 NameAnsible: count
                 NamePythonSdk: count
@@ -2192,7 +1278,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/properties/resources
             PathPython: /value/resources
@@ -2204,7 +1292,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: resourceTypes
             NameAnsible: resource_types
             NamePythonSdk: resource_types
@@ -2213,7 +1303,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: smartGroupAggregatedProperty
-            TypeNameGo: smartGroupAggregatedProperty
+            TypeNameGo: SmartGroupAggregatedProperty
             IsList: true
             Required: false
             Documentation: Summary of target resource types in the smart group
@@ -2252,7 +1342,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: count
                 NameAnsible: count
                 NamePythonSdk: count
@@ -2282,7 +1374,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/properties/resourceTypes
             PathPython: /value/resourceTypes
@@ -2294,7 +1388,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: resourceGroups
             NameAnsible: resource_groups
             NamePythonSdk: resource_groups
@@ -2303,7 +1399,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: smartGroupAggregatedProperty
-            TypeNameGo: smartGroupAggregatedProperty
+            TypeNameGo: SmartGroupAggregatedProperty
             IsList: true
             Required: false
             Documentation: Summary of target resource groups in the smart group
@@ -2342,7 +1438,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: count
                 NameAnsible: count
                 NamePythonSdk: count
@@ -2372,7 +1470,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/properties/resourceGroups
             PathPython: /value/resourceGroups
@@ -2384,7 +1484,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: monitorServices
             NameAnsible: monitor_services
             NamePythonSdk: monitor_services
@@ -2393,7 +1495,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: smartGroupAggregatedProperty
-            TypeNameGo: smartGroupAggregatedProperty
+            TypeNameGo: SmartGroupAggregatedProperty
             IsList: true
             Required: false
             Documentation: Summary of monitorServices in the smart group
@@ -2432,7 +1534,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: count
                 NameAnsible: count
                 NamePythonSdk: count
@@ -2462,7 +1566,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/properties/monitorServices
             PathPython: /value/monitorServices
@@ -2474,7 +1580,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: monitorConditions
             NameAnsible: monitor_conditions
             NamePythonSdk: monitor_conditions
@@ -2483,7 +1591,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: smartGroupAggregatedProperty
-            TypeNameGo: smartGroupAggregatedProperty
+            TypeNameGo: SmartGroupAggregatedProperty
             IsList: true
             Required: false
             Documentation: Summary of monitorConditions in the smart group
@@ -2522,7 +1630,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: count
                 NameAnsible: count
                 NamePythonSdk: count
@@ -2552,7 +1662,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/properties/monitorConditions
             PathPython: /value/monitorConditions
@@ -2564,7 +1676,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: alertStates
             NameAnsible: alert_states
             NamePythonSdk: alert_states
@@ -2573,7 +1687,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: smartGroupAggregatedProperty
-            TypeNameGo: smartGroupAggregatedProperty
+            TypeNameGo: SmartGroupAggregatedProperty
             IsList: true
             Required: false
             Documentation: Summary of alertStates in the smart group
@@ -2612,7 +1726,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: count
                 NameAnsible: count
                 NamePythonSdk: count
@@ -2642,7 +1758,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/properties/alertStates
             PathPython: /value/alertStates
@@ -2654,7 +1772,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: alertSeverities
             NameAnsible: alert_severities
             NamePythonSdk: alert_severities
@@ -2663,7 +1783,7 @@ Modules:
             IdPortion: null
             Type: dict
             TypeName: smartGroupAggregatedProperty
-            TypeNameGo: smartGroupAggregatedProperty
+            TypeNameGo: SmartGroupAggregatedProperty
             IsList: true
             Required: false
             Documentation: Summary of alertSeverities in the smart group
@@ -2702,7 +1822,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: count
                 NameAnsible: count
                 NamePythonSdk: count
@@ -2732,7 +1854,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/properties/alertSeverities
             PathPython: /value/alertSeverities
@@ -2744,7 +1868,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: nextLink
             NameAnsible: next_link
             NamePythonSdk: next_link
@@ -2776,7 +1902,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /value
         PathPython: /value
@@ -2788,7 +1916,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: GetAll
         Options:
@@ -2843,213 +1973,8 @@ Modules:
     CannotTestUpdate: false
     Provider: Microsoft.AlertsManagement
     ApiVersion: !<tag:yaml.org,2002:js/undefined> ''
-    Examples:
-      - Example:
-          parameters:
-            api-version: 2019-05-05-preview
-            subscriptionId: dd91de05-d791-4ceb-b6dc-988682dc7d72
-          responses:
-            '200':
-              body:
-                nextLink: null
-                value:
-                  - properties:
-                      alertsCount: '1942'
-                      smartGroupState: New
-                      severity: Sev3
-                      startDateTime: '2018-06-06T12:35:09Z'
-                      lastModifiedDateTime: '2018-06-13T06:30:09Z'
-                      lastModifiedUserName: System
-                      resources:
-                        - name: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/microsoft.insights/components/{{
-                            component_name }}
-                          count: '1942'
-                      resourceTypes:
-                        - name: components
-                          count: '1942'
-                      resourceGroups:
-                        - name: alertscorrelationrg
-                          count: '1942'
-                      monitorServices:
-                        - name: Application Insights
-                          count: '1942'
-                      monitorConditions:
-                        - name: Fired
-                          count: '1942'
-                      alertStates:
-                        - name: New
-                          count: '1941'
-                        - name: Acknowledged
-                          count: '1'
-                      alertSeverities:
-                        - name: Sev3
-                          count: '1942'
-                    id: >-
-                      /subscriptions/{{ subscription_id
-                      }}/providers/Microsoft.AlertsManagement/smartGroups/{{
-                      smart_group_name }}
-                    type: Microsoft.AlertsManagement/smartGroups
-                    name: cpu alert
-                  - properties:
-                      alertsCount: '15374'
-                      smartGroupState: Acknowledged
-                      severity: Sev0
-                      startDateTime: '2018-05-17T10:18:44.2020997Z'
-                      lastModifiedDateTime: '2018-06-13T06:29:01Z'
-                      lastModifiedUserName: System
-                      resources:
-                        - name: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/microsoft.operationalinsights/workspaces/{{
-                            workspace_name }}
-                          count: '15374'
-                      resourceTypes:
-                        - name: microsoft.operationalinsights/workspaces
-                          count: '6912'
-                        - name: workspaces
-                          count: '8462'
-                      resourceGroups:
-                        - name: mms-eus
-                          count: '15374'
-                      monitorServices:
-                        - name: Log Analytics
-                          count: '13911'
-                      monitorConditions:
-                        - name: Fired
-                          count: '15374'
-                      alertStates:
-                        - name: New
-                          count: '15358'
-                        - name: Acknowledged
-                          count: '12'
-                        - name: Closed
-                          count: '4'
-                      alertSeverities:
-                        - name: Sev0
-                          count: '6984'
-                        - name: Sev1
-                          count: '6927'
-                    id: >-
-                      /subscriptions/{{ subscription_id
-                      }}/providers/Microsoft.AlertsManagement/smartGroups/{{
-                      smart_group_name }}
-                    type: Microsoft.AlertsManagement/smartGroups
-                    name: CPU Alert
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/Microsoft.AlertsManagement/smartGroups
-        Method: get
-        Name: List
-        Filename: alertsmanagement_smartgroups_get
-        Variables: []
-        References: []
-        OperationId: '1741'
-        MethodId: '1742'
-      - Example:
-          parameters:
-            api-version: 2019-05-05-preview
-            subscriptionId: 9e261de7-c804-4b9d-9ebf-6f50fe350a9a
-            smartGroupId: 603675da-9851-4b26-854a-49fc53d32715
-          responses:
-            '200':
-              body:
-                properties:
-                  alertsCount: '1942'
-                  smartGroupState: New
-                  severity: Sev3
-                  startDateTime: '2018-06-06T12:35:09Z'
-                  lastModifiedDateTime: '2018-06-13T06:30:09Z'
-                  lastModifiedUserName: System
-                  resources:
-                    - name: >-
-                        /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                        resource_group
-                        }}/providers/microsoft.insights/components/{{
-                        component_name }}
-                      count: '1942'
-                  resourceTypes:
-                    - name: components
-                      count: '1942'
-                  resourceGroups:
-                    - name: alertscorrelationrg
-                      count: '1942'
-                  monitorServices:
-                    - name: Application Insights
-                      count: '1942'
-                  monitorConditions:
-                    - name: Fired
-                      count: '1942'
-                  alertStates:
-                    - name: New
-                      count: '1941'
-                    - name: Acknowledged
-                      count: '1'
-                  alertSeverities:
-                    - name: Sev3
-                      count: '1942'
-                id: >-
-                  /subscriptions/{{ subscription_id
-                  }}/providers/Microsoft.AlertsManagement/smartGroups/{{
-                  smart_group_name }}
-                type: Microsoft.AlertsManagement/smartGroups
-                name: cpu alert
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/Microsoft.AlertsManagement/smartGroups/{{
-          smart_group_name }}
-        Method: get
-        Name: Get
-        Filename: alertsmanagement_smartgroups_get_1
-        Variables:
-          - name: smart_group_name
-            value: mySmartGroup
-            swaggerName: smartGroupId
-        References: []
-        OperationId: '1741'
-        MethodId: '1818'
-      - Example:
-          parameters:
-            api-version: 2019-05-05-preview
-            subscriptionId: 9e261de7-c804-4b9d-9ebf-6f50fe350a9a
-            smartGroupId: a808445e-bb38-4751-85c2-1b109ccc1059
-          responses:
-            '200':
-              body:
-                properties:
-                  smartGroupId: a808445e-bb38-4751-85c2-1b109ccc1059
-                  modifications:
-                    - modificationEvent: SmartGroupCreated
-                      oldValue: ''
-                      newValue: ''
-                      modifiedAt: '2018-06-06T12:35:09Z'
-                      modifiedBy: System
-                      comments: ''
-                      description: New Smart Group is created
-                id: >-
-                  /subscriptions/{{ subscription_id
-                  }}/providers/Microsoft.AlertsManagement/smartGroups/{{
-                  smart_group_name }}/history/{{ history_name }}
-                type: Microsoft.AlertsManagement/alerts
-                name: cpu alert
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/Microsoft.AlertsManagement/smartGroups/{{
-          smart_group_name }}/history
-        Method: get
-        Name: Resolve
-        Filename: alertsmanagement_smartgroups_history_get
-        Variables:
-          - name: smart_group_name
-            value: mySmartGroup
-            swaggerName: smartGroupId
-        References: []
-        OperationId: '1741'
-        MethodId: '1870'
-  - ModuleName: azure_rm_alertsmanagementactionrule_info
+    Examples: []
+  - ModuleName: azure_rm_alertsmanagementactionrule
     Options:
       - NameSwagger: targetResourceGroup
         NameAnsible: target_resource_group
@@ -3080,7 +2005,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: targetResourceType
         NameAnsible: target_resource_type
         NamePythonSdk: target_resource_type
@@ -3110,7 +2037,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: targetResource
         NameAnsible: target_resource
         NamePythonSdk: target_resource
@@ -3142,7 +2071,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: severity
         NameAnsible: severity
         NamePythonSdk: severity
@@ -3172,7 +2103,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 0
       - NameSwagger: monitorService
         NameAnsible: monitor_service
         NamePythonSdk: monitor_service
@@ -3204,7 +2137,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 0
       - NameSwagger: impactedScope
         NameAnsible: impacted_scope
         NamePythonSdk: impacted_scope
@@ -3237,7 +2172,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: description
         NameAnsible: description
         NamePythonSdk: description
@@ -3267,7 +2204,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: alertRuleId
         NameAnsible: alert_rule_id
         NamePythonSdk: alert_rule_id
@@ -3297,7 +2236,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: actionGroup
         NameAnsible: action_group
         NamePythonSdk: action_group
@@ -3327,7 +2268,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: name
         NameAnsible: name
         NamePythonSdk: name
@@ -3357,67 +2300,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
-      - NameSwagger: resourceGroupName
-        NameAnsible: resource_group
-        NamePythonSdk: resource_group_name
-        NameGoSdk: ResourceGroup
-        NameTerraform: resourceGroup
-        IdPortion: resourceGroups
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: Resource group name where the resource is created.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: actionRuleName
-        NameAnsible: name
-        NamePythonSdk: action_rule_name
-        NameGoSdk: ActionRuleName
-        NameTerraform: name
-        IdPortion: actionRules
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: The name of action rule that needs to be fetched
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
+        Kind: 0
       - &ref_5
         NameSwagger: nextLink
         NameAnsible: next_link
@@ -3448,7 +2333,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_6
         NameSwagger: value
         NameAnsible: value
@@ -3497,7 +2384,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: type
             NameAnsible: type
             NamePythonSdk: type
@@ -3527,7 +2416,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: name
             NameAnsible: name
             NamePythonSdk: name
@@ -3557,7 +2448,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: location
             NameAnsible: location
             NamePythonSdk: location
@@ -3587,7 +2480,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: tags
             NameAnsible: tags
             NamePythonSdk: tags
@@ -3621,7 +2516,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: properties
             NameAnsible: properties
             NamePythonSdk: properties
@@ -3651,7 +2548,9 @@ Modules:
             ExampleValue: null
             Hidden: true
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: scope
             NameAnsible: scope
             NamePythonSdk: scope
@@ -3705,7 +2604,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: values
                 NameAnsible: values
                 NamePythonSdk: values
@@ -3737,7 +2638,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/properties/scope
             PathPython: /value/scope
@@ -3749,7 +2652,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: conditions
             NameAnsible: conditions
             NamePythonSdk: conditions
@@ -3827,7 +2732,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: values
                     NameAnsible: values
                     NamePythonSdk: values
@@ -3857,7 +2764,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /value/properties/conditions/severity
                 PathPython: /value/conditions/severity
@@ -3869,7 +2778,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: monitorService
                 NameAnsible: monitor_service
                 NamePythonSdk: monitor_service
@@ -3929,7 +2840,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: values
                     NameAnsible: values
                     NamePythonSdk: values
@@ -3959,7 +2872,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /value/properties/conditions/monitorService
                 PathPython: /value/conditions/monitorService
@@ -3971,7 +2886,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: monitorCondition
                 NameAnsible: monitor_condition
                 NamePythonSdk: monitor_condition
@@ -4031,7 +2948,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: values
                     NameAnsible: values
                     NamePythonSdk: values
@@ -4061,7 +2980,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /value/properties/conditions/monitorCondition
                 PathPython: /value/conditions/monitorCondition
@@ -4073,7 +2994,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: targetResourceType
                 NameAnsible: target_resource_type
                 NamePythonSdk: target_resource_type
@@ -4133,7 +3056,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: values
                     NameAnsible: values
                     NamePythonSdk: values
@@ -4163,7 +3088,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /value/properties/conditions/targetResourceType
                 PathPython: /value/conditions/targetResourceType
@@ -4175,7 +3102,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: alertRuleId
                 NameAnsible: alert_rule_id
                 NamePythonSdk: alert_rule_id
@@ -4235,7 +3164,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: values
                     NameAnsible: values
                     NamePythonSdk: values
@@ -4265,7 +3196,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /value/properties/conditions/alertRuleId
                 PathPython: /value/conditions/alertRuleId
@@ -4277,7 +3210,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: description
                 NameAnsible: description
                 NamePythonSdk: description
@@ -4337,7 +3272,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: values
                     NameAnsible: values
                     NamePythonSdk: values
@@ -4367,7 +3304,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /value/properties/conditions/description
                 PathPython: /value/conditions/description
@@ -4379,7 +3318,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: alertContext
                 NameAnsible: alert_context
                 NamePythonSdk: alert_context
@@ -4439,7 +3380,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: values
                     NameAnsible: values
                     NamePythonSdk: values
@@ -4469,7 +3412,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /value/properties/conditions/alertContext
                 PathPython: /value/conditions/alertContext
@@ -4481,7 +3426,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/properties/conditions
             PathPython: /value/conditions
@@ -4493,7 +3440,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: description
             NameAnsible: description
             NamePythonSdk: description
@@ -4523,7 +3472,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: createdAt
             NameAnsible: created_at
             NamePythonSdk: created_at
@@ -4553,7 +3504,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: lastModifiedAt
             NameAnsible: last_modified_at
             NamePythonSdk: last_modified_at
@@ -4583,7 +3536,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: createdBy
             NameAnsible: created_by
             NamePythonSdk: created_by
@@ -4613,7 +3568,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: lastModifiedBy
             NameAnsible: last_modified_by
             NamePythonSdk: last_modified_by
@@ -4643,7 +3600,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: status
             NameAnsible: status
             NamePythonSdk: status
@@ -4679,7 +3638,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /value
         PathPython: /value
@@ -4691,7 +3652,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: ListBySubscription
         Options:
@@ -4756,287 +3719,7 @@ Modules:
     CannotTestUpdate: false
     Provider: Microsoft.AlertsManagement
     ApiVersion: !<tag:yaml.org,2002:js/undefined> ''
-    Examples:
-      - Example:
-          parameters:
-            api-version: 2019-05-05-preview
-            subscriptionId: 1e3ff1c0-771a-4119-a03b-be82a51e232d
-          responses:
-            '200':
-              body:
-                nextLink: >-
-                  https://management.azure.com:443/subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/providers/Microsoft.AlertsManagement/actionRules?api-version=2018-11-02-privatepreview&ctoken=%2bRID%3aPlwOAPHEGwB9UwEAAAAgCw%3d%3d%23RT%3a2%23TRC%3a500%23RTD%3aqtQyMDE4LTA2LTEyVDE1OjEyOjE1
-                value:
-                  - properties:
-                      scope:
-                        scopeType: ResourceGroup
-                        values:
-                          - >-
-                            /subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg
-                      conditions:
-                        severity:
-                          operator: Equals
-                          values:
-                            - Sev0
-                            - Sev2
-                        monitorService:
-                          operator: Equals
-                          values:
-                            - Platform
-                            - Application Insights
-                        targetResourceType:
-                          operator: NotEquals
-                          values:
-                            - Microsoft.Compute/VirtualMachines
-                      type: Suppression
-                      suppressionConfig:
-                        recurrenceType: Daily
-                        schedule:
-                          startDate: 12/09/2018
-                          endDate: 12/18/2018
-                          startTime: '06:00:00'
-                          endTime: '14:00:00'
-                      description: Action rule on resource group for daily suppression
-                      status: Enabled
-                      createdAt: '2018-06-12T22:05:09Z'
-                      lastModifiedAt: '2018-06-12T22:05:09Z'
-                      createdBy: abc@microsoft.com
-                      lastModifiedBy: xyz@microsoft.com
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.AlertsManagement/actionRules/{{
-                      action_rule_name }}
-                    type: Microsoft.AlertsManagement/actionRules
-                    name: DailySuppression
-                    location: Global
-                    tags: {}
-                  - properties:
-                      scope:
-                        scopeType: Resource
-                        values:
-                          - >-
-                            /subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg/providers/Microsoft.Compute/VirtualMachines/testResource
-                      conditions:
-                        monitorCondition:
-                          operator: Equals
-                          values:
-                            - Fired
-                        description:
-                          operator: Contains
-                          values:
-                            - Percentage CPU greater than 80%
-                            - Metric alert on resource foo
-                      type: Diagnostics
-                      description: Action rule on resource group for sending diagnostics
-                      status: Enabled
-                      createdAt: '2018-06-12T22:05:09Z'
-                      lastModifiedAt: '2018-06-12T22:05:09Z'
-                      createdBy: abc@microsoft.com
-                      lastModifiedBy: xyz@microsoft.com
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.AlertsManagement/actionRules/{{
-                      action_rule_name }}
-                    type: Microsoft.AlertsManagement/actionRules
-                    name: WeeklySuppression
-                    location: Global
-                    tags: {}
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/Microsoft.AlertsManagement/actionRules
-        Method: get
-        Name: GetActionRulesSubscriptionWide
-        Filename: alertsmanagement_actionrules_get
-        Variables: []
-        References: []
-        OperationId: '1896'
-        MethodId: '1897'
-      - Example:
-          parameters:
-            api-version: 2019-05-05-preview
-            subscriptionId: 1e3ff1c0-771a-4119-a03b-be82a51e232d
-            resourceGroupName: alertscorrelationrg
-          responses:
-            '200':
-              body:
-                nextLink: >-
-                  https://management.azure.com:443/subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg/providers/Microsoft.AlertsManagement/actionRules?api-version=2018-11-02-privatepreview&ctoken=%2bRID%3aPlwOAPHEGwB9UwEAAAAgCw%3d%3d%23RT%3a2%23TRC%3a500%23RTD%3aqtQyMDE4LTA2LTEyVDE1OjEyOjE1
-                value:
-                  - properties:
-                      scope:
-                        scopeType: ResourceGroup
-                        values:
-                          - >-
-                            /subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg
-                      conditions:
-                        severity:
-                          operator: Equals
-                          values:
-                            - Sev0
-                            - Sev2
-                        monitorService:
-                          operator: Equals
-                          values:
-                            - Platform
-                            - Application Insights
-                        targetResourceType:
-                          operator: NotEquals
-                          values:
-                            - Microsoft.Compute/VirtualMachines
-                      type: Suppression
-                      suppressionConfig:
-                        recurrenceType: Daily
-                        schedule:
-                          startDate: 12/09/2018
-                          endDate: 12/18/2018
-                          startTime: '06:00:00'
-                          endTime: '14:00:00'
-                      description: Action rule on resource group for daily suppression
-                      status: Enabled
-                      createdAt: '2018-06-12T22:05:09Z'
-                      lastModifiedAt: '2018-06-12T22:05:09Z'
-                      createdBy: abc@microsoft.com
-                      lastModifiedBy: xyz@microsoft.com
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.AlertsManagement/actionRules/{{
-                      action_rule_name }}
-                    type: Microsoft.AlertsManagement/actionRules
-                    name: DailySuppression
-                    location: Global
-                    tags: {}
-                  - properties:
-                      scope:
-                        scopeType: Resource
-                        values:
-                          - >-
-                            /subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg/providers/Microsoft.Compute/VirtualMachines/testResource
-                      conditions:
-                        monitorCondition:
-                          operator: Equals
-                          values:
-                            - Fired
-                        description:
-                          operator: Contains
-                          values:
-                            - Percentage CPU greater than 80%
-                            - Metric alert on resource foo
-                        alertContext:
-                          operator: DoesNotContain
-                          values:
-                            - testresource
-                            - foo
-                      type: ActionGroup
-                      actionGroupId: >-
-                        /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                        resource_group
-                        }}/providers/Microsoft.insights/actiongroups/{{
-                        actiongroup_name }}
-                      description: Action rule on resource group for sending email
-                      status: Enabled
-                      createdAt: '2018-06-12T22:05:09Z'
-                      lastModifiedAt: '2018-06-12T22:05:09Z'
-                      createdBy: abc@microsoft.com
-                      lastModifiedBy: xyz@microsoft.com
-                    id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.AlertsManagement/actionRules/{{
-                      action_rule_name }}
-                    type: Microsoft.AlertsManagement/actionRules
-                    name: WeeklySuppression
-                    location: Global
-                    tags: {}
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.AlertsManagement/actionRules
-        Method: get
-        Name: GetActionRulesResourceGroupWide
-        Filename: alertsmanagement_actionrules_get_1
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-        References: []
-        OperationId: '1896'
-        MethodId: '1971'
-      - Example:
-          parameters:
-            api-version: 2019-05-05-preview
-            subscriptionId: 1e3ff1c0-771a-4119-a03b-be82a51e232d
-            resourceGroupName: alertscorrelationrg
-            actionRuleName: DailySuppression
-          responses:
-            '200':
-              body:
-                properties:
-                  scope:
-                    scopeType: ResourceGroup
-                    values:
-                      - >-
-                        /subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg
-                  conditions:
-                    severity:
-                      operator: Equals
-                      values:
-                        - Sev0
-                        - Sev2
-                    monitorService:
-                      operator: Equals
-                      values:
-                        - Platform
-                        - Application Insights
-                    monitorCondition:
-                      operator: Equals
-                      values:
-                        - Fired
-                    targetResourceType:
-                      operator: NotEquals
-                      values:
-                        - Microsoft.Compute/VirtualMachines
-                  type: Suppression
-                  suppressionConfig:
-                    recurrenceType: Daily
-                    schedule:
-                      startDate: 12/09/2018
-                      endDate: 12/18/2018
-                      startTime: '06:00:00'
-                      endTime: '14:00:00'
-                  description: Action rule on resource group for daily suppression
-                  status: Enabled
-                  createdAt: '2018-06-12T22:05:09Z'
-                  lastModifiedAt: '2018-06-12T22:05:09Z'
-                  createdBy: abc@microsoft.com
-                  lastModifiedBy: xyz@microsoft.com
-                id: >-
-                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                  resource_group
-                  }}/providers/Microsoft.AlertsManagement/actionRules/{{
-                  action_rule_name }}
-                type: Microsoft.AlertsManagement/actionRules
-                name: DailySuppression
-                location: Global
-                tags: {}
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.AlertsManagement/actionRules/{{
-          action_rule_name }}
-        Method: get
-        Name: GetActionRuleById
-        Filename: alertsmanagement_actionrules_get_2
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-          - name: action_rule_name
-            value: myActionRule
-            swaggerName: actionRuleName
-        References: []
-        OperationId: '1896'
-        MethodId: '2051'
+    Examples: []
   - ModuleName: azure_rm_alertsmanagementsmartdetectoralertrule
     Options:
       - NameSwagger: resourceGroupName
@@ -5068,7 +3751,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: alertRuleName
         NameAnsible: name
         NamePythonSdk: alert_rule_name
@@ -5098,7 +3783,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: parameters
         NameAnsible: parameters
         NamePythonSdk: parameters
@@ -5121,14 +3808,16 @@ Modules:
         PathSwagger: ''
         PathPython: null
         PathGo: null
-        DispositionSdk: dictionary
+        DispositionSdk: '*'
         DispositionRest: '*'
         Comparison: ''
         Updatable: true
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 2
       - NameSwagger: location
         NameAnsible: location
         NamePythonSdk: location
@@ -5158,7 +3847,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: tags
         NameAnsible: tags
         NamePythonSdk: tags
@@ -5188,7 +3879,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -5218,7 +3911,9 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: description
         NameAnsible: description
         NamePythonSdk: description
@@ -5248,7 +3943,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: state
         NameAnsible: state
         NamePythonSdk: state
@@ -5284,7 +3981,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: severity
         NameAnsible: severity
         NamePythonSdk: severity
@@ -5329,7 +4028,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: frequency
         NameAnsible: frequency
         NamePythonSdk: frequency
@@ -5361,7 +4062,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: detector
         NameAnsible: detector
         NamePythonSdk: detector
@@ -5409,7 +4112,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: parameters
             NameAnsible: parameters
             NamePythonSdk: parameters
@@ -5443,7 +4148,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: name
             NameAnsible: name
             NamePythonSdk: name
@@ -5475,7 +4182,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: description
             NameAnsible: description
             NamePythonSdk: description
@@ -5507,7 +4216,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: supportedResourceTypes
             NameAnsible: supported_resource_types
             NamePythonSdk: supported_resource_types
@@ -5539,7 +4250,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: imagePaths
             NameAnsible: image_paths
             NamePythonSdk: image_paths
@@ -5571,7 +4284,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/detector
         PathPython: /detector
@@ -5583,7 +4298,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: scope
         NameAnsible: scope
         NamePythonSdk: scope
@@ -5613,7 +4330,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: actionGroups
         NameAnsible: action_groups
         NamePythonSdk: action_groups
@@ -5661,7 +4380,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: customWebhookPayload
             NameAnsible: custom_webhook_payload
             NamePythonSdk: custom_webhook_payload
@@ -5693,7 +4414,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: groupIds
             NameAnsible: group_ids
             NamePythonSdk: group_ids
@@ -5723,7 +4446,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/actionGroups
         PathPython: /actionGroups
@@ -5735,7 +4460,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: throttling
         NameAnsible: throttling
         NamePythonSdk: throttling
@@ -5786,7 +4513,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/throttling
         PathPython: /throttling
@@ -5798,7 +4527,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_7
         NameSwagger: id
         NameAnsible: id
@@ -5829,7 +4560,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_8
         NameSwagger: type
         NameAnsible: type
@@ -5860,7 +4593,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_9
         NameSwagger: name
         NameAnsible: name
@@ -5891,7 +4626,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: CreateOrUpdate
         Options:
@@ -5988,7 +4725,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: tags
         NameAnsible: tags
         NamePythonSdk: tags
@@ -6018,7 +4757,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -6066,7 +4807,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: state
             NameAnsible: state
             NamePythonSdk: state
@@ -6102,7 +4845,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: severity
             NameAnsible: severity
             NamePythonSdk: severity
@@ -6147,7 +4892,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: frequency
             NameAnsible: frequency
             NamePythonSdk: frequency
@@ -6179,7 +4926,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: detector
             NameAnsible: detector
             NamePythonSdk: detector
@@ -6227,7 +4976,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: parameters
                 NameAnsible: parameters
                 NamePythonSdk: parameters
@@ -6261,7 +5012,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: name
                 NameAnsible: name
                 NamePythonSdk: name
@@ -6293,7 +5046,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: description
                 NameAnsible: description
                 NamePythonSdk: description
@@ -6325,7 +5080,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: supportedResourceTypes
                 NameAnsible: supported_resource_types
                 NamePythonSdk: supported_resource_types
@@ -6357,7 +5114,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: imagePaths
                 NameAnsible: image_paths
                 NamePythonSdk: image_paths
@@ -6389,7 +5148,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/detector
             PathPython: /detector
@@ -6401,7 +5162,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: scope
             NameAnsible: scope
             NamePythonSdk: scope
@@ -6431,7 +5194,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: actionGroups
             NameAnsible: action_groups
             NamePythonSdk: action_groups
@@ -6481,7 +5246,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: customWebhookPayload
                 NameAnsible: custom_webhook_payload
                 NamePythonSdk: custom_webhook_payload
@@ -6513,7 +5280,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: groupIds
                 NameAnsible: group_ids
                 NamePythonSdk: group_ids
@@ -6543,7 +5312,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/actionGroups
             PathPython: /actionGroups
@@ -6555,7 +5326,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: throttling
             NameAnsible: throttling
             NamePythonSdk: throttling
@@ -6606,7 +5379,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/throttling
             PathPython: /throttling
@@ -6618,7 +5393,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties
         PathPython: ''
@@ -6630,7 +5407,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     ModuleOperationNameUpper: SmartDetectorAlertRules
     ModuleOperationName: smart_detector_alert_rules
     ObjectName: SmartDetectorAlertRule
@@ -6744,6 +5523,8 @@ Modules:
           - resourcegroups_put
         OperationId: '2183'
         MethodId: '2274'
+        OperationName: SmartDetectorAlertRules
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             subscriptionId: b368ca2f-e298-46b7-b0ab-012281956afa
@@ -6770,1195 +5551,9 @@ Modules:
         References: []
         OperationId: '2183'
         MethodId: '2343'
-  - ModuleName: azure_rm_alertsmanagementsmartdetectoralertrule_info
-    Options:
-      - NameSwagger: expandDetector
-        NameAnsible: expand_detector
-        NamePythonSdk: expand_detector
-        NameGoSdk: ExpandDetector
-        NameTerraform: ExpandDetector
-        IdPortion: null
-        Type: boolean
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: true
-        Documentation: Indicates if Smart Detector should be expanded.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: resourceGroupName
-        NameAnsible: resource_group
-        NamePythonSdk: resource_group_name
-        NameGoSdk: ResourceGroup
-        NameTerraform: resourceGroup
-        IdPortion: resourceGroups
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: The name of the resource group.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: alertRuleName
-        NameAnsible: name
-        NamePythonSdk: alert_rule_name
-        NameGoSdk: AlertRuleName
-        NameTerraform: name
-        IdPortion: smartDetectorAlertRules
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: The name of the alert rule.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - &ref_10
-        NameSwagger: id
-        NameAnsible: id
-        NamePythonSdk: id
-        NameGoSdk: ID
-        NameTerraform: ID
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: The resource ID.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /id
-        PathPython: /id
-        PathGo: /id
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_11
-        NameSwagger: type
-        NameAnsible: type
-        NamePythonSdk: type
-        NameGoSdk: Type
-        NameTerraform: Type
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: The resource type.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /type
-        PathPython: /type
-        PathGo: /type
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_12
-        NameSwagger: name
-        NameAnsible: name
-        NamePythonSdk: name
-        NameGoSdk: Name
-        NameTerraform: Name
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: The resource name.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /name
-        PathPython: /name
-        PathGo: /name
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_13
-        NameSwagger: location
-        NameAnsible: location
-        NamePythonSdk: location
-        NameGoSdk: Location
-        NameTerraform: Location
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: The resource location.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /location
-        PathPython: /location
-        PathGo: /location
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_14
-        NameSwagger: tags
-        NameAnsible: tags
-        NamePythonSdk: tags
-        NameGoSdk: Tags
-        NameTerraform: Tags
-        IdPortion: null
-        Type: 'unknown-primary[object]'
-        TypeName: Object
-        TypeNameGo: Object
-        IsList: false
-        Required: false
-        Documentation: The resource tags.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /tags
-        PathPython: /tags
-        PathGo: /tags
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_15
-        NameSwagger: properties
-        NameAnsible: properties
-        NamePythonSdk: properties
-        NameGoSdk: Properties
-        NameTerraform: Properties
-        IdPortion: null
-        Type: dict
-        TypeName: AlertRuleProperties
-        TypeNameGo: AlertRuleProperties
-        IsList: false
-        Required: false
-        Documentation: The properties of the alert rule.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties
-        PathPython: ''
-        PathGo: /properties
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: true
-        IncludeInResponse: true
-        Flatten: false
-      - NameSwagger: description
-        NameAnsible: description
-        NamePythonSdk: description
-        NameGoSdk: Description
-        NameTerraform: Description
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: The alert rule description.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/description
-        PathPython: /description
-        PathGo: /properties/description
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: state
-        NameAnsible: state
-        NamePythonSdk: state
-        NameGoSdk: State
-        NameTerraform: State
-        IdPortion: null
-        Type: str
-        TypeName: AlertRuleState
-        TypeNameGo: AlertRuleState
-        IsList: false
-        Required: true
-        Documentation: The alert rule state.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues:
-          - Key: Enabled
-            Value: Enabled
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Disabled
-            Value: Disabled
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-        PathSwagger: /properties/state
-        PathPython: /state
-        PathGo: /properties/state
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: severity
-        NameAnsible: severity
-        NamePythonSdk: severity
-        NameGoSdk: Severity
-        NameTerraform: Severity
-        IdPortion: null
-        Type: str
-        TypeName: Severity
-        TypeNameGo: Severity
-        IsList: false
-        Required: true
-        Documentation: The alert rule severity.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues:
-          - Key: Sev0
-            Value: Sev0
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Sev1
-            Value: Sev1
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Sev2
-            Value: Sev2
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Sev3
-            Value: Sev3
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Sev4
-            Value: Sev4
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-        PathSwagger: /properties/severity
-        PathPython: /severity
-        PathGo: /properties/severity
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: frequency
-        NameAnsible: frequency
-        NamePythonSdk: frequency
-        NameGoSdk: Frequency
-        NameTerraform: Frequency
-        IdPortion: null
-        Type: 'unknown-primary[timeSpan]'
-        TypeName: TimeSpan
-        TypeNameGo: TimeSpan
-        IsList: false
-        Required: true
-        Documentation: >-
-          The alert rule frequency in ISO8601 format. The time granularity must
-          be in minutes and minimum value is 5 minutes.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/frequency
-        PathPython: /frequency
-        PathGo: /properties/frequency
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: detector
-        NameAnsible: detector
-        NamePythonSdk: detector
-        NameGoSdk: Detector
-        NameTerraform: Detector
-        IdPortion: null
-        Type: dict
-        TypeName: Detector
-        TypeNameGo: Detector
-        IsList: false
-        Required: true
-        Documentation: The alert rule's detector.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions:
-          - NameSwagger: id
-            NameAnsible: id
-            NamePythonSdk: id
-            NameGoSdk: ID
-            NameTerraform: ID
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: true
-            Documentation: The detector id.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/detector/id
-            PathPython: /detector/id
-            PathGo: /properties/detector/id
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: parameters
-            NameAnsible: parameters
-            NamePythonSdk: parameters
-            NameGoSdk: Parameters
-            NameTerraform: Parameters
-            IdPortion: null
-            Type: >-
-              unknown[DictionaryType
-              {"$id":"973","$type":"DictionaryType","valueType":{"$id":"974","$type":"PrimaryType","knownPrimaryType":"object","name":{"$id":"975","fixed":false,"raw":"Object"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"976","fixed":false},"deprecated":false}]
-            TypeName: >-
-              {"$id":"973","$type":"DictionaryType","valueType":{"$id":"974","$type":"PrimaryType","knownPrimaryType":"object","name":{"$id":"975","fixed":false,"raw":"Object"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"976","fixed":false},"deprecated":false}
-            TypeNameGo: >-
-              {"$id":"973","$type":"DictionaryType","valueType":{"$id":"974","$type":"PrimaryType","knownPrimaryType":"object","name":{"$id":"975","fixed":false,"raw":"Object"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"976","fixed":false},"deprecated":false}
-            IsList: false
-            Required: false
-            Documentation: The detector's parameters.'
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/detector/parameters
-            PathPython: /detector/parameters
-            PathGo: /properties/detector/parameters
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: name
-            NameAnsible: name
-            NamePythonSdk: name
-            NameGoSdk: Name
-            NameTerraform: Name
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: >-
-              The Smart Detector name. By default this is not populated, unless
-              it's specified in expandDetector
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/detector/name
-            PathPython: /detector/name
-            PathGo: /properties/detector/name
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: description
-            NameAnsible: description
-            NamePythonSdk: description
-            NameGoSdk: Description
-            NameTerraform: Description
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: >-
-              The Smart Detector description. By default this is not populated,
-              unless it's specified in expandDetector
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/detector/description
-            PathPython: /detector/description
-            PathGo: /properties/detector/description
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: supportedResourceTypes
-            NameAnsible: supported_resource_types
-            NamePythonSdk: supported_resource_types
-            NameGoSdk: SupportedResourceTypes
-            NameTerraform: SupportedResourceTypes
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: true
-            Required: false
-            Documentation: >-
-              The Smart Detector supported resource types. By default this is
-              not populated, unless it's specified in expandDetector
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/detector/supportedResourceTypes
-            PathPython: /detector/supportedResourceTypes
-            PathGo: /properties/detector/supportedResourceTypes
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: imagePaths
-            NameAnsible: image_paths
-            NamePythonSdk: image_paths
-            NameGoSdk: ImagePaths
-            NameTerraform: ImagePaths
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: true
-            Required: false
-            Documentation: >-
-              The Smart Detector image path. By default this is not populated,
-              unless it's specified in expandDetector
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/detector/imagePaths
-            PathPython: /detector/imagePaths
-            PathGo: /properties/detector/imagePaths
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /properties/detector
-        PathPython: /detector
-        PathGo: /properties/detector
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: scope
-        NameAnsible: scope
-        NamePythonSdk: scope
-        NameGoSdk: Scope
-        NameTerraform: Scope
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: true
-        Required: true
-        Documentation: The alert rule resources scope.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/scope
-        PathPython: /scope
-        PathGo: /properties/scope
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: actionGroups
-        NameAnsible: action_groups
-        NamePythonSdk: action_groups
-        NameGoSdk: ActionGroups
-        NameTerraform: ActionGroups
-        IdPortion: null
-        Type: dict
-        TypeName: ActionGroupsInformation
-        TypeNameGo: ActionGroupsInformation
-        IsList: false
-        Required: true
-        Documentation: The alert rule actions.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions:
-          - NameSwagger: customEmailSubject
-            NameAnsible: custom_email_subject
-            NamePythonSdk: custom_email_subject
-            NameGoSdk: CustomEmailSubject
-            NameTerraform: CustomEmailSubject
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: An optional custom email subject to use in email notifications.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/actionGroups/customEmailSubject
-            PathPython: /actionGroups/customEmailSubject
-            PathGo: /properties/actionGroups/customEmailSubject
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: customWebhookPayload
-            NameAnsible: custom_webhook_payload
-            NamePythonSdk: custom_webhook_payload
-            NameGoSdk: CustomWebhookPayload
-            NameTerraform: CustomWebhookPayload
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: >-
-              An optional custom web-hook payload to use in web-hook
-              notifications.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/actionGroups/customWebhookPayload
-            PathPython: /actionGroups/customWebhookPayload
-            PathGo: /properties/actionGroups/customWebhookPayload
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: groupIds
-            NameAnsible: group_ids
-            NamePythonSdk: group_ids
-            NameGoSdk: GroupIds
-            NameTerraform: GroupIds
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: true
-            Required: true
-            Documentation: The Action Group resource IDs.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/actionGroups/groupIds
-            PathPython: /actionGroups/groupIds
-            PathGo: /properties/actionGroups/groupIds
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /properties/actionGroups
-        PathPython: /actionGroups
-        PathGo: /properties/actionGroups
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: throttling
-        NameAnsible: throttling
-        NamePythonSdk: throttling
-        NameGoSdk: Throttling
-        NameTerraform: Throttling
-        IdPortion: null
-        Type: dict
-        TypeName: ThrottlingInformation
-        TypeNameGo: ThrottlingInformation
-        IsList: false
-        Required: false
-        Documentation: The alert rule throttling information.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions:
-          - NameSwagger: duration
-            NameAnsible: duration
-            NamePythonSdk: duration
-            NameGoSdk: Duration
-            NameTerraform: Duration
-            IdPortion: null
-            Type: 'unknown-primary[timeSpan]'
-            TypeName: TimeSpan
-            TypeNameGo: TimeSpan
-            IsList: false
-            Required: false
-            Documentation: >-
-              The required duration (in ISO8601 format) to wait before notifying
-              on the alert rule again. The time granularity must be in minutes
-              and minimum value is 0 minutes
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/throttling/duration
-            PathPython: /throttling/duration
-            PathGo: /properties/throttling/duration
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /properties/throttling
-        PathPython: /throttling
-        PathGo: /properties/throttling
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-    Methods:
-      - Name: List
-        Options:
-          - expandDetector
-        RequiredOptions: []
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/microsoft.alertsManagement/smartDetectorAlertRules
-        HttpMethod: get
-        IsAsync: false
-      - Name: ListByResourceGroup
-        Options:
-          - resourceGroupName
-          - expandDetector
-        RequiredOptions:
-          - resourceGroupName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/microsoft.alertsManagement/smartDetectorAlertRules
-        HttpMethod: get
-        IsAsync: false
-      - Name: Get
-        Options:
-          - resourceGroupName
-          - alertRuleName
-          - expandDetector
-        RequiredOptions:
-          - resourceGroupName
-          - alertRuleName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/microsoft.alertsManagement/smartDetectorAlertRules/{{
-          smart_detector_alert_rule_name }}
-        HttpMethod: get
-        IsAsync: false
-    ResponseFields:
-      - *ref_10
-      - *ref_11
-      - *ref_12
-      - *ref_13
-      - *ref_14
-      - *ref_15
-    ModuleOperationNameUpper: SmartDetectorAlertRules
-    ModuleOperationName: smart_detector_alert_rules
-    ObjectName: SmartDetectorAlertRule
-    ResourceNameFieldInResponse: null
-    NeedsDeleteBeforeUpdate: false
-    NeedsForceUpdate: false
-    CannotTestUpdate: false
-    Provider: microsoft.alertsManagement
-    ApiVersion: !<tag:yaml.org,2002:js/undefined> ''
-    Examples:
-      - Example:
-          parameters:
-            subscriptionId: b368ca2f-e298-46b7-b0ab-012281956afa
-            resourceGroupName: MyAlertRules
-            api-version: '2019-06-01'
-          responses:
-            '200':
-              body:
-                nextLink: null
-                value:
-                  - id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/microsoft.alertsManagement/smartDetectorAlertRules/{{
-                      smart_detector_alert_rule_name }}
-                    type: Microsoft.AlertsManagement/smartDetectorAlertRules
-                    name: MyAlertRule
-                    location: global
-                    tags: ''
-                    properties:
-                      description: Sample smart detector alert rule description
-                      state: Enabled
-                      severity: Sev3
-                      frequency: PT5M
-                      detector:
-                        id: VMMemoryLeak
-                      scope:
-                        - >-
-                          /subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourceGroups/vms/providers/Microsoft.Compute/virtualMachines/vm1
-                      actionGroups:
-                        - actionGroupId: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/microsoft.insights/actionGroups/{{
-                            action_group_name }}
-                      throttling:
-                        duration: PT20M
-                  - id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/microsoft.alertsManagement/smartDetectorAlertRules/{{
-                      smart_detector_alert_rule_name }}
-                    type: Microsoft.AlertsManagement/smartDetectorAlertRules
-                    name: MySecondAlertRule
-                    location: global
-                    tags: ''
-                    properties:
-                      description: Sample smart detector alert rule description
-                      state: Disabled
-                      severity: Sev2
-                      frequency: PT15M
-                      detector:
-                        id: VMMemoryLeak
-                      scope:
-                        - >-
-                          /subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourceGroups/vms/providers/Microsoft.Compute/virtualMachines/vm2
-                      actionGroups:
-                        - actionGroupId: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/microsoft.insights/actionGroups/{{
-                            action_group_name }}
-        Url: >-
-          /subscriptions/{{ subscription_id
-          }}/providers/microsoft.alertsManagement/smartDetectorAlertRules
-        Method: get
-        Name: List Smart Detector alert rules
-        Filename: alertsmanagement_smartdetectoralertrules_get
-        Variables: []
-        References: []
-        OperationId: '2183'
-        MethodId: '2184'
-      - Example:
-          parameters:
-            subscriptionId: b368ca2f-e298-46b7-b0ab-012281956afa
-            resourceGroupName: MyAlertRules
-            api-version: '2019-06-01'
-          responses:
-            '200':
-              body:
-                nextLink: null
-                value:
-                  - id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/microsoft.alertsManagement/smartDetectorAlertRules/{{
-                      smart_detector_alert_rule_name }}
-                    type: Microsoft.AlertsManagement/smartDetectorAlertRules
-                    name: MyAlertRule
-                    location: global
-                    tags: ''
-                    properties:
-                      description: Sample smart detector alert rule description
-                      state: Enabled
-                      severity: Sev3
-                      frequency: PT5M
-                      detector:
-                        id: VMMemoryLeak
-                      scope:
-                        - >-
-                          /subscriptions/b324c52b-4073-4807-93af-e07d289c093e/resourceGroups/test/providers/Microsoft.Storage/storageAccounts/larryshoebox/blobServices/default
-                      actionGroups:
-                        - actionGroupId: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/microsoft.insights/actionGroups/{{
-                            action_group_name }}
-                      throttling:
-                        duration: PT20M
-                  - id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/microsoft.alertsManagement/smartDetectorAlertRules/{{
-                      smart_detector_alert_rule_name }}
-                    type: Microsoft.AlertsManagement/smartDetectorAlertRules
-                    name: MySecondAlertRule
-                    location: global
-                    tags: ''
-                    properties:
-                      description: Sample smart detector alert rule description
-                      state: Disabled
-                      severity: Sev2
-                      frequency: PT15M
-                      detector:
-                        id: VMMemoryLeak
-                      scope:
-                        - >-
-                          /subscriptions/b324c52b-4073-4807-93af-e07d289c093e/resourceGroups/test/providers/Microsoft.Storage/storageAccounts/larryshoebox/blobServices/default
-                      actionGroups:
-                        - actionGroupId: >-
-                            /subscriptions/{{ subscription_id
-                            }}/resourceGroups/{{ resource_group
-                            }}/providers/microsoft.insights/actionGroups/{{
-                            action_group_name }}
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/microsoft.alertsManagement/smartDetectorAlertRules
-        Method: get
-        Name: List alert rules
-        Filename: alertsmanagement_smartdetectoralertrules_get_1
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-        References: []
-        OperationId: '2183'
-        MethodId: '2208'
-      - Example:
-          parameters:
-            subscriptionId: b368ca2f-e298-46b7-b0ab-012281956afa
-            resourceGroupName: MyAlertRules
-            alertRuleName: MyAlertRule
-            api-version: '2019-06-01'
-          responses:
-            '200':
-              body:
-                id: >-
-                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                  resource_group
-                  }}/providers/microsoft.alertsManagement/smartDetectorAlertRules/{{
-                  smart_detector_alert_rule_name }}
-                type: Microsoft.AlertsManagement/smartDetectorAlertRules
-                name: MyAlertRule
-                location: global
-                tags: ''
-                properties:
-                  description: Sample smart detector alert rule description
-                  state: Enabled
-                  severity: Sev3
-                  frequency: PT5M
-                  detector:
-                    id: VMMemoryLeak
-                  scope:
-                    - >-
-                      /subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourceGroups/MyVms/providers/Microsoft.Compute/virtualMachines/vm1
-                  actionGroups:
-                    - actionGroupId: >-
-                        /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                        resource_group
-                        }}/providers/microsoft.insights/actionGroups/{{
-                        action_group_name }}
-                  throttling:
-                    duration: PT20M
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/microsoft.alertsManagement/smartDetectorAlertRules/{{
-          smart_detector_alert_rule_name }}
-        Method: get
-        Name: Get a Smart Detector alert rule
-        Filename: alertsmanagement_smartdetectoralertrules_get_2
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-          - name: smart_detector_alert_rule_name
-            value: mySmartDetectorAlertRule
-            swaggerName: alertRuleName
-        References: []
-        OperationId: '2183'
-        MethodId: '2238'
+        OperationName: SmartDetectorAlertRules
+        MethodName: Delete
 ServiceName: RecoveryServices
 MgmtClientName: RecoveryServices
 CliName: alerts
 Namespace: azure.mgmt.alertsmanagement
-Info:
-  - '  ** FOUND OPTION identifier'
-  - '  ** FOUND OPTION targetResource'
-  - '  ** FOUND OPTION targetResourceType'
-  - '  ** FOUND OPTION targetResourceGroup'
-  - '  ** FOUND OPTION monitorService'
-  - '  ** FOUND OPTION monitorCondition'
-  - '  ** FOUND OPTION severity'
-  - '  ** FOUND OPTION alertState'
-  - '  ** FOUND OPTION alertRule'
-  - '  ** FOUND OPTION smartGroupId'
-  - '  ** FOUND OPTION includeContext'
-  - '  ** FOUND OPTION includeEgressConfig'
-  - '  ** FOUND OPTION pageCount'
-  - '  ** FOUND OPTION sortBy'
-  - '  ** FOUND OPTION sortOrder'
-  - '  ** FOUND OPTION select'
-  - '  ** FOUND OPTION timeRange'
-  - '  ** FOUND OPTION customTimeRange'
-  - '  ** FOUND OPTION groupby'
-  - '  ** FOUND OPTION includeSmartGroupsCount'
-  - '  ** FOUND OPTION targetResource'
-  - '  ** FOUND OPTION targetResourceType'
-  - '  ** FOUND OPTION targetResourceGroup'
-  - '  ** FOUND OPTION monitorService'
-  - '  ** FOUND OPTION monitorCondition'
-  - '  ** FOUND OPTION severity'
-  - '  ** FOUND OPTION alertState'
-  - '  ** FOUND OPTION alertRule'
-  - '  ** FOUND OPTION timeRange'
-  - '  ** FOUND OPTION customTimeRange'
-  - '  ** FOUND OPTION alertId'
-  - '  ** FOUND OPTION alertId'
-  - '  ** FOUND OPTION targetResource'
-  - '  ** FOUND OPTION targetResourceGroup'
-  - '  ** FOUND OPTION targetResourceType'
-  - '  ** FOUND OPTION monitorService'
-  - '  ** FOUND OPTION monitorCondition'
-  - '  ** FOUND OPTION severity'
-  - '  ** FOUND OPTION smartGroupState'
-  - '  ** FOUND OPTION timeRange'
-  - '  ** FOUND OPTION pageCount'
-  - '  ** FOUND OPTION sortBy'
-  - '  ** FOUND OPTION sortOrder'
-  - '  ** FOUND OPTION smartGroupId'
-  - '  ** FOUND OPTION smartGroupId'
-  - '  ** FOUND OPTION targetResourceGroup'
-  - '  ** FOUND OPTION targetResourceType'
-  - '  ** FOUND OPTION targetResource'
-  - '  ** FOUND OPTION severity'
-  - '  ** FOUND OPTION monitorService'
-  - '  ** FOUND OPTION impactedScope'
-  - '  ** FOUND OPTION description'
-  - '  ** FOUND OPTION alertRuleId'
-  - '  ** FOUND OPTION actionGroup'
-  - '  ** FOUND OPTION name'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION targetResourceGroup'
-  - '  ** FOUND OPTION targetResourceType'
-  - '  ** FOUND OPTION targetResource'
-  - '  ** FOUND OPTION severity'
-  - '  ** FOUND OPTION monitorService'
-  - '  ** FOUND OPTION impactedScope'
-  - '  ** FOUND OPTION description'
-  - '  ** FOUND OPTION alertRuleId'
-  - '  ** FOUND OPTION actionGroup'
-  - '  ** FOUND OPTION name'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION actionRuleName'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION alertRuleName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION expandDetector'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION expandDetector'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION alertRuleName'
-  - '  ** FOUND OPTION expandDetector'
