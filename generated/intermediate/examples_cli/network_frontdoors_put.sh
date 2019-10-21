@@ -7,9 +7,8 @@ LOAD_BALANCING_SETTING_NAME="myloadbalancingsetting"
 HEALTH_PROBE_SETTING_NAME="myhealthprobesetting"
 FRONT_DOOR_WEB_APPLICATION_FIREWALL_POLICY_NAME="myfrontdoorwebapplicationfirewallpolicy"
 
-az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.Network/frontDoors/$FRONT_DOOR_NAME --api-version 2019-04-01 --is-full-object --properties '
+az rest --method put --uri /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.Network/frontDoors/$FRONT_DOOR_NAME?api-version=2019-04-01 --body '
 {
-  "id": "/subscriptions/" + SUBSCRIPTION_ID + "/resourceGroups/" + RESOURCE_GROUP + "/providers/Microsoft.Network/frontDoors/" + FRONT_DOOR_NAME + "",
   "location": "westus",
   "tags": {
     "tag1": "value1",
@@ -20,7 +19,7 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
       {
         "name": "routingRule1",
         "properties": {
-          "frontendEndpoints": [
+          "frontend_endpoints": [
             {
               "id": "/subscriptions/" + SUBSCRIPTION_ID + "/resourceGroups/" + RESOURCE_GROUP + "/providers/Microsoft.Network/frontDoors/" + FRONT_DOOR_NAME + "/frontendEndpoints/" + FRONTEND_ENDPOINT_NAME + ""
             },
@@ -28,19 +27,19 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
               "id": "/subscriptions/" + SUBSCRIPTION_ID + "/resourceGroups/" + RESOURCE_GROUP + "/providers/Microsoft.Network/frontDoors/" + FRONT_DOOR_NAME + "/frontendEndpoints/" + FRONTEND_ENDPOINT_NAME + ""
             }
           ],
-          "acceptedProtocols": [
+          "accepted_protocols": [
             "Http"
           ],
-          "patternsToMatch": [
+          "patterns_to_match": [
             "/*"
           ],
-          "routeConfiguration": {
+          "route_configuration": {
             "@odata.type": "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration",
-            "backendPool": {
+            "backend_pool": {
               "id": "/subscriptions/" + SUBSCRIPTION_ID + "/resourceGroups/" + RESOURCE_GROUP + "/providers/Microsoft.Network/frontDoors/" + FRONT_DOOR_NAME + "/backendPools/" + BACKEND_POOL_NAME + ""
             }
           },
-          "enabledState": "Enabled"
+          "enabled_state": "Enabled"
         }
       }
     ],
@@ -50,7 +49,7 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
         "properties": {
           "path": "/",
           "protocol": "Http",
-          "intervalInSeconds": "120"
+          "interval_in_seconds": "120"
         }
       }
     ],
@@ -58,8 +57,8 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
       {
         "name": "loadBalancingSettings1",
         "properties": {
-          "sampleSize": "4",
-          "successfulSamplesRequired": "2"
+          "sample_size": "4",
+          "successful_samples_required": "2"
         }
       }
     ],
@@ -70,30 +69,30 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
           "backends": [
             {
               "address": "w3.contoso.com",
-              "httpPort": "80",
-              "httpsPort": "443",
+              "http_port": "80",
+              "https_port": "443",
               "weight": "1",
               "priority": "2"
             },
             {
               "address": "contoso.com.website-us-west-2.othercloud.net",
-              "httpPort": "80",
-              "httpsPort": "443",
+              "http_port": "80",
+              "https_port": "443",
               "weight": "2",
               "priority": "1"
             },
             {
               "address": "contoso1.azurewebsites.net",
-              "httpPort": "80",
-              "httpsPort": "443",
+              "http_port": "80",
+              "https_port": "443",
               "weight": "1",
               "priority": "1"
             }
           ],
-          "loadBalancingSettings": {
+          "load_balancing_settings": {
             "id": "/subscriptions/" + SUBSCRIPTION_ID + "/resourceGroups/" + RESOURCE_GROUP + "/providers/Microsoft.Network/frontDoors/" + FRONT_DOOR_NAME + "/loadBalancingSettings/" + LOAD_BALANCING_SETTING_NAME + ""
           },
-          "healthProbeSettings": {
+          "health_probe_settings": {
             "id": "/subscriptions/" + SUBSCRIPTION_ID + "/resourceGroups/" + RESOURCE_GROUP + "/providers/Microsoft.Network/frontDoors/" + FRONT_DOOR_NAME + "/healthProbeSettings/" + HEALTH_PROBE_SETTING_NAME + ""
           }
         }
@@ -103,10 +102,10 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
       {
         "name": "frontendEndpoint1",
         "properties": {
-          "hostName": "www.contoso.com",
-          "sessionAffinityEnabledState": "Enabled",
-          "sessionAffinityTtlSeconds": "60",
-          "webApplicationFirewallPolicyLink": {
+          "host_name": "www.contoso.com",
+          "session_affinity_enabled_state": "Enabled",
+          "session_affinity_ttl_seconds": "60",
+          "web_application_firewall_policy_link": {
             "id": "/subscriptions/" + SUBSCRIPTION_ID + "/resourceGroups/" + RESOURCE_GROUP + "/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/" + FRONT_DOOR_WEB_APPLICATION_FIREWALL_POLICY_NAME + ""
           }
         }
@@ -114,7 +113,7 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
       {
         "name": "default",
         "properties": {
-          "hostName": "frontDoor1.azurefd.net"
+          "host_name": "frontDoor1.azurefd.net"
         }
       }
     ],
