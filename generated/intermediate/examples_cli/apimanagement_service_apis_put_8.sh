@@ -3,7 +3,7 @@ RESOURCE_GROUP="myresourcegroup"
 SERVICE_NAME="myservice"
 API_NAME="myapi"
 
-az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.ApiManagement/service/$SERVICE_NAME/apis/$API_NAME --api-version 2019-01-01 --is-full-object --properties '
+az rest --method put --uri /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.ApiManagement/service/$SERVICE_NAME/apis/$API_NAME?api-version=2019-01-01 --body '
 {
   "properties": {
     "displayName": "Echo API2",

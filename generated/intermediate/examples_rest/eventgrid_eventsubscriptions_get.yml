@@ -3,13 +3,15 @@
     - ../modules
   vars_files:
     - _vars.yml
-  vars: {}
+  vars:
+    event_subscription_name: myEventSubscription
   tasks:
-    - name: EventSubscriptions_ListGlobalBySubscription
+    - name: EventSubscriptions_GetForSubscription
       azure_rm_resource_facts:
         api_version: '2019-01-01'
         provider: EventGrid
         resource_type: eventSubscriptions
+        resource_name: '{{ event_subscription_name }}'
       register: output
     - debug:
         var: output

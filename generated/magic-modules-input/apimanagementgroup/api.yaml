@@ -44,7 +44,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: GroupCreateParametersProperties
             go_type_name: GroupCreateParametersProperties
           '/displayName': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
@@ -97,7 +97,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: GroupCreateParametersProperties
             go_type_name: GroupCreateParametersProperties
           '/displayName': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
@@ -165,7 +165,7 @@ objects:
         response:
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: GroupCreateParametersProperties
             go_type_name: GroupCreateParametersProperties
           '/properties/displayName': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
@@ -262,13 +262,13 @@ objects:
         name: 'type'
         description: 'Group type.'
         required: false
+        sample_value: external
+        azure_sdk_references: ['/type', '/properties/type']
         values:
           - :custom
           - :system
           - :external
         default_value: :custom
-        sample_value: external
-        azure_sdk_references: ['/type', '/properties/type']
       - !ruby/object:Api::Type::String
         name: 'externalId'
         description: 'Identifier of the external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.'
@@ -284,18 +284,15 @@ objects:
       - !ruby/object:Api::Type::String
         name: 'id'
         description: 'Resource ID.'
-        input: true
         output: true
         azure_sdk_references: ['/id']
       - !ruby/object:Api::Type::String
         name: 'name'
         description: 'Resource name.'
-        input: true
         output: true
         azure_sdk_references: ['/name']
       - !ruby/object:Api::Type::String
         name: 'type'
         description: 'Resource type for API Management resource.'
-        input: true
         output: true
         azure_sdk_references: ['/type']

@@ -44,7 +44,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: LoggerContractProperties
             go_type_name: LoggerContractProperties
           '/loggerType': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
@@ -103,7 +103,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: LoggerContractProperties
             go_type_name: LoggerContractProperties
           '/loggerType': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [python]
@@ -177,7 +177,7 @@ objects:
         response:
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: LoggerContractProperties
             go_type_name: LoggerContractProperties
           '/properties/loggerType': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
             applicable_to: [go]
@@ -262,12 +262,11 @@ objects:
         name: 'loggerType'
         description: 'Logger type.'
         required: true
+        sample_value: applicationInsights
+        azure_sdk_references: ['/loggerType', '/properties/loggerType']
         values:
           - :azureEventHub
           - :applicationInsights
-        default_value: :azureEventHub
-        sample_value: applicationInsights
-        azure_sdk_references: ['/loggerType', '/properties/loggerType']
       - !ruby/object:Api::Type::String
         name: 'description'
         description: 'Logger description.'
@@ -294,18 +293,15 @@ objects:
       - !ruby/object:Api::Type::String
         name: 'id'
         description: 'Resource ID.'
-        input: true
         output: true
         azure_sdk_references: ['/id']
       - !ruby/object:Api::Type::String
         name: 'name'
         description: 'Resource name.'
-        input: true
         output: true
         azure_sdk_references: ['/name']
       - !ruby/object:Api::Type::String
         name: 'type'
         description: 'Resource type for API Management resource.'
-        input: true
         output: true
         azure_sdk_references: ['/type']
