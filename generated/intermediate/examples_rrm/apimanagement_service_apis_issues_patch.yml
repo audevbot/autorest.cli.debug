@@ -14,7 +14,7 @@
   tasks:
 
     - name: ApiManagementUpdateApiIssue
-      azure_rm_apimanagementapiissue:
+      azure_rm_apimanagementapiissu:
         resource_group: '{{resource_group}}'
         service_name: '{{service_name}}'
         api_id: '{{api_name}}'

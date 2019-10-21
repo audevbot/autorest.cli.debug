@@ -14,7 +14,7 @@
   tasks:
 
     - name: ApiManagementCreateProductApi
-      azure_rm_apimanagementproductapi:
+      azure_rm_apimanagementproductap:
         resource_group: '{{resource_group}}'
         service_name: '{{service_name}}'
         product_id: '{{product_name}}'

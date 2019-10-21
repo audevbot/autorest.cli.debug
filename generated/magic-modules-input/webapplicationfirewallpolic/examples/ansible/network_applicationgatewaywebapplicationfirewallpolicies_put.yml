@@ -1,0 +1,16 @@
+--- !ruby/object:Provider::Ansible::Example
+task: !ruby/object:Provider::Ansible::Task
+  name: azure_rm_webapplicationfirewallpolic
+  description: Creates or updates a WAF policy within a resource group
+  code:
+    resource_group: myResourceGroup
+    name: myApplicationGatewayWebApplicationFirewallPolicy
+    location: WestUs
+    custom_rules:
+      - name: Rule1
+        priority: '1'
+        action: Block
+      - name: Rule2
+        priority: '2'
+        action: Block
+  

@@ -13,7 +13,7 @@
   tasks:
 
     - name: ApplicationUpdate
-      azure_rm_batchapplication:
+      azure_rm_batchapplicatio:
         resource_group: '{{resource_group}}'
         account_name: '{{batch_account_name}}'
         name: '{{application_name}}'

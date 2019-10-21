@@ -14,7 +14,7 @@
   tasks:
 
     - name: ApiManagementCreateGroupExternal
-      azure_rm_apimanagementgroup:
+      azure_rm_apimanagementgrou:
         resource_group: '{{resource_group}}'
         service_name: '{{service_name}}'
         group_id: '{{group_name}}'

@@ -12,7 +12,7 @@
   tasks:
 
     - name: ApiManagementCreateServiceWithSystemCertificates
-      azure_rm_apimanagementservice:
+      azure_rm_apimanagementservic:
         resource_group: '{{resource_group}}'
         name: '{{service_name}}'
         tags:
@@ -20,9 +20,7 @@
           tag2: value2
           tag3: value3
         certificates:
-          - encoded_certificate: '*******Base64 encoded Certificate******************'
-            certificate_password: Password
-            store_name: CertificateAuthority
+          - {}
         publisher_email: apim@autorestsdk.com
         publisher_name: autorestsdk
         sku_name: Basic

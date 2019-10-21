@@ -12,7 +12,7 @@
   tasks:
 
     - name: Create or update a simple gallery.
-      azure_rm_computegallery:
+      azure_rm_computegaller:
         resource_group: '{{resource_group}}'
         name: '{{gallery_name}}'
         gallery:

@@ -10,7 +10,7 @@
   tasks:
 
     - name: ApiManagementDeleteApiVersionSet
-      azure_rm_apimanagementapiversionset:
+      azure_rm_apimanagementapiversionse:
         resource_group: '{{resource_group}}'
         service_name: '{{service_name}}'
         version_set_id: '{{api_version_set_name}}'

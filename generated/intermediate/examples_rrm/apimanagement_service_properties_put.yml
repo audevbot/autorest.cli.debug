@@ -13,7 +13,7 @@
   tasks:
 
     - name: ApiManagementCreateProperty
-      azure_rm_apimanagementproperty:
+      azure_rm_apimanagementpropert:
         resource_group: '{{resource_group}}'
         service_name: '{{service_name}}'
         prop_id: '{{property_name}}'

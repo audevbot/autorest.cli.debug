@@ -17,7 +17,7 @@
   tasks:
 
     - name: BatchAccountCreate_BYOS
-      azure_rm_batchaccount:
+      azure_rm_batchaccoun:
         resource_group: '{{resource_group}}'
         name: '{{batch_account_name}}'
         location: japaneast

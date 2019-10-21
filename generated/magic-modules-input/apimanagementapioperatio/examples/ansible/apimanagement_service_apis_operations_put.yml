@@ -1,0 +1,27 @@
+--- !ruby/object:Provider::Ansible::Example
+task: !ruby/object:Provider::Ansible::Task
+  name: azure_rm_apimanagementapioperatio
+  description: ApiManagementCreateApiOperation
+  code:
+    resource_group: myResourceGroup
+    service_name: myService
+    api_id: myApi
+    operation_id: myOperation
+    template_parameters: []
+    description: This can only be done by the logged in user.
+    request:
+      description: Created user object
+      query_parameters: []
+      headers: []
+      representations:
+        - {}
+    responses:
+      - description: successful operation
+        representations:
+          - {}
+          - {}
+        headers: []
+    display_name: createUser2
+    method: POST
+    url_template: /user1
+  

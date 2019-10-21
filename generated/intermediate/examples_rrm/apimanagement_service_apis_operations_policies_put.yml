@@ -16,7 +16,7 @@
   tasks:
 
     - name: ApiManagementCreateApiOperationPolicy
-      azure_rm_apimanagementapioperationpolicy:
+      azure_rm_apimanagementapioperationpolic:
         resource_group: '{{resource_group}}'
         service_name: '{{service_name}}'
         api_id: '{{api_name}}'

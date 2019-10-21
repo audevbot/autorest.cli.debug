@@ -22,7 +22,7 @@
   tasks:
 
     - name: CreatePool - Full Example
-      azure_rm_batchpool:
+      azure_rm_batchpoo:
         resource_group: '{{resource_group}}'
         account_name: '{{batch_account_name}}'
         name: '{{pool_name}}'
@@ -48,27 +48,12 @@
             inbound_nat_pools:
               - name: testnat
                 protocol: TCP
-                backend_port: '12001'
-                frontend_port_range_start: '15000'
-                frontend_port_range_end: '15100'
-                network_security_group_rules:
-                  - access: Allow
-                    sourceAddressPrefix: 192.100.12.45
-                    priority: '150'
-                  - access: Deny
-                    sourceAddressPrefix: '*'
-                    priority: '3500'
         max_tasks_per_node: '13'
         task_scheduling_policy:
           node_fill_type: Pack
         user_accounts:
           - name: username1
             password: examplepassword
-            elevation_level: Admin
-            linux_user_configuration:
-              uid: '1234'
-              gid: '4567'
-              ssh_private_key: sshprivatekeyvalue
         metadata:
           - name: metadata-1
             value: value-1
@@ -77,9 +62,7 @@
         start_task:
           command_line: cmd /c SET
           resource_files:
-            - http_url: 'https://testaccount.blob.core.windows.net/example-blob-file'
-              file_path: 'c:\temp\gohere'
-              file_mode: '777'
+            - {}
           environment_settings:
             - name: MYSET
               value: '1234'
@@ -94,8 +77,6 @@
               /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
               }}/providers/Microsoft.Batch/batchAccounts/{{ batch_account_name
               }}/pools/{{ pool_name }}/certificates/{{ certificate_name }}
-            store_location: LocalMachine
-            store_name: MY
             visibility:
               - RemoteUser
         application_packages:

@@ -11,7 +11,7 @@
   tasks:
 
     - name: ApiManagementDeleteNotificationRecipientUser
-      azure_rm_apimanagementnotificationrecipientuser:
+      azure_rm_apimanagementnotificationrecipientuse:
         resource_group: '{{resource_group}}'
         service_name: '{{service_name}}'
         notification_name: '{{notification_name}}'

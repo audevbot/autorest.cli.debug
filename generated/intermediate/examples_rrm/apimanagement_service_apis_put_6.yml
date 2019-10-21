@@ -15,7 +15,7 @@
   tasks:
 
     - name: ApiManagementCreateApiRevisionFromExistingApi
-      azure_rm_apimanagementapi:
+      azure_rm_apimanagementap:
         resource_group: '{{resource_group}}'
         service_name: '{{service_name}}'
         api_id: '{{api_name}}'

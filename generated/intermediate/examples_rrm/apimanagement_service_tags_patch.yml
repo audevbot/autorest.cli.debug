@@ -13,7 +13,7 @@
   tasks:
 
     - name: ApiManagementUpdateTag
-      azure_rm_apimanagementtag:
+      azure_rm_apimanagementta:
         resource_group: '{{resource_group}}'
         service_name: '{{service_name}}'
         tag_id: '{{tag_name}}'

@@ -10,7 +10,7 @@
   tasks:
 
     - name: CertificateDelete
-      azure_rm_batchcertificate:
+      azure_rm_batchcertificat:
         resource_group: '{{resource_group}}'
         account_name: '{{batch_account_name}}'
         name: '{{certificate_name}}'

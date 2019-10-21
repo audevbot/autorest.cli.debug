@@ -10,7 +10,7 @@
   tasks:
 
     - name: ApiManagementDeleteUser
-      azure_rm_apimanagementuser:
+      azure_rm_apimanagementuse:
         resource_group: '{{resource_group}}'
         service_name: '{{service_name}}'
         user_id: '{{user_name}}'

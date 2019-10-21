@@ -13,7 +13,7 @@
   tasks:
 
     - name: ApiManagementUpdateCache
-      azure_rm_apimanagementcache:
+      azure_rm_apimanagementcach:
         resource_group: '{{resource_group}}'
         service_name: '{{service_name}}'
         cache_id: '{{cache_name}}'

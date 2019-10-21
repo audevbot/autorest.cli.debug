@@ -10,7 +10,7 @@
   tasks:
 
     - name: ApiManagementDeleteIdentityProvider
-      azure_rm_apimanagementidentityprovider:
+      azure_rm_apimanagementidentityprovide:
         resource_group: '{{resource_group}}'
         service_name: '{{service_name}}'
         name: '{{identity_provider_name}}'

@@ -13,7 +13,7 @@
   tasks:
 
     - name: CreatePool - Full VirtualMachineConfiguration
-      azure_rm_batchpool:
+      azure_rm_batchpoo:
         resource_group: '{{resource_group}}'
         account_name: '{{batch_account_name}}'
         name: '{{pool_name}}'
@@ -31,12 +31,8 @@
             data_disks:
               - lun: '0'
                 caching: ReadWrite
-                disk_size_gb: '30'
-                storage_account_type: Premium_LRS
               - lun: '1'
                 caching: None
-                disk_size_gb: '200'
-                storage_account_type: Standard_LRS
             license_type: Windows_Server
         scale_settings:
           auto_scale:
@@ -47,14 +43,4 @@
             inbound_nat_pools:
               - name: testnat
                 protocol: TCP
-                backend_port: '12001'
-                frontend_port_range_start: '15000'
-                frontend_port_range_end: '15100'
-                network_security_group_rules:
-                  - access: Allow
-                    sourceAddressPrefix: 192.100.12.45
-                    priority: '150'
-                  - access: Deny
-                    sourceAddressPrefix: '*'
-                    priority: '3500'
     

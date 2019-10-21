@@ -10,7 +10,7 @@
   tasks:
 
     - name: ApiManagementDeleteBackend
-      azure_rm_apimanagementbackend:
+      azure_rm_apimanagementbacken:
         resource_group: '{{resource_group}}'
         service_name: '{{service_name}}'
         backend_id: '{{backend_name}}'

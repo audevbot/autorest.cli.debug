@@ -13,7 +13,7 @@
   tasks:
 
     - name: ApiManagementCreateProduct
-      azure_rm_apimanagementproduct:
+      azure_rm_apimanagementproduc:
         resource_group: '{{resource_group}}'
         service_name: '{{service_name}}'
         product_id: '{{product_name}}'

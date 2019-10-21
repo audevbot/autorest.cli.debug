@@ -14,7 +14,7 @@
   tasks:
 
     - name: ApiManagementCreateOpenIdConnectProvider
-      azure_rm_apimanagementopenidconnectprovider:
+      azure_rm_apimanagementopenidconnectprovide:
         resource_group: '{{resource_group}}'
         service_name: '{{service_name}}'
         opid: '{{openid_connect_provider_name}}'

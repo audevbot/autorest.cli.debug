@@ -1,0 +1,17 @@
+- hosts: localhost
+  roles:
+    - ../modules
+  vars_files:
+    - _vars.yml
+  vars:
+    resource_group: myResourceGroup
+  tasks:
+    - name: EventSubscriptions_ListGlobalByResourceGroup
+      azure_rm_resource_facts:
+        api_version: '2019-01-01'
+        resource_group: '{{ resource_group }}'
+        provider: EventGrid
+        resource_type: eventSubscriptions
+      register: output
+    - debug:
+        var: output

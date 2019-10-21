@@ -14,7 +14,7 @@
   tasks:
 
     - name: ApiManagementUpdateLogger
-      azure_rm_apimanagementlogger:
+      azure_rm_apimanagementlogge:
         resource_group: '{{resource_group}}'
         service_name: '{{service_name}}'
         logger_id: '{{logger_name}}'

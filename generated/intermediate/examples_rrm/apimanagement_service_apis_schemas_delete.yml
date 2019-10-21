@@ -11,7 +11,7 @@
   tasks:
 
     - name: ApiManagementDeleteApiSchema
-      azure_rm_apimanagementapischema:
+      azure_rm_apimanagementapischem:
         resource_group: '{{resource_group}}'
         service_name: '{{service_name}}'
         api_id: '{{api_name}}'

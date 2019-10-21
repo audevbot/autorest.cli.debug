@@ -13,7 +13,7 @@
   tasks:
 
     - name: CreatePool - Minimal CloudServiceConfiguration
-      azure_rm_batchpool:
+      azure_rm_batchpoo:
         resource_group: '{{resource_group}}'
         account_name: '{{batch_account_name}}'
         name: '{{pool_name}}'

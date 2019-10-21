@@ -9,7 +9,7 @@
   tasks:
 
     - name: Deletes a WAF policy within a resource group
-      azure_rm_webapplicationfirewallpolicy:
+      azure_rm_webapplicationfirewallpolic:
         resource_group: '{{resource_group}}'
         name: '{{application_gateway_web_application_firewall_policy_name}}'
         state: absent

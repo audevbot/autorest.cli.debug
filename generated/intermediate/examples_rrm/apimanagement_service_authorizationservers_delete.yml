@@ -10,7 +10,7 @@
   tasks:
 
     - name: ApiManagementDeleteAuthorizationServer
-      azure_rm_apimanagementauthorizationserver:
+      azure_rm_apimanagementauthorizationserve:
         resource_group: '{{resource_group}}'
         service_name: '{{service_name}}'
         authsid: '{{authorization_server_name}}'

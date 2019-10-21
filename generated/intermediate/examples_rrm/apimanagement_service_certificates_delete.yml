@@ -10,7 +10,7 @@
   tasks:
 
     - name: ApiManagementDeleteCertificate
-      azure_rm_apimanagementcertificate:
+      azure_rm_apimanagementcertificat:
         resource_group: '{{resource_group}}'
         service_name: '{{service_name}}'
         certificate_id: '{{certificate_name}}'

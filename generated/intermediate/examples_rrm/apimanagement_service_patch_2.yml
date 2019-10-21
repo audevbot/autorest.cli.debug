@@ -12,7 +12,7 @@
   tasks:
 
     - name: ApiManagementUpdateSubscription
-      azure_rm_apimanagementsubscription:
+      azure_rm_apimanagementsubscriptio:
         resource_group: '{{resource_group}}'
         service_name: '{{service_name}}'
         sid: testsub

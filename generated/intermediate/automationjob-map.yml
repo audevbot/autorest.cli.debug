@@ -1,5 +1,5 @@
 Modules:
-  - ModuleName: azure_rm_automationjob
+  - ModuleName: azure_rm_automationjo
     Options:
       - NameSwagger: resourceGroupName
         NameAnsible: resource_group
@@ -30,7 +30,9 @@ Modules:
         ExampleValue: '{{resource_group}}'
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: automationAccountName
         NameAnsible: automation_account_name
         NamePythonSdk: automation_account_name
@@ -60,7 +62,9 @@ Modules:
         ExampleValue: '{{automation_account_name}}'
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: jobName
         NameAnsible: name
         NamePythonSdk: job_name
@@ -90,7 +94,9 @@ Modules:
         ExampleValue: '{{job_name}}'
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: parameters
         NameAnsible: parameters
         NamePythonSdk: parameters
@@ -113,14 +119,16 @@ Modules:
         PathSwagger: ''
         PathPython: null
         PathGo: null
-        DispositionSdk: dictionary
+        DispositionSdk: '*'
         DispositionRest: '*'
         Comparison: ''
         Updatable: true
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 2
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -150,7 +158,9 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: runbook
         NameAnsible: runbook
         NamePythonSdk: runbook
@@ -198,7 +208,9 @@ Modules:
             ExampleValue: TestRunbook
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/runbook
         PathPython: /runbook
@@ -210,7 +222,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: parameters
         NameAnsible: parameters
         NamePythonSdk: parameters
@@ -244,7 +258,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: runOn
         NameAnsible: run_on
         NamePythonSdk: run_on
@@ -276,7 +292,9 @@ Modules:
         ExampleValue: ''
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_3
         NameSwagger: startedBy
         NameAnsible: started_by
@@ -307,7 +325,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_4
         NameSwagger: jobId
         NameAnsible: job_id
@@ -338,7 +358,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_5
         NameSwagger: creationTime
         NameAnsible: creation_time
@@ -369,7 +391,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_6
         NameSwagger: status
         NameAnsible: status
@@ -439,7 +463,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_7
         NameSwagger: statusDetails
         NameAnsible: status_details
@@ -470,7 +496,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_8
         NameSwagger: startTime
         NameAnsible: start_time
@@ -501,7 +529,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_9
         NameSwagger: endTime
         NameAnsible: end_time
@@ -532,7 +562,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_10
         NameSwagger: exception
         NameAnsible: exception
@@ -563,7 +595,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_11
         NameSwagger: lastModifiedTime
         NameAnsible: last_modified_time
@@ -594,7 +628,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_12
         NameSwagger: lastStatusModifiedTime
         NameAnsible: last_status_modified_time
@@ -625,7 +661,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_13
         NameSwagger: provisioningState
         NameAnsible: provisioning_state
@@ -668,7 +706,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: clientRequestId
         NameAnsible: client_request_id
         NamePythonSdk: client_request_id
@@ -698,7 +738,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 3
       - &ref_0
         NameSwagger: id
         NameAnsible: id
@@ -729,7 +771,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_1
         NameSwagger: name
         NameAnsible: name
@@ -760,7 +804,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_2
         NameSwagger: type
         NameAnsible: type
@@ -791,7 +837,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: Create
         Options:
@@ -942,7 +990,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/runbook
             PathPython: /runbook
@@ -954,7 +1004,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - *ref_3
           - NameSwagger: runOn
             NameAnsible: run_on
@@ -987,7 +1039,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - *ref_4
           - *ref_5
           - *ref_6
@@ -1030,7 +1084,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - *ref_13
         EnumValues: []
         PathSwagger: /properties
@@ -1043,7 +1099,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     ModuleOperationNameUpper: Job
     ModuleOperationName: job
     ObjectName: Job
@@ -1118,7 +1176,9 @@ Modules:
           - automation_automationaccounts_put
         OperationId: '378'
         MethodId: '593'
-  - ModuleName: azure_rm_automationjob_info
+        OperationName: Job
+        MethodName: Create
+  - ModuleName: azure_rm_automationjobstrea
     Options:
       - NameSwagger: resourceGroupName
         NameAnsible: resource_group
@@ -1146,10 +1206,12 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{resource_group}}'
+        ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: automationAccountName
         NameAnsible: automation_account_name
         NamePythonSdk: automation_account_name
@@ -1176,40 +1238,12 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{automation_account_name}}'
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: clientRequestId
-        NameAnsible: client_request_id
-        NamePythonSdk: client_request_id
-        NameGoSdk: ClientRequestID
-        NameTerraform: ClientRequestID
-        IdPortion: null
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: true
-        Documentation: Identifies this specific client request.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: jobName
         NameAnsible: name
         NamePythonSdk: job_name
@@ -1220,990 +1254,6 @@ Modules:
         TypeName: xxx
         TypeNameGo: null
         IsList: false
-        Required: false
-        Documentation: The job name.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: '{{job_name}}'
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - &ref_14
-        NameSwagger: id
-        NameAnsible: id
-        NamePythonSdk: id
-        NameGoSdk: ID
-        NameTerraform: ID
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Fully qualified resource Id for the resource
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /id
-        PathPython: /id
-        PathGo: /id
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_15
-        NameSwagger: name
-        NameAnsible: name
-        NamePythonSdk: name
-        NameGoSdk: Name
-        NameTerraform: Name
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: The name of the resource
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /name
-        PathPython: /name
-        PathGo: /name
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_16
-        NameSwagger: type
-        NameAnsible: type
-        NamePythonSdk: type
-        NameGoSdk: Type
-        NameTerraform: Type
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: The type of the resource.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /type
-        PathPython: /type
-        PathGo: /type
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_17
-        NameSwagger: properties
-        NameAnsible: properties
-        NamePythonSdk: properties
-        NameGoSdk: Properties
-        NameTerraform: Properties
-        IdPortion: null
-        Type: dict
-        TypeName: JobProperties
-        TypeNameGo: JobProperties
-        IsList: false
-        Required: false
-        Documentation: The properties of the job.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties
-        PathPython: ''
-        PathGo: /properties
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: true
-        IncludeInResponse: true
-        Flatten: false
-      - NameSwagger: runbook
-        NameAnsible: runbook
-        NamePythonSdk: runbook
-        NameGoSdk: Runbook
-        NameTerraform: Runbook
-        IdPortion: null
-        Type: dict
-        TypeName: RunbookAssociationProperty
-        TypeNameGo: RunbookAssociationProperty
-        IsList: false
-        Required: false
-        Documentation: Gets or sets the runbook.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions:
-          - NameSwagger: name
-            NameAnsible: name
-            NamePythonSdk: name
-            NameGoSdk: Name
-            NameTerraform: Name
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: Gets or sets the name of the runbook.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/runbook/name
-            PathPython: /runbook/name
-            PathGo: /properties/runbook/name
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /properties/runbook
-        PathPython: /runbook
-        PathGo: /properties/runbook
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: startedBy
-        NameAnsible: started_by
-        NamePythonSdk: started_by
-        NameGoSdk: StartedBy
-        NameTerraform: StartedBy
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Gets or sets the job started by.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/startedBy
-        PathPython: /startedBy
-        PathGo: /properties/startedBy
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: runOn
-        NameAnsible: run_on
-        NamePythonSdk: run_on
-        NameGoSdk: RunOn
-        NameTerraform: RunOn
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: >-
-          Gets or sets the runOn which specifies the group name where the job is
-          to be executed.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/runOn
-        PathPython: /runOn
-        PathGo: /properties/runOn
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: jobId
-        NameAnsible: job_id
-        NamePythonSdk: job_id
-        NameGoSdk: JobID
-        NameTerraform: JobID
-        IdPortion: null
-        Type: 'unknown-primary[uuid]'
-        TypeName: Uuid
-        TypeNameGo: Uuid
-        IsList: false
-        Required: false
-        Documentation: Gets or sets the id of the job.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/jobId
-        PathPython: /jobId
-        PathGo: /properties/jobId
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: creationTime
-        NameAnsible: creation_time
-        NamePythonSdk: creation_time
-        NameGoSdk: CreationTime
-        NameTerraform: CreationTime
-        IdPortion: null
-        Type: datetime
-        TypeName: DateTime
-        TypeNameGo: DateTime
-        IsList: false
-        Required: false
-        Documentation: Gets or sets the creation time of the job.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/creationTime
-        PathPython: /creationTime
-        PathGo: /properties/creationTime
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: status
-        NameAnsible: status
-        NamePythonSdk: status
-        NameGoSdk: Status
-        NameTerraform: Status
-        IdPortion: null
-        Type: str
-        TypeName: JobStatus
-        TypeNameGo: JobStatus
-        IsList: false
-        Required: false
-        Documentation: Gets or sets the status of the job.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues:
-          - Key: New
-            Value: New
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Activating
-            Value: Activating
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Running
-            Value: Running
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Completed
-            Value: Completed
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Failed
-            Value: Failed
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Stopped
-            Value: Stopped
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Blocked
-            Value: Blocked
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Suspended
-            Value: Suspended
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Disconnected
-            Value: Disconnected
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Suspending
-            Value: Suspending
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Stopping
-            Value: Stopping
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Resuming
-            Value: Resuming
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Removing
-            Value: Removing
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-        PathSwagger: /properties/status
-        PathPython: /status
-        PathGo: /properties/status
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: statusDetails
-        NameAnsible: status_details
-        NamePythonSdk: status_details
-        NameGoSdk: StatusDetails
-        NameTerraform: StatusDetails
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Gets or sets the status details of the job.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/statusDetails
-        PathPython: /statusDetails
-        PathGo: /properties/statusDetails
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: startTime
-        NameAnsible: start_time
-        NamePythonSdk: start_time
-        NameGoSdk: StartTime
-        NameTerraform: StartTime
-        IdPortion: null
-        Type: datetime
-        TypeName: DateTime
-        TypeNameGo: DateTime
-        IsList: false
-        Required: false
-        Documentation: Gets or sets the start time of the job.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/startTime
-        PathPython: /startTime
-        PathGo: /properties/startTime
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: endTime
-        NameAnsible: end_time
-        NamePythonSdk: end_time
-        NameGoSdk: EndTime
-        NameTerraform: EndTime
-        IdPortion: null
-        Type: datetime
-        TypeName: DateTime
-        TypeNameGo: DateTime
-        IsList: false
-        Required: false
-        Documentation: Gets or sets the end time of the job.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/endTime
-        PathPython: /endTime
-        PathGo: /properties/endTime
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: exception
-        NameAnsible: exception
-        NamePythonSdk: exception
-        NameGoSdk: Exception
-        NameTerraform: Exception
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: Gets or sets the exception of the job.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/exception
-        PathPython: /exception
-        PathGo: /properties/exception
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: lastModifiedTime
-        NameAnsible: last_modified_time
-        NamePythonSdk: last_modified_time
-        NameGoSdk: LastModifiedTime
-        NameTerraform: LastModifiedTime
-        IdPortion: null
-        Type: datetime
-        TypeName: DateTime
-        TypeNameGo: DateTime
-        IsList: false
-        Required: false
-        Documentation: Gets or sets the last modified time of the job.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/lastModifiedTime
-        PathPython: /lastModifiedTime
-        PathGo: /properties/lastModifiedTime
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: lastStatusModifiedTime
-        NameAnsible: last_status_modified_time
-        NamePythonSdk: last_status_modified_time
-        NameGoSdk: LastStatusModifiedTime
-        NameTerraform: LastStatusModifiedTime
-        IdPortion: null
-        Type: datetime
-        TypeName: DateTime
-        TypeNameGo: DateTime
-        IsList: false
-        Required: false
-        Documentation: Gets or sets the last status modified time of the job.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/lastStatusModifiedTime
-        PathPython: /lastStatusModifiedTime
-        PathGo: /properties/lastStatusModifiedTime
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: parameters
-        NameAnsible: parameters
-        NamePythonSdk: parameters
-        NameGoSdk: Parameters
-        NameTerraform: Parameters
-        IdPortion: null
-        Type: >-
-          unknown[DictionaryType
-          {"$id":"175","$type":"DictionaryType","valueType":{"$id":"176","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"177","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"178","fixed":false},"deprecated":false}]
-        TypeName: >-
-          {"$id":"175","$type":"DictionaryType","valueType":{"$id":"176","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"177","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"178","fixed":false},"deprecated":false}
-        TypeNameGo: >-
-          {"$id":"175","$type":"DictionaryType","valueType":{"$id":"176","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"177","fixed":false,"raw":"String"},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"178","fixed":false},"deprecated":false}
-        IsList: false
-        Required: false
-        Documentation: Gets or sets the parameters of the job.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/parameters
-        PathPython: /parameters
-        PathGo: /properties/parameters
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: provisioningState
-        NameAnsible: provisioning_state
-        NamePythonSdk: provisioning_state
-        NameGoSdk: ProvisioningState
-        NameTerraform: ProvisioningState
-        IdPortion: null
-        Type: str
-        TypeName: JobProvisioningState
-        TypeNameGo: JobProvisioningState
-        IsList: false
-        Required: false
-        Documentation: The current provisioning state of the job.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues:
-          - Key: Failed
-            Value: Failed
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Succeeded
-            Value: Succeeded
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Suspended
-            Value: Suspended
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-          - Key: Processing
-            Value: Processing
-            Description: !<tag:yaml.org,2002:js/undefined> ''
-        PathSwagger: /properties/provisioningState
-        PathPython: /provisioningState
-        PathGo: /properties/provisioningState
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-    Methods:
-      - Name: GetRunbookContent
-        Options:
-          - resourceGroupName
-          - automationAccountName
-          - jobName
-          - clientRequestId
-        RequiredOptions:
-          - resourceGroupName
-          - automationAccountName
-          - jobName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.Automation/automationAccounts/{{
-          automation_account_name }}/jobs/{{ job_name }}/runbookContent
-        HttpMethod: get
-        IsAsync: false
-      - Name: GetOutput
-        Options:
-          - resourceGroupName
-          - automationAccountName
-          - jobName
-          - clientRequestId
-        RequiredOptions:
-          - resourceGroupName
-          - automationAccountName
-          - jobName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.Automation/automationAccounts/{{
-          automation_account_name }}/jobs/{{ job_name }}/output
-        HttpMethod: get
-        IsAsync: false
-      - Name: Get
-        Options:
-          - resourceGroupName
-          - automationAccountName
-          - jobName
-          - clientRequestId
-        RequiredOptions:
-          - resourceGroupName
-          - automationAccountName
-          - jobName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.Automation/automationAccounts/{{
-          automation_account_name }}/jobs/{{ job_name }}
-        HttpMethod: get
-        IsAsync: false
-      - Name: ListByAutomationAccount
-        Options:
-          - resourceGroupName
-          - automationAccountName
-          - clientRequestId
-        RequiredOptions:
-          - resourceGroupName
-          - automationAccountName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.Automation/automationAccounts/{{
-          automation_account_name }}/jobs
-        HttpMethod: get
-        IsAsync: false
-    ResponseFields:
-      - *ref_14
-      - *ref_15
-      - *ref_16
-      - *ref_17
-    ModuleOperationNameUpper: Job
-    ModuleOperationName: job
-    ObjectName: Job
-    ResourceNameFieldInResponse: null
-    NeedsDeleteBeforeUpdate: false
-    NeedsForceUpdate: false
-    CannotTestUpdate: false
-    Provider: Microsoft.Automation
-    ApiVersion: 2017-05-15-preview
-    Examples:
-      - Example:
-          parameters:
-            subscriptionId: 51766542-3ed7-4a72-a187-0c8ab644ddab
-            resourceGroupName: mygroup
-            automationAccountName: ContoseAutomationAccount
-            jobName: foo
-            api-version: 2017-05-15-preview
-          responses:
-            '200':
-              headers: {}
-              body:
-                value:
-                  - id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Automation/automationAccounts/{{
-                      automation_account_name }}/jobs/{{ job_name }}
-                    name: job1
-                    type: Microsoft.Automation/AutomationAccounts/Jobs
-                    properties:
-                      jobId: 45203a94-a8cb-47c3-8ce4-4dcc3a5f7d23
-                      runbook:
-                        name: TestRunbook
-                      provisioningState: Succeeded
-                      status: New
-                      creationTime: '2017-03-30T05:53:30.243+00:00'
-                      startTime: null
-                      lastModifiedTime: '2017-03-30T05:53:30.243+00:00'
-                      endTime: null
-                  - id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Automation/automationAccounts/{{
-                      automation_account_name }}/jobs/{{ job_name }}
-                    name: job2
-                    type: Microsoft.Automation/AutomationAccounts/Jobs
-                    properties:
-                      jobId: 7584055f-5118-460a-a2dd-5176c9c8efe9
-                      runbook:
-                        name: TestRunbook
-                      provisioningState: Succeeded
-                      status: Completed
-                      creationTime: '2017-03-30T05:46:49.37+00:00'
-                      startTime: '2017-03-30T05:47:35.2+00:00'
-                      lastModifiedTime: '2017-03-30T05:48:38.857+00:00'
-                      endTime: '2017-03-30T05:48:38.857+00:00'
-                nextLink: null
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.Automation/automationAccounts/{{
-          automation_account_name }}/jobs
-        Method: get
-        Name: List jobs by automation account
-        Filename: automation_automationaccounts_jobs_get_1
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-          - name: automation_account_name
-            value: myAutomationAccount
-            swaggerName: automationAccountName
-        References: []
-        OperationId: '378'
-        MethodId: '639'
-      - Example:
-          parameters:
-            subscriptionId: 51766542-3ed7-4a72-a187-0c8ab644ddab
-            resourceGroupName: mygroup
-            automationAccountName: ContoseAutomationAccount
-            jobName: foo
-            api-version: 2017-05-15-preview
-          responses:
-            '200':
-              headers: {}
-              body:
-                id: >-
-                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                  resource_group
-                  }}/providers/Microsoft.Automation/automationAccounts/{{
-                  automation_account_name }}/jobs/{{ job_name }}
-                name: foo
-                type: Microsoft.Automation/AutomationAccounts/Jobs
-                properties:
-                  jobId: 5b8a3960-e8ab-45f6-bec6-567df8467d1a
-                  runbook:
-                    name: TestRunbook
-                  provisioningState: Processing
-                  creationTime: '2018-02-01T05:53:30.243+00:00'
-                  endTime: null
-                  exception: null
-                  lastModifiedTime: '2018-02-01T05:53:30.243+00:00'
-                  lastStatusModifiedTime: '2018-02-01T05:53:30.243+00:00'
-                  startTime: null
-                  status: New
-                  statusDetails: None
-                  parameters:
-                    tag01: value01
-                    tag02: value02
-                  runOn: ''
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.Automation/automationAccounts/{{
-          automation_account_name }}/jobs/{{ job_name }}
-        Method: get
-        Name: Get job
-        Filename: automation_automationaccounts_jobs_get
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-          - name: automation_account_name
-            value: myAutomationAccount
-            swaggerName: automationAccountName
-          - name: job_name
-            value: myJob
-            swaggerName: jobName
-        References: []
-        OperationId: '378'
-        MethodId: '551'
-      - Example:
-          parameters:
-            subscriptionId: 51766542-3ed7-4a72-a187-0c8ab644ddab
-            resourceGroupName: mygroup
-            automationAccountName: ContoseAutomationAccount
-            jobName: foo
-            api-version: 2017-05-15-preview
-          responses:
-            '200':
-              headers:
-                Content-Type: text/plain
-              body: 'Wednesday, February 7, 2018 3:47:17 PM'
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.Automation/automationAccounts/{{
-          automation_account_name }}/jobs/{{ job_name }}/output
-        Method: get
-        Name: Get Job Output
-        Filename: automation_automationaccounts_jobs_output_get
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-          - name: automation_account_name
-            value: myAutomationAccount
-            swaggerName: automationAccountName
-          - name: job_name
-            value: myJob
-            swaggerName: jobName
-        References: []
-        OperationId: '378'
-        MethodId: '379'
-      - Example:
-          parameters:
-            subscriptionId: 51766542-3ed7-4a72-a187-0c8ab644ddab
-            resourceGroupName: mygroup
-            automationAccountName: ContoseAutomationAccount
-            jobName: foo
-            api-version: 2017-05-15-preview
-          responses:
-            '200':
-              headers:
-                Content-Type: text/powershell
-              body: get-date
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.Automation/automationAccounts/{{
-          automation_account_name }}/jobs/{{ job_name }}/runbookContent
-        Method: get
-        Name: Get Job Runbook Content
-        Filename: automation_automationaccounts_jobs_runbookcontent_get
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-          - name: automation_account_name
-            value: myAutomationAccount
-            swaggerName: automationAccountName
-          - name: job_name
-            value: myJob
-            swaggerName: jobName
-        References: []
-        OperationId: '378'
-        MethodId: '423'
-  - ModuleName: azure_rm_automationjobstream_info
-    Options:
-      - NameSwagger: resourceGroupName
-        NameAnsible: resource_group
-        NamePythonSdk: resource_group_name
-        NameGoSdk: ResourceGroup
-        NameTerraform: resourceGroup
-        IdPortion: resourceGroups
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: true
-        Documentation: Name of an Azure Resource group.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: '{{resource_group}}'
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: automationAccountName
-        NameAnsible: automation_account_name
-        NamePythonSdk: automation_account_name
-        NameGoSdk: AutomationAccountName
-        NameTerraform: AutomationAccountName
-        IdPortion: automationAccounts
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: true
-        Documentation: The name of the automation account.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: '{{automation_account_name}}'
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: jobName
-        NameAnsible: job_name
-        NamePythonSdk: job_name
-        NameGoSdk: JobName
-        NameTerraform: JobName
-        IdPortion: jobs
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
         Required: true
         Documentation: The job name.
         DocumentationMarkKeywords: true
@@ -2220,10 +1270,12 @@ Modules:
         DispositionRest: '*'
         Comparison: ''
         Updatable: false
-        ExampleValue: '{{job_name}}'
+        ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: clientRequestId
         NameAnsible: client_request_id
         NamePythonSdk: client_request_id
@@ -2234,7 +1286,7 @@ Modules:
         TypeName: xxx
         TypeNameGo: null
         IsList: false
-        Required: true
+        Required: false
         Documentation: Identifies this specific client request.
         DocumentationMarkKeywords: true
         DefaultValue: null
@@ -2253,38 +1305,10 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
-      - NameSwagger: jobStreamId
-        NameAnsible: job_stream_id
-        NamePythonSdk: job_stream_id
-        NameGoSdk: JobStreamID
-        NameTerraform: JobStreamID
-        IdPortion: streams
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: The job stream id.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: '{{stream_name}}'
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - &ref_18
+        Kind: 3
+      - &ref_14
         NameSwagger: id
         NameAnsible: id
         NamePythonSdk: id
@@ -2314,8 +1338,10 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
-      - &ref_19
+        Kind: 1
+      - &ref_15
         NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -2345,7 +1371,9 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: jobStreamId
         NameAnsible: job_stream_id
         NamePythonSdk: job_stream_id
@@ -2375,7 +1403,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: time
         NameAnsible: time
         NamePythonSdk: time
@@ -2405,7 +1435,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: streamType
         NameAnsible: stream_type
         NamePythonSdk: stream_type
@@ -2456,7 +1488,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: streamText
         NameAnsible: stream_text
         NamePythonSdk: stream_text
@@ -2486,7 +1520,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: summary
         NameAnsible: summary
         NamePythonSdk: summary
@@ -2516,7 +1552,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: value
         NameAnsible: value
         NamePythonSdk: value
@@ -2550,8 +1588,26 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     Methods:
+      - Name: ListByJob
+        Options:
+          - resourceGroupName
+          - automationAccountName
+          - jobName
+          - clientRequestId
+        RequiredOptions:
+          - resourceGroupName
+          - automationAccountName
+          - jobName
+        Url: >-
+          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
+          }}/providers/Microsoft.Automation/automationAccounts/{{
+          automation_account_name }}/jobs/{{ job_name }}/streams
+        HttpMethod: get
+        IsAsync: false
       - Name: Get
         Options:
           - resourceGroupName
@@ -2571,25 +1627,9 @@ Modules:
           }}
         HttpMethod: get
         IsAsync: false
-      - Name: ListByJob
-        Options:
-          - resourceGroupName
-          - automationAccountName
-          - jobName
-          - clientRequestId
-        RequiredOptions:
-          - resourceGroupName
-          - automationAccountName
-          - jobName
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.Automation/automationAccounts/{{
-          automation_account_name }}/jobs/{{ job_name }}/streams
-        HttpMethod: get
-        IsAsync: false
     ResponseFields:
-      - *ref_18
-      - *ref_19
+      - *ref_14
+      - *ref_15
     ModuleOperationNameUpper: JobStream
     ModuleOperationName: job_stream
     ObjectName: JobStream
@@ -2599,146 +1639,8 @@ Modules:
     CannotTestUpdate: false
     Provider: Microsoft.Automation
     ApiVersion: 2017-05-15-preview
-    Examples:
-      - Example:
-          parameters:
-            subscriptionId: 51766542-3ed7-4a72-a187-0c8ab644ddab
-            resourceGroupName: mygroup
-            automationAccountName: ContoseAutomationAccount
-            jobName: foo
-            api-version: 2017-05-15-preview
-          responses:
-            '200':
-              headers: {}
-              body:
-                value:
-                  - id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Automation/automationAccounts/{{
-                      automation_account_name }}/jobs/{{ job_name }}/streams/{{
-                      stream_name }}
-                    properties:
-                      jobStreamId: >-
-                        24456a8a-2857-4af6-932c-3455f38bd05e_00636535675981232703_00000000000000000001
-                      summary: null
-                      time: '2018-02-07T02:33:18.1232703+00:00'
-                      streamType: Output
-                  - id: >-
-                      /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                      resource_group
-                      }}/providers/Microsoft.Automation/automationAccounts/{{
-                      automation_account_name }}/jobs/{{ job_name }}/streams/{{
-                      stream_name }}
-                    properties:
-                      jobStreamId: >-
-                        24456a8a-2857-4af6-932c-3455f38bd05e_00636535675984691350_00000000000000000002
-                      summary: null
-                      time: '2018-02-07T02:33:18.469135+00:00'
-                      streamType: Output
-                nextLink: null
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.Automation/automationAccounts/{{
-          automation_account_name }}/jobs/{{ job_name }}/streams
-        Method: get
-        Name: List job streams by job name
-        Filename: automation_automationaccounts_jobs_streams_get_1
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-          - name: automation_account_name
-            value: myAutomationAccount
-            swaggerName: automationAccountName
-          - name: job_name
-            value: myJob
-            swaggerName: jobName
-        References: []
-        OperationId: '725'
-        MethodId: '774'
-      - Example:
-          parameters:
-            subscriptionId: 51766542-3ed7-4a72-a187-0c8ab644ddab
-            resourceGroupName: mygroup
-            automationAccountName: ContoseAutomationAccount
-            jobName: foo
-            jobStreamId: >-
-              851b2101-686f-40e2-8a4b-5b8df08afbd1_00636535684910693884_00000000000000000001
-            api-version: 2017-05-15-preview
-          responses:
-            '200':
-              headers: {}
-              body:
-                id: >-
-                  /subscriptions/{{ subscription_id }}/resourceGroups/{{
-                  resource_group
-                  }}/providers/Microsoft.Automation/automationAccounts/{{
-                  automation_account_name }}/jobs/{{ job_name }}/streams/{{
-                  stream_name }}
-                properties:
-                  jobStreamId: >-
-                    851b2101-686f-40e2-8a4b-5b8df08afbd1:00636535684910693884:00000000000000000001
-                  summary: null
-                  time: '2018-02-07T02:48:11.0693884+00:00'
-                  streamType: Output
-                  streamText: ''
-                  value: {}
-        Url: >-
-          /subscriptions/{{ subscription_id }}/resourceGroups/{{ resource_group
-          }}/providers/Microsoft.Automation/automationAccounts/{{
-          automation_account_name }}/jobs/{{ job_name }}/streams/{{ stream_name
-          }}
-        Method: get
-        Name: Get job stream
-        Filename: automation_automationaccounts_jobs_streams_get
-        Variables:
-          - name: resource_group
-            value: myResourceGroup
-            swaggerName: resourceGroupName
-          - name: automation_account_name
-            value: myAutomationAccount
-            swaggerName: automationAccountName
-          - name: job_name
-            value: myJob
-            swaggerName: jobName
-          - name: stream_name
-            value: myStream
-            swaggerName: jobStreamId
-        References: []
-        OperationId: '725'
-        MethodId: '726'
+    Examples: []
 ServiceName: AutomationManagement
 MgmtClientName: AutomationManagement
 CliName: automationjob
 Namespace: azure.mgmt.automation
-Info:
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION automationAccountName'
-  - '  ** FOUND OPTION jobName'
-  - '  ** FOUND OPTION parameters'
-  - '  ** FOUND OPTION clientRequestId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION automationAccountName'
-  - '  ** FOUND OPTION clientRequestId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION automationAccountName'
-  - '  ** FOUND OPTION jobName'
-  - '  ** FOUND OPTION clientRequestId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION automationAccountName'
-  - '  ** FOUND OPTION jobName'
-  - '  ** FOUND OPTION clientRequestId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION automationAccountName'
-  - '  ** FOUND OPTION jobName'
-  - '  ** FOUND OPTION clientRequestId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION automationAccountName'
-  - '  ** FOUND OPTION jobName'
-  - '  ** FOUND OPTION clientRequestId'
-  - '  ** FOUND OPTION resourceGroupName'
-  - '  ** FOUND OPTION automationAccountName'
-  - '  ** FOUND OPTION jobName'
-  - '  ** FOUND OPTION jobStreamId'
-  - '  ** FOUND OPTION clientRequestId'

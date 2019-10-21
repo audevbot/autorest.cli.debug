@@ -15,7 +15,7 @@
   tasks:
 
     - name: ApiManagementUpdateApiRelease
-      azure_rm_apimanagementapirelease:
+      azure_rm_apimanagementapireleas:
         resource_group: '{{resource_group}}'
         service_name: '{{service_name}}'
         api_id: >-

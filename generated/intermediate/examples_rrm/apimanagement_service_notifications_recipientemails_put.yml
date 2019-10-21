@@ -14,7 +14,7 @@
   tasks:
 
     - name: ApiManagementCreateNotificationRecipientEmail
-      azure_rm_apimanagementnotificationrecipientemail:
+      azure_rm_apimanagementnotificationrecipientemai:
         resource_group: '{{resource_group}}'
         service_name: '{{service_name}}'
         notification_name: '{{notification_name}}'

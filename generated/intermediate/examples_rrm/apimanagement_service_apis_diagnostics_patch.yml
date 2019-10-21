@@ -15,7 +15,7 @@
   tasks:
 
     - name: ApiManagementUpdateApiDiagnostic
-      azure_rm_apimanagementapidiagnostic:
+      azure_rm_apimanagementapidiagnosti:
         resource_group: '{{resource_group}}'
         service_name: '{{service_name}}'
         api_id: '{{api_name}}'

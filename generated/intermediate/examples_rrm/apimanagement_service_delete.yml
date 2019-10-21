@@ -9,7 +9,7 @@
   tasks:
 
     - name: ApiManagementServiceDeleteService
-      azure_rm_apimanagementservice:
+      azure_rm_apimanagementservic:
         resource_group: '{{resource_group}}'
         name: '{{service_name}}'
         state: absent

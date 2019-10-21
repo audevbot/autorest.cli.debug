@@ -11,7 +11,7 @@
   tasks:
 
     - name: ApplicationPackageDelete
-      azure_rm_batchapplicationpackage:
+      azure_rm_batchapplicationpackag:
         resource_group: '{{resource_group}}'
         account_name: '{{batch_account_name}}'
         application_name: '{{application_name}}'

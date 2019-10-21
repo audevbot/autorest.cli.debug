@@ -12,7 +12,7 @@
   tasks:
 
     - name: ApiManagementDeleteApiIssueComment
-      azure_rm_apimanagementapiissuecomment:
+      azure_rm_apimanagementapiissuecommen:
         resource_group: '{{resource_group}}'
         service_name: '{{service_name}}'
         api_id: '{{api_name}}'

@@ -11,7 +11,7 @@
   tasks:
 
     - name: ApiManagementDeleteProductPolicy
-      azure_rm_apimanagementproductpolicy:
+      azure_rm_apimanagementproductpolic:
         resource_group: '{{resource_group}}'
         service_name: '{{service_name}}'
         product_id: '{{product_name}}'

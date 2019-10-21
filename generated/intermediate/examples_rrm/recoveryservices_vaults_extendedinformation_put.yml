@@ -13,7 +13,7 @@
   tasks:
 
     - name: Put ExtendedInfo of Resource
-      azure_rm_recoveryservicesvaultextendedinfo:
+      azure_rm_recoveryservicesvaultextendedinf:
         resource_group: '{{resource_group}}'
         name: '{{vault_name}}'
         resource_resource_extended_info_details:

@@ -14,7 +14,7 @@
   tasks:
 
     - name: ApiManagementCreateBackendServiceFabric
-      azure_rm_apimanagementbackend:
+      azure_rm_apimanagementbacken:
         resource_group: '{{resource_group}}'
         service_name: '{{service_name}}'
         backend_id: '{{backend_name}}'
@@ -26,7 +26,6 @@
             - 'https://somecluster.com'
           server_x509names:
             - name: ServerCommonName1
-              issuer_certificate_thumbprint: IssuerCertificateThumbprint1
         url: 'fabric:/mytestapp/mytestservice'
         protocol: http
     
