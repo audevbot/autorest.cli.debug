@@ -44,7 +44,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: AuthorizationServerContractProperties
             go_type_name: AuthorizationServerContractProperties
           '/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
@@ -52,20 +52,18 @@ objects:
           '/properties/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Description
-          '/authorizationMethods': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
+          '/authorizationMethods': !ruby/object:Api::Azure::SDKTypeDefinition::EnumArrayObject
             applicable_to: [python]
             python_field_name: authorization_methods
-          '/properties/authorizationMethods': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
+          '/properties/authorizationMethods': !ruby/object:Api::Azure::SDKTypeDefinition::EnumArrayObject
             applicable_to: [go]
             go_field_name: AuthorizationMethods
-            go_enum_type_name: AuthorizationMethod
-          '/clientAuthenticationMethod': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
+          '/clientAuthenticationMethod': !ruby/object:Api::Azure::SDKTypeDefinition::EnumArrayObject
             applicable_to: [python]
             python_field_name: client_authentication_method
-          '/properties/clientAuthenticationMethod': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
+          '/properties/clientAuthenticationMethod': !ruby/object:Api::Azure::SDKTypeDefinition::EnumArrayObject
             applicable_to: [go]
             go_field_name: ClientAuthenticationMethod
-            go_enum_type_name: ClientAuthenticationMethod
           '/tokenBodyParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
             python_field_name: token_body_parameters
@@ -103,13 +101,12 @@ objects:
           '/properties/defaultScope': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: DefaultScope
-          '/bearerTokenSendingMethods': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
+          '/bearerTokenSendingMethods': !ruby/object:Api::Azure::SDKTypeDefinition::EnumArrayObject
             applicable_to: [python]
             python_field_name: bearer_token_sending_methods
-          '/properties/bearerTokenSendingMethods': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
+          '/properties/bearerTokenSendingMethods': !ruby/object:Api::Azure::SDKTypeDefinition::EnumArrayObject
             applicable_to: [go]
             go_field_name: BearerTokenSendingMethods
-            go_enum_type_name: BearerTokenSendingMethod
           '/clientSecret': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: client_secret
@@ -146,13 +143,12 @@ objects:
           '/properties/authorizationEndpoint': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: AuthorizationEndpoint
-          '/grantTypes': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
+          '/grantTypes': !ruby/object:Api::Azure::SDKTypeDefinition::EnumArrayObject
             applicable_to: [python]
             python_field_name: grant_types
-          '/properties/grantTypes': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
+          '/properties/grantTypes': !ruby/object:Api::Azure::SDKTypeDefinition::EnumArrayObject
             applicable_to: [go]
             go_field_name: GrantTypes
-            go_enum_type_name: GrantType
           '/clientId': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: client_id
@@ -185,7 +181,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: AuthorizationServerContractProperties
             go_type_name: AuthorizationServerContractProperties
           '/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
@@ -193,20 +189,18 @@ objects:
           '/properties/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: Description
-          '/authorizationMethods': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
+          '/authorizationMethods': !ruby/object:Api::Azure::SDKTypeDefinition::EnumArrayObject
             applicable_to: [python]
             python_field_name: authorization_methods
-          '/properties/authorizationMethods': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
+          '/properties/authorizationMethods': !ruby/object:Api::Azure::SDKTypeDefinition::EnumArrayObject
             applicable_to: [go]
             go_field_name: AuthorizationMethods
-            go_enum_type_name: AuthorizationMethod
-          '/clientAuthenticationMethod': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
+          '/clientAuthenticationMethod': !ruby/object:Api::Azure::SDKTypeDefinition::EnumArrayObject
             applicable_to: [python]
             python_field_name: client_authentication_method
-          '/properties/clientAuthenticationMethod': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
+          '/properties/clientAuthenticationMethod': !ruby/object:Api::Azure::SDKTypeDefinition::EnumArrayObject
             applicable_to: [go]
             go_field_name: ClientAuthenticationMethod
-            go_enum_type_name: ClientAuthenticationMethod
           '/tokenBodyParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
             applicable_to: [python]
             python_field_name: token_body_parameters
@@ -244,13 +238,12 @@ objects:
           '/properties/defaultScope': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: DefaultScope
-          '/bearerTokenSendingMethods': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
+          '/bearerTokenSendingMethods': !ruby/object:Api::Azure::SDKTypeDefinition::EnumArrayObject
             applicable_to: [python]
             python_field_name: bearer_token_sending_methods
-          '/properties/bearerTokenSendingMethods': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
+          '/properties/bearerTokenSendingMethods': !ruby/object:Api::Azure::SDKTypeDefinition::EnumArrayObject
             applicable_to: [go]
             go_field_name: BearerTokenSendingMethods
-            go_enum_type_name: BearerTokenSendingMethod
           '/clientSecret': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: client_secret
@@ -287,13 +280,12 @@ objects:
           '/properties/authorizationEndpoint': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
             go_field_name: AuthorizationEndpoint
-          '/grantTypes': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
+          '/grantTypes': !ruby/object:Api::Azure::SDKTypeDefinition::EnumArrayObject
             applicable_to: [python]
             python_field_name: grant_types
-          '/properties/grantTypes': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
+          '/properties/grantTypes': !ruby/object:Api::Azure::SDKTypeDefinition::EnumArrayObject
             applicable_to: [go]
             go_field_name: GrantTypes
-            go_enum_type_name: GrantType
           '/clientId': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: client_id
@@ -341,7 +333,7 @@ objects:
         response:
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: AuthorizationServerContractProperties
             go_type_name: AuthorizationServerContractProperties
           '/properties/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [go]
@@ -349,18 +341,16 @@ objects:
           '/description': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: description
-          '/properties/authorizationMethods': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
+          '/properties/authorizationMethods': !ruby/object:Api::Azure::SDKTypeDefinition::EnumArrayObject
             applicable_to: [go]
             go_field_name: AuthorizationMethods
-            go_enum_type_name: AuthorizationMethod
-          '/authorizationMethods': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
+          '/authorizationMethods': !ruby/object:Api::Azure::SDKTypeDefinition::EnumArrayObject
             applicable_to: [python]
             python_field_name: authorization_methods
-          '/properties/clientAuthenticationMethod': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
+          '/properties/clientAuthenticationMethod': !ruby/object:Api::Azure::SDKTypeDefinition::EnumArrayObject
             applicable_to: [go]
             go_field_name: ClientAuthenticationMethod
-            go_enum_type_name: ClientAuthenticationMethod
-          '/clientAuthenticationMethod': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
+          '/clientAuthenticationMethod': !ruby/object:Api::Azure::SDKTypeDefinition::EnumArrayObject
             applicable_to: [python]
             python_field_name: client_authentication_method
           '/properties/tokenBodyParameters': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexArrayObject
@@ -400,11 +390,10 @@ objects:
           '/defaultScope': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: default_scope
-          '/properties/bearerTokenSendingMethods': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
+          '/properties/bearerTokenSendingMethods': !ruby/object:Api::Azure::SDKTypeDefinition::EnumArrayObject
             applicable_to: [go]
             go_field_name: BearerTokenSendingMethods
-            go_enum_type_name: BearerTokenSendingMethod
-          '/bearerTokenSendingMethods': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
+          '/bearerTokenSendingMethods': !ruby/object:Api::Azure::SDKTypeDefinition::EnumArrayObject
             applicable_to: [python]
             python_field_name: bearer_token_sending_methods
           '/properties/clientSecret': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -443,11 +432,10 @@ objects:
           '/authorizationEndpoint': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
             applicable_to: [python]
             python_field_name: authorization_endpoint
-          '/properties/grantTypes': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
+          '/properties/grantTypes': !ruby/object:Api::Azure::SDKTypeDefinition::EnumArrayObject
             applicable_to: [go]
             go_field_name: GrantTypes
-            go_enum_type_name: GrantType
-          '/grantTypes': !ruby/object:Api::Azure::SDKTypeDefinition::EnumObject
+          '/grantTypes': !ruby/object:Api::Azure::SDKTypeDefinition::EnumArrayObject
             applicable_to: [python]
             python_field_name: grant_types
           '/properties/clientId': !ruby/object:Api::Azure::SDKTypeDefinition::StringObject
@@ -510,47 +498,54 @@ objects:
         required: false
         sample_value: 'test server'
         azure_sdk_references: ['/description', '/properties/description']
-      - !ruby/object:Api::Type::Enum
+      - !ruby/object:Api::Type::Array
         name: 'authorizationMethods'
         description: 'HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.'
         required: false
-        values:
-          - :HEAD
-          - :OPTIONS
-          - :TRACE
-          - :GET
-          - :POST
-          - :PUT
-          - :PATCH
-          - :DELETE
-        default_value: :HEAD
         sample_value: GET
         azure_sdk_references: ['/authorizationMethods', '/properties/authorizationMethods']
-      - !ruby/object:Api::Type::Enum
+        item_type: !ruby/object:Api::Type::Enum
+          name: 'TBD'
+          description: 'TBD'
+          values:
+            - :HEAD
+            - :OPTIONS
+            - :TRACE
+            - :GET
+            - :POST
+            - :PUT
+            - :PATCH
+            - :DELETE
+          default_value: :HEAD
+      - !ruby/object:Api::Type::Array
         name: 'clientAuthenticationMethod'
         description: 'Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.'
         required: false
-        values:
-          - :Basic
-          - :Body
-        default_value: :Basic
         azure_sdk_references: ['/clientAuthenticationMethod', '/properties/clientAuthenticationMethod']
-      - !ruby/object:Api::Type::NestedObject
+        item_type: !ruby/object:Api::Type::Enum
+          name: 'TBD'
+          description: 'TBD'
+          values:
+            - :Basic
+            - :Body
+          default_value: :Basic
+      - !ruby/object:Api::Type::Array
         name: 'tokenBodyParameters'
         description: 'Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.'
         required: false
         azure_sdk_references: ['/tokenBodyParameters', '/properties/tokenBodyParameters']
-        properties:
-          - !ruby/object:Api::Type::String
-            name: 'name'
-            description: 'body parameter name.'
-            required: true
-            azure_sdk_references: ['/tokenBodyParameters/name', '/properties/tokenBodyParameters/name', '/name']
-          - !ruby/object:Api::Type::String
-            name: 'value'
-            description: 'body parameter value.'
-            required: true
-            azure_sdk_references: ['/tokenBodyParameters/value', '/properties/tokenBodyParameters/value']
+        item_type: !ruby/object:Api::Type::NestedObject
+          properties:
+            - !ruby/object:Api::Type::String
+              name: 'name'
+              description: 'body parameter name.'
+              required: true
+              azure_sdk_references: ['/tokenBodyParameters/name', '/properties/tokenBodyParameters/name']
+            - !ruby/object:Api::Type::String
+              name: 'value'
+              description: 'body parameter value.'
+              required: true
+              azure_sdk_references: ['/tokenBodyParameters/value', '/properties/tokenBodyParameters/value']
       - !ruby/object:Api::Type::String
         name: 'tokenEndpoint'
         description: 'OAuth token endpoint. Contains absolute URI to entity being referenced.'
@@ -569,16 +564,19 @@ objects:
         required: false
         sample_value: 'read write'
         azure_sdk_references: ['/defaultScope', '/properties/defaultScope']
-      - !ruby/object:Api::Type::Enum
+      - !ruby/object:Api::Type::Array
         name: 'bearerTokenSendingMethods'
         description: 'Specifies the mechanism by which access token is passed to the API. '
         required: false
-        values:
-          - :authorizationHeader
-          - :query
-        default_value: :authorizationHeader
         sample_value: authorizationHeader
         azure_sdk_references: ['/bearerTokenSendingMethods', '/properties/bearerTokenSendingMethods']
+        item_type: !ruby/object:Api::Type::Enum
+          name: 'TBD'
+          description: 'TBD'
+          values:
+            - :authorizationHeader
+            - :query
+          default_value: :authorizationHeader
       - !ruby/object:Api::Type::String
         name: 'clientSecret'
         description: 'Client or app secret registered with this authorization server.'
@@ -615,18 +613,20 @@ objects:
         required: true
         sample_value: 'https://www.contoso.com/oauth2/auth'
         azure_sdk_references: ['/authorizationEndpoint', '/properties/authorizationEndpoint']
-      - !ruby/object:Api::Type::Enum
+      - !ruby/object:Api::Type::Array
         name: 'grantTypes'
         description: 'Form of an authorization grant, which the client uses to request the access token.'
         required: true
-        values:
-          - :authorizationCode
-          - :implicit
-          - :resourceOwnerPassword
-          - :clientCredentials
-        default_value: :authorizationCode
         sample_value: implicit
         azure_sdk_references: ['/grantTypes', '/properties/grantTypes']
+        item_type: !ruby/object:Api::Type::Enum
+          name: 'TBD'
+          description: 'TBD'
+          values:
+            - :authorizationCode
+            - :implicit
+            - :resourceOwnerPassword
+            - :clientCredentials
       - !ruby/object:Api::Type::String
         name: 'clientId'
         description: 'Client or app id registered with this authorization server.'
@@ -637,18 +637,15 @@ objects:
       - !ruby/object:Api::Type::String
         name: 'id'
         description: 'Resource ID.'
-        input: true
         output: true
         azure_sdk_references: ['/id']
       - !ruby/object:Api::Type::String
         name: 'name'
         description: 'Resource name.'
-        input: true
         output: true
         azure_sdk_references: ['/name']
       - !ruby/object:Api::Type::String
         name: 'type'
         description: 'Resource type for API Management resource.'
-        input: true
         output: true
         azure_sdk_references: ['/type']

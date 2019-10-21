@@ -192,7 +192,7 @@ class Actions:
     NoAction, Create, Update, Delete = range(4)
 
 
-class AzureRMDedicatedCloudService(AzureRMModuleBaseExt):
+class AzureRMDedicatedCloudServices(AzureRMModuleBaseExt):
     def __init__(self):
         self.module_arg_spec = dict(
             resource_group=dict(
@@ -252,9 +252,9 @@ class AzureRMDedicatedCloudService(AzureRMModuleBaseExt):
         self.header_parameters = {}
         self.header_parameters['Content-Type'] = 'application/json; charset=utf-8'
 
-        super(AzureRMDedicatedCloudService, self).__init__(derived_arg_spec=self.module_arg_spec,
-                                                           supports_check_mode=True,
-                                                           supports_tags=True)
+        super(AzureRMDedicatedCloudServices, self).__init__(derived_arg_spec=self.module_arg_spec,
+                                                            supports_check_mode=True,
+                                                            supports_tags=True)
 
     def exec_module(self, **kwargs):
         for key in list(self.module_arg_spec.keys()):
@@ -418,7 +418,7 @@ class AzureRMDedicatedCloudService(AzureRMModuleBaseExt):
 
 
 def main():
-    AzureRMDedicatedCloudService()
+    AzureRMDedicatedCloudServices()
 
 
 if __name__ == '__main__':

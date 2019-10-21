@@ -104,13 +104,13 @@ options:
           - Query Parameter description.
         type: >-
           unknown[DictionaryType
-          {"$id":"1845","$type":"DictionaryType","valueType":{"$id":"1846","$type":"SequenceType","elementType":{"$id":"1847","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1848","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1849","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1850","fixed":false},"deprecated":false}]
+          {"$id":"1839","$type":"DictionaryType","valueType":{"$id":"1840","$type":"SequenceType","elementType":{"$id":"1841","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1842","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1843","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1844","fixed":false},"deprecated":false}]
       header:
         description:
           - Header Parameter description.
         type: >-
           unknown[DictionaryType
-          {"$id":"1855","$type":"DictionaryType","valueType":{"$id":"1856","$type":"SequenceType","elementType":{"$id":"1857","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1858","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1859","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1860","fixed":false},"deprecated":false}]
+          {"$id":"1849","$type":"DictionaryType","valueType":{"$id":"1850","$type":"SequenceType","elementType":{"$id":"1851","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1852","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1853","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1854","fixed":false},"deprecated":false}]
       authorization:
         description:
           - Authorization header authentication
@@ -217,7 +217,6 @@ EXAMPLES = '''
         - 'https://somecluster.com'
       server_x509names:
         - name: ServerCommonName1
-          issuer_certificate_thumbprint: IssuerCertificateThumbprint1
     url: 'fabric:/mytestapp/mytestservice'
     protocol: http
 - name: ApiManagementCreateBackendProxyBackend
@@ -392,7 +391,7 @@ properties:
           returned: always
           type: >-
             unknown[DictionaryType
-            {"$id":"1845","$type":"DictionaryType","valueType":{"$id":"1846","$type":"SequenceType","elementType":{"$id":"1847","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1848","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1849","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1850","fixed":false},"deprecated":false}]
+            {"$id":"1839","$type":"DictionaryType","valueType":{"$id":"1840","$type":"SequenceType","elementType":{"$id":"1841","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1842","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1843","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1844","fixed":false},"deprecated":false}]
           sample: null
         header:
           description:
@@ -400,7 +399,7 @@ properties:
           returned: always
           type: >-
             unknown[DictionaryType
-            {"$id":"1855","$type":"DictionaryType","valueType":{"$id":"1856","$type":"SequenceType","elementType":{"$id":"1857","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1858","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1859","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1860","fixed":false},"deprecated":false}]
+            {"$id":"1849","$type":"DictionaryType","valueType":{"$id":"1850","$type":"SequenceType","elementType":{"$id":"1851","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1852","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1853","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1854","fixed":false},"deprecated":false}]
           sample: null
         authorization:
           description:
@@ -582,10 +581,10 @@ class AzureRMBackend(AzureRMModuleBaseExt):
                         type='list'
                     ),
                     query=dict(
-                        type='unknown[DictionaryType {"$id":"1845","$type":"DictionaryType","valueType":{"$id":"1846","$type":"SequenceType","elementType":{"$id":"1847","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1848","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1849","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1850","fixed":false},"deprecated":false}]'
+                        type='unknown[DictionaryType {"$id":"1839","$type":"DictionaryType","valueType":{"$id":"1840","$type":"SequenceType","elementType":{"$id":"1841","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1842","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1843","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1844","fixed":false},"deprecated":false}]'
                     ),
                     header=dict(
-                        type='unknown[DictionaryType {"$id":"1855","$type":"DictionaryType","valueType":{"$id":"1856","$type":"SequenceType","elementType":{"$id":"1857","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1858","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1859","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1860","fixed":false},"deprecated":false}]'
+                        type='unknown[DictionaryType {"$id":"1849","$type":"DictionaryType","valueType":{"$id":"1850","$type":"SequenceType","elementType":{"$id":"1851","$type":"PrimaryType","knownPrimaryType":"string","name":{"$id":"1852","fixed":false,"raw":"String"},"deprecated":false},"name":{"$id":"1853","fixed":false},"deprecated":false},"supportsAdditionalProperties":false,"name":{"$id":"1854","fixed":false},"deprecated":false}]'
                     ),
                     authorization=dict(
                         type='dict',

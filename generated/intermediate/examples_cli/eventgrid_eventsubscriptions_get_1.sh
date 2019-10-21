@@ -1,4 +1,4 @@
-# EventSubscriptions_ListGlobalByResourceGroup
-RESOURCE_GROUP="myresourcegroup"
+# EventSubscriptions_GetForResourceGroup
+EVENT_SUBSCRIPTION_NAME="myeventsubscription"
 
-az resource show --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.EventGrid/eventSubscriptions --api-version 2019-01-01
+az rest --method get --uri /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/$EVENT_SUBSCRIPTION_NAME?api-version=2019-01-01

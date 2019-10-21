@@ -26,11 +26,6 @@ options:
       - Name of the Resource group within the Azure subscription.
     required: true
     type: str
-  front_door_name:
-    description:
-      - Name of the Front Door which is globally unique.
-    required: true
-    type: str
   name:
     description:
       - Resource name.
@@ -156,29 +151,7 @@ author:
 '''
 
 EXAMPLES = '''
-- name: Create or update specific Frontend Endpoint
-  azure_rm_frontdoorfrontendendpoint:
-    resource_group: myResourceGroup
-    front_door_name: myFrontDoor
-    name: myFrontendEndpoint
-    frontend_endpoint_parameters:
-      name: frontendEndpoint1
-      properties:
-        hostName: www.contoso.com
-        sessionAffinityEnabledState: Enabled
-        sessionAffinityTtlSeconds: '60'
-        webApplicationFirewallPolicyLink:
-          id: >-
-            /subscriptions/{{ subscription_id }}/resourceGroups/{{
-            resource_group
-            }}/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/{{
-            front_door_web_application_firewall_policy_name }}
-- name: Delete Backend Pool
-  azure_rm_frontdoorfrontendendpoint:
-    resource_group: myResourceGroup
-    front_door_name: myFrontDoor
-    name: myFrontendEndpoint
-    state: absent
+[]
 
 '''
 
@@ -195,140 +168,6 @@ properties:
   returned: always
   type: dict
   sample: null
-  contains:
-    host_name:
-      description:
-        - The host name of the frontendEndpoint. Must be a domain name.
-      returned: always
-      type: str
-      sample: null
-    session_affinity_enabled_state:
-      description:
-        - >-
-          Whether to allow session affinity on this host. Valid options are
-          'Enabled' or 'Disabled'
-      returned: always
-      type: str
-      sample: null
-    session_affinity_ttl_seconds:
-      description:
-        - >-
-          UNUSED. This field will be ignored. The TTL to use in seconds for
-          session affinity, if applicable.
-      returned: always
-      type: number
-      sample: null
-    web_application_firewall_policy_link:
-      description:
-        - >-
-          Defines the Web Application Firewall policy for each host (if
-          applicable)
-      returned: always
-      type: dict
-      sample: null
-      contains:
-        id:
-          description:
-            - Resource ID.
-          returned: always
-          type: str
-          sample: null
-    resource_state:
-      description:
-        - Resource status.
-      returned: always
-      type: str
-      sample: null
-    custom_https_provisioning_state:
-      description:
-        - Provisioning status of Custom Https of the frontendEndpoint.
-      returned: always
-      type: str
-      sample: null
-    custom_https_provisioning_substate:
-      description:
-        - >-
-          Provisioning substate shows the progress of custom HTTPS
-          enabling/disabling process step by step.
-      returned: always
-      type: str
-      sample: null
-    custom_https_configuration:
-      description:
-        - The configuration specifying how to enable HTTPS
-      returned: always
-      type: dict
-      sample: null
-      contains:
-        certificate_source:
-          description:
-            - Defines the source of the SSL certificate
-          returned: always
-          type: str
-          sample: null
-        protocol_type:
-          description:
-            - >-
-              Defines the TLS extension protocol that is used for secure
-              delivery
-          returned: always
-          type: str
-          sample: null
-        key_vault_certificate_source_parameters:
-          description:
-            - >-
-              KeyVault certificate source parameters (if
-              certificateSource=AzureKeyVault)
-          returned: always
-          type: dict
-          sample: null
-          contains:
-            vault:
-              description:
-                - The Key Vault containing the SSL certificate
-              returned: always
-              type: dict
-              sample: null
-              contains:
-                id:
-                  description:
-                    - Resource ID.
-                  returned: always
-                  type: str
-                  sample: null
-            secret_name:
-              description:
-                - >-
-                  The name of the Key Vault secret representing the full
-                  certificate PFX
-              returned: always
-              type: str
-              sample: null
-            secret_version:
-              description:
-                - >-
-                  The version of the Key Vault secret representing the full
-                  certificate PFX
-              returned: always
-              type: str
-              sample: null
-        front_door_certificate_source_parameters:
-          description:
-            - >-
-              Parameters required for enabling SSL with Front Door-managed
-              certificates (if certificateSource=FrontDoor)
-          returned: always
-          type: dict
-          sample: null
-          contains:
-            certificate_type:
-              description:
-                - >-
-                  Defines the type of the certificate used for secure
-                  connections to a frontendEndpoint
-              returned: always
-              type: str
-              sample: null
 name:
   description:
     - Resource name.
@@ -372,21 +211,11 @@ class AzureRMFrontendEndpoints(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            front_door_name=dict(
-                type='str',
-                updatable=False,
-                required=true
-            ),
             name=dict(
                 type='str',
                 updatable=False,
-                disposition='frontend_endpoint_name',
+                disposition='front_door_name',
                 required=true
-            ),
-            id=dict(
-                type='str',
-                updatable=False,
-                disposition='/'
             ),
             host_name=dict(
                 type='str',
@@ -421,10 +250,71 @@ class AzureRMFrontendEndpoints(AzureRMModuleBaseExt):
                          'Disabled',
                          'Deleting']
             ),
-            name=dict(
+            custom_https_provisioning_state=dict(
                 type='str',
-                updatable=False,
-                disposition='/'
+                disposition='/',
+                choices=['Enabling',
+                         'Enabled',
+                         'Disabling',
+                         'Disabled',
+                         'Failed']
+            ),
+            custom_https_provisioning_substate=dict(
+                type='str',
+                disposition='/',
+                choices=['SubmittingDomainControlValidationRequest',
+                         'PendingDomainControlValidationREquestApproval',
+                         'DomainControlValidationRequestApproved',
+                         'DomainControlValidationRequestRejected',
+                         'DomainControlValidationRequestTimedOut',
+                         'IssuingCertificate',
+                         'DeployingCertificate',
+                         'CertificateDeployed',
+                         'DeletingCertificate',
+                         'CertificateDeleted']
+            ),
+            custom_https_configuration=dict(
+                type='dict',
+                disposition='/',
+                options=dict(
+                    certificate_source=dict(
+                        type='str',
+                        choices=['AzureKeyVault',
+                                 'FrontDoor']
+                    ),
+                    protocol_type=dict(
+                        type='str',
+                        choices=['ServerNameIndication']
+                    ),
+                    key_vault_certificate_source_parameters=dict(
+                        type='dict',
+                        options=dict(
+                            vault=dict(
+                                type='dict',
+                                options=dict(
+                                    id=dict(
+                                        type='str'
+                                    )
+                                )
+                            ),
+                            secret_name=dict(
+                                type='str'
+                            ),
+                            secret_version=dict(
+                                type='str'
+                            )
+                        )
+                    ),
+                    front_door_certificate_source_parameters=dict(
+                        type='dict',
+                        options=dict(
+                            certificate_type=dict(
+                                type='str',
+                                choices=['Dedicated']
+                            )
+                        )
+                    )
+                )
             ),
             state=dict(
                 type='str',
@@ -434,7 +324,9 @@ class AzureRMFrontendEndpoints(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.front_door_name = None
+        self.name = None
+        self.id = None
+        self.properties = None
         self.name = None
         self.type = None
         self.body = {}
@@ -506,10 +398,10 @@ class AzureRMFrontendEndpoints(AzureRMModuleBaseExt):
 
     def create_update_resource(self):
         try:
-            response = self.mgmt_client.frontend_endpoints.create_or_update(resource_group_name=self.resource_group,
-                                                                            front_door_name=self.front_door_name,
-                                                                            frontend_endpoint_name=self.name,
-                                                                            frontend_endpoint_parameters=self.frontendEndpointParameters)
+            if self.to_do == Actions.Create:
+                response = self.mgmt_client.frontend_endpoints.create()
+            else:
+                response = self.mgmt_client.frontend_endpoints.update()
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
         except CloudError as exc:
@@ -520,9 +412,7 @@ class AzureRMFrontendEndpoints(AzureRMModuleBaseExt):
     def delete_resource(self):
         # self.log('Deleting the FrontendEndpoint instance {0}'.format(self.))
         try:
-            response = self.mgmt_client.frontend_endpoints.delete(resource_group_name=self.resource_group,
-                                                                  front_door_name=self.front_door_name,
-                                                                  frontend_endpoint_name=self.name)
+            response = self.mgmt_client.frontend_endpoints.delete()
         except CloudError as e:
             self.log('Error attempting to delete the FrontendEndpoint instance.')
             self.fail('Error deleting the FrontendEndpoint instance: {0}'.format(str(e)))
@@ -534,8 +424,8 @@ class AzureRMFrontendEndpoints(AzureRMModuleBaseExt):
         found = False
         try:
             response = self.mgmt_client.frontend_endpoints.get(resource_group_name=self.resource_group,
-                                                               front_door_name=self.front_door_name,
-                                                               frontend_endpoint_name=self.name)
+                                                               front_door_name=self.name,
+                                                               frontend_endpoint_name=self.frontendEndpointName)
         except CloudError as e:
             return False
         return response.as_dict()
