@@ -49,7 +49,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: IssueContractProperties
             go_type_name: IssueContractProperties
           '/createdDate': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [python]
@@ -119,7 +119,7 @@ objects:
             python_variable_name: parameters
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: IssueContractProperties
             go_type_name: IssueContractProperties
           '/createdDate': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [python]
@@ -209,7 +209,7 @@ objects:
         response:
           '/properties': !ruby/object:Api::Azure::SDKTypeDefinition::ComplexObject
             applicable_to: [go]
-            go_field_name: Properties
+            go_field_name: IssueContractProperties
             go_type_name: IssueContractProperties
           '/properties/createdDate': !ruby/object:Api::Azure::SDKTypeDefinition::ISO8601DateTimeObject
             applicable_to: [go]
@@ -318,6 +318,8 @@ objects:
         name: 'state'
         description: 'Status of the issue.'
         required: false
+        sample_value: closed
+        azure_sdk_references: ['/state', '/properties/state']
         values:
           - :proposed
           - :open
@@ -325,8 +327,6 @@ objects:
           - :resolved
           - :closed
         default_value: :proposed
-        sample_value: closed
-        azure_sdk_references: ['/state', '/properties/state']
       - !ruby/object:Api::Type::String
         name: 'apiId'
         description: 'A resource identifier for the API the issue was created for.'
@@ -355,18 +355,15 @@ objects:
       - !ruby/object:Api::Type::String
         name: 'id'
         description: 'Resource ID.'
-        input: true
         output: true
         azure_sdk_references: ['/id']
       - !ruby/object:Api::Type::String
         name: 'name'
         description: 'Resource name.'
-        input: true
         output: true
         azure_sdk_references: ['/name']
       - !ruby/object:Api::Type::String
         name: 'type'
         description: 'Resource type for API Management resource.'
-        input: true
         output: true
         azure_sdk_references: ['/type']

@@ -30,7 +30,9 @@ Modules:
         ExampleValue: '{{management_group_name}}'
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
       - NameSwagger: createManagementGroupRequest
         NameAnsible: create_management_group_request
         NamePythonSdk: create_management_group_request
@@ -53,7 +55,7 @@ Modules:
         PathSwagger: ''
         PathPython: null
         PathGo: null
-        DispositionSdk: dictionary
+        DispositionSdk: '*'
         DispositionRest: '*'
         Comparison: ''
         Updatable: true
@@ -69,7 +71,9 @@ Modules:
                 id: /providers/Microsoft.Management/managementGroups/RootGroup
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 2
       - NameSwagger: name
         NameAnsible: name
         NamePythonSdk: name
@@ -101,7 +105,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -131,7 +137,9 @@ Modules:
         ExampleValue: null
         Hidden: true
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - NameSwagger: displayName
         NameAnsible: display_name
         NamePythonSdk: display_name
@@ -163,7 +171,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: details
         NameAnsible: details
         NamePythonSdk: details
@@ -232,7 +242,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - &ref_7
                 NameSwagger: name
                 NameAnsible: name
@@ -263,7 +275,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
               - &ref_8
                 NameSwagger: displayName
                 NameAnsible: display_name
@@ -294,7 +308,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: true
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/details/parent
             PathPython: /details/parent
@@ -306,7 +322,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - &ref_4
             NameSwagger: version
             NameAnsible: version
@@ -337,7 +355,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: int32
             Flatten: false
+            Kind: 1
           - &ref_5
             NameSwagger: updatedTime
             NameAnsible: updated_time
@@ -368,7 +388,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
           - &ref_6
             NameSwagger: updatedBy
             NameAnsible: updated_by
@@ -399,7 +421,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: true
+            format: ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/details
         PathPython: /details
@@ -411,7 +435,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_2
         NameSwagger: tenantId
         NameAnsible: tenant_id
@@ -444,7 +470,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_3
         NameSwagger: roles
         NameAnsible: roles
@@ -475,7 +503,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_9
         NameSwagger: children
         NameAnsible: children
@@ -532,7 +562,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - NameSwagger: id
             NameAnsible: id
             NamePythonSdk: id
@@ -565,7 +597,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: name
             NameAnsible: name
             NamePythonSdk: name
@@ -595,7 +629,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: displayName
             NameAnsible: display_name
             NamePythonSdk: display_name
@@ -625,7 +661,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: roles
             NameAnsible: roles
             NamePythonSdk: roles
@@ -655,7 +693,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: children
             NameAnsible: children
             NamePythonSdk: children
@@ -712,7 +752,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: id
                 NameAnsible: id
                 NamePythonSdk: id
@@ -745,7 +787,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: name
                 NameAnsible: name
                 NamePythonSdk: name
@@ -775,7 +819,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: displayName
                 NameAnsible: display_name
                 NamePythonSdk: display_name
@@ -805,7 +851,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: roles
                 NameAnsible: roles
                 NamePythonSdk: roles
@@ -835,7 +883,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: children
                 NameAnsible: children
                 NamePythonSdk: children
@@ -892,7 +942,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: id
                     NameAnsible: id
                     NamePythonSdk: id
@@ -925,7 +977,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: name
                     NameAnsible: name
                     NamePythonSdk: name
@@ -955,7 +1009,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: displayName
                     NameAnsible: display_name
                     NamePythonSdk: display_name
@@ -985,7 +1041,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: roles
                     NameAnsible: roles
                     NamePythonSdk: roles
@@ -1017,7 +1075,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                   - NameSwagger: children
                     NameAnsible: children
                     NamePythonSdk: children
@@ -1047,7 +1107,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: !<tag:yaml.org,2002:js/undefined> ''
                     Flatten: false
+                    Kind: 1
                 EnumValues: []
                 PathSwagger: /properties/children/children/children
                 PathPython: /children/children/children
@@ -1059,7 +1121,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/children/children
             PathPython: /children/children
@@ -1071,7 +1135,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /properties/children
         PathPython: /children
@@ -1083,7 +1149,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
       - &ref_0
         NameSwagger: id
         NameAnsible: id
@@ -1116,7 +1184,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
       - &ref_1
         NameSwagger: type
         NameAnsible: type
@@ -1149,7 +1219,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: CreateOrUpdate
         Options:
@@ -1240,7 +1312,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 1
       - NameSwagger: properties
         NameAnsible: properties
         NamePythonSdk: properties
@@ -1289,7 +1363,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - *ref_3
           - NameSwagger: details
             NameAnsible: details
@@ -1362,7 +1438,9 @@ Modules:
                     ExampleValue: null
                     Hidden: false
                     IncludeInResponse: false
+                    format: ''
                     Flatten: false
+                    Kind: 1
                   - *ref_7
                   - *ref_8
                 EnumValues: []
@@ -1376,7 +1454,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: !<tag:yaml.org,2002:js/undefined> ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /properties/details
             PathPython: /details
@@ -1388,7 +1468,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
           - *ref_9
         EnumValues: []
         PathSwagger: /properties
@@ -1401,7 +1483,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: false
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
+        Kind: 1
     ModuleOperationNameUpper: ManagementGroups
     ModuleOperationName: management_groups
     ObjectName: ManagementGroup
@@ -1472,6 +1556,8 @@ Modules:
           - resourcegroups_put
         OperationId: '884'
         MethodId: '954'
+        OperationName: ManagementGroups
+        MethodName: CreateOrUpdate
       - Example:
           parameters:
             api-version: 2018-03-01-preview
@@ -1516,6 +1602,8 @@ Modules:
           - management_managementgroups_put
         OperationId: '884'
         MethodId: '985'
+        OperationName: ManagementGroups
+        MethodName: Update
       - Example:
           parameters:
             api-version: 2018-03-01-preview
@@ -1543,1344 +1631,8 @@ Modules:
         References: []
         OperationId: '884'
         MethodId: '1013'
-  - ModuleName: azure_rm_managementgroup_info
-    Options:
-      - NameSwagger: groupId
-        NameAnsible: group_id
-        NamePythonSdk: group_id
-        NameGoSdk: GroupID
-        NameTerraform: GroupID
-        IdPortion: managementGroups
-        Type: str
-        TypeName: xxx
-        TypeNameGo: null
-        IsList: false
-        Required: false
-        Documentation: Management Group ID.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: null
-        EnumValues: []
-        PathSwagger: ''
-        PathPython: null
-        PathGo: null
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: '{{management_group_name}}'
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - &ref_10
-        NameSwagger: id
-        NameAnsible: id
-        NamePythonSdk: id
-        NameGoSdk: ID
-        NameTerraform: ID
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: >-
-          The fully qualified ID for the management group.  For example,
-          /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /id
-        PathPython: /id
-        PathGo: /id
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_11
-        NameSwagger: type
-        NameAnsible: type
-        NamePythonSdk: type
-        NameGoSdk: Type
-        NameTerraform: Type
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: >-
-          The type of the resource.  For example,
-          /providers/Microsoft.Management/managementGroups
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /type
-        PathPython: /type
-        PathGo: /type
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_12
-        NameSwagger: name
-        NameAnsible: name
-        NamePythonSdk: name
-        NameGoSdk: Name
-        NameTerraform: Name
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: >-
-          The name of the management group. For example,
-          00000000-0000-0000-0000-000000000000
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /name
-        PathPython: /name
-        PathGo: /name
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: false
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: true
-        Flatten: false
-      - &ref_13
-        NameSwagger: properties
-        NameAnsible: properties
-        NamePythonSdk: properties
-        NameGoSdk: Properties
-        NameTerraform: Properties
-        IdPortion: null
-        Type: dict
-        TypeName: ManagementGroupProperties
-        TypeNameGo: ManagementGroupProperties
-        IsList: false
-        Required: false
-        Documentation: ''
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: false
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties
-        PathPython: ''
-        PathGo: /properties
-        DispositionSdk: '*'
-        DispositionRest: '*'
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: true
-        IncludeInResponse: true
-        Flatten: false
-      - NameSwagger: tenantId
-        NameAnsible: tenant_id
-        NamePythonSdk: tenant_id
-        NameGoSdk: TenantID
-        NameTerraform: TenantID
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: >-
-          The AAD Tenant ID associated with the management group. For example,
-          00000000-0000-0000-0000-000000000000
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/tenantId
-        PathPython: /tenantId
-        PathGo: /properties/tenantId
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: displayName
-        NameAnsible: display_name
-        NamePythonSdk: display_name
-        NameGoSdk: DisplayName
-        NameTerraform: DisplayName
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: false
-        Required: false
-        Documentation: The friendly name of the management group.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/displayName
-        PathPython: /displayName
-        PathGo: /properties/displayName
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: roles
-        NameAnsible: roles
-        NamePythonSdk: roles
-        NameGoSdk: Roles
-        NameTerraform: Roles
-        IdPortion: null
-        Type: str
-        TypeName: String
-        TypeNameGo: String
-        IsList: true
-        Required: false
-        Documentation: The role definitions associated with the management group.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions: []
-        EnumValues: []
-        PathSwagger: /properties/roles
-        PathPython: /roles
-        PathGo: /properties/roles
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: details
-        NameAnsible: details
-        NamePythonSdk: details
-        NameGoSdk: Details
-        NameTerraform: Details
-        IdPortion: null
-        Type: dict
-        TypeName: ManagementGroupDetails
-        TypeNameGo: ManagementGroupDetails
-        IsList: false
-        Required: false
-        Documentation: ''
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions:
-          - NameSwagger: version
-            NameAnsible: version
-            NamePythonSdk: version
-            NameGoSdk: Version
-            NameTerraform: Version
-            IdPortion: null
-            Type: number
-            TypeName: Double
-            TypeNameGo: Double
-            IsList: false
-            Required: false
-            Documentation: The version number of the object.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/details/version
-            PathPython: /details/version
-            PathGo: /properties/details/version
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: updatedTime
-            NameAnsible: updated_time
-            NamePythonSdk: updated_time
-            NameGoSdk: UpdatedTime
-            NameTerraform: UpdatedTime
-            IdPortion: null
-            Type: datetime
-            TypeName: DateTime
-            TypeNameGo: DateTime
-            IsList: false
-            Required: false
-            Documentation: The date and time when this object was last updated.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/details/updatedTime
-            PathPython: /details/updatedTime
-            PathGo: /properties/details/updatedTime
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: updatedBy
-            NameAnsible: updated_by
-            NamePythonSdk: updated_by
-            NameGoSdk: UpdatedBy
-            NameTerraform: UpdatedBy
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: The identity of the principal or process that updated the object.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/details/updatedBy
-            PathPython: /details/updatedBy
-            PathGo: /properties/details/updatedBy
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: parent
-            NameAnsible: parent
-            NamePythonSdk: parent
-            NameGoSdk: Parent
-            NameTerraform: Parent
-            IdPortion: null
-            Type: dict
-            TypeName: ParentGroupInfo
-            TypeNameGo: ParentGroupInfo
-            IsList: false
-            Required: false
-            Documentation: ''
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions:
-              - NameSwagger: id
-                NameAnsible: id
-                NamePythonSdk: id
-                NameGoSdk: ID
-                NameTerraform: ID
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: >-
-                  The fully qualified ID for the parent management group.  For
-                  example,
-                  /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/details/parent/id
-                PathPython: /details/parent/id
-                PathGo: /properties/details/parent/id
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: name
-                NameAnsible: name
-                NamePythonSdk: name
-                NameGoSdk: Name
-                NameTerraform: Name
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: The name of the parent management group
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/details/parent/name
-                PathPython: /details/parent/name
-                PathGo: /properties/details/parent/name
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: displayName
-                NameAnsible: display_name
-                NamePythonSdk: display_name
-                NameGoSdk: DisplayName
-                NameTerraform: DisplayName
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: The friendly name of the parent management group.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/details/parent/displayName
-                PathPython: /details/parent/displayName
-                PathGo: /properties/details/parent/displayName
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-            EnumValues: []
-            PathSwagger: /properties/details/parent
-            PathPython: /details/parent
-            PathGo: /properties/details/parent
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /properties/details
-        PathPython: /details
-        PathGo: /properties/details
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-      - NameSwagger: children
-        NameAnsible: children
-        NamePythonSdk: children
-        NameGoSdk: Children
-        NameTerraform: Children
-        IdPortion: null
-        Type: dict
-        TypeName: ManagementGroupChildInfo
-        TypeNameGo: ManagementGroupChildInfo
-        IsList: true
-        Required: false
-        Documentation: The list of children.
-        DocumentationMarkKeywords: true
-        DefaultValue: null
-        IncludeInDocumentation: true
-        IncludeInArgSpec: true
-        NoLog: false
-        SubOptions:
-          - NameSwagger: type
-            NameAnsible: type
-            NamePythonSdk: type
-            NameGoSdk: Type
-            NameTerraform: Type
-            IdPortion: null
-            Type: str
-            TypeName: ''
-            TypeNameGo: ''
-            IsList: false
-            Required: false
-            Documentation: >-
-              The fully qualified resource type which includes provider
-              namespace (e.g. /providers/Microsoft.Management/managementGroups)
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues:
-              - Key: /providers/Microsoft.Management/managementGroups
-                Value: /providers/Microsoft.Management/managementGroups
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-              - Key: /subscriptions
-                Value: /subscriptions
-                Description: !<tag:yaml.org,2002:js/undefined> ''
-            PathSwagger: /properties/children/type
-            PathPython: /children/type
-            PathGo: /properties/children/type
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: id
-            NameAnsible: id
-            NamePythonSdk: id
-            NameGoSdk: ID
-            NameTerraform: ID
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: >-
-              The fully qualified ID for the child resource (management group or
-              subscription).  For example,
-              /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/children/id
-            PathPython: /children/id
-            PathGo: /properties/children/id
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: name
-            NameAnsible: name
-            NamePythonSdk: name
-            NameGoSdk: Name
-            NameTerraform: Name
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: The name of the child entity.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/children/name
-            PathPython: /children/name
-            PathGo: /properties/children/name
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: displayName
-            NameAnsible: display_name
-            NamePythonSdk: display_name
-            NameGoSdk: DisplayName
-            NameTerraform: DisplayName
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: false
-            Required: false
-            Documentation: The friendly name of the child resource.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/children/displayName
-            PathPython: /children/displayName
-            PathGo: /properties/children/displayName
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: roles
-            NameAnsible: roles
-            NamePythonSdk: roles
-            NameGoSdk: Roles
-            NameTerraform: Roles
-            IdPortion: null
-            Type: str
-            TypeName: String
-            TypeNameGo: String
-            IsList: true
-            Required: false
-            Documentation: The roles definitions associated with the management group.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions: []
-            EnumValues: []
-            PathSwagger: /properties/children/roles
-            PathPython: /children/roles
-            PathGo: /properties/children/roles
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-          - NameSwagger: children
-            NameAnsible: children
-            NamePythonSdk: children
-            NameGoSdk: Children
-            NameTerraform: Children
-            IdPortion: null
-            Type: dict
-            TypeName: ManagementGroupChildInfo
-            TypeNameGo: ManagementGroupChildInfo
-            IsList: true
-            Required: false
-            Documentation: The list of children.
-            DocumentationMarkKeywords: true
-            DefaultValue: null
-            IncludeInDocumentation: true
-            IncludeInArgSpec: true
-            NoLog: false
-            SubOptions:
-              - NameSwagger: type
-                NameAnsible: type
-                NamePythonSdk: type
-                NameGoSdk: Type
-                NameTerraform: Type
-                IdPortion: null
-                Type: str
-                TypeName: ''
-                TypeNameGo: ''
-                IsList: false
-                Required: false
-                Documentation: >-
-                  The fully qualified resource type which includes provider
-                  namespace (e.g.
-                  /providers/Microsoft.Management/managementGroups)
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues:
-                  - Key: /providers/Microsoft.Management/managementGroups
-                    Value: /providers/Microsoft.Management/managementGroups
-                    Description: !<tag:yaml.org,2002:js/undefined> ''
-                  - Key: /subscriptions
-                    Value: /subscriptions
-                    Description: !<tag:yaml.org,2002:js/undefined> ''
-                PathSwagger: /properties/children/children/type
-                PathPython: /children/children/type
-                PathGo: /properties/children/children/type
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: id
-                NameAnsible: id
-                NamePythonSdk: id
-                NameGoSdk: ID
-                NameTerraform: ID
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: >-
-                  The fully qualified ID for the child resource (management
-                  group or subscription).  For example,
-                  /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/children/children/id
-                PathPython: /children/children/id
-                PathGo: /properties/children/children/id
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: name
-                NameAnsible: name
-                NamePythonSdk: name
-                NameGoSdk: Name
-                NameTerraform: Name
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: The name of the child entity.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/children/children/name
-                PathPython: /children/children/name
-                PathGo: /properties/children/children/name
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: displayName
-                NameAnsible: display_name
-                NamePythonSdk: display_name
-                NameGoSdk: DisplayName
-                NameTerraform: DisplayName
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: false
-                Required: false
-                Documentation: The friendly name of the child resource.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/children/children/displayName
-                PathPython: /children/children/displayName
-                PathGo: /properties/children/children/displayName
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: roles
-                NameAnsible: roles
-                NamePythonSdk: roles
-                NameGoSdk: Roles
-                NameTerraform: Roles
-                IdPortion: null
-                Type: str
-                TypeName: String
-                TypeNameGo: String
-                IsList: true
-                Required: false
-                Documentation: The roles definitions associated with the management group.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions: []
-                EnumValues: []
-                PathSwagger: /properties/children/children/roles
-                PathPython: /children/children/roles
-                PathGo: /properties/children/children/roles
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-              - NameSwagger: children
-                NameAnsible: children
-                NamePythonSdk: children
-                NameGoSdk: Children
-                NameTerraform: Children
-                IdPortion: null
-                Type: dict
-                TypeName: ManagementGroupChildInfo
-                TypeNameGo: ManagementGroupChildInfo
-                IsList: true
-                Required: false
-                Documentation: The list of children.
-                DocumentationMarkKeywords: true
-                DefaultValue: null
-                IncludeInDocumentation: true
-                IncludeInArgSpec: true
-                NoLog: false
-                SubOptions:
-                  - NameSwagger: type
-                    NameAnsible: type
-                    NamePythonSdk: type
-                    NameGoSdk: Type
-                    NameTerraform: Type
-                    IdPortion: null
-                    Type: str
-                    TypeName: ''
-                    TypeNameGo: ''
-                    IsList: false
-                    Required: false
-                    Documentation: >-
-                      The fully qualified resource type which includes provider
-                      namespace (e.g.
-                      /providers/Microsoft.Management/managementGroups)
-                    DocumentationMarkKeywords: true
-                    DefaultValue: null
-                    IncludeInDocumentation: true
-                    IncludeInArgSpec: true
-                    NoLog: false
-                    SubOptions: []
-                    EnumValues:
-                      - Key: /providers/Microsoft.Management/managementGroups
-                        Value: /providers/Microsoft.Management/managementGroups
-                        Description: !<tag:yaml.org,2002:js/undefined> ''
-                      - Key: /subscriptions
-                        Value: /subscriptions
-                        Description: !<tag:yaml.org,2002:js/undefined> ''
-                    PathSwagger: /properties/children/children/children/type
-                    PathPython: /children/children/children/type
-                    PathGo: /properties/children/children/children/type
-                    DispositionSdk: '*'
-                    DispositionRest: '*'
-                    Comparison: ''
-                    Updatable: true
-                    ExampleValue: null
-                    Hidden: false
-                    IncludeInResponse: false
-                    Flatten: false
-                  - NameSwagger: id
-                    NameAnsible: id
-                    NamePythonSdk: id
-                    NameGoSdk: ID
-                    NameTerraform: ID
-                    IdPortion: null
-                    Type: str
-                    TypeName: String
-                    TypeNameGo: String
-                    IsList: false
-                    Required: false
-                    Documentation: >-
-                      The fully qualified ID for the child resource (management
-                      group or subscription).  For example,
-                      /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
-                    DocumentationMarkKeywords: true
-                    DefaultValue: null
-                    IncludeInDocumentation: true
-                    IncludeInArgSpec: true
-                    NoLog: false
-                    SubOptions: []
-                    EnumValues: []
-                    PathSwagger: /properties/children/children/children/id
-                    PathPython: /children/children/children/id
-                    PathGo: /properties/children/children/children/id
-                    DispositionSdk: '*'
-                    DispositionRest: '*'
-                    Comparison: ''
-                    Updatable: true
-                    ExampleValue: null
-                    Hidden: false
-                    IncludeInResponse: false
-                    Flatten: false
-                  - NameSwagger: name
-                    NameAnsible: name
-                    NamePythonSdk: name
-                    NameGoSdk: Name
-                    NameTerraform: Name
-                    IdPortion: null
-                    Type: str
-                    TypeName: String
-                    TypeNameGo: String
-                    IsList: false
-                    Required: false
-                    Documentation: The name of the child entity.
-                    DocumentationMarkKeywords: true
-                    DefaultValue: null
-                    IncludeInDocumentation: true
-                    IncludeInArgSpec: true
-                    NoLog: false
-                    SubOptions: []
-                    EnumValues: []
-                    PathSwagger: /properties/children/children/children/name
-                    PathPython: /children/children/children/name
-                    PathGo: /properties/children/children/children/name
-                    DispositionSdk: '*'
-                    DispositionRest: '*'
-                    Comparison: ''
-                    Updatable: true
-                    ExampleValue: null
-                    Hidden: false
-                    IncludeInResponse: false
-                    Flatten: false
-                  - NameSwagger: displayName
-                    NameAnsible: display_name
-                    NamePythonSdk: display_name
-                    NameGoSdk: DisplayName
-                    NameTerraform: DisplayName
-                    IdPortion: null
-                    Type: str
-                    TypeName: String
-                    TypeNameGo: String
-                    IsList: false
-                    Required: false
-                    Documentation: The friendly name of the child resource.
-                    DocumentationMarkKeywords: true
-                    DefaultValue: null
-                    IncludeInDocumentation: true
-                    IncludeInArgSpec: true
-                    NoLog: false
-                    SubOptions: []
-                    EnumValues: []
-                    PathSwagger: /properties/children/children/children/displayName
-                    PathPython: /children/children/children/displayName
-                    PathGo: /properties/children/children/children/displayName
-                    DispositionSdk: '*'
-                    DispositionRest: '*'
-                    Comparison: ''
-                    Updatable: true
-                    ExampleValue: null
-                    Hidden: false
-                    IncludeInResponse: false
-                    Flatten: false
-                  - NameSwagger: roles
-                    NameAnsible: roles
-                    NamePythonSdk: roles
-                    NameGoSdk: Roles
-                    NameTerraform: Roles
-                    IdPortion: null
-                    Type: str
-                    TypeName: String
-                    TypeNameGo: String
-                    IsList: true
-                    Required: false
-                    Documentation: >-
-                      The roles definitions associated with the management
-                      group.
-                    DocumentationMarkKeywords: true
-                    DefaultValue: null
-                    IncludeInDocumentation: true
-                    IncludeInArgSpec: true
-                    NoLog: false
-                    SubOptions: []
-                    EnumValues: []
-                    PathSwagger: /properties/children/children/children/roles
-                    PathPython: /children/children/children/roles
-                    PathGo: /properties/children/children/children/roles
-                    DispositionSdk: '*'
-                    DispositionRest: '*'
-                    Comparison: ''
-                    Updatable: true
-                    ExampleValue: null
-                    Hidden: false
-                    IncludeInResponse: false
-                    Flatten: false
-                  - NameSwagger: children
-                    NameAnsible: children
-                    NamePythonSdk: children
-                    NameGoSdk: Children
-                    NameTerraform: Children
-                    IdPortion: null
-                    Type: dict
-                    TypeName: ManagementGroupChildInfo
-                    TypeNameGo: ManagementGroupChildInfo
-                    IsList: true
-                    Required: false
-                    Documentation: The list of children.
-                    DocumentationMarkKeywords: true
-                    DefaultValue: null
-                    IncludeInDocumentation: true
-                    IncludeInArgSpec: true
-                    NoLog: false
-                    SubOptions: []
-                    EnumValues: []
-                    PathSwagger: /properties/children/children/children/children
-                    PathPython: /children/children/children/children
-                    PathGo: /properties/children/children/children/children
-                    DispositionSdk: '*'
-                    DispositionRest: '*'
-                    Comparison: ''
-                    Updatable: true
-                    ExampleValue: null
-                    Hidden: false
-                    IncludeInResponse: false
-                    Flatten: false
-                EnumValues: []
-                PathSwagger: /properties/children/children/children
-                PathPython: /children/children/children
-                PathGo: /properties/children/children/children
-                DispositionSdk: '*'
-                DispositionRest: '*'
-                Comparison: ''
-                Updatable: true
-                ExampleValue: null
-                Hidden: false
-                IncludeInResponse: false
-                Flatten: false
-            EnumValues: []
-            PathSwagger: /properties/children/children
-            PathPython: /children/children
-            PathGo: /properties/children/children
-            DispositionSdk: '*'
-            DispositionRest: '*'
-            Comparison: ''
-            Updatable: true
-            ExampleValue: null
-            Hidden: false
-            IncludeInResponse: false
-            Flatten: false
-        EnumValues: []
-        PathSwagger: /properties/children
-        PathPython: /children
-        PathGo: /properties/children
-        DispositionSdk: /*
-        DispositionRest: /properties/*
-        Comparison: ''
-        Updatable: true
-        ExampleValue: null
-        Hidden: false
-        IncludeInResponse: false
-        Flatten: false
-    Methods:
-      - Name: Get
-        Options:
-          - groupId
-          - Cache-Control
-        RequiredOptions:
-          - groupId
-        Url: >-
-          /providers/Microsoft.Management/managementGroups/{{
-          management_group_name }}
-        HttpMethod: get
-        IsAsync: false
-      - Name: List
-        Options:
-          - Cache-Control
-        RequiredOptions: []
-        Url: /providers/Microsoft.Management/managementGroups
-        HttpMethod: get
-        IsAsync: false
-    ResponseFields:
-      - *ref_10
-      - *ref_11
-      - *ref_12
-      - *ref_13
-    ModuleOperationNameUpper: ManagementGroups
-    ModuleOperationName: management_groups
-    ObjectName: ManagementGroup
-    ResourceNameFieldInResponse: null
-    NeedsDeleteBeforeUpdate: false
-    NeedsForceUpdate: false
-    CannotTestUpdate: false
-    Provider: Microsoft.Management
-    ApiVersion: 2018-03-01-preview
-    Examples:
-      - Example:
-          parameters:
-            api-version: 2018-03-01-preview
-            Cache-Control: no-cache
-          responses:
-            '200':
-              body:
-                value:
-                  - id: >-
-                      /providers/Microsoft.Management/managementGroups/20000000-0001-0000-0000-000000000000
-                    type: /providers/Microsoft.Management/managementGroups
-                    name: 20000000-0001-0000-0000-000000000000
-                    properties:
-                      tenantId: 20000000-0000-0000-0000-000000000000
-                      displayName: Group 1 Tenant 2
-                  - id: >-
-                      /providers/Microsoft.Management/managementGroups/20000000-0004-0000-0000-000000000000
-                    type: /providers/Microsoft.Management/managementGroups
-                    name: 20000000-0004-0000-0000-000000000000
-                    properties:
-                      tenantId: 20000000-0000-0000-0000-000000000000
-                      displayName: Group 4 Tenant 2
-                nextLink: null
-        Url: /providers/Microsoft.Management/managementGroups
-        Method: get
-        Name: ListManagementGroups
-        Filename: management_managementgroups_get
-        Variables: []
-        References: []
-        OperationId: '884'
-        MethodId: '885'
-      - Example:
-          parameters:
-            api-version: 2018-03-01-preview
-            groupId: 20000000-0001-0000-0000-000000000000
-            Cache-Control: no-cache
-          responses:
-            '200':
-              body:
-                id: >-
-                  /providers/Microsoft.Management/managementGroups/20000000-0001-0000-0000-000000000000
-                type: /providers/Microsoft.Management/managementGroups
-                name: 20000000-0001-0000-0000-000000000000
-                properties:
-                  tenantId: 20000000-0000-0000-0000-000000000000
-                  displayName: Group 1 Tenant 2
-                  details:
-                    version: '1'
-                    updatedTime: '2018-01-01T00:00:00Z'
-                    updatedBy: 16b8ef21-5c9f-420c-bcc9-e4f8c9f30b4b
-                    parent:
-                      id: >-
-                        /providers/Microsoft.Management/managementGroups/RootGroup
-                      name: RootGroup
-                      displayName: RootGroup
-        Url: >-
-          /providers/Microsoft.Management/managementGroups/{{
-          management_group_name }}
-        Method: get
-        Name: GetManagementGroup
-        Filename: management_managementgroups_get_1
-        Variables:
-          - name: management_group_name
-            value: myManagementGroup
-            swaggerName: groupId
-        References: []
-        OperationId: '884'
-        MethodId: '909'
-      - Example:
-          parameters:
-            api-version: 2018-03-01-preview
-            groupId: 20000000-0001-0000-0000-000000000000
-            $expand: children
-            Cache-Control: no-cache
-          responses:
-            '200':
-              body:
-                id: >-
-                  /providers/Microsoft.Management/managementGroups/20000000-0001-0000-0000-000000000000
-                type: /providers/Microsoft.Management/managementGroups
-                name: 20000000-0001-0000-0000-000000000000
-                properties:
-                  tenantId: 20000000-0000-0000-0000-000000000000
-                  displayName: Group 1 Tenant 2
-                  details:
-                    version: '1'
-                    updatedTime: '2018-01-01T00:00:00Z'
-                    updatedBy: Test
-                    parent:
-                      id: >-
-                        /providers/Microsoft.Management/managementGroups/20000000-0000-0000-0000-000000000000
-                      name: 20000000-0000-0000-0000-000000000000
-                      displayName: 20000000-0000-0000-0000-000000000000
-                  children:
-                    - id: >-
-                        /providers/Microsoft.Management/managementGroups/20000000-0002-0000-0000-000000000000
-                      type: /providers/Microsoft.Management/managementGroups
-                      name: 20000000-0002-0000-0000-000000000000
-                      displayName: Group 2 Tenant 2
-                    - id: >-
-                        /providers/Microsoft.Management/managementGroups/20000000-0003-0000-0000-000000000000
-                      type: /providers/Microsoft.Management/managementGroups
-                      name: 20000000-0003-0000-0000-000000000000
-                      displayName: Group 3 Tenant 2
-                    - id: '/subscriptions/{{ subscription_id }}'
-                      type: '/subscriptions/{{ subscription_id }}'
-                      name: 10000000-F004-0000-0000-000000000000
-                      displayName: Subscription 4 Tenant 1
-                    - id: '/subscriptions/{{ subscription_id }}'
-                      type: '/subscriptions/{{ subscription_id }}'
-                      name: 20000000-F005-0000-0000-000000000000
-                      displayName: Subscription 5 Tenant 2
-                    - id: '/subscriptions/{{ subscription_id }}'
-                      type: '/subscriptions/{{ subscription_id }}'
-                      name: 30000000-F003-0000-0000-000000000000
-                      displayName: Subscription 3 Tenant 3
-        Url: >-
-          /providers/Microsoft.Management/managementGroups/{{
-          management_group_name }}
-        Method: get
-        Name: GetManagementGroupWithExpand
-        Filename: management_managementgroups_get_2
-        Variables:
-          - name: management_group_name
-            value: myManagementGroup
-            swaggerName: groupId
-        References: []
-        OperationId: '884'
-        MethodId: '909'
-      - Example:
-          parameters:
-            api-version: 2018-03-01-preview
-            groupId: 20000000-0001-0000-0000-000000000000
-            $expand: children
-            $recurse: true
-            Cache-Control: no-cache
-          responses:
-            '200':
-              body:
-                id: /providers/Microsoft.Management/managementGroups/RootGroup
-                type: /providers/Microsoft.Management/managementGroups
-                name: RootGroup
-                properties:
-                  tenantId: 20000000-0000-0000-0000-000000000000
-                  displayName: RootGroup
-                  details:
-                    version: '2'
-                    updatedTime: '2018-01-25T02:26:49.0022093Z'
-                    updatedBy: bd490e30-04cb-433e-b8c8-6066959a8bab
-                    parent:
-                      id: >-
-                        /providers/Microsoft.Management/managementGroups/20000000-0000-0000-0000-000000000000
-                      name: 20000000-0000-0000-0000-000000000000
-                      displayName: 20000000-0000-0000-0000-000000000000
-                  children:
-                    - id: /providers/Microsoft.Management/managementGroups/Child
-                      type: /providers/Microsoft.Management/managementGroups
-                      name: Child
-                      displayName: Child
-                      roles:
-                        - >-
-                          /providers/Microsoft.Authorization/roleDefinitions/8e3af657-a8ff-443c-a75c-2fe8c4bcb635
-                      children:
-                        - id: >-
-                            /providers/Microsoft.Management/managementGroups/Leaf
-                          type: /providers/Microsoft.Management/managementGroups
-                          name: Leaf
-                          displayName: Leaf
-                          roles:
-                            - >-
-                              /providers/Microsoft.Authorization/roleDefinitions/8e3af657-a8ff-443c-a75c-2fe8c4bcb635
-                          children:
-                            - id: '/subscriptions/{{ subscription_id }}'
-                              type: '/subscriptions/{{ subscription_id }}'
-                              name: 728bcbe4-8d56-4510-86c2-4921b8beefbc
-                              displayName: Pay-As-You-Go
-                              roles:
-                                - >-
-                                  /providers/Microsoft.Authorization/roleDefinitions/8e3af657-a8ff-443c-a75c-2fe8c4bcb635
-                    - id: >-
-                        /providers/Microsoft.Management/managementGroups/AnotherChild
-                      type: /providers/Microsoft.Management/managementGroups
-                      name: AnotherChild
-                      displayName: Leaf
-                      roles:
-                        - >-
-                          /providers/Microsoft.Authorization/roleDefinitions/8e3af657-a8ff-443c-a75c-2fe8c4bcb635
-        Url: >-
-          /providers/Microsoft.Management/managementGroups/{{
-          management_group_name }}
-        Method: get
-        Name: GetManagementGroupsWithExpandAndRecurse
-        Filename: management_managementgroups_get_3
-        Variables:
-          - name: management_group_name
-            value: myManagementGroup
-            swaggerName: groupId
-        References: []
-        OperationId: '884'
-        MethodId: '909'
+        OperationName: ManagementGroups
+        MethodName: Delete
   - ModuleName: azure_rm_managementgroupsubscription
     Options:
       - NameSwagger: groupId
@@ -2912,7 +1664,9 @@ Modules:
         ExampleValue: '{{management_group_name}}'
         Hidden: false
         IncludeInResponse: false
+        format: ''
         Flatten: false
+        Kind: 0
     Methods:
       - Name: Create
         Options:
@@ -2969,6 +1723,8 @@ Modules:
           - management_managementgroups_put
         OperationId: '1070'
         MethodId: '1071'
+        OperationName: ManagementGroupSubscriptions
+        MethodName: Create
       - Example:
           parameters:
             api-version: 2018-03-01-preview
@@ -2990,9 +1746,11 @@ Modules:
         References: []
         OperationId: '1070'
         MethodId: '1101'
-  - ModuleName: azure_rm_managementgroupsoperation_info
+        OperationName: ManagementGroupSubscriptions
+        MethodName: Delete
+  - ModuleName: azure_rm_managementgroupsoperation
     Options:
-      - &ref_14
+      - &ref_10
         NameSwagger: value
         NameAnsible: value
         NamePythonSdk: value
@@ -3042,7 +1800,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: ''
             Flatten: false
+            Kind: 1
           - NameSwagger: display
             NameAnsible: display
             NamePythonSdk: display
@@ -3090,7 +1850,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: resource
                 NameAnsible: resource
                 NamePythonSdk: resource
@@ -3120,7 +1882,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: operation
                 NameAnsible: operation
                 NamePythonSdk: operation
@@ -3150,7 +1914,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
               - NameSwagger: description
                 NameAnsible: description
                 NamePythonSdk: description
@@ -3180,7 +1946,9 @@ Modules:
                 ExampleValue: null
                 Hidden: false
                 IncludeInResponse: false
+                format: ''
                 Flatten: false
+                Kind: 1
             EnumValues: []
             PathSwagger: /value/display
             PathPython: /value/display
@@ -3192,7 +1960,9 @@ Modules:
             ExampleValue: null
             Hidden: false
             IncludeInResponse: false
+            format: !<tag:yaml.org,2002:js/undefined> ''
             Flatten: false
+            Kind: 1
         EnumValues: []
         PathSwagger: /value
         PathPython: /value
@@ -3204,8 +1974,10 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: !<tag:yaml.org,2002:js/undefined> ''
         Flatten: false
-      - &ref_15
+        Kind: 1
+      - &ref_11
         NameSwagger: nextLink
         NameAnsible: next_link
         NamePythonSdk: next_link
@@ -3235,7 +2007,9 @@ Modules:
         ExampleValue: null
         Hidden: false
         IncludeInResponse: true
+        format: ''
         Flatten: false
+        Kind: 1
     Methods:
       - Name: List
         Options: []
@@ -3244,8 +2018,8 @@ Modules:
         HttpMethod: get
         IsAsync: false
     ResponseFields:
-      - *ref_14
-      - *ref_15
+      - *ref_10
+      - *ref_11
     ModuleOperationNameUpper: Operations
     ModuleOperationName: operations
     ObjectName: Operation
@@ -3260,8 +2034,3 @@ ServiceName: ManagementGroupsClient
 MgmtClientName: ManagementGroupsClient
 CliName: mgmtgroups
 Namespace: azure.mgmt.managementgroups
-Info:
-  - '  ** FOUND OPTION groupId'
-  - '  ** FOUND OPTION createManagementGroupRequest'
-  - '  ** FOUND OPTION groupId'
-  - '  ** FOUND OPTION groupId'
