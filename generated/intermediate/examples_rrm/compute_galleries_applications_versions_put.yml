@@ -30,8 +30,8 @@
                   https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}
               targetRegions:
                 - name: West US
-                  regionalReplicaCount: '1'
-                  storageAccountType: Standard_LRS
+                  regional_replica_count: '1'
+                  storage_account_type: Standard_LRS
               replicaCount: '1'
               endOfLifeDate: '2019-07-01T07:00:00Z'
               storageAccountType: Standard_LRS
