@@ -21,14 +21,14 @@ short_description: Manage Azure SubscriptionFactory instance.
 description:
   - 'Create, update and delete instance of Azure SubscriptionFactory.'
 options:
-  enrollment_account_name:
+  name:
     description:
       - >-
         The name of the enrollment account to which the subscription will be
         billed.
     required: true
     type: str
-  name:
+  display_name:
     description:
       - The display name of the subscription.
     type: str
@@ -87,13 +87,13 @@ author:
 EXAMPLES = '''
 - name: createSubscription
   azure_rm_subscriptionssubscriptionfactory:
-    enrollment_account_name: myEnrollmentAccount
+    name: myEnrollmentAccount
     body:
       offerType: MS-AZR-0017P
       displayName: Test Ea Azure Sub
       owners:
-        - objectId: 973034ff-acb7-409c-b731-e789672c7b31
-        - objectId: 67439a9e-8519-4016-a630-f5f805eba567
+        - object_id: 973034ff-acb7-409c-b731-e789672c7b31
+        - object_id: 67439a9e-8519-4016-a630-f5f805eba567
       additionalParameters:
         customData:
           key1: value1
@@ -133,13 +133,13 @@ class Actions:
 class AzureRMSubscriptionFactory(AzureRMModuleBaseExt):
     def __init__(self):
         self.module_arg_spec = dict(
-            enrollment_account_name=dict(
+            name=dict(
                 type='str',
                 updatable=False,
                 disposition='enrollmentAccountName',
                 required=true
             ),
-            name=dict(
+            display_name=dict(
                 type='str',
                 updatable=False,
                 disposition='/'
@@ -174,7 +174,7 @@ class AzureRMSubscriptionFactory(AzureRMModuleBaseExt):
             )
         )
 
-        self.enrollment_account_name = None
+        self.name = None
         self.subscription_link = None
 
         self.results = dict(changed=False)
