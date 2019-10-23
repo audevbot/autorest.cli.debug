@@ -4,7 +4,7 @@ DATABASE_ACCOUNT_NAME="mydatabaseaccount"
 VIRTUAL_NETWORK_NAME="myvirtualnetwork"
 SUBNET_NAME="mysubnet"
 
-az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.DocumentDB/databaseAccounts/$DATABASE_ACCOUNT_NAME --api-version 2015-04-08 --is-full-object --properties '
+az rest --method put --uri /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.DocumentDB/databaseAccounts/$DATABASE_ACCOUNT_NAME?api-version=2015-04-08 --body '
 {
   "location": "westus",
   "tags": {},
@@ -16,19 +16,19 @@ az resource create --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE
     "virtualNetworkRules": [
       {
         "id": "/subscriptions/" + SUBSCRIPTION_ID + "/resourceGroups/" + RESOURCE_GROUP + "/providers/Microsoft.Network/virtualNetworks/" + VIRTUAL_NETWORK_NAME + "/subnets/" + SUBNET_NAME + "",
-        "ignoreMissingVNetServiceEndpoint": False
+        "ignore_missing_vnet_service_endpoint": False
       }
     ],
     "locations": [
       {
-        "failoverPriority": "0",
-        "locationName": "southcentralus",
-        "isZoneRedundant": False
+        "failover_priority": "0",
+        "location_name": "southcentralus",
+        "is_zone_redundant": False
       },
       {
-        "failoverPriority": "1",
-        "locationName": "eastus",
-        "isZoneRedundant": False
+        "failover_priority": "1",
+        "location_name": "eastus",
+        "is_zone_redundant": False
       }
     ],
     "consistencyPolicy": {
