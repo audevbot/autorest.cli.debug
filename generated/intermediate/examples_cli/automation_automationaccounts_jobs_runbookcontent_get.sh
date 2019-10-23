@@ -1,6 +1,0 @@
-# Get Job Runbook Content
-RESOURCE_GROUP="myresourcegroup"
-AUTOMATION_ACCOUNT_NAME="myautomationaccount"
-JOB_NAME="myjob"
-
-az resource show --id /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.Automation/automationAccounts/$AUTOMATION_ACCOUNT_NAME/jobs/$JOB_NAME/runbookContent --api-version 2017-05-15-preview
