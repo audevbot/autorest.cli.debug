@@ -15,7 +15,7 @@
     - name: Create or update a Smart Detector alert rule
       azure_rm_alertsmanagementsmartdetectoralertrule:
         resource_group: '{{resource_group}}'
-        name: '{{smart_detector_alert_rule_name}}'
+        alert_rule_name: '{{smart_detector_alert_rule_name}}'
         description: Sample smart detector alert rule description
         state: Enabled
         severity: Sev3
