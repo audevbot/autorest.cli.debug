@@ -26,9 +26,10 @@ options:
       - The name of the resource group.
     required: true
     type: str
-  name:
+  alert_rule_name:
     description:
-      - The resource name.
+      - The name of the alert rule.
+    required: true
     type: str
   location:
     description:
@@ -147,6 +148,10 @@ options:
     description:
       - The resource type.
     type: str
+  name:
+    description:
+      - The resource name.
+    type: str
 extends_documentation_fragment:
   - azure
   - azure_tags
@@ -159,7 +164,7 @@ EXAMPLES = '''
 - name: Create or update a Smart Detector alert rule
   azure_rm_alertsmanagementsmartdetectoralertrule:
     resource_group: myResourceGroup
-    name: mySmartDetectorAlertRule
+    alert_rule_name: mySmartDetectorAlertRule
     description: Sample smart detector alert rule description
     state: Enabled
     severity: Sev3
@@ -180,7 +185,7 @@ EXAMPLES = '''
 - name: Delete a Smart Detector alert rule
   azure_rm_alertsmanagementsmartdetectoralertrule:
     resource_group: myResourceGroup
-    name: mySmartDetectorAlertRule
+    alert_rule_name: mySmartDetectorAlertRule
     state: absent
 
 '''
@@ -382,10 +387,9 @@ class AzureRMSmartDetectorAlertRules(AzureRMModuleBaseExt):
                 disposition='resource_group_name',
                 required=true
             ),
-            name=dict(
+            alert_rule_name=dict(
                 type='str',
                 updatable=False,
-                disposition='alert_rule_name',
                 required=true
             ),
             location=dict(
@@ -489,7 +493,7 @@ class AzureRMSmartDetectorAlertRules(AzureRMModuleBaseExt):
         )
 
         self.resource_group = None
-        self.name = None
+        self.alert_rule_name = None
         self.id = None
         self.type = None
         self.name = None
@@ -565,7 +569,7 @@ class AzureRMSmartDetectorAlertRules(AzureRMModuleBaseExt):
     def create_update_resource(self):
         try:
             response = self.mgmt_client.smart_detector_alert_rules.create_or_update(resource_group_name=self.resource_group,
-                                                                                    alert_rule_name=self.name,
+                                                                                    alert_rule_name=self.alert_rule_name,
                                                                                     parameters=self.body)
             if isinstance(response, AzureOperationPoller) or isinstance(response, LROPoller):
                 response = self.get_poller_result(response)
@@ -578,7 +582,7 @@ class AzureRMSmartDetectorAlertRules(AzureRMModuleBaseExt):
         # self.log('Deleting the SmartDetectorAlertRule instance {0}'.format(self.))
         try:
             response = self.mgmt_client.smart_detector_alert_rules.delete(resource_group_name=self.resource_group,
-                                                                          alert_rule_name=self.name)
+                                                                          alert_rule_name=self.alert_rule_name)
         except CloudError as e:
             self.log('Error attempting to delete the SmartDetectorAlertRule instance.')
             self.fail('Error deleting the SmartDetectorAlertRule instance: {0}'.format(str(e)))
@@ -590,7 +594,7 @@ class AzureRMSmartDetectorAlertRules(AzureRMModuleBaseExt):
         found = False
         try:
             response = self.mgmt_client.smart_detector_alert_rules.get(resource_group_name=self.resource_group,
-                                                                       alert_rule_name=self.name)
+                                                                       alert_rule_name=self.alert_rule_name)
         except CloudError as e:
             return False
         return response.as_dict()
